@@ -64,9 +64,9 @@ There are problems in this section that can help you check your understanding of
        :optional:
 
        :click-incorrect:A string:endclick::click-incorrect: containing text and possibly delimiters has been split into *tokens* and stored inTest2:endclick:
-       :click-correct:String[] tokens:endclick:. :click-incorrect:Each token is either an open delimiter, a close delimiter, or a substring that is not a
-       delimiter:endclick:. :click-incorrect: You will write the method :endclick::click-incorrect:getDelimitersList:endclick:, :click-incorrect: which returns an:endclick: :click-correct:ArrayList:endclick::click-incorrect:
-       containing all the open and close delimiters found in tokens in their original order.:endclick:
+       :click-correct:String[] tokens:endclick:. :click-incorrect:Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter:endclick:.
+       :click-incorrect: You will write the method :endclick::click-incorrect:getDelimitersList:endclick:, :click-incorrect: which returns an:endclick: :click-correct:ArrayList:endclick:
+       :click-incorrect:containing all the open and close delimiters found in tokens in their original order.:endclick:
 
 
 .. reveal:: delim_cu_r2
@@ -241,7 +241,7 @@ containing all the open and close delimiters found in ``tokens`` in their origin
 
 .. activecode:: frq2019Q3A-delim
    :language: java
-   :autograde: unittest        
+   :autograde: unittest
 
    Write the method getDelimitersList in the code below. The main method contains code to test your solution.
    ~~~~
