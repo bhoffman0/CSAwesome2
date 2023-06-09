@@ -8,6 +8,16 @@ my $OPEN_LT = "TAG_PLACEHOLDER_SHOULD_NOT_EXIST_IN_FEEDBACK";
 $^I = '';
 
 while (<>) {
+
+  # Some blocks start with .. .. which seems to get translated to a comment
+  # but if the block then contains --- that's not something that can appear in
+  # an XML comment.
+  s/^\.\. \.\./../;
+
+  #if (/<\w+\s+.*?[-a-z]+=(?!['"])/) {
+  #  die "$_";
+  #}
+
   if (/^\s+:(feedback|answer)/) {
 
     if (/$OPEN_LT/) {

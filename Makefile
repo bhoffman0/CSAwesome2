@@ -9,8 +9,11 @@ all:
 fix:
 	find _sources/ -name '*.rst' -exec ./fix.pl {} \;
 
-xml: fix
+xml:
 	runestone rs2ptx
+
+fix_xml:
+	find build/xml -name '*.xml' -exec ./fix-xml.pl {} \;
 
 pretext/%.ptx: build/xml/%.xml | pretext
 	mkdir -p $(dir $@)
