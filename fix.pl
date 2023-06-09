@@ -8,11 +8,14 @@ my $OPEN_LT = "TAG_PLACEHOLDER_SHOULD_NOT_EXIST_IN_FEEDBACK";
 $^I = '';
 
 while (<>) {
-  if (/^\s+:feedback/) {
+  if (/^\s+:(feedback|answer)/) {
 
     if (/$OPEN_LT/) {
       die "$OPEN_LT occured!";
     }
+
+    # Fix some broken close tags.
+    s/(<\/\w+)\b(?!>)/$1>/g;
 
     # Swap out <'s in actual embedded tags.
     s/<(?=\/?\w+>)/$OPEN_LT/g;
@@ -27,6 +30,9 @@ while (<>) {
 
     # Put back the tag <'s.
     s/$OPEN_LT/</g;
+
+    # Fix <br> tags to be XMLish.
+    s/<br>/<br\/>/g;
 
   }
   print;
