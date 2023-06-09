@@ -79,6 +79,24 @@ options(
     )
 )
 
+template_args = {
+    'course_id': 'csawesome',
+    'login_required':'false',
+    'appname':master_app,
+    'loglevel': 10,
+    'course_url':master_url,
+    'use_services': 'true',
+    'python3': 'false',
+    'dburl': 'postgresql://runestone@localhost/runestone',
+    'basecourse': 'csawesome',
+    # new 7/2019 changes
+    'dynamic_pages': dynamic_pages,
+    'downloads_enabled': 'false',
+    'enable_chatcodes': 'false',
+    'allow_pairs': 'false',
+    'default_ac_lang': 'java',
+}
+
 version = pkg_resources.require("runestone")[0].version
 options.build.template_args['runestone_version'] = version
 
