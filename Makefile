@@ -13,6 +13,7 @@ xml: fix
 	runestone rs2ptx
 
 pretext/%.ptx: build/xml/%.xml | pretext
+	mkdir -p $(dir $@)
 	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@
 
 ptx: $(ptx)
