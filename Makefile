@@ -1,3 +1,5 @@
+.PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine
+
 R2P := ~/3rdparty/Runestone2PreTeXt
 
 xml := $(shell find build/xml -type f)
@@ -33,6 +35,16 @@ post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
+	cp main.ptx pretext
+	cp publication-rs-for-all.xml pretext
+	python $(R2P)/toctree2xml.py .
+	python $(R2P)/copy_figs.py ./_source ./pretext/Figures
+
+fix_ids:
+	python $(R2P)/fixIds.py
+
+build_web:
+	pretext build web
 
 pretext:
 	mkdir $@
