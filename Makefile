@@ -6,11 +6,11 @@ ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
 # This will run from a virtual env.
 rs2ptx := python -m runestone rs2ptx
 
-all:
-	@echo $(ptx)
+all: fixed_source fixed_xml
+	$(MAKE) ptx post
 
-fix:
-	find _sources/ -name '*.rst' -exec ./fix.pl {} \;
+fixed_source:
+	find _sources/ -name '*.rst' -exec ./fix-source.pl {} \;
 
 xml:
 	$(rs2ptx)
