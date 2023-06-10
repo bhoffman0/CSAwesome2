@@ -24,7 +24,7 @@
     :align: right 
   
 Set Value(s) in a 2D Array (Day 2)
-----------------------------------------
+==================================
 
 ..	index::
 	pair: 2D Array; initialization

@@ -24,7 +24,7 @@
     :align: right 
 
 Enhanced For-Each Loop for 2D Arrays (Day 2)
-----------------------------------------------------
+============================================
 
 ..	index::
 	pair: 2D Array; for-each loop
