@@ -24,6 +24,7 @@ while (<>) {
   s{\[<q>, </q>, </q>\]}{[&lt;q>, &lt;/q>, &lt;/q>]}g;
   s/i <"/i &lt;"/g;
   s/"<img /"&lt; /g;
+  s/<br>/<br\/>/g;
 
   print;
 }
