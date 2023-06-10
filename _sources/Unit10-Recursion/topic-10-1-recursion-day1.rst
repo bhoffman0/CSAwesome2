@@ -106,7 +106,7 @@ This method will print out "This is the method that never ends!" and then call i
 
 
 Why use Recursion?
-==================
+------------------
 
 ..	index::
     single: fractal
@@ -126,7 +126,7 @@ Recursion can also be used to create fractals.  A simple example is Sierpinski's
 Recursion can also be used to traverse String, array, and ArrayList objects, much like a loop. In fact, any recursive solution could be written with iteration (loops) instead. 
 
 Factorial Method
-=================
+----------------
 
 
 The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion and tracing recursion with the factorial method.
@@ -209,7 +209,7 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 
 
 Base Case
-==========
+---------
 
 ..	index::
     single: base case
