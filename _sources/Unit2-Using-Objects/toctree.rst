@@ -33,12 +33,3 @@ AP CS A Exam Weighting: 5-7.5%
    Exercises.rst
    JavaSwingGUIs.rst
    
-.. Old TOC
-    whatIsJava.rst
-   introClassObject.rst
-   firstClass.rst
-   compileTimeErrors.rst
-   firstOOClass.rst
-   runClass.rst
-   partsOfAClass.rst
-   JavaBasicsSummary.rst
