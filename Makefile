@@ -3,6 +3,9 @@ R2P := ~/3rdparty/Runestone2PreTeXt
 xml := $(shell find build/xml -type f)
 ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
 
+# This will run from a virtual env.
+rs2ptx := python -m runestone rs2ptx
+
 all:
 	@echo $(ptx)
 
@@ -10,7 +13,7 @@ fix:
 	find _sources/ -name '*.rst' -exec ./fix.pl {} \;
 
 xml:
-	runestone rs2ptx
+	$(rs2ptx)
 
 fix_xml:
 	find build/xml -name '*.xml' -exec ./fix-xml.pl {} \;
