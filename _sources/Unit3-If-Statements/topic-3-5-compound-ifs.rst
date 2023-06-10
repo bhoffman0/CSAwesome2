@@ -23,10 +23,6 @@
     :align: middle
     :alt: groupwork
     
-.. raw:: html
-
-    <style>    td { text-align: left; } </style>
-    
 .. image:: ../../_static/time90.png
     :width: 225
     :align: right

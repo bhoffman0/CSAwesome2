@@ -23,10 +23,6 @@
     :width: 250
     :align: right 
     
-.. raw:: html
-
-    <style>    td { text-align: left; } </style>
-    
 ArrayList Methods 
 =========================
 
