@@ -3,21 +3,21 @@
 use warnings;
 use strict;
 
-my $OPEN_LT = "TAG_PLACEHOLDER_SHOULD_NOT_EXIST_IN_FEEDBACK";
+my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
 
 $^I = '';
 
 while (<>) {
 
-  # Some blocks start with .. .. which seems to get translated to a comment
-  # but if the block then contains --- that's not something that can appear in
-  # an XML comment.
-  s/^\.\. \.\./../;
+  # These are images put at the top of some pages. When converting to XML that
+  # causes the XML document to not have a single root element. So we make them
+  # into image references for now. Later on we'll have to figure out how to put
+  # the images back into the rendered HTML.
+  s{.. (image:: (\.\./)+_static/time)}{.. |ClockImageToBeFixed| $1}g;
+  s{.. (image:: (\.\./)+_static/CSAwesomeLogo.png)}{.. |LogoImageToBeFixed| $1}g;
 
-  #if (/<\w+\s+.*?[-a-z]+=(?!['"])/) {
-  #  die "$_";
-  #}
-
+  # Specific fixes for some items that in the .rst contain some HTML which is
+  # occasionally broken and often contains unescaped & and <.
   if (/^\s+:(feedback|answer)/) {
 
     if (/$OPEN_LT/) {
@@ -40,9 +40,6 @@ while (<>) {
 
     # Put back the tag <'s.
     s/$OPEN_LT/</g;
-
-    # Fix <br> tags to be XMLish.
-    s/<br>/<br\/>/g;
 
   }
   print;
