@@ -15,4 +15,8 @@
       <xsl:apply-templates select="subsection" />
     </xsl:copy>
   </xsl:template>
+
+
+  <xsl:template match="image/@height"/>
+
 </xsl:stylesheet>
