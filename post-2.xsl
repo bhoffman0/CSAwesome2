@@ -32,7 +32,7 @@
   </xsl:template>
 
   <!-- Clean up deprecated <br>s -->
-  <xsl:template match="p/text()[normalize-space()]">
+  <xsl:template match="p[br]/text()[normalize-space()]">
     <line>
       <xsl:value-of select="."/>
     </line>
