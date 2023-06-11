@@ -11,9 +11,9 @@
   <xsl:template match="section[subsection]">
     <xsl:copy>
       <introduction>
-        <xsl:apply-templates select="*[not(name() = 'subsection')]" />
+        <xsl:apply-templates select="*[not(name() = 'subsection' or name() = 'exercise' or name() = 'exercises')]" />
       </introduction>
-      <xsl:apply-templates select="subsection" />
+      <xsl:apply-templates select="*[name() = 'subsection' or name() = 'exercise' or name() = 'exercises']" />
     </xsl:copy>
   </xsl:template>
 
@@ -40,5 +40,13 @@
 
   <xsl:template match="p/br" />
 
+  <!-- fix up width attributes to be percentages --> 
+  <xsl:template match="@width">
+    <xsl:attribute name="width">
+      <xsl:value-of select="round((. div 850) * 100)"/>
+      <xsl:text>%</xsl:text>
+    </xsl:attribute>
+  </xsl:template>
 
+  
 </xsl:stylesheet>
