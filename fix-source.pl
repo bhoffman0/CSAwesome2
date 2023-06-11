@@ -5,6 +5,8 @@ use strict;
 
 my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
 
+my $max_width = 850;
+
 $^I = '';
 
 while (<>) {
@@ -15,6 +17,14 @@ while (<>) {
   # the images back into the rendered HTML.
   s{.. (image:: (\.\./)+_static/time)}{.. |ClockImageToBeFixed| $1}g;
   s{.. (image:: (\.\./)+_static/CSAwesomeLogo.png)}{.. |LogoImageToBeFixed| $1}g;
+
+
+  # PreTeXt wants all widths in percents. This is a dumb kludge to get them
+  # somewhere in the right ballpark.
+  if (/^(\s+:width:\s+)(\d+)(?:px)?(.*)/) {
+    my $p = 100 * ($2 / $max_width);
+    $_ = sprintf "%s%.0f%%%s\n", $1, $p, $3;
+  }
 
   # Specific fixes for some items that in the .rst contain some HTML which is
   # occasionally broken and often contains unescaped & and <.
