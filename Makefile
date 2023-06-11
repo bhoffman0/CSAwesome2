@@ -23,7 +23,8 @@ fixed_xml: xml
 # This works better
 pretext/%.ptx: build/xml/%.xml | pretext
 	mkdir -p $(dir $@)
-	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@
+	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@.pass1
+	xsltproc --novalid post.xsl $@.pass1 > $@
 
 # This works but produces .ptx files that don't get through post cleanly.
 all_ptx: | pretext
