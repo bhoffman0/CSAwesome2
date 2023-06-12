@@ -10,6 +10,7 @@
   <!-- Try to create introduction in sections with subsections. This could grab too much. -->
   <xsl:template match="section[subsection]">
     <xsl:copy>
+      <xsl:apply-templates select="@*"/>
       <introduction>
         <xsl:apply-templates select="*[not(name() = 'subsection' or name() = 'exercise' or name() = 'exercises')]" />
       </introduction>
