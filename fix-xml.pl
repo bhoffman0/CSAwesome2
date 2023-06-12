@@ -12,7 +12,8 @@ $^I = '';
 
 while (<>) {
 
-  # More or less ad-hoc escaping of special XML characters.
+  # More or less ad-hoc escaping of special XML characters. Some of these may no
+  # longer be needed as I fixed at least part of the escaping of activecode nodes.
   s/\b([A-Z]\w+)<([A-Z]\w+)>/$1&lt;$2>/g;
   s/ArrayList<(int)>/ArrayList&lt;$1>/g;
   s/ArrayList<>/ArrayList&lt;>/g;
@@ -21,6 +22,7 @@ while (<>) {
   s/ &&( |$)/ &amp;&amp;$1/g;
   s/ & / &amp; /g;
   s/"&&"/"&amp;&amp;"/g;
+
   s/&&<\/cline>/&amp;&amp;<\/cline>/g;
   s/"<(\/?(sup|q))>"/"&lt;$1>"/g;
   s{\[<q>, </q>, </q>\]}{[&lt;q>, &lt;/q>, &lt;/q>]}g;
