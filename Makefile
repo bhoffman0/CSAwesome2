@@ -23,14 +23,15 @@ fixed_xml: xml
 
 fixed_ptx:
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
+	rsync -r hand-fixes/ pretext/
 
 # This works better than the script that does them all
 pretext/%.ptx: build/xml/%.xml | pretext
 	mkdir -p $(dir $@)
 	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@.pass1
 	xsltproc --novalid post-1.xsl $@.pass1 > $@.pass2
-	xsltproc --novalid post-2.xsl $@.pass2 > $@
-	cp $@ $@.pass3
+	xsltproc --novalid post-2.xsl $@.pass2 > $@.pass3
+	cp $@.pass3 $@
 
 ptx: $(ptx) pretext/rs-substitutes.xml
 
