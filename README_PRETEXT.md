@@ -17,25 +17,25 @@ up a virtual env in the `rs` repo such that `python -m runestone rs2ptx` runs
 
 Other than those changes, the main thing I did here was add several files:
 
-  - Makefile: a GNU makefile for running various parts of the conversion. You'll
+  - `Makefile`: a GNU makefile for running various parts of the conversion. You'll
     need to set the `R2P` variable to the location of your local copy of the
     `Runestone2PreTeXt` repo.
 
-  - fix-source.pl: A perl script that patches various things in the .rst files
+  - `fix-source.pl`: A perl script that patches various things in the .rst files
     that caused problems Some of those changes, like fixing unescaped & and < in
     embedded HTML should perhaps be committed to the source.
 
-  - fix-xml.pl: A perl script to fix the first batch of XML generated with
+  - `fix-xml.pl`: A perl script to fix the first batch of XML generated with
     sphinx, to make it actually valid XML. Some of the bits in here, as one of
     the comments mentions, may no-longer be necessary as some of my fixes to the
     Runestone scripts may now cover them.
 
-  - fix-ptx.pl: A perl script that patches up a few xrefs in the generated ptx.
+  - `fix-ptx.pl`: A perl script that patches up a few xrefs in the generated ptx.
 
-  - post-1.xsl and post-2.xsl: two XSLT stylesheets that are run by the
+  - `post-1.xsl` and `post-2.xsl`: two XSLT stylesheets that are run by the
     `Makefile` after the main XSLT stylesheet from `Runestone2PreTeXt`.
 
-  - hand-fixes/Unit8-2DArray/routeCipherA.ptx: This is one file that I just gave
+  - `hand-fixes/Unit8-2DArray/routeCipherA.ptx`: This is one file that I just gave
     up and hand fix the generated ptx. The makefile will copy this file over the
     generated one so if the .rst source changes, the hand fixes will need to be
     redone. But the mechanism is general so any .ptx file that doesn't come out
