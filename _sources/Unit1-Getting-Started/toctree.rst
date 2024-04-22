@@ -1,7 +1,7 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 
 Getting Started and Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
@@ -10,7 +10,7 @@ Getting Started and Primitive Types
 
 Unit 1 Class Periods: 8-10
 
-Unit 1 AP CS A Exam Weighting: 2.5-5%
+Unit 1 AP CSA Exam Weighting: 2.5-5%
 
 .. toctree::
    :caption: Unit 1 Table of Contents
@@ -28,5 +28,5 @@ Unit 1 AP CS A Exam Weighting: 2.5-5%
    topic-1-9-practice-coding.rst
    Exercises.rst
 
-   
-   
+
+

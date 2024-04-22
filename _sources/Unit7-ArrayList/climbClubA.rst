@@ -5,39 +5,51 @@
 Free Response - Climbing Club A
 ================================
 
-..	index::
-	single: ClimbingClub
+.. index::
+    single: ClimbingClub
     single: free response
-    
-The following is part a of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
+
+The following is part a of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 1.**  A mountain climbing club maintains a record of the climbs that its members have made. Information about a
 climb includes the name of the mountain peak and the amount of time it took to reach the top. The information is
 contained in the ``ClimbInfo`` class as declared below.
 
 .. code-block:: java
- 
+
    public class ClimbInfo
    {
-      /** Creates a ClimbInfo object with name peakName and time climbTime.
+       /**
+        * Creates a ClimbInfo object with name peakName and time climbTime.
+        *
         * @param peakName the name of the mountain peak
         * @param climbTime the number of minutes taken to complete the climb
         */
-      public ClimbInfo(String peakName, int climbTime)
-      { /* implementation not shown */ }
-      
-      /** @return the name of the mountain peak*/
-      public String getName()
-      { /* implementation not shown */ }
-     
-      /** @return the number of minutes taken to complete the climb*/
-      public int getTime()
-      { /* implementation not shown */ }
-     
-      // There may be instance variables, constructors, and methods 
-      // that are not shown.
+       public ClimbInfo(String peakName, int climbTime)
+       {
+           /* implementation not shown */
+       }
+
+       /**
+        * @return the name of the mountain peak
+        */
+       public String getName()
+       {
+           /* implementation not shown */
+       }
+
+       /**
+        * @return the number of minutes taken to complete the climb
+        */
+       public int getTime()
+       {
+           /* implementation not shown */
+       }
+
+       // There may be instance variables, constructors, and methods
+       // that are not shown.
    }
-   
+
 The ``ClimbingClub`` class maintains a list of the climbs made by members of the club. The declaration of the
 ``ClimbingClub`` class is shown below. You will write two different implementations of the ``addClimb``
 method. You will also answer two questions about an implementation of the ``distinctPeakNames`` method
@@ -46,37 +58,40 @@ method. You will also answer two questions about an implementation of the ``dist
 
    public class ClimbingClub
    {
-      /** The list of climbs completed by members of the club.
-       * Guaranteed not to be null. Contains only non-null 
-       * references.
-       */
-      private List<ClimbInfo> climbList;
-   
-      /** Creates a new ClimbingClub object. */
-      public ClimbingClub()
-      { 
-         climbList = new ArrayList<ClimbInfo>(); 
-      }
-   
-      /** Adds a new climb with name peakName and time climbTime 
-       * to the list of climbs.
-       * @param peakName the name of the mountain peak climbed
-       * @param climbTime the number of minutes taken to complete 
-       * the climb
-       */
-      public void addClimb(String peakName, int climbTime)
-      { 
-         /* to be implemented in part (a) */
-      }
-   
-      /** @return the number of distinct names in the list of climbs */
-      public int distinctPeakNames()
-      { 
-         /* implementation shown in part (c) */ 
-      }
-   
-      // There may be instance variables, constructors, and methods 
-      // that are not shown.
+       /**
+        * The list of climbs completed by members of the club. Guaranteed not to be
+        * null. Contains only non-null references.
+        */
+       private List<ClimbInfo> climbList;
+
+       /** Creates a new ClimbingClub object. */
+       public ClimbingClub()
+       {
+           climbList = new ArrayList<ClimbInfo>();
+       }
+
+       /**
+        * Adds a new climb with name peakName and time climbTime to the list of
+        * climbs.
+        *
+        * @param peakName the name of the mountain peak climbed
+        * @param climbTime the number of minutes taken to complete the climb
+        */
+       public void addClimb(String peakName, int climbTime)
+       {
+           /* to be implemented in part (a) */
+       }
+
+       /**
+        * @return the number of distinct names in the list of climbs
+        */
+       public int distinctPeakNames()
+       {
+           /* implementation shown in part (c) */
+       }
+
+       // There may be instance variables, constructors, and methods
+       // that are not shown.
    }
 
 **Part a.**  Write an implementation of the ``ClimbingClub`` method ``addClimb`` that stores the ``ClimbInfo``
@@ -91,7 +106,7 @@ climbList. For example, consider the following code segment.
    hikerClub.addClimb("Whiteface", 301);
    hikerClub.addClimb("Algonquin", 225);
    hikerClub.addClimb("Monadnock", 344);
-   
+
 When the code segment has completed executing, the instance variable ``climbList`` would contain the
 following entries.
 
@@ -99,7 +114,7 @@ following entries.
    :alt: Picture of the list after the above code executes
    :align: center
    :width: 500
-   
+
 How To Solve This
 -------------------
 
@@ -140,152 +155,173 @@ Click to reveal the algorithm and practice problems to help you write your solut
         :feedback_c: You must reference the ArrayList list using a dot operator to use the add() method. Try again!
 
         How do you append a new item, 7, to the end of a non-empty ArrayList<Integer> list?
-.. .. disqus::
-   :shortname: cslearn4u
-   :identifier: apcsa-climbClubAFRQ
 
 Try and Solve It
 -------------------
-   
+
 
 
 .. activecode:: ClimbClubA
    :language: java
-   :autograde: unittest           
-   
+   :autograde: unittest
+
    Complete the method ``addClimb`` in the ``ClimbingClub`` class in the code below.  The code includes a ``main`` method that will test the ``addClimb`` method.
    ~~~~
-   import java.util.List;
    import java.util.ArrayList;
-   
-   class ClimbInfo 
-   { 
-     private String name;
-     private int time;
-  
-     /** Creates a ClimbInfo object with name peakName and time climbTime. 
-       * 
-       * @param peakName the name of the mountain peak 
-       * @param climbTime the number of minutes taken to complete the climb */ 
-     public ClimbInfo(String peakName, int climbTime) 
-     { 
-       name = peakName;
-       time = climbTime;
-     }
-  
-     /** @return the name of the mountain peak */ 
-     public String getName() 
-     {
-       return name;
-     }
-  
-     /** @return the number of minutes taken to complete the climb */ 
-     public int getTime() 
-     {
-       return time;
-     }
-  
-     public String toString()
-     {
-       return "Peak name: " + name + " time: " + time;
-     }
-   }
-   
-   public class ClimbingClub 
-   { 
-      /** The list of climbs completed by members of the club. 
-       * * Guaranteed not to be null. Contains only non-null references. 
-       */ 
-     private List<ClimbInfo> climbList; 
-  
-     /** Creates a new ClimbingClub object. */ 
-     public ClimbingClub() 
-     { 
-        climbList = new ArrayList<ClimbInfo>(); 
-     } 
-  
-     /** Adds a new climb with name peakName and time climbTime to the end of the list of climbs  
-      * 
-      * @param peakName the name of the mountain peak climbed 
-      * @param climbTime the number of minutes taken to complete the climb 
-      */ 
-     public void addClimb(String peakName, int climbTime) 
-     { 
-    
-     } 
-  
-     public String toString()
-     {
-       String output ="";
-       for (ClimbInfo info : climbList)
-       {
-         output = output + info.toString() + "\n";
-       }
-       return output;
-     }
-  
-     public static void main(String[] args)
-     {
-       // test a 
-       ClimbingClub hikerClub = new ClimbingClub(); 
-       hikerClub.addClimb("Monadnock", 274); 
-       hikerClub.addClimb("Whiteface", 301); 
-       hikerClub.addClimb("Algonquin", 225); 
-       hikerClub.addClimb("Monadnock", 344);
-       System.out.print(hikerClub);
-       System.out.println("The order printed above should be Monadnock, Whiteface, Algonquin, Monadnock");
-     }
+   import java.util.List;
 
+   class ClimbInfo
+   {
+       private String name;
+       private int time;
+
+       /**
+        * Creates a ClimbInfo object with name peakName and time climbTime.
+        *
+        * @param peakName the name of the mountain peak
+        * @param climbTime the number of minutes taken to complete the climb
+        */
+       public ClimbInfo(String peakName, int climbTime)
+       {
+           name = peakName;
+           time = climbTime;
+       }
+
+       /**
+        * @return the name of the mountain peak
+        */
+       public String getName()
+       {
+           return name;
+       }
+
+       /**
+        * @return the number of minutes taken to complete the climb
+        */
+       public int getTime()
+       {
+           return time;
+       }
+
+       public String toString()
+       {
+           return "Peak name: " + name + " time: " + time;
+       }
    }
+
+   public class ClimbingClub
+   {
+       /**
+        * The list of climbs completed by members of the club. * Guaranteed not to be
+        * null. Contains only non-null references.
+        */
+       private List<ClimbInfo> climbList;
+
+       /** Creates a new ClimbingClub object. */
+       public ClimbingClub()
+       {
+           climbList = new ArrayList<ClimbInfo>();
+       }
+
+       /**
+        * Adds a new climb with name peakName and time climbTime to the end of the
+        * list of climbs
+        *
+        * @param peakName the name of the mountain peak climbed
+        * @param climbTime the number of minutes taken to complete the climb
+        */
+       public void addClimb(String peakName, int climbTime) {}
+
+       public String toString()
+       {
+           String output = "";
+           for (ClimbInfo info : climbList)
+           {
+               output = output + info.toString() + "\n";
+           }
+           return output;
+       }
+
+       public static void main(String[] args)
+       {
+           // test a
+           ClimbingClub hikerClub = new ClimbingClub();
+           hikerClub.addClimb("Monadnock", 274);
+           hikerClub.addClimb("Whiteface", 301);
+           hikerClub.addClimb("Algonquin", 225);
+           hikerClub.addClimb("Monadnock", 344);
+           System.out.print(hikerClub);
+           System.out.println(
+                   "The order printed above should be Monadnock, Whiteface,"
+                       + " Algonquin, Monadnock");
+       }
+   }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
 
-      public RunestoneTests() {
-        super("ClimbingClub");
-      }
+   import java.io.*;
 
-      @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
+   public class RunestoneTests extends CodeTestHelper
+   {
 
-        String expect = "Peak name: Monadnock time: 274\nPeak name: Whiteface time: 301\nPeak name: Algonquin time: 225\nPeak name: Monadnock time: 344\n";
+       public RunestoneTests()
+       {
+           super("ClimbingClub");
+       }
 
-        expect = expect + "The order printed above should be Monadnock, Whiteface, Algonquin, Monadnock\n";
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
 
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+           String expect =
+                   "Peak name: Monadnock time: 274\n"
+                       + "Peak name: Whiteface time: 301\n"
+                       + "Peak name: Algonquin time: 225\n"
+                       + "Peak name: Monadnock time: 344\n";
 
+           expect =
+                   expect
+                           + "The order printed above should be Monadnock, Whiteface, Algonquin,"
+                           + " Monadnock\n";
 
-      @Test
-      public void test1()
-      {
-        ClimbingClub hikerClub = new ClimbingClub();
-        hikerClub.addClimb("Monadnock", 274);
-        hikerClub.addClimb("Whiteface", 301);
-        hikerClub.addClimb("Algonquin", 225);
-        hikerClub.addClimb("Monadnock", 344);
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-        String output = hikerClub.toString();
+       @Test
+       public void test1()
+       {
+           ClimbingClub hikerClub = new ClimbingClub();
+           hikerClub.addClimb("Monadnock", 274);
+           hikerClub.addClimb("Whiteface", 301);
+           hikerClub.addClimb("Algonquin", 225);
+           hikerClub.addClimb("Monadnock", 344);
 
-        String expect = "Peak name: Monadnock time: 274\nPeak name: Whiteface time: 301\nPeak name: Algonquin time: 225\nPeak name: Monadnock time: 344\n";
+           String output = hikerClub.toString();
 
-        boolean result = (output.compareTo(expect) == 0);
+           String expect =
+                   "Peak name: Monadnock time: 274\n"
+                       + "Peak name: Whiteface time: 301\n"
+                       + "Peak name: Algonquin time: 225\n"
+                       + "Peak name: Monadnock time: 344\n";
 
-        boolean passed = getResults("true", ""+result, "addClimb method works with arguments Monadnock: 274, Whiteface:301, Algonquin: 225, Monadnock: 344");
+           boolean result = (output.compareTo(expect) == 0);
 
-        assertTrue(passed);
-      }
-    }
+           boolean passed =
+                   getResults(
+                           "true",
+                           "" + result,
+                           "addClimb method works with arguments Monadnock: 274, Whiteface:301,"
+                               + " Algonquin: 225, Monadnock: 344");
 
+           assertTrue(passed);
+       }
+   }
 
-    
 Video - One way to code the solution
 -------------------------------------
 
@@ -299,4 +335,4 @@ The following video is also on YouTube at https://youtu.be/dAbU9_Qn92I.  It walk
     :width: 800
     :align: center
 
-   
+

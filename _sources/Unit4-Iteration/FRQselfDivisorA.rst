@@ -5,7 +5,7 @@
 Free Response - Self Divisor A
 -------------------------------
 
-..	index::
+.. index::
     single: self divisor
     single: free response
 
@@ -20,27 +20,26 @@ The following is part a of a free response question from 2007.  It was question 
    public class SelfDivisor
    {
 
-      /** @param number the number to be tested
-       *         Precondition: number > 0
-       *  @return true if every decimal digit of
-       *          number is a divisor of number;
-       *          false otherwise
-       */
-      public static boolean isSelfDivisor(int number)
-      {
-        // part A
-      }
+       /**
+        * @param number the number to be tested Precondition: number > 0
+        * @return true if every decimal digit of number is a divisor of number; false
+        *     otherwise
+        */
+       public static boolean isSelfDivisor(int number)
+       {
+           // part A
+       }
 
-      /****************/
+       /****************/
 
-      public static void main (String[] args)
-      {
-        System.out.println("128: " + isSelfDivisor(128));
-        System.out.println("26: " + isSelfDivisor(26));
-        System.out.println("120: " + isSelfDivisor(120));
-        System.out.println("102: " + isSelfDivisor(102));
-      }
-    }
+       public static void main(String[] args)
+       {
+           System.out.println("128: " + isSelfDivisor(128));
+           System.out.println("26: " + isSelfDivisor(26));
+           System.out.println("120: " + isSelfDivisor(120));
+           System.out.println("102: " + isSelfDivisor(102));
+       }
+   }
 
 How to solve this problem
 ===========================
@@ -51,67 +50,73 @@ To check if 128 is a self-divisor we divide 128 by 8, 2, and 1.  If 8, 2, and 1 
 
 .. activecode:: lcfrsda2
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestMod
    {
-      public static void main(String[] args)
-      {
-         System.out.println(128 % 8);
-         System.out.println(128 % 2);
-         System.out.println(128 % 1);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(128 % 8);
+           System.out.println(128 % 2);
+           System.out.println(128 % 1);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    //import java.util.regex.*;
-    /* Do NOT change Main or CodeTestHelper.java. */
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "0\n0\n0\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
 
+   import org.junit.*;
+
+   import java.io.*;
+
+   // import java.util.regex.*;
+   /* Do NOT change Main or CodeTestHelper.java. */
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n0\n0\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 To check if 26 is a self-divisor we divide 26 by 6 and find that it has a remainder that is greater than 0, so it can't be a self-divisor and we return false.
 
 .. activecode:: lcfrsda3
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    public class TestSelfDivisor
    {
-      public static void main(String[] args)
-      {
-         System.out.println(26 % 6);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(26 % 6);
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    //import java.util.regex.*;
-    /* Do NOT change Main or CodeTestHelper.java. */
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
 
+   import org.junit.*;
+
+   import java.io.*;
+
+   // import java.util.regex.*;
+   /* Do NOT change Main or CodeTestHelper.java. */
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "2\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+   }
 
 To return false if the number has a 0 in it we just have to check if the current digit is a zero and then return false. So, 120 and 102 should both return false.
 
@@ -122,61 +127,63 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
    :showtitle: Reveal Hints
    :hidetitle: Hide Hints
    :optional:
-   
+
    **Hints:**
-   
+
    So we need to loop through all the digits in the number one at a time and test if the current digit is 0 and if so return false.  Otherwise we need to test if the passed number is evenly divisible (0 remainder) by the current digit.  If it isn't we return false.  If we have looped through all the digits and not found a problem return true.
-   
-   How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the mod operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
+
+   How can we loop through all the digits in a number?  We can use x % 10 to get the rightmost digit from a number and x / 10 to remove the rightmost digit from a number.  We can also use the remainder operator (%) to test if the number is evenly divisible by the current digit.  Run the example code below to see how this works.
 
    .. activecode:: lcfrsda4
        :language: java
-       :autograde: unittest  
+       :autograde: unittest
 
        public class TestDigits
        {
-          public static void main(String[] args)
-          {
-             System.out.println(128 % 10);
-             System.out.println(128 / 10);
-             System.out.println(12 % 10);
-             System.out.println(12 / 10);
-          }
+           public static void main(String[] args)
+           {
+               System.out.println(128 % 10);
+               System.out.println(128 / 10);
+               System.out.println(12 % 10);
+               System.out.println(12 / 10);
+           }
        }
+
        ====
        import static org.junit.Assert.*;
-        import org.junit.*;
-        import java.io.*;
-        //import java.util.regex.*;
-        /* Do NOT change Main or CodeTestHelper.java. */
-        public class RunestoneTests extends CodeTestHelper
-        {
-            @Test
-            public void testMain() throws IOException
-            {
-                String output = getMethodOutput("main");
-                String expect = "8\n12\n2\n1\n";
-                boolean passed = getResults(expect, output, "Expected output from main");
-                assertTrue(passed);
-            }
-        }
 
+       import org.junit.*;
 
+       import java.io.*;
+
+       // import java.util.regex.*;
+       /* Do NOT change Main or CodeTestHelper.java. */
+       public class RunestoneTests extends CodeTestHelper
+       {
+           @Test
+           public void testMain() throws IOException
+           {
+               String output = getMethodOutput("main");
+               String expect = "8\n12\n2\n1\n";
+               boolean passed = getResults(expect, output, "Expected output from main");
+               assertTrue(passed);
+           }
+       }
 
 .. reveal:: frsda_reveal_alg
    :showtitle: Reveal Algorithm
    :hidetitle: Hide Algorithm
    :optional:
-   
-   **Algorithm**: 
-   
+
+   **Algorithm**:
+
    We need to loop through all the digits in a number.  For example, with 128 the first time through the loop we want to test the 8, then the second time through the loop test the 2, and the last time test the 1.  We can use x % 10 to get the rightmost digit and x / 10 to remove the rightmost digit.  We are going to need a local variable that holds the current number since each time through the loop we need to remove the rightmost digit.  We will initialize the current number to the passed number and then get the rightmost digit each time through the loop.  We will test the digit to see if it is zero and if so return false.  We will also test to see if the number is not evenly divisible by the digit and return false in this case.  We will then remove the rightmost digit from the local variable and test if we should continue the loop.
 
 .. reveal:: frsda_r1
    :showtitle: Reveal Problems
    :hidetitle: Hide Problems
    :optional:
-   
+
    .. mchoice:: frsda_1
         :answer_a: for
         :answer_b: for each
@@ -187,7 +194,7 @@ Click to reveal hints and problems to lead you to the solution or skip ahead to 
         :feedback_c: Use a while loop when you don't know how many times a loop needs to execute.
 
         Which loop should you use to loop through all the digits of the number?
-        
+
    .. mchoice:: frsda_2
         :answer_a: Loop while the current number is greater than 10.
         :answer_b: Loop while the current number is greater than 9.
@@ -203,39 +210,42 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
 
 .. activecode:: lcfrsda5
    :language: java
-   :autograde: unittest  
+   :autograde: unittest
 
    FRQ SelfDivisor: Write the method isSelfDivisor.
    ~~~~
    public class SelfDivisor
    {
 
-      /** @param number the number to be tested
-       *         Precondition: number > 0
-       *  @return true if every decimal digit of
-       *          number is a divisor of number;
-       *          false otherwise
-       */
-      public static boolean isSelfDivisor(int number)
-      {
-        // part A
-      }
+       /**
+        * @param number the number to be tested Precondition: number > 0
+        * @return true if every decimal digit of number is a divisor of number; false
+        *     otherwise
+        */
+       public static boolean isSelfDivisor(int number)
+       {
+           // part A
+       }
 
-      /****************/
+       /****************/
 
-      public static void main (String[] args)
-      {
-        System.out.println("128: " + isSelfDivisor(128));
-        System.out.println("26: " + isSelfDivisor(26));
-        System.out.println("120: " + isSelfDivisor(120));
-        System.out.println("102: " + isSelfDivisor(102));
-      }
-    }
+       public static void main(String[] args)
+       {
+           System.out.println("128: " + isSelfDivisor(128));
+           System.out.println("26: " + isSelfDivisor(26));
+           System.out.println("120: " + isSelfDivisor(120));
+           System.out.println("102: " + isSelfDivisor(102));
+       }
+   }
+
     ====
     import static org.junit.Assert.*;
+
     import org.junit.*;
+
     import java.io.*;
-    //import java.util.regex.*;
+
+    // import java.util.regex.*;
     /* Do NOT change Main or CodeTestHelper.java. */
     public class RunestoneTests extends CodeTestHelper
     {
@@ -253,7 +263,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         {
             String code = getCode();
             boolean passed = code.contains("if") && (code.contains("for") || code.contains("while"));
-            getResults("Expected loop, if, %",""+passed, "Checking for loop and if statement",passed);
+            getResults(
+                    "Expected loop, if, %", "" + passed, "Checking for loop and if statement", passed);
             assertTrue(passed);
         }
 
@@ -262,12 +273,13 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         {
             String code = getCode();
             boolean passed = code.contains("%") && code.contains("/");
-            getResults("Expected % and /",""+passed, "Checking for use of % and /",passed);
+            getResults("Expected % and /", "" + passed, "Checking for use of % and /", passed);
             assertTrue(passed);
         }
 
         @Test
-        public void testFunction1() {
+        public void testFunction1()
+        {
             Object[] args = {128};
             String output = getMethodOutput("isSelfDivisor", args);
             String expect = "true";
@@ -276,7 +288,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         }
 
         @Test
-        public void testFunction2() {
+        public void testFunction2()
+        {
             Object[] args = {26};
             String output = getMethodOutput("isSelfDivisor", args);
             String expect = "false";
@@ -285,7 +298,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         }
 
         @Test
-        public void testFunction3() {
+        public void testFunction3()
+        {
             Object[] args = {120};
             String output = getMethodOutput("isSelfDivisor", args);
             String expect = "false";
@@ -294,7 +308,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         }
 
         @Test
-        public void testFunction4() {
+        public void testFunction4()
+        {
             Object[] args = {102};
             String output = getMethodOutput("isSelfDivisor", args);
             String expect = "false";
@@ -304,7 +319,8 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         }
 
         @Test
-        public void testFunction5() {
+        public void testFunction5()
+        {
             Object[] args = {124};
             String output = getMethodOutput("isSelfDivisor", args);
             String expect = "true";
@@ -314,9 +330,6 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
         }
     }
 
-
-
-
 Video - One way to code the solution
 =====================================
 
@@ -325,7 +338,7 @@ There are many possible solutions to this problem. Click to reveal a possible so
 .. reveal:: video_self_divisor_reveal
    :showtitle: Reveal Video
    :hidetitle: Hide Video
-   
+
    The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
 
    .. youtube:: oK1hDTmR3AE

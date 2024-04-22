@@ -1,26 +1,11 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 2-3-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-
-
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-
-
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-
-..	index::
-	single: method
+.. index::
+    single: method
     single: parameter
     single: argument
 
@@ -35,16 +20,14 @@
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-.. image:: ../../_static/time45.png
-    :width: 250
-    :align: right
-    
+|Time45|
+
 Calling Methods Without Parameters
 ===========================================
 
 **Methods** are a set of instructions that define behaviors for all objects of a class. For example, in the ``Turtle`` class, methods like ``forward()`` and ``turnRight()`` give ``Turtle`` objects the ability to move forward and turn 90 degrees right.
 
-To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**. An object method *must* be called on an object of the class that the method is defined in.  Object methods work with the **attributes** of the object, such as the direction the turtle is heading or its position. 
+To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**. An object method *must* be called on an object of the class that the method is defined in.  Object methods work with the **attributes** of the object, such as the direction the turtle is heading or its position.
 
 Every method call is followed by parentheses. The parentheses ``()`` after method names are there in case you need to give the method parameters (data) to do its job, which we will see in the next lesson. You must always include the parentheses after the method name.
 
@@ -62,7 +45,7 @@ Every method call is followed by parentheses. The parentheses ``()`` after metho
    :adaptive:
    :noindent:
 
-   The following code uses a turtle to draw the digital number 7, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the "Check Me" button to check your solution. 
+   The following code uses a turtle to draw the digital number 7, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the "Check Me" button to check your solution.
    -----
    public class DrawL
    {
@@ -96,30 +79,32 @@ After you put the mixed up code in order above, type in the same code below to m
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDraw7
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
-          Turtle yertle = new Turtle(habitat);
-          // Make yertle draw a 7 using the code above
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(habitat);
+            // Make yertle draw a 7 using the code above
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDraw7");
         }
 
@@ -142,60 +127,79 @@ After you put the mixed up code in order above, type in the same code below to m
 
     Can you make yertle draw the digital number 8, as 2 squares on top of each other?
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDraw8
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(500,500);
-          Turtle yertle = new Turtle(habitat);
-          // Make yertle draw an 8 with 2 squares
-          yertle.forward();
+        public static void main(String[] args)
+        {
+            World habitat = new World(500, 500);
+            Turtle yertle = new Turtle(habitat);
+            // Make yertle draw an 8 with 2 squares
+            yertle.forward();
 
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDraw8");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleDraw8\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n      Turtle yertle = new Turtle(habitat);\n      // Make yertle draw an 8 with 2 squares\n      yertle.forward();\n\n\n      habitat.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleDraw8\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n"
+                            + "      Turtle yertle = new Turtle(habitat);\n"
+                            + "      // Make yertle draw an 8 with 2 squares\n"
+                            + "      yertle.forward();\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
 
         @Test
-        public void test2() {
+        public void test2()
+        {
             String code = getCode();
             int numForward = countOccurences(code, "forward(");
 
             boolean passed = numForward >= 7;
 
-            passed = getResults("7 or more", ""+numForward, "Calls to forward()", passed);
+            passed = getResults("7 or more", "" + numForward, "Calls to forward()", passed);
             assertTrue(passed);
         }
 
         @Test
-        public void test3() {
+        public void test3()
+        {
             String code = getCode();
             int numTurn = countOccurences(code, ".turn");
 
             boolean passed = numTurn >= 5;
 
-            passed = getResults("5 or more", ""+numTurn, "Calls to turnRight() or turnLeft()", passed);
+            passed =
+                    getResults("5 or more", "" + numTurn, "Calls to turnRight() or turnLeft()", passed);
             assertTrue(passed);
         }
     }
@@ -250,18 +254,18 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
 
    <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song. 
+The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song.
 
-When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it. 
+When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it.
 
 
 .. codelens:: songviz1
-    :language: java 
+    :language: java
     :optional:
-    
-    public class Song 
+
+    public class Song
     {
-      public void print() 
+      public void print()
       {
         System.out.println("Old MacDonald had a farm");
         chorus();
@@ -269,27 +273,27 @@ When you call the chorus() method, it skips to the chorus code, executes and pri
         animal();
         chorus();
       }
-        
+
       public void chorus()
       {
         System.out.println("E-I-E-I-O");
       }
 
-      public void animal() 
+      public void animal()
       {
         System.out.println("duck");
       }
-        
-      public static void main(String[] args) 
+
+      public static void main(String[] args)
       {
         Song s = new Song();
         s.print();
       }
     }
-    
 
 
-Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``. 
+
+Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``.
 
 .. figure:: Figures/calling-methods.png
     :width: 450px
@@ -320,9 +324,9 @@ Methods inside the same class can call each other using just ``methodName()``, b
 
    .. code-block:: java
 
-      public class Song 
-      {
-        public void print() 
+    public class Song
+    {
+        public void print()
         {
             System.out.print("I like to ");
             eat();
@@ -330,21 +334,21 @@ Methods inside the same class can call each other using just ``methodName()``, b
             eat();
             fruit();
         }
-        
+
         public void fruit()
         {
             System.out.println("apples and bananas!");
         }
 
-        public void eat() 
+        public void eat()
         {
-           System.out.print("eat ");
+            System.out.print("eat ");
         }
-        
-        public static void main(String[] args) 
+
+        public static void main(String[] args)
         {
-           Song s = new Song();
-           s.print();
+            Song s = new Song();
+            s.print();
         }
     }
 
@@ -382,7 +386,7 @@ Here are some simple turtle methods that you can use:
 
 .. |repl link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank">repl.it link</a>
 
 You may notice that it is challenging to have your turtle draw with these simple methods. In the next lesson, we will use more complex ``Turtle`` methods where you can indicate how many steps to take or what angle to turn that will make drawing a lot easier!
 
@@ -393,35 +397,47 @@ You may notice that it is challenging to have your turtle draw with these simple
 
     Create a drawing of a simple letter or number that uses just straight lines (no curves or diagonals). It could be an initial in your name or a number from today's date.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleLetter
     {
-      public static void main(String[] args)
-      {
-          World habitat = new World(300,300);
+        public static void main(String[] args)
+        {
+            World habitat = new World(300, 300);
 
-
-
-          habitat.show(true);
-      }
+            habitat.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleLetter");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleLetter\n{\n  public static void main(String[] args)\n  {\n      World habitat = new World(300,300);\n\n\n\n      habitat.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleLetter\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World habitat = new World(300,300);\n\n\n\n"
+                            + "      habitat.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -433,11 +449,15 @@ You may notice that it is challenging to have your turtle draw with these simple
             String[] lines = code.split("\n");
 
             boolean passed = lines.length >= 20;
-            passed = getResults("20 or more lines", lines.length + " lines", "Adding a reasonable amount of lines to code", passed);
+            passed =
+                    getResults(
+                            "20 or more lines",
+                            lines.length + " lines",
+                            "Adding a reasonable amount of lines to code",
+                            passed);
             assertTrue(passed);
         }
     }
-
 
 Summary
 -------------------
@@ -450,7 +470,7 @@ Summary
 
 - **Procedural abstraction** allows a programmer to use a method by knowing in general what it does without knowing what lines of code execute. This is how we can drive a car without knowing how the brakes work.
 
-- A **method** or **constructor** call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, the flow of control is returned to the point immediately following the method or constructor call.
+- A **method** or **constructor** call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a ``return`` statement is executed, the flow of control is returned to the point immediately following the method or constructor call.
 
 - A **NullPointerException** will happen if you try to call an object method on an object variable whose value is ``null``.  This usually means that you forgot to create the object using the ``new`` operator followed by the class name and parentheses.
 
@@ -577,5 +597,3 @@ AP Practice
          a.meow();
 
       - This would just print "Meow ".
-
-  

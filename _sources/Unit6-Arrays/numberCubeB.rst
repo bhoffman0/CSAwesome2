@@ -22,10 +22,13 @@ The following is a free response question from 2009.  It was question 1 on the e
 
    public class NumberCube
    {
-       /** @return an integer value between 1 and 6, inclusive
+       /**
+        * @return an integer value between 1 and 6, inclusive
         */
        public int toss()
-       { /* implementation not shown */ }
+       {
+           /* implementation not shown */
+       }
 
        // There may be instance variables, constructors, and methods not shown.
    }
@@ -34,7 +37,7 @@ The following is a free response question from 2009.  It was question 1 on the e
 series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A
 run is defined as the repeated occurrence of the same value in two or more consecutive positions in the
 array.  In the example array shown above there are two runs of length 4.  One starts at index 6 and one at index 14.  The method
-may return either of those indicies.  
+may return either of those indicies.
 
 If there are no runs of any value, the method returns -1.
 
@@ -48,7 +51,7 @@ Click to reveal the algorithm for solving this problem.
    :hidetitle: Hide Algorithm
    :optional:
 
-   You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value 
+   You are going to need to keep track of the current run length, the maximum run length, the index where the max run started (which should start at -1).  You want to compare one value to an adjacent value
    so you will need to be careful that you don't go out of bounds.  If you find two values that are adjacent that are equal then increment the current run length and set the start index.  If the two adjacent values
    are not equal then reset the current run length to 0.  Return the starting index of the maximum length run.
 
@@ -65,9 +68,10 @@ Click to reveal the Mixed Up Code for the solution to this problem.
       :numbered: left
       :adaptive:
 
-      The method <code>getLongestRun</code> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+      The method ``getLongestRun`` below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
       -----
-      public static int getLongestRun(int[] values) {
+      public static int getLongestRun(int[] values) 
+      {
          int currentLen = 0;
          int maxLen = 0;
          int maxStart = -1;
@@ -85,7 +89,8 @@ Click to reveal the Mixed Up Code for the solution to this problem.
                    maxStart = i - currentLen + 1;
                }
       =====
-            } else {
+            } else 
+            {
                currentLen = 0;
             }
       =====
@@ -93,7 +98,7 @@ Click to reveal the Mixed Up Code for the solution to this problem.
          return maxStart;
       =====
       } // end method
-      
+
 
 Try and Solve Part B
 --------------------
@@ -101,7 +106,7 @@ Try and Solve Part B
 
 .. activecode:: FRQNumberCubeB
    :language: java
-   :autograde: unittest      
+   :autograde: unittest
 
    FRQ Number Cube B: Write the method ``getLongestRun`` that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.
    ~~~~
@@ -113,70 +118,88 @@ Try and Solve Part B
            // Complete this method
        }
 
-       public static void main(String[] args){
+       public static void main(String[] args)
+       {
            int[] values = {3, 5, 6, 6, 3, 6, 4, 4, 4, 2, 6, 4, 1, 1, 1, 1};
            int longestRunIdx = getLongestRun(values);
 
-           if(longestRunIdx != 12){
-              System.out.println("Your code does not return the correct index.");
+           if (longestRunIdx != 12)
+           {
+               System.out.println("Your code does not return the correct index.");
 
-              if(longestRunIdx == 2 || longestRunIdx == 6)
-                  System.out.println("It is returning the start index of a run, but that run is not the longest.");
+               if (longestRunIdx == 2 || longestRunIdx == 6)
+                   System.out.println(
+                           "It is returning the start index of a run, but that run is"
+                               + " not the longest.");
 
-              System.out.println("Remember that your code must return the start index of the longest run of tosses.");
-           } else {
-              System.out.println("Looks like your code works well!");
+               System.out.println(
+                       "Remember that your code must return the start index of the"
+                           + " longest run of tosses.");
+           }
+           else
+           {
+               System.out.println("Looks like your code works well!");
            }
        }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.util.Arrays;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String expect = "Looks like your code works well!";
-            String actual = getMethodOutput("main");
+   import org.junit.*;
 
-            boolean passed = getResults(expect, actual, "Checking output of main()");
-            assertTrue(passed);
-        }
+   import java.io.*;
+   import java.util.Arrays;
 
-        @Test
-        public void test2() {
-            int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String expect = "Looks like your code works well!";
+           String actual = getMethodOutput("main");
 
-            String actual = "" + NumberCube.getLongestRun(values);
-            String expect = "-1";
+           boolean passed = getResults(expect, actual, "Checking output of main()");
+           assertTrue(passed);
+       }
 
-            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
-            assertTrue(passed);
-        }
+       @Test
+       public void test2()
+       {
+           int[] values = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        @Test
-        public void test3() {
-            int[] values = {1, 1, 1, 1, 1, 1, 1, 1, 1};
+           String actual = "" + NumberCube.getLongestRun(values);
+           String expect = "-1";
 
-            String actual = "" + NumberCube.getLongestRun(values);
-            String expect = "0";
+           boolean passed =
+                   getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+           assertTrue(passed);
+       }
 
-            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
-            assertTrue(passed);
-        }
+       @Test
+       public void test3()
+       {
+           int[] values = {1, 1, 1, 1, 1, 1, 1, 1, 1};
 
-        @Test
-        public void test4() {
-            int[] values = {1, 1, 1, 1, 2, 2, 2, 2, 2};
+           String actual = "" + NumberCube.getLongestRun(values);
+           String expect = "0";
 
-            String actual = "" + NumberCube.getLongestRun(values);
-            String expect = "4";
+           boolean passed =
+                   getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+           assertTrue(passed);
+       }
 
-            boolean passed = getResults(expect, actual, "Checking output with " + Arrays.toString(values));
-            assertTrue(passed);
-        }  
-    }
+       @Test
+       public void test4()
+       {
+           int[] values = {1, 1, 1, 1, 2, 2, 2, 2, 2};
+
+           String actual = "" + NumberCube.getLongestRun(values);
+           String expect = "4";
+
+           boolean passed =
+                   getResults(expect, actual, "Checking output with " + Arrays.toString(values));
+           assertTrue(passed);
+       }
+   }
+

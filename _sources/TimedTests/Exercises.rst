@@ -1,10 +1,10 @@
 .. qnum::
    :prefix: 13-4-
    :start: 1
-   
+
 .. highlight:: java
    :linenothreshold: 4
-   
+
 
 .. |start| image:: Figures/start.png
     :height: 24px
@@ -45,7 +45,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
 .. timed:: practiceExamX
    :timelimit: 40
-   
+
    .. mchoice:: mt1_3
       :answer_a: I only
       :answer_b: II only
@@ -73,10 +73,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
                hours = hours + addition;
             }
 
-			      void addMinutes(int additionMinutes)
-			      {
-			         // implementation not shown
-			      }
+            void addMinutes(int additionMinutes)
+            {
+               // implementation not shown
+            }
 
             // ... other methods not shown
 
@@ -101,21 +101,21 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
         III. public void addMinutes(int additionMinutes)
              {
-             	  minutes += additionMinutes;
-                  while(minutes >= 60)
-                  {
-				      hours++;
-				      minutes -= 60;
-				  }
+                minutes += additionMinutes;
+                while(minutes >= 60)
+                {
+                   hours++;
+                   minutes -= 60;
+                }
              }
 
-        IV.  public void addMinutes(int additionMinutes){
+        IV.  public void addMinutes(int additionMinutes)
              {
-        	       if (additionMinutes + minutes >= 60)
-        	       {
-        	           minutes = additionMinutes + minutes - 60;
-        	           hours += 1;
-        	       }
+                if (additionMinutes + minutes >= 60)
+                {
+                   minutes = additionMinutes + minutes - 60;
+                   hours += 1;
+                }
              }
 
    .. mchoice:: mt1_4
@@ -214,18 +214,18 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public class mysterious
          {
-            public static void main (String[] args)
-            {
-               String mystery;
-               String starter = "Hello World!";
-               for (int i = 0; i < starter.length(); i++)
-               {
-                 if (i % 2 == 0)
+             public static void main(String[] args)
+             {
+                 String mystery;
+                 String starter = "Hello World!";
+                 for (int i = 0; i < starter.length(); i++)
                  {
-                   mystery += starter.charAt(i);
+                     if (i % 2 == 0)
+                     {
+                         mystery += starter.charAt(i);
+                     }
                  }
-               }
-            }
+             }
          }
 
    .. mchoice:: mt1_12
@@ -441,19 +441,23 @@ Click the |start| button when you are ready to begin the exam, but only then as 
 
          public static void conditionTest(int num1, int num2)
          {
-            if ((num1 > 0) && (num2 > 0)) {
+            if ((num1 > 0) && (num2 > 0)) 
+            {
                if (num1 > num2)
                   System.out.println("A");
                else
                   System.out.println("B");
             }
-            else if ((num2 < 0) || (num1 < 0)) {
+            else if ((num2 < 0) || (num1 < 0)) 
+            {
                 System.out.println("C");
             }
-            else if (num2 < 0) {
+            else if (num2 < 0) 
+            {
                System.out.println("D");
             }
-            else {
+            else 
+            {
                System.out.println("E");
             }
         }

@@ -1,12 +1,14 @@
-.. image:: ../../_static/time90.png
-    :width: 250
-    :align: right
-    
+.. include:: ../common.rst
+
+
+
+|Time90|
+
 Getting Started
 ==================
 
 
-Follow the links below to learn more about the AP CS A course and exam and Java development environments. Please complete the pretest to see where you are with your knowledge of Java before beginning this course and then complete the brief demographic survey. The Java lessons start in 1.2.
+Follow the links below to learn more about the AP CSA course and exam and Java development environments. Please complete the pretest to see where you are with your knowledge of Java before beginning this course and then complete the brief demographic survey. The Java lessons start in 1.2.
 
 
 
@@ -21,4 +23,4 @@ Follow the links below to learn more about the AP CS A course and exam and Java 
    growthMindset.rst
    ptest1.rst
    survey.rst
-   
+

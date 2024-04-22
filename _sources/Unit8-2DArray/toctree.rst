@@ -1,13 +1,13 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 2D Arrays
 :::::::::::::::::::::::
 
 Class Periods: 10-12 (including labs)
 
-AP CS A Exam Weighting: 7.5-10%
+AP CSA Exam Weighting: 7.5-10%
 
 
 
@@ -24,4 +24,3 @@ AP CS A Exam Weighting: 7.5-10%
    Exercises.rst
    CBLabs.rst
    Array2dMoreCodePractice.rst
-   

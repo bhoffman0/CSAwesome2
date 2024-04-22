@@ -1,28 +1,11 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 8-2-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
+|Time45|
 
-.. image:: ../../_static/time45.png
-    :width: 250
-    :align: right 
-    
 Nested Loops for 2D Arrays (Day 1)
 -----------------------------------
 
@@ -30,22 +13,22 @@ In this lesson, you will learn how to use nested loops to traverse a 2D Array.
 
 Getting the Number of Rows and Columns
 ---------------------------------------
-..	index::
-	pair: 2D Array; number of rows
-	pair: 2D Array; number of columns
+.. index::
+   pair: 2D Array; number of rows
+   pair: 2D Array; number of columns
 
-Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns. 
+Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns.
 
 
 
-.. code-block:: java 
+.. code-block:: java
 
   ticketInfo.length // returns the number of rows
   ticketInfo[0].length // returns the number of columns
-  
+
 .. note::
 
-     Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. Since for the AP CS A exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
+     Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. Since for the AP CSA exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
 
 |Exercise| **Check your understanding**
 
@@ -59,8 +42,8 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :feedback_b: The size of the inner list is the number of columns.
    :feedback_c: This is the total number of items in the array.
 
-   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?	
-   
+   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?
+
 .. mchoice:: qa2ldb_3
    :practice: T
    :answer_a: nums[3][2]
@@ -68,24 +51,24 @@ Arrays know their length (how many elements they can store).  The length is a pu
    :answer_c: nums[2][1]
    :answer_d: nums[1][2]
    :correct: c
-   :feedback_a: This would be true if array indices started with 1 but they start with 0. 
+   :feedback_a: This would be true if array indices started with 1 but they start with 0.
    :feedback_b: This would be true if array indicies started with 1 and the column was specified first.  However, array indices start at 0 and the row is given first in row-major order.
-   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.  
+   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.
    :feedback_d: This would be true if the column index was first, but in row-major order the row index is first.
 
    Which of the following would I use to get the value in the third row and second column from a 2D array called ``nums``?
-   
- 
+
+
 Looping Through a 2D Array
 --------------------------
 
-..	index::
-	pair: 2D Array; looping through
-	pair: loop; nested
+.. index::
+   pair: 2D Array; looping through
+   pair: loop; nested
 
-Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array. 
+Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array.
 
-.. code-block:: java 
+.. code-block:: java
 
   int[][] array = { {1,2,3},{4,5,6}};
   for (int row = 0; row < array.length; row++)
@@ -95,81 +78,84 @@ Since you can find out the number of rows and columns in a 2D array you can use 
            System.out.println( array[row][col] );
       }
    }
-   
+
 |CodingEx| **Coding Exercise**
 
 
 
 .. activecode:: lcgetAverage
-   :language: java 
+   :language: java
    :autograde: unittest
-   
-   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.  
+
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Use the CodeLens button to trace through the code. Note that an array can be passed in as an argument to a method.
    ~~~~
    public class Test1
    {
 
-      public static double getAverage(int[][] a)
-      {
-         double total = 0;
-         int value = 0;
-         for (int row = 0; row < a.length; row++)
-         {
-            for (int col = 0; col < a[0].length; col++)
-            {
-               value = a[row][col];
-               total = total + value;
-            }
-         }
-         return total / (a.length * a[0].length);
-      }
-      
-      public static void main(String[] args)
-      {
-         int[][] matrix = { {1,2,3},{4,5,6}};
-         System.out.println(getAverage(matrix));
-      }
+       public static double getAverage(int[][] a)
+       {
+           double total = 0;
+           int value = 0;
+           for (int row = 0; row < a.length; row++)
+           {
+               for (int col = 0; col < a[0].length; col++)
+               {
+                   value = a[row][col];
+                   total = total + value;
+               }
+           }
+           return total / (a.length * a[0].length);
+       }
+
+       public static void main(String[] args)
+       {
+           int[][] matrix = { {1, 2, 3}, {4, 5, 6}};
+           System.out.println(getAverage(matrix));
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
+   import org.junit.*;
 
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "3.5";
+   import java.io.*;
 
-            boolean passed = !output.contains(expected);
+   public class RunestoneTests extends CodeTestHelper
+   {
 
-            passed = getResults("true", ""+passed, "Average has changed");
-            assertTrue(passed);
-        }
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expected = "3.5";
 
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String expected = "int[][] matrix = { {1,2,3},{4,5,6}};";
+           boolean passed = !output.contains(expected);
 
-            boolean passed = !code.replaceAll(" ","").contains(expected.replaceAll(" ",""));
+           passed = getResults("true", "" + passed, "Average has changed");
+           assertTrue(passed);
+       }
 
-            passed = getResults("true", ""+passed, "Matrix has been changed");
-            assertTrue(passed);
-        }
-    }
-   
+       @Test
+       public void test2()
+       {
+           String code = getCode();
+           String expected = "int[][] matrix = { {1,2,3},{4,5,6}};";
+
+           boolean passed = !code.replaceAll(" ", "").contains(expected.replaceAll(" ", ""));
+
+           passed = getResults("true", "" + passed, "Matrix has been changed");
+           assertTrue(passed);
+       }
+   }
+
 Some key things to notice about this code are:
 
-- ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.  
+- ``total`` is declared to be a double so that the result will be a double.  If ``total`` was declared to be an ``int`` then the result would be an integer and the values after the decimal point would be thrown away.
 - The array is passed in as an argument to the method.
 - The number of rows is ``a.length``
 - The number of columns is ``a[0].length``
-- The number of times this loop executes is the number of rows times the number of columns.  
+- The number of times this loop executes is the number of rows times the number of columns.
 
 
 
@@ -182,16 +168,20 @@ Some key things to notice about this code are:
 
    The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.
    -----
-   public static int getLargest(int[][] arr)  {
+   public static int getLargest(int[][] arr)  
+   {
    =====
     int largest = arr[0][0];
     int current = 0;
-    for (int r = 0; r < arr.length; r++)  {
+    for (int r = 0; r < arr.length; r++)
+    {
     =====
-      for (int c = 0; c < arr[0].length; c++)  {
+      for (int c = 0; c < arr[0].length; c++)
+      {
     =====
         current = arr[r][c];
-        if (current > largest)  {
+        if (current > largest)
+        {
     =====
           largest = current;
     =====
@@ -203,7 +193,7 @@ Some key things to notice about this code are:
     return largest;
    =====
    } // end method
-   
+
 You can step through this code using the Java Visualizer by clicking on the following |Java Visualizer|.
 
 .. |Java Visualizer| raw:: html
@@ -213,49 +203,51 @@ You can step through this code using the Java Visualizer by clicking on the foll
 
 Most nested loops with 2D Arrays use "row-major order" where the outer loop goes through each row. However, you can write nested loops that traverse in "column-major order" like below.
 
-   
+
 |CodingEx| **Coding Exercise**
 
 
 
 .. activecode:: ColumnMajorTraversal
-   :language: java 
+   :language: java
    :autograde: unittest
-   
-   What will the following code print out? Try to guess before you run it. 
+
+   What will the following code print out? Try to guess before you run it.
    ~~~~
    public class ColumnMajorTraversal
    {
-     public static void main(String[] args)
-      {
-        int[][] array = { {1,2,3},{4,5,6}};
-        for (int col = 0; col < array[0].length; col++)
-        {
-            for (int row = 0; row < array.length; row++)
-            {
-                System.out.println( array[row][col] );
-            }
-        }     
-      }
+       public static void main(String[] args)
+       {
+           int[][] array = { {1, 2, 3}, {4, 5, 6}};
+           for (int col = 0; col < array[0].length; col++)
+           {
+               for (int row = 0; row < array.length; row++)
+               {
+                   System.out.println(array[row][col]);
+               }
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void test1()
-        {
-            String output = getMethodOutput("main");
-            String expected = "1\n4\n2\n5\n3\n6";
+   import org.junit.*;
 
-            boolean passed = getResults(expected, output, "main()", true);
-            assertTrue(passed);
-        }
-    }
-         
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expected = "1\n4\n2\n5\n3\n6";
+
+           boolean passed = getResults(expected, output, "main()", true);
+           assertTrue(passed);
+       }
+   }
 
 AP Practice
 ------------
@@ -274,10 +266,10 @@ AP Practice
    :feedback_d: Correct!
    :feedback_e: Trace through the code. Notice that the inner loop works through the row backwards.
 
-   Consider the following code segment. What is the last row of numbers printed when this code segment is executed? 
+   Consider the following code segment. What is the last row of numbers printed when this code segment is executed?
 
    .. code-block:: java
-    
+
       int[][] points = { {11, 12, 13, 14, 15},
                          {21, 22, 23, 24, 25},
                          {31, 32, 33, 34, 35},
@@ -294,6 +286,6 @@ AP Practice
 
 
 
-This lesson is continued on the next page. 
+This lesson is continued on the next page.
 
 

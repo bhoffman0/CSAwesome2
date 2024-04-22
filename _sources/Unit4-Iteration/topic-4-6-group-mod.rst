@@ -1,37 +1,21 @@
+.. include:: ../common.rst
+
 .. qnum::
-   :prefix: 4-1-
+   :prefix: 4-7-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-
-
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-
-
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-
-
-
-
-Group Work - Modulo Operator (%)
+Group Work - Remainder Operator (%)
 ========================================
 
 It is best to use a POGIL approach with the following. In POGIL students work
 in groups on activities and each member has an assigned role.  For more information see `https://cspogil.org/Home <https://cspogil.org/Home>`_.
-This page is based on a POGIL activity from Helen Hu at that site.  
+This page is based on a POGIL activity from Helen Hu at that site.
 
-..	index::
-	single: modulus
+.. index::
+  single: modulus
   single: modulo operator
+  single: remainder
+  single: remainder operator
 
 .. activecode:: mod-model-1
    :language: java
@@ -40,17 +24,17 @@ This page is based on a POGIL activity from Helen Hu at that site.
    ~~~~
    public class ModModl1
    {
-      public static void main(String[] args)
-      {
-          System.out.println(9 % 4);
-          System.out.println(10 % 4);
-          System.out.println(11 % 4);
-          System.out.println(12 % 4);
-          System.out.println(13 % 4);
-          System.out.println(14 % 4);
-          System.out.println(15 % 4);
-          System.out.println(16 % 4);
-      }
+       public static void main(String[] args)
+       {
+           System.out.println(9 % 4);
+           System.out.println(10 % 4);
+           System.out.println(11 % 4);
+           System.out.println(12 % 4);
+           System.out.println(13 % 4);
+           System.out.println(14 % 4);
+           System.out.println(15 % 4);
+           System.out.println(16 % 4);
+       }
    }
 
 Look at the expressions in the code above and the output.  Then answer the following questions.
@@ -69,8 +53,8 @@ Look at the expressions in the code above and the output.  Then answer the follo
     - :20: Four goes into twenty 5 times with a remainder of 0.
       :.*: Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?
 
-Going Beyond Mod 4
------------------------
+Going Beyond Remainder 4
+-------------------------
 
 .. fillintheblank:: mod-return-zero-mod-five
 
@@ -134,7 +118,7 @@ what number goes evenly into another number and the remainder.
 
 .. fillintheblank:: mod-79-mod-5
 
-    What number is the remainder when you divide 75 by 5?
+    What number is the remainder when you divide 79 by 5?
 
     - :4: Five goes into 79 - 15 times (15 * 5 is 75) with a reminder of 4.
       :.*: What is the remainder when you divide 79 evenly by 5?
@@ -161,7 +145,7 @@ the extras go back to the teacher.
     - :2: Four goes into two zero times with a remainder of 2.
       :.*: What is the remainder when you divide 2 by 4?
 
-Describe the Modulo (%) Operator
+Describe the Remainder (%) Operator
 ---------------------------------
 
 .. shortanswer:: mod-describe-mod-sa

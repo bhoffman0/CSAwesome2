@@ -1,41 +1,22 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 2-2-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-
-
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-
-
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-
-
-
-..	index::
-	pair: class; constructor
+.. index::
+   pair: class; constructor
 
 .. |repl link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">repl.it link</a>
+   <a href="https://firewalledreplit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">repl.it link</a>
 
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-.. image:: ../../_static/time45.png
-    :width: 250
-    :align: right
-    
+|Time45|
+
 Creating and Initializing Objects: Constructors
 ================================================
 
@@ -54,7 +35,7 @@ A new object is created with the ``new`` keyword followed by the class name (``n
 Overloading Constructors
 ---------------------------
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. 
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values.
 
 There can also be other constructors that take parameters like the ``Turtle(habitat)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
 
@@ -110,7 +91,17 @@ The constructor that doesn't take any parameters, ``World()``, creates a graphic
     World world2 = new World(300,400); // creates a 300x400 world
 
 .. note::
-   The turtle world does not use the cartesian coordinate system.  The top left corner is (0,0), x increases to the right, and y increases towards the bottom of the page.
+
+   The turtle world does not use the Cartesian coordinate system with (0,0) in
+   in the middle the screen. Instead, (0,0) is at the top left corner of the
+   screen and x increases to the right and y increases towards the bottom of the
+   screen.
+
+   Most computer graphics systems use this coordinate system which is a carry
+   over from before computers could display graphics. When computer displays
+   were text based and mostly made by people using left-to-right, top-to-bottom
+   languages like English, it made sense to have the first character appear at
+   the top left and then count columns to the right and lines down.
 
 .. figure:: Figures/coords.png
     :width: 200px
@@ -161,53 +152,72 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
     (If the code below does not work in your browser, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleConstructorTest
     {
-      public static void main(String[] args)
-      {
-          // Change the World constructor to 300x400
-          World world1 = new World(300,300);
+        public static void main(String[] args)
+        {
+            // Change the World constructor to 300x400
+            World world1 = new World(300, 300);
 
-          // Change the Turtle constructor to put the turtle in the top right corner
-          Turtle t1 = new Turtle(world1);
+            // Change the Turtle constructor to put the turtle in the top right
+            // corner
+            Turtle t1 = new Turtle(world1);
 
-          t1.turnLeft();
-          world1.show(true);
-      }
+            t1.turnLeft();
+            world1.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleConstructorTest");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorTest\n{\n  public static void main(String[] args)\n  {\n      // Change the World constructor to 300x400\n      World world1 = new World(300,300);\n\n      // Change the Turtle constructor to put the turtle in the top right corner\n      Turtle t1 = new Turtle(world1);\n\n      t1.turnLeft();\n      world1.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                        + "import java.util.*;\n\n"
+                        + "public class TurtleConstructorTest\n"
+                        + "{\n"
+                        + "  public static void main(String[] args)\n"
+                        + "  {\n"
+                        + "      // Change the World constructor to 300x400\n"
+                        + "      World world1 = new World(300,300);\n\n"
+                        + "      // Change the Turtle constructor to put the turtle in the top right"
+                        + " corner\n"
+                        + "      Turtle t1 = new Turtle(world1);\n\n"
+                        + "      t1.turnLeft();\n"
+                        + "      world1.show(true);\n"
+                        + "  }\n"
+                        + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
-
     }
 
 Object Variables and References
 ---------------------------------
 
-You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package. 
+You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package.
 
 .. |video1| raw:: html
 
    <a href="https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-   
+
 Watch the |video1| below about null.
 
 .. youtube:: 5fpjgXAV2BU
@@ -235,7 +245,7 @@ Constructor Signatures
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. 
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types.
 
 Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
 
@@ -383,12 +393,12 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
 .. image:: Figures/customTurtles.png
     :width: 200
     :align: left
-    
+
 |Groupwork| Programming Challenge: Custom Turtles
 ---------------------------------------------------
 
 
-    
+
 Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors.
 
 First, as a warm up, do the following debugging exercise.
@@ -400,38 +410,57 @@ First, as a warm up, do the following debugging exercise.
 
     Debug the following code.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleConstructorDebug
     {
-      public static void main(String[] args)
-      {
-          World w = new World(300,0);
-          turtle t0;
-          Turtle t1 = new Turtle();
-          Turtle t2 = new Turtle(world, 100, 50)
-          t0.forward();
-          t1.turnRight();
-          t2.turnLeft();
-          world.show(true);
-      }
+        public static void main(String[] args)
+        {
+            World w = new World(300,0);
+            turtle t0;
+            Turtle t1 = new Turtle();
+            Turtle t2 = new Turtle(world, 100, 50)
+            t0.forward();
+            t1.turnRight();
+            t2.turnLeft();
+            world.show(true);
+        }
     }
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleConstructorDebug");
         }
 
         @Test
         public void test1()
         {
-            String orig = "import java.util.*;\nimport java.awt.*;\n\npublic class TurtleConstructorDebug\n{\n  public static void main(String[] args)\n  {\n      World w = new World(300,0);\n      turtle t0;\n      Turtle t1 = new Turtle();\n      Turtle t2 = new Turtle(world, 100, 50)\n      t0.forward();\n      t1.turnRight();\n      t2.turnLeft();\n      world.show(true);\n  }\n}\n";
+            String orig =
+                    "import java.awt.*;\n"
+                            + "import java.util.*;\n\n"
+                            + "public class TurtleConstructorDebug\n"
+                            + "{\n"
+                            + "  public static void main(String[] args)\n"
+                            + "  {\n"
+                            + "      World w = new World(300,0);\n"
+                            + "      turtle t0;\n"
+                            + "      Turtle t1 = new Turtle();\n"
+                            + "      Turtle t2 = new Turtle(world, 100, 50)\n"
+                            + "      t0.forward();\n"
+                            + "      t1.turnRight();\n"
+                            + "      t2.turnLeft();\n"
+                            + "      world.show(true);\n"
+                            + "  }\n"
+                            + "}\n";
             boolean passed = codeChanged(orig);
             assertTrue(passed);
         }
@@ -443,20 +472,20 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
 
   /** Constructs a CustomTurtle in the middle of the world */
   public CustomTurtle(World w)
- 
-  /** Constructs a CustomTurtle with a specific body color, 
-      shell color, and width and height in the middle of the world */
-  public CustomTurtle(World w, Color body, Color shell, int w, int h) 
 
-  /** Constructs a CustomTurtle with a specific body color, 
+  /** Constructs a CustomTurtle with a specific body color,
+      shell color, and width and height in the middle of the world */
+  public CustomTurtle(World w, Color body, Color shell, int w, int h)
+
+  /** Constructs a CustomTurtle with a specific body color,
       shell color, and width and height at position (x,y) in the world */
-  public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h) 
+  public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h)
 
 
 .. |Color| raw:: html
 
    <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
-   
+
 You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the |Color| class in Java.
 
 1. Create a large 150x200 (width 150 and height 200) CustomTurtle with a green body (Color.green) and a blue shell (Color.blue) at position (150,300)
@@ -472,122 +501,147 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
 
     Use the CustomTurtle constructors to create the following turtles.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
-    public class CustomTurtleRunner 
+    public class CustomTurtleRunner
     {
-      public static void main(String[] args) 
-      {  
-          World world1 = new World(400,400);
+        public static void main(String[] args)
+        {
+            World world1 = new World(400, 400);
 
-          // 1. Change the constructor call below to create a large 
-          // 150x200 CustomTurtle with a green body (Color.green)
-          // and a blue shell (Color.blue) at position (150,300).
-          // Move it forward to see it.
-          CustomTurtle turtle1 = new CustomTurtle(world1); 
-          turtle1.forward();
-    
+            // 1. Change the constructor call below to create a large
+            // 150x200 CustomTurtle with a green body (Color.green)
+            // and a blue shell (Color.blue) at position (150,300).
+            // Move it forward to see it.
+            CustomTurtle turtle1 = new CustomTurtle(world1);
+            turtle1.forward();
 
-          // 2. Create a small 25x50 CustomTurtle with a red body 
-          // and a yellow shell at position (350,200)
-          // Move it forward to see it.
-        
+            // 2. Create a small 25x50 CustomTurtle with a red body
+            // and a yellow shell at position (350,200)
+            // Move it forward to see it.
 
-          // 3. Create a CustomTurtle of your own design
-        
-          world1.show(true);
-      }
+            // 3. Create a CustomTurtle of your own design
+
+            world1.show(true);
+        }
     }
 
     class CustomTurtle extends Turtle
     {
-       private int x;
-       private int y;
-       private World w;
-       private Color bodycolor;
-       private Color shellcolor;
-       private int width;
-       private int height;
+        private int x;
+        private int y;
+        private World w;
+        private Color bodycolor;
+        private Color shellcolor;
+        private int width;
+        private int height;
 
-     /** Constructor that takes the model display
-       * @param modelDisplay the thing that displays the model or world
-       */
-      public CustomTurtle(ModelDisplay modelDisplay) 
-      {
-        // let the parent constructor handle it
-        super(modelDisplay);
-      }
+        /**
+         * Constructor that takes the model display
+         *
+         * @param modelDisplay the thing that displays the model or world
+         */
+        public CustomTurtle(ModelDisplay modelDisplay)
+        {
+            // let the parent constructor handle it
+            super(modelDisplay);
+        }
 
-      /** Constructor that takes the model
-       * display to draw it on and custom colors and size
-       * @param m the world
-       * @param body : the body color
-       * @param shell : the shell color
-       * @param w: width
-       * @param h: height
-       */
-      public CustomTurtle(ModelDisplay m, Color body, Color shell, int w, int h)
-      {
-        // let the parent constructor handle it
-        super(m);
-        bodycolor = body;
-        setBodyColor(body);
-        shellcolor = shell;
-        setShellColor(shell);
-        height = h;
-        width = w;
-        setHeight(h);
-        setWidth(w);    
-      }
+        /**
+         * Constructor that takes the model display to draw it on and custom
+         * colors and size
+         *
+         * @param m the world
+         * @param body : the body color
+         * @param shell : the shell color
+         * @param w: width
+         * @param h: height
+         */
+        public CustomTurtle(
+                ModelDisplay m, Color body, Color shell, int w, int h)
+                {
+            // let the parent constructor handle it
+            super(m);
+            bodycolor = body;
+            setBodyColor(body);
+            shellcolor = shell;
+            setShellColor(shell);
+            height = h;
+            width = w;
+            setHeight(h);
+            setWidth(w);
+        }
 
-    /** Constructor that takes the x and y and a model
-       * display to draw it on and custom colors and size
-       * @param x the starting x position
-       * @param y the starting y position
-       * @param m the world
-       * @param body : the body color
-       * @param shell : the shell color
-       * @param w: width
-       * @param h: height
-       */
-      public CustomTurtle(int x, int y, ModelDisplay m,  Color body, Color shell, int w, int h) 
-      {
-        // let the parent constructor handle it
-        super(x,y,m);
-        bodycolor = body;
-        setBodyColor(body);
-        shellcolor = shell;
-        setShellColor(shell);
-        height = h;
-        width = w;
-        setHeight(h);
-        setWidth(w);    
-      }
+        /**
+         * Constructor that takes the x and y and a model display to draw it on
+         * and custom colors and size
+         *
+         * @param x the starting x position
+         * @param y the starting y position
+         * @param m the world
+         * @param body : the body color
+         * @param shell : the shell color
+         * @param w: width
+         * @param h: height
+         */
+        public CustomTurtle(
+                int x,
+                int y,
+                ModelDisplay m,
+                Color body,
+                Color shell,
+                int w,
+                int h)
+                {
+            // let the parent constructor handle it
+            super(x, y, m);
+            bodycolor = body;
+            setBodyColor(body);
+            shellcolor = shell;
+            setShellColor(shell);
+            height = h;
+            width = w;
+            setHeight(h);
+            setWidth(w);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-          public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("CustomTurtleRunner");
-          }
+        }
 
         @Test
         public void test1()
         {
             String target = "new CustomTurtle(150,300,world1, Color.green, Color.blue, 150, 200)";
-            boolean passed = checkCodeContains("constructor for a large 150x200 CustomTurtle with a green body and a blue shell at position (150,300) in world1",target);
+            boolean passed =
+                    checkCodeContains(
+                            "constructor for a large 150x200 CustomTurtle with a green body and a blue"
+                                    + " shell at position (150,300) in world1",
+                            target);
             assertTrue(passed);
         }
+
         @Test
         public void test2()
         {
             String target = "new CustomTurtle(350,200,world1, Color.red, Color.yellow, 25, 50)";
-            boolean passed = checkCodeContains("constructor for a small 25x50 CustomTurtle with a red body and a yellow shell at position (350,200) in world1",target);
+            boolean passed =
+                    checkCodeContains(
+                            "constructor for a small 25x50 CustomTurtle with a red body and a yellow"
+                                    + " shell at position (350,200) in world1",
+                            target);
             assertTrue(passed);
         }
     }
@@ -705,4 +759,3 @@ AP Practice
                 inTheaters = false;
             }
         }
-

@@ -1,38 +1,21 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 4-2-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-    
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-.. image:: ../../_static/time90.png
-    :width: 225
-    :align: right
-    
+|Time90|
+
 For Loops
 =========
 
-..	index::
-	single: for loop
-	pair: loop; for
+.. index::
+   single: for loop
+   pair: loop; for
 
 
 Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.
@@ -44,7 +27,7 @@ If you took AP CSP with a block programming language like App Inventor, you prob
     :width: 100%
     :align: center
     :figclass: align-center
-    
+
     Figure 1: Comparing App Inventor and Java for loops
 
 
@@ -52,7 +35,7 @@ If you took AP CSP with a block programming language like App Inventor, you prob
 Three Parts of a For Loop
 --------------------------
 
-A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and change the loop control variable.  The 3 parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  
+A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and change the loop control variable.  The 3 parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.
 
 .. code-block:: java
 
@@ -60,8 +43,8 @@ A for-loop combines all 3 parts of writing a loop in one line to initialize, tes
   {
      loop body
   }
-  
-The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.  
+
+The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.
 
 .. figure:: Figures/compareForAndWhile.png
     :width: 600px
@@ -70,14 +53,14 @@ The for-loop is almost a shortcut way to write a while loop with all three steps
 
     Figure 2: Showing how a for loop maps to a while loop
 
-Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&index=9&ab_channel=colleenlewis>`_ which compares a while loop and for loop line by line. 
+Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&index=9&ab_channel=colleenlewis>`_ which compares a while loop and for loop line by line.
 
 .. youtube:: SEDnzXeb2hU
     :width: 700
     :height: 400
     :align: center
     :optional:
-    
+
 Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png
@@ -86,7 +69,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
     :figclass: align-center
 
     Figure 2: Control flow in a for loop
-    
+
 |CodingEx| **Coding Exercise**
 
 
@@ -94,108 +77,106 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :language: java
    :autograde: unittest
    :practice: T
-   
-   Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? 
+
+   Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10?
    ~~~~
    public class ForLoop
    {
-      public static void main(String[] args)
-      {
-        for(int count = 1; count <= 5; count++)
-        {
-           System.out.println(count);
-        } 
-      }
+       public static void main(String[] args)
+       {
+           for (int count = 1; count <= 5; count++)
+           {
+               System.out.println(count);
+           }
+       }
    }
-   
+
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n3\n4\n5\n6\n7\n8\n9\n10\n";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "2\n3\n4\n5\n6\n7\n8\n9\n10\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
-   
-
-
-
 
 .. activecode:: forloopfromwhile
    :language: java
    :autograde: unittest
    :practice: T
-   
+
    Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
    ~~~~
    public class ForLoopFromWhile
    {
-      public static void main(String[] args)
-      {
-        int count = 5; 
-        while (count <= 10)  
-        {
-           System.out.println(count);
-           count++;
-        }
-      }
+       public static void main(String[] args)
+       {
+           int count = 5;
+           while (count <= 10)
+           {
+               System.out.println(count);
+               count++;
+           }
+       }
    }
+
    ====
    import static org.junit.Assert.*;
 
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
+   import org.junit.Test;
 
-    import java.io.*;
+   import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("ForLoopFromWhile");
-        }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("ForLoopFromWhile");
+       }
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "5\n6\n7\n8\n9\n10\n";
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "5\n6\n7\n8\n9\n10\n";
 
-            boolean passed = getResults(expect, output, "Running main");
-            assertTrue(passed);
-        }
+           boolean passed = getResults(expect, output, "Running main");
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testWhile() throws IOException
-        {
-            String target = "while (*)";
-            boolean passed = checkCodeNotContainsRegex("while loop", target);
-            assertTrue(passed);
-        }
+       @Test
+       public void testWhile() throws IOException
+       {
+           String target = "while (*)";
+           boolean passed = checkCodeNotContainsRegex("while loop", target);
+           assertTrue(passed);
+       }
 
-        @Test
-        public void testFor() throws IOException
-        {
-            String target = "for (int * = #; * ? #; *~)";
-            boolean passed = checkCodeContainsRegex("for loop", target);
-            assertTrue(passed);
-        }
-    }
+       @Test
+       public void testFor() throws IOException
+       {
+           String target = "for (int * = #; * ? #; *~)";
+           boolean passed = checkCodeContainsRegex("for loop", target);
+           assertTrue(passed);
+       }
+   }
 
 .. note::
-   
+
    Two common patterns in for-loops are to count from 0 up to an number (using <) or count from 1 to the number including the number (using <=). Remember that if you start at 0 use <, and if you start at 1, use <=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.
-   
-   .. code-block:: java 
-   
+
+   .. code-block:: java
+
       // These loops both run 10 times
       // If you start at 0, use <
       for(int i = 0; i < 10; i++)
@@ -203,56 +184,56 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
          System.out.println(i);
       }
       // If you start at 1, use <=
-      for(int i = 1; i <= 10; i++) 
+      for(int i = 1; i <= 10; i++)
       {
          System.out.println(i);
       }
-  
+
 
 |Exercise| **Check your understanding**
 
 .. mchoice:: qlb_3_1
    :practice: T
    :answer_a: 3 4 5 6 7 8
-   :answer_b: 0 1 2 3 4 5 6 7 8 
-   :answer_c: 8 8 8 8 8 
-   :answer_d: 3 4 5 6 7 
+   :answer_b: 0 1 2 3 4 5 6 7 8
+   :answer_c: 8 8 8 8 8
+   :answer_d: 3 4 5 6 7
    :correct: d
-   :feedback_a: This loop starts with i equal to 3 but ends when i is equal to 8.  
+   :feedback_a: This loop starts with i equal to 3 but ends when i is equal to 8.
    :feedback_b: What is i set to in the initialization area?
    :feedback_c: This would be true if the for loop was missing the change part <code>(int i = 3; i < 8; )</code> but it does increment i in the change part <code>(int i = 3; i < 8; i++)</code>.
-   :feedback_d: The value of i is set to 3 before the loop executes and the loop stops when i is equal to 8.  So the last time through the loop i is equal to 7.  
+   :feedback_d: The value of i is set to 3 before the loop executes and the loop stops when i is equal to 8.  So the last time through the loop i is equal to 7.
 
    What does the following code print?
-   
-   .. code-block:: java 
 
-     for (int i = 3; i < 8; i++) 
-     {  
+   .. code-block:: java
+
+     for (int i = 3; i < 8; i++)
+     {
         System.out.print(i + " ");
      }
-     
+
 .. mchoice:: qlb_3_2
    :practice: T
    :answer_a: 3 4 5 6 7 8
-   :answer_b: 0 1 2 3 4 5 6 7 8 9 
+   :answer_b: 0 1 2 3 4 5 6 7 8 9
    :answer_c: 1 2 3 4 5 6 7 8 9 10
    :answer_d: 1 3 5 7 9
    :correct: c
-   :feedback_a: What is i set to in the initialization area? 
-   :feedback_b: What is i set to in the initialization area? 
-   :feedback_c: The value of i starts at 1 and this loop will execute until i equals 11.  The last time through the loop the value of i is 10.  
-   :feedback_d: This loop changes i by 1 each time in the change area.  
+   :feedback_a: What is i set to in the initialization area?
+   :feedback_b: What is i set to in the initialization area?
+   :feedback_c: The value of i starts at 1 and this loop will execute until i equals 11.  The last time through the loop the value of i is 10.
+   :feedback_d: This loop changes i by 1 each time in the change area.
 
    What does the following code print?
-   
-   .. code-block:: java 
 
-     for (int i = 1; i <= 10; i++) 
-     {  
+   .. code-block:: java
+
+     for (int i = 1; i <= 10; i++)
+     {
         System.out.print(i + " ");
      }
-     
+
 .. mchoice:: qlb_3_3
    :practice: T
    :answer_a: 10
@@ -262,19 +243,19 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :correct: c
    :feedback_a: This would be true if i started at 0 and ended at 9.  Does it?
    :feedback_b: Since i starts at 3 and the last time through the loop it is 9 the loop executes 7 times (9 - 3 + 1 = 7)
-   :feedback_c: How many numbers are between 3 and 9 (including 3 and 9)?   
-   :feedback_d: This would be true if i started at 0 and the value of i the last time through the loop it was 8.   
+   :feedback_c: How many numbers are between 3 and 9 (including 3 and 9)?
+   :feedback_d: This would be true if i started at 0 and the value of i the last time through the loop it was 8.
 
-   How many times does the following method print a ``*``?  
-   
-   .. code-block:: java 
+   How many times does the following method print a ``*``?
 
-     for (int i = 3; i <= 9; i++) 
-     {  
-        System.out.print("*"); 
+   .. code-block:: java
+
+     for (int i = 3; i <= 9; i++)
+     {
+        System.out.print("*");
      }
-     
-     
+
+
 
 .. parsonsprob:: print_evens
    :numbered: left
@@ -286,9 +267,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    public static void printEvens()
    {
    =====
-      for (int i = 0; 
-           i <= 10; 
-           i+=2) 
+      for (int i = 0; i <= 10; i+=2)
       {
    =====
          System.out.println(i);
@@ -296,92 +275,93 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
       } // end for
    =====
    } // end method
-   
 
 
 Decrementing Loops
 -------------------
-   
-You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, "for (int i=5; i > 0; i--)`` counts from 5 down to 1.
+
+You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, ``for (int i=5; i > 0; i--)`` counts from 5 down to 1.
 
 |CodingEx| **Coding Exercise**
 
 .. activecode:: lcfcp1
    :language: java
    :autograde: unittest
-   
+
    What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3? Try the Code Lens button to visualize and trace through this code.
    ~~~~
    public class SongTest
    {
 
-      public static void printPopSong()
-      {
-         String line1 = " bottles of pop on the wall";
-         String line2 = " bottles of pop";  
-         String line3 = "Take one down and pass it around";  
-  
-         // loop 5 times (5, 4, 3, 2, 1)
-         for (int i = 5; i > 0; i--)
-         {
-            System.out.println(i + line1);
-            System.out.println(i + line2); 
-            System.out.println(line3); 
-            System.out.println((i - 1) + line1);
-            System.out.println();
-         }
-      }
-      
-      public static void main(String[] args)
-      {
-         SongTest.printPopSong();
-      }
+       public static void printPopSong()
+       {
+           String line1 = " bottles of pop on the wall";
+           String line2 = " bottles of pop";
+           String line3 = "Take one down and pass it around";
+
+           // loop 5 times (5, 4, 3, 2, 1)
+           for (int i = 5; i > 0; i--)
+           {
+               System.out.println(i + line1);
+               System.out.println(i + line2);
+               System.out.println(line3);
+               System.out.println((i - 1) + line1);
+               System.out.println();
+           }
+       }
+
+       public static void main(String[] args)
+       {
+           SongTest.printPopSong();
+       }
    }
+
    ====
    // Test Code for Lesson 4.1 - popSong
-    import static org.junit.Assert.*;
-    import org.junit.After;
-    import org.junit.Before;
-    import org.junit.Test;
-    import java.io.*;
+   import static org.junit.Assert.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("SongTest");
-        }
+   import org.junit.Test;
 
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "3 bottles of pop on the wall";
+   import java.io.*;
 
-            String expect1 = expect.split("\n")[0];
-            String output1 = output.split("\n")[0];
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("SongTest");
+       }
 
-            boolean passed = output.contains(expect);
-            passed = getResults(expect1, output1, "Print the song from 3", passed);
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "3 bottles of pop on the wall";
 
-        @Test
-        public void testMain2() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "5 bottles of pop on the wall";
+           String expect1 = expect.split("\n")[0];
+           String output1 = output.split("\n")[0];
 
-            boolean passed = !output.contains(expect);
+           boolean passed = output.contains(expect);
+           passed = getResults(expect1, output1, "Print the song from 3", passed);
+           assertTrue(passed);
+       }
 
-            String expect1 = expect.split("\n")[0];
-            String output1 = output.split("\n")[0];
+       @Test
+       public void testMain2() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "5 bottles of pop on the wall";
 
-            passed = getResults(expect1, output1, "Do not start loop from 5", passed);
-            assertTrue(passed);
-        }
-    }
-  
-The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.  
+           boolean passed = !output.contains(expect);
+
+           String expect1 = expect.split("\n")[0];
+           String output1 = output.split("\n")[0];
+
+           passed = getResults(expect1, output1, "Do not start loop from 5", passed);
+           assertTrue(passed);
+       }
+   }
+
+The method **printPopSong** prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.
 
 
 
@@ -389,47 +369,46 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
    :language: java
    :autograde: unittest
    :practice: T
-   
-   Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop. 
+
+   Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop.
    ~~~~
    public class ForLoop
    {
-      public static void main(String[] args)
-      {
-        for(int count = 1; count <= 5; count++)
-        {
-           System.out.println(count);
-        } 
-      }
+       public static void main(String[] args)
+       {
+           for (int count = 1; count <= 5; count++)
+           {
+               System.out.println(count);
+           }
+       }
    }
-   
+
    ====
    import static org.junit.Assert.*;
-   import org.junit.*;;
+
+   import org.junit.*;
+
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "5\n3\n1";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "5\n3\n1";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
    }
-     
-
-
 
 Turtle Loops
 ------------
 
-        
+
 |CodingEx| **Coding Exercise**
 
-Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 forward and 1 turn command in the loop. Whenever you find yourself repeating code, try to use a loop instead!
+Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!
 
 (If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
@@ -440,47 +419,50 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
     Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square?
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDrawSquare
     {
-      public static void main(String[] args)
-      {
-          World world = new World(300,300);
-          Turtle yertle = new Turtle(world);
-          
-          // Change the following code to use a for loop to draw the square
-          yertle.forward();
-          yertle.turn(90);
-          yertle.forward();
-          yertle.turn(90);
-          yertle.forward();
-          yertle.turn(90);
-          yertle.forward();
-          yertle.turn(90);
-          
-          world.show(true); 
-      }
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
+
+            // Change the following code to use a for loop to draw the square
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
+
+            world.show(true);
+        }
     }
-    
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDrawSquare");
         }
 
         @Test
         public void test1()
         {
-           String target = "for (int * = #; * ? #; *~)";
-           boolean passed = checkCodeContainsRegex("for loop", target);
-           assertTrue(passed);
+            String target = "for (int * = #; * ? #; *~)";
+            boolean passed = checkCodeContainsRegex("for loop", target);
+            assertTrue(passed);
         }
 
         @Test
@@ -493,7 +475,12 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
             boolean passed = count == 1;
 
-            passed = getResults("1 forward()", "" + count  + " forward()", "Should only need forward() once", passed);
+            passed =
+                    getResults(
+                            "1 forward()",
+                            "" + count + " forward()",
+                            "Should only need forward() once",
+                            passed);
             assertTrue(passed);
         }
 
@@ -507,7 +494,12 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
             boolean passed = count == 1;
 
-            passed = getResults("1 turn(90)", "" + count  + " turn(90)", "Should only need turn(90) once", passed);
+            passed =
+                    getResults(
+                            "1 turn(90)",
+                            "" + count + " turn(90)",
+                            "Should only need turn(90) once",
+                            passed);
             assertTrue(passed);
         }
     }
@@ -521,7 +513,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
 In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops. We encourage you to work in pairs.
 
-1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
+1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360.
 
 2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What external angle should you use for the turns? Remember they have to add up to 360 degrees.
 
@@ -534,44 +526,48 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
     Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360. The autograder only checks one shape at a time, so comment out the code for one shape before starting on the next.
     ~~~~
-    import java.util.*;
     import java.awt.*;
+    import java.util.*;
 
     public class TurtleDrawShapes
     {
-      public static void main(String[] args)
-      {
-          World world = new World(400,400);
-          Turtle yertle = new Turtle(world);
-          yertle.penUp();  // move a little to the left
-          yertle.moveTo(100,200);
-          yertle.penDown();
-          yertle.setColor(Color.blue); 
-          
-          // Add your loop here!
-          yertle.forward(100);
-          yertle.turn(90);
-          
-          world.show(true); 
-      }
+        public static void main(String[] args)
+        {
+            World world = new World(400, 400);
+            Turtle yertle = new Turtle(world);
+            yertle.penUp(); // move a little to the left
+            yertle.moveTo(100, 200);
+            yertle.penDown();
+            yertle.setColor(Color.blue);
+
+            // Add your loop here!
+            yertle.forward(100);
+            yertle.turn(90);
+
+            world.show(true);
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-        public RunestoneTests() {
+        public RunestoneTests()
+        {
             super("TurtleDrawShapes");
         }
 
         @Test
         public void test1()
         {
-           String target = "for (int * = *; * ? *; *~)";
-           boolean passed = checkCodeContainsRegex("for loop", target);
-           assertTrue(passed);
+            String target = "for (int * = *; * ? *; *~)";
+            boolean passed = checkCodeContainsRegex("for loop", target);
+            assertTrue(passed);
         }
 
         @Test
@@ -584,7 +580,12 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
             boolean passed = count == 1;
 
-            passed = getResults("1 forward(...)", "" + count  + " forward(...)", "Should only need forward() once", passed);
+            passed =
+                    getResults(
+                            "1 forward(...)",
+                            "" + count + " forward(...)",
+                            "Should only need forward() once",
+                            passed);
             assertTrue(passed);
         }
 
@@ -598,7 +599,12 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 
             boolean passed = count == 1;
 
-            passed = getResults("1 turn(...)", "" + count  + " turn(...)", "Should only need turn(...) once", passed);
+            passed =
+                    getResults(
+                            "1 turn(...)",
+                            "" + count + " turn(...)",
+                            "Should only need turn(...) once",
+                            passed);
             assertTrue(passed);
         }
 
@@ -622,16 +628,14 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
             String code = getCode();
             String test = "360/n";
 
-            int count = countOccurences(code.replaceAll(" ",""), test);
+            int count = countOccurences(code.replaceAll(" ", ""), test);
             boolean passed = count == 1;
 
             passed = getResults("true", "" + passed, "Calculates angle correctly using n", passed);
             assertTrue(passed);
         }
     }
-    
-   
-   
+
 Summary
 -------
 
@@ -668,7 +672,7 @@ AP Practice
     Which of the following code segments will produce the same output as the code segment above?
 
     .. code-block:: java
-     
+
         I.  int sum = 0;
             for(int count = 0; count <= 6; count++)
             {
@@ -677,7 +681,7 @@ AP Practice
                 {
                      sum += count;
                 }
-            } 
+            }
             System.out.println(sum);
 
         II. int sum = 0;
@@ -686,7 +690,7 @@ AP Practice
                sum += i;
             }
             System.out.println(sum);
-        
+
         III. int sum = 0;
              for(int j = 7; j > 1; j--)
              {
@@ -699,23 +703,23 @@ AP Practice
 
     - I and II only
 
-      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted.
 
     - II and III only
 
-      + Correct! In the II, the loop counter increments by 2's making sure it visits only even numbers and III generates the same sum but backwards. 
+      + Correct! In the II, the loop counter increments by 2's making sure it visits only even numbers and III generates the same sum but backwards.
 
     - I and III only
 
-      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted.
 
     - III only
 
       - This is partially correct.
-    
+
     - I, II, and III
 
-      - Note that I has an extra count++ at the beginning of the loop body that should be deleted. 
+      - Note that I has an extra count++ at the beginning of the loop body that should be deleted.
 
 .. mchoice:: AP4-2-2
     :practice: T
@@ -725,12 +729,12 @@ AP Practice
     .. code-block:: java
 
         int result = 1;
-        for(int i = 3; i < 6; i += 2) 
+        for(int i = 3; i < 6; i += 2)
         {
           result *= i;
         }
         System.out.println(result);
-        
+
     Which of the following best explains how changing the for loop header to ``for (int i = 4; i <= 6; i += 2)`` affects the output of the code segment?
 
     - The output of the code segment will be unchanged.

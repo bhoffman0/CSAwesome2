@@ -1,34 +1,20 @@
+.. include:: ../common.rst
+
 .. qnum::
-   :prefix: 5-14-
+   :prefix: 5-16-
    :start: 1
-   
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
 
 Free Response Question (FRQ) for Classes
 -----------------------------------------------------
 
-..	index::
+.. index::
     single: class
     single: free response
 
 As of 2019, the AP exam's second free response question (FRQ) is on classes, where students design and implement a described class.  This question involves creating a class with private instance variables and public methods. The College Board will provide a description of the class and the methods. This question does not involve more complex topics such as arrays.
 
 
-To succeed on the FRQ Question 2 on Classes, you must know how to: 
+To succeed on the FRQ Question 2 on Classes, you must know how to:
 
 - Create a class using ``public class Classname { }``
 
@@ -88,10 +74,10 @@ The following table contains a sample code execution sequence and the correspond
     <tr><td>tr.averageSteps(); </td>
     <td>10222.2</td><td>The average number of steps per day is (51111 / 5). </td></tr>
     </table><p>
-    
-    
+
+
 This question asks you to write the complete StepTracker class, including the constructor and any required instance variables and
-methods. Your implementation must meet all specifications and conform to the example. 
+methods. Your implementation must meet all specifications and conform to the example.
 
 |Groupwork| Determining the Instance Variables
 ==============================================
@@ -105,19 +91,24 @@ It may help to first identify the variables that are needed for the constructor 
          :feedback: Think about phrases that indicate a value that is being stored or changed or returned.
          :iscode:
 
-         This question involves the implementation of :click-incorrect:a fitness tracking system that is represented by the **StepTracker** class.:endclick: 
-    
-         :click-incorrect:A StepTracker object:endclick: is created with a parameter that defines :click-correct:the minimum number of steps that must be taken for a day to be considered active. :endclick:
-    
-         :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods. 
-    
-              - addDailySteps, which accumulates :click-correct:information about steps:endclick:, in readings taken once per day. 
-    
-              - activeDays, which returns :click-correct:the number of active days.:endclick:
-        
-              - averageSteps, which returns :click-correct:the average number of steps per day:endclick:, calculated by dividing :click-correct:the total number of steps taken:endclick: by :click-correct:the number of days tracked.:endclick:
+         This question involves the implementation of :click-incorrect:a fitness tracking system:endclick: 
+         that is represented by the :click-incorrect:**StepTracker** class.:endclick:
 
-Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods. 
+         :click-incorrect:A StepTracker object:endclick: is created with a parameter that defines
+         :click-correct:the minimum number of steps that must be taken for a day to be active.:endclick:
+
+         :click-incorrect:The StepTracker class:endclick: provides a constructor and the following methods.
+
+              - addDailySteps, which accumulates :click-correct:information about steps:endclick: in readings 
+                taken once per day.
+
+              - activeDays, which returns :click-correct:the number of active days.:endclick:
+
+              - averageSteps, which returns :click-correct:the average number of steps per day:endclick:
+                calculated by dividing :click-correct:the total number of steps taken:endclick: 
+                by :click-correct:the number of days tracked.:endclick:
+
+Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods.
 
 .. reveal:: steptraker_ctor_r1
    :showtitle: Reveal Problem
@@ -132,13 +123,13 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_e: number of days tracked
         :correct: a
         :feedback_a: Yes, the problem definition describes this as a parameter to create a StepTracker object.
-        :feedback_b: This is not described as a parameter to create an StepTracker object. 
+        :feedback_b: This is not described as a parameter to create an StepTracker object.
         :feedback_c: This is not described as a parameter to create an StepTracker object.
         :feedback_d: This is not described as a parameter to create an StepTracker object.
         :feedback_e: This is not described as a parameter to create an StepTracker object.
-    
+
         Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?
-   
+
 .. reveal:: accessor_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
@@ -149,12 +140,12 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_b: tr.addDailysteps(1000);
         :answer_c: tr.activeDays();
         :correct: c
-        :feedback_a: This is a call to the constructor. 
+        :feedback_a: This is a call to the constructor.
         :feedback_b: No, addDailySteps(1000) probably adds the given steps to an instance variable as a mutator method.
         :feedback_c: Yes, activeDays() is an accessor method that returns the number of active days (a great instance variable!).
-    
+
         Which of the following methods is an accessor method that returns the value of an instance variable?
-   
+
 .. reveal:: mutator_r1
    :showtitle: Reveal Problem
    :hidetitle: Hide Problem
@@ -166,37 +157,37 @@ Click to reveal multiple choice questions that will help you to determine the in
         :answer_c: tr.activeDays();
         :answer_d: tr.averageSteps();
         :correct: b
-        :feedback_a: No, this is a call to the constructor. 
+        :feedback_a: No, this is a call to the constructor.
         :feedback_b: Yes, addDailySteps(1000) is a mutator method that adds the steps given as a parameter to an instance variable that keeps track of the steps taken so far.
         :feedback_c: No, activeDays() is an accessor method that returns the number of active days.
         :feedback_d: No, averageSteps() is a complex accessor method that calculates and returns the average number of steps from the instance variable.
-    
+
         Which of the following methods is a mutator method that changes the value of an instance variable?
-   
+
 
 .. shortanswer:: steptracker-variables
 
       What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?
-   
+
 Writing the Class Header and Constructor
 ========================================
 
-You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating **private** instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables. 
+You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating **private** instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables.
 
 .. activecode:: stepTrackerCode1
    :language: java
-   :autograde: unittest 
+   :autograde: unittest
 
    Write the first draft of the class StepTracker below with the class name, the instance variables, and the constructor with a parameter for the minimum number of steps threshold for active days. Make sure it compiles.
    ~~~~
                        // Write public class your classname here and delete comment
    {
       // write instance variable declarations here
-      
-      
+
+
       // write the constructor with a parameter here
-      
-      
+
+
       public static void main(String[] args)
       {
          StepTracker tr = new StepTracker(10000);
@@ -204,44 +195,45 @@ You will receive at least 1 point if you write the class header and a constructo
    }
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
 
-    // Tests for ActiveCode StepTrackerCode1
-    public class RunestoneTests extends CodeTestHelper
-    {
-      @Test
-      public void test1(){
-        //check class name
-        boolean passed = checkCodeContains("correct class heading", "public class StepTracker");
-        assertTrue(passed);
+   import org.junit.*;
 
-      }
+   import java.io.*;
 
-      @Test
-      public void test2(){
-         //constructor with 1 parameter for threshold minSteps
-         String args = "int";
-         String results = checkConstructor(args);
+   // Tests for ActiveCode StepTrackerCode1
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           // check class name
+           boolean passed = checkCodeContains("correct class heading", "public class StepTracker");
+           assertTrue(passed);
+       }
 
-         boolean passed = getResults("pass", results, "Checking constructor with one int argument");
-         assertTrue(passed);
+       @Test
+       public void test2()
+       {
+           // constructor with 1 parameter for threshold minSteps
+           String args = "int";
+           String results = checkConstructor(args);
 
-      }
+           boolean passed = getResults("pass", results, "Checking constructor with one int argument");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void test3(){
-            //check int - declaration of instance variables and parameter in constructor
-            String actual = testPrivateInstanceVariables();
-            String expected = "4 Private";
+       @Test
+       public void test3()
+       {
+           // check int - declaration of instance variables and parameter in constructor
+           String actual = testPrivateInstanceVariables();
+           String expected = "4 Private";
 
-            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
-            assertTrue(passed);
+           boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+           assertTrue(passed);
+       }
+   }
 
-      }
-    }
-
-   
 Here is the rubric for the instance variables and the constructor for this problem. Did you receive all 3 points? In class, your teacher may have you grade each others' code.
 
 
@@ -256,7 +248,7 @@ Here is the rubric for the instance variables and the constructor for this probl
 Writing the Accessor Method activeDays
 ========================================
 
-Each method in the FRQ is worth 1 - 3 points. The method header is usually worth 1 point and the code in the method body is usually worth another point or two depending on how complex it is. 
+Each method in the FRQ is worth 1 - 3 points. The method header is usually worth 1 point and the code in the method body is usually worth another point or two depending on how complex it is.
 
 This problem asks you to write a simple accessor method called **activeDays** which returns the number of active days (which should be an instance variable) for 1 point.
 
@@ -264,16 +256,16 @@ Remember that accessor methods usually look like the following:
 
 .. code-block:: java
 
-   class ExampleClass 
-   { 
-     //Instance variable declaration
-     private typeOfVar varName;
-  
-     // Accessor method template
-     public typeOfVar getVarName()
-     {
-        return varName;
-     }
+   class ExampleClass
+   {
+       // Instance variable declaration
+       private typeOfVar varName;
+
+       // Accessor method template
+       public typeOfVar getVarName()
+       {
+           return varName;
+       }
    }
 
 Click to reveal a multiple choice problem to help you determine the accessor method header.
@@ -294,8 +286,8 @@ Click to reveal a multiple choice problem to help you determine the accessor met
         :feedback_b: Accessor methods should not be private.
         :feedback_c: Accessor methods do not usually take parameters.
         :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
-        :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.  
-     
+        :feedback_e: Correct, accessor methods are public, have a return type, and no parameter.
+
         Which of the following is a good method header for the accessor method activeDays()?
 
 .. activecode:: stepTrackerCode2
@@ -306,57 +298,59 @@ Click to reveal a multiple choice problem to help you determine the accessor met
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
-      
-      
-      // copy the constructor with a parameter here
-      
-      // Write the accessor method activeDays() here
-      // @return activeDays
-            
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-      }
+       // copy the instance variable declarations here
+
+       // copy the constructor with a parameter here
+
+       // Write the accessor method activeDays() here
+       // @return activeDays
+
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+           System.out.println(
+                   tr.activeDays()); // returns 0. No data have been recorded yet.
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
        @Test
-      public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-      @Test
-      public void checkCodeContains1(){
-        //check accessor method activeDays()
-        boolean passed = checkCodeContains("activeDays() method", "public int activeDays()");
-        assertTrue(passed);
+       @Test
+       public void checkCodeContains1()
+       {
+           // check accessor method activeDays()
+           boolean passed = checkCodeContains("activeDays() method", "public int activeDays()");
+           assertTrue(passed);
+       }
 
-      }
+       @Test
+       public void checkCodeContains2()
+       {
+           // check that activeDays() returns a value
+           boolean passed = checkCodeContains("return");
+           assertTrue(passed);
+       }
+   }
 
-      @Test
-      public void checkCodeContains2(){
-         //check that activeDays() returns a value
-          boolean passed = checkCodeContains("return");
-        assertTrue(passed);
+Here is the rubric for the accessor method ``activeDays`` for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
 
-      }
-    }
-    
-   
-Here is the rubric for the accessor method activeDays() for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others' code.
 
-    
 .. figure:: Figures/stepTrackerRubric3.png
     :width: 700px
     :align: center
@@ -364,31 +358,32 @@ Here is the rubric for the accessor method activeDays() for this problem. The se
     :figclass: align-center
 
     Figure 2: Rubric for accessor method activeDays()
-    
+
 
 
 Writing the Mutator Method addDailySteps
 ========================================
 
-This problem asks you to write a more complex mutator method called addDailySteps worth 3 points. 
+This problem asks you to write a more complex mutator method called addDailySteps worth 3 points.
 
 Remember that mutator methods often look like the following:
 
 .. code-block:: java
-     
-     class Example 
+
+     class Example
      {
-         //Instance variable declaration
+         // Instance variable declaration
          private typeOfVar varName;
 
          // Mutator method template
          public void changeVarName(typeOfVar newValue)
          {
-            // an instance variable is changed through = or an operator like +=, -=, ++, etc.
-            varName = newValue;
+             // an instance variable is changed through = or an operator like +=, -=,
+             // ++, etc.
+             varName = newValue;
          }
      }
-     
+
 Click to reveal a multiple choice problem to help you determine the mutator method header.
 
 .. reveal:: steptracker_mutator_r1
@@ -408,9 +403,9 @@ Click to reveal a multiple choice problem to help you determine the mutator meth
         :feedback_c: Mutator methods do not usually return a value.
         :feedback_d: Correct, mutator methods are public with a void return type and take a parameter to change the value of an instance variable.
         :feedback_e: Mutator methods should not be private and should take a parameter to change the value of an instance variable.
-     
+
         Which of the following is a good method header for the mutator method addDailySteps?
-   
+
 The code for this mutator method is a little more complex than the template above, because it needs to change more than 1 instance variable. Notice the comments in the sample code execution:
 
 .. raw:: html
@@ -429,7 +424,7 @@ The code for this mutator method is a little more complex than the template abov
     </table><p>
 
 
-Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you. 
+Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you.
 
 .. reveal:: steptracker_mutator_r2
    :showtitle: Reveal Problem
@@ -448,9 +443,9 @@ Consider each of your instance variables and whether this method should change t
         :feedback_c: This method does not have to calculate the average.
         :feedback_d: Yes, addDailySteps should add the number of steps taken that day in its parameter to the total.
         :feedback_e: Yes, addDailySteps is called each day and can change the variable for the number of days being tracked.
-     
+
         Which of the following values does the mutator method addDailySteps need to change? (check all that apply)
-   
+
 .. activecode:: stepTrackerCode3
    :language: java
    :autograde: unittest
@@ -459,63 +454,76 @@ Consider each of your instance variables and whether this method should change t
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
-      
-      
-      // copy the constructor with a parameter here
-      
-      // copy the accessor method activeDays() here.
-      
-      // Write the mutator method addDailySteps here.
-      // @param number of steps taken that day
-      
-      
-      
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-         tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
-         tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
-         tr.addDailySteps(13000); // This represents an active day.
-         System.out.println(tr.activeDays());  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
-      }
+       // copy the instance variable declarations here
+
+       // copy the constructor with a parameter here
+
+       // copy the accessor method activeDays() here.
+
+       // Write the mutator method addDailySteps here.
+       // @param number of steps taken that day
+
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+
+           // returns 0. No data have been recorded yet.
+           System.out.println(tr.activeDays());
+
+           // This is too few steps for the day to be considered active.
+           tr.addDailySteps(9000);
+
+           // This is too few steps for the day to be considered active.
+           tr.addDailySteps(5000);
+
+           // returns 0.  No day had at least 10,000 steps.
+           System.out.println(tr.activeDays());
+
+           // This represents an active day.
+           tr.addDailySteps(13000);
+
+           // returns 1. Of the three days for which step data were entered, one day
+           // had at least 10,000 steps.
+           System.out.println(tr.activeDays());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-     @Test
-     public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n0\n1\n";
-        boolean passed = getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-      }
+   import org.junit.*;
 
-      @Test
-      public void checkCodeContains1()
-      {
-        //check mutator method addDailySteps()
-        boolean passed = checkCodeContains("addDailySteps method with parameter", "public void addDailySteps(int");
-        assertTrue(passed);
+   import java.io.*;
 
-      }
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n0\n1\n";
+           boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
 
-     @Test
-      public void checkCodeContains2()
-      {
-        //check mutator method addDailySteps() contains "if"
-        boolean passed = checkCodeContains("if statement","if (");
-        assertTrue(passed);
-      }
-    }
+       @Test
+       public void checkCodeContains1()
+       {
+           // check mutator method addDailySteps()
+           boolean passed =
+                   checkCodeContains(
+                           "addDailySteps method with parameter", "public void addDailySteps(int");
+           assertTrue(passed);
+       }
 
+       @Test
+       public void checkCodeContains2()
+       {
+           // check mutator method addDailySteps() contains "if"
+           boolean passed = checkCodeContains("if statement", "if (");
+           assertTrue(passed);
+       }
+   }
 
 Here is the rubric for the mutator method for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive all the points? In class, your teacher may have you grade each others' code.
 
@@ -526,11 +534,11 @@ Here is the rubric for the mutator method for this problem. The second column is
     :figclass: align-center
 
     Figure 3: Rubric for mutator method
-    
+
 Writing the Accessor Method averageSteps
 ==========================================
 
-This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked. 
+This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked.
 
 Click to reveal a multiple choice problem to help you determine the accessor method header.
 
@@ -547,24 +555,24 @@ Click to reveal a multiple choice problem to help you determine the accessor met
         :answer_e: public int averageSteps(int numSteps)
         :correct: c
         :feedback_a: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables.
-        :feedback_b: When you compute an average using division, you usually end up with a double value, not int. 
+        :feedback_b: When you compute an average using division, you usually end up with a double value, not int.
         :feedback_c: Correct, accessor methods are public, have a return type, and no parameter. In this case, returning an average requires a double return type.
         :feedback_d: Accessor methods need a return type since they return the value of an instance variable or a value calculated from instance variables, and  they do not usually have a parameter.
         :feedback_e: Accessor methods do not usually take parameters.
-     
+
         Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?
-   
+
 The complex accessor method **averageSteps()** must calculate the average number of steps from your instance variables. Notice that the first time it is called in the sample code execution, it returns 0.0 since there are no steps recorded. This avoids a divide by 0 error.
 
 .. raw:: html
 
     <style>    th,td { text-align: left;  padding-left: 4px; }
     table, tr, td, th { border: 1px solid black;} </style>
-    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>    
+    <table border width="100%"><tr><th>Statements and Expressions</th><th width="15%">Value Returned (blank if no value)</th><th>Comment</th> </tr>
     <tr><td>tr.averageSteps(); </td>
     <td>0.0</td><td>When no step data have been recorded, the averageSteps method returns 0.0.</td></tr>
     </table><p>
-   
+
 .. activecode:: stepTrackerCode4
    :language: java
    :autograde: unittest
@@ -573,78 +581,98 @@ The complex accessor method **averageSteps()** must calculate the average number
    ~~~~
    public class StepTracker
    {
-      // copy the instance variable declarations here
-      
-      
-      // copy the constructor with a parameter here
-      
-      // copy the accessor method activeDays() here
+       // copy the instance variable declarations here
 
-      
-      // copy the mutator method addDailySteps here.
-      // @param number of steps taken that day
-          
-      
-      //Write the accessor method averageSteps() here
-      // @return average steps calculated by dividing the total number of steps taken by the number of days tracked (which should be instance variables). Make sure you use type casting to double!
-      
-      
-      
-      
-      public static void main(String[] args)
-      {
-         StepTracker tr = new StepTracker(10000);
-         System.out.println(tr.activeDays()); // returns 0. No data have been recorded yet.
-         System.out.println(tr.averageSteps()); // returns 0.0. When no step data have been recorded, the averageSteps method returns 0.0.
-         tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
-         tr.addDailySteps(5000); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 0.  No day had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 7000.0 The average number of steps per day is (14000 / 2).
-         tr.addDailySteps(13000); // This represents an active day.
-         System.out.println(tr.activeDays());  // returns 1. Of the three days for which step data were entered, one day had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 9000.0. The average number of steps per day is (27000 / 3).
-         tr.addDailySteps(23000); // This represents an active day.
-         tr.addDailySteps(1111); // This is too few steps for the day to be considered active.
-         System.out.println(tr.activeDays()); // returns 2. Of the five days for which step data were entered, two days had at least 10,000 steps.
-         System.out.println(tr.averageSteps()); // returns 10222.2. The average number of steps per day is (51111 / 5).
-      }
+       // copy the constructor with a parameter here
+
+       // copy the accessor method activeDays() here.
+
+       // Write the mutator method addDailySteps here.
+       // @param number of steps taken that day
+
+       public static void main(String[] args)
+       {
+           StepTracker tr = new StepTracker(10000);
+           // returns 0. No data has been recorded yet.
+           System.out.println(tr.activeDays());
+           // returns 0.0. When no step data have been recorded, 
+           //  the averageSteps method returns 0.0
+           System.out.println(tr.averageSteps());
+
+           // This is too few steps for the day to be considered active.
+           tr.addDailySteps(9000);
+
+           // This is too few steps for the day to be considered active.
+           tr.addDailySteps(5000);
+
+           // returns 0.  No day had at least 10,000 steps.
+           System.out.println(tr.activeDays());
+           // returns 7000.0 The average number of steps per day is (14000/2).
+           System.out.println(tr.averageSteps());
+
+           // This represents an active day.
+           tr.addDailySteps(13000);
+           // returns 1. Of the three days for which step data were entered, 
+           // one day had at least 10,000 steps.
+           System.out.println(tr.activeDays());
+           // returns 9000.0. The average number of steps per day is (27000/3).
+           System.out.println(tr.averageSteps());
+
+           tr.addDailySteps(23000); // This represents an active day.
+           tr.addDailySteps(1111); // This is too few steps for the day to be active.
+           // returns 2. Of the five days for which step data were entered, 
+           //    two days had at least 10,000 steps.
+           System.out.println(tr.activeDays()); 
+           // returns 10222.2. The average number of steps per day is (51111/5).
+           System.out.println(tr.averageSteps());
+       }
    }
+
    ====
    import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-     @Test
-     public void testMain() throws IOException
-      {
-        String output = getMethodOutput("main");
-        String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
-        boolean passed = getResults(expect, output, "Expected output from main. Make sure you used casting to double for the last result!");
-        assertTrue(passed);
-      }
 
-      @Test
-      public void checkCodeContains1()
-      {
-        //check mutator method averageSteps()
-        boolean passed = checkCodeContains("averageSteps() method","public double averageSteps()");
-        assertTrue(passed);
+   import org.junit.*;
 
-      }
-      
-      @Test
-       public void checkCodeZero() {
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "0\n0.0\n0\n7000.0\n1\n9000.0\n2\n10222.2\n";
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Expected output from main. Make sure you used casting to double for the"
+                                   + " last result!");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void checkCodeContains1()
+       {
+           // check mutator method averageSteps()
+           boolean passed = checkCodeContains("averageSteps() method", "public double averageSteps()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void checkCodeZero()
+       {
            StepTracker tr = new StepTracker(10000);
            double average = tr.averageSteps();
 
-           boolean passed = getResults(0.0, average, "averageSteps() returns 0.0 when no days recorded");
+           boolean passed =
+                   getResults(0.0, average, "averageSteps() returns 0.0 when no days recorded");
            assertTrue(passed);
        }
-       
+
        @Test
-       public void checkCodeDoubleResult() {
+       public void checkCodeDoubleResult()
+       {
            StepTracker tr = new StepTracker(10000);
            tr.addDailySteps(9000); // This is too few steps for the day to be considered active.
            tr.addDailySteps(5000);
@@ -653,13 +681,14 @@ The complex accessor method **averageSteps()** must calculate the average number
            tr.addDailySteps(1111);
            double average = tr.averageSteps();
 
-           boolean passed = getResults(10222.2, average, "averageSteps() returns 10222.2 (no integer division)");
+           boolean passed =
+                   getResults(
+                           10222.2, average, "averageSteps() returns 10222.2 (no integer division)");
            assertTrue(passed);
        }
+   }
 
-      }
-   
-Here is the rubric for the averageSteps method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
+Here is the rubric for the ``averageSteps`` method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others' code.
 
 .. figure:: Figures/stepTrackerRubric4.png
     :width: 700px
@@ -668,7 +697,3 @@ Here is the rubric for the averageSteps method for this problem.  Did you receiv
     :figclass: align-center
 
     Figure 4: Rubric for averageSteps method
-    
-
-
- 

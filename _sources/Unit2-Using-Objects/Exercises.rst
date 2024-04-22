@@ -11,7 +11,7 @@ These questions are mostly about Strings, but more questions on using other obje
 Easier Multiple Choice Questions
 ---------------------------------
 
-These problems are mostly easier than what you will see on the AP CS A exam.
+These problems are mostly easier than what you will see on the AP CSA exam.
 
 .. mchoice:: AP2-1-5
    :practice: T
@@ -21,7 +21,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
    :answer_d: age is an attribute of the myCat object.
    :answer_e: An attribute of Cat is myCat.
    :correct: d
-   :feedback_a: The data type of breed is String.  
+   :feedback_a: The data type of breed is String.
    :feedback_b: color, breed, and age are attributes of the Cat class.
    :feedback_c: myCat is an instance of the Cat class.
    :feedback_d: Attributes of the Cat class and myCat object are color, breed, age.
@@ -44,17 +44,17 @@ These problems are mostly easier than what you will see on the AP CS A exam.
    :answer_d: An attribute of the Movie instance is scaryMovie
    :answer_e: Movie is an instance of scaryMovie.
    :correct: b
-   :feedback_a: scaryMovie is an object, not a class. 
+   :feedback_a: scaryMovie is an object, not a class.
    :feedback_b: scaryMovie is an object which is an instance of the Movie class.
    :feedback_c: These are attributes of the object or class.
    :feedback_d: scaryMovie is an instance of the Movie class.
    :feedback_e: scaryMovie is an instance of the Movie class.
-  
+
     A student has created a Movie class. The class contains variables to represent the following.
     - A String variable called title to represent the title of the movie
     - A String variable called director to represent the director of the movie
     - A double variable called rating to represent the rating of the movie
-    
+
     The object scaryMovie will be declared as type Movie.
     Which of the following descriptions is accurate?
 
@@ -79,14 +79,14 @@ These problems are mostly easier than what you will see on the AP CS A exam.
 
      public class Person
      {
-          private String name;
-          private int age;
+         private String name;
+         private int age;
 
-          public Person(String a, int b)
-          {
+         public Person(String a, int b)
+         {
              name = a;
              age = b;
-          }
+         }
      }
 
 .. mchoice:: qse_2
@@ -151,7 +151,7 @@ These problems are mostly easier than what you will see on the AP CS A exam.
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those that you will see on the AP CS A exam.
+These problems are similar to those that you will see on the AP CSA exam.
 
 .. mchoice:: AP2-2-5
    :practice: T
@@ -161,16 +161,16 @@ These problems are similar to those that you will see on the AP CS A exam.
    :answer_d: Movie four = new Movie("My Cool Movie", "Steven Spielburg", "4.4");
    :answer_e: Movie five = new Movie(t);
    :correct: b
-   :feedback_a: There is no Movie constructor with 2 parameters.  
-   :feedback_b: This creates a Movie object with the title "Sponge Bob". 
+   :feedback_a: There is no Movie constructor with 2 parameters.
+   :feedback_b: This creates a Movie object with the title "Sponge Bob".
    :feedback_c: It is not clear whether the variables title, rating, and director are the correct types or in the correct order.
    :feedback_d: The third argument "4.4" is a String because it is in quotes, but the constructor expects a double.
    :feedback_e: It is not clear whether t is the correct type for this constructor.
 
     Consider the following class.  Which of the following code segments would successfully create a new Movie object?
 
-    .. code-block:: java 
-    
+    .. code-block:: java
+
         public class Movie
         {
             private String title;
@@ -194,7 +194,7 @@ These problems are similar to those that you will see on the AP CS A exam.
                 inTheaters = false;
             }
         }
- 
+
 .. mchoice:: qse_6
    :practice: T
    :answer_a: 100.00
@@ -236,7 +236,7 @@ These problems are similar to those that you will see on the AP CS A exam.
         {
             System.out.print(total);
         }
-    
+
         public static void main(String[] args)
         {
             BankAccount newAccount = new BankAccount(12345, 100.00);
@@ -245,8 +245,6 @@ These problems are similar to those that you will see on the AP CS A exam.
             newAccount.printCurrentTotal();
         }
     }
-
-
 
 .. mchoice:: qve_new6
    :practice: T
@@ -258,17 +256,17 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_a: This would be true if it was (int) (Math.random * 5)
    :feedback_b: This would be true if it was ((int) (Math.random * 5)) + 1
    :feedback_c: Math.random returns a value from 0 to not quite 1.  When you multiply it by 5 you get a value from 0 to not quite 5.  When you cast to int you get a value from 0 to 4.  Adding 5 gives a value from 5 to 9.
-   :feedback_d: This would be true if Math.random returned a value between 0 and 1, but it won't ever return 1.  The cast to int results in a number from 0 to 4.  Adding 5 gives a value from 5 to 9.  
+   :feedback_d: This would be true if Math.random returned a value between 0 and 1, but it won't ever return 1.  The cast to int results in a number from 0 to 4.  Adding 5 gives a value from 5 to 9.
 
    Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
-   
-    .. code-block:: java 
+
+    .. code-block:: java
 
       double value = Math.random();
       int num = (int) (value * 5) + 5;
-      
 
-      
+
+
 .. mchoice:: qve_new8
    :practice: T
    :answer_a: a random number from 0 to 10
@@ -279,16 +277,16 @@ These problems are similar to those that you will see on the AP CS A exam.
    :feedback_a: This would be true if it was (int) (value * 11)
    :feedback_b: This would be true if it was (int) (value * 10)
    :feedback_c: This would be true if it was (int) (value * 10) - 5
-   :feedback_d: Math.random returns a random value from 0 to not quite 1.  After it is multipied by 11 and cast to integer it will be a value from 0 to 10.  Subtracting 5 means it will range from -5 to 5.  
+   :feedback_d: Math.random returns a random value from 0 to not quite 1.  After it is multipied by 11 and cast to integer it will be a value from 0 to 10.  Subtracting 5 means it will range from -5 to 5.
 
    Given the following code segment, what is the value of ``num`` when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.
-   
-    .. code-block:: java 
+
+    .. code-block:: java
 
       double value = Math.random();
       int num = (int) (value * 11) - 5;
-      
-      
+
+
 .. mchoice:: qsm_1
    :practice: T
    :answer_a: I, II, III
@@ -384,8 +382,8 @@ These problems are similar to those that you will see on the AP CS A exam.
    .. code-block:: java
 
       Data Set 1    Data Set 2
-      aba	        bcb
-      abba	        bcd
+      aba               bcb
+      abba              bcd
       aBa
 
 .. mchoice:: qsm_5
@@ -445,7 +443,7 @@ These problems are similar to those that you will see on the AP CS A exam.
 Hard Multiple Choice Questions
 ----------------------------------
 
-These problems are harder than most of those that you will usually see on the AP CS A exam.
+These problems are harder than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qsm_7
    :practice: T
@@ -465,24 +463,22 @@ These problems are harder than most of those that you will usually see on the AP
 
      public class Test
      {
-        String someFunc(String str)
-        {
-            return someOtherFunc(str + " Hoo");
-        }
+         String someFunc(String str)
+         {
+             return someOtherFunc(str + " Hoo");
+         }
 
-        String someOtherFunc(String str)
-        {
-            return "Hoo " + str;
-        }
+         String someOtherFunc(String str)
+         {
+             return "Hoo " + str;
+         }
 
-        public static void main(String[] args)
-        {
-            Test x = new Test();
-            System.out.print("Woo " + x.someFunc("Woo"));
-        }
+         public static void main(String[] args)
+         {
+             Test x = new Test();
+             System.out.print("Woo " + x.someFunc("Woo"));
+         }
      }
-
-
 
 .. mchoice:: qsh_1
    :practice: T
@@ -540,9 +536,9 @@ These problems are harder than most of those that you will usually see on the AP
    :answer_c: compile error
    :answer_d: runtime error
    :correct: c
-   :feedback_a: x needs to be initialized with a call to the SomeClass constructor. 
+   :feedback_a: x needs to be initialized with a call to the SomeClass constructor.
    :feedback_b: x and someVar have not been initialized.
-   :feedback_c: This will give an error that x has not been initialized. It needs to be initialized with a call to the SomeClass constructor. 
+   :feedback_c: This will give an error that x has not been initialized. It needs to be initialized with a call to the SomeClass constructor.
    :feedback_d: This code will not run.
 
    Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?
@@ -592,6 +588,5 @@ These problems are harder than most of those that you will usually see on the AP
             System.out.println(x.someVar);
         }
     }
-
 
 The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.

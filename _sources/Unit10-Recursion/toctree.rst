@@ -1,13 +1,13 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 Recursion
 :::::::::
 
 Class Periods: 3-5
 
-AP CS A Exam Weighting: 5-7.5%
+AP CSA Exam Weighting: 5-7.5%
 
 .. toctree::
    :maxdepth: 3
