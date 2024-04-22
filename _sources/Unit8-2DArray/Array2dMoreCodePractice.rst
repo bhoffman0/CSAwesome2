@@ -9,7 +9,7 @@ More Code Practice with 2D Arrays
    :language: java
    :autograde: unittest
    
-    Replace the “ADD CODE HERE” below to finish a function ``String findAndReplaceFirst(String[][] sentence, String target, String replacement)`` that takes a 2D array of strings, a target string to search for, and a replacement string. The function searches the 2D array for the first occurrence of the target string and replaces it with the replacement string.
+   Replace the “ADD CODE HERE” below to finish a function ``String findAndReplaceFirst(String[][] sentence, String target, String replacement)`` that takes a 2D array of strings, a target string to search for, and a replacement string. The function searches the 2D array for the first occurrence of the target string and replaces it with the replacement string.
    ~~~~
 
    import java.util.Arrays;
@@ -64,7 +64,7 @@ More Code Practice with 2D Arrays
    :language: java
    :autograde: unittest
 
-    Replace the “ADD CODE HERE” below to finish a function ``findMaxOnes(matrix)`` that accepts a two-dimensional integer array ``matrix`` as input. The function should determine the row with the maximum number of occurrences of the integer 1 and return its index. If multiple rows have the same maximum number of 1s, return the index of the first such row encountered. For example: if the input matrix is: {[ 0, 1, 1 ], [ 1, 1, 0 ], [ 1, 0, 1 ]}. The function should return 1, as the second row contains the maximum number of 1s (2 in total).
+   Replace the “ADD CODE HERE” below to finish a function ``findMaxOnes(matrix)`` that accepts a two-dimensional integer array ``matrix`` as input. The function should determine the row with the maximum number of occurrences of the integer 1 and return its index. If multiple rows have the same maximum number of 1s, return the index of the first such row encountered. For example: if the input matrix is: {[ 0, 1, 1 ], [ 1, 1, 0 ], [ 1, 0, 1 ]}. The function should return 1, as the second row contains the maximum number of 1s (2 in total).
    ~~~~
    import java.util.Arrays;
 
@@ -270,7 +270,7 @@ More Code Practice with 2D Arrays
      }
    }
 
-    ====
+   ====
    import static org.junit.Assert.*;
    import org.junit.Test;
    import java.io.IOException;
