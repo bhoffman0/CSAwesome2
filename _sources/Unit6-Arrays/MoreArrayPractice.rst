@@ -37,7 +37,7 @@ More Code Practice with Arrays
    ~~~~
    public class Sum13 {
       public static int sum13(int[] nums) {
-         // ADD CODE HERE //
+          // ADD CODE HERE //
       }
 
       public static void main(String[] args) {
@@ -110,7 +110,7 @@ More Code Practice with Arrays
 
    public class Has22{
       public static boolean has22(int[] nums){
-             // ADD CODE HERE //
+          // ADD CODE HERE //
 
       }
 
@@ -179,7 +179,7 @@ More Code Practice with Arrays
    ~~~~
    public class Total89 {
       public static int total89(int[] nums) {
-         // ADD CODE HERE //
+          // ADD CODE HERE //
       }
 
       public static void main(String[] args) {
@@ -246,7 +246,7 @@ More Code Practice with Arrays
 
    public class TwoSum {
       public static int[] twoSum(int[] nums, int target) {
-         // ADD CODE HERE //
+          // ADD CODE HERE //
       }
 
       public static void main(String[] args) {
