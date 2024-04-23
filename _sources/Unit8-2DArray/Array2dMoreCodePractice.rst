@@ -203,6 +203,7 @@ More Code Practice with 2D Arrays
    should return ``true``, while if the input matrix is {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, the 
    function ``isSymmetric(matrix)`` should return ``false``.
    ~~~~
+
    import java.util.Arrays;
 
    public class MatrixSymmetryChecker {
