@@ -198,12 +198,11 @@ More Code Practice with 2D Arrays
    
    Write a function ``isSymmetric(int[][] matrix)`` that takes a 2D array of integers ``matrix`` as input and 
    returns ``true`` if the matrix is symmetric, and ``false`` otherwise.  A matrix is symmetric if it is 
-   square and if each element at position (row, col) is equal to the element at position (col, row). For 
-   example, if the input matrix is {{1, 2, 3}, {2, 4, 5}, {3, 5, 6}}, the function ``isSymmetric(matrix)`` 
+   square and if each element at position (row, col) is equal to the element at position (col, row).  
+   For example, if the input matrix is {{1, 2, 3}, {2, 4, 5}, {3, 5, 6}}, the function ``isSymmetric(matrix)`` 
    should return ``true``, while if the input matrix is {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, the 
    function ``isSymmetric(matrix)`` should return ``false``.
    ~~~~
-
    import java.util.Arrays;
 
    public class MatrixSymmetryChecker {
@@ -241,8 +240,8 @@ More Code Practice with 2D Arrays
        public void testSymmetry() throws IOException {
             String output = getMethodOutput("main");
             String expect = "true false";
-           boolean passed = getResults(expect, output, "Expected output from main");
-           assertTrue(passed);
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
      
        }
    }
