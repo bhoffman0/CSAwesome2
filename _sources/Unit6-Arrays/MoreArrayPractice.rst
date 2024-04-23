@@ -121,13 +121,13 @@ More Code Practice with Arrays
          System.out.println(has22(nums1));
 
          int[] nums2 = {2, 1, 2};
-         System.out.println(has22(nums1)); 
+         System.out.println(has22(nums2)); 
           
          int[] nums3 = {2, 2, 8};
-         System.out.println(has22(nums2));
+         System.out.println(has22(nums3));
           
          int[] nums4 = {3, 3, 5};
-         System.out.println(has22(nums3)); 
+         System.out.println(has22(nums4)); 
       }
 
    }
