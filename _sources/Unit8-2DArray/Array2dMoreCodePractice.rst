@@ -192,59 +192,6 @@ More Code Practice with 2D Arrays
        }
    }
 
-.. activecode:: isSymmetric_Written
-   :language: java
-   :autograde: unittest
-   
-   Write a function ``isSymmetric(int[][] matrix)`` that takes a 2D array of integers ``matrix`` as input and 
-   returns ``true`` if the matrix is symmetric, and ``false`` otherwise.  A matrix is symmetric if it is 
-   square and if each element at position (row, col) is equal to the element at position (col, row).  
-   For example, if the input matrix is {{1, 2, 3}, {2, 4, 5}, {3, 5, 6}}, the function ``isSymmetric(matrix)`` 
-   should return ``true``, while if the input matrix is {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, the 
-   function ``isSymmetric(matrix)`` should return ``false``.
-   ~~~~
 
-   import java.util.Arrays;
-
-   public class MatrixSymmetryChecker {
-       public static boolean isSymmetric(int[][] matrix) {
-          // write code here
-       }
-
-       public static void main(String[] args) {
-           int[][] symmetricMatrix = {
-               {1, 2, 3},
-               {2, 4, 5},
-               {3, 5, 6}
-           };
-   
-           int[][] nonSymmetricMatrix = {
-               {1, 2, 3},
-               {4, 5, 6},
-               {7, 8, 9}
-           };
-
-           System.out.println(isSymmetric(symmetricMatrix)); 
-
-           System.out.println(isSymmetric(nonSymmetricMatrix)); 
-       }
-   }
-
-   ====
-   import static org.junit.Assert.*;
-   import org.junit.Test;
-   import java.io.IOException;
-   import java.util.Arrays;
-
-   public class RunestoneTests extends CodeTestHelper {
-       @Test
-       public void testSymmetry() throws IOException {
-            String output = getMethodOutput("main");
-            String expect = "true false";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-     
-       }
-   }
 
 
