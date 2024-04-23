@@ -15,7 +15,7 @@ More Code Practice with Arrays
    after a 13 to the sum.    Return ``0`` if ``nums`` is an empty array. 
    
     .. table:: 
-          :name: sum13-nd-table
+          :name: sum13-table
           :class: longtable
           :align: left
           :width: 80%
@@ -70,7 +70,7 @@ More Code Practice with Arrays
        }
 
        @Test
-       public void testBoundarySum() throws IOException {
+       public void testSum13() throws IOException {
             String output = getMethodOutput("main");
             String expect = "2\n1\n4\n2\n0\n";
            boolean passed = getResults(expect, output, "Expected output from main");
@@ -109,20 +109,24 @@ More Code Practice with Arrays
    import java.util.Arrays;
 
    public class Has22{
-      public static boolean has22(int[] sums){
+      public static boolean has22(int[] nums){
              // ADD CODE HERE //
 
       }
 
 
       public static void main(String[] args) {
-         int[] nums1 = {2, 1, 2};
+
+         int[] nums1 = {1, 2, 2};
+         System.out.println(has22(nums1));
+
+         int[] nums2 = {2, 1, 2};
          System.out.println(has22(nums1)); 
           
-         int[] nums2 = {2, 2, 8};
+         int[] nums3 = {2, 2, 8};
          System.out.println(has22(nums2));
           
-         int[] nums3 = {3, 3, 5};
+         int[] nums4 = {3, 3, 5};
          System.out.println(has22(nums3)); 
       }
 
@@ -140,9 +144,9 @@ More Code Practice with Arrays
       }
 
       @Test
-      public void testBoundarySum() throws IOException {
+      public void testHas22() throws IOException {
          String output = getMethodOutput("main");
-         String expect = "false\ntrue\nfalse\n";
+         String expect = "true\nfalse\ntrue\nfalse\n";
          boolean passed = getResults(expect, output, "Expected output from main");
          assertTrue(passed);
       }
@@ -221,7 +225,7 @@ More Code Practice with Arrays
    solution, and you may not use the same element twice.
 
    .. table::
-      :name: p3dndta-two-sum-wd-table
+      :name: two-sum-table
       :class: longtable
       :align: left
       :width: 80%
@@ -268,7 +272,7 @@ More Code Practice with Arrays
        }
 
        @Test
-       public void testBoundarySum() throws IOException {
+       public void testTwoSum() throws IOException {
             String output = getMethodOutput("main");
             String expect = "{0, 1}, {0, 2}, {}";
            boolean passed = getResults(expect, output, "Expected output from main");
