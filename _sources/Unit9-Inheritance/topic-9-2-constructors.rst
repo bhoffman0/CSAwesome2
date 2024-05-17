@@ -406,7 +406,7 @@ constructors.
 
 .. |repl.it Java Swing code| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shapes" style="text-decoration:underline" target="_blank">repl.it Java Swing code</a>
+   <a href="https://replit.com/@BerylHoffman/Shapes" style="text-decoration:underline" target="_blank">replit Java Swing code</a>
 
 .. |files here| raw:: html
 

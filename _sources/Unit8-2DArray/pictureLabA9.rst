@@ -612,7 +612,7 @@ color distance is greater than the specified edge distance.
 
 .. |repl.it project| raw:: html
 
-   <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
 
 .. |repl 2| raw:: html
 
