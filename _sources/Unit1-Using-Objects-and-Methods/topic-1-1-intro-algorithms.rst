@@ -1,13 +1,13 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 1-2-
+   :prefix: 1-1-
    :start: 1
 
 |Time45|
 
-Why Programming? Why Java?
-============================
+Introduction to Algorithms, Programming, and Compilers
+=======================================================
 
 .. index::
    single: Java
