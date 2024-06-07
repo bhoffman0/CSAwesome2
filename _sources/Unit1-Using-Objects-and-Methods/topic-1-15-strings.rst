@@ -1,7 +1,7 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 2-6-
+   :prefix: 1-15-
    :start: 1
 
 .. index::
@@ -11,6 +11,8 @@
    pair: String; definition
 
 |Time45|
+
+*** ADD IN 2-7 STRING METHODS ***
 
 Strings
 ========

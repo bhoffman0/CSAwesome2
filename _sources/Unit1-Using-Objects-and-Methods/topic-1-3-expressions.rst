@@ -9,6 +9,8 @@
 Expressions and Assignment Statements
 =====================================
 
+***Divide into 2: 1.3 Expressions and 1.4 Assignment Statements*** 
+
 In this lesson, you will learn about assignment statements and expressions that contain math operators and variables.
 
 Assignment Statements

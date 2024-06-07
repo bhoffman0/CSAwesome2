@@ -61,7 +61,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'CSAwesome'
+project = 'CSAwesome2'
 copyright = 'Barbara Ericson, Beryl Hoffman, Peter Seibel, 2015-2023.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -69,7 +69,7 @@ copyright = 'Barbara Ericson, Beryl Hoffman, Peter Seibel, 2015-2023.'
 # built documents.
 #
 # The short X.Y version.
-version = '2023'
+version = '2025'
 # The full version, including alpha/beta/rc tags.
 release = 'beta'
 
@@ -85,7 +85,7 @@ release = 'beta'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['Unit2-Using-Objects/TurtleJavaSwingCode/*', 'Unit2-Using-Objects/TurtleJavaHTMLCode/*', 'Unit4-Iteration/ConsumerReviewLabFiles/*' ]
+exclude_patterns = ['Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode/*', 'Unit1-Using-Objects-and-Methods/TurtleJavaHTMLCode/*', 'Unit4-Iteration/ConsumerReviewLabFiles/*' ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -129,7 +129,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CSAwesome",
+    'navbar_title': "CSAwesome2",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
@@ -177,10 +177,10 @@ html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'AP CSAwesome'
+html_title = 'CSAwesome2'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='AP CSAwesome'
+html_short_title ='CSAwesome2'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
