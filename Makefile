@@ -39,7 +39,9 @@ post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
+	python $(R2P)/index2main.py
 	cp main.ptx pretext
+	pretext init
 	cp publication-rs-for-all.xml pretext
 	python $(R2P)/toctree2xml.py .
 	python $(R2P)/filltoc.py pretext _sources 
