@@ -4,9 +4,6 @@
    :prefix: 1-6-
    :start: 1
 
-.. raw:: html
-
-    <style>    td { text-align: left; } </style>
 
 
 .. index::

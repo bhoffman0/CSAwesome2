@@ -6,9 +6,7 @@
 
 |Time45|
 
-.. raw:: html
 
-    <style>    td { text-align: left; } </style>
 
 ArrayList Methods
 =========================

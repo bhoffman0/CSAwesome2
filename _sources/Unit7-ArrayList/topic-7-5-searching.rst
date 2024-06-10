@@ -4,9 +4,7 @@
    :prefix: 7-5-
    :start: 1
 
-.. raw:: html
 
-    <style>    td { text-align: left; } </style>
 
 |Time90|
 

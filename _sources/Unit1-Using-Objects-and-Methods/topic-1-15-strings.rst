@@ -12,10 +12,11 @@
 
 |Time45|
 
-*** ADD IN 2-7 STRING METHODS ***
 
 Strings
 ========
+
+*** ADD IN 2-7 STRING METHODS ***
 
 **Strings** in Java are objects of the ``String`` class that hold sequences of characters (a, b, c, $, etc). Remember that a class (or classification) in Java defines the data that all objects of the class have (the fields) and the behaviors, the things that objects know how to do (the methods).
 
