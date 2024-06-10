@@ -4,7 +4,7 @@
    :prefix: 2-3-
    :start: 1
 
-*** ADD IN 2-4 and 2-5 ***
+
 
 .. index::
     single: method
@@ -26,6 +26,8 @@
 
 Calling Methods Without Parameters
 ===========================================
+
+*** ADD IN 2-4 and 2-5 ***
 
 **Methods** are a set of instructions that define behaviors for all objects of a class. For example, in the ``Turtle`` class, methods like ``forward()`` and ``turnRight()`` give ``Turtle`` objects the ability to move forward and turn 90 degrees right.
 

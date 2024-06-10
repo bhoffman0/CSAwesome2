@@ -2,10 +2,8 @@
     :width: 350
     :align: center
 
-==========================================
-AP CSA Java Course
-Following College Board 2025 Revisions
-==========================================
+CSAwesome2 AP CSA Java Course with College Board 2025-6 Revisions
+=====================================================================
 
 Welcome to CSAwesome2! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
 
