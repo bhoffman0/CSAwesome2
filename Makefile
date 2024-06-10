@@ -1,7 +1,7 @@
 .PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine
 
 DEBUG_PRETEXT := # -v DEBUG
-R2P := ~/3rdparty/Runestone2PreTeXt
+R2P := /mnt/c/users/hoffmanb/Documents/github/Runestone2PreTeXt
 
 xml := $(shell find build/xml -type f)
 ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))

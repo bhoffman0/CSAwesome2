@@ -38,5 +38,17 @@ while (<>) {
   # Fix these to be XMLish.
   s/<br>/<br\/>/g;
   
-  print;
+   # Beryl added this for the newer AP questions which somehow generate 
+  # an extra </statement> after </choices>. Have to read in nextline to check.
+  if (/<\/choices>\s*$/) {
+      print;
+      my $nextline = <>;
+      # if the next line is not </statement>, print it; otherwise skip it
+      if (defined $nextline && $nextline !~ /^\s*<\/statement>/) { 
+            print $nextline;
+      } 
+  } 
+  else {
+    print;
+  }
 }
