@@ -1,6 +1,6 @@
 .. include:: ../common.rst
 
-|Time90|
+..  |Time90|
 
 .. |Explorer Repl| raw:: html
 
@@ -239,8 +239,8 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
    :correct: d
    :feedback_a: Don't forget the inner loop.
    :feedback_b: Don't forget the inner loop.
-   :feedback_c: Notice that these loops use <=
-   :feedback_d: Yes, the loops do not start at 0 and use <=.
+   :feedback_c: Notice that these loops use &lt;=
+   :feedback_d: Yes, the loops do not start at 0 and use &lt;=.
 
    How many times would the body of this nested for loop execute?
 

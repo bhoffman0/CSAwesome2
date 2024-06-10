@@ -1,6 +1,6 @@
 .. include:: ../common.rst
 
-|Time90|
+..  |Time90|
 
 Picture Lab A6: Mirroring Pictures
 =====================================================

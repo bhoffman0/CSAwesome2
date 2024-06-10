@@ -4,7 +4,7 @@
    :prefix: 2-9-
    :start: 1
 
-|Time90|
+..  |Time90|
 
 Using the Math Class
 ====================
@@ -504,7 +504,7 @@ value. The table below shows some applications of that general recipe.
 
 .. mchoice:: qrand_1
    :practice: T
-   :answer_a: Math.random() < 0.4
+   :answer_a: Math.random() &lt; 0.4
    :answer_b: Math.random() > 0.4
    :answer_c: Math.random() == 0.4
    :correct: a
@@ -540,7 +540,7 @@ value. The table below shows some applications of that general recipe.
 
 .. mchoice:: qrand_4
    :practice: T
-   :answer_a: Math.random() < 0.25
+   :answer_a: Math.random() &lt; 0.25
    :answer_b: Math.random() > 0.25
    :answer_c: Math.random() == 0.25
    :correct: b

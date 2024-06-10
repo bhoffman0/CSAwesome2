@@ -163,10 +163,10 @@ This section contains a plain English explanation of one way to solve this probl
    :hidetitle: Hide ArrayList Declaration problem
 
    .. mchoice:: grdwrld_mcalg_answr_1
-      :answer_a: locs = new ArrayList&lt;Location&gt;();
-      :answer_b: ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;;
-      :answer_c: ArrayList&lt;Location&gt; locs = new List&lt;Location&gt;();
-      :answer_d: ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;();
+      :answer_a: locs = new ArrayList&lt;Location&amp;gt;();
+      :answer_b: ArrayList&lt;Location&amp;gt; locs = new ArrayList&lt;Location&amp;gt;;
+      :answer_c: ArrayList&lt;Location&amp;gt; locs = new List&lt;Location&amp;gt;();
+      :answer_d: ArrayList&lt;Location&amp;gt; locs = new ArrayList&lt;Location&amp;gt;();
       :correct: d
       :feedback_a: You must declare the type for locs
       :feedback_b: You must include the () when creating a new object

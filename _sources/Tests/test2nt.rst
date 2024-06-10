@@ -526,17 +526,17 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       }
 
 .. mchoice:: qtnt2_18
-   :answer_a: (x <= 7) && (y < 12)
-   :answer_b: (x <= 7) || (y < 12)
+   :answer_a: (x &lt;= 7) &amp;&amp; (y &lt; 12)
+   :answer_b: (x &lt;= 7) || (y &lt; 12)
    :answer_c: (x > 7) || (y >= 12)
-   :answer_d: (x > 7) && (y >= 12)
-   :answer_e: (x <= 7) || (y >= 12)
+   :answer_d: (x > 7) &amp;&amp; (y >= 12)
+   :answer_e: (x &lt;= 7) || (y >= 12)
    :correct: b
-   :feedback_a: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12). The AND needs to be changed to an OR.
-   :feedback_b: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)Using DeMorgan's law, !(A && B) is equivalent to !A || !B. The negation of (x > 7) is (x <= 7), and the negation of !(y < 12) is (y < 12).
-   :feedback_c: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (A || B). It should be (!A || !B). Also, (y >= 12) is equivalent to !(y < 12).
-   :feedback_d: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (A && B). !(y < 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
-   :feedback_e: Use A and B to represent the expressions -- A == (x > 7), B == !(y < 12)!(A && B) is NOT equivalent to (!A && B). Changing !(y < 12) to (y >= 12) does not negate the statement; these two are equivalent.
+   :feedback_a: Use A and B to represent the expressions -- A == (x > 7), B == !(y &lt; 12). The AND needs to be changed to an OR.
+   :feedback_b: Use A and B to represent the expressions -- A == (x > 7), B == !(y &lt; 12)Using DeMorgan's law, !(A &amp;&amp; B) is equivalent to !A || !B. The negation of (x > 7) is (x &lt;= 7), and the negation of !(y &lt; 12) is (y &lt; 12).
+   :feedback_c: Use A and B to represent the expressions -- A == (x > 7), B == !(y &lt; 12)!(A &amp;&amp; B) is NOT equivalent to (A || B). It should be (!A || !B). Also, (y >= 12) is equivalent to !(y &lt; 12).
+   :feedback_d: Use A and B to represent the expressions -- A == (x > 7), B == !(y &lt; 12)!(A &amp;&amp; B) is NOT equivalent to (A &amp;&amp; B). !(y &lt; 12) and (y >=12) mean the same thing; changing this does not make the statement the opposite.
+   :feedback_e: Use A and B to represent the expressions -- A == (x > 7), B == !(y &lt; 12)!(A &amp;&amp; B) is NOT equivalent to (!A &amp;&amp; B). Changing !(y &lt; 12) to (y >= 12) does not negate the statement; these two are equivalent.
 
    Which statement is equivalent to ``!( (x > 7) && !(y < 12) )``?
 

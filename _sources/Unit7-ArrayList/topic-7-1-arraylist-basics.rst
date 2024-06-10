@@ -4,7 +4,7 @@
    :prefix: 7-1-
    :start: 1
 
-|Time45|
+..  |Time45|
 
 Intro to ArrayLists
 =======================
@@ -325,9 +325,9 @@ instances of classes that you write, such as the ``Student``, ``Person``, or
 
 .. mchoice:: qArrayListInteger
    :answer_a: ArrayList[int] numbers = new ArrayList();
-   :answer_b: ArrayList&lt;String&gt; numbers = new ArrayList();
-   :answer_c: ArrayList&lt;int&gt; numbers = new ArrayList&lt;int&gt;();
-   :answer_d: ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();
+   :answer_b: ArrayList&lt;String&amp;gt; numbers = new ArrayList();
+   :answer_c: ArrayList&lt;int&amp;gt; numbers = new ArrayList&lt;int&amp;gt;();
+   :answer_d: ArrayList&lt;Integer&amp;gt; numbers = new ArrayList&lt;Integer&amp;gt;();
    :correct: d
    :feedback_a: The square brackets [] are only used with arrays, not ArrayLists.
    :feedback_b: String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.

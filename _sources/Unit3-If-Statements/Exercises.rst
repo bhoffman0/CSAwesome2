@@ -126,17 +126,17 @@ These problems are similar to those you will see on the AP CSA exam.
 
 .. mchoice:: qcm_1
    :practice: T
-   :answer_a: (!c) && (!d)
+   :answer_a: (!c) &amp;&amp; (!d)
    :answer_b: (c || d)
-   :answer_c: (c && d)
-   :answer_d: !(c && d)
+   :answer_c: (c &amp;&amp; d)
+   :answer_d: !(c &amp;&amp; d)
    :answer_e: (!c) || (!d)
    :correct: a
    :feedback_a: NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See DeMorgans laws.
    :feedback_b: NOTing an OR expression does not result in the same values ORed.
    :feedback_c: You do negate the OR to AND, but you also need to negate the values of c and d.
    :feedback_d: This would be equivalent to (!c || !d)
-   :feedback_e: This would be equivalent to !(c && d)
+   :feedback_e: This would be equivalent to !(c &amp;&amp; d)
 
    Which of the following expressions is equivalent to !(c || d) ?
 
@@ -165,12 +165,12 @@ These problems are similar to those you will see on the AP CSA exam.
    :practice: T
    :answer_a: x = 0;
    :answer_b: if (x > 0) { x = 0; }
-   :answer_c: if (x < 0) { x = 0; }
+   :answer_c: if (x &lt; 0) { x = 0; }
    :answer_d: if (x > 0) { x = -x; } else { x = 0; }
-   :answer_e: if (x < 0) { x = 0; } else { x = -1; }
+   :answer_e: if (x &lt; 0) { x = 0; } else { x = -1; }
    :correct: a
    :feedback_a: No matter what x is set to originally, the code will reset it to 0.
-   :feedback_b: Even if x is < 0, the above code will set it to 0.
+   :feedback_b: Even if x is &lt; 0, the above code will set it to 0.
    :feedback_c: Even if x is > than 0 originally, it will be set to 0 after the code executes.
    :feedback_d: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x.
    :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x.
@@ -237,14 +237,14 @@ These problems are harder than most of those that you will usually see on the AP
 
 .. mchoice:: qch_3
    :practice: T
-   :answer_a: (x > 15 && x < 18) && (x > 10)
-   :answer_b: (y < 20) || (x > 15 && x < 18)
-   :answer_c: ((x > 10) || (x > 15 && x < 18)) || (y < 20)
-   :answer_d: (x < 10 && y > 20) && (x < 15 || x > 18)
+   :answer_a: (x > 15 &amp;&amp; x &lt; 18) &amp;&amp; (x > 10)
+   :answer_b: (y &lt; 20) || (x > 15 &amp;&amp; x &lt; 18)
+   :answer_c: ((x > 10) || (x > 15 &amp;&amp; x &lt; 18)) || (y &lt; 20)
+   :answer_d: (x &lt; 10 &amp;&amp; y > 20) &amp;&amp; (x &lt; 15 || x > 18)
    :correct: c
    :feedback_a: This can't be right as it's only checking the x variable, however the original statement can solely depend on the y variable in some cases.
    :feedback_b: There's a third condition on x that can affect the output of the statement which is not considered in this solution.
-   :feedback_c: The commutative property allows the terms to be switched around, while maintaining the value. In this case, the || symbol is used with the commutative property and the statement included the && must stay together to follow the laws of logic.
+   :feedback_c: The commutative property allows the terms to be switched around, while maintaining the value. In this case, the || symbol is used with the commutative property and the statement included the &amp;&amp; must stay together to follow the laws of logic.
    :feedback_d: This is the negation of the original statement, thus returning incorrect values.
 
    Assuming that x and y have been declared as valid integer values, which of the following is equivalent to this statement?

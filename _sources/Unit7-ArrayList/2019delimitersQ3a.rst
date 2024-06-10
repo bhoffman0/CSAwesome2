@@ -160,10 +160,10 @@ This section contains a plain English explanation of one way to solve this probl
    :optional:
 
    .. mchoice:: delim_solve_mc_1
-      :answer_a: delList = new ArrayList&lt;String&gt;();
-      :answer_b: ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;;
-      :answer_c: ArrayList&lt;String&gt; delList = new List&lt;String&gt;();
-      :answer_d: ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;();
+      :answer_a: delList = new ArrayList&lt;String&amp;gt;();
+      :answer_b: ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;;
+      :answer_c: ArrayList&lt;String&amp;gt; delList = new List&lt;String&amp;gt;();
+      :answer_d: ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;();
       :correct: d
       :feedback_a: You must declare the type for delList
       :feedback_b: You must include the () when creating a new object
@@ -217,14 +217,14 @@ This section contains a plain English explanation of one way to solve this probl
    :optional:
 
    .. mchoice:: delim_solve_mc_4
-      :answer_a: if (token == openDel && token == closeDel)
+      :answer_a: if (token == openDel &amp;&amp; token == closeDel)
       :answer_b: if (token == openDel || token == closeDel)
-      :answer_c: if (token.equals(openDel) && token.equals(closeDel))
+      :answer_c: if (token.equals(openDel) &amp;&amp; token.equals(closeDel))
       :answer_d: if (token.equals(openDel) || token.equals(closeDel))
       :correct: d
       :feedback_a: You should use .equals with strings and || for or
       :feedback_b: You should use .equals with strings
-      :feedback_c: You should use || for or not &&
+      :feedback_c: You should use || for or not &amp;&amp;
       :feedback_d: This returns true when openDel or closeDel have the same characters as token
       :optional:
 

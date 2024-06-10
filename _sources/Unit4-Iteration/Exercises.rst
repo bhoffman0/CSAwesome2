@@ -102,8 +102,8 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_c: 6
    :correct: a
    :feedback_a: The loop starts with i = 1 and loops as long as it is less than 5 so i is 1, 2, 3, 4.
-   :feedback_b: This would be true if the condition was i <= 5.
-   :feedback_c: This would be true if i started at 0 and ended when it reached 6 (i <= 5).
+   :feedback_b: This would be true if the condition was i &lt;= 5.
+   :feedback_c: This would be true if i started at 0 and ended when it reached 6 (i &lt;= 5).
 
    How many times does the following method print a ``*``?
 
@@ -141,7 +141,7 @@ These problems are easier than most of those that you will usually see on the AP
    :correct: b
    :feedback_a: This would be true if x started at 1 instead of 0.
    :feedback_b: The loop starts with x = 0 and ends when it reaches 5 so 5 - 0 = 5.
-   :feedback_c: This would be true if the condition was x <= 5 instead of x = 5.
+   :feedback_c: This would be true if the condition was x &lt;= 5 instead of x = 5.
 
    How many times does the following method print a ``*``?
 
@@ -159,7 +159,7 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_c: 8
    :correct: a
    :feedback_a: This loop starts with x = 2 and continues while it is less than 8 so 8 - 2 = 6.
-   :feedback_b: This would be true if the loop ended when x was 9 instead of 8 (x <= 8).
+   :feedback_b: This would be true if the loop ended when x was 9 instead of 8 (x &lt;= 8).
    :feedback_c: This would be true if the loop started with x = 0.
 
    How many times does the following method print a ``*``?

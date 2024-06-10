@@ -5,7 +5,7 @@
    :start: 1
 
 
-|Time90|
+..  |Time90|
 
 Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
@@ -272,14 +272,14 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm3_1
    :practice: T
-   :answer_a: (x < 2) || (y > 4)
-   :answer_b: (x < 2) && (y > 4)
-   :answer_c: (x <= 2) || (y >= 4)
-   :answer_d: (x <= 2) && (y >= 4)
+   :answer_a: (x &lt; 2) || (y > 4)
+   :answer_b: (x &lt; 2) &amp;&amp; (y > 4)
+   :answer_c: (x &lt;= 2) || (y >= 4)
+   :answer_d: (x &lt;= 2) &amp;&amp; (y >= 4)
    :correct: c
-   :feedback_a: The negation of x > 2 is x <= 2
+   :feedback_a: The negation of x > 2 is x &lt;= 2
    :feedback_b: Don't forget that the "and" is changed to an "or"
-   :feedback_c: The x > 2 becomes x <= 2, the y < 4 becomes y >= 4 and the and changes to or
+   :feedback_c: The x > 2 becomes x &lt;= 2, the y &lt; 4 becomes y >= 4 and the and changes to or
    :feedback_d: Don't forget that the "and" is changed to an "or"
 
    Which of the following is the same as the code below?
@@ -290,15 +290,15 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm4_2
    :practice: T
-   :answer_a: (x != 2) || (y < 4)
-   :answer_b: (x != 2) && (y < 4)
-   :answer_c: (x != 2) && (y <= 4)
-   :answer_d: (x != 2) || (y <= 4)
+   :answer_a: (x != 2) || (y &lt; 4)
+   :answer_b: (x != 2) &amp;&amp; (y &lt; 4)
+   :answer_c: (x != 2) &amp;&amp; (y &lt;= 4)
+   :answer_d: (x != 2) || (y &lt;= 4)
    :correct: d
-   :feedback_a: The negation of y > 4 is y <= 4
+   :feedback_a: The negation of y > 4 is y &lt;= 4
    :feedback_b: Don't forget that the and is changed to an or
    :feedback_c: Don't forget that the and is changed to an or
-   :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y <= 4)
+   :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y &lt;= 4)
 
    Which of the following is the same as the code below?
 
@@ -309,14 +309,14 @@ Explore the following problems with your group. You may use |this worksheet| to 
 .. mchoice:: qcbdm5_3
    :practice: T
    :answer_a: (x == 5) || (y == 7)
-   :answer_b: (x == 5) && (y == 7)
+   :answer_b: (x == 5) &amp;&amp; (y == 7)
    :answer_c: (x != 5) || (y != 7)
-   :answer_d: (x < 5) || (x > 5) || (y > 7) || (y < 7)
+   :answer_d: (x &lt; 5) || (x > 5) || (y > 7) || (y &lt; 7)
    :correct: a
-   :feedback_a: The negation of && is || and the negation of != is ==
-   :feedback_b: The negation of && is ||
+   :feedback_a: The negation of &amp;&amp; is || and the negation of != is ==
+   :feedback_b: The negation of &amp;&amp; is ||
    :feedback_c: The negation of x != 5 is x == 5.  The negation of y !=  7 is y == 7.
-   :feedback_d: The negation of == is != which is the same as < or >.  The negation of != is ==.
+   :feedback_d: The negation of == is != which is the same as &lt; or >.  The negation of != is ==.
 
    Which of the following is the same as the code below?
 
@@ -326,15 +326,15 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm6_4
    :practice: T
-   :answer_a: (x > 5) && (y < 7)
-   :answer_b: (x > 5) || (y < 7)
-   :answer_c: (x > 5) && (y <= 7)
-   :answer_d: (x > 5) || (y <= 7)
+   :answer_a: (x > 5) &amp;&amp; (y &lt; 7)
+   :answer_b: (x > 5) || (y &lt; 7)
+   :answer_c: (x > 5) &amp;&amp; (y &lt;= 7)
+   :answer_d: (x > 5) || (y &lt;= 7)
    :correct: d
-   :feedback_a: The negation of && is || and the negation of y > 7 is y <= 7.
-   :feedback_b: The negation of y > 7 is y <= 7.
-   :feedback_c: The negation of && is ||.
-   :feedback_d: The negation of (x <= 5) is (x > 5).  The negation of && is ||.  The negation of (y > 7) is (y <= 7).
+   :feedback_a: The negation of &amp;&amp; is || and the negation of y > 7 is y &lt;= 7.
+   :feedback_b: The negation of y > 7 is y &lt;= 7.
+   :feedback_c: The negation of &amp;&amp; is ||.
+   :feedback_d: The negation of (x &lt;= 5) is (x > 5).  The negation of &amp;&amp; is ||.  The negation of (y > 7) is (y &lt;= 7).
 
 
    Which of the following is the same as the code below?
@@ -383,7 +383,7 @@ AP Practice
    :answer_e: The value is true when either a or b has the value true, and is false otherwise.
    :correct: b
    :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
-   :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
+   :feedback_b: Yes, a &amp;&amp; !(b || a) = a &amp;&amp; !b &amp;&amp; !a. Since (a &amp;&amp; !a) can never be true, the result will always be false.
    :feedback_c: Try the expression with a = false. Is the result true?
    :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
    :feedback_e: Try the expression with a = true. Is the result true?

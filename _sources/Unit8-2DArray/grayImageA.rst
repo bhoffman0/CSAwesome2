@@ -206,10 +206,10 @@ If you want to solve this problem using nested for loops, complete the three que
     :hidetitle: Hide For Loop Outer Bound Problem
 
     .. mchoice:: 2012GreyScale_alg2_ans
-     :answer_a: (int row = 0; row < pixelValues.length - 1; row++)
-     :answer_b: (int row = 0; row < pixelValues.length; row++)
-     :answer_c: (int row = 0; row < pixelValues.height; row++)
-     :answer_d: (int row = 0; row < pixelValues.height - 1; row++)
+     :answer_a: (int row = 0; row &lt; pixelValues.length - 1; row++)
+     :answer_b: (int row = 0; row &lt; pixelValues.length; row++)
+     :answer_c: (int row = 0; row &lt; pixelValues.height; row++)
+     :answer_d: (int row = 0; row &lt; pixelValues.height - 1; row++)
      :correct: b
      :feedback_a: This does not iterate through all the rows of the array
      :feedback_b: Correct
@@ -223,10 +223,10 @@ If you want to solve this problem using nested for loops, complete the three que
     :hidetitle: Hide For Loop Inner Bound Problem
 
     .. mchoice:: 2012GreyScale_alg3_ans
-     :answer_a: (int col = 0; col <= row; col++)
-     :answer_b: (int col = 0; col < pixelValues[0].length - 1; col++)
-     :answer_c: (int col = 0; col < row; col++)
-     :answer_d: (int col = 0; col < pixelValues[0].length; col++)
+     :answer_a: (int col = 0; col &lt;= row; col++)
+     :answer_b: (int col = 0; col &lt; pixelValues[0].length - 1; col++)
+     :answer_c: (int col = 0; col &lt; row; col++)
+     :answer_d: (int col = 0; col &lt; pixelValues[0].length; col++)
      :correct: d
      :feedback_a: This does not correctly iterate through all the columns in the array
      :feedback_b: This stops one short of iterating through the whole array
@@ -259,7 +259,7 @@ Alternatively, if you want to solve this problem using nested for each loops, co
     :hidetitle: Hide For Each Outer Bounds Problem
 
     .. mchoice:: 2012GreyScale_alg5_ans
-     :answer_a: (int[] row; row < pixelValues; row++)
+     :answer_a: (int[] row; row &lt; pixelValues; row++)
      :answer_b: (int row : this.pixelValues)
      :answer_c: (int[] row : this.pixelValues)
      :answer_d: (int[] row ; pixelValues)
@@ -276,7 +276,7 @@ Alternatively, if you want to solve this problem using nested for each loops, co
     :hidetitle: Hide For Each Inner Bounds Problem
 
     .. mchoice:: 2012GreyScale_alg6_ans
-     :answer_a: (int col = 0; col < pixelValues.length; col++)
+     :answer_a: (int col = 0; col &lt; pixelValues.length; col++)
      :answer_b: (int pv : row)
      :answer_c: (int pv[] : row)
      :answer_d: (int col : pixelValues)

@@ -4,7 +4,7 @@
    :prefix: 5-3-
    :start: 1
 
-|Time45|
+..  |Time45|
 
 Comments and Conditions
 =======================
@@ -168,7 +168,7 @@ The Turtle constructor's precondition is that x and y should be between 0 and th
 
 .. mchoice:: AP5-3-1
     :practice: T
-    :answer_a: /* Precondition: s <= 0 */
+    :answer_a: /* Precondition: s &lt;= 0 */
     :answer_b: /* Precondition: score >= 0 */
     :answer_c: /* Precondition: s and ec >= 0 */
     :answer_d: /* Precondition: n is not the empty String */
@@ -255,9 +255,9 @@ Let's consider the substring method in Java. This method has a strong preconditi
 .. mchoice:: AP5-3-2
    :practice: T
    :answer_a: /* Precondition: i >= 0 */
-   :answer_b: /* Precondition: i <= str.length() */
-   :answer_c: /* Precondition: 0 < i < str.length() */
-   :answer_d: /* Precondition: 0 <= i < str.length() */
+   :answer_b: /* Precondition: i &lt;= str.length() */
+   :answer_c: /* Precondition: 0 &lt; i &lt; str.length() */
+   :answer_d: /* Precondition: 0 &lt;= i &lt; str.length() */
    :correct: d
    :feedback_a: This is true but it could still throw an exception if i is a large value.
    :feedback_b: This is true but it could still throw an exception if i is a negative value.

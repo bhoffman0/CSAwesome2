@@ -92,8 +92,8 @@ You can step through the code above by clicking on the folloiwng `Ex-12-8-3 <htt
 .. mchoice:: qsearchsm_4
    :practice: T
    :answer_a: int k = j - 1; k >= 0; k--
-   :answer_b: int k = j + 1; k < elem.length; k++
-   :answer_c: int k = j; k < elem.length; k++
+   :answer_b: int k = j + 1; k &lt; elem.length; k++
+   :answer_c: int k = j; k &lt; elem.length; k++
    :answer_d: int k = j; k >= 0; k--
    :answer_e: int k = j - 1; k > 0; k--
    :correct: b

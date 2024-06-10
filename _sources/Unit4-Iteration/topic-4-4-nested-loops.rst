@@ -4,7 +4,7 @@
    :prefix: 4-4-
    :start: 1
 
-|Time90|
+..  |Time90|
 
 Nested For Loops
 ================
@@ -88,9 +88,9 @@ What does the following code print out? Watch the code run in the  |Java visuali
    :answer_d: A rectangle of 6 rows with 4 stars per row.
    :correct: c
    :feedback_a: This would be true if i was initialized to 0.
-   :feedback_b: This would be true if i was initialized to 0 and the inner loop continued while <code>y < 5</code>.
+   :feedback_b: This would be true if i was initialized to 0 and the inner loop continued while <code>y &lt; 5</code>.
    :feedback_c: The outer loop runs from 1 up to 7 but not including 7 so there are 6 rows and the inner loop runs 1 to 5 times including 5 so there are 5 columns.
-   :feedback_d: This would be true if the inner loop continued while <code>y < 5</code>.
+   :feedback_d: This would be true if the inner loop continued while <code>y &lt; 5</code>.
 
    What does the following code print?
 

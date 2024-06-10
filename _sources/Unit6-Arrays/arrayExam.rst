@@ -267,7 +267,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_b: Does this code only execute 1 time?
       :feedback_c: This code will loop till sum is not less than limit.  It adds the value at i of x each time to sum so sum isn't 7 until the 3rd time through the loop.
       :feedback_d: This will loop three times till sum is 7 and so i will be 3.
-      :feedback_e: This would be true if it was <code>sum <= limit</code>.
+      :feedback_e: This would be true if it was <code>sum &lt;= limit</code>.
 
       What is the value of ``i`` after the following code executes?
 
@@ -285,15 +285,15 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
 
    .. mchoice:: arrayEx8
       :practice: T
-      :answer_a: <code>for (int j=0 ; j < x.length; j++)</code>
-      :answer_b: <code>for (int j=0 ; j < x.length - 1; j++)</code>
-      :answer_c: <code>for (int j=i+1; j < x.length; j++)</code>
-      :answer_d: <code>for (int j=i+1; j < x.length - 1; j++)</code>
+      :answer_a: <code>for (int j=0 ; j &lt; x.length; j++)</code>
+      :answer_b: <code>for (int j=0 ; j &lt; x.length - 1; j++)</code>
+      :answer_c: <code>for (int j=i+1; j &lt; x.length; j++)</code>
+      :answer_d: <code>for (int j=i+1; j &lt; x.length - 1; j++)</code>
       :correct: c
       :feedback_a: The inner loop should start at the outer loop current position plus one to not double count inversions.
       :feedback_b: The inner loop should start at the outer loop current position plus one to not double count inversions.
       :feedback_c: This correctly starts at the outer loop current index plus one and loops through the rest of the array.
-      :feedback_d: This misses checking the last value in the array since it is <code>j < x.length-1</code>.
+      :feedback_d: This misses checking the last value in the array since it is <code>j &lt; x.length-1</code>.
 
       If any two numbers in an array of integers, not necessarily consecutive numbers in the array, are out of order (i.e. the number that occurs first in the array is larger than the number that occurs second), then that is called an inversion. For example, consider an array ``x`` that has the values {1, 4, 3, 2}.  Then there are three inversions since 4 is greater than both 3 and 2 and 3 is greater than 2.  Which of the following can be used to replace the missing code so that the code correctly counts the number of inversions?
 

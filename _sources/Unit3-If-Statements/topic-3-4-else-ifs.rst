@@ -5,7 +5,7 @@
    :start: 1
 
 
-|Time90|
+..  |Time90|
 
 Multi-Selection: else-if Statements
 ===================================
@@ -103,7 +103,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :answer_b: x is zero
    :answer_c: x is positive
    :correct: a
-   :feedback_a: When x is equal to -5 the condition of x < 0 is true.
+   :feedback_a: When x is equal to -5 the condition of x &lt; 0 is true.
    :feedback_b: This will only print if x has been set to 0.  Has it?
    :feedback_c: This will only print if x is greater than zero.  Is it?
 

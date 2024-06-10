@@ -6,7 +6,7 @@
 
 
 
-|Time90|
+..  |Time90|
 
 Searching Algorithms
 ======================

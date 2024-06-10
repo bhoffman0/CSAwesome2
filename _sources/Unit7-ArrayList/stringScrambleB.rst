@@ -104,7 +104,7 @@ This section contains a plain English explanation of one way to solve this probl
     .. mchoice:: strng_mcalg_answr_1
        :answer_a: (index != wordList.current())
        :answer_b: (int index = wordList.size() - 1; index >= 0; index--)
-       :answer_c: (index < wordList.size())
+       :answer_c: (index &lt; wordList.size())
        :answer_d: (wordList(index) != wordList.size())
        :correct: c
        :feedback_a: the .current() method does not exist

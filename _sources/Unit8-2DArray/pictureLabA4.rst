@@ -1,6 +1,6 @@
 .. include:: ../common.rst
 
-|Time45|
+..  |Time45|
 
 Picture Lab A4: 2D Arrays in Java
 =======================================================

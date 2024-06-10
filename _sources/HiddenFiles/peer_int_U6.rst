@@ -76,8 +76,8 @@ Peer Instruction: Arrays Multiple Choice Questions
    :answer_d: 32767,0
    :answer_e: None of the above
    :correct: b
-   :feedback_a: Incorrect. Examine when the value of b is changed. When is the condition "foo < a" satisfied?
-   :feedback_b: Correct. a holds the smallest value found in the array, and b holds an index. b is only changed when "foo < a" is satified, which last occurs at index 6.
+   :feedback_a: Incorrect. Examine when the value of b is changed. When is the condition "foo &lt; a" satisfied?
+   :feedback_b: Correct. a holds the smallest value found in the array, and b holds an index. b is only changed when "foo &lt; a" is satified, which last occurs at index 6.
    :feedback_c: Incorrect. Examine when a and b are changed. At one point these values are correct, but finish running the for loop.
    :feedback_d: Incorrect. Examine what the variables a and b hold. a holds a value found in the array, and b holds an index.
    :feedback_e: Incorrect. Examine what the variables a and b hold. a holds a value found in the array, and b holds an index.
@@ -177,8 +177,8 @@ Peer Instruction: Arrays Multiple Choice Questions
    :practice: T
    :answer_a: if (foo[i].getValue() >= 0)
    :answer_b: if (i >= 0)
-   :answer_c: if (foo[i].getValue() < 0)
-   :answer_d: if (i < 0)
+   :answer_c: if (foo[i].getValue() &lt; 0)
+   :answer_d: if (i &lt; 0)
    :answer_e: None of the above
    :correct: a
    :feedback_a: Correct. The term "foo[i].getValue()" retrieves the value at index i. This code successfully sets all value sero and greater to the maximum, and all others to the minimum.

@@ -1,6 +1,6 @@
 .. include:: ../common.rst
 
-|Time90|
+..  |Time90|
 
 |Groupwork| Design a Class for your Community Project
 ----------------------------------------------------------

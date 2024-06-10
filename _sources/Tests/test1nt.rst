@@ -8,17 +8,17 @@ Exam 1 for the AP CSA Exam (not timed)
 The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt1_1
-   :answer_a: (a >= b) && (b >= 0)
+   :answer_a: (a >= b) &amp;&amp; (b >= 0)
    :answer_b: !(a > b) || !(b >= 0)
    :answer_c: (a >= b) || (b > 0)
    :answer_d: (a > b) || (b >= 0)
-   :answer_e: (a > b) && (b >= 0)
+   :answer_e: (a > b) &amp;&amp; (b >= 0)
    :correct: d
-   :feedback_a: The "!" would negate everything inside the parentheses. There are a few mistakes here. The opposite of <= is not >= and the opposite of AND is OR.
+   :feedback_a: The "!" would negate everything inside the parentheses. There are a few mistakes here. The opposite of &lt;= is not >= and the opposite of AND is OR.
    :feedback_b: Both of the expressions inside the parentheses were altered. If we wanted to distribute the negation symbol "!" then we would leave the expressions inside the parentheses alone.
-   :feedback_c: Negating less than or equals (<=) results in greater than (>). In addition, less than (<) in the second argument should have been changed to greater than or equals (>=).
+   :feedback_c: Negating less than or equals (&lt;=) results in greater than (>). In addition, less than (&lt;) in the second argument should have been changed to greater than or equals (>=).
    :feedback_d: Using DeMorgan's Law we negate everything.  This includes our AND statement (which becomes an OR) and everything inside both parentheses.
-   :feedback_e: Here we forgot to negate our AND (&&) into an OR (||).
+   :feedback_e: Here we forgot to negate our AND (&amp;&amp;) into an OR (||).
 
    Which of the following is equivalent to the statement below? Recall DeMorgan's Law.
 
@@ -246,10 +246,10 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
    :answer_d: 1
    :answer_e: 0
    :correct: b
-   :feedback_a: This would be the case if i had the initial value 1 and arr[i] < someValue would be true for all i values.
-   :feedback_b: If arr[i] < someValue for all i from 0 to k, HELLO will be printed on each iteration of the for loop. The number of times a loop executes is the biggest value in the loop - the smallest value in the loop + 1 (k - 0 + 1 is k + 1).
-   :feedback_c: This would be the case if i had the initial value 2 and arr[i] < someValue would be true for all i values.
-   :feedback_d: This would be the case if only one element in the array would fulfill the condition that arr[i] < someValue.
+   :feedback_a: This would be the case if i had the initial value 1 and arr[i] &lt; someValue would be true for all i values.
+   :feedback_b: If arr[i] &lt; someValue for all i from 0 to k, HELLO will be printed on each iteration of the for loop. The number of times a loop executes is the biggest value in the loop - the smallest value in the loop + 1 (k - 0 + 1 is k + 1).
+   :feedback_c: This would be the case if i had the initial value 2 and arr[i] &lt; someValue would be true for all i values.
+   :feedback_d: This would be the case if only one element in the array would fulfill the condition that arr[i] &lt; someValue.
    :feedback_e: This is the minimum number of times that HELLO could be executed.
 
    Consider the following code. What is the maximum amount of times that ``HELLO`` could possibly be printed?
@@ -373,8 +373,8 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
    :answer_d: IV
    :answer_e: An ArrayIndexOutOfBoundsException will be thrown.
    :correct: c
-   :feedback_a: Since the inside for loop starts with t = 0  and continues while t < i (and i begins at 0) it will not be print out every single element of the 4x4 matrix.
-   :feedback_b: This anwser is not correct because our inside for loop will start with t = 0 and loop while t < i and, as such, the entire first row of our matrix will be ignored, since both t and i = 0 and t is not less than i.
+   :feedback_a: Since the inside for loop starts with t = 0  and continues while t &lt; i (and i begins at 0) it will not be print out every single element of the 4x4 matrix.
+   :feedback_b: This anwser is not correct because our inside for loop will start with t = 0 and loop while t &lt; i and, as such, the entire first row of our matrix will be ignored, since both t and i = 0 and t is not less than i.
    :feedback_c: When i = 0, the inner for loop does not get executed and the entire first row of the matrix is ignored. When i = 1 t goes from 0 to 0 and the element matrix[1][0] will be printed out. Similarly, when i = 2 we will print out elements matrix[2][0] and matrix[2][1]. Finally, when i = 3, we will print out matrix[3][0], matrix[3][1] and matrix[3][2].
    :feedback_d: This would be the correct anwser if we kept incrementing i by one (the outer for loop) but the inner for variable t would always be 0. We would get the first element of each row.
    :feedback_e: We will not get an index out of bounds exception since we made sure to increment i only until the max length of the array and the other variable we use to index, t, will only increase while it is still less than i.

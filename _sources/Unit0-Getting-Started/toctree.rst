@@ -1,11 +1,11 @@
 .. include:: ../common.rst
 
-.. image:: ../../_static/CSAwesomeLogo.png
+.. |LogoImageToBeFixed| image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
 
 
-|Time90|
+..  |Time90|
 
 Getting Started
 ==================

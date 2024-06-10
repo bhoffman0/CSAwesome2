@@ -4,7 +4,7 @@
    :prefix: 7-4-
    :start: 1
 
-|Time90|
+..  |Time90|
 
 ArrayList Algorithms
 =====================

@@ -8,7 +8,7 @@
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-|Time90|
+..  |Time90|
 
 String Methods
 =================
@@ -347,7 +347,7 @@ An **Application Programming Interface (API)** is a library of prewritten classe
    :practice: T
    :answer_a: positive (> 0)
    :answer_b: 0
-   :answer_c: negative (< 0)
+   :answer_c: negative (&lt; 0)
    :correct: a
    :feedback_a: H is after B in the alphabet so s1 is greater than s2.
    :feedback_b: The method compareTo will only return 0 if the strings have the same characters in the same order.

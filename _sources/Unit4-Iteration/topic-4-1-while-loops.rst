@@ -4,7 +4,7 @@
    :prefix: 4-1-
    :start: 1
 
-|Time90|
+..  |Time90|
 
 While Loops
 ============
@@ -184,8 +184,8 @@ Java doesn't require your code to be correctly indented (code moved to the right
 .. mchoice:: while1
    :practice: T
    :answer_a: while (count == 10)
-   :answer_b: while (count < 10)
-   :answer_c: while (count <= 10)
+   :answer_b: while (count &lt; 10)
+   :answer_c: while (count &lt;= 10)
    :answer_d: while (count > 10)
    :correct: c
    :feedback_a: This would not print out anything because count = 0 at the start of the loop, so it never equals 10.

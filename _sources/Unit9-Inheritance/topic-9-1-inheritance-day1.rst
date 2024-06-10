@@ -5,7 +5,7 @@
    :start: 1
 
 
-|Time45|
+..  |Time45|
 
 Inheritance (Day 1)
 -------------------

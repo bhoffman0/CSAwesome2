@@ -69,17 +69,17 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       }
 
 .. mchoice:: qtnt4_3
-   :answer_a: (x >= 7) && (x > 2)
-   :answer_b: (x < 7) && (x <= 2)
-   :answer_c: (x >= 7) && (x < 2)
-   :answer_d: (x >= 7) || (x <= 2)
-   :answer_e: (x < 7) || (x < 2)
+   :answer_a: (x >= 7) &amp;&amp; (x > 2)
+   :answer_b: (x &lt; 7) &amp;&amp; (x &lt;= 2)
+   :answer_c: (x >= 7) &amp;&amp; (x &lt; 2)
+   :answer_d: (x >= 7) || (x &lt;= 2)
+   :answer_e: (x &lt; 7) || (x &lt; 2)
    :correct: d
-   :feedback_a: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal !A && B.
-   :feedback_b: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal A && !B. !(x >= 7) is the same as (x < 7).
-   :feedback_c: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal !A && !B. Also, the negation of (x > 2) is (x <= 2), not (x < 2).
-   :feedback_d: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) is equal to !A || !B, according to DeMorgan's law. The negation of !(x >= 7) is (x >= 7), and the negation of (x > 2) is (x <= 2).
-   :feedback_e: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal A || !B. The negation of (x > 2) is (x <= 2), not (x < 2), and !(x >= 7) is the same as (x < 7).
+   :feedback_a: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A &amp;&amp; B) does NOT equal !A &amp;&amp; B.
+   :feedback_b: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A &amp;&amp; B) does NOT equal A &amp;&amp; !B. !(x >= 7) is the same as (x &lt; 7).
+   :feedback_c: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A &amp;&amp; B) does NOT equal !A &amp;&amp; !B. Also, the negation of (x > 2) is (x &lt;= 2), not (x &lt; 2).
+   :feedback_d: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A &amp;&amp; B) is equal to !A || !B, according to DeMorgan's law. The negation of !(x >= 7) is (x >= 7), and the negation of (x > 2) is (x &lt;= 2).
+   :feedback_e: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A &amp;&amp; B) does NOT equal A || !B. The negation of (x > 2) is (x &lt;= 2), not (x &lt; 2), and !(x >= 7) is the same as (x &lt; 7).
 
    Which of the following is equivalent to ``! (!(x >= 7) && (x > 2))``?
 

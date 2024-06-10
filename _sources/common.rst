@@ -20,7 +20,7 @@
     :alt: groupwork
 
 
-.. |Time45| raw:: html
+.. ..  |Time45| raw:: html
 
    <div class="unit-time">
      <svg xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@
    </div>
 
 
-.. |Time90| raw:: html
+.. ..  |Time90| raw:: html
 
    <div class="unit-time">
      <svg xmlns="http://www.w3.org/2000/svg"

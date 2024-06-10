@@ -126,9 +126,9 @@ To solve this problem, you have a message that you need to process and concatena
    :hidetitle: Hide conditional for loop
 
    .. mchoice:: FRQRouteCipherBnorm_1
-     :answer_a: while (message.substring(k, k + 1) < 0)
+     :answer_a: while (message.substring(k, k + 1) &lt; 0)
      :answer_b: while (message.substring(k, k + 1) > 0)
-     :answer_c: while (message.length() < 0)
+     :answer_c: while (message.length() &lt; 0)
      :answer_d: while (message.length() > 0)
      :correct: d
      :feedback_a: You do not need to apply that formula here.
@@ -354,7 +354,7 @@ question to practice working through the recursive solution.
 
    .. mchoice:: FRQRouteCipherBrecur_1
      :answer_a: if (message.length() == 0) { return ""; }
-     :answer_b: if (message.length() <= this.numRows * this.numCols) { return encryptBlock(); }
+     :answer_b: if (message.length() &lt;= this.numRows * this.numCols) { return encryptBlock(); }
      :answer_c: return "";
      :answer_d: return encryptBlock();
      :correct: a

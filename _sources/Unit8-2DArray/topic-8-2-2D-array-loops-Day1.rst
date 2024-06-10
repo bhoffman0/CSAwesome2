@@ -4,7 +4,7 @@
    :prefix: 8-2-
    :start: 1
 
-|Time45|
+..  |Time45|
 
 Nested Loops for 2D Arrays (Day 1)
 -----------------------------------

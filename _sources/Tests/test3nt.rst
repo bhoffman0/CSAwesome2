@@ -619,17 +619,17 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       }
 
 .. mchoice:: qtnt3_19
-   :answer_a: (x < 10) && (x > 5)
-   :answer_b: (x > 10) && (x <=5)
-   :answer_c: (x <= 10) && (x > 5)
-   :answer_d: (x <= 10) || (x > 5)
-   :answer_e: (x > 10) || (x <= 5)
+   :answer_a: (x &lt; 10) &amp;&amp; (x > 5)
+   :answer_b: (x > 10) &amp;&amp; (x &lt;=5)
+   :answer_c: (x &lt;= 10) &amp;&amp; (x > 5)
+   :answer_d: (x &lt;= 10) || (x > 5)
+   :answer_e: (x > 10) || (x &lt;= 5)
    :correct: d
-   :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). Also, (x < 10) is not correct negation for (x > 10); the correct negation is (x <= 10).
-   :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A && B).
-   :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). The AND should be changed to an OR.
-   :feedback_d: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is equivalent to (!A || !B), according to DeMorgan's principle. The negation of (x > 10) is (x <= 10), and the negation of (x <= 5) is (x > 5).
-   :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A || B). Both A and B should also be negated.
+   :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (!A &amp;&amp; !B). Also, (x &lt; 10) is not correct negation for (x > 10); the correct negation is (x &lt;= 10).
+   :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (A &amp;&amp; B).
+   :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (!A &amp;&amp; !B). The AND should be changed to an OR.
+   :feedback_d: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is equivalent to (!A || !B), according to DeMorgan's principle. The negation of (x > 10) is (x &lt;= 10), and the negation of (x &lt;= 5) is (x > 5).
+   :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (A || B). Both A and B should also be negated.
 
    Which of the following is equivalent to ``! ( (x > 10) && (x <= 5) )``?
 

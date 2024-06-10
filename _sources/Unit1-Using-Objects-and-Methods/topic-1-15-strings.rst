@@ -10,7 +10,7 @@
    single: reference
    pair: String; definition
 
-|Time45|
+..  |Time45|
 
 
 Strings

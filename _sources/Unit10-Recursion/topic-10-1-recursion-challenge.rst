@@ -4,7 +4,7 @@
    :prefix: 10-1-
    :start: 14
 
-|Time45|
+..  |Time45|
 
 |Groupwork| Tracing Challenge : Recursion
 ===========================================

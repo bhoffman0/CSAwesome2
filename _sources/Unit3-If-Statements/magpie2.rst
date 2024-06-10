@@ -7,7 +7,7 @@
 .. highlight:: java
    :linenothreshold: 4
 
-|Time45|
+..  |Time45|
 
 Activity 2: Running Simplified Magpie Code
 ===========================================

@@ -89,12 +89,12 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_b: x == y
        :answer_c: true
        :answer_d: false
-       :answer_e: x < y
+       :answer_e: x &lt; y
        :correct: d
-       :feedback_a: If we assume that x is not equal to y then the expression is (false && true) || (true && false) which is false.
-       :feedback_b: If we assume that x == y is the same than using it in the full expression should return true.  But, if x is equal to y you would get (true && false) || (false && true) which is false.
-       :feedback_c: How can this be true?  Remember that && requires both expressions to be true in order to return true.  You can think of (x==y && !(x==y)) as A && !A which is always false.   You can think of ( x!=y && !(x!=y) as B && !B which is always false.
-       :feedback_d: This can be simplified to (A && !A) || (B && !B) which is (false || false) which is false.  You can think of (x==y && !(x==y)) as A && !A which is always false.   You can think of ( x!=y && !(x!=y) as B && !B which is always false.
+       :feedback_a: If we assume that x is not equal to y then the expression is (false &amp;&amp; true) || (true &amp;&amp; false) which is false.
+       :feedback_b: If we assume that x == y is the same than using it in the full expression should return true.  But, if x is equal to y you would get (true &amp;&amp; false) || (false &amp;&amp; true) which is false.
+       :feedback_c: How can this be true?  Remember that &amp;&amp; requires both expressions to be true in order to return true.  You can think of (x==y &amp;&amp; !(x==y)) as A &amp;&amp; !A which is always false.   You can think of ( x!=y &amp;&amp; !(x!=y) as B &amp;&amp; !B which is always false.
+       :feedback_d: This can be simplified to (A &amp;&amp; !A) || (B &amp;&amp; !B) which is (false || false) which is false.  You can think of (x==y &amp;&amp; !(x==y)) as A &amp;&amp; !A which is always false.   You can think of ( x!=y &amp;&amp; !(x!=y) as B &amp;&amp; !B which is always false.
        :feedback_e: Since this expression is only about equality how could this be true?
 
        The Boolean expression (x==y && !(x==y)) || ( x!=y && !(x!=y)) can be simplified to which of the following?
@@ -102,7 +102,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
     .. mchoice:: pe4_3
        :answer_a: if (a[savedIndex] > a[j]) { j = savedIndex; }
        :answer_b: if (a[j] > a[savedIndex]) { savedIndex = j;}
-       :answer_c: if (a[j] < a[savedIndex]) { savedIndex = j; }
+       :answer_c: if (a[j] &lt; a[savedIndex]) { savedIndex = j; }
        :answer_d: if (a[j] > a[savedIndex]) { j = savedIndex;}
        :answer_e: if (a[j] == a[savedIndex]) { savedIndex = j; }
        :correct: b

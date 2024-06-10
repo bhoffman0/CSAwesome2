@@ -62,9 +62,9 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
    :answer_d: double x = (double) (Math.random( ) * 0.4);
    :answer_e: double x = (double) (Math.random( ) + 0.6);
    :correct: b
-   :feedback_a: This gives .4 <= x <1
+   :feedback_a: This gives .4 &lt;= x &lt;1
    :feedback_b: Math.random() returns 0(inclusive) to 1(exclusive) so this makes 0 + .6 the lower bound, and .99999 the upper bound
-   :feedback_c: This gives -.4 <= x < 6
+   :feedback_c: This gives -.4 &lt;= x &lt; 6
    :feedback_d: This doesn't ensure lower bound and upper bound
    :feedback_e: This doesn't ensure lower bound and upper bound
 
@@ -150,7 +150,7 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       :answer_d: II and III only
       :answer_e: I, II, and III
       :correct: d
-      :feedback_a: This is true because !false && !false becomes true && true
+      :feedback_a: This is true because !false &amp;&amp; !false becomes true &amp;&amp; true
       :feedback_b: If either a or b (or both a AND b) is true whole expression becomes false
       :feedback_c: If either a or b (or both a AND b) is true whole expression becomes false
       :feedback_d: If either a or b (or both a AND b) is true whole expression becomes false
@@ -227,7 +227,7 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
       :feedback_a: k > 2 so will print out "SMALL"
       :feedback_b: k can be greater than 3
       :feedback_c: max of k-1 iterations (end - start + 1 is k - 2 + 1)
-      :feedback_d: it is <= k so inclusive of k
+      :feedback_d: it is &lt;= k so inclusive of k
       :feedback_e: max of k -1 iterations
 
       Consider the following code segment. Assume ``k`` is some positive integer greater than 2. How many times will "SMALL" be printed?
@@ -274,11 +274,11 @@ The following problems are similar to what you might see on the AP CSA exam.  Pl
     :answer_d: 21
     :answer_e: 31
     :correct: d
-    :feedback_a: Second for loop goes until colum <= row index
-    :feedback_b: Second for loop goes until colum <= row index
-    :feedback_c: Second for loop goes until colum <= row index
+    :feedback_a: Second for loop goes until colum &lt;= row index
+    :feedback_b: Second for loop goes until colum &lt;= row index
+    :feedback_c: Second for loop goes until colum &lt;= row index
     :feedback_d: adds the lower half of the matrix
-    :feedback_e: Second for loop goes until colum <= row index
+    :feedback_e: Second for loop goes until colum &lt;= row index
 
     A square matrix is declared as
 

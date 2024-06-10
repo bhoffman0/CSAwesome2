@@ -9,7 +9,7 @@
 
    <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-|Time45|
+..  |Time45|
 
 Object Superclass
 ====================
