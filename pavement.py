@@ -16,7 +16,7 @@ sys.path.append(os.getcwd())
 
 home_dir = os.getcwd()
 
-project_name = "csawesome"
+project_name = "csawesome2"
 
 #master_url = None
 #if master_url is None:
@@ -35,7 +35,7 @@ if master_url is None:
     master_url = get_master_url()
 
 master_app = 'runestone'
-serving_dir = "./build/csawesome"
+serving_dir = "./build/csawesome2"
 
 #new 7/2019 changes
 # Change to False when running localhost
@@ -55,12 +55,12 @@ options(
     sphinx = Bunch(docroot=".",),
 
     build = Bunch(
-        builddir="./build/csawesome",
+        builddir="./build/csawesome2",
         sourcedir="_sources",
-        outdir="./build/csawesome",
+        outdir="./build/csawesome2",
         confdir=".",
-        project_name = "csawesome",
-        template_args={'course_id': 'csawesome',
+        project_name = "csawesome2",
+        template_args={'course_id': 'csawesome2',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
@@ -68,7 +68,7 @@ options(
                        'use_services': 'true',
                        'python3': 'false',
                        'dburl': 'postgresql://runestone@localhost/runestone',
-                       'basecourse': 'csawesome',
+                       'basecourse': 'csawesome2',
                        # new 7/2019 changes
                        'dynamic_pages': dynamic_pages,
                        'downloads_enabled': 'false',
@@ -91,3 +91,20 @@ version = pkg_resources.require("runestone")[0].version
 options.build.template_args['runestone_version'] = version
 
 from runestone import build  # build is called implicitly by the paver driver.
+
+  template_args={'course_id': 'csawesome2',
+                       'login_required':'false',
+                       'appname':master_app,
+                       'loglevel': 10,
+                       'course_url':master_url,
+                       'use_services': 'true',
+                       'python3': 'false',
+                       'dburl': 'postgresql://runestone@localhost/runestone',
+                       'basecourse': 'csawesome2',
+                       # new 7/2019 changes
+                       'dynamic_pages': dynamic_pages,
+                       'downloads_enabled': 'false',
+                       'enable_chatcodes': 'false',
+                       'allow_pairs': 'false',
+                       'default_ac_lang': 'java',
+                        }
