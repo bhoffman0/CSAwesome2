@@ -57,24 +57,9 @@ Table of Contents
    :numbered:
    :maxdepth: 3
 
-.. Unit0-Getting-Started/toctree.rst
-
+   Unit0-Getting-Started/toctree.rst
    Unit1-Using-Objects-and-Methods/toctree.rst
-   Unit3-If-Statements/toctree.rst
-   Unit4-Iteration/toctree.rst
-   Unit5-Writing-Classes/toctree.rst
-   Unit6-Arrays/toctree.rst
-   Unit7-ArrayList/toctree.rst
-   Unit8-2DArray/toctree.rst
-   Unit9-Inheritance/toctree.rst
-   Unit10-Recursion/toctree.rst
-   Unit11-posttest/toctree.rst
-   Tests/toctree.rst
-   TimedTests/toctree.rst
-   MixedFreeResponse/toctree.rst
-   FreeResponse/toctree.rst
-   Stories/toctree.rst
-   _hidden/toctree.rst
+   
 
 
 Index
