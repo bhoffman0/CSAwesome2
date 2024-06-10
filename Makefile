@@ -47,7 +47,7 @@ post:
 	#cp publication-rs-for-all.xml pretext
 	python $(R2P)/toctree2xml.py .
 	python $(R2P)/filltoc.py pretext _sources 
-	python $(R2P)/copy_figs.py ./_sources ./pretext/Figures
+	python $(R2P)/copy_figs.py ./_sources ./pretext/assets
 
 build_web:
 	pretext $(DEBUG_PRETEXT) build web
