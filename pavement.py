@@ -92,7 +92,7 @@ options.build.template_args['runestone_version'] = version
 
 from runestone import build  # build is called implicitly by the paver driver.
 
-  template_args={'course_id': 'csawesome2',
+template_args={'course_id': 'csawesome2',
                        'login_required':'false',
                        'appname':master_app,
                        'loglevel': 10,
