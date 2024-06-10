@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <xi:include href="./bookinfo.ptx"/>
+        <book xml:id= "csawesome2" permid="csa">
+            <title></title>
+            <subtitle>The PreTeXt Interactive Edition</subtitle> 
+                <xi:include href="./Unit0-Getting-Started/toctree.ptx" />
+                <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx" />
+            <backmatter>
+                <index>
+                    <index-list/>
+                </index>
+            </backmatter>
+        </book>
+    </pretext>

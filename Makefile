@@ -35,14 +35,16 @@ pretext/%.ptx: build/xml/%.xml | pretext
 
 ptx: $(ptx) pretext/rs-substitutes.xml
 
+# need to do pretext init in here to generate project.ptx 
+# need to manually edit project.ptx and create publication-rs-for-all.xml
+#   as described in https://github.com/bnmnetp/Runestone2PreTeXt/blob/main/README.md
 post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
 	python $(R2P)/index2main.py
-	cp main.ptx pretext
 	pretext init
-	cp publication-rs-for-all.xml pretext
+	#cp publication-rs-for-all.xml pretext
 	python $(R2P)/toctree2xml.py .
 	python $(R2P)/filltoc.py pretext _sources 
 	python $(R2P)/copy_figs.py ./_sources ./pretext/Figures
