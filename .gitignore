@@ -15,6 +15,10 @@ _sources copy/Appendix/DrJava.rst
 # Compiled Python files
 *.pyc
 
+# pretext stuff
+pretext/generated/trace/*.js
+cli.log
+
 # added by pretext init
 
 # Boilerplate list of files in a PreTeXt project for git to ignore
