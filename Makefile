@@ -1,4 +1,4 @@
-.PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine
+.PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine restore onetime
 
 ifeq ($(origin R2P), undefined)
 $(error R2P needs to be set in the environment, e.g. via a .env file)
@@ -47,6 +47,14 @@ post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
+
+restore:
+	git restore pretext
+	git restore _sources/
+	git restore rs-substitutes.xml
+	git clean -fdx pretext
+
+onetime:
 	python $(R2P)/index2main.py
 	python $(R2P)/toctree2xml.py .
 	python $(R2P)/filltoc.py pretext _sources
