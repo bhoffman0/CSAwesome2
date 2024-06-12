@@ -3,16 +3,15 @@
 <section xml:id="_introduction-to-algorithms-programming-and-compilers">
   <introduction>
     <title>Introduction to Algorithms, Programming, and Compilers</title>
-    <p xml:id="_index-0-2">What do Android phones, Minecraft, and Netflix have in common? They’re all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you’ve used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a <term>programming language</term> that is used worldwide to create software that we all use.</p>
+    <p xml:id="_index-0-2">What do Android phones, Minecraft, and Netflix have in common? They&#x2019;re all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you&#x2019;ve used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a <term>programming language</term> that is used worldwide to create software that we all use.</p>
     <p>The following <url href="https://www.youtube.com/watch?v=Fc-BQzPbJmU" visual="https://www.youtube.com/watch?v=Fc-BQzPbJmU">video</url> introduces this first lesson in CSAwesome.</p>
     <video xml:id="Fc-BQzPbJmU" youtube="Fc-BQzPbJmU" width="82%"/>
   </introduction>
   <subsection xml:id="_first-java-program">
-            <title>First Java Program</title>
-            
-            
-            <p xml:id="_index-1">Every program in Java is written as a <term>class</term>. Java is an <term>object-oriented language</term> and we’ll learn more about classes and objects in Unit 2. Inside the class, there can be a <term>main method</term> that starts the program. When you ask the Java run-time to <em>run</em> a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:</p>
-            <program language="java"><input>
+    <title>First Java Program</title>
+    <p xml:id="_index-1">Every program in Java is written as a <term>class</term>. Java is an <term>object-oriented language</term> and we&#x2019;ll learn more about classes and objects in Unit 2. Inside the class, there can be a <term>main method</term> that starts the program. When you ask the Java run-time to <em>run</em> a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:</p>
+    <program language="java">
+      <input>
 public class MyClass
 {
     public static void main(String[] args)
@@ -20,18 +19,17 @@ public class MyClass
         // Put your code here!
     }
 }
-</input></program>
-            <note>
-                <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
-            </note>
-            <p><problematic xml:id="_id3" refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term>: Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting <c>"</c> and ending <c>"</c>.  Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.</p>
-
-<exercise label="lcfc1">
-    <statement>
-            <p>Run this code to see the output below it. Then change the code to print your name, for example “Hi Pat!”, and run again.</p>
-
-    </statement>
-    <program xml:id="lcfc1_editor" interactive="activecode" language="java">
+</input>
+    </program>
+    <note>
+      <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
+    </note>
+    <p><problematic xml:id="_id3" refid="id2">|CodingEx|</problematic><term>Coding Exercise</term>: Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting <c>"</c> and ending <c>"</c>.  Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.</p>
+    <exercise label="lcfc1">
+      <statement>
+        <p>Run this code to see the output below it. Then change the code to print your name, for example &#x201C;Hi Pat!&#x201D;, and run again.</p>
+      </statement>
+      <program xml:id="lcfc1_editor" interactive="activecode" language="java">
         <input>
 public class MyClass
 {
@@ -62,40 +60,38 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <p>You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with “.java” as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.</p>
-            <HParsonsNode line="108" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-1', 'qnumber': '1-1-3', 'reuse': '', 'initialsetting': '--blocks--\npublic static\nvoid main(\nString[]\nargs)\npublic Static', 'dburl': '', 'question_label': '2.1.1.2'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-            </HParsonsNode>
-            <HParsonsNode line="122" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-2', 'qnumber': '1-1-4', 'reuse': '', 'initialsetting': '--blocks--\npublic\nstatic\nvoid\nmain(\nString[]\nargs)\nVoid\nPublic', 'dburl': '', 'question_label': '2.1.1.3'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-            </HParsonsNode>
-            <HParsonsNode line="139" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-3', 'qnumber': '1-1-5', 'reuse': '', 'initialsetting': '--blocks--\npublic\nstatic\nvoid\nmain\n(\nString\n[]\nargs\n)\n()', 'dburl': '', 'question_label': '2.1.1.4'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-            </HParsonsNode>
-        </subsection>
+      </program>
+    </exercise>
+    <p>You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with &#x201C;.java&#x201D; as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.</p>
+    <HParsonsNode line="108" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-1', 'qnumber': '1-1-3', 'reuse': '', 'initialsetting': '--blocks--\npublic static\nvoid main(\nString[]\nargs)\npublic Static', 'dburl': '', 'question_label': '2.1.1.2'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
+      <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don&#x2019;t need.</p>
+    </HParsonsNode>
+    <HParsonsNode line="122" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-2', 'qnumber': '1-1-4', 'reuse': '', 'initialsetting': '--blocks--\npublic\nstatic\nvoid\nmain(\nString[]\nargs)\nVoid\nPublic', 'dburl': '', 'question_label': '2.1.1.3'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
+      <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don&#x2019;t need.</p>
+    </HParsonsNode>
+    <HParsonsNode line="139" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-main-method-order-3', 'qnumber': '1-1-5', 'reuse': '', 'initialsetting': '--blocks--\npublic\nstatic\nvoid\nmain\n(\nString\n[]\nargs\n)\n()', 'dburl': '', 'question_label': '2.1.1.4'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
+      <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don&#x2019;t need.</p>
+    </HParsonsNode>
+  </subsection>
   <subsection xml:id="_print-methods">
-            <title>Print Methods</title>
-            
-            
-            <p xml:id="_index-2">Java has two different methods to print output to the screen:</p>
-            <p><ul>
-                <li>
-                    <p><term>System.out.println(value)</term> : prints the value followed by a new line (ln)</p>
-                </li>
-                <li>
-                    <p><term>System.out.print(value)</term> : prints the value without advancing to the next line</p>
-                </li>
-            </ul></p>
-            <p><c>System.out.println("Hi there!");</c> prints out the characters between the first <c>"</c> and the second <c>"</c> followed by a new line.  The <c>"Hi there!"</c> is called a <term>string literal</term>, and it can have zero to many characters enclosed in starting and ending double quotes.</p>
-
-<exercise label="printCommands">
-    <statement>
-            <p>Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?</p>
-
-    </statement>
-    <program xml:id="printCommands_editor" interactive="activecode" language="java">
+    <title>Print Methods</title>
+    <p xml:id="_index-2">Java has two different methods to print output to the screen:</p>
+    <p>
+      <ul>
+        <li>
+          <p><term>System.out.println(value)</term> : prints the value followed by a new line (ln)</p>
+        </li>
+        <li>
+          <p><term>System.out.print(value)</term> : prints the value without advancing to the next line</p>
+        </li>
+      </ul>
+    </p>
+    <p><c>System.out.println("Hi there!");</c> prints out the characters between the first <c>"</c> and the second <c>"</c> followed by a new line.  The <c>"Hi there!"</c> is called a <term>string literal</term>, and it can have zero to many characters enclosed in starting and ending double quotes.</p>
+    <exercise label="printCommands">
+      <statement>
+        <p>Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?</p>
+      </statement>
+      <program xml:id="printCommands_editor" interactive="activecode" language="java">
         <input>
 public class MyClass
 {
@@ -148,127 +144,163 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <p>Special words—also called <term>keywords</term>—such as <c>public</c>, <c>class</c>, and <c>if</c> must be in lowercase, but class names such as <c>System</c> and <c>String</c> are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (<c>;</c>). Such a line is called a <term>statement</term>. You can think of the semicolon (<c>;</c>) in Java like a period (<c>.</c>) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won’t compile without it. Note also that not <em>every</em> line ends with a semicolon; if the line starts a construct like an <title_reference>if</title_reference> statement, there is no semicolon before the opening <c>{</c> nor one after the closing <c>}</c>.</p>
-            <HParsonsNode line="234" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8 9 10'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-print-order-1', 'qnumber': '1-1-7', 'reuse': '', 'initialsetting': '--blocks--\nSystem\n.\nout\n.\nprintln\n(\n&quot;\nHi!\n&quot;\n)\n;\nsystem', 'dburl': '', 'question_label': '2.1.2.2'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print “Hi!”. There are extra blocks that you don’t need.</p>
-            </HParsonsNode>
-            <HParsonsNode line="255" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8 9 10'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-print-order-2', 'qnumber': '1-1-8', 'reuse': '', 'initialsetting': '--blocks--\nSystem\n.\nout\n.\nprintln\n(\n&quot;\nBye!\n&quot;\n)\n;\nOut', 'dburl': '', 'question_label': '2.1.2.3'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print “Bye!”. There are extra blocks that you don’t need.</p>
-            </HParsonsNode>
-        </subsection>
+      </program>
+    </exercise>
+    <p>Special words&#x2014;also called <term>keywords</term>&#x2014;such as <c>public</c>, <c>class</c>, and <c>if</c> must be in lowercase, but class names such as <c>System</c> and <c>String</c> are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (<c>;</c>). Such a line is called a <term>statement</term>. You can think of the semicolon (<c>;</c>) in Java like a period (<c>.</c>) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won&#x2019;t compile without it. Note also that not <em>every</em> line ends with a semicolon; if the line starts a construct like an <title_reference>if</title_reference> statement, there is no semicolon before the opening <c>{</c> nor one after the closing <c>}</c>.</p>
+    <HParsonsNode line="234" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8 9 10'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-print-order-1', 'qnumber': '1-1-7', 'reuse': '', 'initialsetting': '--blocks--\nSystem\n.\nout\n.\nprintln\n(\n&quot;\nHi!\n&quot;\n)\n;\nsystem', 'dburl': '', 'question_label': '2.1.2.2'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
+      <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print &#x201C;Hi!&#x201D;. There are extra blocks that you don&#x2019;t need.</p>
+    </HParsonsNode>
+    <HParsonsNode line="255" runestone_options="{'language': &quot;data-language='java'&quot;, 'randomize': ' data-randomize=&quot;true&quot;', 'blockanswer': &quot;data-blockanswer='0 1 2 3 4 5 6 7 8 9 10'&quot;, 'subchapter': 'topic-1-1-intro-algorithms', 'chapter': 'Unit1-Using-Objects-and-Methods', 'basecourse': 'csawesome2', 'optional': '', 'optclass': '', 'divid': 'mp-print-order-2', 'qnumber': '1-1-8', 'reuse': '', 'initialsetting': '--blocks--\nSystem\n.\nout\n.\nprintln\n(\n&quot;\nBye!\n&quot;\n)\n;\nOut', 'dburl': '', 'question_label': '2.1.2.3'}" source="/mnt/c/users/hoffmanb/Documents/github/csawesome2/_sources/Unit1-Using-Objects-and-Methods/topic-1-1-intro-algorithms.rst">
+      <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print &#x201C;Bye!&#x201D;. There are extra blocks that you don&#x2019;t need.</p>
+    </HParsonsNode>
+  </subsection>
   <subsection xml:id="_syntax-errors-and-debugging">
-            <title>Syntax Errors and Debugging</title>
-            <p>Computers don’t actually speak Java so we have to <term>compile</term> (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.</p>
-            
-            
-            <p><term>Syntax errors</term> are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c> or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the process of removing errors is called <term>debugging</term>. An early computer science pioneer <raw format="html" xml:space="preserve">&lt;a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank"&gt;Grace Hopper&lt;/a&gt;</raw> documented a real bug, a moth that flew into a computer in 1947!</p>
-            <figure align="center" xml:id="id1"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="NaN%"/></figure>
-            <p>The compiler tries to run your code, but if your code has <term>syntax errors</term>, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.</p>
-            <p>Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. <raw format="html" xml:space="preserve">&lt;a href="https://rubberduckdebugging.com/" target="_blank"&gt;Rubber duck debugging&lt;/a&gt;</raw> is a lot of fun!</p>
-
+    <title>Syntax Errors and Debugging</title>
+    <p>Computers don&#x2019;t actually speak Java so we have to <term>compile</term> (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.</p>
+    <p><term>Syntax errors</term> are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c> or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the process of removing errors is called <term>debugging</term>. An early computer science pioneer <raw format="html" xml:space="preserve">&lt;a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank"&gt;Grace Hopper&lt;/a&gt;</raw> documented a real bug, a moth that flew into a computer in 1947!</p>
+    <figure align="center" xml:id="id1">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Grace Hopper&#x2019;s log showing a real bug, 1947.</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="NaN%"/>
+    </figure>
+    <p>The compiler tries to run your code, but if your code has <term>syntax errors</term>, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.</p>
+    <p>Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. <raw format="html" xml:space="preserve">&lt;a href="https://rubberduckdebugging.com/" target="_blank"&gt;Rubber duck debugging&lt;/a&gt;</raw> is a lot of fun!</p>
     <video xml:id="auv10y-dN4s" youtube="auv10y-dN4s" width="82%"/>
-                <p>Let’s practice debugging some code!</p>
-            <p><problematic xml:id="_id5" refid="id4">|Exercise|</problematic> <term>Check Your Understanding: Mixed up programs</term></p>
-<exercise label="thirdClass" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
-            <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
-</statement>
-<blocks><block order="4">
-<cline>public class ThirdClass</cline>
-<cline>{</cline>
-</block><block order="5">
-<cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-<cline>   </cline>
-</block><block order="1">
-<cline>      System.out.println("Hi my friend!");</cline>
-<cline>      </cline>
-</block><block order="2">
-<cline>   }</cline>
-<cline>   </cline>
-</block><block order="3">
-<cline>}</cline>
-</block></blocks></exercise><exercise label="fourthClass" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
-            <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
-</statement>
-<blocks><block order="8">
-<choice correct="yes"><cline>public class FourthClass</cline>
-<cline>{</cline>
-</choice><choice><cline>public Class FourthClass</cline>
-<cline>{                         </cline>
-</choice></block><block order="4">
-<choice correct="yes"><cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-<cline>   </cline>
-</choice><choice><cline>   public static void main()</cline>
-<cline>   {                         </cline>
-<cline>   </cline>
-</choice></block><block order="3">
-<choice correct="yes"><cline>      System.out.println("Hi there!");</cline>
-<cline>      </cline>
-</choice><choice><cline>      System.out.println("Hi there!") </cline>
-<cline>      </cline>
-</choice></block><block order="7">
-<cline>   }</cline>
-<cline>   </cline>
-</block><block order="6">
-<cline>}</cline>
-</block></blocks></exercise>        </subsection>
+    <p>Let&#x2019;s practice debugging some code!</p>
+    <p>
+      <problematic xml:id="_id5" refid="id4">|Exercise|</problematic>
+      <term>Check Your Understanding: Mixed up programs</term>
+    </p>
+    <exercise label="thirdClass" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>The following has all the correct code to print out &#x201C;Hi my friend!&#x201D; when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the &#x201C;Check Me&#x201D; button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
+      </statement>
+      <blocks>
+        <block order="4">
+          <cline>public class ThirdClass</cline>
+          <cline>{</cline>
+        </block>
+        <block order="5">
+          <cline>   public static void main(String[] args)</cline>
+          <cline>   {</cline>
+          <cline>   </cline>
+        </block>
+        <block order="1">
+          <cline>      System.out.println("Hi my friend!");</cline>
+          <cline>      </cline>
+        </block>
+        <block order="2">
+          <cline>   }</cline>
+          <cline>   </cline>
+        </block>
+        <block order="3">
+          <cline>}</cline>
+        </block>
+      </blocks>
+    </exercise>
+    <exercise label="fourthClass" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>The following has all the correct code to print out &#x201C;Hi there!&#x201D; when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the &#x201C;Check Me&#x201D; button to check your solution.</p>
+      </statement>
+      <blocks>
+        <block order="8">
+          <choice correct="yes">
+            <cline>public class FourthClass</cline>
+            <cline>{</cline>
+          </choice>
+          <choice>
+            <cline>public Class FourthClass</cline>
+            <cline>{                         </cline>
+          </choice>
+        </block>
+        <block order="4">
+          <choice correct="yes">
+            <cline>   public static void main(String[] args)</cline>
+            <cline>   {</cline>
+            <cline>   </cline>
+          </choice>
+          <choice>
+            <cline>   public static void main()</cline>
+            <cline>   {                         </cline>
+            <cline>   </cline>
+          </choice>
+        </block>
+        <block order="3">
+          <choice correct="yes">
+            <cline>      System.out.println("Hi there!");</cline>
+            <cline>      </cline>
+          </choice>
+          <choice>
+            <cline>      System.out.println("Hi there!") </cline>
+            <cline>      </cline>
+          </choice>
+        </block>
+        <block order="7">
+          <cline>   }</cline>
+          <cline>   </cline>
+        </block>
+        <block order="6">
+          <cline>}</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
   <subsection xml:id="_reading-error-messages">
-            <title>Reading Error Messages</title>
-            <p>In the exercise below, you should click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button to
+    <title>Reading Error Messages</title>
+    <p>In the exercise below, you should click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button to
                 compile and run the code. Unfortunately you will find there is a syntax error in
                 the code that you need to fix. Before you try to fix it, look for the error
                 message below the code. This is called a <term>compile time error</term> because it is an
                 error detected by the compiler.</p>
-            <p>It will be a lot easier to find the problem, and other problems like it, if you
-                understand how to read the error message. So let’s take a closer look. It will
+    <p>It will be a lot easier to find the problem, and other problems like it, if you
+                understand how to read the error message. So let&#x2019;s take a closer look. It will
                 look something like this:</p>
-            <program language="text"><input>
+    <program language="text">
+      <input>
 FirstClass.java:5: error: unclosed string literal
        System.out.println("Hi there!);
                           ^
 1 error
-</input></program>
-            <p>The first line starts with the name of the file that was being compiled.
-                Because you submitted your code via this web page you didn’t actually name
+</input>
+    </program>
+    <p>The first line starts with the name of the file that was being compiled.
+                Because you submitted your code via this web page you didn&#x2019;t actually name
                 the file but it was named for you to match the name of your class. Then
-                there’s a colon (<c>:</c>) followed by a number. That number tells you the line
+                there&#x2019;s a colon (<c>:</c>) followed by a number. That number tells you the line
                 number in the file where the compiler detected the error, in this case
                 line 5.</p>
-            <p>Error messages aren’t always 100% accurate about where the error actually is;
+    <p>Error messages aren&#x2019;t always 100% accurate about where the error actually is;
                 sometimes you actually need to change something a bit earlier in the program
                 and sometimes a bit later. But the line number is the best place to start
                 looking.</p>
-            <p>After the line number and another colon, you will find the actual error message. These
+    <p>After the line number and another colon, you will find the actual error message. These
                 can be kind of cryptic but you should still read it. As you learn more Java
                 vocabulary they will become more meaningful but they almost always contain
-                some useful clues. For instance take this error message: “unclosed string
-                literal”. You may not know what a string literal is (yet) but “unclosed”
+                some useful clues. For instance take this error message: &#x201C;unclosed string
+                literal&#x201D;. You may not know what a string literal is (yet) but &#x201C;unclosed&#x201D;
                 suggests something was opened and then not closed. Keep that thought in mind.</p>
-            <p>Now look at the next two lines. The very next line is just the line of code
+    <p>Now look at the next two lines. The very next line is just the line of code
                 from your program. But below that is a very important line containing a
                 single caret (<c>^</c>) positioned to point at exactly where in the line the
-                Java compiler thinks the problem is. In this case it’s pointing at the
-                quotation mark (<c>”</c>) before “Hi”. So it’s complaining about something being
-                unclosed and it’s pointing us at a quotation mark. Usually quotation marks
+                Java compiler thinks the problem is. In this case it&#x2019;s pointing at the
+                quotation mark (<c>&#x201D;</c>) before &#x201C;Hi&#x201D;. So it&#x2019;s complaining about something being
+                unclosed and it&#x2019;s pointing us at a quotation mark. Usually quotation marks
                 come in pairs called the open quote and the close quote, right? And if you
-                look at the line of code you’ll see that there’s no closing quotation mark.
+                look at the line of code you&#x2019;ll see that there&#x2019;s no closing quotation mark.
                 Could that be the problem? Try adding a quotation mark and see if that fixes
                 it!</p>
-            <p>It is worth getting in the habit of really reading error messages. The people
+    <p>It is worth getting in the habit of really reading error messages. The people
                 who wrote the Java compiler put in lot of work to try to make the error
-                messages useful. If you read them, you’ll soon learn to recognize
+                messages useful. If you read them, you&#x2019;ll soon learn to recognize
                 common mistakes and will get much quicker at finding your syntax errors.</p>
-            <p><problematic xml:id="_id7" refid="id6">|CodingEx|</problematic> <term>Coding Exercise: Compile Time Error 1</term></p>
-
-<exercise label="sc2error1">
-    <statement>
-            <p>Fix the code below.</p>
-
-    </statement>
-    <program xml:id="sc2error1_editor" interactive="activecode" language="java">
+    <p>
+      <problematic xml:id="_id7" refid="id6">|CodingEx|</problematic>
+      <term>Coding Exercise: Compile Time Error 1</term>
+    </p>
+    <exercise label="sc2error1">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+      <program xml:id="sc2error1_editor" interactive="activecode" language="java">
         <input>
 public class FirstClass
 {
@@ -298,20 +330,21 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <p><problematic xml:id="_id9" refid="id8">|CodingEx|</problematic> <term>Coding Exercise: Compile Time Error 2</term></p>
-            <p>Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to try and run the following code. Look
+      </program>
+    </exercise>
+    <p>
+      <problematic xml:id="_id9" refid="id8">|CodingEx|</problematic>
+      <term>Coding Exercise: Compile Time Error 2</term>
+    </p>
+    <p>Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to try and run the following code. Look
                 for an error message after the code. This time the error message will probably
                 point even more exactly at the problem than in the previous exercise. Try to fix
                 the code and run it again.</p>
-
-<exercise label="sc2error2">
-    <statement>
-            <p>Fix the code below.</p>
-
-    </statement>
-    <program xml:id="sc2error2_editor" interactive="activecode" language="java">
+    <exercise label="sc2error2">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+      <program xml:id="sc2error2_editor" interactive="activecode" language="java">
         <input>
 public class SecondClass
 {
@@ -342,29 +375,30 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <p><problematic xml:id="_id11" refid="id10">|CodingEx|</problematic> <term>Coding Exercise: Compile Time Error 3</term></p>
-            <p>Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to try and run the following code. What is
+      </program>
+    </exercise>
+    <p>
+      <problematic xml:id="_id11" refid="id10">|CodingEx|</problematic>
+      <term>Coding Exercise: Compile Time Error 3</term>
+    </p>
+    <p>Click on the <image source="Unit1-Using-Objects-and-Methods/Figures/run-button.png" width="NaN%" alt="run button"/> button below to try and run the following code. What is
                 wrong this time? The first error message will probably point you directly at the
-                problem. But after you fix that you’ll probably get a <title_reference>new</title_reference> error! That happens
-                sometimes because the compiler can’t even detect the second error until the
+                problem. But after you fix that you&#x2019;ll probably get a <title_reference>new</title_reference> error! That happens
+                sometimes because the compiler can&#x2019;t even detect the second error until the
                 first one is fixed.</p>
-            <p>This is another reason it’s important to read error messages. It’s very tempting
-                when we see that there’s an error to jump immediately to trying to fix it. Arg,
-                an error! Get rid of it! But if we don’t slow down and read the message in a
-                case like this, we might not notice that we’ve actually fixed the first error.
-                If we don’t notice that we fixed it, we might undo our change and <title_reference>unfix</title_reference> it!</p>
-            <p>So read the error messages—they’re there to help you. With that in mind, see if
+    <p>This is another reason it&#x2019;s important to read error messages. It&#x2019;s very tempting
+                when we see that there&#x2019;s an error to jump immediately to trying to fix it. Arg,
+                an error! Get rid of it! But if we don&#x2019;t slow down and read the message in a
+                case like this, we might not notice that we&#x2019;ve actually fixed the first error.
+                If we don&#x2019;t notice that we fixed it, we might undo our change and <title_reference>unfix</title_reference> it!</p>
+    <p>So read the error messages&#x2014;they&#x2019;re there to help you. With that in mind, see if
                 you can fix both errors in this code. A hint for the second error:
                 capitalization matters.</p>
-
-<exercise label="sc2error3">
-    <statement>
-            <p>Fix the code below.</p>
-
-    </statement>
-    <program xml:id="sc2error3_editor" interactive="activecode" language="java">
+    <exercise label="sc2error3">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+      <program xml:id="sc2error3_editor" interactive="activecode" language="java">
         <input>
 public class ThirdClass
 {
@@ -396,38 +430,38 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <p>Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?</p>
-        </subsection>
+      </program>
+    </exercise>
+    <p>Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?</p>
+  </subsection>
   <subsection xml:id="_comments">
-            <title>Comments</title>
-            <p>In Java and many text-based coding languages, <c>//</c> is used to mark the
+    <title>Comments</title>
+    <p>In Java and many text-based coding languages, <c>//</c> is used to mark the
                 beginning of a comment. For multi-line comments, use <c>/*</c> to start the comment
                 and <c>*/</c> to end the comment. The compiler will skip over comments. However, it
                 is a good idea to use comments to make notes to yourself and other programmers
                 working with you. Here are some examples of good commenting:</p>
-            <program language="java"><input>
+    <program language="java">
+      <input>
 /* MyClass.java
    Programmer: My Name
    Date:
 */
 
 int max = 10; // this keeps track of the max score
-</input></program>
-        </subsection>
+</input>
+    </program>
+  </subsection>
   <subsection xml:id="_groupwork-debugging-challenge">
-            <title><problematic xml:id="_id13" refid="id12">|Groupwork|</problematic> Debugging Challenge</title>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/rubberduck.jpg" width="NaN%" alt="Rubber Duck"/>
-            <p>In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you’re working alone, you may want to explain the code to a rubber duck or another toy using <raw format="html" xml:space="preserve">&lt;a href="https://rubberduckdebugging.com/" target="_blank"&gt;Rubber duck debugging&lt;/a&gt;</raw>.</p>
-            <p>Working in pairs, debug the following code. Can you find all the bugs and get the code to run?</p>
-
-<exercise label="challenge1-2">
-    <statement>
-            <p>Fix the code below.</p>
-
-    </statement>
-    <program xml:id="challenge1-2_editor" interactive="activecode" language="java">
+    <title><problematic xml:id="_id13" refid="id12">|Groupwork|</problematic> Debugging Challenge</title>
+    <image source="Unit1-Using-Objects-and-Methods/Figures/rubberduck.jpg" width="NaN%" alt="Rubber Duck"/>
+    <p>In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you&#x2019;re working alone, you may want to explain the code to a rubber duck or another toy using <raw format="html" xml:space="preserve">&lt;a href="https://rubberduckdebugging.com/" target="_blank"&gt;Rubber duck debugging&lt;/a&gt;</raw>.</p>
+    <p>Working in pairs, debug the following code. Can you find all the bugs and get the code to run?</p>
+    <exercise label="challenge1-2">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+      <program xml:id="challenge1-2_editor" interactive="activecode" language="java">
         <input>
 public class Challenge1_2
 {
@@ -460,17 +494,20 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
   <subsection xml:id="_summary">
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p>A basic Java program looks like the following:</p>
-                </li>
-            </ul></p>
-            <program language="java"><input>
+    <title>Summary</title>
+    <p>
+      <ul>
+        <li>
+          <p>A basic Java program looks like the following:</p>
+        </li>
+      </ul>
+    </p>
+    <program language="java">
+      <input>
 public class MyClass
 {
     public static void main(String[] args)
@@ -478,95 +515,140 @@ public class MyClass
         System.out.println("Hi there!");
     }
 }
-</input></program>
-            <p><ul>
-                <li>
-                    <p>A Java program starts with <term>public class NameOfClass { }</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
-                </li>
-                <li>
-                    <p>Most Java classes have a main method that will be run automatically. It looks like this: <term>public static void main(String[] args) { }</term>.</p>
-                </li>
-                <li>
-                    <p>The <term>System.out.print()</term> and <term>System.out.println()</term> methods display information given inside the parentheses on the computer monitor.</p>
-                </li>
-                <li>
-                    <p>System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.</p>
-                </li>
-                <li>
-                    <p>A <term>string literal</term> is enclosed in double quotes (’’ ‘’).</p>
-                </li>
-                <li>
-                    <p>Java statements end in <c>;</c> (semicolon). <c>{ }</c> are used to enclose blocks of code. <c>//</c> and <c>/* */</c> are used for comments.</p>
-                </li>
-                <li>
-                    <p>A <term>compiler</term> translates Java code into a class file that can be run on your computer. <term>Compiler or syntax errors</term> are reported to you by the compiler if the Java code is not correctly written. Some things to check for are <c>;</c> at end of lines containing complete statements and matching <c>{ }</c>, <c>()</c>, and <c>""</c>.</p>
-                </li>
-            </ul></p>
-        </subsection>
+</input>
+    </program>
+    <p>
+      <ul>
+        <li>
+          <p>A Java program starts with <term>public class NameOfClass { }</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
+        </li>
+        <li>
+          <p>Most Java classes have a main method that will be run automatically. It looks like this: <term>public static void main(String[] args) { }</term>.</p>
+        </li>
+        <li>
+          <p>The <term>System.out.print()</term> and <term>System.out.println()</term> methods display information given inside the parentheses on the computer monitor.</p>
+        </li>
+        <li>
+          <p>System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.</p>
+        </li>
+        <li>
+          <p>A <term>string literal</term> is enclosed in double quotes (&#x2019;&#x2019; &#x2018;&#x2019;).</p>
+        </li>
+        <li>
+          <p>Java statements end in <c>;</c> (semicolon). <c>{ }</c> are used to enclose blocks of code. <c>//</c> and <c>/* */</c> are used for comments.</p>
+        </li>
+        <li>
+          <p>A <term>compiler</term> translates Java code into a class file that can be run on your computer. <term>Compiler or syntax errors</term> are reported to you by the compiler if the Java code is not correctly written. Some things to check for are <c>;</c> at end of lines containing complete statements and matching <c>{ }</c>, <c>()</c>, and <c>""</c>.</p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
   <subsection xml:id="_ap-practice">
-            <title>AP Practice</title>
-
+    <title>AP Practice</title>
     <exercise label="AP1-2-1">
-        <statement>
-
-            <p>1-1-16: Consider the following code segment.</p>
-            <program language="java"><input>
+      <statement>
+        <p>1-1-16: Consider the following code segment.</p>
+        <program language="java">
+          <input>
 System.out.print("Java is ");
 System.out.println("fun ");
 System.out.print("and cool!");
-</input></program>
-            <p>What is printed as a result of executing the code segment?</p>
-</statement><choices><choice><statement id="AP1-2-1_opt_a">            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is fun and cool!&lt;/pre&gt;</raw>
-</statement><feedback id="AP1-2-1_opt_a">
+</input>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="AP1-2-1_opt_a">
+            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is fun and cool!&lt;/pre&gt;</raw>
+          </statement>
+          <feedback id="AP1-2-1_opt_a">
             <p>Notice the println in line 2.</p>
-</feedback></choice><choice><statement id="AP1-2-1_opt_b">            <raw format="html" xml:space="preserve">&lt;pre&gt;
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="AP1-2-1_opt_b">
+            <raw format="html" xml:space="preserve">&lt;pre&gt;
 Java isfun
 and cool!
 &lt;/pre&gt;</raw>
-</statement><feedback id="AP1-2-1_opt_b">
+          </statement>
+          <feedback id="AP1-2-1_opt_b">
             <p>Notice the space after is in the first line.</p>
-</feedback></choice><choice><statement id="AP1-2-1_opt_c">            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="AP1-2-1_opt_c">
+            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is
 fun
 and cool!  &lt;/pre&gt;</raw>
-</statement><feedback id="AP1-2-1_opt_c">
+          </statement>
+          <feedback id="AP1-2-1_opt_c">
             <p>Notice that the first line is a print, not println.</p>
-</feedback></choice><choice correct="yes"><statement id="AP1-2-1_opt_d">            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is fun
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="AP1-2-1_opt_d">
+            <raw format="html" xml:space="preserve">&lt;pre&gt;Java is fun
 and cool!  &lt;/pre&gt;</raw>
-</statement><feedback id="AP1-2-1_opt_d">
+          </statement>
+          <feedback id="AP1-2-1_opt_d">
             <p>Correct! Pay attention to which lines are print or println.</p>
-</feedback></choice></choices>
-
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-
     <exercise label="AP1-2-2">
-        <statement>
-
-            <p>1-1-17: Consider the following code segment.</p>
-            <program language="java"><input>
+      <statement>
+        <p>1-1-17: Consider the following code segment.</p>
+        <program language="java">
+          <input>
 System.out.println("Roses are red, ")      // Line 1;
 System.out.println("Violets are blue, ")  // Line 2;
 System.out.print("Unexpected '}' ")        // Line 3;
 System.out.print("on line 32. ")           // Line 4;
-</input></program>
-            <p>The code segment is intended to produce the following output but may not work as intended.</p>
-            <raw format="html" xml:space="preserve">&lt;pre&gt;Roses are red,
+</input>
+        </program>
+        <p>The code segment is intended to produce the following output but may not work as intended.</p>
+        <raw format="html" xml:space="preserve">&lt;pre&gt;Roses are red,
 Violets are blue,
 Unexpected '}' on line 32.&lt;/pre&gt;</raw>
-            <p>Which change, if any, can be made so that the code segment produces the intended output?</p>
-</statement><choices><choice><statement id="AP1-2-2_opt_a">            <p>Replacing print with println on lines 3 and 4.</p>
-</statement><feedback id="AP1-2-2_opt_a">
+        <p>Which change, if any, can be made so that the code segment produces the intended output?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement id="AP1-2-2_opt_a">
+            <p>Replacing print with println on lines 3 and 4.</p>
+          </statement>
+          <feedback id="AP1-2-2_opt_a">
             <p>These should print on the same line without a newline in between.</p>
-</feedback></choice><choice><statement id="AP1-2-2_opt_b">            <p>Replacing println with print on lines 1 and 2.</p>
-</statement><feedback id="AP1-2-2_opt_b">
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="AP1-2-2_opt_b">
+            <p>Replacing println with print on lines 1 and 2.</p>
+          </statement>
+          <feedback id="AP1-2-2_opt_b">
             <p>These should print out with a newline in between.</p>
-</feedback></choice><choice><statement id="AP1-2-2_opt_c">            <p>Removing the single quotes in line 3.</p>
-</statement><feedback id="AP1-2-2_opt_c">
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="AP1-2-2_opt_c">
+            <p>Removing the single quotes in line 3.</p>
+          </statement>
+          <feedback id="AP1-2-2_opt_c">
             <p>The single quotes are fine in this line.</p>
-</feedback></choice><choice correct="yes"><statement id="AP1-2-2_opt_d">            <p>Putting the semicolon after the ) on each line.</p>
-</statement><feedback id="AP1-2-2_opt_d">
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="AP1-2-2_opt_d">
+            <p>Putting the semicolon after the ) on each line.</p>
+          </statement>
+          <feedback id="AP1-2-2_opt_d">
             <p>Correct! The semicolon should go after each statement but not in the comment.</p>
-</feedback></choice></choices>
-
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-        </subsection>
+  </subsection>
 </section>

@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <docinfo>
-
-<document-id edition="2">csawesome2</document-id>
-
-<!-- Rename Checkpoint for <exercise> to Exercise -->
-<rename element="inlineexercise">Exercise</rename>
-
-<brandlogo url="." source="_static/CSAwesomeLogo.png" />  
-
-<blurb shelf="AP Computer Science">CSAwesome2 is a College Board 2025-2026 guidelines AP CSA endorsed curriculum, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School.</blurb>
-    
-
-    <!-- this is the default, but supresses a warning -->
-    <cross-references text="type-global" />
+  <document-id edition="2">csawesome2</document-id>
+  <!-- Rename Checkpoint for <exercise> to Exercise -->
+  <rename element="inlineexercise">Exercise</rename>
+  <brandlogo url="." source="_static/CSAwesomeLogo.png"/>
+  <blurb shelf="AP Computer Science">CSAwesome2 is a College Board 2025-2026 guidelines AP CSA endorsed curriculum, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School.</blurb>
+  <!-- this is the default, but supresses a warning -->
+  <cross-references text="type-global"/>
 </docinfo>
