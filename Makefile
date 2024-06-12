@@ -1,7 +1,10 @@
-.PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine
+.PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine restore onetime
+
+ifeq ($(origin R2P), undefined)
+$(error R2P needs to be set in the environment, e.g. via a .env file)
+endif
 
 DEBUG_PRETEXT := # -v DEBUG
-R2P := /mnt/c/users/hoffmanb/Documents/github/Runestone2PreTeXt
 
 xml := $(shell find build/xml -type f)
 ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
@@ -23,6 +26,7 @@ fixed_xml: xml
 
 fixed_ptx:
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
+	find pretext -name '*.ptx' -exec ./fix-tests.pl {} \;
 	rsync -r hand-fixes/ pretext/
 
 # This works better than the script that does them all
@@ -32,19 +36,28 @@ pretext/%.ptx: build/xml/%.xml | pretext
 	xsltproc --novalid post-1.xsl $@.pass1 > $@.pass2
 	xsltproc --novalid post-2.xsl $@.pass2 > $@.pass3
 	cp $@.pass3 $@
+	find pretext/ -name '*.pass?' -delete
 
 ptx: $(ptx) pretext/rs-substitutes.xml
 
-# need to do pretext init in here to generate project.ptx 
+# need to do pretext init in here to generate project.ptx
 # need to manually edit project.ptx and create publication-rs-for-all.xml
 #   as described in https://github.com/bnmnetp/Runestone2PreTeXt/blob/main/README.md
 post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
+
+restore:
+	git restore pretext
+	git restore _sources/
+	git restore rs-substitutes.xml
+	git clean -fdx pretext
+
+onetime:
 	python $(R2P)/index2main.py
 	python $(R2P)/toctree2xml.py .
-	python $(R2P)/filltoc.py pretext _sources 
+	python $(R2P)/filltoc.py pretext _sources
 	python $(R2P)/copy_figs.py ./_sources ./pretext/assets
 
 build_web:
@@ -56,8 +69,7 @@ pretext:
 pretext/rs-substitutes.xml: rs-substitutes.xml | pretext
 	cp $< $@
 
-clean:
-	rm -rf pretext
+clean: restore
 	rm -rf build/xml
 
 pristine: clean
