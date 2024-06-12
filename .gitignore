@@ -16,7 +16,7 @@ _sources copy/Appendix/DrJava.rst
 *.pyc
 
 # pretext stuff
-pretext/generated/trace/*.js
+pretext/generated/
 cli.log
 
 # added by pretext init
