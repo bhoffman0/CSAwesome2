@@ -26,6 +26,7 @@ fixed_xml: xml
 
 fixed_ptx:
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
+	find pretext -name '*.ptx' -exec ./fix-tests.pl {} \;
 	rsync -r hand-fixes/ pretext/
 
 # This works better than the script that does them all
