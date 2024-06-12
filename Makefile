@@ -69,8 +69,7 @@ pretext:
 pretext/rs-substitutes.xml: rs-substitutes.xml | pretext
 	cp $< $@
 
-clean:
-	rm -rf pretext
+clean: restore
 	rm -rf build/xml
 
 pristine: clean
