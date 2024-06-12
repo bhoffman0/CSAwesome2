@@ -1,7 +1,10 @@
 .PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine
 
+ifeq ($(origin R2P), undefined)
+$(error R2P needs to be set in the environment, e.g. via a .env file)
+endif
+
 DEBUG_PRETEXT := # -v DEBUG
-R2P := /mnt/c/users/hoffmanb/Documents/github/Runestone2PreTeXt
 
 xml := $(shell find build/xml -type f)
 ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
@@ -35,7 +38,7 @@ pretext/%.ptx: build/xml/%.xml | pretext
 
 ptx: $(ptx) pretext/rs-substitutes.xml
 
-# need to do pretext init in here to generate project.ptx 
+# need to do pretext init in here to generate project.ptx
 # need to manually edit project.ptx and create publication-rs-for-all.xml
 #   as described in https://github.com/bnmnetp/Runestone2PreTeXt/blob/main/README.md
 post:
@@ -44,7 +47,7 @@ post:
 	python $(R2P)/reformatPtx.py
 	python $(R2P)/index2main.py
 	python $(R2P)/toctree2xml.py .
-	python $(R2P)/filltoc.py pretext _sources 
+	python $(R2P)/filltoc.py pretext _sources
 	python $(R2P)/copy_figs.py ./_sources ./pretext/assets
 
 build_web:
