@@ -1,7 +1,9 @@
 .PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine restore onetime
 
+#
+# .env sets some environment varibles that we don't want to commit
+#
 ifeq ($(origin R2P), undefined)
-#$(error R2P needs to be set in the environment, e.g. via a .env file)
 include .env
 endif
 
@@ -14,7 +16,7 @@ ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
 rs2ptx := python -m runestone rs2ptx
 
 all: fixed_source fixed_xml
-	$(MAKE) ptx post fixed_ptx build_web
+	$(MAKE) ptx post fixed_ptx build_$(TARGET)
 
 fixed_source:
 	find _sources/ -name '*.rst' -exec ./fix-source.pl {} \;
@@ -63,6 +65,9 @@ onetime:
 
 build_web:
 	pretext $(DEBUG_PRETEXT) build web
+
+build_runestone:
+	pretext $(DEBUG_PRETEXT) build runestone
 
 pretext:
 	mkdir $@
