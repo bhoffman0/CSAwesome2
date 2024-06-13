@@ -9,20 +9,19 @@
     <p>In this lesson, you will learn about assignment statements and expressions that contain math operators and variables.</p>
   </introduction>
   <subsection xml:id="_assignment-statements">
-            <title>Assignment Statements</title>
-            <p><term>Assignment statements</term> initialize or change the value stored in a variable using the assignment operator <c>=</c>.  An assignment statement always has a single variable on the left hand side. The value of the <term>expression</term> (which can contain math operators and other variables) on the right of the <c>=</c> sign is stored in the variable on the left.</p>
-            <figure align="center" xml:id="id1-6"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Assignment Statement (variable = expression;)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/assignment.png" width="NaN%"/></figure>
-            <p>Instead of saying equals for the = in an assignment statement, say “gets” or “is assigned” to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.</p>
-            
-            <p>The following <raw format="html" xml:space="preserve">&lt;a href="https://www.youtube.com/watch?v=MZwIgM__5C8&amp;ab_channel=colleenlewis" target="_blank"&gt;video&lt;/a&gt;</raw> by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.</p>
-
+    <title>Assignment Statements</title>
+    <p><term>Assignment statements</term> initialize or change the value stored in a variable using the assignment operator <c>=</c>.  An assignment statement always has a single variable on the left hand side. The value of the <term>expression</term> (which can contain math operators and other variables) on the right of the <c>=</c> sign is stored in the variable on the left.</p>
+    <figure align="center" xml:id="id1-6">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Assignment Statement (variable = expression;)</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/assignment.png" width="NaN%"/>
+    </figure>
+    <p>Instead of saying equals for the = in an assignment statement, say &#x201C;gets&#x201D; or &#x201C;is assigned&#x201D; to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.</p>
+    <p>The following <raw format="html" xml:space="preserve">&lt;a href="https://www.youtube.com/watch?v=MZwIgM__5C8&amp;ab_channel=colleenlewis" target="_blank"&gt;video&lt;/a&gt;</raw> by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.</p>
     <video xml:id="MZwIgM__5C8" youtube="MZwIgM__5C8" width="82%"/>
-                <p>As we saw in the video, we can set one variable’s value to a <em>copy</em> of the value of another variable like <c>y = x;</c>.  This won’t change the value of the variable that you are copying from.</p>
-            
-            <p>Let’s step through the following code in the <raw format="html" xml:space="preserve">&lt;a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" target="_blank"  style="text-decoration:underline"&gt;Java visualizer&lt;/a&gt;</raw> to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.</p>
-
-<program xml:id="asgn_viz1" interactive="codelens" language="java">
-    <input>
+    <p>As we saw in the video, we can set one variable&#x2019;s value to a <em>copy</em> of the value of another variable like <c>y = x;</c>.  This won&#x2019;t change the value of the variable that you are copying from.</p>
+    <p>Let&#x2019;s step through the following code in the <raw format="html" xml:space="preserve">&lt;a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" target="_blank"  style="text-decoration:underline"&gt;Java visualizer&lt;/a&gt;</raw> to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.</p>
+    <program xml:id="asgn_viz1" interactive="codelens" language="java">
+      <input>
 public class Test2
 {
   public static void main(String[] args)
@@ -40,97 +39,103 @@ public class Test2
   }
 }
     </input>
-</program>
-            <p><problematic xml:id="_id4-3" refid="id3">|Exercise|</problematic> <term>Check your understanding</term></p>
-            
-
+    </program>
+    <p>
+      <problematic xml:id="_id4-3" refid="id3">|Exercise|</problematic>
+      <term>Check your understanding</term>
+    </p>
     <exercise label="q2_1">
-        <statement>
-
-            <p>1-4-3: What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this <raw format="html" xml:space="preserve">&lt;a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" target="_blank"  style="text-decoration:underline"&gt;Java visualizer&lt;/a&gt;</raw> link.</p>
-            <program language="java"><input>
+      <statement>
+        <p>1-4-3: What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this <raw format="html" xml:space="preserve">&lt;a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" target="_blank"  style="text-decoration:underline"&gt;Java visualizer&lt;/a&gt;</raw> link.</p>
+        <program language="java">
+          <input>
 int x = 0;
 int y = 1;
 int z = 2;
 x = y;
 y = y * 2;
 z = 3;
-</input></program>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>x = 0, y = 1, z = 2</p>
-                </statement>
-                <feedback>
-                    <p>These are the initial values in the variable, but the values are changed.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>x = 1, y = 2, z = 3</p>
-                </statement>
-                <feedback>
-                    <p>x changes to y's initial value, y's value is doubled, and z is set to 3</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>x = 2, y = 2, z = 3</p>
-                </statement>
-                <feedback>
-                    <p>Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>x = 0, y = 0, z = 3</p>
-                </statement>
-                <feedback>
-                    <p>Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</p>
-                </feedback>
-            </choice>
-</choices>
-
+</input>
+        </program>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>x = 0, y = 1, z = 2</p>
+          </statement>
+          <feedback>
+            <p>These are the initial values in the variable, but the values are changed.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>x = 1, y = 2, z = 3</p>
+          </statement>
+          <feedback>
+            <p>x changes to y's initial value, y's value is doubled, and z is set to 3</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>x = 2, y = 2, z = 3</p>
+          </statement>
+          <feedback>
+            <p>Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>x = 0, y = 0, z = 3</p>
+          </statement>
+          <feedback>
+            <p>Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-            <p><problematic xml:id="_id6-3" refid="id5">|Exercise|</problematic> <term>Mixed Up Code</term></p>
-<exercise label="2_swap" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
-            <p>The following has the correct code to ‘swap’ the values in x and y (so that x ends up with y’s initial value and y ends up with x’s initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
-</statement>
-<blocks><block order="1">
-<cline>int x = 3;</cline>
-<cline>int y = 5;</cline>
-<cline>int temp = 0;</cline>
-</block><block order="5">
-<cline>temp = x;</cline>
-</block><block order="4">
-<cline>x = y;</cline>
-</block><block order="2">
-<cline>y = temp;</cline>
-</block><block order="3" correct="no">
-<cline>y = x; </cline>
-</block></blocks></exercise>        </subsection>
+    <p>
+      <problematic xml:id="_id6-3" refid="id5">|Exercise|</problematic>
+      <term>Mixed Up Code</term>
+    </p>
+    <exercise label="2_swap" numbered="yes" adaptive="yes" indentation="hide" language="python">
+      <statement>
+        <p>The following has the correct code to &#x2018;swap&#x2019; the values in x and y (so that x ends up with y&#x2019;s initial value and y ends up with x&#x2019;s initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
+      </statement>
+      <blocks>
+        <block order="1">
+          <cline>int x = 3;</cline>
+          <cline>int y = 5;</cline>
+          <cline>int temp = 0;</cline>
+        </block>
+        <block order="5">
+          <cline>temp = x;</cline>
+        </block>
+        <block order="4">
+          <cline>x = y;</cline>
+        </block>
+        <block order="2">
+          <cline>y = temp;</cline>
+        </block>
+        <block order="3" correct="no">
+          <cline>y = x; </cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
   <subsection xml:id="_adding-1-to-a-variable">
-            <title>Adding 1 to a Variable</title>
-            <p>If you use a variable to keep score, you would probably increment it (add one to
+    <title>Adding 1 to a Variable</title>
+    <p>If you use a variable to keep score, you would probably increment it (add one to
                 the current value) whenever score should go up. You can do this by setting the
                 variable to the current value of the variable plus one (<c>score = score + 1</c>)
                 as shown below. The formula would look strange in math class, but it
                 makes sense in coding because it is assigning a new value to the variable on the
                 left that comes from evaluating the arithmetic expression on the right. So, the
                 score variable is set to the previous value of score plus 1.</p>
-
-<exercise label="lccv1">
-    <statement>
-            <p>Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.</p>
-
-    </statement>
-    <program xml:id="lccv1_editor" interactive="activecode" language="java">
+    <exercise label="lccv1">
+      <statement>
+        <p>Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.</p>
+      </statement>
+      <program xml:id="lccv1_editor" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -164,56 +169,53 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
   <subsection xml:id="_input-with-variables">
-            <title>Input with Variables</title>
-            
-            
-            <p>Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (<raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank"&gt;Java Scanner Input Repl&lt;/a&gt;</raw> using the <c>Scanner</c> class or <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank"&gt;Java Console Input Repl&lt;/a&gt;</raw> using the <c>Console</c> class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend’s name. The code works for any name: behold, the power of variables!</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</raw>
-            <p>Although you will not be tested in the AP CSA exam on using the Java input or the <c>Scanner</c> or <c>Console</c> classes, learning how to do input in Java is very useful and fun. For more information on using the <c>Scanner</c> class, go to <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">https://www.w3schools.com/java/java_user_input.asp</url>, and for the newer <c>Console</c> class, <url href="https://howtodoinjava.com/java-examples/console-input-output/" visual="https://howtodoinjava.com/java-examples/console-input-output/">https://howtodoinjava.com/java-examples/console-input-output/</url>.</p>
-        </subsection>
+    <title>Input with Variables</title>
+    <p>Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (<raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank"&gt;Java Scanner Input Repl&lt;/a&gt;</raw> using the <c>Scanner</c> class or <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank"&gt;Java Console Input Repl&lt;/a&gt;</raw> using the <c>Console</c> class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend&#x2019;s name. The code works for any name: behold, the power of variables!</p>
+    <raw format="html" xml:space="preserve">&lt;iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</raw>
+    <p>Although you will not be tested in the AP CSA exam on using the Java input or the <c>Scanner</c> or <c>Console</c> classes, learning how to do input in Java is very useful and fun. For more information on using the <c>Scanner</c> class, go to <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">https://www.w3schools.com/java/java_user_input.asp</url>, and for the newer <c>Console</c> class, <url href="https://howtodoinjava.com/java-examples/console-input-output/" visual="https://howtodoinjava.com/java-examples/console-input-output/">https://howtodoinjava.com/java-examples/console-input-output/</url>.</p>
+  </subsection>
   <subsection xml:id="_operators">
-            <title>Operators</title>
-            
-            
-            <p xml:id="_index-0-5">Java uses the standard mathematical operators for addition (<c>+</c>), subtraction
+    <title>Operators</title>
+    <p xml:id="_index-0-5">Java uses the standard mathematical operators for addition (<c>+</c>), subtraction
                 (<c>-</c>), and division (<c>/</c>). The multiplication operator is written as <c>*</c>, as
                 it is in most programming languages, since the character sets used until
-                relatively recently didn’t have a character for a real multiplication sign,
-                <c>×</c>, and keyboards still don’t have a key for it. Likewise no <c>÷</c>.</p>
-            <p>You may be used to using <c>^</c> for exponentiation, either from a graphing
+                relatively recently didn&#x2019;t have a character for a real multiplication sign,
+                <c>&#xD7;</c>, and keyboards still don&#x2019;t have a key for it. Likewise no <c>&#xF7;</c>.</p>
+    <p>You may be used to using <c>^</c> for exponentiation, either from a graphing
                 calculator or tools like Desmos. Confusingly <c>^</c> <em>is</em> an operator in Java,
-                but it has a completely different meaning than exponentiation and isn’t even
+                but it has a completely different meaning than exponentiation and isn&#x2019;t even
                 exactly an arithmetic operator. You will learn how to use the  <c>Math.pow</c> method to do exponents in Unit 2.</p>
-            <p>Arithmetic expressions can be of type <c>int</c> or <c>double</c>. An arithmetic
+    <p>Arithmetic expressions can be of type <c>int</c> or <c>double</c>. An arithmetic
                 expression consisting only of <c>int</c> values will evaluate to an <c>int</c> value.
                 An arithmetic expression that uses at least one <c>double</c> value will evaluate
                 to a <c>double</c> value. (You may have noticed that <c>+</c> was also used to combine
                 <c>String</c> and other values into new <c>String</c>s. More on this when we talk
                 about <c>String</c>s more fully in Unit 2.)</p>
-            <p>Java uses the operator <c>==</c> to test if the value on the left is equal to the
-                value on the right and <c>!=</c> to test if two items are not equal. Don’t get one
+    <p>Java uses the operator <c>==</c> to test if the value on the left is equal to the
+                value on the right and <c>!=</c> to test if two items are not equal. Don&#x2019;t get one
                 equal sign <c>=</c> confused with two equal signs <c>==</c>. They mean very different
                 things in Java. One equal sign is used to assign a value to a variable. Two
                 equal signs are used to test a variable to see if it is a certain value and that
-                returns true or false as you’ll see below. Also note that using <c>==</c> and
+                returns true or false as you&#x2019;ll see below. Also note that using <c>==</c> and
                 <c>!=</c> with <c>double</c> values can produce surprising results. Because <c>double</c>
                 values are only an approximation of the real numbers even things that should be
                 mathematically equivalent might not be represented by the exactly same
                 <c>double</c> value and thus will not be <c>==</c>. To see this for yourself, write a
                 line of code below to print the value of the expression <c>0.3 == 0.1 + 0.2</c>; it
                 will be <c>false</c>!</p>
-            <p><problematic xml:id="_id8-3" refid="id7">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
-
-<exercise label="lcop1">
-    <statement>
-            <p>Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn’t it surprising that it prints 0?  See the note below.</p>
-
-    </statement>
-    <program xml:id="lcop1_editor" interactive="activecode" language="java">
+    <p>
+      <problematic xml:id="_id8-3" refid="id7">|CodingEx|</problematic>
+      <term>Coding Exercise:</term>
+    </p>
+    <exercise label="lcop1">
+      <statement>
+        <p>Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn&#x2019;t it surprising that it prints 0?  See the note below.</p>
+      </statement>
+      <program xml:id="lcop1_editor" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -250,25 +252,26 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <note>
-                <p>When Java sees you doing integer division (or any operation with integers) it
+      </program>
+    </exercise>
+    <note>
+      <p>When Java sees you doing integer division (or any operation with integers) it
                     assumes you want an integer result so it throws away anything after the
                     decimal point in the answer. This is called <term>truncating division</term>. If you
                     need a double answer, you should make at least one of the values in the
                     expression a double like 2.0.</p>
-            </note>
-            <p>With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an <term>ArithmeticException</term> error message. Try it in one of the active code windows above.</p>
-            <p>Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, <term>operator precedence</term> rules are used, just like when we do math (remember PEMDAS?), so that <c>*</c>, <c>/</c>, and <c>%</c> are done before <c>+</c> and <c>-</c>. However, anything in parentheses is done first. It doesn’t hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.</p>
-            <p><problematic xml:id="_id10-3" refid="id9">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
-
-<exercise label="compound1">
-    <statement>
-            <p>In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider <term>operator precedence</term>. How do the parentheses change the precedence?</p>
-
-    </statement>
-    <program xml:id="compound1_editor" interactive="activecode" language="java">
+    </note>
+    <p>With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an <term>ArithmeticException</term> error message. Try it in one of the active code windows above.</p>
+    <p>Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, <term>operator precedence</term> rules are used, just like when we do math (remember PEMDAS?), so that <c>*</c>, <c>/</c>, and <c>%</c> are done before <c>+</c> and <c>-</c>. However, anything in parentheses is done first. It doesn&#x2019;t hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.</p>
+    <p>
+      <problematic xml:id="_id10-3" refid="id9">|CodingEx|</problematic>
+      <term>Coding Exercise:</term>
+    </p>
+    <exercise label="compound1">
+      <statement>
+        <p>In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider <term>operator precedence</term>. How do the parentheses change the precedence?</p>
+      </statement>
+      <program xml:id="compound1_editor" interactive="activecode" language="java">
         <input>
 public class TestCompound
 {
@@ -301,42 +304,44 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
   <subsection xml:id="_the-remainder-operator">
-            <title>The Remainder Operator</title>
-            <p>The operator <c>%</c> in Java is the <term>remainder</term> operator. Like the other
+    <title>The Remainder Operator</title>
+    <p>The operator <c>%</c> in Java is the <term>remainder</term> operator. Like the other
                 arithmetic operators is takes two operands. Mathematically it returns the
                 remainder after dividing the first number by the second, using truncating integer division.
                 For instance, <c>5 % 2</c> evaluates to 1 since 2 goes into 5 two times
                 with a remainder of 1.</p>
-            <p>While you may not have heard of remainder as an operator, think back to
+    <p>While you may not have heard of remainder as an operator, think back to
                 elementary school math. Remember when you first learned long division, before
-                they taught you about decimals, how when you did a long division that didn’t
+                they taught you about decimals, how when you did a long division that didn&#x2019;t
                 divide evenly, you gave the answer as the number of even divisions and the
                 remainder. That remainder is what is returned by this operator. In the figures
                 below, the remainders are the same values that would be returned by <c>2 % 3</c>
                 and <c>5 % 2</c>.</p>
-            <figure align="center" xml:id="id2-5"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="NaN%"/></figure>
-            <p>Sometimes people—including Professor Lewis in the next video—will call <c>%</c>
+    <figure align="center" xml:id="id2-5">
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Long division showing the integer result and the remainder</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="NaN%"/>
+    </figure>
+    <p>Sometimes people&#x2014;including Professor Lewis in the next video&#x2014;will call <c>%</c>
                 the <term>modulo</term>, or <term>mod</term>, operator. That is not actually correct though the
                 difference between remainder and modulo, which uses Euclidean division instead
                 of truncating integer division, only matters when negative operands are involved
                 and the signs of the operands differ. With positive operands, remainder and mod give the same results.
                 Java does have a method <c>Math.floorMod</c> in the <c>Math</c> class if you need to use modulo instead of remainder, but <c>%</c> is all you need in the AP exam.</p>
-            
-            <p>Here’s the <raw format="html" xml:space="preserve">&lt;a href="https://www.youtube.com/watch?v=jp-T9lFISlI&amp;ab_channel=colleenlewis" target="_blank"&gt;video&lt;/a&gt;</raw>.</p>
-
+    <p>Here&#x2019;s the <raw format="html" xml:space="preserve">&lt;a href="https://www.youtube.com/watch?v=jp-T9lFISlI&amp;ab_channel=colleenlewis" target="_blank"&gt;video&lt;/a&gt;</raw>.</p>
     <video xml:id="jp-T9lFISlI" youtube="jp-T9lFISlI" width="82%"/>
-                <p><problematic xml:id="_id12-2" refid="id11">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
-
-<exercise label="lcop2">
-    <statement>
-            <p>In the example below, try to guess what it will print out and then run it to see if you are right.</p>
-
-    </statement>
-    <program xml:id="lcop2_editor" interactive="activecode" language="java">
+    <p>
+      <problematic xml:id="_id12-2" refid="id11">|CodingEx|</problematic>
+      <term>Coding Exercise:</term>
+    </p>
+    <exercise label="lcop2">
+      <statement>
+        <p>In the example below, try to guess what it will print out and then run it to see if you are right.</p>
+      </statement>
+      <program xml:id="lcop2_editor" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -370,102 +375,87 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            <note>
-                <p>The result of x % y when x is smaller than y is always x.  The value y can’t go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.</p>
-            </note>
-            
-            
-            <p xml:id="_index-1-3"><problematic xml:id="_id14-2" refid="id13">|Exercise|</problematic> <term>Check Your Understanding</term></p>
-
+      </program>
+    </exercise>
+    <note>
+      <p>The result of x % y when x is smaller than y is always x.  The value y can&#x2019;t go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.</p>
+    </note>
+    <p xml:id="_index-1-3">
+      <problematic xml:id="_id14-2" refid="id13">|Exercise|</problematic>
+      <term>Check Your Understanding</term>
+    </p>
     <exercise label="q3_4_1">
-        <statement>
-
-            <p>1-4-10: What is the result of 158 % 10?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>15</p>
-                </statement>
-                <feedback>
-                    <p>This would be the result of 158 divided by 10.  % gives you the remainder.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>16</p>
-                </statement>
-                <feedback>
-                    <p>% gives you the remainder after the division.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>8</p>
-                </statement>
-                <feedback>
-                    <p>When you divide 158 by 10 you get a remainder of 8.</p>
-                </feedback>
-            </choice>
-</choices>
-
+      <statement>
+        <p>1-4-10: What is the result of 158 % 10?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>15</p>
+          </statement>
+          <feedback>
+            <p>This would be the result of 158 divided by 10.  % gives you the remainder.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>16</p>
+          </statement>
+          <feedback>
+            <p>% gives you the remainder after the division.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>8</p>
+          </statement>
+          <feedback>
+            <p>When you divide 158 by 10 you get a remainder of 8.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-
     <exercise label="q3_4_2">
-        <statement>
-
-            <p>1-4-11: What is the result of 3 % 8?</p>
-
-        </statement>
-<choices>
-
-            <choice correct="yes">
-                <statement>
-                    <p>3</p>
-                </statement>
-                <feedback>
-                    <p>8 goes into 3 no times so the remainder is 3.  The remainder of a smaller number divided by a larger number is always the smaller number!</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>2</p>
-                </statement>
-                <feedback>
-                    <p>This would be the remainder if the question was 8 % 3 but here we are asking for the reminder after we divide 3 by 8.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>8</p>
-                </statement>
-                <feedback>
-                    <p>What is the remainder after you divide 3 by 8?</p>
-                </feedback>
-            </choice>
-</choices>
-
+      <statement>
+        <p>1-4-11: What is the result of 3 % 8?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>3</p>
+          </statement>
+          <feedback>
+            <p>8 goes into 3 no times so the remainder is 3.  The remainder of a smaller number divided by a larger number is always the smaller number!</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>2</p>
+          </statement>
+          <feedback>
+            <p>This would be the remainder if the question was 8 % 3 but here we are asking for the reminder after we divide 3 by 8.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>8</p>
+          </statement>
+          <feedback>
+            <p>What is the remainder after you divide 3 by 8?</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-        </subsection>
+  </subsection>
   <subsection xml:id="_groupwork-programming-challenge-dog-years">
-            <title><problematic xml:id="_id16-1" refid="id15">|Groupwork|</problematic> Programming Challenge : Dog Years</title>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/dog-free.png" width="NaN%" alt="dog"/>
-            <p>In this programming challenge, you will calculate your age, and your pet’s age from your birthdates, and your pet’s age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don’t have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.</p>
-
-<exercise label="challenge1-4">
-    <statement>
-            <p>Calculate your age and your pet’s age from the birthdates, and then your pet’s age in dog years.</p>
-
-    </statement>
-    <program xml:id="challenge1-4_editor" interactive="activecode" language="java">
+    <title><problematic xml:id="_id16-1" refid="id15">|Groupwork|</problematic> Programming Challenge : Dog Years</title>
+    <image source="Unit1-Using-Objects-and-Methods/Figures/dog-free.png" width="NaN%" alt="dog"/>
+    <p>In this programming challenge, you will calculate your age, and your pet&#x2019;s age from your birthdates, and your pet&#x2019;s age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don&#x2019;t have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.</p>
+    <exercise label="challenge1-4">
+      <statement>
+        <p>Calculate your age and your pet&#x2019;s age from the birthdates, and then your pet&#x2019;s age in dog years.</p>
+      </statement>
+      <program xml:id="challenge1-4_editor" interactive="activecode" language="java">
         <input>
 public class Challenge1_4
 {
@@ -583,123 +573,115 @@ public class RunestoneTests extends CodeTestHelper {
    }
 }
         </input>
-    </program>
-</exercise>
-            
-            
-            
-            <p>Your teacher may suggest that you use a Java IDE like <raw format="html" xml:space="preserve">&lt;a href="https://replit.com" target="_blank"&gt;replit.com&lt;/a&gt;</raw> for this challenge so that you can use input to get these values using the <raw format="html" xml:space="preserve">&lt;a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank"&gt;Scanner class&lt;/a&gt;</raw>. Here is a <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank"&gt;repl template&lt;/a&gt;</raw> that you can use to get started if you want to try the challenge with input.</p>
-        </subsection>
+      </program>
+    </exercise>
+    <p>Your teacher may suggest that you use a Java IDE like <raw format="html" xml:space="preserve">&lt;a href="https://replit.com" target="_blank"&gt;replit.com&lt;/a&gt;</raw> for this challenge so that you can use input to get these values using the <raw format="html" xml:space="preserve">&lt;a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank"&gt;Scanner class&lt;/a&gt;</raw>. Here is a <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank"&gt;repl template&lt;/a&gt;</raw> that you can use to get started if you want to try the challenge with input.</p>
+  </subsection>
   <subsection xml:id="_summary-7">
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p>Arithmetic expressions include expressions of type <c>int</c> and <c>double</c>.</p>
-                </li>
-                <li>
-                    <p>The arithmetic operators consist of <c>+</c>, <c>-</c>, <c>*</c> , <c>/</c>, and <c>%</c>
+    <title>Summary</title>
+    <p>
+      <ul>
+        <li>
+          <p>Arithmetic expressions include expressions of type <c>int</c> and <c>double</c>.</p>
+        </li>
+        <li>
+          <p>The arithmetic operators consist of <c>+</c>, <c>-</c>, <c>*</c> , <c>/</c>, and <c>%</c>
                         also known as addition, subtraction, multiplication, division, and remainder.</p>
-                </li>
-                <li>
-                    <p>An arithmetic operation that uses two <c>int</c> values will evaluate to an
+        </li>
+        <li>
+          <p>An arithmetic operation that uses two <c>int</c> values will evaluate to an
                         <c>int</c> value. With integer division, any decimal part in the result will be
                         thrown away.</p>
-                </li>
-                <li>
-                    <p>An arithmetic operation that uses at least one <c>double</c> value will evaluate
+        </li>
+        <li>
+          <p>An arithmetic operation that uses at least one <c>double</c> value will evaluate
                         to a <c>double</c> value.</p>
-                </li>
-                <li>
-                    <p>Operators can be used to construct compound expressions.</p>
-                </li>
-                <li>
-                    <p>During evaluation, operands are associated with operators according to
+        </li>
+        <li>
+          <p>Operators can be used to construct compound expressions.</p>
+        </li>
+        <li>
+          <p>During evaluation, operands are associated with operators according to
                         <term>operator precedence</term> to determine how they are grouped. (<c>*</c>, <c>/</c>,
                         <c>%</c> have precedence over <c>+</c> and <c>-</c>, unless parentheses are used to
                         group those.)</p>
-                </li>
-                <li>
-                    <p>An attempt to divide an integer by zero will result in an <c>ArithmeticException</c>.</p>
-                </li>
-                <li>
-                    <p>The assignment operator (<c>=</c>) allows a program to initialize or change the
+        </li>
+        <li>
+          <p>An attempt to divide an integer by zero will result in an <c>ArithmeticException</c>.</p>
+        </li>
+        <li>
+          <p>The assignment operator (<c>=</c>) allows a program to initialize or change the
                         value stored in a variable. The value of the expression on the right is stored
                         in the variable on the left.</p>
-                </li>
-                <li>
-                    <p>During execution, expressions are evaluated to produce a single value.</p>
-                </li>
-                <li>
-                    <p>The value of an expression has a type based on the types of the values and
+        </li>
+        <li>
+          <p>During execution, expressions are evaluated to produce a single value.</p>
+        </li>
+        <li>
+          <p>The value of an expression has a type based on the types of the values and
                         operators used in the expression.</p>
-                </li>
-            </ul></p>
-        </subsection>
+        </li>
+      </ul>
+    </p>
+  </subsection>
   <subsection xml:id="_ap-practice-5">
-            <title>AP Practice</title>
-            <p>The following is a 2019 AP CSA sample question.</p>
-
+    <title>AP Practice</title>
+    <p>The following is a 2019 AP CSA sample question.</p>
     <exercise label="apcsa_sample1">
-        <statement>
-
-            <p>1-4-13: Consider the following code segment.</p>
-            <program language="java"><input>
+      <statement>
+        <p>1-4-13: Consider the following code segment.</p>
+        <program language="java">
+          <input>
 int a = 5;
 int b = 2;
 double c = 3.0;
 System.out.println(5 + a / b * c - 1);
-</input></program>
-            <p>What is printed when the code segment is executed?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>0.666666666666667</p>
-                </statement>
-                <feedback>
-                    <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>9.0</p>
-                </statement>
-                <feedback>
-                    <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>10.0</p>
-                </statement>
-                <feedback>
-                    <p>Yes, this is equivalent to (5 + ((a/b)*c) - 1).</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>11.5</p>
-                </statement>
-                <feedback>
-                    <p>Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>14.0</p>
-                </statement>
-                <feedback>
-                    <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
-                </feedback>
-            </choice>
-</choices>
-
+</input>
+        </program>
+        <p>What is printed when the code segment is executed?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>0.666666666666667</p>
+          </statement>
+          <feedback>
+            <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>9.0</p>
+          </statement>
+          <feedback>
+            <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>10.0</p>
+          </statement>
+          <feedback>
+            <p>Yes, this is equivalent to (5 + ((a/b)*c) - 1).</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>11.5</p>
+          </statement>
+          <feedback>
+            <p>Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>14.0</p>
+          </statement>
+          <feedback>
+            <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
-        </subsection>
+  </subsection>
 </section>

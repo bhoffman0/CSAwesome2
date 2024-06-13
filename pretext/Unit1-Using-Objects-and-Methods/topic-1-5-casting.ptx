@@ -4,15 +4,15 @@
   <introduction>
     <title>Casting and Ranges of Values</title>
     <p>In Java, <term>type casting</term> is used to convert values from one type to another. By
-            <term>casting</term> we don’t mean something to do with fishing, but it is a similar idea
+            <term>casting</term> we don&#x2019;t mean something to do with fishing, but it is a similar idea
             to casting a bronze, without needing to heat anything to 913 degrees Celsius.
             But like molten bronze is reshaped by melting it and pouring it into a mold, our
             data is reshaped via a <term>cast</term> operator. In Java when you cast you are changing
-            the “shape” (or type) of the value.</p>
+            the &#x201C;shape&#x201D; (or type) of the value.</p>
     <figure align="" xml:id="id1-8">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Bronze casting changes the shape of the metal.</caption>
-    <image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="NaN%"/>
-  </figure>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Bronze casting changes the shape of the metal.</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="NaN%"/>
+    </figure>
     <p>The <term>cast operator</term>, which looks like <c>(int)</c> and <c>(double)</c> placed before
             any expression (a literal, a number, a variable, or more complex expression in
             parentheses) produces a value of the given type by converting the value of the
@@ -26,7 +26,7 @@
             the actual mathematical result, removing anything after the decimal point. Thus
             <c>9 / 10</c> evaluates to <c>0</c>, not <c>0.9</c>. It also does not evaluate to <c>1</c>;
             truncating is not the same as rounding!</p>
-    <p>But in any expression involving a <c>double</c>, the <c>double</c> is “contagious” and
+    <p>But in any expression involving a <c>double</c>, the <c>double</c> is &#x201C;contagious&#x201D; and
             will cause the value of that expression to also be a <c>double</c>. Thus the
             expression <c>9.0 / 10</c> is evaluated as if it had been written <c>9.0 / 10.0</c> and
             produces the <c>double</c> value <c>0.9</c>.</p>
@@ -35,38 +35,38 @@
             a <c>double</c>. This is especially useful when you have <c>int</c> variables that
             you want to do non-integer division with:</p>
     <program language="java">
-    <input>
+      <input>
 int total; // a variable containing the sum of a bunch of ints
 int count; // the number of ints that went into total
 
 // Compute the average of the bunch of ints summed into total.
 double average = (double) total / count;
 </input>
-  </program>
+    </program>
     <p>A conversion from <c>int</c> to <c>double</c> is called a <term>widening conversion</term>
             because a <c>double</c> can represent any <c>int</c> value but not vice versa; thus a
             <c>double</c> is considered a wider data type than an <c>int</c>.</p>
     <note>
-            <p><c>int</c>s in Java are always 32-bit signed values which mean they can
+      <p><c>int</c>s in Java are always 32-bit signed values which mean they can
                 represent values from <math>-2^{31}</math> to <math>2^{31} - 1</math>, inclusive, while
                 the range of consecutive integer values that can be represented by a double
                 is from <math>-2^{53}</math> to <math>2^{53}</math>, inclusive. (A <c>double</c> can also
                 represent much larger values but with limited precision.) You can refer to
                 the minimum and maximum <c>int</c> values with the constants
                 <c>Integer.MIN_VALUE</c> and <c>Integer.MAX_VALUE</c>.</p>
-        </note>
+    </note>
     <p>Values of type <c>double</c> in the range that can be represented by an <c>int</c> can
             be rounded to the nearest <c>int</c> by adding or subtracting 0.5 and then casting
             the result with <c>(int)</c>:</p>
     <program language="java">
-    <input>
+      <input>
 double number;    // positive value from somewhere
 double negNumber; // negative value from somewhere
 
 int nearestInt = (int)(number + 0.5);
-int nearestNegInt = (int)(negNumber – 0.5);
+int nearestNegInt = (int)(negNumber &#x2013; 0.5);
 </input>
-  </program>
+    </program>
     <p>For example, if you divide <c>7.0 / 4.0</c> you get <c>1.75</c>. If you cast that to
             an <c>int</c>, it will be truncated to <c>1</c>. However if we want to round a
             <c>double</c> rather than truncating it, adding <c>0.5</c> will produce a number that
@@ -76,25 +76,26 @@ int nearestNegInt = (int)(negNumber – 0.5);
             the other hand adding <c>0.5</c> to the result of evaluating <c>5.0 / 4.2</c>, namely
             <c>1.25</c>, only gets us to <c>1.75</c> which truncates back to <c>1</c> which is the
             nearest integer to <c>1.25</c>.</p>
-    <p xml:id="_index-0-7">What happens to repeating decimal numbers like 3.333333…?  Java limits the number of digits you can save for any <c>double</c> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
+    <p xml:id="_index-0-7">What happens to repeating decimal numbers like 3.333333&#x2026;?  Java limits the number of digits you can save for any <c>double</c> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
     <p>For example, int values are stored in 4 bytes of memory. There is an
             <c>Integer.MAX_VALUE</c> defined as 2147483647 and an <c>Integer.MIN_VALUE</c> defined
             as -2147483648. If you try to store any number larger or smaller than these
             numbers in an int variable, it will result in an <term>integer overflow</term> where an
             incorrect value could be stored. Try it below.</p>
-    <p xml:id="_index-1-5">Although it’s not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:</p>
-    <p><problematic xml:id="_id3-2" refid="id2">|Exercise|</problematic> <term>Check your understanding</term></p>
+    <p xml:id="_index-1-5">Although it&#x2019;s not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:</p>
+    <p>
+      <problematic xml:id="_id3-2" refid="id2">|Exercise|</problematic>
+      <term>Check your understanding</term>
+    </p>
   </introduction>
   <subsection xml:id="_groupwork-programming-challenge-average-3-numbers">
-            <title><problematic xml:id="_id5-3" refid="id4">|Groupwork|</problematic> Programming Challenge : Average 3 Numbers</title>
-            <p>This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.</p>
-
-<exercise label="challenge1-6-average">
-    <statement>
-            <p>Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on replit.com (see template and links below), please paste your repl link here to turn it in.</p>
-
-    </statement>
-    <program xml:id="challenge1-6-average_editor" interactive="activecode" language="java">
+    <title><problematic xml:id="_id5-3" refid="id4">|Groupwork|</problematic> Programming Challenge : Average 3 Numbers</title>
+    <p>This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.</p>
+    <exercise label="challenge1-6-average">
+      <statement>
+        <p>Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on replit.com (see template and links below), please paste your repl link here to turn it in.</p>
+      </statement>
+      <program xml:id="challenge1-6-average_editor" interactive="activecode" language="java">
         <input>
 public class Challenge1_6
 {
@@ -345,55 +346,46 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-            
-            
-            
-            <p>Your teacher may suggest that you use a Java IDE like <raw format="html" xml:space="preserve">&lt;a href="https://replit.com" target="_blank"&gt;replit&lt;/a&gt;</raw> for this challenge so that you can use input to get these values using the <raw format="html" xml:space="preserve">&lt;a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank"&gt;Scanner class&lt;/a&gt;</raw>. Here is a <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" target="_blank"&gt;repl template&lt;/a&gt;</raw> that you can use to get started if you want to try the challenge with input.</p>
-            
-            
-            
-            
-        </subsection>
+      </program>
+    </exercise>
+    <p>Your teacher may suggest that you use a Java IDE like <raw format="html" xml:space="preserve">&lt;a href="https://replit.com" target="_blank"&gt;replit&lt;/a&gt;</raw> for this challenge so that you can use input to get these values using the <raw format="html" xml:space="preserve">&lt;a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank"&gt;Scanner class&lt;/a&gt;</raw>. Here is a <raw format="html" xml:space="preserve">&lt;a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" target="_blank"&gt;repl template&lt;/a&gt;</raw> that you can use to get started if you want to try the challenge with input.</p>
+  </subsection>
   <subsection xml:id="_bonus-challenge-unicode">
-            <title>Bonus Challenge : Unicode</title>
-            <p>If you get done early with the previous challenge, here’s something else fun you
-                can do in Java, although it’s not covered in the AP exam.</p>
-            <p>Java was one of the first programming languages to use <raw format="html" xml:space="preserve">&lt;a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank"&gt;Unicode&lt;/a&gt;</raw> for its
+    <title>Bonus Challenge : Unicode</title>
+    <p>If you get done early with the previous challenge, here&#x2019;s something else fun you
+                can do in Java, although it&#x2019;s not covered in the AP exam.</p>
+    <p>Java was one of the first programming languages to use <raw format="html" xml:space="preserve">&lt;a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank"&gt;Unicode&lt;/a&gt;</raw> for its
                 characters rather than ASCII. While ASCII could represent 128 characters which
                 was plenty for English, Unicode is an international standard that tries to
-                assign a number (which they like to call a “codepoint”) to every character in
+                assign a number (which they like to call a &#x201C;codepoint&#x201D;) to every character in
                 every language. Unicode codepoints are traditionally represented in hex code (a
                 base 16 code that uses the digits 0-9 and the letters A-F for 10-15), so you
-                might see things like <c>U+1F600</c>. But they’re just numbers. That last one is
+                might see things like <c>U+1F600</c>. But they&#x2019;re just numbers. That last one is
                 the same as <c>128512</c>.</p>
-            <p>When Java was released in an 1996, Unicode had been around for five years and
+    <p>When Java was released in an 1996, Unicode had been around for five years and
                 the Unicode people had declared they would only ever need 2<superscript>16</superscript> or 65,536
                 code points to represent all the characters used in the world. So Java included
                 a <c>char</c> data type that can hold exactly 2<superscript>16</superscript> values. Then, seven
-                months later, the Unicode folks, said, “Ooops, that’s not enough”, and extended
+                months later, the Unicode folks, said, &#x201C;Ooops, that&#x2019;s not enough&#x201D;, and extended
                 their system to its current size of 1,112,064 possible codepoints. (As of
                 September 2022, 149,186 have actually been used.)</p>
-            <p>That made <c>char</c> kind of obsolete. But while not every Unicode codepoint can
+    <p>That made <c>char</c> kind of obsolete. But while not every Unicode codepoint can
                 be represented in a Java <c>char</c>, you can use an <c>int</c> to represent a
                 codepoint and the method <c>Character.toString</c> to translate an <c>int</c> into a
                 <c>String</c> containing the character for that codepoint. (You might see older
                 Java code that casts numbers to <c>char</c>; for many codepoints that will work but
-                not on more recently added codepoints including, critically those for Emoji. 😞
+                not on more recently added codepoints including, critically those for Emoji. &#x1F61E;
                 So better to use <c>Character.toString</c> and ignore <c>char</c>.)</p>
-            <p>Try the following program which prints out an English “A”, a
+    <p>Try the following program which prints out an English &#x201C;A&#x201D;, a
                 <raw format="html" xml:space="preserve">&lt;a href="https://unicodelookup.com/#cjk/1" target="_blank"&gt;Chinese character&lt;/a&gt;</raw>, and an <raw format="html" xml:space="preserve">&lt;a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank"&gt;emoji&lt;/a&gt;</raw>. Then look up other characters at this
                 <raw format="html" xml:space="preserve">&lt;a href="https://unicodelookup.com/" target="_blank"&gt;Unicode Lookup&lt;/a&gt;</raw> site and change the code to print them out. (Use the Dec column in site
                 to get the decimal number.) Can you print out letters from 3 different
                 languages?</p>
-
-<exercise label="challenge1-6-unicode">
-    <statement>
-            <p>Can you print out a letter from 3 different languages using this <raw format="html" xml:space="preserve">&lt;a href="https://unicodelookup.com/" target="_blank"&gt;Unicode Lookup&lt;/a&gt;</raw> site?</p>
-
-    </statement>
-    <program xml:id="challenge1-6-unicode_editor" interactive="activecode" language="java">
+    <exercise label="challenge1-6-unicode">
+      <statement>
+        <p>Can you print out a letter from 3 different languages using this <raw format="html" xml:space="preserve">&lt;a href="https://unicodelookup.com/" target="_blank"&gt;Unicode Lookup&lt;/a&gt;</raw> site?</p>
+      </statement>
+      <program xml:id="challenge1-6-unicode_editor" interactive="activecode" language="java">
         <input>
 public class ChallengeUnicode
 {
@@ -435,53 +427,54 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
   <subsection xml:id="_summary-9">
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p><term>Type casting</term> is used to convert value from one type to another.</p>
-                </li>
-                <li>
-                    <p>The casting operators <c>(int)</c> and <c>(double)</c> can be used to create a
+    <title>Summary</title>
+    <p>
+      <ul>
+        <li>
+          <p><term>Type casting</term> is used to convert value from one type to another.</p>
+        </li>
+        <li>
+          <p>The casting operators <c>(int)</c> and <c>(double)</c> can be used to create a
                         temporary value converted to a different data type.</p>
-                </li>
-                <li>
-                    <p>Casting a <c>double</c> value to an <c>int</c> causes the digits to the right of the
+        </li>
+        <li>
+          <p>Casting a <c>double</c> value to an <c>int</c> causes the digits to the right of the
                         decimal point to be truncated (cut off and thrown away).</p>
-                </li>
-                <li>
-                    <p>In expressions involving <c>double</c>s, the <c>double</c> values are contagious,
+        </li>
+        <li>
+          <p>In expressions involving <c>double</c>s, the <c>double</c> values are contagious,
                         causing <c>int</c>s in the expression to be automatically converted to the
                         equivalent <c>double</c> value so the result of the expression can be computed as
                         a <c>double</c>.</p>
-                </li>
-                <li>
-                    <p>Values of type <c>double</c> can be rounded to the nearest integer by (int)(x +
-                        0.5) or (int)(x – 0.5) for negative numbers.</p>
-                </li>
-                <li>
-                    <p>Integer values in Java are represented by values of type <c>int</c>, which are
+        </li>
+        <li>
+          <p>Values of type <c>double</c> can be rounded to the nearest integer by (int)(x +
+                        0.5) or (int)(x &#x2013; 0.5) for negative numbers.</p>
+        </li>
+        <li>
+          <p>Integer values in Java are represented by values of type <c>int</c>, which are
                         stored using a finite amount (4 bytes) of memory. Therefore, an int value must
                         be in the range from <c>Integer.MIN_VALUE</c> to <c>Integer.MAX_VALUE</c>,
                         inclusive.</p>
-                </li>
-                <li>
-                    <p>If an expression would evaluate to an int value outside of the allowed range,
+        </li>
+        <li>
+          <p>If an expression would evaluate to an int value outside of the allowed range,
                         an integer overflow occurs. This could result in an incorrect value within the
                         allowed range.</p>
-                </li>
-            </ul></p>
-        </subsection>
+        </li>
+      </ul>
+    </p>
+  </subsection>
   <exercises>
     <exercise label="lcct1">
-    <statement>
+      <statement>
         <p>What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?</p>
-
-    </statement>
-    <program xml:id="lcct1_editor" interactive="activecode" language="java">
+      </statement>
+      <program xml:id="lcct1_editor" interactive="activecode" language="java">
         <input>
 public class OperatorTest
 {
@@ -518,16 +511,15 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
+      </program>
+    </exercise>
     <exercise label="nearestInt">
-    <statement>
+      <statement>
         <p>Run the code below to see how the formula of adding or subtracting .5 and
             then casting with (int) rounds a positive or negative double number to the
             closest int.</p>
-
-    </statement>
-    <program xml:id="nearestInt_editor" interactive="activecode" language="java">
+      </statement>
+      <program xml:id="nearestInt_editor" interactive="activecode" language="java">
         <input>
 public class NearestInt
 {
@@ -570,14 +562,13 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
+      </program>
+    </exercise>
     <exercise label="overfl">
-    <statement>
+      <statement>
         <p>Try the code below to see two integer overflows for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow by deleting the last 0 in the numbers to store less digits.</p>
-
-    </statement>
-    <program xml:id="overfl_editor" interactive="activecode" language="java">
+      </statement>
+      <program xml:id="overfl_editor" interactive="activecode" language="java">
         <input>
 public class TestOverflow
 {
@@ -609,14 +600,13 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
+      </program>
+    </exercise>
     <exercise label="double_precision">
-    <statement>
+      <statement>
         <p>Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point.</p>
-
-    </statement>
-    <program xml:id="double_precision_editor" interactive="activecode" language="java">
+      </statement>
+      <program xml:id="double_precision_editor" interactive="activecode" language="java">
         <input>
 public class TestFormat
 {
@@ -649,100 +639,84 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
-</exercise>
+      </program>
+    </exercise>
     <exercise label="q2_5">
-        <statement>
-
+      <statement>
         <p>1-5-5: True or false: Java rounds up automatically when you do integer division.</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>true</p>
-                </statement>
-                <feedback>
-                    <p>Did you try this out in Active Code?  Does it work that way?</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>false</p>
-                </statement>
-                <feedback>
-                    <p>Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.</p>
-                </feedback>
-            </choice>
-</choices>
-
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>true</p>
+          </statement>
+          <feedback>
+            <p>Did you try this out in Active Code?  Does it work that way?</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>false</p>
+          </statement>
+          <feedback>
+            <p>Java throws away any values after the decimal point if you do integer division.  It does not round up automatically.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
     <exercise label="q2_6">
-        <statement>
-
+      <statement>
         <p>1-5-6: True or false: casting always results in a double type.</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>true</p>
-                </statement>
-                <feedback>
-                    <p>Try casting to int instead of double.  What does that do?</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>false</p>
-                </statement>
-                <feedback>
-                    <p>Casting results in the type that you cast to. However, if you can't really cast the value to the specified type then you will get an error.</p>
-                </feedback>
-            </choice>
-</choices>
-
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>true</p>
+          </statement>
+          <feedback>
+            <p>Try casting to int instead of double.  What does that do?</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>false</p>
+          </statement>
+          <feedback>
+            <p>Casting results in the type that you cast to. However, if you can't really cast the value to the specified type then you will get an error.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
     <exercise label="q2_7">
-        <statement>
-
+      <statement>
         <p>1-5-7: Which of the following returns the correct average for a total that is the sum of 3 int values?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>(double) (total / 3);</p>
-                </statement>
-                <feedback>
-                    <p>This does integer division before casting the result to double so it loses the fractional part.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>total / 3;</p>
-                </statement>
-                <feedback>
-                    <p>When you divide an integer by an integer you get an integer result and lose the fractional part.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>(double) total /  3;</p>
-                </statement>
-                <feedback>
-                    <p>This will convert total to a double value and then divide by 3 to return a double result.</p>
-                </feedback>
-            </choice>
-</choices>
-
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>(double) (total / 3);</p>
+          </statement>
+          <feedback>
+            <p>This does integer division before casting the result to double so it loses the fractional part.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>total / 3;</p>
+          </statement>
+          <feedback>
+            <p>When you divide an integer by an integer you get an integer result and lose the fractional part.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>(double) total /  3;</p>
+          </statement>
+          <feedback>
+            <p>This will convert total to a double value and then divide by 3 to return a double result.</p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
   </exercises>
 </section>

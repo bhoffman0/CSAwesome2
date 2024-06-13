@@ -5,9 +5,8 @@
   <exercises>
     <exercise xml:id="empty-3">
       <statement>
-                <p>The following code should print “Mary’s favorite color is blue”.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should print &#x201C;Mary&#x2019;s favorite color is blue&#x201D;.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch4Ex2q_editor">
         <input>
 public class Test1
@@ -39,7 +38,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Line 5 is missing a starting ".  Line 6 is missing a ending ;.  Line 7 has Name when it should be name.  Remember that variable names start with a lowercase letter.
 
@@ -48,8 +47,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch4Ex2a_editor" language="java">
-        <input>
+    <program xml:id="ch4Ex2a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -59,19 +57,12 @@ public class Test1
         System.out.println(name + "'s favorite color is " + color);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Line 5 is missing a starting <c>"</c>.  Line 6 is missing a ending <c>;</c>.  Line 7 has <c>Name</c> when it should be <c>name</c>.  Remember that variable names start with a lowercase letter.</p>
 
-<exercise label="ch4Ex2a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch4Ex2a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch4Ex2a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch4Ex2a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -81,16 +72,13 @@ public class Test1
         System.out.println(name + "'s favorite color is " + color);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-4">
       <statement>
-                <p>The following code should print “Gabby’s favorite sport is soccer”.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should print &#x201C;Gabby&#x2019;s favorite sport is soccer&#x201D;.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch4Ex3q_editor">
         <input>
 public class Test1
@@ -123,12 +111,11 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Line 5 is missing a =.  Line 6 is missing the closing ".  Line 7 has Name when it should be name.  Remember that a variable name starts with a lowercase letter.  Line 8 is missing an ending +.
 
-    <program xml:id="ch4Ex3a" language="java">
-        <input>
+    <program xml:id="ch4Ex3a" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -139,8 +126,7 @@ public class Test1
                "'s favorite sport is " + sport);
     }
 }
-        </input>
-    </program>
+        </input></program>
             
                 <p>Line 5 is missing a <c>=</c>.  Line 6 is missing the closing <c>"</c>.  Line 7 has <c>Name</c> when it should be <c>name</c>.  Remember that a variable name starts with a lowercase letter.  Line 8 is missing an ending <c>+</c>.</p>
 
@@ -149,9 +135,8 @@ public class Test1
     </exercise>
     <exercise xml:id="empty-5">
       <statement>
-                <p>The following code should print <c>Your name is Carly and your favorite color is red</c>.  Finish the code so that it prints the output correctly using the variables provided.</p>
-
-    </statement>
+        <p>The following code should print <c>Your name is Carly and your favorite color is red</c>.  Finish the code so that it prints the output correctly using the variables provided.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch4Ex5q_editor">
         <input>
 public class Test1
@@ -184,7 +169,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Add the required strings using the + operator and be sure to include spaces as needed.
 
@@ -193,8 +178,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch4Ex5a_editor" language="java">
-        <input>
+    <program xml:id="ch4Ex5a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -208,19 +192,12 @@ public class Test1
                         + color);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Add the required strings using the <c>+</c> operator and be sure to include spaces as needed.</p>
 
-<exercise label="ch4Ex5a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch4Ex5a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch4Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch4Ex5a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -234,9 +211,7 @@ public class Test1
                         + color);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-6">
@@ -245,8 +220,7 @@ public class Test1
       <solution>
                 Use the + operator to append the strings.  Be sure to include spaces as needed.
 
-    <program xml:id="ch4Ex6a" language="java">
-        <input>
+    <program xml:id="ch4Ex6a" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -258,8 +232,7 @@ public class Test1
 
     }
 }
-        </input>
-    </program>
+        </input></program>
             
                 <p>Use the <c>+</c> operator to append the strings.  Be sure to include spaces as needed.</p>
 
@@ -268,9 +241,8 @@ public class Test1
     </exercise>
     <exercise xml:id="empty-8">
       <statement>
-                <p>Write the code to print <c>Julian's favorite color is green.  His favorite food is pizza.</c> using the variables provided.</p>
-
-    </statement>
+        <p>Write the code to print <c>Julian's favorite color is green.  His favorite food is pizza.</c> using the variables provided.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch4Ex7q_editor">
         <input>
 public class Test1
@@ -306,17 +278,16 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
-                Add the strings together using +.  Don’t forget to include spaces and periods at the end of the sentences.
+                Add the strings together using +.  Don&#x2019;t forget to include spaces and periods at the end of the sentences.
 
 
     
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch4Ex7a_editor" language="java">
-        <input>
+    <program xml:id="ch4Ex7a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -333,19 +304,12 @@ public class Test1
                         + ".");
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
-                <p>Add the strings together using <c>+</c>.  Don’t forget to include spaces and periods at the end of the sentences.</p>
+                <p>Add the strings together using <c>+</c>.  Don&#x2019;t forget to include spaces and periods at the end of the sentences.</p>
 
-<exercise label="ch4Ex7a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch4Ex7a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch4Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch4Ex7a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -362,16 +326,13 @@ public class Test1
                         + ".");
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-9">
       <statement>
-                <p>Finish the code below to print your favorite animal and food.</p>
-
-    </statement>
+        <p>Finish the code below to print your favorite animal and food.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch4Ex8q_editor">
         <input>
 public class Test1
@@ -426,7 +387,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Use + to add strings together.  Add spaces as needed and periods.
 
@@ -435,8 +396,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch4Ex8a_editor" language="java">
-        <input>
+    <program xml:id="ch4Ex8a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -452,19 +412,12 @@ public class Test1
                         + ".");
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Use <c>+</c> to add strings together.  Add spaces as needed and periods.</p>
 
-<exercise label="ch4Ex8a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch4Ex8a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch4Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch4Ex8a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -480,19 +433,16 @@ public class Test1
                         + ".");
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-10">
       <statement/>
       <program interactive="" language="" xml:id="empty-11"/>
       <solution>
-                Add the strings together using +.  Don’t forget to include spaces and periods at the end of the sentences.
+                Add the strings together using +.  Don&#x2019;t forget to include spaces and periods at the end of the sentences.
 
-    <program xml:id="ch4Ex9a" language="java">
-        <input>
+    <program xml:id="ch4Ex9a" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -504,19 +454,17 @@ public class Test1
 
     }
 }
-        </input>
-    </program>
+        </input></program>
             
-                <p>Add the strings together using <c>+</c>.  Don’t forget to include spaces and periods at the end of the sentences.</p>
+                <p>Add the strings together using <c>+</c>.  Don&#x2019;t forget to include spaces and periods at the end of the sentences.</p>
 
     
             </solution>
     </exercise>
     <exercise xml:id="empty-12">
       <statement>
-                <p>The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 30 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 30 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex1q_editor">
         <input>
 public class Test1
@@ -551,7 +499,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Line 5 is missing a semicolon.  Line 6 has Double instead of double.  Remember that the primitive types all start with a lowercase letter.  Line 8 has tripmiles instead of tripMiles.  Remember that you should uppercase the first letter of each new word to make the variable name easier to read (use camel case).
 
@@ -560,8 +508,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer for the previous question.
 
     
-    <program xml:id="ch3Ex1a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex1a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -574,19 +521,12 @@ public class Test1
         System.out.println(totalCost);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Line 5 is missing a semicolon.  Line 6 has <c>Double</c> instead of <c>double</c>.  Remember that the primitive types all start with a lowercase letter.  Line 8 has <c>tripmiles</c> instead of <c>tripMiles</c>.  Remember that you should uppercase the first letter of each new word to make the variable name easier to read (use camel case).</p>
 
-<exercise label="ch3Ex1a">
-    <statement>
-                <p>This is the answer for the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex1a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex1a"><statement><p>This is the answer for the previous question.</p></statement><program xml:id="ch3Ex1a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -599,16 +539,13 @@ public class Test1
         System.out.println(totalCost);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-13">
       <statement>
-                <p>The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>. Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>. Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex2q_editor">
         <input>
 public class Test1
@@ -643,7 +580,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Line 5 has Height instead of height.  Remember that variable names should start with a lowercase letter.  Line 6 is missing an equal sign.  Line 7 is missing a * to square the height.  Line 8 is missing a semicolon at the end of the statement.
 
@@ -652,8 +589,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer for the previous question.
 
     
-    <program xml:id="ch3Ex2a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex2a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -666,19 +602,12 @@ public class Test1
         System.out.println(bodyMassIndexMetric);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Line 5 has <c>Height</c> instead of <c>height</c>.  Remember that variable names should start with a lowercase letter.  Line 6 is missing an equal sign.  Line 7 is missing a <c>*</c> to square the height.  Line 8 is missing a semicolon at the end of the statement.</p>
 
-<exercise label="ch3Ex2a">
-    <statement>
-                <p>This is the answer for the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex2a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex2a"><statement><p>This is the answer for the previous question.</p></statement><program xml:id="ch3Ex2a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -691,16 +620,13 @@ public class Test1
         System.out.println(bodyMassIndexMetric);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-14">
       <statement>
-                <p>The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex3q_editor">
         <input>
 public class Test1
@@ -735,7 +661,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Line 5 is missing the type double.  Line 6 is backwards.  It should be double milesPerGallon = 40;.  Line 8 is missing a /.  Line 10 is missing a ).
 
@@ -744,8 +670,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex3a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex3a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -758,19 +683,12 @@ public class Test1
         System.out.println(distance);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Line 5 is missing the type <c>double</c>.  Line 6 is backwards.  It should be <c>double milesPerGallon = 40;</c>.  Line 8 is missing a <c>/</c>.  Line 10 is missing a <c>)</c>.</p>
 
-<exercise label="ch3Ex3a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex3a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex3a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex3a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -783,16 +701,13 @@ public class Test1
         System.out.println(distance);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-15">
       <statement>
-                <p>The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex4q_editor">
         <input>
 public class Test1
@@ -826,17 +741,16 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
-                Lines 5, 6, and 7 should all be double versus int so that the decimal portion of the calculation isn’t thrown away.
+                Lines 5, 6, and 7 should all be double versus int so that the decimal portion of the calculation isn&#x2019;t thrown away.
 
 
     
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex4a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex4a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -847,19 +761,12 @@ public class Test1
         System.out.println(finalPrice);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
-                <p>Lines 5, 6, and 7 should all be <c>double</c> versus <c>int</c> so that the decimal portion of the calculation isn’t thrown away.</p>
+                <p>Lines 5, 6, and 7 should all be <c>double</c> versus <c>int</c> so that the decimal portion of the calculation isn&#x2019;t thrown away.</p>
 
-<exercise label="ch3Ex4a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex4a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex4a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex4a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -870,16 +777,13 @@ public class Test1
         System.out.println(finalPrice);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-16">
       <statement>
-                <p>The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
-
-    </statement>
+        <p>The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex5q_editor">
         <input>
 public class Test1
@@ -912,7 +816,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Lines 6 and 7 are both missing a /.  Line 8 is missing a (.  Line 9 is missing a } to close the main method.
 
@@ -921,8 +825,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex5a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex5a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -933,19 +836,12 @@ public class Test1
         System.out.println(numDays);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Lines 6 and 7 are both missing a <c>/</c>.  Line 8 is missing a <c>(</c>.  Line 9 is missing a <c>}</c> to close the <c>main</c> method.</p>
 
-<exercise label="ch3Ex5a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex5a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex5a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -956,16 +852,13 @@ public class Test1
         System.out.println(numDays);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-17">
       <statement>
-                <p>Complete the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.</p>
-
-    </statement>
+        <p>Complete the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex6q_editor">
         <input>
 public class Test1
@@ -1009,7 +902,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 Calculate how many weeks it would take to make $200.  Next divide the number of weeks by 4 (roughly the number of weeks in a month).
 
@@ -1018,8 +911,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex6a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex6a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1031,19 +923,12 @@ public class Test1
         System.out.println(numMonths);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>Calculate how many weeks it would take to make $200.  Next divide the number of weeks by 4 (roughly the number of weeks in a month).</p>
 
-<exercise label="ch3Ex6a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex6a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex6a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex6a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1055,16 +940,13 @@ public class Test1
         System.out.println(numMonths);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-18">
       <statement>
-                <p>Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.</p>
-
-    </statement>
+        <p>Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex7q_editor">
         <input>
 public class Test1
@@ -1119,7 +1001,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 First calculate the number of gallons you have left and then multiply that by the miles per gallon to get the number of miles you can still drive.
 
@@ -1128,8 +1010,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex7a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex7a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1140,19 +1021,12 @@ public class Test1
         System.out.println(miles);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>First calculate the number of gallons you have left and then multiply that by the miles per gallon to get the number of miles you can still drive.</p>
 
-<exercise label="ch3Ex7a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex7a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex7a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1163,16 +1037,13 @@ public class Test1
         System.out.println(miles);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-19">
       <statement>
-                <p>Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.</p>
-
-    </statement>
+        <p>Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex8q_editor">
         <input>
 public class Test1
@@ -1228,7 +1099,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
                 First compute the number of seconds in 1 day and then multiple that by 3 days.
 
@@ -1237,8 +1108,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex8a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex8a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1251,19 +1121,12 @@ public class Test1
         System.out.println(secondsInThreeDays);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
                 <p>First compute the number of seconds in 1 day and then multiple that by 3 days.</p>
 
-<exercise label="ch3Ex8a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex8a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex8a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1276,16 +1139,13 @@ public class Test1
         System.out.println(secondsInThreeDays);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
     <exercise xml:id="empty-20">
       <statement>
-                <p>Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can’t buy part of a wing.</p>
-
-    </statement>
+        <p>Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can&#x2019;t buy part of a wing.</p>
+      </statement>
       <program interactive="activecode" language="java" xml:id="ch3Ex10q_editor">
         <input>
 public class Test1
@@ -1334,17 +1194,16 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </input>
-    </program>
+      </program>
       <solution>
-                Divide the amount of money you have by the cost of each wing and set the result to an integer since you can’t buy a part of a wing.
+                Divide the amount of money you have by the cost of each wing and set the result to an integer since you can&#x2019;t buy a part of a wing.
 
 
     
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch3Ex10a_editor" language="java">
-        <input>
+    <program xml:id="ch3Ex10a_editor" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1355,19 +1214,12 @@ public class Test1
         System.out.println(numWings);
     }
 }
-        </input>
-    </program>
+        </input></program>
 
             
-                <p>Divide the amount of money you have by the cost of each wing and set the result to an integer since you can’t buy a part of a wing.</p>
+                <p>Divide the amount of money you have by the cost of each wing and set the result to an integer since you can&#x2019;t buy a part of a wing.</p>
 
-<exercise label="ch3Ex10a">
-    <statement>
-                <p>This is the answer to the previous question.</p>
-
-    </statement>
-    <program xml:id="ch3Ex10a_editor-1" interactive="activecode" language="java">
-        <input>
+<exercise label="ch3Ex10a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch3Ex10a_editor-1" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1378,9 +1230,7 @@ public class Test1
         System.out.println(numWings);
     }
 }
-        </input>
-    </program>
-</exercise>
+        </input></program></exercise>
             </solution>
     </exercise>
   </exercises>
