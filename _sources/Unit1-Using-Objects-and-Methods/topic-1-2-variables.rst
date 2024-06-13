@@ -21,7 +21,7 @@ What is a Variable?
 A **variable** is a name associated with a memory location in the computer, where you can store a value that can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
 
 .. youtube:: pHgYlVjagmA
-    :width: 700
+    :width: 700px
     :height: 400
     :align: center
 

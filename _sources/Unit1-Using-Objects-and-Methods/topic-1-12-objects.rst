@@ -95,7 +95,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
     :optional:
-    :width: 650
+    :width: 650px
     :height: 415
     :align: center
 
@@ -155,7 +155,7 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 
 
 .. image:: Figures/turtleOOD.png
-    :width: 200
+    :width: 200px
     :align: left
 
 Intro to Objects with Turtles
@@ -218,7 +218,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
 
 .. youtube:: TFmmG4_KK8I
-    :width: 650
+    :width: 650px
     :height: 415
     :align: center
     :optional:
@@ -639,7 +639,7 @@ AP Practice
 This |video3| shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
 
 .. youtube:: Y9vn6u3901Y
-    :width: 650
+    :width: 650px
     :height: 415
     :align: center
     :optional:

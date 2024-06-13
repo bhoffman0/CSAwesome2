@@ -17,7 +17,7 @@ Watch this |video| about the Growth Mindset:
 
 .. youtube:: WtKJrB5rOKs
     :height: 400
-    :width: 600
+    :width: 600px
     :align: left
 
 
@@ -59,6 +59,6 @@ Watch this |video2| about pair programming:
 
 .. youtube:: q7d_JtyCq1A
     :height: 400
-    :width: 600
+    :width: 600px
     :align: left
 

@@ -438,7 +438,7 @@ Here is a list of common mistakes made with Strings.
 ----------------------------------------------
 
 .. |pig| image:: Figures/pig.png
-    :width: 100
+    :width: 100px
     :align: middle
     :alt: pig latin
 
