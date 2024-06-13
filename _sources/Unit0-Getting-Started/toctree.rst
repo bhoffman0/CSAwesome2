@@ -1,12 +1,3 @@
-.. include:: ../common.rst
-
-.. |LogoImageToBeFixed| image:: ../../_static/CSAwesomeLogo.png
-    :width: 350px
-    :align: center
-
-
-..  |Time90|
-
 Getting Started
 ==================
 
