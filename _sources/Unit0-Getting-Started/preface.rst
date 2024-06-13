@@ -4,19 +4,15 @@ Preface
 ..  index::
     single: license
 
-CSAwesome is a free AP CSA curriculum that is endorsed by the College Board as an official AP CSA curriculum and PD provider. It was created in 2019 by adapting the AP CSA Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. 
+CSAwesome is a free AP CSA curriculum that is endorsed by the College Board as an official AP CSA curriculum and PD provider. It was created in 2019 by adapting the AP CSA Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan.
 
-Dr. Beryl Hoffman, Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CSA 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org) to help transition students and teachers from AP CSP to AP CSA.  Special thanks to Barb Ericson, Beth Simon, Colleen Lewis (for her awesome Java memory model videos), John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas. 
+Dr. Beryl Hoffman, Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CSA 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org) to help transition students and teachers from AP CSP to AP CSA.  Special thanks to Barb Ericson, Beth Simon, Colleen Lewis (for her awesome Java memory model videos), John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, Kyle Gillette, and Peter Bowers for feedback, edits, and ideas.
 
-In the summer of 2020, CSA teacher extraordinaire Kate McDonnell from Cherry Creek Schools in CO created a JUnit test code suite for our Java servers to provide feedback to students in every active code. Many volunteers including Pat Clark, Emma Brown, Emma Pinnell, Megha Sharma, Arjun Balaji, and Anvita Gollu helped to add many junit tests to each active code to make them auto-gradable. 
+In the summer of 2020, CSA teacher extraordinaire Kate McDonnell from Cherry Creek Schools in CO created a JUnit test code suite for our Java servers to provide feedback to students in every active code. Many volunteers including Pat Clark, Emma Brown, Emma Pinnell, Megha Sharma, Arjun Balaji, and Anvita Gollu helped to add many junit tests to each active code to make them auto-gradable.
 
-In the summer of 2023, Peter Seibel, author, software developer, and Berkeley High School AP CSA teacher, began making valuable improvements to the CSAwesome text and Runestone platform. 
+In the summer of 2023, Peter Seibel, author, software developer, and Berkeley High School AP CSA teacher, began making valuable improvements to the CSAwesome text and Runestone platform.
 
-.. |form| raw:: html
-
-   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">form</a>
-
-If you see errors or bugs, please report them with this |form|.
+If you see errors or bugs, please report them with this `form <https://forms.gle/4gMBsv4W71vG5mNe8>`_.
 
 
 **Acknowledgements**
@@ -153,5 +149,5 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-We acknowledge icons used from https://www.flaticon.com/ and 
+We acknowledge icons used from https://www.flaticon.com/ and
 https://icons.getbootstrap.com/icons/ which are licensed by http://creativecommons.org/licenses/by/3.0/.
