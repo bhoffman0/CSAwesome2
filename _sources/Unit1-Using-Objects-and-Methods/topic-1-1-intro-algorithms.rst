@@ -26,7 +26,7 @@ What do Android phones, Minecraft, and Netflix have in common? They're all progr
 The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces this first lesson in CSAwesome.
 
 .. youtube:: Fc-BQzPbJmU
-    :width: 700
+    :width: 700px
     :height: 400
     :align: center
 
@@ -302,7 +302,7 @@ The compiler tries to run your code, but if your code has **syntax errors**, you
 Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. |Rubber duck debugging| is a lot of fun!
 
 .. youtube:: auv10y-dN4s
-    :width: 700
+    :width: 700px
     :height: 400
     :align: center
 

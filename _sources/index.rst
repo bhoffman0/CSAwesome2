@@ -1,5 +1,5 @@
 .. |LogoImageToBeFixed| image:: ../_static/CSAwesomeLogo.png
-    :width: 350
+    :width: 350px
     :align: center
 
 CSAwesome2 AP CSA Java Course with College Board 2025-6 Revisions

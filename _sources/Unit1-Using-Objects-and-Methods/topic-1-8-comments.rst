@@ -332,7 +332,7 @@ One very popular type of agile development is called **Scrum**. The following sh
 
 .. youtube:: TRcReyRYIMg
     :height: 400
-    :width: 600
+    :width: 600px
     :align: left
 
 |Groupwork| Group Exercise

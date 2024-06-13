@@ -221,7 +221,7 @@ You can also declare an **object variable** and initialize it to **null** (``Tur
 Watch the |video1| below about null.
 
 .. youtube:: 5fpjgXAV2BU
-    :width: 650
+    :width: 650px
     :height: 415
     :align: center
 
@@ -391,7 +391,7 @@ The type of the values being passed in as arguments have to match the type of th
 This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.
 
 .. image:: Figures/customTurtles.png
-    :width: 200
+    :width: 200px
     :align: left
 
 |Groupwork| Programming Challenge: Custom Turtles

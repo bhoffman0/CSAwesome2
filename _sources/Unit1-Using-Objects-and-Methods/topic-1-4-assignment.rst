@@ -35,7 +35,7 @@ Instead of saying equals for the = in an assignment statement, say "gets" or "is
 The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
 
 .. youtube:: MZwIgM__5C8
-    :width: 700
+    :width: 700px
     :height: 415
     :align: center
 
@@ -380,7 +380,7 @@ Java does have a method ``Math.floorMod`` in the ``Math`` class if you need to u
 Here’s the |video2|.
 
 .. youtube:: jp-T9lFISlI
-    :width: 700
+    :width: 700px
     :height: 415
     :align: center
 
@@ -469,7 +469,7 @@ Here’s the |video2|.
 ------------------------------------------------
 
 .. image:: Figures/dog-free.png
-    :width: 150
+    :width: 150px
     :align: left
     :alt: dog
 

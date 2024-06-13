@@ -1,5 +1,5 @@
 .. |LogoImageToBeFixed| image:: ../../_static/CSAwesomeLogo.png
-    :width: 350
+    :width: 350px
     :align: center
 
 Using Objects and Methods
