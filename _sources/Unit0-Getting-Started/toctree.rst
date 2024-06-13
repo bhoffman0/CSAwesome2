@@ -25,5 +25,4 @@ Follow the links below to learn more about the AP CSA course and exam and Java d
    javaIDEs.rst
    growthMindset.rst
    ptest1.rst
-   survey.rst
 

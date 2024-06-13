@@ -1,7 +1,8 @@
 .PHONY: all fixed_source xml fixed_xml ptx post fix_ids post2 post3 build_web clean pristine restore onetime
 
 ifeq ($(origin R2P), undefined)
-$(error R2P needs to be set in the environment, e.g. via a .env file)
+#$(error R2P needs to be set in the environment, e.g. via a .env file)
+include .env
 endif
 
 DEBUG_PRETEXT := # -v DEBUG
@@ -35,7 +36,7 @@ pretext/%.ptx: build/xml/%.xml | pretext
 	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@.pass1
 	xsltproc --novalid post-1.xsl $@.pass1 > $@.pass2
 	xsltproc --novalid post-2.xsl $@.pass2 > $@.pass3
-	cp $@.pass3 $@
+	xsltproc --novalid post-3.xsl $@.pass2 > $@
 	find pretext/ -name '*.pass?' -delete
 
 ptx: $(ptx) pretext/rs-substitutes.xml
@@ -47,6 +48,9 @@ post:
 	python $(R2P)/fixIds.py
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
+	python $(R2P)/toctree2xml.py .
+	python $(R2P)/filltoc.py pretext _sources
+	python $(R2P)/copy_figs.py ./_sources ./pretext/assets
 
 restore:
 	git restore pretext
@@ -56,9 +60,6 @@ restore:
 
 onetime:
 	python $(R2P)/index2main.py
-	python $(R2P)/toctree2xml.py .
-	python $(R2P)/filltoc.py pretext _sources
-	python $(R2P)/copy_figs.py ./_sources ./pretext/assets
 
 build_web:
 	pretext $(DEBUG_PRETEXT) build web
