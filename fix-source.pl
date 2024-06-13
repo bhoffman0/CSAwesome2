@@ -3,13 +3,23 @@
 use warnings;
 use strict;
 
-my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
-
-my $max_width = 850;
-
 $^I = '';
 
+my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
+
+my $in_header = 1;
+
 while (<>) {
+
+  # Skip the .. include and .. |Time90| stuff in toctree.rst files.
+  if ($ARGV =~ /toctree.rst/ and $in_header) {
+    if (/^\w/) {
+      $in_header = 0;
+    } else {
+      next;
+    }
+  }
+
 
   # These are images put at the top of some pages. When converting to XML that
   # causes the XML document to not have a single root element. So we make them
@@ -48,4 +58,10 @@ while (<>) {
 
   }
   print;
+
+} continue {
+  if (eof) {
+    close ARGV;
+    $in_header = 1;
+  }
 }
