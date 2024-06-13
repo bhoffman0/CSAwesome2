@@ -1,7 +1,3 @@
-.. |LogoImageToBeFixed| image:: ../../_static/CSAwesomeLogo.png
-    :width: 350
-    :align: center
-
 Using Objects and Methods
 :::::::::::::::::::::::::::::::::::::::::::
 
