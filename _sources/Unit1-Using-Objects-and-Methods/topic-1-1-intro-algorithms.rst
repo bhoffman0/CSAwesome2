@@ -32,7 +32,7 @@ The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces 
 
 
 .. |runbutton| image:: Figures/run-button.png
-    :height: 20px
+    :width: 40px
     :align: top
     :alt: run button
 
