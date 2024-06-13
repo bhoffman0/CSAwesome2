@@ -35,7 +35,7 @@ pretext/%.ptx: build/xml/%.xml | pretext
 	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $@.pass1
 	xsltproc --novalid post-1.xsl $@.pass1 > $@.pass2
 	xsltproc --novalid post-2.xsl $@.pass2 > $@.pass3
-	cp $@.pass3 $@
+	xsltproc --novalid post-3.xsl $@.pass2 > $@
 	find pretext/ -name '*.pass?' -delete
 
 ptx: $(ptx) pretext/rs-substitutes.xml
