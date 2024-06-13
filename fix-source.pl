@@ -21,6 +21,9 @@ while (<>) {
   # Also remove the time elements for now and replace with a comment (BH)
   s/^\|Time(\d\d)\|/..  \|Time$1\|/g;
 
+  # Add px to image widths
+  s/:width:\s+(\d+)(?!px|\d)/:width: $1px/g;
+
   # Specific fixes for some items that in the .rst contain some HTML which is
   # occasionally broken and often contains unescaped & and <.
   if (/^\s+:(feedback|answer)/) {
