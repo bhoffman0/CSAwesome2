@@ -10,6 +10,14 @@ use strict;
 
 $^I = '';
 
+# I think this is or was at some point the default width.
+my $page_width = 560;
+
+sub width {
+  my ($px) = @_;;
+  return int(100 * $px/$page_width + 0.5);
+}
+
 while (<>) {
 
   # More or less ad-hoc escaping of special XML characters. Some of these may no
@@ -37,18 +45,20 @@ while (<>) {
 
   # Fix these to be XMLish.
   s/<br>/<br\/>/g;
-  
-   # Beryl added this for the newer AP questions which somehow generate 
+
+  # Fix px measurements to %
+  s/"(\d+)px"/'"' . width($1) . '%"'/ge;
+
+  # Beryl added this for the newer AP questions which somehow generate
   # an extra </statement> after </choices>. Have to read in nextline to check.
   if (/<\/choices>\s*$/) {
       print;
       my $nextline = <>;
       # if the next line is not </statement>, print it; otherwise skip it
-      if (defined $nextline && $nextline !~ /^\s*<\/statement>/) { 
+      if (defined $nextline && $nextline !~ /^\s*<\/statement>/) {
             print $nextline;
-      } 
-  } 
-  else {
+      }
+  } else {
     print;
   }
 }
