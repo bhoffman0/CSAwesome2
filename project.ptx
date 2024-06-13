@@ -8,26 +8,26 @@
     <source>pretext/main.ptx</source>
     <publication>pretext/publication-rs-for-all.xml</publication>
     <output-dir>build/html</output-dir>
-    <stringparam key="html.css.extra" value="external/custom-css.css"/> 
-    <stringparam key="html.js.extra" value="external/custom-js.js"/> 
+    <stringparam key="html.css.extra" value="external/custom-css.css"/>
+    <stringparam key="html.js.extra" value="external/custom-js.js"/>
   </target>
   <target name="runestone">
       <format>html</format>
       <source>pretext/main.ptx</source>
       <publication>pretext/publication-rs-academy.ptx</publication>
-      <output-dir>build/runestone</output-dir>
-      <stringparam key="html.css.extra" value="external/custom-css.css"/>  
-      <stringparam key="html.js.extra" value="external/custom-js.js"/>        
-    </target>
-    <target name="print">
-      <format>pdf</format>
-      <source>pretext/main.ptx</source>
-      <publication>pretext/publication.ptx</publication>
-      <output-dir>output/pdf</output-dir>
-    </target>
-  
+      <output-dir>published/csawesome2</output-dir>
+      <stringparam key="html.css.extra" value="external/custom-css.css"/>
+      <stringparam key="html.js.extra" value="external/custom-js.js"/>
+  </target>
+  <target name="print">
+    <format>pdf</format>
+    <source>pretext/main.ptx</source>
+    <publication>pretext/publication.ptx</publication>
+    <output-dir>output/pdf</output-dir>
+  </target>
+
   </targets>
-    <executables>
+  <executables>
     <latex>latex</latex>
     <pdflatex>pdflatex</pdflatex>
     <xelatex>xelatex</xelatex>
