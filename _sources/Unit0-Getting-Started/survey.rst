@@ -14,11 +14,8 @@ If you have questions please email Barbara Ericson (barbarer@umich.edu).
 Survey
 ======
 
-.. |Privacy Policy| raw:: html
 
-   <a href="https://runestone.academy/runestone/default/privacy" target="_blank" style="text-decoration:underline">Runestone Academy Privacy Policy</a>
-
-Please log into Runestone and fill out the following survey.  You do not have to answer any of the following questions, but if you do, it will give us valuable information about who is using this ebook. Your answers to all questions on this site will be used for educational research and to improve the ebook.  Any identifying information, such as your name, will be removed from the data before it is analyzed and used in publications (|Privacy Policy|).
+Please log into Runestone and fill out the following survey.  You do not have to answer any of the following questions, but if you do, it will give us valuable information about who is using this ebook. Your answers to all questions on this site will be used for educational research and to improve the ebook.  Any identifying information, such as your name, will be removed from the data before it is analyzed and used in publications (`Runestone Academy Privacy Policy <https://runestone.academy/runestone/default/privacy>`_).
 
 .. qnum::
    :prefix: 1-1-7-

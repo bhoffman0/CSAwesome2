@@ -226,13 +226,8 @@ Trace through the following code:
 
    Write your trace table for x, y, and z here showing their results after each line of code.
 
-.. |Operators Maze game| raw:: html
 
-   <a href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" target="_blank" style="text-decoration:underline">Operators Maze game</a>
-
-
-
-After doing this challenge, play the |Operators Maze game|. See if you and your
+After doing this challenge, play the `Operators Maze game <https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing>`_. See if you and your
 partner can get the highest score!
 
 Summary

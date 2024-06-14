@@ -392,17 +392,9 @@ What if you wanted to print out a double quote " character? Since the double quo
 
 Have you ever played MAD LIBS? In this game, you first choose a bunch of words without looking at the story and then those words are filled into the story to make it sound very wacky! Fill in the variables below with Strings for each word, and then run to see the wacky story.
 
-.. |repl| raw:: html
-
-   <a href="https://replit.com" target="_blank">replit.com</a>
 
 
-.. |Scanner| raw:: html
-
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-
-
-Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the words (see input examples using the |Scanner|).
+Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE like `replit.com <https://replit.com>`_ so that you can use input to read in the words (see input examples using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_).
 
 .. activecode:: challenge2-6-MadLibs
    :language: java

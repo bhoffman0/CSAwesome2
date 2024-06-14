@@ -30,17 +30,9 @@ This is why we can just say Math.random() instead of having to define an object 
 Mathematical Functions
 -----------------------
 
-.. |AP CSA Reference Sheet| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
-
-.. |Math class Javadocs| raw:: html
-
-   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">Math class Javadocs</a>
 
 
-
-The ``Math`` class contains the following methods that are in the AP CSA subset. There are more ``Math`` methods, outside of what you need on the AP exam, that you can find in the |Math class Javadocs|.
+The ``Math`` class contains the following methods that are in the AP CSA subset. There are more ``Math`` methods, outside of what you need on the AP exam, that you can find in the `Math class Javadocs <https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html>`_.
 
 - ``int abs(int)`` : Returns the absolute value of an int value (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
 
@@ -56,7 +48,7 @@ The ``Math`` class contains the following methods that are in the AP CSA subset.
 .. note::
 
    All the ``Math`` methods that you may need to use or understand on the AP
-   exam are listed in the |AP CSA Reference Sheet| that you can use during the
+   exam are listed in the `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_ that you can use during the
    exam.
 
 These Math methods are mathematical functions that compute new values from their arguments. You may be able to guess what ``abs``, ``pow``, and ``sqrt`` do, from their abbreviations. 

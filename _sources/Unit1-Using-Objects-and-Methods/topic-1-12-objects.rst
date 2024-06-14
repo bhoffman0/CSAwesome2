@@ -6,13 +6,6 @@
 
 ..  |Time45|
 
-.. |repl link| raw:: html
-
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">replit link</a>
-
-.. |github| raw:: html
-
-   <a href="https://github.com/bhoffman0/CSAwesome/raw/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
 
 Objects - Instances of Classes
@@ -87,11 +80,8 @@ playing (*behavior*).
     behaviors of cats? (Note that attributes are often nouns or adjectives
     describing features of cats, and behaviors are often verbs).
 
-.. |video1| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=64DOwDu5SVo&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-
-Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
+Watch the following `video <https://www.youtube.com/watch?v=64DOwDu5SVo&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis>`_ by Dr. Colleen Lewis about classes and objects:
 
 .. youtube:: 64DOwDu5SVo
     :optional:
@@ -169,7 +159,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
     :datafile: turtleClasses.jar
 
     Try clicking the run button below to see what the following program does.
-    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this `replit link <https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java>`_ (refresh page after forking and if it gets stuck) or download the files `here <https://github.com/bhoffman0/CSAwesome/raw/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip>`_ to use in your own IDE.)
     ~~~~
     import java.awt.*;
     import java.util.*;
@@ -211,11 +201,8 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
         }
     }
 
-.. |video2| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-
-The following |video2| shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
+The following `video <https://www.youtube.com/watch?v=TFmmG4_KK8I&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis>`_ shows how the program creates a ``World`` object called ``habitat`` and a ``Turtle`` object called ``yertle`` in memory.
 
 .. youtube:: TFmmG4_KK8I
     :width: 650px
@@ -632,11 +619,8 @@ Summary
 AP Practice
 ------------
 
-.. |video3| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=Y9vn6u3901Y&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-
-This |video3| shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
+This `video <https://www.youtube.com/watch?v=Y9vn6u3901Y&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis>`_ shows another class called Belt and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
 
 .. youtube:: Y9vn6u3901Y
     :width: 650px

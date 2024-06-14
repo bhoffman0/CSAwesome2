@@ -7,16 +7,12 @@ CSAwesome2 AP CSA Java Course with College Board 2025-6 Revisions
 
 Welcome to CSAwesome2! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
 
-CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the `teaching CSAwesome group <https://groups.google.com/forum/#!forum/teaching-csawesome>`_ which will give you access to teacher resources at `csawesome.org <http://csawesome.org>`_.
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
 
-.. |flyer| raw:: html
 
-   <a href="https://drive.google.com/file/d/11MDPfpb3sjzfCR-6zeUe79WNgBbfZbqN/view?usp=sharing" target="_blank" style="text-decoration:underline">flyer</a>
-
-
-ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the |flyer| and apply at https://tinyurl.com/55z7tyb9.
+ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the `flyer <https://drive.google.com/file/d/11MDPfpb3sjzfCR-6zeUe79WNgBbfZbqN/view?usp=sharing>`_ and apply at https://tinyurl.com/55z7tyb9.
 
 .. ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 20th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
 
@@ -68,23 +64,11 @@ Index
 * :ref:`genindex`
 * :ref:`search`
 
-.. |errors form| raw:: html
 
-   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errors form</a>
 
-.. |interest form| raw:: html
 
-   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdN4JKrFnktQakID4sHBHBuBEHCvwv8YsSMBcVm1tB-nYUukA/viewform?usp=sf_link" target="_blank" style="text-decoration:underline">PD interest form</a>
 
-.. |teaching CSAwesome group| raw:: html
-
-   <a href="https://groups.google.com/forum/#!forum/teaching-csawesome" target="_blank" style="text-decoration:underline">teaching CSAwesome group</a>
-
-.. |csawesome| raw:: html
-
-   <a href="http://csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</a>
-
-If you see errors or bugs, please report them with this |errors form|. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
+If you see errors or bugs, please report them with this `errors form <https://forms.gle/4gMBsv4W71vG5mNe8>`_. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this `PD interest form <https://docs.google.com/forms/d/e/1FAIpQLSdN4JKrFnktQakID4sHBHBuBEHCvwv8YsSMBcVm1tB-nYUukA/viewform?usp=sf_link>`_ and join the `teaching CSAwesome group <https://groups.google.com/forum/#!forum/teaching-csawesome>`_ which will give you access to lesson plans at `csawesome.org <http://csawesome.org>`_.
 
 (last revised 1/6/2024)
 

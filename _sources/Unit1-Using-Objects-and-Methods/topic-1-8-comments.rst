@@ -20,21 +20,12 @@ There are 3 types of comments in Java:
 2. ``/*`` Multiline comment ``*/``
 3. ``/**`` Documentation comment ``*/``
 
-.. |Java JDK| raw:: html
 
-   <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">Java JDK</a>
 
-.. |javadoc| raw:: html
-
-   <a href="https://www.tutorialspoint.com/java/java_documentation.htm" target="_blank">javadoc</a>
-
-.. |String class| raw:: html
-
-   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
 
 The special characters ``//`` are used to mark the rest of the line as a comment in many programming languages.  If the comment is going to be multiple lines, we use ``/*`` to start the comment and ``*/`` to end the comment.
 
-There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool.
+There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called `javadoc <https://www.tutorialspoint.com/java/java_documentation.htm>`_ that comes with the `Java JDK <https://www.oracle.com/technetwork/java/javase/downloads/index.html>`_ that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the `String class <http://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`_. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool.
 
 |Exercise| **Check your understanding**
 
@@ -104,15 +95,9 @@ Here is an example of preconditions, postconditions, and @param in the Turtle co
 
 Try to break the preconditions of the Turtle constructor below. Does the Turtle constructor behave properly if you break the preconditions that x and y are between 0 and 300. Try giving the Turtle constructor  x and y values out of these ranges. What happens? Does the method give good results? Does it give any warnings? What about the t.forward() method? Does it have any preconditions that you can break?
 
-.. |github| raw:: html
 
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-.. |repl link| raw:: html
-
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">replit.com link</a>
-
-(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+(If the code below does not work for you, you can copy the code into  this `replit.com link <https://replit.com/@BerylHoffman/Java-Swing-Turtle>`_ (refresh page after forking and if it gets stuck) or download the files `here <https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip>`_ to use in your own IDE.)
 
 .. activecode:: turtle-preconditions
     :language: java
@@ -323,11 +308,7 @@ There are many different models for software development. The **waterfall model*
 
     Figure 2: Waterfall vs Agile Models
 
-One very popular type of agile development is called **Scrum**. The following short |video| describes software development  with Scrum.
-
-.. |video| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=TRcReyRYIMg" target="_blank">video</a>
+One very popular type of agile development is called **Scrum**. The following short `video <https://www.youtube.com/watch?v=TRcReyRYIMg>`_ describes software development  with Scrum.
 
 
 .. youtube:: TRcReyRYIMg
@@ -337,21 +318,15 @@ One very popular type of agile development is called **Scrum**. The following sh
 
 |Groupwork| Group Exercise
 
-.. |pogil game| raw:: html
 
-   <a href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/" target="_blank">Wake Up In the Morning Game</a>
-
-Try the |pogil game| in groups to practice the iterative and incremental agile development process.
+Try the `Wake Up In the Morning Game <https://www.agilesparks.com/blog/wake-up-in-the-morning-game/>`_ in groups to practice the iterative and incremental agile development process.
 
 
 |Groupwork| Programming Challenge : Comments and Conditions
 -----------------------------------------------------------
 
-.. |Creately.com| raw:: html
 
-   <a href="https://creately.com" target="_blank">Creately.com</a>
-
-Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like |Creately.com| (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don't forget to list  the preconditions and postconditions for each step.  You can type in your answer below.
+Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like `Creately.com <https://creately.com>`_ (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don't forget to list  the preconditions and postconditions for each step.  You can type in your answer below.
 
 .. shortanswer:: challenge-5-3-use-case-preconditions
 

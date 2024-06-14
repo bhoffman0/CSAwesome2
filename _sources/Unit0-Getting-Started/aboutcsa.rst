@@ -11,7 +11,7 @@ response questions where you have to write Java code by hand. Each part is worth
 50% of your grade. During the exam, you will have access to the |AP CSA
 Reference Sheet|.
 
-The 4 free response questions cover the following areas (from |AP CSA Free Response|):
+The 4 free response questions cover the following areas (from `AP CSA Free Response <https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment>`_):
 
   - **Question 1**: Methods and Control Structures—You’ll be asked to write program
     code to create objects of a class and call methods, and satisfy method
@@ -66,46 +66,23 @@ lab time for you to practice Java programming.
    10      Recursion               5–7.5%          3-5
    ======= ======================= =============== ========== ========
 
-For more information on the exam see the College Board |AP CSA site| and the
-200+ page |AP CSA CED|. The |AP CSA past FRQs| are available online. Here is an
-|FRQ resource| that categorizes the past FRQs by topic and provides links to
+For more information on the exam see the College Board `AP CSA site <https://apstudent.collegeboard.org/apcourse/ap-computer-science-a>`_ and the
+200+ page `AP CSA Course and Exam Description (CED) <https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a>`_. The `AP CSA Past Free Response Questions <https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year>`_ are available online. Here is an
+`FRQ resource <https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing>`_ that categorizes the past FRQs by topic and provides links to
 their solutions (which are available online in many places). The College Board
 provides a question bank and formative assessment quizzes for each unit online
 for registered AP classes.
 
-Also check out this list of |CS Careers| that taking CSA can lead to. Learning
+Also check out this list of `CS Careers <https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A>`_ that taking CSA can lead to. Learning
 to code is an increasingly important skill that has applications in many
 careers!
 
 
-.. |AP CSA site| raw:: html
 
-   <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" target="_blank">AP CSA site</a>
 
-.. |AP CSA CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CSA Course and Exam Description (CED)</a>
 
-.. |CS Careers| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/choosing-courses/major-career-results/course/AP-Computer-Science-A" target="_blank">CS Careers</a>
 
-.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
-.. |AP CSA past FRQs| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" target="_blank">AP CSA Past Free Response Questions</a>
-
-.. |FRQ resource| raw:: html
-
-   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" target="_blank">FRQ resource</a>
-
-.. |AP Audit|  raw:: html
-
-   <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank">AP Audit</a>
-
-.. |AP CSA Free Response|  raw:: html
-
-   <a href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment" target="_blank">AP CSA Free Response</a>
