@@ -19,8 +19,8 @@ all: fixed_source fixed_xml
 	$(MAKE) ptx post fixed_ptx build_$(TARGET)
 
 fixed_source:
-	find _sources/ -name '*.rst' -exec ./fix-source.pl {} \;
 	find _sources/ -name '*.rst' -exec ./fix-raw-html-links.pl {} \;
+	find _sources/ -name '*.rst' -exec ./fix-source.pl {} \;
 
 xml:
 	$(rs2ptx)
