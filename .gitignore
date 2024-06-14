@@ -1,6 +1,9 @@
 # Ignore unique build info
 build_info
 build
+.env
+.github
+logs
 
 # Miscellaneous source files
 _sources/Tests/test6.rst
