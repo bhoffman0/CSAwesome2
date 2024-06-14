@@ -20,6 +20,7 @@ all: fixed_source fixed_xml
 
 fixed_source:
 	find _sources/ -name '*.rst' -exec ./fix-source.pl {} \;
+	find _sources/ -name '*.rst' -exec ./fix-raw-html-links.pl {} \;
 
 xml:
 	$(rs2ptx)
