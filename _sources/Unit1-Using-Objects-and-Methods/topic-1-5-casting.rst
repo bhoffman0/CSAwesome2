@@ -570,37 +570,15 @@ This would be a good project to work together in pairs, and switch drivers (who 
        }
    }
 
-.. |repl| raw:: html
-
-   <a href="https://replit.com" target="_blank">replit</a>
 
 
-.. |Scanner| raw:: html
 
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-
-.. |repl template| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" target="_blank">repl template</a>
-
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
+Your teacher may suggest that you use a Java IDE like `replit <https://replit.com>`_ for this challenge so that you can use input to get these values using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_. Here is a `repl template <https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java>`_ that you can use to get started if you want to try the challenge with input.
 
 
-.. |Unicode| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">Unicode</a>
 
-.. |Chinese character| raw:: html
 
-   <a href="https://unicodelookup.com/#cjk/1" target="_blank">Chinese character</a>
-
-.. |Unicode Lookup| raw:: html
-
-   <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
-
-.. |emoji| raw:: html
-
-   <a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">emoji</a>
 
 Bonus Challenge : Unicode
 -------------------------------------
@@ -634,8 +612,8 @@ not on more recently added codepoints including, critically those for Emoji. �
 So better to use ``Character.toString`` and ignore ``char``.)
 
 Try the following program which prints out an English “A”, a 
-|Chinese character|, and an |emoji|. Then look up other characters at this 
-|Unicode Lookup| site and change the code to print them out. (Use the Dec column in site
+`Chinese character <https://unicodelookup.com/#cjk/1>`_, and an `emoji <http://unicode.org/emoji/charts/full-emoji-list.html>`_. Then look up other characters at this 
+`Unicode Lookup <https://unicodelookup.com/>`_ site and change the code to print them out. (Use the Dec column in site
 to get the decimal number.) Can you print out letters from 3 different
 languages?
 

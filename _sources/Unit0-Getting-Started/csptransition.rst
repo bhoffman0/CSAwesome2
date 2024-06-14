@@ -43,21 +43,15 @@ your prior programming experience was with a block language:
   activities to make sure they match. Get in the habit of clicking it frequently
   to keep your code tidy.
 
-.. |open in Google Docs| raw:: html
 
-   <a href="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" target="_blank">open in Google Docs</a>
 
-.. |code.org App Lab code to Java| raw:: html
-
-   <a href="https://docs.google.com/document/d/1LB6a36tRKGgTGJUcpT_3TspXFqn5luu1YU8YmYt1CQs/edit?usp=sharing" target="_blank">code.org App Lab code to Java</a>
-
-Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode and Java code used in AP CSA (|open in Google Docs|).
+Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode and Java code used in AP CSA (`open in Google Docs <https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view>`_).
 
 .. raw:: html
 
     <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" style="max-width:100%; margin-left:5%; width:90%;"  height="600px"></iframe>
 
-And here is a a comparison of |code.org App Lab code to Java|:
+And here is a a comparison of `code.org App Lab code to Java <https://docs.google.com/document/d/1LB6a36tRKGgTGJUcpT_3TspXFqn5luu1YU8YmYt1CQs/edit?usp=sharing>`_:
 
 .. raw:: html
 

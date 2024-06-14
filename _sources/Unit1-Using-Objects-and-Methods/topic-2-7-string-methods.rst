@@ -4,9 +4,6 @@
    :prefix: 2-7-
    :start: 1
 
-.. |AP CSA Reference Sheet| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 ..  |Time90|
 
@@ -35,7 +32,7 @@ A string holds characters in a sequence.  Each character is at a position or **i
 
    The first character in a string is at index 0 and the last characters is at **length** -1.
 
-For the AP CSA exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the |AP CSA Reference Sheet| that you get during the exam so you don't have to memorize these.
+For the AP CSA exam, you only need to know how to use the following String methods.  All of the String method descriptions are included in the `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_ that you get during the exam so you don't have to memorize these.
 
 
     -  **int length()** method returns the number of characters in the string, including spaces and special characters like punctuation.
@@ -251,11 +248,8 @@ Run the example below to see the output from ``compareTo`` and ``equals``. Since
        }
    }
 
-.. |String class| raw:: html
 
-   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String class</a>
-
-There are lots of other methods in the String class.  You can look through the Java documentation for the |String class| online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam.
+There are lots of other methods in the String class.  You can look through the Java documentation for the `String class <http://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`_ online.   You don't have to know all of these for the exam, but you can use them if you want to on the exam.
 
 An **Application Programming Interface (API)** is a library of prewritten classes that simplify complex programming tasks for us. These classes are grouped together in a **package** like java.lang and we can import these packages (or individual classes) into our programs to make use of them. For instance, we have just discussed the String library built into the default java.lang package - it takes care of the detailed work of manipulating strings for us.  There are many other useful library packages as well, both in the java.lang package and in other packages. Documentation for APIs and libraries are essential to understanding how to use these classes.
 
@@ -446,16 +440,9 @@ Here is a list of common mistakes made with Strings.
 
 Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
 
-.. |repl| raw:: html
-
-   <a href="https://replit.com" target="_blank">replit.com</a>
 
 
-.. |Scanner| raw:: html
-
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-
-Your teacher may ask you to create this program in a Java IDE like |repl| so that you can use input to read in the word (see input examples using the |Scanner|).
+Your teacher may ask you to create this program in a Java IDE like `replit.com <https://replit.com>`_ so that you can use input to read in the word (see input examples using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_).
 
 
 .. activecode:: challenge2-7-PigLatin
@@ -526,7 +513,7 @@ Summary
 
 - String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string.
 
-- The following String methods and constructors, including what they do and when they are used, are part of the |AP CSA Reference Sheet| that you can use during the exam:
+- The following String methods and constructors, including what they do and when they are used, are part of the `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_ that you can use during the exam:
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
 
@@ -547,10 +534,6 @@ Summary
 
 String Methods Game
 ---------------------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings** and then on the letters that would be the result of the string method calls. We encourage you to work in pairs and see how high a score you can get.

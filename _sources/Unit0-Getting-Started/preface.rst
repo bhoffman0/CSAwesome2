@@ -106,11 +106,8 @@ Many others have been involved in the creation of content for the eBook (includi
 .. figure:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
    :align: center
 
-.. |creative commons| raw:: html
 
-   <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="text-decoration:underline">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
-
-This work is licensed under a |creative commons|.
+This work is licensed under a `Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-nc-sa/4.0/>`_.
 
 Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_
 2014-2024
