@@ -85,7 +85,7 @@ release = 'beta'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode/*', 'Unit1-Using-Objects-and-Methods/TurtleJavaHTMLCode/*', 'Unit4-Iteration/ConsumerReviewLabFiles/*' ]
+exclude_patterns = ['Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode/*', 'Unit1-Using-Objects-and-Methods/TurtleJavaHTMLCode/*', 'Unit2-Selection-and-Iteration/ConsumerReviewLabFiles/*' ]
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
