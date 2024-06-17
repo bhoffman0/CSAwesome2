@@ -3,12 +3,12 @@
     :align: center
 
 
-Boolean Expressions and If Statements
+Selection and Iteration
 :::::::::::::::::::::::::::::::::::::
 
-Class Periods: 11-13 (including lab)
+Class Periods: 
 
-AP CSA Exam Weighting: 15-17.5%
+AP CSA Exam Weighting: 
 
 .. toctree::
    :maxdepth: 3
