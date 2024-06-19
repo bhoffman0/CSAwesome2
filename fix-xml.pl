@@ -15,7 +15,8 @@ my $page_width = 560;
 
 sub width {
   my ($px) = @_;;
-  return int(100 * $px/$page_width + 0.5);
+  my $percent = int(100 * $px/$page_width + 0.5);
+  return $percent > 100 ? 100 : $percent;
 }
 
 while (<>) {
@@ -48,6 +49,9 @@ while (<>) {
 
   # Fix px measurements to %
   s/"(\d+)px"/'"' . width($1) . '%"'/ge;
+
+  # Fix width without px (in youtube videos) measurements to %
+  s/width="(\d+)"/'width="' . width($1) . '%"'/ge;
 
   # Beryl added this for the newer AP questions which somehow generate
   # an extra </statement> after </choices>. Have to read in nextline to check.

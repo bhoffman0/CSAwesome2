@@ -8,6 +8,7 @@ $^I = '';
 my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
 
 my $in_header = 1;
+my $in_youtube = 0;
 
 while (<>) {
 
@@ -31,8 +32,16 @@ while (<>) {
   # Also remove the time elements for now and replace with a comment (BH)
   s/^\|Time(\d\d)\|/..  \|Time$1\|/g;
 
-  # Add px to image widths
-  s/:width:\s+(\d+)(?!px|\d)/:width: $1px/g;
+  if (/^\.\. youtube::/i) {
+    $in_youtube = 1;
+  } elsif ($in_youtube && /^[^ ]/) {
+    $in_youtube = 0;
+  }
+
+  # Add px to image widths except in youtube sections
+  if (!$in_youtube) {
+    s/:width:\s+(\d+)(?!px|\d)/:width: $1px/g;
+  }
 
   # Specific fixes for some items that in the .rst contain some HTML which is
   # occasionally broken and often contains unescaped & and <.
