@@ -13,7 +13,7 @@ my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
 
 my $in_header = 1;
 my $in_youtube = 0;
-my $first_section = 0;
+my $first_section = 1;
 
 while (<>) {
 
@@ -29,12 +29,18 @@ while (<>) {
   # This include doesn't exist in this branch so for now strip it out
   /\Q.. include:: ..\/common.rst/ and next;
 
-  # A few files have busted markup for the first section
-  if (!$first_section and /^-{3,}\s*$/) {
-    s/-/=/g;
-    $first_section = 1;
+  # A few files have busted markup for the first section markers. Standardize on
+  # ='s for the first header and -'s thereafter.
+  if ($first_section) {
+    if (/^((-{3,})|(={3,}))\s*$/) {
+      s/-/=/g;
+      $first_section = 0;
+    }
+  } else {
+    if (/^={3,}\s*$/) {
+      s/=/-/g;
+    }
   }
-
 
   # These are images put at the top of some pages. When converting to XML that
   # causes the XML document to not have a single root element. So we make them
