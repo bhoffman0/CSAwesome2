@@ -8,7 +8,11 @@
 use warnings;
 use strict;
 
-$^I = '';
+if ($ARGV[0] eq "--debug") {
+  shift;
+} else {
+  $^I = '';
+}
 
 while (<>) {
 
@@ -16,6 +20,6 @@ while (<>) {
   s/xml:id="_briceida-mariscal-id1(-\d+)?"/xml:id="interviewees_b_-mariscal"/g;
   s/xml:id="_carla-de-lira-id1(-\d+)?"/xml:id="interviewees_c_-de_-lira"/g;
   s/xml:id="_camille-mbayo-id1(-\d+)?"/xml:id="interviewees_c_-mbayo"/g;
-  
+
   print;
 }

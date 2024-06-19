@@ -3,12 +3,17 @@
 use warnings;
 use strict;
 
-$^I = '';
+if ($ARGV[0] eq "--debug") {
+  shift;
+} else {
+  $^I = '';
+}
 
 my $OPEN_LT = "LESS_THAN_PLACEHOLDER_SHOULD_NOT_EXIST_IN_ACTUAL_TEXT";
 
 my $in_header = 1;
 my $in_youtube = 0;
+my $first_section = 0;
 
 while (<>) {
 
@@ -19,6 +24,15 @@ while (<>) {
     } else {
       next;
     }
+  }
+
+  # This include doesn't exist in this branch so for now strip it out
+  /\Q.. include:: ..\/common.rst/ and next;
+
+  # A few files have busted markup for the first section
+  if (!$first_section and /^-{3,}\s*$/) {
+    s/-/=/g;
+    $first_section = 1;
   }
 
 

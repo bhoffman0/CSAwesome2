@@ -8,8 +8,13 @@
 use warnings;
 use strict;
 
+if ($ARGV[0] eq "--debug") {
+  shift;
+} else {
+  $^I = '';
+}
+
 $/ = undef;
-$^I = '';
 
 while (<>) {
 

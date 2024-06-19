@@ -8,7 +8,11 @@
 use warnings;
 use strict;
 
-$^I = '';
+if ($ARGV[0] eq "--debug") {
+  shift;
+} else {
+  $^I = '';
+}
 
 # I think this is or was at some point the default width.
 my $page_width = 560;

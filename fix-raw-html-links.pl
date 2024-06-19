@@ -9,8 +9,13 @@ use strict;
 
 my $DEBUG = 0;
 
+if ($ARGV[0] eq "--debug") {
+  shift;
+} else {
+  $^I = '';
+}
+
 $/ = undef;
-$^I = '';
 
 my %urls;
 my %texts;
