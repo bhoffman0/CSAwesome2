@@ -9,7 +9,7 @@ endif
 
 DEBUG_PRETEXT := # -v DEBUG
 
-xml := $(shell find build/xml -type f)
+xml := $(if $(wildcard build/xml),$(shell find build/xml -type f))
 ptx := $(patsubst build/xml/%.xml,pretext/%.ptx,$(xml))
 
 # This will run from a virtual env.
