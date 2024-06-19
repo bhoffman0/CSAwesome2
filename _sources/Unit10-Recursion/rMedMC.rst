@@ -5,7 +5,7 @@
 Medium Multiple Choice Questions
 ----------------------------------
 
-These problems are similar to those you will see on the AP CS A exam.
+These problems are similar to those you will see on the AP CSA exam.
 
 .. mchoice:: qrm_1
    :practice: T
@@ -15,10 +15,10 @@ These problems are similar to those you will see on the AP CS A exam.
    :answer_d: 12344321
    :answer_e: Many digits are printed due to infinite recursion.
    :correct: b
-   :feedback_a: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
+   :feedback_a: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
    :feedback_b: This has a recursive call which means that the method calls itself when (x / 10) is greater than or equal to zero. Each time the method is called it prints the remainder of the passed value divided by 10 and then calls the method again with the result of the integer division of the passed number by 10 (which throws away the decimal part). After the recursion stops by <code>(x / 10) == 0</code> the method will print the remainder of the passed value divided by 10 again.
-   :feedback_c: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
-   :feedback_d: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means modulo or remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
+   :feedback_c: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
+   :feedback_d: The first call to <code>mystery</code> with the integer 1234 will print 1234 % 10. The '%' means remainder. The remainder of 1234 divided by 10 is 4 so the first thing printed must be 4.
    :feedback_e: When the recursive call to <code>mystery(1)</code> occurs (the 4th call to mystery), the division of x /10 equals .01--this becomes 0 because this is integer division and the remainder is thrown away. Therefore the current call will be completed and all of the previous calls to <code>mystery</code> will be completed.
 
    Given the following method declaration, which of the following is printed as the result of the call ``mystery(1234)``?
@@ -29,13 +29,13 @@ These problems are similar to those you will see on the AP CS A exam.
       //precondition:  x >=0
       public static void mystery (int x)
       {
-         System.out.print(x % 10);
+          System.out.print(x % 10);
 
-         if ((x / 10) != 0)
-         {
-            mystery(x / 10);
-         }
-         System.out.print(x % 10);
+          if ((x / 10) != 0)
+          {
+              mystery(x / 10);
+          }
+          System.out.print(x % 10);
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-1 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+void+mystery+(int+x)%0A+++%7B%0A+++++++++System.out.print(x+%25+10)%3B%0A%0A+++++++++if+((x+/+10)+!%3D+0)%0A+++++++++%7B%0A++++++++++++mystery(x+/+10)%3B%0A+++++++++%7D%0A+++++++++System.out.print(x+%25+10)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -61,10 +61,14 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public static int mystery(int n)
       {
-         if (n == 0)
-            return 1;
-         else
-            return 3 * mystery (n - 1);
+          if (n == 0)
+          {
+              return 1;
+          }
+          else
+          {
+              return 3 * mystery (n - 1);
+          }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q-11-7-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+mystery(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+3+*+mystery+(n+-+1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -91,9 +95,13 @@ You can step through the code using the Java Visualizer by clicking on the follo
       public static int product(int n)
       {
          if (n <= 1)
-            return 1;
+         {
+             return 1;
+         }
          else
-            return n * product(n - 2);
+         {
+             return n * product(n - 2);
+         }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+product(int+n)+%0A+++%7B%0A+++++++++if+(n+%3C%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else%0A++++++++++++return+n+*+product(n+-+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(product(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -120,10 +128,17 @@ You can step through the code using the Java Visualizer by clicking on the follo
       public static int f(int n)
       {
          if (n == 0)
-            return 0;
+         {
+             return 0;
+         }
          else if (n == 1)
-            return 1;
-         else return f(n-1) + f(n-2);
+         {
+             return 1;
+         }
+         else
+         {
+             return f(n-1) + f(n-2);
+         }
       }
 
 You can step through the code using the Java Visualizer by clicking on the following link: `Q11-7-4 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+f(int+n)%0A+++%7B%0A+++++++++if+(n+%3D%3D+0)%0A++++++++++++return+0%3B%0A+++++++++else+if+(n+%3D%3D+1)%0A++++++++++++return+1%3B%0A+++++++++else+return+f(n-1)+%2B+f(n-2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(f(5))%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.

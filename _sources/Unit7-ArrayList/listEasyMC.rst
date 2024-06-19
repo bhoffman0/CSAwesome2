@@ -5,7 +5,7 @@
 Easier Multiple Choice Questions
 ----------------------------------
 
-These problems are easier than most of those that you will usually see on the AP CS A exam.
+These problems are easier than most of those that you will usually see on the AP CSA exam.
 
 .. mchoice:: qale_1
    :practice: T
@@ -86,7 +86,7 @@ These problems are easier than most of those that you will usually see on the AP
    :answer_d: nums.remove(2);
    :correct: c
    :feedback_a: This would remove the value at index 3 which is 1.
-   :feedback_b: This would remove the value at index 0 which is 5. 
+   :feedback_b: This would remove the value at index 0 which is 5.
    :feedback_c: This would remove the value at index 1 which is 3.
    :feedback_d: This would remove the value at index 2 which is 2.
 
@@ -107,20 +107,6 @@ These problems are easier than most of those that you will usually see on the AP
    :feedback_e: This would add 2 at index 2 which would result in <code>[1, 3, 2, 4]</code>
 
    Which of the following is the correct way to add 2 between the 1 and 3 in the following list ``nums = [1, 3, 4]``?
-
-.. .. mchoice:: qale_8
-   :practice: T
-   :answer_a: It is a type of class.
-   :answer_b: The methods in an interface will be public and abstract.
-   :answer_c: It is like a contract in that the class that implements the interface must provide the methods defined in the interface.
-   :answer_d: You can create an object of an interface type.
-   :correct: d
-   :feedback_a: An interface is a special type of abstract class in Java.
-   :feedback_b: The methods defined in an interface are public and abstract.
-   :feedback_c: An interface is like a contract for the implementing classes.
-   :feedback_d: You can not create an object of an interface type.  This is why you create a ``List`` using the <code>ArrayList</code> class which implements the ``List`` interface.
-
-   Which of the following is *false* about an interface?
 
 .. mchoice:: qale_9
    :practice: T

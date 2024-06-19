@@ -1,22 +1,18 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 Inheritance
 ::::::::::::
 
 Class Periods: 14-15
 
-AP CS A Exam Weighting: 5-10%
+AP CSA Exam Weighting: 5-10%
 
-
-.. Moving first 2 lessons to Unit 5
-   objectObasics.rst
-   objects&Classes.rst
 
 .. toctree::
    :maxdepth: 3
-   
+
    topic-9-1-inheritance.rst
    topic-9-2-constructors.rst
    topic-9-3-overriding.rst
@@ -27,8 +23,9 @@ AP CS A Exam Weighting: 5-10%
    ooSummary.rst
    freeResponse.rst
    ooParsonsPractice.rst
+   topic-9-10-toggle-problems.rst
    ooCodePractice.rst
    Exercises.rst
    CBLabs.rst
-   
+
 

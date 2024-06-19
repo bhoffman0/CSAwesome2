@@ -1,32 +1,15 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 10-1-
    :start: 9
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-
-.. image:: ../../_static/time45.png
-    :width: 225
-    :align: right
+|Time45|
 
 Tracing Recursive Methods (Day 2)
 ===================================
 
-..	index::
+.. index::
     single: call stack
     single: stack
 
@@ -70,13 +53,17 @@ Let's trace the execution of the factorial method defined below.
 
   public static int factorial(int n)
   {
-    if (n == 0)
-      return 1;
-    else
-      return n * factorial(n-1);
+      if (n == 0)
+      {
+          return 1;
+      }
+      else
+      {
+          return n * factorial(n-1);
+      }
   }
 
-What happens when we call ``factorial(0)``?  It will return 1 (line 4) since n is equal to 0.  How about ``factorial(1)``?  It will return ``1 * factorial(0)``.  We already know that ``factorial(0)`` returns 1, but the computer won't *remember* that.  It will execute ``factorial(0)`` and return the result (1).   So  ``factorial(1)`` returns ``1 * 1 which is 1``.
+What happens when we call ``factorial(0)``?  It will return 1 (line 5) since n is equal to 0.  How about ``factorial(1)``?  It will return ``1 * factorial(0)``.  We already know that ``factorial(0)`` returns 1, but the computer won't *remember* that.  It will execute ``factorial(0)`` and return the result (1).   So  ``factorial(1)`` returns ``1 * 1 which is 1``.
 
 How can you show what is happening in a recursive call?  Here is one way to do it.  The lines below show the call stack upside down (with the bottom of the stack, or the beginning at the top and the most recent call at the bottom) for a call to ``factorial(5)``.  This is a handy way to trace a recursive method on the exam and you will do much better on recursive problems if you practice doing it this way.
 
@@ -129,17 +116,21 @@ Another way to see the call stack in action is to download and use the Jeloit so
    :feedback_c: If you remember that factorial(5) was 120 then this is just 6 * 120 = 720.
    :feedback_d: It doesn't return 6 * 5 it returns 6 * factorial(5).
 
-	Given the method defined below what does the following return: factorial(6)?
+    Given the method defined below what does the following return: factorial(6)?
 
     .. code-block:: java
      :linenos:
 
      public static int factorial(int n)
      {
-        if (n == 0)
-           return 1;
-        else
-           return n * factorial(n-1);
+         if (n == 0)
+         {
+             return 1;
+         }
+         else
+         {
+             return n * factorial(n-1);
+         }
      }
 
 .. mchoice:: qrb_6
@@ -154,7 +145,7 @@ Another way to see the call stack in action is to download and use the Jeloit so
    :feedback_c: Check that you didn't miss one of the recursive calls.
    :feedback_d: This would be true if the call was mystery(6).
 
-	Given the method defined below what does the following return: mystery(5)?
+    Given the method defined below what does the following return: mystery(5)?
 
     .. code-block:: java
      :linenos:
@@ -162,9 +153,13 @@ Another way to see the call stack in action is to download and use the Jeloit so
      public static int mystery(int n)
      {
         if (n == 0)
+        {
            return 1;
+        }
         else
+        {
            return 2 * mystery (n - 1);
+        }
      }
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -183,15 +178,18 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if returned 1 instead of a in the base case.
    :feedback_e: This would be correct if it was 3 to the 5th.
 
-	Given the method defined below what does the following print: mystery(4,3)?
+    Given the method defined below what does the following print: mystery(4,3)?
 
     .. code-block:: java
      :linenos:
 
      public static int mystery(int n, int a)
      {
-       if (n == 1) return a;
-       return a * mystery(n-1,a);
+         if (n == 1)
+         {
+             return a;
+         }
+         return a * mystery(n-1,a);
      }
 
 You can step through the code above using the Java Visualizer by clicking on the following link: `Ex-11-3-3 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
@@ -205,12 +203,20 @@ Let's trace the execution of the bunny ears method defined below.
 
   public static int bunnyEars(int bunnies)
   {
-     if (bunnies == 0) return 0;
-     else if (bunnies == 1) return 2;
-     else return 2 + bunnyEars(bunnies - 1);
+     if (bunnies == 0)
+     {
+         return 0;
+     }
+     else if (bunnies == 1)
+     {
+         return 2;
+     }
+     else {
+         return 2 + bunnyEars(bunnies - 1);
+     }
   }
 
-What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal to 0 (line 3).  How about ``bunnyEars(1)``?  It will return 2 since n is equal to 1 (line 4). What about ``bunnyEars(5)``?
+What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal to 0 (line 3).  How about ``bunnyEars(1)``?  It will return 2 since n is equal to 1 (line 5). What about ``bunnyEars(5)``?
 
 .. code-block:: java
   :linenos:
@@ -221,7 +227,7 @@ What happens when we call ``bunnyEars(0)``?  It will return 0 since n is equal t
   bunnyEars(2) returns 2 + bunnyEars(1)
   bunnyEars(1) returns 2
 
-This approach shows the call stack from bottom to top.  Once bunnyEars(1) executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.
+This approach shows the call stack from bottom to top.  Once ``bunnyEars(1)`` executes and returns 2 that value can be substituted back into the previous method call, starting at the top and working our way back toward the bottom (or beginning) of the call stack.
 
 .. code-block:: java
   :linenos:
@@ -250,7 +256,7 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
    :feedback_d: This method prints the right most digit and then removes the rightmost digit for the recursive call.  It prints both before and after the recursive call.
    :feedback_e: Since 1234 % 10 returns the rightmost digit, the first thing printed is 4.
 
-	Given the method defined below what does the following print: mystery(1234)?
+    Given the method defined below what does the following print: mystery(1234)?
 
     .. code-block:: java
      :linenos:
@@ -258,7 +264,8 @@ So ``bunnyEars(5)`` returns 10.  You can step through this code using the Java V
      public static void mystery (int x) {
         System.out.print(x % 10);
 
-        if ((x / 10) != 0) {
+        if ((x / 10) != 0)
+        {
            mystery(x / 10);
         }
         System.out.print(x % 10);
@@ -280,19 +287,27 @@ You can step through the code above using the Java Visualizer by clicking on the
    :feedback_d: This would be correct if the base case returned 1 if the single character was a y.
    :feedback_e: Don't forget about the recursive calls.
 
-	Given the method defined below what does the following return: mystery("xyzxyxy")? Note that this recursive method traverses a String.
+    Given the method defined below what does the following return: mystery("xyzxyxy")? Note that this recursive method traverses a String.
 
     .. code-block:: java
      :linenos:
 
      public static int mystery(String str)
      {
-        if (str.length() == 1) return 0;
+        if (str.length() == 1)
+        {
+            return 0;
+        }
         else
         {
-           if (str.substring(0,1).equals("y")) return 1 +
-                                mystery(str.substring(1));
-           else return mystery(str.substring(1));
+           if (str.substring(0,1).equals("y")) 
+           {
+               return 1 + mystery(str.substring(1));
+           }
+           else 
+           {
+               return mystery(str.substring(1));
+           }
         }
      }
 

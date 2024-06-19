@@ -2,10 +2,10 @@
    :prefix: 14-5-
    :start: 1
 
-Exam 4 for the AP CS A Exam (not timed)
+Exam 4 for the AP CSA Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
+The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt4_1
    :answer_a: arr[i][j]
@@ -78,7 +78,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_a: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal !A && B.
    :feedback_b: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal A && !B. !(x >= 7) is the same as (x < 7).
    :feedback_c: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal !A && !B. Also, the negation of (x > 2) is (x <= 2), not (x < 2).
-   :feedback_d: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) is equal to !A && !B, according to DeMorgan's law. The negation of !(x >= 7) is (x >= 7), and the negation of (x > 2) is (x <= 2).
+   :feedback_d: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) is equal to !A || !B, according to DeMorgan's law. The negation of !(x >= 7) is (x >= 7), and the negation of (x > 2) is (x <= 2).
    :feedback_e: Use A and B to represent the expressions -- A becomes !(x >= 7), B becomes (x > 2). ! (A && B) does NOT equal A || !B. The negation of (x > 2) is (x <= 2), not (x < 2), and !(x >= 7) is the same as (x < 7).
 
    Which of the following is equivalent to ``! (!(x >= 7) && (x > 2))``?
@@ -233,22 +233,22 @@ The following problems are similar to what you might see on the AP CS A exam.  P
           int low = 0;
           int high = arr.length - 1;
 
-      	  while (low <= high)
-      	  {
-      	      int mid = (low + high) / 2;
+          while (low <= high)
+          {
+              int mid = (low + high) / 2;
 
-      	      if (arr[mid] == key)
-      	          return mid;
+              if (arr[mid] == key)
+                  return mid;
 
-      	      else if (arr[mid] < key)
-      	          low = mid + 1;
+              else if (arr[mid] < key)
+                  low = mid + 1;
 
-      	      else
-      	          high = mid - 1;
+              else
+                  high = mid - 1;
 
-      	  }
+          }
 
-      	 return -1;
+         return -1;
       }
 
 .. mchoice:: qtnt4_9
@@ -300,64 +300,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       numbers.remove(3);
       numbers.add(9);
       numbers.set(5, 5);
-
-.. .. mchoice:: qtnt4_11
-   :answer_a: Remove the abstract keyword from the Meal class declaration.
-   :answer_b: Remove the abstract keyword from the Meal class and method declarations.
-   :answer_c: Create a constructor for the Meal class.
-   :answer_d: Remove the abstract keyword from the addToMenu method in the Meal class.
-   :answer_e: Define the addToMenu method in the Breakfast class.
-   :correct: e
-   :feedback_a: Abstract methods cannot be placed in classes that are not abstract. In addition, the Meal class should remain an abstract class. Abstract classes can have many derived classes, so the Meal class can have multiple subclasses other than Breakfast.
-   :feedback_b: Although this answer will allow the classes to compile, it is not the best solution. The Meal class should remain an abstract class. Abstract classes can have many derived classes, so the Meal class can have multiple subclasses other than Breakfast.
-   :feedback_c: Creating a constructor for the Meal class will not make the classes compile. The problem with these classes lies in the methods, not the constructors.
-   :feedback_d: In order for this to compile, the addToMenu method would also have to be defined in the Meal class - would have to have a body.
-   :feedback_e: Because Meal is an abstract class and Breakfast is not, addToMenu MUST be defined in the Breakfast class. Abstract methods must be defined in the classes that implement them, if that class is not also abstract.
-
-   Consider the ``Breakfast`` and ``Meal`` classes shown below. Currently, the ``Breakfast`` class will not compile. Which of the following is the BEST solution to make ``Meal`` and ``Breakfast`` compile and run as intended?
-
-   .. code-block:: java
-
-      public abstract class Meal
-      {
-          public abstract String getMealTime;
-
-          public abstract List<String> getMenu();
-
-          public abstract void addToMenu (String food);
-
-          public abstract double getCalories();
-      }
-
-      public class Breakfast extends Meal
-      {
-          private double calories;
-          private String time;
-          private List<String> menu;
-
-          public Breakfast (double theCalories, String theTime,
-                            ArrayList<String> theMenu)
-          {
-              calories = theCalories;
-              time = theTime;
-              menu = theMenu;
-          }
-
-          public String getMealTime()
-          {
-             return time;
-          }
-
-          public List<String> getMenu()
-          {
-              return menu;
-          }
-
-          public double getCalories()
-          {
-               return calories;
-          }
-      }
 
 .. mchoice:: qtnt4_12
    :answer_a: arr[col][i] += sum;
@@ -508,11 +450,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_d: x / y == 1
    :answer_e: x / y == 0
    :correct: a
-   :feedback_a: The modulo operator (%) returns the remainder left by integer division. If x % y == 0, x is evenly divisible by y, leaving no remainder.
-   :feedback_b: The modulo operator (%) returns the remainder left by integer division. If x % y == 1, x is not evenly divisible by y, as there is a remainder of 1 left over.
-   :feedback_c: The modulo operator (%) returns the remainder left by integer division. If x % y == 2, x is not evenly divisible by y, because there is a remainder of 2 left after the division.
-   :feedback_d: The modulo operator (%) is used to check if numbers are divisible by each other. The division operator (/) should be replaced with a %.
-   :feedback_e: The division operator does not check if one number is divisible by another. In integer division, remainders are calculated by the modulo operator (%).
+   :feedback_a: The remainder operator (%) returns the remainder left by integer division. If x % y == 0, x is evenly divisible by y, leaving no remainder.
+   :feedback_b: The remainder operator (%) returns the remainder left by integer division. If x % y == 1, x is not evenly divisible by y, as there is a remainder of 1 left over.
+   :feedback_c: The remainder operator (%) returns the remainder left by integer division. If x % y == 2, x is not evenly divisible by y, because there is a remainder of 2 left after the division.
+   :feedback_d: The remainder operator (%) is used to check if numbers are divisible by each other. The division operator (/) should be replaced with a %.
+   :feedback_e: The division operator does not check if one number is divisible by another. In integer division, remainders are calculated by the remainder operator (%).
 
 
    The method ``divisible`` is shown below. In order for ``divisible`` to compile and run as intended, the method must return true if x is evenly divisible by y with no remainder, returning false otherwise. Which of the following could replace ``/* to be completed */`` to make the code work as intended?
@@ -537,7 +479,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :answer_e: 2000
    :correct: b
    :feedback_a: 2 ^ 9 is 512, which is not enough elements to cover every element in the database. Remember that binary search requires log2 (number of elements) iterations to perform.
-   :feedback_b: 2 ^ 11 is 2024. 11 iterations is more than enough to find the value or guarantee that it is not in the database. Binary search takes log2 (number of elements) iterations to perform.
+   :feedback_b: 2 ^ 11 is 2048. 11 iterations is more than enough to find the value or guarantee that it is not in the database. Binary search takes log2 (number of elements) iterations to perform.
    :feedback_c: The value will be found in 20 iterations, but a smaller number of iterations could be used.
    :feedback_d: The value will be found in 20 iterations, but a smaller number of iterations could be used. Remember that binary search requires log2 (number of elements) iterations to perform correctly.
    :feedback_e: This would be true if we used a sequential search algorithm. However, binary search only needs log2 (number of elements) iterations.
@@ -589,7 +531,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
           public Student(String theName, int theAge, int theGrade)
           {
-              super (theName, theAge);
+              super(theName, theAge);
               grade = theGrade;
           }
 
@@ -613,8 +555,6 @@ The following problems are similar to what you might see on the AP CS A exam.  P
               grade++;
           }
       }
-
-
 
 .. mchoice:: qtnt4_19
    :answer_a: I only

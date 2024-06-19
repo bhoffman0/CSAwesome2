@@ -1,31 +1,12 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 10-2-
    :start: 1
-   
-.. highlight:: java
-   :linenothreshold: 4
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
 
-.. image:: ../../_static/time90.png
-    :width: 225
-    :align: right
-    
+|Time90|
+
 Recursive Searching and Sorting
 -------------------------------
 
@@ -41,34 +22,36 @@ In Unit 7, we learned about two search algorithms, linear search and binary sear
 
   public class IterativeBinarySearch
   {
-     public static int binarySearch(int[] elements, int target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target < elements[middle])
-           {
-              right = middle - 1;
-           }
-           else if (target > elements[middle])
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(int[] elements, int target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target < elements[middle])
+              {
+                  right = middle - 1;
+              }
+              else if (target > elements[middle])
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        int[] arr1 = {-20, 3, 15, 81, 432};
+      public static void main(String[] args)
+      {
+          int[] arr1 = {-20, 3, 15, 81, 432};
 
-        int index = binarySearch(arr1,81);
-        System.out.println(index);
-     }
+          int index = binarySearch(arr1, 81);
+          System.out.println(index);
+      }
   }
 
 .. |Java visualizer| raw:: html
@@ -77,17 +60,17 @@ In Unit 7, we learned about two search algorithms, linear search and binary sear
 
 Watch the iterative binary search code running in the |Java Visualizer|.
 
-Let's write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code. 
+Let's write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.
 
 |Exercise| **Check Your Understanding**
 
 .. shortanswer:: baseCaseQ
 
     What's the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.
-    
+
 .. shortanswer:: recursiveCallQ
 
-    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int target, int startIndex, int endIndex)", what recursive method call would search the array from index 0 to the middle index? 
+    Given a recursive binary search method with the method signature "boolean binarySearch(int[] array, int startIndex, int endIndex, int target)", what recursive method call would search the array from index 0 to the middle index?
 
 Here is the Java code for a recursive binary search:
 
@@ -97,40 +80,45 @@ Here is the Java code for a recursive binary search:
 
 .. activecode:: recursiveBinarySearch
   :language: java
-  
+
   Run the code below. Try searching for the value 3 and then the value 2 which is not in the array. What would happen if we removed the second base case checking if end < start? Try it and see.
   ~~~~
   public class RecursiveBinarySearch
   {
-    public static int recursiveBinarySearch(int[] array, int target, int start, int end)
-    {
-        int middle = (start + end)/2;
-        // base case: check middle element
-        if (target == array[middle]) {
-            return middle;
-        }	
-        // base case: check if we've run out of elements
-        if(end < start){
-            return -1; // not found
-        } 
-        // recursive call: search start to middle
-        if (target < array[middle]){
-            return recursiveBinarySearch(array, target, start, middle - 1);
-        }
-        // recursive call: search middle to end
-        if (target > array[middle]){
-            return recursiveBinarySearch(array, target, middle + 1, end);
-        }
-        return -1;
-    }
+      public static int recursiveBinarySearch(
+          int[] array, int start, int end, int target)
+      {
+          int middle = (start + end) / 2;
+          // base case: check middle element
+          if (target == array[middle])
+          {
+              return middle;
+          }
+          // base case: check if we've run out of elements
+          if (end < start)
+          {
+              return -1; // not found
+          }
+          // recursive call: search start to middle
+          if (target < array[middle])
+          {
+              return recursiveBinarySearch(array, start, middle - 1, target);
+          }
+          // recursive call: search middle to end
+          if (target > array[middle])
+          {
+              return recursiveBinarySearch(array, middle + 1, end, target);
+          }
+          return -1;
+      }
 
-   public static void main(String[] args)
-   {
-      int[] array = { 3, 7, 12, 19, 22, 25, 29, 30 };
-      int target = 25;
-      int foundIndex = recursiveBinarySearch(array,target,0,array.length-1);
-      System.out.println(target + " was found at index " + foundIndex);
-   }
+      public static void main(String[] args)
+      {
+          int[] array = {3, 7, 12, 19, 22, 25, 29, 30};
+          int target = 25;
+          int foundIndex = recursiveBinarySearch(array, 0, array.length - 1, target);
+          System.out.println(target + " was found at index " + foundIndex);
+      }
   }
 
 .. |Java visualizer link| raw:: html
@@ -142,9 +130,9 @@ Try the recursive binary search code in this |Java visualizer link|.
 Merge Sort
 ==========================
 
-..	index::
-	single: merge sort
-	pair: sort; merge
+.. index::
+   single: merge sort
+   pair: sort; merge
 
 In Unit 7, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a **divide and conquer** algorithm.
 
@@ -153,7 +141,7 @@ A merge sort recursively breaks the values to be sorted in half until there is o
 .. |video| raw:: html
 
    <a href="https://youtu.be/XaqR3G_NVoo" target="_blank">video</a>
-   
+
 Here is a folk dance |video| that shows the merge sort process.
 
 .. youtube:: XaqR3G_NVoo
@@ -163,15 +151,15 @@ Here is a folk dance |video| that shows the merge sort process.
 .. |video2| raw:: html
 
    <a href="https://youtu.be/4VqmGXwpLqc" target="_blank">video</a>
-   
+
 And here is a short |video2| that describes how merge sort works.
 
 .. youtube:: 4VqmGXwpLqc
     :align: center
     :height: 315
-    
 
-The code for ``mergeSort`` below is from the AP CS A course description.
+
+The code for ``mergeSort`` below is from the AP CSA course description.
 
 To identify a merge sort look for the following:
 
@@ -179,89 +167,89 @@ To identify a merge sort look for the following:
 * mergeSortHelper is recursive
 
 .. activecode:: mergeSort
-  :language: java
+   :language: java
 
-  import java.util.Arrays;
+   import java.util.Arrays;
 
-  public class SortTest
-  {
-     public static void mergeSort(int[] elements)
-     {
-        int n = elements.length;
-        int[] temp = new int[n];
-        mergeSortHelper(elements, 0, n - 1, temp);
-     }
+   public class SortTest
+   {
+       public static void mergeSort(int[] elements)
+       {
+           int n = elements.length;
+           int[] temp = new int[n];
+           mergeSortHelper(elements, 0, n - 1, temp);
+       }
 
-     private static void mergeSortHelper(int[] elements,
-                                         int from, int to, int[] temp)
-     {
-         if (from < to)
-         {
-            int middle = (from + to) / 2;
-            mergeSortHelper(elements, from, middle, temp);
-            mergeSortHelper(elements, middle + 1, to, temp);
-            merge(elements, from, middle, to, temp);
-         }
-     }
-
-     private static void merge(int[] elements, int from,
-                               int mid, int to, int[] temp)
-     {
-        int i = from;
-        int j = mid + 1;
-        int k = from;
-
-        while (i <= mid && j <= to)
-        {
-           if (elements[i] < elements[j])
+       private static void mergeSortHelper(
+           int[] elements, int from, int to, int[] temp)
+       {
+           if (from < to)
            {
-              temp[k] = elements[i];
-              i++;
+               int middle = (from + to) / 2;
+               mergeSortHelper(elements, from, middle, temp);
+               mergeSortHelper(elements, middle + 1, to, temp);
+               merge(elements, from, middle, to, temp);
            }
-           else
+       }
+
+       private static void merge(
+           int[] elements, int from, int mid, int to, int[] temp)
+       {
+           int i = from;
+           int j = mid + 1;
+           int k = from;
+
+           while (i <= mid && j <= to)
            {
-              temp[k] = elements[j];
-              j++;
+               if (elements[i] < elements[j])
+               {
+                   temp[k] = elements[i];
+                   i++;
+               }
+               else
+               {
+                   temp[k] = elements[j];
+                   j++;
+               }
+               k++;
            }
-           k++;
-        }
 
-        while (i <= mid)
-        {
-           temp[k] = elements[i];
-           i++;
-           k++;
-        }
+           while (i <= mid)
+           {
+               temp[k] = elements[i];
+               i++;
+               k++;
+           }
 
-        while (j <= to)
-        {
-           temp[k] = elements[j];
-           j++;
-           k++;
-        }
+           while (j <= to)
+           {
+               temp[k] = elements[j];
+               j++;
+               k++;
+           }
 
-        for (k = from; k <= to; k++)
-        {
-           elements[k] = temp[k];
-        }
-     }
+           for (k = from; k <= to; k++)
+           {
+               elements[k] = temp[k];
+           }
+       }
 
-     public static void main(String[] args)
-     {
-        int[] arr1 = {86, 3, 43, 5};
-        System.out.println(Arrays.toString(arr1));
-        mergeSort(arr1);
-        System.out.println(Arrays.toString(arr1));
-     }
-  }
+       public static void main(String[] args)
+       {
+           int[] arr1 = {86, 3, 43, 5};
+           System.out.println(Arrays.toString(arr1));
+           mergeSort(arr1);
+           System.out.println(Arrays.toString(arr1));
+       }
+   }
 
-You can see this executing using the |Java visualizer for merge sort|. 
+You can see this executing using the |Java visualizer for merge sort|.
 
 .. |Java visualizer for merge sort| raw:: html
 
    <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+mergeSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++int+n+%3D+elements.length%3B%0A++++++++int%5B%5D+temp+%3D+new+int%5Bn%5D%3B+%0A++++++++mergeSortHelper(elements,+0,+n+-+1,+temp)%3B%0A+++++%7D%0A+++++%0A+++++private+static+void+mergeSortHelper(int%5B%5D+elements,+int+from,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A+++++++++if+(from+%3C+to)%0A+++++++++%7B%0A++++++++++++int+middle+%3D+(from+%2B+to)+/+2%3B+%0A++++++++++++mergeSortHelper(elements,+from,+middle,+temp)%3B+%0A++++++++++++mergeSortHelper(elements,+middle+%2B+1,+to,+temp)%3B+%0A++++++++++++merge(elements,+from,+middle,+to,+temp)%3B%0A+++++++++%7D%0A+++++%7D%0A+++++%0A+++++private+static+void+merge(int%5B%5D+elements,+int+from,+int+mid,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A++++++++int+i+%3D+from%3B+%0A++++++++int+j+%3D+mid+%2B+1%3B+%0A++++++++int+k+%3D+from%3B%0A++++++++%0A++++++++while+(i+%3C%3D+mid+%26%26+j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++if+(elements%5Bi%5D+%3C+elements%5Bj%5D)+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B%0A++++++++++++++i%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++else+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B%0A++++++++++++++j%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++k%2B%2B%3B+%0A++++++++%7D%0A%0A++++++++while+(i+%3C%3D+mid)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B+%0A+++++++++++i%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++while+(j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B+%0A+++++++++++j%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++for+(k+%3D+from%3B+k+%3C%3D+to%3B+k%2B%2B)+%0A++++++++%7B%0A+++++++++++elements%5Bk%5D+%3D+temp%5Bk%5D%3B+%0A++++++++%7D%0A+++++%7D%0A++++++++%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B86,+3,+43%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++mergeSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0" target="_blank" style="text-decoration:underline">Java visualizer for merge sort</a>
 
-You can trace through a merge sort algorithm given an array by using parentheses or curly brackets to show how the array is divided into subarrays and then merged. For example, here is how you could write down the trace of ``mergeSort(arr1)`` where arr1 = {86, 3, 43, 5} like in the example above.
+You can trace through a merge sort algorithm given an array by using parentheses or curly braces to show how the array is divided into subarrays and then merged. For example, here is how you could write down the trace of ``mergeSort(arr1)`` where arr1 = {86, 3, 43, 5} like in the example above.
 
 1. Split 1: { {86, 3} , {43, 5} }
 2. Split 2: { { {86},{3}} , { {43},{5}} }
@@ -298,24 +286,24 @@ You can trace through a merge sort algorithm given an array by using parentheses
 ==========================================================
 
 
-Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards. 
+Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards.
 
 .. |video3| raw:: html
 
    <a href="https://youtu.be/AMJjtTo1LLE" target="_blank">video</a>
-   
+
 .. youtube:: AMJjtTo1LLE
     :align: center
-    
-Work in pairs to do the following tracing problems. 
+
+Work in pairs to do the following tracing problems.
 
 .. shortanswer:: challenge-10-2-mergesort
 
-    Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.  
+    Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.
 
 .. shortanswer:: challenge-10-2-binary-search
 
-    Trace through recursiveBinarySearch(sortedArray, 22, 0, 8) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
+    Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
 
 Summary
 ============

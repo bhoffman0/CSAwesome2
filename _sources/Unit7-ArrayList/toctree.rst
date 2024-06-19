@@ -1,13 +1,13 @@
 .. image:: ../../_static/CSAwesomeLogo.png
     :width: 350
     :align: center
-    
+
 ArrayList
 ::::::::::::::::::::
 
 Class Periods: 10-12
 
-AP CS A Exam Weighting: 2.5–7.5%
+AP CSA Exam Weighting: 2.5–7.5%
 
 .. toctree::
    :maxdepth: 3
@@ -20,7 +20,9 @@ AP CS A Exam Weighting: 2.5–7.5%
    topic-7-6-sorting.rst
    topic-7-7-data-ethics.rst
    topic-7-8-summary.rst
+   topic-input-files.rst
    ListParsonsPractice.rst
+   topic-7-9-toggle-problems.rst
    listPractice.rst
    Exercises.rst
    CBLabs.rst

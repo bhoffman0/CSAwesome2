@@ -1,7 +1,9 @@
-.. image:: ../../_static/time90.png
-    :width: 225
-    :align: right 
-    
+.. include:: ../common.rst
+
+
+
+|Time90|
+
 Traversing 2D Arrays (nested loops)
 ======================================
 

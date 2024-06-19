@@ -1,39 +1,22 @@
+.. include:: ../common.rst
+
 .. qnum::
    :prefix: 7-5-
    :start: 1
 
-.. |CodingEx| image:: ../../_static/codingExercise.png
-    :width: 30px
-    :align: middle
-    :alt: coding exercise
-    
-    
-.. |Exercise| image:: ../../_static/exercise.png
-    :width: 35
-    :align: middle
-    :alt: exercise
-    
-    
-.. |Groupwork| image:: ../../_static/groupwork.png
-    :width: 35
-    :align: middle
-    :alt: groupwork
-    
-.. image:: ../../_static/time90.png
-    :width: 225
-    :align: right
-    
+|Time90|
+
 Searching Algorithms
 ======================
 
-..	index::
-	single: sequential search
-	single: binary search
-	single: recursion
-	pair: search; sequential
-	pair: search; binary
+.. index::
+   single: sequential search
+   single: binary search
+   single: recursion
+   pair: search; sequential
+   pair: search; binary
 
-Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CS A exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
+Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CSA exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
 .. the video is Searching.mov
 
@@ -49,82 +32,85 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
 
 
 
-If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson. 
+If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson.
 
 
 Sequential Search
 ------------------
 
-..	index::
-	single: sequential search
-	single: linear search
-	pair: search; sequential
-	pair: search; linear
+.. index::
+   single: sequential search
+   single: linear search
+   pair: search; sequential
+   pair: search; linear
 
-Sequential or linear search is the only method that can be used to find a value in unsorted data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns the index it found it at, or it loops until the end of the array or list and then it returns a -1 to show that it didn't find the value in the array or list.
+Sequential or linear search can be used to find a value in *unsorted* data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn't find the value in the array or list. Click on *Show CodeLens* below to see linear search in action.
 
 
 
 .. activecode:: seqSearch
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
-  The code for ``sequentialSearch`` for arrays below is from a previous AP CS A course description. Click on the Code Lens button or the link below to see this code running in the Java visualizer.
+  The code for ``sequentialSearch`` for arrays below is from a previous AP CSA course description. Click on the Code Lens button to see this code running in the Java visualizer.
   ~~~~
   public class ArraySearcher
   {
 
-     /** Finds the index of a value in an array of integers.
+      /**
+       * Finds the index of a value in an array of integers.
+       *
        * @param elements an array containing the items to be searched.
        * @param target the item to be found in elements.
        * @return an index of target in elements if found; -1 otherwise.
        */
-     public static int sequentialSearch(int[] elements, int target)
-     {
-       for (int j = 0; j < elements.length; j++)
-       {
-         if (elements[j] == target)
-         {
-           return j;
-         }
-       }
-       return -1;
-     }
+      public static int sequentialSearch(int[] elements, int target)
+      {
+          for (int j = 0; j < elements.length; j++)
+          {
+              if (elements[j] == target)
+              {
+                  return j;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-       int[] numArray = {3, -2, 9, 38, -23};
-       System.out.println("Tests of sequentialSearch");
-       System.out.println(sequentialSearch(numArray,3));
-       System.out.println(sequentialSearch(numArray,9));
-       System.out.println(sequentialSearch(numArray,-23));
-       System.out.println(sequentialSearch(numArray,99));
-     }
+      public static void main(String[] args)
+      {
+          int[] numArray = {3, -2, 9, 38, -23};
+          System.out.println("Tests of sequentialSearch");
+          System.out.println(sequentialSearch(numArray, 3));
+          System.out.println(sequentialSearch(numArray, 9));
+          System.out.println(sequentialSearch(numArray, -23));
+          System.out.println(sequentialSearch(numArray, 99));
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
 
-To see this executing using the Java Visualizer click on the following link `SequentialSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ArraySearcher%0A%7B%0A++%0A++/**+Finds+the+index+of+a+value+in+an+array+of+integers.%0A++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+%0A++++*+%40param+target+the+item+to+be+found+in+elements.+%0A++++*+%40return+an+index+of+target+in+elements+if+found%3B+-1+otherwise.+%0A++++*/%0A++public+static+int+sequentialSearch(int%5B%5D+elements,+int+target)+%0A++%7B+%0A++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)+%0A++++%7B+%0A++++++if+(elements%5Bj%5D+%3D%3D+target)+%0A++++++%7B+%0A++++++++return+j%3B+%0A++++++%7D+%0A++++%7D+%0A++++return+-1%3B+%0A++%7D%0A++%0A++public+static+void+main(String%5B%5D+args)%0A++%7B%0A++++int%5B%5D+numArray+%3D+%7B3,+-2,+9,+38,+-23%7D%3B%0A++++System.out.println(%22Tests+of+sequentialSearch%22)%3B%0A++++System.out.println(sequentialSearch(numArray,3))%3B%0A++++System.out.println(sequentialSearch(numArray,9))%3B%0A++++System.out.println(sequentialSearch(numArray,-23))%3B%0A++++System.out.println(sequentialSearch(numArray,99))%3B%0A++%7D%0A++%0A%7D&mode=display&curInstr=3>`_
+  import org.junit.*;
 
-Here is the same search with an ArrayList. The same algorithms can be used with arrays or ArrayLists, but notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won't change during runtime. There are methods such as contains that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "Tests of sequentialSearch\n0\n2\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
+
+Here is the same search with an ``ArrayList``. The same algorithms can be used with arrays or ``ArrayList``\ s, but notice that ``size()`` and ``get(i)`` are used with ``ArrayList``\ s instead of ``length`` and ``[i]`` which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won't change during runtime. There are methods such as ``contains`` that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.
 
 .. activecode:: seqSearchList
     :language: java
-    :autograde: unittest        
+    :autograde: unittest
 
     Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Click on the Code Lens button to step through this code in the visualizer.
     ~~~~
@@ -133,43 +119,48 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
     public class ArrayListSearcher
     {
 
-      /** Finds the index of a value in an ArrayList of integers.
-        * @param elements an array containing the items to be searched. 
-        * @param target the item to be found in elements. 
-        * @return an index of target in elements if found; -1 otherwise. 
-        */
-      public static int sequentialSearch(ArrayList<Integer> elements, int target) 
-      { 
-        for (int j = 0; j < elements.size(); j++) 
-        { 
-          if (elements.get(j) == target) 
-          { 
-            return j; 
-          } 
-        } 
-        return -1; 
-      }
+        /**
+         * Finds the index of a value in an ArrayList of integers.
+         *
+         * @param elements an array containing the items to be searched.
+         * @param target the item to be found in elements.
+         * @return an index of target in elements if found; -1 otherwise.
+         */
+        public static int sequentialSearch(ArrayList<Integer> elements, int target)
+        {
+            for (int j = 0; j < elements.size(); j++)
+            {
+                if (elements.get(j) == target)
+                {
+                    return j;
+                }
+            }
+            return -1;
+        }
 
-      public static void main(String[] args)
-      {
-        ArrayList<Integer> numList = new ArrayList<Integer>();
-        numList.add(3);
-        numList.add(-2);
-        numList.add(9);
-        numList.add(38);
-        numList.add(-23);
-        System.out.println("Tests of sequentialSearch");
-        System.out.println(sequentialSearch(numList,3));
-        System.out.println(sequentialSearch(numList,9));
-        System.out.println(sequentialSearch(numList,-23));
-        System.out.println(sequentialSearch(numList,99));
-      }
+        public static void main(String[] args)
+        {
+            ArrayList<Integer> numList = new ArrayList<Integer>();
+            numList.add(3);
+            numList.add(-2);
+            numList.add(9);
+            numList.add(38);
+            numList.add(-23);
+            System.out.println("Tests of sequentialSearch");
+            System.out.println(sequentialSearch(numList, 3));
+            System.out.println(sequentialSearch(numList, 9));
+            System.out.println(sequentialSearch(numList, -23));
+            System.out.println(sequentialSearch(numList, 99));
+        }
     }
+
     ====
     import static org.junit.Assert.*;
-    import org.junit.*;;
+
+    import org.junit.*;
+
     import java.io.*;
-    
+
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
@@ -181,7 +172,6 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
             assertTrue(passed);
         }
     }
-
 
 |Exercise| **Check Your Understanding**
 
@@ -211,220 +201,239 @@ Here is the same search with an ArrayList. The same algorithms can be used with 
 
    Which will cause the *shortest* execution of a sequential search looking for a value in an array of integers?
 
-Of course you can also look for a string in an array or list.  But, when you look for a string be sure to use ``equals`` rather than ``==``.  Remember that ``==`` is only true when the two references refer to the same object, while ``equals`` returns true if the characters in the two objects are the same.
+You can also look for a ``String`` in an array or list, but be sure to use ``equals`` rather than ``==``.  Remember that ``==`` is only true when the two references refer to the same ``String`` object, while ``equals`` returns true if the characters in the two ``String`` objects are the same.
 
 .. activecode:: seqSearchStr
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
   Demonstration of a linear search for a String. Click on the Code Lens button or the link below to step through this code.
   ~~~~
   public class SearchTest
   {
 
-     public static int sequentialSearch(String[] elements, String target)
-     {
-        for (int j = 0; j < elements.length; j++)
-        {
-           if (elements[j].equals(target))
-           {
-              return j;
-           }
-       }
-       return -1;
-     }
+      public static int sequentialSearch(String[] elements, String target)
+      {
+          for (int j = 0; j < elements.length; j++)
+          {
+              if (elements[j].equals(target))
+              {
+                  return j;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        String[] arr1 = {"blue", "red", "purple", "green"};
+      public static void main(String[] args)
+      {
+          String[] arr1 = {"blue", "red", "purple", "green"};
 
-        // test when the target is in the array
-        int index = sequentialSearch(arr1,"red");
-        System.out.println(index);
+          // test when the target is in the array
+          int index = sequentialSearch(arr1, "red");
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = sequentialSearch(arr1,"pink");
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = sequentialSearch(arr1, "pink");
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-   
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "1\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
 
-To see this executing using the Java Visualizer click on this `String-SeqSearch <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A%0A+++++public+static+int+sequentialSearch(String%5B%5D+elements,+String+target)%0A+++++%7B%0A++++++++for+(int+j+%3D+0%3B+j+%3C+elements.length%3B+j%2B%2B)%0A++++++++%7B%0A+++++++++++if+(elements%5Bj%5D.equals(target))%0A+++++++++++%7B%0A++++++++++++++return+j%3B%0A+++++++++++%7D+%0A+++++++%7D%0A+++++++return+-1%3B%0A+++++%7D%0A+++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++String%5B%5D+arr1+%3D+%7B%22blue%22,+%22red%22,+%22purple%22,+%22green%22%7D%3B%0A++++++++%0A++++++++//+test+when+the+target+is+in+the+array%0A++++++++int+index+%3D+sequentialSearch(arr1,%22red%22)%3B%0A++++++++System.out.println(index)%3B%0A++++++++%0A++++++++//+test+when+the+target+is+not+in+the+array%0A++++++++index+%3D+sequentialSearch(arr1,%22pink%22)%3B%0A++++++++System.out.println(index)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "1\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
+
+
 
 Binary Search
 --------------
 
-..	index::
-	single: binary search
-	pair: search; binary
+.. index::
+   single: binary search
+   pair: search; binary
 
-Binary search can only be used if the data is sorted.
+How do you search for something in a phone book or dictionary that is in alphabetical or numerical order? If you're looking for something beginning with M or on page 100 in a 200 page book, you wouldn't want to start with page 1. You would probably start looking somewhere in the middle of the book. This is the idea behind **binary search**.
 
-Binary search keeps dividing the sorted search space into half. It compares a target value to the value in the middle of a range of indices.  If the value isn't found it looks again in either the left or right half of the current range. Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  Click on this `Binary Search Animation <http://cs.armstrong.edu/liang/animation/web/BinarySearch.html>`_ to see how it works.
+If your array or list is already in order (sorted), binary search will on average find an element or determine that it is missing much more quickly than a linear search. But binary search can only be used if the data is sorted.
 
-Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element).   Remember that integer division gives an integer result so 2.5 becomes 2.  It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one.  If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index.    It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
+Binary search keeps dividing the sorted search space into half. It compares a target value to the value in the middle of a range of indices.  If the value isn't found it looks again in either the left or right half of the current range. Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  See the animation below from https://github.com/AlvaroIsrael/binary-search:
 
-The code for ``binarySearch`` below is from the AP CS A course description. A recursive version of this algorithm will be covered in Unit 10.
+.. figure:: Figures/binary-search-small.gif
+    :width: 500px
+    :align: center
+
+
+Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element). Remember that integer division gives an integer result so 2.5 becomes 2. It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one. If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index. It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
+
+The code for ``binarySearch`` below is from the AP CSA course description. A recursive version of this algorithm will be covered in Unit 10.
 
 .. activecode:: binSearch
   :language: java
-  :autograde: unittest        
+  :autograde: unittest
 
-  Demonstration of iterative binary search. Click on the Code Lens button or the link below to step through this code.
+  Demonstration of iterative binary search. Click on the Code Lens button to step through this code.
   ~~~~
   public class SearchTest
   {
-     public static int binarySearch(int[] elements, int target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target < elements[middle])
-           {
-              right = middle - 1;
-           }
-           else if (target > elements[middle])
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(int[] elements, int target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target < elements[middle])
+              {
+                  right = middle - 1;
+              }
+              else if (target > elements[middle])
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        int[] arr1 = {-20, 3, 15, 81, 432};
+      public static void main(String[] args)
+      {
+          int[] arr1 = {-20, 3, 15, 81, 432};
 
-        // test when the target is in the middle
-        int index = binarySearch(arr1,15);
-        System.out.println(index);
+          // test when the target is in the middle
+          int index = binarySearch(arr1, 15);
+          System.out.println(index);
 
-        // test when the target is the first item in the array
-        index = binarySearch(arr1,-20);
-        System.out.println(index);
+          // test when the target is the first item in the array
+          index = binarySearch(arr1, -20);
+          System.out.println(index);
 
-        // test when the target is in the array - last
-        index = binarySearch(arr1,432);
-        System.out.println(index);
+          // test when the target is in the array - last
+          index = binarySearch(arr1, 432);
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = binarySearch(arr1,53);
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = binarySearch(arr1, 53);
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n0\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
-    
-To see this executing using the Java Visualizer click on the following link: `BinarySearch Ex <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0>`_
+  import org.junit.*;
 
-You can also use binary search with a string array.  But, when you look for a string be sure to use ``compareTo()`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the String method compareTo() works:
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "2\n0\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
+
+
+You can also use binary search with a ``String`` array.  But, when you look for a ``String``, be sure to use ``compareTo`` method rather than ``<`` or ``>`` which can only be used with primitive types.  Remember how the ``String`` method ``compareTo`` works:
 
    -  **int compareTo(String other)** returns a negative value if the current string is less than the ``other`` string, 0 if they have the same characters in the same order, and a positive value if the current string is greater than the ``other`` string.
 
 .. activecode:: binSearchStrings
   :language: java
-  :autograde: unittest        
-  
+  :autograde: unittest
+
   Demonstration of binary search with strings using compareTo. Click on the Code Lens button to step through the code.
   ~~~~
   public class BinSearchStrings
   {
-     public static int binarySearch(String[] elements, String target) {
-        int left = 0;
-        int right = elements.length - 1;
-        while (left <= right)
-        {
-           int middle = (left + right) / 2;
-           if (target.compareTo(elements[middle]) < 0)
-           {
-              right = middle - 1;
-           }
-           else if (target.compareTo(elements[middle]) > 0)
-           {
-              left = middle + 1;
-           }
-           else {
-              return middle;
-           }
-         }
-         return -1;
-     }
+      public static int binarySearch(String[] elements, String target)
+      {
+          int left = 0;
+          int right = elements.length - 1;
+          while (left <= right)
+          {
+              int middle = (left + right) / 2;
+              if (target.compareTo(elements[middle]) < 0)
+              {
+                  right = middle - 1;
+              }
+              else if (target.compareTo(elements[middle]) > 0)
+              {
+                  left = middle + 1;
+              }
+              else
+              {
+                  return middle;
+              }
+          }
+          return -1;
+      }
 
-     public static void main(String[] args)
-     {
-        String[] arr1 = {"apple","banana","cherry","kiwi","melon"};
+      public static void main(String[] args)
+      {
+          String[] arr1 = {"apple", "banana", "cherry", "kiwi", "melon"};
 
-        // test when the target is in the middle
-        int index = binarySearch(arr1,"cherry");
-        System.out.println(index);
+          // test when the target is in the middle
+          int index = binarySearch(arr1, "cherry");
+          System.out.println(index);
 
-        // test when the target is the first item in the array
-        index = binarySearch(arr1,"apple");
-        System.out.println(index);
+          // test when the target is the first item in the array
+          index = binarySearch(arr1, "apple");
+          System.out.println(index);
 
-        // test when the target is in the array - last
-        index = binarySearch(arr1,"melon");
-        System.out.println(index);
+          // test when the target is in the array - last
+          index = binarySearch(arr1, "melon");
+          System.out.println(index);
 
-        // test when the target is not in the array
-        index = binarySearch(arr1,"pear");
-        System.out.println(index);
-     }
+          // test when the target is not in the array
+          index = binarySearch(arr1, "pear");
+          System.out.println(index);
+      }
   }
+
   ====
   import static org.junit.Assert.*;
-    import org.junit.*;;
-    import java.io.*;
-    
-    public class RunestoneTests extends CodeTestHelper
-    {
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "2\n0\n4\n-1";
-            boolean passed = getResults(expect, output, "Expected output from main", true);
-            assertTrue(passed);
-        }
-    }
-  
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void testMain() throws IOException
+      {
+          String output = getMethodOutput("main");
+          String expect = "2\n0\n4\n-1";
+          boolean passed = getResults(expect, output, "Expected output from main", true);
+          assertTrue(passed);
+      }
+  }
+
 Runtimes
 --------
 
-How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data. 
+How do we choose between two algorithms that solve the same problem? They usually have different characteristics and **runtimes** which measures how fast they run. For the searching problem, it depends on your data.
 
 Binary search is much faster than linear search, especially on large data sets, but it can only be used on sorted data. Often with runtimes, computer scientist think about the **worst case behavior**. With searching, the worst case is usually if you cannot find the item. With linear search, you would have to go through the whole array before realizing that it is not there, but binary search is much faster even in this case because it eliminates half the data set in each step. We can measure an informal runtime by just counting the number of steps.
 
@@ -444,7 +453,7 @@ N    Linear Search  Binary Search
 100  100            7
 ==== ============== ==============
 
-Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n. 
+Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log\ :sub:`2`\ n as n, the data size, grows and see that binary search runs much faster for any n.  You don't need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n.
 
 
 |Exercise| **Check Your Understanding**
@@ -499,7 +508,7 @@ Runtimes can be described with mathematical functions. For an array of size n, l
    :answer_d: 2 times
    :correct: b
    :feedback_a: How many times can you divide 500 in half?
-   :feedback_b: You can divide 500 in half, 9 times, or you can observe that 2^9 = 512 which is slightly bigger than 500. 
+   :feedback_b: You can divide 500 in half, 9 times, or you can observe that 2^9 = 512 which is slightly bigger than 500.
    :feedback_c: How many times can you divide 500 in half?
    :feedback_d: How many times can you divide 500 in half?
 
@@ -510,35 +519,134 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
 
 
-.. |repl.it| raw:: html
-
-   <a href= "https://repl.it/@BerylHoffman/SpellCheckerArrayListSearches" style="text-decoration:underline" target="_blank">repl.it</a>
-
 .. |Google doc| raw:: html
 
    <a href= "https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
-   
-Let's go back to the spell checker that we programmed in Unit 6. Remember that it used linear search to find a word in the dictionary. The dictionary file was actually in alphabetical order though, so we could have used a much faster binary search. 
 
-Here is a version of the spellchecker on |repl.it| that uses an ArrayList for the dictionary and a linear search method. Notice that get(i) is used instead of [] to get an element in the ArrayList dictionary at index i. The search also prints out the index where it found the word. This is an informal runtime that tells us how many words it had to check.  Run the code in the window below or on |repl.it| with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers. 
+Let's go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. The advantage of using an ``ArrayList`` instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.
+
+In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let's see how much faster we can make it.
+
+Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use ``size`` and ``get(i)`` instead of [] to get an element in the ``ArrayList`` dictionary at index i. You will need to use the ``equals`` and ``compareTo`` methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.
+
+.. activecode:: challenge7-5-search-coding
+    :language: java
+    :datafile: dictionary.txt
+    :autograde: unittest
+
+    This spellchecker uses an ArrayList for the dictionary. Write a ``linearSearch(word)`` and a ``binarySearch(word)`` method. Use ``get(i)``, ``size()``, ``equals``, and ``compareTo``. Return a count of the number of words checked.
+    ~~~~
+    import java.io.*;
+    import java.nio.file.*;
+    import java.util.*;
+
+    public class SpellChecker
+    {
+        private ArrayList<String> dictionary;
+
+        /* Constructor populates the dictionary ArrayList from the file dictionary.txt*/
+        public SpellChecker() throws IOException
+        {
+            List<String> lines = Files.readAllLines(Paths.get("dictionary.txt"));
+            dictionary = new ArrayList<String>(lines);
+        }
+
+        /**
+         * Write a linearSearch(word) method that finds a word
+         * in the ArrayList dictionary. It should also keep
+         * a count of the number of words checked.
+         *
+         * @param String word to be found in elements.
+         * @return a count of how many words checked before returning.
+         */
+        public int linearSearch(String word)
+        {
+
+        }
+
+        /**
+         * Write a binarySearch(word) method that finds the word
+         * in the ArrayList dictionary. It should also keep
+         * a count of the number of words checked.
+         *
+         * @param String word to be found in elements.
+         * @return a count of how many words checked before returning.
+         */
+        public int binarySearch(String word)
+        {
+
+        }
+
+        public static void main(String[] args) throws IOException
+        {
+            SpellChecker checker = new SpellChecker();
+            String word = "catz";
+            int i = checker.linearSearch(word);
+            System.out.println("Linear search steps for " + word + " = " + i);
+            int count = checker.binarySearch(word);
+            System.out.println("Binary search steps for " + word + " = " + count);
+        }
+    }
+
+    ====
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+           super("SpellChecker");
+        }
+
+
+       @Test
+       public void test1()
+       {
+           Object[] args = {"medium"};
+           String output = getMethodOutput("linearSearch", args);
+           String expect = "5549";
+
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "linearSearch(\"medium\")"
+                           );
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           Object[] args = {"medium"};
+           String output = getMethodOutput("binarySearch", args);
+           String expect = "13";
+
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "binarySearch(\"medium\")"
+                           );
+           assertTrue(passed);
+       }
+    }
+
+Run your code with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers.
+
 
 .. raw:: html
 
     <iframe height="400px" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
-   
-.. raw:: html
-
-    <iframe height="600px" width="100%" src="https://repl.it/@BerylHoffman/SpellCheckerArrayListSearches?lite=true" scrolling="no" style="max-width:90%; margin-left:5%"  frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-Now, login to repl and start changing the code to save the |repl.it|  as your own project. The SpellChecker.java file also has a binarySpellCheck(word) method defined, but it does not print out the number of words checked. Looking at the linearSpellCheck(word) method as a guide, add in a counter variable, and increment it in the binary search loop after finding the middle of the list, and print it out before returning true or false. Change the Main.java code to call the binarySpellCheck method instead of the linearSpellCheck method, and try all the same test case words again. Record the runtimes for binary search and compare with the linear search times. What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
-
-
+What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
 
 .. shortanswer:: challenge7-5-binary-search
 
-   After you complete your code on repl, paste in a link (click on share) here. Also, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?
-   
+   After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?
+
 
 Summary
 ---------
@@ -552,5 +660,3 @@ Summary
 - Data must be in sorted order to use the binary search algorithm. This algorithm will be covered more in Unit 10.
 
 - Informal run-time comparisons of program code segments can be made using statement execution counts.
-
-

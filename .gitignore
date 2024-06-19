@@ -1,6 +1,9 @@
 # Ignore unique build info
 build_info
 build
+.env
+.github
+logs
 
 # Miscellaneous source files
 _sources/Tests/test6.rst
@@ -15,13 +18,6 @@ _sources copy/Appendix/DrJava.rst
 
 # Machine specific files
 .DS_Store
-_sources/.DS_Store
-_sources/.DS_Store
-_sources/.DS_Store
-_sources/.DS_Store
 pavement.py
 sphinx_settings.json
-pavement.py
-sphinx_settings.json
-pavement.py
-pavement.py
+.vscode/settings.json

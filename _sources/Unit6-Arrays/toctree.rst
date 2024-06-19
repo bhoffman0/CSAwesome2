@@ -7,7 +7,7 @@ Arrays
 
 Class Periods: 6-8
 
-AP CS A Exam Weighting: 10-15%
+AP CSA Exam Weighting: 10-15%
 
 .. toctree::
    :maxdepth: 3
@@ -18,6 +18,8 @@ AP CS A Exam Weighting: 10-15%
    topic-6-4-array-algorithms.rst
    topic-6-5-summary.rst
    ArrayParsonsPractice.rst
+   Arrays-mixed-code-toggle.rst
    ArrayPractice.rst
    Exercises.rst
    arrayExam.rst
+   MoreArrayPractice.rst

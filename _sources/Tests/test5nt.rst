@@ -2,10 +2,10 @@
    :prefix: 12-6-
    :start: 1
 
-Exam 5 for the AP CS A Exam (not timed)
+Exam 5 for the AP CSA Exam (not timed)
 ----------------------------------------
 
-The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
+The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
 .. mchoice:: qtnt5_1
    :answer_a: I only
@@ -21,7 +21,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
    :feedback_e: III executes to true if either a||b true, III is true because x-y will become 0 then 0 * a *b... = 0
 
    Suppose ``x, y, and z`` are variables of type ``int``. Consider the following three conditions
-      
+
    I. (x == y) && (y == z)  && (x == z)
    II. (x==y) || (y==z) && (x == z)
    III. (x - y) * (x - z) * (y - z) == 0
@@ -48,11 +48,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      public int multiply(int n)
      {
          if (n == 0)
-    	     return 1;
+             return 1;
          else if(n % 2 == 1)
-           return n;
-    	 else
-    	     return n * multiply(n - 2);
+             return n;
+         else
+             return n * multiply(n - 2);
      }
 
 .. mchoice:: qtnt5_3
@@ -158,7 +158,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
 
       Suppose ``a and b`` are ``boolean`` variables. The expression below
-        
+
       ``!a && !b``
 
       ...will evaluate to ``false`` whenever
@@ -185,9 +185,11 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       .. code-block:: java
 
         int x = 10, y = 0;
-        while(x > 5){
+        while(x > 5)
+        {
             y = 3;
-            while(y < x){
+            while(y < x)
+            {
                 y *= 2;
                 if( y % x == 1)
                     y += x;
@@ -228,14 +230,14 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       :feedback_d: it is <= k so inclusive of k
       :feedback_e: max of k -1 iterations
 
-      Consider the folllowing code segment. Assume ``k`` is some positive integer greater than 2. How many times will "SMALL" be printed?
+      Consider the following code segment. Assume ``k`` is some positive integer greater than 2. How many times will "SMALL" be printed?
 
       .. code-block:: Java
 
         for(int i = 2; i <= k; i++)
         {
             if(arr[i] < someValue)
-                System.out.print("SMALL");
+               System.out.print("SMALL");
         }
 
 .. mchoice:: qtnt5_11
@@ -279,7 +281,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     :feedback_e: Second for loop goes until colum <= row index
 
     A square matrix is declared as
-        
+
     ``int[][] mat = new int [SIZE][SIZE]``
 
     where ``SIZE`` is an appropriate integer constant. Consider the code below.
@@ -392,33 +394,41 @@ The following problems are similar to what you might see on the AP CS A exam.  P
 
     .. code-block:: java
 
-        class Dog{
+        class Dog
+        {
 
-          public void act(){
-              System.out.print("run ");
-              eat();
-          }
-          public void eat(){
-              System.out.print("eat ");
-          }
+            public void act()
+            {
+                System.out.print("run ");
+                eat();
+            }
+
+            public void eat()
+            {
+                System.out.print("eat ");
+            }
         }
 
-        public class UnderDog extends Dog{
+        public class UnderDog extends Dog
+        {
 
-          public void act(){
-              super.act();
-              System.out.print("sleep ");
-          }
+            public void act()
+            {
+                super.act();
+                System.out.print("sleep ");
+            }
 
-          public void eat(){
-              super.eat();
-              System.out.print("bark ");
-          }
+            public void eat()
+            {
+                super.eat();
+                System.out.print("bark ");
+            }
 
-          public static void main(String[] args){
-              Dog fido = new UnderDog();
-              fido.act();
-          }
+            public static void main(String[] args)
+            {
+                Dog fido = new UnderDog();
+                fido.act();
+            }
         }
 
 .. mchoice:: qtnt5_17
