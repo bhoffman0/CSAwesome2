@@ -59,7 +59,7 @@ Table of Contents
 
    Unit0-Getting-Started/toctree.rst
    Unit1-Using-Objects-and-Methods/toctree.rst
-
+   Unit2-Selection-and-Iteration/toctree.rst
 
 Index
 ::::::::::::::::::
