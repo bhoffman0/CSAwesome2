@@ -59,7 +59,7 @@ Table of Contents
 
    Unit1-Using-Objects-and-Methods/toctree.rst
    Unit2-Selection-and-Iteration/toctree.rst
-   Unit5-Writing-Classes/toctree.rst
+   Unit3-Class-Creation/toctree.rst
    Unit6-Arrays/toctree.rst
    Unit7-ArrayList/toctree.rst
    Unit8-2DArray/toctree.rst
