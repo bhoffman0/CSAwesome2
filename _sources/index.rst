@@ -60,12 +60,9 @@ Table of Contents
    Unit1-Using-Objects-and-Methods/toctree.rst
    Unit2-Selection-and-Iteration/toctree.rst
    Unit3-Class-Creation/toctree.rst
-   Unit6-Arrays/toctree.rst
-   Unit7-ArrayList/toctree.rst
-   Unit8-2DArray/toctree.rst
-   Unit9-Inheritance/toctree.rst
-   Unit10-Recursion/toctree.rst
-   Unit11-posttest/toctree.rst
+   Unit4-Data-Collections/toctree.rst
+   Unit5-Inheritance/toctree.rst
+   posttest/toctree.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
    MixedFreeResponse/toctree.rst
