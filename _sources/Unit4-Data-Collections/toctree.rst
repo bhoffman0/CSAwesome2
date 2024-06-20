@@ -9,6 +9,7 @@ AP CSA Exam Weighting:
    :maxdepth: 3
 
    topic-4-1-data-ethics.rst
+   topic-4-2-data-sets.rst
    topic-4-3-array-basics.rst
    topic-4-4-array-traversal.rst
    topic-4-5-array-algorithms.rst

@@ -63,9 +63,9 @@ Table of Contents
    HiddenFiles/toctree.rst
    MixedFreeResponse/toctree.rst
    Stories/toctree.rst
+   posttest/toctree.rst
    Tests/toctree.rst
    TimedTests/toctree.rst
-   posttest/toctree.rst
    _hidden/toctree.rst
 
 Index
