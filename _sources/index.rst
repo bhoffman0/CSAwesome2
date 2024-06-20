@@ -58,6 +58,7 @@ Table of Contents
    Unit2-Selection-and-Iteration/toctree.rst
    Unit3-Class-Creation/toctree.rst
    Unit4-Data-Collections/toctree.rst
+   Unit5-Inheritance/toctree.rst
 
 Index
 ::::::::::::::::::
