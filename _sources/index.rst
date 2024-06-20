@@ -59,6 +59,14 @@ Table of Contents
    Unit3-Class-Creation/toctree.rst
    Unit4-Data-Collections/toctree.rst
    Unit5-Inheritance/toctree.rst
+   FreeResponse/toctree.rst
+   HiddenFiles/toctree.rst
+   MixedFreeResponse/toctree.rst
+   Stories/toctree.rst
+   Tests/toctree.rst
+   TimedTests/toctree.rst
+   posttest/toctree.rst
+   _hidden/toctree.rst
 
 Index
 ::::::::::::::::::
