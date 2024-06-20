@@ -60,7 +60,7 @@ while (<>) {
 
   # Add px to image widths except in youtube sections
   if (!$in_youtube) {
-    s/:width:\s+(\d+)(?!px|\d)/:width: $1px/g;
+    s/:width:\s+(\d+)\s*$/:width: $1px/g;
   }
 
   # Specific fixes for some items that in the .rst contain some HTML which is
