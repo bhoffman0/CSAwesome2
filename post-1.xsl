@@ -26,4 +26,16 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template match="hint">
+    <subsection>
+      <xsl:apply-templates select="@*|node()"/>
+    </subsection>
+  </xsl:template>
+
+  <xsl:template match="hint[blockquote]">
+    <subsection>
+      <xsl:apply-templates select="blockquote/node()"/>
+    </subsection>
+  </xsl:template>
+
 </xsl:stylesheet>
