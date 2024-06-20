@@ -1,207 +1,132 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 1-4-
+   :prefix: 1-3-
    :start: 1
 
 |Time90|
 
-Expressions and Assignment Statements
-=====================================
+Expressions and Output 
+==============================
 
-***Divide into 2: 1.3 Expressions and 1.4 Assignment Statements*** 
+Output
+----------
 
-In this lesson, you will learn about assignment statements and expressions that contain math operators and variables.
+.. index::
+   single: String
+   single: String literal
 
-Assignment Statements
----------------------
+Java has two different methods to print output to the screen:
 
-**Assignment statements** initialize or change the value stored in a variable using the assignment operator ``=``.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the ``=`` sign is stored in the variable on the left.
-
-
-.. figure:: Figures/assignment.png
-    :width: 350px
-    :align: center
-    :figclass: align-center
-
-    Figure 1: Assignment Statement (variable = expression;)
-
-Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
-
-.. |video| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis" target="_blank">video</a>
-
-The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
-
-.. youtube:: MZwIgM__5C8
-    :width: 700
-    :height: 415
-    :align: center
+- **System.out.println(value)** : prints the value followed by a new line (ln)
+- **System.out.print(value)** : prints the value without advancing to the next line
 
 
-As we saw in the video, we can set one variable's value to a *copy* of the value of another variable like ``y = x;``.  This won't change the value of the variable that you are copying from.
+``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal**, and it can have zero to many characters enclosed in starting and ending double quotes.
 
-
-
-.. |Java visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
-Let's step through the following code in the |Java visualizer| to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
-
-
-.. codelens:: asgn_viz1
-    :language: java
-    :optional:
-
-    public class Test2
-    {
-      public static void main(String[] args)
-      {
-        int x = 3;
-        int y = 2;
-        System.out.println(x);
-        System.out.println(y);
-        x = y;
-        System.out.println(x);
-        System.out.println(y);
-        y = 5;
-        System.out.println(x);
-        System.out.println(y);
-      }
-    }
-
-
-
-|Exercise| **Check your understanding**
-
-.. |Java visualizer2| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
-.. mchoice:: q2_1
-   :practice: T
-   :answer_a: x = 0, y = 1, z = 2
-   :answer_b: x = 1, y = 2, z = 3
-   :answer_c: x = 2, y = 2, z = 3
-   :answer_d: x = 0, y = 0, z = 3
-   :correct: b
-   :feedback_a: These are the initial values in the variable, but the values are changed.
-   :feedback_b: x changes to y's initial value, y's value is doubled, and z is set to 3
-   :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
-   :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
-
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this |Java visualizer2| link.
-
-   .. code-block:: java
-
-       int x = 0;
-       int y = 1;
-       int z = 2;
-       x = y;
-       y = y * 2;
-       z = 3;
-
-
-|Exercise| **Mixed Up Code**
-
-
-
-.. parsonsprob:: 2_swap
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following has the correct code to 'swap' the values in x and y (so that x ends up with y's initial value and y ends up with x's initial value), but the code is mixed up and contains one extra block which is not needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  After three incorrect attempts you will be able to use the Help Me button to make the problem easier.
-   -----
-   int x = 3;
-   int y = 5;
-   int temp = 0;
-   =====
-   temp = x;
-   =====
-   x = y;
-   =====
-   y = temp;
-   =====
-   y = x; #distractor
-
-Adding 1 to a Variable
--------------------------
-
-If you use a variable to keep score, you would probably increment it (add one to
-the current value) whenever score should go up. You can do this by setting the
-variable to the current value of the variable plus one (``score = score + 1``)
-as shown below. The formula would look strange in math class, but it
-makes sense in coding because it is assigning a new value to the variable on the
-left that comes from evaluating the arithmetic expression on the right. So, the
-score variable is set to the previous value of score plus 1.
-
-.. activecode:: lccv1
+.. activecode:: printCommands
    :language: java
    :autograde: unittest
 
-   Try the code below to see how score is incremented by 1. Try substituting 2 instead of 1 to see what happens.
+   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?
    ~~~~
-   public class Test1
+   public class MyClass
    {
        public static void main(String[] args)
        {
-           int score = 0;
-           System.out.println(score);
-           score = score + 1;
-           System.out.println(score);
+           System.out.print("Hi ");
+           System.out.println("there");
+           System.out.print("!");
        }
    }
 
    ====
-   // Test Code for Lesson 1.4 Expressions - iccv1
+   // should pass if/when they run code
    import static org.junit.Assert.*;
 
-   import org.junit.Test;
+   import org.junit.*;
 
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
    {
        @Test
-       public void test1()
+       public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "0\n1\n";
+           String expect = "Hi there!";
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testLineCount() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "1 output line";
+           String actual = "  output line";
+
+           if (output.length() > 0)
+           {
+               actual = output.split("\n").length + actual;
+           }
+           else
+           {
+               actual = output.length() + actual;
+           }
+           boolean passed =
+                   getResults(expect, actual, "Checking lines of output");
            assertTrue(passed);
        }
    }
 
-Input with Variables
---------------------
+What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline.
 
-.. |JavaIOExample| raw:: html
+.. activecode:: bhescape
+   :language: java
+   :autograde: unittest
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">Java Scanner Input Repl</a>
+   Here are the escape sequences that may be used in the AP course.
+   ~~~~
+   public class TestEscape
+   {
+       public static void main(String[] args)
+       {
+           String message =
+                   "Here is a backslash quote \" "
+                           + " and a backslashed backslash (\\) "
+                           + "Backslash n \n prints out a new line.";
+           System.out.println(message);
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = output;
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
 
 
-.. |JavaIOConsole| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
+Expressions and Operators
+--------------------------
 
+**Arithmetic Expressions** consist of numeric values, variables, and arithmetic operators that evaluate to a single numerical value.  For example, the expression ``2 + 3`` evaluates to 5.  
 
-Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (|JavaIOExample| using the ``Scanner`` class or |JavaIOConsole| using the ``Console`` class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
-
-.. raw:: html
-
-    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-Although you will not be tested in the AP CSA exam on using the Java input or the ``Scanner`` or ``Console`` classes, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/.
-
-
-
-Operators
----------
 
 
 .. index::
@@ -229,8 +154,7 @@ Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
 expression consisting only of ``int`` values will evaluate to an ``int`` value.
 An arithmetic expression that uses at least one ``double`` value will evaluate
 to a ``double`` value. (You may have noticed that ``+`` was also used to combine
-``String`` and other values into new ``String``\ s. More on this when we talk
-about ``String``\ s more fully in Unit 2.)
+``String`` and other values into new ``String``\ s. More on this later.)
 
 Java uses the operator ``==`` to test if the value on the left is equal to the
 value on the right and ``!=`` to test if two items are not equal. Don't get one
@@ -299,7 +223,10 @@ will be ``false``!
 
 With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
 
-Operators can be used to create compound expressions with more than one operator. You can either use a literal value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, just like when we do math (remember PEMDAS?), so that ``*``, ``/``, and ``%`` are done before ``+`` and ``-``. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.
+Compound Operators
+-------------------
+
+Operators can be used to create compound expressions with more than one operator. You can either use a **literal** value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, just like when we do math (remember PEMDAS?), so that ``*``, ``/``, and ``%`` are done before ``+`` and ``-``. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.
 
 |CodingEx| **Coding Exercise:**
 
@@ -465,154 +392,10 @@ Here’s the |video2|.
 
 
 
-|Groupwork| Programming Challenge : Dog Years
+|Groupwork| Programming Challenge : Need New
 ------------------------------------------------
 
-.. image:: Figures/dog-free.png
-    :width: 150
-    :align: left
-    :alt: dog
 
-In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.
-
-.. activecode:: challenge1-4
-   :language: java
-   :autograde: unittest
-   :practice: T
-
-   Calculate your age and your pet's age from the birthdates, and then your pet's age in dog years.
-   ~~~~
-   public class Challenge1_4
-   {
-       public static void main(String[] args)
-       {
-           // Fill in values for these variables
-           int currentYear =
-           int birthYear =
-           int dogBirthYear =
-
-           // Write a formula to calculate your age from the currentYear and
-           // your birthYear variables
-           int age =
-
-           // Write a formula to calculate your dog's age from the currentYear
-           // and dogBirthYear variables
-           int dogAge =
-
-           // Calculate the age of your dog in dogYears (7 times your dog's age
-           // in human years)
-           int dogYearsAge =
-
-           // Print out your age, your dog's age, and your dog's age in dog
-           // years. Make sure you print out text too so that the user knows what
-           // is being printed out.
-
-      }
-   }
-   ====
-   import static org.junit.Assert.*;
-   import org.junit.*;
-
-   //import jdk.jfr.Timestamp;
-
-   import java.io.*;
-
-   /* Do NOT change Main or CodeTestHelper.java.
-      Put the active code exercise in a file like ForLoop.java.
-      Put your Junit test in the file RunestoneTests.java.
-      Run. Test by changing ForLoop.java (student code).
-      */
-   public class RunestoneTests extends CodeTestHelper {
-      @Test
-      public void checkVariables() throws IOException {
-         String code = removeSpaces(getCode());
-         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-
-         boolean passed1 = code.matches(".*intcurrentYear=[0-9]{2,4};.*");
-         boolean passed2 = code.matches(".*intbirthYear=[0-9]{2,4};.*");
-         boolean passed3 = code.matches(".*intbirthYear=[0-9]{1,4};.*");
-
-         boolean passed = passed1 && passed2 && passed3;
-
-         getResults("true", "" + passed, "Checking that you initialized the three variables");
-         assertTrue(passed);
-      }
-
-      @Test
-      public void checkOutput() throws IOException {
-         String output = getMethodOutput("main");
-         int num = output.length();
-         boolean passed = num >= 5;
-         getResults("1+ characters", "" + num, "Checking that you have some output", passed);
-         assertTrue(passed);
-      }
-
-      @Test
-      public void checkPrintlines() throws IOException {
-         String code = removeSpaces(getCode());
-         int num = countOccurences(code, "System.out.print");
-
-         boolean passed = num >= 1;
-         getResults("At least one", "" + num, "Checking that you have at least one print statement", passed);
-         assertTrue(passed);
-      }
-
-      @Test
-      public void testAsgn1() throws IOException {
-         /*
-          * String target = "age = currentYear - birthYear"; boolean passed =
-          * checkCodeContains("formula for age", target); assertTrue(passed);
-          */
-         String target = removeSpaces("age = currentYear - birthYear");
-         String code = removeSpaces(getCode());
-         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-
-         boolean passed = code.contains(target);
-         getResults("true", "" + passed, "Checking that code contains formula for age", passed);
-         assertTrue(passed);
-      }
-
-      @Test
-      public void testAsgn2() throws IOException {
-         String target = removeSpaces("dogAge = currentYear - dogBirthYear");
-         String code = removeSpaces(getCode());
-         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-
-         boolean passed = code.contains(target);
-         getResults("true", "" + passed, "Checking that code contains formula for dogAge", passed);
-         assertTrue(passed);
-      }
-
-      @Test
-      public void testAsgn3() throws IOException {
-         String target1 = removeSpaces("dogYearsAge = dogAge * 7");
-         String target2 = removeSpaces("dogYearsAge = 7 * dogAge");
-         String code = removeSpaces(getCode());
-         code = code.replaceAll("\\(", "").replaceAll("\\)", "");
-
-         boolean passed1 = code.contains(target1);
-         boolean passed2 = code.contains(target2);
-         boolean passed = passed1 || passed2;
-         getResults("true", "" + passed, "Checking that code contains formula for dogYearsAge using dogAge", passed);
-         assertTrue(passed);
-      }
-   }
-
-
-.. |repl| raw:: html
-
-   <a href="https://replit.com" target="_blank">replit.com</a>
-
-
-.. |Scanner| raw:: html
-
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-
-.. |repl template| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
-
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 
 Summary
 -------------------

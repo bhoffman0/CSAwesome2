@@ -31,11 +31,6 @@ The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces 
     :align: center
 
 
-.. |runbutton| image:: Figures/run-button.png
-    :height: 20px
-    :align: top
-    :alt: run button
-
 
 First Java Program
 -------------------
@@ -49,7 +44,7 @@ First Java Program
    pair: class; method
    pair: class; main method
 
-Every program in Java is written as a **class**. Java is an **object-oriented language** and we'll learn more about classes and objects in Unit 2. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
+Every program in Java is written as a **class**. Java is an **object-oriented language**, and we'll learn more about classes and objects later in this unit. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java
 
@@ -65,9 +60,9 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
 
    In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.
 
-|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
+|CodingEx| **Coding Exercise**: Click on the run button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the run button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
 
-.. activecode:: lcfc1
+.. activecode:: printName
    :language: java
    :autograde: unittest
 
@@ -101,6 +96,14 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
            assertTrue(passed);
        }
    }
+
+Compiling and Running Java Programs
+-------------------------------------
+
+.. index::
+   single: compiler
+   single: IDE
+
 
 You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
 
@@ -156,77 +159,6 @@ You can copy the Java source code shown in this book into a file and save it if 
     ()
 
 
-Print Methods
--------------------
-
-.. index::
-   single: String
-   single: String literal
-
-Java has two different methods to print output to the screen:
-
-- **System.out.println(value)** : prints the value followed by a new line (ln)
-- **System.out.print(value)** : prints the value without advancing to the next line
-
-
-``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal**, and it can have zero to many characters enclosed in starting and ending double quotes.
-
-.. activecode:: printCommands
-   :language: java
-   :autograde: unittest
-
-   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?
-   ~~~~
-   public class MyClass
-   {
-       public static void main(String[] args)
-       {
-           System.out.print("Hi ");
-           System.out.println("there");
-           System.out.print("!");
-       }
-   }
-
-   ====
-   // should pass if/when they run code
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "Hi there!";
-           boolean passed =
-                   getResults(expect, output, "Expected output from main");
-           assertTrue(passed);
-       }
-
-       @Test
-       public void testLineCount() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "1 output line";
-           String actual = "  output line";
-
-           if (output.length() > 0)
-           {
-               actual = output.split("\n").length + actual;
-           }
-           else
-           {
-               actual = output.length() + actual;
-           }
-           boolean passed =
-                   getResults(expect, actual, "Checking lines of output");
-           assertTrue(passed);
-       }
-   }
 
 Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
 
@@ -362,7 +294,7 @@ Let's practice debugging some code!
 Reading Error Messages
 ----------------------
 
-In the exercise below, you should click on the |runbutton| button to
+In the exercise below, you should click on the run button to
 compile and run the code. Unfortunately you will find there is a syntax error in
 the code that you need to fix. Before you try to fix it, look for the error
 message below the code. This is called a **compile time error** because it is an
@@ -453,7 +385,7 @@ common mistakes and will get much quicker at finding your syntax errors.
 
 |CodingEx| **Coding Exercise: Compile Time Error 2**
 
-Click on the |runbutton| button below to try and run the following code. Look
+Click on the run button below to try and run the following code. Look
 for an error message after the code. This time the error message will probably
 point even more exactly at the problem than in the previous exercise. Try to fix
 the code and run it again.
@@ -496,7 +428,7 @@ the code and run it again.
 
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
-Click on the |runbutton| button below to try and run the following code. What is
+Click on the run button below to try and run the following code. What is
 wrong this time? The first error message will probably point you directly at the
 problem. But after you fix that you’ll probably get a `new` error! That happens
 sometimes because the compiler can’t even detect the second error until the
