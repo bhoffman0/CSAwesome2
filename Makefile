@@ -27,6 +27,7 @@ xml:
 
 fixed_xml: xml
 	find build/xml -name '*.xml' -exec ./fix-xml.pl {} \;
+	./fixIds.py build/xml ".xml"
 
 fixed_ptx:
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
@@ -37,6 +38,7 @@ fixed_ptx:
 pretext/%.ptx: build/xml/%.xml | pretext
 	mkdir -p $(dir $@)
 	xsltproc --novalid $(R2P)/docutils2ptx.xsl $< > $<.pass1
+	./fixIds.py build/xml ".xml.pass1"
 	xsltproc --novalid post-1.xsl $<.pass1 > $<.pass2
 	xsltproc --novalid post-2.xsl $<.pass2 > $<.pass3
 	xsltproc --novalid post-3.xsl $<.pass3 > $@
@@ -47,7 +49,7 @@ ptx: $(ptx) pretext/rs-substitutes.xml
 # need to manually edit project.ptx and create publication-rs-for-all.xml
 #   as described in https://github.com/bnmnetp/Runestone2PreTeXt/blob/main/README.md
 post:
-	python $(R2P)/fixIds.py
+	./fixIds.py pretext .ptx
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
 	python $(R2P)/index2main.py
