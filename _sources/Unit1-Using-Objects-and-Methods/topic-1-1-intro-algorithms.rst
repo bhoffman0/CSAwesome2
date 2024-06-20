@@ -30,7 +30,16 @@ The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces 
     :height: 400
     :align: center
 
+Algorithms
+-------------
 
+.. index::
+   single: algorithm
+   single: sequence
+
+**Algorithms** define step-by-step processes when completing a task or solving a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
+
+Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
 First Java Program
 -------------------
