@@ -46,7 +46,7 @@ while (<>) {
   s/^\s*\*\s*<(.*)</\* &lt;$1&lt;/g;
   s/^\s*\*\s*</\* &lt;/g;
   s/^\s*\*(.*)</\*$1&lt;/g;
-  s/<E>/&lt;E>/g;
+  s/<E>/&lt;E&gt;/g;
 
   # Not sure what's up with this; Some of these data-optional things are
   # generated within strings of what look like JSON. Anyway, these two lines at
