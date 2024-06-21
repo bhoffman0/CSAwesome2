@@ -67,6 +67,7 @@ Several students at Georgia Tech have helped review the eBook:
 * Stephanie Remy
 
 Several students from the University of Michigan have contributed to the eBook
+
 * Emma Brown - unit tests
 * Emma Pinnell - unit tests
 * Kira Woodhouse - Added Peer Instruction questions
