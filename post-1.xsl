@@ -16,14 +16,8 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="video">
-    <xsl:copy>
-      <xsl:apply-templates select="@*"/>
-      <xsl:attribute name="label">
-        <xsl:value-of select="@youtube"/>
-      </xsl:attribute>
-      <xsl:apply-templates select="node()"/>
-    </xsl:copy>
+  <xsl:template match="video[@youtube]">
+    <video xml:id="{@youtube}" youtube="{@youtube}"/>
   </xsl:template>
 
   <xsl:template match="hint">
