@@ -30,12 +30,16 @@ The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces 
     :height: 400
     :align: center
 
+Algorithms
+-------------
 
-.. |runbutton| image:: Figures/run-button.png
-    :height: 20px
-    :align: top
-    :alt: run button
+.. index::
+   single: algorithm
+   single: sequence
 
+**Algorithms** define step-by-step processes when completing a task or solving a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
+
+Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
 First Java Program
 -------------------
@@ -44,12 +48,10 @@ First Java Program
 .. index::
    single: class
    single: keyword
-   pair: class; field
-   pair: class; constructor
    pair: class; method
    pair: class; main method
 
-Every program in Java is written as a **class**. Java is an **object-oriented language** and we'll learn more about classes and objects in Unit 2. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
+Every program in Java is written as a **class**. Java is an **object-oriented language**, and we'll learn more about classes and objects later in this unit. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java
 
@@ -65,9 +67,9 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
 
    In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.
 
-|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
+|CodingEx| **Coding Exercise**: Click on the run button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the run button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
 
-.. activecode:: lcfc1
+.. activecode:: printName
    :language: java
    :autograde: unittest
 
@@ -102,8 +104,21 @@ Every program in Java is written as a **class**. Java is an **object-oriented la
        }
    }
 
-You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
+Compiling and Running Java Programs
+-------------------------------------
 
+.. index::
+   single: compiler
+   single: IDE
+
+Code can be written in any text editor, including the small text editor built into the Active Code exercises in this e-book.  However, an **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code. For this course, you can use the e-book Active Code exercises or the Scratch button above as your IDE to run your code. Or you can try other IDEs mentioned in the last unit. In other IDEs, you must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
+
+Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.
+
+Java Keywords
+----------------
+
+**Keywords** are reserved words that have special meaning in Java. Keywords such as ``public``, ``class``, and ``void``  must be in lowercase, but class names such as ``System`` and ``String`` are capitalized.  
 
 .. hparsons:: mp-main-method-order-1
     :language: java
@@ -156,79 +171,8 @@ You can copy the Java source code shown in this book into a file and save it if 
     ()
 
 
-Print Methods
--------------------
 
-.. index::
-   single: String
-   single: String literal
-
-Java has two different methods to print output to the screen:
-
-- **System.out.println(value)** : prints the value followed by a new line (ln)
-- **System.out.print(value)** : prints the value without advancing to the next line
-
-
-``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal**, and it can have zero to many characters enclosed in starting and ending double quotes.
-
-.. activecode:: printCommands
-   :language: java
-   :autograde: unittest
-
-   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?
-   ~~~~
-   public class MyClass
-   {
-       public static void main(String[] args)
-       {
-           System.out.print("Hi ");
-           System.out.println("there");
-           System.out.print("!");
-       }
-   }
-
-   ====
-   // should pass if/when they run code
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "Hi there!";
-           boolean passed =
-                   getResults(expect, output, "Expected output from main");
-           assertTrue(passed);
-       }
-
-       @Test
-       public void testLineCount() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "1 output line";
-           String actual = "  output line";
-
-           if (output.length() > 0)
-           {
-               actual = output.split("\n").length + actual;
-           }
-           else
-           {
-               actual = output.length() + actual;
-           }
-           boolean passed =
-                   getResults(expect, actual, "Checking lines of output");
-           assertTrue(passed);
-       }
-   }
-
-Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
+Lines in a Java program that express a complete action such as printing output must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon, but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
 
 
 .. hparsons:: mp-print-order-1
@@ -276,7 +220,7 @@ Special words—also called **keywords**—such as ``public``, ``class``, and ``
 Syntax Errors and Debugging
 -----------------------------
 
-Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.
+
 
 .. |Grace Hopper| raw:: html
 
@@ -359,10 +303,11 @@ Let's practice debugging some code!
    }
 
 
+
 Reading Error Messages
 ----------------------
 
-In the exercise below, you should click on the |runbutton| button to
+In the exercise below, you should click on the run button to
 compile and run the code. Unfortunately you will find there is a syntax error in
 the code that you need to fix. Before you try to fix it, look for the error
 message below the code. This is called a **compile time error** because it is an
@@ -453,7 +398,7 @@ common mistakes and will get much quicker at finding your syntax errors.
 
 |CodingEx| **Coding Exercise: Compile Time Error 2**
 
-Click on the |runbutton| button below to try and run the following code. Look
+Click on the run button below to try and run the following code. Look
 for an error message after the code. This time the error message will probably
 point even more exactly at the problem than in the previous exercise. Try to fix
 the code and run it again.
@@ -496,7 +441,7 @@ the code and run it again.
 
 |CodingEx| **Coding Exercise: Compile Time Error 3**
 
-Click on the |runbutton| button below to try and run the following code. What is
+Click on the run button below to try and run the following code. What is
 wrong this time? The first error message will probably point you directly at the
 problem. But after you fix that you’ll probably get a `new` error! That happens
 sometimes because the compiler can’t even detect the second error until the
@@ -550,6 +495,16 @@ capitalization matters.
    }
 
 Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?
+
+Run-time Errors
+--------------------------
+
+Some errors cannot be detected by the compiler. These are called **run-time errors**. These errors occur when the program is running, after being compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn't exist. 
+
+An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an **ArithmeticException** while running.
+
+Run-time errors can be difficult to find because they don't always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome.
+
 
 
 Comments
@@ -625,6 +580,12 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
 Summary
 -------------------
 
+- **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
+
+- **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
+
+- An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
+
 - A basic Java program looks like the following:
 
 .. code-block:: java
@@ -641,20 +602,26 @@ Summary
 
 - Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
 
-- The **System.out.print()** and **System.out.println()** methods display information given inside the parentheses on the computer monitor.
-
-- System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.
-
-- A **string literal** is enclosed in double quotes ('' '').
+- The **System.out.println()** method display information given inside the parentheses on the computer monitor.
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
 - A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
+- A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
+
+- A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
+
+- A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
+
+- An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
+
 AP Practice
 ------------
 
-.. mchoice:: AP1-2-1
+Need new questions here. Move these to 1.3.
+
+.. mchoice:: AP1-1-1
     :practice: T
 
     Consider the following code segment.
@@ -698,7 +665,7 @@ AP Practice
       + Correct! Pay attention to which lines are print or println.
 
 
-.. mchoice:: AP1-2-2
+.. mchoice:: AP1-1-2
     :practice: T
 
     Consider the following code segment.

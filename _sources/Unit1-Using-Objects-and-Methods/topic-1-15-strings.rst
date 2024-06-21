@@ -348,44 +348,6 @@ talk about overriding in detail in Unit 9.)
 
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  If you want to do addition instead, try using parentheses!
 
-What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline.
-
-.. activecode:: bhescape
-   :language: java
-   :autograde: unittest
-
-   Here are the escape sequences that may be used in the AP course.
-   ~~~~
-   public class TestEscape
-   {
-       public static void main(String[] args)
-       {
-           String message =
-                   "Here is a backslash quote \" "
-                           + " and a backslashed backslash (\\) "
-                           + "Backslash n \n prints out a new line.";
-           System.out.println(message);
-       }
-   }
-
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = output;
-           boolean passed = getResults(expect, output, "Expected output from main", true);
-           assertTrue(passed);
-       }
-   }
 
 |Groupwork| Programming Challenge : Mad Libs
 --------------------------------------------
