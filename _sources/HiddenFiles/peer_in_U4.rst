@@ -1,5 +1,5 @@
 Peer Instruction: Unit 4 Multiple Choice Questions
---------------------------------------------------------
+========================================================
 
 .. mchoice:: bs-forloops-05-09
     :author: Beth Simon
@@ -44,7 +44,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
     How many times is each set of code executed?
 
     .. image:: https://i.postimg.cc/rpzrHmMJ/lecture06-Q06.jpg
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-forloops-09-04
     :author: Beth Simon
@@ -62,7 +62,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
     How many times is each set of code executed?
 
     .. image:: https://i.postimg.cc/HLSgbHZy/lecture09-Q04.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-nestedloops-10-04
     :author: Beth Simon
@@ -92,7 +92,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
         }
 
     .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-nestedloops-10-05
     :author: Beth Simon
@@ -122,7 +122,7 @@ Peer Instruction: Unit 4 Multiple Choice Questions
         }
 
     .. image:: https://i.postimg.cc/50RwmVh5/lecture10-Q04.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-nestedloops-11-10
     :author: Beth Simon
@@ -154,6 +154,6 @@ Peer Instruction: Unit 4 Multiple Choice Questions
         }
 
     .. image:: https://i.postimg.cc/9Qc5jQPJ/lecture11-Q10.png
-      :width: 400
+      :width: 400px
 
 

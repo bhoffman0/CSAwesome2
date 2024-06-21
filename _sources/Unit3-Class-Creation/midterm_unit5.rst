@@ -3,7 +3,7 @@
    :start: 1
 
 Midterm Test
---------------
+==============
 
 The following 20 questions are similar to what you might see on the AP CSA exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
 
@@ -176,7 +176,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
         :feedback_a: This would be the correct answer if there were only two loops nested, but there are three. Try again!
         :feedback_b: Take a look at how many times each inner loop will execute every time the outer loop runs.
         :feedback_c: Correct!
-        :feedback_d: Try again - check the difference between <= and < in each loop.
+        :feedback_d: Try again - check the difference between &lt;= and &lt; in each loop.
         :feedback_e: If you got this value you probably made one extra call to the each of the loops, notice that the loops start at 1 and not 0.
 
         Consider the following block of code. What value is returned from ``solution(5)``?
@@ -200,17 +200,17 @@ We estimate that a score of about 50% on this test would correspond to the passi
            }
 
      .. mchoice:: mid_1_5
-        :answer_a: (x < 10) && (x > 5)
-        :answer_b: (x > 10) && (x <=5)
-        :answer_c: (x <= 10) && (x > 5)
-        :answer_d: (x <= 10) || (x > 5)
-        :answer_e: (x > 10) || (x <= 5)
+        :answer_a: (x &lt; 10) &amp;&amp; (x > 5)
+        :answer_b: (x > 10) &amp;&amp; (x &lt;=5)
+        :answer_c: (x &lt;= 10) &amp;&amp; (x > 5)
+        :answer_d: (x &lt;= 10) || (x > 5)
+        :answer_e: (x > 10) || (x &lt;= 5)
         :correct: d
-        :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B).
-        :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A && B).
-        :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (!A && !B). The AND should be changed to an OR.
+        :feedback_a: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (!A &amp;&amp; !B).
+        :feedback_b: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (A &amp;&amp; B).
+        :feedback_c: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (!A &amp;&amp; !B). The AND should be changed to an OR.
         :feedback_d: Correct!
-        :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x <= 5). ! (A && B) is NOT equivalent to (A || B). Both A and B should also be negated.
+        :feedback_e: Use A and B to represent the expressions -- A becomes (x > 10), B becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (A || B). Both A and B should also be negated.
 
         Which of the following is equivalent to !((x > 10) && (x <= 5)) ?
 
@@ -469,10 +469,10 @@ We estimate that a score of about 50% on this test would correspond to the passi
                 }
 
      .. mchoice:: mid_1_14
-        :answer_a: !(a && b)
-        :answer_b: !a && b
-        :answer_c: !a && !b
-        :answer_d: a && b
+        :answer_a: !(a &amp;&amp; b)
+        :answer_b: !a &amp;&amp; b
+        :answer_c: !a &amp;&amp; !b
+        :answer_d: a &amp;&amp; b
         :answer_e: a || !b
         :correct: c
         :feedback_a: This would be true in any case where a and b weren't both true

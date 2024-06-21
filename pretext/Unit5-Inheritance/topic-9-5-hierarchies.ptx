@@ -4,7 +4,7 @@
   <title>Inheritance Hierarchies</title>
   <introduction>
     <p>If you have multiple subclasses that inherit from a superclass, you can form an <term>inheritance hierarchy</term>. Every subclass is-a or is a kind of the superclass. For example, here is an inheritance hierarchy of Shapes. Square is-a Rectangle and a subclass of Rectangle. Rectangle is-a Shape and a subclass of Shape. In Java, the class <term>Object</term> is at the top of hierarchy. Every class in Java inherits from Object and is-an Object.</p>
-    <figure align="center" xml:id="UNIQUE-ID-000837">
+    <figure align="center" xml:id="UNIQUE-ID-000791">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: An Inheritance Hierarchy of Shapes</caption>
       <image source="Unit5-Inheritance/Figures/shapes.png" width="NaN%"/>
     </figure>
@@ -17,7 +17,7 @@
             you should never use inheritance just to reuse code if there isn&#x2019;t a true &#x201C;is-a&#x201D;
             relationship between the subclass and the superclass.</p>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-000838">
+  <subsection xml:id="UNIQUE-ID-000792">
     <title>Superclass References</title>
     <p>A superclass reference variable can hold an object of that superclass or of any of its subclasses. For example, a Shape reference variable can hold a Rectangle or Square object. (This is a type of <term>polymorphism</term> which will be defined in the next lesson).</p>
     <program language="java">
@@ -41,7 +41,7 @@ Shape s3 = new Square();
     </program>
     <p>Why is using a superclass reference for subclass objects useful? Because now, we can write methods with parameters of type Shape or have arrays of type Shape and use them with any of its subclasses as seen in the next sections.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000839" refid="id2">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qinherRef">
@@ -84,7 +84,7 @@ Shape s3 = new Square();
       </choices>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000840">
+  <subsection xml:id="UNIQUE-ID-000793">
     <title>Superclass Method Parameters</title>
     <p>Another advantage of an inheritance hierarchy is that we can write methods with parameters of the superclass type and pass in subclass objects to them. For example, the print(Shape) method below could be called with many different Shape subclasses and work for Rectangles, Squares, etc.</p>
     <program language="java">
@@ -97,7 +97,7 @@ public void print(Shape s)
 </input>
     </program>
     <p>
-      <problematic xml:id="UNIQUE-ID-000841" refid="id4">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>Notice that in the following code, the print method has a parameter of type <c>Person</c>, but it can be called with <c>Student</c> or <c>Person</c> objects in the <c>main</c> method. Which <c>toString</c> method is called? It depends on whether a <c>Person</c> or <c>Student</c> is passed in at runtime. What would happen if you commented out the <c>toString</c> method in <c>Student</c>? Which one would be called now?</p>
@@ -105,7 +105,7 @@ public void print(Shape s)
       <statement>
         <p>Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000842" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000794" interactive="activecode" language="java">
         <input>
 public class Tester
 {
@@ -188,7 +188,7 @@ class Student extends Person
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000843">
+  <subsection xml:id="UNIQUE-ID-000795">
     <title>Superclass Arrays and ArrayLists</title>
     <p>Using inheritance hierarchies, we can create arrays and <c>ArrayLists</c> using the
                 superclass type and put in values that are of the subclass types. This can be
@@ -208,7 +208,7 @@ shapeList.add(new Square());
 </input>
     </program>
     <p>
-      <problematic xml:id="UNIQUE-ID-000844" refid="id6">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>The code below has an <c>ArrayList&lt;Pet&gt;</c> that can hold <c>Pet</c> or <c>Dog</c>
@@ -221,7 +221,7 @@ shapeList.add(new Square());
                 1 public class in a file. Scroll back to the main method and add some <c>Cat</c>
                 objects to the <c>ArrayList</c> too. Does the <c>petList</c> work with <c>Cats</c> too?</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000845" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000796" interactive="activecode" language="java">
         <input>
 import java.util.*; // for ArrayList
 
@@ -333,7 +333,7 @@ class Dog extends Pet
       </program>
     </exercise>
     <p>
-      <problematic xml:id="UNIQUE-ID-000846" refid="id8">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qoo_4">
@@ -407,8 +407,8 @@ class Dog extends Pet
       </choices>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000847">
-    <title><problematic xml:id="UNIQUE-ID-000848" refid="id10">|Groupwork|</problematic> Programming Challenge : Shopping Cart</title>
+  <subsection xml:id="UNIQUE-ID-000797">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Programming Challenge : Shopping Cart</title>
     <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="NaN%" alt="Shopping"/>
     <p>The following code contains a class called ShoppingCart that simulates a grocery store or an online store&#x2019;s shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this <url href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" visual="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart">replit.com link</url>. We encourage you to work in pairs.</p>
     <p>In this challenge, you will add a new class called <c>DiscountedItem</c> that extends the <c>Item</c> class. The <c>ArrayList</c> of <c>Item</c> will still work since it can hold the subclasses of <c>Item</c> too! The <c>ShoppingCart</c> <c>printOrder</c> method will work with <c>Item</c> and <c>DiscountedItem</c> but note that it has an <c>if</c> statement that treats <c>DiscountedItem</c> differently.</p>
@@ -439,7 +439,7 @@ class Dog extends Pet
       <statement>
         <p>Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Uncomment the testing code in main to add discounted items to the cart.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000849" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000798" interactive="activecode" language="java">
         <input>
 import java.util.*;
 
@@ -704,7 +704,7 @@ class Item
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000850">
+  <subsection xml:id="UNIQUE-ID-000799">
     <title>Summary</title>
     <p>
       <ul>

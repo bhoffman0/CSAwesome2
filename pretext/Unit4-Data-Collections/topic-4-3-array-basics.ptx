@@ -3,24 +3,24 @@
 <section>
   <title>Array Creation and Access</title>
   <introduction>
-    <p xml:id="UNIQUE-ID-001709">To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, &#x2026; , score10;
+    <p xml:id="UNIQUE-ID-001616">To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, &#x2026; , score10;
             But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple <term>data structure</term> for a collection of related data that makes this easier. In many block-based programming languages like App Inventor and Scratch, this is called a list. In Java and many programming languages, this is called an <term>array</term>.</p>
     <p>An <term>array</term> is a block of memory that stores a collection of data items (<term>elements</term>) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don&#x2019;t need to name each one. Instead you use the array name and a number (called an <term>index</term>) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students.</p>
     <p>Here&#x2019;s a fun <url href="https://youtu.be/G7aF-OuLfl4" visual="https://youtu.be/G7aF-OuLfl4">video</url> that introduces the concept of an array and gives an example.</p>
-    <video xml:id="UNIQUE-ID-001710" youtube="G7aF-OuLfl4" width="NaN%" label="G7aF-OuLfl4"/>
+    <video youtube="G7aF-OuLfl4"/>
     <p>An array is like a row of small lockers, except that you can&#x2019;t cram lots of stuff into it. You can only store one value at each locker.</p>
-    <figure align="center" xml:id="UNIQUE-ID-001711">
+    <figure align="center" xml:id="UNIQUE-ID-001617">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A row of lockers</caption>
       <image source="Unit4-Data-Collections/Figures/rowLockers.jpg" width="NaN%"/>
     </figure>
     <p>You can store a value in an array using an <term>index</term> (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index.</p>
     <p>Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. This is similar to how Strings are indexed in Java &#x2013; the first character is at index 0.  If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!</p>
-    <figure align="center" xml:id="UNIQUE-ID-001712">
+    <figure align="center" xml:id="UNIQUE-ID-001618">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Comparing App Inventor lists and Java arrays</caption>
       <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="NaN%"/>
     </figure>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-001713">
+  <subsection xml:id="UNIQUE-ID-001619">
     <title>Declaring and Creating an Array</title>
     <p>When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, <c>int[] scores</c> means we have an array called scores that contains int values.</p>
     <program language="java">
@@ -34,9 +34,9 @@ int[] scores;
     <p>The declarations do not create the array.  Arrays are <term>objects</term> in Java, so any variable that declares an array holds a reference to an object.  If the array hasn&#x2019;t been created yet and you try to print the value of the variable, it will print <term>null</term> (meaning it doesn&#x2019;t reference any object yet).</p>
     <p>There are two ways to create an array. You can use the keyword <term>new</term> to get new memory or use an <term>initializer list</term> to set up the values in the array.</p>
     <p>Watch the following <url href="https://youtu.be/IbPFjw1FNkE" visual="https://youtu.be/IbPFjw1FNkE">video</url> which shows the two ways of creating an array with a physical model of Java memory.</p>
-    <video xml:id="UNIQUE-ID-001714" youtube="IbPFjw1FNkE" width="NaN%" label="IbPFjw1FNkE"/>
+    <video youtube="IbPFjw1FNkE"/>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001715">
+  <subsection xml:id="UNIQUE-ID-001620">
     <title>Using new to Create Arrays</title>
     <p>To create an empty array after declaring the variable, use the <term>new</term> keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.</p>
     <program language="java">
@@ -50,7 +50,7 @@ String[] names = new String[5];
 </input>
     </program>
     <p>
-      <problematic xml:id="UNIQUE-ID-001716" refid="id10">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check Your Understanding</term>
     </p>
     <exercise label="createarray">
@@ -93,14 +93,14 @@ String[] names = new String[5];
       </choices>
     </exercise>
     <p>
-      <problematic xml:id="UNIQUE-ID-001717" refid="id12">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <exercise label="lcab1">
       <statement>
         <p>In the following code, add another two more array declarations, one that creates an array of 5 doubles called prices and another of 5 Strings called names. Then add <c>System.out.println</c> calls to print their lengths.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001718" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001621" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -152,7 +152,7 @@ public class RunestoneTests extends CodeTestHelper
 </tests>
       </program>
     </exercise>
-    <note xml:id="UNIQUE-ID-001719">
+    <note xml:id="UNIQUE-ID-001622">
       <p>Array elements are initialized to default values like the following.</p>
       <p>
         <ul>
@@ -171,12 +171,12 @@ public class RunestoneTests extends CodeTestHelper
         </ul>
       </p>
     </note>
-    <figure align="center" xml:id="UNIQUE-ID-001720">
+    <figure align="center" xml:id="UNIQUE-ID-001623">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Two 5 element arrays with their values set to the default values for integer and object arrays.</caption>
       <image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="NaN%"/>
     </figure>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001721">
+  <subsection xml:id="UNIQUE-ID-001624">
     <title>Initializer Lists to Create Arrays</title>
     <p>Another way to create an array is to use an <term>initializer list</term>. You can initialize (set) the values in the array to a list of values in curly braces (<c>{}</c>) when you create it, like below.  In this case you don&#x2019;t specify the size of the array, it will be determined from the number of values that you specify.</p>
     <program language="java">
@@ -186,25 +186,25 @@ String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 </input>
     </program>
     <p>When you create an array of a <term>primitive type</term> (like <c>int</c>) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an <term>object type</term> (like <c>String</c>) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found.</p>
-    <figure align="center" xml:id="UNIQUE-ID-001722">
+    <figure align="center" xml:id="UNIQUE-ID-001625">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: A primitive array and an object array</caption>
       <image source="Unit4-Data-Collections/Figures/intAndStringArrays.png" width="NaN%"/>
     </figure>
     <p>Watch the following <url href="https://youtu.be/T-YZvVvPOac" visual="https://youtu.be/T-YZvVvPOac">video</url> which shows an array of String objects with a physical model of Java memory.</p>
-    <video xml:id="UNIQUE-ID-001723" youtube="T-YZvVvPOac" width="NaN%" label="T-YZvVvPOac"/>
+    <video youtube="T-YZvVvPOac"/>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001724">
+  <subsection xml:id="UNIQUE-ID-001626">
     <title>Array length</title>
     <p>Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use <term>dot-notation</term> to access the instance variable (<c>arrayName.length</c>).  <term>Dot-notation</term> is using variable name followed by a <c>.</c> and then the instance variable (property) name or a method name. Try the following.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-001725" refid="id14">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <exercise label="lcab2">
       <statement>
         <p>Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001726" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001627" interactive="activecode" language="java">
         <input>
 public class Test2
 {
@@ -262,7 +262,7 @@ public class RunestoneTests extends CodeTestHelper
       <p>Note that length is an instance variable and not a method, unlike the String <c>length()</c> method, so you don&#x2019;t add parentheses after length.  However, if you use parentheses after length during the exam, you won&#x2019;t lose any points. The length instance variable is declared as a <c>public final int</c>.  <c>public</c> means you can access it and <c>final</c> means the value can&#x2019;t change.</p>
     </note>
     <p>
-      <problematic xml:id="UNIQUE-ID-001727" refid="id16">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qab_2">
@@ -293,10 +293,10 @@ public class RunestoneTests extends CodeTestHelper
       </choices>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001728">
+  <subsection xml:id="UNIQUE-ID-001628">
     <title>Access and Modify Array Values</title>
     <p>To access the items in an array, we use an <term>indexed array variable</term> which is the array name and the index inside of square bracket [ ]. Remember that an <term>index</term> is a number that indicates the position of an item in a list, starting at 0. Here&#x2019;s a comparison of App Inventor, AP CSP Pseudocode, and Java array access.</p>
-    <figure align="center" xml:id="UNIQUE-ID-001729">
+    <figure align="center" xml:id="UNIQUE-ID-001629">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: Comparing Access to App Inventor lists and Java arrays</caption>
       <image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="NaN%"/>
     </figure>
@@ -313,9 +313,9 @@ System.out.println( highScores[0] );
       <p>The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.</p>
     </note>
     <p>Watch the following <url href="https://youtu.be/uagEJw6bTM4" visual="https://youtu.be/uagEJw6bTM4">video</url> which shows a physical model of Java memory setting array values.</p>
-    <video xml:id="UNIQUE-ID-001730" youtube="uagEJw6bTM4" width="NaN%" label="uagEJw6bTM4"/>
+    <video youtube="uagEJw6bTM4"/>
     <p>
-      <problematic xml:id="UNIQUE-ID-001731" refid="id18">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="array-access1">
@@ -342,14 +342,14 @@ System.out.println( highScores[0] );
     </exercise>
     <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-001732" refid="id20">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <exercise label="array-set">
       <statement>
         <p>Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo&#x2019;s score? Can you change Sofia&#x2019;s score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out?</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001733" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001630" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -423,7 +423,7 @@ System.out.println(  highScores[index] );
     </program>
     <image source="Unit4-Data-Collections/6-1-images/cow.jpg" width="NaN%"/>
     <p>
-      <problematic xml:id="UNIQUE-ID-001734" refid="id22">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>Here&#x2019;s a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is &#x201C;cow.jpg&#x201D;. The images array holds 5 images.</p>
@@ -431,7 +431,7 @@ System.out.println(  highScores[index] );
       <statement>
         <p>Can you change the index variable&#x2019;s value so that it prints out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What&#x2019;s the maximum number it can be for this array?</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001735" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001631" interactive="activecode" language="java">
         <input>
 public class ImageEx
 {
@@ -495,8 +495,8 @@ public class ImageEx
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001736">
-    <title><problematic xml:id="UNIQUE-ID-001737" refid="id24">|Groupwork|</problematic> Programming Challenge : Countries Array</title>
+  <subsection xml:id="UNIQUE-ID-001632">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Programming Challenge : Countries Array</title>
     <image source="Unit4-Data-Collections/6-1-images/US.jpg" width="NaN%"/>
     <p>In this challenge, you will create a guide to different countries using arrays.</p>
     <p>
@@ -540,7 +540,7 @@ public class ImageEx
         </li>
       </ol>
     </p>
-    <program xml:id="UNIQUE-ID-001738" interactive="activecode" language="java">
+    <program xml:id="UNIQUE-ID-001633" interactive="activecode" language="java">
       <input>
 public class Countries
 {
@@ -672,8 +672,8 @@ public class Countries
 </tests>
     </program>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001739">
-    <title><problematic xml:id="UNIQUE-ID-001740" refid="id26">|Groupwork|</problematic> Design an Array of Objects for your Community</title>
+  <subsection xml:id="UNIQUE-ID-001634">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Design an Array of Objects for your Community</title>
     <p>So far, we have seen arrays of ints and Strings, but we can create an array of any type.
                 For example, the following program creates an array of Turtle objects.
                 Notice that for an array of objects, we must call the constructor of each object to
@@ -695,7 +695,7 @@ array[index].method();
                 Can you change the array size to 3 and create and add 1 more Turtle object to the array?
                 Make this new turtle turnRight and go forward using its indexed array variable.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001741" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001635" interactive="activecode" language="java">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -777,7 +777,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Community Challenge: Copy your class from <url href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community" visual="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community">lesson 5.6</url> below. Create an array of 3 objects of your class, initialize
                 them to new objects and call their print methods.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001742" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001636" interactive="activecode" language="java">
         <input>
 public class          // Add your class name here!
 {
@@ -869,7 +869,7 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001743">
+  <subsection xml:id="UNIQUE-ID-001637">
     <title>Summary</title>
     <p>
       <ul>
@@ -913,7 +913,7 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001744">
+  <subsection xml:id="UNIQUE-ID-001638">
     <title>AP Practice</title>
     <p>We will see in the next lesson that the index of an array is often a variable named <c>i</c>
                 that is used in loops to traverse an array.
@@ -1059,7 +1059,7 @@ int[] array2 = mystery(array1, 1, 20);
       </choices>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001745">
+  <subsection xml:id="UNIQUE-ID-001639">
     <title>Arrays Game</title>
     <p>Try the game below to practice arrays. Click on <term>Arrays</term> and click on the element of the * array that would be printed out by the given code. If you&#x2019;re stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.</p>
     <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;

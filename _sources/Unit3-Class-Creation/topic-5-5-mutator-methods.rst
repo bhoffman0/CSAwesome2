@@ -4,7 +4,6 @@
    :prefix: 5-5-
    :start: 1
 
-|Time45|
 
 Mutators / Setters
 ==================
@@ -269,16 +268,13 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 |Groupwork| Programming Challenge : Class Pet Setters
 -----------------------------------------------------
 
-.. |last lesson| raw:: html
-
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html#groupwork-programming-challenge-class-pet" target="_blank">last lesson</a>
 
 .. image:: Figures/animalclinic.png
-    :width: 150
+    :width: 150px
     :align: left
     :alt: Animal Clinic
 
-1. Copy your Awesome Animal Clinic Pet class from the |last lesson| into this Active Code window.
+1. Copy your Awesome Animal Clinic Pet class from the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-4-accessor-methods.html#groupwork-programming-challenge-class-pet>`_ into this Active Code window.
 2. Add set methods for each of the 5 instance variables. Make sure you use good commenting!
 3. Test each of the set methods in the main method.
 

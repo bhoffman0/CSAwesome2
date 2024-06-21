@@ -3,7 +3,7 @@
    :start: 1
 
 Inheritance Summary
--------------------------
+=========================
 
 In this chapter you learned about **inheritance**.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.
 
@@ -26,7 +26,7 @@ In this chapter you learned about **inheritance**.  In an object-oriented progra
     single: mutator
 
 Concept Summary
-=================
+-----------------
 
 - **object** - Objects do the action in an object-oriented program. An object can have things it knows (attributes) and things it can do (methods).  An object is created by a class and keeps a reference to the class that created it.
 - **class** - A class defines what all objects of that class know (attributes) and can do (methods).  You can also have data and behavior in the object that represents the class (class instance variables and methods).  All objects of a class have access to class instance variables and class methods, but these can also be accessed using ``className.variable`` or ``className.method()``.
@@ -47,7 +47,7 @@ Concept Summary
 
 
 Java Keyword Summary
-=========================
+-------------------------
 
 - **extends** - Used to specify the parent class to inherit from. It is followed
   by the name of the parent class, like this: ``public class ChildName extends
@@ -65,7 +65,7 @@ Java Keyword Summary
   inherited method.
 
 Vocabulary Practice
-=======================
+-----------------------
 
 .. dragndrop:: ch10oo_match_1
     :feedback: Review the summaries above.
@@ -94,15 +94,11 @@ Vocabulary Practice
 
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
-.. |Quizlet| raw:: html
 
-   <a href="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
-
-
-For more practice, see this |Quizlet|.
+For more practice, see this `Quizlet <https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/>`_.
 
 Common Mistakes
-===============
+---------------
 
 - Using inheritance (is-a) when you should use association (has-a). A school has
   classes; it is not a type of class. A high school is a kind of school.

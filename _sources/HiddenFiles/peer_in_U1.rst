@@ -1,5 +1,5 @@
 Peer Instruction: Unit 1 Multiple Choice Questions
---------------------------------------------------------
+========================================================
 
 .. mchoice:: bs-printstatements-02-17
     :author: Beth Simon
@@ -66,7 +66,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     Chromakey is a technique in which a block of one color can be replaced by another. What goes in the result of the red box? What goes in the result of the green box?
 
     .. image:: https://i.postimg.cc/GprMxkrk/lecture17-Q11.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-chromakey-17-12
     :author: Beth Simon
@@ -84,7 +84,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     Chromakey is a technique in which a block of one color can be replaced by another. How will you know if you are in the red part of the image?
 
     .. image:: https://i.postimg.cc/Kcw4kfrs/lecture17-Q12.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-soundwaves-18-15
     :author: Beth Simon
@@ -104,7 +104,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound were modified to be louder it would
 
     .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-soundwaves-18-16
     :author: Beth Simon
@@ -122,7 +122,7 @@ Peer Instruction: Unit 1 Multiple Choice Questions
     Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound was modified to have a higher pitch it would look like which of the following options:
 
     .. image:: https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png
-      :width: 400
+      :width: 400px
 
     .. image:: https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png
-      :width: 400
+      :width: 400px

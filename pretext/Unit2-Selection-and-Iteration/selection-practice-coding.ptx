@@ -44,11 +44,11 @@
     </ul>
   </p>
   <exercises>
-    <exercise xml:id="empty-42">
+    <exercise xml:id="UNIQUE-ID-000619">
       <statement>
         <p>The following code should print <c>x is greater than 0</c>.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex1q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000620">
         <input>
 public class Test1
 {
@@ -90,7 +90,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex1a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000621" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -114,7 +114,7 @@ public class Test1
             
                 <p>Line 6 is missing a final <c>)</c>.  Line 7 is missing a semicolon at the end.  Line 9 is missing the starting <c>"</c>.</p>
 
-<exercise label="ch5Ex1a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex1a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex1a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000622" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -136,11 +136,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-43">
+    <exercise xml:id="UNIQUE-ID-000623">
       <statement>
         <p>The following code should check your guess against the answer and print that it is too low, correct, or too high.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex2q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000624">
         <input>
 public class Test1
 {
@@ -185,7 +185,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex2a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000625" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -214,7 +214,7 @@ public class Test1
             
                 <p>Line 7 is missing the starting <c>(</c>.  Line 8 is missing the closing <c>"</c>.  Line 9 should be <c>==</c> rather than <c>=</c> to test for equality.  Line 12 should be <c>System.out.println</c>.</p>
 
-<exercise label="ch5Ex2a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex2a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex2a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000626" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -241,11 +241,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-44">
+    <exercise xml:id="UNIQUE-ID-000627">
       <statement>
         <p>The following code should print &#x201C;You can go out&#x201D; if you have done your homework and cleaned your room. However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex3q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000628">
         <input>
 public class Test1
 {
@@ -293,7 +293,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex3a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000629" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -318,7 +318,7 @@ public class Test1
             
                 <p>Line 5 should be <c>true</c> not <c>True</c>.  Lines 10 and 8 should be swapped.</p>
 
-<exercise label="ch5Ex3a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex3a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex3a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000630" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -341,11 +341,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-45">
+    <exercise xml:id="UNIQUE-ID-000631">
       <statement>
         <p>The following code should print if x is in the range of 0 to 10 (including 0 and 10). However, the code has errors.  Fix the errors so that the code runs as intended.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex4q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000632">
         <input>
 public class Test1
 {
@@ -387,7 +387,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex4a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000633" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -406,7 +406,7 @@ public class Test1
             
                 <p>Line 5 is missing an end  <c>;</c>.  Line 6 should be <c>x &gt;= 0</c>.  Line 8 should be <c>else</c> instead of <c>otherwise</c>.</p>
 
-<exercise label="ch5Ex4a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex4a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex4a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000634" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -423,11 +423,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-46">
+    <exercise xml:id="UNIQUE-ID-000635">
       <statement>
         <p>The following code should print if x is less than 0, equal to 0, or greater than 0.  Finish it to work correctly.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex5q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000636">
         <input>
 public class Test1
 {
@@ -496,7 +496,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex5a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000637" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -524,7 +524,7 @@ public class Test1
             
                 <p>One way to solve this is to add an <c>else if</c> and then print out if x is equal to 0 and an <c>else</c> to print that x is greater than 0 as shown below.</p>
 
-<exercise label="ch5Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex5a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000638" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -550,11 +550,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-47">
+    <exercise xml:id="UNIQUE-ID-000639">
       <statement>
         <p>Finish the code below so that it prints <c>You can go out</c> if you have a ride or if you can walk and otherwise prints <c>You can't go out</c>.  Use a logical or to create a complex conditional.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex6q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000640">
         <input>
 public class Test1
 {
@@ -623,7 +623,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex6a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000641" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -648,7 +648,7 @@ public class Test1
             
                 <p>Add an <c>if</c> statement and use a logical or (<c>||</c>) to join the conditions and print the one message.  Also add an <c>else</c> statement and print the other message.</p>
 
-<exercise label="ch5Ex6a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex6a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex6a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000642" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -671,11 +671,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-48">
+    <exercise xml:id="UNIQUE-ID-000643">
       <statement>
         <p>Finish the code below to print you can go out if you don&#x2019;t have homework and you have done the dishes.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex7q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000644">
         <input>
 public class Test1
 {
@@ -739,7 +739,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex7a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000645" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -764,7 +764,7 @@ public class Test1
             
                 <p>Add a conditional with a negation <c>!</c> for haveHomework and a logical and to create a complex conditional.</p>
 
-<exercise label="ch5Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex7a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000646" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -787,11 +787,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-49">
+    <exercise xml:id="UNIQUE-ID-000647">
       <statement>
         <p>Finish the following code so that it prints <c>You have a fever</c> if your temperature is above 100 and otherwise prints <c>You don't have a fever</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex8q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000648">
         <input>
 public class Test1
 {
@@ -859,7 +859,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex8a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000649" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -883,7 +883,7 @@ public class Test1
             
                 <p>Add a conditional and print the first message if the temp is above 100 and otherwise print the other message.</p>
 
-<exercise label="ch5Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex8a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000650" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -905,11 +905,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-50">
+    <exercise xml:id="UNIQUE-ID-000651">
       <statement>
         <p>Finish the code to print <c>It is freezing</c> if the temperature is below 30, <c>It is cold</c> if it is below 50, <c>It is nice out</c> if it is below 90, or <c>It is hot</c> using nested if else statements.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex9q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000652">
         <input>
 public class Test1
 {
@@ -991,7 +991,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex9a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000653" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1023,7 +1023,7 @@ public class Test1
             
                 <p>Add a conditional with two <c>else if</c> statements and a final <c>else</c>.</p>
 
-<exercise label="ch5Ex9a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex9a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex9a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000654" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1053,11 +1053,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-51">
+    <exercise xml:id="UNIQUE-ID-000655">
       <statement>
         <p>Finish the code below to print your grade based on your score.  The score is an A if you scored 92 or higher, a B if you scored 82 to 91, a C if you scored 72 to 81, a D if you scored a 62 to 71, or an E.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch5Ex10q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000656">
         <input>
 public class Test1
 {
@@ -1166,7 +1166,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="ch5Ex10a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000657" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1202,7 +1202,7 @@ public class Test1
             
                 <p>Add a conditional with three <c>else if</c> statements and a final <c>else</c>.</p>
 
-<exercise label="ch5Ex10a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="ch5Ex10a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch5Ex10a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-000658" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)

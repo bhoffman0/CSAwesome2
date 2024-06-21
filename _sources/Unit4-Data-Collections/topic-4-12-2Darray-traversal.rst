@@ -4,10 +4,9 @@
    :prefix: 8-2-
    :start: 1
 
-|Time45|
 
 Nested Loops for 2D Arrays 
------------------------------------
+===================================
 
 In this lesson, you will learn how to use nested loops to traverse a 2D Array.
 
@@ -194,11 +193,7 @@ Some key things to notice about this code are:
    =====
    } // end method
 
-You can step through this code using the Java Visualizer by clicking on the following |Java Visualizer|.
-
-.. |Java Visualizer| raw:: html
-
-   <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
+You can step through this code using the Java Visualizer by clicking on the following `Java Visualizer <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40>`_.
 
 
 Most nested loops with 2D Arrays use "row-major order" where the outer loop goes through each row. However, you can write nested loops that traverse in "column-major order" like below.
@@ -591,29 +586,10 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. index::
    single: pixels
 
-.. |CB Picture Lab| raw:: html
 
-   <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
 
-.. |RGB Color Mixer| raw:: html
 
-   <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
-.. |replit project| raw:: html
-
-   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Replit Swing project</a>
-
-.. |repl 2| raw:: html
-
-   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file" style="text-decoration:underline" target="_blank" >alternative Replit project</a>
-
-.. |Picture Lab A1 to A3| raw:: html
-
-   <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
-
-.. |Picture Lab A5| raw:: html
-
-   <a href= "pictureLabA5.html#image-modification-exercises" style="text-decoration:underline" target="_blank">Picture Lab A5 Image Modification Exercises</a>
 
 
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  For example, a pixel is shown at row 173 and column 214 of the image below.
@@ -624,7 +600,7 @@ Photographs and images are made up of a 2D array of **pixels** which are tiny pi
 
 
 The color of a pixel is represented using the RGB (Red, Green, Blue) color
-model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? You can learn more about pixels in the |Picture Lab A1 to A3|.
+model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the `RGB Color Mixer <https://www.rapidtables.com/web/color/RGB_Color.html>`_ to experiment. Can you make black? Can you make white? Can you make purple? You can learn more about pixels in the `Picture Lab sections A1 to A3 <pictureLabA1toA3.html>`_.
 
 In Java, we can write a ``Pixel`` class to represent a pixel in an image at a given x and y coordinate. 
 
@@ -637,7 +613,7 @@ In Java, we can write a ``Pixel`` class to represent a pixel in an image at a gi
        /** Implementation not shown * */
    }
 
-The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
+The `College Board Picture Lab <https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf>`_ contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
 
 .. code-block:: java
 
@@ -650,7 +626,7 @@ The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loa
       p.setBlue(255);  // set its blue value to 255
 
 
-You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended |Picture Lab A5|.
+You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_.
 
 .. code-block:: java
 
@@ -678,7 +654,7 @@ In this challenge, you will do a part of the Picture Lab to modify the pixels of
 
 Now, write a similar method called ``keepOnlyBlue`` that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called ``switchColors`` that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the ``getRed``, ``getGreen``, ``getBlue`` to get the RGB values of the pixel and then swap them around by using the ``setRed``, ``setGreen``, ``setBlue`` methods and giving them different color values from the get methods as arguments.
 
-You can test the methods in the active code below or in this |replit project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
+You can test the methods in the active code below or in this `Replit Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative Replit project <https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file>`_ by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
 
 .. activecode:: challenge-8-2-picture
     :language: java
@@ -885,14 +861,14 @@ You can test the methods in the active code below or in this |replit project| or
         }
     }
 
-Here are some more exercises from the |Picture Lab A5|:
+Here are some more exercises from the `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_:
 
 - Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
 - Write the gray scale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
 
-You can continue on with the next pages of |Picture Lab A5| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
+You can continue on with the next pages of `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_ to mirror images and create collages and detect edges as the first step in recognizing objects in images.
 
 Summary
 ----------
@@ -2055,10 +2031,6 @@ AP Practice
 
 2D Arrays and Loops Game
 -------------------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice loops with 2D arrays. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.

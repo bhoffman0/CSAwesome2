@@ -10,7 +10,6 @@
    pair: Variable; boolean
    pair: boolean; variable
 
-|Time45|
 
 Boolean Expressions
 ===================
@@ -26,11 +25,8 @@ The operators ``==`` and ``!=`` (not equal) can be used to compare values. They 
 
     One ``=`` sign changes the value of a variable. Two ``==`` equal signs are used to test if a variable holds a certain value, without changing its value!
 
-.. |Colleen video| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=bO9bejT0jwE&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-
-Watch the following |Colleen video| which shows what happens in memory as primitive types like ``int`` and reference types like ``Dog`` are compared with ``==`` in a physical model of Java memory.
+Watch the following `video <https://www.youtube.com/watch?v=bO9bejT0jwE&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis>`_ which shows what happens in memory as primitive types like ``int`` and reference types like ``Dog`` are compared with ``==`` in a physical model of Java memory.
 
 .. youtube:: bO9bejT0jwE
     :width: 650
@@ -343,25 +339,14 @@ The **remainder** operator has been used quite a bit on the AP CSA exam, so you 
 |Groupwork| Programming Challenge : Prime Numbers POGIL
 -------------------------------------------------------
 
-.. |pogil| raw:: html
-
-   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank">POGIL</a>
-
-.. |pogil role| raw:: html
-
-   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank">POGIL role</a>
-
-.. |Numberphile video| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=M7kEpw1tn50" target="_blank">Numberphile video</a>
 
 
 
-We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a `POGIL role <https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing>`_ and works together to solve the problems, making sure that everyone in the team participates and learns.
 
 In this activity, you will use boolean expressions to explore prime numbers. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it's only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it's divisible by 2 as well as 1 and 4.
 
-Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the factors of a large number to decode it. If you're curious about this, watch this |Numberphile video|.
+Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the factors of a large number to decode it. If you're curious about this, watch this `Numberphile video <https://www.youtube.com/watch?v=M7kEpw1tn50>`_.
 
 The following program checks if 5 is a prime number by seeing if it is divisible by the numbers 1 - 5. Run the code, and then answer the following questions.
 
@@ -520,10 +505,6 @@ AP Practice
 
 Relational Operators Practice Game
 -----------------------------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice. Click on **Relationals**,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.

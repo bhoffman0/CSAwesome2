@@ -8,7 +8,7 @@
       <statement>
         <p>Fix the errors (marked by comments) in the code so that it correctly creates a 10x10 array called <c>table</c> filled with numbers from 0 to 99 in left-right top-bottom order and prints the output (in row-column order) with the numbers separated by tabs. Most of the errors are syntactical, but one is logical.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000862" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000701" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -64,7 +64,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>This program is supposed to create an 8x8 two-dimensional <c>int</c> array that is filled with a checkered patterns of 0s and 1s, starting with a 1 in the top left corner. It should also print the output in row-column order, separating each element with a space. The only missing part is the <c>if</c> statement that decides if a specific cell should be a 0 or a 1. Fill that in to finish the problem.</p>
         <p>Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s?</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000863" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000702" interactive="activecode" language="java">
         <input>
 public class Test1 {
     public static void main(String[] args)
@@ -117,7 +117,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>The <c>sumVals</c> function in the below program should iterate through a two-dimensional <c>int</c> array <c>nums</c> and return its sum. Fill in the headers for the for loops such that the method  iterates through the entirety of <c>nums</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000864" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000703" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -220,7 +220,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill in the <c>flipImage</c> method. This should accept a two-dimensional String array <c>image</c> and flip the &#x201C;image&#x201D; 180 degrees vertically. For example, <c>{ {"green", "red", "blue"}, {"cat", "dog", "yellow"} }</c> would become <c>{ {"blue", "red", "green"}, {"yellow", "dog", "cat"} }</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000865" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000704" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -287,7 +287,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>makeEvenNumbersZero</c> method such that it iterates through the two-dimensional <c>int</c> array <c>nums</c> and replaces each instance of an even number with 0. For example, <c>{ {3, 4, 5}, {6, 7, 8} }</c> would become <c>{ {3, 0, 5}, {0, 7, 0} }</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000866" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000705" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -348,7 +348,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill in the <c>numOccurrences</c> method. It should take in a two-dimension <c>int</c> array <c>nums</c> and an <c>int</c> <c>desired</c> and return the number of times that <c>desired</c> appears in <c>nums</c>. E.g., with <c>{ {3, 1, 2}, {3, 4, 1} }</c> as <c>nums</c>, <c>numOccurrences(nums, 1)</c> should return <c>2</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000867" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000706" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -403,7 +403,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill in the <c>averageCols</c> method. It should accept a two-dimensional int array <c>nums</c> and return a one-dimensional (normal) <c>int</c> array containing the integer average of each of the columns (NOT the rows). E.g., with <c>nums</c> as <c>{ {3, 5, 2}, {1, 1, 6} }</c>, <c>averageCols(nums)</c> should return <c>{2, 3, 4}</c> as that is <c>(3 + 1) / 2</c>, <c>(5 + 1) / 2</c>, and <c>(2 + 6) / 2</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000868" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000707" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -461,7 +461,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>oddRows</c> method. This should take in a two-dimensional <c>int</c> array <c>nums</c> and return a new two-dimensional <c>int</c> array containing only the odd-index rows. For example, with <c>nums</c> equal to <c>{ {3, 2, 1}, {4, 5, 6}, {1, 5, 7} }</c>, <c>oddRows(nums)</c> would return <c>{ {4, 5, 6} }</c> as that was the row at index 1, which is the only odd index present.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000869" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000708" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -541,7 +541,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>breakIntoLetters</c> method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling <c>breakIntoLetters</c> on { {&#x201C;b&#x201D;, &#x201C;a&#x201D;, &#x201C;t&#x201D;, &#x201C;h&#x201D;}, {&#x201C;t&#x201D;, &#x201C;e&#x201D;, &#x201C;n&#x201D;, &#x201C;s&#x201D;}, {&#x201C;j&#x201D;, &#x201C;a&#x201D;, &#x201C;c&#x201D;, &#x201C;k&#x201D;}, {&#x201C;l&#x201D;, &#x201C;a&#x201D;, &#x201C;z&#x201D;, &#x201C;y&#x201D;} } should return {&#x201C;bath&#x201D;, &#x201C;tens&#x201D;, &#x201C;jack&#x201D;, &#x201C;lazy&#x201D;}.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000870" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000709" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -624,7 +624,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>maxEachRow</c> method. It that should accept a two-dimensional <c>int</c> array <c>nums</c>, and return a single-dimensional (normal) <c>int</c> array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000871" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000710" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 

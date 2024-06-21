@@ -4,7 +4,6 @@
    :prefix: 7-9-
    :start: 1
 
-|Time90|
 
 Input Files (Optional)
 =======================================

@@ -3,7 +3,7 @@
 <section>
   <introduction>
     <title>Wrapper Classes - Integer and Double</title>
-    <p xml:id="_index-0-9">For every primitive type in Java, there is a built-in object type called a wrapper class. The wrapper class for int is called Integer, and for double it is called Double.   Sometimes you may need to create a wrapped object for a primitive type so that you can give it to a method that is expecting an object. To wrap a value, call the constructor for the wrapper class in earlier versions of Java. In Java 9 on, this is <term>deprecated</term> which means it&#x2019;s not the best way to do this anymore, and you should instead just set it equal to a value. The AP CSA Exam covers Java 7 which does allow using the constructor.</p>
+    <p xml:id="UNIQUE-ID-000281">For every primitive type in Java, there is a built-in object type called a wrapper class. The wrapper class for int is called Integer, and for double it is called Double.   Sometimes you may need to create a wrapped object for a primitive type so that you can give it to a method that is expecting an object. To wrap a value, call the constructor for the wrapper class in earlier versions of Java. In Java 9 on, this is <term>deprecated</term> which means it&#x2019;s not the best way to do this anymore, and you should instead just set it equal to a value. The AP CSA Exam covers Java 7 which does allow using the constructor.</p>
     <program language="java">
       <input>
 // in older versions of Java (and on the AP exam)
@@ -17,7 +17,7 @@ Double d = 3.5;
     </program>
     <p>These wrapper classes (defined in the java.lang package) are also useful because they have some special values (like the minimum and maximum values for the type) and methods that you can use. Try the following code to see the minimum and maximum values possible for the type int.</p>
     <p>The int type in Java can be used to represent any whole number from -2147483648 to 2147483647.  Why those numbers?  Integers in Java are represented in 2&#x2019;s complement binary and each integer gets 32 bits of space.  In 32 bits of space with one bit used to represent the sign you can represent that many values.  Why is there one more negative number than positive number?  It is because 0 is considered a positive number.</p>
-    <p xml:id="_index-1-6">What do the last two lines print out?  Did this surprise you?  Java will actually return the maximum integer value if you try to subtract one from the minimum value. This is called <term>underflow</term>. And, Java will return the minimum integer value if you try to add one to the maximum.  This is called <term>overflow</term>.  It is similar to how odometers work &#x2013; in a really old car that reaches the maximum miles possible on the odometer, the odometer rolls over back to 0, the minimum value. In Java, any int value that surpasses 32 bits gets rolled over, so that  the Integer.MAX_VALUE 2147483647 incremented (+1) returns -2147483648 which is the Integer.MIN_VALUE.</p>
+    <p xml:id="UNIQUE-ID-000282">What do the last two lines print out?  Did this surprise you?  Java will actually return the maximum integer value if you try to subtract one from the minimum value. This is called <term>underflow</term>. And, Java will return the minimum integer value if you try to add one to the maximum.  This is called <term>overflow</term>.  It is similar to how odometers work &#x2013; in a really old car that reaches the maximum miles possible on the odometer, the odometer rolls over back to 0, the minimum value. In Java, any int value that surpasses 32 bits gets rolled over, so that  the Integer.MAX_VALUE 2147483647 incremented (+1) returns -2147483648 which is the Integer.MIN_VALUE.</p>
     <p>When would you ever use Integer.MIN_VALUE or Integer.MAX_VALUE?  They are handy if you want to initialize a variable to the smallest possible value and then search a sequence of values for a larger value.</p>
     <p><term>Autoboxing</term> is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an int to an Integer and a double to a Double. The Java compiler applies autoboxing when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class or assigned to a variable of the corresponding wrapper class. Here&#x2019;s an example of autoboxing.</p>
     <program language="java">
@@ -34,19 +34,19 @@ int number = i; // unboxing - back to primitive type
 </input>
     </program>
     <p>
-      <problematic xml:id="_id2-2" refid="id1">|Exercise|</problematic>
+      <problematic xml:id="UNIQUE-ID-000283" refid="id1">|Exercise|</problematic>
       <term>Check your understanding</term>
     </p>
     <p>Here are some more useful methods in the Integer and  Double classes:</p>
   </introduction>
-  <subsection xml:id="_groupwork-programming-challenge-debugging">
-    <title><problematic xml:id="_id4-8" refid="id3">|Groupwork|</problematic> Programming Challenge : Debugging</title>
+  <subsection xml:id="UNIQUE-ID-000284">
+    <title><problematic xml:id="UNIQUE-ID-000285" refid="id3">|Groupwork|</problematic> Programming Challenge : Debugging</title>
     <p>Can you find and fix all the bugs in the following code to use the correct Integer and Double methods and variables?</p>
     <exercise label="challenge2-8-wrapperDebug">
       <statement>
         <p>Find and fix the bugs below to use the correct Integer and Double methods and variables.</p>
       </statement>
-      <program xml:id="challenge2-8-wrapperDebug_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000286" interactive="activecode" language="java">
         <input>
 public class Debug
 {
@@ -61,7 +61,7 @@ public class Debug
         System.out.println( int.MAX_VALUE() );
     }
 }
-====
+</input><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -87,11 +87,11 @@ public class RunestoneTests extends CodeTestHelper
         assertTrue(passed);
     }
 }
-        </input>
+        </tests>
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="_summary-15">
+  <subsection xml:id="UNIQUE-ID-000287">
     <title>Summary</title>
     <p>
       <ul>
@@ -170,7 +170,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>What&#x2019;s the minimum and maximum numbers for an int? What happens if you go beyond these limits with - 1 or + 1?</p>
       </statement>
-      <program xml:id="lcmm1_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000288" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -183,7 +183,7 @@ public class Test1
     }
 }
 
-====
+</input><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -201,7 +201,7 @@ public class RunestoneTests extends CodeTestHelper
         assertTrue(passed);
     }
 }
-        </input>
+        </tests>
       </program>
     </exercise>
     <exercise label="WrapperClasses">
@@ -242,7 +242,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Run the code below to see useful methods in the Integer and Double wrapper classes.</p>
       </statement>
-      <program xml:id="integerMethods_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000289" interactive="activecode" language="java">
         <input>
 public class Test2
 {
@@ -269,7 +269,7 @@ public class Test2
     }
 }
 
-====
+</input><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -291,7 +291,7 @@ public class RunestoneTests extends CodeTestHelper
         assertTrue(passed);
     }
 }
-        </input>
+        </tests>
       </program>
     </exercise>
   </exercises>

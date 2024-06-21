@@ -155,13 +155,13 @@ Click the |start| button when you are ready to begin the exam, but only then as 
          nums[4] = temp;
 
    .. mchoice:: mt1_8
-      :answer_a: !(a && b)
-      :answer_b: !a && b
-      :answer_c: !a && !b
-      :answer_d: a && b
+      :answer_a: !(a &amp;&amp; b)
+      :answer_b: !a &amp;&amp; b
+      :answer_c: !a &amp;&amp; !b
+      :answer_d: a &amp;&amp; b
       :answer_e: a || !b
       :correct: c
-      :feedback_a: This would be true if a OR b are false using De Morgan's laws: !(a && b) = !a || !b.
+      :feedback_a: This would be true if a OR b are false using De Morgan's laws: !(a &amp;&amp; b) = !a || !b.
       :feedback_b: If b was false, this option would be false.
       :feedback_c: Correct!
       :feedback_d: This will only be true only when both a and b are true.
@@ -431,9 +431,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :correct: c
       :feedback_a: This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.
       :feedback_b: This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.
-      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, else if ((num2<0) || (num1<0)) is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
-      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2<0) || (num1<0))).
-      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2<0) || (num1<0))).
+      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&amp;&amp;) to be true both expressions must be true.  Next, else if ((num2&lt;0) || (num1&lt;0)) is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
+      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2&lt;0) || (num1&lt;0))).
+      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true ((num2&lt;0) || (num1&lt;0))).
 
       Consider the following method.  What is the output from ``conditionTest(3,-2);``?
 
@@ -506,7 +506,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :feedback_b: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
       :feedback_c: The conditional would only match multiples of three, and the program does not output anything due to incorrect syntax.
       :feedback_d: The syntax to output text is System.out.print(), so this code will cause a compiler error.
-      :feedback_e: The program would also output 15, since the loop runs until x <= 15. However, the program does not output anything due to incorrect syntax.
+      :feedback_e: The program would also output 15, since the loop runs until x &lt;= 15. However, the program does not output anything due to incorrect syntax.
 
       What will be printed after this code is executed?
 

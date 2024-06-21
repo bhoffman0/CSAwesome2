@@ -3,11 +3,11 @@
 <section>
   <title>Code Practice with ArrayLists</title>
   <exercises>
-    <exercise xml:id="UNIQUE-ID-001278">
+    <exercise xml:id="UNIQUE-ID-001246">
       <statement>
         <p>Fix the following code so that it compiles. The code should instantiate an ArrayList of Strings <c>names</c> and fill it with the Strings from the array <c>friends</c>. It should then print out <c>names</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001279">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001247">
         <input>
 import java.util.*;
 
@@ -54,7 +54,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001280" language="java"><input>
+    <program xml:id="UNIQUE-ID-001248" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -78,7 +78,7 @@ public class Test1
             
                 <p>In line 10, change the terminating condition to <c>i &lt; friends.length</c> so that you don&#x2019;t go out of bounds of the array.</p>
 
-<exercise label="ch8Ex1a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001281" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex1a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001249" interactive="activecode" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -100,11 +100,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001282">
+    <exercise xml:id="UNIQUE-ID-001250">
       <statement>
         <p>Fix the following class so that it will compile and the method <c>reverse</c> will return an ArrayList containing Integers in the reversed order of the ArrayList parameter <c>list</c>. Hint: for this solution, only one line needs to be added to the for-loop inside of the <c>reverse</c> method.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001283">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001251">
         <input>
 import java.util.*;
 
@@ -178,7 +178,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001284" language="java"><input>
+    <program xml:id="UNIQUE-ID-001252" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -216,7 +216,7 @@ public class Test1
                 <p>Change line 8 <c>int</c> to <c>Integer</c> because ArrayLists only store objects and int is a primitive.  Add in line 11 <c>reversed.add(0, element);</c> so that each element of the ArrayList <c>list</c>, the parameter, is added in front of the previously added element (thereby reversing the order).</p>
                 <p>Note that there are other equally correct ways to reverse the order of the ArrayList without creating a new Array or by traversing through it backwards.</p>
 
-<exercise label="ch8Ex2a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001285" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex2a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001253" interactive="activecode" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -251,11 +251,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001286">
+    <exercise xml:id="UNIQUE-ID-001254">
       <statement>
         <p>Fix the following method <c>printEvenIndex</c> so that it will print out the Integers at even indices of the passed-in ArrayList <c>list</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001287">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001255">
         <input>
 import java.util.*;
 
@@ -332,7 +332,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001288" language="java"><input>
+    <program xml:id="UNIQUE-ID-001256" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -370,7 +370,7 @@ public class Test1
             
                 <p>In line 8, the for loop should be written as <c>for (int i = 0; i &lt; list.size(); i++)</c> so that the method will traverse through all elements of the ArrayList <c>list</c>.  In the line 10 conditional, it should be checking when the index, <c>i</c> is even - in other words, checking if it is divisible by 2 with no remainder: <c>i % 2 == 0</c>.</p>
 
-<exercise label="ch8Ex3a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001289" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex3a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001257" interactive="activecode" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -406,11 +406,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001290">
+    <exercise xml:id="UNIQUE-ID-001258">
       <statement>
         <p>Fix the following method <c>printEvenElements</c> so that it will print out all of the even Integers that are in the passed-in ArrayList <c>list</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001291">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001259">
         <input>
 import java.util.*;
 
@@ -481,7 +481,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001292" language="java"><input>
+    <program xml:id="UNIQUE-ID-001260" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -519,7 +519,7 @@ public class Test1
             
                 <p>In line 7, ArrayLists do not have a length property; instead, call the <c>size()</c> method to find out how long an ArrayList is.</p>
 
-<exercise label="ch8Ex4a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001293" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex4a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001261" interactive="activecode" language="java"><input>
 import java.util.*;
 
 public class Test1
@@ -555,11 +555,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001294">
+    <exercise xml:id="UNIQUE-ID-001262">
       <statement>
         <p>Rewrite the following code so that it fills the ArrayList <c>values</c> with the elements of the array <c>nums</c> using a for-each loop instead of a <c>for</c> loop.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001295">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001263">
         <input>
 import java.util.*;
 
@@ -617,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001296" language="java"><input>
+    <program xml:id="UNIQUE-ID-001264" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -642,7 +642,7 @@ public class Test1
             
                 <p>In a for-each loop you specify the type of the values in the array, a name for the current value, and then a <c>:</c> and then the name of the array.  You then want to <c>add</c> each element to the <c>values</c> ArrayList.</p>
 
-<exercise label="ch8Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001297" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex5a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001265" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -665,9 +665,9 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001298">
+    <exercise xml:id="UNIQUE-ID-001266">
       <statement/>
-      <program interactive="" language="" xml:id="UNIQUE-ID-001299"/>
+      <program interactive="" language="" xml:id="UNIQUE-ID-001267"/>
       <solution>
                 Declare a variable to hold the sum and initialize it to zero.  Loop through all the values in the ArrayList.  If the current value is negative (less than 0) then add it to the sum.  Return the sum.
                 
@@ -677,7 +677,7 @@ public class Test1
                     This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001300" language="java"><input>
+    <program xml:id="UNIQUE-ID-001268" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -717,7 +717,7 @@ public class Test1
                 
             
                 <p>Declare a variable to hold the <c>sum</c> and initialize it to zero.  Loop through all the values in the ArrayList.  If the current value is negative (less than 0) then add it to the <c>sum</c>.  Return the <c>sum</c>.</p>
-                <blockquote><exercise label="ch8Ex6a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001301" interactive="activecode" language="java"><input>
+                <blockquote><exercise label="ch8Ex6a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001269" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -755,11 +755,11 @@ public class Test1
 </tests></program></exercise></blockquote>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001302">
+    <exercise xml:id="UNIQUE-ID-001270">
       <statement>
         <p>Finish the following method &#x2018;&#x2019;removeLongStrings&#x2019;&#x2019; that checks each element of the passed in ArrayList <c>list</c> and removes any that are strictly longer than 4 characters.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001303">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001271">
         <input>
 import java.util.ArrayList;
 
@@ -837,7 +837,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001304" language="java"><input>
+    <program xml:id="UNIQUE-ID-001272" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -880,7 +880,7 @@ public class Test1
             
                 <p>Loop through all of the elements of the ArrayList <c>list</c>. In each iteration, check if the length of each element is strictly greater <c>&gt;</c> than 4; if it is, remove that element.</p>
 
-<exercise label="ch8Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001305" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex7a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001273" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -921,11 +921,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001306">
+    <exercise xml:id="UNIQUE-ID-001274">
       <statement>
         <p>Fill in the method <c>shiftLeftOne</c> below to shift all of the elements of the passed-in ArrayList <c>list</c> left by one. The original first element should be wrapped to the back of the list after the shift. Ex: {1, 2, 3, 4} should turn turn into {2, 3, 4, 1}</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001307">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001275">
         <input>
 import java.util.ArrayList;
 
@@ -1002,7 +1002,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001308" language="java"><input>
+    <program xml:id="UNIQUE-ID-001276" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -1035,7 +1035,7 @@ public class Test1
             
                 <p>Remove the first element of <c>list</c> and save it to a new variable of type <c>Integer</c>. Because of the nature of remove, everything else in the ArrayList will shift left accordingly. The only thing left to do after that is add this value to the back of the ArrayList.</p>
 
-<exercise label="ch8Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001309" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex8a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001277" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -1066,11 +1066,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001310">
+    <exercise xml:id="UNIQUE-ID-001278">
       <statement>
         <p>Finish the method <c>moveSmallest</c> so that it finds the smallest value in the passed-in ArrayList <c>list</c> and moves it to the front of the list.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001311">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001279">
         <input>
 import java.util.List;
 import java.util.ArrayList;
@@ -1161,7 +1161,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001312" language="java"><input>
+    <program xml:id="UNIQUE-ID-001280" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -1202,7 +1202,7 @@ public class Test1
             
                 <p>Fill-in the for loop so that it will traverse through the entire ArrayList. The conditional should check if the current element at index <c>i</c> is less than the element at <c>smallestIndex</c>. After the for-loop has completed, the method must remove the value at <c>smallestIndex</c> and save it to a variable, and then add it to the front of the ArrayList</p>
 
-<exercise label="ch8Ex9a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001313" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex9a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001281" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -1241,11 +1241,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001314">
+    <exercise xml:id="UNIQUE-ID-001282">
       <statement>
         <p>Finish the method <c>findLongest</c> to find and return the longest String in the ArrayList of Strings <c>list</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001315">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001283">
         <input>
 import java.util.ArrayList;
 
@@ -1316,7 +1316,7 @@ public class RunestoneTests extends CodeTestHelper
                 This is the answer to the previous question.
 
     
-    <program xml:id="UNIQUE-ID-001316" language="java"><input>
+    <program xml:id="UNIQUE-ID-001284" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1
@@ -1356,7 +1356,7 @@ public class Test1
             
                 <p>Declare a variable to hold the <c>longest</c> String. Initialize it to the empty string <c>""</c>.  Loop through all the values in the ArrayList and compare its length to the length of <c>longest</c>. Return <c>longest</c>.</p>
 
-<exercise label="ch8Ex10a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001317" interactive="activecode" language="java"><input>
+<exercise label="ch8Ex10a"><statement><p>This is the answer to the previous question.</p></statement><program xml:id="UNIQUE-ID-001285" interactive="activecode" language="java"><input>
 import java.util.ArrayList;
 
 public class Test1

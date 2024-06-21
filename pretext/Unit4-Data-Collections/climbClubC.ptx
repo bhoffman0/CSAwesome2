@@ -3,7 +3,7 @@
 <section>
   <title>Free Response - Climbing Club C</title>
   <introduction>
-    <p xml:id="UNIQUE-ID-001226">The following is part c of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
+    <p xml:id="UNIQUE-ID-001208">The following is part c of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  A mountain climbing club maintains a record of the climbs that its members have made. Information about a
             climb includes the name of the mountain peak and the amount of time it took to reach the top. The information is
             contained in the <c>ClimbInfo</c> class as declared below.</p>
@@ -129,13 +129,13 @@ public int distinctPeakNames()
 </input>
     </program>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-001227">
+  <subsection xml:id="UNIQUE-ID-001209">
     <title>Try it Out</title>
     <exercise label="ClimbClubC">
       <statement>
         <p>FRQ ClimbClub C: Try the code.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001228" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001210" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 import java.util.List;

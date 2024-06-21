@@ -1,5 +1,5 @@
 Peer Instruction: Using Objects Multiple Choice Questions
----------------------------------------------------------
+=========================================================
 
 .. mchoice:: bs-objects-2-19
    :author: Beth Simon

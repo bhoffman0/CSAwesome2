@@ -77,9 +77,9 @@ Click to reveal the algorithm and problems to help you write your solution.
         Which of the following correctly creates an array of size numTosses?
 
    .. mchoice:: numbercubea_3
-        :answer_a: for (int i = 0; i <= numTosses; i++)
-        :answer_b: for (int i = 1; i < numTosses; i++)
-        :answer_c: for (int i = 0; i < numTosses; i++)
+        :answer_a: for (int i = 0; i &lt;= numTosses; i++)
+        :answer_b: for (int i = 1; i &lt; numTosses; i++)
+        :answer_c: for (int i = 0; i &lt; numTosses; i++)
         :correct: c
         :feedback_a: This will execute numTosses + 1 times.
         :feedback_b: This will execute numTosses - 1 times.

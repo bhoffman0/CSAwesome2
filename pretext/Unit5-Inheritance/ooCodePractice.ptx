@@ -3,11 +3,11 @@
 <section>
   <title>Code Practice with Object Oriented Concepts</title>
   <exercises>
-    <exercise xml:id="UNIQUE-ID-000851">
+    <exercise xml:id="UNIQUE-ID-000800">
       <statement>
         <p>Write a method that overloads the talk method by taking in a name and printing <c>Hello</c> with that name.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000852">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000801">
         <input>
 public class Test1
 {
@@ -59,7 +59,7 @@ public class RunestoneTests extends CodeTestHelper
                 Overloading is when several methods have the same name but different parameter types, order, or number.
                     In this case, the original method had no parameters and we overloaded it by creating a talk method with a String parameter.
 
-    <program xml:id="UNIQUE-ID-000853" language="java"><input>
+    <program xml:id="UNIQUE-ID-000802" language="java"><input>
 public class Test1
 {
     public static void talk()
@@ -88,11 +88,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000854">
+    <exercise xml:id="UNIQUE-ID-000803">
       <statement>
         <p>Edit this code so the class Beagle is a subclass of the Dog class.  When you run the code it should print &#x201C;woof!&#x201D; and then &#x201C;arf arf&#x201D;.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000855">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000804">
         <input>
 public class Dog
 {
@@ -151,7 +151,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 In order to specify the parent class, use the extends keyword in the class header of the child class.
 
-    <program xml:id="UNIQUE-ID-000856" language="java"><input>
+    <program xml:id="UNIQUE-ID-000805" language="java"><input>
 public class Dog
 {
     public void speak()
@@ -185,11 +185,11 @@ class Beagle extends Dog
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000857">
+    <exercise xml:id="UNIQUE-ID-000806">
       <statement>
         <p>Add an equals method to this class that returns true if the current Dog and passed Dog have the same name.  The code should print false twice then true twice.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000858">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000807">
         <input>
 public class Dog
 {
@@ -277,7 +277,7 @@ public class RunestoneTests extends CodeTestHelper
                 In order to override the equals method,
                     the method header has to have the same return type and parameters as the equals method for the Object class.  The code should print false twice then true twice.
 
-    <program xml:id="UNIQUE-ID-000859" language="java"><input>
+    <program xml:id="UNIQUE-ID-000808" language="java"><input>
 public class Dog
 {
     private String name;
@@ -316,11 +316,11 @@ public class Dog
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000860">
+    <exercise xml:id="UNIQUE-ID-000809">
       <statement>
         <p>Override the taste method from the Candy class in the Chocolate class to return <c>tastes chocolately</c>.  It should print <c>tastes sweet!</c> and then <c>tastes chocolately</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000861">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000810">
         <input>
 public class Candy
 {
@@ -382,7 +382,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 To override a method in a child class, you must have the same return types and parameters as the parent class&#x2019;s method
 
-    <program xml:id="UNIQUE-ID-000862" language="java"><input>
+    <program xml:id="UNIQUE-ID-000811" language="java"><input>
 public class Candy
 {
     public String taste()
@@ -416,11 +416,11 @@ class Chocolate extends Candy
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000863">
+    <exercise xml:id="UNIQUE-ID-000812">
       <statement>
         <p>Overload the greet method to just print <c>Hello</c> if not given any parameters.  It should print <c>Hello</c> and then <c>Hello Sansa</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000864">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000813">
         <input>
 public class Student
 {
@@ -469,7 +469,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 To overload a method, you use the same name as the method but change the parameters or return type.
 
-    <program xml:id="UNIQUE-ID-000865" language="java"><input>
+    <program xml:id="UNIQUE-ID-000814" language="java"><input>
 public class Student
 {
 
@@ -499,11 +499,11 @@ public class Student
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000866">
+    <exercise xml:id="UNIQUE-ID-000815">
       <statement>
         <p>Add a call to Pet&#x2019;s brag method before printing anything in Dog&#x2019;s brag method (hint: use super to call an overridden method).  It should print <c>I have the best pet!</c> and then <c>I have the best dog</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000867">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000816">
         <input>
 public class Pet
 {
@@ -563,7 +563,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 In order to use a method that has been overwritten in a subclass, you can use super.methodName().
 
-    <program xml:id="UNIQUE-ID-000868" language="java"><input>
+    <program xml:id="UNIQUE-ID-000817" language="java"><input>
 public class Pet
 {
 
@@ -597,11 +597,11 @@ class Dog extends Pet
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000869">
+    <exercise xml:id="UNIQUE-ID-000818">
       <statement>
         <p>Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print <c>Destini 20</c> followed by <c>Erica 55 Masters in Teaching</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000870">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000819">
         <input>
 public class Person
 {
@@ -695,7 +695,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Use super(parm1,parm2) to call the parent&#x2019;s constructor.  This is especially useful to initialize inherited fields.
 
-    <program xml:id="UNIQUE-ID-000871" language="java"><input>
+    <program xml:id="UNIQUE-ID-000820" language="java"><input>
 public class Person
 {
     private String name;
@@ -761,11 +761,11 @@ class Teacher extends Person
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000872">
+    <exercise xml:id="UNIQUE-ID-000821">
       <statement>
         <p>Add public getter and setter methods to the Store class so its variables can be accessed by other classes.  It should print the store&#x2019;s name and address and then change both and print the new values.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000873">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000822">
         <input>
 public class Store
 {
@@ -837,7 +837,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 A getter method is one that returns the value of a private variable and a setter method allows one to change the value of a private variable without having direct access to it.
 
-    <program xml:id="UNIQUE-ID-000874" language="java"><input>
+    <program xml:id="UNIQUE-ID-000823" language="java"><input>
 public class Store
 {
     private String name;
@@ -893,11 +893,11 @@ public class Store
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000875">
+    <exercise xml:id="UNIQUE-ID-000824">
       <statement>
         <p>Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print <c>woof</c> and eat() to print <c>num num</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000876">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000825">
         <input>
 class Animal
 {
@@ -967,7 +967,7 @@ public class RunestoneTests extends CodeTestHelper
 </tests>
       </program>
       <solution>
-        <program xml:id="UNIQUE-ID-000877" language="java">
+        <program xml:id="UNIQUE-ID-000826" language="java">
           <input>
 class Animal
 {
@@ -1012,11 +1012,11 @@ public class Dog extends Animal
         </program>
       </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000878">
+    <exercise xml:id="UNIQUE-ID-000827">
       <statement>
         <p>Override the compareTo method so that it returns a positive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000879">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000828">
         <input>
 public class Person implements Comparable&lt;Person&gt;
 {
@@ -1114,7 +1114,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 By overriding the compareTo method you are able to compare objects based on specified factors.
 
-    <program xml:id="UNIQUE-ID-000880" language="java"><input>
+    <program xml:id="UNIQUE-ID-000829" language="java"><input>
 public class Person implements Comparable&lt;Person&gt;
 {
     private String name;
@@ -1162,11 +1162,11 @@ public class Person implements Comparable&lt;Person&gt;
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-000881">
+    <exercise xml:id="UNIQUE-ID-000830">
       <statement>
         <p>Override the Person class&#x2019;s speak function inside the Student class. Make the function print <c>I'm a student</c>.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000882">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000831">
         <input>
 public class Person
 {
@@ -1227,7 +1227,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 In the Student class we add a public void method called speak() and print &#x201C;I&#x2019;m a student&#x201D; inside. It is important to remember that in order to override a function you must have the same method header and parameters!
 
-    <program xml:id="UNIQUE-ID-000883" language="java"><input>
+    <program xml:id="UNIQUE-ID-000832" language="java"><input>
 public class Person
 {
     public void speak()

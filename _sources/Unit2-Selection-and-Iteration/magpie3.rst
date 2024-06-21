@@ -7,7 +7,6 @@
 .. highlight:: java
    :linenothreshold: 4
 
-|Time45|
 
 Activity 3: Better Keyword Detection
 =======================================
@@ -73,11 +72,8 @@ and ``toLowerCase`` methods.  Do they do what you thought they would?  The metho
        }
    }
 
-.. |String in Java documentation| raw:: html
 
-   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" target="_blank">String in Java documentation|</a>
-
-Open the API for |String in Java documentation| in another tab. Scroll down to the Method Summary section and find the
+Open the API for `String in Java documentation| <http://docs.oracle.com/javase/7/docs/api/java/lang/String.html>`_ in another tab. Scroll down to the Method Summary section and find the
 ``indexOf(String str)`` method. Follow the link and read the description of the ``indexOf`` method.
 
 .. fillintheblank:: fill-lab1b1
@@ -162,11 +158,8 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
       return -1;
    }
 
-.. |replit.com version 3| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java" target="_blank">replit.com version 3</a>
-
-Run the code below or this |replit.com version 3| to see this new method ``findKeyword`` in action. It is called from the ``getResponse`` method to print out an appropriate response based on a keyword. For example, looking for the word ``"no"`` to print out ``"Why so negative?"``, but it won't match no inside of another word like ``"another"``.
+Run the code below or this `replit.com version 3 <https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java>`_ to see this new method ``findKeyword`` in action. It is called from the ``getResponse`` method to print out an appropriate response based on a keyword. For example, looking for the word ``"no"`` to print out ``"Why so negative?"``, but it won't match no inside of another word like ``"another"``.
 
 .. code-block:: java
 
@@ -175,14 +168,8 @@ Run the code below or this |replit.com version 3| to see this new method ``findK
        response = "Why so negative?";
     }
 
-You can also step through the code in the |Java Visualizer| or using the CodeLens button below. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
+You can also step through the code in the `Java visualizer <http://www.pythontutor.com/visualize.html#code=public+class+Magpie3%0A+++%7B%0A%09++/**%0A%09+++*+Get+a+default+greeting%0A%09+++*+%0A%09+++*+%40return+a+greeting%0A%09+++*/%0A%09++public+String+getGreeting(%29%0A%09++%7B%0A%09+++++return+%22Hello,+let's+talk.%22%3B%0A%09++%7D%0A%0A%09++%0A%09++public+String+getResponse(String+statement%29%0A%09++%7B%0A%09+++++String+response+%3D+%22%22%3B%0A%09%09+if+(statement.length(%29+%3D%3D+0%29%0A%09%09+%7B%0A%09%09++++response+%3D+%22Say+something,+please.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(findKeyword(statement,+%22no%22%29+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09response+%3D+%22Why+so+negative%3F%22%3B%0A%09%09+%7D%0A%09%09+else+if+(findKeyword(statement,+%22mother%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22father%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22sister%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22brother%22%29+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A%09%09+%7D%0A%09%09+else%0A%09%09+%7B%0A%09%09%09response+%3D+getRandomResponse(%29%3B%0A%09%09+%7D%0A%09%09+return+response%3B%0A%09++%7D%0A%0A%09++%0A%09++private+int+findKeyword(String+statement,+String+goal,%0A%09%09%09int+startPos%29%0A%09++%7B%0A%09+++++String+phrase+%3D+statement.trim(%29%3B%0A%09%09+//+The+only+change+to+incorporate+the+startPos+is+in%0A%09%09+//+the+line+below%0A%09%09+int+psn+%3D+phrase.toLowerCase(%29.indexOf(%0A%09%09%09%09goal.toLowerCase(%29,+startPos%29%3B%0A%0A%09%09+//+Refinement--make+sure+the+goal+isn't+part+of+a%0A%09%09+//+word%0A%09%09+while+(psn+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09//+Find+the+string+of+length+1+before+and+after%0A%09%09%09//+the+word%0A%09%09%09String+before+%3D+%22+%22,+after+%3D+%22+%22%3B%0A%09%09%09if+(psn+%3E+0%29%0A%09%09%09%7B%0A%09%09%09%09before+%3D+phrase.substring(psn+-+1,+psn%29%0A%09%09%09%09%09%09.toLowerCase(%29%3B%0A%09%09%09%7D%0A%09%09%09if+(psn+%2B+goal.length(%29+%3C+phrase.length(%29%29%0A%09%09%09%7B%0A%09%09%09%09after+%3D+phrase.substring(%0A%09%09%09%09%09%09psn+%2B+goal.length(%29,%0A%09%09%09%09%09%09psn+%2B+goal.length(%29+%2B+1%29%0A%09%09%09%09%09%09.toLowerCase(%29%3B%0A%09%09%09%7D%0A%0A++++++++++++/*+determine+the+values+of+psn,+before,+and+after+at+this+point+*/%0A++++++++++++%0A%09%09%09//+If+before+and+after+aren't+letters,+we've%0A%09%09%09//+found+the+word%0A%09%09%09if+(((before.compareTo(%22a%22%29+%3C+0%29+%7C%7C+(before%0A%09%09%09%09%09.compareTo(%22z%22%29+%3E+0%29%29+//+before+is+not+a%0A%09%09%09%09%09%09%09%09%09%09%09//+letter%0A%09%09%09%09%09%26%26+((after.compareTo(%22a%22%29+%3C+0%29+%7C%7C+(after%0A%09%09%09%09%09%09%09.compareTo(%22z%22%29+%3E+0%29%29%29%0A%09%09%09%7B%0A%09%09%09%09return+psn%3B%0A%09%09%09%7D%0A%0A%09%09%09//+The+last+position+didn't+work,+so+let's+find%0A%09%09%09//+the+next,+if+there+is+one.%0A%09%09%09psn+%3D+phrase.indexOf(goal.toLowerCase(%29,%0A%09%09%09%09%09psn+%2B+1%29%3B%0A%0A%09%09+%7D%0A%0A%09%09return+-1%3B%0A%09++%7D%0A%0A%09++%0A%09++private+int+findKeyword(String+statement,+String+goal%29%0A%09++%7B%0A%09%09+return+findKeyword(statement,+goal,+0%29%3B%0A%09++%7D%0A%0A%09++/**%0A%09+++*+Pick+a+default+response+to+use+if+nothing+else+fits.%0A%09+++*+%0A%09+++*+%40return+a+non-committal+string%0A%09+++*/%0A%09++private+String+getRandomResponse(%29%0A%09++%7B%0A%09%09+final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A%09%09+double+r+%3D+Math.random(%29%3B%0A%09%09+int+whichResponse+%3D+(int%29+(r+*+NUMBER_OF_RESPONSES%29%3B%0A%09%09+String+response+%3D+%22%22%3B%0A%0A%09%09+if+(whichResponse+%3D%3D+0%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Interesting,+tell+me+more.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+1%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Hmmm.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+2%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Do+you+really+think+so%3F%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+3%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22You+don't+say.%22%3B%0A%09%09+%7D%0A%0A%09%09+return+response%3B%0A%09++%7D%0A%09++%0A%09++public+static+void+main(String%5B%5D+args%29%0A%09++%7B%0A%09%09Magpie3+maggie+%3D+new+Magpie3(%29%3B%0A%09%09%0A%09%09maggie.findKeyword(%22yesterday+is+today's+day+before.%22,+%22day%22,+0%29%3B%0A%09%09%09%0A%09++%7D%0A%0A+++%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_ or using the CodeLens button below. It may take a minute or two to load.  Click the forward button at the bottom of the code to execute the next statement.
 
-
-
-
-.. |Magpie Chatbot Lab| raw:: html
-
-   <a href="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf" target="_blank">Magpie Chatbot Lab</a>
 
 
 
@@ -191,7 +178,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
    :language: java
    :autograde: unittest
 
-   Modify the code below to print the values of ``psn``, ``before``, and ``after`` right after the comment on line 100 in the ``findKeyword`` method below. Record each of the values in a table. The College Board student guide for the |Magpie Chatbot Lab| has a table on page 8 that can be printed. Use the CodeLens button to step through the code.
+   Modify the code below to print the values of ``psn``, ``before``, and ``after`` right after the comment on line 100 in the ``findKeyword`` method below. Record each of the values in a table. The College Board student guide for the `Magpie Chatbot Lab <http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf>`_ has a table on page 8 that can be printed. Use the CodeLens button to step through the code.
    ~~~~
    /**
     * A program to carry on conversations with a human user. This version:
@@ -380,16 +367,11 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
        }
    }
 
-.. |Java Visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Magpie3%0A+++%7B%0A%09++/**%0A%09+++*+Get+a+default+greeting%0A%09+++*+%0A%09+++*+%40return+a+greeting%0A%09+++*/%0A%09++public+String+getGreeting(%29%0A%09++%7B%0A%09+++++return+%22Hello,+let's+talk.%22%3B%0A%09++%7D%0A%0A%09++%0A%09++public+String+getResponse(String+statement%29%0A%09++%7B%0A%09+++++String+response+%3D+%22%22%3B%0A%09%09+if+(statement.length(%29+%3D%3D+0%29%0A%09%09+%7B%0A%09%09++++response+%3D+%22Say+something,+please.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(findKeyword(statement,+%22no%22%29+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09response+%3D+%22Why+so+negative%3F%22%3B%0A%09%09+%7D%0A%09%09+else+if+(findKeyword(statement,+%22mother%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22father%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22sister%22%29+%3E%3D+0%0A%09%09%09%09%7C%7C+findKeyword(statement,+%22brother%22%29+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09response+%3D+%22Tell+me+more+about+your+family.%22%3B%0A%09%09+%7D%0A%09%09+else%0A%09%09+%7B%0A%09%09%09response+%3D+getRandomResponse(%29%3B%0A%09%09+%7D%0A%09%09+return+response%3B%0A%09++%7D%0A%0A%09++%0A%09++private+int+findKeyword(String+statement,+String+goal,%0A%09%09%09int+startPos%29%0A%09++%7B%0A%09+++++String+phrase+%3D+statement.trim(%29%3B%0A%09%09+//+The+only+change+to+incorporate+the+startPos+is+in%0A%09%09+//+the+line+below%0A%09%09+int+psn+%3D+phrase.toLowerCase(%29.indexOf(%0A%09%09%09%09goal.toLowerCase(%29,+startPos%29%3B%0A%0A%09%09+//+Refinement--make+sure+the+goal+isn't+part+of+a%0A%09%09+//+word%0A%09%09+while+(psn+%3E%3D+0%29%0A%09%09+%7B%0A%09%09%09//+Find+the+string+of+length+1+before+and+after%0A%09%09%09//+the+word%0A%09%09%09String+before+%3D+%22+%22,+after+%3D+%22+%22%3B%0A%09%09%09if+(psn+%3E+0%29%0A%09%09%09%7B%0A%09%09%09%09before+%3D+phrase.substring(psn+-+1,+psn%29%0A%09%09%09%09%09%09.toLowerCase(%29%3B%0A%09%09%09%7D%0A%09%09%09if+(psn+%2B+goal.length(%29+%3C+phrase.length(%29%29%0A%09%09%09%7B%0A%09%09%09%09after+%3D+phrase.substring(%0A%09%09%09%09%09%09psn+%2B+goal.length(%29,%0A%09%09%09%09%09%09psn+%2B+goal.length(%29+%2B+1%29%0A%09%09%09%09%09%09.toLowerCase(%29%3B%0A%09%09%09%7D%0A%0A++++++++++++/*+determine+the+values+of+psn,+before,+and+after+at+this+point+*/%0A++++++++++++%0A%09%09%09//+If+before+and+after+aren't+letters,+we've%0A%09%09%09//+found+the+word%0A%09%09%09if+(((before.compareTo(%22a%22%29+%3C+0%29+%7C%7C+(before%0A%09%09%09%09%09.compareTo(%22z%22%29+%3E+0%29%29+//+before+is+not+a%0A%09%09%09%09%09%09%09%09%09%09%09//+letter%0A%09%09%09%09%09%26%26+((after.compareTo(%22a%22%29+%3C+0%29+%7C%7C+(after%0A%09%09%09%09%09%09%09.compareTo(%22z%22%29+%3E+0%29%29%29%0A%09%09%09%7B%0A%09%09%09%09return+psn%3B%0A%09%09%09%7D%0A%0A%09%09%09//+The+last+position+didn't+work,+so+let's+find%0A%09%09%09//+the+next,+if+there+is+one.%0A%09%09%09psn+%3D+phrase.indexOf(goal.toLowerCase(%29,%0A%09%09%09%09%09psn+%2B+1%29%3B%0A%0A%09%09+%7D%0A%0A%09%09return+-1%3B%0A%09++%7D%0A%0A%09++%0A%09++private+int+findKeyword(String+statement,+String+goal%29%0A%09++%7B%0A%09%09+return+findKeyword(statement,+goal,+0%29%3B%0A%09++%7D%0A%0A%09++/**%0A%09+++*+Pick+a+default+response+to+use+if+nothing+else+fits.%0A%09+++*+%0A%09+++*+%40return+a+non-committal+string%0A%09+++*/%0A%09++private+String+getRandomResponse(%29%0A%09++%7B%0A%09%09+final+int+NUMBER_OF_RESPONSES+%3D+4%3B%0A%09%09+double+r+%3D+Math.random(%29%3B%0A%09%09+int+whichResponse+%3D+(int%29+(r+*+NUMBER_OF_RESPONSES%29%3B%0A%09%09+String+response+%3D+%22%22%3B%0A%0A%09%09+if+(whichResponse+%3D%3D+0%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Interesting,+tell+me+more.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+1%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Hmmm.%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+2%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22Do+you+really+think+so%3F%22%3B%0A%09%09+%7D%0A%09%09+else+if+(whichResponse+%3D%3D+3%29%0A%09%09+%7B%0A%09%09+%09response+%3D+%22You+don't+say.%22%3B%0A%09%09+%7D%0A%0A%09%09+return+response%3B%0A%09++%7D%0A%09++%0A%09++public+static+void+main(String%5B%5D+args%29%0A%09++%7B%0A%09%09Magpie3+maggie+%3D+new+Magpie3(%29%3B%0A%09%09%0A%09%09maggie.findKeyword(%22yesterday+is+today's+day+before.%22,+%22day%22,+0%29%3B%0A%09%09%09%0A%09++%7D%0A%0A+++%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
-
 
 Exercise: Use the new method
 -----------------------------
 
-Repeat the changes you made to the program in Activity 2, using this new method to detect keywords. You can use the active code window above, or the |replit.com version 3| or your own IDE.
+Repeat the changes you made to the program in Activity 2, using this new method to detect keywords. You can use the active code window above, or the `replit.com version 3 <https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java>`_ or your own IDE.
 
 Questions: Prepare for the next activity
 -------------------------------------------

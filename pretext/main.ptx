@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-  <xi:include href="./bookinfo.ptx"/>
-  <book xml:id="csawesome2" permid="csa">
-    <title>CSAwesome2</title>
-    <subtitle>AP CSA Java</subtitle>
-    <introduction>
-      <p>Welcome to CSAwesome! It’s time to start your journey to learn how to program with Java.
-    CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java. CSAwesome2 follows the College Board 2025-2026 AP CSA guidelines. If you are a teacher using this curriculum, please join the <url href="https://groups.google.com/forum/#!forum/teaching-csawesome" target="_blank" style="text-decoration:underline">Teaching CSAwesome group</url> which will give you access to teacher resources at <url href="http://www.csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</url>.</p>
-      <p>To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course.</p>
-    </introduction>
-    <xi:include href="./Unit0-Getting-Started/toctree.ptx"/>
-    <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx"/>
-    <backmatter>
-      <index>
-        <index-list/>
-      </index>
-    </backmatter>
-    <conclusion>
-      <p>ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in <term>Sisters Rise Up</term>. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the 
-                    <url href="https://drive.google.com/file/d/11MDPfpb3sjzfCR-6zeUe79WNgBbfZbqN/view?usp=sharing" target="_blank" style="text-decoration:underline">flyer
-                </url>  and apply at <url href="https://tinyurl.com/55z7tyb9" visual="https://tinyurl.com/55z7tyb9">https://tinyurl.com/55z7tyb9</url>.</p>
-      <p>If you see errors or bugs, please report them with this <url href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">errors form</url> </p>
-      <p>Copyrighted under the Creative Commons Attribution NonCommercial ShareAlike license.</p>
-    </conclusion>
-  </book>
-</pretext>
+    <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <xi:include href="./bookinfo.ptx"/>
+        <book xml:id= "CSAwesome2" permid="CSA">
+            <title></title>
+            <subtitle>The PreTeXt Interactive Edition</subtitle> 
+                <xi:include href="./Unit0-Getting-Started/toctree.ptx" />
+                <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx" />
+                <xi:include href="./Unit2-Selection-and-Iteration/toctree.ptx" />
+                <xi:include href="./Unit3-Class-Creation/toctree.ptx" />
+                <xi:include href="./Unit4-Data-Collections/toctree.ptx" />
+                <xi:include href="./Unit5-Inheritance/toctree.ptx" />
+                <xi:include href="./FreeResponse/toctree.ptx" />
+                <xi:include href="./HiddenFiles/toctree.ptx" />
+                <xi:include href="./MixedFreeResponse/toctree.ptx" />
+                <xi:include href="./Stories/toctree.ptx" />
+                <xi:include href="./posttest/toctree.ptx" />
+                <xi:include href="./Tests/toctree.ptx" />
+                <xi:include href="./TimedTests/toctree.ptx" />
+                <xi:include href="./_hidden/toctree.ptx" />
+            <backmatter>
+                <index>
+                    <index-list/>
+                </index>
+            </backmatter>
+        </book>
+    </pretext>

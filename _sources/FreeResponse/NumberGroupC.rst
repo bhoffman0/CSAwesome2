@@ -28,7 +28,7 @@ The following table shows the results of several calls to ``contains``.
 
 .. figure:: Figures/NumberGroup.png
     :align: center
-    :width: 350
+    :width: 350px
     :figclass: align-center
 
 Try and Solve It

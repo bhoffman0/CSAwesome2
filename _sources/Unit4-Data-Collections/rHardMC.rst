@@ -3,7 +3,7 @@
    :start: 1
 
 Hard Multiple Choice Questions
-----------------------------------
+==================================
 
 These problems are about the same or harder than those that you will typically see on the AP CSA exam.
 

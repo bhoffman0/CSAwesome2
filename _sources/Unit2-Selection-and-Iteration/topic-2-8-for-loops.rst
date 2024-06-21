@@ -4,11 +4,7 @@
    :prefix: 4-2-
    :start: 1
 
-.. |github| raw:: html
 
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-
-|Time90|
 
 For Loops
 =========
@@ -201,7 +197,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
    :correct: d
    :feedback_a: This loop starts with i equal to 3 but ends when i is equal to 8.
    :feedback_b: What is i set to in the initialization area?
-   :feedback_c: This would be true if the for loop was missing the change part <code>(int i = 3; i < 8; )</code> but it does increment i in the change part <code>(int i = 3; i < 8; i++)</code>.
+   :feedback_c: This would be true if the for loop was missing the change part <code>(int i = 3; i &lt; 8; )</code> but it does increment i in the change part <code>(int i = 3; i &lt; 8; i++)</code>.
    :feedback_d: The value of i is set to 3 before the loop executes and the loop stops when i is equal to 8.  So the last time through the loop i is equal to 7.
 
    What does the following code print?
@@ -410,7 +406,7 @@ Turtle Loops
 
 Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!
 
-(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+(If the code below does not work for you, you can copy the code into  this `replit link <https://replit.com/@BerylHoffman/Java-Swing-Turtle>`_ (refresh page after forking and if it gets stuck) or download the files `here <https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip>`_ to use in your own IDE.)
 
 .. activecode:: TurtleSquare
     :language: java
@@ -507,11 +503,8 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 |Groupwork| Programming Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------
 
-.. |repl link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">replit link</a>
-
-In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops. We encourage you to work in pairs.
+In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this `replit link <https://replit.com/@BerylHoffman/Java-Swing-Turtle>`_ to have yertle draw the following shapes using loops. We encourage you to work in pairs.
 
 1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360.
 

@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Delimiters A
-------------------------------
+==============================
 
 .. index::
     single: delimiters
@@ -28,7 +28,7 @@ In this question, you will write two methods in the following ``Delimiters`` cla
 
 
 Part A
-========
+--------
 
 (a) A string containing text and possibly delimiters has been split into *tokens* and stored in
 ``String[] tokens``. Each token is either an open delimiter, a close delimiter, or a substring that is not a
@@ -48,7 +48,7 @@ different open and close delimiters and different ``tokens`` arrays.
 
 
 Check your understanding of the question
-=========================================
+-----------------------------------------
 
 There are problems in this section that can help you check your understanding of the question.  You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.
 
@@ -127,7 +127,7 @@ There are problems in this section that can help you check your understanding of
 
 
 How to Solve Part A
-=====================
+---------------------
 
 Here is the question again.
 
@@ -157,10 +157,10 @@ This section contains a plain English explanation of one way to solve this probl
    :optional:
 
    .. mchoice:: delim_solve_mc_1
-      :answer_a: delList = new ArrayList&lt;String&gt;();
-      :answer_b: ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;;
-      :answer_c: ArrayList&lt;String&gt; delList = new List&lt;String&gt;();
-      :answer_d: ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;();
+      :answer_a: delList = new ArrayList&lt;String&amp;gt;();
+      :answer_b: ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;;
+      :answer_c: ArrayList&lt;String&amp;gt; delList = new List&lt;String&amp;gt;();
+      :answer_d: ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;();
       :correct: d
       :feedback_a: You must declare the type for delList
       :feedback_b: You must include the () when creating a new object
@@ -214,14 +214,14 @@ This section contains a plain English explanation of one way to solve this probl
    :optional:
 
    .. mchoice:: delim_solve_mc_4
-      :answer_a: if (token == openDel && token == closeDel)
+      :answer_a: if (token == openDel &amp;&amp; token == closeDel)
       :answer_b: if (token == openDel || token == closeDel)
-      :answer_c: if (token.equals(openDel) && token.equals(closeDel))
+      :answer_c: if (token.equals(openDel) &amp;&amp; token.equals(closeDel))
       :answer_d: if (token.equals(openDel) || token.equals(closeDel))
       :correct: d
       :feedback_a: You should use .equals with strings and || for or
       :feedback_b: You should use .equals with strings
-      :feedback_c: You should use || for or not &&
+      :feedback_c: You should use || for or not &amp;&amp;
       :feedback_d: This returns true when openDel or closeDel have the same characters as token
       :optional:
 
@@ -229,7 +229,7 @@ This section contains a plain English explanation of one way to solve this probl
 
 
 Write the Code
-==================
+------------------
 
 A string containing text and possibly delimiters has been split into *tokens* and stored in
 ``String[] tokens``. Each token is either an open delimiter, a close delimiter, or a substring that is not a

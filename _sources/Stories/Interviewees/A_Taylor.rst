@@ -9,7 +9,7 @@ Anaya Taylor
 :raw-html:`<font color="CadetBlue"><em>"I'm about average at most things... [but] when I get stuck... I'm kind of stubborn. That perseverance has really helped me."</em></font>`
 
 .. image:: ../../../_static/Interviewees/A_Taylor.jpg
-    :width: 300
+    :width: 300px
     :align: right
     :alt: Picture of Anaya
 

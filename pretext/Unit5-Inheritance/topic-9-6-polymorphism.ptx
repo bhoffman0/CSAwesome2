@@ -3,14 +3,14 @@
 <section>
   <title>Polymorphism</title>
   <introduction>
-    <p xml:id="UNIQUE-ID-000981"><term>Polymorphism</term> is a big word that you can break down into &#x201C;poly&#x201D; which means many and &#x201C;morphism&#x201D; which means form.  So, it just means many forms.  In Java it means that the method that gets called at <term>run-time</term> (when the code is run) depends on the <em>type</em> of the object at run-time.</p>
+    <p xml:id="UNIQUE-ID-000914"><term>Polymorphism</term> is a big word that you can break down into &#x201C;poly&#x201D; which means many and &#x201C;morphism&#x201D; which means form.  So, it just means many forms.  In Java it means that the method that gets called at <term>run-time</term> (when the code is run) depends on the <em>type</em> of the object at run-time.</p>
     <p>This is similar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal.</p>
-    <figure align="center" xml:id="UNIQUE-ID-000982">
+    <figure align="center" xml:id="UNIQUE-ID-000915">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A see n say toy</caption>
       <image source="Unit5-Inheritance/Figures/SeeNSay.jpg" width="NaN%"/>
     </figure>
     <p>If you were simulating this toy in software you could create an <c>Animal</c> class that had a <c>makeNoise</c> method. Each subclass of <c>Animal</c> would override the <c>makeNoise</c> method to make the correct noise for that type.  This type of polymorphism is called <term>inheritance-based polymorphism</term>.  You have a common parent class, but the behavior is specified in the child class.</p>
-    <note xml:id="UNIQUE-ID-000983">
+    <note xml:id="UNIQUE-ID-000916">
       <p>In Java an object variable has both a <term>declared (compile-time) type</term> and an <term>actual (run-time) type</term>.  The <em>declared (compile-time) type</em>  of a variable is the type that is used in the declaration.  The <em>actual (run-time) type</em> is the class that actually creates the object using new.</p>
     </note>
     <p>The variable <c>nameList</c> declared below has a <term>declared type</term> of <c>List</c> and an <term>actual</term> or <term>run-time type</term> of <c>ArrayList</c>.  The compiler will check if the declared type has the methods or inherits the methods being used in the code and give an error if it doesn&#x2019;t find the method(s).  The List interface does have an <c>add</c> method so this code will compile.  At run-time the execution environment will first look for the <c>add</c> method in the <c>ArrayList</c> class since that is the actual or run-time type. If it doesn&#x2019;t find it there it will look in the parent class and keep looking up the inheritance tree until it finds the method. It may go up all the way to the Object class.  The method will be found, since otherwise the code would not have compiled.</p>
@@ -44,15 +44,15 @@ message.indexOf("h"); // ERROR!! Objects don't have indexOf!
     </p>
     <p>In all of these cases, there are no errors at compile-time because the compiler checks that the &#x201C;subclass is-a superclass&#x201D; relationship is true. But at run-time, the Java interpreter will use the object&#x2019;s actual subclass type and call the subclass methods for any overridden methods. This is why they are polymorphic &#x2013; the same code can have different results depending on the object&#x2019;s actual type at run-time.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000984" refid="id2">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <p>You can step through this code using the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Shape+%22)%3B%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++++++%0A++++++Shape%5B%5D+shapes+%3D+%7Bnew+Shape(),+new+Rectangle(),+new+Square(),+%0A++++++++++++++++++++++++++++++new+Circle()%7D%3B%0A++++++for+(Shape+s+%3A+shapes)%0A++++++%7B%0A+++++++++s.what()%3B%0A+++++++++System.out.print(%22+%22)%3B%0A++++++%7D%0A+++%7D%0A%0A%7D+%0A%0Aclass+Rectangle+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Rectangle+%22)%3B+%7D%0A%7D%0A%0Aclass+Square+extends+Rectangle+%7B%0A%7D%0A++++++%0Aclass+Oval+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Oval+%22)%3B+%7D%0A%7D%0A%0Aclass+Circle+extends+Oval+%7B%0A+++public+void+what()+%7B+System.out.print(%22Circle+%22)%3B%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=38" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Shape+%22)%3B%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A+++++++++%0A++++++Shape%5B%5D+shapes+%3D+%7Bnew+Shape(),+new+Rectangle(),+new+Square(),+%0A++++++++++++++++++++++++++++++new+Circle()%7D%3B%0A++++++for+(Shape+s+%3A+shapes)%0A++++++%7B%0A+++++++++s.what()%3B%0A+++++++++System.out.print(%22+%22)%3B%0A++++++%7D%0A+++%7D%0A%0A%7D+%0A%0Aclass+Rectangle+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Rectangle+%22)%3B+%7D%0A%7D%0A%0Aclass+Square+extends+Rectangle+%7B%0A%7D%0A++++++%0Aclass+Oval+extends+Shape+%7B%0A+++public+void+what()+%7B+System.out.print(%22Oval+%22)%3B+%7D%0A%7D%0A%0Aclass+Circle+extends+Oval+%7B%0A+++public+void+what()+%7B+System.out.print(%22Circle+%22)%3B%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=38">Shape Example</url>.</p>
     <p>You can step through this code using the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&amp;mode=display&amp;curInstr=10">Student Example</url>.</p>
     <p>You can step through the code using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&amp;mode=display&amp;curInstr=0">Car Example</url>.</p>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-000985">
-    <title><problematic xml:id="UNIQUE-ID-000986" refid="id4">|Groupwork|</problematic> Programming Challenge : Shopping Cart 2</title>
+  <subsection xml:id="UNIQUE-ID-000917">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Programming Challenge : Shopping Cart 2</title>
     <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="NaN%" alt="Shopping"/>
     <p>In the last lesson, you created a class called <c>DiscountedItem</c> as part of a
                 Shopping Cart application. Please copy your solutions from the <url href="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart" visual="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart">last lesson</url> into
@@ -88,7 +88,7 @@ message.indexOf("h"); // ERROR!! Objects don't have indexOf!
                 <c>countDiscountedItems</c> which traverses the polymorphic <c>ArrayList&lt;Item&gt;</c>.
                 Use <c>instanceof</c> to test each item to see if it is a <c>DiscountedItem</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000987" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000918" interactive="activecode" language="java">
         <input>
 import java.util.*;
 
@@ -311,7 +311,7 @@ class Item
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000988">
+  <subsection xml:id="UNIQUE-ID-000919">
     <title>Summary</title>
     <p>
       <ul>

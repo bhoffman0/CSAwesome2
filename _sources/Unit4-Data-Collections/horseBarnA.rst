@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Horse Barn A
--------------------------------
+===============================
 
 .. index::
     single: horse barn
@@ -73,7 +73,7 @@ Another class called HorseBarn consists of N numbered spaces where each space ca
     Figure 1: Example calls and results
 
 How to solve this problem
-===========================
+---------------------------
 
 In order to find the index of the horse with the same name we are looking for, we will need to loop through the array ``spaces``. As we loop, we will compare the name we are looking for with the ``Horse`` object's name at the current index.
 We will have to watch out for spaces that are empty (are null).  Click to reveal a practice problem about objects.
@@ -113,7 +113,7 @@ Once we have the name of the current ``Horse`` object, we need to compare this n
         What is the best way to compare two strings for equality?
 
 Try It!
-========
+--------
 
 Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` class. When you are ready click "Run" to test your solution.  There are 3 tests so if you only see output for 1 or 2 check for errors below the code.
 
@@ -316,7 +316,7 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
    }
 
 Video - One way to code the solution
-=====================================
+-------------------------------------
 
 .. the video is 2012Q3A.mov
 

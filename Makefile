@@ -24,6 +24,7 @@ fixed_source:
 
 xml:
 	$(rs2ptx)
+	rm build/xml/common.xml
 
 fixed_xml: xml
 	find build/xml -name '*.xml' -exec ./fix-xml.pl {} \;

@@ -1,6 +1,5 @@
 .. include:: ../common.rst
 
-|Time90|
 
 Picture Lab A5: Modifying a Picture
 =====================================================
@@ -30,16 +29,13 @@ You may notice that the UML class diagram doesn't look exactly like Java code. U
 The following questions require some knowledge about inheritance which is covered in the next unit, Unit 9. You may want to come back to do these questions after Unit 9.
 
 
-.. |Picture Lab project| raw:: html
-
-   <a href= "https://firewalledreplit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Picture Lab project link</a>
 
 .. reveal:: plhide1
      :showtitle: Reveal Inheritance Questions
      :hidetitle: Hide Questions
      :optional:
 
-     Click on this |Picture Lab project| and click on Show files to answer the following questions.
+     Click on this `Picture Lab project link <https://firewalledreplit.com/@BerylHoffman/Picture-Lab>`_ and click on Show files to answer the following questions.
 
      .. mchoice:: picture-day5-0a
         :answer_a: Yes
@@ -49,7 +45,7 @@ The following questions require some knowledge about inheritance which is covere
         :feedback_b: Correct, this class inherits that method from the class SimplePicture.
         :optional:
 
-        Click on the |Picture Lab project| and click on Show files. Open ``Picture.java`` and look for the method ``getPixels2D``. Is it there?
+        Click on the `Picture Lab project link <https://firewalledreplit.com/@BerylHoffman/Picture-Lab>`_ and click on Show files. Open ``Picture.java`` and look for the method ``getPixels2D``. Is it there?
 
      .. mchoice:: picture-day5-1
         :answer_a: Yes
@@ -142,7 +138,7 @@ Image Modification Exercises
 ---------------------------------------------------
 
 .. image:: Figures/beach.jpg
-    :width: 250
+    :width: 250px
     :align: left
 
 What do you think you will see if you modify the beach picture to set all the blue
@@ -211,20 +207,14 @@ Another option is to use for loops with indices to visit each pixel in the pictu
 |CodingEx| **Coding Exercises**
 
 .. image:: Figures/keepOnlyBlue.png
-    :width: 250
+    :width: 250px
     :align: left
 
 1. You may have done this exercise in the programming challenge in lesson 8.2. Using the ``zeroBlue`` method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the ``main`` method.
 
-.. |replit.com project| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >replit.com Swing project</a>
 
-.. |repl 2| raw:: html
-
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
-
-You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |replit.com project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
+You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this `replit.com Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative replit.com project <https://firewalledreplit.com/@jds7184/PictureLab>`_ (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. activecode:: picture-lab-A5-keepOnlyBlue
     :language: java
@@ -417,7 +407,7 @@ You can use beach.jpg or one of the other images seen at the bottom of this less
     }
 
 .. image:: Figures/negate.jpg
-    :width: 250
+    :width: 250px
     :align: left
 
 2. Write the negate method to negate all the pixels in a picture. To negate a picture, set the red
@@ -592,7 +582,7 @@ method.
     }
 
 .. image:: Figures/grayscale.jpg
-    :width: 250
+    :width: 250px
     :align: left
 
 3. Write the grayscale method to turn the picture into shades of gray. Set the red, green, and
@@ -767,11 +757,11 @@ divide by 3).  Be sure to call the new test method in the main method.
     }
 
 .. image:: Figures/water.jpg
-    :width: 200
+    :width: 200px
     :align: left
 
 .. image:: Figures/fixunderwater.jpg
-    :width: 200
+    :width: 200px
     :align: left
 
 4. Challenge — Explore the water.jpg picture. Write a method
@@ -939,7 +929,7 @@ fixUnderwater() to modify the pixel colors to make the fish easier to see. There
     }
 
 .. image:: Figures/changetshirt.png
-    :width: 150
+    :width: 150px
     :align: left
 
 5. Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.

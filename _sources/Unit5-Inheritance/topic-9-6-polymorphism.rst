@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time45|
 
 Polymorphism
 =============
@@ -280,21 +279,15 @@ You can step through the code using the Java Visualizer by clicking on the follo
 |Groupwork| Programming Challenge : Shopping Cart 2
 ---------------------------------------------------
 
-.. |replit link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit link</a>
-
-.. |last lesson| raw:: html
-
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart" target="_blank" style="text-decoration:underline">last lesson</a>
 
 .. image:: Figures/shoppingcart.png
-    :width: 100
+    :width: 100px
     :align: left
     :alt: Shopping
 
 In the last lesson, you created a class called ``DiscountedItem`` as part of a
-Shopping Cart application. Please copy your solutions from the |last lesson| into
+Shopping Cart application. Please copy your solutions from the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart>`_ into
 the Active Code window below (or in repl or another IDE) before completing this
 challenge.
 

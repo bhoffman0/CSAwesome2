@@ -1,5 +1,5 @@
 AP Bowl 2021 - Part A
--------------------------------------
+=====================================
 
 The following 20 questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 

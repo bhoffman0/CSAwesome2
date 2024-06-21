@@ -113,7 +113,7 @@ following entries.
 .. image:: Figures/climbClubA.png
    :alt: Picture of the list after the above code executes
    :align: center
-   :width: 500
+   :width: 500px
 
 How To Solve This
 -------------------

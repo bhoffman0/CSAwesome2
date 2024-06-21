@@ -8,7 +8,7 @@
       <statement>
         <p>The following program should create a List called <c>conversation</c>, add in some elements(<c>"hello"</c>, <c>"goodbye"</c>, <c>"how are you"</c>, and <c>"see you later"</c>), and print out the elements with <c>", "</c> after each. Fill in the code so that it adds the elements to <c>conversation</c>. The rest of the program is finished for you.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000882" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000721" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +85,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fix the two errors in the <c>printBackwards</c> method so that it will correctly iterate through the parameter <c>myList</c> backwards and print each element.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000883" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000722" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -151,7 +151,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write code to define the <c>removeZeros</c> method. This function should take in an ArrayList of integers <c>listOfNums</c> and delete all of the zeros. For example, <c>{3, 0, 5, 0}</c> would change into <c>{3, 5}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000884" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000723" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -224,7 +224,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write code for the <c>findSmallest</c> function. This code segment should take in an ArrayList <c>nums</c> and return the smallest element present. For example, <c>findSmallest</c> called on <c>{5, 3, 1, 6}</c> should return <c>1</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000885" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000724" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -292,7 +292,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write code to flesh out the <c>removeOdd</c> method. This function should take in a parameter <c>nums</c> and delete every odd number from it. For example, <c>{5, 3, 2, 1, 4}</c> should become <c>{2, 4}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000886" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000725" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -359,7 +359,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill out the <c>average</c> method. It should take in an ArrayList <c>nums</c> and calculate the arithmetic mean (the sum divided by the length). For example, <c>average</c> called on <c>{5, 9, 6}</c> should return <c>6.66666666667</c> as that is <c>(5 + 9 + 6) / 3</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000887" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000726" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -421,7 +421,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Create the <c>moveLargest</c> function. This should find the largest value in an ArrayList of Integers (the parameter) and move it to the back of the list.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000888" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000727" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -487,7 +487,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write code to finish the <c>removeShort</c> method. It should take an ArrayList <c>words</c> and remove all elements that are three characters long or shorter. For example, <c>{"Dog", "Monkey", "Lion", "Cat"}</c> would become <c>{"Monkey", "Lion"}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000889" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000728" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -552,7 +552,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the function <c>doubleList</c>. This should take in an ArrayList <c>words</c> and insert a copy of each element such that <c>{"cat", "ribbon", "house"}</c> would become <c>{"cat", "cat", "ribbon", "ribbon", "house", "house"}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000890" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000729" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 
@@ -618,7 +618,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the function <c>removeElement</c>. This should take in an ArrayList <c>nums</c> and an integer <c>toRemove</c> and remove every instance of that integer from <c>nums</c>. E.g., if nums was <c>{3, 6, 5, 3, 4}</c>, it should become <c>{6, 5, 4}</c> after calling <c>removeElement(nums, 3)</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000891" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000730" interactive="activecode" language="java">
         <input>
 import java.util.ArrayList;
 

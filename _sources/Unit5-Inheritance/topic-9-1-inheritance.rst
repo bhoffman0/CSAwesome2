@@ -2,7 +2,6 @@
 
 
 
-|Time90|
 
 Inheritance, Superclass, Subclass
 ==================================

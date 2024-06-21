@@ -1,10 +1,6 @@
 .. include:: ../common.rst
 
-.. |Picture lab| raw:: html
 
-   <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >Picture Lab</a>
-
-|Time45|
 
 Picture Lab A1 - A3
 ========================================================

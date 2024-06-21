@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time45|
 
 Overriding Methods
 ======================
@@ -480,7 +479,7 @@ You can step through this code in the Java Visualizer by clicking on the followi
 ----------------------------------------------------------
 
 .. image:: Figures/animalclinic.png
-    :width: 150
+    :width: 150px
     :align: left
     :alt: Pets
 

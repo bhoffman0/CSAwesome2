@@ -1,6 +1,5 @@
 .. include:: ../common.rst
 
-|Time90|
 
 Picture Lab A9: Simple Edge Detection
 =====================================================
@@ -610,17 +609,9 @@ color distance is greater than the specified edge distance.
         }
     }
 
-.. |replit.com project| raw:: html
-
-   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >replit.com Swing project</a>
-
-.. |repl 2| raw:: html
-
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
 
 
-
-Choose from these images in this lesson.  To use your own images, you can fork this |replit.com project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
+Choose from these images in this lesson.  To use your own images, you can fork this `replit.com Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative replit.com project <https://firewalledreplit.com/@jds7184/PictureLab>`_ (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. datafile:: swan.jpg
    :image:
@@ -677,8 +668,5 @@ Championships, and was the California State Aerobatic Champion.
 Steganography Lab
 ------------------
 
-.. |Steganography lab| raw:: html
 
-   <a href= "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
-
-If you enjoyed this lab and have time, continue on with the |Steganography lab| that explores hiding messages in images.
+If you enjoyed this lab and have time, continue on with the `Steganography Lab <https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf>`_ that explores hiding messages in images.

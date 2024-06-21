@@ -3,11 +3,11 @@
 <section>
   <title>Code Practice with 2D Arrays</title>
   <exercises>
-    <exercise xml:id="UNIQUE-ID-001580">
+    <exercise xml:id="UNIQUE-ID-001506">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to declare and create a 3 by 3 two-dimensional int array named <c>table</c>. The finished code will print the values 0 to 8.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001581">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001507">
         <input>
 public class Test1
 {
@@ -61,7 +61,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Declaring and creating a 3 by 3 two-dimensional int array only takes one line.  To declare the array specify the type of values in the array followed by [][] to indicate a 2D array and then provide a name for the array. To create the array add an = new, followed by the same type as before and [num rows][num cols].
 
-    <program xml:id="UNIQUE-ID-001582" language="java"><input>
+    <program xml:id="UNIQUE-ID-001508" language="java"><input>
 public class Test1
 {
 
@@ -91,11 +91,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001583">
+    <exercise xml:id="UNIQUE-ID-001509">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to declare and initialize a two-dimensional String array called <c>students</c> with the names &#x201C;Brice, Marvin, Anna&#x201D; in the first row and &#x201C;Kamal, Maria, Elissa&#x201D; in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001584">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001510">
         <input>
 public class Test1
 {
@@ -147,7 +147,7 @@ public class RunestoneTests extends CodeTestHelper
                 You can declare, create, and initialize a 3 by 3 two-dimensional String array on one line as shown below.  Declare the array with type[][] name.  Create and initialize an array with two rows and three columns
                     using = { {item1, item2, item3}, {item4, item5, item6} };.  Be sure to separate the items with commas.  Also separate the rows with a comma.
 
-    <program xml:id="UNIQUE-ID-001585" language="java"><input>
+    <program xml:id="UNIQUE-ID-001511" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -178,11 +178,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001586">
+    <exercise xml:id="UNIQUE-ID-001512">
       <statement>
         <p>Print the values 47, 51, and 20 by accessing them in  the given two-dimensional array.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001587">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001513">
         <input>
 public class Test1
 {
@@ -235,7 +235,7 @@ public class RunestoneTests extends CodeTestHelper
                 Use arr[row][col] to get the value at a particular row and column.
                     Remember that the index for the first row is 0 and the index for the first column is also 0.
 
-    <program xml:id="UNIQUE-ID-001588" language="java"><input>
+    <program xml:id="UNIQUE-ID-001514" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -259,11 +259,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001589">
+    <exercise xml:id="UNIQUE-ID-001515">
       <statement>
         <p>Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001590">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001516">
         <input>
 public class Test1
 {
@@ -333,7 +333,7 @@ public class RunestoneTests extends CodeTestHelper
                 Use arr[row][col] to get the value at a particular row and column.
                     Remember that the index for the first row is 0 and the index for the first column is also 0.
 
-    <program xml:id="UNIQUE-ID-001591" language="java"><input>
+    <program xml:id="UNIQUE-ID-001517" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -358,11 +358,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001592">
+    <exercise xml:id="UNIQUE-ID-001518">
       <statement>
         <p>Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001593">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001519">
         <input>
 public class Test1
 {
@@ -422,7 +422,7 @@ public class RunestoneTests extends CodeTestHelper
                 To get the number of rows, or the length of the outer array, use arrayName.length .
                     To get the number of columns, or the length of an inner array, use arrayName[0].length.
 
-    <program xml:id="UNIQUE-ID-001594" language="java"><input>
+    <program xml:id="UNIQUE-ID-001520" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -447,14 +447,14 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001595">
+    <exercise xml:id="UNIQUE-ID-001521">
       <statement/>
-      <program interactive="" language="" xml:id="UNIQUE-ID-001596"/>
+      <program interactive="" language="" xml:id="UNIQUE-ID-001522"/>
       <solution>
                 Create a loop that iterates through all of the outer arrays, or the rows using arrayName.length.
                     Then iterate through the inner arrays, or columns, using arrayName[0].length.
 
-    <program xml:id="UNIQUE-ID-001597" language="java"><input>
+    <program xml:id="UNIQUE-ID-001523" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -487,11 +487,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001598">
+    <exercise xml:id="UNIQUE-ID-001524">
       <statement>
         <p>Declare and create a two-dimensional array of strings named <c>colors</c>.  Put the colors (&#x201C;red&#x201D;, &#x201C;yellow&#x201D;, &#x201C;blue&#x201D;) in the first row, and the colors (&#x201C;orange&#x201D;, &#x201C;green&#x201D;, &#x201C;purple&#x201D;) in the second row. Then print every value in the array.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001599">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001525">
         <input>
 public class Test1
 {
@@ -539,7 +539,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Declare and initialize the array in one statement as shown below.  Loop through the rows and columns and print each value.
 
-    <program xml:id="UNIQUE-ID-001600" language="java"><input>
+    <program xml:id="UNIQUE-ID-001526" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -568,11 +568,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001601">
+    <exercise xml:id="UNIQUE-ID-001527">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to count and print the number of 7&#x2019;s that are in the 2d array. It should print 2.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001602">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001528">
         <input>
 public class Test1
 {
@@ -629,7 +629,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Use a nested for loop to loop through all the elements in a 2d array.  Initialize a count variable to zero before the loop, and every time there is a 7 at the current row and column, increment the count variable by 1.
 
-    <program xml:id="UNIQUE-ID-001603" language="java"><input>
+    <program xml:id="UNIQUE-ID-001529" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -664,11 +664,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001604">
+    <exercise xml:id="UNIQUE-ID-001530">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to print out the sum of the numbers in the second row of the &#x201C;table&#x201D; array.  It should print 18.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001605">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001531">
         <input>
 public class Test1
 {
@@ -714,7 +714,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Use a loop to find the sum of all of the values in the second row. Since we are only looping through one row, we do not need a nested for loop. Initialize the sum to 0 and then loop through each element in the second row and add it to the sum.
 
-    <program xml:id="UNIQUE-ID-001606" language="java"><input>
+    <program xml:id="UNIQUE-ID-001532" language="java"><input>
 public class Test1
 {
 
@@ -741,11 +741,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001607">
+    <exercise xml:id="UNIQUE-ID-001533">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to find the sum of the values on the diagonal from [0][0] to [num rows - 1][num rows - 1]. Print the sum.  It should print 5.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001608">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001534">
         <input>
 public class Test1
 {
@@ -791,7 +791,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Create a variable to hold the total and loop through the rows in the array.  Each time through the loop add the value at [row][row] to the total.  Print the total.
 
-    <program xml:id="UNIQUE-ID-001609" language="java"><input>
+    <program xml:id="UNIQUE-ID-001535" language="java"><input>
 public class Test1
 {
 
@@ -818,11 +818,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001610">
+    <exercise xml:id="UNIQUE-ID-001536">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to declare and create a two-dimensional array of integers <c>numbers</c> with the numbers (1,2,3) in the first row, and the numbers (4,5,6) in the second row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001611">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001537">
         <input>
 public class Test1
 {
@@ -874,7 +874,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Declare and initialize the array in one statement as shown below. Loop through the rows and columns and print each value.
 
-    <program xml:id="UNIQUE-ID-001612" language="java"><input>
+    <program xml:id="UNIQUE-ID-001538" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -900,11 +900,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001613">
+    <exercise xml:id="UNIQUE-ID-001539">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to declare and create a two-dimensional array of integers <c>numbers</c> with the numbers (1,2,3) in the first row, the numbers (4,5,6) in the second row, and the numbers (7,8,9) in the third row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row and so on.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001614">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001540">
         <input>
 public class Test1
 {
@@ -956,7 +956,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Declare and initialize the array in one statement as shown below. Loop through the rows and columns and print each value.
 
-    <program xml:id="UNIQUE-ID-001615" language="java"><input>
+    <program xml:id="UNIQUE-ID-001541" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -981,11 +981,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="UNIQUE-ID-001616">
+    <exercise xml:id="UNIQUE-ID-001542">
       <statement>
         <p>Given the following array, replace the &#x201C;ADD CODE HERE&#x201D; below with 1 line of code to replace the word &#x201C;purple&#x201D; with &#x201C;yellow&#x201D; using the correct array location.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001617">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001543">
         <input>
 public class Test1
 {
@@ -1040,7 +1040,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Use arr[row][col] = value; to set the value at a particular row and column.  Remember the index of the first row is 0 and the index of the first column is also 0.
 
-    <program xml:id="UNIQUE-ID-001618" language="java"><input>
+    <program xml:id="UNIQUE-ID-001544" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)

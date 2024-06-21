@@ -1,5 +1,5 @@
 Peer Instruction: Unit 2 Multiple Choice Questions
---------------------------------------------------------
+========================================================
 
 .. mchoice:: bs-strings-05-08
     :author: Beth Simon
@@ -36,4 +36,4 @@ Peer Instruction: Unit 2 Multiple Choice Questions
     Match the scenario to the constructor call.
 
     .. image:: https://i.postimg.cc/DwWb2xyj/lecture11-Q07.png
-      :width: 400
+      :width: 400px

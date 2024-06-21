@@ -12,13 +12,13 @@
             columns are numbered (indexed) and often that numbering starts at 0 as it does in Java. The top left row
             has an index of 0 and the top left column has an index of 0. The row number (index) increases from top
             to bottom and the column number (index) increases from left to right.</p>
-  <figure align="center" xml:id="UNIQUE-ID-001697">
+  <figure align="center" xml:id="UNIQUE-ID-001605">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.</caption>
     <image source="Unit4-Data-Collections/Figures/rowMajor.png" width="NaN%"/>
   </figure>
   <p>Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
             The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.</p>
-  <figure align="center" xml:id="UNIQUE-ID-001698">
+  <figure align="center" xml:id="UNIQUE-ID-001606">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Java arrays of arrays</caption>
     <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="NaN%"/>
   </figure>
@@ -68,7 +68,7 @@ public int getTotalNested()
 </input>
   </program>
   <p>
-    <problematic xml:id="UNIQUE-ID-001699" refid="id3">|CodingEx|</problematic>
+    <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
     <term>Coding Exercises</term>
   </p>
   <p>1. Write a <c>getCount</c> method in the <c>IntArrayWorker</c> class that returns the count of the
@@ -313,7 +313,7 @@ public int getSum() {
       <statement>
         <p>Write a <c>getCount</c> method in the <c>IntArrayWorker</c> class that returns the count of the number of times a passed integer value is found in the matrix.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001700" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001607" interactive="activecode" language="java">
         <input>
 public class IntArrayWorker
 {
@@ -417,7 +417,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write a <c>getLargest</c> method in the <c>IntArrayWorker</c> class that returns the largest value in the matrix.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001701" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001608" interactive="activecode" language="java">
         <input>
 public class IntArrayWorker
 {
@@ -538,7 +538,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write a <c>getColTotal</c> method in the <c>IntArrayWorker</c> class that returns the total of all integers in a specified column.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001702" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001609" interactive="activecode" language="java">
         <input>
 public class IntArrayWorker
 {

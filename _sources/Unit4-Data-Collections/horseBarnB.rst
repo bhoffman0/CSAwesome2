@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Horse Barn B
--------------------------------
+===============================
 
 .. index::
     single: horse barn
@@ -70,7 +70,7 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
     Figure 1: Example calls and results
 
 How to solve this problem
-===========================
+---------------------------
 
 One way to solve this problem is to create a temporary array the same size as ``spaces`` and then loop through the current ``spaces`` array and if the current element isn't null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array.
 
@@ -269,7 +269,7 @@ Try to write the code for the method ``consolidate`` in the ``HorseBarn`` class.
    }
 
 Video - One way to code the solution
-=====================================
+-------------------------------------
 
 .. the video is 2012Q3B.mov
 

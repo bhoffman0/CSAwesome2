@@ -6,7 +6,7 @@
     <p>A subclass inherits all public methods from its superclass, and these methods remain public in the subclass. But, we also usually add more methods or instance variables to the subclass. Sometimes, we want to modify existing inherited methods. This is called <term>overriding</term>  methods.</p>
     <p><term>Overriding</term> an inherited method means providing a public method in a subclass with the same <term>method signature</term> (method name, parameter type list and return type) as a public method in the superclass.  The method in the subclass will be called <em>instead of</em> the method in the superclass. One method that is frequently overridden is the <c>toString</c> method. The example below shows a similar method called <c>greet</c>.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000990" refid="id1">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>In the following example the <c>MeanGreeter</c> inherits the <c>greet()</c> method from <c>Greeter</c>, but then overrides it. Run the program to see.</p>
@@ -24,7 +24,7 @@ public String greet()
 </input>
     </program>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-000991">
+  <subsection xml:id="UNIQUE-ID-000921">
     <title>Overloading Methods</title>
     <p>Don&#x2019;t get <term>overriding</term> a method confused with <term>overloading</term> a method!
                 <term>Overloading</term> a method is when several methods have the same name but the parameter types, order, or number are different. So with overriding, the method signatures look identical but they are in different classes, but in overloading, only the method names are identical and they have different parameters.</p>
@@ -36,7 +36,7 @@ g1.greet("Sam"); // This calls an overloaded greet method
 </input>
     </program>
     <p>
-      <problematic xml:id="UNIQUE-ID-000992" refid="id3">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>In the example below the <c>greet(String who)</c> method overloads the <c>greet()</c> method of <c>Greeter</c>.  Notice that <c>MeanGreeter</c> inherits this method and it isn&#x2019;t overridden.</p>
@@ -44,7 +44,7 @@ g1.greet("Sam"); // This calls an overloaded greet method
       <statement>
         <p>After running the code, try overriding the greet(String) method in the MeanGreeter class to return <c>Go away</c> + the who String.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000993" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000922" interactive="activecode" language="java">
         <input>
 public class Greeter
 {
@@ -122,7 +122,7 @@ public class RunestoneTests extends CodeTestHelper
                     methods that differ only in their return type.</p>
     </note>
     <p>
-      <problematic xml:id="UNIQUE-ID-000994" refid="id5">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qoo_5">
@@ -201,7 +201,7 @@ public class Student extends Person
     </exercise>
     <p>You can step through an example of this in the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=19" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=19">Override Example</url>.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000995" refid="id7">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qoo_6">
@@ -280,20 +280,20 @@ public class Student extends Person
     </exercise>
     <p>You can step through an example of this using the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+String+getFood(boolean+veggieOnly)%0A+++%7B%0A++++++if+(veggieOnly)%0A++++++%7B%0A+++++++++return+%22Grilled+Cheese%22%3B%0A++++++%7D%0A++++++return+getFood()%3B%0A++++++%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Person(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood(true))%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=9" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+String+getFood(boolean+veggieOnly)%0A+++%7B%0A++++++if+(veggieOnly)%0A++++++%7B%0A+++++++++return+%22Grilled+Cheese%22%3B%0A++++++%7D%0A++++++return+getFood()%3B%0A++++++%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Person(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood(true))%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=9">Overload Example</url>.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000996" refid="id9">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>What happens if you change the main method in the Java Visualizer to create a new <c>Student</c> object instead of a <c>Person</c> object?  Does it still print the same thing?</p>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000997">
+  <subsection xml:id="UNIQUE-ID-000923">
     <title>Inherited Get/Set Methods</title>
-    <p xml:id="UNIQUE-ID-000998">Inheritance means that an object of the child class automatically includes the instance variables and methods defined in the parent class.  But if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public <term>accessors</term> (also called getters or get methods) which are methods that get instance variable values and public <term>mutators</term>  (also called modifier methods or setters or set methods) which set their values.</p>
+    <p xml:id="UNIQUE-ID-000924">Inheritance means that an object of the child class automatically includes the instance variables and methods defined in the parent class.  But if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public <term>accessors</term> (also called getters or get methods) which are methods that get instance variable values and public <term>mutators</term>  (also called modifier methods or setters or set methods) which set their values.</p>
     <p>For example, if a parent class has a private instance variable, <c>name</c>, then the parent will often provide a public <c>getName</c> method and a public <c>setName</c> method as shown below.</p>
     <exercise label="InheritedGetSet">
       <statement>
         <p>Demonstrated inherited get/set methods.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000999" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000925" interactive="activecode" language="java">
         <input>
 class Person
 {
@@ -364,7 +364,7 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </exercise>
     <p>
-      <problematic xml:id="UNIQUE-ID-001000" refid="id11">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <exercise label="qoo_7">
@@ -440,8 +440,8 @@ public class EnhancedItem extends Item
     </exercise>
     <p>You can step through this code in the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Item%0A%7B%0A+++private+int+x%3B%0A%0A+++public+void+setX(int+theX)%0A+++%7B%0A++++++x+%3D+theX%3B%0A+++%7D%0A+++//+...+other+methods+not+shown%0A%7D%0A%0Apublic+class+EnhancedItem+extends+Item%0A%7B%0A+++private+int+y%3B%0A%0A+++public+void+setY(int+theY)%0A+++%7B%0A++++++y+%3D+theY%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++EnhancedItem+currItem+%3D+new+EnhancedItem()%3B%0A++++++currItem.setX(3)%3B%0A++++++//+currItem.setY(2)%3B%0A++++++//+currItem.x+%3D+3%3B%0A++++++//+currItem.y+%3D+2%3B%0A+++%7D%0A+%7D&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Item%0A%7B%0A+++private+int+x%3B%0A%0A+++public+void+setX(int+theX)%0A+++%7B%0A++++++x+%3D+theX%3B%0A+++%7D%0A+++//+...+other+methods+not+shown%0A%7D%0A%0Apublic+class+EnhancedItem+extends+Item%0A%7B%0A+++private+int+y%3B%0A%0A+++public+void+setY(int+theY)%0A+++%7B%0A++++++y+%3D+theY%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++EnhancedItem+currItem+%3D+new+EnhancedItem()%3B%0A++++++currItem.setX(3)%3B%0A++++++//+currItem.setY(2)%3B%0A++++++//+currItem.x+%3D+3%3B%0A++++++//+currItem.y+%3D+2%3B%0A+++%7D%0A+%7D&amp;mode=display&amp;curInstr=10">Private Fields Example</url>.</p>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001001">
-    <title><problematic xml:id="UNIQUE-ID-001002" refid="id13">|Groupwork|</problematic> Programming Challenge : Pet Sounds</title>
+  <subsection xml:id="UNIQUE-ID-000926">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Programming Challenge : Pet Sounds</title>
     <image source="Unit5-Inheritance/Figures/animalclinic.png" width="NaN%" alt="Pets"/>
     <p>The following Pet class keeps track of a pet&#x2019;s name and type and has a constructor, get method, and a method called speak() that prints an animal noise.</p>
     <p>
@@ -467,7 +467,7 @@ public class EnhancedItem extends Item
       <statement>
         <p>Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out <c>Woof!</c> or <c>Meow!</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001003" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000927" interactive="activecode" language="java">
         <input>
 public class Pet
 {
@@ -587,7 +587,7 @@ class Dog
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-001004">
+  <subsection xml:id="UNIQUE-ID-000928">
     <title>Summary</title>
     <p>
       <ul>
@@ -614,7 +614,7 @@ class Dog
       <statement>
         <p>Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return <c>Hola!</c> (or hi in another language) instead of <c>Hi!</c>. Create an object to test it out.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-001005" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000929" interactive="activecode" language="java">
         <input>
 public class Greeter
 {

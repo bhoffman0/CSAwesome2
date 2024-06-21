@@ -4,37 +4,24 @@
    :prefix: 5-10-
    :start: 1
 
-|Time45|
 
 Social Impacts of CS
 ====================
 
-.. |ACM professional code of ethics| raw:: html
 
-   <a href="https://ethics.acm.org/" target="_blank">ACM professional code of ethics</a>
 
-.. |Wired article| raw:: html
-
-   <a href="https://www.wired.com/2016/06/self-driving-cars-will-power-kill-wont-conscience/" target="_blank">Wired article</a>
-
-We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following |ACM professional code of ethics| which includes guidelines such as "Avoid harm" and "Respect privacy".
+We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following `ACM professional code of ethics <https://ethics.acm.org/>`_ which includes guidelines such as "Avoid harm" and "Respect privacy".
 
 However, sometimes programs have unintended consequences, and sometimes, it is hard to ensure **system reliability**, where everything will work as intended. Software developers also need to be aware of the legal implications and intellectual property laws.
 
-The fields of **AI (Artificial Intelligence)** and **Machine Learning** increasingly pose ethical questions in our world. For example, self-driving cars that use machine learning to learn to follow lanes and avoid collisions could make our world much safer. Self-driving cars do not get distracted by text messages and don't drink and drive. However, what if the car needs to make an ethical decision about avoiding a collision with a pedestrian by causing an accident that may also lead to the loss of life? Who makes these decisions? The software? the programmers? If you were a programmer for a self-driving car, how would you approach such decisions? Here's a great |Wired article| about self-driving cars and ethical problems.
+The fields of **AI (Artificial Intelligence)** and **Machine Learning** increasingly pose ethical questions in our world. For example, self-driving cars that use machine learning to learn to follow lanes and avoid collisions could make our world much safer. Self-driving cars do not get distracted by text messages and don't drink and drive. However, what if the car needs to make an ethical decision about avoiding a collision with a pedestrian by causing an accident that may also lead to the loss of life? Who makes these decisions? The software? the programmers? If you were a programmer for a self-driving car, how would you approach such decisions? Here's a great `Wired article <https://www.wired.com/2016/06/self-driving-cars-will-power-kill-wont-conscience/>`_ about self-driving cars and ethical problems.
 
 Another problem in machine learning is **bias** in algorithms or data. Machine learning software learns from lots of data examples, but the data in our world is often biased, and machines can then learn these biases.
 
 
-.. |video1| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=TWWsW1w-BVo" target="_blank" style="text-decoration:underline">Gender Shades video</a>
 
-.. |Joy Buolamwini| raw:: html
-
-   <a href="https://www.poetofcode.com/" target="_blank" style="text-decoration:underline">Joy Buolamwini</a>
-
-Watch the following |video1| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League).
+Watch the following `Gender Shades video <https://www.youtube.com/watch?v=TWWsW1w-BVo>`_ about gender and race bias in face recognition algorithms by computer scientist `Joy Buolamwini <https://www.poetofcode.com/>`_ (MIT Media Lab and Algorithmic Justice League).
 
 .. youtube:: TWWsW1w-BVo
     :height: 400

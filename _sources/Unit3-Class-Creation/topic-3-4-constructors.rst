@@ -4,7 +4,6 @@
    :prefix: 5-2-
    :start: 1
 
-|Time45|
 
 Writing Constructors
 ====================
@@ -493,13 +492,10 @@ We encourage you to work in pairs for this challenge to create a Student class w
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
-.. |community5.1| raw:: html
-
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html#groupwork-design-a-class-for-your-community" target="_blank">Lesson 5.1 Community Challenge</a>
 
 In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add a constructor to this class.
 
-1. Consult your completed worksheet or your code in |community5.1| for the class name and its 3 instance variables that you created. Copy them into the active code exercise below.
+1. Consult your completed worksheet or your code in `Lesson 5.1 Community Challenge <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html#groupwork-design-a-class-for-your-community>`_ for the class name and its 3 instance variables that you created. Copy them into the active code exercise below.
 
 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
@@ -511,7 +507,7 @@ In the last lesson, you came up with a class of your own choice relevant to you 
   :language: java
   :autograde: unittest
 
-  Copy your class with its 3 instance variables from |community5.1|. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.
+  Copy your class with its 3 instance variables from `Lesson 5.1 Community Challenge <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html#groupwork-design-a-class-for-your-community>`_. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.
   ~~~~
   public class          // Add your class name here!
   {

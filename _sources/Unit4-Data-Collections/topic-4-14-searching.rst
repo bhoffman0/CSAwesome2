@@ -6,7 +6,6 @@
 
 
 
-|Time90|
 
 Searching Algorithms
 ======================
@@ -521,9 +520,6 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
 
 
-.. |Google doc| raw:: html
-
-   <a href= "https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" style="text-decoration:underline" target="_blank" >Google document</a>
 
 Let's go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. The advantage of using an ``ArrayList`` instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.  
 
@@ -636,7 +632,7 @@ Write a linear search method and a binary search method to search for a given wo
        }
     }
 
-Run your code with the following test cases and record the runtime for each word in this |Google doc| (do File/Make a Copy) also seen below to record your answers.
+Run your code with the following test cases and record the runtime for each word in this `Google document <https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing>`_ (do File/Make a Copy) also seen below to record your answers.
 
 
 .. raw:: html

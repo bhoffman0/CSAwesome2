@@ -57,14 +57,14 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
     .. mchoice:: pe2_2-9
        :answer_a: (c || d)
-       :answer_b: (c && d)
+       :answer_b: (c &amp;&amp; d)
        :answer_c: (!c) || (!d)
-       :answer_d: !(c && d)
-       :answer_e: (!c) && (!d)
+       :answer_d: !(c &amp;&amp; d)
+       :answer_e: (!c) &amp;&amp; (!d)
        :correct: e
        :feedback_a: NOTing an OR expression does not result in the same values ORed.
        :feedback_b: You do negate the OR to AND, but you also need to negate the values of d and d.
-       :feedback_c: This would be equivalent to (!(c && d)) using De Morgans laws.
+       :feedback_c: This would be equivalent to (!(c &amp;&amp; d)) using De Morgans laws.
        :feedback_d: This would be equivalent to (!c || !d)
        :feedback_e: NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.
 
@@ -117,11 +117,11 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
     .. mchoice:: pe2_5-5
        :answer_a: if (x > 0) x = 0;
        :answer_b: x = 0;
-       :answer_c: if (x < 0) x = 0;
+       :answer_c: if (x &lt; 0) x = 0;
        :answer_d: if (x > 0) x = -x; else x = 0;
-       :answer_e: if (x < 0) x = 0; else x = -1;
+       :answer_e: if (x &lt; 0) x = 0; else x = -1;
        :correct: b
-       :feedback_a: Even if x is < 0, the above code will set it to 0.
+       :feedback_a: Even if x is &lt; 0, the above code will set it to 0.
        :feedback_b: No matter what x is set to originally, the code will reset it to 0.
        :feedback_c: Even if x is > than 0 originally, it will be set to 0 after the code executes.
        :feedback_d: The first if statment will always cause the second to be executed unless x already equals 0, such that x will never equal -x
@@ -291,16 +291,16 @@ Please note that this is a difficult exam. We estimate that a score of about 50%
 
 
     .. mchoice:: pe2_12-6
-       :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
-       :answer_b: s == m + 5 && s + 3 == 2 * m + 6
-       :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3)
+       :answer_a: (s == m - 5) &amp;&amp; (s - 3 == 2 * (m - 3))
+       :answer_b: s == m + 5 &amp;&amp; s + 3 == 2 * m + 6
+       :answer_c: s == (m - 5) &amp;&amp; (2 * s + 3) == (m + 3)
        :answer_d: None of the above is correct
-       :answer_e:  (s == (m + 5)) && ((s + 3) == (2 * m + 3))
+       :answer_e:  (s == (m + 5)) &amp;&amp; ((s + 3) == (2 * m + 3))
        :correct: b
        :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
        :feedback_b: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
        :feedback_c: This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt's age minus 5 which would have Matt older than Susan.
-       :feedback_d: The answer is s == m + 5 && s + 3 == 2 * m + 6.
+       :feedback_d: The answer is s == m + 5 &amp;&amp; s + 3 == 2 * m + 6.
        :feedback_e: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
 
        Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age.  What should be in place of ``condition`` in the code segment below to solve this problem?

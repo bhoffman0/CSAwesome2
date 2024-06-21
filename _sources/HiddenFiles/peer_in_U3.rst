@@ -1,5 +1,5 @@
 Peer Instruction: Unit 3 Multiple Choice Questions
---------------------------------------------------------
+========================================================
 
 .. mchoice:: bs-ifstatements-15-07
     :author: Beth Simon
@@ -37,7 +37,7 @@ Peer Instruction: Unit 3 Multiple Choice Questions
         }
 
     .. image:: https://i.postimg.cc/85NS2JGG/lecture15-Q07.png
-      :width: 100
+      :width: 100px
 
     .. image:: https://i.postimg.cc/xTrWhN34/lecture15-Q07-2.png
-      :width: 400
+      :width: 400px

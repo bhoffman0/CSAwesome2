@@ -3,7 +3,7 @@
    :start: 1
 
 Code Practice with 2D Arrays
-------------------------------
+==============================
 
 .. tabbed:: arr2DEx1
 

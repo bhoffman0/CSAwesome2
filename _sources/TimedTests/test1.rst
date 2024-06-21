@@ -31,7 +31,7 @@
     :alt: finish exam
 
 Practice Exam 1 for the AP CSA Exam
--------------------------------------
+=====================================
 
 The following 20 questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
@@ -73,10 +73,10 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :answer_d: 1 2 3 4 2 4 6 8 3 6 9 12
       :answer_e: 0 1 2 3 0 2 4 6 0 3 6 9
       :correct: b
-      :feedback_a: This would be true if it was j < 3.
+      :feedback_a: This would be true if it was j &lt; 3.
       :feedback_b: The variable j will range from 1 to 3 and k will range from 1 to 3.
-      :feedback_c: This would be true if it was k <= 3.
-      :feedback_d: This would be true if it was k <= 4.
+      :feedback_c: This would be true if it was k &lt;= 3.
+      :feedback_d: This would be true if it was k &lt;= 4.
       :feedback_e: This would be true if k started at 0 instead of 1.
 
       What will the following code print when it is executed?
@@ -702,9 +702,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
       :correct: c
       :feedback_a: This would be true if num1 and num2 were both greater than 0 and num1 was greater than num2.  However, num2 is less than 0.
       :feedback_b: This would be true if num1 and num2 were both greater than 0 and num1 was less than or equal to num2.  However, num2 is less than 0.
-      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&&) to be true both expressions must be true.  Next, <code>else if ((num2<0) || (num1<0))</code> is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
-      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code>).
-      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2<0) || (num1<0))</code>).
+      :feedback_c: The first test is false since num2 is less than 0 and for a complex conditional joined with And (&amp;&amp;) to be true both expressions must be true.  Next, <code>else if ((num2&lt;0) || (num1&lt;0))</code> is executed and this will be true since num2 is less than 0 and for a complex conditional joined with Or (||) only one of the expressions must be true for it to execute.
+      :feedback_d: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2&lt;0) || (num1&lt;0))</code>).
+      :feedback_e: This will not happen since if num2 is less than 0 the previous conditional would be true <code>((num2&lt;0) || (num1&lt;0))</code>).
 
       Consider the following method.  What is the output from ``conditionTest(3,-2);``?
 

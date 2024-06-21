@@ -4,7 +4,6 @@
    :prefix: 1-4-
    :start: 1
 
-|Time90|
 
 Expressions and Assignment Statements
 =====================================
@@ -28,11 +27,8 @@ Assignment Statements
 
 Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
 
-.. |video| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis" target="_blank">video</a>
-
-The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
+The following `video <https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis>`_ by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
 
 .. youtube:: MZwIgM__5C8
     :width: 700
@@ -44,11 +40,8 @@ As we saw in the video, we can set one variable's value to a *copy* of the value
 
 
 
-.. |Java visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
-Let's step through the following code in the |Java visualizer| to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
+Let's step through the following code in the `Java visualizer <http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_ to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
 
 
 .. codelens:: asgn_viz1
@@ -76,9 +69,6 @@ Let's step through the following code in the |Java visualizer| to see the values
 
 |Exercise| **Check your understanding**
 
-.. |Java visualizer2| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 .. mchoice:: q2_1
    :practice: T
@@ -92,7 +82,7 @@ Let's step through the following code in the |Java visualizer| to see the values
    :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
    :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
 
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this |Java visualizer2| link.
+   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this `Java visualizer <http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_ link.
 
    .. code-block:: java
 
@@ -180,17 +170,9 @@ score variable is set to the previous value of score plus 1.
 Input with Variables
 --------------------
 
-.. |JavaIOExample| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">Java Scanner Input Repl</a>
 
 
-.. |JavaIOConsole| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
-
-
-Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (|JavaIOExample| using the ``Scanner`` class or |JavaIOConsole| using the ``Console`` class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
+Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (`Java Scanner Input Repl <https://firewalledreplit.com/@BerylHoffman/JavaIOExample>`_ using the ``Scanner`` class or `Java Console Input Repl <https://firewalledreplit.com/@BerylHoffman/JavaIOConsole>`_ using the ``Console`` class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
 
 .. raw:: html
 
@@ -373,11 +355,8 @@ of truncating integer division, only matters when negative operands are involved
 and the signs of the operands differ. With positive operands, remainder and mod give the same results. 
 Java does have a method ``Math.floorMod`` in the ``Math`` class if you need to use modulo instead of remainder, but ``%`` is all you need in the AP exam.
 
-.. |video2| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
-
-Here’s the |video2|.
+Here’s the `video <https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis>`_.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
@@ -469,7 +448,7 @@ Here’s the |video2|.
 ------------------------------------------------
 
 .. image:: Figures/dog-free.png
-    :width: 150
+    :width: 150px
     :align: left
     :alt: dog
 
@@ -599,20 +578,10 @@ In this programming challenge, you will calculate your age, and your pet's age f
    }
 
 
-.. |repl| raw:: html
-
-   <a href="https://replit.com" target="_blank">replit.com</a>
 
 
-.. |Scanner| raw:: html
 
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
-
-.. |repl template| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
-
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
+Your teacher may suggest that you use a Java IDE like `replit.com <https://replit.com>`_ for this challenge so that you can use input to get these values using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_. Here is a `repl template <https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template>`_ that you can use to get started if you want to try the challenge with input.
 
 Summary
 -------------------

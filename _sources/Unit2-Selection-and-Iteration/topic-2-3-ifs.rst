@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time45|
 
 if Statements and Control Flow
 ===============================
@@ -391,23 +390,16 @@ Here are some rules to follow with if statements to avoid some common errors:
 ------------------------------------------------
 
 .. image:: Figures/Magic_eight_ball.png
-    :width: 100
+    :width: 100px
     :align: left
     :alt: Magic 8 Ball
 
 
-.. |simulator| raw:: html
-
-   <a href="https://magic-8ball.com/" target="_blank">simulator</a>
 
 
-.. |lesson 2.9| raw:: html
+Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this `simulator <https://magic-8ball.com/>`_.
 
-   <a href="https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html" target="_blank">lesson 2.9</a>
-
-Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |simulator|.
-
-We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
+We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see `lesson 2.9 <https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html>`_.
 
 .. activecode:: challenge3-2-if-Magic8ball
    :language: java
@@ -497,12 +489,8 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
        }
    }
 
-.. |repl version| raw:: html
 
-    <a href="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate#Main.java" target="_blank" style="text-decoration:underline">repl version</a>
-
-
-Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can click on Open in Replit below, and click on Fork to make your own copy, and add your code in from above to try your code with user input.
+Here's a `repl version <https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate#Main.java>`_ that uses the Scanner class to first have the user ask a question. You can click on Open in Replit below, and click on Fork to make your own copy, and add your code in from above to try your code with user input.
 
 .. raw:: html
 

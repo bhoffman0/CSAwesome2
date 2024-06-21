@@ -1,5 +1,5 @@
 Free Response Question - Time
--------------------------------
+===============================
 
 .. index::
     single: time

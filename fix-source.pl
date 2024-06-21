@@ -27,7 +27,7 @@ while (<>) {
   }
 
   # This include doesn't exist in this branch so for now strip it out
-  /\Q.. include:: ..\/common.rst/ and next;
+  #/\Q.. include:: ..\/common.rst/ and next;
 
   # A few files have busted markup for the first section markers. Standardize on
   # ='s for the first header and -'s thereafter.
@@ -46,11 +46,11 @@ while (<>) {
   # causes the XML document to not have a single root element. So we make them
   # into image references for now. Later on we'll have to figure out how to put
   # the images back into the rendered HTML.
-  s{^.. (image:: (\.\./)+_static/time)}{.. |ClockImageToBeFixed| $1}g;
-  s{^.. (image:: (\.\./)+_static/CSAwesomeLogo.png)}{.. |LogoImageToBeFixed| $1}g;
+  s{^.. (image:: (\.\./)+_static/time)}{.. .. $1}g;
+  s{^.. (image:: (\.\./)+_static/CSAwesomeLogo.png)}{.. .. $1}g;
 
-  # Also remove the time elements for now and replace with a comment (BH)
-  s/^\|Time(\d\d)\|/..  \|Time$1\|/g;
+  # Also remove the time elements for now.
+  /^(\.\.\s+)?(\|Time\d+\|)/ and next;
 
   if (/^\.\. youtube::/i) {
     $in_youtube = 1;

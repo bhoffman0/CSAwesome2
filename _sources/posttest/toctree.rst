@@ -1,8 +1,3 @@
-.. qnum::
-   :prefix: 11-2-
-   :start: 2
-
-
 Post Test and Survey
 :::::::::::::::::::::::
 

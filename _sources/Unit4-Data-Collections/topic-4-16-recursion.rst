@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time45|
 
 What is Recursion? 
 ===============================
@@ -91,7 +90,7 @@ many times you can recurse.)
 
 
 Why use Recursion?
-==================
+------------------
 
 .. index::
     single: fractal
@@ -147,7 +146,7 @@ navigate a 2D array a pair of nested ``for`` loops is the way to go. But if you
 need to traverse a tree structure, recursion should be your go to.
 
 Factorial Method
-=================
+-----------------
 
 The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion and tracing recursion with the factorial method.
 
@@ -237,7 +236,7 @@ computation at https://gigamonkeys.com/misc/factorial/#java.
    }
 
 Base Case
-==========
+----------
 
 .. index::
     single: base case
@@ -359,7 +358,7 @@ case—that’s the equivalent in recursion to incrementing your loop variable i
 
 
 Tracing Recursive Methods 
-===================================
+-----------------------------------
 
 .. index::
     single: call stack
@@ -668,7 +667,7 @@ You can step through the code above using the Java Visualizer by clicking on the
 
 
 |Groupwork| Tracing Challenge : Recursion
-===========================================
+-------------------------------------------
 
 Working in pairs, trace through the following recursion problems.
 
@@ -802,7 +801,7 @@ Once ``strMethod("y")`` returns, the value from each recursive call on the stack
 
 
 Summary
-============
+------------
 
 - A recursive method is a method that calls itself.
 

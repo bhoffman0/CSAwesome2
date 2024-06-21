@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - StringFormatter A
------------------------------------
+===================================
 
 .. index::
     single: trio
@@ -35,7 +35,7 @@ In this example, the first two gaps get an extra space.
 You will implement three static methods in a class named ``StringFormatter`` that is not shown.
 
 Part A
-========
+--------
 
 (a) Write the ``StringFormatter`` method ``totalLetters``, which returns the total number of letters in the words in its parameter ``wordList``.
 For example, if the ``variableList<String> words`` is ["A", "frog", "is"],then the call ``StringFormatter.totalLetters(words)`` returns 7.
@@ -51,7 +51,7 @@ Complete method ``totalLetters`` below.
    public static int totalLetters(List<String> wordList)
 
 How to Solve Part A
-=====================
+---------------------
 
 Click to reveal the algorithm and multiple choice problems that may help you write your solution.
 
@@ -95,7 +95,7 @@ Click to reveal the algorithm and multiple choice problems that may help you wri
 
 
 Put the Code in Order
-======================
+----------------------
 
 .. reveal:: stringFormatterA_parsons
     :showtitle: Reveal Mixed Up Code
@@ -127,7 +127,7 @@ Put the Code in Order
       } //end method
 
 Write the Code
-==================
+------------------
 
 
 

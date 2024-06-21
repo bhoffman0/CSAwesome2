@@ -12,11 +12,8 @@ In the summer of 2020, CSA teacher extraordinaire Kate McDonnell from Cherry Cre
 
 In the summer of 2023, Peter Seibel, author, software developer, and Berkeley High School AP CSA teacher, began making valuable improvements to the CSAwesome text and Runestone platform. 
 
-.. |form| raw:: html
 
-   <a href="https://forms.gle/4gMBsv4W71vG5mNe8" target="_blank" style="text-decoration:underline">form</a>
-
-If you see errors or bugs, please report them with this |form|.
+If you see errors or bugs, please report them with this `form <https://forms.gle/4gMBsv4W71vG5mNe8>`_.
 
 
 **Acknowledgements**
@@ -110,11 +107,8 @@ Many others have been involved in the creation of content for the eBook (includi
 .. figure:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
    :align: center
 
-.. |creative commons| raw:: html
 
-   <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="text-decoration:underline">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
-
-This work is licensed under a |creative commons|.
+This work is licensed under a `Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License <http://creativecommons.org/licenses/by-nc-sa/4.0/>`_.
 
 Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_
 2014-2024

@@ -3,7 +3,7 @@
    :start: 1
 
 Medium Multiple Choice Questions
-----------------------------------
+==================================
 
 These problems are like those you will see on the AP CSA exam.
 

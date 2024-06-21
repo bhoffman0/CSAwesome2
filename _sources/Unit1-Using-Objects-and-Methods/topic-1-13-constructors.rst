@@ -7,15 +7,8 @@
 .. index::
    pair: class; constructor
 
-.. |repl link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">replit.com link</a>
 
-.. |github| raw:: html
-
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-
-|Time45|
 
 Creating and Initializing Objects: Constructors
 ================================================
@@ -150,7 +143,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
 
     Try changing the code below to create a ``World`` object with 300x400 pixels. Where is the turtle placed by default? What parameters do you need to pass to the ``Turtle`` constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
 
-    (If the code below does not work in your browser, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work in your browser, you can also use the ``Turtle`` code at this `replit.com link <https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java>`_ (refresh page after forking and if it gets stuck) or download the files `here <https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip>`_ to use in your own IDE.)
     ~~~~
     import java.awt.*;
     import java.util.*;
@@ -214,11 +207,8 @@ Object Variables and References
 
 You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package.
 
-.. |video1| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
-
-Watch the |video1| below about null.
+Watch the `video <https://www.youtube.com/watch?v=5fpjgXAV2BU&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis>`_ below about null.
 
 .. youtube:: 5fpjgXAV2BU
     :width: 650
@@ -241,11 +231,8 @@ The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turt
 Constructor Signatures
 -----------------------------------
 
-.. |turtle documentation| raw:: html
 
-   <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
-
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types.
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the `documentation <https://www2.cs.uic.edu/~i101/doc/Turtle.html>`_ for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types.
 
 Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
 
@@ -391,7 +378,7 @@ The type of the values being passed in as arguments have to match the type of th
 This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.
 
 .. image:: Figures/customTurtles.png
-    :width: 200
+    :width: 200px
     :align: left
 
 |Groupwork| Programming Challenge: Custom Turtles
@@ -482,11 +469,8 @@ The CustomTurtle class in the ActiveCode below inherits many of its attributes a
   public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h)
 
 
-.. |Color| raw:: html
 
-   <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
-
-You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the |Color| class in Java.
+You will use the constructor(s) to create the CustomTurtles below. You can specify colors like Color.red by using the `Color <https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html>`_ class in Java.
 
 1. Create a large 150x200 (width 150 and height 200) CustomTurtle with a green body (Color.green) and a blue shell (Color.blue) at position (150,300)
 

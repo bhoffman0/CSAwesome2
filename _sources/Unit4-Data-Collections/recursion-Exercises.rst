@@ -3,7 +3,7 @@
    :start: 1
 
 Exercises
------------
+===========
 
 .. toctree::
    :maxdepth: 3

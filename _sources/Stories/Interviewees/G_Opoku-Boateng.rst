@@ -9,7 +9,7 @@ Dr. Gloria Opoku-Boateng
 :raw-html:`<font color="CadetBlue"><em>"[Studying computer science in Ghana] made me stay in tech, because if I had gone up in the United States and seen all these disparity and different options, I probably wouldn't have stayed in tech."</em></font>`
 
 .. image:: ../../../_static/Interviewees/G_Opoku-Boateng.jpg
-    :width: 350
+    :width: 350px
     :align: right
     :alt: Picture of Dr. Opoku-Boateng
 

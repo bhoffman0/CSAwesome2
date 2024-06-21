@@ -7,7 +7,7 @@
 
 
 Mixed Up Code Practice
-------------------------------
+==============================
 
 .. parsonsprob:: chat-labp1
    :numbered: left

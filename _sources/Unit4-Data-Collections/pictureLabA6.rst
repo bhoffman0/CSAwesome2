@@ -1,6 +1,5 @@
 .. include:: ../common.rst
 
-|Time90|
 
 Picture Lab A6: Mirroring Pictures
 =====================================================
@@ -71,18 +70,12 @@ You can see ``mirrorVertical`` in action by running the active code in the exerc
 |CodingEx| **Coding Exercises**
 
 
-.. |replit.com project| raw:: html
 
-   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Replit Swing project</a>
 
-.. |repl 2| raw:: html
-
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
-
-You can use caterpillar.jpg or one of the images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this |replit.com project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
+You can use caterpillar.jpg or one of the images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this `Replit Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative replit.com project <https://firewalledreplit.com/@jds7184/PictureLab>`_ (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. image:: Figures/mirrorright.png
-    :width: 150
+    :width: 150px
     :align: left
 
 1. Write the method mirrorVerticalRightToLeft that mirrors a picture around a mirror
@@ -512,7 +505,7 @@ pictures below (Figure 3).
     }
 
 .. image:: Figures/horizontalbot2top.png
-    :width: 150
+    :width: 150px
     :align: left
 
 
@@ -907,7 +900,7 @@ paint would be copied from the bottom left to the top right as shown in the pict
         }
     }
 
-Choose from these images in this lesson.  To use your own images, you can fork this |replit.com project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
+Choose from these images in this lesson.  To use your own images, you can fork this `Replit Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative replit.com project <https://firewalledreplit.com/@jds7184/PictureLab>`_ (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 .. datafile:: caterpillar.jpg
    :hide:

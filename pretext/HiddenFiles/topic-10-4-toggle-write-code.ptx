@@ -8,7 +8,7 @@
       <statement>
         <p>Finish the <c>reverse</c> method. This should take in a parameter <c>myText</c> and return a reversed version of it. For example, <c>reverse("Cat")</c> would return <c>"taC"</c>. Fill in the missing code (labeled with YOUR CODE HERE comments) to complete the problem.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000846" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000685" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -100,7 +100,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill in the <c>multiply</c> method. It should take in two non-negative integers and return their product, using the fact that multiplication is repeated addition (e.g., 3x4 = 3 + 3 + 3 + 3). Thus, <c>multiply(3, 4)</c> would return <c>12</c>. Do NOT use multiplication; only use addition.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000847" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000686" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -158,7 +158,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>sumElements</c> function. It should add up all of the elements in the passed-in array from <c>index</c> onward - so calling <c>sumElements(nums, 1)</c> with <c>nums</c> as {1,2,3,12} would return <c>17</c> (as that is 2 + 3 + 12). Be sure to use recursion when creating the method.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000848" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000687" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -215,7 +215,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the <c>removeStar</c> method. It should remove any occurrence of an asterisk (&#x201C;*&#x201D;) from a passed-in string. For example, calling <c>removeStar</c> on <c>"ab*c**d"</c> would return <c>"abcd"</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000849" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000688" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -281,7 +281,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>exponent</c> program. This should take in two <c>int</c> parameters - <c>base</c> and <c>power</c> - and return <c>base</c> ^ <c>power</c> (<c>base</c> multiplied by itself <c>power</c> times). For example, <c>exponent(3, 5)</c> would return <c>243</c> because that is 3x3x3x3x3.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000850" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000689" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -339,7 +339,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>numFiveOccurrence</c> method. It should return the number of times that <c>5</c> is present in the passed <c>int</c> array <c>arr</c>. Just as in problem three (<c>sumElements</c>), there will also be an <c>index</c> parameter to make recursion possible. The initial call to <c>numFiveOccurrence</c> will be with index 0, and, from then on, <c>numFiveOccurrence(arr, index)</c> should return the number of 5s in <c>arr</c> from index onward.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000851" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000690" interactive="activecode" language="java">
         <input>
 
 public class ListTest
@@ -396,7 +396,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>repeatThis</c> method. It should take in two parameters - a String <c>s</c> and an int <c>i</c> - and return a new String composed of <c>s</c> <c>i</c> times. For example, <c>repeatThis("Cat", 2)</c> would return <c>"CatCat"</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000852" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000691" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -448,7 +448,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>findNumX</c> function. This should take in a String <c>s</c> and return the number of occurrences of the character <c>'x'</c> (NOT including <c>'X'</c>). For example, <c>findNumX("axbcx")</c> would return <c>2</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000853" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000692" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -512,7 +512,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>countTo</c> method. This should take in an integer <c>x</c> and return a String with the positive numbers from 1 to <c>x</c> (inclusive) with &#x201C;&#x2026;&#x201D; after each. For example, <c>countTo(5)</c> would return &#x201C;1&#x2026;2&#x2026;3&#x2026;4&#x2026;5&#x2026;&#x201D;.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000854" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000693" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -596,7 +596,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>displayEvenDigits</c> method. It should take in an integer <c>num</c> and return a String version of <c>num</c> with the odd digits replaced by <c>'_'</c>. For example, <c>displayEvenDigits(42356)</c> should return <c>"42__6".</c> To achieve this recursively, you should use modulo and division to get the least-significant digit and then pass a version of <c>num</c> without that digit (hint: use integer division).</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000855" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000694" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -684,7 +684,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>fibonacci</c> method. This program should take in an integer <c>n</c> and return the <c>n``th fibonacci number. The 0th fibonacci number is ``0</c> and the 1st is <c>1</c>. From then on, the <c>n``th fibonacci number is the ``n-1``th fibonacci number + the ``n-2``th fibonacci number. For example, the first few fibonacci numbers are 0, 1, 1, 2, 3, 5, 8. ``fibonacci(4)</c> should return <c>3</c>, as that is the 4th fibonacci number (remember that 0 is the 0th!). <c>fibonacci(6)</c> should return <c>8</c>, as that is the 6th fibonacci number.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000856" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000695" interactive="activecode" language="java">
         <input>
 public class ListTest
 {
@@ -737,7 +737,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Create the <c>spaceDash</c> method. It should take in a String <c>str</c> and return a new String that has all of the spaces in <c>str</c> replaced by dashes.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000857" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000696" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -787,7 +787,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>numberOf2s</c> method. It should take in an integer <c>n</c> and count the number of 2s in the digits. Try to do this without converting <c>n</c> to a String. Here&#x2019;s a hint: modulo and integer division will both be very useful.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000858" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000697" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -837,7 +837,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>sum</c> function. It should take in an integer <c>n</c> and recursively find and return the sum of the digits of <c>n</c>. For example, <c>sum(362)</c> would return <c>11</c>, as that is 3+6+2.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000859" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000698" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -887,7 +887,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>evenDigits</c> function. This should take in an integer <c>n</c> and recursively return the number of even digits in <c>n</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000860" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000699" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -965,7 +965,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write the <c>factorial</c> function. This should take in an integer <c>n</c> and return the factorial of <c>n</c>. The factorial of N is equal to N x (N - 1) x (N - 2)&#x2026; x 2 x 1. Note that N times the factorial of (N - 1) would be N factorial.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000861" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000700" interactive="activecode" language="java">
         <input>
 public class Test1
 {

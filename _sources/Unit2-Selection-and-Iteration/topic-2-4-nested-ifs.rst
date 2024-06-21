@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time90|
 
 Multi-Selection: else-if Statements
 ===================================
@@ -103,7 +102,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    :answer_b: x is zero
    :answer_c: x is positive
    :correct: a
-   :feedback_a: When x is equal to -5 the condition of x < 0 is true.
+   :feedback_a: When x is equal to -5 the condition of x &lt; 0 is true.
    :feedback_b: This will only print if x has been set to 0.  Has it?
    :feedback_c: This will only print if x is greater than zero.  Is it?
 
@@ -370,34 +369,21 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 ---------------------------------------------
 
 .. image:: Figures/adventure.jpg
-    :width: 200
+    :width: 200px
     :align: left
     :alt: Adventure map
 
-.. |Colossal Cave Adventure| raw:: html
 
-   <a href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" target="_blank" style="text-decoration:underline">Colossal Cave Adventure</a>
 
-.. |playing Adventure| raw:: html
-
-   <a href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" target="_blank" style="text-decoration:underline">playing Adventure</a>
-
-.. |walkthrough| raw:: html
-
-   <a href="https://adventuregamers.com/walkthrough/full/colossal-cave" target="_blank" style="text-decoration:underline">walkthrough</a>
-
-.. |repl link| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Adventure#Main.java" target="_blank" style="text-decoration:underline">repl link</a>
 
 
 We encourage you to work in pairs for this challenge which is on replit.com (you will need an account there if you want to save your version).
 
-One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand.
+One of the first games coded for early computers in the 1970s was called `Colossal Cave Adventure <https://en.wikipedia.org/wiki/Colossal_Cave_Adventure>`_. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this `walkthrough <https://adventuregamers.com/walkthrough/full/colossal-cave>`_. Part of the challenge is finding the commands that the code will understand.
 
 In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.
 
-1. Try the program below or with this |repl link|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
+1. Try the program below or with this `repl link <https://firewalledreplit.com/@BerylHoffman/Adventure#Main.java>`_. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
 
 2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction.
 

@@ -6,7 +6,6 @@
 
 
 
-|Time90|
 
 Compound Boolean Expressions
 ============================
@@ -434,19 +433,10 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
 |Groupwork| Programming Challenge : Truth Tables POGIL
 ------------------------------------------------------
 
-.. |pogil| raw:: html
 
-   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
 
-.. |pogil role| raw:: html
 
-   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
-
-.. |venn diagram| raw:: html
-
-   <a href="https://docs.google.com/document/d/1lpjk0LS_KdAddRurMayJZmaFzeyEg4FyhviZcSTXvtU/edit?usp=sharing" target="_blank" style="text-decoration:underline">Venn diagram</a>
-
-We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a `POGIL role <https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing>`_ and works together to solve the problems, making sure that everyone in the team participates and learns.
 
 Explore the following problems with your group:
 
@@ -608,10 +598,6 @@ AP Practice
 
 Boolean Game
 ---------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below written to practice Booleans. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.

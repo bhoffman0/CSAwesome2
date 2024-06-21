@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Self Divisor B
--------------------------------
+===============================
 
 .. index::
     single: self divisor
@@ -76,7 +76,7 @@ For example, the call firstNumSelfDivisors(10, 3) should return an array contain
    }
 
 How to solve this problem
-===========================
+---------------------------
 
 Click to reveal the algorithm and problems to help you write your solution.
 
@@ -220,7 +220,7 @@ Try to write the code for firstNumSelfDivisors.  Run the main to check your answ
     }
 
 Video - One way to code the solution
-=====================================
+-------------------------------------
 
 There are many possible solutions to this problem.  The video below (at https://www.youtube.com/watch?v=2VBz-pX1Xos ) shows one solution.
 

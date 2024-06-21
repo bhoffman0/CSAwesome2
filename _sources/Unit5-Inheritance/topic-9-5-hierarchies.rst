@@ -4,7 +4,6 @@
    :prefix: 9-5-
    :start: 1
 
-|Time45|
 
 Inheritance Hierarchies
 ===========================
@@ -343,16 +342,13 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 |Groupwork| Programming Challenge : Shopping Cart
 --------------------------------------------------
 
-.. |replit.com link| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit.com link</a>
 
 .. image:: Figures/shoppingcart.png
-    :width: 100
+    :width: 100px
     :align: left
     :alt: Shopping
 
-The following code contains a class called ShoppingCart that simulates a grocery store or an online store's shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this |replit.com link|. We encourage you to work in pairs.
+The following code contains a class called ShoppingCart that simulates a grocery store or an online store's shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this `replit.com link <https://firewalledreplit.com/@BerylHoffman/Shopping-Cart>`_. We encourage you to work in pairs.
 
 In this challenge, you will add a new class called ``DiscountedItem`` that extends the ``Item`` class. The ``ArrayList`` of ``Item`` will still work since it can hold the subclasses of ``Item`` too! The ``ShoppingCart`` ``printOrder`` method will work with ``Item`` and ``DiscountedItem`` but note that it has an ``if`` statement that treats ``DiscountedItem`` differently.
 

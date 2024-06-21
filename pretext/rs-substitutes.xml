@@ -1,6 +1,6 @@
 <substitutes><substitute xml:id='qstudent'>
 <div class="runestone ">
-<ul data-component="poll" id=qstudent  class='' data-results='instructor' data-question_label="1.7.2.1" >
+<ul data-component="poll" id="qstudent"  class='' data-results='instructor' data-question_label="1.7.2.1" >
 I am a :
 
 <li>1. student</li>
@@ -12,7 +12,7 @@ I am a :
 <li>4. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qgender'>
 <div class="runestone ">
-<ul data-component="poll" id=qgender  class='' data-results='instructor' data-question_label="1.7.2.2" >
+<ul data-component="poll" id="qgender"  class='' data-results='instructor' data-question_label="1.7.2.2" >
 I am :
 
 <li>1. female</li>
@@ -26,7 +26,7 @@ I am :
 <li>5. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qrace'>
 <div class="runestone ">
-<ul data-component="poll" id=qrace  class='' data-results='instructor' data-question_label="1.7.2.3" >
+<ul data-component="poll" id="qrace"  class='' data-results='instructor' data-question_label="1.7.2.3" >
 I am :
 
 <li>1. African-American/Black</li>
@@ -48,7 +48,7 @@ I am :
 <li>9. Prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qdisability'>
 <div class="runestone ">
-<ul data-component="poll" id=qdisability  class='' data-results='instructor' data-question_label="1.7.2.4" >
+<ul data-component="poll" id="qdisability"  class='' data-results='instructor' data-question_label="1.7.2.4" >
 I have a documented disability or student accommodations.
 
 <li>1. yes</li>
@@ -58,7 +58,7 @@ I have a documented disability or student accommodations.
 <li>3. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qprogramming'>
 <div class="runestone ">
-<ul data-component="poll" id=qprogramming  class='' data-results='instructor' data-question_label="1.7.2.5" >
+<ul data-component="poll" id="qprogramming"  class='' data-results='instructor' data-question_label="1.7.2.5" >
 I am a :
 
 <li>1. beginner programmer</li>
@@ -70,7 +70,7 @@ I am a :
 <li>4. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qblockprogramming'>
 <div class="runestone ">
-<ul data-component="poll" id=qblockprogramming  class='' data-results='instructor' data-question_label="1.7.2.6" >
+<ul data-component="poll" id="qblockprogramming"  class='' data-results='instructor' data-question_label="1.7.2.6" >
 I have experience with:
 
 <li>1. no programming</li>
@@ -82,7 +82,7 @@ I have experience with:
 <li>4. both block and text-based programming</li>
 </ul></div></substitute><substitute xml:id='qcsp'>
 <div class="runestone ">
-<ul data-component="poll" id=qcsp  class='' data-results='instructor' data-question_label="1.7.2.7" >
+<ul data-component="poll" id="qcsp"  class='' data-results='instructor' data-question_label="1.7.2.7" >
 I took AP CSP (Computer Science Principles) before this CSA course.
 
 <li>1. Yes, I took AP CSP.</li>
@@ -90,7 +90,7 @@ I took AP CSP (Computer Science Principles) before this CSA course.
 <li>2. No, I did not take AP CSP.</li>
 </ul></div></substitute><substitute xml:id='qjavaconfidence'>
 <div class="runestone ">
-<ul data-component="poll" id=qjavaconfidence  class='' data-results='instructor' data-question_label="1.7.2.9" >
+<ul data-component="poll" id="qjavaconfidence"  class='' data-results='instructor' data-question_label="1.7.2.9" >
 I am confident that I can learn Java.
 
 <li>1. strongly agree</li>
@@ -106,7 +106,7 @@ I am confident that I can learn Java.
 <li>6. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qconfidence'>
 <div class="runestone ">
-<ul data-component="poll" id=qconfidence  class='' data-results='instructor' data-question_label="1.7.2.10" >
+<ul data-component="poll" id="qconfidence"  class='' data-results='instructor' data-question_label="1.7.2.10" >
 I am confident that I will do well in this course and the AP CSA exam.
 
 <li>1. strongly agree</li>
@@ -122,7 +122,67 @@ I am confident that I will do well in this course and the AP CSA exam.
 <li>6. prefer not to answer</li>
 </ul></div></substitute><substitute xml:id='qcareer'>
 <div class="runestone ">
-<ul data-component="poll" id=qcareer  class='' data-results='instructor' data-question_label="1.7.2.11" >
+<ul data-component="poll" id="qcareer"  class='' data-results='instructor' data-question_label="1.7.2.11" >
+I would like to pursue further study or a career in computing.
+
+<li>1. strongly agree</li>
+
+<li>2. agree</li>
+
+<li>3. neither agree or disagree</li>
+
+<li>4. disagree</li>
+
+<li>5. strongly disagree</li>
+
+<li>6. prefer not to answer</li>
+</ul></div></substitute><substitute xml:id='qprogrammingpost'>
+<div class="runestone ">
+<ul data-component="poll" id="qprogrammingpost"  class='' data-results='instructor' data-question_label="11.2.1" >
+I am now a :
+
+<li>1. beginner programmer</li>
+
+<li>2. intermediate programmer</li>
+
+<li>3. expert programmer</li>
+
+<li>4. prefer not to answer</li>
+</ul></div></substitute><substitute xml:id='qconfidencepost'>
+<div class="runestone ">
+<ul data-component="poll" id="qconfidencepost"  class='' data-results='instructor' data-question_label="11.2.2" >
+I am confident in my Java programming skills.
+
+<li>1. strongly agree</li>
+
+<li>2. agree</li>
+
+<li>3. neither agree or disagree</li>
+
+<li>4. disagree</li>
+
+<li>5. strongly disagree</li>
+
+<li>6. prefer not to answer</li>
+</ul></div></substitute><substitute xml:id='qenjoypost'>
+<div class="runestone ">
+<ul data-component="poll" id="qenjoypost"  class='' data-results='instructor' data-question_label="11.2.3" >
+I enjoyed learning about computer science and Java in this course.
+
+<li>1. strongly agree</li>
+
+<li>2. agree</li>
+
+<li>3. neither agree or disagree</li>
+
+<li>4. disagree</li>
+
+<li>5. strongly disagree</li>
+
+<li>6. prefer not to answer</li>
+</ul></div></substitute><substitute xml:id='qcareerpost'>
+<div class="runestone ">
+<ul data-component="poll" id="qcareerpost"  class='' data-results='instructor' data-question_label="11.2.4" >
 I would like to pursue further study or a career in computing.
 
 <li>1. strongly agree</li>

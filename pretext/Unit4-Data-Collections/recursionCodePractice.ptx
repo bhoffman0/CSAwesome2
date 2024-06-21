@@ -4,11 +4,11 @@
   <title>Code Practice for Recursion</title>
   <p>If you would like to try writing recursive methods check out the recursion problems at CodingBat at <url href="http://codingbat.com/java/Recursion-1" visual="http://codingbat.com/java/Recursion-1">http://codingbat.com/java/Recursion-1</url>.</p>
   <exercises>
-    <exercise xml:id="UNIQUE-ID-001148">
+    <exercise xml:id="UNIQUE-ID-001143">
       <statement>
         <p>Replace the &#x201C;ADD CODE HERE&#x201D; below with the code to complete the findSum method. The method should take the sum of every value that is less than or equal to n. For example, findSum(3) should return 6. The output of the program should be 15.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001149">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-001144">
         <input>
 public class Recursion
 {
@@ -47,7 +47,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 In order to find the sum of all the numbers that are less than or equal to n, we can use recursion. When findSum(5) is called, since 5 is not equal to 0, the program will go to the else statement. The method will then return 5 + findsum(4). findSum(4) will return 4 + findSum(3), findSum(3) will return 3 + findSum(2), findSum(2) will return findSum(1), findSum(1) will return 1 + findSum(0). findSum(0) will return 0. Therefore, findSum(5) will be 5+4+3+2+1+0, which is euqal to 15.
 
-    <program xml:id="UNIQUE-ID-001150" language="java"><input>
+    <program xml:id="UNIQUE-ID-001145" language="java"><input>
 public class Recursion
 {
     public static int findSum(int n)

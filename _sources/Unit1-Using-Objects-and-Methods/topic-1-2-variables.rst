@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time90|
 
 Variables and Data Types
 ========================

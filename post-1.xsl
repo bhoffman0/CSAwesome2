@@ -17,7 +17,8 @@
   </xsl:template>
 
   <xsl:template match="video[@youtube]">
-    <video xml:id="{@youtube}" youtube="{@youtube}"/>
+    <!-- <video xml:id="{@youtube}" youtube="{@youtube}"/> -->
+    <video youtube="{@youtube}"/>
   </xsl:template>
 
   <xsl:template match="hint">

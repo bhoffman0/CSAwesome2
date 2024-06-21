@@ -12,13 +12,10 @@ Magpie ChatBot Lab
 Lab Requirement
 ----------------
 
-.. |Magpie Chatbot Lab| raw:: html
-
-   <a href="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf" target="_blank">Magpie Chatbot Lab</a>
 
 As of 2014-2015 the Advanced Placement Computer Science A course must include at least 20 hours of hands-on labs.  In 2014, 3 recommended labs were created, Magpie, Picture, and Elevens, and in 2019-20, 4 more labs were created, Consumer Review, Steganography (an extension of PictureLab), Celebrity, and Data. Your teacher may choose to do any of these labs or their own labs to complete at least 20 hours of labs. See https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/lab-resource-page for the student guides for each of these labs.
 
-If your class does all or part of the Magpie Lab, here is the College Board student guide for the |Magpie Chatbot Lab| as a pdf. Your teacher will provide the lab code for you which is also in the next pages. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
+If your class does all or part of the Magpie Lab, here is the College Board student guide for the `Magpie Chatbot Lab <http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf>`_ as a pdf. Your teacher will provide the lab code for you which is also in the next pages. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
 
 Magpie Lab Description
 ----------------------
@@ -32,23 +29,14 @@ The first activity in Magpie is to explore some existing chatbots.  We encourage
 Activity 1: Exploring Chatbots
 ------------------------------
 
-.. |ELIZA| raw:: html
 
-   <a href="https://web.njit.edu/~ronkowit/eliza.html" target="_blank">ELIZA</a>
 
-.. |ALICE| raw:: html
-
-   <a href="http://www.mfellmann.net/content/alice.html" target="_blank">A.L.I.C.E.</a>
-
-.. |chatbots| raw:: html
-
-   <a href="https://beta.character.ai/" target="_blank">chatbots</a>
 
 1. Working in pairs or groups, try out some chatbots, for example:
 
-   - |ELIZA| the therapist bot from the 1970s:
-   - |ALICE| from the 1990s:
-   - Modern |chatbots| which use AI and machine learning
+   - `ELIZA <https://web.njit.edu/~ronkowit/eliza.html>`_ the therapist bot from the 1970s:
+   - `A.L.I.C.E. <http://www.mfellmann.net/content/alice.html>`_ from the 1990s:
+   - Modern `chatbots <https://beta.character.ai/>`_ which use AI and machine learning
 
 2. Record the chatbot response to each of the following.
 

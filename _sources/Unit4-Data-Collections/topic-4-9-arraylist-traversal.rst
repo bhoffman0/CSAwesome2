@@ -4,7 +4,6 @@
    :prefix: 7-3-
    :start: 1
 
-|Time90|
 
 Traversing ``ArrayList``\ s with Loops
 ================================
@@ -448,13 +447,8 @@ may want a nicer printout.
 |Groupwork| Programming Challenge : FRQ Word Pairs
 ---------------------------------------------------
 
-.. |2018 Free Response Question #2 WordPair| raw:: html
 
-   <a href="https://secure-media.collegeboard.org/ap/pdf/ap18-frq-computer-science-a.pdf#page=7" target="_blank" style="text-decoration:underline">2018 Free Response Question #2 WordPair</a>
-
-
-
-This challenge is based on the |2018 Free Response Question #2 WordPair|. We
+This challenge is based on the `2018 Free Response Question #2 WordPair <https://secure-media.collegeboard.org/ap/pdf/ap18-frq-computer-science-a.pdf#page=7>`_. We
 encourage you to work in pairs on this challenge.
 
 You are given a class called ``WordPair`` that can store pairs of words.

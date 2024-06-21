@@ -115,7 +115,7 @@ following entries in either of the orders shown below.
 .. image:: Figures/climbClubB.png
    :alt: Picture of the list after the above code executes
    :align: center
-   :width: 500
+   :width: 500px
 
 Walk Through the Example
 --------------------------

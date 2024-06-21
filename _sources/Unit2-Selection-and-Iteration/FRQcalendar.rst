@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response Questions (FRQs) for Control Structures
------------------------------------------------------
+=====================================================
 
 .. index::
     single: control structures
@@ -36,7 +36,7 @@ Try to have some code for each of these steps. Do not use arrays or other more c
 
 
 2019 APCalendar FRQ
-=====================
+---------------------
 
 The 2019 FRQ 1 is a good example of what to expect. It is available as question 1 on pages 3-6 of https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf , reproduced below.
 
@@ -97,7 +97,7 @@ The APCalendar class contains methods used to calculate information about a cale
     }
 
 Part A: numberOfLeapYear()
-===========================
+---------------------------
 
 Write the static method numberOfLeapYears, which returns the number of leap years between year1 and year2, inclusive. In order to calculate this value, a helper method is provided for you.
 
@@ -115,7 +115,7 @@ Complete method numberOfLeapYears below. You must use isLeapYear appropriately t
 
 
 How to solve numberOfLeapYears()
-================================
+--------------------------------
 
 First, circle the information given that you will need to use:
 
@@ -282,7 +282,7 @@ In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using th
 
 
 Part B: dayOfWeek()
-===========================
+---------------------------
 
 In part B of the AP Calendar FRQ, you need to write the code inside a static method **dayOfWeek**, which returns the integer value representing the day of the week for the given date (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.  This seems difficult at first, but helper methods are given to you to do most of the work. You just need to put them together to calculate the value. The helper methods given to you are:
 

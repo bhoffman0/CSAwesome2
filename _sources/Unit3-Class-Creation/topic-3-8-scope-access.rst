@@ -4,7 +4,6 @@
    :prefix: 5-8-
    :start: 1
 
-|Time45|
 
 Scope and Access
 =================

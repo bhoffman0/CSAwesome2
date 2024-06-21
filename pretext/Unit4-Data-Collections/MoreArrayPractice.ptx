@@ -10,7 +10,7 @@
             very unlucky, so do not add it or the number that comes immediately
             after a 13 to the sum.    Return <c>0</c> if <c>nums</c> is an empty array.</p>
         <blockquote>
-          <table xml:id="UNIQUE-ID-001186">
+          <table xml:id="UNIQUE-ID-001174">
             <tabular>
               <row header="yes">
                 <cell>
@@ -64,7 +64,7 @@
           </table>
         </blockquote>
       </statement>
-      <program xml:id="UNIQUE-ID-001187" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001175" interactive="activecode" language="java">
         <input>
 public class Sum13 {
    public static int sum13(int[] nums) {
@@ -117,7 +117,7 @@ public class RunestoneTests extends CodeTestHelper {
         <p>Create a function <c>has22(nums)</c> that takes an array of integers, <c>nums</c>
             and returns <c>true</c> if there are at least two items in the list that are
             adjacent and both equal to <c>2</c>, otherwise return <c>false</c>.</p>
-        <table xml:id="UNIQUE-ID-001188">
+        <table xml:id="UNIQUE-ID-001176">
           <tabular>
             <row header="yes">
               <cell>
@@ -162,7 +162,7 @@ public class RunestoneTests extends CodeTestHelper {
           </tabular>
         </table>
       </statement>
-      <program xml:id="UNIQUE-ID-001189" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001177" interactive="activecode" language="java">
         <input>
 import java.util.Scanner;
 import java.util.Arrays;
@@ -219,7 +219,7 @@ public class RunestoneTests extends CodeTestHelper {
         <p>Create the <c>total89(nums)</c> function below that takes an array of integers,
             <c>nums</c>, and returns the total of the numbers in <c>nums</c> except for all numbers
             in the array between an 8 and a 9 (inclusive).</p>
-        <table xml:id="UNIQUE-ID-001190">
+        <table xml:id="UNIQUE-ID-001178">
           <tabular>
             <row header="yes">
               <cell>
@@ -256,7 +256,7 @@ public class RunestoneTests extends CodeTestHelper {
           </tabular>
         </table>
       </statement>
-      <program xml:id="UNIQUE-ID-001191" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001179" interactive="activecode" language="java">
         <input>
 public class Total89 {
    public static int total89(int[] nums) {
@@ -305,7 +305,7 @@ public class RunestoneTests extends CodeTestHelper {
             two numbers such that they add up to <c>target</c>. If no two numbers add up to
             <c>target</c>, it returns an empty array. Assume that each input has exactly one
             solution, and you may not use the same element twice.</p>
-        <table xml:id="UNIQUE-ID-001192">
+        <table xml:id="UNIQUE-ID-001180">
           <tabular>
             <row header="yes">
               <cell>
@@ -342,7 +342,7 @@ public class RunestoneTests extends CodeTestHelper {
           </tabular>
         </table>
       </statement>
-      <program xml:id="UNIQUE-ID-001193" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001181" interactive="activecode" language="java">
         <input>
 import java.util.Scanner;
 import java.util.Arrays;

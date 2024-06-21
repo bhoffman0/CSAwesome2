@@ -4,7 +4,6 @@
    :prefix: 2-8-
    :start: 1
 
-|Time45|
 
 Wrapper Classes - Integer and Double
 ====================================

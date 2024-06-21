@@ -9,25 +9,25 @@
         <p>The following method should recursively reverse the string that is passed in the parameter and return the reversed string.  It if is passed &#x201C;abcd&#x201D; it should return &#x201C;dcba&#x201D;.  It has one extra block that is not needed in a correct solution.</p>
       </statement>
       <blocks>
-        <block order="5">
+        <block order="4">
           <cline>public String reverse(String str)</cline>
           <cline>{</cline>
         </block>
-        <block order="3">
+        <block order="5">
           <cline>    if(str.length() &lt;= 1)</cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="6">
           <cline>        return str;</cline>
         </block>
-        <block order="6">
+        <block order="3">
           <cline>    }</cline>
           <cline>    return reverse(str.substring(1)) + str.charAt(0);</cline>
         </block>
-        <block order="4">
+        <block order="2">
           <cline>}</cline>
         </block>
-        <block order="2" correct="no">
+        <block order="1" correct="no">
           <cline>    return reverse(str.substring(1)); </cline>
         </block>
       </blocks>
@@ -37,15 +37,15 @@
         <p>The following method should recursively return the fibonacci sequence of the first n numbers.  The fibonacci (f) of f(0) is 0 and of f(1) is 1.  The fibonacci of any other number is f(n-1) + f(n-2).  It has one extra block that is not needed in a correct solution.</p>
       </statement>
       <blocks>
-        <block order="3">
+        <block order="5">
           <cline>public int fibonacci(int n)</cline>
           <cline>{</cline>
         </block>
-        <block order="2">
+        <block order="8">
           <cline>    if(n == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="4">
+        <block order="3">
           <cline>        return 0;</cline>
         </block>
         <block order="9">
@@ -53,22 +53,22 @@
           <cline>    else if(n == 1)</cline>
           <cline>    {</cline>
         </block>
-        <block order="6">
+        <block order="2">
           <cline>        return 1;</cline>
         </block>
-        <block order="8">
+        <block order="6">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="5">
+        <block order="1">
           <cline>        return fibonacci(n - 1) + fibonacci(n - 2);</cline>
         </block>
-        <block order="1">
+        <block order="7">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
-        <block order="7" correct="no">
+        <block order="4" correct="no">
           <cline>     return fibonacci(n - 1); </cline>
         </block>
       </blocks>
@@ -78,34 +78,34 @@
         <p>The following method should recursively replace all the spaces in the String str with dashes.</p>
       </statement>
       <blocks>
-        <block order="9">
+        <block order="7">
           <cline>public String spaceDash(String str)</cline>
           <cline>{</cline>
         </block>
-        <block order="2">
+        <block order="9">
           <cline>    if(str.length == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="4">
+        <block order="5">
           <cline>        return str;</cline>
         </block>
-        <block order="6">
+        <block order="4">
           <cline>    }</cline>
           <cline>    else if(str.charAt(0) ==  ' ')</cline>
           <cline>    {</cline>
         </block>
-        <block order="5">
+        <block order="2">
           <cline>        return "-" + spaceDash(str.substring(1));</cline>
         </block>
-        <block order="7">
+        <block order="3">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="3">
+        <block order="8">
           <cline>        return str.charAt(0) + spaceDash(str.substring(1));</cline>
         </block>
-        <block order="8">
+        <block order="6">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
@@ -119,15 +119,15 @@
         <p>The following method should recursively count and return the number of 2&#x2019;s that are present in the number.</p>
       </statement>
       <blocks>
-        <block order="5">
+        <block order="7">
           <cline>public int numberOf2s(int n)</cline>
           <cline>{</cline>
         </block>
-        <block order="8">
+        <block order="4">
           <cline>    if(n == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="3">
+        <block order="8">
           <cline>        return 0;</cline>
         </block>
         <block order="9">
@@ -135,22 +135,22 @@
           <cline>    else if(n % 10 == 2)</cline>
           <cline>    {</cline>
         </block>
-        <block order="2">
+        <block order="5">
           <cline>        return 1 + numberOf2s(n / 10);</cline>
         </block>
-        <block order="6">
+        <block order="3">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="2">
           <cline>        return numberOf2s(n / 10);</cline>
         </block>
-        <block order="7">
+        <block order="1">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
-        <block order="4" correct="no">
+        <block order="6" correct="no">
           <cline>     return 1 + numberOf2s(n % 10); </cline>
         </block>
       </blocks>
@@ -164,14 +164,14 @@
           <cline>public int sum(int n)</cline>
           <cline>{</cline>
         </block>
-        <block order="7">
+        <block order="3">
           <cline>    if(n / 10 == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="5">
+        <block order="2">
           <cline>        return n;</cline>
         </block>
-        <block order="6">
+        <block order="7">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
@@ -179,11 +179,11 @@
         <block order="1">
           <cline>        return sum(n / 10) + n % 10;</cline>
         </block>
-        <block order="2">
+        <block order="6">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
-        <block order="3" correct="no">
+        <block order="5" correct="no">
           <cline>     return 1 + sum(n % 10); </cline>
         </block>
       </blocks>
@@ -193,45 +193,45 @@
         <p>The following method should recursively find and return the number of even digits in int n.</p>
       </statement>
       <blocks>
-        <block order="6">
+        <block order="1">
           <cline>public int evenDigits(int n)</cline>
           <cline>{</cline>
         </block>
-        <block order="8">
+        <block order="6">
           <cline>    if(n / 10 == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="7">
+        <block order="8">
           <cline>        if(n % 2 == 0)</cline>
           <cline>        {</cline>
         </block>
-        <block order="2">
+        <block order="4">
           <cline>           return 1;</cline>
         </block>
-        <block order="4">
+        <block order="10">
           <cline>        }</cline>
           <cline>        else</cline>
           <cline>        {</cline>
           <cline>            return 0;</cline>
           <cline>        }</cline>
         </block>
-        <block order="10">
+        <block order="5">
           <cline>    }</cline>
           <cline>    else if((n % 10) % 2 == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="3">
+        <block order="9">
           <cline>        return evenDigits(n / 10) + 1;</cline>
         </block>
-        <block order="9">
+        <block order="3">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="7">
           <cline>        return evenDigits(n / 10);</cline>
         </block>
-        <block order="5">
+        <block order="2">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
@@ -242,30 +242,30 @@
         <p>The following method should recursively find and print the factorial of int n. It has 1 extra block of code.</p>
       </statement>
       <blocks>
-        <block order="4">
+        <block order="6">
           <cline>public int factorial(int n)</cline>
           <cline>{</cline>
         </block>
-        <block order="3">
+        <block order="7">
           <cline>    if(n == 1)</cline>
           <cline>    {</cline>
         </block>
-        <block order="2">
+        <block order="4">
           <cline>        return 1;</cline>
         </block>
-        <block order="7">
+        <block order="1">
           <cline>    }</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="2">
           <cline>        return n * factorial(n - 1);</cline>
         </block>
-        <block order="6">
+        <block order="5">
           <cline>    }</cline>
           <cline>}</cline>
         </block>
-        <block order="5" correct="no">
+        <block order="3" correct="no">
           <cline>     return 1 + factorial(n % 10); </cline>
         </block>
       </blocks>

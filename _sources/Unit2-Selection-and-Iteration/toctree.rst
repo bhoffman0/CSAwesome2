@@ -1,8 +1,3 @@
-.. image:: ../../_static/CSAwesomeLogo.png
-    :width: 350
-    :align: center
-
-
 Selection and Iteration
 :::::::::::::::::::::::::::::::::::::
 

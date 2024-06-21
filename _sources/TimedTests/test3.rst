@@ -28,7 +28,7 @@
     :alt: finish exam
 
 Practice Exam 2 for the AP CSA Exam
--------------------------------------
+=====================================
 
 The following 20 questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.
 
@@ -401,7 +401,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_d: 43211234
        :answer_e: 32144123
        :correct: a
-       :feedback_a: This method prints the right most digit (x % 10 returns the right most digit) and then if x / 10 is not equal to 0 (x < 10) it returns mystery of the current number after chopping off the right most digit.  So mystery(4321) prints 1 and then calls mystery(432) which prints 2 and then calls mystery(43) which prints 3 and then calls mystery (4) which prints 4.  Since 4 / 10 is equal to 0 it won't do a recursive call. It prints 4 again and mystery(4) returns.  Execution will return to mystery(43) after the recursive call to mystery(4) and the 3 will print and then mystery (43) will return.  Execution will return to mystery(432) after the recursive call to mystery(43) and the 2 will print and then mystery (432) will return. Execution will return to mystery(4321) after the recursive call to mystery(432) and the 1 will print and then mystery (4321) will return.
+       :feedback_a: This method prints the right most digit (x % 10 returns the right most digit) and then if x / 10 is not equal to 0 (x &lt; 10) it returns mystery of the current number after chopping off the right most digit.  So mystery(4321) prints 1 and then calls mystery(432) which prints 2 and then calls mystery(43) which prints 3 and then calls mystery (4) which prints 4.  Since 4 / 10 is equal to 0 it won't do a recursive call. It prints 4 again and mystery(4) returns.  Execution will return to mystery(43) after the recursive call to mystery(4) and the 3 will print and then mystery (43) will return.  Execution will return to mystery(432) after the recursive call to mystery(43) and the 2 will print and then mystery (432) will return. Execution will return to mystery(4321) after the recursive call to mystery(432) and the 1 will print and then mystery (4321) will return.
        :feedback_b: This would be true if there wasn't a second System.out.print(x % 10) after if.
        :feedback_c: This would be true if the first call to System.out.print(x % 10); wasn't in the method.
        :feedback_d: This would be true if it was mystery(1234).
@@ -474,9 +474,9 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_e: 1 2 2 4 3 6 4 8 5 10
        :correct: e
        :feedback_a: This would be true if line 3 was: System.out.print(j + " " + k + " ");
-       :feedback_b: This would be true if line 1 was: for (int j = 1; j < 5; j++).
-       :feedback_c: This would be true if line 1 was: for (int j = 1; j < 5; j++) and if line 3 was: System.out.print(j + " " + k + " ");
-       :feedback_d: This would be true if line 1 was: for (int j = 5; j >=1; j--) and line 2 was: for (int k = 1; k <= 3; k++).
+       :feedback_b: This would be true if line 1 was: for (int j = 1; j &lt; 5; j++).
+       :feedback_c: This would be true if line 1 was: for (int j = 1; j &lt; 5; j++) and if line 3 was: System.out.print(j + " " + k + " ");
+       :feedback_d: This would be true if line 1 was: for (int j = 5; j >=1; j--) and line 2 was: for (int k = 1; k &lt;= 3; k++).
        :feedback_e: This prints j * k and for each value of j from 1 to 5, k changes from 1 to 2.  So when j is 1 it will print 1 2.  When j is 2 it will print 2 4.  When j is 3 it will print 3 6.  When j is 4 it will print 4 8.  When j is 5 it will print 5 10.
 
        What is the output from the following code segment?

@@ -5,7 +5,6 @@
    :start: 1
 
 
-|Time90|
 
 Equivalent Boolean Expressions (De Morgan's Laws)
 =================================================
@@ -188,21 +187,12 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 |Groupwork| Programming Challenge : Truth Tables POGIL
 ------------------------------------------------------
 
-.. |pogil| raw:: html
 
-   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
 
-.. |pogil role| raw:: html
 
-   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a `POGIL role <https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing>`_ and works together to solve the problems, making sure that everyone in the team participates and learns.
 
-.. |this worksheet| raw:: html
-
-   <a href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
-
-We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
-
-Explore the following problems with your group. You may use |this worksheet| to complete your truth tables. Assume that ``x`` is an integer value, for example -1, 0, or 1.
+Explore the following problems with your group. You may use `this worksheet <https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing>`_ to complete your truth tables. Assume that ``x`` is an integer value, for example -1, 0, or 1.
 
 1. Complete a truth table for the boolean expression: ``!(x == 0 || x >= 1)``. Is this the set of positive or negative numbers?  Is the expression true when ``x`` is positive? Or is it true when ``x`` is negative? You can try out the values when ``x`` is 1 or -1 or 0. Note that 0 is not positive or negative. You can try running the code below to check your answer.
 
@@ -272,14 +262,14 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm3_1
    :practice: T
-   :answer_a: (x < 2) || (y > 4)
-   :answer_b: (x < 2) && (y > 4)
-   :answer_c: (x <= 2) || (y >= 4)
-   :answer_d: (x <= 2) && (y >= 4)
+   :answer_a: (x &lt; 2) || (y > 4)
+   :answer_b: (x &lt; 2) &amp;&amp; (y > 4)
+   :answer_c: (x &lt;= 2) || (y >= 4)
+   :answer_d: (x &lt;= 2) &amp;&amp; (y >= 4)
    :correct: c
-   :feedback_a: The negation of x > 2 is x <= 2
+   :feedback_a: The negation of x > 2 is x &lt;= 2
    :feedback_b: Don't forget that the "and" is changed to an "or"
-   :feedback_c: The x > 2 becomes x <= 2, the y < 4 becomes y >= 4 and the and changes to or
+   :feedback_c: The x > 2 becomes x &lt;= 2, the y &lt; 4 becomes y >= 4 and the and changes to or
    :feedback_d: Don't forget that the "and" is changed to an "or"
 
    Which of the following is the same as the code below?
@@ -290,15 +280,15 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm4_2
    :practice: T
-   :answer_a: (x != 2) || (y < 4)
-   :answer_b: (x != 2) && (y < 4)
-   :answer_c: (x != 2) && (y <= 4)
-   :answer_d: (x != 2) || (y <= 4)
+   :answer_a: (x != 2) || (y &lt; 4)
+   :answer_b: (x != 2) &amp;&amp; (y &lt; 4)
+   :answer_c: (x != 2) &amp;&amp; (y &lt;= 4)
+   :answer_d: (x != 2) || (y &lt;= 4)
    :correct: d
-   :feedback_a: The negation of y > 4 is y <= 4
+   :feedback_a: The negation of y > 4 is y &lt;= 4
    :feedback_b: Don't forget that the and is changed to an or
    :feedback_c: Don't forget that the and is changed to an or
-   :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y <= 4)
+   :feedback_d: The and is changed to an or, the (x == 2) becomes (x != 2) and (y > 4) becomes (y &lt;= 4)
 
    Which of the following is the same as the code below?
 
@@ -309,14 +299,14 @@ Explore the following problems with your group. You may use |this worksheet| to 
 .. mchoice:: qcbdm5_3
    :practice: T
    :answer_a: (x == 5) || (y == 7)
-   :answer_b: (x == 5) && (y == 7)
+   :answer_b: (x == 5) &amp;&amp; (y == 7)
    :answer_c: (x != 5) || (y != 7)
-   :answer_d: (x < 5) || (x > 5) || (y > 7) || (y < 7)
+   :answer_d: (x &lt; 5) || (x > 5) || (y > 7) || (y &lt; 7)
    :correct: a
-   :feedback_a: The negation of && is || and the negation of != is ==
-   :feedback_b: The negation of && is ||
+   :feedback_a: The negation of &amp;&amp; is || and the negation of != is ==
+   :feedback_b: The negation of &amp;&amp; is ||
    :feedback_c: The negation of x != 5 is x == 5.  The negation of y !=  7 is y == 7.
-   :feedback_d: The negation of == is != which is the same as < or >.  The negation of != is ==.
+   :feedback_d: The negation of == is != which is the same as &lt; or >.  The negation of != is ==.
 
    Which of the following is the same as the code below?
 
@@ -326,15 +316,15 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 .. mchoice:: qcbdm6_4
    :practice: T
-   :answer_a: (x > 5) && (y < 7)
-   :answer_b: (x > 5) || (y < 7)
-   :answer_c: (x > 5) && (y <= 7)
-   :answer_d: (x > 5) || (y <= 7)
+   :answer_a: (x > 5) &amp;&amp; (y &lt; 7)
+   :answer_b: (x > 5) || (y &lt; 7)
+   :answer_c: (x > 5) &amp;&amp; (y &lt;= 7)
+   :answer_d: (x > 5) || (y &lt;= 7)
    :correct: d
-   :feedback_a: The negation of && is || and the negation of y > 7 is y <= 7.
-   :feedback_b: The negation of y > 7 is y <= 7.
-   :feedback_c: The negation of && is ||.
-   :feedback_d: The negation of (x <= 5) is (x > 5).  The negation of && is ||.  The negation of (y > 7) is (y <= 7).
+   :feedback_a: The negation of &amp;&amp; is || and the negation of y > 7 is y &lt;= 7.
+   :feedback_b: The negation of y > 7 is y &lt;= 7.
+   :feedback_c: The negation of &amp;&amp; is ||.
+   :feedback_d: The negation of (x &lt;= 5) is (x > 5).  The negation of &amp;&amp; is ||.  The negation of (y > 7) is (y &lt;= 7).
 
 
    Which of the following is the same as the code below?
@@ -383,7 +373,7 @@ AP Practice
    :answer_e: The value is true when either a or b has the value true, and is false otherwise.
    :correct: b
    :feedback_a: Try simplifying !(b ||a) or consider what happens if a and b are true.
-   :feedback_b: Yes, a && !(b || a) = a && !b && !a. Since (a && !a) can never be true, the result will always be false.
+   :feedback_b: Yes, a &amp;&amp; !(b || a) = a &amp;&amp; !b &amp;&amp; !a. Since (a &amp;&amp; !a) can never be true, the result will always be false.
    :feedback_c: Try the expression with a = false. Is the result true?
    :feedback_d: Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?
    :feedback_e: Try the expression with a = true. Is the result true?

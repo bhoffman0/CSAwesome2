@@ -1,5 +1,5 @@
 Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
-------------------------------------------------------------------
+==================================================================
 
 .. mchoice:: bs-array-06-09
     :author: Beth Simon
@@ -17,7 +17,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     What is the type of each indicated variable?
 
     .. image:: https://i.postimg.cc/VNFVKKsM/lecture06-Q09.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-array-07-07
     :author: Beth Simon
@@ -49,7 +49,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
         }
 
     .. image:: https://i.postimg.cc/KcDCVXTH/lecture07-Q07.png
-      :width: 200
+      :width: 200px
 
 .. mchoice:: bs-array-09-05
     :author: Beth Simon
@@ -81,7 +81,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
         }
 
     .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-array-09-06
     :author: Beth Simon
@@ -113,7 +113,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
         }
 
     .. image:: https://i.postimg.cc/SRhMBw8D/lecture09-Q05.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-soundarray-20-05
     :author: Beth Simon
@@ -131,7 +131,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
     How would we fill in this SampleSound[]?
 
     .. image:: https://i.postimg.cc/gcVpRjS3/lecture20-Q05.png
-      :width: 500
+      :width: 500px
 
 .. mchoice:: bs-soundarray-20-09
     :author: Beth Simon
@@ -155,7 +155,7 @@ Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)
 
 
     .. image:: https://i.postimg.cc/qM1r7YqK/lecture20-Q09.png
-      :width: 400
+      :width: 400px
 
 .. mchoice:: bs-soundarray-20-14
     :author: Beth Simon

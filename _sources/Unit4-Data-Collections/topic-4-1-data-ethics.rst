@@ -4,27 +4,17 @@
    :prefix: 7-7-
    :start: 1
 
-|Time45|
 
 Ethics of Data Collection and Data Privacy
 ==========================================
 
-.. |video1| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=bqWuioPHhz0" target="_blank" style="text-decoration:underline">video</a>
-
-
-Watch the following |video1| about the massive amounts of data our smart phones and computers collect about us.
+Watch the following `video <https://www.youtube.com/watch?v=bqWuioPHhz0>`_ about the massive amounts of data our smart phones and computers collect about us.
 
 .. youtube:: bqWuioPHhz0
     :height: 315
     :width: 560
     :align: left
-
-.. |https://www.google.com/maps/timeline| raw:: html
-
-   <a href="https://www.google.com/maps/timeline" target="_blank" style="text-decoration:underline" > https://www.google.com/maps/timeline</a>
-
 
 
 |CodingEx| **Activity**

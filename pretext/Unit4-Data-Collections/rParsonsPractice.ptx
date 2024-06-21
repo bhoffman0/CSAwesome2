@@ -15,20 +15,20 @@
           <cline>    if (myText.length() == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="3">
+        <block order="5">
           <cline>        return "";</cline>
         </block>
-        <block order="4">
+        <block order="6">
           <cline>    } //end if</cline>
         </block>
         <block order="2">
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="6">
+        <block order="3">
           <cline>        return reverse(myText.substring(1)) + myText.charAt(0);</cline>
         </block>
-        <block order="5">
+        <block order="4">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -39,31 +39,31 @@
         <p>The following method should multiply the two passed-in positive integers (using the fact that multiplication is repeated addition) &#x2013; so multiply(3, 4) should become 12 (3+3+3+3).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="4">
           <cline>public static int multiply(int a, int b)</cline>
           <cline>{</cline>
         </block>
-        <block order="6">
+        <block order="2">
           <cline>    if (b == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="5">
           <cline>      return 0;</cline>
         </block>
-        <block order="4" correct="no">
+        <block order="3" correct="no">
           <cline>      return 1; </cline>
         </block>
         <block order="7">
           <cline>    } //end if</cline>
         </block>
-        <block order="8">
+        <block order="1">
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="5">
+        <block order="8">
           <cline>      return multiply(a, b - 1) + a;</cline>
         </block>
-        <block order="3">
+        <block order="6">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -74,33 +74,33 @@
         <p>The following method should add up all of the elements in the passed-in array &#x2013; so {1,2,3,12} should return 18 (Note when the method is called, the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="1">
+        <block order="4">
           <cline>public static int sumElements(int[] arr, int index)</cline>
           <cline>{</cline>
         </block>
-        <block order="5">
+        <block order="6">
           <cline>    if (index &gt;= arr.length)</cline>
           <cline>    {</cline>
           <cline>        return 0;</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="7" correct="no">
+        <block order="3" correct="no">
           <cline>    if (index &gt;= arr.length) </cline>
           <cline>    {</cline>
           <cline>        return 1;</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="3">
+        <block order="7">
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="4">
+        <block order="1">
           <cline>        return sumElements(arr, index + 1) + arr[index];</cline>
         </block>
         <block order="2" correct="no">
           <cline>        return sumElements(arr, index) + arr[index]; </cline>
         </block>
-        <block order="6">
+        <block order="5">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -111,7 +111,7 @@
         <p>The following method should remove any occurrence of an asterisk &#x201C;*&#x201D; from a passed-in string &#x2013; so &#x201C;ab*c**d&#x201D; should become &#x201C;abcd&#x201D;.  But the blocks have been mixed up.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="4">
           <cline>public static String removeStar(String myText)</cline>
           <cline>{</cline>
         </block>
@@ -121,16 +121,16 @@
           <cline>       return "";</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="3">
+        <block order="1">
           <cline>    if (myText.charAt(0) == '*')</cline>
           <cline>    {</cline>
           <cline>       return removeStar(myText.substring(1));</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="4">
+        <block order="2">
           <cline>    return myText.charAt(0) + removeStar(myText.substring(1));</cline>
         </block>
-        <block order="1">
+        <block order="3">
           <cline>} //end method</cline>
         </block>
       </blocks>
@@ -140,29 +140,29 @@
         <p>The following method should return the base multiplied power times. In other words, the base ^ power &#x2013; so exponent(2, 4) should return 16.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="6">
           <cline>public static int exponent(int base, int power)</cline>
           <cline>{</cline>
         </block>
-        <block order="1">
+        <block order="2">
           <cline>    if (power == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="4">
+        <block order="5">
           <cline>        return 1;</cline>
         </block>
-        <block order="5" correct="no">
+        <block order="3" correct="no">
           <cline>        return 0; </cline>
         </block>
-        <block order="3">
+        <block order="1">
           <cline>    } //end if</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="7">
+        <block order="4">
           <cline>        return base * exponent(base, power - 1);</cline>
         </block>
-        <block order="6">
+        <block order="7">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -173,15 +173,15 @@
         <p>The following method should return the number of times &#x201C;5&#x201D; is an element in the passed-in array &#x2013; so {1, 5, 7, 14, 5} will return 2 (Note that when the method is called the index will always start off as 0).  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="7">
+        <block order="3">
           <cline>public static int numFiveOccurrence(int[] arr, int index)</cline>
           <cline>{</cline>
         </block>
-        <block order="3">
+        <block order="8">
           <cline>    if (index &gt;= arr.length)</cline>
           <cline>    {</cline>
         </block>
-        <block order="8" correct="no">
+        <block order="9" correct="no">
           <cline>    if (index &lt;= arr.length) </cline>
           <cline>    {</cline>
         </block>
@@ -193,19 +193,19 @@
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="2">
+        <block order="5">
           <cline>        if (arr[index] == 5)</cline>
           <cline>        {</cline>
           <cline>            return numFiveOccurrence(arr, index + 1) + 1;</cline>
           <cline>        }</cline>
         </block>
-        <block order="5">
+        <block order="2">
           <cline>        return numFiveOccurrence(arr, index + 1);</cline>
         </block>
         <block order="1" correct="no">
           <cline>        return numFiveOccurrence(arr, index); </cline>
         </block>
-        <block order="9">
+        <block order="7">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -216,33 +216,33 @@
         <p>The following method should repeat the passed-in string a set number of times &#x2013; so repeatThis(&#x201C;hi&#x201D;, 3) should return &#x201C;hihihi&#x201D;.  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="6">
+        <block order="4">
           <cline>public static String repeatThis(String s, int i)</cline>
           <cline>{</cline>
         </block>
-        <block order="2">
+        <block order="8">
           <cline>    if (i == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="7" correct="no">
+        <block order="2" correct="no">
           <cline>    if (i &gt;= 0) </cline>
           <cline>    {</cline>
         </block>
-        <block order="8">
+        <block order="5">
           <cline>       return "";</cline>
         </block>
-        <block order="4">
+        <block order="1">
           <cline>    } //end if</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="5">
+        <block order="6">
           <cline>       return s + repeatThis(s, i-1);</cline>
         </block>
-        <block order="3" correct="no">
+        <block order="7" correct="no">
           <cline>       return repeatThis(s, i-1); </cline>
         </block>
-        <block order="1">
+        <block order="3">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -253,27 +253,27 @@
         <p>The following method should return number of times the character &#x201C; x &#x201C; is in a String &#x2013; so findNumX(&#x201C;xHihxixx&#x201D;) should return 4.  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="4">
+        <block order="2">
           <cline>public static int findNumX(String s)</cline>
           <cline>{</cline>
         </block>
-        <block order="7">
+        <block order="6">
           <cline>    if (s.length() == 0)</cline>
           <cline>    {</cline>
           <cline>        return 0;</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="6">
+        <block order="1">
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="2">
+        <block order="7">
           <cline>        if (s.charAt(0) == 'x')</cline>
           <cline>        {</cline>
           <cline>            return 1 + findNumX(s.substring(1));</cline>
           <cline>        } //end if</cline>
         </block>
-        <block order="1" correct="no">
+        <block order="4" correct="no">
           <cline>        if (s.charAt(0) = 'x') </cline>
           <cline>        {</cline>
           <cline>            return 1 + findNumX(s.substring(0));</cline>
@@ -293,33 +293,33 @@
         <p>The following method should return a string counting from 1 to the specified number &#x2013; so countTo(4) should return &#x201C;1&#x2026;2&#x2026;3&#x2026;4&#x2026;&#x201D;.  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="4">
+        <block order="3">
           <cline>public static String countTo(int x)</cline>
           <cline>{</cline>
         </block>
-        <block order="5">
+        <block order="2">
           <cline>    if (x == 0)</cline>
           <cline>    {</cline>
         </block>
-        <block order="6" correct="no">
+        <block order="5" correct="no">
           <cline>    if (x == 1) </cline>
           <cline>    {</cline>
         </block>
-        <block order="1">
+        <block order="8">
           <cline>        return "";</cline>
         </block>
-        <block order="8">
+        <block order="1">
           <cline>    } //end if</cline>
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
-        <block order="7">
+        <block order="6">
           <cline>        return countTo(x - 1) + x + "...";</cline>
         </block>
-        <block order="3" correct="no">
+        <block order="7" correct="no">
           <cline>        return countTo(x - 1) + (x - 1) + "..."; </cline>
         </block>
-        <block order="2">
+        <block order="4">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>
@@ -330,17 +330,17 @@
         <p>The following method should take an passed-in number and return a string such that only the even numbers are still present. All of the odd digits should be replaced with a &#x201C;_&#x201D; &#x2013; so 4321 should become <c>4_2_</c>.  But the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="6">
           <cline>public static String displayEvenDigits(int num)</cline>
           <cline>{</cline>
         </block>
-        <block order="3">
+        <block order="7">
           <cline>    if (num == 0)</cline>
           <cline>    {</cline>
           <cline>        return "";</cline>
           <cline>    } //end if</cline>
         </block>
-        <block order="8">
+        <block order="4">
           <cline>    else</cline>
           <cline>    {</cline>
         </block>
@@ -348,21 +348,21 @@
           <cline>        if ((num % 10) % 2 == 0)</cline>
           <cline>        {</cline>
         </block>
-        <block order="9" correct="no">
+        <block order="5" correct="no">
           <cline>        if ((num % 10) % 2 == 1) </cline>
           <cline>        {</cline>
         </block>
-        <block order="5">
+        <block order="8">
           <cline>            return "" + displayEvenDigits(num / 10) + (num % 10);</cline>
           <cline>        } //end if</cline>
         </block>
-        <block order="7">
+        <block order="3">
           <cline>        return displayEvenDigits(num / 10) + "_";</cline>
         </block>
-        <block order="4" correct="no">
+        <block order="2" correct="no">
           <cline>        return "_" + displayEvenDigits(num / 10); </cline>
         </block>
-        <block order="6">
+        <block order="9">
           <cline>    } //end else</cline>
           <cline>} //end method</cline>
         </block>

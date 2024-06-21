@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - StringFormatter B
------------------------------------
+===================================
 
 .. index::
     single: trio
@@ -25,7 +25,7 @@ The following three examples illustrate these concepts. In each example, the lis
     :figclass: align-center
 
 Part B
-=======
+-------
 
 (b) Write the ``StringFormatter`` method ``basicGapWidth``, which returns the basic gap width as defined above.
 
@@ -50,7 +50,7 @@ Complete method ``basicGapWidth`` below.
                                     int formattedLen)
 
 How to Solve Part B
-=====================
+---------------------
 
 Click to reveal the algorithm and multiple choice questions that may help you write your solution.
 
@@ -95,7 +95,7 @@ Click to reveal the algorithm and multiple choice questions that may help you wr
         True or False: A loop is required to correctly solve this problem.
 
 Put the Code in Order
-======================
+----------------------
 
 .. reveal:: stringFormatterB_parsons
     :showtitle: Reveal Mixed Up Code
@@ -125,7 +125,7 @@ Put the Code in Order
 
 
 Write the Code
-==================
+------------------
 
 
 

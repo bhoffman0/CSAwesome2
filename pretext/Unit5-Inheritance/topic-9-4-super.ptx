@@ -17,14 +17,14 @@
     </p>
     <p>The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000933" refid="id1">|CodingEx|</problematic>
+      <image source="../_static/codingExercise.png" width="NaN%" alt="coding exercise"/>
       <term>Coding Exercise</term>
     </p>
     <p>In the example below, the <c>Student</c> class overrides the <c>getFood</c> method of the <c>Person</c> class, and it uses <c>super.getFood()</c> to call the <c>Person</c> <c>getFood</c> method before adding on to it. Here, a <c>Person</c> is associated with the food &#x201C;Hamburger&#x201D; and a <c>Student</c> is associated with &#x201C;Hamburger&#x201D; and &#x201C;Taco&#x201D;.</p>
     <p>How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn&#x2019;t find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled.</p>
     <p>When the student <c>getFood()</c> method is executed it will start executing the <c>getFood</c> method in <c>Student</c>.  When it gets to <c>super.getFood()</c> it will execute the <c>getFood</c> method in <c>Person</c>.  This method will return the string <c>"Hamburger"</c>.  Then execution will continue in the <c>getFood</c> method of <c>Student</c> and  return the string <c>"Hamburger and Taco"</c>.</p>
     <p>
-      <problematic xml:id="UNIQUE-ID-000934" refid="id3">|Exercise|</problematic>
+      <image source="../_static/exercise.png" width="NaN%" alt="exercise"/>
       <term>Check your understanding</term>
     </p>
     <p>You can step through this example using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=10">Super Example</url>.</p>
@@ -42,8 +42,8 @@ public String toString()
 </input>
     </program>
   </introduction>
-  <subsection xml:id="UNIQUE-ID-000935">
-    <title><problematic xml:id="UNIQUE-ID-000936" refid="id5">|Groupwork|</problematic> Programming Challenge : Customer Info</title>
+  <subsection xml:id="UNIQUE-ID-000874">
+    <title><image source="../_static/groupwork.png" width="NaN%" alt="groupwork"/> Programming Challenge : Customer Info</title>
     <p>The <c>Customer</c> class below keeps track of the names and addresses of customers. It has a <c>toString</c> method that prints out the name and address of the object.</p>
     <p>
       <ol marker="1">
@@ -65,7 +65,7 @@ public String toString()
       <statement>
         <p>Complete the OnlineCustomer class below to inherit from Customer and add an email address, a constructor, and override the toString() method.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000937" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000875" interactive="activecode" language="java">
         <input>
 public class Customer
 {
@@ -165,7 +165,7 @@ class OnlineCustomer
       </program>
     </exercise>
   </subsection>
-  <subsection xml:id="UNIQUE-ID-000938">
+  <subsection xml:id="UNIQUE-ID-000876">
     <title>Summary</title>
     <p>
       <ul>
@@ -183,7 +183,7 @@ class OnlineCustomer
       <statement>
         <p>Add another subclass called Vegan that inherits from the Student class. Add a Vegan contructor that takes a name as an argument and passes it to the super constructor. Override the getFood() method in Vegan to call the superclass getFood() but add a &#x201C;No &#x201C; in front of it and then say &#x201C;but &#x201C; and add a vegan food. Change Javier to a Vegan object in main() and try it out!</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000939" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000877" interactive="activecode" language="java">
         <input>
 public class Person
 {

@@ -23,8 +23,60 @@
             </li>
           </ul>
         </p>
+        <table xml:id="UNIQUE-ID-000524">
+          <tabular>
+            <row header="yes">
+              <cell>
+                            Example Input
+                        </cell>
+              <cell>
+                            Expected Output
+                        </cell>
+            </row>
+            <row>
+              <cell>
+                <c>front_back("Open at noon", "Open", "noon")</c>
+              </cell>
+              <cell>
+                <c>"s_e"</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>front_back("Opening time", "Open", "noon")</c>
+              </cell>
+              <cell>
+                <c>"s"</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>front_back("Afternoon", "Open", "noon")</c>
+              </cell>
+              <cell>
+                <c>"e"</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>front_back("Closed", "Open", "noon")</c>
+              </cell>
+              <cell>
+                <c>"n"</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>front_back("It is noon now", "open", "noon")</c>
+              </cell>
+              <cell>
+                <c>"n"</c>
+              </cell>
+            </row>
+          </tabular>
+        </table>
       </statement>
-      <program xml:id="front_back_written_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000525" interactive="activecode" language="java">
         <input>
 public class FrontBack {
    public static String front_back(String str, String start, String end) {
@@ -75,8 +127,44 @@ public class RunestoneTests extends CodeTestHelper {
     <exercise label="squirrelPlay_written">
       <statement>
         <p>The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an <c>int temperature</c> and a <c>boolean isSummer</c>, return <c>true</c> if the squirrels play and <c>false</c> otherwise.</p>
+        <table xml:id="UNIQUE-ID-000526">
+          <tabular>
+            <row header="yes">
+              <cell>
+                            Example Input
+                        </cell>
+              <cell>
+                            Expected Output
+                        </cell>
+            </row>
+            <row>
+              <cell>
+                <c>squirrelPlay(70, false)</c>
+              </cell>
+              <cell>
+                <c>true</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>squirrelPlay(95, false)</c>
+              </cell>
+              <cell>
+                <c>false</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>squirrelPlay(95, true)</c>
+              </cell>
+              <cell>
+                <c>true</c>
+              </cell>
+            </row>
+          </tabular>
+        </table>
       </statement>
-      <program xml:id="squirrelPlay_written_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000527" interactive="activecode" language="java">
         <input>
 
 import java.util.Scanner;
@@ -121,8 +209,44 @@ public class RunestoneTests extends CodeTestHelper {
     <exercise label="alarmClock_written">
       <statement>
         <p>Given a <c>day</c> of the week encoded as 0=Sun, 1=Mon, 2=Tue, &#x2026;6=Sat, and a <c>boolean</c> indicating if we are on <c>vacation</c>, return a string of the form <c>"7:00"</c> indicating when the alarm clock should ring. Weekdays, the alarm should be <c>"7:00"</c> and on the weekend it should be <c>"10:00"</c>. Unless we are on vacation &#x2013; then on weekdays it should be <c>"10:00"</c> and weekends it should be <c>"off"</c>.</p>
+        <table xml:id="UNIQUE-ID-000528">
+          <tabular>
+            <row header="yes">
+              <cell>
+                            Example Input
+                        </cell>
+              <cell>
+                            Expected Output
+                        </cell>
+            </row>
+            <row>
+              <cell>
+                <c>alarmClock(1, false)</c>
+              </cell>
+              <cell>
+                <c>7:00</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>alarmClock(5, false)</c>
+              </cell>
+              <cell>
+                <c>7:00</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>alarmClock(0, false)</c>
+              </cell>
+              <cell>
+                <c>10:00</c>
+              </cell>
+            </row>
+          </tabular>
+        </table>
       </statement>
-      <program xml:id="alarmClock_written_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000529" interactive="activecode" language="java">
         <input>
 import java.util.Scanner;
 
@@ -167,8 +291,44 @@ public class RunestoneTests extends CodeTestHelper {
     <exercise label="dateFashion_written">
       <statement>
         <p>You and your date are trying to get a table at a restaurant. The parameter <c>you</c> is the stylishness of your clothes, in the range 0..10, and <c>date</c> is the stylishness of your date&#x2019;s clothes. The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is <c>2</c> (yes). With the exception that if either of you has style of 2 or less, then the result is <c>0</c> (no). Otherwise the result is <c>1</c> (maybe).</p>
+        <table xml:id="UNIQUE-ID-000530">
+          <tabular>
+            <row header="yes">
+              <cell>
+                            Example Input
+                        </cell>
+              <cell>
+                            Expected Output
+                        </cell>
+            </row>
+            <row>
+              <cell>
+                <c>dateFashion(5, 10)</c>
+              </cell>
+              <cell>
+                <c>2</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>dateFashion(8, 2)</c>
+              </cell>
+              <cell>
+                <c>0</c>
+              </cell>
+            </row>
+            <row>
+              <cell>
+                <c>dateFashion(5, 5)</c>
+              </cell>
+              <cell>
+                <c>1</c>
+              </cell>
+            </row>
+          </tabular>
+        </table>
       </statement>
-      <program xml:id="dateFashion_written_editor" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000531" interactive="activecode" language="java">
         <input>
 import java.util.Scanner;
 public class DateStylishness{

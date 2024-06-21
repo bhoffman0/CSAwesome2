@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Grid World A
---------------------------------------------------------
+========================================================
 
 .. index::
    single: Grid World
@@ -26,7 +26,7 @@ grid. Each empty location should appear exactly once in the ``Arraylist``.
 
 
 Necessary Preliminary Information
-================================================
+------------------------------------------------
 The GridWorld case study provided a graphical environment where visual objects inhabited and interacted in a two-dimensional grid (similar to GreenFoot).
 In this case study, students designed and created ``Actor`` objects, added them to ``Grid`` objects, and determined whether the ``Actor`` objects behaved according to their specifications.
 Since this case study is no longer in the AP Java curriculum, all the necessary documentation is provided below.
@@ -45,7 +45,7 @@ For part A we will be working with the class ``BoundedGrid<E>`` which implements
     :figclass: align-center
 
 Check your understanding of the question
-================================================
+------------------------------------------------
 
 The problems in this section are to help you check your understanding and guide you towards a solution.
 You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.
@@ -135,7 +135,7 @@ You can skip these if you think you know what to do already.  Click the buttons 
 
 
 How to Solve Part A
-=====================
+---------------------
 
 Here is the question again.
 
@@ -163,10 +163,10 @@ This section contains a plain English explanation of one way to solve this probl
    :hidetitle: Hide ArrayList Declaration problem
 
    .. mchoice:: grdwrld_mcalg_answr_1
-      :answer_a: locs = new ArrayList&lt;Location&gt;();
-      :answer_b: ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;;
-      :answer_c: ArrayList&lt;Location&gt; locs = new List&lt;Location&gt;();
-      :answer_d: ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;();
+      :answer_a: locs = new ArrayList&lt;Location&amp;gt;();
+      :answer_b: ArrayList&lt;Location&amp;gt; locs = new ArrayList&lt;Location&amp;gt;;
+      :answer_c: ArrayList&lt;Location&amp;gt; locs = new List&lt;Location&amp;gt;();
+      :answer_d: ArrayList&lt;Location&amp;gt; locs = new ArrayList&lt;Location&amp;gt;();
       :correct: d
       :feedback_a: You must declare the type for locs
       :feedback_b: You must include the () when creating a new object
@@ -228,7 +228,7 @@ This section contains a plain English explanation of one way to solve this probl
 
 
 Write the Code
-==================
+------------------
 
 In this question, you will write the ``GridWorldUtilities`` method ``getEmptyLocations``. If there are no empty locations
 in grid, the method returns an empty ``Arraylist``. Otherwise, it returns an ``Arraylist`` of all empty locations in

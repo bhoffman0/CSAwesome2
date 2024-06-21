@@ -3,11 +3,11 @@
    :start: 1
 
 Free Response - Delimiters B
-------------------------------
+==============================
 
 
 Part B
-========
+--------
 
 (b) Write the method ``isBalanced``, which returns ``true`` when the delimiters are balanced and returns ``false`` otherwise.  The delimiters are balanced when both
 of the following conditions are satisfied; otherwise they are not balanced.
@@ -26,7 +26,7 @@ be returned by calls to ``getDelimitersList`` and the value that would be return
 
 
 Check your understanding of the Question
-=========================================
+-----------------------------------------
 
 The problems in this section can help you check your understanding of part B.  You can skip these if you think you know what to do already.  Click on a button to reveal a question.
 
@@ -70,7 +70,7 @@ The problems in this section can help you check your understanding of part B.  Y
 
 
 How to Solve Part B
-=====================
+---------------------
 
 Here is the question again.
 
@@ -137,7 +137,7 @@ This section contains a plain English explanation of one way to solve this probl
 
 
 Write the Code
-==================
+------------------
 
 Write the method ``isBalanced``, which returns ``true`` when the delimiters are balanced and returns ``false`` otherwise.  The delimiters are balanced when both
 of the following conditions are satisfied; otherwise they are not balanced.

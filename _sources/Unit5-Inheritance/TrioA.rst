@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Trio A
------------------------------------
+===================================
 
 .. index::
     single: trio
@@ -65,7 +65,7 @@ and a price of $6.25 (the two highest prices
 are $2.75 and $3.50).
 
 Try and Solve It
-===================
+-------------------
 
 
 

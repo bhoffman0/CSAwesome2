@@ -4,7 +4,6 @@
    :prefix: 3-7-
    :start: 1
 
-|Time45|
 
 Comparing Objects
 =================
@@ -163,9 +162,9 @@ Note that you can also create ``Strings`` using string literals instead of new, 
 
 .. mchoice:: qsbeq_1
    :practice: T
-   :answer_a: s1 == s2 && s1 == s3
-   :answer_b: s1 == s2 && s1.equals(s3)
-   :answer_c: s1 != s2 && s1.equals(s3)
+   :answer_a: s1 == s2 &amp;&amp; s1 == s3
+   :answer_b: s1 == s2 &amp;&amp; s1.equals(s3)
+   :answer_c: s1 != s2 &amp;&amp; s1.equals(s3)
    :correct: b
    :feedback_a: Do s1 and s3 refer to the same object?
    :feedback_b: Yes s2 was set to refer to the same object as s1 and s1 and s3 have the same characters.
@@ -182,9 +181,9 @@ Note that you can also create ``Strings`` using string literals instead of new, 
 
 .. mchoice:: qsbeq_2
    :practice: T
-   :answer_a: s1 == s2 && s1 == s3
-   :answer_b: s2.equals(s3) && s1.equals(s3)
-   :answer_c: s1 != s3 && s1.equals(s3)
+   :answer_a: s1 == s2 &amp;&amp; s1 == s3
+   :answer_b: s2.equals(s3) &amp;&amp; s1.equals(s3)
+   :answer_c: s1 != s3 &amp;&amp; s1.equals(s3)
    :correct: c
    :feedback_a: Do s1 and s2 refer to the same object?
    :feedback_b: Does s2 have the same characters as s1 or s3?
@@ -200,9 +199,9 @@ Note that you can also create ``Strings`` using string literals instead of new, 
 
 .. mchoice:: qsbeq_3
    :practice: T
-   :answer_a: s1 == s3 && s1.equals(s3)
-   :answer_b: s2.equals(s3) && s1.equals(s3)
-   :answer_c: !(s1 == s2) && !(s1 == s3)
+   :answer_a: s1 == s3 &amp;&amp; s1.equals(s3)
+   :answer_b: s2.equals(s3) &amp;&amp; s1.equals(s3)
+   :answer_c: !(s1 == s2) &amp;&amp; !(s1 == s3)
    :correct: c
    :feedback_a: Since s3 uses the new operator it will not refer to the same object as s1.
    :feedback_b: Do s2 and s3 have the same characters in the same order?

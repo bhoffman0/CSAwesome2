@@ -1,4 +1,3 @@
-
 Timed Multiple-Choice Exams
 :::::::::::::::::::::::::::::::::
 

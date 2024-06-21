@@ -1,16 +1,12 @@
 .. include:: ../common.rst
 
-|Time90|
 
-.. |Explorer Repl| raw:: html
-
-   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureExplorer" style="text-decoration:underline" target="_blank" >Picture Explorer Repl</a>
 
 Picture Lab A7: Mirroring Part of a Picture
 =====================================================
 
 Sometimes you only want to mirror part of a picture. For example, Figure 1 shows a temple in Greece
-that is missing a part of the roof called the pediment. You can use the |Explorer Repl| to find the area that
+that is missing a part of the roof called the pediment. You can use the `Picture Explorer Repl <https://firewalledreplit.com/@BerylHoffman/PictureExplorer>`_ to find the area that
 you want to mirror in temple.jpg to produce the picture on the right. If you do this you will find that you can mirror
 the rows from 27 to 96 (inclusive) and the columns from 13 to 275 (inclusive). You can change the
 starting and ending points for the row and column values to mirror just part of the picture.
@@ -239,8 +235,8 @@ equals 263 times. The total is 70 * 263, which equals 18,410.
    :correct: d
    :feedback_a: Don't forget the inner loop.
    :feedback_b: Don't forget the inner loop.
-   :feedback_c: Notice that these loops use <=
-   :feedback_d: Yes, the loops do not start at 0 and use <=.
+   :feedback_c: Notice that these loops use &lt;=
+   :feedback_d: Yes, the loops do not start at 0 and use &lt;=.
 
    How many times would the body of this nested for loop execute?
 
@@ -413,10 +409,10 @@ inside the body of the loop. Print the value of count after the nested loop ends
     }
 
 .. image:: Figures/mirrorarms.png
-    :width: 150
+    :width: 150px
     :align: left
 
-2. Write the method ``mirrorArms`` to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork |Explorer Repl| and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
+2. Write the method ``mirrorArms`` to mirror the arms on the snowperson ("snowperson.jpg") to make a snowperson with 4 arms. Fork `Picture Explorer Repl <https://firewalledreplit.com/@BerylHoffman/PictureExplorer>`_ and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 .. activecode:: picture-lab-A7-mirrorArms
     :language: java
@@ -584,11 +580,11 @@ inside the body of the loop. Print the value of count after the nested loop ends
     }
 
 .. image:: Figures/mirrorgull.png
-    :width: 150
+    :width: 150px
     :align: left
 
 3. Write the method ``mirrorGull`` to mirror the seagull ("seagull.jpg") to the right so
-that there are two seagulls on the beach near each other. Fork |Explorer Repl| and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
+that there are two seagulls on the beach near each other. Fork `Picture Explorer Repl <https://firewalledreplit.com/@BerylHoffman/PictureExplorer>`_ and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.
 
 
 .. activecode:: picture-lab-A7-mirrorGull

@@ -4,7 +4,6 @@
    :prefix: 3-3-
    :start: 1
 
-|Time90|
 
 Two-way Selection: if-else Statements
 ======================================
@@ -421,22 +420,19 @@ they are not technically required to avoid this kind of confusion.
 ------------------------------------------------
 
 .. image:: Figures/questionmark.jpg
-    :width: 100
+    :width: 100px
     :align: left
 
 
-.. |Akinator| raw:: html
-
-   <a href="https://en.akinator.com/" style="text-decoration:underline" target="_blank">Akinator</a>
 
 We encourage you to work in pairs for this challenge which is on replit.com (you will need an account there if you want to save your version).
 
 Have you ever played 20 Questions? 20 Questions is a game where one person thinks of an object and the other players ask up to 20 questions to guess what it is.
 
-There is great online version called |Akinator| that guesses whether you are thinking of a real or fictional character by asking you questions. Akinator is a simple Artificial Intelligence algorithm that uses a decision tree of yes or no questions to pinpoint the answer.
+There is great online version called `Akinator <https://en.akinator.com/>`_ that guesses whether you are thinking of a real or fictional character by asking you questions. Akinator is a simple Artificial Intelligence algorithm that uses a decision tree of yes or no questions to pinpoint the answer.
 Although Akinator needs a very large decision tree, we can create a  guessing game for animals using a much smaller number of if-statements.
 
-The |Animal Guessing program| below uses the following decision tree:
+The `Animal Guessing program <https://firewalledreplit.com/@BerylHoffman/GuessAnimal#Main.java>`_ below uses the following decision tree:
 
 .. figure:: Figures/decision-tree.png
     :width: 300px
@@ -445,11 +441,8 @@ The |Animal Guessing program| below uses the following decision tree:
 
     Figure 2: Animal Guessing Game Decision Tree
 
-.. |Animal Guessing program| raw:: html
 
-    <a href="https://firewalledreplit.com/@BerylHoffman/GuessAnimal#Main.java" target="_blank" style="text-decoration:underline">Animal Guessing program</a>
-
-1. Try the |Animal Guessing program| below and run it a couple times thinking of an animal and answering the questions with y or n for yes or no. Did it guess your animal? Probably not! It's not very good. It can only guess 3 animals. Let's try to expand it!
+1. Try the `Animal Guessing program <https://firewalledreplit.com/@BerylHoffman/GuessAnimal#Main.java>`_ below and run it a couple times thinking of an animal and answering the questions with y or n for yes or no. Did it guess your animal? Probably not! It's not very good. It can only guess 3 animals. Let's try to expand it!
 
 2. In the very last else clause, the program knows that it is not a mammal and it guesses a bird. Let's add to that part. (You may want to click on Open in replit.com on the top right of the window and then click on Sign up or Log in to save your work). Instead of saying "I guess a bird! Click on run to play again.", change it to ask a question that distinguishes between birds and reptiles (for example does it fly?). Then, get their response and use an if statement to guess "bird" or "turtle" (or another reptile). For example, here's how we decided to choose between a dog or an elephant. We asked the question "Is it a pet?", got the response, and then with an if statement on the y/n answer we determined dog or elephant. You would use similar code to distinguish between a bird and a turtle. Run your code and test both possibilities!
 

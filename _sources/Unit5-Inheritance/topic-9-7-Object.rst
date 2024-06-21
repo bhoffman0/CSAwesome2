@@ -5,11 +5,7 @@
    :start: 1
 
 
-.. |AP CSA Reference Sheet| raw:: html
 
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
-
-|Time45|
 
 Object Superclass
 ====================
@@ -17,7 +13,7 @@ Object Superclass
 The ``Object`` class is the superclass of all other classes in Java and a part
 of the built-in ``java.lang`` package. If a parent class isn’t specified using
 the ``extends`` keyword, the class will inherit from the ``Object`` class. What
-does a class inherit from the ``Object`` class? The |AP CSA Reference Sheet|
+does a class inherit from the ``Object`` class? The `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_
 lists the two main methods that are most frequently used:
 
 - ``String toString()``

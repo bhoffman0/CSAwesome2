@@ -31,7 +31,7 @@
 
 
 Pretest for the AP CSA Exam
-------------------------------
+==============================
 
 Please try the following pretest. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. If you have no idea on the answer, it is okay to skip questions or to make your best guess.
 
@@ -185,12 +185,12 @@ Please make sure you are logged into Runestone before beginning. Click the |star
     .. mchoice:: qpret_5
         :answer_a: x = 0;
         :answer_b: if (x > 0) x = 0;
-        :answer_c: if (x < 0) x = 0;
+        :answer_c: if (x &lt; 0) x = 0;
         :answer_d: if (x > 0) x = -x; else x = 0;
-        :answer_e: if ( x < 0) x = 0; else x = -1;
+        :answer_e: if ( x &lt; 0) x = 0; else x = -1;
         :correct: a
         :feedback_a: No matter what x is set to originally, the code will reset it to 0.
-        :feedback_b: Even if x is < 0, the above code will set it to 0.
+        :feedback_b: Even if x is &lt; 0, the above code will set it to 0.
         :feedback_c: Even if x is > than 0 originally, it will be set to 0 after the code executes.
         :feedback_d: The first if statment will always cause the second to be executed unless x already equals 0, such that x will never equal -x
         :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x
@@ -203,17 +203,17 @@ Please make sure you are logged into Runestone before beginning. Click the |star
             if (x < 0) x = 0;
 
     .. mchoice:: qpret_6
-        :answer_a: (s == m - 5) && (s - 3 == 2 * (m - 3))
-        :answer_b: (s == (m + 5)) && ((s + 3) == (2 * m + 3))
-        :answer_c: s == (m - 5) && (2 * s + 3) == (m + 3)
-        :answer_d: s == m + 5 && s + 3 == 2 * m + 6
+        :answer_a: (s == m - 5) &amp;&amp; (s - 3 == 2 * (m - 3))
+        :answer_b: (s == (m + 5)) &amp;&amp; ((s + 3) == (2 * m + 3))
+        :answer_c: s == (m - 5) &amp;&amp; (2 * s + 3) == (m + 3)
+        :answer_d: s == m + 5 &amp;&amp; s + 3 == 2 * m + 6
         :answer_e: None of the answers are correct
         :correct: d
         :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
         :feedback_b: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
         :feedback_c: This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt's age minus 5 which would have Matt older than Susan.
         :feedback_d: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
-        :feedback_e: The answer is s == m + 5 && s + 3 == 2 * m + 6.
+        :feedback_e: The answer is s == m + 5 &amp;&amp; s + 3 == 2 * m + 6.
 
         Susan is 5 years older than Matt. Three years from now Susan's age will be twice Matt's age.  What should be in place of ``condition`` in the code segment below to solve this problem?
 
@@ -326,16 +326,16 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
     .. mchoice:: qpret_9
         :answer_a: (c || d)
-        :answer_b: (c && d)
-        :answer_c: (!c) && (!d)
-        :answer_d: !(c && d)
+        :answer_b: (c &amp;&amp; d)
+        :answer_c: (!c) &amp;&amp; (!d)
+        :answer_d: !(c &amp;&amp; d)
         :answer_e: (!c) || (!d)
         :correct: c
         :feedback_a: NOTing an OR expression does not result in the same values ORed.
         :feedback_b: You do negate the OR to AND, but you also need to negate the values of d and d.
         :feedback_c: NOTing (negating) an OR expression is the same as the AND of the individual values NOTed (negated). See De Morgans laws.
         :feedback_d: This would be equivalent to (!c || !d)
-        :feedback_e: This would be equivalent to (!(c && d))
+        :feedback_e: This would be equivalent to (!(c &amp;&amp; d))
 
         Which of the following expressions is equivalent to the following?
 

@@ -250,10 +250,10 @@ The Algorithm
    :hidetitle: Hide Conditional Problem
 
    .. mchoice:: routeciphera_6MC
-     :answer_a: if (str.length() < (c + (r * this.numCols)))
+     :answer_a: if (str.length() &lt; (c + (r * this.numCols)))
      :answer_b: if (str.length() > (c + (r * this.numCols)))
      :answer_c: if (str.length() > numRows * numCols)
-     :answer_d: if (str.length() < numRows * numCols)
+     :answer_d: if (str.length() &lt; numRows * numCols)
      :correct: b
      :feedback_a: This will not return the correct boolean
      :feedback_b: Correct!

@@ -3,7 +3,7 @@
    :start: 1
 
 Trio Student Solution 1
-------------------------
+========================
 
 .. index::
     single: trio
@@ -63,7 +63,7 @@ and a price of $6.25 (the two highest prices
 are $2.75 and $3.50).
 
 Grading Rubric
-===================
+-------------------
 
 Below is the grading rubric for the Trio class problem.
 
@@ -76,7 +76,7 @@ Below is the grading rubric for the Trio class problem.
     Figure 3: The grading rubric for the Trio class problem.
 
 Practice Grading
-===================
+-------------------
 
 The following is the first sample student response.
 

@@ -4,7 +4,6 @@
    :prefix: 6-1-
    :start: 1
 
-|Time90|
 
 Array Creation and Access
 ==========================
@@ -19,11 +18,8 @@ But what if we had 100 exam scores? That would be a lot of variables! Most progr
 
 An **array** is a block of memory that stores a collection of data items (**elements**) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don't need to name each one. Instead you use the array name and a number (called an **index**) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students.
 
-.. |video| raw:: html
 
-   <a href="https://youtu.be/G7aF-OuLfl4" target="_blank">video</a>
-
-Here's a fun |video| that introduces the concept of an array and gives an example.
+Here's a fun `video <https://youtu.be/G7aF-OuLfl4>`_ that introduces the concept of an array and gives an example.
 
 .. youtube:: G7aF-OuLfl4
     :width: 640
@@ -73,11 +69,8 @@ The declarations do not create the array.  Arrays are **objects** in Java, so an
 
 There are two ways to create an array. You can use the keyword **new** to get new memory or use an **initializer list** to set up the values in the array.
 
-.. |video2| raw:: html
 
-   <a href="https://youtu.be/IbPFjw1FNkE" target="_blank">video</a>
-
-Watch the following |video2| which shows the two ways of creating an array with a physical model of Java memory.
+Watch the following `video <https://youtu.be/IbPFjw1FNkE>`_ which shows the two ways of creating an array with a physical model of Java memory.
 
 .. youtube:: IbPFjw1FNkE
     :width: 650
@@ -208,17 +201,14 @@ Another way to create an array is to use an **initializer list**. You can initia
 When you create an array of a **primitive type** (like ``int``) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an **object type** (like ``String``) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found.
 
 .. figure:: Figures/intAndStringArrays.png
-    :width: 500
+    :width: 500px
     :align: center
     :figclass: align-center
 
     Figure 4: A primitive array and an object array
 
-.. |video3| raw:: html
 
-   <a href="https://youtu.be/T-YZvVvPOac" target="_blank">video</a>
-
-Watch the following |video3| which shows an array of String objects with a physical model of Java memory.
+Watch the following `video <https://youtu.be/T-YZvVvPOac>`_ which shows an array of String objects with a physical model of Java memory.
 
 .. youtube:: T-YZvVvPOac
     :width: 650
@@ -339,11 +329,8 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
 
     The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
 
-.. |video4| raw:: html
 
-   <a href="https://youtu.be/uagEJw6bTM4" target="_blank">video</a>
-
-Watch the following |video4| which shows a physical model of Java memory setting array values.
+Watch the following `video <https://youtu.be/uagEJw6bTM4>`_ which shows a physical model of Java memory setting array values.
 
 .. youtube:: uagEJw6bTM4
     :width: 650
@@ -463,7 +450,7 @@ One powerful feature in the array **data abstraction** is that we can use variab
   System.out.println(  highScores[index] );
 
 .. image:: 6-1-images/cow.jpg
-    :width: 150
+    :width: 150px
     :align: left
 
 |CodingEx| **Coding Exercise**
@@ -537,7 +524,7 @@ Here's a fun String array of image filenames. The following code displays an onl
 ---------------------------------------------------------
 
 .. image:: 6-1-images/US.jpg
-    :width: 200
+    :width: 200px
     :align: left
 
 In this challenge, you will create a guide to different countries using arrays.
@@ -766,14 +753,11 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
         }
     }
 
-.. |lesson 5.6| raw:: html
-
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 5.6</a>
 
 In Unit 5, you came up with a class of your own choice relevant to you or your
 community.  In this unit, you will create an array to hold objects of your class.
 
-1. Copy your class from |lesson 5.6| below.
+1. Copy your class from `lesson 5.6 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community>`_ below.
 
 2. In the main method, create an array of 3 objects of your class.
 
@@ -785,7 +769,7 @@ community.  In this unit, you will create an array to hold objects of your class
   :language: java
   :autograde: unittest
 
-  Community Challenge: Copy your class from |lesson 5.6| below. Create an array of 3 objects of your class, initialize
+  Community Challenge: Copy your class from `lesson 5.6 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community>`_ below. Create an array of 3 objects of your class, initialize
   them to new objects and call their print methods.
   ~~~~
   public class          // Add your class name here!
@@ -982,10 +966,6 @@ arrays can be passed in as arguments to methods and returned as values, just lik
 
 Arrays Game
 --------------------------
-
-.. |game| raw:: html
-
-   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice arrays. Click on **Arrays** and click on the element of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.

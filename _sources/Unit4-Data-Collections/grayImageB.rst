@@ -3,7 +3,7 @@
    :start: 1
 
 Free Response - Gray Image B
--------------------------------
+===============================
 
 .. index::
     single: gray image
@@ -81,7 +81,7 @@ grayscale image with 4 rows and 5 columns.
    }
 
 How to solve this problem
-===========================
+---------------------------
 
 Once again, this problem starts with looping through the array of pixels, using a nested for loop for the 2D array. As we loop we will need to subtract pixel values from one another.
 
@@ -114,12 +114,6 @@ Once again, this problem starts with looping through the array of pixels, using 
        :feedback_c: Correct!
 
        Which loop is the best for iterating through the image?
-
-.. |Java visualizer| raw:: html
-
-    <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test%0A%7B%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D%5B%5D+values+%3D+%7B%7B9,+8,+7,+6,+5%7D,%0A+++++++++++++++++++++++%7B7,+6,+5,+4,+3%7D,
-    %0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D,%0A+++++++++++++++++++++++%7B4,+3,+2,+1,+0%7D%7D%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+values.length%3B+i%2B%2B)%0A+++++%7B%0A+++++++for+(int+j+%3D+0%3B+j+%3C+values%5Bi%5D.length%3B+j%2B%2B)%0A+++++++%7B%0A
-    +++++++++System.out.print(values%5Bi%5D%5Bj%5D+-+values%5Bi%2B2%5D%5Bj%2B2%5D)%3B%0A+++++++%7D%0A+++++++System.out.println()%3B%0A+++++%7D%0A+++%7D%0A%7D&mode=display&curInstr=6" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
 
 
 When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops.
@@ -178,7 +172,7 @@ When comparing our pixel values to values deeper in the array, we need to be car
        }
 
 Algorithm
-===================
+-------------------
 There are several ways to solve this problem, we will focus on two possible solutions below. It is not required for you to
 come up with both solutions but it would be good practice. If you wish to solve these exercises, click on the buttons to reveal them.
 
@@ -195,8 +189,8 @@ This set of questions will focus on a solution that starts indexing the array at
     .. mchoice:: 2012GreyScaleB_3
      :answer_a: for (int row = this.pixelValues.length; row > 2;  row--)
      :answer_b: for (int row = this.pixelValues.length - 2; row > 0;  row--)
-     :answer_c: for (int row = 0; row < this.pixelValues.length - 2; row++)
-     :answer_d: for (int row = -2; row < this.pixelValues.length; row++)
+     :answer_c: for (int row = 0; row &lt; this.pixelValues.length - 2; row++)
+     :answer_d: for (int row = -2; row &lt; this.pixelValues.length; row++)
      :correct: c
      :feedback_a: This starts and the end and stops two from the beginning.
      :feedback_b: This starts two from the end but never reaches the zero element.
@@ -211,14 +205,14 @@ This set of questions will focus on a solution that starts indexing the array at
     :hidetitle: Hide Inner Bounds Problem
 
     .. mchoice:: 2012GreyScaleB_4
-     :answer_a: for (int col = 0; col < this.pixelValues[0].length - 2; col++)
-     :answer_b: for (int col = 0; col < this.pixelValues.length - 2; col++)
-     :answer_c: for (int col = 0; col < row; col++)
+     :answer_a: for (int col = 0; col &lt; this.pixelValues[0].length - 2; col++)
+     :answer_b: for (int col = 0; col &lt; this.pixelValues.length - 2; col++)
+     :answer_c: for (int col = 0; col &lt; row; col++)
      :answer_d: for (int col = this.pixelValues[0] - 2; col > 0; col--)
      :correct: a
      :feedback_a: Correct!
      :feedback_b: it is important to specify the row of which you are finding the length of (which will give you the height).
-     :feedback_c: having the comparison col < row will lead to unwanted behavior because col will not iterate through the full image.
+     :feedback_c: having the comparison col &lt; row will lead to unwanted behavior because col will not iterate through the full image.
      :feedback_d: The sets col equal to the first VALUE in the image -2 rather than having it only loop through the length - 2
 
      What could you write for the Inner for loop so that it iterates through the rows but stops 2 before the bottom?
@@ -229,9 +223,9 @@ This set of questions will focus on a solution that starts indexing the array at
 
     .. mchoice:: 2012GreyScaleB_5
      :answer_a: if (pixelValues[row][col] = -black) { this.pixelValues[row][col] = black }
-     :answer_b: if (pixelValues[row][col] < black) { this.pixelValues[row][col] = black }
-     :answer_c: if (pixelValues[row][col] = BLACK) { this.pixelValues[row][col] < BLACK }
-     :answer_d: if (pixelValues[row][col] < BLACK) { this.pixelValues[row][col] = BLACK }
+     :answer_b: if (pixelValues[row][col] &lt; black) { this.pixelValues[row][col] = black }
+     :answer_c: if (pixelValues[row][col] = BLACK) { this.pixelValues[row][col] &lt; BLACK }
+     :answer_d: if (pixelValues[row][col] &lt; BLACK) { this.pixelValues[row][col] = BLACK }
      :correct: d
      :feedback_a: We want to check if the pixel in below the value black, not -BLACK (which would be 0)
      :feedback_b: Variable names are case sensitive and the member variable for black is spelt in all caps.
@@ -247,14 +241,14 @@ Next we will have questions focused on a solution that starts at the beginning o
     :hidetitle: Hide Outer Bounds Problem
 
     .. mchoice:: 2012GreyScaleB_6
-     :answer_a: for (int row = 0; row < this.pixelValues.length; row++)
-     :answer_b: for (int row = 1; row <= this.pixelValues.length; row++)
-     :answer_c: for (int row = 0; row < this.pixelValues.length - 1; row++)
-     :answer_d: for (int row = 1; row < this.pixelValues.length + 1; row++)
+     :answer_a: for (int row = 0; row &lt; this.pixelValues.length; row++)
+     :answer_b: for (int row = 1; row &lt;= this.pixelValues.length; row++)
+     :answer_c: for (int row = 0; row &lt; this.pixelValues.length - 1; row++)
+     :answer_d: for (int row = 1; row &lt; this.pixelValues.length + 1; row++)
      :correct: a
      :feedback_a: Correct!
      :feedback_b: We need to start at the beginning of the image.
-     :feedback_c: this syntax would be correct if the comparison was row <= this.pixelValues.length - 1;
+     :feedback_c: this syntax would be correct if the comparison was row &lt;= this.pixelValues.length - 1;
      :feedback_d: We need to start at the beginning of the array
 
      What could you write for the outer for loop so that it iterates through the rows?
@@ -264,13 +258,13 @@ Next we will have questions focused on a solution that starts at the beginning o
     :hidetitle: Hide Inner Bounds Problem
 
     .. mchoice:: 2012GreyScaleB_7
-     :answer_a: for (int col = 0; col <= this.pixelValues.length - 1; col++)
-     :answer_b: for (int col = 0; col < this.pixelValues[0].length - 1; col++)
-     :answer_c: for (int col = 0; col < this.pixelValues[0].length; col++)
-     :answer_d: for (int col = 0; col < this.pixelValues.length + 1; col++)
+     :answer_a: for (int col = 0; col &lt;= this.pixelValues.length - 1; col++)
+     :answer_b: for (int col = 0; col &lt; this.pixelValues[0].length - 1; col++)
+     :answer_c: for (int col = 0; col &lt; this.pixelValues[0].length; col++)
+     :answer_d: for (int col = 0; col &lt; this.pixelValues.length + 1; col++)
      :correct: c
      :feedback_a: This would assume that the image is square, instead you should specify a row from which we can reference the height.
-     :feedback_b: The comparison would need to be less <= for this statement to be true.
+     :feedback_b: The comparison would need to be less &lt;= for this statement to be true.
      :feedback_c: Correct!
      :feedback_d: This would make the loop go out of bounds.
 
@@ -281,10 +275,10 @@ Next we will have questions focused on a solution that starts at the beginning o
     :hidetitle: Hide Out of Bounds Problem
 
     .. mchoice:: 2012GreyScaleB_b
-     :answer_a: if (row < pixelValues.length + 2 && col < pixelValues[row].length + 2)
-     :answer_b: if (row + 2 < pixelValues.length && col + 2 < pixelValues[row].length)
-     :answer_c: if (row + 2 <= pixelValues.length && col + 2 <= pixelValues[row].length)
-     :answer_d: if (row + 2 < pixelValues.length && col + 2 < pixelValues.length)
+     :answer_a: if (row &lt; pixelValues.length + 2 &amp;&amp; col &lt; pixelValues[row].length + 2)
+     :answer_b: if (row + 2 &lt; pixelValues.length &amp;&amp; col + 2 &lt; pixelValues[row].length)
+     :answer_c: if (row + 2 &lt;= pixelValues.length &amp;&amp; col + 2 &lt;= pixelValues[row].length)
+     :answer_d: if (row + 2 &lt; pixelValues.length &amp;&amp; col + 2 &lt; pixelValues.length)
      :correct: b
      :feedback_a: The would not check for out of bounds, in fact the bounds have been incorrectly extended making it possible to be even more out of bounds.
      :feedback_b: Correct!
@@ -294,7 +288,7 @@ Next we will have questions focused on a solution that starts at the beginning o
      Since you don't limit the iteration through the array, how can you check to make sure the subtraction isn't going out of bounds?
 
 Try and Solve It
-===================
+-------------------
 
 
 .. activecode:: lcfrgib4
@@ -411,7 +405,7 @@ Try and Solve It
    }
 
 Video - One way to code the solution
-=====================================
+-------------------------------------
 
 .. the video is 2012Q4B2.mov
 

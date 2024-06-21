@@ -3,7 +3,7 @@
    :start: 1
 
 Peer Instruction: 2D Arrays Multiple Choice Questions
------------------------------------------------------
+=====================================================
 
 .. mchoice:: bs-2d-arrays-7-6
    :author: Beth Simon
@@ -268,9 +268,9 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :answer_d: 5, 9
    :correct: c
    :feedback_a: Incorrect. You have the values correct, but consider which dimensions the x and y correspond to.
-   :feedback_b: Incorrect. Consider how many times the first for loop runs. How many values are included in the span of 40 to <50 ?
+   :feedback_b: Incorrect. Consider how many times the first for loop runs. How many values are included in the span of 40 to &lt;50 ?
    :feedback_c: Correct. The first for loop spans the range of 40-49 (10 values), which correspond to the height. The second for loop spans the range of 1-4 (4 values), and corresponds to the height.
-   :feedback_d: Incorrect. Consider how many times the first for loop runs. How many values are included in the span of 40 to <50 ?
+   :feedback_d: Incorrect. Consider how many times the first for loop runs. How many values are included in the span of 40 to &lt;50 ?
 
     This code makes a red box of size (width, height)
 
@@ -323,7 +323,7 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :correct: c
    :feedback_a: Incorrect. The range from 0 to x inclusive has has a total size of x+1. In addition, the call to getPixel(w,h) could be out of range. Think about our use of zero-based indexing.
    :feedback_b: Incorrect. Even though the range from 10 to x+10 does have a size of x, the call to getPixel(w,h) could fall out of range if x + 10 is greater than the width of the drawing area.
-   :feedback_c: Correct. The range of 0 to <x has a total size of x. By starting the w and h variables at 0, we can ensure that we will not go out of bounds by calling getPixel(w,h) as long as x and y are valid values.
+   :feedback_c: Correct. The range of 0 to &lt;x has a total size of x. By starting the w and h variables at 0, we can ensure that we will not go out of bounds by calling getPixel(w,h) as long as x and y are valid values.
    :feedback_d: Incorrect. The range from 10 to x inclusive has has a total size of x+1. In addition, the call to getPixel(w,h) could be out of range. Think about our use of zero-based indexing.
 
    What are the correct loop headers to make a black box of width x and height y?
@@ -382,10 +382,10 @@ Peer Instruction: 2D Arrays Multiple Choice Questions
    :answer_d: getHeight() * getWidth()/2
    :answer_e: None of the above
    :correct: d
-   :feedback_a: Incorrect. Due to zero-based indexing, the statement "aaa < this.getHeight()" will execute this.getHeight() times. Ex. For an image of width 4, aaa will take on the values 0 1 2 and 3, for a total of 4 values.
-   :feedback_b: Incorrect. Due to zero-based indexing, the statement "aaa < this.getHeight()" will execute this.getHeight() times. Ex. For an image of width 4, aaa will take on the values 0 1 2 and 3, for a total of 4 values.
+   :feedback_a: Incorrect. Due to zero-based indexing, the statement "aaa &lt; this.getHeight()" will execute this.getHeight() times. Ex. For an image of width 4, aaa will take on the values 0 1 2 and 3, for a total of 4 values.
+   :feedback_b: Incorrect. Due to zero-based indexing, the statement "aaa &lt; this.getHeight()" will execute this.getHeight() times. Ex. For an image of width 4, aaa will take on the values 0 1 2 and 3, for a total of 4 values.
    :feedback_c: Incorrect. Examine how the first loop is incremented with "aaa++", but the second loop is incremented with "bbb = bbb + 2";
-   :feedback_d: Correct. Due to zero-based indexing, the statement "aaa < this.getHeight()" will execute this.getHeight() times. The number of potential iterations is cut in half due to the second for loop using "bbb = bbb + 2" to increment.
+   :feedback_d: Correct. Due to zero-based indexing, the statement "aaa &lt; this.getHeight()" will execute this.getHeight() times. The number of potential iterations is cut in half due to the second for loop using "bbb = bbb + 2" to increment.
    :feedback_e: Incorrect. Examine both the less than conditions and the way the for loops are incremented.
 
     How many iterations of the loop body are executed?

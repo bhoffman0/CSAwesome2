@@ -4,7 +4,6 @@
    :prefix: 7-6-
    :start: 1
 
-|Time45|
 
 Sorting Algorithms
 ==================
@@ -34,20 +33,14 @@ Selection Sort
 
 The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
-.. |video| raw:: html
 
-   <a href="https://youtu.be/Ns4TPTC8whw" target="_blank">video</a>
-
-Here is a folk dance |video| that shows the selection sort process.
+Here is a folk dance `video <https://youtu.be/Ns4TPTC8whw>`_ that shows the selection sort process.
 
 .. youtube:: Ns4TPTC8whw
     :align: center
 
-And a short |video2| that describes how selection sort works.
+And a short `video <https://youtu.be/g-PGLbMth_g>`_ that describes how selection sort works.
 
-.. |video2| raw:: html
-
-   <a href="https://youtu.be/g-PGLbMth_g" target="_blank">video</a>
 
 .. youtube:: g-PGLbMth_g
     :align: center
@@ -182,21 +175,14 @@ Insertion Sort
 
 The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 
-.. |video3| raw:: html
 
-   <a href="https://youtu.be/ROalU379l3U" target="_blank">video</a>
-
-
-Here is a folk dance |video3| that shows the insertion sort process.
+Here is a folk dance `video <https://youtu.be/ROalU379l3U>`_ that shows the insertion sort process.
 
 .. youtube:: ROalU379l3U
     :align: center
 
-.. |video4| raw:: html
 
-   <a href="https://youtu.be/JU767SDMDvA" target="_blank">video</a>
-
-And a short |video4| that describes how insertion sort works.
+And a short `video <https://youtu.be/JU767SDMDvA>`_ that describes how insertion sort works.
 
 .. youtube:: JU767SDMDvA
     :align: center
@@ -324,11 +310,8 @@ You can step through the code above by clicking on the following `Visualization 
 
 Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data.
 
-In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this |Google doc| (login to Google to make your own copy) also seen below.
+In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this `Google document <https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy>`_ (login to Google to make your own copy) also seen below.
 
-.. |Google doc| raw:: html
-
-   <a href= "https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy" style="text-decoration:underline" target="_blank" >Google document</a>
 
 .. raw:: html
 

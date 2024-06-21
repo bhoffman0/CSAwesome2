@@ -4,7 +4,6 @@
    :prefix: 5-1-
    :start: 1
 
-|Time90|
 
 Anatomy of a Java Class
 =======================
@@ -424,8 +423,8 @@ For example, here is a UML class diagram for the ``Turtle`` class. The ``-`` in
 front of the attributes indicate that they are private, and the ``+`` in front
 of the methods indicate that they are public. Here is a |tutorial on class
 diagrams| that explains it in more detail if you are curious (Class diagrams are
-not on the AP CSA exam). If you want to draw your own, |app diagrams| or
-|Creately.com| are good free online drawing tools for UML class diagrams.
+not on the AP CSA exam). If you want to draw your own, `app.diagrams.net <https://app.diagrams.net/>`_ or
+`Creately.com <https://creately.com>`_ are good free online drawing tools for UML class diagrams.
 
 
 .. figure:: Figures/turtleUMLClassDiagram.png
@@ -460,7 +459,7 @@ The two nouns in the problem description above, **Student** and **Course** would
 ----------------------------------------------------------
 
 .. image:: Figures/chicken.png
-    :width: 130
+    :width: 130px
     :align: left
     :alt: Chicken
 
@@ -469,7 +468,7 @@ In this project, you will create a class that can tell riddles like the followin
 - Riddle Question: Why did the chicken cross the playground?
 - Riddle Answer: To get to the other slide!
 
-1. First, brainstorm in pairs to create an **object-oriented design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required).
+1. First, brainstorm in pairs to create an **object-oriented design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using `app.diagrams.net <https://app.diagrams.net/>`_ or `Creately.com <https://creately.com>`_, although it is not required).
 
 2. Using the ``Person`` class above as a guide, write a ``Riddle`` class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Don't name your instance variables ``initQuestion`` and ``initAnswer`` since they are used as constructor parameter variables. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the ``private`` or ``public`` access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
@@ -623,22 +622,16 @@ In this project, you will create a class that can tell riddles like the followin
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
-.. |worksheet| raw:: html
 
-   <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
-
-.. |community1| raw:: html
-
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/community-challenge.html" target="_blank">Lesson 5.19</a>
 
 In this unit, you will design a class of your own choice that is relevant to your community.
 You will improve the class in each lesson of this unit. We suggest that you work in pairs on this project.
 If you would rather work on this project as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
-you can do this in |community1| at the end of Unit 5.
+you can do this in `Lesson 5.19 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/community-challenge.html>`_ at the end of Unit 5.
 
-1. Make your own copy of this |worksheet| from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
+1. Make your own copy of this `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
 
-2. Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.You can use the |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
+2. Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.You can use the `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using `app.diagrams.net <https://app.diagrams.net/>`_ or `Creately.com <https://creately.com>`_ (see `tutorial on class diagrams <https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b>`_).
 
 3. Type in your class name and declare the instance variables for your class in the active code exercise below. Click on run. Your class will not print out anything yet, but it should run without errors. You will add constructors and other methods to this class in the next lessons.
 
@@ -839,14 +832,6 @@ AP Practice
       - Methods should be public.
 
 
-.. |tutorial on class diagrams| raw:: html
 
-   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a>
 
-.. |Creately.com| raw:: html
 
-   <a href="https://creately.com" target="_blank">Creately.com</a>
-
-.. |app diagrams| raw:: html
-
-   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>

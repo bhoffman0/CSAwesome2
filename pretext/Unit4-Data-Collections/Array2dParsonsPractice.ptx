@@ -27,10 +27,10 @@
             <cline>        table[row][col] = row + 10 * col; </cline>
           </choice>
         </block>
-        <block order="2">
+        <block order="5">
           <cline>        System.out.print(table[row][col] + "\t");</cline>
         </block>
-        <block order="5">
+        <block order="3">
           <cline>    } //end inner for loop</cline>
           <cline>} //end outer for loop</cline>
         </block>
@@ -41,17 +41,17 @@
         <p>The following program segment should create a 8 by 8 two-dimensional int array. It should fill this array with a checkered pattern of 0s and 1s &#x2013; starting with a 1 in the top left corner and print the output (in row-column order).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="8">
+        <block order="1">
           <cline>int[][] checkerboard = new int[8][8];</cline>
         </block>
-        <block order="7">
+        <block order="5">
           <cline>for (int row = 0; row &lt; checkerboard.length; row++)</cline>
           <cline>{</cline>
           <cline>     for (int col = 0; col &lt; checkerboard[row].length; col++)</cline>
           <cline>     {</cline>
           <cline> </cline>
         </block>
-        <block order="5">
+        <block order="7">
           <choice correct="yes">
             <cline>        if ( (row + col) % 2 == 0)</cline>
             <cline>        {</cline>
@@ -62,16 +62,16 @@
             <cline>        { </cline>
           </choice>
         </block>
-        <block order="1">
+        <block order="2">
           <cline>            checkerboard[row][col] = 1;</cline>
         </block>
-        <block order="2">
+        <block order="3">
           <cline>        } //end if</cline>
         </block>
-        <block order="4">
+        <block order="8">
           <cline>        System.out.print(checkerboard[row][col] + " ");</cline>
         </block>
-        <block order="3">
+        <block order="6">
           <cline>    } //end inner for loop</cline>
           <cline>} //end outer for loop</cline>
         </block>
@@ -82,18 +82,18 @@
         <p>The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="1">
+        <block order="4">
           <cline>public static int sumVals(int[][] nums)</cline>
           <cline>{</cline>
           <cline> </cline>
         </block>
-        <block order="10">
+        <block order="7">
           <cline>   int sum = 0;</cline>
         </block>
         <block order="8" correct="no">
           <cline>   int sum; </cline>
         </block>
-        <block order="7">
+        <block order="2">
           <choice correct="yes">
             <cline>   for (int row = 0; row &lt; nums.length; row++)</cline>
             <cline>   {</cline>
@@ -104,12 +104,12 @@
             <cline>   { </cline>
           </choice>
         </block>
-        <block order="4">
+        <block order="1">
           <cline>         for (int col = 0; col &lt; nums[row].length; col++)</cline>
           <cline>         {</cline>
           <cline> </cline>
         </block>
-        <block order="11">
+        <block order="5">
           <choice correct="yes">
             <cline>             sum += nums[row][col];</cline>
           </choice>
@@ -117,14 +117,14 @@
             <cline>             sum = nums[row][col]; </cline>
           </choice>
         </block>
-        <block order="6">
+        <block order="11">
           <cline>         } //end inner for loop</cline>
         </block>
-        <block order="9">
+        <block order="3">
           <cline>   } //end outer for loop</cline>
           <cline>   return sum;</cline>
         </block>
-        <block order="5">
+        <block order="6">
           <cline>} //end method</cline>
         </block>
       </blocks>
@@ -135,7 +135,7 @@
             But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="1">
+        <block order="6">
           <cline>public static void flipImage(String[][] image)</cline>
           <cline>{</cline>
           <cline> </cline>
@@ -145,12 +145,12 @@
           <cline>    {</cline>
           <cline> </cline>
         </block>
-        <block order="2">
+        <block order="3">
           <cline>        for (int col = 0; col &lt; image[0].length / 2; col++)</cline>
           <cline>        {</cline>
           <cline> </cline>
         </block>
-        <block order="3">
+        <block order="1">
           <choice correct="yes">
             <cline>            String temp = image[row][col];</cline>
             <cline>            image[row][col] = image[row][image[row].length - 1 - col];</cline>
@@ -161,7 +161,7 @@
             <cline>            image[row][image[row].length - 1 - col] = image[row][col];</cline>
           </choice>
         </block>
-        <block order="4">
+        <block order="2">
           <cline>        } //end inner for loop</cline>
           <cline>    } //end outer for loop</cline>
           <cline>} //end method</cline>
@@ -173,7 +173,7 @@
         <p>The following program segment is a method that should accept a two-dimensional array of ints and edit it such that all even numbers are replaced by zero.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="5">
           <cline>public static void makeEvenNumsZero(int[][] nums)</cline>
           <cline>{</cline>
           <cline> </cline>
@@ -183,31 +183,31 @@
           <cline>    {</cline>
           <cline> </cline>
         </block>
-        <block order="5">
+        <block order="7">
           <cline>        for (int col = 0; col &lt; nums[row].length; col++)</cline>
           <cline>        {</cline>
           <cline> </cline>
         </block>
-        <block order="3" correct="no">
+        <block order="1" correct="no">
           <cline>        for (int col = 0; col &lt; nums[row].length(); col++)</cline>
           <cline>        {  </cline>
         </block>
-        <block order="8">
+        <block order="2">
           <cline>            if (nums[row][col] % 2 == 0)</cline>
           <cline>            {</cline>
           <cline>                nums[row][col] = 0;</cline>
           <cline>            } //end if</cline>
         </block>
-        <block order="4" correct="no">
+        <block order="8" correct="no">
           <cline>            if (nums[row][col] % 2 == 1) </cline>
           <cline>            {</cline>
           <cline>                nums[row][col] = 0;</cline>
           <cline>            } //end if</cline>
         </block>
-        <block order="7">
+        <block order="4">
           <cline>        } //end inner for loop</cline>
         </block>
-        <block order="1">
+        <block order="3">
           <cline>    } //end outer for loop</cline>
           <cline>} //end method</cline>
         </block>
@@ -218,16 +218,16 @@
         <p>The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="2">
+        <block order="8">
           <cline>public static int numOccurrences(int[][] nums,</cline>
           <cline>                                 int desired)</cline>
           <cline>{</cline>
           <cline> </cline>
         </block>
-        <block order="1">
+        <block order="3">
           <cline>    int occurrences = 0;</cline>
         </block>
-        <block order="5" correct="no">
+        <block order="2" correct="no">
           <cline>    int occurrences; </cline>
         </block>
         <block order="4">
@@ -237,23 +237,23 @@
           <cline>         {</cline>
           <cline> </cline>
         </block>
-        <block order="3">
+        <block order="7">
           <cline>            if (nums[i][j] == desired)</cline>
           <cline>            {</cline>
           <cline>                occurrences++;</cline>
           <cline>            }</cline>
         </block>
-        <block order="6" correct="no">
+        <block order="5" correct="no">
           <cline>            if (nums[i][j] != desired) </cline>
           <cline>            {</cline>
           <cline>                occurrences++;</cline>
           <cline>            }</cline>
         </block>
-        <block order="7">
+        <block order="1">
           <cline>         } //end inner for loop</cline>
           <cline>    } //end outer for loop</cline>
         </block>
-        <block order="8">
+        <block order="6">
           <cline>    return occurrences;</cline>
           <cline>} //end method</cline>
         </block>
@@ -264,26 +264,26 @@
         <p>The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="10">
+        <block order="1">
           <cline>public static int[] averageCols(int[][] nums)</cline>
           <cline>{</cline>
           <cline> </cline>
         </block>
-        <block order="5" correct="no">
+        <block order="10" correct="no">
           <cline>    int[] averages = new int[nums.length]; </cline>
         </block>
-        <block order="3">
+        <block order="8">
           <cline>    int[] averages = new int[nums[0].length];</cline>
         </block>
-        <block order="4">
+        <block order="3">
           <cline>    for (int col = 0; col &lt; nums[0].length; col++)</cline>
           <cline>    {</cline>
           <cline> </cline>
         </block>
-        <block order="8">
+        <block order="9">
           <cline>        int colSum = 0;</cline>
         </block>
-        <block order="1">
+        <block order="5">
           <cline>        for (int row = 0; row &lt; nums.length; row++)</cline>
           <cline>        {</cline>
           <cline>            colSum += nums[row][col];</cline>
@@ -295,13 +295,13 @@
           <cline>            colSum += nums[col][row];</cline>
           <cline>        } //end inner for loop</cline>
         </block>
-        <block order="9">
+        <block order="6">
           <cline>        averages[col] = colSum / nums.length;</cline>
         </block>
         <block order="7" correct="no">
           <cline>        averages[col] = colSum / nums.length(); </cline>
         </block>
-        <block order="6">
+        <block order="4">
           <cline>    } //end outer for loop</cline>
           <cline>    return averages;</cline>
           <cline>} //end method</cline>
@@ -313,28 +313,28 @@
         <p>The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="8">
+        <block order="11">
           <cline>public static int[][] oddRows(int[][] nums)</cline>
           <cline>{</cline>
           <cline> </cline>
         </block>
-        <block order="6" correct="no">
+        <block order="9" correct="no">
           <cline>public static int[] oddRows(int[][] nums)</cline>
           <cline>{  </cline>
         </block>
-        <block order="4">
+        <block order="10">
           <cline>    int[][] odds = new int[nums.length / 2][nums[0].length];</cline>
         </block>
-        <block order="11" correct="no">
+        <block order="7" correct="no">
           <cline>    int[][] odds = new int[nums.length][nums[0].length]; </cline>
         </block>
-        <block order="3">
+        <block order="5">
           <cline>    int index = 0;</cline>
           <cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
           <cline>    {</cline>
           <cline> </cline>
         </block>
-        <block order="10">
+        <block order="3">
           <cline>        if (i % 2 == 1)</cline>
           <cline>        {</cline>
           <cline> </cline>
@@ -345,19 +345,19 @@
           <cline>                 odds[index][j] = nums[i][j];</cline>
           <cline>            }</cline>
         </block>
-        <block order="5" correct="no">
+        <block order="2" correct="no">
           <cline>            for (int j = 0; j &lt; nums[i].length; j++) </cline>
           <cline>            {</cline>
           <cline>                 odds[index][j] = nums[j][i];</cline>
           <cline>            }</cline>
         </block>
-        <block order="9">
+        <block order="4">
           <cline>            index++;</cline>
         </block>
-        <block order="2">
+        <block order="6">
           <cline>        } //end if</cline>
         </block>
-        <block order="7">
+        <block order="8">
           <cline>    } //end outer for loop</cline>
           <cline>    return odds;</cline>
           <cline>} //end method</cline>
@@ -379,7 +379,7 @@
         <p>But, the blocks have been mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="5">
+        <block order="2">
           <cline>public static String[] breakIntoLetters(String[][] words)</cline>
           <cline>{</cline>
           <cline> </cline>
@@ -387,28 +387,28 @@
         <block order="1">
           <cline>   String[] result = new String[words.length];</cline>
         </block>
-        <block order="8">
+        <block order="4">
           <cline>   for (int i = 0; i &lt; words.length; i++)</cline>
           <cline>   {</cline>
           <cline> </cline>
         </block>
-        <block order="6">
+        <block order="7">
           <cline>       String word = "";</cline>
         </block>
-        <block order="2">
+        <block order="5">
           <cline>       for (int j = 0; j &lt; words[i].length; j++)</cline>
           <cline>       {</cline>
           <cline>            word += words[i][j];</cline>
           <cline>       }</cline>
         </block>
-        <block order="7">
+        <block order="8">
           <cline>       result[i] = word;</cline>
         </block>
-        <block order="3">
+        <block order="6">
           <cline>   } //end for loop</cline>
           <cline>   return result;</cline>
         </block>
-        <block order="4">
+        <block order="3">
           <cline>} //end method</cline>
         </block>
       </blocks>
@@ -418,43 +418,43 @@
         <p>The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.</p>
       </statement>
       <blocks>
-        <block order="7">
+        <block order="1">
           <cline>public static int[] maxEachRow(int[][] nums)</cline>
           <cline>{</cline>
           <cline> </cline>
         </block>
-        <block order="5">
+        <block order="7">
           <cline>   int[] max = new int[nums.length];</cline>
           <cline> </cline>
         </block>
-        <block order="3">
+        <block order="4">
           <cline>   for (int i = 0; i &lt; nums.length; i++)</cline>
           <cline>   {</cline>
           <cline> </cline>
         </block>
-        <block order="1">
+        <block order="6">
           <cline>       int maxVal = nums[i][0];</cline>
           <cline>       for (int j = 1; j &lt; nums[i].length; j++)</cline>
           <cline>       {</cline>
           <cline> </cline>
         </block>
-        <block order="2">
+        <block order="5">
           <cline>           if (maxVal &lt; nums[i][j])</cline>
           <cline>           {</cline>
           <cline>               maxVal = nums[i][j];</cline>
           <cline>           }</cline>
         </block>
-        <block order="4" correct="no">
+        <block order="8" correct="no">
           <cline>           if (maxVal &gt; nums[i][j]) </cline>
           <cline>           {</cline>
           <cline>               maxVal = nums[i][j];</cline>
           <cline>           }</cline>
         </block>
-        <block order="6">
+        <block order="2">
           <cline>       } //end inner for loop</cline>
           <cline>       max[i] = maxVal;</cline>
         </block>
-        <block order="8">
+        <block order="3">
           <cline>   } //end outer for loop</cline>
           <cline>   return max;</cline>
           <cline>} //end method</cline>

@@ -9,7 +9,7 @@ Milly Rodriguez
 :raw-html:`<font color="CadetBlue"><em>"I didn't know that people go to school for [computing], didn't know that there was programs that could help build websites, didn't know there was books that I could read on computers. I didn't realize the possibility of a career until really after college was done."</em></font>`
 
 .. image:: ../../../_static/Interviewees/M_Rodriguez.jpg
-    :width: 350
+    :width: 350px
     :align: right
     :alt: Picture of Milly
 

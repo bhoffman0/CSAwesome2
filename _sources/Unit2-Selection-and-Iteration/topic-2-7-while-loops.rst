@@ -4,7 +4,6 @@
    :prefix: 4-1-
    :start: 1
 
-|Time90|
 
 While Loops
 ============
@@ -18,7 +17,7 @@ While Loops
 
 
 .. image:: Figures/loops.png
-    :width: 125
+    :width: 125px
     :align: left
 
 When you play a song, you can set it to loop, which means that when it reaches
@@ -184,8 +183,8 @@ Java doesn't require your code to be correctly indented (code moved to the right
 .. mchoice:: while1
    :practice: T
    :answer_a: while (count == 10)
-   :answer_b: while (count < 10)
-   :answer_c: while (count <= 10)
+   :answer_b: while (count &lt; 10)
+   :answer_c: while (count &lt;= 10)
    :answer_d: while (count > 10)
    :correct: c
    :feedback_a: This would not print out anything because count = 0 at the start of the loop, so it never equals 10.
@@ -211,9 +210,6 @@ Java doesn't require your code to be correctly indented (code moved to the right
 Tracing Loops
 -------------
 
-.. |video| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=TZss5ukwN8s" target="_blank">video</a>
 
 A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.
 
@@ -226,17 +222,13 @@ You can create a tracing table that keeps track of the variable values each time
 
     Figure 5: A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.
 
-Watch the following |video| for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output.
+Watch the following `video <https://www.youtube.com/watch?v=TZss5ukwN8s>`_ for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output.
 
 .. youtube:: TZss5ukwN8s
     :width: 600
     :height: 400
     :align: center
 
-
-.. |visualizer| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualizer</a>
 
 
 |Exercise| **Check your understanding**
@@ -264,7 +256,7 @@ Watch the following |video| for a tracing demo. When you are tracing through cod
      }
      count = count - 10;
 
-Step through the code above with the |visualizer|.
+Step through the code above with the `visualizer <http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false>`_.
 
 .. mchoice:: qlb_2_1
    :practice: T
@@ -397,11 +389,8 @@ test condition and using the incorrect relational operator ``<`` or ``<=``.
 Input-Controlled Loops
 ----------------------
 
-.. |Magpie chatbot lab on replit.com| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java" target="_blank">Magpie chatbot lab on replit.com</a>
-
-You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the |Magpie chatbot lab on replit.com| below, the while loop stops when you type in "Bye". The stopping value is often called the **sentinel value** for the loop. Notice that if you type in "Bye" right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a ``return`` statement that makes it immediately return from the method.
+You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the `Magpie chatbot lab on replit.com <https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java>`_ below, the while loop stops when you type in "Bye". The stopping value is often called the **sentinel value** for the loop. Notice that if you type in "Bye" right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a ``return`` statement that makes it immediately return from the method.
 
 .. raw:: html
 
@@ -410,11 +399,8 @@ You can use a ``while`` loop to repeat the body of the loop a certain number of 
 
 |CodingEx| **Coding Exercise**
 
-.. |numbers on replit.com| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Average#Main.java" target="_blank">numbers on replit.com</a>
-
-Here's another example with |numbers on replit.com|. This code calculates the average of positive numbers, but it is missing the condition for the loop on line 14.  Let's use -1 as the **sentinel value**. Add the condition to  the while loop to run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Try commenting out line 19 with // to see what happens (note there is a stop button at the top!).
+Here's another example with `numbers on replit.com <https://firewalledreplit.com/@BerylHoffman/Average#Main.java>`_. This code calculates the average of positive numbers, but it is missing the condition for the loop on line 14.  Let's use -1 as the **sentinel value**. Add the condition to  the while loop to run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Try commenting out line 19 with // to see what happens (note there is a stop button at the top!).
 
 .. raw:: html
 
@@ -427,7 +413,7 @@ There are standard algorithms that use loops to compute the sum or average like 
 -------------------------------------------------
 
 .. image:: Figures/questionmark.jpg
-    :width: 100
+    :width: 100px
     :align: left
 
 We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like "Too high" or "Too low". Here's the pseudocode for the guessing game. **Pseudocode** is an English description or plan of what your code will do step by step. What's the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?
@@ -446,15 +432,9 @@ As an extension to this project, you can add a counter variable to count how man
 
 When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, so guessing 50 for the first guess. This is called a **divide and conquer** or **binary search** algorithm. If your guess is between 0-100, you should be able to guess the number within 7 guesses. Another extension to this challenge is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.
 
-.. |Scanner class| raw:: html
 
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
 
-.. |replit.com| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Guessing-Game#Main.java" target="_blank">replit.com</a>
-
-For this project, you will need to use the |Scanner class| for input and |replit.com| or another IDE of your choice.
+For this project, you will need to use the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_ for input and `replit.com <https://firewalledreplit.com/@BerylHoffman/Guessing-Game#Main.java>`_ or another IDE of your choice.
 
 .. raw:: html
 

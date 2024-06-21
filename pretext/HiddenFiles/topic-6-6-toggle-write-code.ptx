@@ -8,7 +8,7 @@
       <statement>
         <p>Write a loop that traverses the array arr from 0 to less than the length of the array. In the loop, double each element in the array arr and print out each new value on the same line separated by &#x201C;, &#x201C;. The finished code should print &#x201C;2, 4, 6, 8, 10, &#x201C;.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000912" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000751" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -64,7 +64,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write a for loop that fills an array with elements that count up from 0 to 50 by 5 (0 5 10 15 20 &#x2026; 50) and prints out each element on a separate line.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000913" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000752" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -120,7 +120,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Write an enhanced for each loop to traverse the array and print out an element if it is even.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000914" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000753" interactive="activecode" language="java">
         <input>
 public class Test1
 {
@@ -175,7 +175,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method to return the smallest integer in an array arr given as the parameter.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000915" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000754" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -261,7 +261,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method to return the average of the elements in an array arr given as the parameter. The method should return the average.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000916" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000755" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -347,7 +347,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method to return the largest integer in an array arr given as the parameter.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000917" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000756" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -431,7 +431,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method that given an array as a parameter, returns the elements &#x201C;right shifted&#x201D; by one &#x2013; so <c>{6, 2, 5, 3}</c> returns <c>{3, 6, 2, 5}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000918" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000757" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -518,7 +518,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method to return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) &#x2013; so <c>{1,2,3,4}</c> should return <c>{2,3}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000919" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000758" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -608,7 +608,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method that should return string array that is in reverse order &#x2013; so <c>{"b", "a", "z"}</c> should return <c>{"z", "a", "b"}</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000920" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000759" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 
@@ -695,7 +695,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Finish the method so that it copies the first half of an array given as an argument to the method into a result array which is returned.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-000921" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-000760" interactive="activecode" language="java">
         <input>
 import java.util.Arrays;
 

@@ -165,7 +165,7 @@
             and returns <c>true</c> if the array contains either 3 even or 3 odd values all next to each other.
             For example <c>has3OddOrEven({2, 1, 3, 5})</c> returns <c>true</c> and <c>has3OddOrEven({2, 1, 2, 5})</c> returns <c>false</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-002183" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001814" interactive="activecode" language="java">
         <input>
 public class StudentCode
 {
@@ -305,7 +305,7 @@ import java.nio.file.Paths;
             For example, <c>isAscending({1, 2, 3})</c> returns <c>true</c> and <c>isAscending({1, 2, 3, 2})</c>
             returns <c>false</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-002184" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001815" interactive="activecode" language="java">
         <input>
 public class StudentCode
 {
@@ -446,7 +446,7 @@ public class isAscendingTester extends CodeTestHelper
             For example, <c>isDescending({3, 2, 1})</c> returns <c>true</c> and <c>isDescending({3, 2, 1, 2})</c>
             returns <c>false</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-002185" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001816" interactive="activecode" language="java">
         <input>
 public class StudentCode
 {
@@ -585,7 +585,7 @@ public class isDescendingTester extends CodeTestHelper
             than a passed value, <c>x</c>. For example, <c>isLevel({3, 4, 6}, 2)</c> returns <c>true</c>
             and <c>isLevel({3, 5, 8, 6}, 2)</c> returns <c>false</c>.</p>
       </statement>
-      <program xml:id="UNIQUE-ID-002186" interactive="activecode" language="java">
+      <program xml:id="UNIQUE-ID-001817" interactive="activecode" language="java">
         <input>
 public class StudentCode
 {

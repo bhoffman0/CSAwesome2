@@ -3,11 +3,11 @@
 <section>
   <title>Coding Practice with Loops</title>
   <exercises>
-    <exercise xml:id="empty-26">
+    <exercise xml:id="UNIQUE-ID-000403">
       <statement>
         <p>Rewrite the following code so that it uses a <c>for</c> loop instead of a <c>while</c> loop to print out all the integers from 5 to 1 (inclusive).</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex1q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000404">
         <input>
 public class Test1
 {
@@ -59,7 +59,7 @@ public class RunestoneTests extends CodeTestHelper
                 Answer: In a for loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the for loop as shown below.
 
     
-    <program xml:id="ch6ex1a_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000405" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -74,7 +74,7 @@ public class Test1
 
             
 
-<exercise label="ch6ex1a"><statement><p>Answer: In a <c>for</c> loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the <c>for</c> loop as shown below.</p></statement><program xml:id="ch6ex1a_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch6ex1a"><statement><p>Answer: In a <c>for</c> loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the <c>for</c> loop as shown below.</p></statement><program xml:id="UNIQUE-ID-000406" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -88,11 +88,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-27">
+    <exercise xml:id="UNIQUE-ID-000407">
       <statement>
         <p>Rewrite the following code to use a <c>while</c> loop instead of a <c>for</c> loop to print out the numbers from 1 to 10 (inclusive).</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex2q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000408">
         <input>
 public class Test1
 {
@@ -137,7 +137,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.
 
-    <program xml:id="ch6ex2a" language="java"><input>
+    <program xml:id="UNIQUE-ID-000409" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -160,11 +160,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-28">
+    <exercise xml:id="UNIQUE-ID-000410">
       <statement>
         <p>Rewrite the following code so that it uses a <c>for</c> loop instead of a <c>while</c> loop to print out all the integers from 5 to 15 (inclusive).</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex3q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000411">
         <input>
 public class Test1
 {
@@ -212,7 +212,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: In a for loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the for loop as shown below.
 
-    <program xml:id="ch6ex3a" language="java"><input>
+    <program xml:id="UNIQUE-ID-000412" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -233,11 +233,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-29">
+    <exercise xml:id="UNIQUE-ID-000413">
       <statement>
         <p>Rewrite the following code to use a <c>while</c> loop instead of a <c>for</c> loop to print out the numbers from 10 to 100 by 10&#x2019;s (inclusive).</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex4q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000414">
         <input>
 public class Test1
 {
@@ -280,7 +280,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: You need to specify the declarations and initializations of the loop variables(s) before the Boolean condition.  You need to do the change(s) at the end of the body of the loop.
 
-    <program xml:id="ch6ex4a" language="java"><input>
+    <program xml:id="UNIQUE-ID-000415" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -303,11 +303,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-30">
+    <exercise xml:id="UNIQUE-ID-000416">
       <statement>
         <p>The following code should print the values from 1 to 10 (inclusive) but has errors.  Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page in the browser to stop the loop and then click on Load History and move the bar above it to see your last changes.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex5q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000417">
         <input>
 public class Test1
 {
@@ -357,7 +357,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: On line 6 it should be while (x &lt;= 10).  Add line 9 at the end of the loop body to increment x so that the loop ends (isn&#x2019;t an infinite loop).
 
-    <program xml:id="ch6ex5a" language="java"><input>
+    <program xml:id="UNIQUE-ID-000418" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -380,11 +380,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-31">
+    <exercise xml:id="UNIQUE-ID-000419">
       <statement>
         <p>The following code should print the values from 10 to 5, but it has errors.  Fix the errors so that the code works as intended.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex6q_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000420">
         <input>
 public class Test1
 {
@@ -423,7 +423,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Remove the x--; at the end of the body of the loop.  The change area in the for loop decrements x by 1, so this line isn&#x2019;t needed.
 
-    <program xml:id="ch6ex6a" language="java"><input>
+    <program xml:id="UNIQUE-ID-000421" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -444,11 +444,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-32">
+    <exercise xml:id="UNIQUE-ID-000422">
       <statement>
         <p>The following code should print the values from 10 to 1, but it has errors.  Fix the errors so that the code works as intended.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex7nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000423">
         <input>
 public class Test1
 {
@@ -488,7 +488,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Move the x--; to the end of the loop body (after the System.out.println.  Change the while to x &gt; 0.
 
-    <program xml:id="ch6ex7na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000424" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -511,11 +511,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-33">
+    <exercise xml:id="UNIQUE-ID-000425">
       <statement>
         <p>Finish the code below to print a countdown from 100 to 0 by 10&#x2019;s using a for or while loop.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex8nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000426">
         <input>
 public class Test1
 {
@@ -556,7 +556,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: You can use a for loop as shown below. Start x at 100, loop while it is greater or equal to 0, and subtract 10 each time after the body of the loop executes.
 
-    <program xml:id="ch6ex8na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000427" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -574,11 +574,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-34">
+    <exercise xml:id="UNIQUE-ID-000428">
       <statement>
         <p>Finish the code to print the value of <c>x</c> and <c>" is even"</c> if <c>x</c> is even and <c>" is odd"</c> if it is odd for all values from 10 to 1.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex10nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000429">
         <input>
 public class Test1
 {
@@ -630,7 +630,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use a for loop to loop from 10 to 1.  Use a conditional to test if x is even (x % 2 == 0).
 
-    <program xml:id="ch6ex10na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000430" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -658,11 +658,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-35">
+    <exercise xml:id="UNIQUE-ID-000431">
       <statement>
         <p>Finish the code below to print the values for <c>10 * x</c> where <c>x</c> changes from 0 to 10 using a loop.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex11nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000432">
         <input>
 public class Test1
 {
@@ -709,7 +709,7 @@ public class RunestoneTests extends CodeTestHelper
                 Answer: Use a for loop with x changing from 0 to 10 and print the value of x and 10 * x.
 
     
-    <program xml:id="ch6ex11na_editor" language="java"><input>
+    <program xml:id="UNIQUE-ID-000433" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -727,7 +727,7 @@ public class Test1
 
             
 
-<exercise label="ch6ex11na"><statement><p>Answer: Use a <c>for</c> loop with <c>x</c> changing from 0 to 10 and print the value of <c>x</c> and <c>10 * x</c>.</p></statement><program xml:id="ch6ex11na_editor-1" interactive="activecode" language="java"><input>
+<exercise label="ch6ex11na"><statement><p>Answer: Use a <c>for</c> loop with <c>x</c> changing from 0 to 10 and print the value of <c>x</c> and <c>10 * x</c>.</p></statement><program xml:id="UNIQUE-ID-000434" interactive="activecode" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -744,11 +744,11 @@ public class Test1
 </tests></program></exercise>
             </solution>
     </exercise>
-    <exercise xml:id="empty-36">
+    <exercise xml:id="UNIQUE-ID-000435">
       <statement>
         <p>Finish the following code so that it prints a string message minus the last character each time through the loop until there are no more characters in message.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex9nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000436">
         <input>
 public class Test1
 {
@@ -791,7 +791,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Add a while loop and loop while there is still at least one character in the string. At the end of the body of the loop reset the message to all characters except the last one.
 
-    <program xml:id="ch6ex9na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000437" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -814,11 +814,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-37">
+    <exercise xml:id="UNIQUE-ID-000438">
       <statement>
         <p>Finish the code to loop printing the message each time through the loop and remove an <c>x</c> from the message until all the <c>x</c>&#x2019;s are gone.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex12nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000439">
         <input>
 public class Test1
 {
@@ -871,7 +871,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use a while loop.  Loop while x has been found in the message (using indexOf).  Remove the x (using substring). Use indexOf again to get the position of the next x or -1 if there are none left in the message.
 
-    <program xml:id="ch6ex12na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000440" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -897,11 +897,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-38">
+    <exercise xml:id="UNIQUE-ID-000441">
       <statement>
         <p>Write a loop below to print the number of <c>x</c>&#x2019;s in the string message.  Use the <c>indexOf</c> and <c>substring</c> methods.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex16nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000442">
         <input>
 public class Test1
 {
@@ -946,7 +946,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use indexOf to find the next x.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next x.
 
-    <program xml:id="ch6ex16na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000443" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -974,11 +974,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-39">
+    <exercise xml:id="UNIQUE-ID-000444">
       <statement>
         <p>Write the code below to print a rectangle of stars (<c>*</c>) with 5 rows of stars and 3 stars per row. Hint: use nested for loops.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex14nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000445">
         <input>
 public class Test1
 {
@@ -1024,7 +1024,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use nested for loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row.
 
-    <program xml:id="ch6ex14na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000446" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1049,11 +1049,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-40">
+    <exercise xml:id="UNIQUE-ID-000447">
       <statement>
         <p>Write the code below to print a rectangle of stars (<c>*</c>) with 3 rows of stars and 5 stars per row.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex15nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000448">
         <input>
 public class Test1
 {
@@ -1099,7 +1099,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use nested for loops.  Use the outer loop to control the number of rows and the inner loop to control the number of stars per row.
 
-    <program xml:id="ch6ex15na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000449" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)
@@ -1124,11 +1124,11 @@ public class Test1
     
             </solution>
     </exercise>
-    <exercise xml:id="empty-41">
+    <exercise xml:id="UNIQUE-ID-000450">
       <statement>
         <p>Write the code below to print 55555, 4444, 333, 22, 1 with each on a different line.</p>
       </statement>
-      <program interactive="activecode" language="java" xml:id="ch6ex13nq_editor">
+      <program interactive="activecode" language="java" xml:id="UNIQUE-ID-000451">
         <input>
 public class Test1
 {
@@ -1173,7 +1173,7 @@ public class RunestoneTests extends CodeTestHelper
       <solution>
                 Answer: Use nested for loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row.
 
-    <program xml:id="ch6ex13na" language="java"><input>
+    <program xml:id="UNIQUE-ID-000452" language="java"><input>
 public class Test1
 {
     public static void main(String[] args)

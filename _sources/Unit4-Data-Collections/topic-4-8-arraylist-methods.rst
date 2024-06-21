@@ -4,7 +4,6 @@
    :prefix: 7-2-
    :start: 1
 
-|Time45|
 
 
 
@@ -18,12 +17,9 @@ ArrayList Methods
    pair: arraylist; set
    pair: arraylist; remove
 
-.. |AP CSA Reference Sheet| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 The following are the ``ArrayList`` methods that you need to know for the AP CSA
-exam. These are included on the |AP CSA Reference Sheet| that you will receive
+exam. These are included on the `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_ that you will receive
 during the exam so you do not need to memorize them. The E in the method headers
 below stands for the type of the element in the ArrayList; this type E can be
 any Object type. We will look at how these methods work below.
@@ -325,9 +321,6 @@ object.
       list1.add(5);
       System.out.println(list1);
 
-.. |Java visualizer 1| raw:: html
-
-   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
 
 You can step through the code above by clicking on this |Java Visualizer 1|.
 
@@ -353,11 +346,8 @@ You can step through the code above by clicking on this |Java Visualizer 1|.
       list1.add(1, "Sarah");
       System.out.println(list1);
 
-.. |Java visualizer 2| raw:: html
 
-   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0" target="_blank">Java Visualizer</a>
-
-You can step through the code above by clicking on the following |Java visualizer 2|.
+You can step through the code above by clicking on the following `Java Visualizer <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 
 ``remove(index)``
@@ -614,9 +604,6 @@ Here is a comparison of how to create arrays and ``ArrayList``\ s:
    ArrayList<Integer> highScoreList = new ArrayList<Integer>();
    ArrayList<String> nameList = new ArrayList<String>();
 
-.. |comparison handout| raw:: html
-
-   <a href="https://drive.google.com/file/d/1EzkHa3TNlbHOKVeZReQIf4HzuwwXsCAV/view?usp=sharing" target="_blank">comparison handout</a>
 
 Here is a comparison of how to access and change elements in arrays and
 ``ArrayList``\ s. Note that ``ArrayList``\ s have a method ``size()`` instead of a
@@ -637,7 +624,7 @@ Note that the ``ArrayList`` methods ``add`` and ``remove`` do not have a simple
 equivalent in arrays because they change the number of elements in the list and
 may shift the positions of other elements.
 
-Here is a |comparison handout| of the basic operations to access 1-dimensional
+Here is a `comparison handout <https://drive.google.com/file/d/1EzkHa3TNlbHOKVeZReQIf4HzuwwXsCAV/view?usp=sharing>`_ of the basic operations to access 1-dimensional
 and 2-dimensional arrays (which we will see in the next unit), ``ArrayList``\ s,
 and ``String``\ s made by AP CSA teacher Sam Procopio of Bishop Blanchet High
 School.

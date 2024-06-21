@@ -1,6 +1,5 @@
 .. include:: ../common.rst
 
-|Time90|
 
 Picture Lab A8: Creating a Collage
 =====================================================
@@ -279,7 +278,7 @@ You can test this with the ``createCollage`` method below.
 |CodingEx| **Coding Exercises**
 
 .. image:: Figures/copypartial.png
-    :width: 100
+    :width: 100px
     :align: left
 
 1. Create a second copy method called ``copyPartial`` that adds parameters to allow you to copy just part of the
@@ -529,16 +528,7 @@ and end column to copy from.
     }
 
 2. Create a ``myCollage`` method that has at least three pictures (can be the same picture) copied
-three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this |replit.com project| or this |repl 2| (click output.jpg to see the result) or download the project files form replit to your own IDE.
-
-
-.. |replit.com project| raw:: html
-
-   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >replit.com Swing project</a>
-
-.. |repl 2| raw:: html
-
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
+three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this `replit.com Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative replit.com project <https://firewalledreplit.com/@jds7184/PictureLab>`_ (click output.jpg to see the result) or download the project files form replit to your own IDE.
 
 
 

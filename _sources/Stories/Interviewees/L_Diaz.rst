@@ -9,7 +9,7 @@ Lien Diaz
 :raw-html:`<font color="CadetBlue"><em>"All of this technology is being developed and created and tested and thought up without people that look like me, without people that have darker skin than me, without so many perspectives, meaning that they're leaving out certain groups in our population that are going to be affected greatly. I don't think that's right."</em></font>`
 
 .. image:: ../../../_static/Interviewees/L_Diaz.jpg
-    :width: 350
+    :width: 350px
     :align: right
     :alt: Picture of Lien
 

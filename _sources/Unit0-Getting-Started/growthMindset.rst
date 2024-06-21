@@ -9,11 +9,8 @@ Growth Mindset
 
 Learning to code can be hard at times and sometimes frustrating. However, the feeling you get when your code works is incredible! And your brain grows as you problem solve and debug your programs!
 
-Watch this |video| about the Growth Mindset:
+Watch this `video <https://youtu.be/WtKJrB5rOKs>`_ about the Growth Mindset:
 
-.. |video| raw:: html
-
-   <a href="https://youtu.be/WtKJrB5rOKs" target="_blank">video</a>
 
 .. youtube:: WtKJrB5rOKs
     :height: 400
@@ -51,11 +48,8 @@ Pair Programming
 
 In this curriculum, you are encouraged to work together in pairs to complete the programming challenges. **Pair programming** is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. You can also try buddy programming where each person uses their own computer but helps each other while coding. The advantages of pair programming are that two heads are better than one, and pairs usually produce better code with less roadblocks. As future software developers, it's also important to learn to work in teams.
 
-Watch this |video2| about pair programming:
+Watch this `video <https://www.youtube.com/watch?v=q7d_JtyCq1A>`_ about pair programming:
 
-.. |video2| raw:: html
-
-   <a href="https://www.youtube.com/watch?v=q7d_JtyCq1A" target="_blank">video</a>
 
 .. youtube:: q7d_JtyCq1A
     :height: 400
