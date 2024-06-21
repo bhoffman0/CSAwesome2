@@ -48,8 +48,6 @@ First Java Program
 .. index::
    single: class
    single: keyword
-   pair: class; field
-   pair: class; constructor
    pair: class; method
    pair: class; main method
 
@@ -113,9 +111,14 @@ Compiling and Running Java Programs
    single: compiler
    single: IDE
 
+Code can be written in any text editor, including the small text editor built into the Active Code exercises in this e-book.  However, an **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code. For this course, you can use the e-book Active Code exercises or the Scratch button above as your IDE to run your code. Or you can try other IDEs mentioned in the last unit. In other IDEs, you must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
 
-You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
+Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.
 
+Java Keywords
+----------------
+
+**Keywords** are reserved words that have special meaning in Java. Keywords such as ``public``, ``class``, and ``void``  must be in lowercase, but class names such as ``System`` and ``String`` are capitalized.  
 
 .. hparsons:: mp-main-method-order-1
     :language: java
@@ -169,7 +172,7 @@ You can copy the Java source code shown in this book into a file and save it if 
 
 
 
-Special words—also called **keywords**—such as ``public``, ``class``, and ``if`` must be in lowercase, but class names such as ``System`` and ``String`` are capitalized. Lines in a Java program that express a complete action such as assigning a value to a variable must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
+Lines in a Java program that express a complete action such as printing output must end with a semicolon (``;``). Such a line is called a **statement**. You can think of the semicolon (``;``) in Java like a period (``.``) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon, but the Java compiler is not so lenient; your program won't compile without it. Note also that not *every* line ends with a semicolon; if the line starts a construct like an `if` statement, there is no semicolon before the opening ``{`` nor one after the closing ``}``.
 
 
 .. hparsons:: mp-print-order-1
@@ -217,7 +220,7 @@ Special words—also called **keywords**—such as ``public``, ``class``, and ``
 Syntax Errors and Debugging
 -----------------------------
 
-Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.
+
 
 .. |Grace Hopper| raw:: html
 
@@ -298,6 +301,7 @@ Let's practice debugging some code!
       }
       =====
    }
+
 
 
 Reading Error Messages
@@ -492,6 +496,16 @@ capitalization matters.
 
 Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?
 
+Run-time Errors
+--------------------------
+
+Some errors cannot be detected by the compiler. These are called **run-time errors**. These errors occur when the program is running, after being compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn't exist. 
+
+An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an **ArithmeticException** while running.
+
+Run-time errors can be difficult to find because they don't always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome.
+
+
 
 Comments
 --------
@@ -566,6 +580,12 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
 Summary
 -------------------
 
+- **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
+
+- **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
+
+- An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
+
 - A basic Java program looks like the following:
 
 .. code-block:: java
@@ -582,20 +602,26 @@ Summary
 
 - Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
 
-- The **System.out.print()** and **System.out.println()** methods display information given inside the parentheses on the computer monitor.
-
-- System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not.
-
-- A **string literal** is enclosed in double quotes ('' '').
+- The **System.out.println()** method display information given inside the parentheses on the computer monitor.
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
 - A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
+- A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
+
+- A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
+
+- A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
+
+- An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
+
 AP Practice
 ------------
 
-.. mchoice:: AP1-2-1
+Need new questions here. Move these to 1.3.
+
+.. mchoice:: AP1-1-1
     :practice: T
 
     Consider the following code segment.
@@ -639,7 +665,7 @@ AP Practice
       + Correct! Pay attention to which lines are print or println.
 
 
-.. mchoice:: AP1-2-2
+.. mchoice:: AP1-1-2
     :practice: T
 
     Consider the following code segment.
