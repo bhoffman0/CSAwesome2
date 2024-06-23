@@ -1,9 +1,5 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-1-
-   :start: 1
-
 |Time45|
 
 Introduction to Algorithms, Programming, and Compilers
@@ -37,7 +33,7 @@ Algorithms
    single: algorithm
    single: sequence
 
-**Algorithms** define step-by-step processes when completing a task or solving a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
+**Algorithms** define step-by-step processes in order to complete a task or solve a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
 
 Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
@@ -113,7 +109,7 @@ Compiling and Running Java Programs
 
 Code can be written in any text editor, including the small text editor built into the Active Code exercises in this e-book.  However, an **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code. For this course, you can use the e-book Active Code exercises or the Scratch button above as your IDE to run your code. Or you can try other IDEs mentioned in the last unit. In other IDEs, you must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.
 
-Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page.
+Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. A **compiler** checks your code for  errors and translates your code to executable code that can be run. Errors detectable by the compiler need to be fixed before the program can be run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the errors and output are sent back to show on the same page.
 
 Java Keywords
 ----------------
@@ -256,14 +252,14 @@ Let's practice debugging some code!
 |Exercise| **Check Your Understanding: Mixed up programs**
 
 
-.. parsonsprob:: thirdClass
+.. parsonsprob:: mixed-hi
    :numbered: left
    :adaptive:
    :noindent:
 
    The following has all the correct code to print out "Hi my friend!" when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.
    -----
-   public class ThirdClass
+   public class Hello
    {
    =====
       public static void main(String[] args)
@@ -275,17 +271,17 @@ Let's practice debugging some code!
       =====
    }
 
-.. parsonsprob:: fourthClass
+.. parsonsprob:: mixed-hi-paired
    :numbered: left
    :adaptive:
    :noindent:
 
    The following has all the correct code to print out "Hi there!" when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the "Check Me" button to check your solution.
    -----
-   public class FourthClass
+   public class Hello
    {
    =====
-   public Class FourthClass
+   public Class Hello
    {                         #paired
    =====
       public static void main(String[] args)
@@ -539,14 +535,14 @@ In this course, you are encouraged to work together in pairs to complete the pro
 Working in pairs, debug the following code. Can you find all the bugs and get the code to run?
 
 
-.. activecode:: challenge1-2
+.. activecode:: challenge1-1
    :language: java
    :autograde: unittest
    :practice: T
 
    Fix the code below.
    ~~~~
-   public class Challenge1_2
+   public class Challenge1_1
    {
       public static void main(String[] args)
       {
@@ -606,7 +602,7 @@ Summary
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
-- A **compiler** translates Java code into a class file that can be run on your computer. **Compiler or syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
+- A **compiler** translates Java code into a class file that can be run on your computer. **Syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
 - A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
 
@@ -619,53 +615,8 @@ Summary
 AP Practice
 ------------
 
-Need new questions here. Move these to 1.3.
 
-.. mchoice:: AP1-1-1
-    :practice: T
-
-    Consider the following code segment.
-
-    .. code-block:: java
-
-       System.out.print("Java is ");
-       System.out.println("fun ");
-       System.out.print("and cool!");
-
-    What is printed as a result of executing the code segment?
-
-    - .. raw:: html
-
-         <pre>Java is fun and cool!</pre>
-
-      - Notice the println in line 2.
-
-    - .. raw:: html
-
-         <pre>
-         Java isfun
-         and cool!
-         </pre>
-
-      - Notice the space after is in the first line.
-
-    - .. raw:: html
-
-         <pre>Java is
-         fun
-         and cool!  </pre>
-
-      - Notice that the first line is a print, not println.
-
-    - .. raw:: html
-
-         <pre>Java is fun
-         and cool!  </pre>
-
-      + Correct! Pay attention to which lines are print or println.
-
-
-.. mchoice:: AP1-1-2
+.. mchoice:: AP1-1-print
     :practice: T
 
     Consider the following code segment.
@@ -674,8 +625,7 @@ Need new questions here. Move these to 1.3.
 
        System.out.println("Roses are red, ")      // Line 1;
        System.out.println("Violets are blue, ")  // Line 2;
-       System.out.print("Unexpected '}' ")        // Line 3;
-       System.out.print("on line 32. ")           // Line 4;
+       System.out.println("Unexpected '}' on line 32. ")  // Line 3;
 
     The code segment is intended to produce the following output but may not work as intended.
 
@@ -687,13 +637,13 @@ Need new questions here. Move these to 1.3.
 
     Which change, if any, can be made so that the code segment produces the intended output?
 
-    - Replacing print with println on lines 3 and 4.
+    - Replacing `System` with `system` on all lines.
 
-      - These should print on the same line without a newline in between.
+      - The class name System is always capitalized.
 
     - Replacing println with print on lines 1 and 2.
 
-      - These should print out with a newline in between.
+      - println is correct to print out with a newline in between.
 
     - Removing the single quotes in line 3.
 

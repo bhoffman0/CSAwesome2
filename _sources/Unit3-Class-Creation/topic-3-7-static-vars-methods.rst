@@ -248,6 +248,54 @@ You can see this code in action in the |visualizer2|.
        }
    }
 
+The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
+
+.. code-block:: java
+
+  final double PI = 3.14
+
+|CodingEx| **Coding Exercise:**
+
+**Change this to be a class variable**
+
+.. activecode:: finalPi
+   :language: java
+   :autograde: unittest
+
+   Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+   ~~~~
+   public class TestFinal
+   {
+       public static void main(String[] args)
+       {
+           final double PI = 3.14;
+           System.out.println(PI);
+           PI = 4.2; // This will cause a syntax error
+       }
+   }
+
+   ====
+   // should pass if/when they run code
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "3.14";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
+
+
 |Groupwork| Programming Challenge : Static Song and counter
 ------------------------------------------------------------
 
@@ -466,3 +514,5 @@ Summary
 - Static methods cannot access or change the values of instance variables, but they can access or change the values of static variables.
 
 - Static methods cannot call non-static methods.
+
+- When a variable is declared final, its value cannot be modified.
