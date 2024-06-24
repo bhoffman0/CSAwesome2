@@ -1,15 +1,9 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-2-
-   :start: 1
-
 
 
 Variables and Data Types
 ========================
-
-In this lesson, you will learn about variables and primitive data types.
 
 What is a Variable?
 -------------------
@@ -17,7 +11,7 @@ What is a Variable?
 .. index::
    single: variable
 
-A **variable** is a name associated with a memory location in the computer, where you can store a value that can change or vary. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives a couple of real word examples of variables.
+A **variable** is a memory location in the computer that can store a value that can change or vary while the program is running. The following `video <https://youtu.be/pHgYlVjagmA>`_ explains what a variable is and gives some real word examples of variables.
 
 .. youtube:: pHgYlVjagmA
     :width: 700
@@ -25,7 +19,7 @@ A **variable** is a name associated with a memory location in the computer, wher
     :align: center
 
 
-When you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.
+For example, when you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.
 
 .. figure:: Figures/pongScore.png
     :width: 300px
@@ -51,7 +45,9 @@ Data Types
    pair: variable; Boolean
    pair: variable; String
 
-There are two types of variables in Java: **primitive variables** that hold primitive types and **object or reference variables** that hold a reference to an object of a class.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  The primitive types on the Advanced Placement Computer Science A exam are:
+Every variable has a name and a data type that determines the kind of data it can hold. There are two types of variables in Java: **primitive variables** that hold values of primitive types like numbers and **reference variables** that hold a reference to a more complex object.  A reference is a way to find the object (like a UPS tracking number helps you find your package).  
+
+The primitive types on the Advanced Placement Computer Science A exam are:
 
 - ``int`` which can represent integers, i.e. numbers with no fractional part
   such as 3, 0, -76, and 20393.
@@ -75,14 +71,14 @@ There are two types of variables in Java: **primitive variables** that hold prim
 ``String`` is one of the object types on the exam and is the name of a class in
 Java. A ``String`` is written in a Java program as a sequence of characters
 enclosed in a pair of double quotes - like ``"Hello"``. You will learn more
-about ``String`` objects in Unit 2.
+about ``String`` objects later.
 
-A type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with ``int``\s and ``double``\s but not with ``boolean``\s and ``String``\s.
+A data type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with ``int``\s and ``double``\s but not with ``boolean``\s and ``String``\s.  
 
 |Exercise| **Check your understanding**
 
 
-.. mchoice:: q3_1_1
+.. mchoice:: chooseType1
    :practice: T
    :answer_a: int
    :answer_b: double
@@ -96,7 +92,7 @@ A type is a set of values (a domain) and a set of operations on them. For exampl
 
    What type should you use to represent the average grade for a course?
 
-.. mchoice:: q3_1_2
+.. mchoice:: chooseType2
    :practice: T
    :answer_a: int
    :answer_b: double
@@ -110,7 +106,7 @@ A type is a set of values (a domain) and a set of operations on them. For exampl
 
    What type should you use to represent the number of people in a household?
 
-.. mchoice:: q3_1_3
+.. mchoice:: chooseType3
    :practice: T
    :answer_a: int
    :answer_b: double
@@ -124,7 +120,7 @@ A type is a set of values (a domain) and a set of operations on them. For exampl
 
    What type should you use to hold the first name of a person?
 
-.. mchoice:: q3_1_4
+.. mchoice:: chooseType4
    :practice: T
    :answer_a: int
    :answer_b: double
@@ -138,7 +134,7 @@ A type is a set of values (a domain) and a set of operations on them. For exampl
 
    What type should you use to record if it is raining or not?
 
-.. mchoice:: q3_1_5
+.. mchoice:: chooseType5
    :practice: T
    :answer_a: int
    :answer_b: double
@@ -200,7 +196,7 @@ When you are printing out variables, you can use the **string concatenation** op
 |CodingEx| **Coding Exercise:**
 
 
-.. activecode:: lcdv2
+.. activecode:: strConcatDemo
    :language: java
    :autograde: unittest
 
@@ -302,7 +298,7 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
 
 |CodingEx| **Coding Exercise:**
 
-.. activecode:: lcdv3
+.. activecode:: asgn_order
    :language: java
    :autograde: unittest
 
@@ -388,50 +384,6 @@ The equal sign here ``=`` doesn't mean the same as it does in a mathematical equ
 
 
 
-The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
-
-.. code-block:: java
-
-  final double PI = 3.14
-
-|CodingEx| **Coding Exercise:**
-
-.. activecode:: Testfn
-   :language: java
-   :autograde: unittest
-
-   Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
-   ~~~~
-   public class TestFinal
-   {
-       public static void main(String[] args)
-       {
-           final double PI = 3.14;
-           System.out.println(PI);
-           PI = 4.2; // This will cause a syntax error
-       }
-   }
-
-   ====
-   // should pass if/when they run code
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "3.14";
-           boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
-           assertTrue(passed);
-       }
-   }
 
 Naming Variables
 --------------------
@@ -462,7 +414,7 @@ The convention in Java and many programming languages is to always start a varia
 
 
 
-.. activecode:: lcnv1
+.. activecode:: varCaseSensitive
    :language: java
    :autograde: unittest
 
@@ -523,7 +475,7 @@ The convention in Java and many programming languages is to always start a varia
 
 
 
-.. activecode:: challenge1-3
+.. activecode:: challenge1-2-weather
    :language: java
    :autograde: unittest
    :practice: T
@@ -573,7 +525,10 @@ The convention in Java and many programming languages is to always start a varia
 Summary
 -------------------
 
-- A **variable** is a name for a memory location where you can store a value that can change or vary.
+
+- A **variable** is a memory storage location that holds a value, which can change while the program is running. 
+
+- Every variable has a name and an associated data type that determines the kind of data it can hold. A variable of a primitive type holds a primitive value from that type.
 
 - A variable can be declared and initialized with the following code:
 
@@ -582,18 +537,15 @@ Summary
   int score;
   double gpa = 3.5;
 
+- **Data types** can be primitive types (like int) or reference types (like String). A reference type is used to define objects that are not primitive types.
 
-- **Data types** can be primitive types (like int) or reference types (like String).
 - The three primitive data types used in this course are **int** (integer numbers), **double** (decimal numbers), and **boolean** (true or false).
-- Each variable has associated memory that is used to hold its value.
-- The memory associated with a variable of a primitive type holds an actual primitive value.
-- When a variable is declared final, its value cannot be changed once it is initialized.
+
 
 AP Practice
 ------------
 
-
-.. mchoice:: AP1-3-1
+.. mchoice:: AP1-2-types
    :practice: T
    :answer_a: int GPA; int numStudents;
    :answer_b: double GPA; int numStudents;
