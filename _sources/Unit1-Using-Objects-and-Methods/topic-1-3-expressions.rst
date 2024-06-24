@@ -433,7 +433,49 @@ Summary
 AP Practice
 ------------
 
-The following is a 2019 AP CSA sample question.
+.. mchoice:: AP1-1-1
+    :practice: T
+
+    Consider the following code segment.
+
+    .. code-block:: java
+
+       System.out.println("Java is ");
+       System.out.println("fun ");
+       System.out.print("and cool!");
+
+    What is printed as a result of executing the code segment?
+
+    - .. raw:: html
+
+         <pre>Java is fun and cool!</pre>
+
+      - Notice the println in line 2.
+
+    - .. raw:: html
+
+         <pre>
+         Java isfun
+         and cool!
+         </pre>
+
+      - Notice the space after is in the first line.
+
+    - .. raw:: html
+
+         <pre>Java is
+         fun
+         and cool!  </pre>
+
+      - Notice that the first line is a print, not println.
+
+    - .. raw:: html
+
+         <pre>Java is fun
+         and cool!  </pre>
+
+      + Correct! Pay attention to which lines are print or println.
+
 
 .. mchoice:: apcsa_sample1
    :practice: T
