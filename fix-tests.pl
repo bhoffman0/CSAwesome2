@@ -1,8 +1,7 @@
 #!/usr/bin/env perl
 
 #
-# Ad-hoc fixes to the generated ptx that aren't worth trying to handle properly
-# in the conversion and XML rewriting.
+# Fix the unit test which are not generated properly by the basic conversion.
 #
 
 use warnings;
