@@ -52,7 +52,7 @@ while (<>) {
   s/\.\.\/\_static/\_static/g;
 
   # BH added to remove xml-id from paragraphs
-  s/<paragraph ids=".*">/<paragraph>/g;
+  s/<paragraph ids=".*?">/<paragraph>/g;
 
   # Not sure what's up with this; Some of these data-optional things are
   # generated within strings of what look like JSON. Anyway, these two lines at
