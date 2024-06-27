@@ -41,13 +41,13 @@
 
   <xsl:template match="p/br" />
 
-  <!-- fix up width attributes to be percentages --> 
+  <!-- fix up width attributes to be percentages  - now done in fix-xml.py
   <xsl:template match="@width">
     <xsl:attribute name="width">
       <xsl:value-of select="round((. div 850) * 100)"/>
       <xsl:text>%</xsl:text>
     </xsl:attribute>
   </xsl:template>
-
+--> 
   
 </xsl:stylesheet>
