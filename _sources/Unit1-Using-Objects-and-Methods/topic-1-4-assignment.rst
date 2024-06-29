@@ -1,9 +1,5 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-4-
-   :start: 1
-
 |Time90|
 
 Assignment and Input
@@ -12,7 +8,7 @@ Assignment and Input
 Assignment Statements
 ---------------------
 
-**Assignment statements** initialize or change the value stored in a variable using the assignment operator ``=``.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the ``=`` sign is stored in the variable on the left.
+**Assignment statements** initialize or change the value stored in a variable using the assignment operator ``=``.  An assignment statement always has a single variable on the left hand side. The value of the **expression** (which can contain math operators and other variables) on the right of the ``=`` sign is assigned to and stored in the variable on the left side.
 
 
 .. figure:: Figures/assignment.png
@@ -76,7 +72,7 @@ Let's step through the following code in the |Java visualizer| to see the values
 
    <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
-.. mchoice:: q2_1
+.. mchoice:: qasgn1
    :practice: T
    :answer_a: x = 0, y = 1, z = 2
    :answer_b: x = 1, y = 2, z = 3
@@ -104,7 +100,7 @@ Let's step through the following code in the |Java visualizer| to see the values
 
 
 
-.. parsonsprob:: 2_swap
+.. parsonsprob:: swapParsons
    :numbered: left
    :practice: T
    :adaptive:
@@ -124,6 +120,61 @@ Let's step through the following code in the |Java visualizer| to see the values
    =====
    y = x; #distractor
 
+Data Types in Assignments
+--------------------------
+
+Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. A variable is **initialized** the first time it is assigned a value. During execution, an expression is evaluated to produce a single value. The value of an expression has a type based on the types of the values and operators evaluated in the expression. For example, an arithmetic expression that uses at least one ``double`` value will evaluate
+to a ``double`` value and must be saved in a ``double`` variable, as seen in the exercise below. In the next lesson, we will see how to change a variable or expression from one type to another.
+
+|CodingEx| **Coding Exercise:**
+
+.. activecode:: assignmentTypes
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   The code below looks okay at first glance, but if you run it, you will see that there is an error of incompatible types. Change the data type of one of the variables to fix the error.  
+   ~~~~
+   public class Asgn
+   {
+       public static void main(String[] args)
+       {
+             int x = 1;
+             double y = 2.2;
+             x = 2 * y;
+             System.out.println(x);
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.Test;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "4.4\n";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
+
+
+Reference types like ``String`` can be assigned a new object or null if there is no object. The literal **null** is a special value used to indicate that a reference is not associated with any object.
+
+.. code-block:: java
+
+      // String variables can be assigned null 
+      // or a new String object
+      String str = null;
+      str = "new object";   
+
 Adding 1 to a Variable
 -------------------------
 
@@ -135,7 +186,7 @@ makes sense in coding because it is assigning a new value to the variable on the
 left that comes from evaluating the arithmetic expression on the right. So, the
 score variable is set to the previous value of score plus 1.
 
-.. activecode:: lccv1
+.. activecode:: incrementScore
    :language: java
    :autograde: unittest
 
@@ -153,7 +204,6 @@ score variable is set to the previous value of score plus 1.
    }
 
    ====
-   // Test Code for Lesson 1.4 Expressions - iccv1
    import static org.junit.Assert.*;
 
    import org.junit.Test;
@@ -186,13 +236,50 @@ Input with Variables
    <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
 
 
-Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  The code below (|JavaIOExample| using the ``Scanner`` class or |JavaIOConsole| using the ``Console`` class) will say hello to anyone who types in their name for different name values. Click on run and then type in your name. Then, try run again and type in a friend's name. The code works for any name: behold, the power of variables!
+Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  Input can come in a variety of forms, such as **tactile** for example by clicking on a button, **audio** with speech, **visual** using a webcam, or the most common form, **text** that the user types in. The ``Scanner`` class in Java is one way to obtain text input from the keyboard.
 
-.. raw:: html
+The code below using the ``Scanner`` class will say hello to anyone who types in their name and will have different results for different name values. First, type in your name below the code and then click on run. Try again with a friend's name. The code works for any name: behold, the power of variables!
 
-    <iframe height="500px" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/JavaIOExample?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+.. activecode:: inputName
+   :language: java
+   :autograde: unittest
+   :stdin: YourName
 
-Although you will not be tested in the AP CSA exam on using the Java input or the ``Scanner`` or ``Console`` classes, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/.
+   The code below will say hello to anyone who types in their name.  Type in your name below and then click on run.  Try again with a friend's name.  
+   ~~~~
+   import java.util.Scanner;
+
+   public class Main 
+   {
+       public static void main(String[] args) 
+       {
+           System.out.println("Please type in a name in the input box below.");
+           Scanner scan = new Scanner(System.in);
+           String name = scan.nextLine();
+           System.out.println("Hello " + name);
+           scan.close();
+        }
+    }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.Test;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           boolean passed =
+                   getResults(output, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
+
+Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs like replit, the input/output would be more interactive. Here are some examples in replit for |JavaIOExample| using the ``Scanner`` class and |JavaIOConsole| using the ``Console`` class that you can try out. We will also learn how to use ``Scanner`` with input files in a later unit.  
 
 |Groupwork| Programming Challenge : Dog Years
 ------------------------------------------------
@@ -241,16 +328,8 @@ In this programming challenge, you will calculate your age, and your pet's age f
    ====
    import static org.junit.Assert.*;
    import org.junit.*;
-
-   //import jdk.jfr.Timestamp;
-
    import java.io.*;
 
-   /* Do NOT change Main or CodeTestHelper.java.
-      Put the active code exercise in a file like ForLoop.java.
-      Put your Junit test in the file RunestoneTests.java.
-      Run. Test by changing ForLoop.java (student code).
-      */
    public class RunestoneTests extends CodeTestHelper {
       @Test
       public void checkVariables() throws IOException {
@@ -346,62 +425,42 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 Summary
 -------------------
 
-- Arithmetic expressions include expressions of type ``int`` and ``double``.
-
-- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
-  also known as addition, subtraction, multiplication, division, and remainder.
-
-- An arithmetic operation that uses two ``int`` values will evaluate to an
-  ``int`` value. With integer division, any decimal part in the result will be
-  thrown away.
-
-- An arithmetic operation that uses at least one ``double`` value will evaluate
-  to a ``double`` value.
-
-- Operators can be used to construct compound expressions.
-
-- During evaluation, operands are associated with operators according to
-  **operator precedence** to determine how they are grouped. (``*``, ``/``,
-  ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to
-  group those.)
-
-- An attempt to divide an integer by zero will result in an ``ArithmeticException``.
-
 - The assignment operator (``=``) allows a program to initialize or change the
-  value stored in a variable. The value of the expression on the right is stored
-  in the variable on the left.
+  value stored in a variable. The value of the expression on the right is stored in the variable on the left.
 
-- During execution, expressions are evaluated to produce a single value.
+- Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. 
 
-- The value of an expression has a type based on the types of the values and
-  operators used in the expression.
+- A variable is initialized the first time it is assigned a value. 
+
+- Reference types can be assigned a new object or ``null`` if there is no object. The literal ``null`` is a special value used to indicate that a reference is not associated with any object.
+
+- During execution, an expression is evaluated to produce a single value. The value of an expression has a type based on the types of the values and operators used in the expression.
+
+- Input can come in a variety of forms, such as tactile, audio, visual, or text. The ``Scanner`` class is one way to obtain text input from the keyboard, although input from the keyboard will not be on the AP exam. 
 
 AP Practice
 ------------
 
-The following is a 2019 AP CSA sample question.
-
 .. mchoice:: apcsa_sample1
    :practice: T
-   :answer_a: 0.666666666666667
-   :answer_b: 9.0
-   :answer_c: 10.0
-   :answer_d: 11.5
-   :answer_e: 14.0
-   :correct: c
-   :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence.
-   :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
-   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).
-   :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
-   :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
+   :answer_a: 8
+   :answer_b: 8.0
+   :answer_c: 10.5
+   :answer_d: An incompatible type error will occur.
+   :correct: b
+   :feedback_a: Don't forget that the result will be a double since at least 1 double value is involved.
+   :feedback_b: Yes, this is equivalent to (5 + ((a/b)*c) - 1) using int division.
+   :feedback_c: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
+   :feedback_d: No error will occur since the double result is saved in a double.
 
    Consider the following code segment.
 
    .. code-block:: java
 
        int a = 5;
-       int b = 2;
-       double c = 3.0;
-       System.out.println(5 + a / b * c - 1);
+       int b = a/2;
+       double c = a/2.0;
+       double d = 5 + a / b * c - 2;
+       System.out.println(d);
 
    What is printed when the code segment is executed?

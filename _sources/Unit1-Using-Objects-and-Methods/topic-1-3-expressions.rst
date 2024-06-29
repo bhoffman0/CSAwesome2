@@ -1,8 +1,5 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-3-
-   :start: 1
 
 |Time90|
 
@@ -13,6 +10,7 @@ Output
 ----------
 
 .. index::
+   single: output
    single: String
    single: String literal
 
@@ -22,7 +20,7 @@ Java has two different methods to print output to the screen:
 - **System.out.print(value)** : prints the value without advancing to the next line
 
 
-``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal**, and it can have zero to many characters enclosed in starting and ending double quotes.
+``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal** which is zero to many characters enclosed in starting and ending double quotes. A **literal** is the code representation of a fixed value, which can be a string or a numerical value. 
 
 .. activecode:: printCommands
    :language: java
@@ -130,6 +128,7 @@ Expressions and Operators
 
 
 .. index::
+    single: expression
     single: operators
     pair: math; operators
     pair: operators; addition
@@ -143,31 +142,14 @@ Java uses the standard mathematical operators for addition (``+``), subtraction
 (``-``), and division (``/``). The multiplication operator is written as ``*``, as
 it is in most programming languages, since the character sets used until
 relatively recently didn’t have a character for a real multiplication sign,
-``×``, and keyboards still don’t have a key for it. Likewise no ``÷``.
-
-You may be used to using ``^`` for exponentiation, either from a graphing
-calculator or tools like Desmos. Confusingly ``^`` *is* an operator in Java,
-but it has a completely different meaning than exponentiation and isn’t even
-exactly an arithmetic operator. You will learn how to use the  ``Math.pow`` method to do exponents in Unit 2.
+``×``, and keyboards still don’t have a key for it or for ``÷``. (You may have noticed that ``+`` was also used to combine
+``String`` and other values into new ``String``\ s. More on this later.)
 
 Arithmetic expressions can be of type ``int`` or ``double``. An arithmetic
 expression consisting only of ``int`` values will evaluate to an ``int`` value.
 An arithmetic expression that uses at least one ``double`` value will evaluate
-to a ``double`` value. (You may have noticed that ``+`` was also used to combine
-``String`` and other values into new ``String``\ s. More on this later.)
+to a ``double`` value. This means that when you are doing division with two integers, you will get an integer result and the decimal part of the result will be thrown away. This is called **truncating division**. If you want a double result, you should make at least one of the values in the expression a double like 2.0. 
 
-Java uses the operator ``==`` to test if the value on the left is equal to the
-value on the right and ``!=`` to test if two items are not equal. Don't get one
-equal sign ``=`` confused with two equal signs ``==``. They mean very different
-things in Java. One equal sign is used to assign a value to a variable. Two
-equal signs are used to test a variable to see if it is a certain value and that
-returns true or false as you'll see below. Also note that using ``==`` and
-``!=`` with ``double`` values can produce surprising results. Because ``double``
-values are only an approximation of the real numbers even things that should be
-mathematically equivalent might not be represented by the exactly same
-``double`` value and thus will not be ``==``. To see this for yourself, write a
-line of code below to print the value of the expression ``0.3 == 0.1 + 0.2``; it
-will be ``false``!
 
 |CodingEx| **Coding Exercise:**
 
@@ -175,7 +157,7 @@ will be ``false``!
    :language: java
    :autograde: unittest
 
-   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about 2 / 3? Isn't it surprising that it prints 0?  See the note below.
+   Run the code below to see all the operators in action. Do all of those operators do what you expected? What about 2 / 3? Isn't it surprising that it prints 0?  See the note above about truncating division with integers. Change the code to make it print the decimal part of the division too. You can do this by making at least one of the numbers a double like 2.0.
    ~~~~
    public class Test1
    {
@@ -185,18 +167,11 @@ will be ``false``!
            System.out.println(2 - 3);
            System.out.println(2 * 3);
            System.out.println(2 / 3);
-           // == is to test while = is to assign
-           System.out.println(2 == 3);
-           System.out.println(2 != 3);
        }
    }
-
    ====
-   // Test Code for Lesson 1.4 Expressions - iccv1
    import static org.junit.Assert.*;
-
    import org.junit.Test;
-
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
@@ -205,28 +180,62 @@ will be ``false``!
        public void test1()
        {
            String output = getMethodOutput("main");
-           String expect = "5\n-1\n6\n0\nfalse\ntrue";
+           String expect = "5\n-1\n6\n" + 2.0/3;
            boolean passed =
                    getResults(expect, output, "Expected output from main", true);
            assertTrue(passed);
        }
    }
 
-.. note::
 
-   When Java sees you doing integer division (or any operation with integers) it
-   assumes you want an integer result so it throws away anything after the
-   decimal point in the answer. This is called **truncating division**. If you
-   need a double answer, you should make at least one of the values in the
-   expression a double like 2.0.
+Math errors sometimes lead to runtime errors in code. A famous example is a math error in coding a formula which caused the Hubble Space Telescope to point in the wrong direction when it was first sent to space. It missed its target stars by about half a degree which is about the width of the moon seen from Earth, and they had to beam up a correction to the code! Thorough testing is the only way to make sure there are no logic errors that will cause runtime errors in your code. Try the following example that tries to convert centimeters to inches. Can you fix the runtime error?
 
+|CodingEx| **Coding Exercise:**
 
-With division, another thing to watch out for is dividing by 0. An attempt to divide an integer by zero will result in an **ArithmeticException** error message. Try it in one of the active code windows above.
+.. activecode:: cm2in-runtime-error
+   :language: java
+   :autograde: unittest
+   :practice: T
 
-Compound Operators
--------------------
+   The following code is trying to convert centimeters to inches, but it has a math error. Run the code to see that there are no error messages, but it simply does the wrong calculation! Can you fix the logic error in the code? 1 inch = 2.54 cms.
+   ~~~~
+   public class CmToInches
+   {
+       public static void main(String[] args)
+       {
+           System.out.print("100 centimeters in inches is: ");
+           System.out.println(100 * 2.54);
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.Test;
+   import java.io.*;
 
-Operators can be used to create compound expressions with more than one operator. You can either use a **literal** value which is a fixed value like 2, or variables in them.  When compound expressions are evaluated, **operator precedence** rules are used, just like when we do math (remember PEMDAS?), so that ``*``, ``/``, and ``%`` are done before ``+`` and ``-``. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void test1() throws IOException 
+       {
+           String output = getMethodOutput("main");
+           String expect = "" + 100/2.54;
+           boolean passed =
+                   getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+       @Test
+       public void test2() 
+       {
+           String target = "/";
+           boolean passed = checkCodeContains("the division operator", target);
+           assertTrue(passed);
+       }
+   }
+
+Compound Expressions
+---------------------
+
+Expressions can be combined into **compound expressions** with multiple operators.  When compound expressions are evaluated, **operator precedence** rules are used, just like when we do math (remember PEMDAS?), so that multiplication ``*``, division ``/``, and remainder ``%`` are done before addition ``+`` and subtraction ``-``. However, anything in parentheses is done first. It doesn't hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.
 
 |CodingEx| **Coding Exercise:**
 
@@ -363,7 +372,7 @@ Here’s the |video2|.
 
 |Exercise| **Check Your Understanding**
 
-.. mchoice:: q3_4_1
+.. mchoice:: mcq-rem1
    :practice: T
    :answer_a: 15
    :answer_b: 16
@@ -375,7 +384,7 @@ Here’s the |video2|.
 
    What is the result of 158 % 10?
 
-.. mchoice:: q3_4_2
+.. mchoice:: mcq-rem2
    :practice: T
    :answer_a: 3
    :answer_b: 2
@@ -391,49 +400,133 @@ Here’s the |video2|.
 
 
 
+|Groupwork| Programming Challenge : Pay Calculator
+---------------------------------------------------
 
-|Groupwork| Programming Challenge : Need New
-------------------------------------------------
+.. figure:: Figures/dollarSign.png
+    :width: 100px
+    :align: left
+
+In this programming challenge, you can work in pairs to create a pay calculator using math expressions and operators. 
+
+.. activecode:: challenge1-3-pay-calculator
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Complete the following expressions for a pay calculator.
+   ~~~~
+   public class Challenge1_3_Pay_Calculator
+   {
+      public static void main(String[] args)
+      {
+          // Put in the math operator between 4 and 10 below to compute 
+          // the pay for 4 hours of work at 10 dollars per hour.
+          System.out.println("Pay for 4 hours of work at 10 dollars an hour");
+          System.out.println(4  10);
+          
+          // Put in the math operator to compute the number of hours worked 
+          // if the pay is 120 dollars and the rate is 15 dollars per hour.
+          System.out.println("Number of hours worked for pay 120 dollars & rate 15 dollars per hour");
+          System.out.println(120  15);
+          
+          // Put in the math expression to compute the pay 
+          //  for 12 hours of work at 7.50 dollars per hour.
+          System.out.println("Pay for 12 hours of work at 7.50 dollars an hour");
+          System.out.println(        );
+        
+          // Put in the math expression to compute the integer number of 
+          // hours worked if the pay is 100 dollars and the rate is 9 dollars per hour.
+          System.out.println("Number of int hours worked for pay 100 dollars & rate 9 dollars per hour");
+          System.out.println(        );
+
+          // Put in the math operator to give the remainder when 
+          //  100 dollars is divided by 9 dollars per hour. 
+          System.out.println("The remainder of 100 dollars divided by 9 dollars per hour");
+          System.out.println(        ); 
+         
+      }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "40\n"
+                   + "8\n"
+                   + "90.0\n"
+                   + "11\n"
+                   + "1\n";
+           boolean passed =
+                   getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test1() throws IOException 
+       {
+           String target = "100/9";
+           boolean passed = checkCodeContains("expression 100/9", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void test2() throws IOException 
+       {
+           String target = "100%9";
+           boolean passed = checkCodeContains("expression 100 % 9", target);
+           assertTrue(passed);
+       }
+   }    
 
 
 
 Summary
 -------------------
 
-- Arithmetic expressions include expressions of type ``int`` and ``double``.
+- In Java, `System.out.print` and `System.out.println` are output statements that display information on the computer screen. `System.out.println` moves the cursor to a new line after the information has been displayed, while `System.out.print` does not.
 
-- The arithmetic operators consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
-  also known as addition, subtraction, multiplication, division, and remainder.
+- **Escape sequences** are special sequences of characters that can be included in a string. They start with a `\` and have a special meaning in Java. Escape sequences used in this course include double quote `\”`, backslash `\`, and newline `\n`.
+
+- A **literal** is the code representation of a fixed value, which can be a string or a numerical value. A **string literal** is zero to many characters enclosed in starting and ending double quotes. 
+
+- **Arithmetic expressions**, which consist of numeric values, variables, and operators, include expressions of type  ``int`` and ``double``.
+
+- The arithmetic **operators** consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
+  also known as addition, subtraction, multiplication, division, and remainder. 
+
+- The **remainder operator %** is used to compute the remainder when one number is divided by another number.
 
 - An arithmetic operation that uses two ``int`` values will evaluate to an
   ``int`` value. With integer division, any decimal part in the result will be
   thrown away.
 
 - An arithmetic operation that uses at least one ``double`` value will evaluate
-  to a ``double`` value.
+  to a ``double`` value. 
 
-- Operators can be used to construct compound expressions.
+- Multiple operators can be used to combine expressions into **compound expressions**.
 
-- During evaluation, operands are associated with operators according to
+- During evaluation, numeric values are associated with operators according to
   **operator precedence** to determine how they are grouped. (``*``, ``/``,
   ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to
   group those.)
 
 - An attempt to divide an integer by zero will result in an ``ArithmeticException``.
 
-- The assignment operator (``=``) allows a program to initialize or change the
-  value stored in a variable. The value of the expression on the right is stored
-  in the variable on the left.
 
-- During execution, expressions are evaluated to produce a single value.
-
-- The value of an expression has a type based on the types of the values and
-  operators used in the expression.
 
 AP Practice
 ------------
 
-.. mchoice:: AP1-1-1
+.. mchoice:: AP1-3-1
     :practice: T
 
     Consider the following code segment.
@@ -477,7 +570,7 @@ AP Practice
       + Correct! Pay attention to which lines are print or println.
 
 
-.. mchoice:: apcsa_sample1
+.. mchoice:: apcsa_sample1_exp
    :practice: T
    :answer_a: 0.666666666666667
    :answer_b: 9.0
@@ -487,7 +580,7 @@ AP Practice
    :correct: c
    :feedback_a: Don't forget that division and multiplication will be done first due to operator precedence.
    :feedback_b: Don't forget that division and multiplication will be done first due to operator precedence.
-   :feedback_c: Yes, this is equivalent to (5 + ((a/b)*c) - 1).
+   :feedback_c: Yes, this is equivalent to (5 + ((5/2)*3) - 1).
    :feedback_d: Don't forget that division and multiplication will be done first due to operator precedence, and that an int/int gives an int truncated result where everything to the right of the decimal point is dropped.
    :feedback_e: Don't forget that division and multiplication will be done first due to operator precedence.
 
@@ -495,9 +588,6 @@ AP Practice
 
    .. code-block:: java
 
-       int a = 5;
-       int b = 2;
-       double c = 3.0;
-       System.out.println(5 + a / b * c - 1);
+       System.out.println(5 + 5 / 2 * 3 - 1);
 
    What is printed when the code segment is executed?

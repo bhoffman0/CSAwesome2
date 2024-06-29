@@ -495,13 +495,45 @@ Did you remember that System is capitalized in System.out.println? Did you find 
 Run-time Errors
 --------------------------
 
-Some errors cannot be detected by the compiler. These are called **run-time errors**. These errors occur when the program is running, after being compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn't exist. 
+Some errors cannot be detected by the compiler. These are called **run-time errors**. These errors occur when the program is running, after the code is compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn't exist or a logic error in the code.
 
-An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an **ArithmeticException** while running.
+An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an **ArithmeticException** while running. Try this out in the code below.
 
-Run-time errors can be difficult to find because they don't always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome.
+.. activecode:: divideByZeroDemo
+   :language: java
+   :autograde: unittest
+
+   The following code has a run-time error. When you click on run, the compiler will not catch it since it is not a syntax error. The program will run and try to compute 3 divided by 0 which cannot be computed. This will cause a run-time error, and the program will report an **ArithmeticException**. Try it out! 
+   ~~~~
+   public class DivideByZero
+   {
+      public static void main(String[] args)
+      {
+          System.out("It makes no sense to divide a number by zero!");
+          System.out.println(3/0);
+      }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String target = "DivideByZero";
+           boolean passed = checkCodeContains("DivideByZero", target);
+           assertTrue(passed);
+       }
+   }
 
 
+Run-time errors can be difficult to find because they don't always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome. We'll see an example of this after learning about expressions in the next lessons.
+   
 
 Comments
 --------
