@@ -188,7 +188,7 @@ to a ``double`` value. This means that when you are doing division with two inte
    }
 
 
-Math errors sometimes lead to runtime errors in code. A famous example is a math error in coding a formula which caused the Hubble Space Telescope to point in the wrong direction when it was first sent to space. It missed its target stars by about half a degree which is about the width of the moon seen from Earth, and they had to beam up a correction to the code! Thorough testing is the only way to make sure there are no logic errors that will cause runtime errors in your code. Try the following example that tries to convert centimeters to inches. Can you fix the runtime error?
+Math errors sometimes lead to runtime errors in code. For example, when the Hubble Space Telescope was launched to space in 1990, a math coding error in a formula caused it to point in the wrong direction! It missed its target stars by about half a degree which is about the width of the moon seen from Earth (https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm). Thorough testing is the only way to make sure there are no logic errors that will cause runtime errors in your code. Try the following example that tries to convert centimeters to inches. Can you fix the runtime error?
 
 |CodingEx| **Coding Exercise:**
 
@@ -231,6 +231,8 @@ Math errors sometimes lead to runtime errors in code. A famous example is a math
            assertTrue(passed);
        }
    }
+
+Another runtime error that is possible in math expressions is dividing by zero which is undefined in mathematics. An attempt to divide an integer by the integer 0 will result in an **ArithmeticException** in Java, as we saw in the first lesson. Try it in one of the active codes to see what happens.
 
 Compound Expressions
 ---------------------
