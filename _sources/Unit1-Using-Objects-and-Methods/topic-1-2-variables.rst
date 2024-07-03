@@ -472,7 +472,10 @@ The convention in Java and many programming languages is to always start a varia
 |Groupwork| Debugging Challenge : Weather Report
 ------------------------------------------------
 
-
+Debug the following code that reads out a weather report.
+Make sure the data types match the values put into the variables.
+Can you find all the bugs and get the code to run? 
+Work with a programming buddy if you get stuck.
 
 
 .. activecode:: challenge1-2-weather
@@ -480,9 +483,9 @@ The convention in Java and many programming languages is to always start a varia
    :autograde: unittest
    :practice: T
 
-   Working in pairs, debug the following code. Can you find the all the bugs and get the code to run?
+   Debug the following code. Can you find the all the bugs and get the code to run?
    ~~~~
-   public class Challenge1_3
+   public class Challenge1_2_weather
    {
       public static void main(String[] args)
       {
