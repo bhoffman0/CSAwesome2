@@ -38,7 +38,7 @@ to the results. Notice what happens when you divide an ``int`` by an ``int`` or
 an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
 ``int``.
 
-.. activecode:: 
+.. activecode:: cast-division
    :language: java
    :autograde: unittest
    :practice: T
@@ -216,8 +216,7 @@ Range of Values
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.
 
 For example, int values are stored in 4 bytes of memory. The constant
-``Integer.MAX_VALUE`` holds the value of the largest possible int value in Java which is  2147483647, and ``Integer.MIN_VALUE`` holds the smallest int value 
- -2147483648. Values in an ``int`` variable must be within the range of ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE`` inclusively. If you try to store any number larger or smaller than these
+``Integer.MAX_VALUE`` holds the value of the largest possible int value in Java which is  2147483647, and ``Integer.MIN_VALUE`` holds the smallest int value \-2147483648. Values in an ``int`` variable must be within the range of ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE`` inclusively. If you try to store any number larger or smaller than these
 numbers in an ``int`` variable, it will result in an **integer overflow** where an
 incorrect value could be stored. Try it below.
 
