@@ -333,7 +333,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.
 
 
-.. activecode:: challenge1-6-average
+.. activecode:: challenge1-5-average
    :language: java
    :autograde: unittest
    :practice: T
