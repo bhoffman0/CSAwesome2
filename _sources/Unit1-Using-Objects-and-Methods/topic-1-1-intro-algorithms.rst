@@ -47,7 +47,9 @@ First Java Program
    pair: class; method
    pair: class; main method
 
-Every program in Java is written as a **class**. Java is an **object-oriented language**, and we'll learn more about classes and objects later in this unit. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
+Every program in Java is written as a **class**. Java is an **object-oriented language**, and **classes** and **objects** created from classes are the basic building blocks in object-oriented programming. We'll learn more about classes and objects later in this unit. 
+
+Inside the class, there can be a **main method** that starts the program. A **method** is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java
 
@@ -630,7 +632,7 @@ Summary
 
 - Most Java classes have a main method that will be run automatically. It looks like this: **public static void main(String[] args) { }**.
 
-- The **System.out.println()** method display information given inside the parentheses on the computer monitor.
+- The **System.out.println()** method displays information given inside the parentheses on the computer monitor.
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
