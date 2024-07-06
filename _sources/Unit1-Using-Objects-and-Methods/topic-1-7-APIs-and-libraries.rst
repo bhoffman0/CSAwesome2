@@ -49,18 +49,19 @@ Work in pairs (or independently if instructed by your teacher) to answer the fol
 
     Drag the definition from the left and drop it on the correct concept on the right. Click the "Check Me" button to see if you are correct.
 
-.. mchoice:: built_in_package
+.. mchoice:: java_lang_package
     :answer_a: java.util
     :answer_b: java.io
     :answer_c: java.lang
     :answer_d: java.net
     :correct: c
-    :feedback_a: Incorrect. java.util is not built into Java.
-    :feedback_b: Incorrect. java.io is not built into Java.
-    :feedback_c: Correct! java.lang is built into Java.
-    :feedback_d: Incorrect. java.net is not built into Java.
+    :feedback_a: Incorrect. java.util must be explicitly imported.
+    :feedback_b: Incorrect. java.io must be explicitly imported.
+    :feedback_c: Correct! java.lang can be used in all Java programs without code to import it.
+    :feedback_d: Incorrect. java.net must be explicitly imported.
 
-    Which package is already built into Java and does not need to be imported?
+    Which package can programmers use in all Java programs without adding code to import it?
+
 
 
 .. mchoice:: system_class
@@ -118,15 +119,15 @@ Work in pairs (or independently if instructed by your teacher) to answer the fol
 .. mchoice:: attributes_class
     :answer_a: Methods that perform tasks
     :answer_b: Data related to the class stored in variables
-    :answer_c: Interfaces related to the class
+    :answer_c: The arguments of a class
     :answer_d: Packages that contain the class
     :correct: b
-    :feedback_a: Incorrect. Attributes (or fields) are not methods.
-    :feedback_b: Correct! Attributes (or fields) are data related to the class stored in variables.
-    :feedback_c: Incorrect. Attributes (or fields) are not interfaces.
-    :feedback_d: Incorrect. Attributes (or fields) are not packages.
+    :feedback_a: Incorrect. Attributes are not methods.
+    :feedback_b: Correct! Attributes are data related to the class stored in variables.
+    :feedback_c: Incorrect. Classes do not have arguments.
+    :feedback_d: Incorrect. Attributes are not packages.
 
-    What are attributes (or fields) in a class?
+    What are attributes of a class?
 
 
 .. mchoice:: identify_attribute_method_1
