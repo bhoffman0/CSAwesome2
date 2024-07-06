@@ -71,8 +71,8 @@ Work in pairs (or independently if instructed by your teacher) to answer the fol
     :correct: b
     :feedback_a: Incorrect. The String class does not have methods to interact with the operating system.
     :feedback_b: Correct! The System class has methods to interact with the operating system.
-    :feedback_c: Incorrect. The PrintStream class does not have methods to interact with the operating system.
-    :feedback_d: Incorrect. The Scanner class does not have methods to interact with the operating system.
+    :feedback_c: Incorrect. The PrintStream class does not have methods to interact with the operating system. Also it is in the ``java.io`` package, not ``java.lang``.
+    :feedback_d: Incorrect. The Scanner class does not have methods to interact with the operating system. Also it is in the ``java.util`` package, not ``java.lang``.
 
     Which class in the java.lang package has methods to interact with the computer's operating system?
 
@@ -97,7 +97,7 @@ Work in pairs (or independently if instructed by your teacher) to answer the fol
     :correct: a
     :feedback_d: Incorrect. println is a method, not an attribute.
     :feedback_b: Incorrect. input is not an attribute in the System class.
-    :feedback_a: Correct! The System class has three fields: in, out, and err.
+    :feedback_a: Correct! The System class has three attributes: in, out, and err.
     :feedback_c: Incorrect. print is not an attribute in the System class.
 
     Which of the following is an attribute in the ``System`` class?
