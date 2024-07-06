@@ -1,31 +1,21 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-6-
-   :start: 1
-
-
+|Time45|
 
 .. index::
-    single: operators
-    pair: math; operators
-    pair: operators; addition
-    pair: operators; subtraction
-    pair: operators; multiplication
-    pair: operators; division
-    pair: operators; equality
-    pair: operators; inequality
-
-|Time45|
+    single: compound operators
 
 Compound Assignment Operators
 =============================
 
-Compound assignment operators are shortcuts that do a math operation and
-assignment in one step. For example, ``x += 1`` adds 1 to the current value of
+Compound assignment operators ``+=``, ``-=``, ``*=``, ``/=``, and ``%=`` are 
+shortcuts that do a math operation and assignment in one step. For example, ``x += 
+1`` adds 1 to the current value of
 ``x`` and assigns the result back to ``x``. It is the same as ``x = x + 1``.
 This pattern is possible with any operator put in front of the ``=`` sign, as
-seen below. If you need a mnemonic to remember whether the compound operators
+seen below. 
+
+If you need a mnemonic to remember whether the compound operators
 are written like ``+=`` or ``=+``, just remember that the operation (``+``) is
 done first to produce the new value which is then assigned (``=``) back to the
 variable. So it's operator then equal sign: ``+=``.
@@ -37,7 +27,7 @@ variable to one greater or less than its current value.
 
 Thus ``x++`` is even more concise way to write ``x = x + 1`` than the compound
 operator ``x += 1``. You’ll see this shortcut used a lot in loops when we get to
-them in Unit 4. Similarly, ``y--`` is a more concise way to write ``y = y - 1``.
+them. Similarly, ``y--`` is a more concise way to write ``y = y - 1``.
 These shortcuts only exist for ``+`` and ``-`` as they don’t really make sense
 for other operators.
 
@@ -114,30 +104,24 @@ shortcut operators in action!
    than ``x++``. That is legal but not something that you will see on the AP
    exam.
 
-   Putting the operator before or after the variable only changes the value of
-   the expression itself. If ``x`` is 10 and we write,
+   If the operator is after the variable name (called the
+   **postfix** operator), the value of the variable is changed *after* evaluating
+   the variable to get its value. And if the operator is before the variable (the
+   **prefix** operator), the value of the variable in incremented *before* the
+   variable is evaluated to get the value of the expression. 
+   For example, if ``x`` is 10 and we write,
    ``System.out.println(x++)`` it will print 10 but aftewards ``x`` will be 11.
    On the other hand if we write, ``System.out.println(++x)``, it will print 11
    and afterwards the value will be 11.
 
-   In other words, with the operator after the variable name, (called the
-   **postfix** operator) the value of the variable is changed *after* evaluating
-   the variable to get its value. And with the operator before the variable (the
-   **prefix** operator) the value of the variable in incremented *before* the
-   variable is evaluated to get the value of the expression.
-
-   But the value of ``x`` after the expression is evaluated is the same in
-   either case: one greater than what it was before. The ``--`` operator works
-   similarly.
-
    The AP exam will never use the prefix form of these operators nor will it use
-   the postfix operators in a context where the value of the expression matters.
+   the postfix operators in a context where the value of the expression matters. 
 
 
 |Exercise| **Check Your Understanding**
 
 
-.. mchoice:: q3_4_3
+.. mchoice:: q_trace_increment
    :practice: T
    :answer_a: x = -1, y = 1, z = 4
    :answer_b: x = -1, y = 2, z = 3
@@ -162,7 +146,7 @@ shortcut operators in action!
      y++;
      z+=y;
 
-.. mchoice:: q3_4_4
+.. mchoice:: q_trace_increment2
    :practice: T
    :answer_a: x = 6, y = 2.5, z = 2
    :answer_b: x = 4, y = 2.5, z = 2
@@ -222,7 +206,7 @@ Trace through the following code:
      y %= 2;
      z--;
 
-.. shortanswer:: challenge1-5
+.. shortanswer:: challenge1-6
 
    Write your trace table for x, y, and z here showing their results after each line of code.
 
@@ -239,12 +223,9 @@ Summary
 -------------------
 
 - Compound assignment operators (``+=``, ``-=``, ``*=``, ``/=``, ``%=``) can be
-  used in place of the assignment operator.
+  used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the current value of the variable on the left and the value on the right and then assigns the resulting value to the variable on the left.
 
 - The increment operator (``++``) and decrement operator (``--``) are used to
-  add 1 or subtract 1 from the stored value of a variable. The new value is
+  add 1 or subtract 1 from the stored value of a numeric variable. The new value is
   assigned to the variable.
 
-- The use of increment and decrement operators in prefix form (e.g., ``++x``)
-  and inside other expressions (i.e., ``arr[x++]``) is outside the scope of this
-  course and the AP Exam.
