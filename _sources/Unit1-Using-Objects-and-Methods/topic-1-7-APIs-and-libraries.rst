@@ -28,7 +28,9 @@ The ``System`` class is part of the ``java.lang`` package in the Java API, and i
 
 The ``System`` class has three fields/attributes: ``in``, ``out``, and ``err``. The ``out`` attribute is the output stream we use in ``System.out.println()`` and an instance of the ``PrintStream`` class, documented at https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html. The ``PrintStream`` class has the method ``println()`` that we use to print to the screen. How many ``println()`` methods are there in the PrintStream class?  One for each type that it can print!
 
-How can you tell attributes and methods apart when you look at library documentation? One easy way is that methods will always have parentheses after them, for example ``println()``, where you can put in the information (the arguments) that it needs to do its job. Attributes are variables and will not have parentheses after them. In later lessons, you will learn more about arguments and return values of methods, and you will learn to write your own classes and methods.
+How can you tell attributes and methods apart when you look at library documentation? One easy way is that methods will always have parentheses after them, for example ``println()``, where you can put in the information (the arguments) that it needs to do its job. Attributes are variables and will not have parentheses after them. 
+
+Notice that you use the . (dot) operator to access attributes and methods of a class. For example, you use ``System.out`` to access the ``out`` attribute of the ``System`` class and ``System.out.println()`` to access the ``println()`` method of the ``PrintStream`` class.  In later lessons, you will learn more about arguments and return values of methods, and you will learn to write your own classes and methods.
 
 |Groupwork| Challenge  
 ------------------------
