@@ -223,7 +223,7 @@ Summary
 -------------------
 
 - Compound assignment operators (``+=``, ``-=``, ``*=``, ``/=``, ``%=``) can be
-  used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the value on the left and the value on the right and then assigns the result to the variable on the left.
+  used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the current value of the variable on the left and the value on the right and then assigns the resulting value to the variable on the left.
 
 - The increment operator (``++``) and decrement operator (``--``) are used to
   add 1 or subtract 1 from the stored value of a numeric variable. The new value is
