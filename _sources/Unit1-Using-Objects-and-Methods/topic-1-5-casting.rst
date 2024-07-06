@@ -257,7 +257,7 @@ incorrect value could be stored. Try it below.
        }
    }
 
-For ``double`` values, computers allot a larger amount of memory. Computers allot a specified amount of memory to store data based on the data type. If an expression would evaluate to a double that is more precise than can be stored in the allotted amount of memory, a round-off error occurs. The result will be rounded to the representable value in the range.  For example, repeating decimals like 0.3333333333333333 will be cut off after 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an int value.
+Computers allot a specified amount of memory to store data based on the data type. For ``double`` values, computers allot twice as much memory than for ``int``\ s—8 bytes rather than 4. However it's still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest ``double`` representable in 8 bytes. For example, repeating decimals like 0.3333333333333333 will be cut off after 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an ``int`` value.
 
 .. index::
    pair: double; precision format
