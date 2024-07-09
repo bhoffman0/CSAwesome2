@@ -1,12 +1,17 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-5-
-   :start: 1
+|Time45|
 
+.. index::
+   single: cast
+   single: casting
+   single: type casting
 
 Casting and Ranges of Values
 ============================
+
+Casting
+---------
 
 In Java, **type casting** is used to convert values from one type to another. By
 **casting** we don't mean something to do with fishing, but it is a similar idea
@@ -25,28 +30,33 @@ the "shape" (or type) of the value.
 The **cast operator**, which looks like ``(int)`` and ``(double)`` placed before
 any expression (a literal, a number, a variable, or more complex expression in
 parentheses) produces a value of the given type by converting the value of the
-original expression to the new type.
+original expression to the new type. The casting operators ``(int)`` and ``(double)`` can be used to convert from a double value to an int value (or vice versa).
+For example, ``(double) 1 / 3`` will evaluate to a ``double`` value ``0.33333333`` instead of an ``int`` truncated value ``0``. And ``(int) 3.6`` will evaluate to an ``int`` value ``3`` instead of a ``double``. Casting an ``int`` value to a ``double`` adds on digits to the right of the decimal point. And casting ``double`` value to an ``int`` value causes the digits to the right of the decimal point to be truncated.
 
-For example, ``(double) 1 / 3`` will evaluate to a ``double`` value instead of an
-``int``. Run this code to find how Java handles division and what casting can do
+Run this code to find how Java handles division and what casting can do
 to the results. Notice what happens when you divide an ``int`` by an ``int`` or
 an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
 ``int``.
 
-.. activecode:: lcct1
+.. activecode:: cast-division
    :language: java
    :autograde: unittest
+   :practice: T
 
-   What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?
+   What happens when you divide an int by an int or with a double operand or with the type cast (double) or (int) on one of the operands? Add another line that divides 5 by 2 using a (double) cast. What is the result?
    ~~~~
-   public class OperatorTest
+   public class Casting
    {
        public static void main(String[] args)
        {
-           System.out.println(1 / 3);          // int divided by int
-           System.out.println(1.0 / 3);        // double divided by int
-           System.out.println(1 / 3.0);        // int divided by double
-           System.out.println((double) 1 / 3); // int cast to double, divided by int
+           System.out.println(3 / 4);          // int divided by int
+           System.out.println(3.0 / 4);        // double divided by int
+           System.out.println(3 / 4.0);        // int divided by double
+           System.out.println((double) 3 / 4); // int cast to double, divided by int
+           System.out.println((int) 3.0 / 4);  // double cast to int, divided by int
+           // Add a line of code that prints out the result of dividing 5 by 2 
+           //  using a (double) cast.
+
        }
    }
 
@@ -65,9 +75,11 @@ an ``int`` by a ``double`` or an ``int`` cast to a ``double`` divided by an
            String output = getMethodOutput("main");
            String expect =
                    "0\n"
-                       + "0.3333333333333333\n"
-                       + "0.3333333333333333\n"
-                       + "0.3333333333333333\n";
+                       + "0.75\n"
+                       + "0.75\n"
+                       + "0.75\n" 
+                       + "0\n"
+                       + "2.5\n";
            boolean passed =
                    getResults(expect, output, "Expected output from main");
            assertTrue(passed);
@@ -79,10 +91,10 @@ the actual mathematical result, removing anything after the decimal point. Thus
 ``9 / 10`` evaluates to ``0``, not ``0.9``. It also does not evaluate to ``1``;
 truncating is not the same as rounding!
 
-But in any expression involving a ``double``, the ``double`` is “contagious” and
+But in any expression involving a ``double``, the ``double``  is “contagious” and
 will cause the value of that expression to also be a ``double``. Thus the
 expression ``9.0 / 10`` is evaluated as if it had been written ``9.0 / 10.0`` and
-produces the ``double`` value ``0.9``.
+produces the ``double`` value ``0.9``. This code causes int values like 10 to be automatically cast (widened) to double values like 10.0.
 
 Casting an ``int`` to ``double``, as shown in the code above, produces a
 ``double`` value which will then causes any expression it is part of to produce
@@ -111,6 +123,13 @@ because a ``double`` can represent any ``int`` value but not vice versa; thus a
    the minimum and maximum ``int`` values with the constants
    ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE``.
 
+Rounding
+----------
+
+.. index::
+   single: rounding
+
+
 Values of type ``double`` in the range that can be represented by an ``int`` can
 be rounded to the nearest ``int`` by adding or subtracting 0.5 and then casting
 the result with ``(int)``:
@@ -136,11 +155,11 @@ nearest integer to ``1.25``.
 .. activecode:: nearestInt
    :language: java
    :autograde: unittest
+   :practice: T
 
    Run the code below to see how the formula of adding or subtracting .5 and
    then casting with (int) rounds a positive or negative double number to the
-   closest int.
-
+   closest int. Add a line of code that rounds number + 2.3 to the nearest int.
    ~~~~
    public class NearestInt
    {
@@ -155,6 +174,9 @@ nearest integer to ``1.25``.
            int nearestNegInt = (int) (negNumber - 0.5);
            System.out.println(
                    "-5.0/3 rounded to nearest negative int: " + nearestNegInt);
+
+           // Print the result of rounding (number + 2.3) to the nearest int. 
+
        }
    }
 
@@ -175,7 +197,8 @@ nearest integer to ``1.25``.
                    "5.0/3 = 1.6666666666666667\n"
                        + "5/3 truncated: 1\n"
                        + "5.0/3 rounded to nearest int: 2\n"
-                       + "-5.0/3 rounded to nearest negative int: -2\n";
+                       + "-5.0/3 rounded to nearest negative int: -2\n"
+                       + "4";
 
            boolean passed =
                    getResults(expect, output, "Expected output from main", true);
@@ -183,21 +206,24 @@ nearest integer to ``1.25``.
        }
    }
 
+Range of Values
+------------------
+
 .. index::
    pair: double; number of digits
 
 
 What happens to repeating decimal numbers like 3.333333...?  Java limits the number of digits you can save for any ``double`` number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.
 
-For example, int values are stored in 4 bytes of memory. There is an
-``Integer.MAX_VALUE`` defined as 2147483647 and an ``Integer.MIN_VALUE`` defined
-as -2147483648. If you try to store any number larger or smaller than these
-numbers in an int variable, it will result in an **integer overflow** where an
+For example, int values are stored in 4 bytes of memory. The constant
+``Integer.MAX_VALUE`` holds the value of the largest possible int value in Java which is  2147483647, and ``Integer.MIN_VALUE`` holds the smallest int value \-2147483648. Values in an ``int`` variable must be within the range of ``Integer.MIN_VALUE`` and ``Integer.MAX_VALUE`` inclusively. If you try to store any number larger or smaller than these
+numbers in an ``int`` variable, it will result in an **integer overflow** where an
 incorrect value could be stored. Try it below.
 
 .. activecode:: overfl
    :language: java
    :autograde: unittest
+   :practice: T
 
    Try the code below to see two integer overflows for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow by deleting the last 0 in the numbers to store less digits.
    ~~~~
@@ -231,6 +257,8 @@ incorrect value could be stored. Try it below.
        }
    }
 
+Computers allot a specified amount of memory to store data based on the data type. For ``double`` values, computers allot twice as much memory than for ``int``\ s—8 bytes rather than 4. However it's still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest ``double`` representable in 8 bytes. For example, repeating decimals like 0.3333333333333333 will be cut off after 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an ``int`` value.
+
 .. index::
    pair: double; precision format
 
@@ -240,15 +268,17 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    :language: java
    :autograde: unittest
 
-   Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point.
+   Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point. Try it with 2.0/3.
    ~~~~
    public class TestFormat
    {
        public static void main(String[] args)
        {
-           double number = 10 / 3;
+           double number = 10.0 / 3;
            System.out.println(number);
            System.out.println(String.format("%.02f", number));
+           // Print out the result of 2.0/3 formatted to show 2 digits after the decimal point.
+
        }
    }
 
@@ -265,7 +295,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "3.0\n3.00\n";
+           String expect = "3.0\n3.33\n0.67\n";
 
            boolean passed =
                    getResults(expect, output, "Expected output from main", true);
@@ -275,7 +305,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: q2_5
+.. mchoice:: q_round
    :practice: T
    :answer_a: true
    :answer_b: false
@@ -285,7 +315,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 
    True or false: Java rounds up automatically when you do integer division.
 
-.. mchoice:: q2_6
+.. mchoice:: q_cast
    :practice: T
    :answer_a: true
    :answer_b: false
@@ -295,17 +325,6 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 
    True or false: casting always results in a double type.
 
-.. mchoice:: q2_7
-   :practice: T
-   :answer_a: (double) (total / 3);
-   :answer_b: total / 3;
-   :answer_c: (double) total /  3;
-   :correct: c
-   :feedback_a: This does integer division before casting the result to double so it loses the fractional part.
-   :feedback_b: When you divide an integer by an integer you get an integer result and lose the fractional part.
-   :feedback_c: This will convert total to a double value and then divide by 3 to return a double result.
-
-   Which of the following returns the correct average for a total that is the sum of 3 int values?
 
 |Groupwork| Programming Challenge : Average 3 Numbers
 ------------------------------------------------------
@@ -313,7 +332,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
 This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.
 
 
-.. activecode:: challenge1-6-average
+.. activecode:: challenge1-5-average
    :language: java
    :autograde: unittest
    :practice: T
@@ -569,15 +588,37 @@ This would be a good project to work together in pairs, and switch drivers (who 
        }
    }
 
+.. |repl| raw:: html
+
+   <a href="https://replit.com" target="_blank">replit</a>
 
 
+.. |Scanner| raw:: html
 
-Your teacher may suggest that you use a Java IDE like `replit <https://replit.com>`_ for this challenge so that you can use input to get these values using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_. Here is a `repl template <https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java>`_ that you can use to get started if you want to try the challenge with input.
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+
+.. |repl template| raw:: html
+
+   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" target="_blank">repl template</a>
+
+Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
 
 
+.. |Unicode| raw:: html
 
+   <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" target="_blank">Unicode</a>
 
+.. |Chinese character| raw:: html
 
+   <a href="https://unicodelookup.com/#cjk/1" target="_blank">Chinese character</a>
+
+.. |Unicode Lookup| raw:: html
+
+   <a href="https://unicodelookup.com/" target="_blank">Unicode Lookup</a>
+
+.. |emoji| raw:: html
+
+   <a href="http://unicode.org/emoji/charts/full-emoji-list.html" target="_blank">emoji</a>
 
 Bonus Challenge : Unicode
 -------------------------------------
@@ -611,8 +652,8 @@ not on more recently added codepoints including, critically those for Emoji. �
 So better to use ``Character.toString`` and ignore ``char``.)
 
 Try the following program which prints out an English “A”, a 
-`Chinese character <https://unicodelookup.com/#cjk/1>`_, and an `emoji <http://unicode.org/emoji/charts/full-emoji-list.html>`_. Then look up other characters at this 
-`Unicode Lookup <https://unicodelookup.com/>`_ site and change the code to print them out. (Use the Dec column in site
+|Chinese character|, and an |emoji|. Then look up other characters at this 
+|Unicode Lookup| site and change the code to print them out. (Use the Dec column in site
 to get the decimal number.) Can you print out letters from 3 different
 languages?
 
@@ -667,27 +708,48 @@ languages?
 Summary
 -------------------
 
-- **Type casting** is used to convert value from one type to another.
+- **Type casting** is used to convert a value from one type to another.
 
-- The casting operators ``(int)`` and ``(double)`` can be used to create a
-  temporary value converted to a different data type.
+- The casting operators ``(int)`` and ``(double)`` can be used to convert from a double value to an int value (or vice versa).
 
 - Casting a ``double`` value to an ``int`` causes the digits to the right of the
   decimal point to be truncated (cut off and thrown away).
 
 - In expressions involving ``double``\ s, the ``double`` values are contagious,
-  causing ``int``\ s in the expression to be automatically converted to the
+  causing ``int``\ s in the expression to be automatically converted ("widened") to the
   equivalent ``double`` value so the result of the expression can be computed as
   a ``double``.
 
 - Values of type ``double`` can be rounded to the nearest integer by (int)(x +
   0.5) or (int)(x – 0.5) for negative numbers.
 
+- The constant ``Integer.MAX_VALUE`` holds the value of the largest possible int value. The constant ``Integer.MIN_VALUE`` holds the value of the smallest possible int value.
+
 - Integer values in Java are represented by values of type ``int``, which are
   stored using a finite amount (4 bytes) of memory. Therefore, an int value must
   be in the range from ``Integer.MIN_VALUE`` to ``Integer.MAX_VALUE``,
-  inclusive.
+  inclusive. 
 
 - If an expression would evaluate to an int value outside of the allowed range,
-  an integer overflow occurs. This could result in an incorrect value within the
-  allowed range.
+  an integer overflow occurs. The result is an int value in the allowed range but not necessarily the value expected.
+
+- Computers allot a specified amount of memory to store data based on the data type. If an expression would evaluate to a double that is more precise than can be stored in the allotted amount of memory, a round-off error occurs. The result will be rounded to the representable value. To avoid rounding errors that naturally occur, use int values or round doubles to the precision needed. 
+
+
+AP Practice
+---------------
+
+.. mchoice:: AP_casting
+   :practice: T
+   :answer_a: (double) (total / 3);
+   :answer_b: total / 3;
+   :answer_c: (double) total /  3;
+   :answer_d: (int) total / 3;
+   :correct: c
+   :feedback_a: This does integer division before casting the result to double so it loses the fractional part.
+   :feedback_b: When you divide an integer by an integer you get an integer result and lose the fractional part.
+   :feedback_c: This will convert total to a double value and then divide by 3 to return a double result.
+   :feedback_d: This will return an int value losing the fractional part.
+
+   Which of the following returns the correct average for a total that is the sum of 3 int values?
+
