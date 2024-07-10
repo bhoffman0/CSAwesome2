@@ -112,10 +112,52 @@ sub add_to_toctree {
   }
 }
 
-my $oldfile = shift || die "Need file to move";
-my $newdir = shift || die "Need directory to move to";
 
-my $newfile = $newdir . "/" . basename($oldfile);
+sub rename_in_toctree {
+  my ($file, $newfile) = @_;
+
+  if (dirname($file) ne dirname($newfile)) {
+    die "Trying to rename across dirs: $file to $newfile";
+  }
+
+
+  my $base = basename($file);
+  my $newbase = basename($newfile);
+  my $tocfile = tocfile($file);
+
+  print STDERR "Replacing $base with $newbase";
+
+  our @ARGV = ($tocfile);
+
+  $^I = '';
+
+  my $in_toc = 0;
+
+  while (<>) {
+
+    if (/^\.\. toctree\:/) {
+      $in_toc = 1;
+    } elsif ($in_toc) {
+
+      if (/^\S/) {
+        $in_toc = 0;
+
+      } elsif (/^(\s+)(?!:)$base/) {
+        print "   $newbase\n";
+        next;
+      }
+    }
+    print;
+  }
+}
+
+
+my $oldfile = shift || die "Need file to move";
+my $newloc = shift || die "Need directory to move to";
+
+$newloc =~ s/\/$//;
+
+my $newfile = -d $newloc ? $newloc . "/" . basename($oldfile) : $newloc;
 
 if (not -e $oldfile) {
   die "Can't move $oldfile. Doesn't exist.";
@@ -129,9 +171,18 @@ if (not check_in_toctree($oldfile)) {
   warn "$oldfile not in TOC";
 }
 
-remove_from_toctree($oldfile);
-add_to_toctree($newfile);
-
 system("git mv $oldfile $newfile") == 0 or die $!;
-system("git add " . tocfile($oldfile)) == 0 or die $!;
-system("git add " . tocfile($newfile)) == 0 or die $!;
+
+my $oldtoc = tocfile($oldfile);
+my $newtoc = tocfile($newfile);
+
+if ($oldtoc eq $newtoc) {
+  print STDERR "Rewriting toctree\n";
+  rename_in_toctree($oldfile, $newfile);
+  system("git add $oldtoc") == 0 or die $!;
+} else {
+  remove_from_toctree($oldfile);
+  add_to_toctree($newfile);
+  system("git add $oldtoc") == 0 or die $!;
+  system("git add $newtoc") == 0 or die $!;
+}
