@@ -76,12 +76,6 @@ Notice that there are some special tags that you can use in Java documentation. 
 Preconditions and Postconditions
 ----------------------------------
 
-
-
-printf format string and arguments must match!!! Good one because you get Exceptions!
-
-
-
 Many methods in API libraries have **preconditions** and the **postconditions** described in their comments. A **precondition** is a condition that must be true for your method code to work, for example the assumption that the parameters, the data that you give the method to do its job, have values within limits and are not null. The methods could check for these preconditions, but they do not have to. The precondition is what the method expects in order to do its job properly.
 
 A **postcondition** is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned from the method or the changes to the state. These assumptions are very useful to other programmers who want to use that method and get the correct results.
