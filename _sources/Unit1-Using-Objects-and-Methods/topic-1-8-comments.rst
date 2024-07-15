@@ -1,24 +1,20 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 1-8-
-   :start: 1
-
 |Time45|
 
-Documentation with Comments
-==========================================
+Documentation with Comments and Preconditions
+==============================================
 
 Comments
 ---------
 
-Adding comments to your code helps to make it more readable and maintainable. In the commercial world, software development is usually a team effort where many programmers will use your code and maintain it for years. Commenting is essential in this kind of environment and a good habit to develop. Comments will also help you to remember what you were doing when you look back to your code a month or a year from now.
+Adding comments to your code helps to make it more readable and maintainable. In the commercial world, software development is usually a team effort where many programmers will use your code and maintain it for years. Commenting is essential in this kind of environment and a good habit to develop. Comments will also help you to remember what you were doing when you look back to your code a month or a year from now. Comments are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run. 
 
 There are 3 types of comments in Java:
 
 1. ``//`` Single line comment
-2. ``/*`` Multiline comment ``*/``
-3. ``/**`` Documentation comment ``*/``
+2. ``/*`` Multiline block of comments ``*/``
+3. ``/**`` Java documentation comments ``*/``
 
 .. |Java JDK| raw:: html
 
@@ -34,7 +30,7 @@ There are 3 types of comments in Java:
 
 The special characters ``//`` are used to mark the rest of the line as a comment in many programming languages.  If the comment is going to be multiple lines, we use ``/*`` to start the comment and ``*/`` to end the comment.
 
-There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool.
+There is also a special version of the multi-line comment, ``/**``  ``*/``, called the documentation comment. Java has a cool tool called |javadoc| that comes with the |Java JDK| that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the |String class|. Although you do not have to use this in the AP exam, it's a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool later on to save your code as a library.
 
 |Exercise| **Check your understanding**
 
@@ -61,7 +57,11 @@ The compiler will skip over comments, and they don't affect how your program run
     {
        private int max = 10; // this keeps track of the max score
        /* The print() method prints out the max */
-       public print() {  System.out.println(max); }
+       public print() 
+       {  
+          System.out.println(max); 
+       }
+    }
 
 Note that most IDEs will tend to show comments formatted in italics -- to make them easier to spot.
 
@@ -73,45 +73,79 @@ Notice that there are some special tags that you can use in Java documentation. 
 - @param   Parameter of a method
 - @return  Return value for a method
 
-Preconditions and  Postconditions
----------------------------------
+Preconditions and Postconditions
+----------------------------------
 
-As you write methods in a class, it is a good idea to keep in mind the **preconditions** and the **postconditions** for the method and write them in the comments. A precondition is a condition that must be true for your method code to work, for example the assumption that the parameters have values and are not null. The methods could check for these preconditions, but they do not have to. The precondition is what the method expects in order to do its job properly.
+Many methods in API libraries have **preconditions** and the **postconditions** described in their comments. A **precondition** is a condition that must be true for your method code to work, for example the assumption that the parameters, the data that you give the method to do its job, have values within limits and are not null. The methods could check for these preconditions, but they do not have to. The precondition is what the method expects in order to do its job properly.
 
-A postcondition is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned or the changes to the instance variables. These assumptions are very useful to other programmers who want to use your class and get the correct results.
+A **postcondition** is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned from the method or the changes to the state. These assumptions are very useful to other programmers who want to use that method and get the correct results.
+
+One precondition that we talked about is that divisors cannot be zero in expressions because that will cause the code to have a runtime error or exception. Many math functions have preconditions about their operands because not every mathematical operation is defined for every value. For example, computing the square root of a negative number is undefined, so the ``Math.sqrt(num)`` Java method, which we will learn later, will return a special value ``NaN`` which stands for "not a number" if num is negative. But since you can't really do anything useful with ``NaN`` it's better to think of ``sqrt`` as having a precondition that says it only works properly if given a positive argument. These are described as special cases in the API documentation, for example in https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double-. Try this out below.
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: math-preconditions
+   :language: java
+   :autograde: unittest
+
+   The following code uses the square root method in Java which has a precondition that the number that you give it is not negative.  When you click on run, the compiler will not catch the error, but it will return the error value ``NaN``.  Can you fix the value of num so that it does not return ``NaN``?  What is the precondition for the Math.sqrt method?
+   ~~~~
+   public class SqRoot
+   {
+      public static void main(String[] args)
+      {
+            double num = -4;
+            System.out.println(Math.sqrt(num));
+      }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String target = "SqRoot";
+           boolean passed = checkCodeContains("SqRoot", target);
+           assertTrue(passed);
+       }
+   }
 
 
-Here is an example of preconditions, postconditions, and @param in the Turtle code that we have used in the past for our drawing turtles.
+Here is an example of preconditions, postconditions, and @param in the Turtle code that we use for animating turtle drawings. The Turtle ``forward`` method's precondition is that the amount of ``pixels`` forward should be between 0 and the width and height of the world. If it receives value out of this range, it sets ``pixels`` to the closest legal values that it can so that the turtle appears just at the edge of the world. 
 
 .. code-block:: java
 
        /**
-         * Constructor that takes the x and y position for the
-         * turtle
-         * Preconditions: parameters x and y are coordinates from 0 to
+         * Method to move the turtle forward the given number of pixels
+         * @param pixels the number of pixels to walk forward in the heading direction
+         * Preconditions: parameters pixel is between 0 and 
          *    the width and height of the world.
-         * Postconditions: the turtle is placed in (x,y) coordinates
-         * @param x the x position to place the turtle
-         * @param y the y position to place the turtle
+         * Postconditions: the turtle is moved forward by pixels amount 
+         *   but stays within the width and height of the world. 
          */
-        public Turtle(int x, int y)
+        public void forward(int pixels)
         {
-          xPos = x;
-          yPos = y;
+          /* code to move the turtle forward */
         }
 
-|CodingEx| **Coding Exercise**
-
-Try to break the preconditions of the Turtle constructor below. Does the Turtle constructor behave properly if you break the preconditions that x and y are between 0 and 300. Try giving the Turtle constructor  x and y values out of these ranges. What happens? Does the method give good results? Does it give any warnings? What about the t.forward() method? Does it have any preconditions that you can break?
 
 .. |github| raw:: html
 
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+   <a href="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
 .. |repl link| raw:: html
 
    <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">replit.com link</a>
 
+|CodingEx| **Coding Exercise**
+
+Try to break the preconditions of the ``Turtle forward`` method below. Try to make the turtle go completely off screen by changing the number of pixels given to the forward method. What happens if you put in negative numbers? 
 (If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
 .. activecode:: turtle-preconditions
@@ -119,7 +153,7 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Try to break the preconditions about the range of the values of x and y in the Turtle constructor below.
+    Try to break the preconditions of the Turtle forward method below. Can you make it go completely off screen by changing the number of pixels given to the forward method in line 13? What happens if you put in negative numbers?
     ~~~~
     import java.awt.*;
     import java.util.*;
@@ -128,13 +162,20 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
     {
         public static void main(String[] args)
         {
-            World world = new World(300, 300);
-            // Change 0, 0 in the Turtle constructor to other values 
-            // outside of 0-300 to break the preconditions 
-            // and see what happens
-            Turtle t = new Turtle(0, 0, world);
-            t.turnRight();
-            world.show(true);
+            World habitat = new World(300, 300);
+            Turtle yertle = new Turtle(world);
+
+            // Change 100 pixels below to a larger number
+            //   to try to go off screen to break preconditions
+            yertle.forward(100);
+      
+            // code to turn and come back down 
+            yertle.turnLeft();
+            yertle.forward();
+            yertle.turnLeft();
+            yertle.forward();
+
+            habitat.show(true);
         }
     }
 
@@ -156,126 +197,11 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
         public void test1()
         {
             String code = getCode();
-            boolean passed = !(code.contains("new Turtle(0, 0"));
-            passed = getResults("true", "" + passed, "Change (0, 0) to try to break preconditions", passed);
+            boolean passed = !(code.contains("forward(100)"));
+            passed = getResults("true", "" + passed, "Change forward(100) to try to break preconditions", passed);
             assertTrue(passed);
         }
     }
-
-The Turtle constructor's precondition is that x and y should be between 0 and the width and height of the world. If it receives values out of this range, it sets x and y to the closest legal values that it can so that the turtle appears just at the edge of the world. Similarly, the forward() method will not allow the turtle to leave the world.
-
-|Exercise| **Check your understanding**
-
-.. mchoice:: AP5-3-1
-    :practice: T
-    :answer_a: /* Precondition: s <= 0 */
-    :answer_b: /* Precondition: score >= 0 */
-    :answer_c: /* Precondition: s and ec >= 0 */
-    :answer_d: /* Precondition: n is not the empty String */
-    :answer_e: /* Precondition: studentName is not the empty String */
-    :correct: c, d
-    :feedback_a: It is not reasonable the s which sets the score should be negative.
-    :feedback_b: The precondition should be about the parameters of the constructor. score is not the parameter variable.
-    :feedback_c: Correct. It is reasonable that the score and extraCredit should be set to positive values using the parameters s and ec.
-    :feedback_d: Correct. It is reasonable that the parameter n which sets the name should be not empty.
-    :feedback_e: The precondition should be about the parameters of the constructor. score is not the parameter variable.
-
-    Consider the following class definition.
-
-    .. code-block:: java
-
-        public class TestScore
-        {
-            private String studentName;
-            private double score;
-            private double extraCredit;
-
-            public TestScore (String n, double s, double ec)
-            {
-                studentName = n;
-                score = s;
-                extraCredit = ec;
-            }
-            /* Other methods not shown */
-        }
-
-     Which of the following preconditions are reasonable for the TestScore constructor?
-
-
-Let's consider the substring method in Java. This method has a strong precondition that its arguments refer to indices within the given string.
-
-|CodingEx| **Coding Exercise**
-
-.. activecode:: substring-preconditions
-    :language: java
-    :autograde: unittest
-
-    The following code breaks the preconditions of the substring method and throws an IndexOutOfBoundsException. Can you fix the code by changing the arguments for the substring method to print out the substring "lo"? What are the preconditions for the substring method?
-    ~~~~
-    public class SubstringPreconditions
-    {
-        public static void main(String[] args)
-        {
-            String str = "hello";
-            System.out.println(str.substring(-1, 10));
-        }
-    }
-
-    ====
-    // Test for Lesson 5.3.2 Substring-preconditions
-    import static org.junit.Assert.*;
-
-    import org.junit.*;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests()
-        {
-            super("SubstringPreconditions");
-        }
-
-        @Test
-        public void testMain() throws IOException
-        {
-            String output = getMethodOutput("main");
-            String expect = "lo";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-    }
-
-.. note::
-
-    The method str.substring(beginIndex, endIndex) has the precondition that 0 <= beginIndex <= endIndex <= str.length.
-
-|Exercise| **Check your understanding**
-
-.. mchoice:: AP5-3-2
-   :practice: T
-   :answer_a: /* Precondition: i >= 0 */
-   :answer_b: /* Precondition: i <= str.length() */
-   :answer_c: /* Precondition: 0 < i < str.length() */
-   :answer_d: /* Precondition: 0 <= i < str.length() */
-   :correct: d
-   :feedback_a: This is true but it could still throw an exception if i is a large value.
-   :feedback_b: This is true but it could still throw an exception if i is a negative value.
-   :feedback_c: This is true but a little too restrictive.
-   :feedback_d: Correct. i can refer to character 0 up to str.length().
-
-   The following method is intended to return the substring starting at index i until the end of the string. For example, getiToEnd("012",1) should return "12". Which of the following is the most appropriate precondition for the method so that it does not throw an exception?
-
-   .. code-block:: java
-
-        /* missing precondition */
-        public String getiToEnd(String str, int i)
-        {
-            return str.substring(i, str.length());
-        }
-
-
-
 
 
 Software Validity and Use-Case Diagrams
@@ -344,8 +270,8 @@ One very popular type of agile development is called **Scrum**. The following sh
 Try the |pogil game| in groups to practice the iterative and incremental agile development process.
 
 
-|Groupwork| Programming Challenge : Comments and Conditions
------------------------------------------------------------
+|Groupwork| Programming Challenge: Preconditions in Algorithms
+---------------------------------------------------------------
 
 .. |Creately.com| raw:: html
 
@@ -353,195 +279,50 @@ Try the |pogil game| in groups to practice the iterative and incremental agile d
 
 Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like |Creately.com| (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don't forget to list  the preconditions and postconditions for each step.  You can type in your answer below.
 
-.. shortanswer:: challenge-5-3-use-case-preconditions
+.. shortanswer:: challenge-1-8-use-case-preconditions
 
      Write down 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step.
-
-
-Here is a simple class called User that could be used in an online store. Add good commenting to this code before the class, the instance variables, and the methods.
-
-.. activecode:: challenge-5-3-comments
-    :language: java
-    :autograde: unittest
-
-    // comments?
-    public class User
-    {
-
-        private String username;
-        private String password;
-
-        public User()
-        {
-            username = "guest";
-            password = "guest" + (int) (Math.random() * 1000);
-        }
-
-        public User(String nameInit, String pwordInit)
-        {
-            username = nameInit;
-            password = pwordInit;
-        }
-
-        public void welcome()
-        {
-            System.out.println("Welcome " + username + "!");
-        }
-
-        public static void main(String[] args)
-        {
-            User u1 = new User(); // guest login
-            // new user
-            User u2 = new User("cooldude@gmail.com", "Coolness*10");
-            u1.welcome();
-            u2.welcome();
-        }
-    }
-
-    ====
-    // Test for 5.3.5 Comments
-    import static org.junit.Assert.*;
-
-    import org.junit.*;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        private String program;
-
-        @Test
-        public void testMain()
-        {
-            String output = getMethodOutput("main");
-            String expect = "Welcome guest!\nWelcome cooldude@gmail.com!";
-            boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testClassComment()
-        {
-            program = getCodeWithComments();
-
-            int index = program.indexOf("public class User");
-
-            String beginning = program.substring(0, index - 1).trim();
-            String expected = "A comment starting with // or /* and not // comments?";
-            // System.out.println(beginning);
-
-            boolean pass = !beginning.startsWith("// comments") && isComment(beginning);
-
-            boolean passed = getResults(expected, beginning, "Class comment", pass);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testVariablesComment()
-        {
-            program = getCodeWithComments();
-
-            int start = program.indexOf("{") + 1;
-            int end = program.indexOf("private String username");
-
-            String comment = program.substring(start, end).trim();
-            String expected = "A comment starting with // or /*";
-            // System.out.println(beginning);
-
-            boolean passed = getResults(expected, comment, "Variable comment", isComment(comment));
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testDefaultConstructorComment()
-        {
-            program = getCodeWithComments();
-
-            int start = program.indexOf("password;") + "password;".length() + 1;
-            int end = program.indexOf("public User()");
-
-            String comment = program.substring(start, end).trim();
-            String expected = "A comment starting with // or /*";
-            // System.out.println(beginning);
-
-            boolean passed =
-                    getResults(expected, comment, "Default constructor comment", isComment(comment));
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testConstructorComment()
-        {
-            program = getCodeWithComments();
-
-            int start = program.indexOf("*1000);");
-            start = program.indexOf("}", start) + 1;
-            int end = program.indexOf("public User(String nameInit, String pwordInit)");
-
-            String comment = program.substring(start, end).trim();
-            String expected = "A comment starting with // or /*";
-            // System.out.println(beginning);
-
-            boolean passed = getResults(expected, comment, "Constructor comment", isComment(comment));
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testWelcomeComment()
-        {
-            program = getCodeWithComments();
-
-            int start = program.indexOf("password = pwordInit;");
-            start = program.indexOf("}", start) + 1;
-            int end = program.indexOf("public void welcome()");
-
-            String comment = program.substring(start, end).trim();
-            String expected = "A comment starting with // or /*";
-            // System.out.println(beginning);
-
-            boolean passed =
-                    getResults(expected, comment, "Welcome method comment", isComment(comment));
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testMainComment()
-        {
-            program = getCodeWithComments();
-
-            int start = program.indexOf("username + \"!\");");
-            start = program.indexOf("}", start) + 1;
-            int end = program.indexOf("public static void main");
-
-            String comment = program.substring(start, end).trim();
-            String expected = "A comment starting with // or /*";
-            // System.out.println(beginning);
-
-            boolean passed = getResults(expected, comment, "Main method comment", isComment(comment));
-            assertTrue(passed);
-        }
-
-        private boolean isComment(String block)
-        {
-            if (!block.contains("\n") && block.startsWith("//")) return true;
-            if (block.startsWith("/*") && block.endsWith("*/")) return true;
-            return false;
-        }
-    }
 
 Summary
 -------
 
-- Comments are ignored by the compiler and are not executed when the program is run.
+- Comments are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run. 
 
 - Three types of comments in Java include ``/* */``, which generates a block of comments, ``//``, which generates a comment on one line, and ``/** */``, which are Javadoc comments and are used to create API documentation.
 
-
 - A precondition is a condition that must be true just prior to the execution of a section of program code in order for the method to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.
 
-- A postcondition is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned or the state of an object.
+- A postcondition is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned  or the current value of the attributes of an object.
 
-- Programmers write method code to satisfy the postconditions when preconditions are met.
 
+AP Practice
+---------------
+
+.. mchoice:: AP-preconditions
+    :practice: T
+    :answer_a: /* Precondition: score <= 0 */
+    :answer_b: /* Precondition: score >= 0 */
+    :answer_c: /* Precondition: extraCredit >= 0 */
+    :answer_d: /* Precondition: extraCredit <= 0 */
+    :answer_e: /* Precondition: computeScore >= 0 */
+    :correct: b,c
+    :feedback_a: No, score should not be negative. Preconditions do not usually enforce negative values.
+    :feedback_b: Correct. It is reasonable that the score should be a positive value.
+    :feedback_c: Correct. It is reasonable that the extraCredit should be a positive value.
+    :feedback_d: No, extraCredit should not be negative. Preconditions do not usually enforce negative values.
+    :feedback_e: computeScore is a method, not a variable. Preconditions are usually for variables.
+
+    Consider the following method.
+
+    .. code-block:: java
+
+            /** method to add extra-credit to the score **/
+            public double computeScore(double score, double extraCredit)
+            {
+                double totalScore = score + extraCredit;
+                return totalScore;
+            }
+
+     Which of the following preconditions are reasonable for the computeScore method?
 
 
