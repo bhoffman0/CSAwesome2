@@ -80,7 +80,7 @@ Many methods in API libraries have **preconditions** and the **postconditions** 
 
 A **postcondition** is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned from the method or the changes to the state. These assumptions are very useful to other programmers who want to use that method and get the correct results.
 
-One precondition that we talked about is that divisors cannot be zero in expressions because that will cause the code to have a runtime error or exception. Many math functions have preconditions about their operands. For example, computing the square root of a negative number is undefined, so the ``Math.sqrt(num)`` Java method which we will learn later will throw an exception (a runtime error) if num is negative. These are described as special cases in the API documentation, for example in https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double-. Try this out below.
+One precondition that we talked about is that divisors cannot be zero in expressions because that will cause the code to have a runtime error or exception. Many math functions have preconditions about their operands because not every mathematical operation is defined for every value. For example, computing the square root of a negative number is undefined, so the ``Math.sqrt(num)`` Java method, which we will learn later, will return a special value ``NaN`` which stands for "not a number" if num is negative. But since you can't really do anything useful with ``NaN`` it's better to think of ``sqrt`` as having a precondition that says it only works properly if given a positive argument. These are described as special cases in the API documentation, for example in https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double-. Try this out below.
 
 |CodingEx| **Coding Exercise**
 
@@ -88,7 +88,7 @@ One precondition that we talked about is that divisors cannot be zero in express
    :language: java
    :autograde: unittest
 
-   The following code uses the square root method in Java which has a precondition that the number that you give it is not negative.  When you click on run, the compiler will not catch the error, but there will be a run-time error or exception.  Can you fix the value of num so that it does not throw an exception?  What is the precondition for the Math.sqrt method?
+   The following code uses the square root method in Java which has a precondition that the number that you give it is not negative.  When you click on run, the compiler will not catch the error, but it will return the error value ``NaN``.  Can you fix the value of num so that it does not return ``NaN``?  What is the precondition for the Math.sqrt method?
    ~~~~
    public class SqRoot
    {
