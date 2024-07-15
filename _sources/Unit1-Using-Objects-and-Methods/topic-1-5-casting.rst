@@ -262,7 +262,7 @@ Computers allot a specified amount of memory to store data based on the data typ
 .. index::
    pair: double; precision format
 
-Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code:
+Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code using ``printf`` a formatted print method or ``format`` instead of ``println``. It takes a format string like ``%.02f`` which tells ``printf`` to print a floating point number indicated by the ``%`` with 2 digits after the decimal point. See https://docs.oracle.com/javase/tutorial/java/data/numberformat.html for more information. You can also use escape characters like ``\\n`` in the format string to do a newline. Try it below.
 
 .. activecode:: double_precision
    :language: java
@@ -276,7 +276,10 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
        {
            double number = 10.0 / 3;
            System.out.println(number);
-           System.out.println(String.format("%.02f", number));
+           // format number to show 2 digits after . 
+           System.out.printf("%.2f", number);
+           // format also with $ and newline
+           System.out.println("$%.2f\n", number);
            // Print out the result of 2.0/3 formatted to show 2 digits after the decimal point.
 
        }
