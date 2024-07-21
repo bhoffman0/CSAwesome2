@@ -201,7 +201,7 @@ nearest integer to ``1.25``.
                        + "4";
 
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main");
            assertTrue(passed);
        }
    }
@@ -233,6 +233,8 @@ incorrect value could be stored. Try it below.
        {
            int id = 2147483650; // overflow
            int negative = -2147483650; // overflow
+           System.out.println(id);
+           System.out.println(negative);
        }
    }
    ====
@@ -252,7 +254,7 @@ incorrect value could be stored. Try it below.
 
            boolean passed =
                    getResults(
-                           expect, output, "Fixed Integer Overflow Error", true);
+                           expect, output, "Fixed Integer Overflow Error");
            assertTrue(passed);
        }
    }
@@ -279,7 +281,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
            // format number to show 2 digits after . 
            System.out.printf("%.2f", number);
            // format also with $ and newline
-           System.out.println("$%.2f\n", number);
+           System.out.printf("$%.2f\n", number);
            // Print out the result of 2.0/3 formatted to show 2 digits after the decimal point.
 
        }
@@ -298,10 +300,9 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "3.0\n3.33\n0.67\n";
-
+           String expect = "3.3333333333333335\n3.33$3.33\n0.67\n";
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main");
            assertTrue(passed);
        }
    }

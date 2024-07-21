@@ -182,7 +182,7 @@ to a ``double`` value. This means that when you are doing division with two inte
            String output = getMethodOutput("main");
            String expect = "5\n-1\n6\n" + 2.0/3;
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main. Make sure you change 2/3 to 2.0/3.");
            assertTrue(passed);
        }
    }
@@ -220,7 +220,7 @@ Math errors sometimes lead to runtime errors in code. For example, when the Hubb
            String output = getMethodOutput("main");
            String expect = "" + 100/2.54;
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main");
            assertTrue(passed);
        }
        @Test

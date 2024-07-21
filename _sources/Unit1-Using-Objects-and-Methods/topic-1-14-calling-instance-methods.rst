@@ -254,48 +254,6 @@ You will learn to write your own methods in Unit 5. In this unit, you should be 
     :click-incorrect:}:endclick:
 
 
-.. |visualization| raw:: html
-
-   <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20he%20had%20a%20%22%29%3B%0A%20%20%20%20%20%20%20%20animal%28%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20void%20animal%28%29%20%7B%0A%20%20%20%20%20%20%20System.out.println%28%22duck%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
-
-The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code. Execution in Java always begins in the ``main`` method in the current class. Then, the flow of control skips from method to method as they are called.  The Song's print method calls the chorus() and animal() methods to help it print out the whole song.
-
-When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus, and then returns back to the method that called it.
-
-
-.. codelens:: songviz1
-    :language: java
-    :optional:
-
-    public class Song
-    {
-      public void print()
-      {
-        System.out.println("Old MacDonald had a farm");
-        chorus();
-        System.out.print("And on that farm he had a ");
-        animal();
-        chorus();
-      }
-
-      public void chorus()
-      {
-        System.out.println("E-I-E-I-O");
-      }
-
-      public void animal()
-      {
-        System.out.println("duck");
-      }
-
-      public static void main(String[] args)
-      {
-        Song s = new Song();
-        s.print();
-      }
-    }
-
-
 
 Methods inside the same class can call each other using just ``methodName()``, but to call non-static methods in another class or from a main method, you must first create an object of that class and then call its methods using ``object.methodName()``.
 
@@ -308,59 +266,7 @@ Methods inside the same class can call each other using just ``methodName()``, b
     Figure 2: Calling non-static methods from main() or from other methods inside the same class.
 
 
-|Exercise| **Check your understanding**
-
-.. mchoice:: songMethods
-   :practice: T
-   :answer_a: I like to eat eat eat.
-   :answer_b: I like to eat eat eat fruit.
-   :answer_c: I like to apples and bananas eat.
-   :answer_d: I like to eat eat eat apples and bananas!
-   :answer_e: Nothing, it does not compile.
-   :correct: d
-   :feedback_a: Try tracing through the print method and see what happens when it calls the other methods.
-   :feedback_b: There is a fruit() method but it does not print out the word fruit.
-   :feedback_c: The order things are printed out depends on the order in which they are called from the print method.
-   :feedback_d: Yes, the print method calls the eat method 3 times and then the fruit method to print this.
-   :feedback_e: Try the code in an active code window to see that it does work.
-
-   What does the following code print out?
-
-   .. code-block:: java
-
-    public class Song
-    {
-        public void print()
-        {
-            System.out.print("I like to ");
-            eat();
-            eat();
-            eat();
-            fruit();
-        }
-
-        public void fruit()
-        {
-            System.out.println("apples and bananas!");
-        }
-
-        public void eat()
-        {
-            System.out.print("eat ");
-        }
-
-        public static void main(String[] args)
-        {
-            Song s = new Song();
-            s.print();
-        }
-    }
-
-.. |visualization2| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20%20%20%20%20public%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22I%20like%20to%20%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20fruit%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20void%20fruit%28%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22apples%20and%20bananas!%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20public%20void%20eat%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22eat%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20s.print%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
-
-Try this |visualization2| to see this code in action.
+**Removed flow of control through a song exercises**
 
 
 .. note::
@@ -371,6 +277,7 @@ Try this |visualization2| to see this code in action.
 Before you call a method from ``main`` or from outside of the current class, you must make sure that you have created and initialized an object. Remember that if you just declare an object reference without setting it to refer to a new object the value will be ``null`` meaning that it doesn't reference an object. If you call a method on a variable whose value is ``null``, you will get a **NullPointerException** error, where a **pointer** is another name for a reference.
 
 
+Change to 2-5 challenge distance?
 
 |Groupwork| Programming Challenge : Draw a Letter
 -------------------------------------------------
