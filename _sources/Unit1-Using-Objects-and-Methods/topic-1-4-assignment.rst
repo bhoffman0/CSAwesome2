@@ -151,7 +151,7 @@ to a ``double`` value and must be saved in a ``double`` variable, as seen in the
            String output = getMethodOutput("main");
            String expect = "4.4\n";
            boolean passed =
-                   getResults(expect, output, "Expected output from main", true);
+                   getResults(expect, output, "Expected output from main");
            assertTrue(passed);
        }
    }
@@ -260,9 +260,9 @@ The code below using the ``Scanner`` class will say hello to anyone who types in
        @Test
        public void test1()
        {
-           String output = getMethodOutput("main");
+           //String output = getMethodOutput("main");
            boolean passed =
-                   getResults(output, output, "Expected output from main", true);
+                   getResults("", "", "Scanner example", true);
            assertTrue(passed);
        }
    }

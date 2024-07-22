@@ -47,7 +47,7 @@ First Java Program
 
 Every program in Java is written as a **class**. Java is an **object-oriented language**, and **classes** and **objects** created from classes are the basic building blocks in object-oriented programming. We'll learn more about classes and objects later in this unit. 
 
-Inside the class, there can be a **main method** that starts the program. A **method** is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
+Inside the class, there can be a **main method** that starts the program. A **method** is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. In other programming languages, methods are called functions or procedures. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java
 
