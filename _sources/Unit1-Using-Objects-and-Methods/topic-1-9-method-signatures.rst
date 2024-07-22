@@ -62,7 +62,7 @@ A **method call** is when the code "calls out" the method's name in order to run
 
 The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run. Execution in Java always begins in the ``main`` method in the current class. Then, the **flow of control** skips from method to method as they are called. Notice that when a method ends, it returns to the line right after the method call. The ``main()`` method below calls the ``intro()`` method which calls the ``chorus()`` method. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus "E-I-E-I-O", and then returns back to the method that called it. Just like variable names, method names should be descriptive of what the method does. The methods can be in any order but usually programmers put the main method at the end after all the methods that it uses are defined.
 
-.. codelens:: songviz-old-mcdonald
+.. codelens:: songvizOldMcdonald
     :language: java
     :optional:
 
@@ -305,7 +305,7 @@ And the main method can now just consist of calls to the intro() and verse() met
 
 Click on the next button below to step through this new version of the code in the |visualizer2| and watch how the argument are saved in the parameter variables with each call to the ``verse`` method.
 
-.. codelens:: songviz-old-mcdonald2
+.. codelens:: songvizOldMcdonald2
     :language: java
     :optional:
 
