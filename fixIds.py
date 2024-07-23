@@ -32,6 +32,9 @@ def uniquify(text):
     seen[text] += 1
     return text if c == 0 else f"{text}-{c}"
 
+def rewrite_and_uniquify(m):
+    return uniquify(rewrite_id_old(m))
+
 
 for root, dirs, files in os.walk(directory):
     for file in files:
@@ -40,7 +43,7 @@ for root, dirs, files in os.walk(directory):
         if file.endswith(ext):
             with open(os.path.join(root, file)) as f:
                 text = f.read()
-            text = re.sub(r'xml:id="(.*?)"', rewrite_id, text)
+            text = re.sub(r'xml:id="(.*?)"', rewrite_and_uniquify, text)
 
             with open(os.path.join(root, file), "w") as f:
                 f.write(text)
