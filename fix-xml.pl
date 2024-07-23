@@ -51,8 +51,18 @@ while (<>) {
   # BH added to remove .. from ../_static image paths
   s/\.\.\/\_static/\_static/g;
 
-  # BH added to remove xml-id from paragraphs
+  # BH added to remove xml-id from paragraphs, programs, videos, figures
   s/<paragraph ids=".*?">/<paragraph>/g;
+  s/<program xml:id=".*?"/<program /g;
+  s/<video xml:id=".*?"/<video /g;
+  s/<target(.*?)ids=".*?"/<target$1 /g;
+  s/<figure(.*?)ids=".*?"/<figure$1 /g;
+  s/<problematic(.*?)ids=".*?"/<problematic$1 /g;
+  s/<image(.*?)ids=".*?"/<image$1 /g;
+  # remove space in ids
+  s/ids="(.*?)\s(.*?)"/ids="$1$2"/g;
+  # not sure where the lack of space comes in here ids=""names=""
+  s/"names=/" names=/g;
 
   # Not sure what's up with this; Some of these data-optional things are
   # generated within strings of what look like JSON. Anyway, these two lines at

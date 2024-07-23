@@ -26,5 +26,10 @@ while (<>) {
   s/<exercises line=.*nofeedback.*>/<exercises time-limit="" feedback="no">/g;
   s/<exercises line=.*(test|exam|midterm).*>/<exercises time-limit="">/g;
  
+  # BH: remove xml-ids from subsection because lots of duplicates 
+  s/<subsection xml:id=".*?"/<subsection /g;
+  # remove _ in section ids 
+  s/<section xml:id="_/<section xml:id="/g;
+  
   print;
 }

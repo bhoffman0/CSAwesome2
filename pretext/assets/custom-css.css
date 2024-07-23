@@ -2,3 +2,7 @@
 details.ptx-footnote {
   display: none;
 }
+/* hack to align |CodingEx| type images */
+img .contained {
+  float: left;
+}

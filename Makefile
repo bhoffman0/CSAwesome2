@@ -43,7 +43,8 @@ xml:
 
 fixed_xml: xml
 	find build/xml -name '*.xml' -exec ./fix-xml.pl {} \;
-	./fixIds.py build/xml ".xml"
+
+# BH removed fixIds ./fixIds.py build/xml ".xml"
 
 fixed_ptx: post
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
@@ -70,8 +71,8 @@ ptx: $(ptx) pretext/rs-substitutes.xml
 # need to do pretext init in here to generate project.ptx
 # need to manually edit project.ptx and create publication-rs-for-all.xml
 #   as described in https://github.com/bnmnetp/Runestone2PreTeXt/blob/main/README.md
+# BH removed fixIds ./fixIds.py pretext ".ptx"
 post: ptx
-	./fixIds.py pretext .ptx
 	python $(R2P)/fix_xrefs.py
 	python $(R2P)/reformatPtx.py
 	python $(R2P)/index2main.py
