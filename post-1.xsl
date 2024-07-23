@@ -7,6 +7,14 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- Remove xml:id attribute from all elements except 'section' -->
+  <xsl:template match="@xml:id[not(parent::section)]"/>
+
+  <!-- Explicitly keep xml:id on 'section' elements -->
+  <xsl:template match="section/@xml:id">
+    <xsl:copy-of select="."/>
+  </xsl:template>
+
   <xsl:template match="section[exercise]">
     <xsl:copy>
       <xsl:apply-templates select="*[not(name() = 'exercise')]" />
