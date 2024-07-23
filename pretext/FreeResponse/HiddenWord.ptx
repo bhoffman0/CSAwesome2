@@ -56,8 +56,7 @@ HiddenWord puzzle = new HiddenWord("HARPS");
     } // end of main
 
 } // end of class
-        </input>
-      <tests>
+</input><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
