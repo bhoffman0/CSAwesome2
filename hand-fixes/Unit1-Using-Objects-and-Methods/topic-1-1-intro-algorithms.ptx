@@ -194,10 +194,11 @@ public class RunestoneTests extends CodeTestHelper
                     <block>
                         <cline>println</cline>       
                         </block>
+                    <block>
                      <cline>(</cline>       
                     </block>
                     <block>
-                        <cline>&quot;\nHi!\n&quot;</cline>       
+                        <cline>&quot;Hi!&quot;</cline>       
                      </block>
                      <block>
                         <cline>)</cline>       
@@ -208,6 +209,7 @@ public class RunestoneTests extends CodeTestHelper
                      <block correct="no">
                         <cline>system</cline>       
                      </block>
+                     
                 </blocks>
             </exercise>
           
@@ -229,10 +231,11 @@ public class RunestoneTests extends CodeTestHelper
                 <block>
                     <cline>println</cline>       
                     </block>
+                 <block>
                  <cline>(</cline>       
                 </block>
                 <block>
-                    <cline>&quot;\nHi!\n&quot;</cline>       
+                    <cline>&quot;Bye!&quot;</cline>       
                  </block>
                  <block>
                     <cline>)</cline>       
