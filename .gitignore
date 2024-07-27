@@ -4,6 +4,10 @@ build
 .env
 .github
 logs
+_fixed_sources
+.error_schema.log
+pretext/generated
+codechat_config.yaml
 
 # Miscellaneous source files
 _sources/Tests/test6.rst

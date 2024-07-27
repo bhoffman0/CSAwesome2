@@ -2,16 +2,17 @@
 
 |Time45|
 
-.. index::
-   single: cast
-   single: casting
-   single: type casting
 
 Casting and Ranges of Values
 ============================
 
 Casting
 ---------
+
+.. index::
+   single: cast
+   single: casting
+   single: type casting
 
 In Java, **type casting** is used to convert values from one type to another. By
 **casting** we don't mean something to do with fishing, but it is a similar idea
