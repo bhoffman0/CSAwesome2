@@ -227,17 +227,29 @@ Methods Signature, Parameters, Arguments
     single: return type
     single: parameter list
 
-When using methods in a library or API, we can look up the **method signature** (or **method header**) in its documentation.  A **method signature** is the first line of a method that includes the method name, the return type, and the parameter list of parameters and their data types. The **return type** is the type of value that the method returns; in this lesson, we'll just look at **void** return types which means the method doesn't return anything. The **parameter list** is a list of variables and their data types that are passed to the method when it is called. The parameter list is enclosed in parentheses and separated by commas; it can be empty with no parameters although the parentheses must be present. For example, the ``PrintStream`` class documented in https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html contains the following method signatures for ``println``: 
+When using methods in a library or API, we can look up the **method signature** (or **method header**) in its documentation.  A **method header** is the first line of a method that includes the method name, the return type, and the parameter list of parameters and their data types. The **return type** is the type of value that the method returns; in this lesson, we'll just look at **void** return types which means the method doesn't return anything. The **method signature** is the method header without the return type, just the method name and its parameter list.  The **parameter list** is a list of variables and their data types that are passed to the method when it is called. The parameter list is enclosed in parentheses and separated by commas; it can be empty with no parameters although the parentheses must be present. 
+
+For example, the ``PrintStream`` class documented in https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html contains the following method signatures for ``println`` that we use in ``System.out.println()``: 
 
 - ``void println()`` which has an empty parameter list with no parameters 
 - ``void println(String x)`` which will print out a ``String`` value
 - ``void println(int x)`` which will print out an ``int`` value
 
-We can call these methods with the appropriate arguments to print out the value we want. The **argument** is the actual value that is passed to the method when it is called. The argument must be compatible with the data type of the parameter in the method signature and is saved in the parameter variable. Here are the method calls that correspond to the method signatures above:
+We can call these methods with the appropriate arguments to print out the value we want. The **argument** is the actual value that is passed to the method when it is called.  Here are the method calls that correspond to the method signatures above:
 
 - ``System.out.println();`` // prints a newline
 - ``System.out.println("Hello World");`` // prints a String
 - ``System.out.println(42);`` // prints an int
+
+Compare the method signature of ``println(String x)`` with the method call ``println("Hello World");`` below. The method signature contains the method name and the parameter type and variable. The method call contains only the method name and the argument value. The argument must be compatible with the data type of the parameter in the method signature and is saved in the parameter variable when the method is called. Many people use the terms parameter and argument interchangeably.
+
+.. figure:: Figures/method-parts.png
+    :width: 500px
+    :align: center
+    :alt: Method Signature and Method Call
+    :figclass: align-center
+
+    Figure 1: Method Signature and Method Call
 
 Let's take another look at the Old MacDonald Song and see if we can replace more repeated code with methods with parameters. Each verse of the song is similar except it is about a different animal and the sound it makes. Click on the words that are different in the lines that are repeated to discover what parameters we need to add to the methods.
 
@@ -265,9 +277,9 @@ Let's take another look at the Old MacDonald Song and see if we can replace more
 
 Did you notice that there are lines that are identical except for the animal name and the sound that they make? 
 
-We can make methods even more powerful and more abstract by giving them parameters for data that they need to do their job. A **parameter** (sometimes called a **formal parameter**) is a variable declared in the header of a method or constructor and can be used inside the body of the method. This allows values or arguments to be passed and used by a method. An **argument** (sometimes called an **actual parameter**) is a value that is passed into a method when the method is called and is saved in the parameter variable. Many people use the terms parameter and argument interchangeably.
+We can make methods even more powerful and more abstract by giving them parameters for data that they need to do their job. A **parameter** (sometimes called a **formal parameter**) is a variable declared in the header of a method or constructor and can be used inside the body of the method. This allows values or arguments to be passed and used by a method. An **argument** (sometimes called an **actual parameter**) is a value that is passed into a method when the method is called and is saved in the parameter variable. 
 
-We can make a method called verse that takes the animal and its sound to print out any verse! The parameter variables ``animal`` and ``sound`` will hold different values when the method is called.
+We can make a method called ``verse`` that takes the animal and its sound to print out any verse! The parameter variables ``animal`` and ``sound`` will hold different values when the method is called.
 
 .. code-block:: java
 
@@ -434,7 +446,7 @@ Here's what that looks like with the two method calls above. The arguments like 
     :alt: Arguments to Parameters
     :figclass: align-center
 
-    Figure 1: Matching Arguments to Parameters
+    Figure 2: Matching Arguments to Parameters
   
 
 The method headers contain data types of the parameters because they are variable declarations that reserve memory for the parameter variables.  However, the method calls never contain the parameter types, only the values that are passed to the method. The argument values can be variables, literals, or expressions that evaluate to the correct data type.

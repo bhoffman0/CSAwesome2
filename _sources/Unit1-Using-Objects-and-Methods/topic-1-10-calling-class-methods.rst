@@ -117,7 +117,7 @@ When calling the ``square`` method, the return value can be stored in a variable
          public static void main(String[] args)
          {
              System.out.println("5 squared is " + square(5));
-             // TO DO: Call the square method to prints out the square of 6
+             // TO DO: Call the square method to print out the square of 6
 
          }
     }
