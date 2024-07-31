@@ -138,7 +138,7 @@ When calling the ``square`` method, the return value can be stored in a variable
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "36"
+            String expect = "36";
             boolean passed =
                  getResults(expect, output, "Expected output from main");
             assertTrue(passed);
@@ -204,16 +204,20 @@ Another common error is a mismatch in types or order for the arguments or return
     :autograde: unittest
     :practice: T
 
-    Fix the method calls below in the main method. Are the returned values saved in the right type of variables? Do not change the methods other than main.
+    Fix the method calls below in the main method. Make sure the type, how many, and order of the arguments match what the methods expect. Are the returned values saved in the right type of variables? Do not change the methods other than main.
     ~~~~
     public class MathMethods
-    {
+    {    
+         /* square method returns the square of a number. 
+            Do NOT change */
          public static int square(int number) 
          {
              return number * number;
          }
 
-         public static int divide(int x, int y)
+         /** divide method divides x by y to return a double result .
+            Do NOT change */
+         public static double divide(double x, double y)
          {
              return x / y;
          }
@@ -221,12 +225,15 @@ Another common error is a mismatch in types or order for the arguments or return
          public static void main(String[] args)
          {
              // TO DO: Fix the method calls and data types below
+             // Make sure the type, how many, and order of the
+             // arguments match what the methods expect.
+             // Make sure they are saved in the right type of variables.
              // result1 should be 4 squared
-             // result2 should be 10 divided by 2
-             double result1 = square(4.0, 2);
-             double result2 = divide(2, 10); 
+             // result2 should be 5 divided by 2
+             int result1 = square(4.0, 2);
+             int result2 = divide(2, 5); 
              System.out.println("4 squared is " + result1);
-             System.out.println("10 divided by 2 is " + result2)
+             System.out.println("5 divided by 2 is " + result2);
          }
     }
     ====
@@ -239,26 +246,26 @@ Another common error is a mismatch in types or order for the arguments or return
         @Test
         public void containsType()
         {
-            boolean passed = checkCodeContains("int result", "correct int type for result1 and result2");
+            boolean passed = checkCodeContains("correct double type for result2", "double result2");
             assertTrue(passed);
         }
         @Test
         public void containsCall()
         {
-            boolean passed = checkCodeContains("square(4)", "call to square with int 4");
+            boolean passed = checkCodeContains("call to square with int 4", "square(4)");
             assertTrue(passed);
         }
         @Test
         public void containsCall2()
         {
-            boolean passed = checkCodeContains("divide(10,2)", "call to divide with the correct int argument order");
+            boolean passed = checkCodeContains("call to divide with the correct argument order", "divide(5,2)");
             assertTrue(passed);
         }
         @Test
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "4 squared is 16\n10 divided by 2 is 5";
+            String expect = "4 squared is 16\n5 divided by 2 is 2.5";
             boolean passed =
                  getResults(expect, output, "Expected output from main");
             assertTrue(passed);
@@ -301,9 +308,8 @@ of the squares of the lengths of the other two sides, also called the “legs”
 Pythagoras who was also the leader of the gang of Greek mathematicians who legend has it allegedly drowned their fellow mathematician for showing that
 :math:`\sqrt{2}` is irrational.) Here's the formula for this theorem:
 
--  :math:`c = \sqrt{a^{2} + b^{2}}` where
-:math:`a` and :math:`b` are the width and height of the triangle and :math:`c` is the
-length of the hypotenuse. 
+-  :math:`c = \sqrt{a^{2} + b^{2}}` where :math:`a` and :math:`b` are the width and height of the triangle and :math:`c` is the length of the hypotenuse. 
+
 
 One common use for the Pythagorean theorem is to calculate the length of
 ladder you will need to reach the window of your beloved, given that their

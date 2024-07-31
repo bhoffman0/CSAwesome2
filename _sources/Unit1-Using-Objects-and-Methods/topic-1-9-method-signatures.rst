@@ -60,7 +60,7 @@ A **method call** is when the code "calls out" the method's name in order to run
 
    <a href="https://pythontutor.com/render.html#code=public%20class%20OldMacDonaldSong%0A%7B%0A%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20they%20had%20a%20cow.%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22With%20a%20moo%20moo%20here%20and%20a%20moo%20moo%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22Here%20a%20moo,%20there%20a%20moo,%20everywhere%20moo%20moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">visualization</a>
 
-The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run. Execution in Java always begins in the ``main`` method in the current class. Then, the **flow of control** skips from method to method as they are called. Notice that when a method ends, it returns to the line right after the method call. The ``main()`` method below calls the ``intro()`` method which calls the ``chorus()`` method. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus "E-I-E-I-O", and then returns back to the method that called it. Just like variable names, method names should be descriptive of what the method does. The methods can be in any order but usually programmers put the main method at the end after all the methods that it uses are defined.
+The Java |visualization| below shows how a song can be divided up into methods. Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run. Execution in Java always begins in the ``main`` method in the current class. Then, the **flow of control** skips from method to method as they are called. Notice that when a method ends, it returns to the line right after the method call. The ``main()`` method below calls the ``intro()`` method which calls the ``chorus()`` method. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus "E-I-E-I-O", and then returns back to the method that called it. Just like variable names, method names should be descriptive of what the method does. The methods can be in any order, but usually programmers put the main method at the end after all the methods that it uses are defined.
 
 .. codelens:: songvizOldMcdonald
     :language: java
@@ -82,10 +82,10 @@ The Java |visualization| below shows how a song can be divided up into methods. 
       public static void main(String[] args)
       {
         intro();
-        System.out.print("And on that farm they had a cow.");
+        System.out.println("And on that farm they had a cow.");
         chorus();
-        System.out.print("With a moo moo here and a moo moo there");
-        System.out.print("Here a moo, there a moo, everywhere a moo moo");
+        System.out.println("With a moo moo here and a moo moo there");
+        System.out.println("Here a moo, there a moo, everywhere a moo moo");
         intro();
       }
     }
@@ -101,7 +101,7 @@ Try writing your own method calls below to add another verse to the song.
     :practice: T
     :autograde: unittest
 
-    Scroll down to the main method below and add lines of code to the main method  for the second verse of the Old MacDonald Song by calling the intro() and chorus() methods and printing out lines about a duck or another animal.
+    Scroll down to the main method below and add lines of code to the main method for the second verse of the Old MacDonald Song by calling the intro() and chorus() methods and printing out lines about a duck or another animal.
     ~~~~
     public class OldMacDonaldSong
     {
@@ -119,18 +119,22 @@ Try writing your own method calls below to add another verse to the song.
         public static void main(String[] args)
         {
             intro();
-            System.out.print("And on that farm they had a cow.");
+            System.out.println("And on that farm they had a cow.");
             chorus();
-            System.out.print("With a moo moo here and a moo moo there");
-            System.out.print("Here a moo, there a moo, everywhere a moo moo");
+            System.out.println("With a moo moo here and a moo moo there");
+            System.out.println("Here a moo, there a moo, everywhere a moo moo");
         
             // TODO:
             // 1. Call the method intro()
 
-            // 2. Print out lines of the song about a duck 
-            //    or another animal and their sounds.
+            // 2. Print out the line "And on that farm..." 
+            //    with a duck or another animal
 
-            // 3. Call the method chorus and the method intro again
+            // 3. Call the method chorus
+            
+            // 4. Print out the lines with the appropriate animal sounds
+            
+            // 5. Call the method intro again
 
         }
     }
@@ -144,7 +148,7 @@ Try writing your own method calls below to add another verse to the song.
         public void test1()
         {
             String code = getCode();
-            int num = countOccurences(code, "intro()");
+            int num = countOccurences(code, "intro();");
 
             boolean passed = num >= 3;
 
@@ -155,7 +159,7 @@ Try writing your own method calls below to add another verse to the song.
         public void test2()
         {
             String code = getCode();
-            int num = countOccurences(code, "chorus()");
+            int num = countOccurences(code, "chorus();");
 
             boolean passed = num >= 3;
 
@@ -427,11 +431,11 @@ Let's try adding another verse to the song with a goose that honks.
       public void test1()
       {
           String code = getCode();
-          int num = countOccurences(code, "verse(");
+          int num = countOccurences(code, "intro();");
 
-          boolean passed = num >= 4;
+          boolean passed = num >= 5;
 
-          passed = getResults("4 or more", "" + num, "Calls to verse", passed);
+          passed = getResults("5 or more", "" + num, "Calls to intro", passed);
           assertTrue(passed);
       }
   }
@@ -522,23 +526,25 @@ Here's another song, |The Ants Go Marching|, that is very similar in its repetit
   {
       public static void chorus(String num)
       {
-  	      System.out.println("The ants go marching " + num 
-                 + " by " + num + " hurrah, hurrah");
+          System.out.println("The ants go marching " + num
+                           + " by " + num + " hurrah, hurrah");
+          System.out.println("The ants go marching " + num
+                           + " by " + num + " hurrah, hurrah");
       }
-    
+
       public static void verse(String num, String action)
       {
-       	  System.out.println("The ants go marching " + num + " by " + num);
-  	      System.out.println("The little one stops to " + action);
-  	      System.out.println("And they all go marching down to the ground");
-	      System.out.println("To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n");
+          System.out.println("The ants go marching " + num + " by " + num);
+          System.out.println("The little one stops to " + action);
+          System.out.println("And they all go marching down to the ground");
+          System.out.println("To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n");
       }
 
       public static void main(String args[])
       {
-         // Call the chorus and verse methods 
-         // with the correct arguments 
-         // to print out all three verses above.
+          // Call the chorus and verse methods 
+          // with the correct arguments 
+          // to print out all three verses above.
 
 
 
@@ -556,13 +562,13 @@ Here's another song, |The Ants Go Marching|, that is very similar in its repetit
       {
           String code = getCode();
           int actual = countOccurences(code, "chorus(");
-          String expected = "6";
+          String expected = "3";
 
-          boolean passed = actual >= 6;
+          boolean passed = actual >= 3;
           getResults(
                   expected,
                   "" + actual,
-                  "Checking that code contains 6 calls to verse chorus",
+                  "Checking that code contains 3 calls to  chorus",
                   passed);
           assertTrue(passed);
       }
