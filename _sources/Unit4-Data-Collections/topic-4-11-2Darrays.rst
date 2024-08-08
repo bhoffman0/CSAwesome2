@@ -366,7 +366,7 @@ Try the code below. Did it print what you expected?  When you print a two dimens
    :feedback_a: Remember that the indices start at 0.
    :feedback_b: Remember that the row is first then the column.
    :feedback_c: This will set the value  of the 3rd row and 2nd column.
-   :feedback_d: Remember that the row is first and then the column and that the indicies start at 0.
+   :feedback_d: Remember that the row is first and then the column and that the indices start at 0.
 
    Which of the following sets the value for the 3rd row and 2nd column of a 2D array called ``nums``?
 
@@ -387,7 +387,7 @@ You can also initialize (set) the values for the array when you create it.  In t
    What is the value at ``seatingInfo[2][1]`` after the code above executes?
 
    -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
-        :.*: Indicies start at 0 and the row is first then the column
+        :.*: indices start at 0 and the row is first then the column
 
 
 
@@ -397,7 +397,7 @@ Get a Value from a 2D Array
 .. index::
    pair: 2D Array; access value
 
-To get the value in a 2D array give the name of the array followed by the row and column indicies in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.
+To get the value in a 2D array give the name of the array followed by the row and column indices in square brackets. The code below will get the value at row index 1 and column index 0 from ``ticketInfo``.  It will also get the value at row index 0 and column index 1 from ``seatingChart``.
 
 .. code-block:: java
 
