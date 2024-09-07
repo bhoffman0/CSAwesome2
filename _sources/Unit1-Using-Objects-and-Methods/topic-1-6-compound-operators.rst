@@ -2,11 +2,12 @@
 
 |Time45|
 
-.. index::
-    single: compound operators
 
 Compound Assignment Operators
 =============================
+
+.. index::
+    single: compound operators
 
 Compound assignment operators ``+=``, ``-=``, ``*=``, ``/=``, and ``%=`` are 
 shortcuts that do a math operation and assignment in one step. For example, ``x += 

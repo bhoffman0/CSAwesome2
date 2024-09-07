@@ -26,9 +26,10 @@ AP CSA Exam Weighting:
    selection-practice-mixed-code.rst
    selection-practice-mixed-code-toggle.rst
    selection-practice-coding.rst
+   Exercises-selection.rst
+   frq-game-score.rst
    selection-more-practice-coding.rst
    group-mod-practice.rst
-   Exercises-selection.rst
    magpieindex.rst
    loops-summary.rst
    loops-practice-mixed-code.rst

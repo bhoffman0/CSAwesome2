@@ -2,6 +2,10 @@
 
 |Time45|
 
+
+APIs and Libraries  
+=====================
+
 .. index::
    single: API
    single: library
@@ -11,11 +15,7 @@
    single: method
    single: dot operator
    single: behavior
-
-
-APIs and Libraries  
-=====================
-
+   
 We have been using the ``System.out.println()`` method to print to the screen. This method is part of the Java **API (Application Programming Interface)**. A **method** is a block of code that performs a specific task. APIs are connected to **libraries** which are collections of classes written by other programmers that provide a set of methods that can be used to perform specific tasks. An API specification tells the programmer how to use those classes with methods in a library. 
 
 APIs and libraries are essential to programming because they allow you to use code that has already been written by others. This saves you time and allows you to focus on the specific task you are trying to accomplish.

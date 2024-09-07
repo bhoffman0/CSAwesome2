@@ -1,30 +1,23 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 2-9-
-   :start: 1
 
 
 Using the Math Class
 ====================
 
 .. index::
-    single: Math methods
-    single: random method
-    pair: Math; random method
+    single: Math
+    single: random
+    pair: Math; random 
+
 
 Games would be boring if the same thing happened each time you played the game.  Random numbers can be used in games to generate different outcomes each time the game is played. In Java, the ``Math.random()`` method to is used to generate a random number.
 
 There are lots of mathematical methods in the ``Math`` class
 that you might want to use in your programs, like ``Math.pow(2,3)`` which calculates the 2 to the power of 3 which is 8.
 
-These methods are in the **Math** class defined in the java.lang package. These are **static methods** which means you can call them by just using ``ClassName.methodName()`` without creating an object.
-This is why we can just say Math.random() instead of having to define an object of the class Math.
+The ``Math`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default. The ``Math`` methods are **class methods** (or **static** methods) which means you can call them by just using ``ClassName.methodName()``.
 
-
-.. note::
-
-   **Static methods** (also called class methods) are called using the class name and the dot operator (.) followed by the method name. You do not need to create an object of the class to use them. You can use ClassName.methodName() or just methodName() if they are called from within the same class.
 
 Mathematical Functions
 -----------------------
@@ -574,7 +567,7 @@ You may have a combination lock on your locker at school where you have to spin 
 
 1. Write code that will generate 3 random integers from 0 up to 40 (but not including 40) using **Math.random()** in the Active Code window below. Run it a couple times to see it generate different numbers.
 
-2. How many times would you need to run it to guess your combination correctly? Let's have the code compute the number of permutations possible in your combination lock using **Math.pow(number,exponent)**. For example, if you had 2 dials on your combination lock where each dial can be set to a digit from 0-9 (10 digits), there are 10\ :sup:`2` possible permutations. In Java, this would be written as **Math.pow(10,2)** which means 10 to the power of 2. If you start listing all the permutations possible, you can tell that there are 10\ :sup:`2` or 100 possible permutations for a 2 dial lock from 0-9.
+2. How many times would you need to run it to guess your combination correctly? Let's have the code compute the number of permutations possible in your combination lock using **Math.pow(number,exponent)**. For example, if you had to spin the dial twice on your combination lock where each spin can choose a digit from 0-9 (10 digits), there are 10\ :sup:`2` possible permutations. In Java, this would be written as **Math.pow(10,2)** which means 10 to the power of 2. If you start listing all the permutations possible, you can tell that there are 10\ :sup:`2` or 100 possible permutations for a 2 spins on a dial lock from 0-9.
 
 .. raw:: html
 
@@ -585,10 +578,10 @@ You may have a combination lock on your locker at school where you have to spin 
     90, 91, 92, 93, 94, 95, 96, 97, 98, 99
     </pre>
 
-Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial\ :sup:`numberOfDials`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
+Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial\ :sup:`numberOfSpins`. Write this using the **Math.pow()** method in your code and save it into a variable and print out.
 
 
-.. activecode:: challenge2-9-random-math
+.. activecode:: challenge1-11-random-math
    :language: java
    :autograde: unittest
 
@@ -675,7 +668,7 @@ Now what about the combination lock for this challenge? You will need to spin th
 
 Here's another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by CSA teacher Zac Martin.
 
-.. activecode:: challenge-2-9b-dancing-turtles
+.. activecode:: challenge-random-dancing-turtles
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
@@ -759,7 +752,9 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
 Summary
 -------------------
 
-- Static Math methods can be called using **Math**.method(); for each method.
+- The ``Math`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default.
+
+- The Math class contains only class (static) methods. They can be called using **Math**.method(); for each method.
 
 - The following static Math methods are part of the Java Quick Reference:
 
