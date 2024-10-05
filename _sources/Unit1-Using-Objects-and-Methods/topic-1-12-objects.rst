@@ -25,27 +25,25 @@ Objects - Instances of Classes
 Java is an **object-oriented programming** language. That means that one of the
 primary ways of designing and organizing a Java program is in terms of **objects**. Objects combine data and the code that operates on that data into
 a single unit. To create objects, we first define a **class** which provides
-a blueprint for creating the objects. In Java, all programs are built out of classes. This is why, every Java program starts with ``public class``. In this unit, you will learn the vocabulary of object-oriented programming and to create and use objects of a class written for you. In later units, you will learn to write your own classes.
+a blueprint for creating the objects. In Java, all programs are built out of classes. This is why, every Java program starts with ``public class``. In this unit, you will learn the vocabulary of object-oriented programming and to create and use objects of a class written for you. In later units, you will learn to write your own classes.  
+
+What are Classes and Objects?
+------------------------------
+
+You can think of a class as something like a blueprint of a house that is used to construct houses (objects), or like a cookie cutter that is used to create the cookies (objects). The cookie cutter (class) can
+be used to create as many cookies (objects) as you want. The cookies (objects) are all the same shape and size, but they can have different colors and decorations. 
 
 .. figure:: Figures/blueprint.png
     :width: 400px
     :align: center
     :figclass: align-center
-
-    Figure 0: A blueprint of a house (class) is used to construct houses (objects)
-
-What are Classes and Objects?
-------------------------------
-
-You can think of a class as something like a blueprint or a cookie cutter that is used to create the cookies (objects) and can
-be used to create as many cookies (objects) as you want. The cookies (objects) are all the same shape and size, but they can have different colors and decorations. 
-
+    
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
     :align: center
     :figclass: align-center
 
-    Figure 1: Using a cookie cutter (class) to make cookies (objects)
+    Figure 1: Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects) 
 
 You can also think of a class as defining a new data type. In this lesson, we will use the class ``Turtle`` to make animated turtle objects. Just like you use ``int`` to
 declare variables that hold numbers, you can use ``Turtle`` to declare many variables, animated turtle objects, who are **instances** of the ``Turtle`` class. 
