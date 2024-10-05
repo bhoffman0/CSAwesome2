@@ -27,6 +27,13 @@ primary ways of designing and organizing a Java program is in terms of **objects
 a single unit. To create objects, we first define a **class** which provides
 a blueprint for creating the objects. In Java, all programs are built out of classes. This is why, every Java program starts with ``public class``. In this unit, you will learn the vocabulary of object-oriented programming and to create and use objects of a class written for you. In later units, you will learn to write your own classes.
 
+.. figure:: Figures/blueprint.png
+    :width: 400px
+    :align: center
+    :figclass: align-center
+
+    Figure 0: A blueprint of a house (class) is used to construct houses (objects)
+
 What are Classes and Objects?
 ------------------------------
 
