@@ -25,7 +25,7 @@ Objects - Instances of Classes
 Java is an **object-oriented programming** language. That means that one of the
 primary ways of designing and organizing a Java program is in terms of **objects**. Objects combine data and the code that operates on that data into
 a single unit. To create objects, we first define a **class** which provides
-a blueprint for creating objects of a certain kind. In Java, all programs are built out of classes. This is why, every Java program starts with ``public class``. In this unit, you will learn the vocabulary of object-oriented programming and to create and use objects of a class written for you. In later units, you will learn to write your own classes.
+a blueprint for creating the objects. In Java, all programs are built out of classes. This is why, every Java program starts with ``public class``. In this unit, you will learn the vocabulary of object-oriented programming and to create and use objects of a class written for you. In later units, you will learn to write your own classes.
 
 What are Classes and Objects?
 ------------------------------
@@ -64,13 +64,13 @@ Watch the following |video1| by Dr. Colleen Lewis about classes and objects:
 Attributes and Behaviors
 --------------------------
 
-A class defines the **attributes** (data) and **behaviors** (methods) that all objects of that class will have. The objects are the specific instances of the class that have their own values for the attributes.  **Attributes** are the data or properties that an object knows about itself, for example, a turtle object's color and size. **Behaviors** are the things that an object can do. For example, a turtle object can go forward, turn left, or turn right. The attributes and behaviors of a class are defined in the class, but each object has its own values for the attributes.
+A class defines the **attributes** (data) and **behaviors** (methods) that all objects of that class will have. The objects are the specific **instances** of the class that have their own values for the attributes.  **Attributes** are the data or properties that an object knows about itself, for example, a turtle object's color and size. **Behaviors** are the things that an object can do. For example, a turtle object can go forward, turn left, or turn right. The attributes and behaviors of a class are defined in the class, but each object has its own values for the attributes.
 
 .. |video3| raw:: html
 
    <a href="https://www.youtube.com/watch?v=Y9vn6u3901Y&list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&ab_channel=colleenlewis" target="_blank">video</a>
 
-This |video3| shows another class called ``Belt`` and how it has 3 instance variables to define its attributes. Every belt object has its own copy of instance variables.
+This |video3| shows another class called ``Belt`` and how it has 3 instance variables to define its attributes. Every belt object can have different values stored in the instance variables.
 
 .. youtube:: Y9vn6u3901Y
     :width: 650
@@ -412,9 +412,9 @@ To draw a window, you will need to call ``penUp`` and ``moveTo`` to walk the tur
 
 .. code-block:: java
 
-   builder.penUp();
-   builder.moveTo(120,200);
-   builder.penDown();
+   t.penUp();
+   t.moveTo(120,200);
+   t.penDown();
 
 It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. When planning your coordinates for the house, remember that the turtle starts at the center of the screen (150,150) and the top left corner is (0,0). 
 
