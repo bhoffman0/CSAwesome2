@@ -37,7 +37,7 @@ be used to create as many cookies (objects) as you want. The cookies (objects) a
     :width: 400px
     :align: center
     :figclass: align-center
-    
+
 .. figure:: Figures/cookieCutterLabelled.png
     :width: 500px
     :align: center
@@ -106,7 +106,7 @@ playing (*behavior*).
 The following picture of a turtle shows some of the Turtle **attributes** like name, width, height, color in the body of the turtle and its **methods** like forward(), backward(), written around the turtle. 
 
 .. figure:: Figures/turtleOOD.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Turtle attributes and behaviors 
     :figclass: align-center
@@ -401,7 +401,7 @@ For example, you could have a superclass called ``Pet`` with attributes like ``n
     :align: center
     :figclass: align-center
 
-    Figure 5: Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle
+    Figure 4: Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle
 
 |Groupwork| Programming Challenge : Turtle House
 ------------------------------------------------
@@ -423,6 +423,22 @@ To draw a window, you will need to call ``penUp`` and ``moveTo`` to walk the tur
 
 It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. When planning your coordinates for the house, remember that the turtle starts at the center of the screen (150,150) and the top left corner is (0,0). 
 
+.. note::
+
+   The Turtle world does not use the Cartesian coordinate system with (0,0) in
+   in the middle the screen. Instead, (0,0) is at the top left corner of the
+   screen and x increases to the right and y increases towards the bottom of the
+   screen. Most computer graphics systems use this coordinate system which is a carry
+   over from before computers could display graphics and had to approximate the graphics with text print outs. 
+
+.. figure:: Figures/coords.png
+    :width: 200px
+    :align: center
+    :figclass: align-center
+        
+    Figure 5: The coordinate (0,0) is at the top left of the Turtle world.
+
+
 Here is a class diagram that shows some of the attributes and methods in the class ``Turtle``.
 
 .. figure:: Figures/turtleUMLClassDiagram.png
@@ -431,7 +447,7 @@ Here is a class diagram that shows some of the attributes and methods in the cla
     :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 4: Turtle Class Diagram
+    Figure 6: Turtle Class Diagram
 
 .. |repl link| raw:: html
 
