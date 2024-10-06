@@ -328,7 +328,7 @@ The type of the values being passed in as arguments have to match the type of th
    :correct: c
    :feedback_a: Objects have attributes and behavior.
    :feedback_b: A class defines the data and behavior for all objects of that type.
-   :feedback_c: The formal parameters are in the constructor's signature.
+   :feedback_c: The parameters are in the constructor's signature.
    :feedback_d: An argument is the value that is passed into the constructor.
 
    In ``public World(int width, int height)`` what are ``width`` and ``height``?
