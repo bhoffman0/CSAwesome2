@@ -217,7 +217,7 @@ Constructor Signatures
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the values passed into the contstructor.
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the argument values passed into the constructor.
 
 Constructors are said to be **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the ``Turtle`` class that take different parameters:
 
@@ -245,7 +245,7 @@ Constructors are said to be **overloaded** when there are multiple constructors,
    :feedback_b: There is no Turtle constructor that takes 2 arguments according to the figure above.
    :feedback_c: This would initialize the Turtle to the middle of the world, not necessarily coordinates (50,150).
    :feedback_d: Make sure the order of the arguments match the constructor signature above.
-   :feedback_e: This matches the second constructor above with the arguments of x, y, and world.
+   :feedback_e: This matches the second constructor above with the parameters of x, y, and world.
 
    Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?
 
@@ -296,7 +296,7 @@ In Unit 3, you will learn to write your own classes. However, if you see a class
    :feedback_a: This would initialize the date attributes to today's date according to the constructor comment above, which might not be Sept. 20, 2020.
    :feedback_b: There is no Date constructor that takes 2 arguments according to the figure above.
    :feedback_c: The comment for the second constructor in the Date class above says that the first argument must be the year.
-   :feedback_d: This matches the second constructor above with the arguments year, month, day.
+   :feedback_d: This matches the second constructor above with the parameters year, month, day.
    :feedback_e: Make sure the order of the arguments match the constructor signature above.
 
    Given the ``Date`` class in the figure above and assuming that months in the ``Date`` class are numbered starting at 1, which of the following code segments will create a ``Date`` object for the date September 20, 2020 using the correct constructor?
