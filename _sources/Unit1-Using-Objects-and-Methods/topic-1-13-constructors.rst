@@ -176,9 +176,9 @@ Object Variables and References
    single: reference
    single: null
 
-New objects are saved in variables of a **reference type** which holds a reference to an object or **null** (which means none) if there is no object. A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package in the mail.
+New objects are saved in variables of a **reference type** which holds a reference to an object. A **reference** is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package in the mail.
 
-You can also declare an object variable and initialize it to **null** (``Turtle t1 = null;``). This means that the variable doesn't refer to an object yet. 
+A special reference value **null** (which means none) can be used when a variable doesn't refer to any object. For instance, you can declare a variable and initialize it to **null** (``Turtle t1 = null;``) meaning the variable doesn't refer to any object yet.
 
 .. |video1| raw:: html
 
