@@ -305,7 +305,7 @@ In Unit 3, you will learn to write your own classes. However, if you see a class
 Arguments, Parameters, and Call by Value
 -----------------------------------------
 
-When a constructor like ``Date(2005,9,1)`` is called, the **formal parameters**, (year, month, day), are set to copies of the  **arguments** (or **actual parameters**), which are (2005,9,1).  This is **call by value** which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object's attributes.
+When a constructor like ``Date(2005,9,1)`` is called, the **parameters**, (``year``, ``month``, and ``day``), are set to copies of the  **arguments**, (``2005``, ``9``, and ``1``).  This is **call by value** which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object's attributes.
 
 .. figure:: Figures/parameterMappingDate.png
     :width: 450px
