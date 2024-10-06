@@ -24,7 +24,7 @@ A new object is created with the ``new`` keyword followed by the class name whic
 The World Class Constructors
 ----------------------------------------------------------
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. The ``World`` class has the 2 constructors seen below. One doesn't take any arguments and creates a default sized world and one takes the world’s width and height arguments to create a world of a specific size. An **argument** (also called actual parameter) is a value that is passed into a constructor. Arguments are used to initialize the attributes of an object, in this case, the size of the world.
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. The ``World`` class has the 2 constructors seen below. One doesn't take any arguments and creates a default sized world and one takes the world’s width and height arguments to create a world of a specific size. An **argument** is a value that is passed into a constructor. Arguments are used to initialize the attributes of an object, in this case, the size of the world.
 
 .. figure:: Figures/worldConstructors.png
     :width: 350px
@@ -217,7 +217,7 @@ Constructor Signatures
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types.
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **parameters** which are variable declarations including the data types to store the values passed into the contstructor.
 
 Constructors are said to be **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the ``Turtle`` class that take different parameters:
 
@@ -305,7 +305,7 @@ In Unit 3, you will learn to write your own classes. However, if you see a class
 Arguments, Parameters, and Call by Value
 -----------------------------------------
 
-When a constructor like ``Date(2005,9,1)`` is called, the **parameters**, (``year``, ``month``, and ``day``), are set to copies of the  **arguments**, (``2005``, ``9``, and ``1``).  This is **call by value** which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object's attributes.
+When a constructor like ``Date(2005,9,1)`` is called, the **parameters**, (``year``, ``month``, and ``day``), are set to copies of the  **arguments**, (``2005``, ``9``, and ``1``).  This is **call by value** which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object's attributes. A constructor call interrupts the sequential execution of statements in that the program executes the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.
 
 .. figure:: Figures/parameterMappingDate.png
     :width: 450px
@@ -315,15 +315,15 @@ When a constructor like ``Date(2005,9,1)`` is called, the **parameters**, (``yea
 
     Figure 5: Parameter Mapping
 
-The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the month and the day in the ``Date`` constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).
+The type of the values being passed in as arguments have to match the type of the parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the month and the day in the ``Date`` constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: mcq_formal_params
+.. mchoice:: mcq_params
    :practice: T
    :answer_a: objects
    :answer_b: classes
-   :answer_c: formal parameters
+   :answer_c: parameters
    :answer_d: arguments
    :correct: c
    :feedback_a: Objects have attributes and behavior.
@@ -333,16 +333,16 @@ The type of the values being passed in as arguments have to match the type of th
 
    In ``public World(int width, int height)`` what are ``width`` and ``height``?
 
-.. mchoice:: mcq_actual_params
+.. mchoice:: mcq_arguments
    :practice: T
    :answer_a: objects
    :answer_b: classes
-   :answer_c: formal parameters
+   :answer_c: parameters
    :answer_d: arguments
    :correct: d
    :feedback_a: Objects have attributes and behavior.
    :feedback_b: A class defines the data and behavior for all objects of that type.
-   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_c: A parameter is in the constructor's signature.
    :feedback_d: An argument is the value that is passed into the constructor.
 
    In ``new World(150, 200)`` what are ``150`` and ``200``?
