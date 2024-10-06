@@ -17,7 +17,7 @@ A new object is created with the ``new`` keyword followed by the class name whic
 .. code-block:: java
 
     // To create a new object and call a constructor write:
-    // ClassName variableName = new ClassName(parameters);
+    // ClassName variableName = new ClassName(arguments);
     World habitat = new World();    // create a new World object
     Turtle t = new Turtle(habitat); // create a new Turtle object
 
@@ -43,14 +43,14 @@ The **no-argument constructor** ``World()``, with no arguments inside the parent
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: const_def_1
+.. mchoice:: mcq_world_constructor
    :practice: T
    :answer_a: World w = null;
    :answer_b: World w = new World;
    :answer_c: World w = new World();
    :answer_d: World w = World();
    :answer_e: World w = new World(300,500);
-   :correct: c
+   :correct: c, e
    :feedback_a: This declares a variable w that refers to a World object, but it doesn't create a World object or initialize it.
    :feedback_b: You must include parentheses () to call a constructor.
    :feedback_c: Correct, use the new keyword followed by the classname and parentheses to create a new object and call the constructor.
@@ -59,10 +59,10 @@ The **no-argument constructor** ``World()``, with no arguments inside the parent
 
    Which of these is valid syntax for creating and initializing a World object?
 
-.. mchoice:: overload_const_1
+.. mchoice:: mcq_overload_constructor
    :practice: T
-   :answer_a: When a constructor takes one parameter.
-   :answer_b: When a constructor takes more than one parameter.
+   :answer_a: When a constructor takes one argument.
+   :answer_b: When a constructor takes more than one argument.
    :answer_c: When one constructor is defined in a class.
    :answer_d: When more than one constructor is defined in a class.
    :correct: d
@@ -71,12 +71,12 @@ The **no-argument constructor** ``World()``, with no arguments inside the parent
    :feedback_c: For a constructor to be overloaded there must be more than one constructor.
    :feedback_d: Overloading means that there is more than one constructor.  The parameter lists must differ in either number, order, or type of parameters.
 
-   Which of these is overloading?
+   Which of these is overloading the constructor?
 
 The Turtle Class Constructors
 ----------------------------------------------------------
 
-The ``Turtle`` class also has multiple constructors, although it always requires a world as a parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
+The ``Turtle`` class also has multiple constructors, although it always requires a world as a argument in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
 
 There is another ``Turtle`` constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
 
@@ -86,7 +86,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
     Turtle t2 = new Turtle(50, 100, world1);
 
 .. note::
-   Notice that the order of the parameters matter. The ``Turtle`` constructor takes ``(x,y,world)`` as parameters in that order. If you mix up the order of the parameters it will cause an error, because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
+   Notice that the order of the arguments matter. The ``Turtle`` constructor takes ``(x,y,world)`` as arguments in that order. If you mix up the order of the arguments it will cause an error, because the arguments will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
 
 |Exercise| **Check your understanding**
 
@@ -98,7 +98,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
    :answer_d: Turtle t = new Turtle(100, 100, world1);
    :correct: d
    :feedback_a: You must use the new keyword to create a new Turtle.
-   :feedback_b: All turtle constructors take a world as a parameter.
+   :feedback_b: All turtle constructors take a world as an argument.
    :feedback_c: The order of the parameters matter, so this would cause a syntax error.
    :feedback_d: This creates a new Turtle object in the passed world at location (100,100)
 
@@ -111,7 +111,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Try changing the code below to create a ``World`` object with 300x400 pixels. Where is the turtle placed by default? What parameters do you need to pass to the ``Turtle`` constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
+    Try changing the code below to create a ``World`` object with 300x400 pixels. Where is the turtle placed by default? What arguments do you need to pass to the ``Turtle`` constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the arguments?
     ~~~~
     import java.awt.*;
     import java.util.*;
@@ -217,7 +217,7 @@ Constructor Signatures
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **parameters** which are variable declarations including the data types to store the values passed into the contstructor.
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the values passed into the contstructor.
 
 Constructors are said to be **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the ``Turtle`` class that take different parameters:
 
@@ -241,11 +241,11 @@ Constructors are said to be **overloaded** when there are multiple constructors,
    :answer_d: Turtle t = new Turtle(world1,50,150);
    :answer_e: Turtle t = new Turtle(50,150,world1);
    :correct: e
-   :feedback_a: There is no Turtle constructor that takes no parameters according to the figure above.
-   :feedback_b: There is no Turtle constructor that takes 2 parameters according to the figure above.
+   :feedback_a: There is no Turtle constructor that takes no arguments according to the figure above.
+   :feedback_b: There is no Turtle constructor that takes 2 arguments according to the figure above.
    :feedback_c: This would initialize the Turtle to the middle of the world, not necessarily coordinates (50,150).
-   :feedback_d: Make sure the order of the parameters match the constructor signature above.
-   :feedback_e: This matches the second constructor above with the parameters of x, y, and world.
+   :feedback_d: Make sure the order of the arguments match the constructor signature above.
+   :feedback_e: This matches the second constructor above with the arguments of x, y, and world.
 
    Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?
 
@@ -294,10 +294,10 @@ In Unit 3, you will learn to write your own classes. However, if you see a class
    :answer_e: Date d = new Date(2020,20,9);
    :correct: d
    :feedback_a: This would initialize the date attributes to today's date according to the constructor comment above, which might not be Sept. 20, 2020.
-   :feedback_b: There is no Date constructor that takes 2 parameters according to the figure above.
-   :feedback_c: The comment for the second constructor in the Date class above says that the first parameter must be the year.
-   :feedback_d: This matches the second constructor above with the parameters year, month, day.
-   :feedback_e: Make sure the order of the parameters match the constructor signature above.
+   :feedback_b: There is no Date constructor that takes 2 arguments according to the figure above.
+   :feedback_c: The comment for the second constructor in the Date class above says that the first argument must be the year.
+   :feedback_d: This matches the second constructor above with the arguments year, month, day.
+   :feedback_e: Make sure the order of the arguments match the constructor signature above.
 
    Given the ``Date`` class in the figure above and assuming that months in the ``Date`` class are numbered starting at 1, which of the following code segments will create a ``Date`` object for the date September 20, 2020 using the correct constructor?
 
@@ -638,10 +638,10 @@ AP Practice
    :answer_e: II and III
    :correct: c
    :feedback_a: I is one of the correct constructors but the second constructor can also be used.
-   :feedback_b: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_b: II is not correct because there is no Cat constructor with 2 parameters.
    :feedback_c: I and III call the correct constructors.
-   :feedback_d: II is not correct because there is no Cat constructor that takes 2 parameters.
-   :feedback_e: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_d: II is not correct because there is no Cat constructor with 2 parameters.
+   :feedback_e: II is not correct because there is no Cat constructor with 2 parameters.
 
     Consider the following class. Which of the following successfully creates a new Cat object?
 
