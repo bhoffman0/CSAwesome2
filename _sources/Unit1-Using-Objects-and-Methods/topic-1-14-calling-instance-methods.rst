@@ -165,16 +165,15 @@ In the last lessons, we used simple **methods** like ``forward`` and ``turnRight
 
     ``object.method(arguments);`` is used to call an object's method and give it some argument values that it will need to do its job.
 
-When you create your own method, the variables you define for it are called **parameters**. When you call the method to do its job, you give or pass in **arguments** to it that are then saved in the parameter variables. So, in the definition of the ``forward`` method, it has a parameter variable called ``pixels``, and in the call to ``forward(100)``, the argument is the value 100 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 3. In this unit, you will learn to call methods that are already written for you.
+When you create your own method, the variables you define for it are called **parameters**. When you call the method to do its job, you give or pass in **arguments** to it that are then saved in the parameter variables. So, in the definition of the ``forward`` method, it has a parameter variable called ``pixels``, and in the call to ``forward(200)``, the argument is the value 200 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 3. In this unit, you will learn to call methods that are already written for you.
 
-.. code-block:: java
+.. figure:: Figures/method-param-arg.png
+    :width: 550px
+    :align: center
+    :alt: Method parameters and arguments
+    :figclass: align-center
 
-    // Method call
-    yertle.forward(100); // argument is 100
-
-    // Method signature in the method written for you
-    public void forward(int pixels) // parameter pixels
-    ...
+    Figure 5: Method signatures with parameters and method calls arguments
 
 |Exercise| **Check your understanding**
 
@@ -195,7 +194,7 @@ Here is the Turtle class diagram again that shows some of the variables and meth
     :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 4: Turtle Class Diagram
+    Figure 6: Turtle Class Diagram
 
 Methods are said to be **overloaded** when there
 are multiple methods with the same name but a
@@ -325,13 +324,12 @@ different **method signature**, where it requires a different number or type of 
 
 |CodingEx| **Coding Exercise**
 
-Try the following mixed up code to draw a simple house made of a square and a triangle roof.
-
 .. image:: Figures/house.png
-    :width: 200px
+    :width: 150px
     :align: left
     :alt: simple house
 
+Try the following mixed up code to draw a simple house made of a square and a triangle roof.
 
 .. parsonsprob:: DrawAHouse
    :numbered: left
