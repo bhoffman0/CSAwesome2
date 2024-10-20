@@ -473,3 +473,43 @@ AP Practice
     - result = calculatePizzaBoxes(45, 9);
 
       - The variable result has not been declared (with an appropriate data type).
+
+.. mchoice:: AP1-10-static-method2
+    :practice: T
+
+    Consider the following methods:
+
+    .. code-block:: java
+
+        public void static inchesToCentimeters(double i)
+        {
+            double c = i * 2.54;
+            printInCentimeters(i, c);
+        }
+
+        public void static printInCentimeters(double inches, double centimeters)
+        {
+            System.out.print(inches + "-->" + centimeters);
+        }
+
+    Assume that the method call ``inchesToCentimeters(10)`` appears in a static method in the same class. What is printed as a result of the method call?
+
+    - inches --> centimeters
+
+      - The values of the variables inches and centimeters should be printed out, not the words.
+
+    - 10 -->  25
+
+      - Two doubles should be printed, not two ints, and the centimeters should be 25.4
+
+    - 25.4 --> 10
+
+      - Inches should be printed before centimeters.
+
+    - 10 --> 12.54
+
+      - c = 10 * 2.54 = 25.4, not 12.54.
+
+    - 10.0 --> 25.4
+
+      + Correct! centimeters = 10 * 2.54 = 25.4.
