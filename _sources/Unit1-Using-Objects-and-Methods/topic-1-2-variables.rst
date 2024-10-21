@@ -470,7 +470,7 @@ The convention in Java and many programming languages is to always start a varia
         :.*: In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.
 
 
-|Groupwork| Debugging Challenge : Weather Report
+Debugging Challenge : Weather Report
 ------------------------------------------------
 
 Debug the following code that reads out a weather report.
@@ -526,6 +526,80 @@ Work with a programming buddy if you get stuck.
        }
    }
 
+
+|Groupwork| Programming Challenge : Mad Libs
+--------------------------------------------
+
+Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.
+
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+
+
+Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the |Scanner| to read in input into the variables.
+
+.. activecode:: challengeMadLibs
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Replace the text "Replace" below with silly words following the description in the variable names (for example, "cats" for a plural noun, "blue" for a color, etc.) to create a silly poem. Run the code to see the poem. Then, create your own silly story using 5 more String variables.
+   ~~~~
+   public class MadLibs1
+   {
+       public static void main(String[] args)
+       {
+           // fill these in with silly words/strings (don't read the poem yet)
+           String pluralnoun1 = "Replace";
+           String color1 = "Replace";
+           String color2 = "Replace";
+           String food = "Replace";
+           String pluralnoun2 = "Replace";
+
+
+           // Run to see the silly poem!
+           System.out.println("Roses are " + color1);
+           System.out.println(pluralnoun1 + " are " + color2);
+           System.out.println("I like " + food);
+           System.out.println("Do " + pluralnoun2 + " like them too?");
+
+           // Now come up with your own silly poem!
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Roses are *\n* are *\nI like *\nDo * like them too?";
+
+           boolean passed = getResultsRegEx(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testNull() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Replace";
+
+           String actual = countOccurences(output, expect) + " Replace values";
+
+           boolean passed = getResults("0 Replace values", actual, "Change all \"Replace\" values");
+           assertTrue(passed);
+       }
+   }
+
 Summary
 -------------------
 
@@ -545,6 +619,7 @@ Summary
 
 - The three primitive data types used in this course are **int** (integer numbers), **double** (decimal numbers), and **boolean** (true or false).
 
+- ``String`` is a reference data type representing a sequence of characters.
 
 AP Practice
 ------------
