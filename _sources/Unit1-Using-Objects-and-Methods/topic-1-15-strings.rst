@@ -810,7 +810,8 @@ Create a program that takes a word and transforms it to Pig Latin using String m
        @Test
        public void testMethod() throws IOException
        {
-           String output = getMethodOutput("pigLatin", {"java"});
+           Object[] args = {"java"};
+           String output = getMethodOutput("pigLatin", args);
            String expect = "avajay";
            boolean passed = getResults(expect, output, 
 				"pigLatin(\"java\") should return \"avajay\"");
