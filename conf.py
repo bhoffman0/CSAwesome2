@@ -30,7 +30,7 @@ import pkg_resources
 #html_defer_js = True
 
 # new for title page
-course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School."
+course_description = "CSAwesome2beta is in development for the 2025-2026 College Board AP CSA curriculum revisions. CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School."
 key_words = "AP CSA Java"
 shelf_section = "AP Computer Science"
 
@@ -61,8 +61,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'CSAwesome2'
-copyright = 'Barbara Ericson, Beryl Hoffman, Peter Seibel, 2015-2023.'
+project = 'CSAwesome2beta'
+copyright = 'Barbara Ericson, Beryl Hoffman, Peter Seibel, 2015-current.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -129,7 +129,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "CSAwesome2",
+    'navbar_title': "CSAwesome2beta",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
@@ -177,10 +177,10 @@ html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'CSAwesome2'
+html_title = 'CSAwesome2beta'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='CSAwesome2'
+html_short_title ='CSAwesome2beta'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

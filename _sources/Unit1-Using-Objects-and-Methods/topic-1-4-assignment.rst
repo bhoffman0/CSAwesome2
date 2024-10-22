@@ -20,8 +20,11 @@ Assignment Statements
 
 Instead of saying equals for the = in an assignment statement, say "gets" or "is assigned" to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.
 
+.. |video| raw:: html
 
-The following `video <https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis>`_ by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
+   <a href="https://www.youtube.com/watch?v=MZwIgM__5C8&ab_channel=colleenlewis" target="_blank">video</a>
+
+The following |video| by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.
 
 .. youtube:: MZwIgM__5C8
     :width: 700
@@ -33,8 +36,11 @@ As we saw in the video, we can set one variable's value to a *copy* of the value
 
 
 
+.. |Java visualizer| raw:: html
 
-Let's step through the following code in the `Java visualizer <http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_ to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
+   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
+
+Let's step through the following code in the |Java visualizer| to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.
 
 
 .. codelens:: asgn_viz1
@@ -62,6 +68,9 @@ Let's step through the following code in the `Java visualizer <http://www.python
 
 |Exercise| **Check your understanding**
 
+.. |Java visualizer2| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 .. mchoice:: qasgn1
    :practice: T
@@ -75,7 +84,7 @@ Let's step through the following code in the `Java visualizer <http://www.python
    :feedback_c: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
    :feedback_d: Remember that the equal sign doesn't mean that the two sides are equal.  It sets the value for the variable on the left to the value from evaluating the right side.
 
-   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this `Java visualizer <http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+0%3B%0A+++++int+y+%3D+1%3B%0A+++++int+z+%3D+2%3B%0A+++++x+%3D+y%3B%0A+++++y+%3D+y+*+2%3B%0A+++++z+%3D+3%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++System.out.println(z%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0>`_ link.
+   What are the values of x, y, and z after the following code executes?  You can step through this code by clicking on this |Java visualizer2| link.
 
    .. code-block:: java
 
@@ -124,7 +133,7 @@ to a ``double`` value and must be saved in a ``double`` variable, as seen in the
    :autograde: unittest
    :practice: T
 
-   The code below looks okay at first glance, but if you run it, you will see that there is an error of incompatible types. Change the data type of one of the variables to fix the error.
+   The code below looks okay at first glance, but if you run it, you will see that there is an error of incompatible types. Change the data type of one of the variables to fix the error.  
    ~~~~
    public class Asgn
    {
@@ -161,10 +170,10 @@ Reference types like ``String`` can be assigned a new object or null if there is
 
 .. code-block:: java
 
-      // String variables can be assigned null
+      // String variables can be assigned null 
       // or a new String object
       String str = null;
-      str = "new object";
+      str = "new object";   
 
 Adding 1 to a Variable
 -------------------------
@@ -217,11 +226,18 @@ score variable is set to the previous value of score plus 1.
 Input with Variables
 --------------------
 
+.. |JavaIOExampleJuiceMind| raw:: html
+
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#18fe2d0b-9011-40b1-b384-f956576a86a7" target="_blank">Scanner input example in JuiceMind</a>
+
+.. |JavaIOExampleReplit| raw:: html
+
+   <a href="https://replit.com/@BerylHoffman/JavaIOExample" target="_blank">Scanner input example in Replit</a>
 
 
-.. |JavaIOConsole| raw:: html
+.. |JavaIOConsoleReplit| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
+   <a href="https://replit.com/@BerylHoffman/JavaIOConsole" target="_blank">Console input example</a>
 
 
 Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  Input can come in a variety of forms, such as **tactile** for example by clicking on a button, **audio** with speech, **visual** using a webcam, or the most common form, **text** that the user types in. The ``Scanner`` class in Java is one way to obtain text input from the keyboard.
@@ -233,13 +249,13 @@ The code below using the ``Scanner`` class will say hello to anyone who types in
    :autograde: unittest
    :stdin: YourName
 
-   The code below will say hello to anyone who types in their name.  Type in your name below and then click on run.  Try again with a friend's name.
+   The code below will say hello to anyone who types in their name.  Type in your name below and then click on run.  Try again with a friend's name.  
    ~~~~
    import java.util.Scanner;
 
-   public class Main
+   public class Main 
    {
-       public static void main(String[] args)
+       public static void main(String[] args) 
        {
            System.out.println("Please type in a name in the input box below.");
            Scanner scan = new Scanner(System.in);
@@ -267,13 +283,13 @@ The code below using the ``Scanner`` class will say hello to anyone who types in
        }
    }
 
-Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs like replit, the input/output would be more interactive. Here are some examples in replit for |JavaIOExample| using the ``Scanner`` class and |JavaIOConsole| using the ``Console`` class that you can try out. We will also learn how to use ``Scanner`` with input files in a later unit.
+Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs, the input/output would be more interactive. You can try this |JavaIOExampleJuiceMind| (click on Create Starter Code after login with a Google account) or |JavaIOExampleReplit| using the ``Scanner`` class and |JavaIOConsoleReplit| using the ``Console`` class. We will also learn how to use ``Scanner`` with input files in a later unit.  
 
 |Groupwork| Programming Challenge : Dog Years
 ------------------------------------------------
 
 .. image:: Figures/dog-free.png
-    :width: 150px
+    :width: 150
     :align: left
     :alt: dog
 
@@ -395,10 +411,19 @@ In this programming challenge, you will calculate your age, and your pet's age f
    }
 
 
+.. |repl template| raw:: html
 
+   <a href="https://replit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
 
+.. |JuiceMind template| raw:: html
 
-Your teacher may suggest that you use a Java IDE like `replit.com <https://replit.com>`_ for this challenge so that you can use input to get these values using the `Scanner class <https://www.w3schools.com/java/java_user_input.asp>`_. Here is a `repl template <https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template>`_ that you can use to get started if you want to try the challenge with input.
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#de42baff-8802-40d7-a3a5-74701999c5ba" target="_blank">JuiceMind activity</a>
+
+.. |Scanner| raw:: html
+
+   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+
+Your teacher may suggest that you use a Java IDE with interactive input using the |Scanner| for this challenge, for example this |JuiceMind template| or |repl template| if you want to try the challenge with input.
 
 Summary
 -------------------
@@ -406,15 +431,15 @@ Summary
 - The assignment operator (``=``) allows a program to initialize or change the
   value stored in a variable. The value of the expression on the right is stored in the variable on the left.
 
-- Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type.
+- Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. 
 
-- A variable is initialized the first time it is assigned a value.
+- A variable is initialized the first time it is assigned a value. 
 
 - Reference types can be assigned a new object or ``null`` if there is no object. The literal ``null`` is a special value used to indicate that a reference is not associated with any object.
 
 - During execution, an expression is evaluated to produce a single value. The value of an expression has a type based on the types of the values and operators used in the expression.
 
-- Input can come in a variety of forms, such as tactile, audio, visual, or text. The ``Scanner`` class is one way to obtain text input from the keyboard, although input from the keyboard will not be on the AP exam.
+- Input can come in a variety of forms, such as tactile, audio, visual, or text. The ``Scanner`` class is one way to obtain text input from the keyboard, although input from the keyboard will not be on the AP exam. 
 
 AP Practice
 ------------

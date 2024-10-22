@@ -1,9 +1,7 @@
-.. qnum::
-   :prefix: 2-13-
-   :start: 1
 
-Coding Practice
-======================
+
+Coding Practice 1b (1.7-1.15)
+=================================
 
 
 
