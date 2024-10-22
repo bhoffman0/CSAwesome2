@@ -797,16 +797,7 @@ Create a program that takes a word and transforms it to Pig Latin using String m
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "* in Pig Latin is *ay";
-           boolean passed = getResultsRegEx(expect, output, "Expected output from main");
-           assertTrue(passed);
-       }
-
+   {   
        @Test
        public void testMethod() throws IOException
        {
@@ -817,7 +808,16 @@ Create a program that takes a word and transforms it to Pig Latin using String m
 				"pigLatin(\"java\") should return \"avajay\"");
            assertTrue(passed);
        }
-       
+       @Test
+       public void testMethod2() throws IOException
+       {
+           Object[] args = {"pig"};
+           String output = getMethodOutput("pigLatin", args);
+           String expect = "igpay";
+           boolean passed = getResults(expect, output, 
+				"pigLatin(\"pig\") should return \"igpay\"");
+           assertTrue(passed);
+       }
        @Test
        public void testContainsSubstring()
        {
