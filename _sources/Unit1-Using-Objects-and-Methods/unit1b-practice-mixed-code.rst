@@ -1,9 +1,7 @@
-.. qnum::
-   :prefix: 2-11-
-   :start: 1
 
-Mixed Up Code Practice
-===============================
+
+Mixed Up Code Practice 1b (1.7-1.15)
+==========================================
 
 Try to solve each of the following mixed-up code problems or try the experimental switch between mixed up or write code versions of these problems on the next page instead.
 

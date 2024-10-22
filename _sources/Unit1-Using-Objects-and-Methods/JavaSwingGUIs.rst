@@ -1,8 +1,5 @@
 .. include:: ../common.rst
 
-.. qnum::
-   :prefix: 2-14-
-   :start: 1
 
 
 .. |repl| raw:: html

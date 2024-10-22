@@ -1,9 +1,7 @@
-.. qnum::
-   :prefix: 2-10-
-   :start: 1
 
-Unit 2 Summary
-===============
+
+Unit Summary 1b (1.7-1.15)
+==============================
 
 In this unit, you learned to use objects (variables of a class type)  that have been written for you in Java. You learned to use constructors and methods with and without parameters of objects, and built-in Java classes like String, Integer, Double, and Math.
 
@@ -89,7 +87,7 @@ Java Keyword Summary
 Vocabulary Practice
 -----------------------
 
-.. dragndrop:: unit2_vocab
+.. dragndrop:: unit1b_vocab
     :feedback: Review the summaries above.
     :match_1: a specific instance of a class with defined attributes|||object
     :match_2: defines a new data type with instance variables and methods|||class

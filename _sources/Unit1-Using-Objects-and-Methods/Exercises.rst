@@ -1,9 +1,5 @@
-Multiple Choice Exercises
-=================================
-
-.. qnum::
-   :prefix: 1-11-
-   :start: 1
+Multiple Choice Exercises for Unit 1a (1.1-1.6)
+=================================================
 
 
 

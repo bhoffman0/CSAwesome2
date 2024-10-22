@@ -1,9 +1,6 @@
-.. qnum::
-   :prefix: 2-15-
-   :start: 1
 
-Multiple Choice Exercises
-=================================
+Multiple Choice Exercises for Unit 1b (1.9-1.15)    
+=================================================
 
 These questions are mostly about Strings, but more questions on using other objects will be added in the future.
 
