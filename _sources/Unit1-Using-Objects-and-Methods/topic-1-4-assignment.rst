@@ -226,14 +226,18 @@ score variable is set to the previous value of score plus 1.
 Input with Variables
 --------------------
 
-.. |JavaIOExample| raw:: html
+.. |JavaIOExampleJuiceMind| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOExample" target="_blank">Java Scanner Input Repl</a>
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#18fe2d0b-9011-40b1-b384-f956576a86a7" target="_blank">Scanner input example in JuiceMind</a>
+
+.. |JavaIOExampleReplit| raw:: html
+
+   <a href="https://replit.com/@BerylHoffman/JavaIOExample" target="_blank">Scanner input example in Replit</a>
 
 
-.. |JavaIOConsole| raw:: html
+.. |JavaIOConsoleReplit| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/JavaIOConsole" target="_blank">Java Console Input Repl</a>
+   <a href="https://replit.com/@BerylHoffman/JavaIOConsole" target="_blank">Console input example</a>
 
 
 Variables are a powerful abstraction in programming because the same algorithm can be used with different input values saved in variables.  Input can come in a variety of forms, such as **tactile** for example by clicking on a button, **audio** with speech, **visual** using a webcam, or the most common form, **text** that the user types in. The ``Scanner`` class in Java is one way to obtain text input from the keyboard.
@@ -279,7 +283,7 @@ The code below using the ``Scanner`` class will say hello to anyone who types in
        }
    }
 
-Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs like replit, the input/output would be more interactive. Here are some examples in replit for |JavaIOExample| using the ``Scanner`` class and |JavaIOConsole| using the ``Console`` class that you can try out. We will also learn how to use ``Scanner`` with input files in a later unit.  
+Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs, the input/output would be more interactive. You can try this |JavaIOExampleJuiceMind| (click on Create Starter Code after login with a Google account) or |JavaIOExampleReplit| using the ``Scanner`` class and |JavaIOConsoleReplit| using the ``Console`` class. We will also learn how to use ``Scanner`` with input files in a later unit.  
 
 |Groupwork| Programming Challenge : Dog Years
 ------------------------------------------------
@@ -407,20 +411,19 @@ In this programming challenge, you will calculate your age, and your pet's age f
    }
 
 
-.. |repl| raw:: html
+.. |repl template| raw:: html
 
-   <a href="https://replit.com" target="_blank">replit.com</a>
+   <a href="https://replit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
 
+.. |JuiceMind template| raw:: html
+
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#de42baff-8802-40d7-a3a5-74701999c5ba" target="_blank">JuiceMind activity</a>
 
 .. |Scanner| raw:: html
 
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
 
-.. |repl template| raw:: html
-
-   <a href="https://firewalledreplit.com/@BerylHoffman/Challenge1-4-Dog-Years-Template" target="_blank">repl template</a>
-
-Your teacher may suggest that you use a Java IDE like |repl| for this challenge so that you can use input to get these values using the |Scanner|. Here is a |repl template| that you can use to get started if you want to try the challenge with input.
+Your teacher may suggest that you use a Java IDE with interactive input using the |Scanner| for this challenge, for example this |JuiceMind tempate| or |repl template| if you want to try the challenge with input.
 
 Summary
 -------------------

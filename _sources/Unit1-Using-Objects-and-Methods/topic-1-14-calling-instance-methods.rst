@@ -1,8 +1,5 @@
 .. include:: ../common.rst
 
-.. |github| raw:: html
-
-   <a href="https://github.com/bhoffman0/csawesome/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
 |Time90|
 

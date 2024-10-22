@@ -2,15 +2,6 @@
 
 |Time45|
 
-.. |repl link| raw:: html
-
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">replit link</a>
-
-.. |github| raw:: html
-
-   <a href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-
-
 Objects - Instances of Classes
 ===============================
 
@@ -177,13 +168,25 @@ Turtle Class
 
 The Turtle class (that we've written for you and hidden on this page) is a blueprint for turtle objects. It defines attributes for graphical turtles like their color and position and methods to make the turtles move. Try the Java program below that creates a Turtle object called yertle using the Turtle class.
 
+.. |JuiceMind| raw:: html
+
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/beca9c16-4004-4a4e-b4b0-11593e140808#f5357602-b60b-44c3-be0e-dfb07de2a778" target="_blank" style="text-decoration:underline">JuiceMind</a>
+
+.. |replit| raw:: html
+
+   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" target="_blank" style="text-decoration:underline">replit</a>
+
+.. |github| raw:: html
+
+   <a href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
+   
 .. activecode:: TurtleTest
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
 
     Try clicking the run button below to see what the following program does.
-    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action on |JuiceMind| or |replit| or download the files |github| to use in your own IDE.)
     ~~~~
     import java.awt.*;
     import java.util.*;
