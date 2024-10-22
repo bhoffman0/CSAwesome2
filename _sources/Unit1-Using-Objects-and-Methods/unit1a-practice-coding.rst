@@ -1,9 +1,7 @@
-.. qnum::
-   :prefix: 1-9-
-   :start: 1
 
-Coding Practice
-=======================
+
+Coding Practice 1a (1.1-1.6)
+=================================
 
 
 .. tabbed:: ch4Ex2

@@ -38,9 +38,10 @@ Unit 1 AP CSA Exam Weighting: ?
    unit1b-practice-mixed-code-toggle.rst
    unit1b-practice-coding.rst
    Exercises-objects.rst
-   frq-practice.rst
    practice-test-objects.rst
    JavaSwingGUIs.rst
+   frq-practice.rst
+
 
   
 

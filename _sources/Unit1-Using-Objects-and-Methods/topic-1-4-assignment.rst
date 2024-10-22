@@ -423,7 +423,7 @@ In this programming challenge, you will calculate your age, and your pet's age f
 
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
 
-Your teacher may suggest that you use a Java IDE with interactive input using the |Scanner| for this challenge, for example this |JuiceMind tempate| or |repl template| if you want to try the challenge with input.
+Your teacher may suggest that you use a Java IDE with interactive input using the |Scanner| for this challenge, for example this |JuiceMind template| or |repl template| if you want to try the challenge with input.
 
 Summary
 -------------------
