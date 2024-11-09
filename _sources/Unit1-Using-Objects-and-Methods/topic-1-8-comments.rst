@@ -163,7 +163,7 @@ Try to break the preconditions of the ``Turtle forward`` method below. Try to ma
         public static void main(String[] args)
         {
             World habitat = new World(300, 300);
-            Turtle yertle = new Turtle(world);
+            Turtle yertle = new Turtle(habitat);
 
             // Change 100 pixels below to a larger number
             //   to try to go off screen to break preconditions

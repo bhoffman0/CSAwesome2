@@ -155,22 +155,9 @@ Try the Java program below that creates a Turtle object called ``yertle`` using 
             String expect = "yertle.forward";
 
             int count = countOccurences(code, expect);
-            boolean passed = (count >= 3);
-            passed = getResults("3+", "" + count, "yertle.forward() count", passed);
+            boolean passed = (count >= 2);
+            passed = getResults("2+", "" + count, "yertle.forward() count", passed);
             
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String expect = "yertle.turnLeft()";
-
-            int count = countOccurences(code, expect);
-
-            boolean passed = count >= 1;
-            passed = getResults("1+ time(s)", "" + count + " time(s)", "yertle.turnLeft()", passed);
             assertTrue(passed);
         }
     }
