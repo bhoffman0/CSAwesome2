@@ -42,15 +42,15 @@ In programming, selection (also called branching) occurs when a choice of how th
     :iscode:
    
     Morning routine:
-    :click-incorrect:Wake up.:endclick:
-    :click-incorrect:Snooze for 5 more minutes.:endclick:
-    :click-incorrect:Check your phone and the weather:endclick:
-    :click-correct:If there is a text from your friend, answer it.:endclick:
-    :click-incorrect:Brush teeth and shower.:endclick:
-    :click-correct:If it’s cold, wear a sweater.:endclick:
-    :click-correct:Check if you have homework due. If so, pack it in your bag.:endclick:
-    :click-correct:Put on your sunglasses if it's sunny.:endclick:
-    :click-incorrect:Leave for school or work.:endclick:
+    :click-incorrect:1. Wake up.:endclick:
+    :click-incorrect:2. Snooze for 5 more minutes.:endclick:
+    :click-incorrect:3. Check your phone and the weather:endclick:
+    :click-correct:4. If there is a text from your friend, answer it.:endclick:
+    :click-incorrect:5. Brush teeth and shower.:endclick:
+    :click-correct:6. If it’s cold, wear a sweater.:endclick:
+    :click-correct:7. Check if you have homework due. If so, pack it in your bag.:endclick:
+    :click-correct:8. Put on your sunglasses if it's sunny.:endclick:
+    :click-incorrect:9. Leave for school or work.:endclick:
 
 
 
@@ -68,14 +68,14 @@ Repetition is when a process repeats itself until a desired outcome is reached. 
     :iscode:
    
     Morning routine 2:
-    :click-incorrect:Wake up.:endclick:
-    :click-correct:Snooze for 5 more minutes. Keep waking up and snoozing for the next 15 minutes:endclick:
-    :click-correct:If there is a text from your friend, answer it. Do this for all of your texts.:endclick:
-    :click-incorrect:Brush teeth and shower.:endclick:
-    :click-incorrect:If it’s cold, wear a sweater.:endclick:
-    :click-incorrect:Check if you have homework due. If so, pack it in your bag.:endclick:
-    :click-correct:Repeat packing items until your bag is ready. :endclick:
-    :click-incorrect:Leave for school or work.:endclick:
+    :click-incorrect:1. Wake up.:endclick:
+    :click-correct:2. Snooze for 5 more minutes. Keep waking up and snoozing for the next 15 minutes:endclick:
+    :click-correct:3. If there is a text from your friend, answer it. Do this for all of your texts.:endclick:
+    :click-incorrect:4. Brush teeth and shower.:endclick:
+    :click-incorrect:5. If it’s cold, wear a sweater.:endclick:
+    :click-incorrect:6. Check if you have homework due. If so, pack it in your bag.:endclick:
+    :click-correct:7. Repeat packing items until your bag is ready. :endclick:
+    :click-incorrect:8. Leave for school or work.:endclick:
 
 
 
@@ -103,17 +103,17 @@ The order in which sequencing, selection, and repetition are used contributes to
 
    Put the following pseudocode algorithm steps for buying a birthday gift for your friend in order. Make sure some of the steps are indented to be inside the repetition and that you buy the more expensive gifts first. Click on Check Me to see if you are right.
    -----
-   You have *total* amount of money to spend on a birthday gift for your friend.
+   Initialize *total* amount of money.
    =====
-   Repeat while you still have money in *total*:  
+   Repeat while still money in *total*:  
    =====
-      If you have more than $25, buy a $25 gift card and subtract 20 from total. 
+      If total more than $25, buy a gift card and subtract 25 from total. 
    =====    
-      If you have more than $10, buy a small cake and subtract 10 from total.
+      If total more than $10, buy a small cake and subtract 10 from total.
    =====
-      If you have more than $5, buy some candy and subtract $5 from total.
+      If total more than $5, buy some candy and subtract 5 from total.
    =====
-      If you have more than $1, buy a card and subtract $1 from total.
+      If total more than $1, buy a card and subtract 1 from total.
    =====
       Otherwise, give them the change. 
 

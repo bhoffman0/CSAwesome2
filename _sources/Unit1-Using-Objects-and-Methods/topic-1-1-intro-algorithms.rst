@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-1-
+   :start: 1
+
 |Time45|
 
 Introduction to Algorithms, Programming, and Compilers
@@ -610,11 +614,11 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
 Summary
 -------------------
 
-- **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
+- (AP 1.1.A.1) **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
 
-- **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
+- (AP 1.1.A.2) **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
-- An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
+- (AP 1.1.B.1) An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
 
 - A basic Java program looks like the following:
 
@@ -636,15 +640,15 @@ Summary
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
-- A **compiler** translates Java code into a class file that can be run on your computer. **Syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
+- (AP 1.1.B.2) A **compiler** translates Java code into a class file that can be run on your computer and checks code for some errors. Errors detectable by the compiler need to be fixed before the program can be run. 
 
-- A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
+- (AP 1.1.C.1) A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
-- A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
+- (AP 1.1.C.2) A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
 
-- A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
+- (AP 1.1.C.3) A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
 
-- An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
+- (AP 1.1.C.4) An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
 
 AP Practice
 ------------

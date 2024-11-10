@@ -2,6 +2,9 @@
 
 |Time45|
 
+.. qnum::
+   :prefix: 1-5-
+   :start: 1
 
 Casting and Ranges of Values
 ============================
@@ -714,30 +717,30 @@ Summary
 
 - **Type casting** is used to convert a value from one type to another.
 
-- The casting operators ``(int)`` and ``(double)`` can be used to convert from a double value to an int value (or vice versa).
+- (AP 1.5.A.1) The casting operators ``(int)`` and ``(double)`` can be used to convert from a double value to an int value (or vice versa).
 
-- Casting a ``double`` value to an ``int`` causes the digits to the right of the
+- (AP 1.5.A.2) Casting a ``double`` value to an ``int`` causes the digits to the right of the
   decimal point to be truncated (cut off and thrown away).
 
-- In expressions involving ``double``\ s, the ``double`` values are contagious,
+- (AP 1.5.A.3) Some code causes int values to be automatically cast (widened) to double values. In expressions involving ``double``\ s, the ``double`` values are contagious,
   causing ``int``\ s in the expression to be automatically converted ("widened") to the
   equivalent ``double`` value so the result of the expression can be computed as
   a ``double``.
 
-- Values of type ``double`` can be rounded to the nearest integer by (int)(x +
+- (AP 1.5.A.4) Values of type ``double`` can be rounded to the nearest integer by (int)(x +
   0.5) or (int)(x – 0.5) for negative numbers.
 
-- The constant ``Integer.MAX_VALUE`` holds the value of the largest possible int value. The constant ``Integer.MIN_VALUE`` holds the value of the smallest possible int value.
+- (AP 1.5.B.1) The constant ``Integer.MAX_VALUE`` holds the value of the largest possible int value. The constant ``Integer.MIN_VALUE`` holds the value of the smallest possible int value.
 
-- Integer values in Java are represented by values of type ``int``, which are
+- (AP 1.5.B.2) Integer values in Java are represented by values of type ``int``, which are
   stored using a finite amount (4 bytes) of memory. Therefore, an int value must
   be in the range from ``Integer.MIN_VALUE`` to ``Integer.MAX_VALUE``,
   inclusive. 
 
-- If an expression would evaluate to an int value outside of the allowed range,
-  an integer overflow occurs. The result is an int value in the allowed range but not necessarily the value expected.
+- (AP 1.5.B.3) If an expression would evaluate to an int value outside of the allowed range,
+  an **integer overflow** occurs. The result is an int value in the allowed range but not necessarily the value expected.
 
-- Computers allot a specified amount of memory to store data based on the data type. If an expression would evaluate to a double that is more precise than can be stored in the allotted amount of memory, a round-off error occurs. The result will be rounded to the representable value. To avoid rounding errors that naturally occur, use int values or round doubles to the precision needed. 
+- (AP 1.5.C.1) Computers allot a specified amount of memory to store data based on the data type. If an expression would evaluate to a double that is more precise than can be stored in the allotted amount of memory, a **round-off error** occurs. The result will be rounded to the representable value. To avoid rounding errors that naturally occur, use int values or round doubles to the precision needed. 
 
 
 AP Practice

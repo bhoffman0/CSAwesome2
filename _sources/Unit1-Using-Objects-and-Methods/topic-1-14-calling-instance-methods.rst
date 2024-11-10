@@ -1,5 +1,8 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-14-
+   :start: 
 
 |Time90|
 
@@ -946,11 +949,11 @@ Summary
 
 - **Instance methods** define the behavior and actions that an object can perform. 
 
-- **Instance methods** are called on objects of the class. 
+- (AP 1.14.A.1) **Instance methods** are called on objects of the class. 
 
-- The dot operator is used along with the object name to **call** instance methods, for example **object.method();**
+- (AP 1.14.A.1) The dot operator is used along with the object name to **call** instance methods, for example **object.method();**
 
-- A method call on a ``null`` reference will result in a ``NullPointerException``.
+- (AP 1.14.A.2) A method call on a ``null`` reference will result in a ``NullPointerException``.
 
 - Some methods take **arguments** that are placed inside the parentheses **object.method(arguments)**.
 
