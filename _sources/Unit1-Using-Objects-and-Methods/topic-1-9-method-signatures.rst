@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-9-
+   :start: 1
+
 |Time45|
 
 Method Signatures
@@ -635,21 +639,21 @@ Summary
 
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
 
-- A **method** is a named block of code that only runs when it is called. A block of code is any section of code that is enclosed in braces.
+- (AP 1.9.A.1) A **method** is a named block of code that only runs when it is called. A block of code is any section of code that is enclosed in braces.
 
-- **Procedural abstraction** allows a programmer to use a method by knowing what the method does even if they do not know how the method was written.
+- (AP 1.9.A.1) **Procedural abstraction** allows a programmer to use a method by knowing what the method does even if they do not know how the method was written.
 
-- A method call interrupts the sequential execution of statements, causing the program to first execute the statements in the method before continuing. Once the last statement in the method has been executed or a return statement is executed, the flow of control is returned to the point immediately following where the method was called.
+- (AP 1.9.B.5) A method call interrupts the sequential execution of statements, causing the program to first execute the statements in the method before continuing. Once the last statement in the method has been executed or a return statement is executed, the flow of control is returned to the point immediately following where the method was called.
 
-- A **parameter** is a variable declared in the header of a method or constructor and can be used inside the body of the method. This allows values or arguments to be passed and used by a method or constructor. 
+- (AP 1.9.A.2) A **parameter** is a variable declared in the header of a method or constructor and can be used inside the body of the method. This allows values or arguments to be passed and used by a method or constructor. 
 
-- A **method signature** for a method with parameters consists of the method name and the ordered list of parameter types. A method signature for a method without parameters consists of the method name and an empty parameter list.
+- (AP 1.9.A.2) A **method signature** for a method with parameters consists of the method name and the ordered list of parameter types. A method signature for a method without parameters consists of the method name and an empty parameter list.
 
-- An **argument** is a value that is passed into a method when the method is called. The arguments passed to a method must be compatible in number and order with the types identified in the parameter list of the method signature. When calling methods, arguments are passed using call by value. 
+- (AP 1.9.B.3) An **argument** is a value that is passed into a method when the method is called. The arguments passed to a method must be compatible in number and order with the types identified in the parameter list of the method signature. When calling methods, arguments are passed using call by value. 
 
-- **Call by value** initializes the parameters with copies of the arguments.
+- (AP 1.9.B.3) **Call by value** initializes the parameters with copies of the arguments.
 
-- Methods are said to be **overloaded** when there are multiple methods with the same name but different signatures.
+- (AP 1.9.B.4) Methods are said to be **overloaded** when there are multiple methods with the same name but different signatures.
 
 AP Practice
 ------------

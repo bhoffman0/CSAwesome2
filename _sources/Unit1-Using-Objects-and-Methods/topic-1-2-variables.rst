@@ -1,7 +1,10 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-2-
+   :start: 1
 
-|Time90|
+|Time45|
 
 Variables and Data Types
 ========================
@@ -604,9 +607,9 @@ Summary
 -------------------
 
 
-- A **variable** is a memory storage location that holds a value, which can change while the program is running. 
+- (AP 1.2.B.2)	A **variable** is a memory storage location that holds a value, which can change while the program is running.  
 
-- Every variable has a name and an associated data type that determines the kind of data it can hold. A variable of a primitive type holds a primitive value from that type.
+- (AP 1.2.B.2) Every variable has a name and an associated data type that determines the kind of data it can hold. A variable of a primitive type holds a primitive value from that type.
 
 - A variable can be declared and initialized with the following code:
 
@@ -615,9 +618,13 @@ Summary
   int score;
   double gpa = 3.5;
 
-- **Data types** can be primitive types (like int) or reference types (like String). A reference type is used to define objects that are not primitive types.
+- (AP 1.2.A.1) A **data type** is a set of values and a corresponding set of operations on those values. Data types can be primitive types (like int) or reference types (like String). 
 
-- The three primitive data types used in this course are **int** (integer numbers), **double** (decimal numbers), and **boolean** (true or false).
+- (AP 1.2.A.2) The **primitive** data types used in this course define the set of values and corresponding operations on those values for numbers and Boolean values.
+
+- (AP 1.2.A.3) A **reference** type, like String, is used to define objects that are not primitive types.
+
+- (AP 1.2.B.1) The three primitive data types used in this course are **int** (integer numbers), **double** (decimal numbers), and **boolean** (true or false).
 
 - ``String`` is a reference data type representing a sequence of characters.
 

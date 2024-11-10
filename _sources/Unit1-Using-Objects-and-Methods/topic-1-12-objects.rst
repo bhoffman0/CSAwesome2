@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-12-
+   :start: 
+
 |Time45|
 
 Objects - Instances of Classes
@@ -692,19 +696,19 @@ You may notice that it is challenging to have your turtle draw with these simple
 Summary
 -------------------
 
-- A **class** defines a new data type (a classification). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
+- (AP 1.12.A.1) A **class** defines a new data type (a classification). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
 
-- An **object** is a specific **instance** of a class with defined attributes. Objects are declared as variables of a class type.
+- (AP 1.12.A.1) An **object** is a specific **instance** of a class with defined attributes. Objects are declared as variables of a class type.
 
-- A variable of a reference type holds an object reference, which can be thought of as the memory address of that object.
+- (AP 1.12.B.1) A variable of a reference type holds an object reference, which can be thought of as the memory address of that object.
 
 - An **attribute** or **instance variable** is data the object knows about itself. For example a turtle object knows the direction it is facing or its color.
 
 - A **behavior** or **method** is something that an object can do.  For example a turtle object can go forward 100 pixels.
 
-- A **class hierarchy** can be developed by putting common attributes and behaviors of related classes into a single class called a **superclass**. Classes that **extend** a superclass, called **subclasses**, can draw upon the existing attributes and behaviors of the superclass without replacing these in the code. This creates an **inheritance** relationship from the subclasses to the superclass. Designing and implementing inheritance relationships are outside the scope of the AP Computer Science A course and exam.
+- (AP 1.12.A.2) A **class hierarchy** can be developed by putting common attributes and behaviors of related classes into a single class called a **superclass**. Classes that **extend** a superclass, called **subclasses**, can draw upon the existing attributes and behaviors of the superclass without replacing these in the code. This creates an **inheritance** relationship from the subclasses to the superclass. Designing and implementing inheritance relationships are outside the scope of the AP Computer Science A course and exam.
 
-- All classes in Java are subclasses of the **Object** class.
+- (AP 1.12.A.2) All classes in Java are subclasses of the **Object** class.
 
 AP Practice
 ------------

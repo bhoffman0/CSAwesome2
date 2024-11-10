@@ -1,6 +1,10 @@
 .. include:: ../common.rst
 
-|Time90|
+.. qnum::
+   :prefix: 1-4-
+   :start: 1
+
+|Time45|
 
 Assignment and Input
 =====================================
@@ -428,18 +432,18 @@ Your teacher may suggest that you use a Java IDE with interactive input using th
 Summary
 -------------------
 
-- The assignment operator (``=``) allows a program to initialize or change the
+- (AP 1.4.A.2) The **assignment operator** (``=``) allows a program to initialize or change the
   value stored in a variable. The value of the expression on the right is stored in the variable on the left.
 
-- Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. 
+- (AP 1.4.A.1) Every variable must be assigned a value before it can be used in an expression. That value must be from a compatible data type. 
 
-- A variable is initialized the first time it is assigned a value. 
+- (AP 1.4.A.1) A variable is **initialized** the first time it is assigned a value. 
 
-- Reference types can be assigned a new object or ``null`` if there is no object. The literal ``null`` is a special value used to indicate that a reference is not associated with any object.
+- (AP 1.4.A.1) Reference types can be assigned a new object or ``null`` if there is no object. The literal ``null`` is a special value used to indicate that a reference is not associated with any object.
 
-- During execution, an expression is evaluated to produce a single value. The value of an expression has a type based on the types of the values and operators used in the expression.
+- (AP 1.4.A.3) During execution, an expression is evaluated to produce a single value. The value of an expression has a type based on the types of the values and operators used in the expression.
 
-- Input can come in a variety of forms, such as tactile, audio, visual, or text. The ``Scanner`` class is one way to obtain text input from the keyboard, although input from the keyboard will not be on the AP exam. 
+- (AP 1.4.B.1) Input can come in a variety of forms, such as tactile, audio, visual, or text. The ``Scanner`` class is one way to obtain text input from the keyboard, although input from the keyboard will not be on the AP exam. 
 
 AP Practice
 ------------
