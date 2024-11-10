@@ -158,11 +158,11 @@ In this group activity, you will work together to create an algorithm for a comm
 Summary
 ----------
 
-- The building blocks of algorithms include sequencing, selection, and repetition.
-- Algorithms can contain selection, through decision making, and repetition, via looping.
-- Selection occurs when a choice of how the execution of an algorithm will proceed is based on a true or false decision.
-- Repetition is when a process repeats itself until a desired outcome is reached.
-- The order in which sequencing, selection, and repetition are used contributes to the outcome of the algorithm.
+- (AP 2.1.A.1) The building blocks of algorithms include sequencing, selection, and repetition.
+- (AP 2.1.A.2) Algorithms can contain selection, through decision making, and repetition, via looping.
+- (AP 2.1.A.3) Selection occurs when a choice of how the execution of an algorithm will proceed is based on a true or false decision.
+- (AP 2.1.A.4) Repetition is when a process repeats itself until a desired outcome is reached.
+- (AP 2.1.A.5) The order in which sequencing, selection, and repetition are used contributes to the outcome of the algorithm.
 
 
 
