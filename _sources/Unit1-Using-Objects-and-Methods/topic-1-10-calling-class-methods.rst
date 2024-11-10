@@ -1,5 +1,8 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-10-
+   :start: 1
 
 |Time45|
 
@@ -426,17 +429,19 @@ to place the base of the ladder on the edge of the moat.
 Summary
 ----------
 
-- Class methods are associated with the class (not instances of the class which we will see in later lessons). 
+- (AP 1.10.A.1) Class methods are associated with the class (not instances of the class which we will see in later lessons). 
 
-- Class methods include the keyword **static** in the header before the method name.
+- (AP 1.10.A.2) Class methods include the keyword **static** in the header before the method name.
 
-- A **non-void method** returns a value that is the same type as the **return type** in the header. 
+- (AP 1.9.B.1) A void method does not have a return value and is therefore not called as part of an expression.
 
-- To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression. A void method does not have a return value and is therefore not called as part of an expression.
+- (AP 1.9.B.2) A **non-void method** returns a value that is the same type as the **return type** in the header. 
+
+- (AP 1.9.B.2) To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression. 
 
 - Common errors with methods are mismatches in the order or type of arguments, return values, and forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out.
 
-- Class methods are typically called using the class name along with the dot operator. When the method call occurs in the defining class, the use of the class name is optional in the call.
+- (AP 1.10.A.2) Class methods are typically called using the class name along with the dot operator. When the method call occurs in the defining class, the use of the class name is optional in the call.
 
 
 AP Practice

@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-6-
+   :start: 1
+
 |Time45|
 
 
@@ -223,10 +227,10 @@ partner can get the highest score!
 Summary
 -------------------
 
-- Compound assignment operators (``+=``, ``-=``, ``*=``, ``/=``, ``%=``) can be
+- (AP 1.6.A.1) Compound assignment operators (``+=``, ``-=``, ``*=``, ``/=``, ``%=``) can be
   used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the current value of the variable on the left and the value on the right and then assigns the resulting value to the variable on the left.
 
-- The increment operator (``++``) and decrement operator (``--``) are used to
+- (AP 1.6.A.2) The increment operator (``++``) and decrement operator (``--``) are used to
   add 1 or subtract 1 from the stored value of a numeric variable. The new value is
   assigned to the variable.
 

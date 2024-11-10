@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-7-
+   :start: 1
+
 |Time45|
 
 
@@ -155,22 +159,9 @@ Try the Java program below that creates a Turtle object called ``yertle`` using 
             String expect = "yertle.forward";
 
             int count = countOccurences(code, expect);
-            boolean passed = (count >= 3);
-            passed = getResults("3+", "" + count, "yertle.forward() count", passed);
+            boolean passed = (count >= 2);
+            passed = getResults("2+", "" + count, "yertle.forward() count", passed);
             
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String expect = "yertle.turnLeft()";
-
-            int count = countOccurences(code, expect);
-
-            boolean passed = count >= 1;
-            passed = getResults("1+ time(s)", "" + count + " time(s)", "yertle.turnLeft()", passed);
             assertTrue(passed);
         }
     }
@@ -406,19 +397,19 @@ Make yertle the Turtle draw a shape.  For example, have it draw a square or a zi
 Summary
 -----------
 
-- **Libraries** are collections of classes written by other programmers. 
+- (AP 1.7.A.1) **Libraries** are collections of classes written by other programmers. 
 
-- An **Application Programming Interface (API)** specification informs the programmer how to use classes in a library. 
+- (AP 1.7.A.1) An **Application Programming Interface (API)** specification informs the programmer how to use classes in a library. 
 
-- Documentation found in API specifications and libraries is essential to understanding the attributes and behaviors of a class defined by the API. 
+- (AP 1.7.A.1) Documentation found in API specifications and libraries is essential to understanding the attributes and behaviors of a class defined by the API. 
 
-- Classes in the APIs and libraries are grouped into **packages** that can be imported into a program. 
+- (AP 1.7.A.1) Classes in the APIs and libraries are grouped into **packages** that can be imported into a program. 
 
-- A **class** defines a specific reference type and is the building block of object-oriented programming. Existing classes and class libraries can be utilized to create objects.
+- (AP 1.7.A.1) A **class** defines a specific reference type and is the building block of object-oriented programming. Existing classes and class libraries can be utilized to create objects.
 
-- **Attributes** refer to the data related to the class and are stored in variables. 
+- (AP 1.7.A.2) **Attributes** refer to the data related to the class and are stored in variables. 
 
-- **Behaviors** refer to what instances of the class can do (or what can be done with it) and are defined by methods.
+- (AP 1.7.A.2) **Behaviors** refer to what instances of the class can do (or what can be done with it) and are defined by methods.
 
 
 .. datafile:: turtleClasses.jar

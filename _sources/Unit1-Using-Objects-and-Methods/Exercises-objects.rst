@@ -1,3 +1,6 @@
+.. qnum::
+   :prefix: 1-25-
+   :start: 1
 
 Multiple Choice Exercises for Unit 1b (1.9-1.15)    
 =================================================

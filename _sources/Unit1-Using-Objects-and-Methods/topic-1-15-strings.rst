@@ -1,6 +1,10 @@
 .. include:: ../common.rst
 
-|Time45|
+.. qnum::
+   :prefix: 1-15-
+   :start: 
+
+|Time90|
 
 Strings
 ========
@@ -797,16 +801,7 @@ Create a program that takes a word and transforms it to Pig Latin using String m
    import java.io.*;
 
    public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "* in Pig Latin is *ay";
-           boolean passed = getResultsRegEx(expect, output, "Expected output from main");
-           assertTrue(passed);
-       }
-
+   {   
        @Test
        public void testMethod() throws IOException
        {
@@ -817,7 +812,16 @@ Create a program that takes a word and transforms it to Pig Latin using String m
 				"pigLatin(\"java\") should return \"avajay\"");
            assertTrue(passed);
        }
-       
+       @Test
+       public void testMethod2() throws IOException
+       {
+           Object[] args = {"pig"};
+           String output = getMethodOutput("pigLatin", args);
+           String expect = "igpay";
+           boolean passed = getResults(expect, output, 
+				"pigLatin(\"pig\") should return \"igpay\"");
+           assertTrue(passed);
+       }
        @Test
        public void testContainsSubstring()
        {
@@ -837,28 +841,27 @@ Create a program that takes a word and transforms it to Pig Latin using String m
 Summary
 -------------------
 
-- A ``String`` object represents a sequence of characters and can be created by using a string literal.
+- (AP 1.15.A.1) A ``String`` object represents a sequence of characters and can be created by using a string literal.
 
-- The ``String`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default.
+- (AP 1.15.A.2) The ``String`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default.
 
 - String objects can be created by using string literals (String s = "hi";) or by calling the String class constructor (String t = new String("bye");).
 
-- A String object is immutable, meaning once a String object is created, its attributes cannot be changed. Methods called on a String object do not change the content of the String object.
+- (AP 1.15.A.3) A String object is **immutable**, meaning once a String object is created, its attributes cannot be changed. Methods called on a String object do not change the content of the String object.
 
-- Two String objects can be concatenated together or combined using the + or += operator, resulting in a new String object. 
+- (AP 1.15.A.4) Two String objects can be concatenated together or combined using the + or += operator, resulting in a new String object. 
 
-- A primitive value can be concatenated with a String object. This causes the implicit conversion of the primitive value to a String object.
+- (AP 1.15.A.4) A primitive value can be concatenated with a String object. This causes the implicit conversion of the primitive value to a String object.
 
-- A String object can be concatenated with any object, which implicitly calls the object’s ``toString`` method (a behavior which is guaranteed to exist by the inheritance relationship every class has with the Object class). An object’s ``toString`` method returns a string value representing the object. Subclasses of Object often **override** the toString method with class-specific implementation. Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass, but the behavior of the method is specific to the subclass. Overriding the ``toString`` method of a class is outside the scope of the AP CSA exam.
+- (AP 1.15.A.5) A String object can be concatenated with any object, which implicitly calls the object’s ``toString`` method (a behavior which is guaranteed to exist by the inheritance relationship every class has with the Object class). An object’s ``toString`` method returns a string value representing the object. Subclasses of Object often **override** the toString method with class-specific implementation. Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass, but the behavior of the method is specific to the subclass. Overriding the ``toString`` method of a class is outside the scope of the AP CSA exam.
 
 - **index** - A number that represents the position of a character in a string.  The first character in a string is at index 0.
 - **length** - The number of characters in a string.
 - **substring** - A new string that contains a copy of part of the original string.
 
-- A String object has index values from 0 to one less than the length of the string. Attempting to access indices outside this range will result in an ``IndexOutOfBoundsException``.
+- (AP 1.15.B.1) A String object has index values from 0 to one less than the length of the string. Attempting to access indices outside this range will result in an ``IndexOutOfBoundsException``.
 
-
-- The following String methods and constructors, including what they do and when they are used, are part of the |AP CSA Reference Sheet| that you can use during the exam:
+- (AP 1.15.B.2) The following String methods and constructors, including what they do and when they are used, are part of the |AP CSA Reference Sheet| that you can use during the exam:
 
   - **String(String str)** : Constructs a new String object that represents the same sequence of characters as str.
 

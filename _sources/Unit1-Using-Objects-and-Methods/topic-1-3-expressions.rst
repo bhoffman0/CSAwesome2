@@ -1,8 +1,12 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-3-
+   :start: 1
 
+|Time45|
 
-Expressions and Output
+Expressions and Output 
 ==============================
 
 Output
@@ -122,7 +126,7 @@ What if you wanted to print out a double quote " character? Since the double quo
 Expressions and Operators
 --------------------------
 
-**Arithmetic Expressions** consist of numeric values, variables, and arithmetic operators that evaluate to a single numerical value.  For example, the expression ``2 + 3`` evaluates to 5.
+**Arithmetic Expressions** consist of numeric values, variables, and arithmetic operators that evaluate to a single numerical value.  For example, the expression ``2 + 3`` evaluates to 5.  
 
 
 
@@ -284,7 +288,7 @@ The Remainder Operator
 
 The operator ``%`` in Java is the **remainder** operator. Like the other
 arithmetic operators is takes two operands. Mathematically it returns the
-remainder after dividing the first number by the second, using truncating integer division.
+remainder after dividing the first number by the second, using truncating integer division. 
 For instance, ``5 % 2`` evaluates to 1 since 2 goes into 5 two times
 with a remainder of 1.
 
@@ -305,13 +309,16 @@ and ``5 % 2``.
 
 Sometimes people—including Professor Lewis in the next video—will call ``%``
 the **modulo**, or **mod**, operator. That is not actually correct though the
-difference between remainder and modulo, which uses Euclidean division instead
-of truncating integer division, only matters when negative operands are involved
-and the signs of the operands differ. With positive operands, remainder and mod give the same results.
+difference between remainder and modulo, which uses Euclidean division instead 
+of truncating integer division, only matters when negative operands are involved 
+and the signs of the operands differ. With positive operands, remainder and mod give the same results. 
 Java does have a method ``Math.floorMod`` in the ``Math`` class if you need to use modulo instead of remainder, but ``%`` is all you need in the AP exam.
 
+.. |video2| raw:: html
 
-Here’s the `video <https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis>`_.
+   <a href="https://www.youtube.com/watch?v=jp-T9lFISlI&ab_channel=colleenlewis" target="_blank">video</a>
+
+Here’s the |video2|.
 
 .. youtube:: jp-T9lFISlI
     :width: 700
@@ -490,35 +497,32 @@ In this programming challenge, you can work in pairs to create a pay calculator 
 Summary
 -------------------
 
-- In Java, `System.out.print` and `System.out.println` are output statements that display information on the computer screen. `System.out.println` moves the cursor to a new line after the information has been displayed, while `System.out.print` does not.
+- (AP 1.3.A.1) `System.out.print` and `System.out.println` are Java output statements that display information on the computer screen. `System.out.println` moves the cursor to a new line after the information has been displayed, while `System.out.print` does not.
 
-- **Escape sequences** are special sequences of characters that can be included in a string. They start with a `\` and have a special meaning in Java. Escape sequences used in this course include double quote `\”`, backslash `\`, and newline `\n`.
+- (AP 1.3.B.1) A **literal** is the code representation of a fixed value, which can be a string or a numerical value. 
 
-- A **literal** is the code representation of a fixed value, which can be a string or a numerical value. A **string literal** is zero to many characters enclosed in starting and ending double quotes. 
+- (AP 1.3.B.2) A **string literal** is a sequence of zero to many characters enclosed in starting and ending double quotes. 
 
-- **Arithmetic expressions**, which consist of numeric values, variables, and operators, include expressions of type  ``int`` and ``double``.
+- (AP 1.3.B.3) **Escape sequences** are special sequences of characters that can be included in a string. They start with a `\` and have a special meaning in Java. Escape sequences used in this course include double quote `\”`, backslash `\`, and newline `\n`.
 
-- The arithmetic **operators** consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
+- (AP 1.3.C.1) **Arithmetic expressions**, which consist of numeric values, variables, and operators, include expressions of type  ``int`` and ``double``.
+
+- (AP 1.3.C.2) The arithmetic **operators** consist of ``+``, ``-``, ``*`` , ``/``, and ``%``
   also known as addition, subtraction, multiplication, division, and remainder. 
 
-- The **remainder operator %** is used to compute the remainder when one number is divided by another number.
+- (AP 1.3.C.2) An arithmetic operation that uses two ``int`` values will evaluate to an ``int`` value. With integer division, any decimal part in the result will be thrown away.
 
-- An arithmetic operation that uses two ``int`` values will evaluate to an
-  ``int`` value. With integer division, any decimal part in the result will be
-  thrown away.
+- (AP 1.3.C.2) An arithmetic operation that uses at least one ``double`` value will evaluate to a ``double`` value. 
 
-- An arithmetic operation that uses at least one ``double`` value will evaluate
-  to a ``double`` value. 
+- (AP 1.3.C.3) When dividing numeric values that are both int values, the result is only the integer portion of the quotient. Anything after the decimal point is thrown away. When dividing numeric values that use at least one double value, the result is the double quotient as expected.
 
-- Multiple operators can be used to combine expressions into **compound expressions**.
+- (AP 1.3.C.4) The **remainder (modulo) operator %** is used to compute the remainder when one number is divided by another number.
 
-- During evaluation, numeric values are associated with operators according to
-  **operator precedence** to determine how they are grouped. (``*``, ``/``,
-  ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to
-  group those.)
+- (AP 1.3.C.5) Multiple operators can be used to combine expressions into **compound expressions**.
 
-- An attempt to divide an integer by zero will result in an ``ArithmeticException``.
+- (AP 1.3.C.5) During evaluation, numeric values are associated with operators according to **operator precedence** to determine how they are grouped. ``*``, ``/``, ``%`` have precedence over ``+`` and ``-``, unless parentheses are used to group those to be evaluated first. Operators with the same precedence are evaluated from left to right.
 
+- (AP 1.3.C.6) An attempt to divide an integer by zero will result in an ``ArithmeticException``.
 
 
 AP Practice

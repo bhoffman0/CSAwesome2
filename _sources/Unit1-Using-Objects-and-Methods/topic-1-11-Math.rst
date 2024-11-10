@@ -1,6 +1,10 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-11-
+   :start: 1
 
+|Time45|
 
 Using the Math Class
 ====================
@@ -22,9 +26,17 @@ The ``Math`` class is part of the ``java.lang`` package. Classes in the ``java.l
 Mathematical Functions
 -----------------------
 
+.. |AP CSA Reference Sheet| raw:: html
+
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
+
+.. |Math class Javadocs| raw:: html
+
+   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" target="_blank">Math class Javadocs</a>
 
 
-The ``Math`` class contains the following methods that are in the AP CSA subset. There are more ``Math`` methods, outside of what you need on the AP exam, that you can find in the `Math class Javadocs <https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html>`_.
+
+The ``Math`` class contains the following methods that are in the AP CSA subset. There are more ``Math`` methods, outside of what you need on the AP exam, that you can find in the |Math class Javadocs|.
 
 - ``int abs(int)`` : Returns the absolute value of an int value (which is the value of a number without its sign, for example ``Math.abs(-4)`` = 4).
 
@@ -40,7 +52,7 @@ The ``Math`` class contains the following methods that are in the AP CSA subset.
 .. note::
 
    All the ``Math`` methods that you may need to use or understand on the AP
-   exam are listed in the `AP CSA Java Quick Reference Sheet <https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf>`_ that you can use during the
+   exam are listed in the |AP CSA Reference Sheet| that you can use during the
    exam.
 
 These Math methods are mathematical functions that compute new values from their arguments. You may be able to guess what ``abs``, ``pow``, and ``sqrt`` do, from their abbreviations. 
@@ -415,7 +427,7 @@ words, add the difference between the two ranges, 1 in this case.
 
     - Math.random() returns a random number between 0.0-0.99.
 
-    - **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number.
+    - **(int)(Math.random() * range) + min** moves the random number into a range starting from a minimum number.
 
     - The range is the **(max number - min number + 1)**.
 
@@ -488,7 +500,7 @@ value. The table below shows some applications of that general recipe.
 
 .. mchoice:: qrand_1
    :practice: T
-   :answer_a: Math.random() &lt; 0.4
+   :answer_a: Math.random() < 0.4
    :answer_b: Math.random() > 0.4
    :answer_c: Math.random() == 0.4
    :correct: a
@@ -524,7 +536,7 @@ value. The table below shows some applications of that general recipe.
 
 .. mchoice:: qrand_4
    :practice: T
-   :answer_a: Math.random() &lt; 0.25
+   :answer_a: Math.random() < 0.25
    :answer_b: Math.random() > 0.25
    :answer_c: Math.random() == 0.25
    :correct: b
@@ -752,11 +764,11 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
 Summary
 -------------------
 
-- The ``Math`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default.
+- (AP 1.11.A.1) The ``Math`` class is part of the ``java.lang`` package. Classes in the ``java.lang`` package are available by default.
 
-- The Math class contains only class (static) methods. They can be called using **Math**.method(); for each method.
+- (AP 1.11.A.2) The Math class contains only class (static) methods. They can be called using **Math**.method(); for each method.
 
-- The following static Math methods are part of the Java Quick Reference:
+- (AP 1.11.A.2) The following static Math methods are part of the Java Quick Reference:
 
   - **int abs(int)** : Returns the absolute value of an int value (which means no negatives).
   - **double abs(double)** : Returns the absolute value of a double value.
@@ -764,6 +776,6 @@ Summary
   - **double sqrt(double)** :  Returns the positive square root of a double value.
   - **double random()** :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0)!
 
-- The values returned from Math.random can be manipulated to produce a random int or double in a defined range.
+- (AP 1.11.A.3) The values returned from ``Math.random()`` can be manipulated to produce a random int or double in a defined range.
 
-- **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the **(max number - min number + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: ``(int)(Math.random()*6) + 5``.
+- **(int)(Math.random() * range) + min** moves the random number into a range starting from a minimum number. The range is the **(max - min + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: ``(int)(Math.random()*6) + 5``.

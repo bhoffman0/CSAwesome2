@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-13-
+   :start: 
+
 |Time45|
 
 Creating and Initializing Objects: Constructors
@@ -602,29 +606,29 @@ You will use the constructor(s) to create the CustomTurtles below. You can speci
 Summary
 -------------------
 
-- A class contains **constructors** that are called with the keyword ``new`` to create objects and initialize its attributes. 
+- (AP 1.13.A.1) A class contains **constructors** that are called with the keyword ``new`` to create objects and initialize its attributes. 
 
-- **Constructors** have the same name as the class.
+- (AP 1.13.A.1) **Constructors** have the same name as the class.
 
-- An object is typically created using the keyword new followed by a call to one of the class’s constructors. ``new ClassName()`` creates a new object of the specified class and calls a constructor.
+- (AP 1.13.C.1) An object is typically created using the keyword new followed by a call to one of the class’s constructors. ``new ClassName()`` creates a new object of the specified class and calls a constructor.
 
-- The new object is saved in a variable of a **reference type** which holds an object reference or null if there is no object.
+- (AP 1.13.B.1) The new object is saved in a variable of a **reference type** which holds an object reference or null if there is no object.
 
-- A **constructor signature** consists of the constructor’s name, which is the same as the class name, and the ordered list of parameter types. 
+- (AP 1.13.A.2) A **constructor signature** consists of the constructor’s name, which is the same as the class name, and the ordered list of parameter types. 
 
-- The **parameter list**, in the header of a constructor, lists the types of the values that are passed and their variable names.
+- (AP 1.13.A.2) The **parameter list**, in the header of a constructor, lists the types of the values that are passed and their variable names.
 
-- Constructors are said to be **overloaded** when there are multiple constructors with different signatures. They must differ in the number, type, or order of parameters.
+- (AP 1.13.A.3) Constructors are said to be **overloaded** when there are multiple constructors with different signatures. They must differ in the number, type, or order of parameters.
 
 - A **no-argument constructor** is a constructor that doesn't take any passed in values (arguments).
 
-- **Parameters** allow constructors to accept values to establish the initial values of the attributes of the object.
+- (AP 1.13.C.2) **Parameters** allow constructors to accept values to establish the initial values of the attributes of the object.
 
-- A constructor **argument** is a value that is passed into a constructor when the constructor is called. The arguments passed to a constructor must be compatible in order and number with the types identified in the parameter list in the constructor signature. 
+- (AP 1.13.C.3) A constructor **argument** is a value that is passed into a constructor when the constructor is called. The arguments passed to a constructor must be compatible in order and number with the types identified in the parameter list in the constructor signature. 
 
-- When calling constructors, arguments are passed using call by value. **Call by value** initializes the parameters with copies of the arguments.
+- (AP 1.13.C.3) When calling constructors, arguments are passed using call by value. **Call by value** initializes the parameters with copies of the arguments.
 
-- A constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.
+- (AP 1.13.C.4) A constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.
 
 AP Practice
 ------------

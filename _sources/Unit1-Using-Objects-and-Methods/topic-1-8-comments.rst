@@ -1,5 +1,9 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-8-
+   :start: 1
+
 |Time45|
 
 Documentation with Comments and Preconditions
@@ -163,7 +167,7 @@ Try to break the preconditions of the ``Turtle forward`` method below. Try to ma
         public static void main(String[] args)
         {
             World habitat = new World(300, 300);
-            Turtle yertle = new Turtle(world);
+            Turtle yertle = new Turtle(habitat);
 
             // Change 100 pixels below to a larger number
             //   to try to go off screen to break preconditions
@@ -286,13 +290,13 @@ Working in pairs or groups, come up with 4 steps that a user must do to purchase
 Summary
 -------
 
-- Comments are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run. 
+- (AP 1.8.A.1) **Comments** are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run. 
 
-- Three types of comments in Java include ``/* */``, which generates a block of comments, ``//``, which generates a comment on one line, and ``/** */``, which are Javadoc comments and are used to create API documentation.
+- (AP 1.8.A.1) Three types of comments in Java include ``/* */``, which generates a block of comments, ``//``, which generates a comment on one line, and ``/** */``, which are Javadoc comments and are used to create API documentation.
 
-- A precondition is a condition that must be true just prior to the execution of a section of program code in order for the method to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.
+- (AP 1.8.A.2) A **precondition** is a condition that must be true just prior to the execution of a section of program code in order for the method to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.
 
-- A postcondition is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned  or the current value of the attributes of an object.
+- (AP 1.8.A.3) A **postcondition** is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned  or the current value of the attributes of an object.
 
 
 AP Practice

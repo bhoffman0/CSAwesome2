@@ -1,5 +1,11 @@
 .. include:: ../common.rst
 
+.. qnum::
+   :prefix: 1-1-
+   :start: 1
+
+|Time45|
+
 Introduction to Algorithms, Programming, and Compilers
 =======================================================
 
@@ -31,7 +37,7 @@ Algorithms
    single: algorithm
    single: sequence
 
-**Algorithms** define step-by-step processes in order to complete a task or solve a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game.
+**Algorithms** define step-by-step processes in order to complete a task or solve a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
 
 Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
@@ -114,7 +120,7 @@ Computers don't actually speak Java so we have to **compile** (translate) Java s
 Java Keywords
 ----------------
 
-**Keywords** are reserved words that have special meaning in Java. Keywords such as ``public``, ``class``, and ``void``  must be in lowercase, but class names such as ``System`` and ``String`` are capitalized.
+**Keywords** are reserved words that have special meaning in Java. Keywords such as ``public``, ``class``, and ``void``  must be in lowercase, but class names such as ``System`` and ``String`` are capitalized.  
 
 .. hparsons:: mp-main-method-order-1
     :language: java
@@ -218,9 +224,16 @@ Syntax Errors and Debugging
 
 
 
+.. |Grace Hopper| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
+
+.. |Rubber duck debugging| raw:: html
+
+   <a href="https://rubberduckdebugging.com/" target="_blank">Rubber duck debugging</a>
 
 
-**Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{`` or open quote ``"``, but no close curly brace ``}`` or close quote ``"``. Informally, a syntax error is called a **bug**, and the process of removing errors is called **debugging**. An early computer science pioneer `Grace Hopper <https://en.wikipedia.org/wiki/Grace_Hopper>`_ documented a real bug, a moth that flew into a computer in 1947!
+**Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{`` or open quote ``"``, but no close curly brace ``}`` or close quote ``"``. Informally, a syntax error is called a **bug**, and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
 
 .. figure:: Figures/firstbug.jpg
     :width: 300px
@@ -232,7 +245,7 @@ Syntax Errors and Debugging
 
 The compiler tries to run your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.
 
-Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. `Rubber duck debugging <https://rubberduckdebugging.com/>`_ is a lot of fun!
+Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. |Rubber duck debugging| is a lot of fun!
 
 .. youtube:: auv10y-dN4s
     :width: 700
@@ -496,7 +509,7 @@ An **exception** is a type of run-time error that occurs as a result of an unexp
    :language: java
    :autograde: unittest
 
-   The following code has a run-time error. When you click on run, the compiler will not catch it since it is not a syntax error. The program will run and try to compute 3 divided by 0 which cannot be computed. This will cause a run-time error, and the program will report an **ArithmeticException**. Try it out!
+   The following code has a run-time error. When you click on run, the compiler will not catch it since it is not a syntax error. The program will run and try to compute 3 divided by 0 which cannot be computed. This will cause a run-time error, and the program will report an **ArithmeticException**. Try it out! 
    ~~~~
    public class DivideByZero
    {
@@ -526,7 +539,7 @@ An **exception** is a type of run-time error that occurs as a result of an unexp
 
 
 Run-time errors can be difficult to find because they don't always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome. We'll see an example of this after learning about expressions in the next lessons.
-
+   
 
 Comments
 --------
@@ -555,7 +568,7 @@ working with you. Here are some examples of good commenting:
     :align: left
     :alt: Rubber Duck
 
-In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you're working alone, you may want to explain the code to a rubber duck or another toy using `Rubber duck debugging <https://rubberduckdebugging.com/>`_.
+In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
 Working in pairs, debug the following code. Can you find all the bugs and get the code to run?
 
@@ -601,11 +614,11 @@ Working in pairs, debug the following code. Can you find all the bugs and get th
 Summary
 -------------------
 
-- **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
+- (AP 1.1.A.1) **Algorithms** define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.
 
-- **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
+- (AP 1.1.A.2) **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
-- An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
+- (AP 1.1.B.1) An **Integrated Development Environment (IDE)** is often used to write programs because it provides tools for a programmer to write, compile, and run code.
 
 - A basic Java program looks like the following:
 
@@ -627,15 +640,15 @@ Summary
 
 - Java statements end in ``;`` (semicolon). ``{ }`` are used to enclose blocks of code. ``//`` and ``/* */`` are used for comments.
 
-- A **compiler** translates Java code into a class file that can be run on your computer. **Syntax errors** are reported to you by the compiler if the Java code is not correctly written. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
+- (AP 1.1.B.2) A **compiler** translates Java code into a class file that can be run on your computer and checks code for some errors. Errors detectable by the compiler need to be fixed before the program can be run. 
 
-- A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.
+- (AP 1.1.C.1) A **syntax error** is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler. Some things to check for are ``;`` at end of lines containing complete statements and matching ``{ }``, ``()``, and ``""``.
 
-- A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
+- (AP 1.1.C.2) A **logic error** is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.
 
-- A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
+- (AP 1.1.C.3) A **run-time error** is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.
 
-- An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
+- (AP 1.1.C.4) An **exception** is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.
 
 AP Practice
 ------------
