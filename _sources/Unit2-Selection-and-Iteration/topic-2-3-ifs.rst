@@ -1,21 +1,22 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 3-2-
+   :prefix: 2-3-
    :start: 1
 
+|Time90|
 
-|Time45|
-
-if Statements and Control Flow
-===============================
+if Statements
+=================
 
 .. index::
-   single: conditional
+   single: selection
    single: if
-   pair: conditional; if
+   single: else
 
-If you took an AP CSP course or used a block programming language like Scratch, you've probably seen if blocks or statements before. *If statements* are found in all programming languages as a way to make choices. Here's a comparison of ifs in App Inventor blocks, AP CSP block and pseudocode and Java ifs.
+**If statements** are found in all programming languages as a way to choose between different paths in an algorithm. An if statement is a type of **selection** statement that changes the sequential execution. It affects the flow of control by executing different segments of code based on the value of a **Boolean expression**.
+
+If you took an AP CSP course or used a block programming language like Scratch, you've probably seen if blocks or statements before.  Here's a comparison of ifs in App Inventor blocks, AP CSP block code and pseudocode, and Java ifs.
 
 .. figure:: Figures/BlocksIfComparison.png
     :width: 100%
@@ -24,7 +25,11 @@ If you took an AP CSP course or used a block programming language like Scratch, 
 
     Figure 1: Comparison of App Inventor if block, AP CSP ifs, and Java if statements
 
-The statements in a Java main method normally run or execute one at a time in the order they are found from top to bottom.   **If statements** (also called **conditionals** or **selection**) change the flow of control through the program so that some code is only run when something is true.  In an if statement, if the condition is true then the next statement or a block of statements will execute.  If the condition is false then the next statement or block of statements is skipped.
+One-way selection
+------------------
+
+A one-way selection (if statement) is used when there is a segment of code (called the **body** of the if statement) to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true. If the Boolean expression is false, the body of the if statement is skipped and the program continues with the next statement after the if statement.
+
 
 .. figure:: Figures/Condition.png
     :width: 200px
@@ -33,9 +38,7 @@ The statements in a Java main method normally run or execute one at a time in th
 
     Figure 2: The order that statements execute in a conditional
 
-
-A conditional uses the keyword ``if`` followed by Boolean expression inside of  an open parenthesis ``(`` and a close parenthesis ``)`` and then followed by a single statement or block of statements.  The single statement or block of statements are only executed if the condition is true.  The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.
-
+The open curly brace ``{`` and a close curly brace ``}`` are used to group a block of statements together as the body of the if statement.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.
 
 .. code-block:: java
 
@@ -62,7 +65,7 @@ A conditional uses the keyword ``if`` followed by Boolean expression inside of  
 
 Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).
 
-.. activecode:: lccb1
+.. activecode:: if-raining
    :language: java
    :autograde: unittest
 
@@ -102,7 +105,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 
 |Exercise| **Check your understanding**
 
-.. fillintheblank:: 5_1_1_falseOutput
+.. fillintheblank:: iffalseOutput
 
    Try changing the code above to ``boolean isRaining = false;``.  What will it print?
 
@@ -152,7 +155,6 @@ Most if statements have a boolean condition that uses relational operators like 
    }
 
    ====
-   // Test Code for Lesson 3.2.1 - Activity 1 - if-relational
    import static org.junit.Assert.*;
 
    import org.junit.Test;
@@ -290,7 +292,7 @@ Most if statements have a boolean condition that uses relational operators like 
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qcb1_2
+.. mchoice:: mcq-if-trace
    :practice: T
    :answer_a: 3
    :answer_b: 6
@@ -311,7 +313,7 @@ Most if statements have a boolean condition that uses relational operators like 
      int x = 3;
      if (x > 2)
      {
-         x = x * 2;
+        x = x * 2;
      }
      if (x > 4)
      {
@@ -320,8 +322,420 @@ Most if statements have a boolean condition that uses relational operators like 
      System.out.print(x);
 
 
-.. More practice with if == and < > Active code.
-    Note always use == not = in an if statement! Test not assign.
+Two-way selection
+------------------
+
+What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might flip a coin and do one thing if it lands as heads and another if it is tails.  In programming, you can use the **if** keyword followed by a statement or block of statements and then the **else** keyword also followed by a statement or block of statements.
+
+
+.. code-block:: java
+
+    // A block if/else statement
+    if (boolean expression)
+    {
+       statement1;
+       statement2;
+    }
+    else
+    {
+       do other statement;
+       and another one;
+    }
+
+.. code-block:: java
+
+    // A single if/else statement
+    if (boolean expression)
+        Do statement;
+    else
+        Do other statement;
+
+
+A two-way selection (if-else statement) is used when there are two segments of code—one to be executed when the Boolean expression is true and another segment for when the Boolean expression is false. In this case, the body of the if is executed when the Boolean expression is true, and the body of the else is executed when the Boolean expression is false.
+
+The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.
+
+.. figure:: Figures/Condition-two.png
+    :width: 350px
+    :align: center
+    :figclass: align-center
+
+    Figure 3: The order that statements execute in a if/else statement
+
+.. activecode:: ifHeads
+   :language: java
+   :autograde: unittest
+
+   Try the following code. If ``isHeads`` is true it will print ``Let's go to the game`` and then ``after conditional``.
+   ~~~~
+   public class Test2
+   {
+       public static void main(String[] args)
+       {
+           boolean isHeads = true;
+           if (isHeads)
+           {
+               System.out.println("Let's go to the game");
+           }
+           else
+           {
+               System.out.println("Let's watch a movie");
+           }
+           System.out.println("after conditional");
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testMain() throws IOException
+       {
+           String output = getMethodOutput("main");
+           String expect = "Let's go to the game\nafter conditional";
+
+           boolean passed = getResults(expect, output, "Expected output from main", true);
+           assertTrue(passed);
+       }
+   }
+
+|Exercise| **Check your understanding**
+
+.. fillintheblank:: falseElse
+
+   Try changing the code above to ``boolean isHeads = false;``.  What line will be printed before the ``after conditional``?
+
+   -    :^Let's watch a movie$: Correct.  If the boolean value is false, the statement following the else will execute
+        :.*: Try it and see
+
+
+If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: licenseifelse
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age's value to 15 and then run it again to see the result of the print statement in the else part.
+   Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements.
+   ~~~~
+   public class DriversLicenseTest
+   {
+       public static void main(String[] args)
+       {
+           int age = 16;
+           if (age >= 16)
+           {
+               System.out.println("You can get a driver's license in most states!");
+           }
+           else
+           {
+               System.out.println(
+                       "Sorry, you need to be older to get a driver's license.");
+           }
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testCodeContains() throws IOException
+       {
+           String target = "age >= 15";
+           boolean passed = checkCodeContains("check age >= 15", target);
+           assertTrue(passed);
+       }
+   }
+
+.. parsonsprob:: ifelseevenOdd
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd" otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on Check Me to see if you are right.
+   -----
+   public class EvenOrOdd
+   {
+   =====
+       public static void main(String[] args)
+       {
+       =====
+           int x = 92;
+           =====
+           if (x % 2 == 0)
+           =====
+           {
+               System.out.println("x is even");
+           }
+           =====
+           else
+           =====
+           {
+               System.out.println("x is odd");
+           }
+           =====
+       }
+       =====
+   }
+
+
+|CodingEx| **Coding Exercise**
+
+
+
+.. activecode:: scoreifelse
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Try the following code. Add an else statement to the if statement that prints out "Good job!" if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out "Good job" if the score is greater than 20?
+   ~~~~
+   public class ScoreTest
+   {
+       public static void main(String[] args)
+       {
+           int score = 8;
+           if (score <= 9)
+           {
+               System.out.println("Try for a higher score!");
+           }
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       @Test
+       public void testChangedCode()
+       {
+           String origCode =
+                   "public class ScoreTest   {      public static void main(String[] args)      {     "
+                       + "   int score = 8;        if (score <= 9)         {           "
+                       + " System.out.println(\"Try for a higher score!\");        }      }} ";
+
+           boolean changed = codeChanged(origCode);
+           assertTrue(changed);
+       }
+
+       @Test
+       public void testCodeContainsElse()
+       {
+           boolean ifCheck2 = checkCodeContains("else", "else");
+           assertTrue(ifCheck2);
+       }
+
+       @Test
+       public void testCodeContains20()
+       {
+           String target1 = removeSpaces("score <= 20");
+           String target2 = removeSpaces("score > 20");
+
+           String code = removeSpaces(getCode());
+
+           boolean passed = code.contains(target1) || code.contains(target2);
+           getResults("true", "" + passed, "Checking for score <= 20 or score > 20", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCodeChange1() throws Exception
+       {
+           String className = "Test1";
+
+           String program = getCode();
+           program = program.replace("ScoreTest", className).replace("public class", "class");
+           program = program.replaceAll("= *[0-9]+;", "= 25;");
+
+           String output = getMethodOutputChangedCode(program, className, "main");
+
+           String expected = "Good job!";
+           boolean passed = output.contains(expected);
+           getResults(expected, output, "Checking output if score is 25", passed);
+           assertTrue(passed);
+       }
+
+       @Test
+       public void testCodeChange2() throws Exception
+       {
+           String className2 = "Test2";
+
+           String program2 = getCode();
+           program2 = program2.replace("ScoreTest", className2).replace("public class", "class");
+           program2 = program2.replaceAll("= *[0-9]+;", "= 5;");
+
+           String output2 = getMethodOutputChangedCode(program2, className2, "main");
+
+           String expected2 = "Try for a higher score!";
+           boolean passed2 = output2.contains(expected2);
+           getResults(expected2, output2, "Checking output if score is 5", passed2);
+           assertTrue(passed2);
+       }
+   }
+
+Math.random() in if Statements
+-------------------------------
+
+The ``Math.random()`` method returns a random number between 0.0 and 1.0.  You can use this method with ``if`` statements to simulate a coin flip or an event occuring a certain percentage of the time. For example, if you want to simulate a coin flip, you can check if the random number is less than 0.5 (halfway between 0 and 1) to simulate a 50% chance of heads or tails:
+
+.. code-block:: java
+
+    if (Math.random() < 0.5)
+    {
+        System.out.println("Heads");
+    }
+    else
+    {
+        System.out.println("Tails");
+    }
+
+If you want to simulate an event occuring 90% of the time, you can check the random number to see if it is less than 0.9 (90% of the way between 0 and 1):
+
+.. code-block:: java
+
+    if (Math.random() < 0.9)
+    {
+        // 90% of the time
+        System.out.println("Event happened");
+    }
+    else 
+    {
+        // 10% of the time
+        System.out.println("Event did not happen");
+    }
+
+
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: mcq-rnd-ifs
+   :practice: T
+   
+   The weather report says there is approximately 25% chance of rain today. Which of the following if statements would print Rain or No Rain to simulate a day with the correct percentages following the weather report? 
+
+   -  .. code-block:: java
+        
+         if (Math.random() < 0.25) { System.out.println("Rain"); }
+       
+      + Correct! This code will print "Rain" 25% of the time.
+
+   -  .. code-block:: java
+        
+         if (Math.random() > 0.75) { System.out.println("Rain"); }
+
+      + Correct. This code will print "Rain" 25% (1 - .75) of the time.
+
+   -  .. code-block:: java
+       
+         if (Math.random() > 0.25) { System.out.println("Rain"); }
+
+      - Incorrect. This code will print "Rain" 75% of the time.
+
+   -  .. code-block:: java
+        
+         if (Math.random() < 0.75) { System.out.println("No Rain"); }
+
+      + Correct! This code will print "No Rain" 75% of the time, so it will rain 25% of the time.
+
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: randomShapes
+    :language: java
+    :autograde: unittest
+    :datafile: turtleClasses.jar
+
+    Add an if/else statement that uses Math.random() to do a coin flip to decide whether to call yertle.turnRight() or yertle.turnLeft. Run the code to see the turtle draw a random shape.
+    ~~~~
+    import java.util.*;
+    import java.awt.*;
+
+    public class RandomTurns
+    {
+        public static void main(String[] args)
+        {
+            World world = new World(500,400);
+            Turtle yertle = new Turtle(world);
+
+            // This is a loop that runs 10 times (you will learn to write loops in later lessons).
+            for(int i = 1; i <= 10; i++)
+            {
+                yertle.forward(20);
+
+                // Write an if/else statement that uses 
+                // Math.random() to do a coin flip (50%) to choose 
+                // between yertle.turnRight() or turnLeft()
+
+
+
+
+
+
+            } // end of loop
+            world.show(true);
+        }
+    }
+    ====
+    import static org.junit.Assert.*;
+
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("RandomTurns");
+        }
+
+       @Test
+       public void testCodeContainsIf()
+       {
+           boolean ifCheck = checkCodeContains("if", "if");
+           assertTrue(ifCheck);
+       }
+       @Test
+       public void testCodeContainsElse()
+       {
+           boolean ifCheck2 = checkCodeContains("else", "else");
+           assertTrue(ifCheck2);
+       }
+       @Test
+       public void testCodeContainsRandom()
+       {
+           boolean ifCheck2 = checkCodeContains("Math.Random()", "Math.random()");
+           assertTrue(ifCheck2);
+       } 
+       @Test
+       public void testCodeContains5()
+       {
+           boolean ifCheck2 = checkCodeContains(".5", ".5");
+           assertTrue(ifCheck2);
+       } 
+    }
+
 
 
 Common Errors with If Statements
@@ -335,11 +749,13 @@ Here are some rules to follow with if statements to avoid some common errors:
 
    - Always use ``==``, not ``=``, in the condition of an if statement to test a variable. One ``=`` assigns, two ``==`` tests!
 
+   - The ``else`` statement matches with the closest ``if`` statement. If you want to match an ``else`` with a different ``if`` statement, you need to use curly braces to group the ``if`` and ``else`` together.
+
 
 |CodingEx| **Coding Exercise**
 
 
-.. activecode:: lccb2-indent
+.. activecode:: if-missing-curlies
    :language: java
    :autograde: unittest
    :practice: T
@@ -387,8 +803,8 @@ Here are some rules to follow with if statements to avoid some common errors:
        }
    }
 
-|Groupwork| Programming Challenge : Magic 8 Ball
-------------------------------------------------
+|Groupwork| Programming Challenge: Magic 8 Ball
+-------------------------------------------------
 
 .. image:: Figures/Magic_eight_ball.png
     :width: 100
@@ -401,30 +817,46 @@ Here are some rules to follow with if statements to avoid some common errors:
    <a href="https://magic-8ball.com/" target="_blank">simulator</a>
 
 
-.. |lesson 2.9| raw:: html
+.. |mathlesson| raw:: html
 
-   <a href="https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html" target="_blank">lesson 2.9</a>
+   <a href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" target="_blank">Math lesson</a>
 
-Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |simulator|.
+Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like ``Signs point to yes!``, ``Very doubtful``, etc. If you've never seen a Magic 8 ball, check out this |simulator|. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the |mathlesson| and remember the formula ``(int) (Math.random() * max) + min``.
 
-We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
-
-.. activecode:: challenge3-2-if-Magic8ball
+.. activecode:: challenge-Magic8ball
    :language: java
    :autograde: unittest
+   :practice: T
 
+   Complete the ``printRandomResponse()`` method to print out 1 of 8 random responses and the ``lucky()`` method to toss a coin and print out "Lucky!" or "No Luck!" based on the result. Run the code multiple times to see the responses.
+   ~~~~
    public class Magic8Ball
    {
-       public static void main(String[] args)
+       public static void printRandomResponse()
        {
-           // Get a random number from 1 to 8
+           // 1. Get a random number from 1 to 8
 
-           // Use if statements to test the random number
-           // and print out 1 of 8 random responses
+           // 2. Use if statements to test the random number
+           //    and print out 1 of 8 random responses
 
-       }
-   }
-
+        }
+        
+        public static void lucky()
+        {
+            // 3. Use Math.random() to toss a coin to choose between 2 choices
+            // 4. Use an if/else statement to test the random number
+            //    and print out "Lucky!" or else "No Luck!"
+      
+        }
+        
+        public static void main(String[] args)
+        {
+            String question = "Will it rain tomorrow?";
+            System.out.println(question);
+            printRandomResponse();
+            lucky();
+        }
+    }
    ====
    import static org.junit.Assert.*;
 
@@ -490,28 +922,41 @@ We encourage you to work in pairs for this challenge. Come up with 8 responses t
 
            int numIfs = countOccurences(code, "if");
 
-           boolean passed = numIfs >= 7;
+           boolean passed = numIfs >= 8;
 
-           passed = getResults("7 or more", "" + numIfs, "Code has at least 7 if statements", passed);
+           passed = getResults("8 or more", "" + numIfs, "Code has at least 8 if statements", passed);
+           assertTrue(passed);
+       }
+       @Test
+       public void testElse()
+       {
+           String expect = "else";
+           boolean passed = checkCodeContains("else statement in lucky() method", target);
            assertTrue(passed);
        }
    }
 
-.. |repl version| raw:: html
+.. |JuiceMind| raw:: html
 
-    <a href="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate#Main.java" target="_blank" style="text-decoration:underline">repl version</a>
+    <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e" target="_blank" style="text-decoration:underline">JuiceMind</a>
 
 
-Here's a |repl version| that uses the Scanner class to first have the user ask a question. You can click on Open in Replit below, and click on Fork to make your own copy, and add your code in from above to try your code with user input.
+.. |replit| raw:: html
 
-.. raw:: html
+    <a href="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java" target="_blank" style="text-decoration:underline">replit</a>
 
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magic8BallTemplate?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+You can make this code more interactive by using the ``Scanner`` class to have the user ask a question first; you can try your code with input in |JuiceMind| or |replit| or a local IDE.
 
 Summary
--------------------
+-------
 
-- if statements test a boolean expression and if it is true, go on to execute the following statement or block of statements surrounded by curly braces  (``{}``) like below.
+- (AP 2.3.A.1) Selection statements change the sequential execution of statements.
+
+- (AP 2.3.A.2) An **if statement** is a type of selection statement that affects the flow of control by executing different segments of code based on the value of a Boolean expression.
+
+- (AP 2.3.A.3) A one-way selection (if statement) is used when there is a segment of code to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true.
+
+- **if statements** test a boolean expression and if it is true, go on to execute the body which is the following statement or block of statements surrounded by curly braces  (``{}``) like below.
 
 .. code-block:: java
 
@@ -529,13 +974,25 @@ Summary
 
 - Relational operators (==, !=, <, >, <=, >=) are used in boolean expressions to compare values and arithmetic expressions.
 
-- Conditional (if) statements affect the flow of control by executing different statements based on the value of a Boolean expression.
+- If statements can be followed by an associated **else** part to form a 2-way branch:
 
+.. code-block:: java
+
+    if (boolean expression)
+    {
+        Do statement;
+    }
+    else
+    {
+        Do other statement;
+    }
+
+- (AP 2.3.A.4) A two-way selection (if-else statement) is used when there are two segments of code—one to be executed when the Boolean expression is true and another segment for when the Boolean expression is false. In this case, the body of the if is executed when the Boolean expression is true, and the body of the else is executed when the Boolean expression is false.
 
 AP Practice
 ------------
 
-.. mchoice:: AP3-2-1
+.. mchoice:: AP2-3-1
     :practice: T
 
     Consider the following code segment.
@@ -587,7 +1044,7 @@ AP Practice
 
 
 
-.. mchoice:: AP3-2-2
+.. mchoice:: AP2-3-2
     :practice: T
 
     Consider the following code segment.
@@ -629,3 +1086,49 @@ AP Practice
     - 5
 
       + Correct! The first if statement is not true. The second one is true since 5 is odd, and x becomes 2. And 2*2 + 1 = 5 is printed out.
+
+
+.. mchoice:: AP2-3-if-else
+    :practice: T
+
+    Consider the following code segment where a range of "High", "Middle", or "Low" is being determined
+    where x is an int and a "High" is 80 and above, a "Middle" is between 50 - 79, and "Low" is below 50.
+
+    .. code-block:: java
+
+        if (x >= 80)
+        {
+           System.out.println("High");
+        }
+
+        if (x >= 50)
+        {
+          System.out.println("Middle");
+        }
+        else
+        {
+           System.out.println("Low");
+        }
+
+    Which of the following initializations for *x* will demonstrate that the code segment will not work as intended?
+
+    - 80
+
+      + This would print out both "High" and "Middle", showing that there is an error in the code. As you will see in the next lesson, one way to fix the code is to add another else in front of the second if.
+
+    - 60
+
+      - This would correctly print out "Middle".
+
+    - 50
+
+      - This would correctly print out "Middle".
+
+    - 30
+
+      - This would print out "Low" which is correct according to this problem description.
+
+    - -10
+
+      - This would print out "Low" which is correct according to this problem description.
+
