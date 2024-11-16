@@ -11,7 +11,6 @@ AP CSA Exam Weighting:
    topic-2-1-algorithms.rst 
    topic-2-2-booleans.rst
    topic-2-3-ifs.rst
-   topic-2-3-if-else.rst
    topic-2-4-nested-ifs.rst
    topic-2-5-compound-ifs.rst
    topic-2-6-DeMorgan.rst
