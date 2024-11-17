@@ -1,0 +1,8 @@
+/* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
+details.ptx-footnote {
+  display: none;
+}
+/* A hack to align |CodingEx| type of images - not working */
+.ptx-content img.contained {
+  float: left;
+}
