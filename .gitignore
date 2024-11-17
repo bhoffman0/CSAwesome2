@@ -8,6 +8,9 @@ _fixed_sources
 .error_schema.log
 pretext/generated
 codechat_config.yaml
+published/
+cli.log
+.devcontainer.json
 
 # Miscellaneous source files
 _sources/Tests/test6.rst
