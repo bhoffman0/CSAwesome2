@@ -91,3 +91,20 @@ version = pkg_resources.require("runestone")[0].version
 options.build.template_args['runestone_version'] = version
 
 from runestone import build  # build is called implicitly by the paver driver.
+
+template_args={'course_id': 'csawesome2beta',
+                       'login_required':'false',
+                       'appname':master_app,
+                       'loglevel': 10,
+                       'course_url':master_url,
+                       'use_services': 'true',
+                       'python3': 'false',
+                       'dburl': 'postgresql://runestone@localhost/runestone',
+                       'basecourse': 'csawesome2beta',
+                       # new 7/2019 changes
+                       'dynamic_pages': dynamic_pages,
+                       'downloads_enabled': 'false',
+                       'enable_chatcodes': 'false',
+                       'allow_pairs': 'false',
+                       'default_ac_lang': 'java',
+                        }

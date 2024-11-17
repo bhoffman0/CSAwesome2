@@ -47,6 +47,8 @@ while (<>) {
   s/^\s*\*\s*</\* &lt;/g;
   s/^\s*\*(.*)</\*$1&lt;/g;
   s/<E>/&lt;E&gt;/g;
+  # weird case of looking for ="<" in unit tests
+  s/=\s*"</="&lt;/g;
 
   # BH added to remove .. from ../_static image paths
   s/\.\.\/\_static/\_static/g;
