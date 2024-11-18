@@ -1,0 +1,186 @@
+/*
+ * This currently contains rules for both the old Runestone and new Runestone.
+ * Once everything has switched to the new `rs`-based Runestone, we should
+ * remove the selectors without the `.runestone-sphinx` class.
+ */
+
+:root {
+    --emphasisColor: #007d9f;
+    --codeColor: #641227;
+    /* Make this as narrow as we can while still getting side-by-side Parson's problems. */
+    --contentWidthWide: calc(var(--contentWidthRegular) + 250px);
+}
+
+:root[data-theme="dark"] {
+    --emphasisColor: #00b3e3;
+    --codeColor: #ffaaaa;
+}
+
+
+h1,
+h2,
+.runestone-sphinx h1,
+.runestone-sphinx h2
+{
+    color:  var(--emphasisColor);
+    border-bottom: 2px solid  #70d549;
+}
+
+strong,
+.runestone-sphinx strong
+{
+    color:  var(--emphasisColor);
+    font-weight: bolder;
+}
+
+a,
+.runestone-sphinx a
+{
+  text-decoration: underline !important;
+}
+
+blockquote,
+.runestone-sphinx blockquote
+{
+  font-size: inherit;
+}
+
+section h1,
+.runestone-sphinx section h1
+{
+  padding-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+section section h2,
+.runestone-sphinx section section h2
+{
+  padding-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+code,
+.runestone-sphinx code
+{
+  padding: 0;
+  color: var(--codeColor);
+  background-color: inherit;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+#summary ul.simple li
+{
+  padding-top: 1em;
+}
+
+/*
+ * Table on Unit1's aboutcsa page.
+ */
+
+#aboutcsa-table
+{
+  padding-top: 1em;
+}
+
+#aboutcsa-table th,
+#aboutcsa-table td
+{
+  text-align: center;
+}
+
+#aboutcsa-table thead {
+  background-color: lightblue;
+}
+
+/*
+ * Time estimates at the top right of some pages.
+ */
+div.unit-time,
+.runestone-sphinx div.unit-time
+{
+  clear: right;
+  float: right;
+  width: 50%;
+  text-align: right;
+  font-size: 16px;
+  padding: 1em;
+  color: grey;
+}
+
+div.unit-time svg,
+.runestone-sphinx div.unit-time svg {
+  display: inline;
+  vertical-align: middle;
+}
+
+/*
+ * Give paragraphs immediately after certain elements a bit of breathing room.
+ * This could also be achieved by giving some margin-bottom to those preceding
+ * elements but this seems simpler for now.
+ */
+
+iframe + p,
+div.highlight-java + p,
+.runestone-sphinx iframe + p,
+.runestone-sphinx div.highlight-java + p,
+.runestone-sphinx div.highlight-text + p
+{
+  margin-top: 10px;
+}
+
+/*
+ * Override this which would otherwise be --contentWidthWide. (We've also
+ * adjusted --contentWidthWide above to be slightly less wide.)
+ */
+.runestone-sphinx #main-content section > .runestone.ac_section
+{
+  max-width: calc(var(--contentWidthRegular) + 100px);
+}
+
+/*
+ * Set the width so it uses the space in the box. This was put in so the videos
+ * wouldn't overflow their box. Don't know if there are other things it will
+ * catch up that we don't want.
+ */
+.runestone iframe
+{
+  width: 100%;
+}
+
+/* Padding for table of unit test responses.
+   until Brad adds it to the template.
+*/
+.runestone-sphinx .ac-feedback, 
+.ptx-runestone-container .ac-feedback {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+/* Changing font in code window in active codes 
+   Default is washed out in Windows Chrome.
+*/
+.ptx-runestone-container .ac_section .CodeMirror pre, 
+.runestone-sphinx .ac_section .CodeMirror pre {
+  font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
+}
+
+/* Try adding flex wrap on buttons */
+.ac_actions {
+  flex-wrap: wrap;
+}
+
+/* To unsquish bottom of unit test results box */
+.unittest-results {
+    margin-bottom: 8px;
+}
+
+/* For tables in the FRQs (default 0) */
+.ptx-runestone-container td, .ptx-runestone-container th, 
+.runestone-sphinx td, .runestone-sphinx th {
+    padding: 5px;
+}
+
+table.random-recipes tbody tr td:first-child {
+  text-align: left;
+}

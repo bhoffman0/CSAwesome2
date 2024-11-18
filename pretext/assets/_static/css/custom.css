@@ -1,8 +1,5 @@
-/*
- * This currently contains rules for both the old Runestone and new Runestone.
- * Once everything has switched to the new `rs`-based Runestone, we should
- * remove the selectors without the `.runestone-sphinx` class.
- */
+/* Most of these rules are from the rst version so might not work in ptx 
+   Replaced .runestone-sphinx with .ptx-content. */
 
 :root {
     --emphasisColor: #007d9f;
@@ -16,51 +13,51 @@
     --codeColor: #ffaaaa;
 }
 
-
-h1,
-h2,
-.runestone-sphinx h1,
-.runestone-sphinx h2
+/* The wide style seems to add huge font size so put it down */
+.ptx-content .para
 {
-    color:  var(--emphasisColor);
-    border-bottom: 2px solid  #70d549;
+  font-size: 1rem;
 }
 
-strong,
-.runestone-sphinx strong
+.ptx-content section > .heading,
+.ptx-content section section > .heading,
+.ptx-content section section section > .heading
+{
+    font-size: 1.4rem;
+    color:  var(--emphasisColor);
+    border-bottom: 2px solid #70d549;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.ptx-content .terminology
 {
     color:  var(--emphasisColor);
     font-weight: bolder;
 }
 
-a,
-.runestone-sphinx a
+/* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
+details.ptx-footnote {
+  display: none;
+}
+/* A hack to align |CodingEx| type of images - not working */
+.ptx-content img.contained {
+  float: left;
+}
+
+
+.ptx-content .para a
 {
   text-decoration: underline !important;
 }
 
-blockquote,
-.runestone-sphinx blockquote
+.ptx-content blockquote
 {
   font-size: inherit;
 }
 
-section h1,
-.runestone-sphinx section h1
-{
-  padding-top: 1.5em;
-  margin-bottom: 0.5em;
-}
 
-section section h2,
-.runestone-sphinx section section h2
-{
-  padding-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-code,
-.runestone-sphinx code
+.ptx-content code
 {
   padding: 0;
   color: var(--codeColor);
@@ -97,7 +94,7 @@ code,
  * Time estimates at the top right of some pages.
  */
 div.unit-time,
-.runestone-sphinx div.unit-time
+.ptx-content div.unit-time
 {
   clear: right;
   float: right;
@@ -109,7 +106,7 @@ div.unit-time,
 }
 
 div.unit-time svg,
-.runestone-sphinx div.unit-time svg {
+.ptx-content div.unit-time svg {
   display: inline;
   vertical-align: middle;
 }
@@ -122,9 +119,9 @@ div.unit-time svg,
 
 iframe + p,
 div.highlight-java + p,
-.runestone-sphinx iframe + p,
-.runestone-sphinx div.highlight-java + p,
-.runestone-sphinx div.highlight-text + p
+.ptx-content iframe + p,
+.ptx-content div.highlight-java + p,
+.ptx-content div.highlight-text + p
 {
   margin-top: 10px;
 }
@@ -133,7 +130,7 @@ div.highlight-java + p,
  * Override this which would otherwise be --contentWidthWide. (We've also
  * adjusted --contentWidthWide above to be slightly less wide.)
  */
-.runestone-sphinx #main-content section > .runestone.ac_section
+.ptx-content #main-content section > .runestone.ac_section
 {
   max-width: calc(var(--contentWidthRegular) + 100px);
 }
@@ -151,7 +148,7 @@ div.highlight-java + p,
 /* Padding for table of unit test responses.
    until Brad adds it to the template.
 */
-.runestone-sphinx .ac-feedback, 
+.ptx-content .ac-feedback, 
 .ptx-runestone-container .ac-feedback {
     border: 1px solid black;
     padding: 3px;
@@ -161,7 +158,7 @@ div.highlight-java + p,
    Default is washed out in Windows Chrome.
 */
 .ptx-runestone-container .ac_section .CodeMirror pre, 
-.runestone-sphinx .ac_section .CodeMirror pre {
+.ptx-content .ac_section .CodeMirror pre {
   font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
 }
 
@@ -177,7 +174,7 @@ div.highlight-java + p,
 
 /* For tables in the FRQs (default 0) */
 .ptx-runestone-container td, .ptx-runestone-container th, 
-.runestone-sphinx td, .runestone-sphinx th {
+.ptx-content td, .ptx-content th {
     padding: 5px;
 }
 
