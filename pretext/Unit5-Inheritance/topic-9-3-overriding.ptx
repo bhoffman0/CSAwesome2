@@ -5,7 +5,6 @@
     
     <p>A subclass inherits all public methods from its superclass, and these methods remain public in the subclass. But, we also usually add more methods or instance variables to the subclass. Sometimes, we want to modify existing inherited methods. This is called <term>overriding</term>  methods.</p>
     <p><term>Overriding</term> an inherited method means providing a public method in a subclass with the same <term>method signature</term> (method name, parameter type list and return type) as a public method in the superclass.  The method in the subclass will be called <em>instead of</em> the method in the superclass. One method that is frequently overridden is the <c>toString</c> method. The example below shows a similar method called <c>greet</c>.</p>
-    <p><problematic refid="id1">|CodingEx|</problematic> <term>Coding Exercise</term></p>
     <p>In the following example the <c>MeanGreeter</c> inherits the <c>greet()</c> method from <c>Greeter</c>, but then overrides it. Run the program to see.</p>
     <note>
             <p>To override an inherited method, the method in the child class must have the same name, parameter list, and return type (or a subclass of the return type) as the parent method. Any method that is called must be defined within its own class or its superclass.</p>
@@ -30,7 +29,6 @@ public String greet()
 g2.greet(); // This could be calling an overridden greet method in g2's class
 g1.greet("Sam"); // This calls an overloaded greet method
 </input></program>
-            <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>In the example below the <c>greet(String who)</c> method overloads the <c>greet()</c> method of <c>Greeter</c>.  Notice that <c>MeanGreeter</c> inherits this method and it isn’t overridden.</p>
 
 <exercise label="GreeterOverride">
@@ -114,12 +112,11 @@ public class RunestoneTests extends CodeTestHelper
                     parameter types. The return type can also be different but you can’t have two
                     methods that differ only in their return type.</p>
             </note>
-            <p><problematic refid="id5">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qoo_5">
         <statement>
 
-            <p>9-3-3:  Which of the following declarations in <c>Student</c> would correctly <em>override</em> the <c>getFood</c> method in <c>Person</c>?</p>
+            <p>  Which of the following declarations in <c>Student</c> would correctly <em>override</em> the <c>getFood</c> method in <c>Person</c>?</p>
             <blockquote>
                 <program language="java"><input>
 public class Person
@@ -195,12 +192,11 @@ public class Student extends Person
 
     </exercise>
             <p>You can step through an example of this in the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=19" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Student(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood())%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=19">Override Example</url>.</p>
-            <p><problematic refid="id7">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qoo_6">
         <statement>
 
-            <p>9-3-4:  Which of the following declarations in <c>Person</c> would correctly <em>overload</em> the <c>getFood</c> method in <c>Person</c>?</p>
+            <p>  Which of the following declarations in <c>Person</c> would correctly <em>overload</em> the <c>getFood</c> method in <c>Person</c>?</p>
             <blockquote>
                 <program language="java"><input>
 public class Person
@@ -276,7 +272,6 @@ public class Student extends Person
 
     </exercise>
             <p>You can step through an example of this using the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+String+getFood(boolean+veggieOnly)%0A+++%7B%0A++++++if+(veggieOnly)%0A++++++%7B%0A+++++++++return+%22Grilled+Cheese%22%3B%0A++++++%7D%0A++++++return+getFood()%3B%0A++++++%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Person(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood(true))%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=9" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Person+%0A%7B%0A+++private+String+name+%3D+null%3B%0A+++++++++%0A+++public+Person(String+theName)%0A+++%7B%0A++++++name+%3D+theName%3B%0A+++%7D%0A+++++++++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Hamburger%22%3B%0A+++%7D%0A+++%0A+++public+String+getFood(boolean+veggieOnly)%0A+++%7B%0A++++++if+(veggieOnly)%0A++++++%7B%0A+++++++++return+%22Grilled+Cheese%22%3B%0A++++++%7D%0A++++++return+getFood()%3B%0A++++++%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++%0A++++++Person+p+%3D+new+Person(%22Jamal%22)%3B%0A++++++System.out.println(p.getFood(true))%3B%0A+++%7D%0A%7D%0A++++++++%0Aclass+Student+extends+Person%0A%7B%0A+++private+int+id%3B%0A+++private+static+int+nextId+%3D+0%3B%0A+++++++++%0A+++public+Student(String+theName)%0A+++%7B%0A++++++super(theName)%3B%0A++++++id+%3D+nextId%3B%0A++++++nextId%2B%2B%3B%0A+++%7D%0A+++++++++%0A+++public+int+getId()+%7Breturn+id%3B%7D%0A+++++++++%0A+++public+void+setId+(int+theId)+%0A+++%7B%0A++++++this.id+%3D+theId%3B%0A+++%7D%0A+++%0A+++public+String+getFood()+%0A+++%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=9">Overload Example</url>.</p>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>What happens if you change the main method in the Java Visualizer to create a new <c>Student</c> object instead of a <c>Person</c> object?  Does it still print the same thing?</p>
         </subsection>
   <subsection>
@@ -360,12 +355,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id11">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qoo_7">
         <statement>
 
-            <p>9-3-6: Given the following class definitions which of the following would not compile if it was used in place of the missing code in the main method?</p>
+            <p> Given the following class definitions which of the following would not compile if it was used in place of the missing code in the main method?</p>
             <program language="java"><input>
 class Item
 {
@@ -441,7 +435,7 @@ public class EnhancedItem extends Item
             <p>You can step through this code in the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Item%0A%7B%0A+++private+int+x%3B%0A%0A+++public+void+setX(int+theX)%0A+++%7B%0A++++++x+%3D+theX%3B%0A+++%7D%0A+++//+...+other+methods+not+shown%0A%7D%0A%0Apublic+class+EnhancedItem+extends+Item%0A%7B%0A+++private+int+y%3B%0A%0A+++public+void+setY(int+theY)%0A+++%7B%0A++++++y+%3D+theY%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++EnhancedItem+currItem+%3D+new+EnhancedItem()%3B%0A++++++currItem.setX(3)%3B%0A++++++//+currItem.setY(2)%3B%0A++++++//+currItem.x+%3D+3%3B%0A++++++//+currItem.y+%3D+2%3B%0A+++%7D%0A+%7D&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+Item%0A%7B%0A+++private+int+x%3B%0A%0A+++public+void+setX(int+theX)%0A+++%7B%0A++++++x+%3D+theX%3B%0A+++%7D%0A+++//+...+other+methods+not+shown%0A%7D%0A%0Apublic+class+EnhancedItem+extends+Item%0A%7B%0A+++private+int+y%3B%0A%0A+++public+void+setY(int+theY)%0A+++%7B%0A++++++y+%3D+theY%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++EnhancedItem+currItem+%3D+new+EnhancedItem()%3B%0A++++++currItem.setX(3)%3B%0A++++++//+currItem.setY(2)%3B%0A++++++//+currItem.x+%3D+3%3B%0A++++++//+currItem.y+%3D+2%3B%0A+++%7D%0A+%7D&amp;mode=display&amp;curInstr=10">Private Fields Example</url>.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id13">|Groupwork|</problematic> Programming Challenge : Pet Sounds</title>
+            <title>Programming Challenge : Pet Sounds</title>
             <image source="Unit5-Inheritance/Figures/animalclinic.png" width="27%%" alt="Pets"/>
             <p>The following Pet class keeps track of a pet’s name and type and has a constructor, get method, and a method called speak() that prints an animal noise.</p>
             <p><ol marker="1">

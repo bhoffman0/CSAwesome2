@@ -208,7 +208,7 @@ public class RunestoneTests extends CodeTestHelper
                 defines the variables and methods for that class. Each object will have their
                 own copies of the same instance variables but with possibly different values in
                 them (as seen in the cookie decorations below).</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Person Class and Objects</caption><image source="Unit3-Class-Creation/Figures/PersonClassWithCookies.png" width="100%%" alt="Person data encapsulation"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Person Class and Objects</caption><image source="Unit3-Class-Creation/Figures/PersonClassWithCookies.png" width="100%%" alt="Person data encapsulation"/></figure>
             <p>Good Java style stresses <term>data encapsulation</term> where the data (instance
                 variables) and the code acting on the data (methods) are wrapped together into a
                 single unit and the implementation details are hidden. Because only code in the
@@ -224,7 +224,6 @@ public class RunestoneTests extends CodeTestHelper
                 from Unit 2 how the <c>Turtle</c> class provided <c>getXPos</c> and <c>getYPos</c> to get
                 the turtle’s position but no <c>setXPos</c> and <c>setYPos</c> since the only way to
                 move a turtle is through  <c>forward</c> and <c>moveTo</c> methods?)</p>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
 <exercise label="name_instance_variables">
     <statement><p>Click on all the instance  variable declarations in the following class</p></statement>
@@ -299,7 +298,6 @@ Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
 // call p1's print method
 p1.print();
 </input></program>
-            <p><problematic refid="id10">|Exercise|</problematic> Check Your Understanding</p>
 
 <exercise label="name_methods">
     <statement><p>Click on all the lines of code that are part of a method in the following class.</p></statement>
@@ -353,31 +351,29 @@ p1.print();
                 Language (UML) for drawing these diagrams.</p>
             <p>For example, here is a UML class diagram for the <c>Turtle</c> class. The <c>-</c> in
                 front of the attributes indicate that they are private, and the <c>+</c> in front
-                of the methods indicate that they are public. Here is a <problematic refid="id12">|tutorial on class
+                of the methods indicate that they are public. Here is a <problematic refid="id8">|tutorial on class
                     diagrams|</problematic> that explains it in more detail if you are curious (Class diagrams are
                 not on the AP CSA exam). If you want to draw your own, <url href="https://app.diagrams.net/" visual="https://app.diagrams.net/">app.diagrams.net</url> or
                 <url href="https://creately.com" visual="https://creately.com">Creately.com</url> are good free online drawing tools for UML class diagrams.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Turtle Class Diagram</caption><image source="Unit3-Class-Creation/Figures/turtleUMLClassDiagram.png" width="63%%" alt="Turtle class diagram"/></figure>
-            <p><problematic refid="id14">|Exercise|</problematic> <term>Check Your Understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit3-Class-Creation/Figures/turtleUMLClassDiagram.png" width="63%%" alt="Turtle class diagram"/></figure>
 
 <exercise label="OOD1">
     <statement>
-            <p>5-1-5: You’ve been hired by your school to create a program that keeps track of “students at your school and the courses they are taking”. Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.</p>
+            <p> You’ve been hired by your school to create a program that keeps track of “students at your school and the courses they are taking”. Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.</p>
 
     </statement>
 </exercise>
             <p>The two nouns in the problem description above, <term>Student</term> and <term>Course</term> would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!</p>
-            <p><problematic refid="id16">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
 <exercise label="OOD2">
     <statement>
-            <p>5-1-6: Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): “Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything.” What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.</p>
+            <p> Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): “Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything.” What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.</p>
 
     </statement>
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id18">|Groupwork|</problematic> Programming Challenge : Riddle Class</title>
+            <title>Programming Challenge : Riddle Class</title>
             <image source="Unit3-Class-Creation/Figures/chicken.png" width="23%%" alt="Chicken"/>
             <p>In this project, you will create a class that can tell riddles like the following:</p>
             <p><ul>
@@ -548,7 +544,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id20">|Groupwork|</problematic> Design a Class for your Community</title>
+            <title>Design a Class for your Community</title>
             <p>In this unit, you will design a class of your own choice that is relevant to your community.
                 You will improve the class in each lesson of this unit. We suggest that you work in pairs on this project.
                 If you would rather work on this project as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
@@ -651,7 +647,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP5-1-1">
         <statement>
 
-            <p>5-1-9: Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.</p>
+            <p> Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.</p>
             <program language="java"><input>
 public class Cat
 {
@@ -707,7 +703,7 @@ private Cat(String name, int age)
     <exercise label="AP5-1-2">
         <statement>
 
-            <p>5-1-10: Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.</p>
+            <p> Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.</p>
             <program language="java"><input>
 public class Party
 {

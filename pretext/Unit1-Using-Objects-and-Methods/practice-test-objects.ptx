@@ -11,7 +11,7 @@
 
             <dl>
                 <li>
-                    <title>2-14-1:  A student has created a Liquid class. The class contains variables to represent the following.</title>
+                    <title>  A student has created a Liquid class. The class contains variables to represent the following.</title>
                     
                         <p><ul>
                             <li>
@@ -86,7 +86,7 @@
 
             <dl>
                 <li>
-                    <title>2-14-2:  A student has created an Artwork class. The class contains the following variables.</title>
+                    <title>  A student has created an Artwork class. The class contains the following variables.</title>
                     
                         <p><ul>
                             <li>
@@ -159,7 +159,7 @@
     <exercise label="AP2-2-3">
         <statement>
 
-            <p>2-14-3:  Which of the following code segments correctly creates an instance of a new Party object?</p>
+            <p>  Which of the following code segments correctly creates an instance of a new Party object?</p>
             <blockquote>
                 <program language="java"><input>
 public class Party
@@ -241,7 +241,7 @@ III. int numOfFriends = 6;
     <exercise label="AP2-2-4">
         <statement>
 
-            <p>2-14-4:  Consider the following class. Which of the following code segments, when placed in a method in a class other than Liquid, will construct a Liquid object l with a boilingPoint of 98.6 ?</p>
+            <p>  Consider the following class. Which of the following code segments, when placed in a method in a class other than Liquid, will construct a Liquid object l with a boilingPoint of 98.6 ?</p>
             <blockquote>
                 <program language="java"><input>
 public class Liquid
@@ -316,7 +316,7 @@ public class Liquid
     <exercise label="AP2-3-3">
         <statement>
 
-            <p>2-14-5:  Consider the following class. Assume that the Liquid object liquid has been properly declared and initialized in a method in a class other than Liquid.  Which of the following statements are valid?</p>
+            <p>  Consider the following class. Assume that the Liquid object liquid has been properly declared and initialized in a method in a class other than Liquid.  Which of the following statements are valid?</p>
             <blockquote>
                 <program language="java"><input>
 public class Liquid
@@ -402,7 +402,7 @@ public class Liquid
     <exercise label="AP2-3-4">
         <statement>
 
-            <p>2-14-6: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Dog
 {
@@ -464,7 +464,7 @@ a.wag();
     <exercise label="AP2-4-3">
         <statement>
 
-            <p>2-14-7: Consider the following methods, which appear in the same class.</p>
+            <p> Consider the following methods, which appear in the same class.</p>
             <program language="java"><input>
 public void celsiusToFahrenheit(double cTemp)
 {
@@ -500,7 +500,7 @@ public void printTemperature(double celsius, double fahrenheit)
     <exercise label="AP2-4-4">
         <statement>
 
-            <p>2-14-8: Consider the following methods, which appear in the same class.</p>
+            <p> Consider the following methods, which appear in the same class.</p>
             <program language="java"><input>
 public void calculatePizzaOrder(int numOfPeople, int slicesPerPerson)
 {
@@ -536,7 +536,7 @@ public void printOrder(int number)
     <exercise label="AP2-5-3">
         <statement>
 
-            <p>2-14-9: Consider the following method in the Movie class.</p>
+            <p> Consider the following method in the Movie class.</p>
             <program language="java"><input>
 public double calculateMovieRating(int numOfPeople, double rating)
 { /*implementation not shown */}
@@ -564,7 +564,7 @@ public double calculateMovieRating(int numOfPeople, double rating)
     <exercise label="AP2-5-4">
         <statement>
 
-            <p>2-14-10: Consider the following methods, which appear in the same class.</p>
+            <p> Consider the following methods, which appear in the same class.</p>
             <program language="java"><input>
 public int oneThing(int i, int j)
 {

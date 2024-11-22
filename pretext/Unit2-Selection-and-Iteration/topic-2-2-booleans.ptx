@@ -14,7 +14,6 @@
 
     <video youtube="bO9bejT0jwE"/>
                 <p>The following code shows how <c>==</c> is used with primitive types like <c>int</c>.</p>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="bool1">
     <statement>
@@ -64,8 +63,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>We can also use <c>==</c> or <c>!=</c> to test if two reference values, like <c>Turtle</c> and <c>String</c> objects,  refer to the same object. In the figure below, we are creating two separate <c>Turtle</c> objects called <c>juan</c> and <c>mia</c>. They do not refer to same object or turtle. Then, we create a reference variable called <c>friend</c> that is set to <c>mia</c>. The turtle <c>mia</c> will have two ways (<term>references</term> or <term>aliases</term>) to name her – she’s both <c>mia</c> and <c>friend</c>, and these variables refer to the same object (same <c>Turtle</c>) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with <c>==</c> will return true which you can see in the code below.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Turtle Reference Equality</caption><image source="Unit2-Selection-and-Iteration/Figures/turtleEquality.png" width="89%%"/></figure>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Reference Equality</caption><image source="Unit2-Selection-and-Iteration/Figures/turtleEquality.png" width="89%%"/></figure>
 
 <exercise label="boolRef">
     <statement>
@@ -153,7 +151,6 @@ public class BoolTestRef
             <p>To remember the correct order of the two characters in <c>&lt;=</c> and <c>&gt;=</c>, just
                 write them in the same order you would say them in English: “less than or equal
                 to” not “equal to or less than”.</p>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="bool2">
     <statement>
@@ -197,7 +194,7 @@ public class RunestoneTests extends CodeTestHelper
      @Test
      public void test1()
      {
-         String code = "&lt;=";
+         String code ="&lt;=";
          boolean passed = checkCodeContains(code);
          assertTrue(passed);
      }
@@ -212,7 +209,6 @@ public class RunestoneTests extends CodeTestHelper
 //Test if a number is negative
 (number &lt; 0)
 </input></program>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check your understanding</term></p>
 
 <exercise label="BooleanExps">
     <statement><p>Drag the boolean expression from the left and drop it on what it is testing on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
@@ -229,7 +225,6 @@ public class RunestoneTests extends CodeTestHelper
 //Test if a number is a multiple of x (or divisible by x with no remainder)
 (number % x == 0)
 </input></program>
-            <p><problematic refid="id10">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="boolRem">
     <statement>
@@ -330,8 +325,8 @@ int minutes = totalMinutes % 60; // Number of minutes left over, i.e. 45
             </note>
         </subsection>
   <subsection>
-            <title><problematic refid="id12">|Groupwork|</problematic> Programming Challenge : Prime Numbers POGIL</title>
-            <p>We encourage you to do this activity as a <problematic refid="id14">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <title>Programming Challenge : Prime Numbers POGIL</title>
+            <p>We encourage you to do this activity as a <problematic refid="id2">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>In this activity, you will write a Java program that uses boolean expressions to determine if a number is prime. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it’s only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it’s divisible by 2 as well as 1 and 4. You will write methods that test whether a number is positive, negative, odd, even, and divisible by another number. You will then experiment with these methods to determine if the numbers 5, 6, and 7 are prime. And to ask questions about prime numbers like whether all odd numbers are prime.</p>
 
 <exercise label="challenge-primeNumbers">
@@ -443,7 +438,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="prime1">
         <statement>
 
-            <p>2-2-8: Is 5 prime?</p>
+            <p> Is 5 prime?</p>
 
         </statement>
 <choices>
@@ -472,7 +467,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="prime2">
         <statement>
 
-            <p>2-2-9: Is 6 prime?</p>
+            <p> Is 6 prime?</p>
 
         </statement>
 <choices>
@@ -501,7 +496,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="prime3">
         <statement>
 
-            <p>2-2-10: Is 7 prime?</p>
+            <p> Is 7 prime?</p>
 
         </statement>
 <choices>
@@ -529,10 +524,10 @@ public class RunestoneTests extends CodeTestHelper
 
         <exercise label="prime4">
             <statement>
-    <p>2-2-11: Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? <var/>  </p></statement><setup><var><condition string="^\s*^9$\s*$"><feedback><p>Yes, 9 is not prime because it is divisible by 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 3-10 in your code.</p></feedback></condition></var></setup></exercise>
+    <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? <var/>  </p></statement><setup><var><condition string="^\s*^9$\s*$"><feedback><p>Yes, 9 is not prime because it is divisible by 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 3-10 in your code.</p></feedback></condition></var></setup></exercise>
         <exercise label="prime5">
             <statement>
-    <p>2-2-12:  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 2-10 in your code.</p></feedback></condition></var></setup></exercise>            <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
+    <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 2-10 in your code.</p></feedback></condition></var></setup></exercise>            <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
         </subsection>
   <subsection>
             <title>Summary</title>
@@ -557,7 +552,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP2-2-1">
         <statement>
 
-            <p>2-2-13: Consider the following statement.</p>
+            <p> Consider the following statement.</p>
             <program language="java"><input>
 boolean x = (5 % 3 == 0) == (3 &gt; 5);
 </input></program>
@@ -584,7 +579,7 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
     <exercise label="AP2-2-2">
         <statement>
 
-            <p>2-2-14: Consider the following Boolean expression in which the int variables x and y have been properly declared and initialized.</p>
+            <p> Consider the following Boolean expression in which the int variables x and y have been properly declared and initialized.</p>
             <program language="java"><input>
 (x &gt;= 10) == (y &lt; 12)
 </input></program>

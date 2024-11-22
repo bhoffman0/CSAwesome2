@@ -11,7 +11,7 @@
     <exercise label="qle_1">
         <statement>
 
-            <p>4-11-1: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 for (int i = 3; i &lt;= 12; i++)
 {
@@ -64,7 +64,7 @@ for (int i = 3; i &lt;= 12; i++)
     <exercise label="qle_2">
         <statement>
 
-            <p>4-11-2: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 3; i &lt; 9; i++)
 {
@@ -117,7 +117,7 @@ for (int i = 3; i &lt; 9; i++)
     <exercise label="qle_3">
         <statement>
 
-            <p>4-11-3: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 int x = -5;
 while (x &lt; 0)
@@ -163,7 +163,7 @@ while (x &lt; 0)
     <exercise label="qle_4">
         <statement>
 
-            <p>4-11-4: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 5; i &lt;= 12; i++)
 {
@@ -216,7 +216,7 @@ for (int i = 5; i &lt;= 12; i++)
     <exercise label="qle_5">
         <statement>
 
-            <p>4-11-5: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 1; i &lt; 5; i++)
 {
@@ -260,7 +260,7 @@ for (int i = 1; i &lt; 5; i++)
     <exercise label="qle_6">
         <statement>
 
-            <p>4-11-6: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 0; i &lt;= 8; i++)
 {
@@ -304,7 +304,7 @@ for (int i = 0; i &lt;= 8; i++)
     <exercise label="qle_7">
         <statement>
 
-            <p>4-11-7: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int x = 0; x &lt; 5; x++)
 {
@@ -348,7 +348,7 @@ for (int x = 0; x &lt; 5; x++)
     <exercise label="qle_8">
         <statement>
 
-            <p>4-11-8: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int x = 2; x &lt; 8; x++)
 {
@@ -392,7 +392,7 @@ for (int x = 2; x &lt; 8; x++)
     <exercise label="qle_9">
         <statement>
 
-            <p>4-11-9: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 int x = 0;
 while (x &lt;= 5)
@@ -447,7 +447,7 @@ while (x &lt;= 5)
     <exercise label="qle_10">
         <statement>
 
-            <p>4-11-10: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 int x = 3;
 while (x &lt; 9)
@@ -514,7 +514,7 @@ while (x &lt; 9)
     <exercise label="qlm_1">
         <statement>
 
-            <p>4-11-11: How many stars are output when the following code is executed?</p>
+            <p> How many stars are output when the following code is executed?</p>
             <program language="java"><input>
 for (int i = 0; i &lt; 5; i++) {
    for (int j = 0; j &lt; 5; j++)
@@ -576,7 +576,7 @@ for (int i = 0; i &lt; 5; i++) {
     <exercise label="qlm_2">
         <statement>
 
-            <p>4-11-12: Which of the following code segments will produce the displayed output?</p>
+            <p> Which of the following code segments will produce the displayed output?</p>
             <program language="java"><input>
 1
 22
@@ -674,7 +674,7 @@ V.   for (int i = 0; i &lt; 5; i++) {
     <exercise label="qlm_3">
         <statement>
 
-            <p>4-11-13: What is printed as a result of the following code segment?</p>
+            <p> What is printed as a result of the following code segment?</p>
             <program language="java"><input>
 for (int k = 0; k &lt; 20; k+=2) {
    if (k % 3 == 1)
@@ -736,7 +736,7 @@ for (int k = 0; k &lt; 20; k+=2) {
     <exercise label="qlm_4">
         <statement>
 
-            <p>4-11-14: Which of the following code segments will produce the displayed output?</p>
+            <p> Which of the following code segments will produce the displayed output?</p>
             <program language="java"><input>
 11111
 2222
@@ -834,7 +834,7 @@ V.   for (int j = 1; j &lt;= 5; j++) {
     <exercise label="qlm_5n">
         <statement>
 
-            <p>4-11-15: What are the values of var1 and var2 after the following code segment is executed and the while loop finishes?</p>
+            <p> What are the values of var1 and var2 after the following code segment is executed and the while loop finishes?</p>
             <program language="java"><input>
 int var1 = 0;
 int var2 = 2;

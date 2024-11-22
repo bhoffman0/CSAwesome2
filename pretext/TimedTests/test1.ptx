@@ -9,7 +9,7 @@
     <exercise label="pe1_1">
         <statement>
 
-            <p>13-1-1: Given the following method.  What is the output when <c>m1(5)</c> is called?</p>
+            <p> Given the following method.  What is the output when <c>m1(5)</c> is called?</p>
             <program language="java"><input>
 public int m1 (int a)
 {
@@ -74,7 +74,7 @@ public int m1 (int a)
     <exercise label="pe1_2">
         <statement>
 
-            <p>13-1-2: What will the following code print when it is executed?</p>
+            <p> What will the following code print when it is executed?</p>
             <program language="java"><input>
 for (int j = 1; j &lt;= 3; j++)
 {
@@ -137,7 +137,7 @@ for (int j = 1; j &lt;= 3; j++)
     <exercise label="pe1_3">
         <statement>
 
-            <p>13-1-3: What value is returned as the result of <c>mystery(7)</c>?</p>
+            <p> What value is returned as the result of <c>mystery(7)</c>?</p>
             <program language="java"><input>
 public int mystery(int n)
 {
@@ -202,7 +202,7 @@ public int mystery(int n)
     <exercise label="pe1_4">
         <statement>
 
-            <p>13-1-4: Given the following code.  Which of the following would return true?</p>
+            <p> Given the following code.  Which of the following would return true?</p>
             <program language="java"><input>
 Integer int1 = new Integer(3);
 Integer int2 = new Integer(3);
@@ -269,7 +269,7 @@ V. (int2 == int3)
     <exercise label="pe1_5">
         <statement>
 
-            <p>13-1-5: Under which of these conditions will a sequential search be faster than a binary search?</p>
+            <p> Under which of these conditions will a sequential search be faster than a binary search?</p>
 
         </statement>
 <choices>
@@ -325,7 +325,7 @@ V. (int2 == int3)
     <exercise label="pe1_6">
         <statement>
 
-            <p>13-1-6: There is a method called <c>checkString</c> that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method.  Which is a best set of test cases?</p>
+            <p> There is a method called <c>checkString</c> that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method.  Which is a best set of test cases?</p>
             <program language="java"><input>
 Data set 1: "aba", "abba", "aBa", "z"
 Data set 2: "bcb", "bcd", "c"
@@ -385,7 +385,7 @@ Data set 2: "bcb", "bcd", "c"
     <exercise label="pe1_7">
         <statement>
 
-            <p>13-1-7: Which of the following code will produce this output:</p>
+            <p> Which of the following code will produce this output:</p>
             <program language="java"><input>
 1
 22
@@ -502,7 +502,7 @@ for (int i = 0; i &lt; 5; i++)
     <exercise label="pe1_8">
         <statement>
 
-            <p>13-1-8: What will the following print?</p>
+            <p> What will the following print?</p>
             <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(new Integer(5));
@@ -568,7 +568,7 @@ System.out.println(list1);
     <exercise label="pe1_9">
         <statement>
 
-            <p>13-1-9: Consider the following declaration for a class that will be used to represent points in the xy-coordinate plane.  Which of these constructors would be legal for the NamedPoint class?</p>
+            <p> Consider the following declaration for a class that will be used to represent points in the xy-coordinate plane.  Which of these constructors would be legal for the NamedPoint class?</p>
             <program language="java"><input>
  public class Point
  {
@@ -674,7 +674,7 @@ III. public NamedPoint(int d1, int d2, String name)
     <exercise label="pe1_10">
         <statement>
 
-            <p>13-1-10: Given the following incomplete class declaration:</p>
+            <p> Given the following incomplete class declaration:</p>
             <program language="java"><input>
  public class TimeRecord
  {
@@ -796,7 +796,7 @@ III. public NamedPoint(int d1, int d2, String name)
     <exercise label="pe1_11">
         <statement>
 
-            <p>13-1-11: Consider the following class definitions, which of the following can replace the missing code?</p>
+            <p> Consider the following class definitions, which of the following can replace the missing code?</p>
             <program language="java"><input>
 public class ContactInfo
 {
@@ -903,7 +903,7 @@ V.
     <exercise label="pe1_12">
         <statement>
 
-            <p>13-1-12: Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?</p>
+            <p> Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?</p>
 
         </statement>
 <choices>
@@ -959,7 +959,7 @@ V.
     <exercise label="pe1_13">
         <statement>
 
-            <p>13-1-13: Which of the following reasons for using an inheritance hierarchy are valid?</p>
+            <p> Which of the following reasons for using an inheritance hierarchy are valid?</p>
             <program language="java"><input>
 I.   Methods from a superclass can be used in a subclass without rewriting
      or copying code.
@@ -1024,7 +1024,7 @@ V.   None of the above
     <exercise label="pe1_14">
         <statement>
 
-            <p>13-1-14: Consider the following method and if <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
+            <p> Consider the following method and if <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
             <program language="java"><input>
 public int m1(int[] a)
 {
@@ -1087,7 +1087,7 @@ public int m1(int[] a)
     <exercise label="pe1_15">
         <statement>
 
-            <p>13-1-15: What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
+            <p> What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
             <program language="java"><input>
 int a = 10, b = 3, t;
 for (int i=1; i&lt;=6; i++)
@@ -1152,7 +1152,7 @@ for (int i=1; i&lt;=6; i++)
     <exercise label="pe1_16">
         <statement>
 
-            <p>13-1-16: Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
+            <p> Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -1217,7 +1217,7 @@ s4 = null;
     <exercise label="pe1_17">
         <statement>
 
-            <p>13-1-17: Consider the following code segment.  What value is in sum after this code executes?</p>
+            <p> Consider the following code segment.  What value is in sum after this code executes?</p>
             <program language="java"><input>
 int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
 
@@ -1283,7 +1283,7 @@ for (int row = 0; row &lt; 4; row++)
     <exercise label="pe1_18">
         <statement>
 
-            <p>13-1-18: Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
+            <p> Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
             <program language="java"><input>
 int [][] mat = new int [3][4];
 for (int row = 0; row &lt; mat.length; row++)
@@ -1354,7 +1354,7 @@ for (int row = 0; row &lt; mat.length; row++)
     <exercise label="pe1_19">
         <statement>
 
-            <p>13-1-19: Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of type <c>int</c>.  Also, consider the following code segment.  What of the following will cause an infinite loop?</p>
+            <p> Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of type <c>int</c>.  Also, consider the following code segment.  What of the following will cause an infinite loop?</p>
             <program language="java"><input>
 for ( int k = 0; k &lt; a.length; k++ )
 {
@@ -1419,7 +1419,7 @@ for ( int k = 0; k &lt; a.length; k++ )
     <exercise label="pe1_20">
         <statement>
 
-            <p>13-1-20: Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
+            <p> Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
             <program language="java"><input>
  public static void conditionTest(int num1, int num2)
  {

@@ -8,7 +8,7 @@
                 <p>Replace the “ADD CODE HERE” below with the code to declare and create a 3 by 3 two-dimensional int array named <c>table</c>. The finished code will print the values 0 to 8.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -95,7 +95,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to declare and initialize a two-dimensional String array called <c>students</c> with the names “Brice, Marvin, Anna” in the first row and “Kamal, Maria, Elissa” in the second. The finished code will print all the names in the array starting with all in the first row followed by all in the second row.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -181,7 +181,7 @@ public class Test1
                 <p>Print the values 47, 51, and 20 by accessing them in  the given two-dimensional array.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -261,7 +261,7 @@ public class Test1
                 <p>Print the values 8, 3, 87, and 34 by accessing them from the given two-dimensional array.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -359,7 +359,7 @@ public class Test1
                 <p>Print the number of rows in the given two-dimensional array, or the length of the outer array. Then print the number of columns, or the length of each inner array.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -444,7 +444,7 @@ public class Test1
     </exercise>
     <exercise>
       <statement/>
-      <program interactive="" language=""/>
+      <program interactive="" language="" datafile=""/>
       <solution>
                 Create a loop that iterates through all of the outer arrays, or the rows using arrayName.length.
                     Then iterate through the inner arrays, or columns, using arrayName[0].length.
@@ -486,7 +486,7 @@ public class Test1
                 <p>Declare and create a two-dimensional array of strings named <c>colors</c>.  Put the colors (“red”, “yellow”, “blue”) in the first row, and the colors (“orange”, “green”, “purple”) in the second row. Then print every value in the array.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -566,7 +566,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to count and print the number of 7’s that are in the 2d array. It should print 2.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -661,7 +661,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to print out the sum of the numbers in the second row of the “table” array.  It should print 18.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -737,7 +737,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to find the sum of the values on the diagonal from [0][0] to [num rows - 1][num rows - 1]. Print the sum.  It should print 5.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -813,7 +813,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to declare and create a two-dimensional array of integers <c>numbers</c> with the numbers (1,2,3) in the first row, and the numbers (4,5,6) in the second row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -894,7 +894,7 @@ public class Test1
                 <p>Replace the “ADD CODE HERE” below with the code to declare and create a two-dimensional array of integers <c>numbers</c> with the numbers (1,2,3) in the first row, the numbers (4,5,6) in the second row, and the numbers (7,8,9) in the third row. Then loop through the two-dimensional array, printing out the values in the first row followed by those in the second row and so on.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -974,7 +974,7 @@ public class Test1
                 <p>Given the following array, replace the “ADD CODE HERE” below with 1 line of code to replace the word “purple” with “yellow” using the correct array location.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {

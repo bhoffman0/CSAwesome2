@@ -38,7 +38,7 @@ public class GrayImage
             to <c>processImage</c>. The values shown in boldface represent the pixels that could be modified in a
             grayscale image with 4 rows and 5 columns.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Example before and after a call to processImage</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example before and after a call to processImage</caption>
       <image source="Unit4-Data-Collections/Figures/grayImageB.png" width="100%%"/>
     </figure>
     <program language="java">
@@ -77,7 +77,7 @@ public class GrayImage
     <exercise label="grayImageB_0">
         <statement>
 
-                <p>9-11-1: Which is the simplest way to subtract one integer value from another integer value?</p>
+                <p> Which is the simplest way to subtract one integer value from another integer value?</p>
 
         </statement>
 <choices>
@@ -117,7 +117,7 @@ public class GrayImage
     <exercise label="grayImageB_1">
         <statement>
 
-                <p>9-11-2: Which loop is the best for iterating through the image?</p>
+                <p> Which loop is the best for iterating through the image?</p>
 
         </statement>
 <choices>
@@ -215,7 +215,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <exercise label="gray_image_B">
     <statement>
-            <p>9-11-4: Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
+            <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
 </exercise>
@@ -225,7 +225,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_3">
         <statement>
 
-                <p>9-11-5: What could you write for the outer for loop so that it iterates through the rows but stops 2 before the end?</p>
+                <p> What could you write for the outer for loop so that it iterates through the rows but stops 2 before the end?</p>
 
         </statement>
 <choices>
@@ -274,7 +274,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_4">
         <statement>
 
-                <p>9-11-6: What could you write for the Inner for loop so that it iterates through the rows but stops 2 before the bottom?</p>
+                <p> What could you write for the Inner for loop so that it iterates through the rows but stops 2 before the bottom?</p>
 
         </statement>
 <choices>
@@ -323,7 +323,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_5">
         <statement>
 
-                <p>9-11-7: The question requires if any value is less than the value <c>BLACK</c> after subtraction, it needs to be replaced with the value <c>BLACK</c>. How could you write this?</p>
+                <p> The question requires if any value is less than the value <c>BLACK</c> after subtraction, it needs to be replaced with the value <c>BLACK</c>. How could you write this?</p>
 
         </statement>
 <choices>
@@ -373,7 +373,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_6">
         <statement>
 
-                <p>9-11-8: What could you write for the outer for loop so that it iterates through the rows?</p>
+                <p> What could you write for the outer for loop so that it iterates through the rows?</p>
 
         </statement>
 <choices>
@@ -422,7 +422,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_7">
         <statement>
 
-                <p>9-11-9: What could you write for the Inner for loop so that it iterates through the columns?</p>
+                <p> What could you write for the Inner for loop so that it iterates through the columns?</p>
 
         </statement>
 <choices>
@@ -471,7 +471,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="2012GreyScaleB_b">
         <statement>
 
-                <p>9-11-10: Since you don’t limit the iteration through the array, how can you check to make sure the subtraction isn’t going out of bounds?</p>
+                <p> Since you don’t limit the iteration through the array, how can you check to make sure the subtraction isn’t going out of bounds?</p>
 
         </statement>
 <choices>

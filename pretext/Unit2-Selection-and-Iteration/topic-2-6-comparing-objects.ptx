@@ -11,8 +11,7 @@
             
             <p>The <term>equals</term> method for Strings compares two strings letter by letter. <c>s1.equals(s2)</c> is true if <c>s1</c> and <c>s2</c> have all the same characters in the same order. With <c>Strings</c> and other objects, you almost always use <c>equals</c> instead of <c>==</c> to check their equality.</p>
             <p>When the operator <c>==</c> is used to compare object variables, it returns true when the two variables <em>refer to the same object</em>. These variables are called <term>object references</term> and <term>aliases</term> for the same object. With strings this happens when one string variable is set to another.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: String aliases</caption><image source="Unit2-Selection-and-Iteration/Figures/stringEquality.png" width="54%%"/></figure>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">String aliases</caption><image source="Unit2-Selection-and-Iteration/Figures/stringEquality.png" width="54%%"/></figure>
 
 <exercise label="lcse1">
     <statement>
@@ -59,7 +58,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <video youtube="hhYBVgmC-vw"/>
                 <p>Here’s the representation of memory where s2 and s3 refer to the same String object.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: s2 and s3 are aliases referring to the same String object</caption><image source="Unit2-Selection-and-Iteration/Figures/s2ands3.jpg" width="63%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">s2 and s3 are aliases referring to the same String object</caption><image source="Unit2-Selection-and-Iteration/Figures/s2ands3.jpg" width="63%%"/></figure>
         </subsection>
   <subsection>
             <title>Equality with New Strings</title>
@@ -108,17 +107,16 @@ public class RunestoneTests extends CodeTestHelper
 
     <video youtube="xZroaSGhgxA"/>
                 <p>Here is the representation of these String objects in memory.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Two strings that are equal with equals but not with ==.</caption><image source="Unit2-Selection-and-Iteration/Figures/s1ands2.jpg" width="63%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two strings that are equal with equals but not with ==.</caption><image source="Unit2-Selection-and-Iteration/Figures/s1ands2.jpg" width="63%%"/></figure>
             <p>Note that you can also create <c>Strings</c> using string literals instead of new, like <c>String s = "Hello"</c>. <c>String</c> literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and <c>==</c> on the AP exam.</p>
             <note>
                 <p>Only use <c>==</c> with primitive types like <c>int</c> or to test if two strings (or objects) refer to the same object.  Use <c>equals</c>, not <c>==</c>, with strings to test if they are equal letter by letter.</p>
             </note>
-            <p><problematic refid="id6">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qsbeq_1">
         <statement>
 
-            <p>3-7-5: Which of the following is true after the code executes?</p>
+            <p> Which of the following is true after the code executes?</p>
             <program language="java"><input>
 String s1 = new String("hi");
 String s2 = new String("bye");
@@ -162,7 +160,7 @@ s2 = s1;
     <exercise label="qsbeq_2">
         <statement>
 
-            <p>3-7-6: Which of the following is true after the code executes?</p>
+            <p> Which of the following is true after the code executes?</p>
             <program language="java"><input>
 String s1 = new String("hi");
 String s2 = new String("bye");
@@ -205,7 +203,7 @@ String s3 = new String("hi");
     <exercise label="qsbeq_3">
         <statement>
 
-            <p>3-7-7: Which of the following is true after the code executes?</p>
+            <p> Which of the following is true after the code executes?</p>
             <program language="java"><input>
 String s1 = new String("hi");
 String s2 = new String("bye");
@@ -248,7 +246,6 @@ String s3 = new String("hi");
   <subsection>
             <title>Comparing with null</title>
             <p>One common place to use <c>==</c> or <c>!=</c> with objects is to compare them to <term>null</term> to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn’t exist. Remember that <term>short-circuit evaluation</term> is used with <c>&amp;&amp;</c> in Java meaning that if the first part of the if condition is false, it doesn’t even have to check the second condition and it knows the whole <c>&amp;&amp;</c> test is false.</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="nullTest">
     <statement>
@@ -330,7 +327,7 @@ public class RunestoneTests extends CodeTestHelper
     <video youtube="GPdoHm1K8HA"/>
             </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge : Tracing Code</title>
+            <title>Programming Challenge : Tracing Code</title>
             <p>What will the following code print out? Trace through the code by drawing diagrams of what is going on in memory like the figures above, and then show the values of s1, s2, s3, s4 and the output after each line of code. Remember that you can use trace tables to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column in a table and keep track of its value throughout the program as you go through it line by line.</p>
             <program language="java"><input>
 String s1 = null;
@@ -361,7 +358,7 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
 
 <exercise label="challenge3-7-tracingStrings">
     <statement>
-            <p>3-7-10: Write your tracing table here that keeps track of s1, s2, s3, s4 and the output.</p>
+            <p> Write your tracing table here that keeps track of s1, s2, s3, s4 and the output.</p>
 
     </statement>
 </exercise>
@@ -389,7 +386,7 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
     <exercise label="AP3-7-1">
         <statement>
 
-            <p>3-7-11: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 String message = new String("AP Practice");
 String note = new String("AP Practice");

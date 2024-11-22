@@ -43,7 +43,7 @@ while (condition)
             loops (or you may have used a <c>for</c> loop which will be covered in the next
             lesson). Almost every programming language has a <c>while</c> loop.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Comparing App Inventor and Java for <literal>while</literal> loops</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor and Java for <literal>while</literal> loops</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/whileInAppInventor.png" width="100%%"/>
     </figure>
     <p>If you’re used to a language like Snap! or Scratch, you may be familiar with the
@@ -53,21 +53,21 @@ while (condition)
             must create a Java <c>while</c> loop that repeatedly moves while it has <em>not</em> yet
             reached x position 100 or is less than 100 as below.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java <literal>while</literal> loop</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Snap! or Scratch Repeat Until Loop to Java <literal>while</literal> loop</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/ScratchRepeatUntilLoop.png" width="100%%"/>
     </figure>
     <p>The following <url href="https://www.youtube.com/watch?v=Uw9mv53Jnfs" visual="https://www.youtube.com/watch?v=Uw9mv53Jnfs">video</url> introduces while loops.</p>
     <video youtube="Uw9mv53Jnfs"/>
     <p>Here’s what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Control Flow in a while Loop</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Control Flow in a while Loop</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/WhileLoopFlow.png" width="45%%"/>
     </figure>
   </introduction>
   <subsection>
             <title>Three Steps to Writing a Loop</title>
             <p>The simplest loops are <term>counter-controlled loops</term> like below, where the <term>loop control variable</term> is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: Three Steps of Writing a Loop</caption><image source="Unit2-Selection-and-Iteration/Figures/loop3steps.png" width="71%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Three Steps of Writing a Loop</caption><image source="Unit2-Selection-and-Iteration/Figures/loop3steps.png" width="71%%"/></figure>
             <note>
                 <p>Remember these 3 steps to writing a loop:</p>
                 <p><ol marker="1">
@@ -82,7 +82,6 @@ while (condition)
                     </li>
                 </ol></p>
             </note>
-            <p><problematic refid="id7">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="whileloop">
     <statement>
@@ -133,12 +132,11 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.</p>
             </note>
-            <p><problematic refid="id9">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="while1">
         <statement>
 
-            <p>4-1-3: Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out “0 2 4 6 8 10”?</p>
+            <p> Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out “0 2 4 6 8 10”?</p>
             <program language="java"><input>
 int count = 0;
 /* missing loop header */
@@ -194,16 +192,15 @@ int count = 0;
             <title>Tracing Loops</title>
             <p>A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.</p>
             <p>You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/traceTable.png" width="27%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/traceTable.png" width="27%%"/></figure>
             <p>Watch the following <url href="https://www.youtube.com/watch?v=TZss5ukwN8s" visual="https://www.youtube.com/watch?v=TZss5ukwN8s">video</url> for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output.</p>
 
     <video youtube="TZss5ukwN8s"/>
-                <p><problematic refid="id11">|Exercise|</problematic> <term>Check your understanding</term></p>
-
+    
     <exercise label="while2">
         <statement>
 
-            <p>4-1-5: Consider the following code segment. What is count’s value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)</p>
+            <p> Consider the following code segment. What is count’s value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)</p>
             <program language="java"><input>
 int count = 1;
 while (count &lt;= 10)
@@ -259,7 +256,7 @@ count = count - 10;
     <exercise label="qlb_2_1">
         <statement>
 
-            <p>4-1-6: What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)</p>
+            <p> What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)</p>
             <program language="java"><input>
 int x = -5;
 while (x &lt; 0)
@@ -343,7 +340,6 @@ while (i &lt; 10)
             <p>Another common error with loops is an <term>off-by-one error</term> where the loop runs
                 one too many or one too few times. This is usually a problem with step 2 the
                 test condition and using the incorrect relational operator <c>&lt;</c> or <c>&lt;=</c>.</p>
-            <p><problematic refid="id13">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="whileloopbugs">
     <statement>
@@ -400,13 +396,12 @@ public class RunestoneTests extends CodeTestHelper
             <title>Input-Controlled Loops</title>
             <p>You can use a <c>while</c> loop to repeat the body of the loop a certain number of times as shown above.  However, a <c>while</c> loop is typically used when you don’t know how many times the loop will execute. It is often used for a <term>input-controlled loop</term> where the user’s input indicates when to stop. For example, in the <url href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java" visual="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java">Magpie chatbot lab on replit.com</url> below, the while loop stops when you type in “Bye”. The stopping value is often called the <term>sentinel value</term> for the loop. Notice that if you type in “Bye” right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a <c>return</c> statement that makes it immediately return from the method.</p>
             <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;&lt;p&gt;</raw>
-            <p><problematic refid="id15">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>Here’s another example with <url href="https://firewalledreplit.com/@BerylHoffman/Average#Main.java" visual="https://firewalledreplit.com/@BerylHoffman/Average#Main.java">numbers on replit.com</url>. This code calculates the average of positive numbers, but it is missing the condition for the loop on line 14.  Let’s use -1 as the <term>sentinel value</term>. Add the condition to  the while loop to run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Try commenting out line 19 with // to see what happens (note there is a stop button at the top!).</p>
             <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Average?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</raw>
             <p>There are standard algorithms that use loops to compute the sum or average like above, or determine the minimum or maximum value entered, or the frequency of a certain condition. You can also use loops to identify if some integers are evenly divisible by other integers or identify the individual digits in an integer. We will see a lot more of these algorithms in Unit 6 with loops and arrays.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id17">|Groupwork|</problematic> Programming Challenge : Guessing Game</title>
+            <title>Programming Challenge : Guessing Game</title>
             <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%%"/>
             <p>We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like “Too high” or “Too low”. Here’s the pseudocode for the guessing game. <term>Pseudocode</term> is an English description or plan of what your code will do step by step. What’s the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?</p>
             <p><ol marker="1">
@@ -622,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP4-1-1">
         <statement>
 
-            <p>4-1-9: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 int n = 35;
 int result = 1;
@@ -657,7 +652,7 @@ System.out.println(result);
     <exercise label="AP4-1-2">
         <statement>
 
-            <p>4-1-10: Consider the following code segment which is intended to print out the even numbers from 0 to 8 (including 8).</p>
+            <p> Consider the following code segment which is intended to print out the even numbers from 0 to 8 (including 8).</p>
             <program language="java"><input>
 int count = 0;
 /* missing loop header */

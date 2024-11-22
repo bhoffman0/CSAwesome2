@@ -8,7 +8,7 @@
     <exercise label="PDpretest1">
         <statement>
 
-            <p>1-1: Unit 1 Primitive Types Skills and Learning Objectives:</p>
+            <p> Unit 1 Primitive Types Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 5.B: Explain why a code segment will not compile or work as intended.</p>
@@ -59,7 +59,7 @@ III. In lines 1, 2, and 3, the text inside the parentheses should be in quotatio
     <exercise label="PDpretest2">
         <statement>
 
-            <p>1-2: Unit 1 Primitive Types (Expressions) Skills and Learning Objectives:</p>
+            <p> Unit 1 Primitive Types (Expressions) Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>VAR-1.C: Declare variables of the correct types to represent primitive data.</p>
@@ -100,7 +100,7 @@ y = y * z;
     <exercise label="PDpretest3">
         <statement>
 
-            <p>1-3: Unit 2 Using Objects (Constructors) Skills and Learning Objectives:</p>
+            <p> Unit 2 Using Objects (Constructors) Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3.A: Write program code to create objects of a class and call their methods.</p>
@@ -158,7 +158,7 @@ III. Party otherParty = new Party();
     <exercise label="PDpretest4">
         <statement>
 
-            <p>1-4: Unit 2 Using Objects (Methods) Skills and Learning Objectives:</p>
+            <p> Unit 2 Using Objects (Methods) Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3.A: Write program code to create objects of a class and call their methods.</p>
@@ -220,7 +220,7 @@ Liquid liquid = new Liquid();
     <exercise label="PDpretest5">
         <statement>
 
-            <p>1-5: Unit 4 If Statements and Boolean Operators Skills and Learning Objectives:</p>
+            <p> Unit 4 If Statements and Boolean Operators Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>CON-1.E: Evaluate Boolean expressions that use relational operators in program code.</p>
@@ -259,7 +259,7 @@ if (!p || q)
     <exercise label="PDpretest6">
         <statement>
 
-            <p>1-6: Unit 4 If Statements Skills and Learning Objectives:</p>
+            <p> Unit 4 If Statements Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>CON-2.A: Represent branching logical processes by using  conditional statements.</p>
@@ -312,7 +312,7 @@ System.out.print("on ");
     <exercise label="PDpretest7">
         <statement>
 
-            <p>1-7: Unit 4 Loops Skills and Learning Objectives:</p>
+            <p> Unit 4 Loops Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>CON-2.E Represent iterative processes using a for loop.</p>
@@ -352,7 +352,7 @@ int count = 0;
     <exercise label="PDpretest8">
         <statement>
 
-            <p>1-8: Unit 4 Loops Skills and Learning Objectives:</p>
+            <p> Unit 4 Loops Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>CON-2.E Represent iterative processes using a for loop.</p>
@@ -396,7 +396,7 @@ public static String changeStr(String str)
     <exercise label="PDpretest9">
         <statement>
 
-            <p>1-9: Unit 5 Writing Classes Skills and Learning Objectives:</p>
+            <p> Unit 5 Writing Classes Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3B: Write program code to define a new type by creating a class.</p>
@@ -478,7 +478,7 @@ public Cat(String n, int a)
     <exercise label="PDpretest10">
         <statement>
 
-            <p>1-10: Unit 5 Writing Classes Skills and Learning Objectives:</p>
+            <p> Unit 5 Writing Classes Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3B: Write program code to define a new type by creating a class.</p>
@@ -507,7 +507,7 @@ public Cat(String n, int a)
     <exercise label="PDpretest11">
         <statement>
 
-            <p>1-11: Unit 5 Writing Classes Skills and Learning Objectives:</p>
+            <p> Unit 5 Writing Classes Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3B: Write program code to define a new type by creating a class.</p>
@@ -551,7 +551,7 @@ public class Student
     <exercise label="PDpretest12">
         <statement>
 
-            <p>1-12: Unit 6 Arrays Skills and Learning Objectives:</p>
+            <p> Unit 6 Arrays Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3.D: Write program code to create, traverse, and manipulate elements in 1D array or ArrayList objects.</p>
@@ -602,7 +602,7 @@ III. for (int i = 1; i &lt;= array.length; i++)
     <exercise label="PDpretest13">
         <statement>
 
-            <p>1-13: Unit 6 Arrays Skills and Learning Objectives:</p>
+            <p> Unit 6 Arrays Skills and Learning Objectives:</p>
             <p><ul>
                 <li>
                     <p>Skill 3.D: Write program code to create, traverse, and manipulate elements in 1D array or ArrayList objects.</p>

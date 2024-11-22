@@ -10,7 +10,7 @@
     <p>The code above declares an object variable named <c>greeting</c> and sets the value of greeting to the Java keyword <c>null</c> to show that it doesn’t refer to any object yet.  So <c>System.out.println(greeting);</c> will print <c>null</c>.</p>
     <p>Object variables <term>refer</term> to objects in memory.  A reference is a way to find the actual object, like adding a contact to your phone lets you reach someone without knowing exactly where they are.  The value of greeting is null since the string object has not been created yet.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Initial value for an object reference</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Initial value for an object reference</caption>
     <image source="Unit1-Using-Objects-and-Methods/Figures/greeting.png" width="9%%"/>
   </figure>
     <p>In Java there are two ways to create an object of the <c>String</c> class.  You can use the <c>new</c> keyword followed by a space and then the class constructor and then in parentheses you can include values used to initialize the fields of the object.  This is the standard way to create a new object of a class in Java.</p>
@@ -26,10 +26,9 @@ String greeting = "Hello";
 </input>
   </program>
     <p>In both cases an object of the <c>String</c> class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object.</p>
-    <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
     <p>The code above will first print class <c>java.lang.String</c> since <c>greeting</c> was created by the <c>String</c> class.  The full name for the <c>String</c> class is <c>java.lang.String</c>.  The <c>java.lang</c> part is the <term>package</term> name.  Every class in the Java language is in a package and the standard classes like <c>String</c> are in the <c>java.lang</c> package.  Every object in Java knows the class that created it.  Also, every class knows its <term>parent</term> class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can <c>inherit</c> object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The last print statement will print <c>class java.lang.Object</c> because the parent class (<term>superclass</term>) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Object variable of type String with a reference to a String object which has a reference to the String class which has a reference to the Object class.</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Object variable of type String with a reference to a String object which has a reference to the String class which has a reference to the Object class.</caption>
     <image source="Unit1-Using-Objects-and-Methods/Figures/stringObject.png" width="89%%"/>
   </figure>
   </introduction>
@@ -91,12 +90,11 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + ” ” +. If you forget to add spaces, you will get smushed output like “HiJose” instead of “Hi Jose”.  And remember that variables are never put inside the quotes (“”) since this would print the variable name out letter by letter instead of its value.</p>
             </note>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="qse_1">
         <statement>
 
-            <p>1-14-5: Given the following code segment, what is in the string referenced by s1?</p>
+            <p> Given the following code segment, what is in the string referenced by s1?</p>
             <program language="java"><input>
 String s1 = "xy";
 String s2 = s1;
@@ -159,7 +157,6 @@ s1 = s1 + s2 + "z";
                 values like <c>int</c> and <c>boolean</c> will be converted to a <c>String</c> automatically when concatenated with a <c>String</c>.  Any other objects concatenated with a <c>String</c> will be converted to <c>String</c> using their
                 <c>toString</c> method. All objects inherit a
                 <c>toString</c> method from the <c>Object</c> class that returns a <c>String</c> representation of the object and many classes <term>override</term> it to produce a useful human-readable value. Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass, but the behavior of the method is specific to the subclass (overriding toString is no longer covered on the AP CSA exam).</p>
-            <p><problematic refid="id10">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="lcso2">
     <statement>
@@ -219,7 +216,7 @@ public class RunestoneTests extends CodeTestHelper
             
             
             <p>A string holds characters in a sequence.  Each character is at a position or <term>index</term> which starts with 0 as shown below.  An <term>index</term> is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: A string with the position (index) shown above each character</caption><image source="Unit1-Using-Objects-and-Methods/Figures/stringIndicies.png" width="89%%" alt="a string with the position (index) shown above each character"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A string with the position (index) shown above each character</caption><image source="Unit1-Using-Objects-and-Methods/Figures/stringIndicies.png" width="89%%" alt="a string with the position (index) shown above each character"/></figure>
             <note>
                 <p>The first character in a string is at index 0 and the last characters is at <term>length</term> -1. Attempting to access indices outside this range will result in an <term>IndexOutOfBoundsException</term>.</p>
             </note>
@@ -307,7 +304,6 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>Remember that substring(from,to) does not include the character at the <c>to</c> index! To return a single character at index i, use <c>str.substring(i, i + 1)</c>.</p>
             </note>
-            <p><problematic refid="id12">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="substring-preconditions">
     <statement>
@@ -351,12 +347,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id14">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qsb_3">
         <statement>
 
-            <p>1-14-9: What is the value of pos after the following code executes?</p>
+            <p> What is the value of pos after the following code executes?</p>
             <program language="java"><input>
 String s1 = "abccba";
 int pos = s1.indexOf("b");
@@ -407,7 +402,7 @@ int pos = s1.indexOf("b");
     <exercise label="qsb_3b">
         <statement>
 
-            <p>1-14-10: What is the value of len after the following code executes?</p>
+            <p> What is the value of len after the following code executes?</p>
             <program language="java"><input>
 String s1 = "baby";
 int len = s1.length();
@@ -458,7 +453,7 @@ int len = s1.length();
     <exercise label="qsb_3c">
         <statement>
 
-            <p>1-14-11: What is the value of s2 after the following code executes?</p>
+            <p> What is the value of s2 after the following code executes?</p>
             <program language="java"><input>
 String s1 = "baby";
 String s2 = s1.substring(0,3);
@@ -509,7 +504,7 @@ String s2 = s1.substring(0,3);
     <exercise label="qsb_4b">
         <statement>
 
-            <p>1-14-12: What is the value of s2 after the following code executes?</p>
+            <p> What is the value of s2 after the following code executes?</p>
             <program language="java"><input>
 String s1 = "baby";
 String s2 = s1.substring(2);
@@ -570,7 +565,7 @@ String s2 = s1.substring(2);
             <title>CompareTo and Equals</title>
             <p>We can compare primitive types like int and double using operators like <c>==</c> and <c>&lt;</c> or <c>&gt;</c>, which you will learn about in the next unit. However, with reference types like String, you must use the methods <c>equals</c> and <c>compareTo</c>, not <c>==</c> or <c>&lt;</c> or <c>&gt;</c>.</p>
             <p>The method <c>compareTo</c> compares two strings character by character. If they are equal, it returns 0. If the first string is alphabetically ordered before the second string (which is the argument of <c>compareTo</c>), it returns a negative number. And if the first string is alphabetically ordered after the second string, it returns a positive number. (The actual number that it returns does not matter, but it is the distance in the first letter that is different, e.g. A is 7 letters away from H.)</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: compareTo returns a negative or positive value or 0 based on alphabetical order</caption><image source="Unit1-Using-Objects-and-Methods/Figures/compareTo.png" width="63%%" alt="compareTo"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">compareTo returns a negative or positive value or 0 based on alphabetical order</caption><image source="Unit1-Using-Objects-and-Methods/Figures/compareTo.png" width="63%%" alt="compareTo"/></figure>
             <p>The <c>equals</c> method compares the two strings character by character and returns <c>true</c> or <c>false</c>. Both <c>compareTo</c> and <c>equals</c> are case-sensitive. There are case-insensitive versions of these methods, <c>compareToIgnoreCase</c> and <c>equalsIgnoreCase</c>, which are not on the AP exam.</p>
             <p>Run the example below to see the output from <c>compareTo</c> and <c>equals</c>. Since <c>"Hello!"</c> would be alphabetically ordered after <c>"And"</c>, <c>compareTo</c> returns a positive number. Since <c>"Hello!"</c> would be alphabetically ordered before <c>"Zoo"</c>, <c>compareTo</c> returns a negative number.  Notice that <c>equals</c> is case-sensitive.</p>
 
@@ -618,7 +613,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>There are lots of other methods in the String class.  You can look through the Java documentation for the <url href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" visual="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String class</url> online.   You don’t have to know all of these for the exam, but you can use them if you want to on the exam.</p>
-            <p><problematic refid="id16">|Exercise|</problematic> <term>Check your understanding</term></p>
 
 <exercise label="ch4_str1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct</p></statement>
@@ -631,7 +625,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qsb_8-new">
         <statement>
 
-            <p>1-14-16: What is the value of answer after the following code executes?</p>
+            <p> What is the value of answer after the following code executes?</p>
             <program language="java"><input>
 String s1 = "Hi";
 String s2 = "Bye";
@@ -751,7 +745,7 @@ public class RunestoneTests extends CodeTestHelper
             </blockquote>
         </subsection>
   <subsection>
-            <title><problematic refid="id18">|Groupwork|</problematic> Programming Challenge : Pig Latin</title>
+            <title>Programming Challenge : Pig Latin</title>
             
             <p><image source="Unit1-Using-Objects-and-Methods/Figures/pig.png" width="18%%" alt="pig latin"/> Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay”.</p>
             <p>Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word’s length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).</p>
@@ -907,7 +901,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP-substring">
         <statement>
 
-            <p>1-14-19: What is the value of s2 after the following code executes?</p>
+            <p> What is the value of s2 after the following code executes?</p>
             <program language="java"><input>
 String s1 = new String("hi there");
 int pos = s1.indexOf("e");
@@ -959,7 +953,7 @@ String s2 = s1.substring(0,pos);
     <exercise label="AP-immutable">
         <statement>
 
-            <p>1-14-20: What is the value of s1 after the following code executes?</p>
+            <p> What is the value of s1 after the following code executes?</p>
             <program language="java"><input>
 String s1 = "Hi";
 String s2 = s1.substring(0,1);

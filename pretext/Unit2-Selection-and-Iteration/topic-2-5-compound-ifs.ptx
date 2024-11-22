@@ -7,7 +7,6 @@
   <subsection>
             <title>And (&amp;&amp;), Or (||), and Not (!)</title>
             <p>What if you want two things to be true before the body of the conditional is executed?  Use <c>&amp;&amp;</c> as a logical <term>and</term> to join two Boolean expressions and the body of the condition will only be executed only if both are true.</p>
-            <p><problematic refid="id1">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lccc1">
     <statement>
@@ -69,7 +68,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>What if it is okay if only one of two things is true? Use <c>||</c> as a logical <term>or</term> to join two Boolean expressions and the body of the condition will be executed if one or both are true.</p>
-            <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lccc2">
     <statement>
@@ -134,7 +132,6 @@ public class RunestoneTests extends CodeTestHelper
                 <p>In English, we often use an exclusive-or like in the sentence “do you want to be player 1 <em>or</em> player 2?” where you can’t be both player 1 and player 2. In programming, the or-operator is an inclusive-or which means that the whole expression is true if either one or the other or <em>both</em> conditions are true.</p>
             </note>
             <p>With numerical values, the <term>or</term> (||) operator is often used to check for error conditions on different ends of the number line, while the <term>and</term> (&amp;&amp;) operator is often used to see if a number is in an range.</p>
-            <p><problematic refid="id5">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lcccnum">
     <statement>
@@ -185,7 +182,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>The <term>not</term> (<c>!</c>) operator can be used to negate a boolean value. We’ve seen <c>!</c> before in <c>!=</c> (not equal).  If you use <c>!</c> in expressions with <c>&amp;&amp;</c> and <c>||</c>, be careful because the results are often the opposite of what you think it will be at first. We’ll see examples of this in the next lesson.</p>
-            <p><problematic refid="id7">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lcccnot">
     <statement>
@@ -303,11 +299,10 @@ public class RunestoneTests extends CodeTestHelper
                     
                 
             </tabular></table>
-            <p><problematic refid="id9">|Exercise|</problematic> <term>Check your understanding</term></p>
 
         <exercise label="3_5_1_trueAndFalse">
             <statement>
-    <p>3-5-5: The truth table above is missing one result.  What is the result of <c>P &amp;&amp; Q</c> when <c>P=true</c> and <c>Q=false</c>? <var/>  </p></statement><setup><var><condition string="^\s*^false$\s*$"><feedback><p>Correct.  Both values must be true for &amp;&amp; to return true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>The following table shows the result for <c>P || Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>.  As you can see below the result of <c>P || Q</c> is <c>true</c> if either <c>P</c> or <c>Q</c> is <c>true</c>.  It is also <c>true</c> when both of them are <c>true</c>.</p>
+    <p> The truth table above is missing one result.  What is the result of <c>P &amp;&amp; Q</c> when <c>P=true</c> and <c>Q=false</c>? <var/>  </p></statement><setup><var><condition string="^\s*^false$\s*$"><feedback><p>Correct.  Both values must be true for &amp;&amp; to return true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>The following table shows the result for <c>P || Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>.  As you can see below the result of <c>P || Q</c> is <c>true</c> if either <c>P</c> or <c>Q</c> is <c>true</c>.  It is also <c>true</c> when both of them are <c>true</c>.</p>
             <table><tabular>
                 
                     
@@ -374,16 +369,14 @@ public class RunestoneTests extends CodeTestHelper
                     
                 
             </tabular></table>
-            <p><problematic refid="id11">|Exercise|</problematic> <term>Check your understanding</term></p>
 
         <exercise label="3_5_2_falseOrTrue">
             <statement>
-    <p>3-5-6: The truth table above is missing one result.  What is the result of <c>P || Q</c> when <c>P=false</c> and <c>Q=true</c>? <var/>  </p></statement><setup><var><condition string="^\s*^true$\s*$"><feedback><p>Correct.  Only one of the two has to be true with || so this will print true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p><problematic refid="id13">|Exercise|</problematic> <term>Check your understanding</term></p>
-
+    <p> The truth table above is missing one result.  What is the result of <c>P || Q</c> when <c>P=false</c> and <c>Q=true</c>? <var/>  </p></statement><setup><var><condition string="^\s*^true$\s*$"><feedback><p>Correct.  Only one of the two has to be true with || so this will print true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>
     <exercise label="qcbc_7">
         <statement>
 
-            <p>3-5-7: What is printed when the following code executes and x has been set to 3 and y has been set to 9?</p>
+            <p> What is printed when the following code executes and x has been set to 3 and y has been set to 9?</p>
             <program language="java"><input>
 if (x &gt; 0 &amp;&amp; (y / x) == 3)
 {
@@ -422,7 +415,7 @@ else
     <exercise label="qcbc_8">
         <statement>
 
-            <p>3-5-8: What is printed when the following code executes and x has been set to 3 and y has been set to 6?</p>
+            <p> What is printed when the following code executes and x has been set to 3 and y has been set to 6?</p>
             <program language="java"><input>
 if (x &gt; 0 &amp;&amp; (y / x) == 3)
 {
@@ -461,7 +454,7 @@ else
     <exercise label="qcbc_or">
         <statement>
 
-            <p>3-5-9: What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an <term>or</term> (||) instead of <term>and</term> (&amp;&amp;).</p>
+            <p> What is printed when the following code executes and x has been set to 3 and y has been set to 6?  Notice that it is now an <term>or</term> (||) instead of <term>and</term> (&amp;&amp;).</p>
             <program language="java"><input>
 if (x &gt; 0 || (y / x) == 3)
 {
@@ -510,12 +503,11 @@ else
                     <p>If two boolean values/expressions are combined with a logical <term>and</term> (<c>&amp;&amp;</c>) and the first expression is <c>false</c>, then the second expression won’t be executed.  If the first expression is <c>false</c>, the result will be <c>false</c>, since both sides of the <c>&amp;&amp;</c> need to be <c>true</c> for the result to be <c>true</c>.</p>
                 </li>
             </ul></p>
-            <p><problematic refid="id15">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qcbc_5">
         <statement>
 
-            <p>3-5-10: What is printed when the following code executes and x has been set to 0 and y to 3?</p>
+            <p> What is printed when the following code executes and x has been set to 0 and y to 3?</p>
             <program language="java"><input>
 if (x &gt; 0 &amp;&amp; (y / x) == 3)
 {
@@ -563,7 +555,7 @@ else
     <exercise label="qcb_7sc">
         <statement>
 
-            <p>3-5-11: What is printed when the following code executes and x has been set to zero and y is set to 3?</p>
+            <p> What is printed when the following code executes and x has been set to zero and y is set to 3?</p>
             <program language="java"><input>
 if (x == 0 || (y / x) == 3)
 {
@@ -609,12 +601,12 @@ else
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id17">|Groupwork|</problematic> Programming Challenge : Truth Tables POGIL</title>
-            <p>We encourage you to do this activity as a <problematic refid="id19">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <title>Programming Challenge : Truth Tables POGIL</title>
+            <p>We encourage you to do this activity as a <problematic refid="id1">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Explore the following problems with your group:</p>
             <p><ol marker="1">
                 <li>
-                    <p>Draw or print a <problematic refid="id21">|Venn diagram|</problematic> of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using <c>==</c>, <c>&lt;</c>, <c>&gt;</c>, and <c>&amp;&amp;</c>, for example Ada’s age <c>&gt;</c> Alan’s age <c>&amp;&amp;</c> Alan’s age <c>==</c> Grace’s age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using <c>==</c>, <c>!=</c>, and <c>&amp;&amp;</c>, for example Ada’s movie <c>==</c> Alan’s movie <c>&amp;&amp;</c> Alan’s movie <c>!=</c> Grace’s movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).</p>
+                    <p>Draw or print a <problematic refid="id3">|Venn diagram|</problematic> of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using <c>==</c>, <c>&lt;</c>, <c>&gt;</c>, and <c>&amp;&amp;</c>, for example Ada’s age <c>&gt;</c> Alan’s age <c>&amp;&amp;</c> Alan’s age <c>==</c> Grace’s age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using <c>==</c>, <c>!=</c>, and <c>&amp;&amp;</c>, for example Ada’s movie <c>==</c> Alan’s movie <c>&amp;&amp;</c> Alan’s movie <c>!=</c> Grace’s movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).</p>
                 </li>
                 <li>
                     <p>Write the sentence “If it’s sunny, OR if the temperature is greater than 80 and it’s not raining, I will go to the beach.” as a Java if statement using an int variable <c>temperature</c> and boolean variables <c>sunny</c> and <c>raining</c>.  If the conditional is true, print out “Go to the beach!”. So, you will go to the beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it’s not raining.</p>
@@ -741,7 +733,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP3-5-1">
         <statement>
 
-            <p>3-5-13: Consider the following code segment. What is printed as a result of executing the code segment?</p>
+            <p> Consider the following code segment. What is printed as a result of executing the code segment?</p>
             <program language="java"><input>
 int x = 10;
 int y = 5;

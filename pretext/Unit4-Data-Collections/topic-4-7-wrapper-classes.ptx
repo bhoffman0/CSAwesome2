@@ -33,11 +33,10 @@ Integer i = 2;  // autoboxing - wrap 2
 int number = i; // unboxing - back to primitive type
 </input>
   </program>
-    <p><problematic refid="id1">|Exercise|</problematic> <term>Check your understanding</term></p>
     <p>Here are some more useful methods in the Integer and  Double classes:</p>
   </introduction>
   <subsection>
-            <title><problematic refid="id3">|Groupwork|</problematic> Programming Challenge : Debugging</title>
+            <title>Programming Challenge : Debugging</title>
             <p>Can you find and fix all the bugs in the following code to use the correct Integer and Double methods and variables?</p>
 
 <exercise label="challenge2-8-wrapperDebug">

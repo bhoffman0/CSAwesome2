@@ -9,7 +9,7 @@
                 <p>Replace the “ADD CODE HERE” below with the code to complete the findSum method. The method should take the sum of every value that is less than or equal to n. For example, findSum(3) should return 6. The output of the program should be 15.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Recursion
 {

@@ -29,7 +29,7 @@
                 <p>Write the code to print a random number from 1 to 100.  You can use <c>Math.random()</c> to get a value between 0 and not quite 1.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -115,7 +115,7 @@ public class Test1
                 <p>The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -223,7 +223,7 @@ public class Test1
                 <p>The following code should print the first 3 letters of the string <c>message</c> all in lowercase letters. However, the code has errors.  Fix the errors so that the code runs as intended.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -317,7 +317,7 @@ public class Test1
                 <p>The following code starts with <c>String name1 = ALEX;</c> and should print <c>Alex</c>.  Use the <c>toLowerCase</c> and <c>substring</c> methods to do this task.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -410,7 +410,7 @@ public class Test1
                 <p>The following code should remove the word “very ” (and following space) from the message and print the new message.  You can use <c>indexOf</c> to find the position of a substring in your string.  You can use <c>substring</c> to create a new string removing the word.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -516,7 +516,7 @@ public class Test1
                 <p>The following code should replace <c>lol</c> in the message with <c>laugh out loud</c> and print the new message using indexOf and substring.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {

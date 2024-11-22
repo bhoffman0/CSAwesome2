@@ -80,7 +80,7 @@ public class RouteCipher
 
 <exercise label="routecipherb_short">
     <statement>
-            <p>9-13-1: Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
+            <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
 </exercise>
@@ -92,7 +92,7 @@ public class RouteCipher
     <exercise label="FRQRouteCipherB_1.5MC">
         <statement>
 
-                <p>9-13-2: What type of loop could you use to solve this problem?</p>
+                <p> What type of loop could you use to solve this problem?</p>
 
         </statement>
 <choices>
@@ -141,7 +141,7 @@ public class RouteCipher
     <exercise label="FRQRouteCipherBnorm_1">
         <statement>
 
-                <p>9-13-3: What should your while statement conditional be?</p>
+                <p> What should your while statement conditional be?</p>
 
         </statement>
 <choices>
@@ -188,7 +188,7 @@ public class RouteCipher
     <exercise label="FRQRouteCipherBnorm_2">
         <statement>
 
-                <p>9-13-4: How can you determine how large the “chunk size” should be?</p>
+                <p> How can you determine how large the “chunk size” should be?</p>
 
         </statement>
 <choices>
@@ -235,7 +235,7 @@ public class RouteCipher
     <exercise label="FRQRouteCipherBnorm_3">
         <statement>
 
-                <p>9-13-5: If chunkSize is greater that message.length(), what should you set chunkSize to?</p>
+                <p> If chunkSize is greater that message.length(), what should you set chunkSize to?</p>
 
         </statement>
 <choices>
@@ -282,7 +282,7 @@ public class RouteCipher
     <exercise label="FRQRouteCipherBnorm_4">
         <statement>
 
-                <p>9-13-6: What method needs to be called on message before you can call “encryptBlock()”?</p>
+                <p> What method needs to be called on message before you can call “encryptBlock()”?</p>
 
         </statement>
 <choices>
@@ -331,29 +331,29 @@ public class RouteCipher
 <exercise label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="4">
+<blocks><block order="8">
 <cline>public String encryptMessage(String message)</cline>
 <cline>{</cline>
 <cline>  String encryptedMessage = "";</cline>
 <cline>  int chunkSize = this.numRows * this.numCols;</cline>
-</block><block order="8">
+</block><block order="4">
 <cline>  while (message.length() &gt; 0)</cline>
 <cline>  {</cline>
-</block><block order="2">
+</block><block order="3">
 <cline>    if (chunkSize &gt; message.length())</cline>
 <cline>    {</cline>
 <cline>      chunkSize = message.length();</cline>
-</block><block order="3">
+</block><block order="7">
 <cline>    } // end if</cline>
-</block><block order="1">
+</block><block order="2">
 <cline>    fillBlock(message);</cline>
 <cline>    encryptedMessage += encryptBlock();</cline>
 <cline>    message = message.substring(chunkSize);</cline>
 </block><block order="5">
 <cline>  } // end while</cline>
-</block><block order="7">
-<cline>  return encryptedMessage;</cline>
 </block><block order="6">
+<cline>  return encryptedMessage;</cline>
+</block><block order="1">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>
@@ -495,7 +495,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="FRQRouteCipherBrecur_1">
         <statement>
 
-                <p>9-13-9: What is your base case?</p>
+                <p> What is your base case?</p>
 
         </statement>
 <choices>
@@ -542,7 +542,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="FRQRouteCipherBrecur_2">
         <statement>
 
-                <p>9-13-10: What kind of recursion will you use?</p>
+                <p> What kind of recursion will you use?</p>
 
         </statement>
 <choices>
@@ -589,7 +589,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="FRQRouteCipherBrecur_3">
         <statement>
 
-                <p>9-13-11: What is your tail recursive call?</p>
+                <p> What is your tail recursive call?</p>
 
         </statement>
 <choices>
@@ -638,7 +638,7 @@ public class RunestoneTests extends CodeTestHelper
 <exercise label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="3">
+<blocks><block order="1">
 <cline>public String encryptMessage(String message)</cline>
 <cline>{</cline>
 </block><block order="6">
@@ -646,18 +646,18 @@ public class RunestoneTests extends CodeTestHelper
 <cline>  {</cline>
 <cline>      return "";</cline>
 <cline>  }</cline>
-</block><block order="4">
+</block><block order="5">
 <cline>  fillBlock(message);</cline>
-</block><block order="2">
+</block><block order="4">
 <cline>  if (message.length() &lt;= this.numRows * this.numCols)</cline>
 <cline>  {</cline>
 <cline>      return encryptBlock();</cline>
 <cline>  }</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>  return (encryptBlock() +</cline>
 <cline>         encryptMessage(message.substring(</cline>
 <cline>            this.numRows * this.numCols)));</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

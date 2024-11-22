@@ -90,7 +90,7 @@ str.substring(k, k + 1)
 
 <exercise label="routeciphera_short">
     <statement>
-            <p>9-12-1: Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
+            <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
 </exercise>
@@ -103,7 +103,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_1.5MC">
         <statement>
 
-                    <p>9-12-2: What type of loop should you use?</p>
+                    <p> What type of loop should you use?</p>
 
         </statement>
 <choices>
@@ -162,7 +162,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_1.75MC">
         <statement>
 
-                    <p>9-12-3: How many Loops should you use?</p>
+                    <p> How many Loops should you use?</p>
 
         </statement>
 <choices>
@@ -212,7 +212,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_2MC">
         <statement>
 
-                <p>9-12-4: What can you use to set the outer bound while you iterate through your 2D array?</p>
+                <p> What can you use to set the outer bound while you iterate through your 2D array?</p>
 
         </statement>
 <choices>
@@ -261,7 +261,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_3MC">
         <statement>
 
-                <p>9-12-5: What can you use to set the inner bound while you iterate through your 2D array?</p>
+                <p> What can you use to set the inner bound while you iterate through your 2D array?</p>
 
         </statement>
 <choices>
@@ -310,7 +310,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_4MC">
         <statement>
 
-                <p>9-12-6: Which <c>String</c> method can you use to access partial or full strings within another string?</p>
+                <p> Which <c>String</c> method can you use to access partial or full strings within another string?</p>
 
         </statement>
 <choices>
@@ -362,7 +362,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_5MC">
         <statement>
 
-                <p>9-12-7: What is the formula for obtaining a single-character string at position <c>k</c> of the string <c>str</c>?</p>
+                <p> What is the formula for obtaining a single-character string at position <c>k</c> of the string <c>str</c>?</p>
 
         </statement>
 <choices>
@@ -411,7 +411,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_5.5MC">
         <statement>
 
-                <p>9-12-8: How can one find the aforementioned <c>k</c>? (this is hard to visualize, try drawing out some examples)</p>
+                <p> How can one find the aforementioned <c>k</c>? (this is hard to visualize, try drawing out some examples)</p>
 
         </statement>
 <choices>
@@ -460,7 +460,7 @@ str.substring(k, k + 1)
     <exercise label="routeciphera_6MC">
         <statement>
 
-                <p>9-12-9: What conditional can you write to make sure trailing characters are ignored?</p>
+                <p> What conditional can you write to make sure trailing characters are ignored?</p>
 
         </statement>
 <choices>
@@ -512,24 +512,24 @@ str.substring(k, k + 1)
                         but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
                         correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="2">
+<blocks><block order="7">
 <cline>public void fillBlock(String str)</cline>
 <cline>{</cline>
 <cline>  int pos = 0;</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>  for (int r = 0; r &lt; this.numRows; r++ )</cline>
 <cline>  {</cline>
 </block><block order="4">
 <cline>      for (int c = 0; c &lt; this.numCols; c++ )</cline>
 <cline>      {</cline>
-</block><block order="7">
+</block><block order="5">
 <cline>          if (pos &lt; str.length())</cline>
 <cline>          {</cline>
-</block><block order="3">
+</block><block order="1">
 <cline>              String subStr = str.substring(pos, pos+1);</cline>
 <cline>              this.letterBlock[r][c] = subStr;</cline>
 <cline>              pos++;</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>          } else</cline>
 <cline>          {</cline>
 <cline>              this.letterBlock[r][c] = "A";</cline>

@@ -20,9 +20,9 @@ public static return-type method-name(parameters)
             
             
             <p>Most of the methods we have used so far have been <term>void methods</term>, which do not return a value. However, many methods act like mathematical functions that calculate and return a value given some arguments. These methods are called <term>non-void methods</term>. You can imagine a non-void method as a calculating machine that takes numbers as arguments and returns a calculated result or like a toaster that takes bread as an argument and changes it to return toast.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Method that takes arguments and returns a value</caption><image source="Unit1-Using-Objects-and-Methods/Figures/function.png" width="71%%" alt="function"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method that takes arguments and returns a value</caption><image source="Unit1-Using-Objects-and-Methods/Figures/function.png" width="71%%" alt="function"/></figure>
             <p>In the next lesson, we will look at the Math library in Java, but consider a simple method that squares a number. For example, <c>square(3)</c> would return 9.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: The Square Method</caption><image source="Unit1-Using-Objects-and-Methods/Figures/square-method.png" width="71%%" alt="Square Method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The Square Method</caption><image source="Unit1-Using-Objects-and-Methods/Figures/square-method.png" width="71%%" alt="Square Method"/></figure>
             <p>Here is a simple implementation of this method which takes an int number as an argument, squares that number, and returns the result.  Notice that instead of <c>static void</c>, the header includes <c>static int</c> to indicate that the method returns an integer value. There could be another <term>overloaded</term> version of this method that takes a double number and returns a double value; remember methods are overloaded when there are multiple methods with the same name but different signatures with a different number or types of parameters.</p>
             <program language="java"><input>
 public static int square(int number)
@@ -62,7 +62,6 @@ System.out.println(y); // prints 25
 // Printing the returned value of the square method directly
 System.out.println(square(4)); // prints 16
 </input></program>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="squareMethod">
     <statement>
@@ -112,12 +111,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id6">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="traceMethods1">
         <statement>
 
-            <p>1-10-3: What does the following code print out? (<url href="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url>)</p>
+            <p> What does the following code print out? (<url href="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url>)</p>
             <program language="java"><input>
 public class MethodTrace
 {
@@ -193,7 +191,6 @@ public class MethodTrace
             <title>Common Errors with Methods</title>
             <p>A common error with non-void methods is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out. To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression.</p>
             <p>Another common error is a mismatch in types or order for the arguments or return values. For example, if a method returns a double value, you cannot assign it to an int variable.</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="fixMethodCalls">
     <statement>
@@ -291,7 +288,7 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
 </input></program>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge: Ladder on Tower</title>
+            <title>Programming Challenge: Ladder on Tower</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/ladder.png" width="36%%" alt="Ladder on tower"/>
             <p>The Pythagorean theorem states that the length of the hypotenuse (the side
                 opposite the right angle in a right triangle) is the square root of the sum
@@ -313,7 +310,7 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
     <exercise label="hypotenuse-java-mc">
         <statement>
 
-            <p>1-10-5: Which of the following are correct Java expressions to compute the hypotenuse of
+            <p> Which of the following are correct Java expressions to compute the hypotenuse of
                 a triangle with legs <c>a</c> and <c>b</c> given the Pythagorean Theorem <math>c = \sqrt{a^{2} + b^{2}}</math> where
                 <math>a</math> and <math>b</math> are the lengths of the legs and <math>c</math> is the
                 length of the hypotenuse?</p>
@@ -445,7 +442,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP1-10-static-method">
         <statement>
 
-            <p>1-10-7: Consider the following method.</p>
+            <p> Consider the following method.</p>
             <program language="java"><input>
 public static double calculatePizzaBoxes(int numOfPeople, double slicesPerBox)
 { /*implementation not shown */}
@@ -473,7 +470,7 @@ public static double calculatePizzaBoxes(int numOfPeople, double slicesPerBox)
     <exercise label="AP1-10-static-method2">
         <statement>
 
-            <p>1-10-8: Consider the following methods:</p>
+            <p> Consider the following methods:</p>
             <program language="java"><input>
 public void static inchesToCentimeters(double i)
 {

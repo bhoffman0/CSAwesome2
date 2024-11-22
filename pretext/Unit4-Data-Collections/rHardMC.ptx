@@ -9,7 +9,7 @@
     <exercise label="qrh_1">
         <statement>
 
-        <p>10-7-4-1: Given the following method declaration, this method will return true if and only if:</p>
+        <p> Given the following method declaration, this method will return true if and only if:</p>
         <program language="java"><input>
 public static boolean check(String s)
 {
@@ -63,7 +63,7 @@ public static boolean check(String s)
     <exercise label="qrh_2">
         <statement>
 
-        <p>10-7-4-2: Given the following method declaration, what will <c>redo(82, 3)</c> return?</p>
+        <p> Given the following method declaration, what will <c>redo(82, 3)</c> return?</p>
         <program language="java"><input>
 public static int redo(int i, int j)
 {

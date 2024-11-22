@@ -6,7 +6,7 @@
     <exercise label="bs-ifstatements-15-07">
         <statement>
 
-        <p>16-6-1: What’s the result of running this pixel-adjusting code on this green, red, and purple input?</p>
+        <p> What’s the result of running this pixel-adjusting code on this green, red, and purple input?</p>
         <program language="java"><input>
 //Inside loop over all pixels
 topP = this.getPixel(x,y);

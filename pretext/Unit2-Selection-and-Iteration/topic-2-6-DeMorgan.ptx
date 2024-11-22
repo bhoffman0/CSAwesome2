@@ -20,7 +20,7 @@ b = "at our high school"
   <subsection>
             <title>De Morgan’s Laws</title>
             <p>De Morgan’s Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an <term>and</term> (<c>&amp;&amp;</c>) or <term>or</term> (<c>||</c>), such as <c>(x &lt; 3) &amp;&amp; (y &gt; 2)</c>. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan’s Laws state the following equivalencies. Here’s an easy way to remember De Morgan’s Laws: <term>move the NOT inside, AND becomes OR</term> and <term>move the NOT inside, OR becomes AND</term>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: De Morgan’s Laws to simplify complex expressions</caption><image source="Unit2-Selection-and-Iteration/Figures/demorgan.png" width="71%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">De Morgan’s Laws to simplify complex expressions</caption><image source="Unit2-Selection-and-Iteration/Figures/demorgan.png" width="71%%"/></figure>
             <p>In Java, De Morgan’s Laws are written with the following operators:</p>
             <blockquote>
                 <p><ul>
@@ -152,8 +152,7 @@ b = "at our high school"
   <subsection>
             <title>Simplifying Boolean Expressions</title>
             <p>Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan’s Laws to <c>!(x &lt; 3 &amp;&amp; y &gt; 2)</c> yields <c>!(x &lt; 3) || !(y &gt; 2)</c> as seen in the figure below. This can then be simplified further by flipping the relational operators to remove the not.  So, <c>!(x &lt; 3) || !(y &gt; 2)</c> is simplified to <c>(x &gt;= 3 || y &lt;= 2)</c> where the relational operators are flipped and the negation is removed. These two simplification steps are seen below.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: An example boolean expression simplified</caption><image source="Unit2-Selection-and-Iteration/Figures/demorganex.png" width="71%%"/></figure>
-            <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An example boolean expression simplified</caption><image source="Unit2-Selection-and-Iteration/Figures/demorganex.png" width="71%%"/></figure>
 
 <exercise label="lcdmtest">
     <statement>
@@ -195,12 +194,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id5">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qcbdm1_8">
         <statement>
 
-            <p>3-6-2: What is printed when the following code executes and x equals 4 and y equals 3?</p>
+            <p> What is printed when the following code executes and x equals 4 and y equals 3?</p>
             <program language="java"><input>
 int x = 4, y = 3;
 if (!(x &lt; 3 || y &gt; 2))
@@ -240,7 +238,7 @@ else
     <exercise label="qcbdm2_9">
         <statement>
 
-            <p>3-6-3: What is printed when the following code executes and x equals 4 and y equals 3?</p>
+            <p> What is printed when the following code executes and x equals 4 and y equals 3?</p>
             <program language="java"><input>
 int x = 4, y = 3;
 if (!(x &lt; 3 &amp;&amp; y &gt; 2))
@@ -278,8 +276,8 @@ else
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id7">|Groupwork|</problematic> Programming Challenge : Truth Tables POGIL</title>
-            <p>We encourage you to do this activity as a <problematic refid="id9">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <title>Programming Challenge : Truth Tables POGIL</title>
+            <p>We encourage you to do this activity as a <problematic refid="id3">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Explore the following problems with your group. You may use <url href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" visual="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing">this worksheet</url> to complete your truth tables. Assume that <c>x</c> is an integer value, for example -1, 0, or 1.</p>
             <p><ol marker="1">
                 <li>
@@ -362,7 +360,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qcbdm3_1">
         <statement>
 
-            <p>3-6-5: Which of the following is the same as the code below?</p>
+            <p> Which of the following is the same as the code below?</p>
             <program language="java"><input>
 !(x &gt; 2 &amp;&amp; y &lt; 4)
 </input></program>
@@ -412,7 +410,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qcbdm4_2">
         <statement>
 
-            <p>3-6-6: Which of the following is the same as the code below?</p>
+            <p> Which of the following is the same as the code below?</p>
             <program language="java"><input>
 !(x == 2 &amp;&amp; y &gt; 4)
 </input></program>
@@ -462,7 +460,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qcbdm5_3">
         <statement>
 
-            <p>3-6-7: Which of the following is the same as the code below?</p>
+            <p> Which of the following is the same as the code below?</p>
             <program language="java"><input>
 !(x!=5 &amp;&amp; y!=7)
 </input></program>
@@ -512,7 +510,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qcbdm6_4">
         <statement>
 
-            <p>3-6-8: Which of the following is the same as the code below?</p>
+            <p> Which of the following is the same as the code below?</p>
             <program language="java"><input>
 !(x&lt;= 5 &amp;&amp; y &gt; 7)
 </input></program>
@@ -610,7 +608,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="apcsa-sample5">
         <statement>
 
-            <p>3-6-9:  Which of the following best describes the value of the Boolean expression: a &amp;&amp; !(b || a)</p>
+            <p>  Which of the following best describes the value of the Boolean expression: a &amp;&amp; !(b || a)</p>
 
         </statement>
 <choices>

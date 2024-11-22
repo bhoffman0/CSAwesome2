@@ -137,7 +137,6 @@ public class RunestoneTests extends CodeTestHelper
                 expression consisting only of <c>int</c> values will evaluate to an <c>int</c> value.
                 An arithmetic expression that uses at least one <c>double</c> value will evaluate
                 to a <c>double</c> value. This means that when you are doing division with two integers, you will get an integer result and the decimal part of the result will be thrown away. This is called <term>truncating division</term>. If you want a double result, you should make at least one of the values in the expression a double like 2.0.</p>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="lcop1">
     <statement>
@@ -177,7 +176,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Math errors sometimes lead to runtime errors in code. For example, when the Hubble Space Telescope was launched to space in 1990, a math coding error in a formula caused it to point in the wrong direction! It missed its target stars by about half a degree which is about the width of the moon seen from Earth (<url href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm" visual="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough testing is the only way to make sure there are no logic errors that will cause runtime errors in your code. Try the following example that tries to convert centimeters to inches. Can you fix the runtime error?</p>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="cm2in-runtime-error">
     <statement>
@@ -226,7 +224,6 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Compound Expressions</title>
             <p>Expressions can be combined into <term>compound expressions</term> with multiple operators.  When compound expressions are evaluated, <term>operator precedence</term> rules are used, just like when we do math (remember PEMDAS?), so that multiplication <c>*</c>, division <c>/</c>, and remainder <c>%</c> are done before addition <c>+</c> and subtraction <c>-</c>. However, anything in parentheses is done first. It doesn’t hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.</p>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="compound1">
     <statement>
@@ -283,7 +280,7 @@ public class RunestoneTests extends CodeTestHelper
                 remainder. That remainder is what is returned by this operator. In the figures
                 below, the remainders are the same values that would be returned by <c>2 % 3</c>
                 and <c>5 % 2</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="27%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="27%%"/></figure>
             <p>Sometimes people—including Professor Lewis in the next video—will call <c>%</c>
                 the <term>modulo</term>, or <term>mod</term>, operator. That is not actually correct though the
                 difference between remainder and modulo, which uses Euclidean division instead
@@ -293,8 +290,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Here’s the <url href="https://www.youtube.com/watch?v=jp-T9lFISlI&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=jp-T9lFISlI&amp;ab_channel=colleenlewis">video</url>.</p>
 
     <video youtube="jp-T9lFISlI"/>
-                <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
-
+    
 <exercise label="lcop2">
     <statement>
             <p>In the example below, try to guess what it will print out and then run it to see if you are right.</p>
@@ -341,12 +337,11 @@ public class RunestoneTests extends CodeTestHelper
             </note>
             
             
-            <p><problematic refid="id10">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="mcq-rem1">
         <statement>
 
-            <p>1-3-8: What is the result of 158 % 10?</p>
+            <p> What is the result of 158 % 10?</p>
 
         </statement>
 <choices>
@@ -384,7 +379,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="mcq-rem2">
         <statement>
 
-            <p>1-3-9: What is the result of 3 % 8?</p>
+            <p> What is the result of 3 % 8?</p>
 
         </statement>
 <choices>
@@ -420,7 +415,7 @@ public class RunestoneTests extends CodeTestHelper
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id12">|Groupwork|</problematic> Programming Challenge : Pay Calculator</title>
+            <title>Programming Challenge : Pay Calculator</title>
             <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%%"/></figure>
             <p>In this programming challenge, you can work in pairs to create a pay calculator using math expressions and operators.</p>
 
@@ -556,7 +551,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP1-3-1">
         <statement>
 
-            <p>1-3-11: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 System.out.println("Java is ");
 System.out.println("fun ");
@@ -588,7 +583,7 @@ and cool!  &lt;/pre&gt;</raw>
     <exercise label="apcsa_sample1_exp">
         <statement>
 
-            <p>1-3-12: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 System.out.println(5 + 5 / 2 * 3 - 1);
 </input></program>

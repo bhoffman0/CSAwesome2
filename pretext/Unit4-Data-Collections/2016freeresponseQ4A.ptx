@@ -46,7 +46,7 @@ public static int totalLetters(List&lt;String&gt; wordList)
     <exercise label="fr_formatter_1">
         <statement>
 
-                <p>7-4-7-1: Which loop would be best for this problem?</p>
+                <p> Which loop would be best for this problem?</p>
 
         </statement>
 <choices>
@@ -84,7 +84,7 @@ public static int totalLetters(List&lt;String&gt; wordList)
     <exercise label="fr_formatter_2">
         <statement>
 
-                <p>7-4-7-2: What is the correct way to access the length of a String str?</p>
+                <p> What is the correct way to access the length of a String str?</p>
 
         </statement>
 <choices>
@@ -126,18 +126,18 @@ public static int totalLetters(List&lt;String&gt; wordList)
 <exercise label="stringFormatterA" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The following has the correct code to solve this problem, but also contains extra code that isn’t needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.</p>
 </statement>
-<blocks><block order="1">
+<blocks><block order="7">
 <cline>public static int totalLetters(List&lt;String&gt; wordList)</cline>
 <cline>{</cline>
-</block><block order="8">
+</block><block order="9">
 <cline>   int numLetters = 0;</cline>
-</block><block order="4">
+</block><block order="1">
 <choice correct="yes"><cline>   for (String s : wordList)</cline>
 </choice><choice><cline>   for (String s in wordList) </cline>
-</choice></block><block order="7">
+</choice></block><block order="2">
 <choice correct="yes"><cline>      numLetters = numLetters + s.length();</cline>
 </choice><choice><cline>      numLetters = numLetters + wordList.length(); </cline>
-</choice></block><block order="9">
+</choice></block><block order="6">
 <choice correct="yes"><cline>   return numLetters;</cline>
 </choice><choice><cline>   return numletters; </cline>
 </choice></block><block order="5">

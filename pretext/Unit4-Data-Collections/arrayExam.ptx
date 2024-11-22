@@ -10,7 +10,7 @@
     <exercise label="arrayEx1">
         <statement>
 
-            <p>6-10-1: What is the value of <c>i</c> after the following code has executed?</p>
+            <p> What is the value of <c>i</c> after the following code has executed?</p>
             <program language="java"><input>
 int[] x = {2, 1, 4, 5, 7};
 int limit = 3;
@@ -68,7 +68,7 @@ while ((sum &lt; limit) &amp;&amp; (i &lt; x.length))
     <exercise label="arrayEx2">
         <statement>
 
-            <p>6-10-2: What is the value of <c>count</c> after the following code has executed?</p>
+            <p> What is the value of <c>count</c> after the following code has executed?</p>
             <program language="java"><input>
 int[] x1 = {1, 2, 4, 7};
 int[] x2 = {1, 2, 5, 7};
@@ -139,7 +139,7 @@ while ((i1 &gt; 0 ) &amp;&amp; (i2 &gt; 0 ))
     <exercise label="arrayEx3">
         <statement>
 
-            <p>6-10-3: What is the value of <c>count</c> after the following code has executed?</p>
+            <p> What is the value of <c>count</c> after the following code has executed?</p>
             <program language="java"><input>
 int [] x = {1, 2, 3, 3, 3};
 boolean b[] = new boolean[x.length];
@@ -211,7 +211,7 @@ for (int i = 0; i &lt; b.length; i++)
     <exercise label="arrayEx4">
         <statement>
 
-            <p>6-10-4: What is the value of <c>count</c> after the following code has executed?</p>
+            <p> What is the value of <c>count</c> after the following code has executed?</p>
             <program language="java"><input>
 int[ ] x1 = {0, 1, 2, 3};
 int[ ] x2 = {1, 2, 2, 3};
@@ -291,7 +291,7 @@ while ( (i1 &lt; x1.length) &amp;&amp;
     <exercise label="arrayEx5">
         <statement>
 
-            <p>6-10-5: After the following code is executed which of the following are the values in <c>x</c>?</p>
+            <p> After the following code is executed which of the following are the values in <c>x</c>?</p>
             <program language="java"><input>
 int[ ] x = {0, 1, 2, 3};
 int temp;
@@ -361,7 +361,7 @@ while (i &lt; j)
     <exercise label="arrayEx6">
         <statement>
 
-            <p>6-10-6: Which of the following is the missing code from the method <c>isSorted</c> so that it correctly checks that all elements in <c>x</c> are sorted in ascending order?</p>
+            <p> Which of the following is the missing code from the method <c>isSorted</c> so that it correctly checks that all elements in <c>x</c> are sorted in ascending order?</p>
             <program language="java"><input>
  public static boolean isSorted(int[] x)
  {
@@ -469,7 +469,7 @@ return false;
     <exercise label="arrayEx7">
         <statement>
 
-            <p>6-10-7: What is the value of <c>i</c> after the following code executes?</p>
+            <p> What is the value of <c>i</c> after the following code executes?</p>
             <program language="java"><input>
 int[] x = {2, 1, 4, 5, 7};
 int limit = 7;
@@ -536,7 +536,7 @@ while ((sum&lt;limit) &amp;&amp; (i&lt;x.length))
     <exercise label="arrayEx8">
         <statement>
 
-            <p>6-10-8: If any two numbers in an array of integers, not necessarily consecutive numbers in the array, are out of order (i.e. the number that occurs first in the array is larger than the number that occurs second), then that is called an inversion. For example, consider an array <c>x</c> that has the values {1, 4, 3, 2}.  Then there are three inversions since 4 is greater than both 3 and 2 and 3 is greater than 2.  Which of the following can be used to replace the missing code so that the code correctly counts the number of inversions?</p>
+            <p> If any two numbers in an array of integers, not necessarily consecutive numbers in the array, are out of order (i.e. the number that occurs first in the array is larger than the number that occurs second), then that is called an inversion. For example, consider an array <c>x</c> that has the values {1, 4, 3, 2}.  Then there are three inversions since 4 is greater than both 3 and 2 and 3 is greater than 2.  Which of the following can be used to replace the missing code so that the code correctly counts the number of inversions?</p>
             <program language="java"><input>
 int inversionCount = 0;
 for (int i=0 ; i &lt; x.length - 1 ; i++)
@@ -594,7 +594,7 @@ for (int i=0 ; i &lt; x.length - 1 ; i++)
     <exercise label="arrayEx9">
         <statement>
 
-            <p>6-10-9: Which of the following correctly copies all the even numbers from <c>array1</c> to <c>array2</c> in the same order as they are in <c>array1</c> without any errors?  Assume that <c>array2</c> is large enough for all the copied values.</p>
+            <p> Which of the following correctly copies all the even numbers from <c>array1</c> to <c>array2</c> in the same order as they are in <c>array1</c> without any errors?  Assume that <c>array2</c> is large enough for all the copied values.</p>
             <program language="java"><input>
 A.
 int a2 = 0;
@@ -698,7 +698,7 @@ for (int a1=0 ; a1 &lt;= array1.length ; a1++)
     <exercise label="arrayEx10">
         <statement>
 
-            <p>6-10-10: After the following code executes what are the values in <c>array2</c>?</p>
+            <p> After the following code executes what are the values in <c>array2</c>?</p>
             <program language="java"><input>
 int[] array1 = {2, 4, 1, 3};
 int[] array2 = {0, 0, 0, 0};

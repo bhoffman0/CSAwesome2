@@ -6,7 +6,7 @@
     <exercise label="bs-arrays-21-8">
         <statement>
 
-        <p>16-6-1:  What does this code do?</p>
+        <p>  What does this code do?</p>
         <blockquote>
             <program language="java"><input>
 public void lab7Quiz3(Sound mySound)
@@ -75,7 +75,7 @@ public void lab7Quiz3(Sound mySound)
     <exercise label="bs-arrays-21-9">
         <statement>
 
-        <p>16-6-2:  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
+        <p>  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
         <blockquote>
             <program language="java"><input>
 public void guess()
@@ -150,7 +150,7 @@ public void guess()
     <exercise label="bs-arrays-21-10">
         <statement>
 
-        <p>16-6-3:  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
+        <p>  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
         <blockquote>
             <program language="java"><input>
 public void guess()
@@ -225,7 +225,7 @@ public void guess()
     <exercise label="bs-arrays-22-6">
         <statement>
 
-        <p>16-6-4:  What does this code do for the object {60, 80, 60, 65, 90, 0, 0, 0, 0}?</p>
+        <p>  What does this code do for the object {60, 80, 60, 65, 90, 0, 0, 0, 0}?</p>
         <blockquote>
             <program language="java"><input>
 int a,b = 0;
@@ -296,7 +296,7 @@ for (int i=0;i&lt;noiseArray.length; i++)
     <exercise label="bs-arrays-22-8">
         <statement>
 
-        <p>16-6-5:  How does the sound sample change if funky() is called on [40, 60, 30, 30]?</p>
+        <p>  How does the sound sample change if funky() is called on [40, 60, 30, 30]?</p>
         <blockquote>
             <program language="java"><input>
 public void funky()
@@ -372,7 +372,7 @@ public void funky()
     <exercise label="bs-arrays-22-11">
         <statement>
 
-        <p>16-6-6:  What if all positive values (including zero) were (set to) the maximum value (32,767) and all negative values were set to the minimum value (-32,768)? Which line would complete the code block to accomplish this?</p>
+        <p>  What if all positive values (including zero) were (set to) the maximum value (32,767) and all negative values were set to the minimum value (-32,768)? Which line would complete the code block to accomplish this?</p>
         <blockquote>
             <program language="java"><input>
 SoundSample[] foo = this.getSamples();
@@ -439,7 +439,7 @@ for (int i = 0; i &lt; foo.length; i++)
     <exercise label="bs-arrays-23-5">
         <statement>
 
-        <p>16-6-7:  What is the resulting soundSample if the original soundSample is [40, 50, 60, 70, 100, 130, 150, 100, 110, 90] and foo is equal to 5?</p>
+        <p>  What is the resulting soundSample if the original soundSample is [40, 50, 60, 70, 100, 130, 150, 100, 110, 90] and foo is equal to 5?</p>
         <blockquote>
             <program language="java"><input>
 public Sound funky2(int foo)
@@ -508,7 +508,7 @@ public Sound funky2(int foo)
     <exercise label="bs-arrays-23-13">
         <statement>
 
-        <p>16-6-8:  What code would you replace &lt;&lt;X&gt;&gt; with is order to create a new sound of correct length 1/2 ?</p>
+        <p>  What code would you replace &lt;&lt;X&gt;&gt; with is order to create a new sound of correct length 1/2 ?</p>
         <blockquote>
             <program language="java"><input>
 public void raiseP()
@@ -575,7 +575,7 @@ public void raiseP()
     <exercise label="bs-arrays-23-14">
         <statement>
 
-        <p>16-6-9:  What lines should be inserted into the for loop in order to fill in our new higher array, which is 1/2 the length of the “this” array?</p>
+        <p>  What lines should be inserted into the for loop in order to fill in our new higher array, which is 1/2 the length of the “this” array?</p>
         <blockquote>
             <program language="java"><input>
 public void raiseP()
@@ -645,7 +645,7 @@ public void raiseP()
     <exercise label="bs-arrays-24-9">
         <statement>
 
-        <p>16-6-10:  What header/value combo should we use in ored to modify an existing sound?</p>
+        <p>  What header/value combo should we use in ored to modify an existing sound?</p>
         <blockquote>
             <program language="java"><input>
 public Sound funky2(int foo)
@@ -714,7 +714,7 @@ public Sound funky2(int foo)
     <exercise label="bs-arrays-24-10">
         <statement>
 
-        <p>16-6-11:  What is the result of running this code if noiseArr is [10, 15, 20, 25, 30, 35, 40, 45, 50, 55]?</p>
+        <p>  What is the result of running this code if noiseArr is [10, 15, 20, 25, 30, 35, 40, 45, 50, 55]?</p>
         <blockquote>
             <program language="java"><input>
 int newPlace = 0;

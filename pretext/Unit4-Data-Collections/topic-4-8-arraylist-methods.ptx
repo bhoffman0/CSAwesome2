@@ -57,7 +57,6 @@ System.out.println( list.size() );
             <p>You can add values to an <c>ArrayList</c> using the method <c>add(obj)</c> which will
                 add the object to the end of the list, just like you would join the end of the
                 line to board a bus.</p>
-            <p><problematic refid="id1">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listAdd1">
     <statement>
@@ -221,7 +220,6 @@ public class RunestoneTests extends CodeTestHelper
                 <c>add(index,obj)</c> method adds the passed object at the passed index, but first
                 moves over any existing values to higher indices to make room for the new
                 object.</p>
-            <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listAddInt2">
     <statement>
@@ -284,12 +282,11 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p><c>ArrayList</c>s like arrays start numbering their elements from 0.</p>
             </note>
-            <p><problematic refid="id5">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qalAdd1">
         <statement>
 
-            <p>7-2-4: What will print when the following code executes?</p>
+            <p> What will print when the following code executes?</p>
             <program language="java"><input>
 ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(1);
@@ -341,12 +338,12 @@ System.out.println(list1);
 </choices>
 
     </exercise>
-            <p>You can step through the code above by clicking on this <problematic refid="id7">|Java Visualizer 1|</problematic>.</p>
+            <p>You can step through the code above by clicking on this <problematic refid="id1">|Java Visualizer 1|</problematic>.</p>
 
     <exercise label="qalAdd2">
         <statement>
 
-            <p>7-2-5: What will print when the following code executes?</p>
+            <p> What will print when the following code executes?</p>
             <program language="java"><input>
 ArrayList&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
 list1.add("Anaya");
@@ -407,7 +404,6 @@ System.out.println(list1);
                 method. It removes and returns the item at the given index. This will move all
                 the other items over in the underlying array and decrease the size of the
                 <c>ArrayList</c> by 1.</p>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listRem">
     <statement>
@@ -469,7 +465,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qListRem">
         <statement>
 
-            <p>7-2-7: What will print when the following code executes?</p>
+            <p> What will print when the following code executes?</p>
             <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(1);
@@ -534,7 +530,6 @@ System.out.println(list1);
                 index operator that we use with arrays: <c>array[index]</c>. This is because
                 <c>ArrayList</c> is a class with methods, not a built in type with special support
                 in the language like arrays.</p>
-            <p><problematic refid="id11">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listGetSet">
     <statement>
@@ -600,12 +595,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id13">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qListRem1">
         <statement>
 
-            <p>7-2-9: What will print when the following code executes?</p>
+            <p> What will print when the following code executes?</p>
             <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(1);
@@ -663,7 +657,7 @@ System.out.println(list1);
     <exercise label="qListRem2">
         <statement>
 
-            <p>7-2-10: What will print when the following code executes?</p>
+            <p> What will print when the following code executes?</p>
             <program language="java"><input>
 List&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
 list1.add("Anaya");
@@ -804,7 +798,7 @@ ArrayList&lt;String&gt; nameList = new ArrayList&lt;String&gt;();
                 School.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id15">|Groupwork|</problematic> Programming Challenge : Array to ArrayList</title>
+            <title>Programming Challenge : Array to ArrayList</title>
 
 <exercise label="challenge-7-2-array-to-arraylist">
     <statement>

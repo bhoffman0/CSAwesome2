@@ -4,7 +4,7 @@
   <title>Intro to ArrayLists</title><introduction>
     
     <figure align="left">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A couple of lists</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A couple of lists</caption>
     <image source="Unit4-Data-Collections/Figures/lists.jpg" width="54%%"/>
   </figure>
     <p>In the last unit, we learned about using arrays to hold collections of related
@@ -75,12 +75,11 @@ import java.util.*;
             <note>
                 <p>Don’t worry about adding import statements on the AP CSA exam.  Any that you need will be provided for you.</p>
             </note>
-            <p><problematic refid="id2">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qlib_1">
         <statement>
 
-            <p>7-1-2: Which of the following is true about import statements?</p>
+            <p> Which of the following is true about import statements?</p>
 
         </statement>
 <choices>
@@ -149,7 +148,6 @@ ArrayList&lt;String&gt; shoppingList = new ArrayList&lt;String&gt;();
                     elements of the <c>ArrayList</c> as if they were in fact <c>int</c>s or
                     <c>double</c>s.</p>
             </note>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="ArrayListDeclare">
     <statement>
@@ -310,12 +308,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id6">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qArrayListInteger">
         <statement>
 
-            <p>7-1-6: Which of the following is the correct way to create an ArrayList of integers?</p>
+            <p> Which of the following is the correct way to create an ArrayList of integers?</p>
 
         </statement>
 <choices>
@@ -409,7 +406,6 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>You can add values to an <c>ArrayList</c> using its <term>add</term> method, described in
                 detail in the next lesson. Try the code below. Note that the type of the
                 <c>ArrayList</c>, <c>String</c> or <c>Integer</c>, also determines the type of parameters
@@ -484,7 +480,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge : FRQ Digits</title>
+            <title>Programming Challenge : FRQ Digits</title>
             <p>This programming challenge is based on the <url href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" visual="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a">2017 Free Response Question</url> part 1a on the 2017 AP CSA
                 exam. In this question, you are asked to write a constructor for a class called
                 <c>Digits</c>. This constructor takes an integer number as its argument and divides
@@ -686,7 +682,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qloopList">
         <statement>
 
-        <p>7-1-1: Which of the following is a reason to use an ArrayList instead of an array?</p>
+        <p> Which of the following is a reason to use an ArrayList instead of an array?</p>
 
         </statement>
 <choices>

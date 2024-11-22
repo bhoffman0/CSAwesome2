@@ -7,7 +7,7 @@
     <exercise label="qtnt2_1">
         <statement>
 
-        <p>12-3-1: Consider the <c>Animal</c>, <c>Fish</c>, and <c>Goldfish</c> classes shown below.  Which of the following object declarations will compile without error?</p>
+        <p> Consider the <c>Animal</c>, <c>Fish</c>, and <c>Goldfish</c> classes shown below.  Which of the following object declarations will compile without error?</p>
         <program language="java"><input>
 public class Animal
 {
@@ -84,7 +84,7 @@ III. Fish glub = new Goldfish();
     <exercise label="qtnt2_2">
         <statement>
 
-        <p>12-3-2: Assume that <c>list</c> has been instantiated as an ArrayList of integers containing <c>[6, 2, 9]</c> . What are the contents of <c>list</c> after the code is executed?</p>
+        <p> Assume that <c>list</c> has been instantiated as an ArrayList of integers containing <c>[6, 2, 9]</c> . What are the contents of <c>list</c> after the code is executed?</p>
         <program language="java"><input>
 list.remove(2);
 list.add(1, 4);
@@ -145,7 +145,7 @@ list.set(2, 7);
     <exercise label="qtnt2_3">
         <statement>
 
-        <p>12-3-3: A sorted array of integers containing 2000 elements is to be searched for <c>key</c> using a binary search method. Assuming <c>key</c> is in the array, what is the maximum number of iterations needed to find <c>key</c>?</p>
+        <p> A sorted array of integers containing 2000 elements is to be searched for <c>key</c> using a binary search method. Assuming <c>key</c> is in the array, what is the maximum number of iterations needed to find <c>key</c>?</p>
 
         </statement>
 <choices>
@@ -200,7 +200,7 @@ list.set(2, 7);
     <exercise label="qtnt2_4">
         <statement>
 
-        <p>12-3-4: Which of the following code segments creates a 7 x 9 array of integers and fills every space in the array with multiples of two (not including the value 0)?</p>
+        <p> Which of the following code segments creates a 7 x 9 array of integers and fills every space in the array with multiples of two (not including the value 0)?</p>
         <program language="java"><input>
 I.   int[][] arr = new int [7][9];
 
@@ -283,7 +283,7 @@ III. int[][] arr = new int [7][9];
     <exercise label="qtnt2_5">
         <statement>
 
-        <p>12-3-5: Consider the method <c>printString</c> shown below. What is printed as a result of printString(“sandwich”)?</p>
+        <p> Consider the method <c>printString</c> shown below. What is printed as a result of printString(“sandwich”)?</p>
         <program language="java"><input>
 public void printString(String s)
 {
@@ -348,7 +348,7 @@ public void printString(String s)
     <exercise label="qtnt2_6">
         <statement>
 
-        <p>12-3-6: The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods does the GoldenRetriever class inherit?</p>
+        <p> The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods does the GoldenRetriever class inherit?</p>
         <program language="java"><input>
 public class Dog
 {
@@ -431,7 +431,7 @@ III. getName()
     <exercise label="qtnt2_7">
         <statement>
 
-        <p>12-3-7: Which of these loops will output <c>02468</c>?</p>
+        <p> Which of these loops will output <c>02468</c>?</p>
         <program language="java"><input>
 I. for (int i = 0; i &lt;= 8; i++)
    {
@@ -504,7 +504,7 @@ III. for (int i = 0; i &lt;= 8; i +=2)
     <exercise label="qtnt2_8">
         <statement>
 
-        <p>12-3-8: Consider the following method <c>mystery</c>. Assuming x is an integer greater than 1, in which case does <c>mystery</c> result in an infinite loop?</p>
+        <p> Consider the following method <c>mystery</c>. Assuming x is an integer greater than 1, in which case does <c>mystery</c> result in an infinite loop?</p>
         <program language="java"><input>
 public int mystery(int x, int y)
 {
@@ -568,7 +568,7 @@ public int mystery(int x, int y)
     <exercise label="qtnt2_9">
         <statement>
 
-        <p>12-3-9: Consider the following classes <c>Cat</c> and <c>FluffyCat</c>. What is the result of executing the following code?
+        <p> Consider the following classes <c>Cat</c> and <c>FluffyCat</c>. What is the result of executing the following code?
             <c>Cat obj = new FluffyCat();</c></p>
         <p><c>obj.display();</c></p>
         <program language="java"><input>
@@ -642,7 +642,7 @@ public class FluffyCat extends Cat
     <exercise label="qtnt2_10">
         <statement>
 
-        <p>12-3-10: Consider the class <c>showMe</c>, shown below. What is printed as a result of <c>showMe(10)</c>?</p>
+        <p> Consider the class <c>showMe</c>, shown below. What is printed as a result of <c>showMe(10)</c>?</p>
         <program language="java"><input>
 public static void showMe(int arg)
 {
@@ -711,7 +711,7 @@ public static void showMe(int arg)
     <exercise label="qtnt2_11">
         <statement>
 
-        <p>12-3-11: Consider the following code. What is printed as a result of executing this code?</p>
+        <p> Consider the following code. What is printed as a result of executing this code?</p>
         <program language="java"><input>
 int sum = 0;
 
@@ -779,7 +779,7 @@ System.out.println(sum);
     <exercise label="qtnt2_12">
         <statement>
 
-        <p>12-3-12: You are trying to write a method <c>sumRow</c> that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace <c>/* to be determined */</c> to make the code work correctly?</p>
+        <p> You are trying to write a method <c>sumRow</c> that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace <c>/* to be determined */</c> to make the code work correctly?</p>
         <program language="java"><input>
 public int sumRow (int row, int[][] values)
 {
@@ -867,7 +867,7 @@ while (col &lt; values[0].length)
     <exercise label="qtnt2_13">
         <statement>
 
-        <p>12-3-13: You have an array <c>values</c> filled with 50 integers. Which of the following correctly produces a random index of <c>values</c>?</p>
+        <p> You have an array <c>values</c> filled with 50 integers. Which of the following correctly produces a random index of <c>values</c>?</p>
 
         </statement>
 <choices>
@@ -922,7 +922,7 @@ while (col &lt; values[0].length)
     <exercise label="qtnt2_14">
         <statement>
 
-        <p>12-3-14: Given the following code, what is returned by mystery(5364)?</p>
+        <p> Given the following code, what is returned by mystery(5364)?</p>
         <program language="java"><input>
 public static int mystery(int num)
 {
@@ -991,7 +991,7 @@ public static int mystery(int num)
     <exercise label="qtnt2_15">
         <statement>
 
-        <p>12-3-15: Consider an array of integers that contains <c>[12, 8, 4, 6, 13, 29, 7]</c>. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?</p>
+        <p> Consider an array of integers that contains <c>[12, 8, 4, 6, 13, 29, 7]</c>. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?</p>
 
         </statement>
 <choices>
@@ -1046,7 +1046,7 @@ public static int mystery(int num)
     <exercise label="qtnt2_16">
         <statement>
 
-        <p>12-3-16: Consider the classes <c>Car</c> and <c>Minivan</c>, shown below. If <c>obj</c> has been instantiated later in the class as a <c>Minivan</c>, what is printed as a result of <c>obj.drive()</c>?</p>
+        <p> Consider the classes <c>Car</c> and <c>Minivan</c>, shown below. If <c>obj</c> has been instantiated later in the class as a <c>Minivan</c>, what is printed as a result of <c>obj.drive()</c>?</p>
         <program language="java"><input>
 public class Car
 {
@@ -1119,7 +1119,7 @@ public class Minivan extends Car
     <exercise label="qtnt2_17">
         <statement>
 
-        <p>12-3-17: Consider the following method <c>changeArray</c>. An array is created that contains <c>[2, 8, 10, 9, 6]</c> and is passed to <c>changeArray</c>. What are the contents of the array after the <c>changeArray</c> method executes?</p>
+        <p> Consider the following method <c>changeArray</c>. An array is created that contains <c>[2, 8, 10, 9, 6]</c> and is passed to <c>changeArray</c>. What are the contents of the array after the <c>changeArray</c> method executes?</p>
         <program language="java"><input>
 public void changeArray(int[] data)
 {
@@ -1181,7 +1181,7 @@ public void changeArray(int[] data)
     <exercise label="qtnt2_18">
         <statement>
 
-        <p>12-3-18: Which statement is equivalent to <c>!( (x &gt; 7) &amp;&amp; !(y &lt; 12) )</c>?</p>
+        <p> Which statement is equivalent to <c>!( (x &gt; 7) &amp;&amp; !(y &lt; 12) )</c>?</p>
 
         </statement>
 <choices>
@@ -1236,7 +1236,7 @@ public void changeArray(int[] data)
     <exercise label="qtnt2_19">
         <statement>
 
-        <p>12-3-19: Consider the following method <c>evens</c>, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace <c>/* to be completed */</c>?</p>
+        <p> Consider the following method <c>evens</c>, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace <c>/* to be completed */</c>?</p>
         <program language="java"><input>
 public int evens(int [] arr)
 {
@@ -1320,7 +1320,7 @@ if (x / 2 == 1)
     <exercise label="qtnt2_20">
         <statement>
 
-        <p>12-3-20: Consider the method <c>findMax</c>, which uses sequential search to find the index of the largest value of an array. In which case would <c>findMax</c> not work properly?</p>
+        <p> Consider the method <c>findMax</c>, which uses sequential search to find the index of the largest value of an array. In which case would <c>findMax</c> not work properly?</p>
         <program language="java"><input>
 public int findMax(int[] arr)
 {

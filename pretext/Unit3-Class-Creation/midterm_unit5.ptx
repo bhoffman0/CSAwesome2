@@ -9,7 +9,7 @@
     <exercise label="mid_1_1">
         <statement>
 
-            <p>5-15-1: Which of the following code segments will produce the displayed output?</p>
+            <p> Which of the following code segments will produce the displayed output?</p>
             <program language="java"><input>
 /* Output:
 1
@@ -121,7 +121,7 @@ for (int i = 0; i &lt; 5; i++) {
     <exercise label="mid_1_2">
         <statement>
 
-            <p>5-15-2: Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
+            <p> Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
             <program language="java"><input>
 public static void conditionTest(int num1, int num2)
 {
@@ -201,7 +201,7 @@ public static void conditionTest(int num1, int num2)
     <exercise label="mid_1_3">
         <statement>
 
-            <p>5-15-3: Which of these loops will output <c>01234</c>?</p>
+            <p> Which of these loops will output <c>01234</c>?</p>
             <program language="java"><input>
 int max = 5;
 
@@ -281,7 +281,7 @@ for (int i = max; i &gt; 0; i--)
     <exercise label="mid_1_4">
         <statement>
 
-            <p>5-15-4: Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
+            <p> Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
             <program language="java"><input>
 public int solution(int limit)
 {
@@ -354,7 +354,7 @@ public int solution(int limit)
     <exercise label="mid_1_5">
         <statement>
 
-            <p>5-15-5: Which of the following is equivalent to !((x &gt; 10) &amp;&amp; (x &lt;= 5)) ?</p>
+            <p> Which of the following is equivalent to !((x &gt; 10) &amp;&amp; (x &lt;= 5)) ?</p>
 
         </statement>
 <choices>
@@ -410,7 +410,7 @@ public int solution(int limit)
     <exercise label="mid_1_6">
         <statement>
 
-            <p>5-15-6: Consider the following class with the method <c>test</c>. What is the output after the main method is executed calling <c>test(s,b)</c>?</p>
+            <p> Consider the following class with the method <c>test</c>. What is the output after the main method is executed calling <c>test(s,b)</c>?</p>
             <program language="java"><input>
 public class Test1
 {
@@ -484,7 +484,7 @@ public class Test1
     <exercise label="mid_1_7">
         <statement>
 
-            <p>5-15-7: Consider the following <c>Cat</c> class that has an <c>age</c> attribute of type int. The <c>getAge</c> method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the <c>getAge</c> method does NOT work as intended?</p>
+            <p> Consider the following <c>Cat</c> class that has an <c>age</c> attribute of type int. The <c>getAge</c> method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the <c>getAge</c> method does NOT work as intended?</p>
             <program language="java"><input>
 public class Cat
 {
@@ -556,7 +556,7 @@ public class Cat
     <exercise label="mid_1_8">
         <statement>
 
-            <p>5-15-8: Which of the following statements are TRUE about local variables?</p>
+            <p> Which of the following statements are TRUE about local variables?</p>
             <p><ol marker="I">
                 <li>
                     <p>Local variables can be declared in the body of constructors and methods.</p>
@@ -623,7 +623,7 @@ public class Cat
     <exercise label="mid_1_9">
         <statement>
 
-            <p>5-15-9: Which of the following statements are TRUE about <term>static</term> methods?</p>
+            <p> Which of the following statements are TRUE about <term>static</term> methods?</p>
             <p><ol marker="I">
                 <li>
                     <p>Static methods and variables include the keyword static before their name in the header or declaration and can be public or private.</p>
@@ -690,7 +690,7 @@ public class Cat
     <exercise label="mid_1_10">
         <statement>
 
-            <p>5-15-10: What are the values of <c>var1</c> and <c>var2</c> after the following code segment is executed and the while loop finishes?</p>
+            <p> What are the values of <c>var1</c> and <c>var2</c> after the following code segment is executed and the while loop finishes?</p>
             <program language="java"><input>
 int var1 = 0;
 int var2 = 2;
@@ -755,7 +755,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
     <exercise label="mid_1_11">
         <statement>
 
-            <p>5-15-11: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 int x = -5;
 while (x &lt; 0)
@@ -819,7 +819,7 @@ while (x &lt; 0)
     <exercise label="mid_1_12">
         <statement>
 
-            <p>5-15-12: What will be printed after this code is executed?</p>
+            <p> What will be printed after this code is executed?</p>
             <program language="java"><input>
 for (int i = 0; i &lt;= 15; i++)
 {
@@ -884,7 +884,7 @@ for (int i = 0; i &lt;= 15; i++)
     <exercise label="mid_1_13">
         <statement>
 
-            <p>5-15-13: Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement <c>addMinutes()</c>?</p>
+            <p> Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement <c>addMinutes()</c>?</p>
             <program language="java"><input>
 public class Timer
 {
@@ -994,7 +994,7 @@ IV.  public void addMinutes(int additionMinutes)
     <exercise label="mid_1_14">
         <statement>
 
-            <p>5-15-14: Which option will evaluate to true, if and only if both a and b are false?</p>
+            <p> Which option will evaluate to true, if and only if both a and b are false?</p>
 
         </statement>
 <choices>
@@ -1050,7 +1050,7 @@ IV.  public void addMinutes(int additionMinutes)
     <exercise label="mid_1_15">
         <statement>
 
-            <p>5-15-15: What does the method <c>mystery</c> do?</p>
+            <p> What does the method <c>mystery</c> do?</p>
             <program language="java"><input>
 public void mystery(String tester)
 {
@@ -1116,7 +1116,7 @@ public void mystery(String tester)
     <exercise label="mid_1_16">
         <statement>
 
-            <p>5-15-16: After the following code is executed, what does the variable <c>mystery</c> hold?</p>
+            <p> After the following code is executed, what does the variable <c>mystery</c> hold?</p>
             <program language="java"><input>
 public class Mysterious
 {
@@ -1189,7 +1189,7 @@ public class Mysterious
     <exercise label="mid_1_17">
         <statement>
 
-            <p>5-15-17: Which of the following code segments correctly creates an instance of a new <c>Party</c> object?</p>
+            <p> Which of the following code segments correctly creates an instance of a new <c>Party</c> object?</p>
             <program language="java"><input>
 public class Party
 {
@@ -1271,7 +1271,7 @@ III. int numOfFriends = 6;
     <exercise label="mid_1_18">
         <statement>
 
-            <p>5-15-18: What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
+            <p> What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
             <program language="java"><input>
 int a = 10, b = 3, t = 0;
 for (int i = 1; i &lt;= 6; i++)
@@ -1336,7 +1336,7 @@ for (int i = 1; i &lt;= 6; i++)
     <exercise label="mid_1_19">
         <statement>
 
-            <p>5-15-19: Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
+            <p> Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -1401,7 +1401,7 @@ s4 = null;
     <exercise label="mid_1_20">
         <statement>
 
-            <p>5-15-20: Given following code, which of the following statements is a valid assignment statement using these variables?</p>
+            <p> Given following code, which of the following statements is a valid assignment statement using these variables?</p>
             <program language="java"><input>
 int a = 5;
 int b = 3;

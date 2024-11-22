@@ -27,12 +27,12 @@ public interface MenuItem
     </program>
     <p>The following diagram shows the relationship between the <c>MenuItem</c> interface and the <c>Sandwich</c>, <c>Salad</c>, <c>Drink</c>, and <c>Trio</c> classes.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: UML class diagram showing MenuItem is implemented by Sandwich, Salad, Drink, and Trio.</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">UML class diagram showing MenuItem is implemented by Sandwich, Salad, Drink, and Trio.</caption>
       <image source="Unit5-Inheritance/Figures/trioUML.png" width="89%%"/>
     </figure>
     <p>For example, assume that the menu includes the following items. The objects listed under each heading are instances of the class indicated by the heading.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Example objects</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example objects</caption>
       <image source="Unit5-Inheritance/Figures/menuItemObjs.png" width="100%%"/>
     </figure>
     <p>The menu allows customers to create Trio menu items, each of which includes a sandwich, a salad, and a
@@ -50,20 +50,20 @@ public interface MenuItem
   <subsection>
             <title>Grading Rubric</title>
             <p>Below is the grading rubric for the Trio class problem.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: The grading rubric for the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioGrading.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The grading rubric for the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioGrading.png" width="100%%"/></figure>
         </subsection>
   <subsection>
             <title>Practice Grading</title>
             <p>The following is the second sample student response.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: The start of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2a.png" width="100%%"/></figure>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: The end of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2b.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The start of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2a.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The end of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2b.png" width="100%%"/></figure>
             <p>Apply the grading rubric shown above as you answer the following questions.</p>
             <p><em>Apply the Grading Rubric</em></p>
 
     <exercise label="qtrio2_1">
         <statement>
 
-            <p>9-9-2-1: Should the student earn 1 point for the correct declaration of the <c>Trio</c> class?</p>
+            <p> Should the student earn 1 point for the correct declaration of the <c>Trio</c> class?</p>
 
         </statement>
 <choices>
@@ -92,7 +92,7 @@ public interface MenuItem
     <exercise label="qtrio2_2">
         <statement>
 
-            <p>9-9-2-2: Should the student earn 1 point for declaring the private instance variables (sandwich, salad, and drink or name and price)?</p>
+            <p> Should the student earn 1 point for declaring the private instance variables (sandwich, salad, and drink or name and price)?</p>
 
         </statement>
 <choices>
@@ -121,7 +121,7 @@ public interface MenuItem
     <exercise label="qtrio2_3">
         <statement>
 
-            <p>9-9-2-3: Should the student earn 1 point for declaring the the constructor correctly?</p>
+            <p> Should the student earn 1 point for declaring the the constructor correctly?</p>
 
         </statement>
 <choices>
@@ -150,7 +150,7 @@ public interface MenuItem
     <exercise label="qtrio2_4">
         <statement>
 
-            <p>9-9-2-4: Should the student earn 1 point for correctly initializing the appropriate instance variables in the constructor?</p>
+            <p> Should the student earn 1 point for correctly initializing the appropriate instance variables in the constructor?</p>
 
         </statement>
 <choices>
@@ -179,7 +179,7 @@ public interface MenuItem
     <exercise label="qtrio2_5">
         <statement>
 
-            <p>9-9-2-5: Should the student earn 1 point for correctly declaring the methods in the <c>MenuItem</c> interface (getName and getPrice)?</p>
+            <p> Should the student earn 1 point for correctly declaring the methods in the <c>MenuItem</c> interface (getName and getPrice)?</p>
 
         </statement>
 <choices>
@@ -208,7 +208,7 @@ public interface MenuItem
     <exercise label="qtrio2_6">
         <statement>
 
-            <p>9-9-2-6: Should the student earn 1 point for correctly constructing the string to return from <c>getName</c> and making it available to be returned?</p>
+            <p> Should the student earn 1 point for correctly constructing the string to return from <c>getName</c> and making it available to be returned?</p>
 
         </statement>
 <choices>
@@ -237,7 +237,7 @@ public interface MenuItem
     <exercise label="qtrio2_7">
         <statement>
 
-            <p>9-9-2-7: Should the student earn 1 point for returning a constructed string from <c>getName</c>?</p>
+            <p> Should the student earn 1 point for returning a constructed string from <c>getName</c>?</p>
 
         </statement>
 <choices>
@@ -266,7 +266,7 @@ public interface MenuItem
     <exercise label="qtrio2_8">
         <statement>
 
-            <p>9-9-2-8: Should the student earn 1 point for correctly calculating the price and making it available to be returned from <c>getPrice</c>?</p>
+            <p> Should the student earn 1 point for correctly calculating the price and making it available to be returned from <c>getPrice</c>?</p>
 
         </statement>
 <choices>
@@ -295,7 +295,7 @@ public interface MenuItem
     <exercise label="qtrio2_9">
         <statement>
 
-            <p>9-9-2-9: Should the student earn 1 point for returning the calculated price in <c>getPrice</c>?</p>
+            <p> Should the student earn 1 point for returning the calculated price in <c>getPrice</c>?</p>
 
         </statement>
 <choices>
@@ -323,5 +323,5 @@ public interface MenuItem
 
         <exercise label="qtrio2_total">
             <statement>
-    <p>9-9-2-10: What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^6$\s*$"><feedback><p>Correct.  The answer lost a total of 3 points.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Subtract 1 point for each no response from the 9 possible points</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^6$\s*$"><feedback><p>Correct.  The answer lost a total of 3 points.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Subtract 1 point for each no response from the 9 possible points</p></feedback></condition></var></setup></exercise>        </subsection>
 </section>

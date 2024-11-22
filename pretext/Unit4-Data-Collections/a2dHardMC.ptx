@@ -8,7 +8,7 @@
     <exercise label="qa2dh_1">
         <statement>
 
-        <p>8-8-7: What are the contents of <c>arr</c> after the following code has been executed?</p>
+        <p> What are the contents of <c>arr</c> after the following code has been executed?</p>
         <program language="java"><input>
 int[][] arr = { {3,2,1},{1,2,3}};
 for (int row = 1; row &lt; arr.length; row++)
@@ -80,7 +80,7 @@ for (int row = 1; row &lt; arr.length; row++)
     <exercise label="qa2hard_2">
         <statement>
 
-        <p>8-8-8: A two-dimensional array, <c>imagePixels</c>, holds the brightness values for the pixels in an image. The brightness can range from 0 to 255. What does the following method compute?</p>
+        <p> A two-dimensional array, <c>imagePixels</c>, holds the brightness values for the pixels in an image. The brightness can range from 0 to 255. What does the following method compute?</p>
         <program language="java"><input>
 public int findMax(int[][] imagePixels)
 {

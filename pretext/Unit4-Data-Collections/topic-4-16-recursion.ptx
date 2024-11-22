@@ -19,7 +19,6 @@ public static void neverEnd()
             course, this particular method is not very useful. (Actually, in practice it
             <em>will</em> end, crashing with a <c>StackOverFlowError</c> because there is a limit on how
             many times you can recurse.)</p>
-    <p><problematic refid="id6">|Exercise|</problematic> <term>Check your Understanding</term></p>
   </introduction>
   <subsection>
             <title>Why use Recursion?</title>
@@ -43,7 +42,7 @@ public static void neverEnd()
             <p>Recursion can also be used to create fractals. A simple example is Sierpinski’s
                 triangle in which you subdivide a triangle into 4 new triangles as shown below.
                 You can then do the some procedure with each new triangle except the center one.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A sequence of Sierpinski’s triangles</caption><image source="Unit4-Data-Collections/Figures/triangleSub.png" width="81%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A sequence of Sierpinski’s triangles</caption><image source="Unit4-Data-Collections/Figures/triangleSub.png" width="81%%"/></figure>
             <p>Recursion can also be used to traverse <c>String</c>s, arrays, and <c>ArrayList</c>s just like a loop. In fact, any loop—also known as <em>iterative</em> code—can be
                 written using recursion. However in most languages, including Java, there are
                 limitations on how deeply code can recurse which rules out using recursion for
@@ -80,12 +79,10 @@ public static int factorial(int n)
 </input></program>
             <p>You can also play with an interactive demonstration of the recursive factorial
                 computation at <url href="https://gigamonkeys.com/misc/factorial/#java" visual="https://gigamonkeys.com/misc/factorial/#java">https://gigamonkeys.com/misc/factorial/#java</url>.</p>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check your understanding</term></p>
 
         <exercise label="recurb2fill">
             <statement>
-    <p>10-1-5: Which line in the method factorial contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>            <p><problematic refid="id10">|CodingEx|</problematic> <term>Coding Exercise</term></p>
-
+    <p> Which line in the method factorial contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>
 <exercise label="FactorialTest">
     <statement>
             <p>Run the code below to test the factorial method. What’s the factorial of 6? Add another test to print out the factorial of 6. What’s the factorial of 1? Add another test to print out the factorial of 1.</p>
@@ -163,7 +160,6 @@ public class RunestoneTests extends CodeTestHelper
                 every time you recurse you are shrinking the problem so it is closer to the base
                 case—that’s the equivalent in recursion to incrementing your loop variable in a
                 <c>for</c> loop.</p>
-            <p><problematic refid="id12">|Exercise|</problematic> <term>Check your understanding</term></p>
 
 <exercise label="rec_base1">
     <statement><p>Click on the line or lines that contain the test for the base case</p></statement>
@@ -180,7 +176,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qrb_3">
         <statement>
 
-            <p>10-1-8: What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
+            <p> What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
             <blockquote>
                 <program language="java"><input>
 public static int product(int n)
@@ -229,7 +225,7 @@ public static int product(int n)
     <exercise label="qrb_4">
         <statement>
 
-            <p>10-1-9: What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)?</p>
+            <p> What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)?</p>
             <blockquote>
                 <program language="java"><input>
 public static int bunnyEars(int bunnies)
@@ -277,7 +273,7 @@ public static int bunnyEars(int bunnies)
     <exercise label="qrb_5-new">
         <statement>
 
-            <p>10-1-10: Is the following method recursive?</p>
+            <p> Is the following method recursive?</p>
             <blockquote>
                 <program language="java"><input>
 public static int bunnyEars(int bunnies)
@@ -321,14 +317,13 @@ public static int bunnyEars(int bunnies)
             
             
             <p>In Java, the <term>call stack</term> keeps track of the methods that you have called since the main method executes.   A <term>stack</term> is a way of organizing data that adds and removes items only from the top of the stack.  An example is a stack of cups.  You can grap a cup from the top of the stack or add more cups at the top of the stack.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Stacks of cups</caption><image source="Unit4-Data-Collections/Figures/cupStack.jpg" width="54%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Stacks of cups</caption><image source="Unit4-Data-Collections/Figures/cupStack.jpg" width="54%%"/></figure>
             <p>When you are executing one method (method a) and it calls another method (method b) the method call is placed on the call stack along with information about where it was called from, which tells the run-time where to return to when the current method finishes executing.  When method b finishes executing the run-time pops the method b off of the call stack and returns execution to the next line to be executed in method a.</p>
             <p>Consider the following class definition.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Code with a divide by zero in a method.</caption><image source="Unit4-Data-Collections/Figures/codeForCallStack.png" width="71%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Code with a divide by zero in a method.</caption><image source="Unit4-Data-Collections/Figures/codeForCallStack.png" width="71%%"/></figure>
             <p>The code above will cause a run-time error of division by zero when it runs.  The <c>main</c> method calls the method <c>test1</c> (at line 20) which calls the method <c>test2</c> (at line 6) which has the divide by zero error (line 14).  This can be seen in the call stack shown below which shows the call stack from the top (most recent method) to the bottom (first method call).</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: A call stack in DrJava with a run-time error</caption><image source="Unit4-Data-Collections/Figures/errorCallStack.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A call stack in DrJava with a run-time error</caption><image source="Unit4-Data-Collections/Figures/errorCallStack.png" width="100%%"/></figure>
             <p>When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed. Each recursive call on the stack has its own set of local variables, including the parameter variables. The parameter values progressively change in each recursive call until we reach the base case which stops the recursion.</p>
-            <p><problematic refid="id14">|CodingEx|</problematic> <term>Tracing Exercise</term></p>
             <p>Let’s trace the execution of the factorial method defined below.</p>
             <program language="java"><input>
 public static int factorial(int n)
@@ -366,13 +361,12 @@ factorial(0) returns 1
             <p>You can step through this code using the Java Visualizer by clicking on this link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">factorial</url>.</p>
             <p>Another way to see the call stack in action is to download and use the Jeloit software (see <url href="http://cs.joensuu.fi/jeliot/" visual="http://cs.joensuu.fi/jeliot/">http://cs.joensuu.fi/jeliot/</url>).</p>
             
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: A call tree in Jeliot</caption><image source="Unit4-Data-Collections/Figures/callTree.png" width="54%%"/></figure>
-            <p><problematic refid="id16">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A call tree in Jeliot</caption><image source="Unit4-Data-Collections/Figures/callTree.png" width="54%%"/></figure>
 
     <exercise label="qrb_5-old">
         <statement>
 
-            <p>10-1-11:  Given the method defined below what does the following return: factorial(6)?</p>
+            <p>  Given the method defined below what does the following return: factorial(6)?</p>
             <blockquote>
                 <program language="java"><input>
 public static int factorial(int n)
@@ -434,7 +428,7 @@ public static int factorial(int n)
     <exercise label="qrb_6">
         <statement>
 
-            <p>10-1-12:  Given the method defined below what does the following return: mystery(5)?</p>
+            <p>  Given the method defined below what does the following return: mystery(5)?</p>
             <blockquote>
                 <program language="java"><input>
 public static int mystery(int n)
@@ -497,7 +491,7 @@ public static int mystery(int n)
     <exercise label="qrb_7">
         <statement>
 
-            <p>10-1-13:  Given the method defined below what does the following print: mystery(4,3)?</p>
+            <p>  Given the method defined below what does the following print: mystery(4,3)?</p>
             <blockquote>
                 <program language="java"><input>
 public static int mystery(int n, int a)
@@ -562,7 +556,6 @@ public static int mystery(int n, int a)
 
     </exercise>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-3</url>.</p>
-            <p><problematic refid="id18">|CodingEx|</problematic> <term>Tracing Exercise</term></p>
             <p>Let’s trace the execution of the bunny ears method defined below.</p>
             <program language="java"><input>
 public static int bunnyEars(int bunnies)
@@ -597,12 +590,11 @@ bunnyEars(2) returns 2 + bunnyEars(1) = 2 + 2 = 4
 bunnyEars(1) returns 2
 </input></program>
             <p>So <c>bunnyEars(5)</c> returns 10.  You can step through this code using the Java Visualizer by clicking on this link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">bunnyEars</url>.</p>
-            <p><problematic refid="id20">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qrb_8">
         <statement>
 
-            <p>10-1-14:  Given the method defined below what does the following print: mystery(1234)?</p>
+            <p>  Given the method defined below what does the following print: mystery(1234)?</p>
             <blockquote>
                 <program language="java"><input>
 public static void mystery (int x) {
@@ -672,7 +664,7 @@ public static void mystery (int x) {
     <exercise label="qrb_9">
         <statement>
 
-            <p>10-1-15:  Given the method defined below what does the following return: mystery(“xyzxyxy”)? Note that this recursive method traverses a String.</p>
+            <p>  Given the method defined below what does the following return: mystery(“xyzxyxy”)? Note that this recursive method traverses a String.</p>
             <blockquote>
                 <program language="java"><input>
 public static int mystery(String str)
@@ -749,7 +741,7 @@ public static int mystery(String str)
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-5</url></p>
         </subsection>
   <subsection>
-            <title><problematic refid="id22">|Groupwork|</problematic> Tracing Challenge : Recursion</title>
+            <title>Tracing Challenge : Recursion</title>
             <p>Working in pairs, trace through the following recursion problems.</p>
             <p>Consider the following recursive method:</p>
             <program language="java"><input>
@@ -776,7 +768,7 @@ mystery(0) returns A
 
         <exercise label="recBase1">
             <statement>
-    <p>10-1-16: What is the value of A in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from mystery(0)?</p></feedback></condition></var></setup></exercise>            <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
+    <p> What is the value of A in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from mystery(0)?</p></feedback></condition></var></setup></exercise>            <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
             <program language="java"><input>
 mystery(4) returns 3 * mystery(3) = 3 * X = Y
 mystery(3) returns 3 * mystery(2) = 3 * 9 = 27
@@ -787,10 +779,10 @@ mystery(0) returns 1
 
         <exercise label="recFBTracex1">
             <statement>
-    <p>10-1-17: What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^27$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of mystery(3)?</p></feedback></condition></var></setup></exercise>
+    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^27$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of mystery(3)?</p></feedback></condition></var></setup></exercise>
         <exercise label="recFBTracey1">
             <statement>
-    <p>10-1-18: What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^81$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of 3 * mystery(3)?</p></feedback></condition></var></setup></exercise>            <p>Consider the following recursive method:</p>
+    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^81$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of 3 * mystery(3)?</p></feedback></condition></var></setup></exercise>            <p>Consider the following recursive method:</p>
             <program language="java"><input>
 public static int strMethod(String str)
 {
@@ -821,7 +813,7 @@ strMethod("y") returns B
 
         <exercise label="recFBBase2">
             <statement>
-    <p>10-1-19: What is the value of B in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“y”)?</p></feedback></condition></var></setup></exercise>            <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
+    <p> What is the value of B in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“y”)?</p></feedback></condition></var></setup></exercise>            <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
             <program language="java"><input>
 strMethod("every") returns 1 + strMethod("very") = Z
 strMethod("very") returns strMethod("ery") = Y
@@ -832,13 +824,13 @@ strMethod("y") returns 0
 
         <exercise label="recFBRetX2">
             <statement>
-    <p>10-1-20: What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ry”)?</p></feedback></condition></var></setup></exercise>
+    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ry”)?</p></feedback></condition></var></setup></exercise>
         <exercise label="recFBRetY2">
             <statement>
-    <p>10-1-21: What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ery”)?</p></feedback></condition></var></setup></exercise>
+    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ery”)?</p></feedback></condition></var></setup></exercise>
         <exercise label="recFBRetZ2">
             <statement>
-    <p>10-1-22: What is the value of Z in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“every”)?</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the value of Z in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“every”)?</p></feedback></condition></var></setup></exercise>        </subsection>
   <subsection>
             <title>Summary</title>
             <p><ul>
@@ -877,11 +869,11 @@ strMethod("y") returns 0
   <exercises>
     <exercise label="recurb1fill">
             <statement>
-    <p>10-1-1: Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*4$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>
+    <p> Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*4$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>
     <exercise label="qrb_1">
         <statement>
 
-        <p>10-1-2:  Is the following method recursive?</p>
+        <p>  Is the following method recursive?</p>
         <blockquote>
             <program language="java"><input>
 public static int mystery()
@@ -922,7 +914,7 @@ public static int mystery()
     <exercise label="qrb_2">
         <statement>
 
-        <p>10-1-3: Is the following method recursive?</p>
+        <p> Is the following method recursive?</p>
         <blockquote>
             <program language="java"><input>
 public static int mystery2(int x)
