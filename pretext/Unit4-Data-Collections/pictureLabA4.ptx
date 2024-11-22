@@ -13,13 +13,13 @@
             has an index of 0 and the top left column has an index of 0. The row number (index) increases from top
             to bottom and the column number (index) increases from left to right.</p>
   <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A 2D array stored in row-major order or column-major order as a 1D array.</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A 2D array stored in row-major order or column-major order as a 1D array.</caption>
     <image source="Unit4-Data-Collections/Figures/rowMajor.png" width="45%%"/>
   </figure>
   <p>Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
             The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.</p>
   <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Java arrays of arrays</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Java arrays of arrays</caption>
     <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%%"/>
   </figure>
   <p>To loop through the values in a 2D array you must have two indexes. One index is used to change the
@@ -67,7 +67,6 @@ public int getTotalNested()
 }
 </input>
   </program>
-  <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercises</term></p>
   <p>1. Write a <c>getCount</c> method in the <c>IntArrayWorker</c> class that returns the count of the
             number of times a passed integer value is found in the matrix. There is already a method to test
             this in IntArrayWorkerTester.</p>
@@ -80,7 +79,7 @@ public int getTotalNested()
     <exercise label="picture-lab-A4-0a">
         <statement>
 
-        <p>6-4-7-1: Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in row-major order?</p>
+        <p> Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in row-major order?</p>
 
         </statement>
 <choices>
@@ -126,7 +125,7 @@ public int getTotalNested()
     <exercise label="picture-lab-A4-1a">
         <statement>
 
-        <p>6-4-7-2: Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in column-major order?</p>
+        <p> Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in column-major order?</p>
 
         </statement>
 <choices>
@@ -172,7 +171,7 @@ public int getTotalNested()
     <exercise label="picture-lab-A4-2a">
         <statement>
 
-        <p>6-4-7-3: Here is a mysteryMethod in the <c>IntArrayWorker</c> class that uses a private instance variable which is a 2D array
+        <p> Here is a mysteryMethod in the <c>IntArrayWorker</c> class that uses a private instance variable which is a 2D array
             named <c>matrix</c>. What does this method do?</p>
         <program language="Java"><input>
 public int mysteryMethod() {
@@ -203,7 +202,7 @@ public int mysteryMethod() {
     <exercise label="picture-lab-A4-3a">
         <statement>
 
-        <p>6-4-7-4: Which of these methods correctly sum up the values in a 2D array? Assume the 2D array is called <c>matrix</c>.</p>
+        <p> Which of these methods correctly sum up the values in a 2D array? Assume the 2D array is called <c>matrix</c>.</p>
 </statement><choices><choice><statement id="picture-lab-A4-3a_opt_a">        <program language="Java"><input>
 public int getSum() {
   int total = 0;

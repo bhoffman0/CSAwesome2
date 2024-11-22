@@ -10,13 +10,13 @@
     <video youtube="G7aF-OuLfl4"/>
     <p>An array is like a row of small lockers, except that you can’t cram lots of stuff into it. You can only store one value at each locker.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A row of lockers</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A row of lockers</caption>
     <image source="Unit4-Data-Collections/Figures/rowLockers.jpg" width="71%%"/>
   </figure>
     <p>You can store a value in an array using an <term>index</term> (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index.</p>
     <p>Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. This is similar to how Strings are indexed in Java – the first character is at index 0.  If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Comparing App Inventor lists and Java arrays</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor lists and Java arrays</caption>
     <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="100%%"/>
   </figure>
   </introduction>
@@ -46,12 +46,11 @@ highScores = new int[5];
 // declare and create array in 1 step!
 String[] names = new String[5];
 </input></program>
-            <p><problematic refid="id10">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="createarray">
         <statement>
 
-            <p>6-1-4: Which of the following creates an array of 10 doubles called prices?</p>
+            <p> Which of the following creates an array of 10 doubles called prices?</p>
 
         </statement>
 <choices>
@@ -94,7 +93,6 @@ String[] names = new String[5];
 </choices>
 
     </exercise>
-            <p><problematic refid="id12">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lcab1">
     <statement>
@@ -171,7 +169,7 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </note>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Two 5 element arrays with their values set to the default values for integer and object arrays.</caption><image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two 5 element arrays with their values set to the default values for integer and object arrays.</caption><image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%%"/></figure>
         </subsection>
   <subsection>
             <title>Initializer Lists to Create Arrays</title>
@@ -181,7 +179,7 @@ int[ ] highScores = {99,98,98,88,68};
 String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 </input></program>
             <p>When you create an array of a <term>primitive type</term> (like <c>int</c>) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an <term>object type</term> (like <c>String</c>) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: A primitive array and an object array</caption><image source="Unit4-Data-Collections/Figures/intAndStringArrays.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A primitive array and an object array</caption><image source="Unit4-Data-Collections/Figures/intAndStringArrays.png" width="89%%"/></figure>
             <p>Watch the following <url href="https://youtu.be/T-YZvVvPOac" visual="https://youtu.be/T-YZvVvPOac">video</url> which shows an array of String objects with a physical model of Java memory.</p>
 
     <video youtube="T-YZvVvPOac"/>
@@ -191,7 +189,6 @@ String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
   <subsection>
             <title>Array length</title>
             <p>Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use <term>dot-notation</term> to access the instance variable (<c>arrayName.length</c>).  <term>Dot-notation</term> is using variable name followed by a <c>.</c> and then the instance variable (property) name or a method name. Try the following.</p>
-            <p><problematic refid="id14">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lcab2">
     <statement>
@@ -254,12 +251,11 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>Note that length is an instance variable and not a method, unlike the String <c>length()</c> method, so you don’t add parentheses after length.  However, if you use parentheses after length during the exam, you won’t lose any points. The length instance variable is declared as a <c>public final int</c>.  <c>public</c> means you can access it and <c>final</c> means the value can’t change.</p>
             </note>
-            <p><problematic refid="id16">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qab_2">
         <statement>
 
-            <p>6-1-8: Which index is for the last element of an array called <c>highScores</c>?</p>
+            <p> Which index is for the last element of an array called <c>highScores</c>?</p>
 
         </statement>
 <choices>
@@ -288,7 +284,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Access and Modify Array Values</title>
             <p>To access the items in an array, we use an <term>indexed array variable</term> which is the array name and the index inside of square bracket [ ]. Remember that an <term>index</term> is a number that indicates the position of an item in a list, starting at 0. Here’s a comparison of App Inventor, AP CSP Pseudocode, and Java array access.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: Comparing Access to App Inventor lists and Java arrays</caption><image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Access to App Inventor lists and Java arrays</caption><image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="100%%"/></figure>
             <p>An indexed variable like <term>arrayname[index]</term> can be used anywhere a regular variable can be used, for example to assign a new value or to get a value from the array like below.</p>
             <program language="java"><input>
 // assign a new value 99 to the first element in the array
@@ -302,15 +298,13 @@ System.out.println( highScores[0] );
             <p>Watch the following <url href="https://youtu.be/uagEJw6bTM4" visual="https://youtu.be/uagEJw6bTM4">video</url> which shows a physical model of Java memory setting array values.</p>
 
     <video youtube="uagEJw6bTM4"/>
-                <p><problematic refid="id18">|Exercise|</problematic> <term>Check your understanding</term></p>
-
+    
         <exercise label="array-access1">
             <statement>
-    <p>6-1-10:  Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Access cars array to get Volvo</p></var></setup></exercise>
+    <p>  Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Access cars array to get Volvo</p></var></setup></exercise>
         <exercise label="array-access2">
             <statement>
-    <p>6-1-11:  Fill in the blank with code to access the cars array. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Set the first item of the cars array to be Toyota</p></var></setup></exercise>            <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
-            <p><problematic refid="id20">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+    <p>  Fill in the blank with code to access the cars array. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Set the first item of the cars array to be Toyota</p></var></setup></exercise>            <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
 
 <exercise label="array-set">
     <statement>
@@ -387,7 +381,6 @@ int index = 3;
 System.out.println(  highScores[index] );
 </input></program>
             <image source="Unit4-Data-Collections/6-1-images/cow.jpg" width="27%%"/>
-            <p><problematic refid="id22">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>Here’s a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is “cow.jpg”. The images array holds 5 images.</p>
 
 <exercise label="imageArray">
@@ -456,7 +449,7 @@ public class ImageEx
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id24">|Groupwork|</problematic> Programming Challenge : Countries Array</title>
+            <title>Programming Challenge : Countries Array</title>
             <image source="Unit4-Data-Collections/6-1-images/US.jpg" width="36%%"/>
             <p>In this challenge, you will create a guide to different countries using arrays.</p>
             <p><ol marker="1">
@@ -624,7 +617,7 @@ public class Countries
     </program>
         </subsection>
   <subsection>
-            <title><problematic refid="id26">|Groupwork|</problematic> Design an Array of Objects for your Community</title>
+            <title>Design an Array of Objects for your Community</title>
             <p>So far, we have seen arrays of ints and Strings, but we can create an array of any type.
                 For example, the following program creates an array of Turtle objects.
                 Notice that for an array of objects, we must call the constructor of each object to
@@ -870,7 +863,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP6-1-1">
         <statement>
 
-            <p>6-1-17: Consider the following method. Given an <c>array</c> initialized to <c>{4, 10, 15}</c>, which of the following represents the contents of the array after a call to <c>mystery(array, 2)</c>?</p>
+            <p> Consider the following method. Given an <c>array</c> initialized to <c>{4, 10, 15}</c>, which of the following represents the contents of the array after a call to <c>mystery(array, 2)</c>?</p>
             <program language="java"><input>
 public void mystery(int[] a, int i)
 {
@@ -932,7 +925,7 @@ public void mystery(int[] a, int i)
     <exercise label="AP6-1-2">
         <statement>
 
-            <p>6-1-18: Consider the following method. Which of the following code segments, appearing in the same class as the <c>mystery</c> method,
+            <p> Consider the following method. Which of the following code segments, appearing in the same class as the <c>mystery</c> method,
                 will result in <c>array2</c> having the contents <c>{5, 10, 20}</c>?</p>
             <program language="java"><input>
 public int[] mystery(int[] a, int i, int value)
@@ -984,7 +977,7 @@ int[] array2 = mystery(array1, 1, 20);
   <exercises>
     <exercise label="arrayAnalogy">
     <statement>
-        <p>6-1-2: Can you think of another example of something that is like an array (like a row of lockers)?</p>
+        <p> Can you think of another example of something that is like an array (like a row of lockers)?</p>
 
     </statement>
 </exercise>

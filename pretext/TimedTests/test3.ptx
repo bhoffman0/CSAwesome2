@@ -9,7 +9,7 @@
     <exercise label="pe3_1">
         <statement>
 
-            <p>13-2-1: What is the value of total after the following code executes?</p>
+            <p> What is the value of total after the following code executes?</p>
             <program language="java"><input>
 int[][] matrix = { {4, 5, 6, 7}, {0, 1, 2, 3}, {3, 2, 1, 0}, {8, 9, 1, 2}};
 
@@ -74,7 +74,7 @@ for (int row = 0; row &lt; matrix.length; row++)
     <exercise label="pe3_3">
         <statement>
 
-            <p>13-2-2: Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?</p>
+            <p> Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?</p>
             <program language="java"><input>
 private List list&lt;Integer&gt;;
 public void mystery(int n)
@@ -141,7 +141,7 @@ public void mystery(int n)
     <exercise label="pe3_4">
         <statement>
 
-            <p>13-2-3: Given the following two class declarations, what is the relationship between Dog and DogOwner?</p>
+            <p> Given the following two class declarations, what is the relationship between Dog and DogOwner?</p>
             <program language="java"><input>
 public class Dog
 {
@@ -219,7 +219,7 @@ public class DogOwner
     <exercise label="pe3_5">
         <statement>
 
-            <p>13-2-4: Which of the following expressions can be use to replace the body of mystery so that mystery will return the same result for all values of y?</p>
+            <p> Which of the following expressions can be use to replace the body of mystery so that mystery will return the same result for all values of y?</p>
             <program language="java"><input>
 public static int mystery(int y)
 {
@@ -283,7 +283,7 @@ public static int mystery(int y)
     <exercise label="pe3_6">
         <statement>
 
-            <p>13-2-5: Class C extends class B, which extends class A. Also, all of the three classes implement a public method test(). How can a method in an object of class C invoke the test() method defined in class A (without creating a new instance of class A)?</p>
+            <p> Class C extends class B, which extends class A. Also, all of the three classes implement a public method test(). How can a method in an object of class C invoke the test() method defined in class A (without creating a new instance of class A)?</p>
 
         </statement>
 <choices>
@@ -339,7 +339,7 @@ public static int mystery(int y)
     <exercise label="pe3_7">
         <statement>
 
-            <p>13-2-6: Which of the following is a correct call to the <c>test</c> method?</p>
+            <p> Which of the following is a correct call to the <c>test</c> method?</p>
             <program language="java"><input>
 public class Vehicle
 {
@@ -415,7 +415,7 @@ public class VehicleTest
     <exercise label="pe3_8">
         <statement>
 
-            <p>13-2-7: Given the following method declaration. What value is returned from recur(5)?</p>
+            <p> Given the following method declaration. What value is returned from recur(5)?</p>
             <program language="java"><input>
 public static int recur(int n)
 {
@@ -480,7 +480,7 @@ public static int recur(int n)
     <exercise label="pe3_9">
         <statement>
 
-            <p>13-2-8: What is printed when the following code is run?</p>
+            <p> What is printed when the following code is run?</p>
             <program language="java"><input>
 for (int k = 0; k &lt; 20; k = k + 1)
 {
@@ -543,7 +543,7 @@ for (int k = 0; k &lt; 20; k = k + 1)
     <exercise label="pe3_10">
         <statement>
 
-            <p>13-2-9: What is printed when the following code executes (runs)?</p>
+            <p> What is printed when the following code executes (runs)?</p>
             <program language="java"><input>
 List&lt;String&gt; list = new ArrayList&lt;String&gt;();
 list.add("a");
@@ -609,7 +609,7 @@ System.out.println(list);
     <exercise label="pe3_11">
         <statement>
 
-            <p>13-2-10: Assume that Parent p = new Child(); appears in a client program.  What is the result of the call p.m1()?</p>
+            <p> Assume that Parent p = new Child(); appears in a client program.  What is the result of the call p.m1()?</p>
             <program language="java"><input>
 public class Parent
 {
@@ -695,7 +695,7 @@ public class Child extends Parent
     <exercise label="pe3_12">
         <statement>
 
-            <p>13-2-11: Assume the following classes.</p>
+            <p> Assume the following classes.</p>
             <program language="java"><input>
 public class Animal
 {
@@ -776,7 +776,7 @@ III.  ((Bear) b).growl();
     <exercise label="pe3_13">
         <statement>
 
-            <p>13-2-12: Which of the following best explains what the method m does?</p>
+            <p> Which of the following best explains what the method m does?</p>
             <program language="java"><input>
 public void m(int[][]p)
 {
@@ -845,7 +845,7 @@ public void m(int[][]p)
     <exercise label="pe3_14">
         <statement>
 
-            <p>13-2-13: What is the output from mystery(4321) when mystery is defined as follows?</p>
+            <p> What is the output from mystery(4321) when mystery is defined as follows?</p>
             <program language="java"><input>
 //precondition: x &gt;=0
 public static void mystery (int x)
@@ -914,7 +914,7 @@ public static void mystery (int x)
     <exercise label="pe3_15">
         <statement>
 
-            <p>13-2-14: A classroom is a room and a building has many rooms. If the three classes Room, Classroom, and Building create objects that have the same relationship which of the following is the most appropriate set of declarations?</p>
+            <p> A classroom is a room and a building has many rooms. If the three classes Room, Classroom, and Building create objects that have the same relationship which of the following is the most appropriate set of declarations?</p>
 
         </statement>
 <choices>
@@ -970,7 +970,7 @@ public static void mystery (int x)
     <exercise label="pe3_16">
         <statement>
 
-            <p>13-2-15: Given the following code which of the answers best describes the conditions needed for temp to be true when it is returned?</p>
+            <p> Given the following code which of the answers best describes the conditions needed for temp to be true when it is returned?</p>
             <program language="java"><input>
 boolean temp = false;
 int count = 0;
@@ -1037,7 +1037,7 @@ return temp;
     <exercise label="pe3_17">
         <statement>
 
-            <p>13-2-16: What is the output from the following code segment?</p>
+            <p> What is the output from the following code segment?</p>
             <program language="java"><input>
 for (int j = 1; j &lt;=5; j++)
 {
@@ -1100,7 +1100,7 @@ for (int j = 1; j &lt;=5; j++)
     <exercise label="pe3_18">
         <statement>
 
-            <p>13-2-17: Consider the following methods. Which of method1, method2, and method3 would give the same result as sample?</p>
+            <p> Consider the following methods. Which of method1, method2, and method3 would give the same result as sample?</p>
             <program language="java"><input>
 public void sample(int num1, int num2)
 {
@@ -1230,7 +1230,7 @@ public void method3(int num1, int num2)
     <exercise label="pe3_19">
         <statement>
 
-            <p>13-2-18: What are the first and last values output by the following code segment?</p>
+            <p> What are the first and last values output by the following code segment?</p>
             <program language="java"><input>
 int t = 13;
 while (t &lt; 29)
@@ -1294,7 +1294,7 @@ while (t &lt; 29)
     <exercise label="pe3_20">
         <statement>
 
-            <p>13-2-19: Given the following code.</p>
+            <p> Given the following code.</p>
             <program language="java"><input>
 String s1 = new String("hi");
 String s2 = new String("hi");

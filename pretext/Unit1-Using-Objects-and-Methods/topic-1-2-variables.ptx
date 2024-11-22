@@ -12,7 +12,7 @@
 
     <video youtube="pHgYlVjagmA"/>
                 <p>For example, when you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A pong game in <reference name="Scratch" refuri="http://scratch.mit.edu">Scratch</reference><target ids="scratch" names="scratch" refuri="http://scratch.mit.edu"/> with a score shown in the upper left.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A pong game in <reference name="Scratch" refuri="http://scratch.mit.edu">Scratch</reference><target ids="scratch" names="scratch" refuri="http://scratch.mit.edu"/> with a score shown in the upper left.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%%"/></figure>
         </subsection>
   <subsection>
             <title>Data Types</title>
@@ -48,12 +48,11 @@
                 enclosed in a pair of double quotes - like <c>"Hello"</c>. You will learn more
                 about <c>String</c> objects later.</p>
             <p>A data type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with <c>int</c>s and <c>double</c>s but not with <c>boolean</c>s and <c>String</c>s.</p>
-            <p><problematic refid="id3">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="chooseType1">
         <statement>
 
-            <p>1-2-2: What type should you use to represent the average grade for a course?</p>
+            <p> What type should you use to represent the average grade for a course?</p>
 
         </statement>
 <choices>
@@ -100,7 +99,7 @@
     <exercise label="chooseType2">
         <statement>
 
-            <p>1-2-3: What type should you use to represent the number of people in a household?</p>
+            <p> What type should you use to represent the number of people in a household?</p>
 
         </statement>
 <choices>
@@ -147,7 +146,7 @@
     <exercise label="chooseType3">
         <statement>
 
-            <p>1-2-4: What type should you use to hold the first name of a person?</p>
+            <p> What type should you use to hold the first name of a person?</p>
 
         </statement>
 <choices>
@@ -194,7 +193,7 @@
     <exercise label="chooseType4">
         <statement>
 
-            <p>1-2-5: What type should you use to record if it is raining or not?</p>
+            <p> What type should you use to record if it is raining or not?</p>
 
         </statement>
 <choices>
@@ -241,7 +240,7 @@
     <exercise label="chooseType5">
         <statement>
 
-            <p>1-2-6: What type should you use to represent the amount of money you have?</p>
+            <p> What type should you use to represent the amount of money you have?</p>
 
         </statement>
 <choices>
@@ -292,7 +291,7 @@
             <p>To create a variable, you must tell Java its data type and its name.  Creating a variable is also called <term>declaring a variable</term>.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a <term>primitive variable</term> Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.</p>
             <p>Computers store all values using <term>bits</term> (binary digits).  A <term>bit</term> can represent two values and we usually say that the value of a bit is either 0 or 1. When you declare a variable, you have to tell Java the type of the variable because Java needs to know how many bits to use and how to represent the value.  The 3 different primitive types
                 all require different number of bits.  An integer gets 32 bits of memory, a double gets 64 bits of memory and a boolean could be represented by just one bit.</p>
-            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Examples of variables with names and values.  Notice that the different types get a different amount of memory space.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/typesAndSpace.png" width="89%%"/></figure>
+            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Examples of variables with names and values.  Notice that the different types get a different amount of memory space.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/typesAndSpace.png" width="89%%"/></figure>
             <p>To <term>declare</term> (create) a variable, you  specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (<c>;</c>). Java uses the keyword <term>int</term> for integer, <term>double</term> for a floating point number (a double precision number), and <term>boolean</term> for a Boolean value (true or false).</p>
             <p>Here is an example declaration of a variable called score.</p>
             <program language="java"><input>
@@ -308,7 +307,6 @@ score = 4;
 int score = 4;
 </input></program>
             <p>When you are printing out variables, you can use the <term>string concatenation</term> operator <c>+</c> to add them to another string inside System.out.print. Never put variables inside quotes <c>""</c> because that will print out the variable name letter by letter. You do not want to print out the variable name, but the value of the variable in memory. If you’re not sure what this means, try putting quotes around the variable and see what happens. In the print out, if you want spaces between words and variables, you must put the space in the quotes. If you forget to add spaces, you will get smushed output like “HiJose” instead of “Hi Jose”.</p>
-            <p><problematic refid="id5">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="strConcatDemo">
     <statement>
@@ -366,7 +364,6 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>Variables are never put inside quotes (“”) in System.out.print statements. This would print the variable name out letter by letter instead of printing its value.</p>
             </note>
-            <p><problematic refid="id7">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
 <exercise label="var_declare">
     <statement><p>Click on all of the variable declarations in the following code.</p></statement>
@@ -406,7 +403,6 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
 </areas></exercise>            <p>The equal sign here <c>=</c> doesn’t mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a <em>copy</em> of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the <c>=</c> and a value or expression on the right.</p>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="asgn_order">
     <statement>
@@ -448,17 +444,16 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id11">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
         <exercise label="fillDecVar1">
             <statement>
-    <p>1-2-11: Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5. <var/>  <var/>  </p></statement><setup><var><condition string="^\s*int\s*$"><feedback><p>Correct.  You typically use whole numbers for ages after age 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Remember that Java uses just the first 3 letters of integer</p></feedback></condition></var><var><condition number="[5, 5]"><feedback><p>Correct.  You can initialize to a value.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use 5 in the second blank</p></feedback></condition></var></setup></exercise>
+    <p> Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5. <var/>  <var/>  </p></statement><setup><var><condition string="^\s*int\s*$"><feedback><p>Correct.  You typically use whole numbers for ages after age 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Remember that Java uses just the first 3 letters of integer</p></feedback></condition></var><var><condition number="[5, 5]"><feedback><p>Correct.  You can initialize to a value.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use 5 in the second blank</p></feedback></condition></var></setup></exercise>
         <exercise label="fillDecVar2">
             <statement>
-    <p>1-2-12: What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
+    <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
         <exercise label="fillDecVar3">
             <statement>
-    <p>1-2-13: What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>            <p><term>Mixed up Code Problems</term></p>
+    <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>            <p><term>Mixed up Code Problems</term></p>
 <exercise label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following code declares and initializes variables for storing a number of visits, a person’s temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the “Check Me” button to check your solution.</p>
 </statement>
@@ -539,14 +534,13 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id13">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
         <exercise label="fillName1">
             <statement>
-    <p>1-2-16: What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></exercise>
+    <p> What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></exercise>
         <exercise label="fillName2">
             <statement>
-    <p>1-2-17: What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
   <subsection>
             <title>Debugging Challenge : Weather Report</title>
             <p>Debug the following code that reads out a weather report.
@@ -605,7 +599,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id15">|Groupwork|</problematic> Programming Challenge : Mad Libs</title>
+            <title>Programming Challenge : Mad Libs</title>
             <p>Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.</p>
             <p>Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you’re done, try another team’s mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url> to read in input into the variables.</p>
 
@@ -713,7 +707,7 @@ double gpa = 3.5;
     <exercise label="AP1-2-types">
         <statement>
 
-            <p>1-2-20: Which of the following pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA and the number of students in the variable numStudents?</p>
+            <p> Which of the following pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA and the number of students in the variable numStudents?</p>
 
         </statement>
 <choices>

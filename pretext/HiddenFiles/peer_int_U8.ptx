@@ -6,7 +6,7 @@
     <exercise label="bs-2d-arrays-7-6">
         <statement>
 
-        <p>8-10-1:  What does this code do?</p>
+        <p>  What does this code do?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
@@ -75,7 +75,7 @@ while (index &lt; pixelArray.length)
     <exercise label="bs-2d-arrays-8-6">
         <statement>
 
-        <p>8-10-2:  For debugging, where is the best place to put a print statement?</p>
+        <p>  For debugging, where is the best place to put a print statement?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
@@ -139,7 +139,7 @@ while (index &lt; pixelArray.length) //Location B
     <exercise label="bs-2d-arrays-8-7">
         <statement>
 
-        <p>8-10-3:  This code should swap the red and blue components at each pixel, what does it actually do?</p>
+        <p>  This code should swap the red and blue components at each pixel, what does it actually do?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
@@ -201,7 +201,7 @@ while (index &lt; pixelArray.length)
     <exercise label="bs-2d-arrays-8-9">
         <statement>
 
-        <p>8-10-4:  Which code chunk should be inserted into the marked location to swap the red and blue components at each pixel?</p>
+        <p>  Which code chunk should be inserted into the marked location to swap the red and blue components at each pixel?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
@@ -268,7 +268,7 @@ pix.setBlue(pix.getRed());</p>
     <exercise label="bs-2d-arrays-9-7">
         <statement>
 
-        <p>8-10-5:  Why does this code have an error?</p>
+        <p>  Why does this code have an error?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
@@ -337,7 +337,7 @@ for(int index = 0; index &lt; pixelArray.length; index++)
     <exercise label="bs-2d-arrays-10-7">
         <statement>
 
-        <p>8-10-6:  Why does this code have an error?</p>
+        <p>  Why does this code have an error?</p>
         <blockquote>
             <program language="java"><input>
 //A method in Picture.java
@@ -397,7 +397,7 @@ for (int bar = 0; bar &lt; getWidth(); bar++)
     <exercise label="bs-2d-arrays-11-9">
         <statement>
 
-        <p>8-10-7:  Which of the following is the best answer?</p>
+        <p>  Which of the following is the best answer?</p>
         <blockquote>
             <program language="java"><input>
 //Code to mirror around the vertical axis
@@ -468,7 +468,7 @@ for (int y = 0; y &lt; getHeight); y++)
     <exercise label="bs-2d-arrays-11-15">
         <statement>
 
-        <p>8-10-8:  What does this code do?</p>
+        <p>  What does this code do?</p>
         <blockquote>
             <program language="java"><input>
 int magic = getWidth()/2;
@@ -540,7 +540,7 @@ for(int y = 0; y &lt; getHeight(); y++)
     <exercise label="bs-2d-arrays-12-6">
         <statement>
 
-        <p>8-10-9:  This code makes a red box of size (width, height)</p>
+        <p>  This code makes a red box of size (width, height)</p>
         <blockquote>
             <program language="java"><input>
 Pixel foo;
@@ -599,7 +599,7 @@ for(int y = 40; y &lt; 50; y++)
     <exercise label="bs-2d-arrays-12-7">
         <statement>
 
-        <p>8-10-10:  This code makes a red box of size (width, height)</p>
+        <p>  This code makes a red box of size (width, height)</p>
         <blockquote>
             <program language="java"><input>
 Pixel foo;
@@ -658,7 +658,7 @@ for(int y = 40; y &lt;= 50; y++)
     <exercise label="bs-2d-arrays-12-8">
         <statement>
 
-        <p>8-10-11: What are the correct loop headers to make a black box of width x and height y?</p>
+        <p> What are the correct loop headers to make a black box of width x and height y?</p>
         <blockquote>
             <program language="java"><input>
 public void foo(int x, int y)
@@ -720,7 +720,7 @@ public void foo(int x, int y)
     <exercise label="bs-2d-arrays-14-5">
         <statement>
 
-        <p>8-10-12:  How many times is the variable pix assigned a value?</p>
+        <p>  How many times is the variable pix assigned a value?</p>
         <blockquote>
             <program language="java"><input>
 public void everyColumn(Color newColor)
@@ -791,7 +791,7 @@ public void everyColumn(Color newColor)
     <exercise label="bs-2d-arrays-14-8">
         <statement>
 
-        <p>8-10-13:  How many iterations of the loop body are executed?</p>
+        <p>  How many iterations of the loop body are executed?</p>
         <blockquote>
             <program language="java"><input>
 public void everyOtherColumn(Color newColor)
@@ -862,7 +862,7 @@ public void everyOtherColumn(Color newColor)
     <exercise label="bs-2d-arrays-14-9">
         <statement>
 
-        <p>8-10-14:  Adding which if statement at the marked line would result in the inner body of the for loop running the same way it would if the inner for loop was “for (int bbb = 0; bbb &lt; this.getWidth(); bbb = bbb + 2)”?</p>
+        <p>  Adding which if statement at the marked line would result in the inner body of the for loop running the same way it would if the inner for loop was “for (int bbb = 0; bbb &lt; this.getWidth(); bbb = bbb + 2)”?</p>
         <blockquote>
             <program language="java"><input>
 public void everyOtherColumn(Color newColor)
@@ -928,7 +928,7 @@ public void everyOtherColumn(Color newColor)
     <exercise label="bs-2d-arrays-15-6">
         <statement>
 
-        <p>8-10-15:  What is this code doing?</p>
+        <p>  What is this code doing?</p>
         <blockquote>
             <program language="java"><input>
 //Inside loop over all pixels
@@ -989,7 +989,7 @@ else
     <exercise label="bs-2d-arrays-15-10">
         <statement>
 
-        <p>8-10-16:  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
+        <p>  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
         <blockquote>
             <program language="java"><input>
 int diffValue = Math.abs(topAv – botAv);
@@ -1045,7 +1045,7 @@ else
     <exercise label="bs-2d-arrays-15-11">
         <statement>
 
-        <p>8-10-17:  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
+        <p>  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
         <blockquote>
             <program language="java"><input>
 int diffValue = Math.abs(topAv – botAv);
@@ -1103,7 +1103,7 @@ else
     <exercise label="bs-2d-arrays-15-12">
         <statement>
 
-        <p>8-10-18:  Which best describes the conditions under which we change pixel color?</p>
+        <p>  Which best describes the conditions under which we change pixel color?</p>
         <blockquote>
             <program language="java"><input>
 public void makeConvict()
@@ -1171,7 +1171,7 @@ for (int x = 0; x &lt; this.getWidth(); x++)
     <exercise label="bs-2d-arrays-16-6">
         <statement>
 
-        <p>8-10-19: How would you call and display a flipped picture of Picture p?</p>
+        <p> How would you call and display a flipped picture of Picture p?</p>
 
         </statement>
 <choices>
@@ -1226,7 +1226,7 @@ for (int x = 0; x &lt; this.getWidth(); x++)
     <exercise label="bs-2d-arrays-16-7">
         <statement>
 
-        <p>8-10-20:  How many times is the marked line below executed?</p>
+        <p>  How many times is the marked line below executed?</p>
         <blockquote>
             <program language="java"><input>
 public void makeConvict()
@@ -1303,7 +1303,7 @@ public void makeConvict()
     <exercise label="bs-2d-arrays-16-8">
         <statement>
 
-        <p>8-10-21:  How many times is the marked line below executed?</p>
+        <p>  How many times is the marked line below executed?</p>
         <blockquote>
             <program language="java"><input>
 public void makeConvict()
@@ -1380,7 +1380,7 @@ public void makeConvict()
     <exercise label="bs-2d-arrays-16-9">
         <statement>
 
-        <p>8-10-22: Which of these statements is true?</p>
+        <p> Which of these statements is true?</p>
         <program language="java"><input>
 public void makeConvict()
 {
@@ -1446,7 +1446,7 @@ public void makeConvict()
     <exercise label="bs-2d-arrays-20-11">
         <statement>
 
-        <p>8-10-23:  What does this code do?</p>
+        <p>  What does this code do?</p>
         <blockquote>
             <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();

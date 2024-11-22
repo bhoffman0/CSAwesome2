@@ -30,10 +30,29 @@
     margin-bottom: 0.5em;
 }
 
+.ptx-content .heading h4
+{ 
+  font-size: 1.4rem;
+  color:  var(--emphasisColor);
+}
+
 .ptx-content .terminology
 {
     color:  var(--emphasisColor);
     font-weight: bolder;
+}
+
+.ptx-content .code-inline
+{
+  padding: 0;
+  color: var(--codeColor);
+  background-color: inherit;
+  font-weight: bold;
+  font-size: 100%;  
+}
+
+.ptx-content .summary-links {
+  font-size: 1rem;
 }
 
 /* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
@@ -57,15 +76,8 @@ details.ptx-footnote {
 }
 
 
-.ptx-content code
-{
-  padding: 0;
-  color: var(--codeColor);
-  background-color: inherit;
-  font-weight: bold;
-  font-size: 100%;
-}
 
+.ptx-content
 #summary ul.simple li
 {
   padding-top: 1em;

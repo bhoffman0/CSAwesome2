@@ -7,7 +7,7 @@
     <exercise label="qtnt1_1">
         <statement>
 
-        <p>12-2-1: Which of the following is equivalent to the statement below? Recall DeMorgan’s Law.</p>
+        <p> Which of the following is equivalent to the statement below? Recall DeMorgan’s Law.</p>
         <program language="java"><input>
 !((a &lt;= b) &amp;&amp; (b &lt; 0))
 </input></program>
@@ -65,7 +65,7 @@
     <exercise label="qtnt1_2">
         <statement>
 
-        <p>12-2-2: Consider the following recursive method. What does <c>mystery(4)</c> return?</p>
+        <p> Consider the following recursive method. What does <c>mystery(4)</c> return?</p>
         <program language="java"><input>
 public int mystery(int m)
 {
@@ -132,7 +132,7 @@ public int mystery(int m)
     <exercise label="qtnt1_3">
         <statement>
 
-        <p>12-2-3: In which of these cases will an ascending order (from smallest to largest) insertion sort have the fastest run time?</p>
+        <p> In which of these cases will an ascending order (from smallest to largest) insertion sort have the fastest run time?</p>
         <program language="java"><input>
 I.   An array that is in reverse order (from largest to smallest).
 II.  An array that is in sorted order already (from smallest to largest).
@@ -192,7 +192,7 @@ III. An array that is in random order (not already sorted).
     <exercise label="qtnt1_4">
         <statement>
 
-        <p>12-2-4: Which of these loops will output <c>01234</c>?</p>
+        <p> Which of these loops will output <c>01234</c>?</p>
         <program language="java"><input>
 int max = 5;
 
@@ -273,7 +273,7 @@ for (int i = max; i &gt; 0; i--)
     <exercise label="qtnt1_5">
         <statement>
 
-        <p>12-2-5: Consider the following block of code. What are the first and last numbers printed after running the code?</p>
+        <p> Consider the following block of code. What are the first and last numbers printed after running the code?</p>
         <program language="java"><input>
 int value = 15;
 while (value &lt; 30)
@@ -336,7 +336,7 @@ while (value &lt; 30)
     <exercise label="qtnt1_6">
         <statement>
 
-        <p>12-2-6: Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
+        <p> Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
         <program language="java"><input>
 public int solution(int limit)
 {
@@ -409,7 +409,7 @@ public int solution(int limit)
     <exercise label="qtnt1_7">
         <statement>
 
-        <p>12-2-7: Given that both <c>count</c> and <c>n</c> are integer values, which of the following statements is true about both code blocks?</p>
+        <p> Given that both <c>count</c> and <c>n</c> are integer values, which of the following statements is true about both code blocks?</p>
         <program language="java"><input>
 // Code block I
 for (count = 0; count &lt;= n; count++)
@@ -479,7 +479,7 @@ while (count &lt;= n)
     <exercise label="qtnt1_8">
         <statement>
 
-        <p>12-2-8: Consider the following class declarations. Which statements are true?</p>
+        <p> Consider the following class declarations. Which statements are true?</p>
         <program language="java"><input>
  public class Animal
  {
@@ -549,7 +549,7 @@ III. Cat can override existing public methods of Animal
     <exercise label="qtnt1_9">
         <statement>
 
-        <p>12-2-9: Consider the following code. What is the maximum amount of times that <c>HELLO</c> could possibly be printed?</p>
+        <p> Consider the following code. What is the maximum amount of times that <c>HELLO</c> could possibly be printed?</p>
         <program language="java"><input>
 for (int i = 0; i &lt;= k; i++)
 {
@@ -613,7 +613,7 @@ for (int i = 0; i &lt;= k; i++)
     <exercise label="qtnt1_10">
         <statement>
 
-        <p>12-2-10: When will the method <c>stringRecursion</c> produce a run time error?</p>
+        <p> When will the method <c>stringRecursion</c> produce a run time error?</p>
         <program language="java"><input>
 public void stringRecursion(String s)
 {
@@ -679,7 +679,7 @@ public void stringRecursion(String s)
     <exercise label="qtnt1_11">
         <statement>
 
-        <p>12-2-11: Consider the following class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?</p>
+        <p> Consider the following class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?</p>
         <program language="java"><input>
 public class A
 {
@@ -771,7 +771,7 @@ III objectC.method2(objectB);
     <exercise label="qtnt1_12">
         <statement>
 
-        <p>12-2-12: Which of these declarations will <em>not</em> cause an error?</p>
+        <p> Which of these declarations will <em>not</em> cause an error?</p>
         <program language="java"><input>
 I ArrayList&lt;String&gt; stringList = new List&lt;String&gt;();
 II ArrayList&lt;int&gt; intList = new ArrayList&lt;int&gt;();
@@ -831,7 +831,7 @@ III ArrayList&lt;String&gt; stringList = new ArrayList&lt;String&gt;();
     <exercise label="qtnt1_14">
         <statement>
 
-        <p>12-2-13: Suppose that the following method takes in a two dimensional array called <c>matrix</c>. After the method call <c>printMatrix(matrix)</c> what will the output be? Possible options are listed below the method definition.</p>
+        <p> Suppose that the following method takes in a two dimensional array called <c>matrix</c>. After the method call <c>printMatrix(matrix)</c> what will the output be? Possible options are listed below the method definition.</p>
         <program language="java"><input>
 /* assume that matrix has the following values */
 7654
@@ -931,7 +931,7 @@ IV.
     <exercise label="qtnt1_15">
         <statement>
 
-        <p>12-2-14: If randomList is an <c>ArrayList</c> of <c>Integer</c> objects and is initially set to {0, 1, 2, 3}, what will randomList look like after the following code is executed?</p>
+        <p> If randomList is an <c>ArrayList</c> of <c>Integer</c> objects and is initially set to {0, 1, 2, 3}, what will randomList look like after the following code is executed?</p>
         <program language="java"><input>
 randomList.add(5);
 randomList.add(7);
@@ -994,7 +994,7 @@ randomList.set(1, 8);
     <exercise label="qtnt1_16">
         <statement>
 
-        <p>12-2-15: Consider the following code segment. What will be printed as a result of executing the code below?</p>
+        <p> Consider the following code segment. What will be printed as a result of executing the code below?</p>
         <program language="java"><input>
 String str = "fedcba";
 int counter = 0;
@@ -1058,7 +1058,7 @@ while(counter &lt; str.length() - 1)
     <exercise label="qtnt1_17">
         <statement>
 
-        <p>12-2-16: Consider the following class declarations. Which of the following statements will not compile?</p>
+        <p> Consider the following class declarations. Which of the following statements will not compile?</p>
         <program language="java"><input>
 public class B
 {
@@ -1139,7 +1139,7 @@ public class C extends B
     <exercise label="qtnt1_18">
         <statement>
 
-        <p>12-2-17: Consider the following method.  Assume that <c>String s = "rain";</c> and <c>int b = 4;</c> have been executed.  What are the values of <c>s</c> and <c>b</c> after <c>test(s,b)</c> is executed?</p>
+        <p> Consider the following method.  Assume that <c>String s = "rain";</c> and <c>int b = 4;</c> have been executed.  What are the values of <c>s</c> and <c>b</c> after <c>test(s,b)</c> is executed?</p>
         <program language="java"><input>
 public static void test(String str, int y)
 {
@@ -1201,7 +1201,7 @@ public static void test(String str, int y)
     <exercise label="qtnt1_19">
         <statement>
 
-        <p>12-2-18: Which of the following is/are true about using insertion sort versus using merge sort?</p>
+        <p> Which of the following is/are true about using insertion sort versus using merge sort?</p>
         <program language="java"><input>
 I. Insertion sort requires more storage space than mergesort.
 II. Insertion sort is only more efficient than mergesort in the case that we have a very small and nearly sorted array.
@@ -1261,7 +1261,7 @@ III. Insertion sort is almost always less efficient than mergesort.
     <exercise label="qtnt1_20">
         <statement>
 
-        <p>12-2-19: What would the contents of <c>matrix</c>, a 2-D array of integers, be after a call to <c>alter(1)</c>? The method alter is defined below.</p>
+        <p> What would the contents of <c>matrix</c>, a 2-D array of integers, be after a call to <c>alter(1)</c>? The method alter is defined below.</p>
         <program language="java"><input>
   private int[][] matrix;
 

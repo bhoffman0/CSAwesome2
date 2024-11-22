@@ -20,18 +20,16 @@
   </p>
     <p>The image below shows these 3 levels of scope.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Class, Method, and Block Level Scope</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Class, Method, and Block Level Scope</caption>
     <image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%%" alt="Scope Levels"/>
   </figure>
-    <p><problematic refid="id2">|Exercise|</problematic> Check Your Understanding</p>
     <p><term>Local variables</term> are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It’s good practice to declare any variables that are used by just one method as local variables in that method.</p>
     <p>Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.</p>
     <p>Another way to look at scope is that a variable’s scope is where it lives and exists. You cannot use the variable in code outside of its scope. The variable does not exist outside of its scope.</p>
-    <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
     <p>If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We’ll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword this to refer to this object’s instance variables.</p>
   </introduction>
   <subsection>
-            <title><problematic refid="id6">|Groupwork|</problematic> Programming Challenge : Debugging</title>
+            <title>Programming Challenge : Debugging</title>
 
 <exercise label="challenge-5-8-Debug">
     <statement>
@@ -196,7 +194,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP5-8-1">
         <statement>
 
-            <p>5-8-6: Consider the following class definitions. Which of the following best explains why the class will not compile?</p>
+            <p> Consider the following class definitions. Which of the following best explains why the class will not compile?</p>
             <program language="java"><input>
 public class Party
 {
@@ -276,7 +274,7 @@ public class Party
     <exercise label="AP5-8-2">
         <statement>
 
-            <p>5-8-7: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Movie
 {

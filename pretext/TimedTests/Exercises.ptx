@@ -10,7 +10,7 @@
     <exercise label="mt1_3">
         <statement>
 
-            <p>13-4-1: Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ‘’addMinutes()’’?</p>
+            <p> Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ‘’addMinutes()’’?</p>
             <program language="java"><input>
  public class Timer
  {
@@ -122,7 +122,7 @@ IV.  public void addMinutes(int additionMinutes)
     <exercise label="mt1_4">
         <statement>
 
-            <p>13-4-2: Which is NOT a correct way to declare an array of integers?</p>
+            <p> Which is NOT a correct way to declare an array of integers?</p>
 
         </statement>
 <choices>
@@ -169,7 +169,7 @@ IV.  public void addMinutes(int additionMinutes)
     <exercise label="mt1_7">
         <statement>
 
-            <p>13-4-3: What are the contents of nums after the following code is executed?</p>
+            <p> What are the contents of nums after the following code is executed?</p>
             <program language="java"><input>
 int [] nums = { 1, 2, 3, 4, 5 };
 int temp = nums[2];
@@ -231,7 +231,7 @@ nums[4] = temp;
     <exercise label="mt1_8">
         <statement>
 
-            <p>13-4-4: Which option will evaluate to true, if and only if both a and b are false?</p>
+            <p> Which option will evaluate to true, if and only if both a and b are false?</p>
 
         </statement>
 <choices>
@@ -287,7 +287,7 @@ nums[4] = temp;
     <exercise label="mt1_10">
         <statement>
 
-            <p>13-4-5: What does the method <c>mystery</c> do?</p>
+            <p> What does the method <c>mystery</c> do?</p>
             <program language="java"><input>
 public void mystery(String tester)
 {
@@ -353,7 +353,7 @@ public void mystery(String tester)
     <exercise label="mt1_11">
         <statement>
 
-            <p>13-4-6: After the following code is executed, what does the variable mystery hold?</p>
+            <p> After the following code is executed, what does the variable mystery hold?</p>
             <program language="java"><input>
 public class mysterious
 {
@@ -426,7 +426,7 @@ public class mysterious
     <exercise label="mt1_12">
         <statement>
 
-            <p>13-4-7: Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?</p>
+            <p> Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?</p>
 
         </statement>
 <choices>
@@ -482,7 +482,7 @@ public class mysterious
     <exercise label="mt1_13">
         <statement>
 
-            <p>13-4-8: Which of the following reasons for using an inheritance hierarchy are valid?</p>
+            <p> Which of the following reasons for using an inheritance hierarchy are valid?</p>
             <program language="java"><input>
 I.   Methods from a superclass can be used in a subclass without rewriting or copying code.
 II.  An object from a subclass can be passed as an argument to a method that takes an object of the superclass
@@ -545,7 +545,7 @@ V.   None of the above
     <exercise label="mt1_14">
         <statement>
 
-            <p>13-4-9: Consider the following method and if <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
+            <p> Consider the following method and if <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
             <program language="java"><input>
 public int m1(int[] a)
 {
@@ -608,7 +608,7 @@ public int m1(int[] a)
     <exercise label="mt1_15">
         <statement>
 
-            <p>13-4-10: What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
+            <p> What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
             <program language="java"><input>
 int a = 10, b = 3, t;
 for (int i = 1; i &lt;= 6; i++)
@@ -673,7 +673,7 @@ for (int i = 1; i &lt;= 6; i++)
     <exercise label="mt1_16">
         <statement>
 
-            <p>13-4-11: Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
+            <p> Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -738,7 +738,7 @@ s4 = null;
     <exercise label="mt1_17">
         <statement>
 
-            <p>13-4-12: Consider the following code segment.  What value is in sum after this code executes?</p>
+            <p> Consider the following code segment.  What value is in sum after this code executes?</p>
             <program language="java"><input>
 int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
 
@@ -804,7 +804,7 @@ for (int row = 0; row &lt; 4; row++)
     <exercise label="mt1_18">
         <statement>
 
-            <p>13-4-13: Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
+            <p> Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
             <program language="java"><input>
 int [][] mat = new int [3][4];
 for (int row = 0; row &lt; mat.length; row++)
@@ -875,7 +875,7 @@ for (int row = 0; row &lt; mat.length; row++)
     <exercise label="mt1_19">
         <statement>
 
-            <p>13-4-14: Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of type <c>int</c>.  Also, consider the following code segment.  Which of the following will cause an infinite loop?</p>
+            <p> Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of type <c>int</c>.  Also, consider the following code segment.  Which of the following will cause an infinite loop?</p>
             <program language="java"><input>
 for ( int k = 0; k &lt; a.length; k++ )
 {
@@ -940,7 +940,7 @@ for ( int k = 0; k &lt; a.length; k++ )
     <exercise label="mt1_20">
         <statement>
 
-            <p>13-4-15: Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
+            <p> Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
             <program language="java"><input>
  public static void conditionTest(int num1, int num2)
  {

@@ -12,7 +12,7 @@
     <exercise label="qsearchsm_1">
         <statement>
 
-        <p>7-11-5-1: Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {7,3,8,5,2}?</p>
+        <p> Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {7,3,8,5,2}?</p>
 
         </statement>
 <choices>
@@ -67,7 +67,7 @@
     <exercise label="qsearchsm_2">
         <statement>
 
-        <p>7-11-5-2: What is printed when the following main method is executed?</p>
+        <p> What is printed when the following main method is executed?</p>
         <program language="java"><input>
 public class Searcher
 {
@@ -151,7 +151,7 @@ public class Searcher
     <exercise label="qsearchsm_3">
         <statement>
 
-        <p>7-11-5-3: Which of the following correctly shows the iterations of an ascending (from left to right) selection sort on an array with the following elements: {10, 6, 3, 2, 8}?</p>
+        <p> Which of the following correctly shows the iterations of an ascending (from left to right) selection sort on an array with the following elements: {10, 6, 3, 2, 8}?</p>
 
         </statement>
 <choices>
@@ -197,7 +197,7 @@ public class Searcher
     <exercise label="qsearchsm_4">
         <statement>
 
-        <p>7-11-5-4: Which of the following could be used to replace // missing code // in the code so that the method always sorts the array <c>elem</c> in ascending order?</p>
+        <p> Which of the following could be used to replace // missing code // in the code so that the method always sorts the array <c>elem</c> in ascending order?</p>
         <program language="java"><input>
 public class Searcher
 {
@@ -282,7 +282,7 @@ public class Searcher
     <exercise label="qsearchsm_5">
         <statement>
 
-        <p>7-11-5-5: What would test return if a = {1,2,3,4} and v =  3?</p>
+        <p> What would test return if a = {1,2,3,4} and v =  3?</p>
         <program language="java"><input>
 public static int test(int[] a, int v)
 {

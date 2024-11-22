@@ -10,7 +10,7 @@
     <exercise label="pe2_1-14">
         <statement>
 
-            <p>11-1: Under which of these conditions will a sequential search be faster than a binary search?</p>
+            <p> Under which of these conditions will a sequential search be faster than a binary search?</p>
 
         </statement>
 <choices>
@@ -66,7 +66,7 @@
     <exercise label="pe2_2-9">
         <statement>
 
-            <p>11-2: Which of the following expressions is equivalent to the following?</p>
+            <p> Which of the following expressions is equivalent to the following?</p>
             <program language="java"><input>
 !(c || d)
 </input></program>
@@ -125,7 +125,7 @@
     <exercise label="pe2_3-19">
         <statement>
 
-            <p>11-3: What is encapsulation and how does Java implement it?</p>
+            <p> What is encapsulation and how does Java implement it?</p>
 
         </statement>
 <choices>
@@ -181,7 +181,7 @@
     <exercise label="pe2_4-10">
         <statement>
 
-            <p>11-4: Which of the following will cause an infinite loop when <c>temp</c> is greater than zero and <c>a</c> is an array of integers.</p>
+            <p> Which of the following will cause an infinite loop when <c>temp</c> is greater than zero and <c>a</c> is an array of integers.</p>
             <program language="java"><input>
 for (int k = 0; k &lt; a.length; k++ )
 {
@@ -246,7 +246,7 @@ for (int k = 0; k &lt; a.length; k++ )
     <exercise label="pe2_5-5">
         <statement>
 
-            <p>11-5: Given the following code segment, which of the following is this equivalent to?</p>
+            <p> Given the following code segment, which of the following is this equivalent to?</p>
             <program language="java"><input>
 if (x &gt; 0) x = -x;
 if (x &lt; 0) x = 0;
@@ -306,7 +306,7 @@ if (x &lt; 0) x = 0;
     <exercise label="pe2_6-15">
         <statement>
 
-            <p>11-6: Given the following code segment, what will be printed when it is executed?</p>
+            <p> Given the following code segment, what will be printed when it is executed?</p>
             <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(new Integer(1));
@@ -372,7 +372,7 @@ System.out.println(list1);
     <exercise label="pe2_7-20">
         <statement>
 
-            <p>11-7: Which of the following reasons for using an inheritance heirarchy are valid?</p>
+            <p> Which of the following reasons for using an inheritance heirarchy are valid?</p>
             <program language="java"><input>
 I.   Methods from a superclass can be used in a subclass without
      rewriting or copying code.
@@ -437,7 +437,7 @@ V.   None of the above
     <exercise label="pe2_8-13">
         <statement>
 
-            <p>11-8: Which of the following is printed as the result of the call <c>mystery(1234);</c>?</p>
+            <p> Which of the following is printed as the result of the call <c>mystery(1234);</c>?</p>
             <program language="java"><input>
 //precondition:  x &gt;=0
 public void mystery (int x)
@@ -506,7 +506,7 @@ public void mystery (int x)
     <exercise label="pe2_9-18">
         <statement>
 
-            <p>11-9: Given the following code segment, what are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
+            <p> Given the following code segment, what are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
             <program language="java"><input>
 int a = 10, b = 3, t;
 for (int i=1; i&lt;=6; i++)
@@ -571,7 +571,7 @@ for (int i=1; i&lt;=6; i++)
     <exercise label="pe2_10-1">
         <statement>
 
-            <p>11-10: Given the following code segment, what is printed when it is executed?</p>
+            <p> Given the following code segment, what is printed when it is executed?</p>
             <program language="java"><input>
 String test = "123456";
 for (int index = 0; index &lt; test.length() - 1; index = index + 1)
@@ -634,7 +634,7 @@ for (int index = 0; index &lt; test.length() - 1; index = index + 1)
     <exercise label="pe2_11-3">
         <statement>
 
-            <p>11-11: Given the following code segment, what are the values of <c>var1</c> and <c>var2</c> after the while loop finishes?</p>
+            <p> Given the following code segment, what are the values of <c>var1</c> and <c>var2</c> after the while loop finishes?</p>
             <program language="java"><input>
 int var1 = 0;
 int var2 = 2;
@@ -700,7 +700,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
     <exercise label="pe2_12-6">
         <statement>
 
-            <p>11-12: Susan is 5 years older than Matt. Three years from now Susan’s age will be twice Matt’s age.  What should be in place of <c>condition</c> in the code segment below to solve this problem?</p>
+            <p> Susan is 5 years older than Matt. Three years from now Susan’s age will be twice Matt’s age.  What should be in place of <c>condition</c> in the code segment below to solve this problem?</p>
             <program language="java"><input>
 for (int s = 1; s &lt;= 100; s++) {
    for (int m = 1; m &lt;= 100; m++) {
@@ -764,7 +764,7 @@ for (int s = 1; s &lt;= 100; s++) {
     <exercise label="pe2_13-16">
         <statement>
 
-            <p>11-13: Given the following code segment, What are the contents of <c>mat</c> after the code segment has been executed?</p>
+            <p> Given the following code segment, What are the contents of <c>mat</c> after the code segment has been executed?</p>
             <program language="java"><input>
  int [][] mat = new int [3][4];
  for (int row = 0; row &lt; mat.length; row++)
@@ -835,7 +835,7 @@ for (int s = 1; s &lt;= 100; s++) {
     <exercise label="pe2_14-12">
         <statement>
 
-            <p>11-14: Given the following code segment, what will the value of <c>s1</c> be after this executes?</p>
+            <p> Given the following code segment, what will the value of <c>s1</c> be after this executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -900,7 +900,7 @@ s4 = null;
     <exercise label="pe2_15-7">
         <statement>
 
-            <p>11-15: Given the following code segment, what is printed when it executes?</p>
+            <p> Given the following code segment, what is printed when it executes?</p>
             <program language="java"><input>
  public static void test()
  {
@@ -979,7 +979,7 @@ s4 = null;
     <exercise label="pe2_16-2">
         <statement>
 
-            <p>11-16: Consider the following data field and method <c>findLongest</c>. Method <c>findLongest</c> is intended to find the longest consecutive block of the value target occurring in the array nums; however, <c>findLongest</c> does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call <c>findLongest(10)</c> should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to <c>findLongest</c>?</p>
+            <p> Consider the following data field and method <c>findLongest</c>. Method <c>findLongest</c> is intended to find the longest consecutive block of the value target occurring in the array nums; however, <c>findLongest</c> does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call <c>findLongest(10)</c> should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to <c>findLongest</c>?</p>
             <program language="java"><input>
 private int[] nums;
 public int findLongest(int target)
@@ -1063,7 +1063,7 @@ public int findLongest(int target)
     <exercise label="pe2_17-11">
         <statement>
 
-            <p>11-17: Given the following method declaration, and <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
+            <p> Given the following method declaration, and <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
             <program language="java"><input>
 public static int m1(int[] a)
 {
@@ -1126,7 +1126,7 @@ public static int m1(int[] a)
     <exercise label="pe2_18-4">
         <statement>
 
-            <p>11-18: At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to <c>grade</c> for a given integer score?</p>
+            <p> At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to <c>grade</c> for a given integer score?</p>
             <program language="java"><input>
 I.   if (score &gt;= 93)
         grade = "A";
@@ -1210,7 +1210,7 @@ III. if (score &gt;= 93)
     <exercise label="pe2_19-8">
         <statement>
 
-            <p>11-19: Given the following incomplete class declaration, which of the following can be used to replace the missing code in the <c>advance</c> method so that it will correctly update the time?</p>
+            <p> Given the following incomplete class declaration, which of the following can be used to replace the missing code in the <c>advance</c> method so that it will correctly update the time?</p>
             <program language="java"><input>
 public class TimeRecord
 {
@@ -1305,7 +1305,7 @@ public class TimeRecord
     <exercise label="pe2_20-17">
         <statement>
 
-            <p>11-20:  Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
+            <p>  Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
             <blockquote>
                 <program language="java"><input>
 public class Base

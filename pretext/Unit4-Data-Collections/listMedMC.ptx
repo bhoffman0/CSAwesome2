@@ -17,7 +17,7 @@
     <exercise label="qalm_1">
         <statement>
 
-        <p>7-11-2-1: What is printed as a result of executing the following code segment?</p>
+        <p> What is printed as a result of executing the following code segment?</p>
         <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(new Integer(1));
@@ -73,7 +73,7 @@ System.out.println(list1);
     <exercise label="qalm_2">
         <statement>
 
-        <p>7-11-2-2: Given the following code and assume that <c>nums</c> initially contains [0, 0, 4, 2, 5, 0, 3], what will <c>nums</c> contain as a result of executing numQuest?</p>
+        <p> Given the following code and assume that <c>nums</c> initially contains [0, 0, 4, 2, 5, 0, 3], what will <c>nums</c> contain as a result of executing numQuest?</p>
         <program language="java"><input>
 private List&lt;Integer&gt; nums;
 
@@ -146,7 +146,7 @@ public void numQuest()
     <exercise label="qalm_3">
         <statement>
 
-        <p>7-11-2-3: Which of the following best describes the behavior of process1 and process2 (shown below)?</p>
+        <p> Which of the following best describes the behavior of process1 and process2 (shown below)?</p>
         <program language="java"><input>
 public static List&lt;Integer&gt; process1(int n)
 {
@@ -218,7 +218,7 @@ public static List&lt;Integer&gt; process2(int n)
     <exercise label="qalm_4">
         <statement>
 
-        <p>7-11-2-4: What is printed as a result of executing the following code segment?</p>
+        <p> What is printed as a result of executing the following code segment?</p>
         <program language="java"><input>
 List&lt;Integer&gt; aList = new ArrayList&lt;Integer&gt;();
 aList.add(new Integer(1));
@@ -283,7 +283,7 @@ System.out.println(aList);
     <exercise label="qalm_5">
         <statement>
 
-        <p>7-11-2-5: What is printed as a result of executing the following code segment?</p>
+        <p> What is printed as a result of executing the following code segment?</p>
         <program language="java"><input>
 List&lt;Integer&gt; aList = new ArrayList&lt;Integer&gt;();
 aList.add(new Integer(1));
@@ -348,7 +348,7 @@ System.out.println(list);
     <exercise label="qalm_6">
         <statement>
 
-        <p>7-11-2-6: What is printed as a result of executing the following code segment?</p>
+        <p> What is printed as a result of executing the following code segment?</p>
         <program language="java"><input>
 List&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
 list1.add("a");
@@ -415,7 +415,7 @@ What is printed as a result of executing the following code segment?
     <exercise label="qalm_7">
         <statement>
 
-        <p>7-11-2-7: Given the list <c>nums = [4, 2, 3, 4, 5]</c> what is the result after executing <c>nums.remove(4)</c>?</p>
+        <p> Given the list <c>nums = [4, 2, 3, 4, 5]</c> what is the result after executing <c>nums.remove(4)</c>?</p>
 
         </statement>
 <choices>
@@ -461,7 +461,7 @@ What is printed as a result of executing the following code segment?
     <exercise label="qalm_8">
         <statement>
 
-        <p>7-11-2-8: What is printed as a result of executing the following code segment?</p>
+        <p> What is printed as a result of executing the following code segment?</p>
         <program language="java"><input>
 List&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
 list1.add("a");
@@ -519,7 +519,7 @@ What is printed as a result of executing the following code segment?
     <exercise label="qalm_9">
         <statement>
 
-        <p>7-11-2-9: Assume that <c>numList</c> has been initialized with the following Integer objects: [0, 1, 2, 3, 4].  What is the value of <c>numList</c> after <c>mystery(5)</c> executes?</p>
+        <p> Assume that <c>numList</c> has been initialized with the following Integer objects: [0, 1, 2, 3, 4].  What is the value of <c>numList</c> after <c>mystery(5)</c> executes?</p>
         <program language="java"><input>
 private List&lt;Integer&gt; numList;
 public void mystery(int n)
@@ -585,7 +585,7 @@ public void mystery(int n)
     <exercise label="qalm_10">
         <statement>
 
-        <p>7-11-2-10: Assume that <c>numList</c> has been initialized with the following Integer objects: [5, 7, 8, 12].  Which of the following shows the values in <c>numList</c> after a call to <c>mystery(11)</c>?</p>
+        <p> Assume that <c>numList</c> has been initialized with the following Integer objects: [5, 7, 8, 12].  Which of the following shows the values in <c>numList</c> after a call to <c>mystery(11)</c>?</p>
         <program language="java"><input>
 private List&lt;Integer&gt; numList;
 public void mystery(int value)

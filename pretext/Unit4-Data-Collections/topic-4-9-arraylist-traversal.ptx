@@ -21,7 +21,6 @@
                 being looped over, it will cause the loop to throw a
                 <c>ConcurrentModificationException</c>. If you need to modify an <c>ArrayList</c>
                 while looping over it, you’ll need to use a regular <c>while</c> or <c>for</c> loop.</p>
-            <p><problematic refid="id1">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listForEachLoop">
     <statement>
@@ -108,7 +107,6 @@ public class RunestoneTests extends CodeTestHelper
                 <c>IndexOutOfBoundsException</c>, similar to the <c>ArrayIndexOutOfBoundsException</c>
                 thrown if you use the index operator on an array with an index out of bounds for
                 that array.</p>
-            <p><problematic refid="id3">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listForLoop">
     <statement>
@@ -171,7 +169,6 @@ public class RunestoneTests extends CodeTestHelper
             <p>The example below demonstrates a <c>while</c> loop and an object-oriented approach
                 where the list is a field of the current object and you use an instance method
                 rather than a class (static) method to loop through the list.</p>
-            <p><problematic refid="id5">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="listForEachLoopObj">
     <statement>
@@ -254,12 +251,11 @@ public class RunestoneTests extends CodeTestHelper
                 element that used to be at that position. Leaving the index unchanged after a
                 remove allows the shifted-down element to be processed on the next time through
                 the loop.</p>
-            <p><problematic refid="id7">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qloopList_1">
         <statement>
 
-            <p>7-3-4: Assume that <c>nums</c> has been created as an <c>ArrayList</c> object and it initially contains the following <c>Integer</c> values [0, 0, 4, 2, 5, 0, 3, 0]. What will <c>nums</c> contain as a result of executing <c>numQuest</c>?</p>
+            <p> Assume that <c>nums</c> has been created as an <c>ArrayList</c> object and it initially contains the following <c>Integer</c> values [0, 0, 4, 2, 5, 0, 3, 0]. What will <c>nums</c> contain as a result of executing <c>numQuest</c>?</p>
             <program language="java"><input>
 ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 private ArrayList&lt;Integer&gt; nums;
@@ -324,62 +320,61 @@ public void numQuest()
 <exercise label="list_1" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
             <p>The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
-<blocks><block order="5">
+<blocks><block order="4">
 <cline>public static int getScore(ArrayList&lt;String&gt; wordList)</cline>
 <cline>{</cline>
-</block><block order="4">
+</block><block order="3">
 <cline>  int score = 0;</cline>
 <cline>  for (String word : wordList)</cline>
 <cline>  {</cline>
-</block><block order="1">
-<cline>    if (word.length() == 3)</cline>
 </block><block order="7">
+<cline>    if (word.length() == 3)</cline>
+</block><block order="8">
 <cline>    {</cline>
 <cline>      score++;</cline>
 <cline>    }</cline>
-</block><block order="9">
+</block><block order="6">
 <cline>    else if (word.length() == 4)</cline>
 <cline>    {</cline>
 <cline>      score = score + 2;</cline>
 <cline>    }</cline>
-</block><block order="6">
+</block><block order="5">
 <cline>    else if (word.length() &gt; 4)</cline>
 <cline>    {</cline>
 <cline>      score = score + 3;</cline>
 <cline>    }</cline>
-</block><block order="8">
-<cline>  } // end for</cline>
 </block><block order="2">
+<cline>  } // end for</cline>
+</block><block order="1">
 <cline>  return score;</cline>
 <cline>} // end method</cline>
-</block><block order="3" correct="no">
+</block><block order="9" correct="no">
 <cline>if (word.length == 3) </cline>
 </block></blocks></exercise><exercise label="list_2" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
             <p>The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
-<blocks><block order="4">
+<blocks><block order="5">
 <cline>public void insertInOrder(String name)</cline>
 <cline>{</cline>
-</block><block order="2">
+</block><block order="8">
 <cline>  int index = 0;</cline>
-</block><block order="3">
+</block><block order="7">
 <cline>  while (index &lt; nameList.size() &amp;&amp;</cline>
 <cline>         nameList.get(index).compareTo(name) &lt; 0)</cline>
 <cline>  {</cline>
-</block><block order="1">
+</block><block order="2">
 <cline>    index++;</cline>
-</block><block order="8">
+</block><block order="3">
 <cline>  } // end while</cline>
-</block><block order="5">
-<cline>  nameList.add(index,name);</cline>
 </block><block order="6">
+<cline>  nameList.add(index,name);</cline>
+</block><block order="4">
 <cline>} // end method</cline>
-</block><block order="7" correct="no">
+</block><block order="1" correct="no">
 <cline>nameList.add(name); </cline>
 </block></blocks></exercise>        </subsection>
   <subsection>
             <title>ArrayList of Student Objects</title>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>You can put any kind of objects into an <c>ArrayList</c>. For example, here is an
                 <c>ArrayList</c> of <c>Student</c>s. Although the print statement works here, you
                 may want a nicer printout.</p>
@@ -457,7 +452,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id11">|Groupwork|</problematic> Programming Challenge : FRQ Word Pairs</title>
+            <title>Programming Challenge : FRQ Word Pairs</title>
             <p>This challenge is based on the <url href="https://secure-media.collegeboard.org/ap/pdf/ap18-frq-computer-science-a.pdf#page=7" visual="https://secure-media.collegeboard.org/ap/pdf/ap18-frq-computer-science-a.pdf#page=7">2018 Free Response Question #2 WordPair</url>. We
                 encourage you to work in pairs on this challenge.</p>
             <p>You are given a class called <c>WordPair</c> that can store pairs of words.</p>

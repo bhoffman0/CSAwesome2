@@ -72,8 +72,7 @@ class Student
                 Getters return an instance variable’s value and have the same return type as
                 this variable and no parameters. Setters have a void return type and take a new
                 value as a parameter to change the value of the instance variable.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Comparison of setters and getters</caption><image source="Unit3-Class-Creation/Figures/get-set-comparison.png" width="100%%"/></figure>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparison of setters and getters</caption><image source="Unit3-Class-Creation/Figures/get-set-comparison.png" width="100%%"/></figure>
             <p>Try the <c>Student</c> class below which has had some setters added. Notice that
                 there is no <c>setId</c> method even though there is a <c>getId</c>. This is
                 presumably because in the system this class is part of, while it makes sense for
@@ -188,12 +187,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id4">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="setSignature">
         <statement>
 
-            <p>5-5-2: Consider the class Party which keeps track of the number of people at the party.</p>
+            <p> Consider the class Party which keeps track of the number of people at the party.</p>
             <program language="java"><input>
 public class Party
 {
@@ -232,7 +230,7 @@ public class Party
 <matches><match order="1"><premise>gets and returns the value of an instance variable</premise><response>accessor method</response></match><match order="2"><premise>sets the instance variable to a value in its parameter</premise><response>mutator method</response></match><match order="3"><premise>initializes the instance variables to values</premise><response>constructor</response></match><match order="4"><premise>accessible from outside the class</premise><response>public</response></match><match order="5"><premise>accessible only inside the class</premise><response>private</response></match></matches></exercise>            <p>Mutator methods do not have to have a name with “set” in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id6">|Groupwork|</problematic> Programming Challenge : Class Pet Setters</title>
+            <title>Programming Challenge : Class Pet Setters</title>
             <image source="Unit3-Class-Creation/Figures/animalclinic.png" width="27%%" alt="Animal Clinic"/>
             <p><ol marker="1">
                 <li>
@@ -417,7 +415,7 @@ public class TesterClass
     <exercise label="AP5-5-1">
         <statement>
 
-            <p>5-5-5: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Liquid
 {
@@ -457,7 +455,7 @@ public class Liquid
     <exercise label="AP5-5-2">
         <statement>
 
-            <p>5-5-6: In the <c>Party</c> class below, the <c>addPeople</c> method is intended to increase the value of the instance variable <c>numOfPeople</c> by the value of the parameter <c>additionalPeople</c>. The method does not work as intended.</p>
+            <p> In the <c>Party</c> class below, the <c>addPeople</c> method is intended to increase the value of the instance variable <c>numOfPeople</c> by the value of the parameter <c>additionalPeople</c>. The method does not work as intended.</p>
             <program language="java"><input>
 public class Party
 {

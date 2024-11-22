@@ -7,7 +7,7 @@
     <exercise label="qtnt5_1">
         <statement>
 
-        <p>12-6-1: Suppose <c>x, y, and z</c> are variables of type <c>int</c>. Consider the following three conditions</p>
+        <p> Suppose <c>x, y, and z</c> are variables of type <c>int</c>. Consider the following three conditions</p>
         <p><ol marker="I">
             <li>
                 <p>(x == y) &amp;&amp; (y == z)  &amp;&amp; (x == z)</p>
@@ -74,7 +74,7 @@
     <exercise label="qtnt5_2">
         <statement>
 
-        <p>12-6-2: Consider the following method. What will be returned by a call to <c>multiply(8)</c>?</p>
+        <p> Consider the following method. What will be returned by a call to <c>multiply(8)</c>?</p>
         <program language="java"><input>
 public int multiply(int n)
 {
@@ -140,7 +140,7 @@ public int multiply(int n)
     <exercise label="qtnt5_3">
         <statement>
 
-        <p>12-6-3: Which of the following code segments correctly stores in <c>x</c> a random real number such that <c>0.6 &lt;= x &lt; 1</c>?</p>
+        <p> Which of the following code segments correctly stores in <c>x</c> a random real number such that <c>0.6 &lt;= x &lt; 1</c>?</p>
 
         </statement>
 <choices>
@@ -195,7 +195,7 @@ public int multiply(int n)
     <exercise label="qtnt5_4">
         <statement>
 
-        <p>12-6-4: Suppose methods <c>f1</c> and <c>f2</c> are defined as follows. What value is returned from the call <c>f1(5)</c>?</p>
+        <p> Suppose methods <c>f1</c> and <c>f2</c> are defined as follows. What value is returned from the call <c>f1(5)</c>?</p>
         <program language="java"><input>
 public int f1(int x)
 {
@@ -267,7 +267,7 @@ public int f2(int x)
     <exercise label="qtnt5_5">
         <statement>
 
-        <p>12-6-5: Which statement about constructors is <c>false</c>?</p>
+        <p> Which statement about constructors is <c>false</c>?</p>
 
         </statement>
 <choices>
@@ -322,7 +322,7 @@ public int f2(int x)
     <exercise label="qtnt5_6">
         <statement>
 
-        <p>12-6-6: Consider the following method. What will the output of <c>mystery(6)</c> return?</p>
+        <p> Consider the following method. What will the output of <c>mystery(6)</c> return?</p>
         <program language="java"><input>
 public int mystery(int n)
 {
@@ -386,7 +386,7 @@ public int mystery(int n)
     <exercise label="qtnt5_7">
         <statement>
 
-        <p>12-6-7: Suppose <c>a and b</c> are <c>boolean</c> variables. The expression below</p>
+        <p> Suppose <c>a and b</c> are <c>boolean</c> variables. The expression below</p>
         <p><c>!a &amp;&amp; !b</c></p>
         <p>…will evaluate to <c>false</c> whenever</p>
         <p><ol marker="I">
@@ -454,7 +454,7 @@ public int mystery(int n)
     <exercise label="qtnt5_8">
         <statement>
 
-        <p>12-6-8: Consider the following code segment. What will be the output after execution of this code segment?</p>
+        <p> Consider the following code segment. What will be the output after execution of this code segment?</p>
         <program language="java"><input>
 int x = 10, y = 0;
 while(x &gt; 5)
@@ -524,7 +524,7 @@ System.out.println(x + " " + y);
     <exercise label="qtnt5_9">
         <statement>
 
-        <p>12-6-9: What value is stored in <c>result</c> if:</p>
+        <p> What value is stored in <c>result</c> if:</p>
         <program language="Java"><input>
 int result = 13 - 3 * 6 / 4 % 3
 </input></program>
@@ -582,7 +582,7 @@ int result = 13 - 3 * 6 / 4 % 3
     <exercise label="qtnt5_10">
         <statement>
 
-        <p>12-6-10: Consider the following code segment. Assume <c>k</c> is some positive integer greater than 2. How many times will “SMALL” be printed?</p>
+        <p> Consider the following code segment. Assume <c>k</c> is some positive integer greater than 2. How many times will “SMALL” be printed?</p>
         <program language="Java"><input>
 for(int i = 2; i &lt;= k; i++)
 {
@@ -644,7 +644,7 @@ for(int i = 2; i &lt;= k; i++)
     <exercise label="qtnt5_11">
         <statement>
 
-        <p>12-6-11: Which best describes what the <c>printSomething</c> method below does?</p>
+        <p> Which best describes what the <c>printSomething</c> method below does?</p>
         <program language="Java"><input>
 public void printSomething(String str)
 {
@@ -710,7 +710,7 @@ public void printSomething(String str)
     <exercise label="qtnt5_12">
         <statement>
 
-        <p>12-6-12: A square matrix is declared as</p>
+        <p> A square matrix is declared as</p>
         <p><c>int[][] mat = new int [SIZE][SIZE]</c></p>
         <p>where <c>SIZE</c> is an appropriate integer constant. Consider the code below.</p>
         <p>If mat is initialized to be:</p>
@@ -788,7 +788,7 @@ public static int sum(int[][] mat)
     <exercise label="qtnt5_13">
         <statement>
 
-        <p>12-6-13: The elements of an array are to be sorted in increasing order. Which represent the first step of a merge sort algorithm?</p>
+        <p> The elements of an array are to be sorted in increasing order. Which represent the first step of a merge sort algorithm?</p>
 
         </statement>
 <choices>
@@ -843,7 +843,7 @@ public static int sum(int[][] mat)
     <exercise label="qtnt5_14">
         <statement>
 
-        <p>12-6-14: Which of the following could replace the body of <c>compute</c> so it does the same thing.</p>
+        <p> Which of the following could replace the body of <c>compute</c> so it does the same thing.</p>
         <program language="Java"><input>
 public static int compute(int n)
 {
@@ -908,7 +908,7 @@ public static int compute(int n)
     <exercise label="qtnt5_15">
         <statement>
 
-        <p>12-6-15: How many times will the <c>asterik("*")</c> be printed?</p>
+        <p> How many times will the <c>asterik("*")</c> be printed?</p>
         <program language="Java"><input>
 for(int k = 4; k &lt; 10; k +=2)
 {
@@ -972,7 +972,7 @@ for(int k = 4; k &lt; 10; k +=2)
     <exercise label="qtnt5_16">
         <statement>
 
-        <p>12-6-16: Consider the following code. What is printed?</p>
+        <p> Consider the following code. What is printed?</p>
         <program language="java"><input>
 class Dog
 {
@@ -1065,7 +1065,7 @@ public class UnderDog extends Dog
     <exercise label="qtnt5_17">
         <statement>
 
-        <p>12-6-17: What is the output of the <c>System.out.println</c> statement?</p>
+        <p> What is the output of the <c>System.out.println</c> statement?</p>
         <program language="Java"><input>
 int x = 3, y = -2;
 while(x &gt; y)
@@ -1129,7 +1129,7 @@ System.out.println(x - y);
     <exercise label="qtnt5_18">
         <statement>
 
-        <p>12-6-18: What will be the value of <c>sum</c> after the execution of code above?</p>
+        <p> What will be the value of <c>sum</c> after the execution of code above?</p>
         <program language="Java"><input>
 int sum = 0;
 for(int i = 0; i &lt; 3; i++)
@@ -1194,7 +1194,7 @@ for(int i = 0; i &lt; 3; i++)
     <exercise label="qtnt5_19">
         <statement>
 
-        <p>12-6-19: What is printed out by the following code?</p>
+        <p> What is printed out by the following code?</p>
         <program language="Java"><input>
 String s = "Computer Science is fun!";
 String s1 = s.substring(0,8);

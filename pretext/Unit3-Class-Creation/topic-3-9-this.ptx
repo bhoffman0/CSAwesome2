@@ -28,10 +28,9 @@ public Person(String name)
     <figure align="center">
     <image source="Unit3-Class-Creation/Figures/thisTrace.png" width="71%%"/>
   </figure>
-    <p><problematic refid="id1">|Exercise|</problematic> Check Your Understanding</p>
   </introduction>
   <subsection>
-            <title><problematic refid="id3">|Groupwork|</problematic> Programming Challenge : Bank Account</title>
+            <title>Programming Challenge : Bank Account</title>
             <figure align="left"><image source="Unit3-Class-Creation/Figures/dollarSign.png" width="18%%"/></figure>
             <p>A bank account can be used to store your money. The bank keeps track of the account holder’s name, the acount balance which is the amount of money in the account, and assigns an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here’s a <url href="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F" visual="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F">video</url> that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.</p>
             <p>For this challenge, you can work in pairs to:</p>
@@ -186,7 +185,7 @@ public class BankAccount {}
     <exercise label="AP5-9-2">
         <statement>
 
-            <p>5-9-5: Consider the following class definitions.</p>
+            <p> Consider the following class definitions.</p>
             <program language="java"><input>
 public class Liquid
 {
@@ -432,7 +431,7 @@ class Overtime
     <exercise label="AP5-9-1">
         <statement>
 
-        <p>5-9-3: Consider the following class definitions.</p>
+        <p> Consider the following class definitions.</p>
         <program language="java"><input>
 public class Pay
 {

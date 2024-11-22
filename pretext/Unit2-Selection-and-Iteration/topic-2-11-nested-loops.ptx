@@ -5,17 +5,14 @@
     
     <p>A <term>nested loop</term> has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.   When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Nested Loops</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Nested Loops</caption>
     <image source="Unit2-Selection-and-Iteration/Figures/nestedloops.png" width="63%%"/>
   </figure>
-    <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercises</term></p>
     <p>What does the following code print out? Watch the code run in the  <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> by clicking the CodeLens button and then forward. Notice how the inner loop is started over for each row. Can you predict how many rows and columns of stars there will be?</p>
-    <p><problematic refid="id8">|Exercise|</problematic> <term>Check your understanding</term></p>
   </introduction>
   <subsection>
             <title>Nested Loops with Turtles</title>
             <p>Try nested loops with turtles to create a snowflake design!</p>
-            <p><problematic refid="id10">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="TurtleNestedLoop">
     <statement>
@@ -108,7 +105,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id12">|Groupwork|</problematic> Programming Challenge : Turtle Snowflakes</title>
+            <title>Programming Challenge : Turtle Snowflakes</title>
             <p>In the last exercise, you used nested for-loops to have the turtle draw a square repeatedly to make a snowflake. Use the Active Code window below or this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit link</url> to have yertle draw the following shapes using nested loops. We encourage you to work in pairs on this.</p>
             <p><ol marker="1">
                 <li>
@@ -319,7 +316,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="nested1">
         <statement>
 
-        <p>4-4-2: What does the following code print?</p>
+        <p> What does the following code print?</p>
         <program language="java"><input>
 for (int i = 1; i &lt; 7; i++)
 {
@@ -375,7 +372,7 @@ for (int i = 1; i &lt; 7; i++)
     <exercise label="nested2">
         <statement>
 
-        <p>4-4-3: What does the following code print?</p>
+        <p> What does the following code print?</p>
         <program language="java"><input>
 for (int i = 0; i &lt; 5; i++)
 {
@@ -431,7 +428,7 @@ for (int i = 0; i &lt; 5; i++)
     <exercise label="ch6ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print 10 rows with 5 *s in each row.   But, the blocks have been mixed up and include one extra block that isn’t needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="2">
+<blocks><block order="9">
 <cline>public class Test1</cline>
 <cline>{</cline>
 <cline>    public static void main(String[] args)</cline>
@@ -439,20 +436,20 @@ for (int i = 0; i &lt; 5; i++)
 </block><block order="8">
 <cline>        for (int x = 0; x &lt; 10; x++)</cline>
 <cline>        {</cline>
-</block><block order="9">
+</block><block order="7">
 <choice correct="yes"><cline>            for (int y = 0; y &lt; 5; y++)</cline>
 <cline>            {</cline>
 </choice><choice><cline>            for (int y = 0; y &lt;= 5; y++)</cline>
 <cline>            { </cline>
-</choice></block><block order="5">
+</choice></block><block order="6">
 <cline>                System.out.print("*");</cline>
-</block><block order="4">
+</block><block order="2">
 <cline>            }</cline>
-</block><block order="6">
+</block><block order="1">
 <cline>            System.out.println();</cline>
-</block><block order="3">
+</block><block order="5">
 <cline>        }</cline>
-</block><block order="7">
+</block><block order="3">
 <cline>    }</cline>
 <cline>}</cline>
 </block></blocks></exercise>

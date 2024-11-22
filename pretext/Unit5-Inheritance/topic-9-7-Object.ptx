@@ -26,7 +26,6 @@
                 <c>toString()</c> method in every class. In a subclass, <c>toString()</c> can call the
                 superclass <c>toString()</c> method using <c>super.toString()</c> and then add on its
                 own attributes.</p>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>In the following code, the <c>Person</c> class overrides the <c>toString</c> method
                 from <c>Object</c> method and the <c>Student</c> class then overrides it again. In
                 each class the new <c>toString</c> method adds the new attributes from that class.</p>
@@ -149,7 +148,6 @@ obj)</c> method. This method is used to test if the current object and the passe
             <p>As you can see if you run the code below, the <c>equals</c> method inherited from
                 <c>Object</c> only returns <c>true</c> if the two objects references refer to the same
                 object. In other words it is does the same test as <c>==</c>.</p>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="ObjEquals">
     <statement>
@@ -207,7 +205,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A picture from the Java Visualizer showing that only p3 and p4 refer to the same object.</caption><image source="Unit5-Inheritance/Figures/equalsEx.png" width="54%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A picture from the Java Visualizer showing that only p3 and p4 refer to the same object.</caption><image source="Unit5-Inheritance/Figures/equalsEx.png" width="54%%"/></figure>
         </subsection>
   <subsection>
             <title>Overriding the <c>equals</c> Method</title>
@@ -225,7 +223,6 @@ public class RunestoneTests extends CodeTestHelper
                 type). <c>String</c> has done that with <c>equals</c> so when we compare <c>String</c>
                 objects with <c>equals</c> that new method will be called instead of the inherited
                 one.</p>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="StringTest1">
     <statement>
@@ -317,7 +314,6 @@ public class RunestoneTests extends CodeTestHelper
                 because sometimes different languages have words that are spelled the same but
                 with different meanings such as “pie” which in English is a tasty baked treat
                 and in Spanish is what we call a “foot” in English.</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="OverrideEquals">
     <statement>
@@ -452,7 +448,7 @@ ClassifiedWord</c>. In general you should only provide an overridden <c>equals</
                 method in one class in a class hierarchy.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge : Savings Account</title>
+            <title>Programming Challenge : Savings Account</title>
             <p>The following code contains the beginning of a class for representing a bank
                 account containing the account holder’s name and the money balance in the
                 account.</p>

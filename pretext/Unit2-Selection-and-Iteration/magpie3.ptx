@@ -71,7 +71,7 @@ public class RunestoneTests extends CodeTestHelper
 
         <exercise label="fill-lab1b1">
             <statement>
-    <p>lab-1c-2: What value is returned by <c>indexOf</c> if the substring does not occur in the string? <var/>  </p></statement><setup><var><condition number="[-1, -1]"><feedback><p>Correct.  If the substring isn’t found it returns -1</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Check the documentation or try it out in the ActiveCode window</p></feedback></condition></var></setup></exercise>            <p>Copy the following lines to <c>StringExplorer</c> in the ActiveCode above in the <c>main</c> method above to see for yourself that <c>indexOf</c> behaves as
+    <p> What value is returned by <c>indexOf</c> if the substring does not occur in the string? <var/>  </p></statement><setup><var><condition number="[-1, -1]"><feedback><p>Correct.  If the substring isn’t found it returns -1</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Check the documentation or try it out in the ActiveCode window</p></feedback></condition></var></setup></exercise>            <p>Copy the following lines to <c>StringExplorer</c> in the ActiveCode above in the <c>main</c> method above to see for yourself that <c>indexOf</c> behaves as
                 specified:</p>
             <program language="java"><input>
 int notFoundPsn = sample.indexOf("slow");

@@ -146,7 +146,7 @@ public class APCalendar
     <exercise label="callooptype">
         <statement>
 
-                <p>4-11-1: Which loop should you use to count the number of leap years between year1 and year2?</p>
+                <p> Which loop should you use to count the number of leap years between year1 and year2?</p>
 
         </statement>
 <choices>
@@ -175,7 +175,7 @@ public class APCalendar
     <exercise label="calloop2">
         <statement>
 
-                <p>4-11-2: What is the starting and ending values for the loop to count the leap years between year 1 and year 2?</p>
+                <p> What is the starting and ending values for the loop to count the leap years between year 1 and year 2?</p>
 
         </statement>
 <choices>
@@ -318,7 +318,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using the rubric below. Did you receive all 5 points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Rubric for the numberOfLeapYears method</caption><image source="Unit2-Selection-and-Iteration/Figures/numberOfLeapYearsRubric.png" width="100%%" alt="Rubric for the numberOfLeapYears method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the numberOfLeapYears method</caption><image source="Unit2-Selection-and-Iteration/Figures/numberOfLeapYearsRubric.png" width="100%%" alt="Rubric for the numberOfLeapYears method"/></figure>
         </subsection>
   <subsection>
             <title>Part B: dayOfWeek()</title>
@@ -337,7 +337,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="dow1">
         <statement>
 
-                <p>4-11-4: If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019?</p>
+                <p> If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019?</p>
 
         </statement>
 <choices>
@@ -386,7 +386,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="dow2">
         <statement>
 
-                <p>4-11-5: Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?</p>
+                <p> Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?</p>
 
         </statement>
 <choices>
@@ -435,7 +435,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="dow3">
         <statement>
 
-                <p>4-11-6: If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019?</p>
+                <p> If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019?</p>
 
         </statement>
 <choices>
@@ -555,7 +555,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="dow4">
         <statement>
 
-                <p>4-11-8: Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?</p>
+                <p> Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?</p>
 
         </statement>
 <choices>
@@ -711,6 +711,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Rubric for the dayOfWeek method</caption><image source="Unit2-Selection-and-Iteration/Figures/dayOfWeekRubric.png" width="100%%" alt="Rubric for the dayOfWeek method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the dayOfWeek method</caption><image source="Unit2-Selection-and-Iteration/Figures/dayOfWeekRubric.png" width="100%%" alt="Rubric for the dayOfWeek method"/></figure>
         </subsection>
 </section>

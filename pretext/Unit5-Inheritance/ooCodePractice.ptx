@@ -8,7 +8,7 @@
                 <p>Write a method that overloads the talk method by taking in a name and printing <c>Hello</c> with that name.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -92,7 +92,7 @@ public class Test1
                 <p>Edit this code so the class Beagle is a subclass of the Dog class.  When you run the code it should print “woof!” and then “arf arf”.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Dog
 {
@@ -188,7 +188,7 @@ class Beagle extends Dog
                 <p>Add an equals method to this class that returns true if the current Dog and passed Dog have the same name.  The code should print false twice then true twice.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Dog
 {
@@ -318,7 +318,7 @@ public class Dog
                 <p>Override the taste method from the Candy class in the Chocolate class to return <c>tastes chocolately</c>.  It should print <c>tastes sweet!</c> and then <c>tastes chocolately</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Candy
 {
@@ -417,7 +417,7 @@ class Chocolate extends Candy
                 <p>Overload the greet method to just print <c>Hello</c> if not given any parameters.  It should print <c>Hello</c> and then <c>Hello Sansa</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Student
 {
@@ -499,7 +499,7 @@ public class Student
                 <p>Add a call to Pet’s brag method before printing anything in Dog’s brag method (hint: use super to call an overridden method).  It should print <c>I have the best pet!</c> and then <c>I have the best dog</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Pet
 {
@@ -596,7 +596,7 @@ class Dog extends Pet
                 <p>Finish the Teacher constructor.  Use super to use the Person construtor to set the fields inherited from Person.  It should print <c>Destini 20</c> followed by <c>Erica 55 Masters in Teaching</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Person
 {
@@ -759,7 +759,7 @@ class Teacher extends Person
                 <p>Add public getter and setter methods to the Store class so its variables can be accessed by other classes.  It should print the store’s name and address and then change both and print the new values.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Store
 {
@@ -890,7 +890,7 @@ public class Store
                 <p>Correctly finish the Dog subclass for the following Animal class.  Override the methods speak() to print <c>woof</c> and eat() to print <c>num num</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 class Animal
 {
@@ -1009,7 +1009,7 @@ public class Dog extends Animal
                 <p>Override the compareTo method so that it returns a positive number if the current Person is older than the passed other and a negative number if they are younger. If their age is the same then return the compareTo result on the names.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Person implements Comparable&lt;Person&gt;
 {
@@ -1158,7 +1158,7 @@ public class Person implements Comparable&lt;Person&gt;
                 <p>Override the Person class’s speak method inside the Student class. Make the method print <c>I'm a student</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Person
 {

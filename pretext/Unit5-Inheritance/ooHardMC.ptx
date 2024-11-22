@@ -7,7 +7,7 @@
     <exercise label="qooh_1">
         <statement>
 
-        <p>9-12-14: Assume that <c>Base b = new Derived();</c> appears in a client program.  What is the result of the call <c>b.methodOne();</c>?</p>
+        <p> Assume that <c>Base b = new Derived();</c> appears in a client program.  What is the result of the call <c>b.methodOne();</c>?</p>
         <program language="java"><input>
 public class Base
 {
@@ -83,7 +83,7 @@ public class Derived extends Base
     <exercise label="qooh_2">
         <statement>
 
-        <p>9-12-15: If you have the following classes.  Which of the following constructors would be valid for <c>Point3D</c>?</p>
+        <p> If you have the following classes.  Which of the following constructors would be valid for <c>Point3D</c>?</p>
         <program language="java"><input>
 public class Point2D
 {

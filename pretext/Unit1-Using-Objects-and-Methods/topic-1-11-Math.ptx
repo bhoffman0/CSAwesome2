@@ -60,7 +60,6 @@ Math.sqrt(9); // returns 3.0
             <program language="java"><input>
 System.out.println("The square root of 9 is " + Math.sqrt(9));
 </input></program>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="trymath">
     <statement>
@@ -103,12 +102,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id4">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="call-sqrt-mc">
         <statement>
 
-            <p>1-11-2: Knowing that <c>Math.sqrt</c> takes a single argument, Which of these are
+            <p> Knowing that <c>Math.sqrt</c> takes a single argument, Which of these are
                 syntactically correct method calls to <c>sqrt</c>?</p>
 </statement><choices><choice correct="yes"><statement id="call-sqrt-mc_opt_a">            <p><c>Math.sqrt(2)</c></p>
 </statement><feedback id="call-sqrt-mc_opt_a">
@@ -136,7 +134,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="distance-mc">
         <statement>
 
-            <p>1-11-3: The distance between two numbers on the number line is defined as the absolute value of their
+            <p> The distance between two numbers on the number line is defined as the absolute value of their
                 difference. Their difference is just what you get when you subtract one from
                 the other. For example, the distance from 0 to 3 is 3, the distance from -3 to 0 is 3, and the distance from -3 to 1 is 4.</p>
             <image source="Unit1-Using-Objects-and-Methods/Figures/number-line.svg" width="80%%" alt="number line"/>
@@ -156,7 +154,6 @@ public class RunestoneTests extends CodeTestHelper
 </feedback></choice></choices>
 
     </exercise>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="distance-abs">
     <statement>
@@ -283,7 +280,6 @@ public class RunestoneTests extends CodeTestHelper
             <p>Same trick applies to random numbers. The value <c>Math.random</c> returns is like
                 the initial amount of money in your pocket, always a bit less than $1. If you
                 multiply that value by any amount, it will stretch it into the range you want:</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="random-example-stretched">
     <statement>
@@ -340,7 +336,6 @@ int rnd = (int)(Math.random()*10);
 // rnd is an integer in the range 1-10 (including 10).
 int rnd = (int)(Math.random()*10) + 1;
 </input></program>
-            <p><problematic refid="id10">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="randomRange">
     <statement>
@@ -537,12 +532,11 @@ int rnd4 = (int)(Math.random()*20) - 10;
                     
                 
             </tabular></table>
-            <p><problematic refid="id12">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qrand_1">
         <statement>
 
-            <p>1-11-8: Which of the following would be true about 40% of the time?</p>
+            <p> Which of the following would be true about 40% of the time?</p>
 
         </statement>
 <choices>
@@ -580,7 +574,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
     <exercise label="qrand_2">
         <statement>
 
-            <p>1-11-9: Which of the following would return a random number from 1 to 5 inclusive?</p>
+            <p> Which of the following would return a random number from 1 to 5 inclusive?</p>
 
         </statement>
 <choices>
@@ -618,7 +612,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
     <exercise label="qrand_3">
         <statement>
 
-            <p>1-11-10: Which of the following would return a random number from 0 to 10 inclusive?</p>
+            <p> Which of the following would return a random number from 0 to 10 inclusive?</p>
 
         </statement>
 <choices>
@@ -656,7 +650,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
     <exercise label="qrand_4">
         <statement>
 
-            <p>1-11-11: Which of the following would be true about 75% of the time?</p>
+            <p> Which of the following would be true about 75% of the time?</p>
 
         </statement>
 <choices>
@@ -690,12 +684,11 @@ int rnd4 = (int)(Math.random()*20) - 10;
 </choices>
 
     </exercise>
-            <p><problematic refid="id14">|Exercise|</problematic> <term>AP CSA Sample Problem</term></p>
 
     <exercise label="apcsa_sample3">
         <statement>
 
-            <p>1-11-12: Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?</p>
+            <p> Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?</p>
 
         </statement>
 <choices>
@@ -749,7 +742,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id16">|Groupwork|</problematic> Programming Challenge : Random Numbers</title>
+            <title>Programming Challenge : Random Numbers</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/lock.jpg" width="18%%" alt="lock"/>
             <p>You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it?</p>
             <p><ol marker="1">

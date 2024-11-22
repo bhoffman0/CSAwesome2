@@ -5,7 +5,7 @@
     
     <p>If you have multiple subclasses that inherit from a superclass, you can form an <term>inheritance hierarchy</term>. Every subclass is-a or is a kind of the superclass. For example, here is an inheritance hierarchy of Shapes. Square is-a Rectangle and a subclass of Rectangle. Rectangle is-a Shape and a subclass of Shape. In Java, the class <term>Object</term> is at the top of hierarchy. Every class in Java inherits from Object and is-an Object.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: An Inheritance Hierarchy of Shapes</caption>
+    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An Inheritance Hierarchy of Shapes</caption>
     <image source="Unit5-Inheritance/Figures/shapes.png" width="71%%"/>
   </figure>
     <p>One of the main reasons to use an inheritance hierarchy is that all the classes
@@ -36,12 +36,11 @@ Shape s3 = new Square();
 // Square q = new Shape(); // ERROR!!
 </input></program>
             <p>Why is using a superclass reference for subclass objects useful? Because now, we can write methods with parameters of type Shape or have arrays of type Shape and use them with any of its subclasses as seen in the next sections.</p>
-            <p><problematic refid="id2">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qinherRef">
         <statement>
 
-            <p>9-5-3: A class Student inherits from the superclass Person. Which of the following assignment statements will give a compiler error?</p>
+            <p> A class Student inherits from the superclass Person. Which of the following assignment statements will give a compiler error?</p>
 
         </statement>
 <choices>
@@ -95,7 +94,6 @@ public void print(Shape s)
    ...
 }
 </input></program>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>Notice that in the following code, the print method has a parameter of type <c>Person</c>, but it can be called with <c>Student</c> or <c>Person</c> objects in the <c>main</c> method. Which <c>toString</c> method is called? It depends on whether a <c>Person</c> or <c>Student</c> is passed in at runtime. What would happen if you commented out the <c>toString</c> method in <c>Student</c>? Which one would be called now?</p>
 
 <exercise label="superclassMethod">
@@ -199,7 +197,6 @@ shapeList.add(new Shape());
 shapeList.add(new Rectangle());
 shapeList.add(new Square());
 </input></program>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>The code below has an <c>ArrayList&lt;Pet&gt;</c> that can hold <c>Pet</c> or <c>Dog</c>
                 objects. Notice that the loop works with a variable of type <c>Pet</c> because a
                 <c>Dog</c> is a <c>Pet</c> too!</p>
@@ -319,14 +316,13 @@ class Dog extends Pet
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qoo_4">
         <statement>
 
             <dl>
                 <li>
-                    <title>9-5-6:  Which of the following reasons for using an inheritance hierarchy are valid?</title>
+                    <title>  Which of the following reasons for using an inheritance hierarchy are valid?</title>
                     
                         <p><ol marker="I">
                             <li>
@@ -401,7 +397,7 @@ class Dog extends Pet
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge : Shopping Cart</title>
+            <title>Programming Challenge : Shopping Cart</title>
             <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%%" alt="Shopping"/>
             <p>The following code contains a class called ShoppingCart that simulates a grocery store or an online store’s shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this <url href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" visual="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart">replit.com link</url>. We encourage you to work in pairs.</p>
             <p>In this challenge, you will add a new class called <c>DiscountedItem</c> that extends the <c>Item</c> class. The <c>ArrayList</c> of <c>Item</c> will still work since it can hold the subclasses of <c>Item</c> too! The <c>ShoppingCart</c> <c>printOrder</c> method will work with <c>Item</c> and <c>DiscountedItem</c> but note that it has an <c>if</c> statement that treats <c>DiscountedItem</c> differently.</p>
@@ -713,13 +709,13 @@ class Item
   <exercises>
     <exercise label="hierarchy1" data-optional="true">
     <statement>
-        <p>9-5-1: What variables and methods might be inherited from the superclass Shape in the inheritance hierarchy above?</p>
+        <p> What variables and methods might be inherited from the superclass Shape in the inheritance hierarchy above?</p>
 
     </statement>
 </exercise>
     <exercise label="hierarchy2" data-optional="true">
     <statement>
-        <p>9-5-2: Can you make a 3 level inheritance hierarchy for living things on Earth?</p>
+        <p> Can you make a 3 level inheritance hierarchy for living things on Earth?</p>
 
     </statement>
 </exercise>

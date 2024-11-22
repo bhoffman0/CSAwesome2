@@ -6,7 +6,7 @@
     <p>One of the really useful features of Object-Oriented programming is <term>inheritance</term>.  You may have heard of someone coming into an inheritance, which often means they were left something from a relative who died.  Or, you might hear someone say that they have inherited musical ability from a parent.  In Java all classes can <term>inherit</term> attributes (instance variables) and behaviors (methods) from another class.  The class being inherited from is called the <term>parent class</term> or <term>superclass</term>.  The class that is inheriting is called the <term>child class</term> or <term>subclass</term>.</p>
     <p>When one class inherits from another, we can say that it is the <em>same kind of thing</em> as the <term>parent class</term> (the class it inherits from).  For example, a car is a kind of vehicle.  This is sometimes called the <em>is-a</em> relationship, but more accurately it’s a <em>is-a kind of</em> relationship.  A motorcycle is another kind of vehicle.  All vehicles have a make, model, and year that they were created.  All vehicles can go forward, backward, turn left and turn right.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A UML Class Diagram Showing Inheritance</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram Showing Inheritance</caption>
       <image source="Unit5-Inheritance/Figures/vehicle.png" width="71%%"/>
     </figure>
     <p>A <term>UML (Unified Modeling Language) class diagram</term> shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for <c>Car</c> and <c>Motorcycle</c> is <c>Vehicle</c>. The <c>Vehicle</c> class has two child classes or subclasses: <c>Car</c> and <c>Motorcycle</c>.</p>
@@ -31,13 +31,12 @@ public class Motorcycle extends Vehicle
             
             <p>Inheritance allows you to reuse data and behavior from the parent class.  If you notice that several classes share the same data and/or behavior,  you can pull that out into a parent class.  This is called <term>generalization</term>. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below.</p>
             <p>Inheritance is also useful for <term>specialization</term> which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: A UML Class Diagram Showing Inheritance</caption><image source="Unit5-Inheritance/Figures/person.png" width="54%%"/></figure>
-            <p><problematic refid="id3">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram Showing Inheritance</caption><image source="Unit5-Inheritance/Figures/person.png" width="54%%"/></figure>
 
     <exercise label="qoo10-1-1">
         <statement>
 
-            <p>9-1-1: If you don’t specify the parent class in a class declaration which of the following is true?</p>
+            <p> If you don’t specify the parent class in a class declaration which of the following is true?</p>
 
         </statement>
 <choices>
@@ -84,7 +83,7 @@ public class Motorcycle extends Vehicle
     <exercise label="qoo10-1-2">
         <statement>
 
-            <p>9-1-2: If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?</p>
+            <p> If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?</p>
 
         </statement>
 <choices>
@@ -113,7 +112,7 @@ public class Motorcycle extends Vehicle
     <exercise label="qoo10-1-3">
         <statement>
 
-            <p>9-1-3: If I had a class ParkingGarage should it inherit from the class Vehicle?</p>
+            <p> If I had a class ParkingGarage should it inherit from the class Vehicle?</p>
 
         </statement>
 <choices>
@@ -142,7 +141,7 @@ public class Motorcycle extends Vehicle
     <exercise label="qoo10-1-4">
         <statement>
 
-            <p>9-1-4: In Java how many parents can a class have?</p>
+            <p> In Java how many parents can a class have?</p>
 
         </statement>
 <choices>
@@ -185,7 +184,6 @@ public class Motorcycle extends Vehicle
 </choices>
 
     </exercise>
-            <p><problematic refid="id5">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>The Student class can also inherit from the class Person just like Employee and Customer because a Student is a type of Person.</p>
 
 <exercise label="StudentInheritance">

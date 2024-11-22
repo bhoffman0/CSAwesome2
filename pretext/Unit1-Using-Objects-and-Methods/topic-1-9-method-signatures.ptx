@@ -17,7 +17,6 @@
             
             
             <p>We divide up a program into multiple methods in order to organize the code to reduce its complexity and to avoid repetition of code. For example, the song “Old MacDonald Had a Farm” has a lot of repetition. Instead of writing the same code over and over in order to print the song, we can write methods that contain the repeated code and run them when needed. Click on all the repeated code in the song below and then we will learn how it can be replaced with methods.</p>
-            <p><problematic refid="id4">|Exercise|</problematic> Check Your Understanding</p>
 
 <exercise label="repeatedcode-old-mcdonald">
     <statement><p>Click on all the lines that are completely identical and repeated.</p></statement>
@@ -147,12 +146,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id6">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="songMethodsTrace">
         <statement>
 
-            <p>1-9-4: What does the following code print out?</p>
+            <p> What does the following code print out?</p>
             <program language="java"><input>
 public class Song
 {
@@ -264,7 +262,7 @@ public class Song
                 </li>
             </ul></p>
             <p>Compare the method signature of <c>println(String x)</c> with the method call <c>println("Hello World");</c> below. The method signature contains the method name and the parameter type and variable. The method call contains only the method name and the argument value. The argument must be compatible with the data type of the parameter in the method signature and is saved in the parameter variable when the method is called. Many people use the terms parameter and argument interchangeably.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Method Signature and Method Call</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-parts.png" width="89%%" alt="Method Signature and Method Call"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method Signature and Method Call</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-parts.png" width="89%%" alt="Method Signature and Method Call"/></figure>
             <p>Let’s take another look at the Old MacDonald Song and see if we can replace more repeated code with methods with parameters. Each verse of the song is similar except it is about a different animal and the sound it makes. Click on the words that are different in the lines that are repeated to discover what parameters we need to add to the methods.</p>
 
 <exercise label="different-code-old-mcdonald">
@@ -357,7 +355,6 @@ public class OldMacDonaldSong
     </input>
 </program>
             <p>Let’s try adding another verse to the song with a goose that honks.</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="OldMacDonaldSong2">
     <statement>
@@ -440,7 +437,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
             <p>When a method is called, the right method definition is found by checking the <term>method signature</term> or <term>header</term> at the top of the method definition to match the method name, the number of arguments, the data types for the arguments and the return type. A method signature for a method with parameters consists of the method name and the ordered list of parameter types. A method signature for a method without parameters consists of the method name and an empty parameter list.</p>
             <p>Here’s what that looks like with the two method calls above. The arguments like “cow” and “moo” are saved into the parameter variables <c>animal</c> and <c>sound</c> with each method call.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Matching Arguments to Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/args2paramsFarm.png" width="89%%" alt="Arguments to Parameters"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Matching Arguments to Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/args2paramsFarm.png" width="89%%" alt="Arguments to Parameters"/></figure>
             <p>The method headers contain data types of the parameters because they are variable declarations that reserve memory for the parameter variables.  However, the method calls never contain the parameter types, only the values that are passed to the method. The argument values can be variables, literals, or expressions that evaluate to the correct data type.</p>
             <program language="java"><input>
 // Method headers contain data types for the parameters
@@ -461,7 +458,7 @@ verse("cow", "moo");
                 is overloaded with different parameter types. The method <c>println()</c> with no parameters prints a newline, the method <c>println(String x)</c> prints the given string followed by a newline, the method <c>println(int x)</c> prints the given int number followed by a newline, etc. The compiler determines which method to call based on the number and types of arguments passed to the method.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge: Song with Parameters</title>
+            <title>Programming Challenge: Song with Parameters</title>
             <p>Here’s another song, <url href="https://youtu.be/QPwEZ8Vv2YQ" visual="https://youtu.be/QPwEZ8Vv2YQ">The Ants Go Marching</url>, that is very similar in its repetitive structure. The verses below have a lot of repeated words and phrases. Click on the words or phrases that are different in each verse. These will be the arguments that you will pass to the methods in your song code.</p>
 
 <exercise label="clickDifferentAntSong">
@@ -637,7 +634,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP-trace-method-calls">
         <statement>
 
-            <p>1-9-11: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Cat
 {

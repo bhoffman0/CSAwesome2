@@ -10,13 +10,12 @@
             <p>In lessons 1.9 and 1.10, we learned how to call <term>class methods</term> (also called <term>static methods</term>).  Class methods are called using the class name followed by the dot (.) operator and the method name,  example, <c>Math.sqrt(25);</c> calls the <c>sqrt</c> method in the <c>Math</c> class to find the square root of 25. Class methods use the keyword <c>static</c> in their method signature. They do not access or change the attributes of an object.</p>
             <p>In this lesson, we will learn more about <term>instance methods</term> which are always called using an object of the class. They are not static methods. They access and change the attributes of the object they are called on, for example <c>yertle.forward()</c> changes the <c>Turtle</c> object yertle’s position.</p>
             <p>The following flowchart shows the difference between calling class (static) methods and instance methods. Static methods are called using the class name, for example, <c>Math.sqrt(25);</c>. Instance methods are called using an object of the class, for example, <c>yertle.forward();</c>. Traditionally, class names are capitalized, and object variables are lowercase.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Calling static vs. instance methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/calling-static-vs-instance-methods.png" width="63%%" alt="Calling static vs. instance methods"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Calling static vs. instance methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/calling-static-vs-instance-methods.png" width="63%%" alt="Calling static vs. instance methods"/></figure>
         </subsection>
   <subsection>
             <title>Method Signatures</title>
             <p>The <term>method signature</term> defines the method’s name and the number and types of parameters it takes. In a class definition or in documentation of a library, instance methods are usually defined after the instance variables (attributes) and constructors in a class. For example, see the <c>Student</c> class below. Notice that the methods do not use the keyword <c>static</c>. They are instance methods that are called using an object of the class and can access and change the object’s attributes.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: A Student class showing instance variables, constructors, and methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/StudentClass.png" width="89%%" alt="A Student class showing instance variables, constructors, and methods"/></figure>
-            <p><problematic refid="id10">|Exercise|</problematic> Check Your Understanding</p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Student class showing instance variables, constructors, and methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/StudentClass.png" width="89%%" alt="A Student class showing instance variables, constructors, and methods"/></figure>
 
 <exercise label="student_methods">
     <statement><p>Click on the method headers (signatures) in the following class. Do not click on the constructors.</p></statement>
@@ -48,7 +47,7 @@
             <title>Method Calls</title>
             <p>To use an object’s method, you must use the object name and the dot (.) operator followed by the method name, for example, <c>yertle.forward();</c> calls <c>yertle</c>’s <c>forward</c> method to move a turtle object forward 100 pixels. Object methods work with the <term>attributes</term> of the object, such as the direction the turtle is heading or its position.</p>
             <p>Methods inside the same class can call each other using just <c>methodName()</c>, but to call instance methods in another class or from a main method, you must first create an object of that class and then call its methods using <c>object.methodName()</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Calling instance methods from main() or from other methods inside the same class.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/calling-methods.png" width="80%%" alt="Calling Methods"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Calling instance methods from main() or from other methods inside the same class.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/calling-methods.png" width="80%%" alt="Calling Methods"/></figure>
             <note>
                 <p><c>method();</c> is used to call a method within the same class, but <c>object.method();</c> is necessary if you are calling the method from the main method or from a different class.</p>
             </note>
@@ -99,7 +98,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>The following flowchart can be used to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods are called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using <c>object.methodName()</c>. If you are calling the method from within the same class, you can just call the method using <c>methodName()</c> which will refer to the current object.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: Comparing Method Calls to Static and Instance Methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/FlowChartCallingMethods.png" width="98%%" alt="Comparing method calls to static and instance methods"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Method Calls to Static and Instance Methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/FlowChartCallingMethods.png" width="98%%" alt="Comparing method calls to static and instance methods"/></figure>
         </subsection>
   <subsection>
             <title>Methods Calls with Arguments</title>
@@ -108,18 +107,16 @@ public class RunestoneTests extends CodeTestHelper
                 <p><c>object.method(arguments);</c> is used to call an object’s method and give it some argument values that it will need to do its job.</p>
             </note>
             <p>When you create your own method, the variables you define for it are called <term>parameters</term>. When you call the method to do its job, you give or pass in <term>arguments</term> to it that are then saved in the parameter variables. So, in the definition of the <c>forward</c> method, it has a parameter variable called <c>pixels</c>, and in the call to <c>forward(200)</c>, the argument is the value 200 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 3. In this unit, you will learn to call methods that are already written for you.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: Method signatures with parameters and method calls arguments</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-param-arg.png" width="98%%" alt="Method parameters and arguments"/></figure>
-            <p><problematic refid="id12">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method signatures with parameters and method calls arguments</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-param-arg.png" width="98%%" alt="Method parameters and arguments"/></figure>
 
 <exercise label="methodVocab">
     <statement><p>Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the vocabulary above.</p></feedback>
 <matches><match order="1"><premise>an object's behaviors or functions that can be used or called to do its job</premise><response>methods</response></match><match order="2"><premise>the values or data passed to an object's method</premise><response>arguments</response></match><match order="3"><premise>the variables in a method's definition that hold the arguments</premise><response>parameters</response></match><match order="4"><premise>asking to run the method</premise><response>method call</response></match></matches></exercise>            <p>Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle that are written for you.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 6: Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%%" alt="Turtle class diagram"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%%" alt="Turtle class diagram"/></figure>
             <p>Methods are said to be <term>overloaded</term> when there
                 are multiple methods with the same name but a
                 different <term>method signature</term>, where it requires a different number or type of parameters. For example, we have two different forward methods, <c>forward()</c> with no arguments and <c>forward(100)</c> which has an argument that tells it how much to move forward. The arguments given to the method need to correspond to the order and types of the parameters in the method signature.</p>
-            <p><problematic refid="id14">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="TurtleTestMethods1">
     <statement>
@@ -239,7 +236,6 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id16">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <image source="Unit1-Using-Objects-and-Methods/Figures/house.png" width="27%%" alt="simple house"/>
             <p>Try the following mixed up code to draw a simple house made of a square and a triangle roof.</p>
 <exercise label="DrawAHouse" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
@@ -331,7 +327,6 @@ System.out.println("Yertle's y position is: " + yertle.getYPos() );
             <note>
                 <p>A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out.</p>
             </note>
-            <p><problematic refid="id18">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleTestGetSet">
     <statement>
@@ -409,7 +404,6 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id20">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleArea">
     <statement>
@@ -495,12 +489,11 @@ public class RunestoneTests extends CodeTestHelper
                 trace through method calls like the ones below. Notice that the <term>return
                     statement</term> in a method returns the value, and it must match declared return type
                 of the method. The calling method must then do something useful with that value.</p>
-            <p><problematic refid="id22">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="traceCircleArea">
         <statement>
 
-            <p>1-14-8: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Circle
 {
@@ -578,7 +571,7 @@ System.out.println(c.getArea());
     <exercise label="traceRectangleArea">
         <statement>
 
-            <p>1-14-9: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Rectangle
 {
@@ -664,7 +657,7 @@ System.out.println(r.getArea());
     <exercise label="traceReturnMethods">
         <statement>
 
-            <p>1-14-10: What does the following code print out? (If you get stuck, try this <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> to see this code in action.)</p>
+            <p> What does the following code print out? (If you get stuck, try this <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> to see this code in action.)</p>
             <program language="java"><input>
 public class MethodTrace
 {
@@ -739,7 +732,6 @@ public class MethodTrace
             <p>The <c>Turtle</c> class has a method called
                 <c>getDistance(x,y)</c> which will return the turtle’s distance from a point (x,y). Can you find yertle’s distance from the point (0,0)? In the exercise below, add another turtle and make both turtles move. Then find the distance between them. You must use the <c>getXPos</c> and <c>getYPos</c> methods as well as the
                 <c>getDistance</c> method.</p>
-            <p><problematic refid="id24">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleDistance">
     <statement>
@@ -829,7 +821,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id26">|Groupwork|</problematic> Programming Challenge : Turtle House</title>
+            <title>Programming Challenge : Turtle House</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/houseWithWindows.png" width="36%%" alt="simple house"/>
             <p>This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors below. Can you add windows and a door? Come up with your own house design as a team.</p>
             <p>To draw a window, you will need to call <c>penUp</c> and <c>moveTo</c> to walk the turtle into position without drawing, for example:</p>
@@ -976,7 +968,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP-Party-Methods">
         <statement>
 
-            <p>1-14-13: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Party
 {
@@ -1023,7 +1015,7 @@ public class Party
     <exercise label="AP-Cat-trace">
         <statement>
 
-            <p>1-14-14: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Cat
 {
@@ -1084,7 +1076,7 @@ a.meow();
     <exercise label="AP-Liquid-return">
         <statement>
 
-            <p>1-14-15: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Liquid
 {
@@ -1137,7 +1129,7 @@ System.out.println(water.getTemp());
     <exercise label="AP-Pizza-trace-args">
         <statement>
 
-            <p>1-14-16: Consider the following methods, which appear in the same class.</p>
+            <p> Consider the following methods, which appear in the same class.</p>
             <program language="java"><input>
 public void splitPizza(int numOfPeople)
 {

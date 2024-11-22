@@ -17,18 +17,17 @@ Turtle t = new Turtle(habitat); // create a new Turtle object
   <subsection>
             <title>The World Class Constructors</title>
             <p>There can be more than one constructor defined in a class. This is called <term>overloading</term> the constructor. The <c>World</c> class has the 2 constructors seen below. One doesn’t take any arguments and creates a default sized world and one takes the world’s width and height arguments to create a world of a specific size. An <term>argument</term> is a value that is passed into a constructor. Arguments are used to initialize the attributes of an object, in this case, the size of the world.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Two World constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/worldConstructors.png" width="63%%" alt="Two World constructors"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two World constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/worldConstructors.png" width="63%%" alt="Two World constructors"/></figure>
             <p>The <term>no-argument constructor</term> <c>World()</c>, with no arguments inside the parentheses following the name of the constructor, creates a graphical window with a default size of 640x480 pixels. No-argument constructors usually set the attributes of the object to default values. The second <c>World(int width, int height)</c> constructor takes two integer arguments, and initializes the <c>World</c> object’s width and height to them, for example <c>new World(300,400)</c> creates a 300x400 pixel world.</p>
             <program language="java"><input>
 World world1 = new World(); // creates a default size 640x480 world
 World world2 = new World(300,400); // creates a 300x400 world
 </input></program>
-            <p><problematic refid="id5">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="mcq_world_constructor">
         <statement>
 
-            <p>1-13-1: Which of these is valid syntax for creating and initializing a World object?</p>
+            <p> Which of these is valid syntax for creating and initializing a World object?</p>
 
         </statement>
 <choices>
@@ -84,7 +83,7 @@ World world2 = new World(300,400); // creates a 300x400 world
     <exercise label="mcq_overload_constructor">
         <statement>
 
-            <p>1-13-2: Which of these is overloading the constructor?</p>
+            <p> Which of these is overloading the constructor?</p>
 
         </statement>
 <choices>
@@ -139,12 +138,11 @@ Turtle t2 = new Turtle(50, 100, world1);
             <note>
                 <p>Notice that the order of the arguments matter. The <c>Turtle</c> constructor takes <c>(x,y,world)</c> as arguments in that order. If you mix up the order of the arguments it will cause an error, because the arguments will not be the data types that it expects. This is one reason why programming languages have data types – to allow for error-checking.</p>
             </note>
-            <p><problematic refid="id7">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="const_turtle">
         <statement>
 
-            <p>1-13-3: Which of these is valid syntax for creating and initializing a Turtle object in world1?</p>
+            <p> Which of these is valid syntax for creating and initializing a Turtle object in world1?</p>
 
         </statement>
 <choices>
@@ -187,7 +185,6 @@ Turtle t2 = new Turtle(50, 100, world1);
 </choices>
 
     </exercise>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleConstructorTest">
     <statement>
@@ -279,13 +276,12 @@ Turtle t2 = new Turtle(world1);
             
             <p>When you use a class that someone has already written for you in a <term>library</term> that you can import like the <c>Turtle</c> class above, you can look up how to use the constructors and methods in the <url href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" visual="https://www2.cs.uic.edu/~i101/doc/Turtle.html">documentation</url> for that class.  The documentation will list the <term>signatures</term> (or headers) of the constructors or methods which will tell you their name and parameter list. The <term>parameter list</term>, in the <term>header</term> of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the argument values passed into the constructor.</p>
             <p>Constructors are said to be <term>overloaded</term> when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the <c>Turtle</c> class that take different parameters:</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Turtle Class Constructor Signatures and Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/TurtleClassDefn.png" width="100%%" alt="Turtle Class Constructor Signatures and Parameters"/></figure>
-            <p><problematic refid="id11">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Constructor Signatures and Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/TurtleClassDefn.png" width="100%%" alt="Turtle Class Constructor Signatures and Parameters"/></figure>
 
     <exercise label="TurtleClass1">
         <statement>
 
-            <p>1-13-6: Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?</p>
+            <p> Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?</p>
 
         </statement>
 <choices>
@@ -338,8 +334,7 @@ Turtle t2 = new Turtle(world1);
 
     </exercise>
             <p>In Unit 3, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called <c>Date</c>, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: A Date class showing attributes and constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/DateClass.png" width="89%%" alt="A Date class showing attributes and constructors"/></figure>
-            <p><problematic refid="id13">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Date class showing attributes and constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/DateClass.png" width="89%%" alt="A Date class showing attributes and constructors"/></figure>
 
 <exercise label="date_constructor">
     <statement><p>Click on the constructor headers (signatures)</p></statement>
@@ -365,7 +360,7 @@ Turtle t2 = new Turtle(world1);
     <exercise label="DateClass1">
         <statement>
 
-            <p>1-13-8: Given the <c>Date</c> class in the figure above and assuming that months in the <c>Date</c> class are numbered starting at 1, which of the following code segments will create a <c>Date</c> object for the date September 20, 2020 using the correct constructor?</p>
+            <p> Given the <c>Date</c> class in the figure above and assuming that months in the <c>Date</c> class are numbered starting at 1, which of the following code segments will create a <c>Date</c> object for the date September 20, 2020 using the correct constructor?</p>
 
         </statement>
 <choices>
@@ -421,14 +416,13 @@ Turtle t2 = new Turtle(world1);
   <subsection>
             <title>Arguments, Parameters, and Call by Value</title>
             <p>When a constructor like <c>Date(2005,9,1)</c> is called, the <term>parameters</term>, (<c>year</c>, <c>month</c>, and <c>day</c>), are set to copies of the  <term>arguments</term>, (<c>2005</c>, <c>9</c>, and <c>1</c>).  This is <term>call by value</term> which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object’s attributes. A constructor call interrupts the sequential execution of statements in that the program executes the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%%" alt="Parameter Mapping"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%%" alt="Parameter Mapping"/></figure>
             <p>The type of the values being passed in as arguments have to match the type of the parameter variables. We cannot give a constructor a <c>String</c> object when it is expecting an <c>int</c>. The order of the arguments also matters. If you mix up the month and the day in the <c>Date</c> constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).</p>
-            <p><problematic refid="id15">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="mcq_params">
         <statement>
 
-            <p>1-13-9: In <c>public World(int width, int height)</c> what are <c>width</c> and <c>height</c>?</p>
+            <p> In <c>public World(int width, int height)</c> what are <c>width</c> and <c>height</c>?</p>
 
         </statement>
 <choices>
@@ -475,7 +469,7 @@ Turtle t2 = new Turtle(world1);
     <exercise label="mcq_arguments">
         <statement>
 
-            <p>1-13-10: In <c>new World(150, 200)</c> what are <c>150</c> and <c>200</c>?</p>
+            <p> In <c>new World(150, 200)</c> what are <c>150</c> and <c>200</c>?</p>
 
         </statement>
 <choices>
@@ -588,7 +582,7 @@ public class RunestoneTests extends CodeTestHelper
             <image source="Unit1-Using-Objects-and-Methods/Figures/customTurtles.png" width="36%%"/>
         </subsection>
   <subsection>
-            <title><problematic refid="id17">|Groupwork|</problematic> Programming Challenge: Custom Turtles</title>
+            <title>Programming Challenge: Custom Turtles</title>
             <p>Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors. The CustomTurtle class in the ActiveCode below inherits many of its attributes and methods from the Turtle class. However, it has some new constructors with more parameters to customize a turtle with its body color, shell color, width, and height. CustomTurtle has 3 constructors:</p>
             <program language="java"><input>
 /** Constructs a CustomTurtle in the middle of the world */
@@ -817,7 +811,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP-constructors">
         <statement>
 
-            <p>1-13-13:  Consider the following class. Which of the following successfully creates a new Cat object?</p>
+            <p>  Consider the following class. Which of the following successfully creates a new Cat object?</p>
             <blockquote>
                 <program language="java"><input>
 public class Cat
@@ -903,7 +897,7 @@ III. String color = "orange";
     <exercise label="AP-constructors2">
         <statement>
 
-            <p>1-13-14: Consider the following class.  Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?</p>
+            <p> Consider the following class.  Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?</p>
             <program language="java"><input>
 public class Movie
 {

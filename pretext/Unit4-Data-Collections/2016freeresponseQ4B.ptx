@@ -51,7 +51,7 @@ public static int basicGapWidth(List&lt;String&gt; wordList,
     <exercise label="fr_formatterb_1">
         <statement>
 
-                <p>7-4-8-1: How do you access the number of items in an ArrayList&lt;String&gt; called list?</p>
+                <p> How do you access the number of items in an ArrayList&lt;String&gt; called list?</p>
 
         </statement>
 <choices>
@@ -89,7 +89,7 @@ public static int basicGapWidth(List&lt;String&gt; wordList,
     <exercise label="fr_formatterb_2">
         <statement>
 
-                <p>7-4-8-2: True or False: A loop is required to correctly solve this problem.</p>
+                <p> True or False: A loop is required to correctly solve this problem.</p>
 
         </statement>
 <choices>
@@ -127,14 +127,14 @@ public static int basicGapWidth(List&lt;String&gt; wordList,
 <cline>                                int formattedLen)</cline>
 </block><block order="6">
 <cline>{</cline>
-</block><block order="2">
+</block><block order="4">
 <choice correct="yes"><cline>   int numSpaces = formattedLen - totalLetters(wordList);</cline>
 <cline>   int numGaps = wordList.size() - 1;</cline>
 </choice><choice><cline>   int numSpaces = formattedLen + totalLetters(wordList); </cline>
 <cline>   int numGaps = wordList.length - 1;</cline>
-</choice></block><block order="3">
+</choice></block><block order="2">
 <cline>   return numSpaces / numGaps;</cline>
-</block><block order="4">
+</block><block order="5">
 <cline>} //end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

@@ -6,7 +6,7 @@
     <exercise label="bs-forloops-05-09">
         <statement>
 
-        <p>16-6-1: Which statement best describes what this code does?</p>
+        <p> Which statement best describes what this code does?</p>
         <program language="java"><input>
 Pixel[] pixelArray = this.getPixels();
 int value = 0;
@@ -70,7 +70,7 @@ for (Pixel pO: pixelArray)
     <exercise label="bs-whileloops-06-07">
         <statement>
 
-        <p>16-6-2: How many times is each set of code executed?</p>
+        <p> How many times is each set of code executed?</p>
         <image source="https://i.postimg.cc/rpzrHmMJ/lecture06-Q06.jpg" width="71%%"/>
 
         </statement>
@@ -117,7 +117,7 @@ for (Pixel pO: pixelArray)
     <exercise label="bs-forloops-09-04">
         <statement>
 
-        <p>16-6-3: How many times is each set of code executed?</p>
+        <p> How many times is each set of code executed?</p>
         <image source="https://i.postimg.cc/HLSgbHZy/lecture09-Q04.png" width="71%%"/>
 
         </statement>
@@ -164,7 +164,7 @@ for (Pixel pO: pixelArray)
     <exercise label="bs-nestedloops-10-04">
         <statement>
 
-        <p>16-6-4: What picture most accurately describes what this code does?</p>
+        <p> What picture most accurately describes what this code does?</p>
         <program language="java"><input>
 Pixel p;
 for (int foo = 0; foo &lt; getWidth();  bar++)
@@ -222,7 +222,7 @@ for (int foo = 0; foo &lt; getWidth();  bar++)
     <exercise label="bs-nestedloops-10-05">
         <statement>
 
-        <p>16-6-5: What picture most accurately describes what this code does?</p>
+        <p> What picture most accurately describes what this code does?</p>
         <program language="java"><input>
 Pixel p;
 for (int bar = 0; bar &lt; getHeight();  bar++)
@@ -280,7 +280,7 @@ for (int bar = 0; bar &lt; getHeight();  bar++)
     <exercise label="bs-nestedloops-11-10">
         <statement>
 
-        <p>16-6-6: What are the parameter values we use to index leftPixel and rightPixel for the first three iterations of the loop? (assume picture has a height = 50 and width = 100)</p>
+        <p> What are the parameter values we use to index leftPixel and rightPixel for the first three iterations of the loop? (assume picture has a height = 50 and width = 100)</p>
         <program language="java"><input>
 int mirrorPt = getWidth()/2;
 Pixel leftP, rightP;

@@ -38,7 +38,7 @@ public class NumberCube
     <exercise label="numbercubea_1">
         <statement>
 
-                <p>6-4-6-1: Which Java expression correctly generates a random number between 1 and 6?</p>
+                <p> Which Java expression correctly generates a random number between 1 and 6?</p>
 
         </statement>
 <choices>
@@ -76,7 +76,7 @@ public class NumberCube
     <exercise label="numbercubea_2">
         <statement>
 
-                <p>6-4-6-2: Which of the following correctly creates an array of size numTosses?</p>
+                <p> Which of the following correctly creates an array of size numTosses?</p>
 
         </statement>
 <choices>
@@ -114,7 +114,7 @@ public class NumberCube
     <exercise label="numbercubea_3">
         <statement>
 
-                <p>6-4-6-3: Which of the following correctly loops numTosses number of times?</p>
+                <p> Which of the following correctly loops numTosses number of times?</p>
 
         </statement>
 <choices>
@@ -157,23 +157,23 @@ public class NumberCube
 <exercise label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method <c>getCubeTosses</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="5">
 <cline>public static int[] getCubeTosses(</cline>
 <cline>                          NumberCube cube,</cline>
 <cline>                          int numTosses)</cline>
 <cline>{</cline>
-</block><block order="3">
+</block><block order="1">
 <cline>  int[] cubeTosses = new int[numTosses];</cline>
-</block><block order="7">
+</block><block order="6">
 <cline>  for (int i = 0; i &lt; numTosses; i++)</cline>
 <cline>  {</cline>
-</block><block order="4">
+</block><block order="7">
 <cline>     cubeTosses[i] = cube.toss();</cline>
 </block><block order="2">
 <cline>  } // end for</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>  return cubeTosses;</cline>
-</block><block order="5">
+</block><block order="4">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

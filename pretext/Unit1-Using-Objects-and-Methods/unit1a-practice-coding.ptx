@@ -8,7 +8,7 @@
                 <p>The following code should print “Mary’s favorite color is blue”.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -91,7 +91,7 @@ public class Test1
                 <p>The following code should print “Gabby’s favorite sport is soccer”.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -152,7 +152,7 @@ public class Test1
                 <p>The following code should print <c>Your name is Carly and your favorite color is red</c>.  Finish the code so that it prints the output correctly using the variables provided.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -241,7 +241,7 @@ public class Test1
     </exercise>
     <exercise>
       <statement/>
-      <program interactive="" language=""/>
+      <program interactive="" language="" datafile=""/>
       <solution>
                 Use the + operator to append the strings.  Be sure to include spaces as needed.
 
@@ -271,7 +271,7 @@ public class Test1
                 <p>Write the code to print <c>Julian's favorite color is green.  His favorite food is pizza.</c> using the variables provided.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -372,7 +372,7 @@ public class Test1
                 <p>Finish the code below to print your favorite animal and food.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -487,7 +487,7 @@ public class Test1
     </exercise>
     <exercise>
       <statement/>
-      <program interactive="" language=""/>
+      <program interactive="" language="" datafile=""/>
       <solution>
                 Add the strings together using +.  Don’t forget to include spaces and periods at the end of the sentences.
 
@@ -517,7 +517,7 @@ public class Test1
                 <p>The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 30 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -609,7 +609,7 @@ public class Test1
                 <p>The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched <c>"</c> or <c>(</c>. Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -701,7 +701,7 @@ public class Test1
                 <p>The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -793,7 +793,7 @@ public class Test1
                 <p>The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -880,7 +880,7 @@ public class Test1
                 <p>The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -966,7 +966,7 @@ public class Test1
                 <p>Complete the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -1065,7 +1065,7 @@ public class Test1
                 <p>Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -1173,7 +1173,7 @@ public class Test1
                 <p>Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {
@@ -1286,7 +1286,7 @@ public class Test1
                 <p>Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can’t buy part of a wing.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 public class Test1
 {

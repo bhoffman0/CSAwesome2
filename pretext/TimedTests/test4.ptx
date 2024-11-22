@@ -9,7 +9,7 @@
     <exercise label="pe4_1">
         <statement>
 
-            <p>13-3-1: Consider the following partial class definitions.  Which of the constructors shown below (I, II, and III) are valid for C2?</p>
+            <p> Consider the following partial class definitions.  Which of the constructors shown below (I, II, and III) are valid for C2?</p>
             <program language="java"><input>
 public class C1
 {
@@ -93,7 +93,7 @@ III. public C2 (String label) { super(label); }
     <exercise label="pe4_2">
         <statement>
 
-            <p>13-3-2: The Boolean expression (x==y &amp;&amp; !(x==y)) || ( x!=y &amp;&amp; !(x!=y)) can be simplified to which of the following?</p>
+            <p> The Boolean expression (x==y &amp;&amp; !(x==y)) || ( x!=y &amp;&amp; !(x!=y)) can be simplified to which of the following?</p>
 
         </statement>
 <choices>
@@ -149,7 +149,7 @@ III. public C2 (String label) { super(label); }
     <exercise label="pe4_3">
         <statement>
 
-            <p>13-3-3: Which of the following could be used to replace the missing code so that the method sort will sort the array a in ascending order?</p>
+            <p> Which of the following could be used to replace the missing code so that the method sort will sort the array a in ascending order?</p>
             <program language="java"><input>
 public static void sort(int[] a)
 {
@@ -228,7 +228,7 @@ public static void sort(int[] a)
     <exercise label="pe4_5">
         <statement>
 
-            <p>13-3-4: Consider the following declarations.  If matrix is initialized to be: { {-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?</p>
+            <p> Consider the following declarations.  If matrix is initialized to be: { {-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?</p>
             <program language="java"><input>
 int[][] matrix = new int[2][3];
 
@@ -295,7 +295,7 @@ public static void changeMatrix(int[][] matrix )
     <exercise label="pe4_6">
         <statement>
 
-            <p>13-3-5: What are the values of a and b after the for loop finishes?</p>
+            <p> What are the values of a and b after the for loop finishes?</p>
             <program language="java"><input>
 int a = 5, b = 2, temp;
 
@@ -361,7 +361,7 @@ for (int i=1; i&lt;=4; i++)
     <exercise label="pe4_7">
         <statement>
 
-            <p>13-3-6: Condsider the following method.  What value is returned from a call of mystery(4)?</p>
+            <p> Condsider the following method.  What value is returned from a call of mystery(4)?</p>
             <program language="java"><input>
 public static int mystery(int n)
 {
@@ -426,7 +426,7 @@ public static int mystery(int n)
     <exercise label="pe4_8">
         <statement>
 
-            <p>13-3-7: Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {6,3,8,5,1}?</p>
+            <p> Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {6,3,8,5,1}?</p>
 
         </statement>
 <choices>
@@ -482,7 +482,7 @@ public static int mystery(int n)
     <exercise label="pe4_9">
         <statement>
 
-            <p>13-3-8: Consider the following code segment.  How many times will a * be printed?</p>
+            <p> Consider the following code segment.  How many times will a * be printed?</p>
             <program language="java"><input>
 for(int i = 0; i &lt; 3; i++)
 {
@@ -545,7 +545,7 @@ for(int i = 0; i &lt; 3; i++)
     <exercise label="pe4_10">
         <statement>
 
-            <p>13-3-9: Consider the following method.   What is the output from conditionTest(-3,2)?</p>
+            <p> Consider the following method.   What is the output from conditionTest(-3,2)?</p>
             <program language="java"><input>
 public static void conditionTest(int num1, int num2)
 {
@@ -625,7 +625,7 @@ public static void conditionTest(int num1, int num2)
     <exercise label="pe4_11">
         <statement>
 
-            <p>13-3-10: What is value of s1 after the code below executes?</p>
+            <p> What is value of s1 after the code below executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -690,7 +690,7 @@ s4 = null;
     <exercise label="pe4_12">
         <statement>
 
-            <p>13-3-11: What is the output from the following code?</p>
+            <p> What is the output from the following code?</p>
             <program language="java"><input>
 String s = "Computer Science is fun!";
 String s1 = s.substring(0,8);
@@ -753,7 +753,7 @@ System.out.println(s3);
     <exercise label="pe4_13">
         <statement>
 
-            <p>13-3-12: Given the following class declarations, which declaration below will result in a compiler error?</p>
+            <p> Given the following class declarations, which declaration below will result in a compiler error?</p>
             <program language="java"><input>
 public class Book
 {
@@ -802,7 +802,7 @@ public class Dictionary extends Book
     <exercise label="pe4_14">
         <statement>
 
-            <p>13-3-13: What will the method below return when called with mystery(“xxzxyxx”)?</p>
+            <p> What will the method below return when called with mystery(“xxzxyxx”)?</p>
             <program language="java"><input>
 public static int mystery(String str)
 {
@@ -872,7 +872,7 @@ public static int mystery(String str)
     <exercise label="pe4_15">
         <statement>
 
-            <p>13-3-14: Which will cause the longest execution of a binary search looking for a value in an array of 9 integers?</p>
+            <p> Which will cause the longest execution of a binary search looking for a value in an array of 9 integers?</p>
 
         </statement>
 <choices>
@@ -928,7 +928,7 @@ public static int mystery(String str)
     <exercise label="pe4_16">
         <statement>
 
-            <p>13-3-15: Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, Cat, and Cow, what is output from looping through this array of animals and asking each object to speak()?</p>
+            <p> Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, Cat, and Cow, what is output from looping through this array of animals and asking each object to speak()?</p>
             <program language="java"><input>
 Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
 
@@ -994,7 +994,7 @@ Cat has a speak method that returns "Meow"
     <exercise label="pe4_17">
         <statement>
 
-            <p>13-3-16: What is the result of 17 (in base 16) - 13 (in base 8)?</p>
+            <p> What is the result of 17 (in base 16) - 13 (in base 8)?</p>
 
         </statement>
 <choices>
@@ -1050,7 +1050,7 @@ Cat has a speak method that returns "Meow"
     <exercise label="pe4_18">
         <statement>
 
-            <p>13-3-17: Consider the following method and code.  What are the values of s and b after the following has executed?</p>
+            <p> Consider the following method and code.  What are the values of s and b after the following has executed?</p>
             <program language="java"><input>
 public static void test(int[] a, int y)
 {
@@ -1118,7 +1118,7 @@ test(s,b);
     <exercise label="pe4_19">
         <statement>
 
-            <p>13-3-18: Which of the following is (are) true?</p>
+            <p> Which of the following is (are) true?</p>
             <program language="java"><input>
 I.  Insertion sort takes longer when the array is sorted in ascending order and
     you want it sorted in descending order.
@@ -1181,7 +1181,7 @@ III.  Selection sort takes less time to execute if the array is already sorted
     <exercise label="pe4_20">
         <statement>
 
-            <p>13-3-19: Given the following code, how many calls to mystery are made (including the first call) when mystery(0, 4, 5) is executed when arr = {1, 2, 3, 5, 7}?</p>
+            <p> Given the following code, how many calls to mystery are made (including the first call) when mystery(0, 4, 5) is executed when arr = {1, 2, 3, 5, 7}?</p>
             <program language="java"><input>
 private int[] arr;
 

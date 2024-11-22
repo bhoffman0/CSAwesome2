@@ -8,7 +8,7 @@
                 <p>Fix the following code so that it compiles. The code should instantiate an ArrayList of Strings <c>names</c> and fill it with the Strings from the array <c>friends</c>. It should then print out <c>names</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.*;
 
@@ -109,7 +109,7 @@ public class Test1
                 <p>Fix the following class so that it will compile and the method <c>reverse</c> will return an ArrayList containing Integers in the reversed order of the ArrayList parameter <c>list</c>. Hint: for this solution, only one line needs to be added to the for-loop inside of the <c>reverse</c> method.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.*;
 
@@ -264,7 +264,7 @@ public class Test1
                 <p>Fix the following method <c>printEvenIndex</c> so that it will print out the Integers at even indices of the passed-in ArrayList <c>list</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.*;
 
@@ -423,7 +423,7 @@ public class Test1
                 <p>Fix the following method <c>printEvenElements</c> so that it will print out all of the even Integers that are in the passed-in ArrayList <c>list</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.*;
 
@@ -576,7 +576,7 @@ public class Test1
                 <p>Rewrite the following code so that it fills the ArrayList <c>values</c> with the elements of the array <c>nums</c> using a for-each loop instead of a <c>for</c> loop.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.*;
 
@@ -687,7 +687,7 @@ public class Test1
     </exercise>
     <exercise>
       <statement/>
-      <program interactive="" language=""/>
+      <program interactive="" language="" datafile=""/>
       <solution>
                 Declare a variable to hold the sum and initialize it to zero.  Loop through all the values in the ArrayList.  If the current value is negative (less than 0) then add it to the sum.  Return the sum.
                 
@@ -787,7 +787,7 @@ public class Test1
                 <p>Finish the following method ‘’removeLongStrings’’ that checks each element of the passed in ArrayList <c>list</c> and removes any that are strictly longer than 4 characters.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.ArrayList;
 
@@ -957,7 +957,7 @@ public class Test1
                 <p>Fill in the method <c>shiftLeftOne</c> below to shift all of the elements of the passed-in ArrayList <c>list</c> left by one. The original first element should be wrapped to the back of the list after the shift. Ex: {1, 2, 3, 4} should turn turn into {2, 3, 4, 1}</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.ArrayList;
 
@@ -1106,7 +1106,7 @@ public class Test1
                 <p>Finish the method <c>moveSmallest</c> so that it finds the smallest value in the passed-in ArrayList <c>list</c> and moves it to the front of the list.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.List;
 import java.util.ArrayList;
@@ -1285,7 +1285,7 @@ public class Test1
                 <p>Finish the method <c>findLongest</c> to find and return the longest String in the ArrayList of Strings <c>list</c>.</p>
 
     </statement>
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="">
         <input>
 import java.util.ArrayList;
 

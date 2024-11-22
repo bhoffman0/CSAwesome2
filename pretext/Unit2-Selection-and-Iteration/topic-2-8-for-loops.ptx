@@ -6,7 +6,7 @@
     <p>Another type of loop in Java is a <term>for loop</term>. This is usually used when you know how many times you want the loop to execute. It is often a simple <term>counter-controlled loop</term> to do the loop body a set number of times.</p>
     <p>If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. If you have used a language like Scratch or Snap!, you may remember the repeat(n) block where you type in a number of times you want the code to be repeated, just like the AP pseudocode REPEAT block. In fact, almost every programming language has a for or repeat loop.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Comparing App Inventor and Java for loops</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor and Java for loops</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/loopAppInv.png" width="100%%"/>
     </figure>
   </introduction>
@@ -20,13 +20,12 @@ for (initialize; test condition; change)
 }
 </input></program>
             <p>The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Showing how a for loop maps to a while loop</caption><image source="Unit2-Selection-and-Iteration/Figures/compareForAndWhile.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Showing how a for loop maps to a while loop</caption><image source="Unit2-Selection-and-Iteration/Figures/compareForAndWhile.png" width="100%%"/></figure>
             <p>Watch the following <url href="https://www.youtube.com/watch?v=SEDnzXeb2hU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;index=9&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=SEDnzXeb2hU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;index=9&amp;ab_channel=colleenlewis">video</url> which compares a while loop and for loop line by line.</p>
 
     <video youtube="SEDnzXeb2hU"/>
                 <p>Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Control flow in a for loop</caption><image source="Unit2-Selection-and-Iteration/Figures/ForLoopFlow.png" width="45%%"/></figure>
-            <p><problematic refid="id5">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Control flow in a for loop</caption><image source="Unit2-Selection-and-Iteration/Figures/ForLoopFlow.png" width="45%%"/></figure>
 
 <exercise label="forloop">
     <statement>
@@ -147,12 +146,11 @@ for(int i = 1; i &lt;= 10; i++)
 }
 </input></program>
             </note>
-            <p><problematic refid="id7">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="qlb_3_1">
         <statement>
 
-            <p>4-2-4: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 for (int i = 3; i &lt; 8; i++)
 {
@@ -205,7 +203,7 @@ for (int i = 3; i &lt; 8; i++)
     <exercise label="qlb_3_2">
         <statement>
 
-            <p>4-2-5: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 for (int i = 1; i &lt;= 10; i++)
 {
@@ -258,7 +256,7 @@ for (int i = 1; i &lt;= 10; i++)
     <exercise label="qlb_3_3">
         <statement>
 
-            <p>4-2-6: How many times does the following method print a <c>*</c>?</p>
+            <p> How many times does the following method print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 3; i &lt;= 9; i++)
 {
@@ -310,23 +308,22 @@ for (int i = 3; i &lt;= 9; i++)
 <exercise label="print_evens" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
             <p>The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn’t require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the “Check Me” button.</p>
 </statement>
-<blocks><block order="3">
+<blocks><block order="4">
 <cline>public static void printEvens()</cline>
 <cline>{</cline>
 </block><block order="5">
 <cline>   for (int i = 0; i &lt;= 10; i+=2)</cline>
 <cline>   {</cline>
-</block><block order="1">
-<cline>      System.out.println(i);</cline>
-</block><block order="4">
-<cline>   } // end for</cline>
 </block><block order="2">
+<cline>      System.out.println(i);</cline>
+</block><block order="1">
+<cline>   } // end for</cline>
+</block><block order="3">
 <cline>} // end method</cline>
 </block></blocks></exercise>        </subsection>
   <subsection>
             <title>Decrementing Loops</title>
             <p>You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, <c>for (int i=5; i &gt; 0; i--)</c> counts from 5 down to 1.</p>
-            <p><problematic refid="id9">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="lcfcp1">
     <statement>
@@ -452,7 +449,6 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Turtle Loops</title>
-            <p><problematic refid="id11">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!</p>
             <p>(If the code below does not work for you, you can copy the code into  this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit link</url> (refresh page after forking and if it gets stuck) or download the files <url href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
 
@@ -552,7 +548,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id13">|Groupwork|</problematic> Programming Challenge : Turtles Drawing Shapes</title>
+            <title>Programming Challenge : Turtles Drawing Shapes</title>
             <p>In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit link</url> to have yertle draw the following shapes using loops. We encourage you to work in pairs.</p>
             <p><ol marker="1">
                 <li>
@@ -709,7 +705,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP4-2-1">
         <statement>
 
-            <p>4-2-12: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 int count = 0, sum = 0;
 while (count &lt;= 6)
@@ -774,7 +770,7 @@ III. int sum = 0;
     <exercise label="AP4-2-2">
         <statement>
 
-            <p>4-2-13: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 int result = 1;
 for(int i = 3; i &lt; 6; i += 2)
