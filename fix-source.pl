@@ -49,8 +49,25 @@ while (<>) {
   s{^.. (image:: (\.\./)+_static/time)}{.. .. $1}g;
   s{^.. (image:: (\.\./)+_static/CSAwesomeLogo.png)}{.. .. $1}g;
 
+
+  # Also remove .. qnum:: + 2 lines that follow it.
+  s/^(\.\.\s+)?qnum::.*//g;
+  s/.*:prefix:.*//g;
+  s/.*:start:.*//g;
+  
   # Also remove the time elements for now.
   /^(\.\.\s+)?(\|Time\d+\|)/ and next;
+
+  # Remove Exercise and Groupwork images
+  s/\|CodingEx\|.*//g;
+  s/\|Exercise\|.*//g;
+  s/\|Groupwork\|\s+//g;
+
+  # Attributes stdin and datafile are not being generated in XML
+  # so put in some placeholders in the :language: attr to replace later on.
+  # didn't really work
+  #s/(\s*):stdin:\s*(.*)\s*/\n$1stdin=\"$2\"/g; 
+  #s/(\s*):datafile:\s*(.*)\s*/\n$1datafile=\"$2\"/g;
 
   if (/^\.\. youtube::/i) {
     $in_youtube = 1;

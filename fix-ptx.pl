@@ -17,9 +17,20 @@ if ($ARGV[0] eq "--debug") {
 while (<>) {
 
   # Translate xml:ids that were generated in the docs to the ones used in the xrefs.
-  s/xml:id="_briceida-mariscal-id1(-\d+)?"/xml:id="interviewees_b_-mariscal"/g;
-  s/xml:id="_carla-de-lira-id1(-\d+)?"/xml:id="interviewees_c_-de_-lira"/g;
-  s/xml:id="_camille-mbayo-id1(-\d+)?"/xml:id="interviewees_c_-mbayo"/g;
+  s/ref=".*mariscal"/ref="briceida-mariscal-id1"/g;
+  s/ref=".*lira"/ref="carla-de-lira-id1"/g;
+  s/ref=".*mbayo"/ref="camille-mbayo-id1"/g;
+
+  # Remove the hard-coded numbering of exercises Q6: or 1-1-1:
+  s/Q\-\d+\://g;
+  s/\d+\-\d+\-\d+\://g;
+  s/Figure \d\: //g;
+
+  # Replace problematic images - maybe get rid of writing too
+  #s/<problematic refid="id\d+">\|CodingEx\|<\/problematic>/<image class="imgex" source="_static\/codingExercise.png" width="5%" alt="coding exercise"\/>/g;
+  #s/<problematic refid="id\d+">\|Exercise\|<\/problematic>/<image class="imgex" source="_static\/exercise.png" width="5%" alt="exercise"\/>/g;
+  #s/<problematic refid="id\d+">\|Groupwork\|<\/problematic>/<image class="imgex" source="_static\/groupwork.png" width="5%" alt="groupwork"\/>/g;
+  #s/<problematic refid="id\d+">\|.*\|<\/problematic>//g;
 
   # For tests, put in time-limit to have it generate as a test. Pretests are no-feedback.
   # There are some with 'timelimit': 45, but we could make them all untimed.
