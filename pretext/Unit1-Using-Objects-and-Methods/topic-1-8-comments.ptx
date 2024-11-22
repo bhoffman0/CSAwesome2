@@ -127,7 +127,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Try to break the preconditions of the Turtle forward method below. Can you make it go completely off screen by changing the number of pixels given to the forward method in line 13? What happens if you put in negative numbers?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;

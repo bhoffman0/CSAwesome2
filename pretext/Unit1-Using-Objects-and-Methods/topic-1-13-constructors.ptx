@@ -191,7 +191,7 @@ Turtle t2 = new Turtle(50, 100, world1);
             <p>Try changing the code below to create a <c>World</c> object with 300x400 pixels. Where is the turtle placed by default? What arguments do you need to pass to the <c>Turtle</c> constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the arguments?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -518,7 +518,7 @@ Turtle t2 = new Turtle(world1);
             <p>Debug the following code.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -614,7 +614,7 @@ public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h
             <p>Use the CustomTurtle constructors to create the following turtles.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;

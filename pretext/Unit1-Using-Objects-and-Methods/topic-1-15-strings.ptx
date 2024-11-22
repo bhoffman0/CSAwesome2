@@ -755,7 +755,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Write code in the pigLatin method below to use the substring method to transform a word given as its argument into Pig Latin where the first letter is put at the end and “ay” is added. The word pig is igpay in Pig Latin. Change the input below to try it on other words.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" stdin="pig">
         <input>
 import java.util.Scanner;
 
