@@ -149,10 +149,9 @@
             <p>The AP exam will never use the prefix form of these operators nor will it use
                 the postfix operators in a context where the value of the expression matters.</p>
         </note>
-    <p><problematic refid="id1">|Exercise|</problematic> <term>Check Your Understanding</term></p>
   </introduction>
   <subsection>
-            <title><problematic refid="id3">|Groupwork|</problematic> Code Tracing Challenge and Operators Maze</title>
+            <title>Code Tracing Challenge and Operators Maze</title>
             <p>Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end.</p>
             <p><term>Code Tracing</term> is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does.</p>
             <p>Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column or row in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.</p>
@@ -174,7 +173,7 @@ z--;
 
 <exercise label="challenge1-6">
     <statement>
-            <p>1-6-4: Write your trace table for x, y, and z here showing their results after each line of code.</p>
+            <p> Write your trace table for x, y, and z here showing their results after each line of code.</p>
 
     </statement>
 </exercise>
@@ -245,7 +244,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="q_trace_increment">
         <statement>
 
-        <p>1-6-2: What are the values of x, y, and z after the following code executes?</p>
+        <p> What are the values of x, y, and z after the following code executes?</p>
         <program language="java"><input>
 int x = 0;
 int y = 1;
@@ -308,7 +307,7 @@ z+=y;
     <exercise label="q_trace_increment2">
         <statement>
 
-        <p>1-6-3: What are the values of x, y, and z after the following code executes?</p>
+        <p> What are the values of x, y, and z after the following code executes?</p>
         <program language="java"><input>
 int x = 3;
 int y = 5;

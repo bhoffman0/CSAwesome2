@@ -16,11 +16,9 @@
         </ol>
   </p>
     <p>The keyword super is very useful in allowing us to first execute the superclass method and then add on to it in the subclass.</p>
-    <p><problematic refid="id1">|CodingEx|</problematic> <term>Coding Exercise</term></p>
     <p>In the example below, the <c>Student</c> class overrides the <c>getFood</c> method of the <c>Person</c> class, and it uses <c>super.getFood()</c> to call the <c>Person</c> <c>getFood</c> method before adding on to it. Here, a <c>Person</c> is associated with the food “Hamburger” and a <c>Student</c> is associated with “Hamburger” and “Taco”.</p>
     <p>How does this work?  Remember that an object always keeps a reference to the class that created it and always looks for a method during execution starting in the class that created it.  If it finds the method in the class that created it, it will execute that method.  If it doesn’t find it in the class that created it, it will look at the parent of that class.  It will keep looking up the ancestor chain until it finds the method, all the way up to the Object class.  The method has to be there, or else the code would not have compiled.</p>
     <p>When the student <c>getFood()</c> method is executed it will start executing the <c>getFood</c> method in <c>Student</c>.  When it gets to <c>super.getFood()</c> it will execute the <c>getFood</c> method in <c>Person</c>.  This method will return the string <c>"Hamburger"</c>.  Then execution will continue in the <c>getFood</c> method of <c>Student</c> and  return the string <c>"Hamburger and Taco"</c>.</p>
-    <p><problematic refid="id3">|Exercise|</problematic> <term>Check your understanding</term></p>
     <p>You can step through this example using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A+++++System.out.print(%22A%22)%3B%0A+++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A+++++super.methodTwo()%3B%0A+++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=10">Super Example</url>.</p>
     <p>The <c>toString</c> method is commonly overridden. A subclass can override
             <c>toString</c> but in its new <c>toString</c> method, it can call
@@ -37,7 +35,7 @@ public String toString()
   </program>
   </introduction>
   <subsection>
-            <title><problematic refid="id5">|Groupwork|</problematic> Programming Challenge : Customer Info</title>
+            <title>Programming Challenge : Customer Info</title>
             <p>The <c>Customer</c> class below keeps track of the names and addresses of customers. It has a <c>toString</c> method that prints out the name and address of the object.</p>
             <p><ol marker="1">
                 <li>
@@ -267,7 +265,7 @@ class Student extends Person
     <exercise label="qoo_6s">
         <statement>
 
-        <p>9-4-2: Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
+        <p> Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
         <program language="java"><input>
 public class Base
 {

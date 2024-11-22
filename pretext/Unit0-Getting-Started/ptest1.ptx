@@ -10,7 +10,7 @@
     <exercise label="qpret_1">
         <statement>
 
-            <p>1-1-6-1: Given the following code segment, what is printed when it is executed?</p>
+            <p> Given the following code segment, what is printed when it is executed?</p>
             <program language="java"><input>
 String test = "123456";
 for (int index = 0; index &lt; test.length() - 1; index = index + 2)
@@ -73,7 +73,7 @@ for (int index = 0; index &lt; test.length() - 1; index = index + 2)
     <exercise label="qpret_2">
         <statement>
 
-            <p>1-1-6-2:    Consider the following data field and method <c>findLongest</c>. Method <c>findLongest</c> is intended to find the longest consecutive block of the value target occurring in the array nums; however, <c>findLongest</c> does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call <c>findLongest(10)</c> should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to <c>findLongest</c>?</p>
+            <p>    Consider the following data field and method <c>findLongest</c>. Method <c>findLongest</c> is intended to find the longest consecutive block of the value target occurring in the array nums; however, <c>findLongest</c> does not work as intended. For example, if the array nums contains the values [7, 10, 10, 15, 15, 15, 15, 10, 10, 10, 15, 10, 10], the call <c>findLongest(10)</c> should return 3, the length of the longest consecutive block of 10s.  Which of the following best describes the value returned by a call to <c>findLongest</c>?</p>
             <blockquote>
                 <program language="java"><input>
 private int[] nums;
@@ -162,7 +162,7 @@ public int findLongest(int target)
     <exercise label="qpret_3">
         <statement>
 
-            <p>1-1-6-3: Given the following code segment, what are the values of <c>var1</c> and <c>var2</c> after the while loop finishes?</p>
+            <p> Given the following code segment, what are the values of <c>var1</c> and <c>var2</c> after the while loop finishes?</p>
             <program language="java"><input>
 int var1 = 0;
 int var2 = 2;
@@ -228,7 +228,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
     <exercise label="qpret_4">
         <statement>
 
-            <p>1-1-6-4: At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to <c>grade</c> for a given integer score?</p>
+            <p> At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 inclusive is a B, 75 to 83 inclusive is a C, and below 75 is an F.  Which of the following code segments will assign the correct string to <c>grade</c> for a given integer score?</p>
             <program language="java"><input>
 I.  if (score &gt;= 93)
        grade = "A";
@@ -312,7 +312,7 @@ III. if (score &gt;= 93)
     <exercise label="qpret_5">
         <statement>
 
-            <p>1-1-6-5: Given the following code segment, which of the following is this equivalent to?</p>
+            <p> Given the following code segment, which of the following is this equivalent to?</p>
             <program language="java"><input>
 if ( x &gt; 0) x = -x;
 if (x &lt; 0) x = 0;
@@ -372,7 +372,7 @@ if (x &lt; 0) x = 0;
     <exercise label="qpret_6">
         <statement>
 
-            <p>1-1-6-6: Susan is 5 years older than Matt. Three years from now Susan’s age will be twice Matt’s age.  What should be in place of <c>condition</c> in the code segment below to solve this problem?</p>
+            <p> Susan is 5 years older than Matt. Three years from now Susan’s age will be twice Matt’s age.  What should be in place of <c>condition</c> in the code segment below to solve this problem?</p>
             <program language="java"><input>
 for (int s = 1; s &lt;= 100; s++) {
    for (int m = 1; m &lt;= 100; m++) {
@@ -436,7 +436,7 @@ for (int s = 1; s &lt;= 100; s++) {
     <exercise label="qpret_7">
         <statement>
 
-            <p>1-1-6-7: Given the following code segment, what is printed when it executes?</p>
+            <p> Given the following code segment, what is printed when it executes?</p>
             <program language="java"><input>
  public static void test()
  {
@@ -518,7 +518,7 @@ for (int s = 1; s &lt;= 100; s++) {
     <exercise label="qpret_8">
         <statement>
 
-            <p>1-1-6-8: Given the following incomplete class declaration, which of the following can be used to replace the missing code in the <c>advance</c> method so that it will correctly update the time?</p>
+            <p> Given the following incomplete class declaration, which of the following can be used to replace the missing code in the <c>advance</c> method so that it will correctly update the time?</p>
             <program language="java"><input>
 public class TimeRecord
 {
@@ -614,7 +614,7 @@ public class TimeRecord
     <exercise label="qpret_9">
         <statement>
 
-            <p>1-1-6-9: Which of the following expressions is equivalent to the following?</p>
+            <p> Which of the following expressions is equivalent to the following?</p>
             <program language="java"><input>
 !(c || d)
 </input></program>
@@ -673,7 +673,7 @@ public class TimeRecord
     <exercise label="qpret_10">
         <statement>
 
-            <p>1-1-6-10: Which of the following will cause an infinite loop when <c>temp</c> is greater than zero and <c>a</c> is an array of integers.</p>
+            <p> Which of the following will cause an infinite loop when <c>temp</c> is greater than zero and <c>a</c> is an array of integers.</p>
             <program language="java"><input>
 for (int k = 0; k &lt; a.length; k++ )
 {
@@ -738,7 +738,7 @@ for (int k = 0; k &lt; a.length; k++ )
     <exercise label="qpret_11">
         <statement>
 
-            <p>1-1-6-11: Given the following method declaration, and <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
+            <p> Given the following method declaration, and <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
             <program language="java"><input>
 public static int m1(int[] a)
 {
@@ -801,7 +801,7 @@ public static int m1(int[] a)
     <exercise label="qpret_12">
         <statement>
 
-            <p>1-1-6-12: Given the following code segment, what will the value of <c>s1</c> be after this executes?</p>
+            <p> Given the following code segment, what will the value of <c>s1</c> be after this executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -866,7 +866,7 @@ s4 = null;
     <exercise label="qpret_13">
         <statement>
 
-            <p>1-1-6-13: Which of the following is printed as the result of the call <c>mystery(1234);</c>?</p>
+            <p> Which of the following is printed as the result of the call <c>mystery(1234);</c>?</p>
             <program language="java"><input>
 //precondition:  x &gt;=0
 public void mystery (int x)
@@ -937,7 +937,7 @@ public void mystery (int x)
     <exercise label="qpret_14">
         <statement>
 
-            <p>1-1-6-14: Under which of these conditions will a sequential search be faster than a binary search?</p>
+            <p> Under which of these conditions will a sequential search be faster than a binary search?</p>
 
         </statement>
 <choices>
@@ -993,7 +993,7 @@ public void mystery (int x)
     <exercise label="qpret_15">
         <statement>
 
-            <p>1-1-6-15: Given the following code segment, what will be printed when it is executed?</p>
+            <p> Given the following code segment, what will be printed when it is executed?</p>
             <program language="java"><input>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(new Integer(1));
@@ -1059,7 +1059,7 @@ System.out.println(list1);
     <exercise label="qpret_16">
         <statement>
 
-            <p>1-1-6-16: Given the following code segment, What are the contents of <c>mat</c> after the code segment has been executed?</p>
+            <p> Given the following code segment, What are the contents of <c>mat</c> after the code segment has been executed?</p>
             <program language="java"><input>
 int [][] mat = new int [3][4];
 for (int row = 0; row &lt; mat.length; row++)
@@ -1131,7 +1131,7 @@ for (int row = 0; row &lt; mat.length; row++)
     <exercise label="qpret_17">
         <statement>
 
-            <p>1-1-6-17: Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
+            <p> Given the following class declarations, and assuming that the following declaration appears in a client program: <c>Base b = new Derived();</c>, what is the result of the call <c>b.methodOne();</c>?</p>
             <program language="java"><input>
 public class Base
 {
@@ -1219,7 +1219,7 @@ public class Derived extends Base
     <exercise label="qpret_18">
         <statement>
 
-            <p>1-1-6-18: Given the following code segment, what are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
+            <p> Given the following code segment, what are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
             <program language="java"><input>
 int a = 10, b = 3, t;
 for (int i=1; i&lt;=6; i++)
@@ -1284,7 +1284,7 @@ for (int i=1; i&lt;=6; i++)
     <exercise label="qpret_19">
         <statement>
 
-            <p>1-1-6-19: What is data encapsulation and how does Java implement it?</p>
+            <p> What is data encapsulation and how does Java implement it?</p>
 
         </statement>
 <choices>
@@ -1340,7 +1340,7 @@ for (int i=1; i&lt;=6; i++)
     <exercise label="qpret_20">
         <statement>
 
-            <p>1-1-6-20: Which of the following reasons for using an inheritance heirarchy are valid?</p>
+            <p> Which of the following reasons for using an inheritance heirarchy are valid?</p>
             <program language="java"><input>
 I.   Methods from a superclass can be used in a subclass without
      rewriting or copying code.

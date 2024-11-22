@@ -155,12 +155,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id1">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="qss_1">
         <statement>
 
-            <p>7-5-4: Which will cause the <em>longest</em> execution of a sequential search looking for a value in an array of integers?</p>
+            <p> Which will cause the <em>longest</em> execution of a sequential search looking for a value in an array of integers?</p>
 
         </statement>
 <choices>
@@ -207,7 +206,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qss_2">
         <statement>
 
-            <p>7-5-5: Which will cause the <em>shortest</em> execution of a sequential search looking for a value in an array of integers?</p>
+            <p> Which will cause the <em>shortest</em> execution of a sequential search looking for a value in an array of integers?</p>
 
         </statement>
 <choices>
@@ -564,12 +563,11 @@ public class RunestoneTests extends CodeTestHelper
                 
             </tabular></table>
             <p>Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log<subscript>2</subscript>n as n, the data size, grows and see that binary search runs much faster for any n.  You don’t need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n.</p>
-            <p><problematic refid="id3">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="qbs_1">
         <statement>
 
-            <p>7-5-9: Which will cause the <em>shortest</em> execution of a binary search looking for a value in an array of integers?</p>
+            <p> Which will cause the <em>shortest</em> execution of a binary search looking for a value in an array of integers?</p>
 
         </statement>
 <choices>
@@ -616,7 +614,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="qbs_2">
         <statement>
 
-            <p>7-5-10: Which of the following conditions must be true in order to search for a value using binary search?</p>
+            <p> Which of the following conditions must be true in order to search for a value using binary search?</p>
             <program language="java"><input>
 I. The values in the array must be integers.
 II. The values in the array must be in sorted order.
@@ -668,7 +666,7 @@ III. The array must not contain duplicate values.
     <exercise label="qbs_3">
         <statement>
 
-            <p>7-5-11: How many times would the loop in the binary search run for an array  int[] arr = {2, 10, 23, 31, 55, 86} with binarySearch(arr,55)?</p>
+            <p> How many times would the loop in the binary search run for an array  int[] arr = {2, 10, 23, 31, 55, 86} with binarySearch(arr,55)?</p>
 
         </statement>
 <choices>
@@ -706,7 +704,7 @@ III. The array must not contain duplicate values.
     <exercise label="qbs_4">
         <statement>
 
-            <p>7-5-12: If you had an ordered array of size 500, what is the maximum number of iterations required to find an element with binary search?</p>
+            <p> If you had an ordered array of size 500, what is the maximum number of iterations required to find an element with binary search?</p>
 
         </statement>
 <choices>
@@ -751,7 +749,7 @@ III. The array must not contain duplicate values.
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id5">|Groupwork|</problematic> Programming Challenge : Search Runtimes</title>
+            <title>Programming Challenge : Search Runtimes</title>
             <p>Let’s go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an <c>ArrayList</c>. The advantage of using an <c>ArrayList</c> instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.</p>
             <p>In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
             <p>Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use <c>size</c> and <c>get(i)</c> instead of [] to get an element in the <c>ArrayList</c> dictionary at index i. You will need to use the <c>equals</c> and <c>compareTo</c> methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.</p>
@@ -869,7 +867,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <exercise label="challenge7-5-binary-search">
     <statement>
-            <p>7-5-14: After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
+            <p> After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
 
     </statement>
 </exercise>

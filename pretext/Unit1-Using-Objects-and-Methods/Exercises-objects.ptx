@@ -14,7 +14,7 @@
 
             <dl>
                 <li>
-                    <title>1-25-1:  A student has created a Cat class. The class contains variables to represent the following.</title>
+                    <title>  A student has created a Cat class. The class contains variables to represent the following.</title>
                     
                         <p><ul>
                             <li>
@@ -89,7 +89,7 @@
 
             <dl>
                 <li>
-                    <title>1-25-2:  A student has created a Movie class. The class contains variables to represent the following.</title>
+                    <title>  A student has created a Movie class. The class contains variables to represent the following.</title>
                     
                         <p><ul>
                             <li>
@@ -162,7 +162,7 @@
     <exercise label="qse_5">
         <statement>
 
-            <p>1-25-3: Which of the following code segments will correctly create an instance of a Person object?</p>
+            <p> Which of the following code segments will correctly create an instance of a Person object?</p>
             <program language="java"><input>
 public class Person
 {
@@ -231,7 +231,7 @@ public class Person
     <exercise label="qse_2">
         <statement>
 
-            <p>1-25-4: What is the value of len after the following executes?</p>
+            <p> What is the value of len after the following executes?</p>
             <program language="java"><input>
 String s1 = "Hey, buddy!";
 int len = s1.length();
@@ -273,7 +273,7 @@ int len = s1.length();
     <exercise label="qse_3">
         <statement>
 
-            <p>1-25-5: What is the value of pos after the following code executes?</p>
+            <p> What is the value of pos after the following code executes?</p>
             <program language="java"><input>
 String s1 = "ac ded ca";
 int pos = s1.indexOf("d");
@@ -324,7 +324,7 @@ int pos = s1.indexOf("d");
     <exercise label="qse_4">
         <statement>
 
-            <p>1-25-6: What is the value of s1 after the following code executes?</p>
+            <p> What is the value of s1 after the following code executes?</p>
             <program language="java"><input>
 String s1 = "Hey";
 String s2 = s1.substring(0,1);
@@ -380,7 +380,7 @@ String s3 = s2.toLowerCase();
     <exercise label="AP2-2-5">
         <statement>
 
-            <p>1-25-7:  Consider the following class.  Which of the following code segments would successfully create a new Movie object?</p>
+            <p>  Consider the following class.  Which of the following code segments would successfully create a new Movie object?</p>
             <blockquote>
                 <program language="java"><input>
 public class Movie
@@ -463,7 +463,7 @@ public class Movie
     <exercise label="qse_6">
         <statement>
 
-            <p>1-25-8: Given the BankAccount class definition below, what is the output of the code in the main method?</p>
+            <p> Given the BankAccount class definition below, what is the output of the code in the main method?</p>
             <program language="java"><input>
 public class BankAccount
 {
@@ -546,7 +546,7 @@ public class BankAccount
     <exercise label="qve_new6">
         <statement>
 
-            <p>1-25-9: Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
+            <p> Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
             <blockquote>
                 <program language="java"><input>
 double value = Math.random();
@@ -599,7 +599,7 @@ int num = (int) (value * 5) + 5;
     <exercise label="qve_new8">
         <statement>
 
-            <p>1-25-10: Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
+            <p> Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
             <blockquote>
                 <program language="java"><input>
 double value = Math.random();
@@ -652,7 +652,7 @@ int num = (int) (value * 11) - 5;
     <exercise label="qsm_1">
         <statement>
 
-            <p>1-25-11: After the following code is executed, which of I, II and/or III will evaluate to true?</p>
+            <p> After the following code is executed, which of I, II and/or III will evaluate to true?</p>
             <program language="java"><input>
 String s1 = "xyz";
 String s2 = s1;
@@ -717,7 +717,7 @@ III. s1 == s3
     <exercise label="qsm_2">
         <statement>
 
-            <p>1-25-12: What is output from the following code?</p>
+            <p> What is output from the following code?</p>
             <program language="java"><input>
 String s = "Georgia Tech";
 String s1 = s.substring(0,7);
@@ -780,7 +780,7 @@ System.out.println(s3);
     <exercise label="qsm_3">
         <statement>
 
-            <p>1-25-13: Given the following code segment, what is the value of s1 after the code executes?</p>
+            <p> Given the following code segment, what is the value of s1 after the code executes?</p>
             <program language="java"><input>
 String s1 = "Hi There";
 String s2 = s1;
@@ -845,7 +845,7 @@ s4 = null;
     <exercise label="qsm_4">
         <statement>
 
-            <p>1-25-14: There is a method called checkString that determines whether a string is the same forwards and backwards. The following data set inputs can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?</p>
+            <p> There is a method called checkString that determines whether a string is the same forwards and backwards. The following data set inputs can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?</p>
             <program language="java"><input>
 Data Set 1    Data Set 2
 aba               bcb
@@ -907,7 +907,7 @@ aBa
     <exercise label="qsm_5">
         <statement>
 
-            <p>1-25-15: A car dealership needs a program to store information about the cars for sale.For each car, they want to keep track of the following information: the number of doors (2 or 4),its average number of miles per gallon, and whether the car has air conditioning. Which of the following is the best design?</p>
+            <p> A car dealership needs a program to store information about the cars for sale.For each car, they want to keep track of the following information: the number of doors (2 or 4),its average number of miles per gallon, and whether the car has air conditioning. Which of the following is the best design?</p>
 
         </statement>
 <choices>
@@ -963,7 +963,7 @@ aBa
     <exercise label="qsm_6">
         <statement>
 
-            <p>1-25-16: Assume that SomeClass and MainClass are properly defined in separate files. What is the output of the code in main()?</p>
+            <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of the code in main()?</p>
             <program language="java"><input>
 class SomeClass
 {
@@ -1037,7 +1037,7 @@ public class MainClass
     <exercise label="qsm_7">
         <statement>
 
-            <p>1-25-17: What is the output of the following code?</p>
+            <p> What is the output of the following code?</p>
             <program language="java"><input>
 public class Test
 {
@@ -1104,7 +1104,7 @@ public class Test
     <exercise label="qsh_1">
         <statement>
 
-            <p>1-25-18: Given the following code segment, which of the following is true?</p>
+            <p> Given the following code segment, which of the following is true?</p>
             <program language="java"><input>
 String s1 = new String("Hi There");
 String s2 = new String("Hi There");
@@ -1170,7 +1170,7 @@ IV.  (s2.equals(s3))
     <exercise label="qsh_2">
         <statement>
 
-            <p>1-25-19: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 System.out.println("13" + 5 + 3);
 </input></program>
@@ -1229,7 +1229,7 @@ System.out.println("13" + 5 + 3);
     <exercise label="qsh_4">
         <statement>
 
-            <p>1-25-20: Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
+            <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
             <program language="java"><input>
 class SomeClass
 {
@@ -1291,7 +1291,7 @@ public class MainClass
     <exercise label="qsh_5">
         <statement>
 
-            <p>1-25-21: Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
+            <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
             <program language="java"><input>
 class SomeClass
 {

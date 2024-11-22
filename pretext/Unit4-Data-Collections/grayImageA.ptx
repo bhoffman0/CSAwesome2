@@ -31,7 +31,7 @@ public class GrayImage
     </program>
     <p><term>Part a.</term>  Write the method <c>countWhitePixels</c> that returns the number of pixels in the image that contain the value <c>WHITE</c>.  For example, assume that <c>pixelValues</c> contains the following image.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Example 2D array</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example 2D array</caption>
       <image source="Unit4-Data-Collections/Figures/grayImageA.png" width="54%%"/>
     </figure>
     <p>A call to <c>countWhitePixels</c> method would return 5 because there are 5 entries (shown in boldface)
@@ -69,7 +69,7 @@ public class GrayImage
     <exercise label="frgia_1">
         <statement>
 
-                <p>9-10-1: What kind of loop could you use to solve this problem?</p>
+                <p> What kind of loop could you use to solve this problem?</p>
 
         </statement>
 <choices>
@@ -109,7 +109,7 @@ public class GrayImage
     <exercise label="frgia_1.5">
         <statement>
 
-                <p>9-10-2: What is another kind of loop you could use to solve this problem?</p>
+                <p> What is another kind of loop you could use to solve this problem?</p>
 
         </statement>
 <choices>
@@ -195,7 +195,7 @@ public class Test
 
 <exercise label="gray_image_A">
     <statement>
-            <p>9-10-5: Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
+            <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
 </exercise>
@@ -204,7 +204,7 @@ public class Test
     <exercise label="2012GreyScale_alg_ans">
         <statement>
 
-                <p>9-10-6: Which class is <c>countWhitePixels</c> a method in?</p>
+                <p> Which class is <c>countWhitePixels</c> a method in?</p>
 
         </statement>
 <choices>
@@ -253,7 +253,7 @@ public class Test
     <exercise label="2012GreyScale_alg1_ans">
         <statement>
 
-                <p>9-10-7: What array will you be modifying in this method?</p>
+                <p> What array will you be modifying in this method?</p>
 
         </statement>
 <choices>
@@ -304,7 +304,7 @@ public class Test
     <exercise label="2012GreyScale_alg2_ans">
         <statement>
 
-                <p>9-10-8: What could you write for the outer for loop so that it iterates through the rows of the array?</p>
+                <p> What could you write for the outer for loop so that it iterates through the rows of the array?</p>
 
         </statement>
 <choices>
@@ -353,7 +353,7 @@ public class Test
     <exercise label="2012GreyScale_alg3_ans">
         <statement>
 
-                <p>9-10-9: What could you write for the inner for loop so that it iterates through the columns of the array?</p>
+                <p> What could you write for the inner for loop so that it iterates through the columns of the array?</p>
 
         </statement>
 <choices>
@@ -402,7 +402,7 @@ public class Test
     <exercise label="2012GreyScale_alg4_ans">
         <statement>
 
-                <p>9-10-10: how could you check if the current value is white?</p>
+                <p> how could you check if the current value is white?</p>
 
         </statement>
 <choices>
@@ -452,7 +452,7 @@ public class Test
     <exercise label="2012GreyScale_alg5_ans">
         <statement>
 
-                <p>9-10-11: What could you write for the outer for loop so that it iterates through the rows of the array?</p>
+                <p> What could you write for the outer for loop so that it iterates through the rows of the array?</p>
 
         </statement>
 <choices>
@@ -501,7 +501,7 @@ public class Test
     <exercise label="2012GreyScale_alg6_ans">
         <statement>
 
-                <p>9-10-12: What could you write for the inner for loop so that it iterates through the columns of the array?</p>
+                <p> What could you write for the inner for loop so that it iterates through the columns of the array?</p>
 
         </statement>
 <choices>
@@ -550,7 +550,7 @@ public class Test
     <exercise label="2012GreyScale_alg7_ans">
         <statement>
 
-                <p>9-10-13: How will you check if pv is white?</p>
+                <p> How will you check if pv is white?</p>
 
         </statement>
 <choices>

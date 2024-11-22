@@ -6,14 +6,14 @@
     <p><term>If statements</term> are found in all programming languages as a way to choose between different paths in an algorithm. An if statement is a type of <term>selection</term> statement that changes the sequential execution. It affects the flow of control by executing different segments of code based on the value of a <term>Boolean expression</term>.</p>
     <p>If you took an AP CSP course or used a block programming language like Scratch, you’ve probably seen if blocks or statements before.  Here’s a comparison of ifs in App Inventor blocks, AP CSP block code and pseudocode, and Java ifs.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Comparison of App Inventor if block, AP CSP ifs, and Java if statements</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparison of App Inventor if block, AP CSP ifs, and Java if statements</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/BlocksIfComparison.png" width="100%%"/>
     </figure>
   </introduction>
   <subsection>
             <title>One-way selection</title>
             <p>A one-way selection (if statement) is used when there is a segment of code (called the <term>body</term> of the if statement) to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true. If the Boolean expression is false, the body of the if statement is skipped and the program continues with the next statement after the if statement.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%%"/></figure>
             <p>The open curly brace <c>{</c> and a close curly brace <c>}</c> are used to group a block of statements together as the body of the if statement.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.</p>
             <program language="java"><input>
 // A single if statement
@@ -79,15 +79,13 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id4">|Exercise|</problematic> <term>Check your understanding</term></p>
 
         <exercise label="iffalseOutput">
             <statement>
-    <p>2-3-2: Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>        </subsection>
   <subsection>
             <title>Relational Operators in If Statements</title>
             <p>Most if statements have a boolean condition that uses relational operators like ==, !=, &lt;, &gt;, &lt;=, &gt;=, as we saw in the last lesson.</p>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="if-relational">
     <statement>
@@ -257,12 +255,11 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>A common mistake in if statements is using = instead of == in the condition by mistake. You should always <term>use ==</term>, not =, in the condition of an if statement to test a variable. One equal sign (=) assigns a value to a variable, and two equal signs (==) test if a variable has a certain value.</p>
             </note>
-            <p><problematic refid="id8">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="mcq-if-trace">
         <statement>
 
-            <p>2-3-4: Consider the following code segment. What is printed as a result of executing the code segment?</p>
+            <p> Consider the following code segment. What is printed as a result of executing the code segment?</p>
             <program language="java"><input>
 int x = 3;
 if (x &gt; 2)
@@ -352,7 +349,7 @@ else
 </input></program>
             <p>A two-way selection (if-else statement) is used when there are two segments of code—one to be executed when the Boolean expression is true and another segment for when the Boolean expression is false. In this case, the body of the if is executed when the Boolean expression is true, and the body of the else is executed when the Boolean expression is false.</p>
             <p>The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%%"/></figure>
 
 <exercise label="ifHeads">
     <statement>
@@ -400,13 +397,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id10">|Exercise|</problematic> <term>Check your understanding</term></p>
 
         <exercise label="falseElse">
             <statement>
-    <p>2-3-6: Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
-            <p><problematic refid="id12">|CodingEx|</problematic> <term>Coding Exercise</term></p>
-            <p><problematic refid="id14">|CodingEx|</problematic> <term>Coding Exercise</term></p>
+    <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
         </subsection>
   <subsection>
             <title>Math.random() in if Statements</title>
@@ -434,12 +428,11 @@ else
     System.out.println("Event did not happen");
 }
 </input></program>
-            <p><problematic refid="id16">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="mcq-rnd-ifs">
         <statement>
 
-            <p>2-3-10: The weather report says there is approximately 25% chance of rain today. Which of the following if statements would print Rain or No Rain to simulate a day with the correct percentages following the weather report?</p>
+            <p> The weather report says there is approximately 25% chance of rain today. Which of the following if statements would print Rain or No Rain to simulate a day with the correct percentages following the weather report?</p>
 </statement><choices><choice correct="yes"><statement id="mcq-rnd-ifs_opt_a">            <program language="java"><input>
 if (Math.random() &lt; 0.25) { System.out.println("Rain"); }
 </input></program>
@@ -463,7 +456,6 @@ if (Math.random() &lt; 0.75) { System.out.println("No Rain"); }
 </feedback></choice></choices>
 
     </exercise>
-            <p><problematic refid="id18">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="randomShapes">
     <statement>
@@ -562,7 +554,6 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </blockquote>
-            <p><problematic refid="id20">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="if-missing-curlies">
     <statement>
@@ -616,7 +607,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id22">|Groupwork|</problematic> Programming Challenge: Magic 8 Ball</title>
+            <title>Programming Challenge: Magic 8 Ball</title>
             <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%%" alt="Magic 8 Ball"/>
             <p>Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like <c>Signs point to yes!</c>, <c>Very doubtful</c>, etc. If you’ve never seen a Magic 8 ball, check out this <url href="https://magic-8ball.com/" visual="https://magic-8ball.com/">simulator</url>. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the <url href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" visual="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html">Math lesson</url> and remember the formula <c>(int) (Math.random() * max) + min</c>.</p>
 
@@ -796,7 +787,7 @@ else
     <exercise label="AP2-3-1">
         <statement>
 
-            <p>2-3-14: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 int speed = 35;
 boolean rain = false;
@@ -841,7 +832,7 @@ System.out.println(speed);
     <exercise label="AP2-3-2">
         <statement>
 
-            <p>2-3-15: Consider the following code segment.</p>
+            <p> Consider the following code segment.</p>
             <program language="java"><input>
 int x = 5;
 
@@ -880,7 +871,7 @@ System.out.print(2*x + 1);
     <exercise label="AP2-3-if-else">
         <statement>
 
-            <p>2-3-16: Consider the following code segment where a range of “High”, “Middle”, or “Low” is being determined
+            <p> Consider the following code segment where a range of “High”, “Middle”, or “Low” is being determined
                 where x is an int and a “High” is 80 and above, a “Middle” is between 50 - 79, and “Low” is below 50.</p>
             <program language="java"><input>
 if (x &gt;= 80)

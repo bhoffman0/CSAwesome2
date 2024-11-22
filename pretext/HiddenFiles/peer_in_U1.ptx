@@ -6,7 +6,7 @@
     <exercise label="bs-printstatements-02-17">
         <statement>
 
-        <p>16-6-1: What is the output of this code?</p>
+        <p> What is the output of this code?</p>
         <program language="java"><input>
 int x = 3;
 int y = 2;
@@ -68,7 +68,7 @@ System.out.println(z);
     <exercise label="bs-binary-05-05">
         <statement>
 
-        <p>16-6-2: What does this data stored in a computer represent (in binary)?</p>
+        <p> What does this data stored in a computer represent (in binary)?</p>
         <program language="java"><input>
 11111111
 </input></program>
@@ -126,7 +126,7 @@ System.out.println(z);
     <exercise label="bs-chromakey-17-11">
         <statement>
 
-        <p>16-6-3: Chromakey is a technique in which a block of one color can be replaced by another. What goes in the result of the red box? What goes in the result of the green box?</p>
+        <p> Chromakey is a technique in which a block of one color can be replaced by another. What goes in the result of the red box? What goes in the result of the green box?</p>
         <image source="https://i.postimg.cc/GprMxkrk/lecture17-Q11.png" width="71%%"/>
 
         </statement>
@@ -182,7 +182,7 @@ System.out.println(z);
     <exercise label="bs-chromakey-17-12">
         <statement>
 
-        <p>16-6-4: Chromakey is a technique in which a block of one color can be replaced by another. How will you know if you are in the red part of the image?</p>
+        <p> Chromakey is a technique in which a block of one color can be replaced by another. How will you know if you are in the red part of the image?</p>
         <image source="https://i.postimg.cc/Kcw4kfrs/lecture17-Q12.png" width="71%%"/>
 
         </statement>
@@ -229,7 +229,7 @@ System.out.println(z);
     <exercise label="bs-soundwaves-18-15">
         <statement>
 
-        <p>16-6-5: Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound were modified to be louder it would</p>
+        <p> Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound were modified to be louder it would</p>
         <image source="https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png" width="71%%"/>
 
         </statement>
@@ -285,7 +285,7 @@ System.out.println(z);
     <exercise label="bs-soundwaves-18-16">
         <statement>
 
-        <p>16-6-6: Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound was modified to have a higher pitch it would look like which of the following options:</p>
+        <p> Soundwaves have varying frequencies, amplitudes, pitches, and compressions/rarefactions. If the following sound was modified to have a higher pitch it would look like which of the following options:</p>
         <image source="https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png" width="71%%"/>
         <image source="https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png" width="71%%"/>
 

@@ -7,7 +7,7 @@
     <exercise label="qtnt3_1">
         <statement>
 
-        <p>12-4-1: Consider the following segment of code.  For the method call <c>t(5)</c>, how many calls to <c>t</c> will be made, including the original call?</p>
+        <p> Consider the following segment of code.  For the method call <c>t(5)</c>, how many calls to <c>t</c> will be made, including the original call?</p>
         <program language="java"><input>
 public int t(int n)
 {
@@ -72,7 +72,7 @@ public int t(int n)
     <exercise label="qtnt3_2">
         <statement>
 
-        <p>12-4-2: Consider the following class declarations. Which of the following code can be executed in the <c>Swan</c> class?</p>
+        <p> Consider the following class declarations. Which of the following code can be executed in the <c>Swan</c> class?</p>
         <program language="java"><input>
 public class Bird
 {
@@ -165,7 +165,7 @@ III. Swan s = new Swan("blue");
     <exercise label="qtnt3_3">
         <statement>
 
-        <p>12-4-3: Consider the following code. Assume that <c>list</c> is an ArrayList of integers that contains <c>[7, 3, 2]</c>. What will the contents of <c>list</c> be after the following code is executed?</p>
+        <p> Consider the following code. Assume that <c>list</c> is an ArrayList of integers that contains <c>[7, 3, 2]</c>. What will the contents of <c>list</c> be after the following code is executed?</p>
         <program language="java"><input>
 list.add(4);
 list.add(1, 8);
@@ -227,7 +227,7 @@ list.add(3);
     <exercise label="qtnt3_4">
         <statement>
 
-        <p>12-4-4: The method <c>rowSums</c> returns an array of integers. Each element of the array holds the sum of the corresponding row of a 2-D matrix. Which line correctly fills in <c>\* to be determined *\</c> in <c>rowSums</c>?</p>
+        <p> The method <c>rowSums</c> returns an array of integers. Each element of the array holds the sum of the corresponding row of a 2-D matrix. Which line correctly fills in <c>\* to be determined *\</c> in <c>rowSums</c>?</p>
         <program language="java"><input>
 public int[] rowSums(int[][] arr)
 {
@@ -298,7 +298,7 @@ public int[] rowSums(int[][] arr)
     <exercise label="qtnt3_5">
         <statement>
 
-        <p>12-4-5: Consider the following method <c>binSearch</c>, which uses binary search to locate an element <c>key</c> in an array of integers <c>arr</c>. If <c>list</c> is an array of integers containing <c>{4, 7, 9, 11, 20, 24, 30, 41}</c>, how many iterations of the while loop occur in <c>binSearch(30, list)</c>?</p>
+        <p> Consider the following method <c>binSearch</c>, which uses binary search to locate an element <c>key</c> in an array of integers <c>arr</c>. If <c>list</c> is an array of integers containing <c>{4, 7, 9, 11, 20, 24, 30, 41}</c>, how many iterations of the while loop occur in <c>binSearch(30, list)</c>?</p>
         <program language="java"><input>
 public static int binSearch(int key, int[] arr)
 {
@@ -376,7 +376,7 @@ public static int binSearch(int key, int[] arr)
     <exercise label="qtnt3_6">
         <statement>
 
-        <p>12-4-6: The <c>wordScramble</c> method is shown below. What is returned as a result of <c>wordScramble("hello")</c>?</p>
+        <p> The <c>wordScramble</c> method is shown below. What is returned as a result of <c>wordScramble("hello")</c>?</p>
         <program language="java"><input>
 public static String wordScramble (String str)
 {
@@ -440,7 +440,7 @@ public static String wordScramble (String str)
     <exercise label="qtnt3_7">
         <statement>
 
-        <p>12-4-7: Which of these loops will print multiples of 10, from 0 to 100 inclusive?</p>
+        <p> Which of these loops will print multiples of 10, from 0 to 100 inclusive?</p>
         <program language="java"><input>
 I. for (int i = 0; i &lt; 11; i++)
    {
@@ -514,7 +514,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
     <exercise label="qtnt3_8">
         <statement>
 
-        <p>12-4-8: The <c>Person</c> and <c>Student</c> classes are found below. Which of the following correctly replaces <c>/* to be completed */</c> in the <c>Student</c> class?</p>
+        <p> The <c>Person</c> and <c>Student</c> classes are found below. Which of the following correctly replaces <c>/* to be completed */</c> in the <c>Student</c> class?</p>
         <program language="java"><input>
 public class Person
 {
@@ -604,7 +604,7 @@ III. super(theName, theAge);
     <exercise label="qtnt3_9">
         <statement>
 
-        <p>12-4-9: A list of integers containing <c>[12, 8, 7, 30, 62, 45, 10, 3]</c> is sorted from largest to smallest using a selection sort method. After three passes, what does the list look like?</p>
+        <p> A list of integers containing <c>[12, 8, 7, 30, 62, 45, 10, 3]</c> is sorted from largest to smallest using a selection sort method. After three passes, what does the list look like?</p>
 
         </statement>
 <choices>
@@ -659,7 +659,7 @@ III. super(theName, theAge);
     <exercise label="qtnt3_10">
         <statement>
 
-        <p>12-4-10: Consider the classes <c>Animal</c> and <c>Pig</c> shown below. What is printed as a result of executing the code below?</p>
+        <p> Consider the classes <c>Animal</c> and <c>Pig</c> shown below. What is printed as a result of executing the code below?</p>
         <program language="java"><input>
 public class Animal
 {
@@ -765,7 +765,7 @@ public class Pig extends Animal
     <exercise label="qtnt3_11">
         <statement>
 
-        <p>12-4-11: Consider the following method oddArray, which changes every even number value in the array to 0. By the end of the method, only odd numbers will be present in the array. Which line correctly completes  <c>/* to be determined */</c> to make the code work as intended?</p>
+        <p> Consider the following method oddArray, which changes every even number value in the array to 0. By the end of the method, only odd numbers will be present in the array. Which line correctly completes  <c>/* to be determined */</c> to make the code work as intended?</p>
         <program language="java"><input>
 public void oddArray (int[] arr)
 {
@@ -831,7 +831,7 @@ public void oddArray (int[] arr)
     <exercise label="qtnt3_12">
         <statement>
 
-        <p>12-4-12: The method <c>numFun</c> is below. What is returned as a result of <c>numFun(21560)</c>?</p>
+        <p> The method <c>numFun</c> is below. What is returned as a result of <c>numFun(21560)</c>?</p>
         <program language="java"><input>
 public static int numFun(int num)
 {
@@ -896,7 +896,7 @@ public static int numFun(int num)
     <exercise label="qtnt3_13">
         <statement>
 
-        <p>12-4-13: Consider the method <c>emptyList</c>, shown below. The method returns true if a <c>List</c> of integers is filled with zeros and false otherwise. Which of the following should replace <c>/* to be completed */</c> so that the method will work as intended?</p>
+        <p> Consider the method <c>emptyList</c>, shown below. The method returns true if a <c>List</c> of integers is filled with zeros and false otherwise. Which of the following should replace <c>/* to be completed */</c> so that the method will work as intended?</p>
         <program language="java"><input>
 public boolean emptyList (List &lt;Integer&gt; list)
 {
@@ -981,7 +981,7 @@ return false;
     <exercise label="qtnt3_14">
         <statement>
 
-        <p>12-4-14: You need to find a random integer in the range 1 to 25, inclusive. Which of the following always returns a value that satisfies this condition?</p>
+        <p> You need to find a random integer in the range 1 to 25, inclusive. Which of the following always returns a value that satisfies this condition?</p>
 
         </statement>
 <choices>
@@ -1036,7 +1036,7 @@ return false;
     <exercise label="qtnt3_15">
         <statement>
 
-        <p>12-4-15: A list of 120 names has been sorted in alphabetical order. Using a binary search method, what is the minimum number of passes needed to confirm that a name is not in the list?</p>
+        <p> A list of 120 names has been sorted in alphabetical order. Using a binary search method, what is the minimum number of passes needed to confirm that a name is not in the list?</p>
 
         </statement>
 <choices>
@@ -1091,7 +1091,7 @@ return false;
     <exercise label="qtnt3_16">
         <statement>
 
-        <p>12-4-16: The method <c>recur</c> is shown below. In which case will <c>recur</c> terminate without error?</p>
+        <p> The method <c>recur</c> is shown below. In which case will <c>recur</c> terminate without error?</p>
         <program language="java"><input>
 public void recur (String str)
 {
@@ -1155,7 +1155,7 @@ public void recur (String str)
     <exercise label="qtnt3_17">
         <statement>
 
-        <p>12-4-17:  Consider the <c>Fruit</c>, <c>Grape</c>, and <c>SeedlessGrape</c> classes shown below. Which of the following object declarations will compile without error?</p>
+        <p>  Consider the <c>Fruit</c>, <c>Grape</c>, and <c>SeedlessGrape</c> classes shown below. Which of the following object declarations will compile without error?</p>
         <program language="java"><input>
 public class Fruit
 {
@@ -1235,7 +1235,7 @@ III. SeedlessGrape c = new Grape("grape", "green");
     <exercise label="qtnt3_18">
         <statement>
 
-        <p>12-4-18: The method <c>printNames</c> is located below. It prints out all the names in a 2-D matrix. Which of the following correctly replaces <c>/* to be determined */</c> to make the method work as intended?</p>
+        <p> The method <c>printNames</c> is located below. It prints out all the names in a 2-D matrix. Which of the following correctly replaces <c>/* to be determined */</c> to make the method work as intended?</p>
         <program language="java"><input>
 public void printNames (String[][] arr)
 {
@@ -1304,7 +1304,7 @@ public void printNames (String[][] arr)
     <exercise label="qtnt3_19">
         <statement>
 
-        <p>12-4-19: Which of the following is equivalent to <c>! ( (x &gt; 10) &amp;&amp; (x &lt;= 5) )</c>?</p>
+        <p> Which of the following is equivalent to <c>! ( (x &gt; 10) &amp;&amp; (x &lt;= 5) )</c>?</p>
 
         </statement>
 <choices>
@@ -1359,7 +1359,7 @@ public void printNames (String[][] arr)
     <exercise label="qtnt3_20">
         <statement>
 
-        <p>12-4-20: Consider the method <c>mystery</c>. What is returned as a result of <c>mystery(4)</c>?</p>
+        <p> Consider the method <c>mystery</c>. What is returned as a result of <c>mystery(4)</c>?</p>
         <program language="java"><input>
 public int mystery (int num)
 {

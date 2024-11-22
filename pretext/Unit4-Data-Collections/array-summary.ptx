@@ -5,7 +5,7 @@
     
     <p>In this chapter you learned about <term>Arrays</term>.  An <term>array</term> is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Two 5 element arrays with their values set to the default values for integer and object arrays.</caption>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two 5 element arrays with their values set to the default values for integer and object arrays.</caption>
       <image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%%"/>
     </figure>
   </introduction>

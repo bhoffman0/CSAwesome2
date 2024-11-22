@@ -48,23 +48,21 @@ public class IterativeBinarySearch
     </program>
             <p>Watch the iterative binary search code running in the <problematic refid="id3">|Java Visualizer|</problematic>.</p>
             <p>Let’s write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.</p>
-            <p><problematic refid="id5">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
 <exercise label="baseCaseQ">
     <statement>
-            <p>10-2-2: What’s the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.</p>
+            <p> What’s the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.</p>
 
     </statement>
 </exercise>
 
 <exercise label="recursiveCallQ">
     <statement>
-            <p>10-2-3: Given a recursive binary search method with the method signature “boolean binarySearch(int[] array, int startIndex, int endIndex, int target)”, what recursive method call would search the array from index 0 to the middle index?</p>
+            <p> Given a recursive binary search method with the method signature “boolean binarySearch(int[] array, int startIndex, int endIndex, int target)”, what recursive method call would search the array from index 0 to the middle index?</p>
 
     </statement>
 </exercise>
             <p>Here is the Java code for a recursive binary search:</p>
-            <p><problematic refid="id7">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="recursiveBinarySearch">
     <statement>
@@ -231,12 +229,11 @@ public class SortTest
                     <p>Merge 2: { 3, 5, 43, 86 }</p>
                 </li>
             </ol></p>
-            <p><problematic refid="id9">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
     <exercise label="qms_1">
         <statement>
 
-            <p>10-2-8: Under what condition will a merge sort execute faster?</p>
+            <p> Under what condition will a merge sort execute faster?</p>
 
         </statement>
 <choices>
@@ -274,7 +271,7 @@ public class SortTest
     <exercise label="qms_2">
         <statement>
 
-            <p>10-2-9: Which sort should be the fastest most of the time?</p>
+            <p> Which sort should be the fastest most of the time?</p>
 
         </statement>
 <choices>
@@ -310,7 +307,7 @@ public class SortTest
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id11">|Groupwork|</problematic> Tracing Challenge : Recursive Search and Sort</title>
+            <title>Tracing Challenge : Recursive Search and Sort</title>
             <p>Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here’s a <url href="https://youtu.be/AMJjtTo1LLE" visual="https://youtu.be/AMJjtTo1LLE">video</url> that shows merge sort with cards.</p>
 
     <video youtube="AMJjtTo1LLE"/>
@@ -318,14 +315,14 @@ public class SortTest
 
 <exercise label="challenge-10-2-mergesort">
     <statement>
-            <p>10-2-11: Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
+            <p> Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
 
     </statement>
 </exercise>
 
 <exercise label="challenge-10-2-binary-search">
     <statement>
-            <p>10-2-12: Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
+            <p> Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
 
     </statement>
 </exercise>

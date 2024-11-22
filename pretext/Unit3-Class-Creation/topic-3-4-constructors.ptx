@@ -120,7 +120,6 @@ public Person()
             <p>It’s up to you to decide if this is actually a useful value to have or if it
                 would be better to force the users of the <c>Person</c> class to choose the
                 values themselves.</p>
-            <p><problematic refid="id2">|Exercise|</problematic> <term>Check Your Understanding</term></p>
 
 <exercise label="name_constructor">
     <statement><p>Click on all the lines of code that are part of constructors in the following class.</p></statement>
@@ -152,7 +151,7 @@ public Person()
     <exercise label="qsse_5">
         <statement>
 
-            <p>5-2-2: What best describes the purpose of a class’s constructor?</p>
+            <p> What best describes the purpose of a class’s constructor?</p>
 
         </statement>
 <choices>
@@ -195,7 +194,6 @@ public Person()
 </choices>
 
     </exercise>
-            <p><problematic refid="id4">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="class-Fraction">
     <statement>
@@ -270,7 +268,6 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="class-Car">
     <statement>
@@ -378,7 +375,7 @@ public class Person
 </input></program>
         </subsection>
   <subsection>
-            <title><problematic refid="id8">|Groupwork|</problematic> Programming Challenge : Student Class</title>
+            <title>Programming Challenge : Student Class</title>
             <p>We encourage you to work in pairs for this challenge to create a Student class with constructors.</p>
             <p><ol marker="1">
                 <li>
@@ -504,7 +501,7 @@ public class Student
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Design a Class for your Community</title>
+            <title>Design a Class for your Community</title>
             <p>In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add a constructor to this class.</p>
             <p><ol marker="1">
                 <li>
@@ -656,7 +653,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP5-2-1">
         <statement>
 
-            <p>5-2-7: Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.</p>
+            <p> Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.</p>
             <program language="java"><input>
 public class Cat
 {
@@ -702,7 +699,7 @@ public class Cat
     <exercise label="AP5-2-2">
         <statement>
 
-            <p>5-2-8: Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?</p>
+            <p> Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?</p>
             <program language="java"><input>
 public class Cat
 {
@@ -784,7 +781,7 @@ III. Cat c = new Cat("Luna", 5);
     <exercise label="AP5-2-3">
         <statement>
 
-            <p>5-2-9: Consider the following class definition.</p>
+            <p> Consider the following class definition.</p>
             <program language="java"><input>
 public class Cat
 {

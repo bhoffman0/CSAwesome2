@@ -14,7 +14,7 @@
                 But like molten bronze is reshaped by melting it and pouring it into a mold, our
                 data is reshaped via a <term>cast</term> operator. In Java when you cast you are changing
                 the “shape” (or type) of the value.</p>
-            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%%"/></figure>
+            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%%"/></figure>
             <p>The <term>cast operator</term>, which looks like <c>(int)</c> and <c>(double)</c> placed before
                 any expression (a literal, a number, a variable, or more complex expression in
                 parentheses) produces a value of the given type by converting the value of the
@@ -288,12 +288,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id2">|Exercise|</problematic> <term>Check your understanding</term></p>
 
     <exercise label="q_round">
         <statement>
 
-            <p>1-5-5: True or false: Java rounds up automatically when you do integer division.</p>
+            <p> True or false: Java rounds up automatically when you do integer division.</p>
 
         </statement>
 <choices>
@@ -322,7 +321,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="q_cast">
         <statement>
 
-            <p>1-5-6: True or false: casting always results in a double type.</p>
+            <p> True or false: casting always results in a double type.</p>
 
         </statement>
 <choices>
@@ -349,7 +348,7 @@ public class RunestoneTests extends CodeTestHelper
     </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id4">|Groupwork|</problematic> Programming Challenge : Average 3 Numbers</title>
+            <title>Programming Challenge : Average 3 Numbers</title>
             <p>This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.</p>
 
 <exercise label="challenge1-5-average">
@@ -616,7 +615,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Bonus Challenge : Unicode</title>
             <p>If you get done early with the previous challenge, here’s something else fun you
                 can do in Java, although it’s not covered in the AP exam.</p>
-            <p>Java was one of the first programming languages to use <problematic refid="id6">|UNICODE|</problematic> for its
+            <p>Java was one of the first programming languages to use <problematic refid="id2">|UNICODE|</problematic> for its
                 characters rather than ASCII. While ASCII could represent 128 characters which
                 was plenty for English, Unicode is an international standard that tries to
                 assign a number (which they like to call a “codepoint”) to every character in
@@ -646,7 +645,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <exercise label="challenge1-6-unicode">
     <statement>
-            <p>Can you print out a letter from 3 different languages using this <problematic refid="id8">|Unicode
+            <p>Can you print out a letter from 3 different languages using this <problematic refid="id4">|Unicode
                     Lookup|</problematic> site?</p>
 
     </statement>
@@ -742,7 +741,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="AP_casting">
         <statement>
 
-            <p>1-5-9: Which of the following returns the correct average for a total that is the sum of 3 int values?</p>
+            <p> Which of the following returns the correct average for a total that is the sum of 3 int values?</p>
 
         </statement>
 <choices>

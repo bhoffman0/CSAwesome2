@@ -47,19 +47,19 @@ public class NumberCube
 <exercise label="numcubeB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method <c>getLongestRun</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="2">
+<blocks><block order="5">
 <cline>public static int getLongestRun(int[] values)</cline>
 <cline>{</cline>
 <cline>   int currentLen = 0;</cline>
 <cline>   int maxLen = 0;</cline>
 <cline>   int maxStart = -1;</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>   for (int i = 0; i &lt; values.length-1; i++)</cline>
 <cline>   {</cline>
-</block><block order="6">
+</block><block order="1">
 <cline>      if (values[i] == values[i+1])</cline>
 <cline>      {</cline>
-</block><block order="4">
+</block><block order="2">
 <cline>         currentLen++;</cline>
 <cline>         if (currentLen &gt; maxLen)</cline>
 <cline>         {</cline>
@@ -71,10 +71,10 @@ public class NumberCube
 <cline>      {</cline>
 <cline>         currentLen = 0;</cline>
 <cline>      }</cline>
-</block><block order="3">
+</block><block order="6">
 <cline>   } // end for</cline>
 <cline>   return maxStart;</cline>
-</block><block order="5">
+</block><block order="4">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

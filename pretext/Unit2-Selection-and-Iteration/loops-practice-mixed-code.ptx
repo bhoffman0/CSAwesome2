@@ -7,37 +7,37 @@
     <exercise label="ch6ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The following program segment should print out all the values from 20 to 30 (20, 21, 22, … 30). But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="3">
+<blocks><block order="5">
 <cline>int x = 20;</cline>
-</block><block order="2">
+</block><block order="3">
 <cline>while (x &lt;= 30)</cline>
 <cline>{</cline>
-</block><block order="1">
-<cline>    System.out.println(x);</cline>
-</block><block order="5">
-<cline>    x++;</cline>
 </block><block order="4">
+<cline>    System.out.println(x);</cline>
+</block><block order="2">
+<cline>    x++;</cline>
+</block><block order="1">
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The following program segment should print a countdown from 15 to 0 (15, 14, 13, … 0).  But the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="5">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="4">
+</block><block order="6">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
 </block><block order="7">
 <choice correct="yes"><cline>        for (int i = 15; i &gt;=0; i--)</cline>
 </choice><choice><cline>        for (int i = 15; i &gt; 0; i--) </cline>
-</choice></block><block order="5">
+</choice></block><block order="2">
 <cline>        {</cline>
 <cline>            System.out.println(i);</cline>
 <cline>        }</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>    }</cline>
-</block><block order="2">
+</block><block order="4">
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
@@ -46,93 +46,93 @@
 <blocks><block order="7">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="1">
+</block><block order="9">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="2">
+</block><block order="8">
 <cline>        int x = 0;</cline>
-</block><block order="4">
+</block><block order="6">
 <choice correct="yes"><cline>        while (x &lt;= 50)</cline>
 </choice><choice><cline>        while (x &lt; 50)  </cline>
-</choice></block><block order="8">
+</choice></block><block order="1">
 <cline>        {</cline>
 <cline>            System.out.println(x);</cline>
-</block><block order="3">
-<cline>            x = x + 5;</cline>
-</block><block order="6">
-<cline>        }</cline>
 </block><block order="5">
+<cline>            x = x + 5;</cline>
+</block><block order="3">
+<cline>        }</cline>
+</block><block order="4">
 <cline>    }</cline>
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print out the values from 0 to 100 by 20’s (0, 20, 40, .. 100). But, the blocks have been mixed up and include an extra block that isn’t needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="4">
+<blocks><block order="6">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="5">
+</block><block order="3">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="7">
+</block><block order="2">
 <choice correct="yes"><cline>       for (int i = 0; i &lt;= 100; i+=20)</cline>
 </choice><choice><cline>       for (int i = 100; i &gt;= 0; i-=20) </cline>
-</choice></block><block order="1">
+</choice></block><block order="5">
 <cline>       {</cline>
 <cline>           System.out.println(i);</cline>
 <cline>       }</cline>
-</block><block order="6">
+</block><block order="1">
 <cline>    }</cline>
-</block><block order="2">
+</block><block order="4">
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print out the values from 100 to 0 by 10’s (100, 90, 80, … 0). But, the blocks have been mixed up and include an extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="3">
+<blocks><block order="4">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="7">
+</block><block order="6">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="4">
+</block><block order="5">
 <choice correct="yes"><cline>        for (int i = 100; i &gt;= 0; i -= 10)</cline>
 </choice><choice><cline>        for (int i = 0; i &lt;= 100; i += 10) </cline>
-</choice></block><block order="1">
+</choice></block><block order="7">
 <cline>        {</cline>
 <cline>            System.out.println(i);</cline>
 <cline>        }</cline>
-</block><block order="2">
+</block><block order="1">
 <cline>    }</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print 3 rows with 6 *’s in each row.  But, the blocks have been mixed up and include two extra blocks that aren’t needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="9">
+<blocks><block order="10">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="2">
+</block><block order="7">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="3">
+</block><block order="1">
 <choice correct="yes"><cline>        for (int x = 3; x &gt; 0; x--)</cline>
 <cline>        {</cline>
 </choice><choice><cline>        for (int x = 0; x &lt;= 3; x++)</cline>
 <cline>        { </cline>
-</choice></block><block order="1">
+</choice></block><block order="2">
 <choice correct="yes"><cline>            for (int y = 6; y &gt; 0; y--)</cline>
 <cline>            {</cline>
 </choice><choice><cline>            for (int y = 0; y &lt;= 6; y++)</cline>
 <cline>            { </cline>
 </choice></block><block order="4">
 <cline>                 System.out.print("*");</cline>
-</block><block order="6">
-<cline>            }</cline>
 </block><block order="8">
+<cline>            }</cline>
+</block><block order="3">
 <cline>            System.out.println();</cline>
-</block><block order="7">
+</block><block order="6">
 <cline>        }</cline>
 <cline>    }</cline>
 <cline>}</cline>
@@ -140,83 +140,83 @@
     <exercise label="ch6ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print 1 (followed by a newline), then 22 (followed by a newline), and then 333 (followed by a newline).  But, the blocks have been mixed up and include an extra block that isn’t needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="1">
+<blocks><block order="8">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="6">
+</block><block order="5">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="8">
+</block><block order="4">
 <choice correct="yes"><cline>        for (int x = 1; x &lt;= 3; x++)</cline>
 <cline>        {</cline>
 </choice><choice><cline>        for (int x = 0; x &lt; 3; x++)</cline>
 <cline>        { </cline>
-</choice></block><block order="5">
+</choice></block><block order="7">
 <cline>            for (int y = 0; y &lt; x; y++)</cline>
 <cline>            {</cline>
-</block><block order="7">
+</block><block order="1">
 <cline>                System.out.print(x);</cline>
-</block><block order="4">
+</block><block order="6">
 <cline>            }</cline>
 <cline>            System.out.println();</cline>
 <cline>        }</cline>
-</block><block order="3">
+</block><block order="2">
 <cline>    }</cline>
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print 11111, 22222, 33333, 44444, and 55555. But, the blocks have been mixed up and contain two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="10">
+<blocks><block order="6">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="4">
+</block><block order="5">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="5">
+</block><block order="8">
 <choice correct="yes"><cline>        for (int x = 1; x &lt;= 5; x++)</cline>
 <cline>        {</cline>
 </choice><choice><cline>        for (int x = 1; x &lt; 5; x++)</cline>
 <cline>        { </cline>
-</choice></block><block order="3">
+</choice></block><block order="1">
 <cline>            for (int y = 0; y &lt; 5; y++)</cline>
 <cline>            {</cline>
-</block><block order="6">
+</block><block order="4">
 <choice correct="yes"><cline>                System.out.print(x);</cline>
 </choice><choice><cline>                System.out.print(y); </cline>
 </choice></block><block order="2">
 <cline>            } //end inner loop</cline>
 <cline>            System.out.println();</cline>
-</block><block order="1">
+</block><block order="7">
 <cline>        } //end outer loop</cline>
-</block><block order="8">
+</block><block order="3">
 <cline>    }</cline>
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The main method in the following class should print 11111, 2222, 333, 44, 5.  But, the blocks have been mixed up and include one extra block that isn’t needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="2">
+<blocks><block order="1">
 <cline>public class Test1</cline>
 <cline>{</cline>
-</block><block order="1">
+</block><block order="7">
 <cline>    public static void main(String[] args)</cline>
 <cline>    {</cline>
-</block><block order="3">
+</block><block order="6">
 <cline>        for (int x = 0; x &lt; 5; x++)</cline>
 <cline>        {</cline>
 </block><block order="4">
 <cline>            for (int y = 5; y &gt; x; y--)</cline>
 <cline>            {</cline>
-</block><block order="8">
+</block><block order="3">
 <choice correct="yes"><cline>                System.out.print(x+1);</cline>
 </choice><choice><cline>                System.out.print(x); </cline>
-</choice></block><block order="7">
+</choice></block><block order="9">
 <cline>            } //end inner loop</cline>
 <cline>            System.out.println();</cline>
-</block><block order="5">
+</block><block order="8">
 <cline>        } //end outer loop</cline>
-</block><block order="9">
+</block><block order="5">
 <cline>    }</cline>
 <cline>}</cline>
 </block></blocks></exercise>
@@ -227,33 +227,33 @@
             <c>get_mid("way")</c> should return <c>"a"</c> and <c>get_mid("away")</c> should
             return <c>"wa"</c>.</p>
 </statement>
-<blocks><block order="2">
+<blocks><block order="1">
 <cline>public class StringWorker</cline>
 <cline>{</cline>
-</block><block order="3">
+</block><block order="9">
 <cline>    public static String get_mid(String str)</cline>
 <cline>    {</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>        int str_len = str.length();</cline>
 <cline>        int mid = str_len / 2;</cline>
-</block><block order="1">
+</block><block order="4">
 <cline>        /* if odd number of chars */</cline>
 <cline>        if (str_len % 2 == 1)</cline>
 <cline>        {</cline>
-</block><block order="8">
-<cline>            return str.substring(mid, mid+1);</cline>
-</block><block order="7">
-<cline>        }</cline>
 </block><block order="11">
+<cline>            return str.substring(mid, mid+1);</cline>
+</block><block order="5">
+<cline>        }</cline>
+</block><block order="10">
 <cline>        else</cline>
 <cline>        {</cline>
-</block><block order="10">
+</block><block order="3">
 <cline>            return str.substring(mid-1, mid+1);</cline>
-</block><block order="4">
-<cline>        }</cline>
-</block><block order="9">
-<cline>    }</cline>
 </block><block order="6">
+<cline>        }</cline>
+</block><block order="7">
+<cline>    }</cline>
+</block><block order="8">
 <cline>}</cline>
 </block></blocks></exercise>
     <exercise label="ch6ex12muc" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
@@ -262,38 +262,38 @@
             evenly divisible by <c>n</c>.  For example, <c>even_div('6892',3)</c> should return
             2 since both 6 and 9 are evenly divisible by 3.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="2">
 <cline>public class NumWorker</cline>
 <cline>{</cline>
-</block><block order="10">
+</block><block order="8">
 <cline>    public static int ev_div(String s, int n)</cline>
 <cline>    {</cline>
-</block><block order="1">
+</block><block order="7">
 <cline>        int c_num = 0;</cline>
 <cline>        String c_digit = "";</cline>
 <cline>        int count = 0;</cline>
-</block><block order="12">
+</block><block order="13">
 <cline>        for (int i = 0; i &lt; s.length(); i++)</cline>
 <cline>        {</cline>
-</block><block order="8">
+</block><block order="1">
 <cline>            c_digit = s.substring(i, i+1);</cline>
-</block><block order="9">
+</block><block order="5">
 <cline>            c_num = Integer.parseInt(c_digit);</cline>
-</block><block order="13">
+</block><block order="4">
 <cline>            /* if is evely divisible by n */</cline>
 <cline>            if (c_num % n == 0)</cline>
 <cline>            {</cline>
-</block><block order="4">
+</block><block order="9">
 <cline>                count += 1;</cline>
 </block><block order="3">
 <cline>            }</cline>
-</block><block order="2">
+</block><block order="10">
 <cline>        }</cline>
-</block><block order="11">
+</block><block order="12">
 <cline>        return count;</cline>
-</block><block order="7">
+</block><block order="11">
 <cline>    }</cline>
-</block><block order="5">
+</block><block order="6">
 <cline>}</cline>
 </block></blocks></exercise>
   </exercises>

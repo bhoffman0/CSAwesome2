@@ -8,7 +8,6 @@
   <subsection>
             <title>Tracing Loops</title>
             <p>Let’s practice tracing through loops with many variables. Remember to make a tracing table to keep track of all the variables, the iterations, and the output.</p>
-            <p><problematic refid="id2">|CodingEx|</problematic> <term>Coding Exercise</term></p>
             <p>Here is a complex loop.  See if you can trace the code on paper by making a tracing table to predict what the code will do when you run it. Click on the this <url href="https://goo.gl/qEHnpg" visual="https://goo.gl/qEHnpg">Java visualizer</url> link or the Code Lens button to help you step through the code.</p>
 
 <exercise label="example_trace_loop">
@@ -55,13 +54,12 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Did your trace table look like the following?</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/whileLoopTrace.png" width="27%%"/></figure>
-            <p><problematic refid="id4">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/whileLoopTrace.png" width="27%%"/></figure>
 
     <exercise label="qlb_2_2">
         <statement>
 
-            <p>4-5-2: What are the values of var1 and var2 when the code finishes executing?</p>
+            <p> What are the values of var1 and var2 when the code finishes executing?</p>
             <program language="java"><input>
 int var1 = 0;
 int var2 = 2;
@@ -127,7 +125,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
     <exercise label="qlb_2_3">
         <statement>
 
-            <p>4-5-3: What are the values of x and y when the code finishes executing?</p>
+            <p> What are the values of x and y when the code finishes executing?</p>
             <program language="java"><input>
 int x = 2;
 int y = 5;
@@ -193,7 +191,6 @@ while (y &gt; 2 &amp;&amp; x &lt; y)
   <subsection>
             <title>Counting Loop Iterations</title>
             <p>Loops can be also analyzed to determine how many times they run.  This is called <term>run-time analysis</term> or a <term>statement execution count</term>.</p>
-            <p><problematic refid="id6">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="countstars1">
     <statement>
@@ -248,7 +245,6 @@ public class RunestoneTests extends CodeTestHelper
                 </ul></p>
             </note>
             <p>In the code above the largest value that allows the loop to run is 6 (which is the largest value &lt; 7) and the smallest value that allows the loop to execute is 3 so this loop executes (6 - 3 + 1 = 4 times).</p>
-            <p><problematic refid="id8">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="countstars">
     <statement>
@@ -300,14 +296,14 @@ public class RunestoneTests extends CodeTestHelper
             <p>For the example above, the outer loop executes 4 - 0 + 1 = 5 times and the inner 9 - 0 + 1 = 10 times so the total is 5 * 10 = 50.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id10">|Groupwork|</problematic> Programming Challenge : POGIL Analyzing Loops</title>
-            <p>We encourage you to do this activity as a <problematic refid="id12">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <title>Programming Challenge : POGIL Analyzing Loops</title>
+            <p>We encourage you to do this activity as a <problematic refid="id2">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Do the following exercises in your group. Make sure you draw the trace tables keeping track of all the variables in the loops. Use the formulas to determine how many times the loops run. If your group finishes early, do some of the multiple-choice problems in the 4.6 Practice and Summary section of this unit.</p>
 
     <exercise label="qln_6_1">
         <statement>
 
-            <p>4-5-6: How many times does the following code print a <c>*</c>?</p>
+            <p> How many times does the following code print a <c>*</c>?</p>
             <program language="java"><input>
 for (int i = 3; i &lt; 8; i++)
 {
@@ -364,7 +360,7 @@ for (int i = 3; i &lt; 8; i++)
     <exercise label="qln_6_2">
         <statement>
 
-            <p>4-5-7: What does the following code print?</p>
+            <p> What does the following code print?</p>
             <program language="java"><input>
 for (int i = 2; i &lt; 8; i++)
 {
@@ -421,7 +417,7 @@ for (int i = 2; i &lt; 8; i++)
     <exercise label="qln_6_3">
         <statement>
 
-            <p>4-5-8: What does the following print?</p>
+            <p> What does the following print?</p>
             <program language="java"><input>
 for (int i = 3; i &lt;= 9; i++)
 {
@@ -478,7 +474,7 @@ for (int i = 3; i &lt;= 9; i++)
     <exercise label="qln4">
         <statement>
 
-            <p>4-5-9: Consider the following code segment. How many times is the string “Hi!” printed as a result of executing the code segment?</p>
+            <p> Consider the following code segment. How many times is the string “Hi!” printed as a result of executing the code segment?</p>
             <program language="java"><input>
 int i = 0;
 while (i &lt;= 4)

@@ -13,7 +13,7 @@
             <p>You can think of a class as something like a blueprint of a house that is used to construct houses (objects), or like a cookie cutter that is used to create the cookies (objects). The cookie cutter (class) can
                 be used to create as many cookies (objects) as you want. The cookies (objects) are all the same shape and size, but they can have different colors and decorations.</p>
             <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/blueprint.png" width="71%%"/></figure>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%%"/></figure>
             <p>You can also think of a class as defining a new data type. In this lesson, we will use the class <c>Turtle</c> to make animated turtle objects. Just like you use <c>int</c> to
                 declare variables that hold numbers, you can use <c>Turtle</c> to declare many variables, animated turtle objects, who are <term>instances</term> of the <c>Turtle</c> class.</p>
             <program language="java"><input>
@@ -37,19 +37,18 @@ Turtle myrtle;
                 Name some of the attributes and behaviors of the cats below. For example, the
                 color (<em>attribute</em>) of the first cat is black (<em>attribute value</em>) and it is
                 playing (<em>behavior</em>).</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Pictures of cats (cat objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/catsLabelled.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Pictures of cats (cat objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/catsLabelled.png" width="89%%"/></figure>
 
 <exercise label="cats">
     <statement>
-            <p>1-12-3: Discuss with your class: What are some attributes of cats? What are some
+            <p> Discuss with your class: What are some attributes of cats? What are some
                 behaviors of cats? (Note that attributes are often nouns or adjectives
                 describing features of cats, and behaviors are often verbs).</p>
 
     </statement>
 </exercise>
             <p>The following picture of a turtle shows some of the Turtle <term>attributes</term> like name, width, height, color in the body of the turtle and its <term>methods</term> like forward(), backward(), written around the turtle.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Turtle Attributes and Behaviors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="63%%" alt="Turtle attributes and behaviors"/></figure>
-            <p><problematic refid="id9">|Exercise|</problematic> <term>Check your understanding</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Attributes and Behaviors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="63%%" alt="Turtle attributes and behaviors"/></figure>
 
 <exercise label="vocab2_1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
@@ -58,7 +57,7 @@ Turtle myrtle;
     <exercise label="howmanyobjects">
         <statement>
 
-            <p>1-12-5: How many objects can you create from a class in Java?</p>
+            <p> How many objects can you create from a class in Java?</p>
 
         </statement>
 <choices>
@@ -105,7 +104,7 @@ Turtle myrtle;
     <exercise label="mcq_behaviors">
         <statement>
 
-            <p>1-12-6: What specifies the behavior for objects of a class in Java?</p>
+            <p> What specifies the behavior for objects of a class in Java?</p>
 
         </statement>
 <choices>
@@ -152,7 +151,7 @@ Turtle myrtle;
     <exercise label="mcq_data">
         <statement>
 
-            <p>1-12-7: What are the data or properties of an object called?</p>
+            <p> What are the data or properties of an object called?</p>
 
         </statement>
 <choices>
@@ -255,7 +254,6 @@ public class RunestoneTests extends CodeTestHelper
 
     <video youtube="TFmmG4_KK8I"/>
                 <p>The <term>dot operator</term> (.) is used to run an object’s method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, <c>yertle.forward()</c> asks the turtle <c>yertle</c> to go <c>forward</c>. It doesn’t tell <c>yertle</c> how much to go forward, so it goes forward 100 pixels by default. The parentheses <c>()</c> after a method name are there in case you need to give the method <term>arguments</term> (some data) to do its job, for example to go forward 50 pixels instead of 100 in <c>yertle.forward(50);</c> Try changing the code above to go forward 50 pixels instead and then run it again.</p>
-            <p><problematic refid="id11">|CodingEx|</problematic> <term>Coding Exercise</term></p>
 
 <exercise label="TurtleTest2">
     <statement>
@@ -335,7 +333,6 @@ public class RunestoneTests extends CodeTestHelper
 Turtle yourTurtleName = new Turtle(habitat);
 yourTurtlename.forward();
 </input></program>
-            <p><problematic refid="id13">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleTest3">
     <statement>
@@ -403,16 +400,15 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>Another important concept in object-oriented programming is <term>inheritance</term>. Although the AP CSA exam no longer covers inheritance, you should know what it means. <term>Inheritance</term> is a way to create a new class that is based on an existing class. The new class, called a <term>subclass</term>, inherits the attributes and behaviors of the existing class, called a <term>superclass</term>.  In Java, all classes are subclasses of a superclass called <term>Object</term>.</p>
             <p>For example, you could have a superclass called <c>Pet</c> with attributes like <c>name</c> and <c>age</c> and behaviors like <c>eat</c> and <c>sleep</c>. You could then have subclasses like <c>Dog</c> and <c>Cat</c> and <c>Turtle</c> that inherit the attributes and behaviors of the <c>Pet</c> class. Each subclass could add attributes and behaviors specific to that type of pet. For example, a <c>Dog</c> subclass could have an attribute called <c>breed</c> and a behavior called <c>bark</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle</caption><image source="Unit1-Using-Objects-and-Methods/Figures/inheritance-hierarchy-pet.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle</caption><image source="Unit1-Using-Objects-and-Methods/Figures/inheritance-hierarchy-pet.png" width="89%%"/></figure>
         </subsection>
   <subsection>
             <title>Turtle Methods</title>
             <p>Let’s practice more with the <c>Turtle</c> class and its methods.
                 Here is a class diagram that shows some of the attributes and methods in the class <c>Turtle</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 5: Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%%" alt="Turtle class diagram"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%%" alt="Turtle class diagram"/></figure>
             <p>The Turtle world does not use the Cartesian coordinate system with (0,0) in the middle the screen. Instead, (0,0) is at the top left corner of the screen and x increases to the right and y increases towards the bottom of the screen. Most computer graphics systems use this coordinate system which is a carry over from before computers could display graphics and had to approximate the graphics with text print outs.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 6: The coordinate (0,0) is at the top left of the Turtle world.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/coords.png" width="36%%"/></figure>
-            <p><problematic refid="id15">|Exercise|</problematic> <term>Check Your Understanding: Mixed-up Code</term></p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The coordinate (0,0) is at the top left of the Turtle world.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/coords.png" width="36%%"/></figure>
 <exercise label="ParsonsDraw7" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following code uses a turtle to draw the digital number 7 (with just straight lines), but the code is mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the “Check Me” button to check your solution.</p>
 </statement>
@@ -437,8 +433,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    } // end main</cline>
 </block><block order="5">
 <cline>} // end class</cline>
-</block></blocks></exercise>            <p><problematic refid="id17">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
-            <p>After you put the mixed up code in order above, type in the same code below to make the turtle draw a 7.</p>
+</block></blocks></exercise>            <p>After you put the mixed up code in order above, type in the same code below to make the turtle draw a 7.</p>
 
 <exercise label="TurtleDrawSeven">
     <statement>
@@ -487,7 +482,6 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><problematic refid="id19">|CodingEx|</problematic> <term>Coding Exercise:</term></p>
 
 <exercise label="TurtleDrawEight">
     <statement>
@@ -577,7 +571,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title><problematic refid="id21">|Groupwork|</problematic> Programming Challenge : Draw Letters</title>
+            <title>Programming Challenge : Draw Letters</title>
             <p>Working in pairs, use the area below to have your turtle draw simple block-style letters for your first or last name initials using just straight lines (no curves or diagonals).</p>
             <p>It may help to act out the code pretending you are the turtle. Remember that which way you turn depends on which direction you are facing, and the turtle begins facing north (towards the top of the page).</p>
             <p>Here are some simple turtle methods that you can use:</p>
@@ -713,7 +707,7 @@ public class RunestoneTests extends CodeTestHelper
 
             <dl>
                 <li>
-                    <title>1-12-16: A student has created a <c>Dog</c> class. The class contains variables to represent the following.</title>
+                    <title> A student has created a <c>Dog</c> class. The class contains variables to represent the following.</title>
                     
                         <p><ul>
                             <li>
@@ -788,7 +782,7 @@ public class RunestoneTests extends CodeTestHelper
 
             <dl>
                 <li>
-                    <title>1-12-17:  A student has created a <c>Party</c> class. The class contains variables to represent the following.</title>
+                    <title>  A student has created a <c>Party</c> class. The class contains variables to represent the following.</title>
                     
                         <p><ul>
                             <li>

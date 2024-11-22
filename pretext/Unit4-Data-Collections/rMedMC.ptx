@@ -11,7 +11,7 @@
     <exercise label="qrm_1">
         <statement>
 
-        <p>10-7-3-1: Given the following method declaration, which of the following is printed as the result of the call <c>mystery(1234)</c>?</p>
+        <p> Given the following method declaration, which of the following is printed as the result of the call <c>mystery(1234)</c>?</p>
         <program language="java"><input>
 //precondition:  x &gt;=0
 public static void mystery (int x)
@@ -79,7 +79,7 @@ public static void mystery (int x)
     <exercise label="qrm_2">
         <statement>
 
-        <p>10-7-3-2: Given the following method declaration, what value is returned as the result of the call <c>mystery(5)</c>?</p>
+        <p> Given the following method declaration, what value is returned as the result of the call <c>mystery(5)</c>?</p>
         <program language="java"><input>
 public static int mystery(int n)
 {
@@ -147,7 +147,7 @@ public static int mystery(int n)
     <exercise label="qrm_3">
         <statement>
 
-        <p>10-7-3-3: Given the following method declaration, what value is returned as the result of the call <c>product(5)</c>?</p>
+        <p> Given the following method declaration, what value is returned as the result of the call <c>product(5)</c>?</p>
         <program language="java"><input>
 public static int product(int n)
 {
@@ -215,7 +215,7 @@ public static int product(int n)
     <exercise label="qrm_4">
         <statement>
 
-        <p>10-7-3-4: Given the following method declaration, what value is returned as the result of the call <c>f(5)</c>?</p>
+        <p> Given the following method declaration, what value is returned as the result of the call <c>f(5)</c>?</p>
         <program language="java"><input>
 public static int f(int n)
 {

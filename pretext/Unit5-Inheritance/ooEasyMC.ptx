@@ -7,7 +7,7 @@
     <exercise label="qooe_1">
         <statement>
 
-        <p>9-12-1: What best describes the purpose of a class’s constructor?</p>
+        <p> What best describes the purpose of a class’s constructor?</p>
 
         </statement>
 <choices>
@@ -44,7 +44,7 @@
     <exercise label="qooe_2">
         <statement>
 
-        <p>9-12-2: Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?</p>
+        <p> Under which of these conditions is it appropriate to overload a method (ie: the class will contain two methods with the same name)?</p>
 
         </statement>
 <choices>
@@ -99,7 +99,7 @@
     <exercise label="qooe_5">
         <statement>
 
-        <p>9-12-3:  A car dealership needs a program to store information about the cars for sale. For each car, they want to keep track of the following information: number of doors (2 or 4), whether the car has air conditioning, and its average number of miles per gallon. Which of the following is the best design?</p>
+        <p>  A car dealership needs a program to store information about the cars for sale. For each car, they want to keep track of the following information: number of doors (2 or 4), whether the car has air conditioning, and its average number of miles per gallon. Which of the following is the best design?</p>
 
         </statement>
 <choices>
@@ -154,7 +154,7 @@
     <exercise label="qooe_6">
         <statement>
 
-        <p>9-12-4:  A program is being written by a team of programmers. One programmer is implementing a class called <c>Employee</c>; another programmer is writing code that will use the <c>Employee</c> class. Which of the following aspects of the public methods and fields of the <c>Employee</c> class does not need to be known by both programmers?</p>
+        <p>  A program is being written by a team of programmers. One programmer is implementing a class called <c>Employee</c>; another programmer is writing code that will use the <c>Employee</c> class. Which of the following aspects of the public methods and fields of the <c>Employee</c> class does not need to be known by both programmers?</p>
 
         </statement>
 <choices>
@@ -209,7 +209,7 @@
     <exercise label="qooe_7">
         <statement>
 
-        <p>9-12-5: A bookstore is working on an on-line ordering system. For each type of published material (books, movies, audio tapes) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?</p>
+        <p> A bookstore is working on an on-line ordering system. For each type of published material (books, movies, audio tapes) they need to track the id, title, author(s), date published, and price. Which of the following would be the best design?</p>
 
         </statement>
 <choices>

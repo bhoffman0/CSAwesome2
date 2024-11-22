@@ -134,7 +134,7 @@ hikerClub.addClimb("Monadnock", 344);
     <exercise label="fr_climbB_1">
         <statement>
 
-                <p>7-4-3-1: What type of loop should you use to find the first place that the new peakName is less than the current element’s peakName?</p>
+                <p> What type of loop should you use to find the first place that the new peakName is less than the current element’s peakName?</p>
 
         </statement>
 <choices>
@@ -172,7 +172,7 @@ hikerClub.addClimb("Monadnock", 344);
     <exercise label="fr_climbB_2">
         <statement>
 
-                <p>7-4-3-2: What ArrayList method allows you to add a new element at a specific index in a list?</p>
+                <p> What ArrayList method allows you to add a new element at a specific index in a list?</p>
 
         </statement>
 <choices>
@@ -210,7 +210,7 @@ hikerClub.addClimb("Monadnock", 344);
     <exercise label="fr_climbB_3">
         <statement>
 
-                <p>7-4-3-3: What will be stored in value after running this code:</p>
+                <p> What will be stored in value after running this code:</p>
                 <program language="java"><input>
 String s1 = "Bee";
 String s2 = "Kiwi";

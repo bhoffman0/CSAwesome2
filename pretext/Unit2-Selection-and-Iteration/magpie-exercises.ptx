@@ -6,38 +6,38 @@
     <exercise label="chat-labp1" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
         <p>The following program segment should print 4 random responses using if/else statements,  but the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
-<blocks><block order="5">
+<blocks><block order="2">
 <cline>private String getRandomResponse()</cline>
 <cline>{</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>    final int NUMBER_OF_RESPONSES = 4;</cline>
 <cline>    double r = Math.random();</cline>
-</block><block order="2">
+</block><block order="8">
 <cline>    int whichResponse = (int)(r * NUMBER_OF_RESPONSES);</cline>
 <cline>    String response = "";</cline>
-</block><block order="7">
+</block><block order="1">
 <cline>    if (whichResponse == 0)</cline>
 <cline>    {</cline>
 <cline>        response = "Interesting, tell me more.";</cline>
-</block><block order="3">
+</block><block order="6">
 <cline>    }</cline>
 <cline>    else if (whichResponse == 1)</cline>
 <cline>    {</cline>
 <cline>        response = "Hmmm.";</cline>
-</block><block order="9">
+</block><block order="5">
 <cline>    }</cline>
 <cline>    else if (whichResponse == 2)</cline>
 <cline>    {</cline>
 <cline>        response = "Do you really think so?";</cline>
-</block><block order="6">
+</block><block order="4">
 <cline>    }</cline>
 <cline>    else if (whichResponse == 3)</cline>
 <cline>    {</cline>
 <cline>        response = "You don't say.";</cline>
 <cline>    }</cline>
-</block><block order="4">
+</block><block order="9">
 <cline>    return response;</cline>
-</block><block order="8">
+</block><block order="7">
 <cline>}</cline>
 </block></blocks></exercise>
   </exercises>

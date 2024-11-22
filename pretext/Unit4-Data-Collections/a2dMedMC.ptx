@@ -10,7 +10,7 @@
     <exercise label="qa2dm_1">
         <statement>
 
-        <p>8-8-4: Given the following code segment, what is the value of sum after this code executes?</p>
+        <p> Given the following code segment, what is the value of sum after this code executes?</p>
         <program language="java"><input>
 int[][] matrix = { {1,1,2,2},{1,2,2,4},{1,2,3,4},{1,4,1,2}};
 
@@ -75,7 +75,7 @@ for (int row = 0; row &lt; 4; row++)
     <exercise label="qa2dm_2">
         <statement>
 
-        <p>8-8-5: What are the contents of <c>mat</c> after the following code segment has been executed?</p>
+        <p> What are the contents of <c>mat</c> after the following code segment has been executed?</p>
         <program language="java"><input>
 int [][] mat = new int [4][3];
 for (int row = 0; row &lt; mat.length; row++)
@@ -145,7 +145,7 @@ for (int row = 0; row &lt; mat.length; row++)
     <exercise label="qa2dm_3">
         <statement>
 
-        <p>8-8-6: Given the following code segment, what is the value of sum after this code executes?</p>
+        <p> Given the following code segment, what is the value of sum after this code executes?</p>
         <program language="java"><input>
 int[][] m = { {1,1,1,1},{1,2,3,4},{2,2,2,2},{2,4,6,8}};
 

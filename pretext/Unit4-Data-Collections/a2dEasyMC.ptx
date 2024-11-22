@@ -8,7 +8,7 @@
     <exercise label="qa2de_1">
         <statement>
 
-        <p>8-8-1: How many columns does <c>a</c> have if it is created as follows <c>int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};</c>?</p>
+        <p> How many columns does <c>a</c> have if it is created as follows <c>int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};</c>?</p>
 
         </statement>
 <choices>
@@ -45,7 +45,7 @@
     <exercise label="qa2de_2">
         <statement>
 
-        <p>8-8-2: Which of the following statements assigns the letter S to the third row and first column of a two-dimensional array named <c>strGrid</c> (assuming row-major order).</p>
+        <p> Which of the following statements assigns the letter S to the third row and first column of a two-dimensional array named <c>strGrid</c> (assuming row-major order).</p>
 
         </statement>
 <choices>
@@ -100,7 +100,7 @@
     <exercise label="qa2de_3">
         <statement>
 
-        <p>8-8-3: How would you get the value 6 out of the following array <c>int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};</c>?</p>
+        <p> How would you get the value 6 out of the following array <c>int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};</c>?</p>
 
         </statement>
 <choices>

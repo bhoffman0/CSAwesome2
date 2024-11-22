@@ -73,7 +73,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
                 methods. Your implementation must meet all specifications and conform to the example.</p>
         </subsection>
   <subsection>
-            <title><problematic refid="id5">|Groupwork|</problematic> Determining the Instance Variables</title>
+            <title>Determining the Instance Variables</title>
             <p>Work in pairs or groups to read through the problem statement and determine the instance variables required for this class. During the exam, it helps to circle the words that are important and may describe the instance variables. Different groups may come up with different variables that will still work. Groups should report back and compare answers in class to determine the best variables before writing the class.</p>
             <p>It may help to first identify the variables that are needed for the constructor and the accessor and mutator methods.</p>
 
@@ -103,7 +103,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
     <exercise label="steptracker-constructor">
         <statement>
 
-                <p>5-16-2: Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?</p>
+                <p> Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?</p>
 
         </statement>
 <choices>
@@ -161,7 +161,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
     <exercise label="steptracker-accessor">
         <statement>
 
-                <p>5-16-3: Which of the following methods is an accessor method that returns the value of an instance variable?</p>
+                <p> Which of the following methods is an accessor method that returns the value of an instance variable?</p>
 
         </statement>
 <choices>
@@ -201,7 +201,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
     <exercise label="steptracker-mutator">
         <statement>
 
-                <p>5-16-4: Which of the following methods is a mutator method that changes the value of an instance variable?</p>
+                <p> Which of the following methods is a mutator method that changes the value of an instance variable?</p>
 
         </statement>
 <choices>
@@ -248,7 +248,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
 
 <exercise label="steptracker-variables">
     <statement>
-            <p>5-16-5: What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?</p>
+            <p> What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?</p>
 
     </statement>
 </exercise>
@@ -321,7 +321,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Here is the rubric for the instance variables and the constructor for this problem. Did you receive all 3 points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 1: Rubric for instance variables and constructor</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric1.png" width="100%%" alt="Rubric for instance variables and constructor"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for instance variables and constructor</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric1.png" width="100%%" alt="Rubric for instance variables and constructor"/></figure>
         </subsection>
   <subsection>
             <title>Writing the Accessor Method activeDays</title>
@@ -347,7 +347,7 @@ class ExampleClass
     <exercise label="steptracker-accessor-header">
         <statement>
 
-                <p>5-16-7: Which of the following is a good method header for the accessor method activeDays()?</p>
+                <p> Which of the following is a good method header for the accessor method activeDays()?</p>
 
         </statement>
 <choices>
@@ -463,7 +463,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Here is the rubric for the accessor method <c>activeDays</c> for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Rubric for accessor method activeDays()</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric3.png" width="100%%" alt="Rubric for acccessor methods"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for accessor method activeDays()</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric3.png" width="100%%" alt="Rubric for acccessor methods"/></figure>
         </subsection>
   <subsection>
             <title>Writing the Mutator Method addDailySteps</title>
@@ -490,7 +490,7 @@ class Example
     <exercise label="steptracker-mutator-header">
         <statement>
 
-                <p>5-16-9: Which of the following is a good method header for the mutator method addDailySteps?</p>
+                <p> Which of the following is a good method header for the mutator method addDailySteps?</p>
 
         </statement>
 <choices>
@@ -562,7 +562,7 @@ class Example
     <exercise label="steptracker-mutator-changes">
         <statement>
 
-                <p>5-16-10: Which of the following values does the mutator method addDailySteps need to change? (check all that apply)</p>
+                <p> Which of the following values does the mutator method addDailySteps need to change? (check all that apply)</p>
 
         </statement>
 <choices>
@@ -699,7 +699,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Here is the rubric for the mutator method for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive all the points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 3: Rubric for mutator method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric2.png" width="100%%" alt="Rubric for mutator method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for mutator method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric2.png" width="100%%" alt="Rubric for mutator method"/></figure>
         </subsection>
   <subsection>
             <title>Writing the Accessor Method averageSteps</title>
@@ -710,7 +710,7 @@ public class RunestoneTests extends CodeTestHelper
     <exercise label="steptracker-accessor-header2">
         <statement>
 
-                <p>5-16-12: Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?</p>
+                <p> Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?</p>
 
         </statement>
 <choices>
@@ -890,6 +890,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Here is the rubric for the <c>averageSteps</c> method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 4: Rubric for averageSteps method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric4.png" width="100%%" alt="Rubric for acccessor methods"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for averageSteps method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric4.png" width="100%%" alt="Rubric for acccessor methods"/></figure>
         </subsection>
 </section>
