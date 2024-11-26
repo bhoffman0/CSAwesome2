@@ -1,16 +1,38 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 3-4-
+   :prefix: 2-4-
    :start: 1
 
 
-|Time90|
+|Time45|
 
-Multi-Selection: else-if Statements
+Nested if Statements
 ===================================
 
-Using if/else statements, you can even pick between 3 or more possibilites. Just add **else if** for each possibility after the first **if**, and **else** before the last possibility.
+.. index::
+   single: Nested if statements
+   single: Multiway selection
+   single: else if
+
+If statements can be nested inside other if statements. Nested if statements consist of if, if-else, or if-else-if statements within if, if-else, or if-else-if statements. The Boolean expression of the inner nested if statement is evaluated only if the Boolean expression of the outer if statement evaluates to true.
+
+.. code-block:: java
+
+    if (boolean expression)
+    {   // This nested if is executed if outer if is true
+        if (boolean expression)
+        {
+            statement;
+        }
+    }
+
+Multiway selection (else if)
+-----------------------------
+
+A single if/else statement allows us to select between 2 branches of code. With nested if/else statements, we can pick between 3 or more branches of code. A multi-way selection (if-else-if) is used when there are a series of expressions with different segments of code for each condition. Multi-way selection is performed such that no more than one segment of code is executed based on the first expression that evaluates to true. If no expression evaluates to true and there is a trailing else statement, then the body of the else is executed.
+
+Just add **else if** for each possibility after the first **if**, and **else** before the last possibility like below.
 
 .. code-block:: java
 
@@ -32,13 +54,13 @@ Using if/else statements, you can even pick between 3 or more possibilites. Just
 
 
 
-.. activecode:: lccbElseIf
+.. activecode:: TryElseIf
    :language: java
    :autograde: unittest
 
    Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.
    ~~~~
-   public class TestElseIf
+   public class TryElseIf
    {
        public static void main(String[] args)
        {
@@ -97,7 +119,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qcb3_4_1
+.. mchoice:: trace-nested-if
    :practice: T
    :answer_a: x is negative
    :answer_b: x is zero
@@ -124,7 +146,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
         System.out.println("x is positive");
      }
 
-.. mchoice:: qcb3_4_2
+.. mchoice:: trace-nested-ifs2
    :practice: T
    :answer_a: x is negative
    :answer_b: x is zero
@@ -151,7 +173,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
         System.out.println("x is positive");
      }
 
-.. mchoice:: qcb3_4_3
+.. mchoice:: trace-nested-ifs3
    :practice: T
    :answer_a: first quartile
    :answer_b: second quartile
@@ -188,7 +210,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
 
 
-.. activecode:: lccbIfDebug
+.. activecode:: ifElseIfDebug
    :language: java
    :autograde: unittest
    :practice: T
@@ -228,7 +250,6 @@ Here is a flowchart for a conditional with 3 options like in the code above.
    }
 
    ====
-   // Test Code for Lesson 3.4 - lccbIfDebug
    import static org.junit.Assert.*;
    import org.junit.After;
    import org.junit.Before;
@@ -366,7 +387,136 @@ Here is a flowchart for a conditional with 3 options like in the code above.
       }
   }
 
-|Groupwork| Programming Challenge : Adventure
+Dangling Else Statements
+----------------------------
+
+Sometimes with nested ifs we find a **dangling else** that could potentially belong to either if statement.
+The rule is that the else clause will always be a part of the closest unmatched if statement in the same block of code, regardless of indentation.
+
+.. code-block:: java
+
+    // Nested if with dangling else
+    if (boolean expression)
+       if (boolean expression)
+          Do statement;
+       else  // belongs to closest if
+          Do other statement;
+
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: danglingelse
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Try the following code with a dangling else. Notice that the indentation does not matter to the compiler (but you should make it your habit to use good indentation just as a best practice). How could you get the else to belong to the first if statement?
+   ~~~~
+   public class DanglingElseTest
+   {
+       public static void main(String[] args)
+       {
+           boolean sunny = true;
+           boolean hot = false;
+           if (sunny)
+               if (hot) 
+                  System.out.println("Head for the beach!");
+             else // Which if is else attached to??
+               System.out.println("Bring your umbrella!");
+       }
+   }
+
+   ====
+    import static org.junit.Assert.*;
+
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        /*
+        @Test
+        public void testCodeChange1() throws Exception
+        {
+            String className = "Test1";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("sunny = true;", "sunny = false;");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Bring your umbrella!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if sunny is false", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeChange2() throws Exception
+        {
+            String className = "Test2";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("hot = false", "hot = true");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Head for the beach!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if hot is true", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testCodeChange3() throws Exception
+        {
+            String className = "Test3";
+
+            String program = getCode();
+            program = program.replace("DangleElse", className).replace("public class", "class");
+            program = program.replaceAll("hot = false", "hot = true");
+            program = program.replaceAll("sunny = true;", "sunny = false;");
+
+            String output = getMethodOutputChangedCode(program, className, "main");
+
+            String expected = "Bring your umbrella!";
+            boolean passed = output.contains(expected);
+            getResults(expected, output, "Checking output if sunny is false and hot is true", passed);
+            assertTrue(passed);
+        }
+        */
+
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("main");
+            String expect = "";
+            boolean passed =
+                    getResults(expect, output, "Expected output from main (no output if correct)");
+            assertTrue(passed);
+        }
+    }
+
+You can use curly braces (``{}``) to enclose a nested if and have the else clause belong to the the top level if clause like below:
+
+.. code-block:: java
+
+    // Nested if with dangling else
+    if (boolean expression)
+    {
+       if (boolean expression)
+          Do this statement;
+    }
+    else  // belongs to first if
+      Do that statement;
+
+In fact many experienced Java programmers `always` use curly braces, even when
+they are not technically required to avoid this kind of confusion.
+
+|Groupwork| Coding Challenge : Adventure
 ---------------------------------------------
 
 .. image:: Figures/adventure.jpg
@@ -386,40 +536,55 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
    <a href="https://adventuregamers.com/walkthrough/full/colossal-cave" target="_blank" style="text-decoration:underline">walkthrough</a>
 
-.. |repl link| raw:: html
+.. |JuiceMind| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Adventure#Main.java" target="_blank" style="text-decoration:underline">repl link</a>
+   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/54bfe3f4-f112-4062-8d7d-a033b2bf09b6#079f4341-137a-497f-b874-553ababd627a" target="_blank" style="text-decoration:underline">JuiceMind</a>
 
+.. |replit| raw:: html
 
-We encourage you to work in pairs for this challenge which is on replit.com (you will need an account there if you want to save your version).
+   <a href="https://replit.com/@BerylHoffman/Adventure#Main.java" target="_blank" style="text-decoration:underline">replit</a>
 
 One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand.
 
 In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.
 
-1. Try the program below or with this |repl link|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
+1. Try the program below or in an interactive input IDE like |JuiceMind| or |replit|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
 
-2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction.
-
-2. How many test-cases are needed to test all branches of your code?
-
-3. If your class has time, your teacher may ask you to expand this game further or to come up with a different adventure location.
+2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. You will need to change the input below the code to s or e or w and then run to test these branches. How many test-cases are needed to test all branches of your code? If your class has time, your teacher may ask you to expand this game further with more nested if/else statements and to come up with a different adventure location.
 
 
-.. raw:: html
-
-    <iframe height="650px" width="100%" style="max-width:90%; margin-left:5%" src="https://firewalledreplit.com/@BerylHoffman/Adventure?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-
-.. activecode:: challenge3-4-ElseIf-Adventure-autograde
+.. activecode:: challenge-ElseIf-Adventure
   :language: java
   :autograde: unittest
+  :stdin: n
 
-  Copy and paste your all of your code from replit.com and run to see if it passes the autograder tests. Include the link to your replit.com code in comments. Note that this code will only run with the autograder's input and will not ask the user for input.
+  This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. You can change the initial location of the game and add more nested if statements to make the game more complex. 
   ~~~~
-    // Copy in your link to your code on replit.com here:
-    // Copy in all of your code from replit.com below (include import and public class
-    // Main)
+  import java.util.Scanner;
 
+  public class Adventure 
+  {
+    public static void main(String[] args) 
+    {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("\n\n You are on an island surrounded by water.\n There is a path to the woods to the north, the sea to the south, and a beach shack to the east. \n Which way do you want to go (n,e,s,w)?");
+        String command = scan.next(); // use nextLine() in your own IDE
+        if (command.equals("n")) 
+        {
+            System.out.println("You enter the forest and hear some rustling. \nThere may be tigers here or maybe it's just monkeys.");
+            System.out.println("... What do want to do now?");
+            String command2 = scan.next(); // use nextLine() in your own IDE
+            // Add more nested if statements for the next action
+
+
+        }
+        // Add else-ifs for command equals s, e, w, and an else for any other input. Be creative!
+                
+        
+        System.out.println("End of adventure!");   
+        scan.close();
+     }
+  }
   ====
   import static org.junit.Assert.*;
 
@@ -431,21 +596,21 @@ In a game like Adventure, else if statements can be used to respond to commands 
   {
       public RunestoneTests()
       {
-          super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("Main", input1.replaceAll(" ", "\n")); // For Book
       }
 
       private static int goal = 5;
-      private static String input1 = "n s e w y y y y y y y y y y y y y y";
-      private static String input2 = "s e w y n y y y y y y y y y y y y y";
-      private static String input3 = "e w y n s y y y y y y y y y y y y y";
-      private static String input4 = "w y n s e y y y y y y y y y y y y y";
-      private static String input5 = "y n s e w y y y y y y y y y y y y y";
+      private static String input1 = "n"; // s e w y y y y y y y y y y y y y y";
+      private static String input2 = "s"; // e w y n y y y y y y y y y y y y y";
+      private static String input3 = "e"; // w y n s y y y y y y y y y y y y y";
+      private static String input4 = "w"; // y n s e y y y y y y y y y y y y y";
+      private static String input5 = "y"; // n s e w y y y y y y y y y y y y y";
       private String output1, output2, output3, output4, output5;
 
       @Test
       public void test1()
       {
-          String input = input1.replaceAll(" ", "\n");
+          //String input = input1.replaceAll(" ", "\n");
           String output = getMethodOutputWithInput("main", input);
           output1 = output;
 
@@ -465,25 +630,25 @@ In a game like Adventure, else if statements can be used to respond to commands 
       @Test
       public void test2()
       {
-          String input = input2.replaceAll(" ", "\n");
+          //String input = input2.replaceAll(" ", "\n");
           String output = getMethodOutputWithInput("main", input);
           output2 = output;
 
-          input = input3.replaceAll(" ", "\n");
+          //input = input3.replaceAll(" ", "\n");
           output = getMethodOutputWithInput("main", input);
           output3 = output;
 
-          input = input4.replaceAll(" ", "\n");
+          //input = input4.replaceAll(" ", "\n");
           output = getMethodOutputWithInput("main", input);
           output4 = output;
 
-          input = input5.replaceAll(" ", "\n");
+          //input = input5.replaceAll(" ", "\n");
           output = getMethodOutputWithInput("main", input);
           output5 = output;
 
           if (output1 == null)
           {
-              input = input1.replaceAll(" ", "\n");
+              //input = input1.replaceAll(" ", "\n");
               output1 = getMethodOutputWithInput("main", input);
           }
 
@@ -528,10 +693,10 @@ In a game like Adventure, else if statements can be used to respond to commands 
       public void test5()
       {
           String code = getCode();
-          int num = countOccurences(code, "else {");
+          int num = countOccurences(code, "else") - countOccurences(code, "else if");
           boolean passed = num >= 1;
 
-          getResults("1", "" + num, "Number of else statements", passed);
+          getResults("1", "" + num, "Ending else statement", passed);
           assertTrue(passed);
       }
   }
@@ -539,9 +704,9 @@ In a game like Adventure, else if statements can be used to respond to commands 
 Summary
 --------
 
-- A multi-way selection is written when there are a series of conditions with different statements for each condition.
-
-- Multi-way selection is performed using if-else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
+- (AP 2.4.A.1) Nested if statements consist of if, if-else, or if-else-if statements within if, if-else, or if-else-if statements.
+- (AP 2.4.A.2) The Boolean expression of the inner nested if statement is evaluated only if the Boolean expression of the outer if statement evaluates to true.
+- (AP 2.4.A.3) A multi-way selection (if-else-if) is used when there are a series of expressions with different segments of code for each condition. Multi-way selection is performed such that no more than one segment of code is executed based on the first expression that evaluates to true. If no expression evaluates to true and there is a trailing else statement, then the body of the else is executed.
 
 .. code-block:: java
 
@@ -559,10 +724,11 @@ Summary
         statement3;
     }
 
+
 AP Practice
 ------------
 
-.. mchoice:: AP3-4-1
+.. mchoice:: AP-nested-if-else
     :practice: T
 
     Assume an int variable x has been properly declared and initialized.
