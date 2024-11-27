@@ -19,7 +19,6 @@ AP CSA Exam Weighting:
    topic-2-4-nested-ifs.rst
    topic-2-5-compound-ifs.rst
    topic-2-6-DeMorgan.rst
-   topic-2-6-comparing-objects.rst
    topic-2-7-while-loops.rst
    topic-2-8-for-loops.rst
    topic-2-9-loop-algorithms.rst
