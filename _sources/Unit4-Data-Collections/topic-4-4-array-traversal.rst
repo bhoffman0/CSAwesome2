@@ -1045,7 +1045,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
          }
       }
 
-|Groupwork| Programming Challenge : SpellChecker
+|Groupwork| Coding Challenge : SpellChecker
 --------------------------------------------------
 
 .. image:: Figures/spellcheck.png

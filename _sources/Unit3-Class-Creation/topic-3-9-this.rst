@@ -286,7 +286,7 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
 
 
 
-|Groupwork| Programming Challenge : Bank Account
+|Groupwork| Coding Challenge : Bank Account
 ------------------------------------------------------------
 
 .. figure:: Figures/dollarSign.png

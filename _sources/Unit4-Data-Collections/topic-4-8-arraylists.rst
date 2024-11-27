@@ -457,7 +457,7 @@ into instances of ``Integer`` for us.
        }
    }
 
-|Groupwork| Programming Challenge : FRQ Digits
+|Groupwork| Coding Challenge : FRQ Digits
 ---------------------------------------------------
 
 
@@ -465,7 +465,7 @@ into instances of ``Integer`` for us.
 
    <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" target="_blank">2017 Free Response Question</a>
 
-This programming challenge is based on the |FRQ 2017| part 1a on the 2017 AP CSA
+This coding challenge is based on the |FRQ 2017| part 1a on the 2017 AP CSA
 exam. In this question, you are asked to write a constructor for a class called
 ``Digits``. This constructor takes an integer number as its argument and divides
 it up into its digits and puts the digits into an ``ArrayList``. For example,

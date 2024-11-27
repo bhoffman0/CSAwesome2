@@ -343,7 +343,7 @@ This summation formula has a great story that goes back to the famous mathematic
 
    In non-rectangular loops, the number of times the inner loop runs can be calculated with the sum of natural numbers formula ``n(n+1)/2`` where n is the number of times the outer loop runs or the maximum number of times the inner loop runs.
 
-|Groupwork| Programming Challenge : POGIL Analyzing Loops
+|Groupwork| Coding Challenge : POGIL Analyzing Loops
 ----------------------------------------------------------
 
 .. |pogil| raw:: html

@@ -214,7 +214,7 @@ Another option is to use for loops with indices to visit each pixel in the pictu
     :width: 250
     :align: left
 
-1. You may have done this exercise in the programming challenge in lesson 8.2. Using the ``zeroBlue`` method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the ``main`` method.
+1. You may have done this exercise in the coding challenge in lesson 8.2. Using the ``zeroBlue`` method as a starting point, write the method ``keepOnlyBlue`` that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the ``main`` method.
 
 .. |replit.com project| raw:: html
 

@@ -173,7 +173,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    What Java keyword is used to set up an inheritance relationship between a subclass and a superclass?
 
 
-|Groupwork| Programming Challenge : Online Store
+|Groupwork| Coding Challenge : Online Store
 -------------------------------------------------
 
 .. |Creately.com| raw:: html

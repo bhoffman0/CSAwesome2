@@ -332,7 +332,7 @@ public void zeroBlue()
             <image source="Unit4-Data-Collections/Figures/keepOnlyBlue.png" width="45%%"/>
             <p><ol marker="1">
                 <li>
-                    <p>You may have done this exercise in the programming challenge in lesson 8.2. Using the <c>zeroBlue</c> method as a starting point, write the method <c>keepOnlyBlue</c> that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the <c>main</c> method.</p>
+                    <p>You may have done this exercise in the coding challenge in lesson 8.2. Using the <c>zeroBlue</c> method as a starting point, write the method <c>keepOnlyBlue</c> that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the <c>main</c> method.</p>
                 </li>
             </ol></p>
             <p>You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this <url href="https://replit.com/@BerylHoffman/Picture-Lab" visual="https://replit.com/@BerylHoffman/Picture-Lab">replit.com Swing project</url> or this <url href="https://firewalledreplit.com/@jds7184/PictureLab" visual="https://firewalledreplit.com/@jds7184/PictureLab">alternative replit.com project</url> (click output.jpg to see the result) or download the project files form replit to your own IDE.</p>

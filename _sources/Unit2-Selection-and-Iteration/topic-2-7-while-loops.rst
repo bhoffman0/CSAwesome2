@@ -442,7 +442,7 @@ Here's another example of an input-controlled loop, which you can try online wit
 
 There are standard algorithms that use loops to compute the sum or average like above, or determine the minimum or maximum value entered, or the frequency of a certain condition. You can also use loops to identify if some integers are evenly divisible by other integers or identify the individual digits in an integer. We will see a lot more of these algorithms in later lessons with loops and arrays.
 
-|Groupwork| Programming Challenge : Guessing Game
+|Groupwork| Coding Challenge : Guessing Game
 -------------------------------------------------
 
 

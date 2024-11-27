@@ -401,7 +401,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>There are standard algorithms that use loops to compute the sum or average like above, or determine the minimum or maximum value entered, or the frequency of a certain condition. You can also use loops to identify if some integers are evenly divisible by other integers or identify the individual digits in an integer. We will see a lot more of these algorithms in Unit 6 with loops and arrays.</p>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Guessing Game</title>
+            <title>Coding Challenge : Guessing Game</title>
             <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%%"/>
             <p>We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like “Too high” or “Too low”. Here’s the pseudocode for the guessing game. <term>Pseudocode</term> is an English description or plan of what your code will do step by step. What’s the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?</p>
             <p><ol marker="1">

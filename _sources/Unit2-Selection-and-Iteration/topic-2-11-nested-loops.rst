@@ -265,7 +265,7 @@ Try nested loops with turtles to create a snowflake design!
         }
     }
 
-|Groupwork| Programming Challenge : Turtle Snowflakes
+|Groupwork| Coding Challenge : Turtle Snowflakes
 ----------------------------------------------------------
 
 .. |repl link| raw:: html

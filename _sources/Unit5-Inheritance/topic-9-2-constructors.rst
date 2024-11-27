@@ -260,7 +260,7 @@ variables.
 You can step through this code using the Java Visualizer by clicking the following link `Named Point <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=class+MPoint%0A%7B%0A+++private+int+myX%3B+//+coordinates%0A+++private+int+myY%3B%0A%0A+++public+MPoint(+)%0A+++%7B%0A++++++myX+%3D+0%3B%0A++++++myY+%3D+0%3B%0A+++%7D%0A%0A+++public+MPoint(int+a,+int+b)%0A+++%7B%0A++++++myX+%3D+a%3B%0A++++++myY+%3D+b%3B%0A+++%7D%0A%0A+++//+...+other+methods+not+shown%0A%0A%7D%0A++++++%0Apublic+class+NamedPoint+extends+MPoint%0A%7B%0A+++private+String+myName%3B%0A+++%0A+++//+constructors+go+here%0A+++//+I.%0A+++public+NamedPoint()%0A+++%7B%0A++++++myName+%3D+%22%22%3B%0A+++%7D%0A+++%0A+++//+II.%0A+++//+public+NamedPoint(int+d1,+int+d2,+String+name)%0A+++//+%7B%0A+++//++++myX+%3D+d1%3B%0A+++//++++myY+%3D+d2%3B%0A+++//++++myName+%3D+name%3B%0A+++//+%7D%0A+++%0A+++//+III.%0A+++//+public+NamedPoint(int+d1,+int+d2,+String+name)%0A+++//+%7B%0A+++//++++super(d1,+d2)%3B%0A+++//++++myName+%3D+name%3B%0A+++//+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++NamedPoint+nPt+%3D+new+NamedPoint()%3B%0A++++++//+NamedPoint+nPt+%3D+new+NamedPoint(3,+2,+%22home%22)%3B%0A++++++//+NamedPoint+nPt+%3D+new+NamedPoint(5,+4,+%22work%22)%3B%0A+++%7D%0A%0A%7D&mode=display&curInstr=0>`_.
 
 
-|Groupwork| Programming Challenge : Square is-a Rectangle
+|Groupwork| Coding Challenge : Square is-a Rectangle
 ----------------------------------------------------------
 
 In this challenge, you are giving a class called ``Rectangle`` that has two

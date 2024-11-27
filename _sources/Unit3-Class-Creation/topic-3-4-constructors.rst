@@ -373,7 +373,7 @@ the original object as shown below.
          }
      }
 
-|Groupwork| Programming Challenge : Student Class
+|Groupwork| Coding Challenge : Student Class
 --------------------------------------------------
 
 We encourage you to work in pairs for this challenge to create a Student class with constructors.

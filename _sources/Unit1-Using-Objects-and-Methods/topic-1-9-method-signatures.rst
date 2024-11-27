@@ -483,7 +483,7 @@ is overloaded with different parameter types. The method ``println()`` with no p
 
 
 
-|Groupwork| Programming Challenge: Song with Parameters
+|Groupwork| Coding Challenge: Song with Parameters
 --------------------------------------------------------- 
 
 .. |The Ants Go Marching| raw:: html

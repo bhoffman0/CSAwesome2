@@ -697,7 +697,7 @@ public void zeroBlue()
 </input></program>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Picture Lab</title>
+            <title>Coding Challenge : Picture Lab</title>
             <figure align="left"><image source="_static/arch.jpg" width="36%%"/></figure>
             <p>In this challenge, you will do a part of the Picture Lab to modify the pixels of a digital photo. Scroll down to the bottom of the following code and take a look at the <c>zeroBlue</c> method. Run the code and watch what it does. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0.</p>
             <p>Now, write a similar method called <c>keepOnlyBlue</c> that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called <c>switchColors</c> that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the <c>getRed</c>, <c>getGreen</c>, <c>getBlue</c> to get the RGB values of the pixel and then swap them around by using the <c>setRed</c>, <c>setGreen</c>, <c>setBlue</c> methods and giving them different color values from the get methods as arguments.</p>

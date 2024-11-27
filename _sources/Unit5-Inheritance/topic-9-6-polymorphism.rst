@@ -277,7 +277,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
           }
       }
 
-|Groupwork| Programming Challenge : Shopping Cart 2
+|Groupwork| Coding Challenge : Shopping Cart 2
 ---------------------------------------------------
 
 .. |replit link| raw:: html

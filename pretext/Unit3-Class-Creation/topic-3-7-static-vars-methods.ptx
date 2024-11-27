@@ -53,7 +53,7 @@ final double PI = 3.14
   </p>
   </introduction>
   <subsection>
-            <title>Programming Challenge : Static Song and counter</title>
+            <title>Coding Challenge : Static Song and counter</title>
             <p>In the <url href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters" visual="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters">last lesson</url>, we wrote a class with methods to print out the song <url href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" visual="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ">The Ants Go Marching</url>. Notice that this is a class where there are no instance variables and we don’t really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With the Song, we can just make the methods static and have just 1 copy of them.</p>
             <p><ol marker="1">
                 <li>
