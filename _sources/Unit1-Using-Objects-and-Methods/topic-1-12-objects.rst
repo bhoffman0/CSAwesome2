@@ -602,7 +602,7 @@ After you put the mixed up code in order above, type in the same code below to m
     }
 
 
-|Groupwork| Programming Challenge : Draw Letters
+|Groupwork| Coding Challenge : Draw Letters
 -------------------------------------------------
 
 Working in pairs, use the area below to have your turtle draw simple block-style letters for your first or last name initials using just straight lines (no curves or diagonals). 

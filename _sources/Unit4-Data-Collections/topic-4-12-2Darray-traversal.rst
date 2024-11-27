@@ -667,7 +667,7 @@ You can loop through all the Pixel objects in the two-dimensional array to modif
     }
 
 
-|Groupwork| Programming Challenge : Picture Lab
+|Groupwork| Coding Challenge : Picture Lab
 ---------------------------------------------------
 
 .. figure:: ../../_static/arch.jpg

@@ -530,7 +530,7 @@ Work with a programming buddy if you get stuck.
    }
 
 
-|Groupwork| Programming Challenge : Mad Libs
+|Groupwork| Coding Challenge : Mad Libs
 --------------------------------------------
 
 Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.

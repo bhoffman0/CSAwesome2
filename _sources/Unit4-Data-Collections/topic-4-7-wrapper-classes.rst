@@ -159,7 +159,7 @@ Here are some more useful methods in the Integer and  Double classes:
        }
    }
 
-|Groupwork| Programming Challenge : Debugging
+|Groupwork| Coding Challenge : Debugging
 ----------------------------------------------
 
 Can you find and fix all the bugs in the following code to use the correct Integer and Double methods and variables?

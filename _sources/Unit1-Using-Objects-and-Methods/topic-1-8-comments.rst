@@ -274,7 +274,7 @@ One very popular type of agile development is called **Scrum**. The following sh
 Try the |pogil game| in groups to practice the iterative and incremental agile development process.
 
 
-|Groupwork| Programming Challenge: Preconditions in Algorithms
+|Groupwork| Coding Challenge: Preconditions in Algorithms
 ---------------------------------------------------------------
 
 .. |Creately.com| raw:: html

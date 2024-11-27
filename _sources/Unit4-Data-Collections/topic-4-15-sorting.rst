@@ -319,7 +319,7 @@ You can step through the code above by clicking on the following `Visualization 
 
 
 
-|Groupwork| Programming Challenge : Sort Runtimes
+|Groupwork| Coding Challenge : Sort Runtimes
 ---------------------------------------------------
 
 Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data.

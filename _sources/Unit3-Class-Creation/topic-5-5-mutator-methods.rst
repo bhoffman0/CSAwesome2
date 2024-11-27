@@ -266,7 +266,7 @@ in the ```Student`` class. Change the ``main`` method so that it uses a
 Mutator methods do not have to have a name with "set" in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.
 
 
-|Groupwork| Programming Challenge : Class Pet Setters
+|Groupwork| Coding Challenge : Class Pet Setters
 -----------------------------------------------------
 
 .. |last lesson| raw:: html

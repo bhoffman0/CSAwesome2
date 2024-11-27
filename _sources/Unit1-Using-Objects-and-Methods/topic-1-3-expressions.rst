@@ -405,14 +405,14 @@ Here’s the |video2|.
 
 
 
-|Groupwork| Programming Challenge : Pay Calculator
+|Groupwork| Coding Challenge : Pay Calculator
 ---------------------------------------------------
 
 .. figure:: Figures/dollarSign.png
     :width: 100px
     :align: left
 
-In this programming challenge, you can work in pairs to create a pay calculator using math expressions and operators. 
+In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators. 
 
 .. activecode:: challenge1-3-pay-calculator
    :language: java

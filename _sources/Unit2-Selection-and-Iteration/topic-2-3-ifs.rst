@@ -803,7 +803,7 @@ Here are some rules to follow with if statements to avoid some common errors:
        }
    }
 
-|Groupwork| Programming Challenge: Magic 8 Ball
+|Groupwork| Coding Challenge: Magic 8 Ball
 -------------------------------------------------
 
 .. image:: Figures/Magic_eight_ball.png

@@ -504,7 +504,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
         }
     }
 
-|Groupwork| Programming Challenge : Turtles Drawing Shapes
+|Groupwork| Coding Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------
 
 .. |repl link| raw:: html

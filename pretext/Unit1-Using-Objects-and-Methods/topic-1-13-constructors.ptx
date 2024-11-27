@@ -582,7 +582,7 @@ public class RunestoneTests extends CodeTestHelper
             <image source="Unit1-Using-Objects-and-Methods/Figures/customTurtles.png" width="36%%"/>
         </subsection>
   <subsection>
-            <title>Programming Challenge: Custom Turtles</title>
+            <title>Coding Challenge: Custom Turtles</title>
             <p>Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors. The CustomTurtle class in the ActiveCode below inherits many of its attributes and methods from the Turtle class. However, it has some new constructors with more parameters to customize a turtle with its body color, shell color, width, and height. CustomTurtle has 3 constructors:</p>
             <program language="java"><input>
 /** Constructs a CustomTurtle in the middle of the world */

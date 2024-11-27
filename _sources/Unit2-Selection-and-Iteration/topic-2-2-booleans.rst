@@ -360,7 +360,7 @@ The **remainder** operator has been used quite a bit on the AP CSA exam, so you 
   ``num`` is odd.
 
 
-|Groupwork| Programming Challenge : Prime Numbers POGIL
+|Groupwork| Coding Challenge : Prime Numbers POGIL
 -------------------------------------------------------
 
 .. |pogil| raw:: html

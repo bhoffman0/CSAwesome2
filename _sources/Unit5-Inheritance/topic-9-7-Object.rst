@@ -459,7 +459,7 @@ ClassifiedWord``. In general you should only provide an overridden ``equals``
 method in one class in a class hierarchy.
 
 
-|Groupwork| Programming Challenge : Savings Account
+|Groupwork| Coding Challenge : Savings Account
 ---------------------------------------------------
 
 The following code contains the beginning of a class for representing a bank

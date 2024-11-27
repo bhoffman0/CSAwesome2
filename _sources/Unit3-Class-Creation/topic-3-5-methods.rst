@@ -268,7 +268,7 @@ in the Java visualizer by using the Show CodeLens button.
       }
   }
 
-|Groupwork| Programming Challenge : Class Pet
+|Groupwork| Coding Challenge : Class Pet
 --------------------------------------------------
 
 .. image:: Figures/animalclinic.png

@@ -145,7 +145,7 @@ The order in which sequencing, selection, and repetition are used contributes to
 
     Given the pseudocode for buying a gift above, assume you have $22 to spend. What will be the outcome of the algorithm?
 
-|Groupwork| Programming Challenge : Algorithms
+|Groupwork| Coding Challenge : Algorithms
 ------------------------------------------------
 
 In this group activity, you will work together to create an algorithm for a common problem: choosing a snack!  Create pseudocode for this problem. Make sure you include selection and repetition in your algorithm. For example, if there is no chocolate, you may want to keep searching for another snack. If you're thirsty, you may want to consider the drinks in the fridge. You may want to consider every item in the fridge or your leftover halloween candy stash before deciding on the perfect snack. Be creative!

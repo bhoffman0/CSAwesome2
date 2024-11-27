@@ -205,7 +205,7 @@ If there is a local variable with the same name as an instance variable, the var
       }
   }
 
-|Groupwork| Programming Challenge : Debugging
+|Groupwork| Coding Challenge : Debugging
 ------------------------------------------------------------
 
 

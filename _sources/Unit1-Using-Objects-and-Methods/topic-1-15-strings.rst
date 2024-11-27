@@ -748,7 +748,7 @@ Here is a list of common mistakes made with Strings.
   -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.
 
 
-|Groupwork| Programming Challenge : Pig Latin
+|Groupwork| Coding Challenge : Pig Latin
 ----------------------------------------------
 
 .. |pig| image:: Figures/pig.png

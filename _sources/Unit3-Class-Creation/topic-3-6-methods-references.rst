@@ -442,7 +442,7 @@ Methods can also return values of any type back to the calling method. The calli
       }
   }
 
-|Groupwork| Programming Challenge : Song with Parameters
+|Groupwork| Coding Challenge : Song with Parameters
 ---------------------------------------------------------
 
 .. |The Ants Go Marching| raw:: html

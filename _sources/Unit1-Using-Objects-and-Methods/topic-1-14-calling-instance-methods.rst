@@ -827,7 +827,7 @@ The ``Turtle`` class has a method called
     }
 
 
-|Groupwork| Programming Challenge : Turtle House
+|Groupwork| Coding Challenge : Turtle House
 ------------------------------------------------
 
 .. image:: Figures/houseWithWindows.png

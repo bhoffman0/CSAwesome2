@@ -821,7 +821,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Turtle House</title>
+            <title>Coding Challenge : Turtle House</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/houseWithWindows.png" width="36%%" alt="simple house"/>
             <p>This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors below. Can you add windows and a door? Come up with your own house design as a team.</p>
             <p>To draw a window, you will need to call <c>penUp</c> and <c>moveTo</c> to walk the turtle into position without drawing, for example:</p>

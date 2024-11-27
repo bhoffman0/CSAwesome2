@@ -318,7 +318,7 @@ Here is a ``for`` loop that creates a new string that reverses the string ``s``.
         }
     }
 
-|Groupwork| Programming Challenge : String Replacement Cats and Dogs
+|Groupwork| Coding Challenge : String Replacement Cats and Dogs
 ---------------------------------------------------------------------
 
 .. image:: Figures/catordog.jpg

@@ -289,7 +289,7 @@ The code below using the ``Scanner`` class will say hello to anyone who types in
 
 Although you will not be tested in the AP CSA exam on using the Java input from the keyboard, learning how to do input in Java is very useful and fun. For more information on using the ``Scanner`` class, go to https://www.w3schools.com/java/java_user_input.asp, and for the newer ``Console`` class, https://howtodoinjava.com/java-examples/console-input-output/. We are limited with the one way communication with the Java server in this Runestone ebook, but in most IDEs, the input/output would be more interactive. You can try this |JavaIOExampleJuiceMind| (click on Create Starter Code after login with a Google account) or |JavaIOExampleReplit| using the ``Scanner`` class and |JavaIOConsoleReplit| using the ``Console`` class. We will also learn how to use ``Scanner`` with input files in a later unit.  
 
-|Groupwork| Programming Challenge : Dog Years
+|Groupwork| Coding Challenge : Dog Years
 ------------------------------------------------
 
 .. image:: Figures/dog-free.png
@@ -297,7 +297,7 @@ Although you will not be tested in the AP CSA exam on using the Java input from 
     :align: left
     :alt: dog
 
-In this programming challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.
+In this coding challenge, you will calculate your age, and your pet's age from your birthdates, and your pet's age in dog years.   In the code below, type in the current year, the year you were born, the year your dog or cat was born (if you don't have one, make one up!) in the variables below. Then write formulas in assignment statements to calculate how old you are, how old your dog or cat is, and how old they are in dog years which is 7 times a human year.  Finally, print it all out. If you are pair programming, switch drivers (who has control of the keyboard in pair programming) after every line of code.
 
 .. activecode:: challenge1-4
    :language: java

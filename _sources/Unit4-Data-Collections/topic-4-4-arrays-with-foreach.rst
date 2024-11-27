@@ -468,7 +468,7 @@ If you want to step through the correct code to see what it does in the Java Vis
 
 
 
-|Groupwork| Programming Challenge : SpellChecker 2
+|Groupwork| Coding Challenge : SpellChecker 2
 ---------------------------------------------------
 
 .. image:: Figures/spellcheck.png

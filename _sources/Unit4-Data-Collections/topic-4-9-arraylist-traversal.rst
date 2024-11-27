@@ -445,7 +445,7 @@ may want a nicer printout.
       }
   }
 
-|Groupwork| Programming Challenge : FRQ Word Pairs
+|Groupwork| Coding Challenge : FRQ Word Pairs
 ---------------------------------------------------
 
 .. |2018 Free Response Question #2 WordPair| raw:: html

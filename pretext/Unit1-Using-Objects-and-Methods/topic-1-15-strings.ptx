@@ -745,7 +745,7 @@ public class RunestoneTests extends CodeTestHelper
             </blockquote>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Pig Latin</title>
+            <title>Coding Challenge : Pig Latin</title>
             
             <p><image source="Unit1-Using-Objects-and-Methods/Figures/pig.png" width="18%%" alt="pig latin"/> Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay”.</p>
             <p>Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word’s length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).</p>
