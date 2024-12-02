@@ -180,6 +180,31 @@ Java doesn't require your code to be correctly indented (code moved to the right
 
 |Exercise| **Check your understanding**
 
+.. parsonsprob:: print_odds_while
+   :numbered: left
+   :practice: T
+   :adaptive:
+
+   The following method has the correct code to print out all the odd values from 1 to 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn't require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the "Check Me" button.
+   -----
+   public static void printOdds()
+   {
+   =====
+      // initialize the loop variable
+      int i = 1; 
+   =====
+      while (i <= 10)
+      {
+   =====
+         System.out.println(i);
+   =====
+         // update the loop variable  
+         i += 2;  
+   =====
+      } // end while
+   } // end method
+
+
 .. mchoice:: while1
    :practice: T
    :answer_a: while (count == 10)
@@ -547,13 +572,13 @@ Can you change the code below to remove the repeated lines of code and use a whi
         @Test
         public void test4()
         {
-            boolean passed = checkCodeContains("++", "increment the counter with ++");
+            boolean passed = checkCodeContains("increment the counter with ++", "++");
             assertTrue(passed);
         }
         @Test
         public void test5()
         {
-            boolean passed = checkCodeContains("<", "test the counter with < or <=");
+            boolean passed = checkCodeContains("test the counter with < or <=", "<");
             assertTrue(passed);
         }
     }

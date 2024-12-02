@@ -481,6 +481,7 @@ The following code has 4 methods to draw shapes using a Turtle t passed in as an
             //move a little to the left
             yertle.moveTo(100, 200);
             yertle.penDown();
+            yertle.setSpeed(25); // fast 0 - 100 slow
 
             // Draw a square
             drawSquare(yertle);
@@ -492,7 +493,7 @@ The following code has 4 methods to draw shapes using a Turtle t passed in as an
             // Draw shapes of any number of sides and pixels
             drawShape(yertle, 4, 50);
             
-            // 5. Call drawShapes to draw a hexagon (6 sides) of length 40
+            // 5. Call drawShapes to draw a hexagon (6 sides) of length 20
         
 
 
@@ -530,40 +531,34 @@ The following code has 4 methods to draw shapes using a Turtle t passed in as an
         @Test
         public void test2()
         {
-            boolean passed = checkCodeContains("4", "drawSquare for loop should count up to 4");
+            boolean passed = checkCodeContains("drawSquare for loop should count up to 4","4");
             assertTrue(passed);
         }
 
         @Test
         public void test3()
         {
-            boolean passed = checkCodeContains("3", "drawTriangle for loop should count up to 3");
+            boolean passed = checkCodeContains("drawTriangle for loop should count up to 3","3");
             assertTrue(passed);  
         }
 
         @Test
         public void test4()
         {
-            boolean passed = checkCodeContains("5", "drawPentagon for loop should count up to 5");
+            boolean passed = checkCodeContains("drawPentagon for loop should count up to 5","5");
             assertTrue(passed);
         }
 
         @Test
         public void test5()
         {
-            String code = getCode();
-            String test = "360/n";
-
-            int count = countOccurences(code.replaceAll(" ", ""), test);
-            boolean passed = count == 1;
-
-            passed = getResults("true", "" + passed, "Calculates angle correctly using n and 360 and a math operator", passed);
+            boolean passed = checkCodeContains("formula using 360 and n and a math operation to calculate angle in drawShape","360/n");
             assertTrue(passed);
         }
         @Test
         public void test6()
         {
-            boolean passed = checkCodeContains("drawShape(yertle, 6, 40);", "call drawShape to draw a hexagon (6 sides) of length 40");
+            boolean passed = checkCodeContains("call drawShape to draw a hexagon (6 sides) of length 20", "drawShape(yertle, 6, 20);");
             assertTrue(passed);
         }
     }
