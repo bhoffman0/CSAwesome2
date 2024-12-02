@@ -1,12 +1,8 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 4-2-
+   :prefix: 2-8-
    :start: 1
-
-.. |github| raw:: html
-
-   <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
 |Time90|
 
@@ -18,9 +14,9 @@ For Loops
    pair: loop; for
 
 
-Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.
+Another type of loop (or iteration) in Java is a **for loop**. It is usually used when you know how many times you want the loop to execute, as a simple **counter-controlled loop** to do the loop body a set number of times.
 
-If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. If you have used a language like Scratch or Snap!, you may remember the repeat(n) block where you type in a number of times you want the code to be repeated, just like the AP pseudocode REPEAT block. In fact, almost every programming language has a for or repeat loop.
+If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. If you have used a language like Scratch or Snap!, you may remember the repeat(n) block where you type in a number of times you want the code to be repeated, just like the AP pseudocode REPEAT block. In fact, almost every programming language has a ``for`` or ``repeat`` loop.
 
 
 .. figure:: Figures/loopAppInv.png
@@ -35,16 +31,16 @@ If you took AP CSP with a block programming language like App Inventor, you prob
 Three Parts of a For Loop
 --------------------------
 
-A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and change the loop control variable.  The 3 parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.
+A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and update the loop control variable.  The 3 parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization; Boolean expression; update), but the semicolons are not optional.
 
 .. code-block:: java
 
-  for (initialize; test condition; change)
+  for (initialize; test; update)
   {
      loop body
   }
 
-The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line.
+The for-loop is almost a shortcut way to write a while loop with all three steps that you need in one line. A ``for`` loop can be rewritten into an equivalent ``while`` loop (and vice versa).
 
 .. figure:: Figures/compareForAndWhile.png
     :width: 600px
@@ -61,7 +57,7 @@ Watch the following `video <https://www.youtube.com/watch?v=SEDnzXeb2hU&list=PLH
     :align: center
     :optional:
 
-Here is a control flow diagram for a for loop.  The code in the initialization area is executed only one time before the loop begins, the test condition is checked each time through the loop and the loop continues as long as the condition is true, and the loop control variable change is done at the end of each execution of the body of the loop, just like a while loop.  When the loop condition is false, execution will continue at the next statement after the body of the loop.
+Here is a control flow diagram for a for loop. In a ``for`` loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a **loop control variable**. The Boolean expression is evaluated immediately after the loop control variable is initialized and then followed by each execution of the increment statement until it is false. In each iteration, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again. When the loop condition is finally false, we jump out of the loop and continue at the next statement after the body of the loop.
 
 .. figure:: Figures/ForLoopFlow.png
     :width: 250px
@@ -192,7 +188,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qlb_3_1
+.. mchoice:: mcq-for-1
    :practice: T
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8
@@ -213,7 +209,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
         System.out.print(i + " ");
      }
 
-.. mchoice:: qlb_3_2
+.. mchoice:: mcq-for-2
    :practice: T
    :answer_a: 3 4 5 6 7 8
    :answer_b: 0 1 2 3 4 5 6 7 8 9
@@ -234,7 +230,7 @@ Here is a control flow diagram for a for loop.  The code in the initialization a
         System.out.print(i + " ");
      }
 
-.. mchoice:: qlb_3_3
+.. mchoice:: mcq-for-3
    :practice: T
    :answer_a: 10
    :answer_b: 6
@@ -284,7 +280,7 @@ You can also count backwards in a loop starting from the last number and decreme
 
 |CodingEx| **Coding Exercise**
 
-.. activecode:: lcfcp1
+.. activecode:: for-bottles-backwards
    :language: java
    :autograde: unittest
 
@@ -317,7 +313,6 @@ You can also count backwards in a loop starting from the last number and decreme
    }
 
    ====
-   // Test Code for Lesson 4.1 - popSong
    import static org.junit.Assert.*;
 
    import org.junit.Test;
@@ -402,152 +397,108 @@ The method **printPopSong** prints the words to a song.  It initializes the valu
        }
    }
 
-Turtle Loops
-------------
 
-
-|CodingEx| **Coding Exercise**
-
-Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below. Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!
-
-(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
-
-.. activecode:: TurtleSquare
-    :language: java
-    :autograde: unittest
-    :datafile: turtleClasses.jar
-
-    Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square?
-    ~~~~
-    import java.awt.*;
-    import java.util.*;
-
-    public class TurtleDrawSquare
-    {
-        public static void main(String[] args)
-        {
-            World world = new World(300, 300);
-            Turtle yertle = new Turtle(world);
-
-            // Change the following code to use a for loop to draw the square
-            yertle.forward();
-            yertle.turn(90);
-            yertle.forward();
-            yertle.turn(90);
-            yertle.forward();
-            yertle.turn(90);
-            yertle.forward();
-            yertle.turn(90);
-
-            world.show(true);
-        }
-    }
-
-    ====
-    import static org.junit.Assert.*;
-
-    import org.junit.*;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests()
-        {
-            super("TurtleDrawSquare");
-        }
-
-        @Test
-        public void test1()
-        {
-            String target = "for (int * = #; * ? #; *~)";
-            boolean passed = checkCodeContainsRegex("for loop", target);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test2()
-        {
-            String code = getCode();
-            String forwards = ".forward()";
-
-            int count = countOccurences(code, forwards);
-
-            boolean passed = count == 1;
-
-            passed =
-                    getResults(
-                            "1 forward()",
-                            "" + count + " forward()",
-                            "Should only need forward() once",
-                            passed);
-            assertTrue(passed);
-        }
-
-        @Test
-        public void test3()
-        {
-            String code = getCode();
-            String forwards = ".turn(90)";
-
-            int count = countOccurences(code, forwards);
-
-            boolean passed = count == 1;
-
-            passed =
-                    getResults(
-                            "1 turn(90)",
-                            "" + count + " turn(90)",
-                            "Should only need turn(90) once",
-                            passed);
-            assertTrue(passed);
-        }
-    }
 
 |Groupwork| Coding Challenge : Turtles Drawing Shapes
 ----------------------------------------------------------
 
-.. |repl link| raw:: html
 
-   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">replit link</a>
 
-In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops. We encourage you to work in pairs.
+Let's use a ``for`` loop to have a Turtle draw different shapes. We encourage you to work in pairs.
 
-1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360.
+The following code has 4 methods to draw shapes using a Turtle t passed in as an argument. 
 
-2. Have yertle draw a pentagon using a loop. A pentagon has 5 sides. What external angle should you use for the turns? Remember they have to add up to 360 degrees.
+1. Complete the ``drawSquare`` method to use a ``for`` loop to have the Turtle t draw a square.
 
-3. Create a variable n that holds the number of sides for any polygon, and use n in your loop for the sides and to calculate the angle to turn. Can you have the loop draw a variety of shapes by just changing the value of the variable n? The power of abstraction! Can you draw a 9 sided nonagon? (Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts).
+2. Complete the ``drawTriangle`` method to use a ``for`` loop to draw an equilateral triangle. How many times should the loop run? It ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. What angle times 3 will give you 360?
 
-.. activecode:: challenge4-2-TurtleLoopShapes
+3. Complete the ``drawPentagon`` method to use a ``for`` loop to draw a pentagon (which has 5 sides and looks like a stop sign). What external angle should you use for the turns? Remember they have to add up to 360 degrees after 5 turns.
+
+4. Complete the ``drawPolygon`` method to use a ``for`` loop to draw any polygong with ``n`` sides of length ``pixels`` given as arguments. Use ``n`` in your loop for the number of sides (or the number of iterations). Use ``pixels`` for the amount to move forward. Calculate the angle to turn by using a formula that uses n and 360, so that n turns add up to 360 degrees. 
+
+5. In the main method, call the ``drawPolygon`` method to draw a hexagon (6 sides). This method can draw a variety of shapes by just changing the value of the argument n. The power of abstraction! Try drawing other shapes with it. Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts.
+
+.. activecode:: challenge-TurtleLoopShapes
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar
 
-    Use a for-loop to draw a triangle. Then, change it to a pentagon. Then change it to draw any polygon using a variable n that holds the number of sides. Note that the angles in the turns have to add up to 360. The autograder only checks one shape at a time, so comment out the code for one shape before starting on the next.
+    Complete the methods below with for-loops to draw a square, triangle, pentagon, and then any polygon using a variable n that holds the number of sides. Call 1 more call to the method drawShapes in main. Note that the angles in the turns have to add up to 360. 
     ~~~~
     import java.awt.*;
     import java.util.*;
 
     public class TurtleDrawShapes
     {
+
+        public static void drawSquare(Turtle t)
+        {
+            t.setColor(Color.blue);
+            // 1. Complete the following for loop to draw a square with 4 sides
+            for(int i = 0;                )                      
+            {
+                t.forward(100);
+                t.turn(90);
+            }
+        }
+        
+        public static void drawTriangle(Turtle t)
+        {
+            t.setColor(Color.green);
+            // 2. Use a for loop to draw a triangle
+            // External angles of 3 sides add up to 360. 
+           
+
+
+        }
+        
+        public static void drawPentagon(Turtle t)
+        {
+            t.setColor(Color.red);
+            // 3. Use a for loop to draw a pentagon 
+            // External angles of 5 sides add up to 360.
+           
+
+
+        }
+
+        public static void drawShape(Turtle t, int n, int pixels)
+        {
+            t.setColor(Color.black);
+            // 4. Use a for loop to draw a polygon with n sides.
+            // Use the argument pixels to move forward.
+            // Use 360 and n to determine the angle to turn.
+           
+
+
+        }
+
         public static void main(String[] args)
         {
             World world = new World(400, 400);
             Turtle yertle = new Turtle(world);
-            yertle.penUp(); // move a little to the left
+            yertle.penUp(); 
+            //move a little to the left
             yertle.moveTo(100, 200);
             yertle.penDown();
-            yertle.setColor(Color.blue);
 
-            // Add your loop here!
-            yertle.forward(100);
-            yertle.turn(90);
+            // Draw a square
+            drawSquare(yertle);
+            // Draw a triangle
+            drawTriangle(yertle);
+            // Draw a pentagon
+            drawPentagon(yertle);
+
+            // Draw shapes of any number of sides and pixels
+            drawShape(yertle, 4, 50);
+            
+            // 5. Call drawShapes to draw a hexagon (6 sides) of length 40
+        
+
 
             world.show(true);
         }
     }
-
     ====
     import static org.junit.Assert.*;
 
@@ -565,60 +516,35 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
         @Test
         public void test1()
         {
-            String target = "for (int * = *; * ? *; *~)";
-            boolean passed = checkCodeContainsRegex("for loop", target);
+            String code = getCode();
+            String target = "for (int * = #; * ? *; *~)";
+
+            int num = countOccurencesRegex(code, target);
+
+            boolean passed = num == 4;
+
+            getResults("4", "" + num, "Each method should have a for loop", passed);
             assertTrue(passed);
         }
 
         @Test
         public void test2()
         {
-            String code = getCode();
-            String forwards = ".forward(";
-
-            int count = countOccurences(code, forwards);
-
-            boolean passed = count == 1;
-
-            passed =
-                    getResults(
-                            "1 forward(...)",
-                            "" + count + " forward(...)",
-                            "Should only need forward() once",
-                            passed);
+            boolean passed = checkCodeContains("4", "drawSquare for loop should count up to 4");
             assertTrue(passed);
         }
 
         @Test
         public void test3()
         {
-            String code = getCode();
-            String forwards = ".turn(";
-
-            int count = countOccurences(code, forwards);
-
-            boolean passed = count == 1;
-
-            passed =
-                    getResults(
-                            "1 turn(...)",
-                            "" + count + " turn(...)",
-                            "Should only need turn(...) once",
-                            passed);
-            assertTrue(passed);
+            boolean passed = checkCodeContains("3", "drawTriangle for loop should count up to 3");
+            assertTrue(passed);  
         }
 
         @Test
         public void test4()
         {
-            String code = getCode();
-            String forwards = "int n";
-
-            int count = countOccurences(code, forwards);
-
-            boolean passed = count == 1;
-
-            passed = getResults("true", "" + passed, "Declare int n", passed);
+            boolean passed = checkCodeContains("5", "drawPentagon for loop should count up to 5");
             assertTrue(passed);
         }
 
@@ -631,7 +557,13 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
             int count = countOccurences(code.replaceAll(" ", ""), test);
             boolean passed = count == 1;
 
-            passed = getResults("true", "" + passed, "Calculates angle correctly using n", passed);
+            passed = getResults("true", "" + passed, "Calculates angle correctly using n and 360 and a math operator", passed);
+            assertTrue(passed);
+        }
+        @Test
+        public void test6()
+        {
+            boolean passed = checkCodeContains("drawShape(yertle, 6, 40);", "call drawShape to draw a hexagon (6 sides) of length 40");
             assertTrue(passed);
         }
     }
@@ -639,19 +571,16 @@ In the last exercise, you used a for-loop to have the turtle draw a square. Use 
 Summary
 -------
 
-- There are three parts in a for loop header: the initialization, the test condition (a Boolean expression), and an increment or decrement statement to change the loop control variable.
-
-- In a for loop, the initialization statement is only executed once before the evaluation of the test Boolean expression. The variable being initialized is referred to as a **loop control variable**.
-
-- In each iteration of a for loop, the increment or decrement statement is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
-
-- A for loop can be rewritten into an equivalent while loop and vice versa.
-
+- (AP 2.8.A.1) A ``for`` loop is a type of iterative statement. There are three parts in a for loop header: the initialization (of the loop control variable or counter), the Boolean expression (testing the loop variable), and the update (to change the loop variable).
+- (AP 2.8.A.2) In a ``for`` loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a **loop control variable**. 
+- (AP 2.8.A.2) The ``for`` loop  Boolean expression is evaluated immediately after the loop control variable is initialized and then followed by each execution of the increment (or update) statement until it is false. 
+- (AP 2.8.A.2) In each iteration of the ``for`` loop, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again.
+- (AP 2.8.A.3) A ``for`` loop can be rewritten into an equivalent ``while`` loop (and vice versa).
 
 AP Practice
 ------------
 
-.. mchoice:: AP4-2-1
+.. mchoice:: AP-for-loop-1
     :practice: T
 
     Consider the following code segment.
@@ -721,7 +650,7 @@ AP Practice
 
       - Note that I has an extra count++ at the beginning of the loop body that should be deleted.
 
-.. mchoice:: AP4-2-2
+.. mchoice:: AP-for-loop-2
     :practice: T
 
     Consider the following code segment.
