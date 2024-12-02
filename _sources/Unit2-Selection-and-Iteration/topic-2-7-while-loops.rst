@@ -1,10 +1,10 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 4-1-
+   :prefix: 2-7-
    :start: 1
 
-|Time90|
+|Time45|
 
 While Loops
 ============
@@ -13,6 +13,7 @@ While Loops
     single: loop
     single: looping
     single: iteration
+    single: repetition
     single: while
     pair: loop; while
 
@@ -20,6 +21,8 @@ While Loops
 .. image:: Figures/loops.png
     :width: 125
     :align: left
+
+
 
 When you play a song, you can set it to loop, which means that when it reaches
 the end it starts over at the beginning. A **loop** in programming, also called
@@ -62,14 +65,12 @@ have used a loop block like below that looks very similar to Java ``while``
 loops (or you may have used a ``for`` loop which will be covered in the next
 lesson). Almost every programming language has a ``while`` loop.
 
-
 .. figure:: Figures/whileInAppInventor.png
     :width: 100%
     :align: center
     :figclass: align-center
 
     Figure 1: Comparing App Inventor and Java for ``while`` loops
-
 
 If you're used to a language like Snap! or Scratch, you may be familiar with the
 Repeat Until loop. However, you have to be very careful comparing repeat until
@@ -78,14 +79,12 @@ For example, if you are repeatedly moving until reaching x position 100, you
 must create a Java ``while`` loop that repeatedly moves while it has *not* yet
 reached x position 100 or is less than 100 as below.
 
-
 .. figure:: Figures/ScratchRepeatUntilLoop.png
     :width: 100%
     :align: center
     :figclass: align-center
 
     Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java ``while`` loop
-
 
 The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces while loops.
 
@@ -95,7 +94,7 @@ The following `video <https://www.youtube.com/watch?v=Uw9mv53Jnfs>`_ introduces 
     :align: center
     :optional:
 
-Here's what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated.
+Here's what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated. Iteration statements change the flow of control by repeating a segment of code zero or more times as long as the Boolean expression controlling the loop evaluates to true. In while loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the Boolean expression evaluates to false, whereupon the iteration terminates.
 
 .. figure:: Figures/WhileLoopFlow.png
     :width: 250px
@@ -123,7 +122,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
 
     1. Initialize the loop variable (before the ``while`` loop)
     2. Test the loop variable (in the loop header)
-    3. Change the loop variable (in the while loop body at the end)
+    3. Update the loop variable (in the while loop body at the end)
 
 
 
@@ -148,7 +147,7 @@ The simplest loops are **counter-controlled loops** like below, where the **loop
            while (count <= 5)
            {
                System.out.println(count);
-               // 3. change the loop variable
+               // 3. update the loop variable
                count++;
            }
        }
@@ -177,7 +176,7 @@ Java doesn't require your code to be correctly indented (code moved to the right
 
 .. note::
 
-    On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.
+    On the free response part of the AP exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.
 
 |Exercise| **Check your understanding**
 
@@ -266,7 +265,7 @@ Watch the following |video| for a tracing demo. When you are tracing through cod
 
 Step through the code above with the |visualizer|.
 
-.. mchoice:: qlb_2_1
+.. mchoice:: while3
    :practice: T
    :answer_a: 5 4 3 2 1
    :answer_b: -5 -4 -3 -2 -1
@@ -298,7 +297,7 @@ Common Errors with Loops
    pair: loop; infinite
 
 One common error with loops is to accidentally create an **infinite loop**. An
-infinite loop is one that never stops because the condition is always true.
+infinite loop is one that never stops because the Boolean condition is always true.
 
 Sometimes we will write an infinite loop on purpose like this:
 
@@ -394,10 +393,23 @@ test condition and using the incorrect relational operator ``<`` or ``<=``.
        }
    }
 
+
+Another possible error is not realizing that the loop body of an iterative statement will not execute if the Boolean expression initially evaluates to false. This is often a problem with the initial value of the loop control variable. For example, if you initialize the loop variable to 10 and test if it is less than 10, the loop body will not execute at all.
+
+.. code-block:: java
+
+   int i = 10;
+   while (i < 10)  // This loop will never run!
+   {
+       System.out.println(i);
+       i++;
+   }
+
+
 Input-Controlled Loops
 ----------------------
 
-You can use a ``while`` loop to repeat the body of the loop a certain number of times as shown above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the Magpie chatbot lab code below, the while loop stops when you type in "Bye". The stopping value is often called the **sentinel value** for the loop. Notice that if you type in "Bye" right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a ``return`` statement that makes it immediately return from the method.
+You can use a ``while`` loop to repeat the body of the loop a certain number of times in counter-controlled loop as we saw above.  However, a ``while`` loop is typically used when you don't know how many times the loop will execute. It is often used for a **input-controlled loop** where the user's input indicates when to stop. For example, in the Magpie chatbot lab code below, the while loop stops when you type in "Bye". The stopping value is often called the **sentinel value** for the loop. Notice that if you type in "Bye" right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a ``return`` statement that makes it immediately return from the method.
 
 .. code-block:: java
 
@@ -409,263 +421,178 @@ You can use a ``while`` loop to repeat the body of the loop a certain number of 
         statement = in.nextLine();
     }
 
-
-.. |JuiceMind| raw:: html
-
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#9c210139-7c72-441f-88c8-d68482488aa1" target="_blank" style="text-decoration:underline">JuiceMind</a>
-
-.. |replit| raw:: html
-
-   <a href="https://replit.com/@BerylHoffman/Average#Main.java" target="_blank">replit</a>
-
-Here's another example of an input-controlled loop, which you can try online with |JuiceMind| or |replit|. This code calculates the average of positive numbers. The number -1 is used as the **sentinel value**. The while loop will run while the user does not input -1. What would happen if you forgot step 3 (change the loop variable - get a new input)? Remember that skipping step 3 will often lead to an infinite loop!
-
-.. code-block:: java
-
-    // 1. initialize the loop variable (get the first number)
-    System.out.print("Please enter a number to average in or -1 to stop: ");
-    number = scan.nextInt();
-
-    // 2. test the loop variable (against sentinel value)
-    while (number != -1) 
-    {
-      sum += number; // add number to sum
-      count++; // count the number
-      // 3. Change the loop variable (get a new number)
-      System.out.print("Please enter a number to average in or -1 to stop: ");
-      number = scan.nextInt();
-    }
-    System.out.println(count);
-    // calculate average
-    average = (double) sum/count;
-    System.out.println("The average is " + average);
-
-There are standard algorithms that use loops to compute the sum or average like above, or determine the minimum or maximum value entered, or the frequency of a certain condition. You can also use loops to identify if some integers are evenly divisible by other integers or identify the individual digits in an integer. We will see a lot more of these algorithms in later lessons with loops and arrays.
-
-|Groupwork| Coding Challenge : Guessing Game
+|Groupwork| Coding Challenge : Turtle Squares
 -------------------------------------------------
 
+Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below.  This is a lot of repeated code!
 
-.. image:: Figures/questionmark.jpg
-    :width: 100
-    :align: left
+.. clickablearea:: repeatedcode-square
+    :question: Click on the lines of code that are repeated after the first two lines.
+    :iscode:
+    :feedback: Which lines are identical to the first two lines?
 
-We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like "Too high" or "Too low". Here's the pseudocode for the guessing game. **Pseudocode** is an English description or plan of what your code will do step by step. What's the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?
+    :click-incorrect:yertle.forward(100);:endclick:
+    :click-incorrect:yertle.turn(90);:endclick:
+    :click-correct:yertle.forward(100);:endclick:
+    :click-correct:yertle.turn(90);:endclick:
+    :click-correct:yertle.forward(100);:endclick:
+    :click-correct:yertle.turn(90);:endclick:
+    :click-correct:yertle.forward(100);:endclick:
+    :click-correct:yertle.turn(90);:endclick:
+    
+Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!
 
-1. Choose a random number from 0-100
-2. Get the first guess
-3. Loop while the guess does not equal the random number,
+.. |repl link| raw:: html
 
-   - If the guess is less than the random number, print out "Too low!"
-   - If the guess is greater than the random number, print out "Too high!"
-   - Get a new guess (save it into the same variable)
+   <a href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" target="_blank">replit link</a>
 
-4. Print out something like "You got it!"
+.. |github| raw:: html
 
-As an extension to this project, you can add a counter variable to count how many guesses the user took and print it out when they guess correctly.
+   <a href="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, so guessing 50 for the first guess. This is called a **divide and conquer** or **binary search** algorithm. If your guess is between 0-100, you should be able to guess the number within 7 guesses. Another extension to this challenge is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.
+(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
-.. |Scanner class| raw:: html
+.. activecode:: challenge-turtle-square-while
+    :language: java
+    :autograde: unittest
+    :datafile: turtleClasses.jar
 
-   <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
+    Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square?
+    ~~~~
+    import java.awt.*;
+    import java.util.*;
 
-.. |JuiceMindGuess| raw:: html
-
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#bb8a2ea3-cfb8-401f-9f58-62605edf4106" target="_blank" style="text-decoration:underline">JuiceMind</a>
-
-.. |replitGuess| raw:: html
-
-   <a href="https://replit.com/@BerylHoffman/Guessing-Game#Main.java" target="_blank">replit</a>
-
-For this project, you can use the |Scanner class| for input and |JuiceMindGuess| or |replitGuess| or another IDE of your choice.
-
-.. activecode:: challenge4-1-loop-GuessingGame-autograde
-  :language: java
-  :autograde: unittest
-
-  Complete the code for the guessing game below. If you did this code in |JuiceMindGuess| or |replitGuess| or your own IDE, you can paste in your code to see if it passes the autograder tests. Note that this code will only run with the autograder's input and will not ask the user for input.
-  ~~~~
-  import java.util.Scanner;
-
-  public class Main 
-  {
-    public static void main(String[] args) 
+    public class TurtleDrawSquare
     {
-        Scanner scan = new Scanner(System.in);
-        // Choose a random number from 0-100 
-        
+        public static void main(String[] args)
+        {
+            World world = new World(300, 300);
+            Turtle yertle = new Turtle(world);
 
-        // Ask the user to guess a number from 0 to 100 
-        // Get the first guess using scan.nextInt();
-    
+            // Change the following code to use a while loop to draw the square
+            // Remember to initialize a counter variable, test it, and increment it.
 
-        // Loop while the guess does not equal the random number,
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
+            yertle.forward();
+            yertle.turn(90);
 
-        // If the guess is less than the random number, print out "Too low!"
-    
-        // If the guess is greater than the random number, print out "Too high!"
-    
-        // Get a new guess (save it into the same variable)
-    
-
-        // Print out something like "You got it!"
-
-
+            world.show(true);
+        }
     }
-  }
-  ====
-  import static org.junit.Assert.*;
 
-  import org.junit.*;
+    ====
+    import static org.junit.Assert.*;
 
-  import java.io.*;
+    import org.junit.*;
 
-  public class RunestoneTests extends CodeTestHelper
-  {
-      public RunestoneTests()
-      {
-          super("Main", input1.replaceAll(" ", "\n")); // For Book
-          // super("GuessingGame", input1.replaceAll(" ", "\n")); // For replit.com
-      }
+    import java.io.*;
 
-      private static int goal = 1;
-      private static String input1 =
-              "100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73"
-                  + " 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47"
-                  + " 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21"
-                  + " 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0";
-      private static String input2 =
-              "0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-                  + " 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57"
-                  + " 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83"
-                  + " 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100";
-      private String output1, output2;
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("TurtleDrawSquare");
+        }
 
-      @Test
-      public void test1()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = output;
+        @Test
+        public void test1()
+        {
+            String target = "while (* ? 4)";
+            boolean passed = checkCodeContainsRegex("while loop that counts to 4", target);
+            assertTrue(passed);
+        }
 
-          String[] lines = output.split("\n");
+        @Test
+        public void test2()
+        {
+            String code = getCode();
+            String forwards = ".forward()";
 
-          boolean passed = lines.length >= goal;
+            int count = countOccurences(code, forwards);
 
-          passed =
-                  getResults(
-                          ">" + goal + " lines",
-                          "" + lines.length + " lines",
-                          "Outputs at least " + goal + " lines",
-                          passed);
-          assertTrue(passed);
-      }
+            boolean passed = count == 1;
 
-      @Test
-      public void test2()
-      {
-          String input = input2.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output2 = output;
+            passed =
+                    getResults(
+                            "1 forward()",
+                            "" + count + " forward()",
+                            "Should only need forward() once",
+                            passed);
+            assertTrue(passed);
+        }
 
-          if (output1 == null)
-          {
-              input = input1.replaceAll(" ", "\n");
-              output1 = getMethodOutputWithInput("main", input);
-          }
+        @Test
+        public void test3()
+        {
+            String code = getCode();
+            String forwards = ".turn(90)";
 
-          boolean passed = !output1.equals(output2);
+            int count = countOccurences(code, forwards);
 
-          passed =
-                  getResults(
-                          "true",
-                          "" + passed,
-                          "Outputs different results for different inputs",
-                          passed);
-          assertTrue(passed);
-      }
+            boolean passed = count == 1;
 
-      @Test
-      public void test3()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "if");
-          boolean passed = num >= 1;
-
-          getResults(">=1", "" + num, "Number of if statements", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test4()
-      {
-          // boolean passed = checkCodeContainsRegex("while loop", "while(*)");
-          boolean passed = checkCodeContains("while loop", "while");
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test5()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          int[] values = new int[10];
-
-          for (int i = 0; i < values.length; i++)
-          {
-              String output = getMethodOutputWithInput("main", input);
-              values[i] = output.split("\n").length;
-          }
-
-          boolean passed = false;
-          for (int i = 0; i < values.length - 1; i++)
-          {
-              if (values[i] != values[i + 1]) passed = true;
-          }
-
-          passed = getResults("true", "" + passed, "Guesses random numbers", passed);
-          assertTrue(passed);
-      }
-  }
+            passed =
+                    getResults(
+                            "1 turn(90)",
+                            "" + count + " turn(90)",
+                            "Should only need turn(90) once",
+                            passed);
+            assertTrue(passed);
+        }
+        @Test
+        public void test4()
+        {
+            boolean passed = checkCodeContains("++", "increment the counter with ++");
+            assertTrue(passed);
+        }
+        @Test
+        public void test5()
+        {
+            boolean passed = checkCodeContains("<", "test the counter with < or <=");
+            assertTrue(passed);
+        }
+    }
 
 Summary
 -------------------
 
+- (AP 2.7.A.1) Iteration statements (loops) change the flow of control by repeating a segment of code zero or more times as long as the Boolean expression controlling the loop evaluates to true. Iteration is a form of repetition.
+- (AP 2.7.B.1) A **while loop** is a type of iterative statement. In while loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the Boolean expression evaluates to false, whereupon the iteration terminates. Here is the general form of a while loop:
 
-- Iteration statements (loops) change the flow of control by repeating a set of statements zero or more times until a condition is met.
+.. code-block:: java
+
+    // The statements in a while loop run zero or more times,
+    // determined by how many times the condition is true
+    int count = 0; // initialize the loop variable
+    while (count < 10)  // test the loop variable
+    {
+        // repeat this code 
+        // update the loop variable
+        count++;
+    }
 
 - Loops often have a **loop control variable** that is used in the boolean condition of the loop. Remember the 3 steps of writing a loop:
 
-  - Initialize the loop variable
-  - Test the loop variable
-  - Change the loop variable
+  1. Initialize the loop variable
+  2. Test the loop variable
+  3. Update the loop variable
 
-- In ``while`` loops, the Boolean expression is evaluated before each iteration
-  of the loop body, including the first. When the expression evaluates to true,
-  the loop body is executed. This continues until the expression evaluates to
-  false which signals to exit the loop.
+- (AP 2.7.A.2) An **infinite loop** occurs when the Boolean expression in an iterative statement always evaluates to true.
+- (AP 2.7.A.3) The loop body of an iterative statement will not execute if the Boolean expression initially evaluates to false.
+- (AP 2.7.A.4) **Off by one errors** occur when the iteration statement loops one time too many or one time too few.
 
-- If the Boolean expression evaluates to false initially, the loop body is not
-  executed at all.
-
-- A loop is an **infinite loop** when the Boolean expression always evaluates to
-  true so that the loop never ends.
-
-- **Off-by-one** errors occur when the iteration statement loops one time too
-  many or one time too few.
-
-- **Input-controlled loops** often use a **sentinel value** that is input by the
-  user like "bye" or -1 as the condition for the loop to stop. Input-controlled
-  loops are not on the AP CSA exam, but are very useful to accept data from the
-  user.
-
-- There are standard algorithms to compute a sum or average.
+- **Input-controlled loops** often use a **sentinel value** that is input by the user like "bye" or -1 as the condition for the loop to stop. Input-controlled loops are not on the AP CSA exam, but are very useful to accept data from the user.
 
 
 AP Practice
 ------------
 
-.. mchoice:: AP4-1-1
+.. mchoice:: AP-while-loop1
     :practice: T
 
     Consider the following code segment.
@@ -704,7 +631,7 @@ AP Practice
 
       - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
 
-.. mchoice:: AP4-1-2
+.. mchoice:: AP-while-loop2
     :practice: T
 
     Consider the following code segment which is intended to print out the even numbers from 0 to 8 (including 8).
