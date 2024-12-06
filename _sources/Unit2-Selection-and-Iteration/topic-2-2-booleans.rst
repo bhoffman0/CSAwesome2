@@ -322,31 +322,6 @@ The remainder operator (%) is very useful in coding. The following Boolean expre
        
    }
 
-The **remainder** operator has been used quite a bit on the AP CSA exam, so you should be familiar with it.
-
-- Use it to check for odd or even numbers. If ``num % 2 != 0`` is true, ``num``
-  is odd and if ``num % 2 == 0`` is true then ``num`` is even.
-
-- You can also use remainder to check if any number is evenly divisible by any
-  other: If ``num1 % num2 == 0`` is true then ``num1`` is evenly divisible by
-  ``num2``.
-
-- Use it to get the last digit from an integer number: ``num % 10`` gives us the
-  rightmost digit of ``num``.
-
-- Use it to get the number of minutes left when you convert a total number of minutes to hours and minutes:
-
-  .. code:: java
-
-     int totalMinutes = 345;
-     int hours = totalMinutes / 60;   // Number of whole hours, i.e. 5
-     int minutes = totalMinutes % 60; // Number of minutes left over, i.e. 45
-
-- Use it whenever you have limit in the value, and you need to wrap around to
-  zero if the value goes over the limit: the value of ``num % limit`` will
-  always be in the range from 0 (inclusive) to ``limit`` (exclusive) as long as
-  ``num`` and ``limit`` are both positive.
-
 .. note::
 
   A warning: because Java's ``%`` is a remainder operator and not a true
