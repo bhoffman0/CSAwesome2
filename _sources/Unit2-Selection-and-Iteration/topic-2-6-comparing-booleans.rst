@@ -481,8 +481,8 @@ The `following video <https://www.youtube.com/watch?v=GPdoHm1K8HA>`_ shows how t
 
 
 
-|Groupwork| Coding Challenge : Truth Tables POGIL
-------------------------------------------------------
+|Groupwork| Coding Challenge : Truth and Tracing Tables POGIL
+----------------------------------------------------------------
 
 .. |pogil| raw:: html
 
