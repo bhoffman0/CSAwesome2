@@ -41,6 +41,30 @@ Algorithms
 
 Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
 
+|Exercise| **Check Your Understanding**
+
+.. parsonsprob:: brushalgorithm
+   :practice: T
+   :numbered: left
+   :adaptive:
+
+   Put the following algorithm steps for brushing your teeth in order. Click on Check Me to see if you are right.
+   -----
+   Take the toothbrush.
+   =====
+   Put some toothpaste on the toothbrush.
+   =====
+   Put the brush in your mouth.
+   =====
+   Brush each section of your teeth.
+   =====
+   Rinse your mouth with water.
+    
+.. shortanswer:: pbjalgorithm
+
+    Write an algorithm for someone (maybe a robot) to make a peanut butter and jelly sandwich.  Be sure to include at least 5 precise steps in order. Have someone (maybe your instructor) act it out. Were your instructions precise enough?  
+
+
 First Java Program
 -------------------
 

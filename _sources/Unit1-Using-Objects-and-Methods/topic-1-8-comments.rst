@@ -77,6 +77,57 @@ Notice that there are some special tags that you can use in Java documentation. 
 - @param   Parameter of a method
 - @return  Return value for a method
 
+.. activecode:: commentExercise
+   :language: java
+   :autograde: unittest
+   :stdin: 5 5
+
+   The code below will read in the 2 numbers below it and multiply them.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to read in, calculate, and print the result to describe what it does.
+   ~~~~
+   import java.util.Scanner;
+
+
+
+
+    public class Multiply
+    {
+         public static void main(String[] args)
+         {
+              Scanner scan = new Scanner(System.in);
+              int num1 = scan.nextInt();
+              int num2 = scan.nextInt();
+              
+              int result = num1 * num2;
+              
+              System.out.println(num1 + " x " + num2 + " = " + result); 
+              scan.close();
+         }
+    }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.Test;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+        @Test
+        public void containsOp1()
+        {
+            boolean passed = checkCodeContains("/*", "/*");
+            assertTrue(passed);
+        }
+        @Test
+        public void containsOp2()
+        {
+            boolean passed = checkCodeContains("//", "//");
+            assertTrue(passed);
+        }
+   }
+
+
+
 Preconditions and Postconditions
 ----------------------------------
 
