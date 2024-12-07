@@ -62,7 +62,108 @@ The accumulator pattern can also be used to calculate the average of a set of va
     double average = (double)sum / 10;
     System.out.println("The average of 10 random numbers is " + average);
 
-Here's an example of an **input-controlled loop** that calculates the average of positive numbers entered below it. The number -1 is used as the **sentinel value**. The while loop will run while the user does not input -1. What would happen if you forgot step 3 (update the loop variable - get a new input)? Remember that skipping step 3 will often lead to an infinite loop! 
+Try the accumulator practice below.
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: accumulator-practice
+    :language: java
+    :autograde: unittest
+    :practice: T
+
+    Complete the methods below to compute the sum and average of a set of numbers. 
+    ~~~~
+    public class Accumulator
+    {
+        // sum calculates and returns the sum of the numbers 1 to n
+        public static int sum(int n)
+        {
+            int sum = 0;
+            // 1. Add a loop to calculate the sum of 1 to n
+
+
+            return sum;
+        }
+
+        // average calculates and returns the average of numbers 1 to n
+        public static double average(int n)
+        {
+            int sum = 0;
+            // 2. Add a loop to calculate the sum of 1 to n
+
+
+
+            // 3. Calculate the average using sum and n
+            double average = 0;
+
+            return average;
+        }
+        
+        public static void main(String[] args)
+        {
+            int n = 10;
+            System.out.println("The sum of 1 to " + n + " is " + sum(n));
+            System.out.println("The average of 1 to " + n + " is " + average(n));
+        }
+    }
+    ====
+    import static org.junit.Assert.*;
+
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("Accumulator");
+        }
+
+         @Test
+         public void test1() throws IOException
+         {
+             String code = getCode();
+             String target = "for (int * = 1; * ? n; *~)";
+
+             int num = countOccurencesRegex(code, target);
+
+             boolean passed = num == 2;
+
+            getResults("2", "" + num, "Each method should have a for loop that counts from 1 to n", passed);
+            assertTrue(passed);
+         }
+        
+        @Test
+        public void testMain() throws IOException
+        {
+            String expected = "The sum of 1 to 10 is 55\nThe average of 1 to 10 is 5.5";
+            String output = getMethodOutput("main");
+            boolean passed = getResults(expected, output, "Checking main output");
+            assertTrue(passed);
+        }
+
+       @Test
+       public void testCall() throws IOException
+       {
+           Object[] args = {5};
+           String output = getMethodOutput("sum", args);
+           String expect = "15";
+
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "sum(5)"
+                           );
+           assertTrue(passed);
+       }
+    }
+
+Input-Controlled Loop
+-----------------------
+
+Here's an example of an **input-controlled loop** that calculates the average of positive numbers using the accumulator pattern with a ``while`` loop. The number -1 is used as the **sentinel value**. The ``while`` loop will run while the user does not input -1. What would happen if you forgot step 3 (update the loop variable - get a new input)? Remember that skipping step 3 will often lead to an infinite loop! 
 
 .. code-block:: java
 
@@ -116,12 +217,12 @@ You can try this below on the input numbers below the code or for more interacti
 
         // Initialize the loop variable (get the first number)
         System.out.print("Please enter a number to average in or -1 to stop: "); 
-        number = scan.nextInt();
+        int number = scan.nextInt();
 
         // Test the loop variable against sentinel value
         while (number != -1) 
         {
-            // TODO: add number to sum and increment count
+            // 1. TODO: add number to sum and increment count
             
 
             // Update the loop variable (get a new number)
@@ -132,7 +233,7 @@ You can try this below on the input numbers below the code or for more interacti
         System.out.println("You entered " + count + " numbers.");
         System.out.println("Their sum is " + sum);
 
-        // TODO: calculate average
+        // 2. TODO: calculate average
         double average = 0;
         
         System.out.println("The average is " + average);
@@ -157,7 +258,7 @@ You can try this below on the input numbers below the code or for more interacti
           String input = "80 90 100 -1";
           String output = getMethodOutputWithInput("main", input);
 
-          boolean passed = getResults("The average is 90.0", output, "Checking average output");
+          boolean passed = getResults("The average is 90.0", output, "Average calculated correctly");
             
           assertTrue(passed);
       }
@@ -169,110 +270,10 @@ You can try this below on the input numbers below the code or for more interacti
           String input = "1 4 -1";
           String output = getMethodOutputWithInput("main", input);
 
-          boolean passed = getResults("The average is 2.5", output, "Trying with input 1 4 -1");
+          boolean passed = getResults("The average is 2.5", output, "Trying with input 1 4 -1 (did you typecast to double?)");
             
           assertTrue(passed);
       }  
-    }
-
-Try the accumulator practice below.
-
-|CodingEx| **Coding Exercise**
-
-.. activecode:: accumulator-practice
-    :language: java
-    :autograde: unittest
-    :practice: T
-
-    Complete the methods below to compute the sum and average of a set of numbers. 
-    ~~~~
-    public class Accumulator
-    {
-        // sumNumbers calculates and returns 
-        // the sum of the numbers 1 to n
-        public static int sum(int n)
-        {
-            int sum = 0;
-            // 1. Add a loop to calculate the sum of 1 to n
-
-
-            return sum;
-        }
-
-        // averageNumbers calculates and returns 
-        // the average of numbers 1 to n
-        public static double average(int n)
-        {
-            int sum = 0;
-            // 2. Add a loop to calculate the sum of 1 to n
-
-
-
-            // 3. Calculate the average using sum and n
-            double average = 0;
-
-            return average;
-        }
-        
-        public static void main(String[] args)
-        {
-            int n = 10;
-            System.out.println("The sum of 1 to " + n + " is " + sum(n));
-            System.out.println("The average of 1 to " + n + " is " + average(n));
-        }
-    }
-    ====
-    import static org.junit.Assert.*;
-
-    import org.junit.*;
-
-    import java.io.*;
-
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests()
-        {
-            super("Accumulator");
-        }
-
-         @Test
-         public void test1() throws IOException
-         {
-             String code = getCode();
-             String target = "for (int * = #; * ? n; *~)";
-
-             int num = countOccurencesRegex(code, target);
-
-             boolean passed = num == 2;
-
-            getResults("2", "" + num, "Each method should have a for loop that uses n", passed);
-            assertTrue(passed);
-         }
-        
-        @Test
-        public void testMain() throws IOException
-        {
-            String expected = "The sum of 1 to 10 is 55\nThe average of 1 to 10 is 5.5";
-            String output = getMethodOutput("main");
-            boolean passed = getResults(expected, output, "Checking main output");
-            assertTrue(passed);
-        }
-
-       @Test
-       public void testCall() throws IOException
-       {
-           Object[] args = {5};
-           String output = getMethodOutput("sum", args);
-           String expect = "15";
-
-           boolean passed =
-                   getResults(
-                           expect,
-                           output,
-                           "sum(5)"
-                           );
-           assertTrue(passed);
-       }
     }
 
 Loop with if and Minimum/Maximum
@@ -320,7 +321,7 @@ To determine the minimum or maximum value in a sequence of numbers, use a variab
                     min = num;
                 }
             }
-            System.out.println("The minimum value is " + min);
+
             return min;
         }
 
@@ -332,7 +333,7 @@ To determine the minimum or maximum value in a sequence of numbers, use a variab
             // of n random numbers from 0 to 100
 
 
-            return min;
+            return max;
         }
         
         public static void main(String[] args)
@@ -401,11 +402,11 @@ The selection statement above can be put in a loop to determine if a number is d
     :autograde: unittest
     :practice: T
 
-    Complete the primeNumber method below to determine if a number n is prime by checking if it is evenly divisible by any number between 2 and n-1 or the square root of n.
+    Complete the isPrime method below to determine if a number n is prime by checking if it is evenly divisible by any number between 2 and n-1 or the square root of n.
     ~~~~
     public class PrimeNumbers
     {
-        // primeNumber checks whether n is a prime number
+        // isPrime checks whether n is a prime number
         public static boolean isPrime(int n)
         {
             // Add a loop from 2 to n-1 or Math.sqrt(n)
@@ -459,15 +460,15 @@ The selection statement above can be put in a loop to determine if a number is d
        @Test
        public void testCall() throws IOException
        {
-           Object[] args = {7};
+           Object[] args = {9};
            String output = getMethodOutput("isPrime", args);
-           String expect = "true";
+           String expect = "false";
 
            boolean passed =
                    getResults(
                            expect,
                            output,
-                           "isPrime(7)"
+                           "isPrime(9)"
                            );
            assertTrue(passed);
        }
@@ -758,7 +759,7 @@ You can use a counter variable inside a loop to determine the frequency with whi
     }
     System.out.println("There are " + count + " even numbers from 1 to 100.");
 
-The AP exam often gives a boolean method for students to use to determine some criteria in a set of value. For example, in the following challenge, you can count the number of prime numbers from 1 to 100 given a boolean method to use ``isPrime(n)`` which returns true or false. 
+The AP exam often gives a boolean method for students to use to determine some criteria in a set of values. For example, in the following challenge, you can count the number of prime numbers from 1 to 100 given a boolean method to use ``isPrime(n)`` which returns true or false. 
 
 
 
@@ -769,7 +770,7 @@ The AP exam often gives a boolean method for students to use to determine some c
 
    <a href="https://www.youtube.com/watch?v=M7kEpw1tn50" target="_blank">Numberphile video</a>
 
-Prime numbers (numbers that are only divisible by 1 and themselves) are very useful in computer science because they can be used as keys for encoding and decoding in encryption algorithms. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the factors of a large number to decode it. Small prime numbers can be easily guessed, so encryption only uses very large prime numbers with hundreds of digits. Finding these large prime numbers is a very hard problem. As numbers grow, primes become less frequent, due to the increasing likelihood of divisibility by smaller primes. If you're curious about the use of prime numbers in encryption, watch this |Numberphile video|.
+Prime numbers (numbers that are only divisible by 1 and themselves) are used every day in encryption algorithms that safely transmit your username and password whenever you login on the internet. Two large prime numbers are multiplied together to generate partial keys for encoding and decoding in encryption algorithms. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don't have the key, it's very hard to guess the prime factors of a large number to decode it. Small prime numbers can be easily guessed, so encryption only uses very large prime numbers with hundreds of digits. Finding these large prime numbers is a very hard problem. As numbers grow, primes become less frequent, due to the increasing likelihood of divisibility by smaller primes. If you're curious about the use of prime numbers in encryption, watch this |Numberphile video|.
 
 In the challenge below,
 
@@ -814,7 +815,8 @@ In the challenge below,
 
         public static void main(String[] args)
         {
-            System.out.println("There are " + findPrimes(1, 100) + " prime numbers between 1 and 100.");
+            System.out.println("There are " + findPrimes(2, 100) + " prime numbers between 2 and 100.");
+            // You may see the grader's test runs in the output.
         }
     }
     ====
@@ -848,7 +850,7 @@ In the challenge below,
         @Test
         public void testMain() throws IOException
         {
-            String expected = "There are 25 prime numbers between 1 and 100.";
+            String expected = "There are 25 prime numbers between 2 and 100.";
             String output = getMethodOutput("main");
             boolean passed = getResults(expected, output, "Checking main output");
             assertTrue(passed);
@@ -873,8 +875,8 @@ In the challenge below,
         @Test
        public void testBool() throws IOException
        {
-           String target = "n % i == 0";
-           boolean passed = checkCodeContains(target + " test", target);
+           String target = "(isPrime(";
+           boolean passed = checkCodeContains("call to isPrime", target);
            assertTrue(passed);
        }
     }
@@ -884,12 +886,11 @@ Summary
 --------
 
 - (AP 2.9.1) There are standard algorithms that use loops and selection to: 
-
     - compute a sum or average of a set of values
     - determine a minimum or maximum value 
     - identify if an integer is or is not evenly divisible by another integer 
     - determine the frequency with which a specific criterion is met.
-    
+
 - The **accumulator** pattern is an algorithm that involves storing and updating an accumulator value within a loop, for example to compute a sum or average of a set of values.
 
 - A common algorithm pattern is an if statement within a loop to test each value against a criterion, such as finding the minimum or maximum value in a sequence of numbers.
