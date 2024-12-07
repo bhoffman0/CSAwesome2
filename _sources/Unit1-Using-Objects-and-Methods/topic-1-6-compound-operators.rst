@@ -59,11 +59,12 @@ shortcut operators in action!
 +----------------+--------------+--------------+--------------+--------------+--------------+
 
 
-.. activecode:: lcpp
+.. activecode:: compound-ops
    :language: java
    :autograde: unittest
+   :practice: T
 
-   Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Try creating more compound assignment statements with shortcut operators and work with a partner to guess what they would print out before running the code.
+   Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Create more compound assignment statements with shortcut operators as described below and work with a partner to guess what they would print out before running the code.
    ~~~~
    public class Test2
    {
@@ -78,6 +79,9 @@ shortcut operators in action!
            int penalty = 5;
            score -= penalty / 2;
            System.out.println(score);
+           // 1. Write a compound statement that adds 3 to score
+
+           // 2. Write a compound statement that divides score by 2
        }
    }
 
@@ -100,6 +104,18 @@ shortcut operators in action!
                    getResults(expect, output, "Expected output from main", true);
            assertTrue(passed);
        }
+        @Test
+        public void containsOp1()
+        {
+            boolean passed = checkCodeContains("+=", "+=");
+            assertTrue(passed);
+        }
+        @Test
+        public void containsOp2()
+        {
+            boolean passed = checkCodeContains("/=", "/=");
+            assertTrue(passed);
+        }
    }
 
 .. note::
