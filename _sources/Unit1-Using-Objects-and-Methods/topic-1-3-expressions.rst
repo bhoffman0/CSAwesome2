@@ -466,7 +466,7 @@ In this coding challenge, you can work in pairs to create a pay calculator using
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "90.0"
+           String expect = "90.0";
             
            boolean passed = output.contains(expect);
            passed = getResults(expect, output, "Output contains 90.0 for 12*7.5", passed);
@@ -485,6 +485,20 @@ In this coding challenge, you can work in pairs to create a pay calculator using
        {
            String target = "100%9";
            boolean passed = checkCodeContains("expression 100 % 9", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void test0() throws IOException 
+       {
+           String target = "4*10";
+           boolean passed = checkCodeContains("expression 4*10", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void testE2() throws IOException 
+       {
+           String target = "120/15";
+           boolean passed = checkCodeContains("expression 120/15", target);
            assertTrue(passed);
        }
    }    
