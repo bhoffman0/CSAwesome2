@@ -1,10 +1,14 @@
+.. qnum::
+   :prefix: 2-18-
+   :start: 1
 
-Unit 3 Free Response Question (FRQ) Game Practice
-====================================================
+Selection Free Response Question (FRQ) Game Practice (2.1-2.6)
+===============================================================
 
 .. index::
     single: free response questions
     single: FRQ
+    single: control structures
 
 The AP CSA exam has 4 free response questions (FRQs) where you have to write Java code in 1.5 hours. The first FRQ is about Methods and Control Structures using expressions, methods, loops, and if statements. In the last unit, we tried a simplified FRQ 1 part a about the points earned in a video game with 3 levels using the class ``Level``. You will now try the complete 2022 FRQ 1 part a from https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf.
 

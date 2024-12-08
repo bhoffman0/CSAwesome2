@@ -33,15 +33,15 @@ AP CSA Exam Weighting:
    frq-game-score.rst
    selection-more-practice-coding.rst
    group-mod-practice.rst
-   magpieindex.rst
    loops-summary.rst
    loops-practice-mixed-code.rst
    loops-practice-mixed-code-toggle.rst
    loops-practice-coding.rst
-   Exercises-loops.rst
+   Exercises.rst
    FRQcalendar.rst
    FRQselfDivisorA.rst
    FRQstringScrambleA.rst
+   magpieindex.rst
    ConsumerReviewLab.rst
 
 

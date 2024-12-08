@@ -1,24 +1,27 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 4-3-
+   :prefix: 2-10-
    :start: 1
-
-
-.. |AP CSA Reference Sheet| raw:: html
-
-   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
 
 |Time90|
 
-Loops and Strings
-=================
+Implementing String Algorithms
+===============================
 
 .. index::
    single: string processing
    pair: string; loop
 
-Loops are often used for **String Traversals** or **String Processing** where the code steps through a string character by character. In lesson 2.6 and 2.7, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings.
+.. |AP CSA Reference Sheet| raw:: html
+
+   <a href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" target="_blank">AP CSA Java Quick Reference Sheet</a>
+
+Loops are often used for **String Traversals** or **String Processing** algorithms where the code steps through a string character by character. In previous lessons, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings. There are standard string algorithms to:
+
+* Find if one or more substrings has a particular property
+* Determine the number of substrings that meet specific criteria
+* Create a new string with the characters reversed
 
 Remember that strings are a sequence of characters where each character is at a position or **index** starting at 0.
 
@@ -34,7 +37,7 @@ Remember that strings are a sequence of characters where each character is at a 
 
    The first character in a Java String is at index 0 and the last characters is at **length()** - 1. So loops processing Strings should start at 0!
 
-The String methods (covered in lesson 2.7 and given in the |AP CSA Reference Sheet|) that are most often used to process strings are:
+The String methods (covered in a previous lesson and given in the |AP CSA Reference Sheet|) that are most often used to process strings are:
 
 - **int length()** : returns the number of characters in a String object.
 
@@ -118,7 +121,7 @@ Google has been scanning old books and then using software to read the scanned t
 
 The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that ``indexOf`` here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found.
 
-.. activecode:: lclw1
+.. activecode:: string-replace1
    :language: java
    :autograde: unittest
 
@@ -336,7 +339,7 @@ Are you a cat person or a dog person? The code below prints a nice message about
 
    - **int indexOf(String target, int fromIndex)** searches left-to-right for the target substring, but starts the search at the given fromIndex. You are not required to know this version of indexOf for the AP CSA exam, but you can use it (and any valid Java code) in the Free Response Questions.
 
-.. activecode:: challenge4-3-string-replace
+.. activecode:: challenge-string-replace
    :language: java
    :autograde: unittest
    :practice: T
@@ -415,10 +418,10 @@ Summary
 
 - Loops can be used to traverse or process a string.
 
-There are standard algorithms that utilize String traversals to:
+- (AP 2.10.A.1) There are standard string algorithms to:
 
-* Find if one or more substrings has a particular property
-* Determine the number of substrings that meet specific criteria
-* Create a new string with the characters reversed
+    * Find if one or more substrings has a particular property
+    * Determine the number of substrings that meet specific criteria
+    * Create a new string with the characters reversed
 
 For more practice with string processing, see the Free Response Question in the Practice and Summary section of this unit.

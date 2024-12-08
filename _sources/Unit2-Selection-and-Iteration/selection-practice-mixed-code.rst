@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 3-9-
+   :prefix: 2-14-
    :start: 1
 
-Mixed Up Code Practice
-======================
+Selection Mixed Up Code Practice (2.1-2.6)
+===========================================
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 

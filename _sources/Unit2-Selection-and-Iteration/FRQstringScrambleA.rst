@@ -1,8 +1,8 @@
 .. qnum::
-   :prefix: 4-12-
+   :prefix: 2-28-
    :start: 1
 
-Free Response - String Scramble A
+FRQ String Scramble A
 -----------------------------------
 
 .. index::

@@ -1,13 +1,13 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 4-5-
+   :prefix: 2-12-
    :start: 1
 
 |Time45|
 
-Loop Analysis
-==============
+Informal Runtime Analysis of Loops
+====================================
 
 .. index::
     pair: loop; analysis
@@ -87,7 +87,7 @@ Did your trace table look like the following?
 |Exercise| **Check your understanding**
 
 
-.. mchoice:: qlb_2_2
+.. mchoice:: loop-trace-count
    :practice: T
    :answer_a: var1 = 1, var2 = 1
    :answer_b: var1 = 2, var2 = 0
@@ -114,7 +114,7 @@ Did your trace table look like the following?
         var2 = var2 -1;
      }
 
-.. mchoice:: qlb_2_3
+.. mchoice:: loop-trace-count2
    :practice: T
    :answer_a: x = 5, y = 2
    :answer_b: x = 2, y = 5
@@ -144,7 +144,7 @@ Did your trace table look like the following?
 Counting Loop Iterations
 ------------------------
 
-Loops can be also analyzed to determine how many times they run.  This is called **run-time analysis** or a **statement execution count**.
+Loops can be also analyzed to determine how many times they run.  This is called **run-time analysis** or a **statement execution count**. A **statement execution count** indicates the number of times a statement is executed by the program. Statement execution counts are often calculated informally through tracing and analysis of the iterative statements.
 
 |CodingEx| **Coding Exercise**
 
@@ -197,6 +197,12 @@ If you made a trace table, you would know that the loop runs when i = 3, 4, 5, 6
    - If the loop uses counter < limit, limit-1 is the largest value that allows the loop to run.
 
 In the code above the largest value that allows the loop to run is 6 (which is the largest value < 7) and the smallest value that allows the loop to execute is 3 so this loop executes (6 - 3 + 1 = 4 times).
+
+
+Analyzing Nested Loops
+-----------------------------
+
+Nested loops are loops within loops. The number of times a nested loop runs is the number of times the outer loop runs **times** the number of times the inner loop runs. Here is an example of a nested loop that prints a rectangle of stars:
 
 |CodingEx| **Coding Exercise**
 
@@ -360,7 +366,7 @@ We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inqui
 Do the following exercises in your group. Make sure you draw the trace tables keeping track of all the variables in the loops. Use the formulas to determine how many times the loops run. If your group finishes early, do some of the multiple-choice problems in the 4.6 Practice and Summary section of this unit.
 
 
-.. mchoice:: qln_6_1
+.. mchoice:: qln1
    :practice: T
    :answer_a: 40
    :answer_b: 20
@@ -385,7 +391,7 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
           System.out.println();
       }
 
-.. mchoice:: qln_6_2
+.. mchoice:: qln2
    :practice: T
    :answer_a: A rectangle of 8 rows with 5 stars per row.
    :answer_b: A rectangle of 8 rows with 4 stars per row.
@@ -410,7 +416,7 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
          System.out.println();
      }
 
-.. mchoice:: qln_6_3
+.. mchoice:: qln3
    :practice: T
    :answer_a: A rectangle of 9 rows and 5 stars per row.
    :answer_b: A rectangle of 6 rows and 6 stars per row.
@@ -469,13 +475,15 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
 Summary
 -------
 
-- A trace table can be used to keep track of the variables and their values throughout each iteration of the loop.
+- (AP 2.12.A.1) A **statement execution count** indicates the number of times a statement is executed by the program. Statement execution counts are often calculated informally through tracing and analysis of the iterative statements.
 
-- We can determine the number of times a code segment will execute with a **statement execution count**. This is called **run-time analysis**.
+- A **trace table** can be used to keep track of the variables and their values throughout each iteration of the loop.
 
 - The number of times a loop executes can be calculated by ``largestValue - smallestValue + 1`` where these are the largest and smallest values of the loop counter variable possible in the body of the loop.
 
 - The number of times a nested for-loop runs is the number of times the outer loop runs **times** the number of times the inner loop runs.
+
+- In non-rectangular loops, the number of times the inner loop runs can be calculated with the sum of natural numbers formula ``n(n+1)/2`` where n is the number of times the outer loop runs or the maximum number of times the inner loop runs.
 
 
 Loop Analysis Game

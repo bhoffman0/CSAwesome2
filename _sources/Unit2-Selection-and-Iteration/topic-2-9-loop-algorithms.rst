@@ -17,6 +17,10 @@ Implementing Selection and Iteration Algorithms
     single: minimum
     single: maximum
     single: divisible
+    single: remainder
+    single: mod 
+    single: prime
+    single: digits
     single: frequency
     single: counter
 
@@ -25,6 +29,7 @@ In this lesson, you will learn how to implement algorithms that use loops to sol
 - compute a sum or average of a set of values
 - determine a minimum or maximum value 
 - identify if an integer is or is not evenly divisible by another integer 
+- identify the individual digits in an integer 
 - determine the frequency with which a specific criterion is met
 
 
@@ -482,7 +487,10 @@ The selection statement above can be put in a loop to determine if a number is d
        }
     }
 
-Another example is to use the remainder operator to find the digits of a number by dividing by 10. For example, 1234 divided by 10 is 123 with a remainder of 4. Remember that in integer
+Finding Digits with / and %
+--------------------------------------
+
+We can also use division (``/``) and remainder (``%``) to find the digits of a number by dividing by 10. For example, 1234 divided by 10 is 123 with a remainder of 4. Remember that in integer
 division the result truncates (cuts off) everything to the right of the decimal point, so we get the number without the last digit when we divide by 10. The remainder is the last digit of the number. You could use this algorithm to add the digits of a number, reverse the digits of a number, or check if a digit is equal to a certain number, etc.
 
 |CodingEx| **Coding Exercise**
@@ -786,7 +794,7 @@ In the challenge below,
     ~~~~
     public class FindPrimeNumbers
     {
-        // primeNumber checks whether n is a prime number
+        // isPrime checks whether n is a prime number
         public static boolean isPrime(int n)
         {
             // 1. Copy your isPrime method here
@@ -889,6 +897,7 @@ Summary
     - compute a sum or average of a set of values
     - determine a minimum or maximum value 
     - identify if an integer is or is not evenly divisible by another integer 
+    - identify the individual digits in an integer 
     - determine the frequency with which a specific criterion is met.
 
 - The **accumulator** pattern is an algorithm that involves storing and updating an accumulator value within a loop, for example to compute a sum or average of a set of values.
