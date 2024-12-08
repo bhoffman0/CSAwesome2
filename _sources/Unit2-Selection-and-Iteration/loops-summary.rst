@@ -1,11 +1,11 @@
 .. qnum::
-   :prefix: 4-6-
+   :prefix: 2-21-
    :start: 1
 
-Unit 4 Summary
-==============
+Unit Summary 2b Loops (2.7-2.12)
+=================================
 
-In this chapter you learned about **loops**.  **Loops** are used to repeat a statement or block of statements inside a pair of curly braces.
+In the second half of this unit, lessons 2.7-2.12, you learned about **loops**.  **Loops** are used to repeat a statement or block of statements inside a pair of curly braces.
 
 .. index::
     single: loop
@@ -41,7 +41,7 @@ Java Keyword Summary
 Vocabulary Practice
 -------------------
 
-.. dragndrop:: ch6_loops1
+.. dragndrop:: vocabloops1
     :feedback: Review the summaries above.
     :match_1: a loop that repeats while a Boolean condition is true|||while loop
     :match_2: a loop that has three parts: initialization, condition, and change|||for loop
@@ -49,7 +49,7 @@ Vocabulary Practice
 
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
 
-.. dragndrop:: ch6_loops2
+.. dragndrop:: vocabloops2
     :feedback: Review the summaries above.
     :match_1: the statement or block of statements following a loop header that is repeated|||body of a loop
     :match_2: a loop that never ends|||infinite loop

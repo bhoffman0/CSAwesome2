@@ -1,11 +1,11 @@
 .. qnum::
-   :prefix: 3-8-
+   :prefix: 2-13-
    :start: 1
 
-Unit 3 - Summary
-=========================
+Unit Summary 2a Selection (2.1-2.6)
+====================================
 
-In this chapter you learned about **conditionals**.  **Conditionals** are used to execute code when a ``boolean`` expression is ``true`` or ``false``.  A ``boolean`` expression is one that is either ``true`` or ``false`` like ``x > 0``.
+In the first half of this unit, lessons 2.1 - 2.6, you learned about **conditionals**.  **Conditionals** are used to execute code when a ``boolean`` expression is ``true`` or ``false``.  A ``boolean`` expression is one that is either ``true`` or ``false`` like ``x > 0``.
 
 .. index::
     single: conditional
@@ -42,7 +42,7 @@ Java Keyword Summary
 Vocabulary Practice
 --------------------
 
-.. dragndrop:: ch5_cond1
+.. dragndrop:: vocabcond1
     :feedback: Review the summaries above.
     :match_1: joins two conditions and it will only be true if both of the conditions are true|||logical and
     :match_2: used to execute code only when a Boolean condition is true|||conditional
@@ -51,7 +51,7 @@ Vocabulary Practice
 
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
 
-.. dragndrop:: ch5_cond2
+.. dragndrop:: vocabcond2
     :feedback: Review the summaries above.
     :match_1: used to execute code when at least one of two conditions is true|||logical or
     :match_2: one or more statements enclosed in a open curly brace and a close curly brace|||block(s) of statements
