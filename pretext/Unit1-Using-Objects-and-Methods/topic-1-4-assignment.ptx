@@ -219,7 +219,8 @@ public class RunestoneTests extends CodeTestHelper
             <p>The code below will say hello to anyone who types in their name.  Type in your name below and then click on run.  Try again with a friend’s name.</p>
 
     </statement>
-    <program interactive="activecode" language="java" stdin="name">
+    <program interactive="activecode" language="java">
+        <stdin>Your name</stdin>
         <input>
 import java.util.Scanner;
 

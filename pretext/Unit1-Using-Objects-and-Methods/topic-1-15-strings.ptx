@@ -756,6 +756,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" stdin="pig">
+        <stdin>Your name</stdin>
         <input>
 import java.util.Scanner;
 
