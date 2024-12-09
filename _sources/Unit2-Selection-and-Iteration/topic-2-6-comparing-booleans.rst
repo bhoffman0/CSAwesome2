@@ -274,11 +274,12 @@ Equality with New Strings
 
 If you use the ``new`` keyword to create a string, it will always create a new string object. So, even if we create two string objects with new that contain all the same characters in the same order, they will not refer to the same object.
 
-.. activecode:: lcse2
+.. activecode:: strEquals
    :language: java
    :autograde: unittest
+   :practice: T
 
-   What will the following print?
+   What will the following print? Run the code to see the difference between == and equals with new Strings that are both "Hello". Then, write the if statements described below to test the equality of s1 and s3 to see if capitalization matters.
    ~~~~
    public class Test2
    {
@@ -288,9 +289,20 @@ If you use the ``new`` keyword to create a string, it will always create a new s
            String s2 = new String("Hello");
            System.out.println(s1 == s2);
            System.out.println(s1.equals(s2));
+
+           String s3 = new String("hello");
+           // Write an if statement to test if 
+           //  s1 and s2 are equal with equals
+           // If they are, print "Equals"
+
+           // Write an if/else statement to test if 
+           //   s1 and s3 are equal with equals 
+           // If they are, print "Equals" 
+           // else print "Not Equals".
+           // Note that case matters with equals unless you use equalsIgnoreCase
+
        }
    }
-
    ====
    import static org.junit.Assert.*;
 
@@ -304,8 +316,24 @@ If you use the ``new`` keyword to create a string, it will always create a new s
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "false\ntrue\n";
+           String expect = "false\ntrue\nEquals\nNot Equals\n";
            boolean passed = getResults(expect, output, "Expected output from main");
+           assertTrue(passed);
+       }
+       @Test
+       public void testCodeContains1()
+       {
+           boolean ifStatement = checkCodeContains("if", "if");
+           assertTrue(ifStatement);
+       }
+        @Test
+       public void testCount()
+       {
+           String code = getCode();
+           int num = countOccurences(code, ".equals");
+           boolean passed = num >= 3;
+
+           getResults("3", "" + num, "Number of equals used", passed);
            assertTrue(passed);
        }
    }
