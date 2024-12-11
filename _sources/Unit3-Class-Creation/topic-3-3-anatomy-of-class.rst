@@ -9,7 +9,7 @@
 Anatomy of a Java Class
 =======================
 
-In Unit 2, we learned to use **classes** and **objects** that are built-in to
+In Unit 1, we learned to use **classes** and **objects** that are built-in to
 Java or written by other programmers. In this unit, you will learn to write your
 own classes and make your own objects!
 
@@ -18,7 +18,7 @@ you create **objects**, you create new **instances** of that class and what you
 can do with those instances is determined by what methods are defined in the
 class.
 
-For example in Unit 2, we created ``yertle`` and ``myrtle``, 2 ``Turtle``
+For example, we created ``yertle`` and ``myrtle``, 2 ``Turtle``
 variables and assigned them references to objects created from the class
 ``Turtle`` and we used instances of Java’s ``String`` class to assign values to
 different ``String`` variables.
@@ -64,7 +64,7 @@ reference to a new ``Person`` as shown here.
     Person ada = new Person();
     Person charles = new Person();
 
-So what makes up the body of the class—the stuff between the ``{}``\
+So what makes up the body of the class — the stuff between the ``{}``\
 s?
 
 Remember that objects have both attributes and behaviors. These correspond to
@@ -392,69 +392,6 @@ on the object ``p1``.
 
     :click-incorrect:}:endclick:
 
-Object-Oriented Design
-----------------------
-
-So far we’ve just talked about designing one class. In **object-oriented
-design** (OOD), programmers often start by deciding which classes are needed to
-solve a problem and then figure out the data and methods in each class.
-
-When you are given a problem specification, you can identify classes you’ll need
-by looking for the **nouns** in the specification. For instance, the
-specification for the turtle graphics system from Unit 2 probably contained a
-sentence that said something like, “there are turtles that can exist on a
-2-dimensional world and can draw lines by moving around the world”. The main
-nouns in that description are “turtle” and “world” and indeed the classes in the
-system are ``Turtle`` and ``World``. (The one noun that was not turned into a
-class was “line”. Do you think it would have made sense to create a ``Line``
-class? Why or why not?)
-
-Once you’ve determined the classes you need, then you can go through the process
-we described above to design the individual classes. Note that you can often
-identify methods that should exist on classes by looking for verbs in the
-specification like “move”.
-
-Sometimes it’s useful, when designing a complex system with lots of classes, to
-make diagrams of the classes that show you at a glance what instance variables
-and methods they have. Often these can just be sketches in your notebook or on a
-whiteboard but there are also more formal systems such as the Unified Modeling
-Language (UML) for drawing these diagrams.
-
-For example, here is a UML class diagram for the ``Turtle`` class. The ``-`` in
-front of the attributes indicate that they are private, and the ``+`` in front
-of the methods indicate that they are public. Here is a |tutorial on class
-diagrams| that explains it in more detail if you are curious (Class diagrams are
-not on the AP CSA exam). If you want to draw your own, |app diagrams| or
-|Creately.com| are good free online drawing tools for UML class diagrams.
-
-
-.. figure:: Figures/turtleUMLClassDiagram.png
-    :width: 350px
-    :align: center
-    :alt: Turtle class diagram
-    :figclass: align-center
-
-    Figure 3: Turtle Class Diagram
-
-
-|Exercise| **Check Your Understanding**
-
-.. shortanswer:: OOD1
-
-    You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.
-
-
-The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
-
-
-
-
-
-|Exercise| **Check Your Understanding**
-
-.. shortanswer:: OOD2
-
-    Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): "Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything." What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.
 
 |Groupwork| Coding Challenge : Riddle Class
 ----------------------------------------------------------
