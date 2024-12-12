@@ -64,8 +64,8 @@ In POGIL groups, choose a software application that has social and ethical impli
 Summary
 --------
 
-- **System reliability** refers to the program being able to perform its tasks as expected under stated conditions without failure. Programmers should make an effort to maximize system reliability by testing the program with a variety of conditions.
+- (AP 3.2.A.1) **System reliability** refers to the program being able to perform its tasks as expected under stated conditions without failure. Programmers should make an effort to maximize system reliability by testing the program with a variety of conditions.
 
-- The creation of programs has impacts on society, economies, and culture. These impacts can be both beneficial and harmful. Programs meant to fill a need or solve a problem can have unintended harmful effects beyond their intended use.
+- (AP 3.2.A.2) The creation of programs has impacts on society, economies, and culture. These impacts can be both beneficial and harmful. Programs meant to fill a need or solve a problem can have unintended harmful effects beyond their intended use.
 
-- Legal issues and intellectual property concerns arise when creating programs. Programmers often reuse code written by others and published as **open source** and free to use. Incorporation of code that is not published as open source requires the programmer to obtain permission and often purchase the code before integrating it into their program.
+- (AP 3.1.A.3) Legal issues and intellectual property concerns arise when creating programs. Programmers often reuse code written by others and published as **open source** and free to use. Incorporation of code that is not published as open source requires the programmer to obtain permission and often purchase the code before integrating it into their program.
