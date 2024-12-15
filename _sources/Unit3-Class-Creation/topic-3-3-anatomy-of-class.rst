@@ -77,7 +77,7 @@ constructor’s job is to initialize the instance variables when the object is
 created. In this course, constructors are always designated ``public``.
 
 The real meat of a class is in the **methods** which define the behaviors of the
-objects of that class. Recall from Unit 2 that most methods either do things
+objects of that class. Remember that most methods either do things
 (like the ``Turtle`` methods that moved the turtle on the screen) or return
 values like the ``getXPos`` and ``getYPos`` on ``Turtle``. The methods of the class share access to the object’s instance variables and
 when a method is called on an object it uses the instance variables for that
