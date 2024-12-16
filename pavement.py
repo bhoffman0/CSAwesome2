@@ -39,7 +39,7 @@ serving_dir = "./build/csawesome2beta"
 
 #new 7/2019 changes
 # Change to False when running localhost
-dynamic_pages = False
+dynamic_pages = True
 
 if dynamic_pages:
     dest = './published'
