@@ -140,8 +140,9 @@ the Next button to run the code step by step.
   :language: java
   :autograde: unittest
 
-  Run the following class. Try changing the Person p2 object in main to your name.
-  Click on the Show CodeLens button and then Next to step through the code.
+  The following Person class keeps track of the name, email, and phone number of a person.
+  Try changing the Person p2 object in the main method to your name.
+  Click on the Show CodeLens button and then Next to step through the code. 
   ~~~~
   public class Person
   {
@@ -289,14 +290,81 @@ modifiable from other classes by what ``public`` methods you provide.
          :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
+.. activecode:: PersonClass2
+  :language: java
+  :autograde: unittest
+  :practice: T
 
-Methods
--------
+  The following Person class keeps track of the name, email, and phone number of a person. 
+  What other data could you keep track of about a Person? Add another private instance variable of your choice. Do not worry about changing the constructor or other methods yet.
+  ~~~~
+  public class Person
+  {
+      // instance variables
+      private String name;
+      private String email;
+      private String phoneNumber;
+      // Add another private instance variable about a Person here
+
+
+      // constructor: construct a Person copying in the data into the instance
+      // variables
+      public Person(String initName, String initEmail, String initPhone)
+      {
+          name = initName;
+          email = initEmail;
+          phoneNumber = initPhone;
+      }
+
+      // Print all the data for a person
+      public void print()
+      {
+          System.out.println("Name: " + name);
+          System.out.println("Email: " + email);
+          System.out.println("Phone Number: " + phoneNumber);
+      }
+
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // call the constructor to create a new person
+          Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+          // call p1's print method
+          p1.print();
+          Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+          p2.print();
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+       @Test
+      public void testPrivateVariables()
+      {
+          String expect = "4 Private";
+          String output = testPrivateInstanceVariables();
+
+          boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+          assertTrue(passed);
+      }
+  }
+
+
+Instance Methods
+-----------------
 
 .. index::
    pair: class; method
 
-**Methods** define what we can actually do with an object, their behaviors and functions. Methods have direct access to the instance variables and can use them and change them to perform their tasks. Methods are defined in the class after the instance variables and constructors. They are usually marked as ``public`` so they can be accessed from inside or outside the class.  Methods designated as ``private``  are not accessible outside of the class; they can only be used as helper methods by other methods inside the same class. 
+**Instance methods** define what we can actually do with an object, their behaviors and functions. These methods have direct access to the instance variables and can use them and change them to perform their tasks. In Unit 1, we used and wrote static class methods like ``Math.random()`` which were called with the classname. Instance methods are not marked static and are always called using an object of the class and can access the object's instance variables. 
+
+Methods are defined in the class after the instance variables and constructors. They are usually marked as ``public`` so they can be accessed from inside or outside the class.  Methods designated as ``private``  are not accessible outside of the class; they can only be used as helper methods by other methods inside the same class. 
 
 .. note::
 
@@ -367,6 +435,71 @@ on the object ``p1``.
         :click-correct:}:endclick:
 
     :click-incorrect:}:endclick:
+
+.. activecode:: class-add-print-method
+  :language: java
+  :autograde: unittest
+  :practice: T
+
+  The following Name class keeps track of the first and last name of a person. 
+  Add a method print that prints out the instance variables first and last. Note that instance methods have direct access and share the instance variables.
+  ~~~~
+  public class Name
+  {
+      private String first;
+      private String last;
+
+      public Name(String theFirst, String theLast)
+      {
+          first = theFirst;
+          last = theLast;
+      }
+
+      // Complete the print method below to print out the 
+      // first and last instance variables with a space in between
+      public void print()
+      {
+          
+      }
+
+      public static void main(String[] args)
+      {
+          Name n = new Name("Ada", "Lovelace");
+          n.print();
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        public RunestoneTests()
+        {
+            super("Name"); // class name / location of main
+            Object[] values = new Object[] {"Mickey", "Mouse"};
+            setDefaultValues(values);
+        }
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("print");
+            String expect = "Ada Lovelace";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+        public void testPrint()
+        {
+            String output = getMethodOutput("print");
+            String expect = "Mickey Mouse";
+            boolean passed = getResults(expect, output, "Expected output from print method with object Mickey Mouse");
+            assertTrue(passed);
+        }
+  }
 
 
 |Groupwork| Coding Challenge : Virtual Pet Class
