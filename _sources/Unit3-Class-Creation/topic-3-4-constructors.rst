@@ -1,7 +1,7 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-2-
+   :prefix: 3-4-
    :start: 1
 
 |Time45|
@@ -12,7 +12,7 @@ Writing Constructors
 .. index::
    pair: class; constructor
 
-In Unit 2, we learned how to create objects by calling **constructors**. To
+In Unit 1, we learned how to create objects by calling **constructors**. To
 review, a call to a constructor consists of the word ``new`` followed by the
 name of the class being constructed, and then an argument list in parentheses.
 For example, here is how we create ``World``, ``Turtle``, and ``Person``
@@ -36,8 +36,8 @@ instance variables and before any methods.
 
 The signature of a constructor is similar to the signature of a method except
 there is no return type, not even ``void``, and instead of a method name, the
-name of the constructor is the same as the name of the class. The constructors
-you write will almost always be marked ``public``. Like methods, constructors
+name of the constructor is always the same as the name of the class. The constructors
+you write will be marked ``public``. Like methods, constructors
 also have a **parameter list** specified in parenthesis that declare the
 variables that will be used to hold the arguments passed when the constructor is
 called.
@@ -70,17 +70,22 @@ the values of all an object's instance variables at a given time as the object's
 **state**. And we say an object is in a **valid state** when all its instance
 variables have values that let us use the object by invoking its public methods.
 So another way to describe the job of a constructor is to set the object’s
-instance values so it’s in a valid state and ready to be used.
-
-Classes can have zero or more constructors but they should all produce an object
+instance values so it’s in a valid state and ready to be used. Classes can have zero or more constructors but they should all produce an object
 in a valid state.
+
+An object’s **state** refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This defines a **has-a** relationship between the object and its instance variables. For example, a Person object **has** a name, email, and phone number attributes. A constructor is used to set the initial state of an object, which should include initial values for all instance variables. For example, ``new Person("Pat", "pat@gmail.com", "123-456-7890")`` calls the Person constructor with the values to fill in for its name ("Pat"), email ("pat@gmail.com"), and phone number ("123-456-7890"). When a constructor is called, memory is allocated for the object and the associated object reference is returned. Constructor parameters, if specified, provide data to initialize instance variables.
 
 The easiest way to write a constructor is to *not* write one. If you do not
 write a constructor your class will automatically get what is called the
-**default no-argument constructor**. This constructor will initialize all your
-instance variables to the default value for their type: 0 for ``int`` and
-``double``, ``false`` for ``boolean``, and ``null`` for all reference types. If
-those default values are sufficient to put your object into a valid state you may
+**default constructor** with no parameters. This constructor will initialize all your
+instance variables to the default value for their type: 
+
+   - 0 for ``int`` 
+   - 0.0 for ``double``
+   - ``false`` for ``boolean``
+   - ``null`` for all reference types
+
+If those default values are sufficient to put your object into a valid state you may
 not need to write a constructor at all.
 
 Usually, however, if you are writing a class that has instance variables, you
@@ -89,7 +94,7 @@ probably need to write a constructor that takes arguments and uses them to
 initialize your instance variables.
 
 For example, consider the constructor from the ``Person`` class from the last
-section.
+lesson.
 
 .. code-block:: java
 
@@ -111,29 +116,12 @@ that instances of your class are always properly initialized. With this
 constructor in place, for instance, there’s no way to construct a ``Person``
 object without providing the three required ``String`` values.
 
-Sometimes you will want to write more than one constructor so there are
+Sometimes you will want to write more than one constructor so that there are
 different ways of making an instance of your class. One reason to do that is to
 make it convenient to create instances from different kinds of arguments. This
-is called **overloading** and we discussed it in Chapter 2 from the perspective
-of calling constructors.
-
-For instance, suppose we were writing a program that had another class
-``AddressBookEntry`` which had getters for name, email, and phone number. In
-that program it might be useful to write another ``Person`` constructor like
-this:
-
-.. code-block:: java
-
-   public Person(AddressBookEntry address) {
-   {
-       name = address.getName();
-       email = address.getEmail();
-       phoneNumber = address.getPhoneNumber();
-   }
-
-Sometimes you might still even want to provide a no-argument constructor. If
-there’s a valid object that you can create without any arguments, you could
-write a no-argument constructor for ``Person`` like:
+is called **overloading**. You could write a no-argument constructor for ``Person`` that provides fill-in values like the following, if those make sense for your program. It’s up to you to decide if this is actually a useful value to have or if it
+would be better to force the users of the ``Person`` class to choose the
+values themselves using the constructor with arguments.
 
 .. code-block:: java
 
@@ -143,11 +131,6 @@ write a no-argument constructor for ``Person`` like:
        email = "unknown";
        phoneNumber = "unknown";
    }
-
-
-It’s up to you to decide if this is actually a useful value to have or if it
-would be better to force the users of the ``Person`` class to choose the
-values themselves.
 
 
 |Exercise| **Check Your Understanding**
@@ -180,7 +163,7 @@ values themselves.
 
     :click-incorrect:}:endclick:
 
-.. mchoice:: qsse_5
+.. mchoice:: constructor-purpose
    :practice: T
    :answer_a: Determines the amount of space needed for an object and creates the object
    :answer_b: Names the new object
@@ -200,14 +183,12 @@ values themselves.
 .. activecode:: class-Fraction
    :language: java
    :autograde: unittest
+   :practice: T
 
    The following class defines a ``Fraction`` with the instance variables
-   ``numerator`` and ``denominator``. It uses 2 constructors. Note that the
-   no-argument constructor sets the default instance variable values to 1 rather
-   than 0 since a fraction with 0 in the denominator is not valid. Try to guess
-   what it will print before you run it. Hint! Remember to start with the
-   ``main`` method! You can also view it in the Java visualizer by clicking on
-   the Show CodeLens button below.
+   ``numerator`` and ``denominator``. Complete the body of its 2 constructors. The
+   no-argument constructor should set the default instance variable values to 1 rather
+   than 0 since a fraction with 0 in the denominator is not valid. The constructor with parameters should copy those parameters into the instance variables. What will the code print out? Try tracing through it. View it in the Java visualizer by clicking on the Show CodeLens button below.
    ~~~~
    public class Fraction
    {
@@ -215,18 +196,21 @@ values themselves.
        private int numerator;
        private int denominator;
 
-       // constructor: set instance variables to default values
+       // no-arg constructor: set instance variables to default values of 1
        public Fraction()
        {
-           numerator = 1;
-           denominator = 1;
+           // 1. set numerator to 1
+
+           // 2. set denominator to 1
        }
 
-       // constructor: set instance variables to init parameters
+       // constructor w/args: set instance variables to init parameters
        public Fraction(int initNumerator, int initDenominator)
        {
-           numerator = initNumerator;
-           denominator = initDenominator;
+           // 3. set numerator to initNumerator
+
+           // 4. set denominator to initDenominator
+
        }
 
        // Print fraction
@@ -265,6 +249,34 @@ values themselves.
            boolean passed = getResults(expect, output, "Running main", true);
            assertTrue(passed);
        }
+       @Test
+      public void testCodeContains1()
+      {
+          boolean check1 =
+                  checkCodeContains("numerator = 1 in Fraction()", "numerator = 1");");
+          assertTrue(check1);
+      }
+      @Test
+      public void testCodeContains2()
+      {
+          boolean check1 =
+                  checkCodeContains("denominator = 1 in Fraction()", "denominator = 1");");
+          assertTrue(check1);
+      }
+      @Test
+      public void testCodeContains3()
+      {
+          boolean check1 =
+                  checkCodeContains("numerator = initNumerator in 2nd constructor", "numerator = initNumerator");");
+          assertTrue(check1);
+      }
+      @Test
+      public void testCodeContains4()
+      {
+          boolean check1 =
+                  checkCodeContains("denominator = initDenominator in 2nd constructor", "denominator = initDenominator");");
+          assertTrue(check1);
+      }
    }
 
 |CodingEx| **Coding Exercise**
@@ -349,9 +361,9 @@ storing the passed-in reference in an instance variable in your object can lead
 to surprising results: if some other code changes the object it will change for
 you too. If that’s not what you want, sometimes it makes sense to copy the
 object passed to the constructor and store the copy in the instance variable
-instead. How to make the copy will depend on the class of the object but often
+instead. How to make the copy will depend on the class of the object, but often
 you can just construct a new object of the appropriate class using values from
-the original object as shown below.
+the original object as shown below. This way the instance variable ``addr`` does not hold a reference to the original object ``initAddr``, and the methods in the ``Person`` class cannot modify the state of the original object.
 
 .. code-block:: java
 
@@ -386,7 +398,7 @@ We encourage you to work in pairs for this challenge to create a Student class w
 
 4. Add a main method that constructs at least 2 Student objects using the constructor with different values and then calls their print() methods.
 
-.. activecode:: challenge-5-2-Student-class
+.. activecode:: challenge-Student-class
   :language: java
   :autograde: unittest
 
@@ -404,7 +416,10 @@ We encourage you to work in pairs for this challenge to create a Student class w
       // variables
 
       // Write a print method that prints all the instance variables
-      public void print() {}
+      public void print() 
+      {
+      
+      }
 
       // main method
       public static void main(String[] args)
@@ -493,25 +508,25 @@ We encourage you to work in pairs for this challenge to create a Student class w
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
-.. |community5.1| raw:: html
+.. |community1| raw:: html
 
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-1-parts-of-class.html#groupwork-design-a-class-for-your-community" target="_blank">Lesson 5.1 Community Challenge</a>
+   <a href="topic-3-3-anatomy-of-class.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 3.3 Community Challenge</a>
 
 In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add a constructor to this class.
 
-1. Consult your completed worksheet or your code in |community5.1| for the class name and its 3 instance variables that you created. Copy them into the active code exercise below.
+1. Consult your completed worksheet or your code in |community1| for the class name and its 3 instance variables that you created. Copy them into the active code exercise below.
 
 2. Add a constructor with 3 parameters to set all of the instance variables to the given parameters.
 
-3. Write a print() method that uses System.out.println to print out all the instance variables.
+3. Write a print() method that uses ``System.out.println`` to print out all the instance variables.
 
-4. Write a main method that constructs at least 2 objects of your class using the constructor and then calls their print() methods.
+4. Write a main method that constructs at least 2 objects of your class using the constructor and then calls their ``print()`` methods.
 
-.. activecode:: community-challenge-5-2
+.. activecode:: community-challenge2
   :language: java
   :autograde: unittest
 
-  Copy your class with its 3 instance variables from |community5.1|. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.
+  Copy your class with its 3 instance variables from |community1|. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.
   ~~~~
   public class          // Add your class name here!
   {
@@ -621,21 +636,22 @@ In the last lesson, you came up with a class of your own choice relevant to you 
 Summary
 --------
 
+- (AP 3.4.A.1) An object’s **state** refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This defines a **has-a** relationship between the object and its instance variables.
+- (AP 3.4.A.2) A constructor is used to set the initial state of an object, which should include initial values for all instance variables. When a constructor is called, memory is allocated for the object and the associated object reference is returned. Constructor parameters, if specified, provide data to initialize instance variables.
+- (AP 3.4.A.3) When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable does not hold a reference to the original object, and methods are prevented from modifying the state of the original object.
+- (AP 3.4.A.4) When no constructor is written, Java provides a no-parameter constructor, and the instance variables are set to default values according to the data type of the attribute. This constructor is called the **default constructor**.
+- (3.4.A.5) Default values used by the default constructor:
 
-- **Constructors** are used to set the initial state of an object, which includes initial values for all instance variables.
-
-- When no constructor is written, Java provides a no-argument **default constructor**, and the instance variables are set to their default values (0 for ``int`` and ``double``, ``null`` for objects like ``String``).
-
-- Constructor parameters are local variables to the constructor and provide data to initialize instance variables.
-
+   - The default value for an attribute of type `int` is `0`. 
+   - The default value of an attribute of type `double` is `0.0`. 
+   - The default value of an attribute of type `boolean` is `false`. 
+   - The default value of a reference type is `null`.
 
 
 AP Practice
 ------------
 
-
-
-.. mchoice:: AP5-2-1
+.. mchoice:: AP-constructor1
     :practice: T
 
     Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.
@@ -688,7 +704,7 @@ AP Practice
 
 
 
-.. mchoice:: AP5-2-2
+.. mchoice:: AP-constructor2
    :practice: T
    :answer_a: I only
    :answer_b: II only
@@ -731,7 +747,7 @@ AP Practice
     II.  Cat c = new Cat("Lucy", 0, 5);
     III. Cat c = new Cat("Luna", 5);
 
-.. mchoice:: AP5-2-3
+.. mchoice:: AP-constructor3
     :practice: T
 
     Consider the following class definition.
