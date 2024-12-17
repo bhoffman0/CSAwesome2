@@ -97,6 +97,12 @@ Procedural Abstraction
 
 **Procedural abstraction** provides a name for a process and allows a method to be used only knowing what it does, not how it does it. Through **method decomposition**, a programmer breaks down larger behaviors of the class into smaller behaviors by creating methods to represent each individual smaller behavior.  For example, in the Turtle class, the ``forward()`` method is a procedural abstraction that allows the turtle to move forward without needing to know exactly how the turtle is animated to move forward.  
 
+Here are some of the main reasons to use procedural abstraction and multiple methods in your programs:
+
+- Organization and Reducing Complexity: organize your program into small sections of code by function to reduce its complexity. Divide a problem into subproblems to solve it a piece at a time.
+- Reusing Code: avoid repetition of code. Reuse code by putting it in a method and calling it whenever needed.
+- Maintainability and Debugging: smaller methods are easier to debug and understand than searching through a large main method.
+
 Using procedural abstraction in a program allows programmers to change the internals of a method (to make it faster, more efficient, use less storage, etc.) without needing to notify method users of the change as long as the method signature and what the method does is preserved. For example, we could change the way the Turtle class is implemented to make it faster without needing to change the way the ``forward()`` method is called.
 
 Another reason to use procedural abstraction is to avoid repetition of code. For example, when we were deconstructing songs into methods in Unit 1, we found that we could reuse the ``chorus()`` or ``verse()`` method for each verse of the song. A procedural abstraction may extract shared features to generalize functionality instead of duplicating code. This allows for code reuse, which helps manage complexity. 
@@ -112,7 +118,7 @@ As a review, let's deconstruct the song "Old MacDonald" into methods with parame
   :autograde: unittest
   :practice: T
 
-  Complete the methods ``chorus()`` and ``verse()``. Add method calss in main. 
+  Complete the methods ``chorus()`` and ``verse()``. Add method calls in main. 
   ~~~~
   public class OldMacDonaldSong
   {

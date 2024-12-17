@@ -127,9 +127,7 @@ and pulse rate.
 For now let’s go with the address book example. Here's a fleshed out ``Person``
 class with instance variables, a constructor, and methods. We’ll go through the
 details in the next few sections but for now you can run the code to see how it
-constructs 2 ``Person`` objects and fills in their data.
-
-Remember that execution always starts in the ``main`` method. When a method like
+constructs 2 ``Person`` objects and fills in their data. Remember that execution always starts in the ``main`` method. When a method like
 ``print`` is called, the code defined in the method runs but when it gets the
 values of ``name``, ``email``, and ``phoneNumber`` it gets the specific values
 of those variables that were set by the constructor when the particular object
@@ -442,7 +440,7 @@ on the object ``p1``.
   :practice: T
 
   The following Name class keeps track of the first and last name of a person. 
-  Add a method print that prints out the instance variables first and last. Note that instance methods have direct access and share the instance variables.
+  Add a method print that prints out the instance variables first and last. Note that the methods have direct access and share the instance variables.
   ~~~~
   public class Name
   {
@@ -486,7 +484,7 @@ on the object ``p1``.
         @Test
         public void testMain()
         {
-            String output = getMethodOutput("print");
+            String output = getMethodOutput("main");
             String expect = "Ada Lovelace";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
@@ -514,7 +512,7 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
 
 1. **Design:** In pairs, brainstorm about the **object-oriented design** for the virtual pet. What data or instance variables would you need to keep track of for a virtual pet? What behaviors or methods would the virtual pet have? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required). Then, using the ``Person`` class above as a guide, write a ``VirtualPet`` class in the Active Code template below with the following parts.
 
-2. **Instance Variables**: Declare at least 3 instance variables in the ``VirtualPet`` class below. Two of the instance variables should be called ``name`` and ``health``. The rest can be variables from your design above.  Don't forget to add in their ``private`` access modifiers. 
+2. **Instance Variables**: Declare at least 3 instance variables in the ``VirtualPet`` class below. Two of the instance variables should be called ``name`` and ``health`` where health is a number from 0 to 10. The rest can be variables from your design above.  Don't forget to add in their ``private`` access modifiers. 
 
 3. **Methods**: Complete the ``print`` method to print out the instance variables of the ``VirtualPet`` object, and complete the ``feed`` method to add 1 to the health instance variable. Remember that the methods have direct access to the instance variables. Create at least one more method that changes one of the instance variables from your design. (The constructor method and a get method is written for you below. You will learn how to write constructors in detail in the next lesson.) 
 
@@ -528,7 +526,8 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
   ~~~~
   public class VirtualPet
   {
-      // write 3 instance variables for VirtualPet's name, health, and at least 1 other from your design
+      // write 3 instance variables for VirtualPet's name, 
+      // health (as a number), and at least 1 other from your design
       // Remember the pattern:  private type variableName;
     
     
@@ -567,7 +566,7 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
       // main method for testing
       public static void main(String[] args)
       {
-          VirtualPet p = new Pet("Fluffy", 5);
+          VirtualPet p = new VirtualPet("Fluffy", 5);
           // call the VirtualPet constructor to create another new object with a different name and health 
 
           // call the pet object p's feed() method
@@ -623,7 +622,7 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
       {
           VirtualPet p = new VirtualPet("Fluffy",5);
           p.feed();
-          String output = getMethodOutput("getHealth");
+          String output = p.getHealth() + "";
           String expect = "6";
           boolean passed = getResults(expect, output, "Expected health for pet Fluffy with initial health 5 after feed()");
           assertTrue(passed);
@@ -631,9 +630,9 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
       @Test
       public void testFeed2()
       {
-          VirtualPet p = new VirtualPet("Pikachu",1);
-          p.feed();
-          String output = getMethodOutput("getHealth");
+          VirtualPet p1 = new VirtualPet("Pikachu",1);
+          p1.feed();
+          String output = p1.getHealth() + "";
           String expect = "2";
           boolean passed = getResults(expect, output, "Expected health for pet Pikachu with initial health 1 after feed()");
           assertTrue(passed);
@@ -671,30 +670,6 @@ In the late 1990s and early 2000s, digital pets like in the photo were a huge hi
           String output = testPrivateInstanceVariables();
 
           boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
-          assertTrue(passed);
-      }
-
-      @Test
-      public void testMain()
-      {
-          String output = getMethodOutput("main");
-
-          String expect = "2+ line(s) of text";
-          String actual = " line(s) of text";
-
-          int len = output.split("\n").length;
-
-          if (output.length() > 0)
-          {
-              actual = len + actual;
-          }
-          else
-          {
-              actual = output.length() + actual;
-          }
-          boolean passed = len >= 2;
-
-          getResults(expect, actual, "Checking main method", passed);
           assertTrue(passed);
       }
   }

@@ -253,28 +253,28 @@ values themselves using the constructor with arguments.
       public void testCodeContains1()
       {
           boolean check1 =
-                  checkCodeContains("numerator = 1 in Fraction()", "numerator = 1");");
+                  checkCodeContains("numerator = 1 in Fraction()", "numerator = 1");
           assertTrue(check1);
       }
       @Test
       public void testCodeContains2()
       {
           boolean check1 =
-                  checkCodeContains("denominator = 1 in Fraction()", "denominator = 1");");
+                  checkCodeContains("denominator = 1 in Fraction()", "denominator = 1");
           assertTrue(check1);
       }
       @Test
       public void testCodeContains3()
       {
           boolean check1 =
-                  checkCodeContains("numerator = initNumerator in 2nd constructor", "numerator = initNumerator");");
+                  checkCodeContains("numerator = initNumerator in 2nd constructor", "numerator = initNumerator");
           assertTrue(check1);
       }
       @Test
       public void testCodeContains4()
       {
           boolean check1 =
-                  checkCodeContains("denominator = initDenominator in 2nd constructor", "denominator = initDenominator");");
+                  checkCodeContains("denominator = initDenominator in 2nd constructor", "denominator = initDenominator");
           assertTrue(check1);
       }
    }
@@ -638,6 +638,7 @@ Summary
 
 - (AP 3.4.A.1) An object’s **state** refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This defines a **has-a** relationship between the object and its instance variables.
 - (AP 3.4.A.2) A constructor is used to set the initial state of an object, which should include initial values for all instance variables. When a constructor is called, memory is allocated for the object and the associated object reference is returned. Constructor parameters, if specified, provide data to initialize instance variables.
+- A constructor must have the same name as the class! Constructors have no return type!
 - (AP 3.4.A.3) When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable does not hold a reference to the original object, and methods are prevented from modifying the state of the original object.
 - (AP 3.4.A.4) When no constructor is written, Java provides a no-parameter constructor, and the instance variables are set to default values according to the data type of the attribute. This constructor is called the **default constructor**.
 - (3.4.A.5) Default values used by the default constructor:
