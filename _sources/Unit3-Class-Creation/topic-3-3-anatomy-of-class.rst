@@ -1,14 +1,15 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-1-
+   :prefix: 3-3-
    :start: 1
 
+|Time90|
 
 Anatomy of a Java Class
 =======================
 
-In Unit 2, we learned to use **classes** and **objects** that are built-in to
+In Unit 1, we learned to use **classes** and **objects** that are built-in to
 Java or written by other programmers. In this unit, you will learn to write your
 own classes and make your own objects!
 
@@ -17,7 +18,7 @@ you create **objects**, you create new **instances** of that class and what you
 can do with those instances is determined by what methods are defined in the
 class.
 
-For example in Unit 2, we created ``yertle`` and ``myrtle``, 2 ``Turtle``
+For example, we created ``yertle`` and ``myrtle``, 2 ``Turtle``
 variables and assigned them references to objects created from the class
 ``Turtle`` and we used instances of Java’s ``String`` class to assign values to
 different ``String`` variables.
@@ -30,7 +31,7 @@ Watch this short video to review the vocabulary of object-oriented programming:
     :align: center
 
 
-Creating a Class
+Parts of a Class 
 ------------------
 
 Most classes you write will have the keyword ``public`` before them though it is
@@ -40,8 +41,7 @@ is defined inside a pair of ``{}``\ s.
 
 Since we’re talking about anatomy, let’s create a class called ``Person``.
 Classes are almost always named with capitalized names though this is a matter
-of style, not a rule of the language. Here is the basic skeleton of a ``Person``
-class:
+of style, not a rule of the language. In this course, classes are always designated ``public`` and are declared with the keyword ``class``. Here is the basic skeleton of a ``Person`` class:
 
 .. code-block:: java
 
@@ -53,9 +53,7 @@ class:
 
 You can create instances of the ``Person`` class with ``new`` as in ``new
 Person()`` And you can declare variables that can hold a reference to a
-``Person`` object with ``Person variableName``.
-
-Or put it altogether to declare some variables and initialize each one with a
+``Person`` object with ``Person variableName``. Or put it altogether to declare some variables and initialize each one with a
 reference to a new ``Person`` as shown here.
 
 .. code-block:: java
@@ -63,31 +61,25 @@ reference to a new ``Person`` as shown here.
     Person ada = new Person();
     Person charles = new Person();
 
-So what makes up the body of the class—the stuff between the ``{}``\
+So what makes up the body of the class — the stuff between the ``{}``\
 s?
 
 Remember that objects have both attributes and behaviors. These correspond to
-**instance variables** and **methods** in the class definition.
-
-The first things we define in a class are usually the instance variables. They
+**instance variables** and **methods** in the class definition. The first things we define in a class are usually the instance variables. They
 are called that because each instance of the class (each object) has its own set
 of variables that aren’t shared with other instances. This is what allowed
-``yertle`` and ``myrtle`` from Unit 2 to be at different positions at the same
+``yertle`` and ``myrtle`` from to be at different positions at the same
 time; they each had their own x position and y position instance variables.
 
 The next thing we define in a class is usually its **constructors**. We’ll talk
 about writing constructors in more detail in the next section but a
 constructor’s job is to initialize the instance variables when the object is
-created. Usually that will mean they need to take arguments. (The call to ``new
-Person()`` before is to a constructor that doesn’t take any arguments. In a
-moment we’ll see that our ``Person`` constructor will actually need arguments.)
+created. In this course, constructors are always designated ``public``.
 
 The real meat of a class is in the **methods** which define the behaviors of the
-objects of that class. Recall from Unit 2 that most methods either do things
+objects of that class. Remember that most methods either do things
 (like the ``Turtle`` methods that moved the turtle on the screen) or return
-values like the ``getXPos`` and ``getYPos`` on ``Turtle``.
-
-The methods of the class share access to the object’s instance variables and
+values like the ``getXPos`` and ``getYPos`` on ``Turtle``. The methods of the class share access to the object’s instance variables and
 when a method is called on an object it uses the instance variables for that
 object. For example in the ``Turtle`` class the ``forward`` method changes an
 instance variable ``xPos``. When you call ``forward`` on ``yertle`` it changes
@@ -135,9 +127,7 @@ and pulse rate.
 For now let’s go with the address book example. Here's a fleshed out ``Person``
 class with instance variables, a constructor, and methods. We’ll go through the
 details in the next few sections but for now you can run the code to see how it
-constructs 2 ``Person`` objects and fills in their data.
-
-Remember that execution always starts in the ``main`` method. When a method like
+constructs 2 ``Person`` objects and fills in their data. Remember that execution always starts in the ``main`` method. When a method like
 ``print`` is called, the code defined in the method runs but when it gets the
 values of ``name``, ``email``, and ``phoneNumber`` it gets the specific values
 of those variables that were set by the constructor when the particular object
@@ -148,8 +138,9 @@ the Next button to run the code step by step.
   :language: java
   :autograde: unittest
 
-  Run the following class. Try changing the Person p2 object in main to your name.
-  Click on the Show CodeLens button and then Next to step through the code.
+  The following Person class keeps track of the name, email, and phone number of a person.
+  Try changing the Person p2 object in the main method to your name.
+  Click on the Show CodeLens button and then Next to step through the code. 
   ~~~~
   public class Person
   {
@@ -214,6 +205,12 @@ the Next button to run the code step by step.
       }
   }
 
+Data encapsulation
+-------------------
+
+**Data encapsulation** is an object-oriented design technique in which the implementation details of a class are kept hidden from external classes. The keywords ``public`` and ``private`` are called **access modifiers**, and they affect how you can the access classes, data, constructors, and methods. The keyword ``public`` means anyone can access this; it allows access from classes outside the declaring class. The keyword ``private`` restricts access to the declaring class which means that  variables or methods marked private are only accessible inside the class where they are defined. In general, instance variables in a class should be declared ``private`` to ensure data encapsulation.
+
+
 Instance Variables
 ---------------------------
 
@@ -221,14 +218,12 @@ Instance Variables
    pair: class; instance variables
 
 
-As we’ve said, **instance Variables** hold the data for an object. They record
-what an object needs to know to play its role in the program. Instance variables
-are also sometimes called **attributes**, **fields**, or **properties**.
+**Instance Variables** (sometimes called **attributes**, **fields**, or **properties**) hold the data for an object. They belong to the object, and each object has its own copy of these variables.  
 
 In general and definitely on the AP CSA exam, instance variables should be
 declared **private**. Think of ``private`` as like your diary. Only you should
 have direct access to it. Similarly, in Java a ``private`` instance variable can
-only be accessed by code in the class that declares the variable.
+only be accessed by code inside the class that declares the variable.
 
 .. note::
 
@@ -254,23 +249,15 @@ them (as seen in the cookie decorations below).
 
     Figure 2: Person Class and Objects
 
-Good Java style stresses **data encapsulation** where the data (instance
+Access to attributes should be kept internal to the class in order to accomplish encapsulation. It is good programming practice to designate the instance variables as `private` in order to ensure **data encapsulation** where the data (instance
 variables) and the code acting on the data (methods) are wrapped together into a
-single unit and the implementation details are hidden. Because only code in the
-class can access or change the values of ``private`` instance variables it is a
-lot easier to keep track of how your program works than if you had to worry that
-any code anywhere in a much larger program could possibly change the values of
-the variables.
+single unit and the implementation details are hidden. Only code in the
+class can access or change the values of ``private`` instance variables. This keeps the data secure and makes it a lot easier to keep track of how your program works than if you had to worry that any code anywhere in a much larger program could possibly change the values of the variables.
 
 Code in other classes can only interact with the ``public`` methods you provide
 and cannot directly access the ``private`` instance variables (shown in the pink
-box above).
-
-When designing a class you get to decide what data to make accessible or
-modifiable from other classes by what ``public`` methods you provide. (Remember
-from Unit 2 how the ``Turtle`` class provided ``getXPos`` and ``getYPos`` to get
-the turtle’s position but no ``setXPos`` and ``setYPos`` since the only way to
-move a turtle is through  ``forward`` and ``moveTo`` methods?)
+box above). When designing a class you get to decide what data to make accessible or
+modifiable from other classes by what ``public`` methods you provide. 
 
 |Exercise| **Check Your Understanding**
 
@@ -299,26 +286,83 @@ move a turtle is through  ``forward`` and ``moveTo`` methods?)
          :click-incorrect:{:endclick:
             :click-incorrect:last = theLast;:endclick:
          :click-incorrect:}:endclick:
-
     :click-incorrect:}:endclick:
 
+.. activecode:: PersonClass2
+  :language: java
+  :autograde: unittest
+  :practice: T
+
+  The following Person class keeps track of the name, email, and phone number of a person. 
+  What other data could you keep track of about a Person? Add another private instance variable of your choice. Do not worry about changing the constructor or other methods yet.
+  ~~~~
+  public class Person
+  {
+      // instance variables
+      private String name;
+      private String email;
+      private String phoneNumber;
+      // Add another private instance variable about a Person here
 
 
+      // constructor: construct a Person copying in the data into the instance
+      // variables
+      public Person(String initName, String initEmail, String initPhone)
+      {
+          name = initName;
+          email = initEmail;
+          phoneNumber = initPhone;
+      }
+
+      // Print all the data for a person
+      public void print()
+      {
+          System.out.println("Name: " + name);
+          System.out.println("Email: " + email);
+          System.out.println("Phone Number: " + phoneNumber);
+      }
+
+      // main method for testing
+      public static void main(String[] args)
+      {
+          // call the constructor to create a new person
+          Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
+          // call p1's print method
+          p1.print();
+          Person p2 = new Person("Jean", "jean@gmail.com", "404 899-9955");
+          p2.print();
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+       @Test
+      public void testPrivateVariables()
+      {
+          String expect = "4 Private";
+          String output = testPrivateInstanceVariables();
+
+          boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+          assertTrue(passed);
+      }
+  }
 
 
-Methods
--------
+Instance Methods
+-----------------
 
 .. index::
    pair: class; method
 
-Now to **methods** which define what we can actually do with an object. The most
-important methods in a class are the ``public`` methods since they can be
-accessed from outside the class. You may also write ``private`` methods that are
-not accessible outside of the class and therefore can only be used by other
-methods inside the same class. As you’ve probably figured out, the ``public``
-and ``private`` keywords determine the external access and visibility of
-classes, instance variables, constructors, and methods.
+**Instance methods** define what we can actually do with an object, their behaviors and functions. These methods have direct access to the instance variables and can use them and change them to perform their tasks. In Unit 1, we used and wrote static class methods like ``Math.random()`` which were called with the classname. Instance methods are not marked static and are always called using an object of the class and can access the object's instance variables. 
+
+Methods are defined in the class after the instance variables and constructors. They are usually marked as ``public`` so they can be accessed from inside or outside the class.  Methods designated as ``private``  are not accessible outside of the class; they can only be used as helper methods by other methods inside the same class. 
 
 .. note::
 
@@ -329,8 +373,7 @@ classes, instance variables, constructors, and methods.
 
 The ``Person`` class above has a ``print`` method that prints out all the data
 stored for a person object. Notice that it is marked as ``public`` and after
-``public`` comes the return type. The ``void`` return type, as you may recall
-from Unit 2, is used to indicate that the method does not return anything but
+``public`` comes the return type. The ``void`` return type is used to indicate that the method does not return anything but
 has some effect such as printing to the screen. After the return type comes the
 method name followed by parentheses containing the list of parameters. In this
 case there are no parameters but we still need the ``()``\ s. The body of the
@@ -391,138 +434,150 @@ on the object ``p1``.
 
     :click-incorrect:}:endclick:
 
-Object-Oriented Design
-----------------------
+.. activecode:: class-add-print-method
+  :language: java
+  :autograde: unittest
+  :practice: T
 
-So far we’ve just talked about designing one class. In **object-oriented
-design** (OOD), programmers often start by deciding which classes are needed to
-solve a problem and then figure out the data and methods in each class.
+  The following Name class keeps track of the first and last name of a person. 
+  Add a method print that prints out the instance variables first and last. Note that the methods have direct access and share the instance variables.
+  ~~~~
+  public class Name
+  {
+      private String first;
+      private String last;
 
-When you are given a problem specification, you can identify classes you’ll need
-by looking for the **nouns** in the specification. For instance, the
-specification for the turtle graphics system from Unit 2 probably contained a
-sentence that said something like, “there are turtles that can exist on a
-2-dimensional world and can draw lines by moving around the world”. The main
-nouns in that description are “turtle” and “world” and indeed the classes in the
-system are ``Turtle`` and ``World``. (The one noun that was not turned into a
-class was “line”. Do you think it would have made sense to create a ``Line``
-class? Why or why not?)
+      public Name(String theFirst, String theLast)
+      {
+          first = theFirst;
+          last = theLast;
+      }
 
-Once you’ve determined the classes you need, then you can go through the process
-we described above to design the individual classes. Note that you can often
-identify methods that should exist on classes by looking for verbs in the
-specification like “move”.
+      // Complete the print method below to print out the 
+      // first and last instance variables with a space in between
+      public void print()
+      {
+          
+      }
 
-Sometimes it’s useful, when designing a complex system with lots of classes, to
-make diagrams of the classes that show you at a glance what instance variables
-and methods they have. Often these can just be sketches in your notebook or on a
-whiteboard but there are also more formal systems such as the Unified Modeling
-Language (UML) for drawing these diagrams.
+      public static void main(String[] args)
+      {
+          Name n = new Name("Ada", "Lovelace");
+          n.print();
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
 
-For example, here is a UML class diagram for the ``Turtle`` class. The ``-`` in
-front of the attributes indicate that they are private, and the ``+`` in front
-of the methods indicate that they are public. Here is a |tutorial on class
-diagrams| that explains it in more detail if you are curious (Class diagrams are
-not on the AP CSA exam). If you want to draw your own, `app.diagrams.net <https://app.diagrams.net/>`_ or
-`Creately.com <https://creately.com>`_ are good free online drawing tools for UML class diagrams.
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        public RunestoneTests()
+        {
+            super("Name"); // class name / location of main
+            Object[] values = new Object[] {"Mickey", "Mouse"};
+            setDefaultValues(values);
+        }
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+            String expect = "Ada Lovelace";
+            boolean passed = getResults(expect, output, "Expected output from main");
+            assertTrue(passed);
+        }
+        @Test
+        public void testPrint()
+        {
+            String output = getMethodOutput("print");
+            String expect = "Mickey Mouse";
+            boolean passed = getResults(expect, output, "Expected output from print method with object Mickey Mouse");
+            assertTrue(passed);
+        }
+  }
 
 
-.. figure:: Figures/turtleUMLClassDiagram.png
-    :width: 350px
-    :align: center
-    :alt: Turtle class diagram
-    :figclass: align-center
-
-    Figure 3: Turtle Class Diagram
-
-
-|Exercise| **Check Your Understanding**
-
-.. shortanswer:: OOD1
-
-    You've been hired by your school to create a program that keeps track of "students at your school and the courses they are taking". Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.
-
-
-The two nouns in the problem description above, **Student** and **Course** would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. Note that the instance variables in the Person class could also work for a Student class!
-
-
-
-
-
-|Exercise| **Check Your Understanding**
-
-.. shortanswer:: OOD2
-
-    Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): "Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything." What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables.
-
-|Groupwork| Programming Challenge : Riddle Class
+|Groupwork| Coding Challenge : Virtual Pet Class
 ----------------------------------------------------------
 
-.. image:: Figures/chicken.png
-    :width: 130px
+.. image:: Figures/virtualpet.jpg
+    :width: 130
     :align: left
-    :alt: Chicken
+    :alt: Virtual Pet
 
-In this project, you will create a class that can tell riddles like the following:
+In the late 1990s and early 2000s, digital pets like in the photo were a huge hit! You had to feed, play, and interact with your virtual pet in order to keep it healthy and happy. Let's think about how they were programmed.
 
-- Riddle Question: Why did the chicken cross the playground?
-- Riddle Answer: To get to the other slide!
+1. **Design:** In pairs, brainstorm about the **object-oriented design** for the virtual pet. What data or instance variables would you need to keep track of for a virtual pet? What behaviors or methods would the virtual pet have? (You could draw a Class Diagram for this class using |app diagrams| or |Creately.com|, although it is not required). Then, using the ``Person`` class above as a guide, write a ``VirtualPet`` class in the Active Code template below with the following parts.
 
-1. First, brainstorm in pairs to create an **object-oriented design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using `app.diagrams.net <https://app.diagrams.net/>`_ or `Creately.com <https://creately.com>`_, although it is not required).
+2. **Instance Variables**: Declare at least 3 instance variables in the ``VirtualPet`` class below. Two of the instance variables should be called ``name`` and ``health`` where health is a number from 0 to 10. The rest can be variables from your design above.  Don't forget to add in their ``private`` access modifiers. 
 
-2. Using the ``Person`` class above as a guide, write a ``Riddle`` class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Don't name your instance variables ``initQuestion`` and ``initAnswer`` since they are used as constructor parameter variables. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the ``private`` or ``public`` access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
+3. **Methods**: Complete the ``print`` method to print out the instance variables of the ``VirtualPet`` object, and complete the ``feed`` method to add 1 to the health instance variable. Remember that the methods have direct access to the instance variables. Create at least one more method that changes one of the instance variables from your design. (The constructor method and a get method is written for you below. You will learn how to write constructors in detail in the next lesson.) 
 
-3. Complete the ``main`` method to construct at least 2 ``Riddle`` objects that call the ``Riddle`` constructor with the arguments for the riddle question and answer and call their ``printQuestion`` and ``printAnswer`` methods to ask and answer the riddle. You can look up some good riddles online.
+4. Complete the ``main`` method to construct at least 2 ``VirtualPet`` objects that call the ``VirtualPet`` constructor given to you with arguments for name and health. Then, use at least one of the objects to call its ``feed`` and ``print`` methods.
 
-
-
-.. activecode:: challenge-5-1-Riddle-Class
+.. activecode:: challenge-VirtualPet-Class
   :language: java
   :autograde: unittest
 
-  Complete the Riddle class below and complete the main method to construct 2 Riddle objects and call their printQuestion() and printAnswer() methods.
+  Complete the VirtualPet class below.  Add at least 3 instance variables, a print method, a feed method, and at least 1 other method that changes an instance variable.  Then complete the main method to construct at least 2 VirtualPet objects, call the feed and print method with one of them.  
   ~~~~
-  public class Riddle
+  public class VirtualPet
   {
-      // write 2 instance variables for Riddle's question and answer: private type
-      // variableName;
+      // write 3 instance variables for VirtualPet's name, 
+      // health (as a number), and at least 1 other from your design
+      // Remember the pattern:  private type variableName;
+    
+    
 
-      // constructor
-      public Riddle(String initQuestion, String initAnswer)
+      // constructor written for you - do not change
+      public VirtualPet(String initName, int initHealth)
       {
-          // set the instance variables to the init parameter variables
-
+          // the constructor sets the instance variables to the init parameter variables
+          name = initName;
+          health = initHealth;
       }
 
-      // Print riddle question
-      public void printQuestion()
+      // Print the VirtualPet's data (instance variables) with System.out.println
+      public void print()
       {
-          // print out the riddle question with System.out.println
+          // print the instance variables with spaces between them
 
       }
-
-      // Print riddle answer
-      public void printAnswer()
+   
+      // Complete the feed method below to add to the health instance variable
+      public void feed()
       {
-          // print out the riddle answer with System.out.println
+          // add 1 to the health variable
 
+      }
+    
+      // Create another public void method that changes one of the instance variables
+
+
+      // get method used for testing - do not change
+      public int getHealth()
+      {
+          return health;
       }
 
       // main method for testing
       public static void main(String[] args)
       {
-          // call the Riddle constructor to create 2 new Riddle objects
-          // with the arguments for the riddle question and answer.
+          VirtualPet p = new VirtualPet("Fluffy", 5);
+          // call the VirtualPet constructor to create another new object with a different name and health 
 
-          // call the riddle objects' printQuestion() and printAnswer methods
-
+          // call the pet object p's feed() method
+        
+          // call the other method that you created
+          
+          // call the pet object p's print() method
+        
       }
   }
-
   ====
-  // Test Code for Lesson 5.1.5 - Riddle
-  // @author Kate McDonnell
-  // Test Code for Lesson 5.1.5 - Riddle
   import static org.junit.Assert.*;
 
   import org.junit.*;
@@ -533,29 +588,53 @@ In this project, you will create a class that can tell riddles like the followin
   {
       public RunestoneTests()
       {
-          super("Riddle"); // class name / location of main
+          super("VirtualPet"); // class name / location of main
 
-          Object[] values = new Object[] {"Question", "Answer"};
+          Object[] values = new Object[] {"Fluffy", 5};
           setDefaultValues(values);
       }
+       @Test
+       public void countMethods()
+       {
+           String target = "public void";
+           String code = getCode();
+
+           int num = countOccurences(code, target);
+
+           boolean passed = num >= 3;
+
+           getResults("3+", "" + num, "public void methods", passed);
+           assertTrue(passed);
+       }
 
       @Test
-      public void testPrintQuestion()
+      public void testPrint()
       {
-          String output = getMethodOutput("printQuestion");
-          String expect = "Question";
+          String output = getMethodOutput("print");
+          String expect = "Fluffy";
 
-          boolean passed = getResults(expect, output, "Checking method printQuestion()");
+          boolean passed = getResults(expect, output, "Checking method print()");
           assertTrue(passed);
       }
 
       @Test
-      public void testPrintAnswer()
+      public void testFeed()
       {
-          String output = getMethodOutput("printAnswer");
-          String expect = "Answer";
-
-          boolean passed = getResults(expect, output, "Checking method printAnswer()");
+          VirtualPet p = new VirtualPet("Fluffy",5);
+          p.feed();
+          String output = p.getHealth() + "";
+          String expect = "6";
+          boolean passed = getResults(expect, output, "Expected health for pet Fluffy with initial health 5 after feed()");
+          assertTrue(passed);
+      }
+      @Test
+      public void testFeed2()
+      {
+          VirtualPet p1 = new VirtualPet("Pikachu",1);
+          p1.feed();
+          String output = p1.getHealth() + "";
+          String expect = "2";
+          boolean passed = getResults(expect, output, "Expected health for pet Pikachu with initial health 1 after feed()");
           assertTrue(passed);
       }
 
@@ -563,21 +642,21 @@ In this project, you will create a class that can tell riddles like the followin
       public void testCallConstructors()
       {
           String code = getCodeWithoutComments();
-          String search = "= new Riddle(";
+          String search = "= new VirtualPet(";
 
           int num = countOccurences(code, search);
 
           String expect = search + "...) x 2";
           String actual = search + "...) x " + num;
 
-          boolean passed = getResults(expect, actual, "Checking that you made 2 Riddle objects");
+          boolean passed = getResults(expect, actual, "Checking that you created another VirtualPet object");
           assertTrue(passed);
       }
 
       @Test
       public void testVariableTypes()
       {
-          String varTypes = "String String";
+          String varTypes = "String int";
           String output = testInstanceVariableTypes(varTypes.split(" "));
 
           boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
@@ -587,34 +666,10 @@ In this project, you will create a class that can tell riddles like the followin
       @Test
       public void testPrivateVariables()
       {
-          String expect = "2 Private";
+          String expect = "3 Private";
           String output = testPrivateInstanceVariables();
 
           boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
-          assertTrue(passed);
-      }
-
-      @Test
-      public void testMain()
-      {
-          String output = getMethodOutput("main");
-
-          String expect = "2+ line(s) of text";
-          String actual = " line(s) of text";
-
-          int len = output.split("\n").length;
-
-          if (output.length() > 0)
-          {
-              actual = len + actual;
-          }
-          else
-          {
-              actual = output.length() + actual;
-          }
-          boolean passed = len >= 2;
-
-          getResults(expect, actual, "Checking main method", passed);
           assertTrue(passed);
       }
   }
@@ -622,21 +677,27 @@ In this project, you will create a class that can tell riddles like the followin
 |Groupwork| Design a Class for your Community
 ----------------------------------------------------------
 
+.. |worksheet| raw:: html
 
+   <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
+
+.. |community1| raw:: html
+
+   <a href="community-challenge.html" target="_blank">lesson</a>
 
 In this unit, you will design a class of your own choice that is relevant to your community.
 You will improve the class in each lesson of this unit. We suggest that you work in pairs on this project.
 If you would rather work on this project as 1 stand-alone lab project rather than a piece at a time at the end of each lesson,
-you can do this in `Lesson 5.19 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/community-challenge.html>`_ at the end of Unit 5.
+you can do this in this |community1| at the end of the unit.
 
-1. Make your own copy of this `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
+1. Make your own copy of this |worksheet| from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
 
-2. Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.You can use the `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using `app.diagrams.net <https://app.diagrams.net/>`_ or `Creately.com <https://creately.com>`_ (see `tutorial on class diagrams <https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b>`_).
+2. Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be.You can use the |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
 
 3. Type in your class name and declare the instance variables for your class in the active code exercise below. Click on run. Your class will not print out anything yet, but it should run without errors. You will add constructors and other methods to this class in the next lessons.
 
 
-.. activecode:: community-challenge-5-1
+.. activecode:: community-challenge1
   :language: java
   :autograde: unittest
 
@@ -680,34 +741,21 @@ you can do this in `Lesson 5.19 <https://runestone.academy/ns/books/published/cs
 Summary
 ----------
 
-- Programmers use code to represent a physical object or nonphysical concept,
-  real or imagined, by defining a class based on the attributes and/or behaviors
-  of the object or concept.
-
+- (AP 3.3.A.1) **Data encapsulation** is a technique in which the implementation details of a class are kept hidden from external classes. 
+- (AP 3.3.A.1) The keywords ``public`` and ``private`` affect the access of classes, data, constructors, and methods. The keyword ``private`` restricts access to the declaring class, while the keyword ``public`` allows access from classes outside the declaring class. 
+- (AP 3.3.A.2) In this course, classes are always designated ``public`` and are declared with the keyword ``class``.
+- (AP 3.3.A.3) In this course, constructors are always designated ``public``.
+- (AP 3.3.A.4) **Instance variables** belong to the object, and each object has its own copy of the variables.
+- (AP 3.3.A.5) Access to attributes should be kept internal to the class in order to accomplish encapsulation. Therefore, it is good programming practice to designate the instance variables for these attributes as ``private`` unless the class specification states otherwise.
 - **Instance Variables** define the attributes or data needed for objects, and
   **methods** define the behaviors or functions of the object.
 
-- **Data encapsulation** is a technique in which the implementation details of a
-  class are kept hidden from the user. The data is kept private with access only
-  through the public methods that can act on the data in the class.
-
-- The keywords ``public`` and ``private`` affect the access of classes, data,
-  constructors, and methods.
-
-- The keyword ``private`` restricts access to the declaring class, while the
-  keyword ``public`` allows access from classes outside the declaring class.
-
-- Instance variables are encapsulated by using the ``private`` **access
-  modifier**.
-
-- Methods can be ``public`` or ``private``. The set of ``public`` methods define
-  what other classes can do with an instance of a class.
 
 AP Practice
 ------------
 
 
-.. mchoice:: AP5-1-1
+.. mchoice:: APclass1
         :practice: T
         :random:
 
@@ -768,7 +816,7 @@ AP Practice
 
           - Constructor should be public.
 
-.. mchoice:: AP5-1-2
+.. mchoice:: APclass2
     :practice: T
 
     Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.
@@ -832,6 +880,14 @@ AP Practice
       - Methods should be public.
 
 
+.. |tutorial on class diagrams| raw:: html
 
+   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a>
 
+.. |Creately.com| raw:: html
 
+   <a href="https://creately.com" target="_blank">Creately.com</a>
+
+.. |app diagrams| raw:: html
+
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>

@@ -749,7 +749,7 @@ III. The array must not contain duplicate values.
     </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Search Runtimes</title>
+            <title>Coding Challenge : Search Runtimes</title>
             <p>Let’s go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an <c>ArrayList</c>. The advantage of using an <c>ArrayList</c> instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.</p>
             <p>In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
             <p>Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use <c>size</c> and <c>get(i)</c> instead of [] to get an element in the <c>ArrayList</c> dictionary at index i. You will need to use the <c>equals</c> and <c>compareTo</c> methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.</p>

@@ -13,8 +13,7 @@ AP CSA Exam Weighting:
    topic-2-3-ifs.rst
    topic-2-4-nested-ifs.rst
    topic-2-5-compound-ifs.rst
-   topic-2-6-DeMorgan.rst
-   topic-2-6-comparing-objects.rst
+   topic-2-6-comparing-booleans.rst
    topic-2-7-while-loops.rst
    topic-2-8-for-loops.rst
    topic-2-9-loop-algorithms.rst
@@ -29,15 +28,15 @@ AP CSA Exam Weighting:
    frq-game-score.rst
    selection-more-practice-coding.rst
    group-mod-practice.rst
-   magpieindex.rst
    loops-summary.rst
    loops-practice-mixed-code.rst
    loops-practice-mixed-code-toggle.rst
    loops-practice-coding.rst
-   Exercises-loops.rst
+   Exercises.rst
    FRQcalendar.rst
    FRQselfDivisorA.rst
    FRQstringScrambleA.rst
+   magpieindex.rst
    ConsumerReviewLab.rst
 
 

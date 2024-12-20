@@ -1136,7 +1136,7 @@ for ( int k = 0; k &lt; a.length; k++ )
     </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : SpellChecker</title>
+            <title>Coding Challenge : SpellChecker</title>
             <image source="Unit4-Data-Collections/Figures/spellcheck.png" width="18%%" alt="Spell Checker"/>
             <p>In this challenge, you will use an array of English words from a dictionary file to see if a given word is spelled correctly. We encourage you to work in pairs for this challenge. Make sure you have done the last coding exercise above which will help you with this challenge.</p>
             <p>This challenge includes a dictionary file of 10,000 English words which is read into the array dictionary for you. You could use this <url href="https://firewalledreplit.com/@BerylHoffman/SpellChecker1" visual="https://firewalledreplit.com/@BerylHoffman/SpellChecker1">replit</url> code instead that has an even bigger dictionary of English words and lets you do input with your spell checker. If you use repl, copy in the link for your repl in the Active Code window below to turn it in. If you are interested in how to read in files using Java, there is an optional <url href="https://runestone.academy/ns/books/published/csawesome/Unit7-ArrayList/topic-input-files.html" visual="https://runestone.academy/ns/books/published/csawesome/Unit7-ArrayList/topic-input-files.html">input files</url> lesson at the end of Unit 7.</p>

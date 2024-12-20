@@ -58,7 +58,7 @@
             <p>Run the code below to see a NullPointerException. Fix the code by using <c>new Turtle(habitat)</c> to create a new Turtle object before calling its methods.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -130,7 +130,7 @@ public class RunestoneTests extends CodeTestHelper
             </ol></p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -333,7 +333,7 @@ System.out.println("Yertle's y position is: " + yertle.getYPos() );
             <p>Try the code below that prints out the turtle’s current position using <c>getXPos()</c> and <c>getYPos()</c>. Can you make it go to position (0,0) or as close to it as possible?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
                 you have to do something with the values that the get methods return.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.lang.Math;
@@ -738,7 +738,7 @@ public class MethodTrace
             <p>Use the <c>getXPos</c>, <c>getYPos</c>, and <c>getDistance(x,y)</c> methods to find yertle’s distance from the point (0,0). Add another turtle, move both turtles to different positions, and find the distance between the two turtles.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -821,7 +821,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Turtle House</title>
+            <title>Coding Challenge : Turtle House</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/houseWithWindows.png" width="36%%" alt="simple house"/>
             <p>This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors below. Can you add windows and a door? Come up with your own house design as a team.</p>
             <p>To draw a window, you will need to call <c>penUp</c> and <c>moveTo</c> to walk the turtle into position without drawing, for example:</p>
@@ -837,7 +837,7 @@ t.penDown();
             <p>Draw a Turtle House! Make sure you use forward, turn, penUp, penDown, moveTo methods as well as different colors. Have fun!</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;

@@ -181,7 +181,7 @@ variables.
      return super.toString() + "\n" + subclassInstanceVariables;
    }
 
-|Groupwork| Programming Challenge : Customer Info
+|Groupwork| Coding Challenge : Customer Info
 -------------------------------------------------
 
 The ``Customer`` class below keeps track of the names and addresses of customers. It has a ``toString`` method that prints out the name and address of the object.

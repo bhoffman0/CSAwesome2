@@ -1,18 +1,22 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-10-
+   :prefix: 3-2-
    :start: 1
 
 
-Social Impacts of CS
-====================
+Impact of Program Design
+=========================
 
 
 
 We are living in an age of rapid development in technology and automation. Software and hardware developers increasingly have real impacts on people's lives. In computer science, we follow the following `ACM professional code of ethics <https://ethics.acm.org/>`_ which includes guidelines such as "Avoid harm" and "Respect privacy".
 
-However, sometimes programs have unintended consequences, and sometimes, it is hard to ensure **system reliability**, where everything will work as intended. Software developers also need to be aware of the legal implications and intellectual property laws.
+However, sometimes programs have unintended consequences. It can be difficult to ensure **system reliability**, which refers to a program being able to perform its tasks as expected under stated conditions without failure. Programmers should make an effort to maximize system reliability by testing the program with a variety of conditions.
+
+The creation of programs has impacts on society, economies, and culture. These impacts can be both beneficial and harmful. Programs meant to fill a need or solve a problem can have unintended harmful effects beyond their intended use.
+
+Legal issues and intellectual property concerns can also arise when creating programs. Programmers often reuse code written by others and published as **open source** which is free to use. Incorporation of code that is not published as open source requires the programmer to obtain permission and often purchase the code before integrating it into their program. There are also newly arising issues with the use of AIs in coding.
 
 The fields of **AI (Artificial Intelligence)** and **Machine Learning** increasingly pose ethical questions in our world. For example, self-driving cars that use machine learning to learn to follow lanes and avoid collisions could make our world much safer. Self-driving cars do not get distracted by text messages and don't drink and drive. However, what if the car needs to make an ethical decision about avoiding a collision with a pedestrian by causing an accident that may also lead to the loss of life? Who makes these decisions? The software? the programmers? If you were a programmer for a self-driving car, how would you approach such decisions? Here's a great `Wired article <https://www.wired.com/2016/06/self-driving-cars-will-power-kill-wont-conscience/>`_ about self-driving cars and ethical problems.
 
@@ -47,10 +51,8 @@ In POGIL groups, choose a software application that has social and ethical impli
 Summary
 --------
 
-- While programs are typically designed to achieve a specific purpose, they may have unintended consequences.
+- (AP 3.2.A.1) **System reliability** refers to the program being able to perform its tasks as expected under stated conditions without failure. Programmers should make an effort to maximize system reliability by testing the program with a variety of conditions.
 
-- System reliability is limited. Programmers should make an effort to maximize system reliability.
+- (AP 3.2.A.2) The creation of programs has impacts on society, economies, and culture. These impacts can be both beneficial and harmful. Programs meant to fill a need or solve a problem can have unintended harmful effects beyond their intended use.
 
-- Legal issues and intellectual property concerns arise when creating programs.
-
-- The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial and/or harmful.
+- (AP 3.1.A.3) Legal issues and intellectual property concerns arise when creating programs. Programmers often reuse code written by others and published as **open source** and free to use. Incorporation of code that is not published as open source requires the programmer to obtain permission and often purchase the code before integrating it into their program.

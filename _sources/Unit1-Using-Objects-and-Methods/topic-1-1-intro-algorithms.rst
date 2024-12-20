@@ -21,7 +21,7 @@ Introduction to Algorithms, Programming, and Compilers
 
 
 
-What do Android phones, Minecraft, and Netflix have in common? They're all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a **programming language** that is used worldwide to create software that we all use.
+What do Android phones, Minecraft, and Netflix have in common? They're all coded in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a **programming language** that is used worldwide to create software that we all use.
 
 The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces this first lesson in CSAwesome.
 
@@ -40,6 +40,30 @@ Algorithms
 **Algorithms** define step-by-step processes in order to complete a task or solve a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend's house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game. 
 
 Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in **pseudocode** which is writing simplified code on paper. It's important to plan the algorithm step by step where each step can be implemented by a line of code.  **Sequencing** defines an order for when steps in a process are completed. Steps in a process are completed one at a time.
+
+|Exercise| **Check Your Understanding**
+
+.. parsonsprob:: brushalgorithm
+   :practice: T
+   :numbered: left
+   :adaptive:
+
+   Put the following algorithm steps for brushing your teeth in order. Click on Check Me to see if you are right.
+   -----
+   Take the toothbrush.
+   =====
+   Put some toothpaste on the toothbrush.
+   =====
+   Put the brush in your mouth.
+   =====
+   Brush each section of your teeth.
+   =====
+   Rinse your mouth with water.
+    
+.. shortanswer:: pbjalgorithm
+
+    Write an algorithm for someone (maybe a robot) to make a peanut butter and jelly sandwich.  Be sure to include at least 5 precise steps in order. Have someone (maybe your instructor) act it out. Were your instructions precise enough?  
+
 
 First Java Program
 -------------------
@@ -568,7 +592,7 @@ working with you. Here are some examples of good commenting:
     :align: left
     :alt: Rubber Duck
 
-In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
+In this course, you are encouraged to work together in pairs to complete the coding challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you're working alone, you may want to explain the code to a rubber duck or another toy using |Rubber duck debugging|.
 
 Working in pairs, debug the following code. Can you find all the bugs and get the code to run?
 

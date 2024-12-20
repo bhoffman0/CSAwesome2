@@ -567,7 +567,7 @@ value. The table below shows some applications of that general recipe.
 
 
 
-|Groupwork| Programming Challenge : Random Numbers
+|Groupwork| Coding Challenge : Random Numbers
 --------------------------------------------------
 
 .. image:: Figures/lock.jpg

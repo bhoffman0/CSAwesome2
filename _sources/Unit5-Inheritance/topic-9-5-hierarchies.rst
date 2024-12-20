@@ -339,7 +339,7 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
     V.   None of the above
 
 
-|Groupwork| Programming Challenge : Shopping Cart
+|Groupwork| Coding Challenge : Shopping Cart
 --------------------------------------------------
 
 

@@ -29,7 +29,7 @@
     <p>If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We’ll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword this to refer to this object’s instance variables.</p>
   </introduction>
   <subsection>
-            <title>Programming Challenge : Debugging</title>
+            <title>Coding Challenge : Debugging</title>
 
 <exercise label="challenge-5-8-Debug">
     <statement>

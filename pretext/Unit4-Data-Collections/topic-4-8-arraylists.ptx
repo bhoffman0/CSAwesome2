@@ -480,8 +480,8 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : FRQ Digits</title>
-            <p>This programming challenge is based on the <url href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" visual="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a">2017 Free Response Question</url> part 1a on the 2017 AP CSA
+            <title>Coding Challenge : FRQ Digits</title>
+            <p>This coding challenge is based on the <url href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" visual="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a">2017 Free Response Question</url> part 1a on the 2017 AP CSA
                 exam. In this question, you are asked to write a constructor for a class called
                 <c>Digits</c>. This constructor takes an integer number as its argument and divides
                 it up into its digits and puts the digits into an <c>ArrayList</c>. For example,

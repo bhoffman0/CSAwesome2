@@ -515,7 +515,7 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
    If you had an ordered array of size 500, what is the maximum number of iterations required to find an element with binary search?
 
-|Groupwork| Programming Challenge : Search Runtimes
+|Groupwork| Coding Challenge : Search Runtimes
 ---------------------------------------------------
 
 

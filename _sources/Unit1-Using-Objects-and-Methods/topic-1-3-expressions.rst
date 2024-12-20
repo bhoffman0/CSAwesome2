@@ -405,14 +405,14 @@ Here’s the |video2|.
 
 
 
-|Groupwork| Programming Challenge : Pay Calculator
+|Groupwork| Coding Challenge : Pay Calculator
 ---------------------------------------------------
 
 .. figure:: Figures/dollarSign.png
     :width: 100px
     :align: left
 
-In this programming challenge, you can work in pairs to create a pay calculator using math expressions and operators. 
+In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators. 
 
 .. activecode:: challenge1-3-pay-calculator
    :language: java
@@ -440,16 +440,17 @@ In this programming challenge, you can work in pairs to create a pay calculator 
           System.out.println("Pay for 12 hours of work at 7.50 dollars an hour");
           System.out.println(        );
         
-          // Put in the math expression to compute the integer number of 
+          // Add another statement to print the math expression to compute the integer number of 
           // hours worked if the pay is 100 dollars and the rate is 9 dollars per hour.
           System.out.println("Number of int hours worked for pay 100 dollars & rate 9 dollars per hour");
-          System.out.println(        );
+        
 
-          // Put in the math operator to give the remainder when 
+
+          // Add another statement to print the math expression to give the remainder when 
           //  100 dollars is divided by 9 dollars per hour. 
           System.out.println("The remainder of 100 dollars divided by 9 dollars per hour");
-          System.out.println(        ); 
-         
+        
+
       }
    }
    ====
@@ -465,14 +466,10 @@ In this programming challenge, you can work in pairs to create a pay calculator 
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect =
-                   "40\n"
-                   + "8\n"
-                   + "90.0\n"
-                   + "11\n"
-                   + "1\n";
-           boolean passed =
-                   getResults(expect, output, "Expected output from main");
+           String expect = "90.0";
+            
+           boolean passed = output.contains(expect);
+           passed = getResults(expect, output, "Output contains 90.0 for 12*7.5", passed);
            assertTrue(passed);
        }
 
@@ -488,6 +485,20 @@ In this programming challenge, you can work in pairs to create a pay calculator 
        {
            String target = "100%9";
            boolean passed = checkCodeContains("expression 100 % 9", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void test0() throws IOException 
+       {
+           String target = "4*10";
+           boolean passed = checkCodeContains("expression 4*10", target);
+           assertTrue(passed);
+       }
+       @Test
+       public void testE2() throws IOException 
+       {
+           String target = "120/15";
+           boolean passed = checkCodeContains("expression 120/15", target);
            assertTrue(passed);
        }
    }    

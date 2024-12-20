@@ -1,7 +1,10 @@
+.. qnum::
+   :prefix: 2-19-
+   :start: 1
+   
 
-
-FRQ Style Coding Practice
-==============================
+FRQ Style Selection Coding Practice (2.1-2.6)
+==============================================
 
 In the following exercises which are similar to the Free Response Questions (FRQs) in the AP exam, you will write code inside a method with parameters and return values. Make sure that you use the parameter variables given in the method header and return a value.
 

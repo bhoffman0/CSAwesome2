@@ -1,14 +1,15 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-9-
+   :prefix: 3-9-
    :start: 1
 
+|Time45|
 
 this Keyword
 =================
 
-The keyword ``this`` can be used in a class to refer to the current calling object.
+Within an instance method or a constructor, the keyword ``this`` acts as a special variable that holds a reference to the current object—the object whose method or constructor is being called.
 
 For example, in the following Class Person, when we create an object p1 and call the constructor or p1.setEmail(), the word "this" refers to p1. And when we make the same method calls with object p2, "this" refers to p2.
 Run the code below and also check it out in the Java visualizer with the Show CodeLens button which shows how this refers to different objects when the code is run.
@@ -107,14 +108,16 @@ Run the code below and also check it out in the Java visualizer with the Show Co
        }
    }
 
-.. note::
+The ``this`` variable can only be used in instance methods and constructors. Class methods cannot refer to ``this`` or instance variables because they are called with the classname, not an object, so there is no ``this`` object.
 
-    Note that in the code above, this.name, this.email, and this.phoneNumber are equivalent to writing just name, email, and phoneNumber, but ``this.variable`` is a way to indicate that we are referring to the instance variables of this object instead of a local variable.
-
-Static methods cannot refer to this or instance variables because they are called with the classname, not an object, so there is no this object.
-
+``this``.instanceVariable
+---------------------------
 
 The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below.
+
+.. note::
+
+    ``this.instanceVariable`` can be used to distinguish between this object's instance variables and local parameter variables that may have the same variable names.
 
 .. code-block:: java
 
@@ -127,6 +130,9 @@ The keyword this is sometimes used by programmers to distinguish between variabl
         // Set this object's instance variable name to the parameter variable name
         this.name = name;
      }
+
+``this`` as an Argument
+-------------------------
 
 The ``this`` variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, ``Pay`` and ``Overtime``. The ``Pay`` class declares an ``Overtime`` object and passes in ``this`` (the current ``Pay`` object) to its constructor which computes the overtime with respect to that ``Pay`` object. Try this code in the active code exercise below with the Show CodeLens button to trace through it step by step. Here is an image that shows how ``this``, ``myPay`` and ``p`` all refer to the same object in memory.
 
@@ -207,7 +213,7 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
 
 |Exercise| Check Your Understanding
 
-.. mchoice:: AP5-9-1
+.. mchoice:: AP-this-arg
     :practice: T
 
     Consider the following class definitions.
@@ -285,15 +291,19 @@ The ``this`` variable can be used anywhere you would use an object variable.  Yo
 
 
 
-|Groupwork| Programming Challenge : Bank Account
+|Groupwork| Coding Challenge : Bank Account
 ------------------------------------------------------------
 
 .. figure:: Figures/dollarSign.png
     :width: 100px
     :align: left
 
+.. |ATM video| raw:: html
 
-A bank account can be used to store your money. The bank keeps track of the account holder's name, the acount balance which is the amount of money in the account, and assigns an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here's a `video <https://www.youtube.com/watch?v=YpD1tJK9vIA&ab_channel=Doyouknow%3F>`_ that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.
+   <a href="https://www.youtube.com/watch?v=YpD1tJK9vIA&ab_channel=Doyouknow%3F" target="_blank">video</a>
+
+
+Many people keep their money in a bank account. The bank may keep track of the account holder's name, the acount balance which is the amount of money in the account, and assign an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here's a |ATM video| that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.
 
 For this challenge, you can work in pairs to:
 
@@ -307,7 +317,7 @@ For this challenge, you can work in pairs to:
 
 - Test your class below with a ``main`` method that creates a ``BankAccount`` object and calls its ``deposit`` and ``withdraw`` methods and prints out the object to test its ``toString`` method.
 
-.. activecode:: challenge-5-9-BankAccount
+.. activecode:: challenge-BankAccount
   :language: java
   :autograde: unittest
 
@@ -416,19 +426,19 @@ For this challenge, you can work in pairs to:
 Summary
 --------
 
-- Within a non-static method or a constructor, the keyword this is a reference to the current object, the object whose method or constructor is being called.
+- (AP 3.9.A.1) Within an instance method or a constructor, the keyword ``this`` acts as a special variable that holds a reference to the current object—the object whose method or constructor is being called.
 
-- this.instanceVariable can be used to distinguish between this object's instance variables and local parameter variables that may have the same variable names.
+- ``this.instanceVariable`` can be used to distinguish between this object's instance variables and local parameter variables that may have the same variable names.
 
-- Static methods do not have a this reference.
+- (AP 3.9.A.2) The keyword ``this`` can be used to pass the current object as an argument in a method call.
 
-- The this variable can be used anywhere you would use an object variable, even to pass it to another method as an argument.
+- (AP 3.9.A.3) Class methods do not have a ``this`` reference.
 
 
 AP Practice
 ------------
 
-.. mchoice:: AP5-9-2
+.. mchoice:: AP-this
     :practice: T
 
     Consider the following class definitions.

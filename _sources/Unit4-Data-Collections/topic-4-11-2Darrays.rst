@@ -530,7 +530,7 @@ To get the value in a 2D array give the name of the array followed by the row an
       }
   }
 
-|Groupwork| Programming Challenge : ASCII Art
+|Groupwork| Coding Challenge : ASCII Art
 ---------------------------------------------------
 
 

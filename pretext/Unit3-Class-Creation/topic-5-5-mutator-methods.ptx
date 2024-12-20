@@ -230,7 +230,7 @@ public class Party
 <matches><match order="1"><premise>gets and returns the value of an instance variable</premise><response>accessor method</response></match><match order="2"><premise>sets the instance variable to a value in its parameter</premise><response>mutator method</response></match><match order="3"><premise>initializes the instance variables to values</premise><response>constructor</response></match><match order="4"><premise>accessible from outside the class</premise><response>public</response></match><match order="5"><premise>accessible only inside the class</premise><response>private</response></match></matches></exercise>            <p>Mutator methods do not have to have a name with “set” in it, although most do. They can be any methods that change the value of an instance variable or a static variable in the class, as can be seen in the AP Practice questions below.</p>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Class Pet Setters</title>
+            <title>Coding Challenge : Class Pet Setters</title>
             <image source="Unit3-Class-Creation/Figures/animalclinic.png" width="27%%" alt="Animal Clinic"/>
             <p><ol marker="1">
                 <li>

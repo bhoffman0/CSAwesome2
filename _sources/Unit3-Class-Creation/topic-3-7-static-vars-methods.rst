@@ -289,7 +289,7 @@ The keyword **final** can be used in front of a variable declaration to make it 
    }
 
 
-|Groupwork| Programming Challenge : Static Song and counter
+|Groupwork| Coding Challenge : Static Song and counter
 ------------------------------------------------------------
 
 

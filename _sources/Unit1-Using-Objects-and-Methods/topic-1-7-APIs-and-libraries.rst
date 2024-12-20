@@ -279,7 +279,7 @@ Try the Java program below that creates a Turtle object called ``yertle`` using 
        } // end main
    } // end class
 
-|Groupwork| Programming Challenge : Turtle Drawing
+|Groupwork| Coding Challenge : Turtle Drawing
 --------------------------------------------------
 
 Make yertle the Turtle draw a shape.  For example, have it draw a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times. We encourage you to work in pairs for this challenge. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use or check the API at https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html: 

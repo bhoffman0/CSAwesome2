@@ -1,11 +1,10 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 3-5-
+   :prefix: 2-5-
    :start: 1
 
-
-
+|Time90|
 
 Compound Boolean Expressions
 ============================
@@ -25,9 +24,7 @@ What if you want two things to be true before the body of the conditional is exe
 
 |CodingEx| **Coding Exercise**
 
-
-
-.. activecode:: lccc1
+.. activecode:: compoundAnd
    :language: java
    :autograde: unittest
 
@@ -87,8 +84,7 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
 
 |CodingEx| **Coding Exercise**
 
-
-.. activecode:: lccc2
+.. activecode:: compoundOr
    :language: java
    :autograde: unittest
 
@@ -152,9 +148,7 @@ With numerical values, the **or** (||) operator is often used to check for error
 
 |CodingEx| **Coding Exercise**
 
-
-
-.. activecode:: lcccnum
+.. activecode:: compound-number-range
    :language: java
    :autograde: unittest
 
@@ -203,8 +197,7 @@ The **not** (``!``) operator can be used to negate a boolean value. We've seen `
 
 |CodingEx| **Coding Exercise**
 
-
-.. activecode:: lcccnot
+.. activecode:: not-operator
    :language: java
    :autograde: unittest
 
@@ -250,7 +243,7 @@ The **not** (``!``) operator can be used to negate a boolean value. We've seen `
 
 
 Truth Tables
-------------
+-------------
 
 The following table (also called a **truth table**) shows the result for ``P && Q`` when ``P`` and ``Q`` are both expressions that can be ``true`` or ``false``. An expression involving logical operators like ``P && Q`` evaluates to a ``boolean`` value, ``true`` or ``false``. As you can see below the result of ``P && Q`` is only ``true`` if both ``P`` and ``Q`` are ``true``.
 
@@ -268,7 +261,7 @@ The following table (also called a **truth table**) shows the result for ``P && 
 
 |Exercise| **Check your understanding**
 
-.. fillintheblank:: 3_5_1_trueAndFalse
+.. fillintheblank:: truthTableFill
 
    The truth table above is missing one result.  What is the result of ``P && Q`` when ``P=true`` and ``Q=false``?
 
@@ -291,7 +284,7 @@ The following table shows the result for ``P || Q`` when ``P`` and ``Q`` are bot
 
 |Exercise| **Check your understanding**
 
-.. fillintheblank:: 3_5_2_falseOrTrue
+.. fillintheblank:: truthTableFill2
 
    The truth table above is missing one result.  What is the result of ``P || Q`` when ``P=false`` and ``Q=true``?
 
@@ -303,7 +296,7 @@ The following table shows the result for ``P || Q`` when ``P`` and ``Q`` are bot
 |Exercise| **Check your understanding**
 
 
-.. mchoice:: qcbc_7
+.. mchoice:: traceCompoundBools
    :practice: T
    :answer_a: first case
    :answer_b: second case
@@ -325,7 +318,7 @@ The following table shows the result for ``P || Q`` when ``P`` and ``Q`` are bot
      }
 
 
-.. mchoice:: qcbc_8
+.. mchoice:: traceCompoundBools2
    :practice: T
    :answer_a: first case
    :answer_b: second case
@@ -368,7 +361,7 @@ The following table shows the result for ``P || Q`` when ``P`` and ``Q`` are bot
      }
 
 Short Circuit Evaluation
-------------------------
+-------------------------
 
 .. index::
    single: short circuit evaluation
@@ -377,6 +370,7 @@ Short Circuit Evaluation
 Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the second expression (on the right of the operator) isn't necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:
 
 - If two boolean values/expressions are combined with a logical **or** (``||``) and the first expression is ``true``, then the second expression won’t be executed, since only one needs to be ``true`` for the result to be ``true``.
+
 - If two boolean values/expressions are combined with a logical **and** (``&&``) and the first expression is ``false``, then the second expression won't be executed.  If the first expression is ``false``, the result will be ``false``, since both sides of the ``&&`` need to be ``true`` for the result to be ``true``.
 
 
@@ -384,7 +378,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qcbc_5
+.. mchoice:: shortCircuit1
    :practice: T
    :answer_a: first case
    :answer_b: second case
@@ -407,7 +401,7 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
         System.out.println("second case");
      }
 
-.. mchoice:: qcb_7sc
+.. mchoice:: shortCircuit2
    :practice: T
    :answer_a: first case
    :answer_b: second case
@@ -430,16 +424,24 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
         System.out.println("second case");
      }
 
-|Groupwork| Programming Challenge : Truth Tables POGIL
+|Groupwork| Coding Challenge : Truth Tables POGIL
 ------------------------------------------------------
 
+.. |pogil| raw:: html
 
+   <a href="https://pogil.org/about-pogil/what-is-pogil" target="_blank" style="text-decoration:underline">POGIL</a>
 
+.. |pogil role| raw:: html
 
-We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a `POGIL role <https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing>`_ and works together to solve the problems, making sure that everyone in the team participates and learns.
+   <a href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" target="_blank" style="text-decoration:underline">POGIL role</a>
+
+.. |venn diagram| raw:: html
+
+   <a href="https://docs.google.com/document/d/1lpjk0LS_KdAddRurMayJZmaFzeyEg4FyhviZcSTXvtU/edit?usp=sharing" target="_blank" style="text-decoration:underline">Venn diagram</a>
+
+We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns.
 
 Explore the following problems with your group:
-
 
 
 1. Draw or print a |Venn diagram| of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using ``==``, ``<``, ``>``, and ``&&``, for example Ada's age ``>`` Alan's age ``&&`` Alan's age ``==`` Grace's age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using ``==``, ``!=``, and ``&&``, for example Ada's movie ``==`` Alan's movie ``&&`` Alan's movie ``!=`` Grace's movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).
@@ -450,12 +452,12 @@ Explore the following problems with your group:
 
 4. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly. You will need test case for each of the 8 rows in your truth table, for example when sunny is true and false, when raining is true or false, and for a value of temperature greater than 80, for example 90, and less than 80, for example 60.
 
-.. activecode:: challenge3-5-truthtables
+.. activecode:: challenge-truthtables
    :language: java
    :autograde: unittest
    :practice: T
 
-   Challenge-3-5-truthtables: Test your boolean expression in an if statement below.
+   Challenge-truthtables: Test your boolean expression in an if statement below.
    ~~~~
    public class TruthTable
    {
@@ -535,23 +537,25 @@ Explore the following problems with your group:
 Summary
 --------
 
-- Logical operators ``!`` (not), ``&&`` (and), and ``||`` (or) are used with Boolean values.
+- (AP 2.5.A.1) Logical operators ``!`` (not), ``&&`` (and), and ``||`` (or) are used with Boolean values.
 
-- ``A && B`` is ``true`` if both ``A`` and ``B`` are ``true``.
+    - ``A && B`` is ``true`` if both ``A`` and ``B`` are ``true``.
 
-- ``A || B`` is ``true`` if either ``A`` or ``B`` (or both) are ``true``.
+    - ``A || B`` is ``true`` if either ``A`` or ``B`` (or both) are ``true``.
 
-- ``!A`` is ``true`` if ``A`` is ``false``.
+    - ``!A`` is ``true`` if ``A`` is ``false``.
 
-- In Java, ``!`` has precedence (is executed before) ``&&`` which has precedence over ``||``. Parentheses can be used to force the order of execution in a different way.
+- (AP 2.5.A.1) ``!`` has precedence (is executed before) ``&&`` which has precedence over ``||``. (Parentheses can be used to force the order of execution in a different way.) 
 
-- When the result of a logical expression using ``&&`` or ``||`` can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as **short-circuit evaluation**.
+- (AP 2.5.A.1) An expression involving logical operators evaluates to a Boolean value.
+
+- (AP 2.5.A.2)	**Short-circuit evaluation** occurs when the result of a logical operation using  ``&&`` or ``||`` can be determined by evaluating only the first Boolean expression. In this case, the second Boolean expression is not evaluated. (If the first expression is ``true`` in an ``||`` operation, the second expression is not evaluated since the result is true. If the first expression is ``false`` in an ``&&`` operation, the second expression is not evaluated since the result is false.)
 
 
 AP Practice
 ------------
 
-.. mchoice:: AP3-5-1
+.. mchoice:: AP-compound-bools
     :practice: T
 
     Consider the following code segment. What is printed as a result of executing the code segment?
@@ -598,6 +602,10 @@ AP Practice
 
 Boolean Game
 ---------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below written to practice Booleans. Click on **Booleans**, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.

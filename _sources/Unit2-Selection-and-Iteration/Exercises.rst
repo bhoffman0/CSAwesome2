@@ -1,10 +1,10 @@
 .. qnum::
-   :prefix: 4-11-
+   :prefix: 2-25-
    :start: 1
 
 
-Multiple Choice Exercises
-=================================
+Loops Multiple Choice Exercises (2.7-2.12)
+============================================
 
 Easier Multiple Choice Questions
 ----------------------------------

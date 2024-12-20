@@ -263,12 +263,12 @@ incorrect value could be stored. Try it below.
        }
    }
 
-Computers allot a specified amount of memory to store data based on the data type. For ``double`` values, computers allot twice as much memory than for ``int``\ s—8 bytes rather than 4. However it's still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest ``double`` representable in 8 bytes. For example, repeating decimals like 0.3333333333333333 will be cut off after 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an ``int`` value.
+Computers allot a specified amount of memory to store data based on the data type. For ``double`` values, computers allot twice as much memory than for ``int``\ s—8 bytes rather than 4. However it's still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest ``double`` representable in 8 bytes. For example, repeating decimals like 0.333333333333333333 will be cut off after about 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an ``int`` value.
 
 .. index::
    pair: double; precision format
 
-Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code using ``printf`` a formatted print method or ``format`` instead of ``println``. It takes a format string like ``%.02f`` which tells ``printf`` to print a floating point number indicated by the ``%`` with 2 digits after the decimal point. See https://docs.oracle.com/javase/tutorial/java/data/numberformat.html for more information. You can also use escape characters like ``\\n`` in the format string to do a newline. Try it below.
+Although it's not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code using ``printf`` a formatted print method or ``format`` instead of ``println``. It takes a format string like ``%.02f`` which tells ``printf`` to print a floating point number indicated by the ``%`` with 2 digits after the decimal point. See https://docs.oracle.com/javase/tutorial/java/data/numberformat.html for more information. You can also use escape characters like ``\n`` in the format string to do a newline. Try it below.
 
 .. activecode:: double_precision
    :language: java
@@ -281,11 +281,14 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
        public static void main(String[] args)
        {
            double number = 10.0 / 3;
-           System.out.println(number);
-           // format number to show 2 digits after . 
-           System.out.printf("%.2f", number);
+           // Note that this gets cut off after 15 digits
+           System.out.println("Number cut off after 15 digits: " + number);
+           // We could turn it into an int with some loss of precision
+           System.out.println("Number as an int: " + (int) number);
+           // Or format it to show 2 digits after . 
+           System.out.printf("Formatted number: %.2f", number);
            // format also with $ and newline
-           System.out.printf("$%.2f\n", number);
+           System.out.printf("\nFormatted number: $%.2f\n", number);
            // Print out the result of 2.0/3 formatted to show 2 digits after the decimal point.
 
        }
@@ -304,9 +307,9 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "3.3333333333333335\n3.33$3.33\n0.67\n";
-           boolean passed =
-                   getResults(expect, output, "Expected output from main");
+           String expect = "0.67";
+           boolean passed = output.contains(expect);
+           passed = getResults(expect, output, "Expected output from main", passed);
            assertTrue(passed);
        }
    }
@@ -334,7 +337,7 @@ Although it's not on the AP exam, you can format long decimal numbers to just sh
    True or false: casting always results in a double type.
 
 
-|Groupwork| Programming Challenge : Average 3 Numbers
+|Groupwork| Coding Challenge : Average 3 Numbers
 ------------------------------------------------------
 
 This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.

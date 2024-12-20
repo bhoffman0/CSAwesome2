@@ -206,7 +206,7 @@ Turtle myrtle;
                 (If the code below does not work or is too slow in your browser, you can also see the <c>Turtle</c> code in action on <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/beca9c16-4004-4a4e-b4b0-11593e140808#f5357602-b60b-44c3-be0e-dfb07de2a778" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/beca9c16-4004-4a4e-b4b0-11593e140808#f5357602-b60b-44c3-be0e-dfb07de2a778">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit</url> or download the files <url href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -260,7 +260,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>In the code below, <c>yertle</c> goes forward and then turns left. Can you change the code to make <c>yertle</c> go <c>forward</c> twice and then <c>turnRight</c>?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -339,7 +339,7 @@ yourTurtlename.forward();
             <p>Can you add another turtle object to the code below?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -440,7 +440,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Can you make yertle draw a 7 by going forward to go up and then left?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -488,7 +488,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Can you make yertle draw the digital number 8, as 2 squares on top of each other?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -571,7 +571,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
         </subsection>
   <subsection>
-            <title>Programming Challenge : Draw Letters</title>
+            <title>Coding Challenge : Draw Letters</title>
             <p>Working in pairs, use the area below to have your turtle draw simple block-style letters for your first or last name initials using just straight lines (no curves or diagonals).</p>
             <p>It may help to act out the code pretending you are the turtle. Remember that which way you turn depends on which direction you are facing, and the turtle begins facing north (towards the top of the page).</p>
             <p>Here are some simple turtle methods that you can use:</p>
@@ -602,7 +602,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Have your turtle create a block drawing of the initials of your name. Use straight lines (no curves or diagonals unless you want to try adding arguments to the turtle methods).</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;

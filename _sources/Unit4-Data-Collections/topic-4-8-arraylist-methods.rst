@@ -629,7 +629,7 @@ and 2-dimensional arrays (which we will see in the next unit), ``ArrayList``\ s,
 and ``String``\ s made by AP CSA teacher Sam Procopio of Bishop Blanchet High
 School.
 
-|Groupwork| Programming Challenge : Array to ArrayList
+|Groupwork| Coding Challenge : Array to ArrayList
 -------------------------------------------------------
 
 .. activecode:: challenge-7-2-array-to-arraylist

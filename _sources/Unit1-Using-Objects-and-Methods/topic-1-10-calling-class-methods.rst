@@ -297,7 +297,7 @@ Here is an example of how to use these methods:
    double x = Math.pow(3, 2); // 3^2 is 9.0
    double y = Math.sqrt(9); // the square root of 9 is 3.0   
 
-|Groupwork| Programming Challenge: Ladder on Tower 
+|Groupwork| Coding Challenge: Ladder on Tower 
 --------------------------------------------------------
 
 .. image:: Figures/ladder.png

@@ -1,18 +1,18 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 4-4-
+   :prefix: 2-11-
    :start: 1
 
 
-Nested For Loops
+Nested Iteration
 ================
 
 .. index::
    single: nested for loop
    pair: loop; nested
 
-A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.   When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.
+**Nested iteration statements** (or **nested loops**) are iteration statements that appear in the body of another iteration statement. Or in simpler terms, a loop inside of another loop. Nested loops are typically used for working with two dimensions, for example printing a rectangle of stars in rows and columns as shown below.  When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.
 
 .. figure:: Figures/nestedloops.png
     :width: 350px
@@ -125,7 +125,7 @@ What does the following code print out? Watch the code run in the  `Java visuali
          System.out.println();
      }
 
-.. parsonsprob:: ch6ex6muc
+.. parsonsprob:: nestedParsons1
    :numbered: left
    :practice: T
    :adaptive:
@@ -255,7 +255,7 @@ Try nested loops with turtles to create a snowflake design!
         }
     }
 
-|Groupwork| Programming Challenge : Turtle Snowflakes
+|Groupwork| Coding Challenge : Turtle Snowflakes
 ----------------------------------------------------------
 
 
@@ -273,7 +273,7 @@ In the last exercise, you used nested for-loops to have the turtle draw a square
 5. Be creative and design a unique snowflake!
 
 
-.. activecode:: challenge4-4-Turtle-Nested-Loop-Snowflakes
+.. activecode:: challenge-Turtle-Nested-Loop-Snowflakes
     :language: java
     :autograde: unittest
     :datafile: turtleClasses.jar

@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 3-9-
+   :prefix: 2-15-
    :start: 1
 
-Toggle Mixed Up or Write Code Practice
-=========================================================
+Selection Toggle Mixed Up or Write Code Practice (2.1-2.6)
+===========================================================
 
  For each of the problems below, if you need help, you can pull down the toggle menu to choose the associated mixed up code problem to help you get started.
 

@@ -520,7 +520,7 @@ Here's a fun String array of image filenames. The following code displays an onl
         }
     }
 
-|Groupwork| Programming Challenge : Countries Array
+|Groupwork| Coding Challenge : Countries Array
 ---------------------------------------------------------
 
 .. image:: 6-1-images/US.jpg

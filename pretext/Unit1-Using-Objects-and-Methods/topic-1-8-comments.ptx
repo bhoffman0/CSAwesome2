@@ -127,7 +127,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Try to break the preconditions of the Turtle forward method below. Can you make it go completely off screen by changing the number of pixels given to the forward method in line 13? What happens if you put in negative numbers?</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <input>
 import java.awt.*;
 import java.util.*;
@@ -221,7 +221,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Try the <url href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/" visual="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/">Wake Up In the Morning Game</url> in groups to practice the iterative and incremental agile development process.</p>
         </subsection>
   <subsection>
-            <title>Programming Challenge: Preconditions in Algorithms</title>
+            <title>Coding Challenge: Preconditions in Algorithms</title>
             <p>Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like <url href="https://creately.com" visual="https://creately.com">Creately.com</url> (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don’t forget to list  the preconditions and postconditions for each step.  You can type in your answer below.</p>
 
 <exercise label="challenge-1-8-use-case-preconditions">

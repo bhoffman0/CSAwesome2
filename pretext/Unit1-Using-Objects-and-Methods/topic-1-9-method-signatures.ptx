@@ -458,7 +458,7 @@ verse("cow", "moo");
                 is overloaded with different parameter types. The method <c>println()</c> with no parameters prints a newline, the method <c>println(String x)</c> prints the given string followed by a newline, the method <c>println(int x)</c> prints the given int number followed by a newline, etc. The compiler determines which method to call based on the number and types of arguments passed to the method.</p>
         </subsection>
   <subsection>
-            <title>Programming Challenge: Song with Parameters</title>
+            <title>Coding Challenge: Song with Parameters</title>
             <p>Here’s another song, <url href="https://youtu.be/QPwEZ8Vv2YQ" visual="https://youtu.be/QPwEZ8Vv2YQ">The Ants Go Marching</url>, that is very similar in its repetitive structure. The verses below have a lot of repeated words and phrases. Click on the words or phrases that are different in each verse. These will be the arguments that you will pass to the methods in your song code.</p>
 
 <exercise label="clickDifferentAntSong">

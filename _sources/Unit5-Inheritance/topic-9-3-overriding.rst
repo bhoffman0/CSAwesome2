@@ -475,7 +475,7 @@ You can step through this code in the Java Visualizer by clicking on the followi
 
 
 
-|Groupwork| Programming Challenge : Pet Sounds
+|Groupwork| Coding Challenge : Pet Sounds
 ----------------------------------------------------------
 
 .. image:: Figures/animalclinic.png

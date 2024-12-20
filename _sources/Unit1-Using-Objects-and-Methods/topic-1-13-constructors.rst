@@ -420,7 +420,7 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
     :width: 200
     :align: left
 
-|Groupwork| Programming Challenge: Custom Turtles
+|Groupwork| Coding Challenge: Custom Turtles
 ---------------------------------------------------
 
 Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors. The CustomTurtle class in the ActiveCode below inherits many of its attributes and methods from the Turtle class. However, it has some new constructors with more parameters to customize a turtle with its body color, shell color, width, and height. CustomTurtle has 3 constructors:

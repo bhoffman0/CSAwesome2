@@ -444,7 +444,7 @@ may want a nicer printout.
       }
   }
 
-|Groupwork| Programming Challenge : FRQ Word Pairs
+|Groupwork| Coding Challenge : FRQ Word Pairs
 ---------------------------------------------------
 
 

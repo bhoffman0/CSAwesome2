@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 4-11-
+   :prefix: 2-27-
    :start: 1
 
-Free Response - Self Divisor A
-===============================
+FRQ Self Divisor A
+-------------------------------
 
 .. index::
     single: self divisor
@@ -42,7 +42,7 @@ The following is part a of a free response question from 2007.  It was question 
    }
 
 How to solve this problem
----------------------------
+===========================
 
 The first thing to do is try to solve the examples by hand.  The question tells us that 128 should return true, 26 should return false, and any number with a 0 in it should return false.
 
@@ -331,7 +331,7 @@ Try to write the code for the method isSelfDivisor.  When you are ready click "R
     }
 
 Video - One way to code the solution
--------------------------------------
+=====================================
 
 There are many possible solutions to this problem. Click to reveal a possible solution's video for this problem.
 
@@ -342,6 +342,6 @@ There are many possible solutions to this problem. Click to reveal a possible so
    The following video is also on YouTube at https://youtu.be/oK1hDTmR3AE.  It walks through creating a solution.
 
    .. youtube:: oK1hDTmR3AE
-        :width: 800px
+        :width: 800
         :align: center
         :optional:

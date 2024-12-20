@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 4-9-
+   :prefix: 2-24-
    :start: 1
 
-Coding Practice with Loops
-====================================
+Loops Coding Practice (2.7-2.12)
+======================================
 
 .. tabbed:: ch6ex1
 
