@@ -74,16 +74,16 @@ Try the code below. Add code in the main method that changes the original addres
       {
           name = initName;
           // This direct assignment of references may not be the best practice!
-          address = initAddress;
+          addr = initAddress;
       }
 
       public String toString()
       {
-          return "Name:" + name + "\n" + "Address:" + address;
+          return "Name:" + name + "\n" + "Address:" + addr;
       }
       public static void main(String[] args)
       {
-          Address a1 = new Address("123 Main St", "Anytown", "12345");
+          Address a1 = new Address("123 Main St", "Anytown", "Anystate", "12345");
           Person p1 = new Person("Skyler", a1);
           System.out.println(p1);
           // Add code to change a1 to your city with its setCity method
@@ -129,7 +129,8 @@ Try the code below. Add code in the main method that changes the original addres
             return zipcode;
         }
         // Setters (makes the class mutable)
-        public void setCity(String initCity) {
+        public void setCity(String initCity) 
+        {
             city = initCity;
         }
    }
@@ -216,6 +217,7 @@ Another way to handle this is to provide a copy constructor in the ``Address`` c
         {
             street = otherAddr.getStreet();
             city = otherAddr.getCity();
+            state = otherAddr.getState();
             zipcode = otherAddr.getZipcode();
         }
     }
@@ -261,7 +263,8 @@ Try the variation of the code below where the constructor copies the Address obj
           addr =  new Address(
                              initAddr.getStreet(),
                              initAddr.getCity(),
-                             initAddr.getState());
+                             initAddr.getState(),
+                             initAddr.getZipcode());
       }
 
       public void setAddress(Address otherAddr)
@@ -272,12 +275,12 @@ Try the variation of the code below where the constructor copies the Address obj
       }
       public String toString()
       {
-          return "Name:" + name + "\n" + "Address:" + address;
+          return "Name:" + name + "\n" + "Address:" + addr;
       }
       public static void main(String[] args)
       {
-          Address a1 = new Address("123 Main St", "Anytown", "12345");
-          Address a2 = new Address("456 Elm St", "Othertown", "67890");
+          Address a1 = new Address("123 Main St", "Anytown", "Anystate", "12345");
+          Address a2 = new Address("456 Elm St", "Othertown", "Otherstate", "67890");
           Person p1 = new Person("Skyler", a1);
           System.out.println(p1);
           // TODO: Add code to change a1 to your city with its setCity method
@@ -327,7 +330,8 @@ Try the variation of the code below where the constructor copies the Address obj
             return zipcode;
         }
         // Setters (makes the class mutable)
-        public void setCity(String initCity) {
+        public void setCity(String initCity) 
+        {
             city = initCity;
         }
    }
@@ -416,7 +420,8 @@ Try it in the code below.
           addr =  new Address(
                              initAddr.getStreet(),
                              initAddr.getCity(),
-                             initAddr.getState());
+                             initAddr.getState(),
+                             initAddr.getZipcode());
       }
 
       public void copyAddressFromPerson(Person otherPerson)
@@ -439,13 +444,13 @@ Try it in the code below.
 
       public String toString()
       {
-          return "Name:" + name + "\n" + "Address:" + address;
+          return "Name:" + name + "\n" + "Address:" + addr;
       }
 
       public static void main(String[] args)
       {
-          Address a1 = new Address("123 Main St", "Anytown", "12345");
-          Address a2 = new Address("456 Elm St", "Othertown", "67890");
+          Address a1 = new Address("123 Main St", "Anytown", "Anystate", "12345");
+          Address a2 = new Address("456 Elm St", "Othertown", "Otherstate", "67890");
           Person p1 = new Person("Skyler", a1);
           Person p2 = new Person("Jordan", a2);
           System.out.println(p1);
@@ -471,6 +476,13 @@ Try it in the code below.
             state = initState;
             zipcode = initZipcode;
         }
+        // copy constructor
+        public Address(Address otherAddr)
+        {
+            street = otherAddr.getStreet();
+            city = otherAddr.getCity();
+            zipcode = otherAddr.getZipcode();
+        }
         public String toString()
         {
             return street + "\n" + city + ", " + state + " " + zipcode;
@@ -492,8 +504,21 @@ Try it in the code below.
             return zipcode;
         }
         // Setters (makes the class mutable)
-        public void setCity(String initCity) {
+        public void setStreet(String initStreet) 
+        {
+            street = initStreet;
+        }
+        public void setCity(String initCity) 
+        {
             city = initCity;
+        }
+        public void setState(String initState) 
+        {
+            state = initState;
+        }
+        public void setZipcode(String initZipcode) 
+        {
+            zipcode = initZipcode;
         }
    }
   ====
@@ -544,7 +569,7 @@ For example, the ``Person`` class can have a ``getAddress`` method that returns 
 
         public static void main(String[] args)
         {
-            Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "12345"));
+            Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "Anystate", "12345"));
             System.out.println(p1);
             Address a = p1.getAddress();
             a.setCity("Othertown");
@@ -578,7 +603,8 @@ Try it in the code below.
           addr =  new Address(
                              initAddr.getStreet(),
                              initAddr.getCity(),
-                             initAddr.getState());
+                             initAddr.getState(),
+                             initAddr.getZipcode());
       }
 
       public Address getAddress()
@@ -588,15 +614,15 @@ Try it in the code below.
 
       public String toString()
       {
-          return "Name:" + name + "\n" + "Address:" + address;
+          return "Name:" + name + "\n" + "Address:" + addr;
       }
 
       public static void main(String[] args)
       {
-          Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "12345"));
+          Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "Anystate", "12345"));
           System.out.println(p1);
           Address a = p1.getAddress();
-          // TODO: add code to change the zipcode of a to 11111
+          // TODO: add code to change a's zipcode to "11111"
           //    using setZipcode
         
           // Does it change in p1 too?
@@ -640,10 +666,12 @@ Try it in the code below.
             return zipcode;
         }
         // Setters (makes the class mutable)
-        public void setCity(String initCity) {
+        public void setCity(String initCity) 
+        {
             city = initCity;
         }
-        public void setZipcode(String initZipcode) {
+        public void setZipcode(String initZipcode) 
+        {
             zipcode = initZipcode;
         }
    }
@@ -728,7 +756,7 @@ In this challenge, you will create a class ``Friend`` which keeps track of your 
 
           // Create a Date object with today's date
 
-          // Call the isBirthday method to see if today is the friend's birthday
+          // Call your friend's isBirthday method with today's date object
           
       }
   }
@@ -767,7 +795,7 @@ In this challenge, you will create a class ``Friend`` which keeps track of your 
           assertTrue(passed);
       }
       @Test
-      public void test2() 
+      public void test3() 
       {
           Friend tw = new Friend("Taylor Swift", new Date(12, 13, 1989));
           String output = tw.isBirthday(new Date(1, 1,2025)) + "";
