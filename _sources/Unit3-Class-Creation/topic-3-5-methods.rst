@@ -97,6 +97,57 @@ The following flowchart can be used to compare three different ways of calling m
 
     Figure 1: Comparing Method Calls to Static and Instance Methods
 
+|CodingEx| **Coding Exercise**
+
+.. activecode:: PersonPrint
+  :language: java
+  :autograde: unittest
+  :practice: T
+
+  Try the following code. Add a print() method in the Person class that prints out all the attributes (name, email, phonenumber) of a person object. 
+  ~~~~
+  public class Person
+  {
+      // instance variables
+      private String name;
+      private String email;
+      private String phonenumber;
+
+      // Constructor
+      public Person(String n, String e, String p)
+      {
+          name = n;
+          email = e;
+          phonenumber = p;
+      }
+      
+      // TODO: Add a print() method that prints out all the attributes (name, email, phonenumber)
+     
+
+      public static void main(String[] args)
+      {
+          Person p1 = new Person("Taylor", "swift@gmail.com", "123-456-7890"); 
+          p1.print();
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void test1()
+      {
+          String target = "public void print()";
+          boolean passed = checkCodeContains("public void print() method", target);
+          assertTrue(passed);
+      }
+  }
+
 void Methods
 ---------------
 
@@ -336,7 +387,7 @@ in the Java visualizer by using the Show CodeLens button.
   :language: java
   :autograde: unittest
 
-  See the toString() method in action.
+  See the toString() method in action. Add another student object and print it out.
   ~~~~
   public class TesterClass
   {
@@ -345,6 +396,9 @@ in the Java visualizer by using the Show CodeLens button.
       {
           Student s1 = new Student("Skyler", "skyler@sky.com", 123456);
           System.out.println(s1);
+          // TODO: add another student s2 and print it out
+
+
       }
   }
 
@@ -378,11 +432,10 @@ in the Java visualizer by using the Show CodeLens button.
   public class RunestoneTests extends CodeTestHelper
   {
       @Test
-      public void testMain() throws IOException
+      public void test1() throws IOException
       {
-          String output = getMethodOutput("main");
-          String expect = "123456: Skyler, skyler@sky.com";
-          boolean passed = getResults(expect, output, "Checking for expected output", true);
+          String target = "System.out.println(s2)";
+          boolean passed = checkCodeContains("System.out.println(s2)", target);
           assertTrue(passed);
       }
   }
