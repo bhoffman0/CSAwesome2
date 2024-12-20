@@ -246,7 +246,7 @@ values themselves using the constructor with arguments.
            String output = getMethodOutput("main");
            String expect = "1/1\n1/2";
 
-           boolean passed = getResults(expect, output, "Running main", true);
+           boolean passed = getResults(expect, output, "Running main");
            assertTrue(passed);
        }
        @Test
@@ -349,41 +349,6 @@ values themselves using the constructor with arguments.
        }
    }
 
-Advanced AP Topic: Reference parameters 
-------------------------------------------------
-
-When you pass object references as parameters to
-constructors or methods, those references refer to the same objects as the
-references in the caller. If the objects are immutable, like ``String`` objects
-it doesn’t matter at all. On the other hand, if the objects are **mutable**,
-meaning their instance variables can change after they are constructed, then
-storing the passed-in reference in an instance variable in your object can lead
-to surprising results: if some other code changes the object it will change for
-you too. If that’s not what you want, sometimes it makes sense to copy the
-object passed to the constructor and store the copy in the instance variable
-instead. How to make the copy will depend on the class of the object, but often
-you can just construct a new object of the appropriate class using values from
-the original object as shown below. This way the instance variable ``addr`` does not hold a reference to the original object ``initAddr``, and the methods in the ``Person`` class cannot modify the state of the original object.
-
-.. code-block:: java
-
-     public class Person
-     {
-         private String name;
-         private Address addr; // Assumes an Address class is already defined
-
-         // constructor: initialize instance variable and call Address constructor to
-         // make a copy
-         public Person(String initName, Address initAddr)
-         {
-             name = initName;
-             addr =
-                     new Address(
-                             initAddr.getStreet(),
-                             initAddr.getCity(),
-                             initAddr.getState());
-         }
-     }
 
 |Groupwork| Coding Challenge : Student Class
 --------------------------------------------------
@@ -639,8 +604,7 @@ Summary
 - (AP 3.4.A.1) An object’s **state** refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This defines a **has-a** relationship between the object and its instance variables.
 - (AP 3.4.A.2) A constructor is used to set the initial state of an object, which should include initial values for all instance variables. When a constructor is called, memory is allocated for the object and the associated object reference is returned. Constructor parameters, if specified, provide data to initialize instance variables.
 - A constructor must have the same name as the class! Constructors have no return type!
-- (AP 3.4.A.3) When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable does not hold a reference to the original object, and methods are prevented from modifying the state of the original object.
-- (AP 3.4.A.4) When no constructor is written, Java provides a no-parameter constructor, and the instance variables are set to default values according to the data type of the attribute. This constructor is called the **default constructor**.
+- (AP 3.4.A.4) When no constructor is written, Java provides a no-parameter constructor, and the instance variables are set to default values according to the data type of the attribute. This constructor is called the **default constructor**. (Note that AP 3.4.A.3 is covered in lesson 3.6).
 - (3.4.A.5) Default values used by the default constructor:
 
    - The default value for an attribute of type `int` is `0`. 
