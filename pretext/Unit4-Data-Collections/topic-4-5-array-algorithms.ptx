@@ -40,7 +40,7 @@
   </p>
   <p>Here are two common array traversal loops that can be used for these algorithms:</p>
   <program language="java">
-    <input>
+    <code>
 for (int value : array)
 {
     if (value ....)
@@ -52,7 +52,7 @@ for(int i=0; i &lt; array.length; i++)
    if (array[i] ....)
        ...
 }
-</input>
+</code>
   </program>
   <p>We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice!</p>
 <xi:include href='./horseBarnA.ptx'/>
@@ -69,7 +69,7 @@ for(int i=0; i &lt; array.length; i++)
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class MinMax
 {
     public static void main(String[] args)
@@ -87,7 +87,7 @@ public class MinMax
     }
 }
 
-</input><tests>
+</code><tests>
 // Test for Lesson MinMax
 import static org.junit.Assert.*;
 
@@ -145,7 +145,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class Rotate
 {
     public static void main(String[] args)
@@ -173,7 +173,7 @@ public class Rotate
     }
 }
 
-</input><tests>
+</code><tests>
 // Test for Lesson 6.4.2 - Rotate
 import static org.junit.Assert.*;
 

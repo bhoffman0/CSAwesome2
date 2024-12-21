@@ -59,11 +59,6 @@
 details.ptx-footnote {
   display: none;
 }
-/* A hack to align |CodingEx| type of images - not working */
-.ptx-content img.contained {
-  float: left;
-}
-
 
 .ptx-content .para a
 {
