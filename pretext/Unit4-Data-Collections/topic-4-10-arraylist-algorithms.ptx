@@ -45,7 +45,7 @@
         </blockquote>
   <p>Here are two common ArrayList traversal loops that can be used for these algorithms:</p>
   <program language="java">
-    <input>
+    <code>
 for (Type obj : list)
 {
     if (obj ....)
@@ -57,7 +57,7 @@ for(int i=0; i &lt; list.size(); i++)
    if (list.get(i) ....)
        ...
 }
-</input>
+</code>
   </program>
   <p>You should be able to trace through code that uses all the basic ArrayList methods like the following.</p>
   <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(6))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(6))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example1</url>.</p>
@@ -83,7 +83,7 @@ for(int i=0; i &lt; list.size(); i++)
         <statement>
 
         <p> What will print when the following code executes?</p>
-        <program language="java"><input>
+        <program language="java"><code>
 List&lt;Integer&gt; numList = new ArrayList&lt;Integer&gt;();
 numList.add(new Integer(1));
 numList.add(new Integer(2));
@@ -92,7 +92,7 @@ numList.set(2,new Integer(4));
 numList.add(1, new Integer(5));
 numList.add(new Integer(6));
 System.out.println(numList);
-</input></program>
+</code></program>
 
         </statement>
 <choices>
@@ -139,14 +139,14 @@ System.out.println(numList);
         <statement>
 
         <p> What will print when the following code executes?</p>
-        <program language="java"><input>
+        <program language="java"><code>
 List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
 list1.add(new Integer(1));
 list1.add(new Integer(2));
 list1.add(new Integer(3));
 list1.remove(1);
 System.out.println(list1);
-</input></program>
+</code></program>
 
         </statement>
 <choices>
@@ -195,7 +195,7 @@ System.out.println(list1);
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 import java.util.*;
 
 public class ArrayListLoop
@@ -219,7 +219,7 @@ public class ArrayListLoop
     }
 }
 
-</input><tests>
+</code><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -246,7 +246,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 import java.util.*;
 
 public class ParallelTests
@@ -271,7 +271,7 @@ public class ParallelTests
     }
 }
 
- </input><tests>
+ </code><tests>
  import static org.junit.Assert.*;
 
  import org.junit.*;
