@@ -54,9 +54,9 @@ while (<>) {
   s/^(\.\.\s+)?qnum::.*//g;
   s/.*:prefix:.*//g;
   s/.*:start:.*//g;
-  
+
   # Also remove the time elements for now.
-  /^(\.\.\s+)?(\|Time\d+\|)/ and next;
+  s/^(\.\.\s+)?(\|Time(\d+)\|)/<time length="$1"\/>/ and next;
 
   # Remove Exercise and Groupwork images
   s/\|CodingEx\|.*//g;

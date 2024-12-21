@@ -19,7 +19,7 @@
             
             <p>Every program in Java is written as a <term>class</term>. Java is an <term>object-oriented language</term>, and <term>classes</term> and <term>objects</term> created from classes are the basic building blocks in object-oriented programming. We’ll learn more about classes and objects later in this unit.</p>
             <p>Inside the class, there can be a <term>main method</term> that starts the program. A <term>method</term> is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to <em>run</em> a class, it will always start execution in the main method. In other programming languages, methods are called functions or procedures. Here is the template for a simple Java program with a main method:</p>
-            <program language="java"><input>
+            <program language="java"><code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -27,7 +27,7 @@ public class MyClass
         // Put your code here!
     }
 }
-</input></program>
+</code></program>
             <note>
                 <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
             </note>
@@ -39,7 +39,7 @@ public class MyClass
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -48,7 +48,7 @@ public class MyClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -314,12 +314,12 @@ public class RunestoneTests extends CodeTestHelper
             <p>It will be a lot easier to find the problem, and other problems like it, if you
                 understand how to read the error message. So let’s take a closer look. It will
                 look something like this:</p>
-            <program language="text"><input>
+            <program language="text"><code>
 FirstClass.java:5: error: unclosed string literal
        System.out.println("Hi there!);
                           ^
 1 error
-</input></program>
+</code></program>
             <p>The first line starts with the name of the file that was being compiled.
                 Because you submitted your code via this web page you didn’t actually name
                 the file but it was named for you to match the name of your class. Then
@@ -358,7 +358,7 @@ FirstClass.java:5: error: unclosed string literal
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class FirstClass
 {
     public static void main(String[] args)
@@ -367,7 +367,7 @@ public class FirstClass
     }
 }
 
-</input><tests>
+</code><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -401,7 +401,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class SecondClass
 {
     public static void main(String[] args)
@@ -410,7 +410,7 @@ public class SecondClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -454,7 +454,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class ThirdClass
 {
     public static void main(String[] args)
@@ -463,7 +463,7 @@ public class ThirdClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 // This doesn't really work because it filters out the \n
 import static org.junit.Assert.*;
@@ -500,7 +500,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class DivideByZero
 {
    public static void main(String[] args)
@@ -509,7 +509,7 @@ public class DivideByZero
        System.out.println(3/0);
    }
 }
-</input><tests>
+</code><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -538,14 +538,14 @@ public class RunestoneTests extends CodeTestHelper
                 and <c>*/</c> to end the comment. The compiler will skip over comments. However, it
                 is a good idea to use comments to make notes to yourself and other programmers
                 working with you. Here are some examples of good commenting:</p>
-            <program language="java"><input>
+            <program language="java"><code>
 /* MyClass.java
    Programmer: My Name
    Date:
 */
 
 int max = 10; // this keeps track of the max score
-</input></program>
+</code></program>
         </subsection>
   <subsection>
             <title> Debugging Challenge</title>
@@ -559,7 +559,7 @@ int max = 10; // this keeps track of the max score
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class Challenge1_1
 {
    public static void main(String[] args)
@@ -570,7 +570,7 @@ public class Challenge1_1
 
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -610,7 +610,7 @@ public class RunestoneTests extends CodeTestHelper
                     <p>A basic Java program looks like the following:</p>
                 </li>
             </ul></p>
-            <program language="java"><input>
+            <program language="java"><code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -618,7 +618,7 @@ public class MyClass
         System.out.println("Hi there!");
     }
 }
-</input></program>
+</code></program>
             <p><ul>
                 <li>
                     <p>A Java program starts with <term>public class NameOfClass { }</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
@@ -656,11 +656,11 @@ public class MyClass
         <statement>
 
             <p>Consider the following code segment.</p>
-            <program language="java"><input>
+            <program language="java"><code>
 System.out.println("Roses are red, ")      // Line 1;
 System.out.println("Violets are blue, ")  // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
-</input></program>
+</code></program>
             <p>The code segment is intended to produce the following output but may not work as intended.</p>
             <raw format="html" xml:space="preserve">&lt;pre&gt;Roses are red,
 Violets are blue,

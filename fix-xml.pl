@@ -62,6 +62,11 @@ while (<>) {
   s/data-optional=true/data-optional="true"/g;
   s/'data-optional="true"'/'data-optional=true'/g;
 
+  # BH added to fix <literal_block> tags in 2-12
+  s/&lt;\/literal_block/<\/literal_block/g;
+  # in unit tests
+  s/"<"/"&lt;"/g;
+  
   # Fix these to be XMLish.
   s/<br>/<br\/>/g;
 
@@ -83,4 +88,5 @@ while (<>) {
   } else {
     print;
   }
+  
 }
