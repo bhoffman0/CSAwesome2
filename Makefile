@@ -48,6 +48,7 @@ fixed_xml: xml
 fixed_ptx: post
 	find pretext -name '*.ptx' -exec ./fix-ptx.pl {} \;
 	find pretext -name '*.ptx' -exec ./fix-tests.pl {} \;
+	find pretext -name '*.ptx' -exec ./fix-data-stdin.pl {} \;
 	if [ -d hand-fixes ]; then rsync -r hand-fixes/ pretext/; fi
 
 # This works better than the script that does them all
