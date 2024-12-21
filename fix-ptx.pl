@@ -16,6 +16,10 @@ if ($ARGV[0] eq "--debug") {
 
 while (<>) {
 
+  # New <code> instead of <input>
+  s/<input>/<code>/g;
+  s/<\/input>/<\/code>/g;
+  
   # Translate xml:ids that were generated in the docs to the ones used in the xrefs.
   s/ref=".*mariscal"/ref="briceida-mariscal-id1"/g;
   s/ref=".*lira"/ref="carla-de-lira-id1"/g;
@@ -34,8 +38,8 @@ while (<>) {
 
   # For tests, put in time-limit to have it generate as a test. Pretests are no-feedback.
   # There are some with 'timelimit': 45, but we could make them all untimed.
-  s/<exercises line=.*nofeedback.*>/<exercises time-limit="" feedback="no">/g;
-  s/<exercises line=.*(test|exam|midterm).*>/<exercises time-limit="">/g;
+  s/<exercises line=.*nofeedback.*>/<exercises time-limit="1000" timer="no" feedback="no" results="no">/g;
+  s/<exercises line=.*(test|exam|midterm).*>/<exercises time-limit="1000" timer="no">/g;
  
   print;
 }
