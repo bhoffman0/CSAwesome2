@@ -7,6 +7,7 @@
 
 use warnings;
 use strict;
+use File::Basename;
 
 if ($ARGV[0] eq "--debug") {
   shift;
@@ -14,16 +15,25 @@ if ($ARGV[0] eq "--debug") {
   $^I = '';
 }
 
+# Get the filename from the command-line argument
+my $file = $ARGV[0];
+my $filename = fileparse($file, qr/\.[^.]*/);
+
 while (<>) {
 
   # New <code> instead of <input>
   s/<input>/<code>/g;
   s/<\/input>/<\/code>/g;
-  
+
+  # Replace section xml:ids with the filename
+  s/<section xml:id=".*?">/<section xml:id="$filename">/g;
+  s/<section>/<section xml:id="$filename">/g;
+
   # Translate xml:ids that were generated in the docs to the ones used in the xrefs.
   s/ref=".*mariscal"/ref="briceida-mariscal-id1"/g;
   s/ref=".*lira"/ref="carla-de-lira-id1"/g;
   s/ref=".*mbayo"/ref="camille-mbayo-id1"/g;
+  s/xml:id="exercises-1-1"-1/xml:id="recursive-exercises"/g;
 
   # Remove the hard-coded numbering of exercises Q6: or 1-1-1:
   s/Q\-\d+\://g;

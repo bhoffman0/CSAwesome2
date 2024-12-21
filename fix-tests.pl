@@ -17,7 +17,7 @@ $/ = undef;
 
 while (<>) {
 
-  s{<input>(.*?)====(.*?)</input>}{<input>$1</input><tests>$2</tests>}msg;
+  s{<code>(.*?)====(.*?)</code>}{<code>$1</code><tests>$2</tests>}msg;
 
   print;
 }
