@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="introduction-to-algorithms-programming-and-compilers">
+<section xml:id="topic-1-1-intro-algorithms">
   <title>Introduction to Algorithms, Programming, and Compilers</title><introduction>
     
     <p>What do Android phones, Minecraft, and Netflix have in common? They’re all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you’ve used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a <term>programming language</term> that is used worldwide to create software that we all use.</p>
@@ -19,7 +19,7 @@
             
             <p>Every program in Java is written as a <term>class</term>. Java is an <term>object-oriented language</term>, and <term>classes</term> and <term>objects</term> created from classes are the basic building blocks in object-oriented programming. We’ll learn more about classes and objects later in this unit.</p>
             <p>Inside the class, there can be a <term>main method</term> that starts the program. A <term>method</term> is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to <em>run</em> a class, it will always start execution in the main method. In other programming languages, methods are called functions or procedures. Here is the template for a simple Java program with a main method:</p>
-            <program language="java"><input>
+            <program language="java"><code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -27,11 +27,11 @@ public class MyClass
         // Put your code here!
     }
 }
-</input></program>
+</code></program>
             <note>
                 <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
             </note>
-            <p><image class="imgex" source="_static/codingExercise.png" width="5%" alt="coding exercise"/> <term>Coding Exercise</term>: Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting <c>"</c> and ending <c>"</c>.  Click on the run button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.</p>
+            <p><term>Coding Exercise</term>: Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting <c>"</c> and ending <c>"</c>.  Click on the run button to run the modified code. </p>
 
 <exercise label="printName">
     <statement>
@@ -39,7 +39,7 @@ public class MyClass
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -48,7 +48,7 @@ public class MyClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -88,19 +88,19 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public static</cline>       
+                    <c>public static</c>       
                     </block>
                     <block>
-                        <cline>void main(</cline>       
+                        <c>void main(</c>       
                     </block>
                     <block>
-                        <cline>String[]</cline>       
+                        <c>String[]</c>       
                      </block>
                      <block>
-                        <cline>args)</cline>       
+                        <c>args)</c>       
                      </block>
                      <block correct="no">
-                        <cline>public Static</cline>       
+                        <c>public Static</c>       
                      </block>
                 </blocks>
             </exercise>
@@ -111,28 +111,28 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public</cline>       
+                    <c>public</c>       
                     </block>
                     <block>
-                        <cline>static</cline>       
+                        <c>static</c>       
                         </block>
                     <block>
-                        <cline>void</cline>       
+                        <c>void</c>       
                     </block>
                     <block>
-                        <cline>main(</cline>       
+                        <c>main(</c>       
                         </block>
                     <block>
-                        <cline>String[]</cline>       
+                        <c>String[]</c>       
                      </block>
                      <block>
-                        <cline>args)</cline>       
+                        <c>args)</c>       
                      </block>
                      <block correct="no">
-                        <cline>Public</cline>       
+                        <c>Public</c>       
                      </block>
                      <block correct="no">
-                        <cline>Static</cline>       
+                        <c>Static</c>       
                      </block>
                 </blocks>
             </exercise>
@@ -143,34 +143,34 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public</cline>       
+                    <c>public</c>       
                     </block>
                     <block>
-                        <cline>static</cline>       
+                        <c>static</c>       
                         </block>
                     <block>
-                        <cline>void</cline>       
+                        <c>void</c>       
                     </block>
                     <block>
-                        <cline>main</cline>       
+                        <c>main</c>       
                         </block>
                     <block>
-                     <cline>(</cline>       
+                     <c>(</c>       
                     </block>
                     <block>
-                        <cline>String</cline>       
+                        <c>String</c>       
                      </block>
                      <block>
-                        <cline>[] </cline>       
+                        <c>[] </c>       
                         </block>
                      <block>
-                        <cline>args</cline>       
+                        <c>args</c>       
                      </block>
                      <block>
-                        <cline>)</cline>       
+                        <c>)</c>       
                         </block>
                      <block correct="no">
-                        <cline>()</cline>       
+                        <c>()</c>       
                      </block>
                 </blocks>
             </exercise>
@@ -183,31 +183,31 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>System.</cline>       
+                    <c>System.</c>       
                     </block>
                     <block>
-                        <cline>out</cline>       
+                        <c>out</c>       
                         </block>
                     <block>
-                        <cline>.</cline>       
+                        <c>.</c>       
                     </block>
                     <block>
-                        <cline>println</cline>       
+                        <c>println</c>       
                         </block>
                     <block>
-                     <cline>(</cline>       
+                     <c>(</c>       
                     </block>
                     <block>
-                        <cline>&quot;Hi!&quot;</cline>       
+                        <c>&quot;Hi!&quot;</c>       
                      </block>
                      <block>
-                        <cline>)</cline>       
+                        <c>)</c>       
                         </block>
                      <block>
-                        <cline>;</cline>       
+                        <c>;</c>       
                      </block>
                      <block correct="no">
-                        <cline>system</cline>       
+                        <c>system</c>       
                      </block>
                      
                 </blocks>
@@ -220,31 +220,31 @@ public class RunestoneTests extends CodeTestHelper
             </statement>
             <blocks layout="horizontal">
                 <block>
-                <cline>System.</cline>       
+                <c>System.</c>       
                 </block>
                 <block>
-                    <cline>out</cline>       
+                    <c>out</c>       
                     </block>
                 <block>
-                    <cline>.</cline>       
+                    <c>.</c>       
                 </block>
                 <block>
-                    <cline>println</cline>       
+                    <c>println</c>       
                     </block>
                  <block>
-                 <cline>(</cline>       
+                 <c>(</c>       
                 </block>
                 <block>
-                    <cline>&quot;Bye!&quot;</cline>       
+                    <c>&quot;Bye!&quot;</c>       
                  </block>
                  <block>
-                    <cline>)</cline>       
+                    <c>)</c>       
                     </block>
                  <block>
-                    <cline>;</cline>       
+                    <c>;</c>       
                  </block>
                  <block correct="no">
-                    <cline>Out</cline>       
+                    <c>Out</c>       
                  </block>
             </blocks>
         </exercise>
@@ -253,56 +253,56 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Syntax Errors and Debugging</title>
             <p><term>Syntax errors</term> are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c> or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the process of removing errors is called <term>debugging</term>. An early computer science pioneer <url href="https://en.wikipedia.org/wiki/Grace_Hopper" visual="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</url> documented a real bug, a moth that flew into a computer in 1947!</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Figure 2: Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%"/></figure>
+            <figure align="left"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%"/></figure><br/>
             <p>The compiler tries to run your code, but if your code has <term>syntax errors</term>, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.</p>
             <p>Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url> is a lot of fun!</p>
 
     <video youtube="auv10y-dN4s"/>
                 <p>Let’s practice debugging some code!</p>
-            <p><image class="imgex" source="_static/exercise.png" width="6%" alt="exercise"/> <term>Check Your Understanding: Mixed up programs</term></p>
+            <p> <term>Check Your Understanding: Mixed up programs</term></p>
 <exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
 </statement>
 <blocks><block order="4">
-<cline>public class Hello</cline>
-<cline>{</cline>
+<c>public class Hello</c>
+<c>{</c>
 </block><block order="1">
-<cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-<cline>   </cline>
+<c>   public static void main(String[] args)</c>
+<c>   {</c>
+<c>   </c>
 </block><block order="2">
-<cline>      System.out.println("Hi my friend!");</cline>
-<cline>      </cline>
+<c>      System.out.println("Hi my friend!");</c>
+<c>      </c>
 </block><block order="3">
-<cline>   }</cline>
-<cline>   </cline>
+<c>   }</c>
+<c>   </c>
 </block><block order="5">
-<cline>}</cline>
+<c>}</c>
 </block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="6">
-<choice correct="yes"><cline>public class Hello</cline>
-<cline>{</cline>
-</choice><choice><cline>public Class Hello</cline>
-<cline>{                         </cline>
+<choice correct="yes"><c>public class Hello</c>
+<c>{</c>
+</choice><choice><c>public Class Hello</c>
+<c>{                         </c>
 </choice></block><block order="5">
-<choice correct="yes"><cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-<cline>   </cline>
-</choice><choice><cline>   public static void main()</cline>
-<cline>   {                         </cline>
-<cline>   </cline>
+<choice correct="yes"><c>   public static void main(String[] args)</c>
+<c>   {</c>
+<c>   </c>
+</choice><choice><c>   public static void main()</c>
+<c>   {                         </c>
+<c>   </c>
 </choice></block><block order="8">
-<choice correct="yes"><cline>      System.out.println("Hi there!");</cline>
-<cline>      </cline>
-</choice><choice><cline>      System.out.println("Hi there!") </cline>
-<cline>      </cline>
+<choice correct="yes"><c>      System.out.println("Hi there!");</c>
+<c>      </c>
+</choice><choice><c>      System.out.println("Hi there!") </c>
+<c>      </c>
 </choice></block><block order="2">
-<cline>   }</cline>
-<cline>   </cline>
+<c>   }</c>
+<c>   </c>
 </block><block order="4">
-<cline>}</cline>
+<c>}</c>
 </block></blocks></exercise>        </subsection>
   <subsection>
             <title>Reading Error Messages</title>
@@ -314,12 +314,12 @@ public class RunestoneTests extends CodeTestHelper
             <p>It will be a lot easier to find the problem, and other problems like it, if you
                 understand how to read the error message. So let’s take a closer look. It will
                 look something like this:</p>
-            <program language="text"><input>
+            <program language="text"><code>
 FirstClass.java:5: error: unclosed string literal
        System.out.println("Hi there!);
                           ^
 1 error
-</input></program>
+</code></program>
             <p>The first line starts with the name of the file that was being compiled.
                 Because you submitted your code via this web page you didn’t actually name
                 the file but it was named for you to match the name of your class. Then
@@ -350,7 +350,7 @@ FirstClass.java:5: error: unclosed string literal
                 who wrote the Java compiler put in lot of work to try to make the error
                 messages useful. If you read them, you’ll soon learn to recognize
                 common mistakes and will get much quicker at finding your syntax errors.</p>
-            <p><image class="imgex" source="_static/codingExercise.png" width="5%" alt="coding exercise"/> <term>Coding Exercise: Compile Time Error 1</term></p>
+            <p><term>Coding Exercise: Compile Time Error 1</term></p>
 
 <exercise label="sc2error1">
     <statement>
@@ -358,7 +358,7 @@ FirstClass.java:5: error: unclosed string literal
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class FirstClass
 {
     public static void main(String[] args)
@@ -367,7 +367,7 @@ public class FirstClass
     }
 }
 
-</input><tests>
+</code><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -389,7 +389,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><image class="imgex" source="_static/codingExercise.png" width="5%" alt="coding exercise"/> <term>Coding Exercise: Compile Time Error 2</term></p>
+            <p><term>Coding Exercise: Compile Time Error 2</term></p>
             <p>Click on the run button below to try and run the following code. Look
                 for an error message after the code. This time the error message will probably
                 point even more exactly at the problem than in the previous exercise. Try to fix
@@ -401,7 +401,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class SecondClass
 {
     public static void main(String[] args)
@@ -410,7 +410,7 @@ public class SecondClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -433,7 +433,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p><image class="imgex" source="_static/codingExercise.png" width="5%" alt="coding exercise"/> <term>Coding Exercise: Compile Time Error 3</term></p>
+            <p><term>Coding Exercise: Compile Time Error 3</term></p>
             <p>Click on the run button below to try and run the following code. What is
                 wrong this time? The first error message will probably point you directly at the
                 problem. But after you fix that you’ll probably get a <title_reference>new</title_reference> error! That happens
@@ -454,7 +454,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class ThirdClass
 {
     public static void main(String[] args)
@@ -463,7 +463,7 @@ public class ThirdClass
     }
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 // This doesn't really work because it filters out the \n
 import static org.junit.Assert.*;
@@ -500,7 +500,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class DivideByZero
 {
    public static void main(String[] args)
@@ -509,7 +509,7 @@ public class DivideByZero
        System.out.println(3/0);
    }
 }
-</input><tests>
+</code><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -538,17 +538,17 @@ public class RunestoneTests extends CodeTestHelper
                 and <c>*/</c> to end the comment. The compiler will skip over comments. However, it
                 is a good idea to use comments to make notes to yourself and other programmers
                 working with you. Here are some examples of good commenting:</p>
-            <program language="java"><input>
+            <program language="java"><code>
 /* MyClass.java
    Programmer: My Name
    Date:
 */
 
 int max = 10; // this keeps track of the max score
-</input></program>
+</code></program>
         </subsection>
   <subsection>
-            <title><image class="imgex" source="_static/groupwork.png" width="6%" alt="groupwork"/> Debugging Challenge</title>
+            <title> Debugging Challenge</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/rubberduck.jpg" width="18%" alt="Rubber Duck"/>
             <p>In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you’re working alone, you may want to explain the code to a rubber duck or another toy using <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url>.</p>
             <p>Working in pairs, debug the following code. Can you find all the bugs and get the code to run?</p>
@@ -559,7 +559,7 @@ int max = 10; // this keeps track of the max score
 
     </statement>
     <program interactive="activecode" language="java">
-        <input>
+        <code>
 public class Challenge1_1
 {
    public static void main(String[] args)
@@ -570,7 +570,7 @@ public class Challenge1_1
 
 }
 
-</input><tests>
+</code><tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -610,7 +610,7 @@ public class RunestoneTests extends CodeTestHelper
                     <p>A basic Java program looks like the following:</p>
                 </li>
             </ul></p>
-            <program language="java"><input>
+            <program language="java"><code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -618,7 +618,7 @@ public class MyClass
         System.out.println("Hi there!");
     }
 }
-</input></program>
+</code></program>
             <p><ul>
                 <li>
                     <p>A Java program starts with <term>public class NameOfClass { }</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
@@ -656,11 +656,11 @@ public class MyClass
         <statement>
 
             <p>Consider the following code segment.</p>
-            <program language="java"><input>
+            <program language="java"><code>
 System.out.println("Roses are red, ")      // Line 1;
 System.out.println("Violets are blue, ")  // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
-</input></program>
+</code></program>
             <p>The code segment is intended to produce the following output but may not work as intended.</p>
             <raw format="html" xml:space="preserve">&lt;pre&gt;Roses are red,
 Violets are blue,
