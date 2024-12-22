@@ -1,7 +1,7 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-8-
+   :prefix: 3-8-
    :start: 1
 
 |Time45|
@@ -16,6 +16,9 @@ Scope and Access
 
 
 The **scope** of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (``{}``) -- this is its scope.
+
+Class, Method, and Block Level Scope
+-------------------------------------
 
 Java has 3 levels of scope that correspond to different types of variables:
 
@@ -73,9 +76,15 @@ The image below shows these 3 levels of scope.
         :click-incorrect:}:endclick:
     :click-incorrect:}:endclick:
 
-**Local variables** are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It's good practice to declare any variables that are used by just one method as local variables in that method.
+Local Variables
+----------------
 
-Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.
+**Local variables** are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared. 
+Local variables that are declared inside a method are usually declared at the top of the method. These variables can only be used within the method and do not exist outside of the method. 
+
+Parameter variables are also considered local variables that only exist for that method or constructor. These variables may only be used within the constructor or method and cannot be declared to be ``public`` or ``private``.It's good practice to declare any variables that are used by just one method as local variables in that method.
+
+Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have class scope regardless of whether they are public or private.
 
 Another way to look at scope is that a variable's scope is where it lives and exists. You cannot use the variable in code outside of its scope. The variable does not exist outside of its scope.
 
@@ -150,7 +159,7 @@ Another way to look at scope is that a variable's scope is where it lives and ex
       }
   }
 
-If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We'll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword this to refer to this object's instance variables.
+If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We'll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword ``this`` to refer to this object's instance variables.
 
 .. activecode:: PersonLocalVar
   :language: java
@@ -210,7 +219,7 @@ If there is a local variable with the same name as an instance variable, the var
 
 
 
-.. activecode:: challenge-5-8-Debug
+.. activecode:: challenge-scope-debug
   :language: java
   :autograde: unittest
   :practice: T
@@ -351,13 +360,9 @@ Summary
 -------
 
 - **Scope** is defined as where a variable is accessible or can be used.
-
-- Local variables can be declared in the body of constructors and methods. These variables may only be used within the constructor or method and cannot be declared to be public or private.
-
-- When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.
-
-- Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.
-
+- (AP 3.8.A.1) **Local variables** are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared. 
+- (AP 3.8.A.1) Parameters to constructors or methods are also considered local variables. These variables may only be used within the constructor or method and cannot be declared to be ``public`` or ``private``.
+- (AP 3.8.A.2) When there is a local variable or parameter with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable within the body of the constructor or method.
 
 
 AP Practice
