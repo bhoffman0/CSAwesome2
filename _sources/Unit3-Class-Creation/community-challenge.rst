@@ -3,7 +3,7 @@
 |Time90|
 
 |Groupwork| Design a Class for your Community Project
-----------------------------------------------------------
+=========================================================
 
 .. |worksheet| raw:: html
 
@@ -21,7 +21,7 @@
 
    <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
 
-In lessons 5.1, 5.2, and 5.6, you were asked to design a class of your own choice
+In this unit's challenges, you were asked to design a class of your own choice
 that is relevant to your community. If you would like to do this activity as 1 lab project rather than a piece at a time at the end of each lesson, you can create your complete class here. Or you may choose to create a different class of your own here.
 You can work in pairs on this project.
 
@@ -31,7 +31,7 @@ You can work in pairs on this project.
 
 
 Code your Class
-=================
+------------------
 
 1. Create your class and its instance variables below.
 
@@ -210,7 +210,7 @@ You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array o
 
 
 Optional Swing GUI
-=====================
+------------------------
 
 .. |Java Swing Example| raw:: html
 

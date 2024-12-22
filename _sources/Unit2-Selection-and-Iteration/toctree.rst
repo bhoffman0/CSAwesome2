@@ -38,6 +38,7 @@ AP CSA Exam Weighting:
    loops-practice-mixed-code-toggle.rst
    loops-practice-coding.rst
    Exercises.rst
+   unit2-test.rst
    FRQcalendar.rst
    FRQselfDivisorA.rst
    FRQstringScrambleA.rst

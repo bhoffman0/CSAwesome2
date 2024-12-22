@@ -1,17 +1,17 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-16-
+   :prefix: 3-15-
    :start: 1
 
-Free Response Question (FRQ) for Classes
------------------------------------------------------
+Free Response Question (FRQ) - StepTracker Class
+=====================================================
 
 .. index::
     single: class
     single: free response
 
-As of 2019, the AP exam's second free response question (FRQ) is on classes, where students design and implement a described class.  This question involves creating a class with private instance variables and public methods. The College Board will provide a description of the class and the methods. This question does not involve more complex topics such as arrays.
+The AP exam's second free response question (FRQ), since 2019, is on classes, where students design and implement a described class.  This question involves creating a class with private instance variables and public methods. The College Board will provide a description of the class and the methods. This question does not involve more complex topics such as arrays.
 
 
 To succeed on the FRQ Question 2 on Classes, you must know how to:
@@ -22,8 +22,8 @@ To succeed on the FRQ Question 2 on Classes, you must know how to:
 
 - Write public methods in the class that use the instance variables as well as parameters and return values. These methods will probably use if statements but not more complex coding. One of these methods will probably be an **accessor method** that returns an instance variable or a calculated value that is dependent on the instance variables, and one will probably be a **mutator method** that changes the value of an instance variable.
 
-2019 StepTracker Class FRQ
-==========================
+StepTracker Class FRQ
+-------------------------
 
 The 2019 FRQ 2 for the class StepTracker is a good example of what to expect. It is available as question 2 on page 7 of https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf , reproduced below.
 
@@ -80,7 +80,7 @@ This question asks you to write the complete StepTracker class, including the co
 methods. Your implementation must meet all specifications and conform to the example.
 
 |Groupwork| Determining the Instance Variables
-==============================================
+------------------------------------------------
 
 Work in pairs or groups to read through the problem statement and determine the instance variables required for this class. During the exam, it helps to circle the words that are important and may describe the instance variables. Different groups may come up with different variables that will still work. Groups should report back and compare answers in class to determine the best variables before writing the class.
 
@@ -170,7 +170,7 @@ Click to reveal multiple choice questions that will help you to determine the in
       What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?
 
 Writing the Class Header and Constructor
-========================================
+-------------------------------------------
 
 You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating **private** instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables.
 
@@ -246,7 +246,7 @@ Here is the rubric for the instance variables and the constructor for this probl
     Figure 1: Rubric for instance variables and constructor
 
 Writing the Accessor Method activeDays
-========================================
+---------------------------------------
 
 Each method in the FRQ is worth 1 - 3 points. The method header is usually worth 1 point and the code in the method body is usually worth another point or two depending on how complex it is.
 
@@ -362,7 +362,7 @@ Here is the rubric for the accessor method ``activeDays`` for this problem. The 
 
 
 Writing the Mutator Method addDailySteps
-========================================
+-------------------------------------------
 
 This problem asks you to write a more complex mutator method called addDailySteps worth 3 points.
 
@@ -536,7 +536,7 @@ Here is the rubric for the mutator method for this problem. The second column is
     Figure 3: Rubric for mutator method
 
 Writing the Accessor Method averageSteps
-==========================================
+------------------------------------------
 
 This problem asks you to write a more complex accessor method which uses the instance variables to calculate and return the **averageSteps** for 2 points. This method returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked.
 

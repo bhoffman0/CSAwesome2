@@ -1,18 +1,19 @@
 .. qnum::
-   :prefix: 5-15-
+   :prefix: 2-26-
    :start: 1
 
-Midterm Test
---------------
+Unit 2 Test
+==============
 
-The following 20 questions are similar to what you might see on the AP CSA exam for Units 1 - 5.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
+The following questions are similar to what you might see on the AP CSA exam.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.
 
 We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.
 
 
-.. timed:: midterm-exam-in-unit-5
+.. timed:: unit2-test
 
-     .. mchoice:: mid_1_1
+     .. mchoice:: u2_1
+        :random:
         :answer_a: I only
         :answer_b: I and II only
         :answer_c: III only
@@ -84,9 +85,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               System.out.println();
            }
 
-
-
-     .. mchoice:: mid_1_2
+     .. mchoice:: u2_2
+        :random:
         :answer_a: A
         :answer_b: AC
         :answer_c: C
@@ -126,7 +126,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               }
            }
 
-     .. mchoice:: mid_1_3
+     .. mchoice:: u2_3
+        :random:
         :answer_a: I only
         :answer_b: II only
         :answer_c: II and III only
@@ -166,7 +167,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               System.out.print(i);
            }
 
-     .. mchoice:: mid_1_4
+     .. mchoice:: u2_4
+        :random:
         :answer_a: 25
         :answer_b: 15
         :answer_c: 125
@@ -199,7 +201,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
              return s;
            }
 
-     .. mchoice:: mid_1_5
+     .. mchoice:: u2_5
+        :random:
         :answer_a: (x < 10) && (x > 5)
         :answer_b: (x > 10) && (x <=5)
         :answer_c: (x <= 10) && (x > 5)
@@ -214,7 +217,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         Which of the following is equivalent to !((x > 10) && (x <= 5)) ?
 
-     .. mchoice:: mid_1_6
+     .. mchoice:: u2_6
+        :random:
         :answer_a: s="rainbow"; b=8;
         :answer_b: s="rain";  b=8;
         :answer_c: s="rainbow"; b=4;
@@ -249,82 +253,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
                }
            }
 
-     .. mchoice:: mid_1_7
-        :answer_a: The ``getAge()`` method should be declared as private.
-        :answer_b: The return type of the ``getAge()`` method should be void.
-        :answer_c: The ``getAge()`` method should have at least one parameter.
-        :answer_d: The variable ``age`` is not declared inside the ``getAge()`` method.
-        :answer_e: The instance variable ``age`` should be returned instead of a, which is local to the constructor.
-        :correct: e
-        :feedback_a: The method should be public so it can be accessed outside of the class.
-        :feedback_b: The method's return type should be int.
-        :feedback_c: The getAge method should not take any parameters.
-        :feedback_d: This is an instance variable and should be declared outside of the method.
-        :feedback_e: Correct! The accessor method getAge should return the instance variable age.
-
-        Consider the following ``Cat`` class that has an ``age`` attribute of type int. The ``getAge`` method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the ``getAge`` method does NOT work as intended?
-
-        .. code-block:: java
-
-           public class Cat
-           {
-               private int age;
-
-               public Cat(int a)
-               {
-                   age = a;
-               }
-
-               public int getAge()
-               {
-                   return a;
-               }
-           }
-
-     .. mchoice:: mid_1_8
-        :answer_a: I only
-        :answer_b: I and II only
-        :answer_c: I and III only
-        :answer_d: I, II, and III
-        :answer_e: II and III only
-        :correct: d
-        :feedback_a: It's true that the local variables can be declared in the body of constructors and methods, but there are other options that are also true about local variables.
-        :feedback_b: Both I and II are true but III is also true regarding local variables.
-        :feedback_c: Both I and III are true but II is also true regarding local variables.
-        :feedback_d: Correct! All of the above are true.
-        :feedback_e: Both of these are true but I is also true.
-
-        Which of the following statements are TRUE about local variables?
-
-        I.   Local variables can be declared in the body of constructors and methods.
-
-        II.  Local variables may only be used within the constructor or method and cannot be declared to be public or private.
-
-        III. When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.
-
-
-     .. mchoice:: mid_1_9
-        :answer_a: I and II only
-        :answer_b: I, II, and III
-        :answer_c: I and III only
-        :answer_d: I only
-        :answer_e: III only
-        :correct: c
-        :feedback_a: Static methods cannot acccess instance variables. They can only access static variables.
-        :feedback_b: Static methods cannot acccess instance variables. They can only access static variables.
-        :feedback_c: Correct! I and III are true, but static methods cannot acccess instance variables. They can only access static variables.
-        :feedback_d: I is true, but there is another option that is true too.
-        :feedback_e: III is true, but there is another option that is true too.
-
-        Which of the following statements are TRUE about **static** methods?
-
-        I.   Static methods and variables include the keyword static before their name in the header or declaration and can be public or private.
-
-        II.  Static methods can access or change the values of instance variables.
-
-        III.  Static methods are associated with the class, not objects of the class.
-
-     .. mchoice:: mid_1_10
+     .. mchoice:: u2_7
+        :random:
         :answer_a: var1 = 0, var2 = 2
         :answer_b: var1 = 1, var2 = 1
         :answer_c: var1 = 3, var2 = -1
@@ -349,7 +279,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               var2 = var2 - 1;
            }
 
-     .. mchoice:: mid_1_11
+     .. mchoice:: u2_8
+        :random:
         :answer_a: 5 4 3 2 1
         :answer_b: -5 -4 -3 -2 -1
         :answer_c: -4 -3 -2 -1 0
@@ -373,7 +304,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               System.out.print(x + " ");
            }
 
-     .. mchoice:: mid_1_12
+     .. mchoice:: u2_9
+        :random:
         :answer_a: 0 3 6 9 12
         :answer_b: 0 1 2 3 4 5
         :answer_c: 1 4 7 10 13
@@ -398,77 +330,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               }
            }
 
-     .. mchoice:: mid_1_13
-        :answer_a: I only
-        :answer_b: II only
-        :answer_c: IV only
-        :answer_d: II and III
-        :answer_e: I, II, and III
-        :correct: d
-        :feedback_a: This implementation of ``addMinutes`` does not account for values of additionMinutes that push the minute count above 60.
-        :feedback_b: Implementation II works, but implementation III also works.
-        :feedback_c: Implementation IV does not work for situations where additionMinutes + minutes does not go above 60.
-        :feedback_d: Correct!
-        :feedback_e: Implementations II and III are correct, but implementation I is not. Implementation I does not account for values of additionMinutes that push the minute account above 60.
-
-        Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement ``addMinutes()``?
-
-        .. code-block:: java
-
-           public class Timer
-           {
-              private int hours; // number of hours
-              private int minutes; // 0 <= minutes < 60
-
-              void addHours(int addition)
-              {
-                 hours = hours + addition;
-              }
-
-              /** addMinutes adds the given argument to the time stored in hours and minutes.
-              The argument additionMinutes is between 0 and 119.  **/
-              void addMinutes(int additionMinutes)
-              {
-                 // implementation not shown
-              }
-
-              // ... other methods not shown
-           }
-
-
-           //Proposed Implementations:
-           I.   public void addMinutes(int additionMinutes)
-                {
-                    minutes = minutes + additionMinutes;
-                }
-           II.  public void addMinutes(int additionMinutes)
-                {
-                    minutes += additionMinutes;
-                    if (minutes >= 60)
-                    {
-                       hours += minutes / 60;
-                       minutes = minutes % 60;
-                    }
-                }
-           III. public void addMinutes(int additionMinutes)
-                {
-                    minutes += additionMinutes;
-                    while (minutes >= 60)
-                    {
-                       hours++;
-                       minutes -= 60;
-                    }
-                }
-           IV.  public void addMinutes(int additionMinutes)
-                {
-                    if (additionMinutes + minutes >= 60)
-                    {
-                       minutes = additionMinutes + minutes - 60;
-                       hours += 1;
-                    }
-                }
-
-     .. mchoice:: mid_1_14
+     .. mchoice:: u2_10
+        :random:
         :answer_a: !(a && b)
         :answer_b: !a && b
         :answer_c: !a && !b
@@ -483,33 +346,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
 
         Which option will evaluate to true, if and only if both a and b are false?
 
-     .. mchoice:: mid_1_15
-        :answer_a: Prints the string in reverse order
-        :answer_b: Deletes the second half of the string
-        :answer_c: Prints string normally
-        :answer_d: Compile-time error occurs
-        :answer_e: Prints alternating characters from beginning and end of the string.
-        :correct: a
-        :feedback_a: Correct! This method prints the reversed string.
-        :feedback_b: Incorrect, this method prints the parameter reversed.
-        :feedback_c: Incorrect, this method prints the parameter reversed.
-        :feedback_d: Incorrect, this method prints the parameter reversed.
-        :feedback_e: Incorrect, this method prints the parameter reversed.
-
-        What does the method ``mystery`` do?
-
-        .. code-block:: java
-
-           public void mystery(String tester)
-           {
-              for (int i = tester.length() - 1; i >= 0; i--)
-              {
-                 System.out.print(tester.substring(i,i+1));
-              }
-              System.out.println("");
-           }
-
-     .. mchoice:: mid_1_16
+     .. mchoice:: u2_11
+        :random:
         :answer_a: "Hello World!"
         :answer_b: "Hello "
         :answer_c: "He"
@@ -542,49 +380,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
                }
            }
 
-     .. mchoice:: mid_1_17
-        :answer_a: I only
-        :answer_b: I and II
-        :answer_c: II only
-        :answer_d: II and III
-        :answer_e: I, II, and III
-        :correct: c
-        :feedback_a: I contains incorrect syntax. Try again!
-        :feedback_b: I contains incorrect syntax. Try again!
-        :feedback_c: Correct! II is the only correct option.
-        :feedback_d: III is incorrect due to a problem with the constructor argument. Try again!
-        :feedback_e: Two of these options are incorrect. Take a closer look at the syntax of I and parameters of III.
-
-        Which of the following code segments correctly creates an instance of a new ``Party`` object?
-
-        .. code-block:: java
-
-           public class Party
-           {
-
-              private int numInvited;
-              private boolean partyCancelled;
-
-              public Party()
-              {
-                 numInvited = 1;
-                 partyCancelled = false;
-              }
-
-              public Party(int invites)
-              {
-                 numInvited = invites;
-                 partyCancelled = false;
-              }
-           }
-
-           I.   Party myParty;
-           II.  int classSize = 20;
-                Party ourParty = new Party(classSize);
-           III. int numOfFriends = 6;
-                Party yourParty = new Party(numOfFriends + 3.0);
-
-     .. mchoice:: mid_1_18
+     .. mchoice:: u2_12
+        :random:
         :answer_a: a = 6 and b = 7
         :answer_b: a = 6 and b = 13
         :answer_c: a = 13 and b = 0
@@ -609,7 +406,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
               b = t - i;
            }
 
-     .. mchoice:: mid_1_19
+     .. mchoice:: u2_13
+        :random:
         :answer_a: hi there
         :answer_b: HI THERE
         :answer_c: Hi There
@@ -634,7 +432,8 @@ We estimate that a score of about 50% on this test would correspond to the passi
            s3 = s3.toUpperCase();
            s4 = null;
 
-     .. mchoice:: mid_1_20
+     .. mchoice:: u2_14
+        :random:
         :answer_a: a = 6.7
         :answer_b: b = 87.7
         :answer_c: 12 = c * b
@@ -652,3 +451,4 @@ We estimate that a score of about 50% on this test would correspond to the passi
            int a = 5;
            int b = 3;
            int c = 4;
+

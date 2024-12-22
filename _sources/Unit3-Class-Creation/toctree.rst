@@ -27,10 +27,10 @@ AP CSA Exam Weighting:
    topic-parsons-practice.rst
    topic-toggle-problems.rst
    Exercises.rst
-   midterm_unit5.rst
+   unit3-test.rst
    FRQstepTracker.rst
    timeFRQ.rst
    APLine.rst
-   CBLabs.rst
+   CBLabs1.rst
    community-challenge.rst
 
