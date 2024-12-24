@@ -380,7 +380,7 @@ public class RunestoneTests extends CodeTestHelper
 int index = 3;
 System.out.println(  highScores[index] );
 </code></program>
-            <image source="Unit4-Data-Collections/6-1-images/cow.jpg" width="27%%"/>
+            <image source="Unit4-Data-Collections/array-images/cow.jpg" width="27%%"/>
             <p>Here’s a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is “cow.jpg”. The images array holds 5 images.</p>
 
 <exercise label="imageArray">
@@ -450,7 +450,7 @@ public class ImageEx
         </subsection>
   <subsection>
             <title>Coding Challenge : Countries Array</title>
-            <image source="Unit4-Data-Collections/6-1-images/US.jpg" width="36%%"/>
+            <image source="Unit4-Data-Collections/array-images/US.jpg" width="36%%"/>
             <p>In this challenge, you will create a guide to different countries using arrays.</p>
             <p><ol marker="1">
                 <li>
