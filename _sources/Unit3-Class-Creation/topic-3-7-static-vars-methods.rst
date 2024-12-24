@@ -32,7 +32,8 @@ Class methods belong to the class and not to any object of the class. They are c
      // If the method is in the same class,
      // you can call it with or without the class name 
      // from other static methods in the class
-     staticMethodName();
+     ClassName.methodName();
+     methodName();
 
 Let's revisit the following flowchart to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods can only be called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using ``object.methodName()``. If you are calling the method from within the same class, you can just call the method using ``methodName()`` which will refer to the current object.
 
@@ -60,7 +61,7 @@ When writing class methods, they can be public or private. The static keyword is
      }
    }
 
-Class (static) methods can access or change the values of class (static) variables and can call other class (static) methods. However, they cannot access or change the values of (non-static) instance variables or call (nont-static) instance methods without being passed an instance of the class via a parameter. For example, the main method which is static can call other static methods directly with or without the classname, but it cannot call instance methods without first creating an object. Try this below.
+Class (static) methods can access or change the values of class (static) variables and can call other class (static) methods. However, they cannot access or change the values of (non-static) instance variables or call (nont-static) instance methods without being passed an instance of the class via a parameter. For example, the main method which is static can call other static methods directly with or without the classname, but it cannot call instance methods without first creating an object. Try this below to see "non-static variable or method cannot be referenced from a static context" errors.
 
 .. activecode:: staticmethods
   :language: java
@@ -85,7 +86,7 @@ Class (static) methods can access or change the values of class (static) variabl
       // instance method
       public void print()
       {
-          System.out.println(name + ": " + email + " " + phoneNumber);
+          System.out.println(name + ": " + email);
       }
       
       // static method 
@@ -289,7 +290,7 @@ You can see this code in action in the |visualizer2|.
   :autograde: unittest
   :practice: T
 
-  Fix the bugs in the following code.
+  Fix the bugs in the following code. Static methods should only access static variables.
   ~~~~
   public class Temperature
   {
@@ -304,7 +305,7 @@ You can see this code in action in the |visualizer2|.
                maxTemp = t;
           }
       }
-
+      // This static method should print out the static variable
       public static printMax()
       {
           System.out.println(temperature);
