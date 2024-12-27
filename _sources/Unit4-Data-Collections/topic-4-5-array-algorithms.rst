@@ -1174,6 +1174,7 @@ The following programs show how you can reverse an array in place by swapping el
               import org.junit.*;
 
               import java.io.*;
+              import java.util.Arrays;
 
               public class RunestoneTests extends CodeTestHelper
               {
@@ -1195,7 +1196,7 @@ The following programs show how you can reverse an array in place by swapping el
                   {
                       String[] a = {"r","a","t","s"};
                       ReverseTest.reverse(a);    
-                      String output = Arrays.toString(a1);
+                      String output = Arrays.toString(a);
                       String expect = "[s, t, a, r]";
 
                       boolean passed = getResults(expect, output, "reverse({r, a, t, s})");
