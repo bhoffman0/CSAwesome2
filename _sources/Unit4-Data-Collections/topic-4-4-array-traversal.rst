@@ -1,13 +1,15 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 6-2-
+   :prefix: 4-4-
    :start: 1
 
 |Time90|
 
-Traversing Arrays with For Loops
-==========================================
+Array Traversals
+====================
+
+In this lesson, we will learn how to traverse an array using a loop. **Traversing** an array means visiting each element of the array. We can use a loop to visit each element of an array and perform some operation on it. This is a common operation when working with arrays. 
 
 Index Variables
 -----------------------
@@ -67,10 +69,7 @@ What does the code above print out? You can follow the code in this |visualizer|
            System.out.println(names[index + 1]);
        }
    }
-
    ====
-   // Test for Lesson 6.2
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -95,14 +94,15 @@ What does the code above print out? You can follow the code in this |visualizer|
        }
    }
 
-For Loop to Traverse Arrays
+Loops to Traverse Arrays
 ---------------------------
 
 .. index::
     single: for loop
-    pair: loop; from front to back
+    pair: loop; array
+    single: array traversal
 
-We can use iteration with a **for loop** to visit each element of an array.  This is called **traversing** the array. Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index.
+**Traversing an array** or **iteration** is when repetition statements are used to access all or an ordered sequence of elements in an array. We can traverse an array with an indexed ``for`` loop or ``while`` loop, accessing the elements using an index variable.Just start the index at **0** and loop while the index is less than the **length** of the array. Note that the variable **i** (short for index) is often used in loops as the loop counter variable and is used here to access each element of an array with its index. Since this is a simple counter-controlled loop, ``for`` loops are used more often than ``while`` loops for array traversals.
 
 .. figure:: Figures/arrayForLoop.png
     :width: 500
@@ -111,7 +111,7 @@ We can use iteration with a **for loop** to visit each element of an array.  Thi
 
     Figure 2: For Loop Traversing Array
 
-For example, here is a loop traversing the ``highScores`` array to print every score. Follow the code below in the |visualizer3|.
+For example, here is a ``for`` loop and a ``while`` loop that traverse the ``highScores`` array to print every score. Try the code for the ``for`` loop below in the |visualizer3|.
 
 .. |visualizer3| raw:: html
 
@@ -123,6 +123,13 @@ For example, here is a loop traversing the ``highScores`` array to print every s
   for (int i = 0; i < highScores.length; i++)
   {
       System.out.println(  highScores[i] );
+  }
+  // Or with a while loop
+  int i = 0;
+  while (i < highScores.length)
+  {
+      System.out.println(  highScores[i] );
+      i++;
   }
 
 .. note::
@@ -149,10 +156,7 @@ For example, here is a loop traversing the ``highScores`` array to print every s
            }
        }
    }
-
    ====
-   // Test for Lesson 6.2
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -194,17 +198,13 @@ For example, here is a loop traversing the ``highScores`` array to print every s
 
 The following code demonstrates a loop that changes the values in an array. In this code, the array is passed as an argument to the static methods in the class.  Arrays in Java are objects. The array variables are references to an address in memory. Since arrays can be very large, we do not want to copy them when we pass them into methods. When an array is passed as an argument to a method, the name of the array refers to its address in memory. Therefore, any changes to the array in the method will affect the original array. You can also try the code in the |Java visualizer|.
 
-
-
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 |CodingEx| **Coding Exercise**
 
-
-
-.. activecode:: lcal1
+.. activecode:: arrayMethodTrace
    :language: java
    :autograde: unittest
 
@@ -238,10 +238,7 @@ The following code demonstrates a loop that changes the values in an array. In t
            printValues(numArray);
        }
    }
-
    ====
-   // Test for Lesson 6.2
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -272,7 +269,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 |Exercise| **Check Your Understanding**
 
-.. parsonsprob:: pab_1r
+.. parsonsprob:: patdonsArraySubtract
    :numbered: left
    :practice: T
    :adaptive:
@@ -301,6 +298,7 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 Looping From Back to Front
 --------------------------
+
 .. index::
    pair: loop; from back to front
 
@@ -312,7 +310,7 @@ You don't have to loop through an array from the front to the back.  You can loo
 
 |CodingEx| **Coding Exercise**
 
-.. activecode:: lcbf1
+.. activecode:: arrayFindSmaller
    :language: java
    :autograde: unittest
    :practice: T
@@ -367,10 +365,7 @@ You don't have to loop through an array from the front to the back.  You can loo
                            + getIndexOfLastElementSmallerThanTarget(theArray, -30));
        }
    }
-
    ====
-   // Test for Lesson 6.2.3 - ArrayFindSmallest
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -438,7 +433,7 @@ You don't have to loop through an array from the front to the back.  You can loo
 
 |Exercise| **Check Your Understanding**
 
-.. mchoice:: qab_6
+.. mchoice:: mcq_array_loop
    :practice: T
    :answer_a: -1
    :answer_b: -15
@@ -466,7 +461,7 @@ You don't have to loop through an array from the front to the back.  You can loo
          return -1; // to show none found
       }
 
-.. mchoice:: qab_7
+.. mchoice:: mcq_array_loop2
    :practice: T
    :answer_a: -1
    :answer_b: 1
@@ -505,7 +500,7 @@ Looping through Part of an Array
 
 You don't have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (``&&``) on line 14 to make sure that the loop doesn't go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn't want the code to try to double the 5th element which doesn't exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods.
 
-.. activecode:: lclp1
+.. activecode:: tripleFirstFour
    :language: java
    :autograde: unittest
    :practice: T
@@ -551,10 +546,7 @@ You don't have to loop through all of the elements of an array.  You can loop th
            worker.printArray();
        }
    }
-
    ====
-   // Test for Lesson 6.2.4 - ArrayWorker
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -606,7 +598,7 @@ You don't have to loop through all of the elements of an array.  You can loop th
 
 You can even start in the middle and loop through the rest of the array.
 
-.. activecode:: lclp2
+.. activecode:: doubleLastHalf
    :language: java
    :autograde: unittest
 
@@ -645,9 +637,7 @@ You can even start in the middle and loop through the rest of the array.
            worker.printArray();
        }
    }
-
    ====
-   // Test for Lesson 6.2.4 - ArrayWorker
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -713,7 +703,7 @@ You can even start in the middle and loop through the rest of the array.
 |Exercise| **Check Your Understanding**
 
 
-.. mchoice:: qab_8
+.. mchoice:: mcq_array_loop3
    :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
@@ -740,7 +730,7 @@ You can even start in the middle and loop through the rest of the array.
          }
       }
 
-.. mchoice:: qab_9
+.. mchoice:: mcq_array_loop4
    :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 33}
@@ -770,8 +760,7 @@ You can even start in the middle and loop through the rest of the array.
       }
 
 
-
-.. parsonsprob:: pab_3
+.. parsonsprob:: parsons_array_reverse
    :numbered: left
    :practice: T
    :adaptive:
@@ -799,7 +788,7 @@ You can even start in the middle and loop through the rest of the array.
    =====
    } // end method
 
-.. parsonsprob:: pab_4
+.. parsonsprob:: parsons_array_avg
    :numbered: left
    :practice: T
    :adaptive:
@@ -881,10 +870,8 @@ When processing all array elements, be careful to start at the first index which
            }
        }
    }
-
-    ====
-    // Test for Lesson 6.2 OffByOne
-    import static org.junit.Assert.*;
+   ====
+   import static org.junit.Assert.*;
 
     import org.junit.*;
 
@@ -933,9 +920,10 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
 
 
-.. activecode:: lcap1
+.. activecode:: find_loop_early_return_error
    :language: java
    :autograde: unittest
+   :practice: T
 
    What is wrong with the code below?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?
    ~~~~
@@ -968,10 +956,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
            System.out.println(sWorker.findString("Hey"));
        }
    }
-
    ====
-   // Test for Lesson 6.2.4 - ArrayWorker
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -1019,7 +1004,7 @@ Be careful not to jump out of loop too early when you are looking for a value in
        }
    }
 
-.. mchoice:: qab_5
+.. mchoice:: mcq_array_loop5
    :practice: T
    :answer_a: The values don't matter this will always cause an infinite loop.
    :answer_b: Whenever <i>a</i> includes a value that is less than or equal to zero.
@@ -1045,6 +1030,502 @@ Be careful not to jump out of loop too early when you are looking for a value in
          }
       }
 
+
+
+Enhanced For-Loop (For-Each) for Arrays
+-----------------------------------------
+
+.. index::
+   single: enhanced for loop
+   single: for each
+   pair: loop; for each
+
+There is a special kind of loop that can be used with arrays that is called an **enhanced for loop** or a **for each loop**. This loop is much easier to write because it does not involve an index variable or the use of the []. It just sets up a variable that is set to each value in the array successively.
+
+To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname". You may have used a similar loop in AP CSP Pseudocode or App Inventor with lists like below.
+
+
+.. figure:: Figures/appinvForEachComparison.png
+    :width: 100%
+    :align: center
+    :figclass: align-center
+
+    Figure: Comparing App Inventor, AP CSP, and Java for each
+
+See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
+
+.. code-block:: java
+
+  int[] highScores = { 10, 9, 8, 8};
+  String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
+  // for each loop: for each value in highScores
+  // for (type variable : arrayname)
+  for (int value : highScores)
+  {
+      // Notice no index or [ ], just the variable value!
+      System.out.println( value );
+  }
+  // for each loop with a String array to print each name
+  // the type for variable name is String!
+  for (String name : names)
+  {
+      System.out.println(name);
+  }
+
+Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. This type of loop can only be used with arrays and some other collections of items like ArrayLists which we will see in the next unit.
+
+
+|CodingEx| **Coding Exercise**
+
+
+.. activecode:: foreach1
+   :language: java
+   :autograde: unittest
+
+   Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
+   ~~~~
+   public class ForEachDemo
+   {
+       public static void main(String[] args)
+       {
+           int[] highScores = {10, 9, 8, 8};
+           String[] names = {"Jamal", "Emily", "Destiny", "Mateo"};
+           // for each loop with an int array
+           for (int value : highScores)
+           {
+               System.out.println(value);
+           }
+           // for each loop with a String array
+           for (String value : names)
+           {
+               System.out.println(value); // this time it's a name!
+           }
+       }
+   }
+    ====
+    import static org.junit.Assert.*;
+
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("ForEachDemo");
+        }
+
+        @Test
+        public void test1()
+        {
+            String output = getMethodOutput("main");
+            String expect1 = "10\n9\n8\n8";
+            String expect2 = "Jamal\nEmily\nDestiny\nMateo";
+
+            boolean passed = output.contains(expect1) && output.contains(expect2);
+
+            passed = getResults(expect1 + " " + expect2, output, "Original main()", passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String output = getMethodOutput("main");
+            String expect = "10 9 8 8 Jamal Emily Destiny Mateo".replaceAll(" ", "\n");
+
+            boolean passed = !output.equals(expect) && output.length() > expect.length();
+
+            passed = getResults(expect, output, "Added another high score and name", passed);
+            assertTrue(passed);
+        }
+    }
+
+Code written using an enhanced ``for`` loop to traverse elements in an array can be rewritten using an indexed ``for`` loop or a ``while`` loop and vice versa. They are equivalent in terms of functionality, but the enhanced ``for`` loop is more concise and easier to read.
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: evenLoop
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
+   ~~~~
+   public class EvenLoop
+   {
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           // Rewrite this loop as a for each loop and run
+           for (int i = 0; i < values.length; i++)
+           {
+               if (values[i] % 2 == 0)
+               {
+                   System.out.println(values[i] + " is even!");
+               }
+           }
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("EvenLoop");
+       }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect = "6 is even!\n2 is even!\n12 is even!";
+
+           boolean passed = getResults(expect, output, "main()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           boolean passed = checkCodeContains("for each loop", "for(int * : values)");
+           assertTrue(passed);
+       }
+   }
+
+
+Enhanced For Loop Limitations
+-------------------------------
+
+.. |foreachvisualizer| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
+
+What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop would change, not the real array values. Assigning a new value to the enhanced ``for`` loop variable does not change the value stored in the array. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |foreachvisualizer| by clicking the CodeLens button and step through the code to see why it doesn't work.
+
+|CodingEx| **Coding Exercise**
+
+
+.. activecode:: incrementLoop
+   :language: java
+   :autograde: unittest
+   :practice: T
+
+   The for-each loop below cannot change the values in the array because only the loop variable value will change. Run it with the CodeLens button to see why this is. Then, change the loop to an indexed for loop to make it change the array values.
+   ~~~~
+   public class IncrementLoop
+   {
+       public static void main(String[] args)
+       {
+           int[] values = {6, 2, 1, 7, 12, 5};
+           // Can this loop increment the values?
+           for (int val : values)
+           {
+               val++;
+               System.out.println("New val: " + val);
+           }
+           // Print out array to see if they really changed
+           System.out.println("Array after the loop: ");
+           for (int v : values)
+           {
+               System.out.print(v + " ");
+           }
+       }
+   }
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("IncrementLoop");
+       }
+
+       @Test
+       public void test1()
+       {
+           String output = getMethodOutput("main");
+           String expect =
+                   "New val: 7\n"
+                       + "New val: 3\n"
+                       + "New val: 2\n"
+                       + "New val: 8\n"
+                       + "New val: 13\n"
+                       + "New val: 6\n"
+                       + "Array after the loop:\n"
+                       + "7 3 2 8 13 6";
+
+           boolean passed = getResults(expect, output, "main()");
+           assertTrue(passed);
+       }
+
+       @Test
+       public void test2()
+       {
+           String target = "for (int * = #; * ? *.length; *~)";
+           boolean passed = checkCodeContains("for loop", target);
+           assertTrue(passed);
+       }
+   }
+
+.. note::
+
+   Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values.
+
+   - Do not use for each loops if you need the index.
+   - Do not use for each loops if  you need to change the values in the array.
+   - Do not use for each loops if you want to loop through only part of an array or in a different order.
+
+
+
+
+|Exercise| **Check Your Understanding**
+
+.. mchoice:: mcq_for_each1
+   :practice: T
+   :answer_a: Only I.
+   :answer_b: I and III only.
+   :answer_c: II and III only.
+   :answer_d: All of the Above.
+   :correct: b
+   :feedback_a: This style of loop does access every element of the array, but using a for-each loop also means the user can access elements through the variable name.
+   :feedback_b: Correct! For-each loops access all elements and enable users to use a variable name to refer to array elements, but do not allow users to modify elements directly.
+   :feedback_c: For-each loops, as well as allowing users to refer to array elements, run through every element. For-each loops also do not allow users to modify elements directly.
+   :feedback_d: For-each loops access all of an array's elements and allow users to refer to elements through a variable, but do not allow users to modify elements directly.
+
+
+   What are some of the reasons you would use an enhanced for-each loop instead of a for loop?
+
+   .. code-block:: java
+
+      I: If you wish to access every element of an array.
+      II: If you wish to modify elements of the array.
+      III: If you wish to refer to elements through a variable name instead of an array index.
+
+
+.. mchoice:: mcqfor-each2
+   :practice: T
+
+   What is the output of the following code segment?
+
+   .. code-block:: java
+
+      int[ ] numbers = {44, 33, 22, 11};
+      for (int num : numbers)
+      {
+          num *= 2;
+      }
+      for (int num : numbers)
+      {
+          System.out.print(num + " ");
+      }
+
+   - 44 33 22 11
+
+     + The array is unchanged because the foreach loop cannot modify the array elements.
+
+   - 46 35 24 13
+
+     - Remember that the foreach loop cannot modify the array elements, but it also uses multiplication, not addition.
+
+   - 88 66 44 22
+
+     - Remember that the foreach loop cannot modify the array elements. Only the variable num will be doubled, not the original array values.
+
+   - The code will not compile.
+
+     - This code will compile.
+
+
+Traversing Arrays of Objects
+-----------------------------
+
+Both indexed for loops and enhanced for (for each) loops can be used to traverse an array of objects. Here is an example of a Student class and a StudentArray class that searches for a student with a
+specific name. In Java, when you are working with multiple classes on your own computer, each
+class is usually in its own file that matches the class name. On Runestone, when you are working
+with multiple classes, only the class that has the main method should be public, and the other classes should
+start with ``class`` instead of ``public class``.
+
+.. activecode:: student-array
+  :language: java
+  :autograde: unittest
+  :practice: T
+
+  Run the StudentArray class below. Note that it uses the class Student below it and creates
+  an array of Students. Using the StudentArray print() method as a guide,
+  write a StudentArray method called findAndPrint() which takes a String name as an argument,
+  and uses an enhanced for-loop to traverse the array to find a Student in the array with the same name.
+  If the argument equals the Student object's name (using its getName() method), then print out that student's info.
+  Call it from the main method to test it.
+  ~~~~
+  public class StudentArray
+  {
+      private Student[] array;
+      private int size = 3;
+
+      // Creates an array of the default size
+      public StudentArray()
+      {
+          array = new Student[size];
+      }
+
+      // Creates an array of the given size
+      public StudentArray(int size)
+      {
+          array = new Student[size];
+      }
+
+      // Adds Student s to the array at index i
+      public void add(int i, Student s)
+      {
+          array[i] = s;
+      }
+
+      // prints the array of students
+      public void print()
+      {
+          for (Student s : array)
+          {
+              // this will call Student's toString() method
+              System.out.println(s);
+          }
+      }
+
+      /* Write a findAndPrint(name) method */
+
+      public static void main(String[] args)
+      {
+          // Create an object of this class and pass in size 3
+          StudentArray roster = new StudentArray(3);
+          // Add new Student objects at indices 0-2
+          roster.add(0, new Student("Skyler", "skyler@sky.com", 123456));
+          roster.add(1, new Student("Ayanna", "ayanna@gmail.com", 789012));
+          roster.add(2, new Student("Dakota", "dak@gmail.com", 112233));
+          roster.print();
+          System.out.println("Finding student Ayanna: ");
+          // uncomment to test
+          // roster.findAndPrint("Ayanna");
+      }
+  }
+
+  class Student
+  {
+      private String name;
+      private String email;
+      private int id;
+
+      public Student(String initName, String initEmail, int initId)
+      {
+          name = initName;
+          email = initEmail;
+          id = initId;
+      }
+
+      public String getName()
+      {
+          return name;
+      }
+
+      public String getEmail()
+      {
+          return email;
+      }
+
+      public int getId()
+      {
+          return id;
+      }
+
+      // toString() method
+      public String toString()
+      {
+          return id + ": " + name + ", " + email;
+      }
+  }
+  ====
+    import static org.junit.Assert.*;
+
+    import org.junit.*;
+
+    import java.io.*;
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("StudentArray");
+        }
+
+        @Test
+        public void test1()
+        {
+            String target = "findAndPrint(String";
+            boolean passed =
+                    checkCodeContains("findAndPrint method header with String paramenter", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void test2()
+        {
+            String target = "roster.findAndPrint(";
+            boolean passed =
+                    checkCodeContains(
+                            "call to roster.findAndPrint method (uncommented in main)", target);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testForEach()
+        {
+            String target = "for(Student";
+            String code = getCode().replaceAll("\\s", "");
+            int index = code.indexOf("findAndPrint(String");
+            boolean passed = false;
+            if (index > 0)
+            {
+                code = code.substring(index, index + 200);
+                int num = countOccurences(code, target);
+                passed = num == 1;
+            }
+            getResults(
+                    "true",
+                    "" + passed,
+                    "Checking that findAndPrint() contains an enhanced for loop for Student in array",
+                    passed);
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testEquals()
+        {
+            boolean passed = checkCodeContains("use of equals method", ".equals(");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testGetName()
+        {
+            boolean passed = checkCodeContains("use of getName() method", ".getName()");
+            assertTrue(passed);
+        }
+    }
+
+Remember that normally an enhanced for loop cannot be used to modify primitive values in an array because the loop variable does not refer to the real object in the array. However, when an array stores object references, the attributes can be modified by calling methods on the enhanced ``for`` loop variable. The references stored in the array are unchanged, but since loop variable is another reference to the same objects, you can change the attributes of an object in an array using the enhanced for loop using its public mutator methods. 
+
+
 |Groupwork| Coding Challenge : SpellChecker
 --------------------------------------------------
 
@@ -1060,15 +1541,15 @@ Be careful not to jump out of loop too early when you are looking for a value in
 
 .. |replit| raw:: html
 
-   <a href= "https://firewalledreplit.com/@BerylHoffman/SpellChecker1" target="_blank">replit</a>
+   <a href= "https://replit.com/@BerylHoffman/SpellChecker1" target="_blank">replit</a>
 
 .. |input files| raw:: html
 
    <a href="https://runestone.academy/ns/books/published/csawesome/Unit7-ArrayList/topic-input-files.html" target="_blank">input files</a>
 
-In this challenge, you will use an array of English words from a dictionary file to see if a given word is spelled correctly. We encourage you to work in pairs for this challenge. Make sure you have done the last coding exercise above which will help you with this challenge.
+In this challenge, you will use an array of English words from a dictionary file to see if a given word is spelled correctly. We encourage you to work in pairs for this challenge. 
 
-This challenge includes a dictionary file of 10,000 English words which is read into the array dictionary for you. You could use this |replit| code instead that has an even bigger dictionary of English words and lets you do input with your spell checker. If you use repl, copy in the link for your repl in the Active Code window below to turn it in. If you are interested in how to read in files using Java, there is an optional |input files| lesson at the end of Unit 7.
+This challenge includes a dictionary file of 10,000 English words which is read into the array dictionary for you. You could use this |replit| code instead that has an even bigger dictionary of English words and lets you do input with your spell checker. We will learn how to read in files using Java later on in this unit. 
 
 1. Write a ``print10`` method that prints out the first 10 words of the dictionary array. Do not print out the whole array of 10,000 words!
 2. Write a ``spellcheck`` method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found (When can you tell that you have not found a word in the dictionary?). Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.
@@ -1078,12 +1559,12 @@ This challenge includes a dictionary file of 10,000 English words which is read 
    :fromfile: ../../_static/dictionary10K.txt
    :hide:
 
-.. activecode:: challenge-6-2-spellchecker
+.. activecode:: challenge-spellchecker
    :language: java
    :datafile: dictionary.txt
    :autograde: unittest
 
-   Write print10 and spellcheck methods using for loops. Spellchek should take a word as a parameter and return true if it is in the dictionary array. Return false if it is not found.
+   Write print10 and spellcheck methods using for loops. Spellcheck should take a word as a parameter and return true if it is in the dictionary array. Return false if it is not found.
    ~~~~
    import java.io.*;
    import java.nio.file.*;
@@ -1160,9 +1641,7 @@ This challenge includes a dictionary file of 10,000 English words which is read 
            */
        }
    }
-
    ====
-   // Test for Lesson 6.2.5 - challenge-6-2-spell-checker
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -1234,27 +1713,27 @@ This challenge includes a dictionary file of 10,000 English words which is read 
 |Groupwork| Design an Array of Objects for your Community
 ----------------------------------------------------------
 
-.. |last lesson 6.1| raw:: html
+.. |last lesson| raw:: html
 
-   <a href="https://runestone.academy/ns/books/published/csawesome/Unit6-Arrays/topic-6-1-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" target="_blank">last lesson 6.1</a>
+   <a href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" target="_blank">last lesson</a>
 
-In Unit 5, you came up with a class of your own choice relevant to you or your
-community.  In the |last lesson 6.1|, you created an array to hold objects of your class.
-Copy your array of objects code from the |last lesson 6.1|. In this challenge, add a loop to
+In the last unit, you came up with a class of your own choice relevant to you or your
+community.  In the |last lesson|, you created an array to hold objects of your class.
+Copy your array of objects code from the |last lesson|. In this challenge, add a loop to
 traverse your array to print out each object.
 
-.. activecode:: community-challenge-6-2
+.. activecode:: community-challenge-array-loop
   :language: java
   :autograde: unittest
 
-  Copy your class from the |last lesson 6.1| below.
+  Copy your class from the |last lesson| below.
   It should create an array of 3 objects of your class and initialize
-  them to new objects. Instead of calling their print() methods individually, write a loop that
+  them to new objects. Instead of calling their print() methods individually, write a ``for`` (indexed or enhanced) loop that
   traverses your array to print out each object using the index i.
   ~~~~
   public class          // Add your class name here!
   {
-      // Copy your class from lesson 6.1 below.
+      // Copy your class from lesson 4.3 below.
 
 
 
@@ -1266,7 +1745,7 @@ traverse your array to print out each object.
 
 
          // Write a for loop that traverses the array and calls
-         // the print method of each object in the array using the array index i.
+         // the print method of each object in the array 
 
 
       }
@@ -1290,8 +1769,6 @@ traverse your array to print out each object.
       @Test
       public void testLoop()
       {
-          // String target = "for(int * = *; * ? *; *~)";
-          // boolean passed = checkCodeContainsRegex("for loop", target);
           String target = "for";
           boolean passed = checkCodeContains("for loop", target);
           assertTrue(passed);
@@ -1301,7 +1778,7 @@ traverse your array to print out each object.
       public void testprint()
       {
           boolean passed =
-                  checkCodeContains("call to print() using index [i] in the loop", "[i].print();");
+                  checkCodeContains("call to print() in the loop", ".print();");
           assertTrue(passed);
       }
 
@@ -1331,11 +1808,20 @@ traverse your array to print out each object.
 Summary
 -------
 
-- Iteration (loops) can be used to access all the elements in an array, **traversing the array**.
+- (AP 4.4.A.1) **Traversing an array** is when repetition statements are used to access all or an ordered sequence of elements in an array.
+- (AP 4.4.A.2) Traversing an array with an indexed ``for`` loop or ``while`` loop requires elements to be accessed using their indices.
+- In ``for`` and ``while`` loops, make sure the index for an array starts at 0 and end at the number of elements − 1.  **Off by one** errors are easy to make when traversing an array, resulting in an **ArrayIndexOutOfBoundsException** being thrown.
 
-- Traversing an array with an indexed for loop or while loop requires elements to be accessed using their indices.
+- An **enhanced for loop**, also called a **for each loop**, can be used to loop through an array without using an index variable.
 
-- Since the index for an array starts at 0 and end at the number of elements − 1, "off by one" errors are easy to make when traversing an array, resulting in an **ArrayIndexOutOfBoundsException** being thrown.
+- To set up a for-each loop, use **for (type variable : arrayname)** where the type is the type for elements in the array, and read it as "for each variable value in arrayname".
+
+- (AP 4.4.A.3) An enhanced ``for`` loop header includes a variable, referred to as the enhanced ``for`` loop variable. For each iteration of the enhanced ``for`` loop, the enhanced ``for`` loop variable is assigned a copy of an element without using its index.
+
+- (AP 4.4.A.4) Assigning a new value to the enhanced ``for`` loop variable does not change the value stored in the array. (So, you can't change an array using the enhanced for loop.)
+- (AP 4.4.A.5) When an array stores object references, the attributes can be modified by calling methods on the enhanced ``for`` loop variable. This does not change the object references stored in the array. (So, you can change the attributes of an object in an array using the enhanced for loop.)
+- (AP 4.4.A.6) Code written using an enhanced ``for`` loop to traverse elements in an array can be rewritten using an indexed ``for`` loop or a ``while`` loop.
+
 
 Arrays Game
 -------------
@@ -1351,3 +1837,4 @@ Try the game below to practice loops with arrays. Click on **Arrays** and then c
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
     <script>      window.scrollTo(0, 0);</script>
+
