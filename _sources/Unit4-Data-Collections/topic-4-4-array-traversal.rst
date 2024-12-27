@@ -41,58 +41,6 @@ What does the code above print out? You can follow the code in this |visualizer|
 
     Figure 1: Array with index variable
 
-.. |visualizer2| raw:: html
-
-   <a href="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Test1%0A%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20String%5B%20%5D%20names%20%3D%20%7B%22Jamal%22,%20%22Emily%22,%20%22Destiny%22,%20%22Mateo%22,%20%22Sofia%22%7D%3B%20%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20int%20index%20%3D%201%3B%0A%20%20%20%20%20%20%20%20System.out.println%28names%5Bindex%20-%201%5D%29%3B%0A%20%20%20%20%20%20%20%20index%2B%2B%3B%0A%20%20%20%20%20%20%20%20System.out.println%28names%5Bindex%5D%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28names%5Bindex/2%5D%29%3B%0A%20%20%20%20%20%20%20%20names%5Bindex%5D%20%3D%20%22Rafi%22%3B%0A%20%20%20%20%20%20%20%20index--%3B%0A%20%20%20%20%20%20%20%20System.out.println%28names%5Bindex%2B1%5D%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">visualizer</a>
-
-|CodingEx| **Coding Exercise**
-
-.. activecode:: arraytrace1
-   :language: java
-   :autograde: unittest
-
-   What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. You can also follow it in the |visualizer2| by clicking on the Show Code Lens button.
-   ~~~~
-   public class Test1
-   {
-       public static void main(String[] args)
-       {
-           String[] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
-
-           int index = 1;
-           System.out.println(names[index - 1]);
-           index++;
-           System.out.println(names[index]);
-           System.out.println(names[index / 2]);
-           names[index] = "Rafi";
-           index--;
-           System.out.println(names[index + 1]);
-       }
-   }
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       public RunestoneTests()
-       {
-           super("Test1");
-       }
-
-       @Test
-       public void test1() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "Jamal\nDestiny\nEmily\nRafi";
-
-           boolean passed = getResults(expect, output, "Did you run the code?", true);
-           assertTrue(passed);
-       }
-   }
 
 Loops to Traverse Arrays
 ---------------------------
@@ -196,6 +144,9 @@ For example, here is a ``for`` loop and a ``while`` loop that traverse the ``hig
        }
    }
 
+Arrays as Objects and Parameters
+---------------------------------
+
 The following code demonstrates a loop that changes the values in an array. In this code, the array is passed as an argument to the static methods in the class.  Arrays in Java are objects. The array variables are references to an address in memory. Since arrays can be very large, we do not want to copy them when we pass them into methods. When an array is passed as an argument to a method, the name of the array refers to its address in memory. Therefore, any changes to the array in the method will affect the original array. You can also try the code in the |Java visualizer|.
 
 .. |Java visualizer| raw:: html
@@ -296,200 +247,6 @@ The following code demonstrates a loop that changes the values in an array. In t
 
 
 
-Looping From Back to Front
---------------------------
-
-.. index::
-   pair: loop; from back to front
-
-You don't have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  In the example below,  the method ``getIndexOfLastElementSmallerThanTarget`` returns the index of the last element in the array that is smaller than the given argument.  The **return** statement inside the loop stops the execution of the loop and the method and returns the index that is found immediately back to the main method. It returns -1 if there is no number in the array that is smaller than the given number.
-
-.. |visualizerBF| raw:: html
-
-   <a href="http://www.pythontutor.com/java.html#code=%20%20%20public%20class%20ArrayFindSmallest%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20/**%20%40return%20index%20of%20the%20last%20number%20smaller%20than%20target%20*/%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20int%20getIndexOfLastElementSmallerThanTarget%28int%5B%20%5D%20values,%20int%20target%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20for%20%28int%20index%20%3D%20values.length%20-%201%3B%20index%20%3E%3D%200%3B%20index--%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28values%5Bindex%5D%20%3C%20target%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20index%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20return%20-1%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%20%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20int%5B%5D%20theArray%20%3D%20%7B-30,%20-5,%208,%2023,%2046%7D%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2050%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2050%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2030%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2030%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2010%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2010%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%200%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,0%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-20%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-20%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-30%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-30%29%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>
-
-|CodingEx| **Coding Exercise**
-
-.. activecode:: arrayFindSmaller
-   :language: java
-   :autograde: unittest
-   :practice: T
-
-   What does the following code print out? Notice that the array and the target are passed in as arguments to the getIndexOfLastElementSmallerThanTarget method. Trace through it keeping track of the array values and the output. Then run it to see if you're right.  You can also try the code in the |visualizerBF| with the Code Lens button. Can you add another method that finds the index of the last element greater than the target instead of smaller than the target and have main print out a test of it? Call this method getIndexOfLastElementGreaterThanTarget and give it 2 arguments and a return value like the method below.
-   ~~~~
-   public class ArrayFindSmallest
-   {
-
-       /**
-        * @return index of the last number smaller than target
-        */
-       public static int getIndexOfLastElementSmallerThanTarget(int[] values, int target)
-       {
-           for (int index = values.length - 1; index >= 0; index--)
-           {
-               if (values[index] < target)
-               {
-                  return index;
-               }
-           }
-           return -1;
-       }
-
-       /**
-        * Add a method called getIndexOfLastElementGreaterThanTarget
-        *
-        * @param int array
-        * @param int target
-        * @return index of the last number greater than target
-        */
-       public static void main(String[] args)
-       {
-           int[] theArray = {-30, -5, 8, 23, 46};
-           System.out.println(
-                   "Last index of element smaller than 50: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, 50));
-           System.out.println(
-                   "Last index of element smaller than 30: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, 30));
-           System.out.println(
-                   "Last index of element smaller than 10: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, 10));
-           System.out.println(
-                   "Last index of element smaller than 0: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, 0));
-           System.out.println(
-                   "Last index of element smaller than -20: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, -20));
-           System.out.println(
-                   "Last index of element smaller than -30: "
-                           + getIndexOfLastElementSmallerThanTarget(theArray, -30));
-       }
-   }
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       public RunestoneTests()
-       {
-           super("ArrayFindSmallest");
-       }
-
-       @Test
-       public void test1()
-       {
-           String output = getMethodOutput("main");
-           String expect = "Last index of element smaller than ";
-
-           boolean passed = output.contains(expect);
-           output = output.substring(0, output.indexOf("\n"));
-           passed =
-                   getResults(
-                           "Last index of element smaller than 50: 4",
-                           output,
-                           "Ran getIndexOfLastElementSmallerThanTarget",
-                           passed);
-           assertTrue(passed);
-       }
-
-       @Test
-       public void test2()
-       {
-           int[] nums = {10, 50, 20, 30, 40, 20};
-           Object[] args = {nums, 30};
-
-           String output = getMethodOutput("getIndexOfLastElementGreaterThanTarget", args);
-           String expect = "4";
-
-           boolean passed =
-                   getResults(
-                           expect,
-                           output,
-                           "getIndexOfLastElementGreaterThanTarget({10, 50, 20, 30, 40, 20}, 30)");
-           assertTrue(passed);
-       }
-
-       @Test
-       public void test3()
-       {
-           int[] nums = {10, 50, 20, 30, 40, 20};
-           Object[] args = {nums, 100};
-
-           String output = getMethodOutput("getIndexOfLastElementGreaterThanTarget", args);
-           String expect = "-1";
-
-           boolean passed =
-                   getResults(
-                           expect,
-                           output,
-                           "getIndexOfLastElementGreaterThanTarget({10, 50, 20, 30, 40, 20}, 100)");
-           assertTrue(passed);
-       }
-   }
-
-|Exercise| **Check Your Understanding**
-
-.. mchoice:: mcq_array_loop
-   :practice: T
-   :answer_a: -1
-   :answer_b: -15
-   :answer_c: 1
-   :answer_d: You will get an out of bounds error.
-   :correct: c
-   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.
-   :feedback_b: The method returns the index of the first item in the array that is less than the value, not the value.
-   :feedback_c: Since the method loops from the back towards the front -15 is the last value in the array that is less than -13 and it is at index 1.
-   :feedback_d: No, the method correctly starts the index at values.length - 1 and continues as long as i is greater than or equal to 0.
-
-   Given the following code segment (which is identical to the method above) what will be returned when you execute: ``getIndexOfLastElementSmallerThanTarget(values,-13)``;
-
-   .. code-block:: java
-
-      private int[ ] values = {-20, -15, 2, 8, 16, 33};
-
-      public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int compare)
-      {
-         for (int i = values.length - 1; i >=0; i--)
-         {
-            if (values[i] < compare)
-               return i;
-         }
-         return -1; // to show none found
-      }
-
-.. mchoice:: mcq_array_loop2
-   :practice: T
-   :answer_a: -1
-   :answer_b: 1
-   :answer_c: 2
-   :answer_d: You will get an out of bounds error.
-   :correct: d
-   :feedback_a: The method will only return -1 if no value in the array is less than the passed value.
-   :feedback_b: Check the starting index.   Is it correct?
-   :feedback_c: Check the starting index.   Is it correct?
-   :feedback_d: You can not start the index at the length of the array.  You must start at the length of the array minus one.  This is a common mistake.
-
-   Given the following code segment (which is not quite identical to the method above) what will be returned when you execute: ``getIndexOfLastElementSmallerThanTarget(values, 7)``;
-
-   .. code-block:: java
-
-      int[ ] values = {-20, -15, 2, 8, 16, 33};
-
-      public static int getIndexOfLastElementSmallerThanTarget(int[] values, int compare)
-      {
-         for (int i = values.length; i >=0; i--)
-         {
-            if (values[i] < compare)
-               return i;
-         }
-         return -1; // to show none found
-      }
-
-
 
 
 Looping through Part of an Array
@@ -527,9 +284,16 @@ You don't have to loop through all of the elements of an array.  You can loop th
        }
 
        /**
-        * Write a method called tripleFirstFour() that triples the first 4 elements of
-        * the array *
+        * Write a method called tripleFirstFour() that triples 
+        * the first 4 elements of the array *
         */
+       public void tripleFirstFour()
+       {
+
+
+       }
+       
+       /** Prints the array */
        public void printArray()
        {
            for (int i = 0; i < values.length; i++)
@@ -544,6 +308,9 @@ You don't have to loop through all of the elements of an array.  You can loop th
            ArrayWorker worker = new ArrayWorker(numArray);
            worker.doubleFirstFive();
            worker.printArray();
+           // uncomment these to test        
+           // worker.tripleFirstFour();
+           // worker.printArray();
        }
    }
    ====
@@ -594,116 +361,12 @@ You don't have to loop through all of the elements of an array.  You can loop th
        }
    }
 
-|CodingEx| **Coding Exercise**
-
-You can even start in the middle and loop through the rest of the array.
-
-.. activecode:: doubleLastHalf
-   :language: java
-   :autograde: unittest
-
-   Does this work for arrays that have an even number of elements?  Does it work for arrays that have an odd number of elements?  Modify the main code below to test with both arrays with an even number of items and an odd number.
-   ~~~~
-   public class ArrayWorker
-   {
-       private int[] values;
-
-       public ArrayWorker(int[] theValues)
-       {
-           values = theValues;
-       }
-
-       public void doubleLastHalf()
-       {
-           for (int i = values.length / 2; i < values.length; i++)
-           {
-               values[i] = values[i] * 2;
-           }
-       }
-
-       public void printArray()
-       {
-           for (int i = 0; i < values.length; i++)
-           {
-               System.out.println(values[i]);
-           }
-       }
-
-       public static void main(String[] args)
-       {
-           int[] numArray = {3, 8, -3, 2};
-           ArrayWorker worker = new ArrayWorker(numArray);
-           worker.doubleLastHalf();
-           worker.printArray();
-       }
-   }
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       public RunestoneTests()
-       {
-           super("ArrayWorker");
-       }
-
-       @Test
-       public void test1()
-       {
-           String output = getMethodOutput("main");
-           String expect = "3\n8\n-6\n4".replaceAll(" ", "\n");
-
-           boolean passed = getResults(expect, output, "Testing main()", true);
-           assertTrue(passed);
-       }
-
-       @Test
-       public void test2()
-       {
-           String orig =
-                   "public class ArrayWorker\n"
-                       + "{\n"
-                       + "   private int[ ] values;\n\n"
-                       + "   public ArrayWorker(int[] theValues)\n"
-                       + "   {\n"
-                       + "      values = theValues;\n"
-                       + "   }\n\n"
-                       + "   public void doubleLastHalf()\n"
-                       + "   {\n"
-                       + "     for (int i = values.length / 2; i < values.length; i++)\n"
-                       + "     {\n"
-                       + "       values[i] = values[i] * 2;\n"
-                       + "     }\n"
-                       + "   }\n\n"
-                       + "   public void printArray()\n"
-                       + "   {\n"
-                       + "      for (int i = 0; i < values.length; i++)\n"
-                       + "      {\n"
-                       + "        System.out.println(  values[i] );\n"
-                       + "      }\n"
-                       + "   }\n\n"
-                       + "   public static void main(String[] args)\n"
-                       + "   {\n"
-                       + "     int[] numArray = {3,8,-3, 2};\n"
-                       + "     ArrayWorker worker = new ArrayWorker(numArray);\n"
-                       + "     worker.doubleLastHalf();\n"
-                       + "     worker.printArray();\n"
-                       + "   }\n"
-                       + "}\n";
-
-           boolean passed = codeChanged(orig);
-           assertTrue(passed);
-       }
-   }
 
 |Exercise| **Check Your Understanding**
 
 
-.. mchoice:: mcq_array_loop3
+.. mchoice:: mcq_array_doublelast
+   :random:
    :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 32}
@@ -730,7 +393,8 @@ You can even start in the middle and loop through the rest of the array.
          }
       }
 
-.. mchoice:: mcq_array_loop4
+.. mchoice:: mcq_array_mystery
+   :random:
    :practice: T
    :answer_a: {-40, -30, 4, 16, 32, 66}
    :answer_b: {-40, -30, 4, 8, 16, 33}
@@ -760,59 +424,6 @@ You can even start in the middle and loop through the rest of the array.
       }
 
 
-.. parsonsprob:: parsons_array_reverse
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following program has the correct code to reverse the elements in an array, a,  but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.
-   -----
-   public static void reverse(int[] a)
-   {
-   =====
-     int temp = 0;
-     int half = a.length / 2;
-     int max = a.length - 1;
-   =====
-     for (int i = 0; i < half; i++)
-     {
-   =====
-        temp = a[i];
-   =====
-        a[i] = a[max - i];
-   =====
-        a[max - i] = temp;
-   =====
-     } // end for
-   =====
-   } // end method
-
-.. parsonsprob:: parsons_array_avg
-   :numbered: left
-   :practice: T
-   :adaptive:
-
-   The following program has the correct code to return the average of the first 3 items in the array a, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.
-   -----
-   public static double avg3(int[] a)
-   {
-   =====
-     double total = 0;
-   =====
-     for (int i = 0; i < a.length && i < 3; i++)
-     {
-   =====
-       total = total + a[i];
-   =====
-     } // end for
-     return total / 3;
-   =====
-   } // end method
-
-
-
-
 Common Errors When Looping Through an Array
 -------------------------------------------------
 
@@ -821,6 +432,7 @@ When processing all array elements, be careful to start at the first index which
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: qIndexOutOfBounds
+   :random:
    :practice: T
 
    Which of the following loop headers will cause an ArrayIndexOutOfBounds error while traversing the array scores?
@@ -1004,7 +616,8 @@ Be careful not to jump out of loop too early when you are looking for a value in
        }
    }
 
-.. mchoice:: mcq_array_loop5
+.. mchoice:: mcq_array_infinite
+   :random:
    :practice: T
    :answer_a: The values don't matter this will always cause an infinite loop.
    :answer_b: Whenever <i>a</i> includes a value that is less than or equal to zero.
@@ -1050,7 +663,7 @@ To set up a for-each loop, use **for (type variable : arrayname)** where the typ
     :align: center
     :figclass: align-center
 
-    Figure: Comparing App Inventor, AP CSP, and Java for each
+    Figure 3: Comparing App Inventor, AP CSP, and Java for each
 
 See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
 
@@ -1294,6 +907,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 |Exercise| **Check Your Understanding**
 
 .. mchoice:: mcq_for_each1
+   :random:
    :practice: T
    :answer_a: Only I.
    :answer_b: I and III only.
@@ -1316,6 +930,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
 
 .. mchoice:: mcqfor-each2
+   :random:
    :practice: T
 
    What is the output of the following code segment?
