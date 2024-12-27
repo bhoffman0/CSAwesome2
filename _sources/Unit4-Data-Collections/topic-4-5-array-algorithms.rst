@@ -1061,41 +1061,6 @@ Reversing an Array
 
 Reversing an array is similar to rotating it. We can copy the first element to the last position, the second element to the second-to-last position, and so on. We can use a temporary variable to store the value of the element we are overwriting. We usually need an indexed loop to access the elements at different indices unless we use a temporary array to store the reversed elements. Note that arrays are passed as references to methods, so any changes made to the array within the method will affect the original array.
 
-|CodingEx| **Coding Exercise**
-
-.. parsonsprob:: array-reverse1
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following program segment is a method that should return string array that is in reverse order -- so {"b", "a", "z"} should return {"z", "a", "b"}.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
-   -----
-   public static String[] reverse(String[] arr) 
-   {
-   =====
-       String[] result = new String[arr.length];
-   =====
-       int i = arr.length - 1;
-   =====
-       int i = arr.length; #distractor
-   =====
-       for (String element: arr) 
-       {
-   =====
-       for (element: arr) 
-       { #distractor
-   =====
-         result[i] = element;
-   =====
-         i--;
-   =====
-       } //end for loop
-   =====
-       return result;
-   =====
-   } //end reverse method
-
 The following programs show how you can reverse an array in place by swapping elements. The first uses a while loop and the second an indexed for loop. To swap two elements, you need to use a temp variable to store the value of the element you are overwriting. Imagine that you have a glass of milk and a glass of orange juice. How would you swap the contents of the two glasses without making a huge mess? You would need a third glass to hold the contents of one of the glasses while you pour the contents of the other glass into it. Then you can pour the contents of the third glass into the other glass. This is the same idea behind swapping elements in an array.
 
 .. figure:: Figures/swap.png
@@ -1112,6 +1077,7 @@ The following programs show how you can reverse an array in place by swapping el
       array[i] = array[j];  // pour orange juice into milk glass
       array[j] = temp;      // pour milk from temp into oj glass
             
+|CodingEx| **Coding Exercise**
 
 .. parsonsprob:: array-reverse2
    :numbered: left
@@ -1126,27 +1092,28 @@ The following programs show how you can reverse an array in place by swapping el
    =====
         int start = 0;
         int end = array.length - 1;
-        =====
+   =====
         while (start < end) 
         {
-        =====
+   =====
         for(int i = start; i < end; i++)
         { #distractor
-        =====
+   =====
             // Swap the elements at the start and end indices
             String temp = array[start];
-            =====
+   =====
             array[start] = array[end];
-            =====
+   =====
             array[end] = temp;
-            =====
+   =====
             start++;
             end--;
-            =====
+   =====
             start++; #distractor
-            =====       
+   =====       
         }
-    }
+   }
+
 
 .. parsonsprob:: parsons_array_reverse
    :numbered: left
@@ -1201,7 +1168,6 @@ The following programs show how you can reverse an array in place by swapping el
                 System.out.println(Arrays.toString(a1));  
             }
         }
-
         ====
               import static org.junit.Assert.*;
 
@@ -1211,6 +1177,11 @@ The following programs show how you can reverse an array in place by swapping el
 
               public class RunestoneTests extends CodeTestHelper
               {
+                  public RunestoneTests()
+                  {
+                    super("ReverseTest");
+                  }
+
                   @Test
                   public void testMain() throws IOException
                   {
@@ -1222,10 +1193,9 @@ The following programs show how you can reverse an array in place by swapping el
                   @Test
                   public void testMethod2()
                   {
-                      String[] nums = {"r","a","t","s"};
-                      Object[] args = {nums};
-
-                      String output = getMethodOutput("reverse", args);
+                      String[] a = {"r","a","t","s"};
+                      ReverseTest.reverse(a);    
+                      String output = Arrays.toString(a1);
                       String expect = "[s, t, a, r]";
 
                       boolean passed = getResults(expect, output, "reverse({r, a, t, s})");
@@ -1236,6 +1206,8 @@ The following programs show how you can reverse an array in place by swapping el
 
 FRQ Practice
 -------------
+
+|Time90|
 
 We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice!
 
