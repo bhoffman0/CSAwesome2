@@ -30,7 +30,7 @@ Implementing Array Algorithms (FRQs)
     single: pairs
     single: duplicates
 
-In this lesson, you will study different Free Response Questions and responses that develop algorithms using arrays.
+In this lesson, you will study common algorithms using arrays and loops and practice FRQ (Free Response Question) problems.
 
 Here are some common algorithms that utilize array traversal that you should be familiar with for the AP CSA exam (AP 4.5.A.1):
 
@@ -1079,49 +1079,13 @@ The following programs show how you can reverse an array in place by swapping el
             
 |CodingEx| **Coding Exercise**
 
-.. parsonsprob:: array-reverse2
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following method reverses an array in place by using a temp variable to swap the first and last items.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
-   -----
-   public static void reverse(String[] array) 
-   {
-   =====
-        int start = 0;
-        int end = array.length - 1;
-   =====
-        while (start < end) 
-        {
-   =====
-        for(int i = start; i < end; i++)
-        { #distractor
-   =====
-            // Swap the elements at the start and end indices
-            String temp = array[start];
-   =====
-            array[start] = array[end];
-   =====
-            array[end] = temp;
-   =====
-            start++;
-            end--;
-   =====
-            start++; #distractor
-   =====       
-        }
-   }
-
-
 .. parsonsprob:: parsons_array_reverse
    :numbered: left
    :practice: T
    :adaptive:
    :noindent:
 
-   The following program has the correct code to reverse the elements in an array, a,  but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.
+   The following method reverses an array in place using an indexed for loop and a temp variable to swap the first and last items, but the code blocks are mixed up. Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static void reverse(int[] a)
    {
@@ -1143,6 +1107,40 @@ The following programs show how you can reverse an array in place by swapping el
    =====
    } // end method
 
+
+.. parsonsprob:: parsons_array_reverse2
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following method reverses an array in place using a while loop and a temp variable to swap the first and last items.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   -----
+   public static void reverse(int[] array) 
+   {
+   =====
+      int start = 0;
+      int end = array.length - 1;
+   =====
+      while (start < end) 
+      {
+   =====
+      for(int i = start; i < end; i++)
+      { #distractor
+   =====
+        int temp = array[start];
+   =====
+        array[start] = array[end];
+   =====
+        array[end] = temp;
+   =====
+        start++;
+        end--;
+   =====
+        start++; #distractor
+   =====       
+      }
+   }
 
 .. activecode::  reverseArrayCode
         :language: java
