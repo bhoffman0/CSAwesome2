@@ -31,25 +31,25 @@ Legal issues and intellectual property concerns can also arise when creating pro
 
 The fields of **AI (Artificial Intelligence)** and **Machine Learning** increasingly pose ethical questions in our world. For example, self-driving cars that use machine learning to learn to follow lanes and avoid collisions could make our world much safer. Self-driving cars do not get distracted by text messages and don't drink and drive. However, what if the car needs to make an ethical decision about avoiding a collision with a pedestrian by causing an accident that may also lead to the loss of life? Who makes these decisions? The software? the programmers? If you were a programmer for a self-driving car, how would you approach such decisions? Here's a great |Wired article| or |video| about self-driving cars and ethical problems.
 
-Here are some interesting videos about the beneficial impacts of AI in different domains:
+Watch the following video about the impacts of AI:
 
-- Google AI Changing the World: https://www.youtube.com/watch?v=3r42iwO2gCQ
-- AI in Agriculture: https://www.youtube.com/watch?v=DjHGG7eQevY
-- AI in Healthcare and Radiology: https://www.youtube.com/watch?v=dCDuMyzWS8Q
-
-Watch the following Ted Talk by Dr. Sasha Luccioni (https://www.ted.com/talks/sasha_luccioni_ai_is_dangerous_but_not_for_the_reasons_you_think) about the harmful effects and ethical implications of AI:
-
-.. youtube:: eXdVDhOGqoE
+.. youtube:: tJQSyzBUAew
     :height: 400
     :width: 600
     :align: left
 
 
+Here are some other interesting videos about the impacts of AI in different domains:
 
-|Groupwork| POGIL Groupwork: Impacts of CS
+- AI in Healthcare and Radiology: https://www.youtube.com/watch?v=dCDuMyzWS8Q
+- AI in Agriculture: https://www.youtube.com/watch?v=DjHGG7eQevY
+
+
+
+|Groupwork| Groupwork: Impacts of CS
 ----------------------------------------------
 
-In POGIL groups, choose a software application that has social and ethical implications. Discuss the beneficial and harmful effects of this software application. Discuss the ethical problems that may arise and how programmers can try to avoid them. If you chose an AI application, make sure you narrow it to a particular domain or use. Prepare a presentation for your class.
+In groups, choose a software application that has social and ethical implications. Discuss the beneficial and harmful effects of this software application. Discuss the ethical problems that may arise and how programmers can try to avoid them. If you chose an AI application, make sure you narrow it to a particular domain or use. Prepare a presentation for your class.
 
 .. shortanswer:: impacts
 
