@@ -239,7 +239,7 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
     :autograde: unittest
     :datafile: pokemon.csv
 
-    Complete the . This program reads in some of the data from the pokemon file into a String array of lines. Complete the ``randomPokemon`` method to print out a random pokemon name and its image using the split method. Run the program multiple times to see different Pokemon names and images.
+    This program reads in each line from the pokemon file into a String array of lines. Complete the ``findMaxSpeed`` and ``findAverageSpeed`` methods below. 
     ~~~~
     import java.io.*;
     import java.util.*;
@@ -255,7 +255,7 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
             File myFile = new File(filename);
             Scanner scan = new Scanner(myFile);
             int i = 0;
-            while (scan.hasNextLine())
+            while (scan.hasNext())
             {
                 pokemonLines[i] = scan.nextLine();
                 i++; 
@@ -270,13 +270,15 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
         public int findMaxSpeed()
         {
             int maxSpeed = 0;
+            String maxPokemonName = "";
 
-            // 1. Loop through the pokemonLines array
+            // 1. Loop through the pokemonLines array starting at index 1 
+            //     (0 is the column headers)
                 // 2. Split the line on commas into a data array
                 // 3. Use parseInt on the 7th element of the data array to get the  speed
-                // 4. Compare the speed to a maxSpeed variable and update maxSpeed if needed
+                // 4. If speed is larger than maxSpeed, update maxSpeed and maxPokemonName
       
-
+            // 5. Print out the maxPokemonName and return the maxSpeed
             return maxSpeed;
         }
 
@@ -291,6 +293,7 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
 
             return averageSpeed;
         }
+        
         public static void main(String[] args) throws IOException
         {
             PokeSpeed p = new PokeSpeed();
@@ -312,7 +315,6 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
        public RunestoneTests() throws IOException
        {
            super("PokeSpeed");
-           readFile();
        }
 
        @Test
@@ -322,36 +324,22 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
            assertTrue(passed);
        }
 
-        @Test
+       @Test
        public void callFindMax() throws IOException
        {
-            int speed = findMaxSpeed();
-            String expect = "130";
+            String output = getMethodOutput("findMaxSpeed");
+            String expect = "140";
             boolean passed = getResults(expect, output, "Expected output from findMaxSpeed");
             assertTrue(passed);
         }
-        @Test
-       public void callFindMax() throws IOException
-       {
-            int speed = findMaxSpeed();
-            String expect = "130";
-            boolean passed = getResults(expect, output, "Expected output from findMaxSpeed");
-            assertTrue(passed);
-        }
-        @Test
-       public void callFindMax() throws IOException
-       {
-            int speed = findMaxSpeed();
-            String expect = "130";
-            boolean passed = getResults(expect, ""+speed, "Expected output from findMaxSpeed");
-            assertTrue(passed);
-        }
+  
         @Test
          public void callAvgSpeed() throws IOException
          {
-                double speed = findAverageSpeed();
-                String expect = "65.0";
-                boolean passed = getResults(expect, ""+speed, "Expected output from findAverageSpeed");
+                String output = getMethodOutput("findAverageSpeed");
+                String expect = "68";
+                boolean passed = output.startsWith(expect);
+                passed = getResults(expect, output, "Expected output from findAverageSpeed", passed);
                 assertTrue(passed);
          }
 
