@@ -49,6 +49,13 @@
   background-color: inherit;
   font-weight: bold;
   font-size: 100%;  
+
+}
+/* Code listings with <pre> in text washed out in Chrome */
+.ptx-content pre.program
+{
+  font-weight: bolder;
+  font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
 }
 
 .ptx-content .summary-links {

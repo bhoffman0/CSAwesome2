@@ -43,7 +43,7 @@ Math.abs(-45);   // returns 45
 Math.abs(33.3);  // returns 33.3
 Math.abs(-33.3); // returns 33.3
 </code></program>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/pow.png" width="14%%" alt="Pow!"/>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/pow.png" width="14%" alt="Pow!"/>
             <p><c>Math.pow</c> takes two argument, both <c>double</c>s and returns
                 a <c>double</c> which is the first argument raised to the power of the second
                 argument.</p>
@@ -137,7 +137,7 @@ public class RunestoneTests extends CodeTestHelper
             <p> The distance between two numbers on the number line is defined as the absolute value of their
                 difference. Their difference is just what you get when you subtract one from
                 the other. For example, the distance from 0 to 3 is 3, the distance from -3 to 0 is 3, and the distance from -3 to 1 is 4.</p>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/number-line.svg" width="80%%" alt="number line"/>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/number-line.svg" width="80%" alt="number line"/>
             <p>Which of the following are correct expressions to compute the
                 distance between the numbers <c>a</c> and <c>b</c>.</p>
 </statement><choices><choice correct="yes"><statement id="distance-mc_opt_a">            <p><c>Math.abs(a - b)</c></p>
@@ -218,7 +218,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Random Numbers</title>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/dice.png" width="18%%" alt="Dice"/>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/dice.png" width="18%" alt="Dice"/>
             <p>The <c>Math.random()</c> method returns a double number greater than or equal to 0.0, and less than 1.0.
                 When we talk about ranges of numbers sometimes
                 we need to be precise about whether the ends of the range are part of the range.
@@ -743,7 +743,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         </subsection>
   <subsection>
             <title>Coding Challenge : Random Numbers</title>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/lock.jpg" width="18%%" alt="lock"/>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/lock.jpg" width="18%" alt="lock"/>
             <p>You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it?</p>
             <p><ol marker="1">
                 <li>

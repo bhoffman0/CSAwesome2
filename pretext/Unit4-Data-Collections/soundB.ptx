@@ -45,11 +45,11 @@ public class Sound
             is updated to refer to the new array. For example, suppose the instance variable <c>samples</c> refers to the
             following array.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/soundTable3.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/soundTable3.png" width="100%"/>
     </figure>
     <p>After <c>trimSilenceFromBeginning</c> has been called, the instance variable <c>samples</c> will refer to the following array.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/soundTable4.png" width="84%%"/>
+      <image source="Unit4-Data-Collections/Figures/soundTable4.png" width="84%"/>
     </figure>
   </introduction>
   <subsection>
@@ -65,7 +65,7 @@ public class Sound
                     </li>
                 </ol></p>
             </subsection>
-            <exercises line="84" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_soundb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
+            <exercises line="84" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_soundb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
 
     <exercise label="fr_soundb_1">
         <statement>
@@ -147,34 +147,34 @@ public class Sound
   <subsection>
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
-            <exercises line="116" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'soundB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
+            <exercises line="116" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'soundB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
 <exercise label="SoundB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method <c>trimSilenceFromBeginning</c> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="9">
+<blocks><block order="6">
 <cline>public void trimSilenceFromBeginning()</cline>
 <cline>{</cline>
 <cline>  int i = 0;</cline>
-</block><block order="4">
+</block><block order="10">
 <cline>  while (this.samples[i] == 0)</cline>
 <cline>  {</cline>
 </block><block order="8">
 <cline>     i++;</cline>
-</block><block order="2">
-<cline>  } // end while</cline>
 </block><block order="3">
+<cline>  } // end while</cline>
+</block><block order="7">
 <cline>  int samplesLen = this.samples.length;</cline>
 <cline>  int[] newSamples = new int[samplesLen - i];</cline>
-</block><block order="5">
+</block><block order="1">
 <cline>  for (int j = 0; j &lt; newSamples.length; j++)</cline>
 <cline>  {</cline>
-</block><block order="1">
+</block><block order="5">
 <cline>     newSamples[j] = this.samples[j+i];</cline>
-</block><block order="6">
+</block><block order="4">
 <cline>  } // end for</cline>
-</block><block order="10">
+</block><block order="2">
 <cline>  this.samples = newSamples;</cline>
-</block><block order="7">
+</block><block order="9">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

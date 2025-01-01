@@ -12,8 +12,8 @@
             <title>What are Classes and Objects?</title>
             <p>You can think of a class as something like a blueprint of a house that is used to construct houses (objects), or like a cookie cutter that is used to create the cookies (objects). The cookie cutter (class) can
                 be used to create as many cookies (objects) as you want. The cookies (objects) are all the same shape and size, but they can have different colors and decorations.</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/blueprint.png" width="71%%"/></figure>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%%"/></figure>
+            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/blueprint.png" width="71%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%"/></figure>
             <p>You can also think of a class as defining a new data type. In this lesson, we will use the class <c>Turtle</c> to make animated turtle objects. Just like you use <c>int</c> to
                 declare variables that hold numbers, you can use <c>Turtle</c> to declare many variables, animated turtle objects, who are <term>instances</term> of the <c>Turtle</c> class.</p>
             <program language="java"><code>
@@ -37,7 +37,7 @@ Turtle myrtle;
                 Name some of the attributes and behaviors of the cats below. For example, the
                 color (<em>attribute</em>) of the first cat is black (<em>attribute value</em>) and it is
                 playing (<em>behavior</em>).</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Pictures of cats (cat objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/catsLabelled.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Pictures of cats (cat objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/catsLabelled.png" width="89%"/></figure>
 
 <exercise label="cats">
     <statement>
@@ -48,7 +48,7 @@ Turtle myrtle;
     </statement>
 </exercise>
             <p>The following picture of a turtle shows some of the Turtle <term>attributes</term> like name, width, height, color in the body of the turtle and its <term>methods</term> like forward(), backward(), written around the turtle.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Attributes and Behaviors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="63%%" alt="Turtle attributes and behaviors"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Attributes and Behaviors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="63%" alt="Turtle attributes and behaviors"/></figure>
 
 <exercise label="vocab2_1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
@@ -194,7 +194,7 @@ Turtle myrtle;
 </choices>
 
     </exercise>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="36%%"/>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="36%"/>
         </subsection>
   <subsection>
             <title>Turtle Class</title>
@@ -207,7 +207,7 @@ Turtle myrtle;
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -261,7 +261,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -340,7 +340,7 @@ yourTurtlename.forward();
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -400,15 +400,15 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>Another important concept in object-oriented programming is <term>inheritance</term>. Although the AP CSA exam no longer covers inheritance, you should know what it means. <term>Inheritance</term> is a way to create a new class that is based on an existing class. The new class, called a <term>subclass</term>, inherits the attributes and behaviors of the existing class, called a <term>superclass</term>.  In Java, all classes are subclasses of a superclass called <term>Object</term>.</p>
             <p>For example, you could have a superclass called <c>Pet</c> with attributes like <c>name</c> and <c>age</c> and behaviors like <c>eat</c> and <c>sleep</c>. You could then have subclasses like <c>Dog</c> and <c>Cat</c> and <c>Turtle</c> that inherit the attributes and behaviors of the <c>Pet</c> class. Each subclass could add attributes and behaviors specific to that type of pet. For example, a <c>Dog</c> subclass could have an attribute called <c>breed</c> and a behavior called <c>bark</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle</caption><image source="Unit1-Using-Objects-and-Methods/Figures/inheritance-hierarchy-pet.png" width="89%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Inheritance hierarchy for Pet superclass with the subclasses Dog, Cat, and Turtle</caption><image source="Unit1-Using-Objects-and-Methods/Figures/inheritance-hierarchy-pet.png" width="89%"/></figure>
         </subsection>
   <subsection>
             <title>Turtle Methods</title>
             <p>Let’s practice more with the <c>Turtle</c> class and its methods.
                 Here is a class diagram that shows some of the attributes and methods in the class <c>Turtle</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%%" alt="Turtle class diagram"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%" alt="Turtle class diagram"/></figure>
             <p>The Turtle world does not use the Cartesian coordinate system with (0,0) in the middle the screen. Instead, (0,0) is at the top left corner of the screen and x increases to the right and y increases towards the bottom of the screen. Most computer graphics systems use this coordinate system which is a carry over from before computers could display graphics and had to approximate the graphics with text print outs.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The coordinate (0,0) is at the top left of the Turtle world.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/coords.png" width="36%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The coordinate (0,0) is at the top left of the Turtle world.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/coords.png" width="36%"/></figure>
 <exercise label="ParsonsDraw7" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following code uses a turtle to draw the digital number 7 (with just straight lines), but the code is mixed up.  Drag the code blocks to the right and put them in the correct order to first draw the line going up (towards the top of the page) and then turn and draw a line to the left to make a 7. Remember that the turtle is facing the top of the page when it is first created. Click on the “Check Me” button to check your solution.</p>
 </statement>
@@ -441,7 +441,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -489,7 +489,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -603,7 +603,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 

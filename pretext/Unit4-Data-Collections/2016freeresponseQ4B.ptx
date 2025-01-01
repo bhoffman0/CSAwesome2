@@ -11,7 +11,7 @@
             Any leftover spaces are inserted one at a time into the gaps from left to right until there are no more leftover spaces.</p>
     <p>The following three examples illustrate these concepts. In each example, the list of words is to be placed into a formatted string of length 20.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/2016FRQ4A1.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/2016FRQ4A1.png" width="100%"/>
     </figure>
   </introduction>
   <subsection>
@@ -21,7 +21,7 @@
                     <p>Write the <c>StringFormatter</c> method <c>basicGapWidth</c>, which returns the basic gap width as defined above.</p>
                 </li>
             </ol></p>
-            <figure align="center"><image source="Unit4-Data-Collections/Figures/2016FRQ4B1.png" width="100%%"/></figure>
+            <figure align="center"><image source="Unit4-Data-Collections/Figures/2016FRQ4B1.png" width="100%"/></figure>
             <p>Assume that <c>totalLetters</c> works as specified regardless of what you wrote in part (a).
                 You must use <c>totalLetters</c> appropriately to receive full credit.</p>
             <p>Complete method <c>basicGapWidth</c> below.</p>
@@ -46,7 +46,7 @@ public static int basicGapWidth(List&lt;String&gt; wordList,
                 <p>If <c>formattedLen</c> is 20 and <c>wordList</c> is [“GREEN”, “EGGS”, “AND”, “HAM”] then the number of spaces left is 20 - 15 = 5 and the number of gaps is 4 - 1 = 3 so 5 / 3 = 1.  There will be two extra spaces left over.</p>
                 <p>If <c>formattedLen</c> is 20 and <c>wordList</c> is [“BEACH”, “BALL”] then the number of spaces left is 20 - 9 = 11 and the number of gaps is 2 - 1 = 1 so 11 / 1 = 11.</p>
             </subsection>
-            <exercises line="72" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': '2016freeresponseQ4B', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_formatterb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4B.rst">
+            <exercises line="72" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': '2016freeresponseQ4B', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_formatterb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4B.rst">
 
     <exercise label="fr_formatterb_1">
         <statement>
@@ -118,7 +118,7 @@ public static int basicGapWidth(List&lt;String&gt; wordList,
         </subsection>
   <subsection>
             <title>Put the Code in Order</title>
-            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': '2016freeresponseQ4B', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'stringFormatterB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4B.rst">
+            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': '2016freeresponseQ4B', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'stringFormatterB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4B.rst">
 <exercise label="stringFormatterB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The following has the correct code to solve this problem, but also contains extra code that isn’t needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.</p>
 </statement>

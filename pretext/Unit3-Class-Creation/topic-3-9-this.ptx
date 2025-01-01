@@ -29,7 +29,7 @@ public Person(String name)
   <subsection>
             <title><c>this</c> as an Argument</title>
             <p>The <c>this</c> variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, <c>Pay</c> and <c>Overtime</c>. The <c>Pay</c> class declares an <c>Overtime</c> object and passes in <c>this</c> (the current <c>Pay</c> object) to its constructor which computes the overtime with respect to that <c>Pay</c> object. Try this code in the active code exercise below with the Show CodeLens button to trace through it step by step. Here is an image that shows how <c>this</c>, <c>myPay</c> and <c>p</c> all refer to the same object in memory.</p>
-            <figure align="center"><image source="Unit3-Class-Creation/Figures/thisTrace.png" width="71%%"/></figure>
+            <figure align="center"><image source="Unit3-Class-Creation/Figures/thisTrace.png" width="71%"/></figure>
 
 <exercise label="PayClassThis">
     <statement>
@@ -175,7 +175,7 @@ System.out.println(one.getPay());
         </subsection>
   <subsection>
             <title>Coding Challenge : Bank Account</title>
-            <figure align="left"><image source="Unit3-Class-Creation/Figures/dollarSign.png" width="18%%"/></figure>
+            <figure align="left"><image source="Unit3-Class-Creation/Figures/dollarSign.png" width="18%"/></figure>
             <p>Many people keep their money in a bank account. The bank may keep track of the account holder’s name, the acount balance which is the amount of money in the account, and assign an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here’s a <url href="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F" visual="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F">video</url> that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.</p>
             <p>For this challenge, you can work in pairs to:</p>
             <p><ul>

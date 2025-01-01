@@ -53,14 +53,14 @@ public class HorseBarn
     <p><term>Part a.</term>  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example calls and results</caption>
-      <image source="Unit4-Data-Collections/Figures/horseBarnA.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/horseBarnA.png" width="100%"/>
     </figure>
   </introduction>
   <subsection>
             <title>How to solve this problem</title>
             <p>In order to find the index of the horse with the same name we are looking for, we will need to loop through the array <c>spaces</c>. As we loop, we will compare the name we are looking for with the <c>Horse</c> object’s name at the current index.
                 We will have to watch out for spaces that are empty (are null).  Click to reveal a practice problem about objects.</p>
-            <exercises line="81" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'horseBarnA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'frhba_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/horseBarnA.rst">
+            <exercises line="81" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'horseBarnA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'frhba_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/horseBarnA.rst">
 
     <exercise label="frhba_1">
         <statement>
@@ -101,7 +101,7 @@ public class HorseBarn
     </exercise>
             </exercises>
             <p>Once we have the name of the current <c>Horse</c> object, we need to compare this name to the name we are looking for. Click to reveal a practice problem about String comparisons.</p>
-            <exercises line="99" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'horseBarnA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'frhba_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/horseBarnA.rst">
+            <exercises line="99" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'horseBarnA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'frhba_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/horseBarnA.rst">
 
     <exercise label="frhba_2">
         <statement>

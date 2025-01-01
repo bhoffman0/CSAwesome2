@@ -9,7 +9,7 @@
     <p>The following example shows how the contents of <c>wordList</c> would be modified as a result of calling <c>scrambleOrRemove</c>.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example call and result</caption>
-      <image source="Unit4-Data-Collections/Figures/stringScrambleB.png" width="89%%"/>
+      <image source="Unit4-Data-Collections/Figures/stringScrambleB.png" width="89%"/>
     </figure>
     <p>Assume that the method <c>scrambleWord</c> works as intended and is in the same class.  It will return the scrambled word or the same word.  You will write the <c>scrambleOrRemove</c> method to replace each original word with the scrambled word or remove the word if it was not scrambled.</p>
     <program language="java">
@@ -50,7 +50,7 @@ public class ScrambledStrings
             <subsection>
                 <p>In the example the first word (at index 0) <c>TAN</c> is scrambled and replaced. The second word <c>ABRACADABRA</c> (at index 1) is scrambled and replaced. The third word <c>WHOA</c> (at index 2) is removed. The fourth word <c>APPLE</c> (at index 3) is scrambled and replaced. The fifth word <c>EGGS</c> (at index 4) is removed since the scrambled word is the same as the original. What method of List allows you to replace an element in a list? What method of list allows you to remove an element from a list? How can you loop through a list and not always increment the current index?</p>
             </subsection>
-            <exercises line="66" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Data Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Data Type Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_0', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="66" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Data Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Data Type Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_0', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_0">
         <statement>
@@ -99,7 +99,7 @@ public class ScrambledStrings
 
     </exercise>
             </exercises>
-            <exercises line="83" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Parameter Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Parameter problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_0_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="83" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Parameter Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Parameter problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_0_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_0_5">
         <statement>
@@ -148,7 +148,7 @@ public class ScrambledStrings
 
     </exercise>
             </exercises>
-            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal While Loop Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide While Loop problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal While Loop Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide While Loop problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_1">
         <statement>
@@ -197,7 +197,7 @@ public class ScrambledStrings
 
     </exercise>
             </exercises>
-            <exercises line="117" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal For Loop Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide For Loop Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="117" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal For Loop Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide For Loop Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_2">
         <statement>
@@ -246,7 +246,7 @@ public class ScrambledStrings
 
     </exercise>
             </exercises>
-            <exercises line="134" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Accessor Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Accessor Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="134" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Accessor Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Accessor Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_3">
         <statement>
@@ -295,7 +295,7 @@ public class ScrambledStrings
 
     </exercise>
             </exercises>
-            <exercises line="151" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Checking Equality Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Checking Equality Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="151" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Checking Equality Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Checking Equality Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_mcalg_hint_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 
     <exercise label="strng_mcalg_answr_4">
         <statement>
@@ -366,7 +366,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
           iterate the index
 </code></program>
             </subsection>
-            <exercises line="195" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Solution 1 Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Solution 1 Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_scarmble_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="195" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Solution 1 Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Solution 1 Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_scarmble_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 <exercise label="StringScrambleB1" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
@@ -415,7 +415,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
               iterate the index
 </code></program>
             </subsection>
-            <exercises line="253" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Solution 2 Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Solution Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_scarmble_parsons_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
+            <exercises line="253" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Solution 2 Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Solution Problem&quot;', 'subchapter': 'stringScrambleB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'strng_scarmble_parsons_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/stringScrambleB.rst">
 <exercise label="StringScrambleB2" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>

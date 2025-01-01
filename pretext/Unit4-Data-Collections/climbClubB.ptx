@@ -104,7 +104,7 @@ hikerClub.addClimb("Monadnock", 344);
     </program>
     <p>When the code segment has completed execution, the instance variable <c>climbList</c> would contain the
             following entries in either of the orders shown below.</p>
-    <image source="Unit4-Data-Collections/Figures/climbClubB.png" width="89%%" alt="Picture of the list after the above code executes"/>
+    <image source="Unit4-Data-Collections/Figures/climbClubB.png" width="89%" alt="Picture of the list after the above code executes"/>
   </introduction>
   <subsection>
             <title>Walk Through the Example</title>
@@ -129,7 +129,7 @@ hikerClub.addClimb("Monadnock", 344);
             <subsection>
                 <p>Loop through the elements of <c>climbList</c> until you find the index where the new peakName is less than the peakName of the <c>ClimbInfo</c> object at the current index.  Insert the new <c>ClimbInfo</c> object there.</p>
             </subsection>
-            <exercises line="141" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'climbClubB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_climbB_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/climbClubB.rst">
+            <exercises line="141" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'climbClubB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_climbB_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/climbClubB.rst">
 
     <exercise label="fr_climbB_1">
         <statement>

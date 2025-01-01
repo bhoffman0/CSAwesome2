@@ -20,7 +20,7 @@
     <p>Remember that strings are a sequence of characters where each character is at a position or <term>index</term> starting at 0.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A string with the position (index) shown above each character</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/stringIndicies.png" width="89%%" alt="a string with the position (index) shown above each character"/>
+      <image source="Unit2-Selection-and-Iteration/Figures/stringIndicies.png" width="89%" alt="a string with the position (index) shown above each character"/>
     </figure>
     <note>
             <p>The first character in a Java String is at index 0 and the last characters is at <term>length()</term> - 1. So loops processing Strings should start at 0!</p>
@@ -277,7 +277,7 @@ public class ReverseString
         </subsection>
   <subsection>
             <title>Coding Challenge : String Replacement Cats and Dogs</title>
-            <image source="Unit2-Selection-and-Iteration/Figures/catordog.jpg" width="27%%" alt="Cat or Dog"/>
+            <image source="Unit2-Selection-and-Iteration/Figures/catordog.jpg" width="27%" alt="Cat or Dog"/>
             <p>Are you a cat person or a dog person? The code below prints a nice message about cats, but if you’re a dog person, you might not agree.</p>
             <p><ol marker="1">
                 <li>

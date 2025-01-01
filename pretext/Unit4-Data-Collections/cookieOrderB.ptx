@@ -89,18 +89,18 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
     </program>
     <p>After the code segment has executed, the contents of the master order are as shown in the following table.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/cookieOrderTable.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/cookieOrderTable.png" width="100%"/>
     </figure>
     <p>The method call <c>goodies.removeVariety("Chocolate Chip")</c> returns 4 because there were two Chocolate Chip cookie orders totaling 4 boxes. The master order is modified as shown below.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/cookieOrderTable2.png" width="51%%"/>
+      <image source="Unit4-Data-Collections/Figures/cookieOrderTable2.png" width="51%"/>
     </figure>
     <p>The method call <c>goodies.removeVariety("Brownie")</c> returns <title_reference>0</title_reference> and does not change the master order.</p>
   </introduction>
   <subsection>
             <title>How to Solve This</title>
             <p>Click to reveal multiple choice questions that may help you write your solution.</p>
-            <exercises line="119" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'cookieOrderB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_cookieB_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderB.rst">
+            <exercises line="119" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'cookieOrderB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_cookieB_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderB.rst">
 
     <exercise label="fr_cookieB_1">
         <statement>
@@ -220,37 +220,37 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
   <subsection>
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
-            <exercises line="162" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'cookieOrderB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'cookieOrderB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderB.rst">
+            <exercises line="162" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'cookieOrderB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'cookieOrderB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderB.rst">
 <exercise label="cookieOrderB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method <c>removeVariety</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.</p>
 </statement>
-<blocks><block order="9">
+<blocks><block order="10">
 <cline>private int removeVariety(String cookieVar)</cline>
 <cline>{</cline>
 <cline>   int numBoxesRemoved = 0;</cline>
-</block><block order="10">
+</block><block order="2">
 <cline>   for (int i = this.orders.size() - 1; i &gt;= 0; i--)</cline>
 <cline>   {</cline>
-</block><block order="7" correct="no">
+</block><block order="1" correct="no">
 <cline>   for (CookieOrder co : this.orders)</cline>
 <cline>   { </cline>
-</block><block order="8">
+</block><block order="11">
 <cline>      CookieOrder thisOrder = this.orders.get(i);</cline>
-</block><block order="1">
+</block><block order="7">
 <choice correct="yes"><cline>      if(cookieVar.equals(thisOrder.getVariety()))</cline>
 <cline>      {</cline>
 </choice><choice><cline>      if(cookieVar == thisOrder.getVariety())</cline>
 <cline>      { </cline>
-</choice></block><block order="6">
+</choice></block><block order="3">
 <cline>         numBoxesRemoved += thisOrder.getNumBoxes();</cline>
 <cline>         this.orders.remove(i);</cline>
-</block><block order="3">
+</block><block order="6">
 <cline>      } // end if</cline>
 </block><block order="5">
 <cline>   } // end for</cline>
-</block><block order="2">
+</block><block order="9">
 <cline>   return numBoxesRemoved;</cline>
-</block><block order="11">
+</block><block order="4">
 <cline>} // end method</cline>
 </block></blocks></exercise>            </exercises>
         </subsection>

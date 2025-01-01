@@ -6,7 +6,7 @@
     <p>If you have multiple subclasses that inherit from a superclass, you can form an <term>inheritance hierarchy</term>. Every subclass is-a or is a kind of the superclass. For example, here is an inheritance hierarchy of Shapes. Square is-a Rectangle and a subclass of Rectangle. Rectangle is-a Shape and a subclass of Shape. In Java, the class <term>Object</term> is at the top of hierarchy. Every class in Java inherits from Object and is-an Object.</p>
     <figure align="center">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An Inheritance Hierarchy of Shapes</caption>
-    <image source="Unit5-Inheritance/Figures/shapes.png" width="71%%"/>
+    <image source="Unit5-Inheritance/Figures/shapes.png" width="71%"/>
   </figure>
     <p>One of the main reasons to use an inheritance hierarchy is that all the classes
             in the hierarchy can be treated as instances of the top type in the hierarchy.
@@ -398,7 +398,7 @@ class Dog extends Pet
         </subsection>
   <subsection>
             <title>Coding Challenge : Shopping Cart</title>
-            <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%%" alt="Shopping"/>
+            <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%" alt="Shopping"/>
             <p>The following code contains a class called ShoppingCart that simulates a grocery store or an online store’s shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this <url href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" visual="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart">replit.com link</url>. We encourage you to work in pairs.</p>
             <p>In this challenge, you will add a new class called <c>DiscountedItem</c> that extends the <c>Item</c> class. The <c>ArrayList</c> of <c>Item</c> will still work since it can hold the subclasses of <c>Item</c> too! The <c>ShoppingCart</c> <c>printOrder</c> method will work with <c>Item</c> and <c>DiscountedItem</c> but note that it has an <c>if</c> statement that treats <c>DiscountedItem</c> differently.</p>
             <p>In the <c>DiscountedItem</c> subclass,</p>

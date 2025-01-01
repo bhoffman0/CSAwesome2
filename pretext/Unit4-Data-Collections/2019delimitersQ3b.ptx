@@ -23,7 +23,7 @@
   <subsection>
             <title>Check your understanding of the Question</title>
             <p>The problems in this section can help you check your understanding of part B.  You can skip these if you think you know what to do already.  Click on a button to reveal a question.</p>
-            <exercises line="33" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cub_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
+            <exercises line="33" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cub_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
 
     <exercise label="delim_cub_mc_1">
         <statement>
@@ -72,7 +72,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="52" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cub_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
+            <exercises line="52" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cub_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
 
     <exercise label="delim_cub_mc_2">
         <statement>
@@ -148,7 +148,7 @@
                     initially. Each time through the loop we will check if the current string which we will call currString is equal to <c>openDel</c> and if so increment <c>totalOpen</c>, otherwise if it is equal to <c>closeDel</c> increment <c>totalClose</c>.   Next if <c>totalClose</c> &gt; <c>totalOpen</c> the method should return false.  A
                     After the loop return <c>totalOpen</c> == <c>totalClose</c>.  This will return true if they are equal and false otherwise.</p>
             </subsection>
-            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solveb_mc_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
+            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solveb_mc_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
 
     <exercise label="delim_solveb_mc_1">
         <statement>
@@ -197,7 +197,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="119" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solveb_mc_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
+            <exercises line="119" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3b', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solveb_mc_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3b.rst">
 
     <exercise label="delim_solveb_mc_2">
         <statement>

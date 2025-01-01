@@ -14,13 +14,13 @@
             to bottom and the column number (index) increases from left to right.</p>
   <figure align="center">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A 2D array stored in row-major order or column-major order as a 1D array.</caption>
-    <image source="Unit4-Data-Collections/Figures/rowMajor.png" width="45%%"/>
+    <image source="Unit4-Data-Collections/Figures/rowMajor.png" width="45%"/>
   </figure>
   <p>Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
             The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.</p>
   <figure align="center">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Java arrays of arrays</caption>
-    <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%%"/>
+    <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%"/>
   </figure>
   <p>To loop through the values in a 2D array you must have two indexes. One index is used to change the
             row index and one is used to change the column index. You can use nested loops, which is one for

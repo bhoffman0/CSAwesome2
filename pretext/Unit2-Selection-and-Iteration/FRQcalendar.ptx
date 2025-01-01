@@ -141,7 +141,7 @@ public class APCalendar
  }
 </code></program>
             <p>Next, plan your loop. Click to reveal some problems that may help you to plan the loop.</p>
-            <exercises line="144" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'call_loop_type_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="144" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'call_loop_type_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
     <exercise label="callooptype">
         <statement>
@@ -318,7 +318,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using the rubric below. Did you receive all 5 points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the numberOfLeapYears method</caption><image source="Unit2-Selection-and-Iteration/Figures/numberOfLeapYearsRubric.png" width="100%%" alt="Rubric for the numberOfLeapYears method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the numberOfLeapYears method</caption><image source="Unit2-Selection-and-Iteration/Figures/numberOfLeapYearsRubric.png" width="100%" alt="Rubric for the numberOfLeapYears method"/></figure>
         </subsection>
   <subsection>
             <title>Part B: dayOfWeek()</title>
@@ -332,7 +332,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
             <p>If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples by revealing the problems below.</p>
-            <exercises line="297" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="297" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
     <exercise label="dow1">
         <statement>
@@ -381,7 +381,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="315" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="315" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
     <exercise label="dow2">
         <statement>
@@ -430,7 +430,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="333" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="333" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
     <exercise label="dow3">
         <statement>
@@ -499,7 +499,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
             <p>Try the <c>%</c> operator below.</p>
-            <exercises line="369" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'mod_r', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="369" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'mod_r', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
 <exercise label="mod">
     <statement>
@@ -550,7 +550,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             </exercises>
-            <exercises line="419" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
+            <exercises line="419" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': 'FRQcalendar', 'chapter': 'Unit2-Selection-and-Iteration', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'dow_r4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit2-Selection-and-Iteration/FRQcalendar.rst">
 
     <exercise label="dow4">
         <statement>
@@ -711,6 +711,6 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the dayOfWeek method</caption><image source="Unit2-Selection-and-Iteration/Figures/dayOfWeekRubric.png" width="100%%" alt="Rubric for the dayOfWeek method"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the dayOfWeek method</caption><image source="Unit2-Selection-and-Iteration/Figures/dayOfWeekRubric.png" width="100%" alt="Rubric for the dayOfWeek method"/></figure>
         </subsection>
 </section>

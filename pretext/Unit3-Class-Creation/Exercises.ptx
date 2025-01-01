@@ -3,7 +3,7 @@
 <section xml:id="Exercises">
   <title>Multiple-Choice Exercises</title>
   <exercises>
-    <exercise label="AP5-1-3">
+    <exercise label="AP-OOP-1">
         <statement>
 
         <p> The Liquid class will contain two double attributes for a liquid’s boiling point temperature and freezing point temperature. The class will also contain a constructor.</p>
@@ -15,50 +15,50 @@ public class Liquid
 Which of the following replacements for /* missing code */ is the most appropriate
 implementation of the class?
 </code></program>
-</statement><choices><choice correct="yes"><statement id="AP5-1-3_opt_a">        <program language="java"><code>
+</statement><choices><choice correct="yes"><statement id="AP-OOP-1_opt_a">        <program language="java"><code>
 private double boilingPoint;
 private double freezingPoint;
 public Liquid(double boilingPoint, double freezingPoint)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-3_opt_a">
+</statement><feedback id="AP-OOP-1_opt_a">
         <p>Correct! The instance variables should be private and the constructor and methods should be public.</p>
-</feedback></choice><choice><statement id="AP5-1-3_opt_b">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-1_opt_b">        <program language="java"><code>
 private double boilingPoint;
 private double freezingPoint;
 private Liquid(double boilingPoint, double freezingPoint)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-3_opt_b">
+</statement><feedback id="AP-OOP-1_opt_b">
         <p>Constructors should be public.</p>
-</feedback></choice><choice><statement id="AP5-1-3_opt_c">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-1_opt_c">        <program language="java"><code>
 private double boilingPoint;
 public double freezingPoint;
 private Liquid(double freezingPoint, double boilingPoint)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-3_opt_c">
+</statement><feedback id="AP-OOP-1_opt_c">
         <p>The instance variables should be private and the constructor and methods should be public.</p>
-</feedback></choice><choice><statement id="AP5-1-3_opt_d">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-1_opt_d">        <program language="java"><code>
 public double boilingPoint;
 public double freezingPoint;
 private Liquid(double boilingPoint, double freezingPoint)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-3_opt_d">
+</statement><feedback id="AP-OOP-1_opt_d">
         <p>The instance variables should be private and the constructor and methods should be public.</p>
-</feedback></choice><choice><statement id="AP5-1-3_opt_e">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-1_opt_e">        <program language="java"><code>
 public double freezingPoint;
 public double boilingPoint;
 public Liquid(double freezingPoint, double boilingPoint)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-3_opt_e">
+</statement><feedback id="AP-OOP-1_opt_e">
         <p>The instance variables should be private.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-1-4">
+    <exercise label="AP-OOP-2">
         <statement>
 
         <p> The Cat class below will contain two String attributes and one int attribute for name, color, and age; a constructor; and an adoptCat method. The adoptCat method is intended to be accessed outside the class.</p>
@@ -70,7 +70,7 @@ public class Cat
 Which of the following replacements for /* missing code */ is the most appropriate
 implementation of the class?
 </code></program>
-</statement><choices><choice><statement id="AP5-1-4_opt_a">        <program language="java"><code>
+</statement><choices><choice><statement id="AP-OOP-2_opt_a">        <program language="java"><code>
 private String name;
 private String color;
 private int age;
@@ -79,9 +79,9 @@ public Cat()
 private void adoptCat(String n, String c, int a)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-4_opt_a">
+</statement><feedback id="AP-OOP-2_opt_a">
         <p>Method adoptCat() should be public.</p>
-</feedback></choice><choice><statement id="AP5-1-4_opt_b">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-2_opt_b">        <program language="java"><code>
 public String name;
 public String color;
 public int age;
@@ -90,9 +90,9 @@ private Cat()
 private void adoptCat(String n, String c, int a)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-4_opt_b">
+</statement><feedback id="AP-OOP-2_opt_b">
         <p>Method and constructor should be public, and instance variables should be private.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-1-4_opt_c">        <program language="java"><code>
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-2_opt_c">        <program language="java"><code>
 private String name;
 private String color;
 private int age;
@@ -101,9 +101,9 @@ public Cat()
 public void adoptCat(String n, String c, int a)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-4_opt_c">
+</statement><feedback id="AP-OOP-2_opt_c">
         <p>Correct! Method and constructor should be public, and instance variables should be private.</p>
-</feedback></choice><choice><statement id="AP5-1-4_opt_d">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-2_opt_d">        <program language="java"><code>
 public String name;
 public String color;
 public int age;
@@ -112,9 +112,9 @@ public Cat()
 public void adoptCat(String n, String c, int a)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-4_opt_d">
+</statement><feedback id="AP-OOP-2_opt_d">
         <p>Instance variables should be private.</p>
-</feedback></choice><choice><statement id="AP5-1-4_opt_e">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-2_opt_e">        <program language="java"><code>
 public String name;
 public String color;
 public int age;
@@ -123,12 +123,12 @@ private Cat()
 public void adoptCat(String n, String c, int a)
 { /* implementation not shown */ }
 </code></program>
-</statement><feedback id="AP5-1-4_opt_e">
+</statement><feedback id="AP-OOP-2_opt_e">
         <p>Instance variables should be private, and the constructor should be public.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-2-4">
+    <exercise label="AP-OOP-3">
         <statement>
 
         <p> Consider the definition of the Party class below. The class uses the instance variable numOfPeople to indicate how many people are at the party.</p>
@@ -148,25 +148,25 @@ public class Party
 Which of the following statements will create a Party object
 that represents a party that has three people at it?
 </code></program>
-</statement><choices><choice><statement id="AP5-2-4_opt_a">        <p>Party p = new Party (“Natasha”, “3”);</p>
-</statement><feedback id="AP5-2-4_opt_a">
+</statement><choices><choice><statement id="AP-OOP-3_opt_a">        <p>Party p = new Party (“Natasha”, “3”);</p>
+</statement><feedback id="AP-OOP-3_opt_a">
         <p>An int should be passed in as the second parameter, not a String.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-2-4_opt_b">        <p>Party p = new Party (“Eduardo”, 3);</p>
-</statement><feedback id="AP5-2-4_opt_b">
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-3_opt_b">        <p>Party p = new Party (“Eduardo”, 3);</p>
+</statement><feedback id="AP-OOP-3_opt_b">
         <p>Correct</p>
-</feedback></choice><choice><statement id="AP5-2-4_opt_c">        <p>Party p = new Party (“Emillio”, “three”);</p>
-</statement><feedback id="AP5-2-4_opt_c">
+</feedback></choice><choice><statement id="AP-OOP-3_opt_c">        <p>Party p = new Party (“Emillio”, “three”);</p>
+</statement><feedback id="AP-OOP-3_opt_c">
         <p>An int should be passed in as the second parameter, not a string.</p>
-</feedback></choice><choice><statement id="AP5-2-4_opt_d">        <p>Party p = new Party (“Bob”, three);</p>
-</statement><feedback id="AP5-2-4_opt_d">
+</feedback></choice><choice><statement id="AP-OOP-3_opt_d">        <p>Party p = new Party (“Bob”, three);</p>
+</statement><feedback id="AP-OOP-3_opt_d">
         <p>The word three would be treated as an undeclared variable here.</p>
-</feedback></choice><choice><statement id="AP5-2-4_opt_e">        <p>Party p = new Party (“Billie”, “2+1”);</p>
-</statement><feedback id="AP5-2-4_opt_e">
+</feedback></choice><choice><statement id="AP-OOP-3_opt_e">        <p>Party p = new Party (“Billie”, “2+1”);</p>
+</statement><feedback id="AP-OOP-3_opt_e">
         <p>Strings cannot perform addition.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-2-5">
+    <exercise label="AP-OOP-4">
         <statement>
 
         <p> Consider the following class definition. Each object of the class Party will store the party host’s name as partyHost, the number of people as numOfPeople, and the capacity that the event can hold as capacity. Which of the following code segments, found in a class other than Party, can be used to create a party hosted by Charlie without anyone there initially, but the place can hold 78 people ?</p>
@@ -247,7 +247,7 @@ III. Party b = new Party("Charlie", 0, 78);
 </choices>
 
     </exercise>
-    <exercise label="AP5-2-6">
+    <exercise label="AP-OOP-5">
         <statement>
 
         <p> Consider the following class definition.</p>
@@ -266,46 +266,46 @@ Party p = new Party(10, 5.0);
 Which of the following can be used to replace /* missing constructor */
 so that the object p is correctly created?
 </code></program>
-</statement><choices><choice><statement id="AP5-2-6_opt_a">        <program language="java"><code>
+</statement><choices><choice><statement id="AP-OOP-5_opt_a">        <program language="java"><code>
 public Party(int first, double second)
 {
     numOfPeople = 10;
     volumeOfMusic = 5.0;
 }
 </code></program>
-</statement><feedback id="AP5-2-6_opt_a">
+</statement><feedback id="AP-OOP-5_opt_a">
         <p>The constructor should be using the local variables to set the instance variables.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-2-6_opt_b">        <program language="java"><code>
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-5_opt_b">        <program language="java"><code>
 public Party(int first, double second)
 {
     numOfPeople = first;
     volumeOfMusic = second;
 }
 </code></program>
-</statement><feedback id="AP5-2-6_opt_b">
+</statement><feedback id="AP-OOP-5_opt_b">
         <p>Correct</p>
-</feedback></choice><choice><statement id="AP5-2-6_opt_c">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-5_opt_c">        <program language="java"><code>
 public Party(int first, double second)
 {
     first = 10;
     second = 5.0;
 }
 </code></program>
-</statement><feedback id="AP5-2-6_opt_c">
+</statement><feedback id="AP-OOP-5_opt_c">
         <p>The constructor should be using the parameters to set the instance variables.</p>
-</feedback></choice><choice><statement id="AP5-2-6_opt_d">        <program language="java"><code>
+</feedback></choice><choice><statement id="AP-OOP-5_opt_d">        <program language="java"><code>
 public Party(int first, double second)
 {
     first = numOfPeople;
     second = volumeOfMusic;
 }
 </code></program>
-</statement><feedback id="AP5-2-6_opt_d">
+</statement><feedback id="AP-OOP-5_opt_d">
         <p>The constructor should be changing the instance variables, not the local variables.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-3-3">
+    <exercise label="AP-OOP-6">
         <statement>
 
         <p> Consider the following class definition that defines a Liquid class with a boilingPoint, a currentTemperature, and a freezingPoint. For example, Liquid water = new Liquid(100, 50, 0); defines a water object with a boiling point of 100, a current temperature of 50, and a freezing temperature of 0.</p>
@@ -326,22 +326,22 @@ public class Liquid
 }
 </code></program>
         <p>Which of the following preconditions is reasonable for the Liquid constructor?</p>
-</statement><choices><choice><statement id="AP5-3-3_opt_a">        <p>Precondition: fp &gt; 0</p>
-</statement><feedback id="AP5-3-3_opt_a">
+</statement><choices><choice><statement id="AP-OOP-6_opt_a">        <p>Precondition: fp &gt; 0</p>
+</statement><feedback id="AP-OOP-6_opt_a">
         <p>Incorrect. The freezing point could be negative.</p>
-</feedback></choice><choice><statement id="AP5-3-3_opt_b">        <p>Precondition: currentTemp &gt; 0</p>
-</statement><feedback id="AP5-3-3_opt_b">
+</feedback></choice><choice><statement id="AP-OOP-6_opt_b">        <p>Precondition: currentTemp &gt; 0</p>
+</statement><feedback id="AP-OOP-6_opt_b">
         <p>Incorrect. Unable to make this assumption for all liquids.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-3-3_opt_c">        <p>Precondition: fp &lt; ct &lt; bp</p>
-</statement><feedback id="AP5-3-3_opt_c">
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-6_opt_c">        <p>Precondition: fp &lt; ct &lt; bp</p>
+</statement><feedback id="AP-OOP-6_opt_c">
         <p>Correct!</p>
-</feedback></choice><choice><statement id="AP5-3-3_opt_d">        <p>Precondition: fp &gt; ct &gt; bp</p>
-</statement><feedback id="AP5-3-3_opt_d">
+</feedback></choice><choice><statement id="AP-OOP-6_opt_d">        <p>Precondition: fp &gt; ct &gt; bp</p>
+</statement><feedback id="AP-OOP-6_opt_d">
         <p>Incorrect. This would again result in freezing point being &gt; boiling point which is impossible.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-4-4">
+    <exercise label="AP-OOP-7">
         <statement>
 
         <p>  Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?</p>
@@ -414,7 +414,7 @@ public class Cat
 </choices>
 
     </exercise>
-    <exercise label="AP5-4-3">
+    <exercise label="AP-OOP-8">
         <statement>
 
         <p> Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?</p>
@@ -434,25 +434,25 @@ public class Liquid
     }
 }
 </code></program>
-</statement><choices><choice><statement id="AP5-4-3_opt_a">        <p>The getCurrentTemperature method should be declared as private.</p>
-</statement><feedback id="AP5-4-3_opt_a">
+</statement><choices><choice><statement id="AP-OOP-8_opt_a">        <p>The getCurrentTemperature method should be declared as private.</p>
+</statement><feedback id="AP-OOP-8_opt_a">
         <p>Accessor methods should be public methods.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-4-3_opt_b">        <p>The return type of the getCurrentTemperature method should be int.</p>
-</statement><feedback id="AP5-4-3_opt_b">
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-8_opt_b">        <p>The return type of the getCurrentTemperature method should be int.</p>
+</statement><feedback id="AP-OOP-8_opt_b">
         <p>Correct! The return type should match the type of the variable being returned.</p>
-</feedback></choice><choice><statement id="AP5-4-3_opt_c">        <p>The getCurrentTemperature method should have at least one parameter.</p>
-</statement><feedback id="AP5-4-3_opt_c">
+</feedback></choice><choice><statement id="AP-OOP-8_opt_c">        <p>The getCurrentTemperature method should have at least one parameter.</p>
+</statement><feedback id="AP-OOP-8_opt_c">
         <p>Get methods do not need parameters.</p>
-</feedback></choice><choice><statement id="AP5-4-3_opt_d">        <p>The variable currentTemperature is not declared inside of the getCurrentTemperature method.</p>
-</statement><feedback id="AP5-4-3_opt_d">
+</feedback></choice><choice><statement id="AP-OOP-8_opt_d">        <p>The variable currentTemperature is not declared inside of the getCurrentTemperature method.</p>
+</statement><feedback id="AP-OOP-8_opt_d">
         <p>currentTemperature is an instance variable that is shared by all the methods in the class.</p>
-</feedback></choice><choice><statement id="AP5-4-3_opt_e">        <p>The instance variable ct should be returned instead of currentTemperature.</p>
-</statement><feedback id="AP5-4-3_opt_e">
+</feedback></choice><choice><statement id="AP-OOP-8_opt_e">        <p>The instance variable ct should be returned instead of currentTemperature.</p>
+</statement><feedback id="AP-OOP-8_opt_e">
         <p>The getCurrentTemperature method does not have access to the ct variable which is the parameter for the constructor.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-5-3">
+    <exercise label="AP-OOP-9">
         <statement>
 
         <p> Consider the following class definition.</p>
@@ -483,25 +483,25 @@ Liquid liq = new Liquid(50);
 System.out.println("The temperature of the liquid is " + liq.currentTemp);
 </code></program>
         <p>Which of the following best identifies the reason the code segment does not compile?</p>
-</statement><choices><choice><statement id="AP5-5-3_opt_a">        <p>The Liquid class constructor should not have a parameter.</p>
-</statement><feedback id="AP5-5-3_opt_a">
+</statement><choices><choice><statement id="AP-OOP-9_opt_a">        <p>The Liquid class constructor should not have a parameter.</p>
+</statement><feedback id="AP-OOP-9_opt_a">
         <p>The constructor does have a parameter.</p>
-</feedback></choice><choice><statement id="AP5-5-3_opt_b">        <p>The resetTemperature method does not return a value that can be printed.</p>
-</statement><feedback id="AP5-5-3_opt_b">
+</feedback></choice><choice><statement id="AP-OOP-9_opt_b">        <p>The resetTemperature method does not return a value that can be printed.</p>
+</statement><feedback id="AP-OOP-9_opt_b">
         <p>This is a void mutator method.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-5-3_opt_c">        <p>The private instance variable cannot be accessed from outside the class unless the accessor method is used.</p>
-</statement><feedback id="AP5-5-3_opt_c">
+</feedback></choice><choice correct="yes"><statement id="AP-OOP-9_opt_c">        <p>The private instance variable cannot be accessed from outside the class unless the accessor method is used.</p>
+</statement><feedback id="AP-OOP-9_opt_c">
         <p>Correct! The currentTemp instance variable is private and cannot be accessed outside of the class but the public accessor method getTemp() can be used instead.</p>
-</feedback></choice><choice><statement id="AP5-5-3_opt_d">        <p>The getTemp method cannot be called from outside the Liquid class.</p>
-</statement><feedback id="AP5-5-3_opt_d">
+</feedback></choice><choice><statement id="AP-OOP-9_opt_d">        <p>The getTemp method cannot be called from outside the Liquid class.</p>
+</statement><feedback id="AP-OOP-9_opt_d">
         <p>The getTemp accessor method should be used from outside the class.</p>
-</feedback></choice><choice><statement id="AP5-5-3_opt_e">        <p>currentTemp does not have a value.</p>
-</statement><feedback id="AP5-5-3_opt_e">
+</feedback></choice><choice><statement id="AP-OOP-9_opt_e">        <p>currentTemp does not have a value.</p>
+</statement><feedback id="AP-OOP-9_opt_e">
         <p>currentTemp is initialized to a value by the constructor but it is private and cannot be accessed outside the class.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-5-4">
+    <exercise label="AP-OOP-10">
         <statement>
 
         <p> In the Liquid class below, the raiseTemperature method is intended to increase the value of the instance variable currentTemp by the value of the parameter increase. The method does not work as intended.</p>
@@ -522,25 +522,25 @@ public class Liquid
 }
 </code></program>
         <p>Which of the following changes should be made so that the class definition compiles without error and the method raiseTemperature works as intended?</p>
-</statement><choices><choice correct="yes"><statement id="AP5-5-4_opt_a">        <p>Replace line 12 with <c>currentTemp += increase;</c></p>
-</statement><feedback id="AP5-5-4_opt_a">
+</statement><choices><choice correct="yes"><statement id="AP-OOP-10_opt_a">        <p>Replace line 12 with <c>currentTemp += increase;</c></p>
+</statement><feedback id="AP-OOP-10_opt_a">
         <p>Correct! This void mutator method should just change the value of currentTemp and not return a value.</p>
-</feedback></choice><choice><statement id="AP5-5-4_opt_b">        <p>Replace line 12 with <c>return currentTemp += increase;</c></p>
-</statement><feedback id="AP5-5-4_opt_b">
+</feedback></choice><choice><statement id="AP-OOP-10_opt_b">        <p>Replace line 12 with <c>return currentTemp += increase;</c></p>
+</statement><feedback id="AP-OOP-10_opt_b">
         <p>This void mutator method should just change the value of currentTemp and not return a value.</p>
-</feedback></choice><choice><statement id="AP5-5-4_opt_c">        <p>Replace line 12 with  <c>increase += currentTemp;</c></p>
-</statement><feedback id="AP5-5-4_opt_c">
+</feedback></choice><choice><statement id="AP-OOP-10_opt_c">        <p>Replace line 12 with  <c>increase += currentTemp;</c></p>
+</statement><feedback id="AP-OOP-10_opt_c">
         <p>This method should  change the value of currentTemp, not increase.</p>
-</feedback></choice><choice><statement id="AP5-5-4_opt_d">        <p>Replace line 10 with  <c>public raiseTemperature(int increase)</c></p>
-</statement><feedback id="AP5-5-4_opt_d">
+</feedback></choice><choice><statement id="AP-OOP-10_opt_d">        <p>Replace line 10 with  <c>public raiseTemperature(int increase)</c></p>
+</statement><feedback id="AP-OOP-10_opt_d">
         <p>This mutator method needs a return type of void.</p>
-</feedback></choice><choice><statement id="AP5-5-4_opt_e">        <p>Replace line 10 with  <c>public int raiseTemperature(int increase)</c></p>
-</statement><feedback id="AP5-5-4_opt_e">
+</feedback></choice><choice><statement id="AP-OOP-10_opt_e">        <p>Replace line 10 with  <c>public int raiseTemperature(int increase)</c></p>
+</statement><feedback id="AP-OOP-10_opt_e">
         <p>This mutator method should have a void return value and just change the value of currentTemp without returning a value.</p>
 </feedback></choice></choices>
 
     </exercise>
-    <exercise label="AP5-6-3">
+    <exercise label="AP-OOP-11">
         <statement>
 
         <p> Consider the following class definition. The calculatePizzaCostPerPerson method is intended to calculate the amount each person at the party must pay for pizza. The amount is equal to the total price of all the pizza boxes divided by the number of people at the party. Which of the following code segments should replace <em>missing code</em> so that the calculatePizzaCostPerPerson method will work as intended?</p>
@@ -612,7 +612,7 @@ public class Party
 </choices>
 
     </exercise>
-    <exercise label="AP5-6-4">
+    <exercise label="AP-OOP-12">
         <statement>
 
         <p> Consider the Party class below.</p>
@@ -712,230 +712,6 @@ III. if (numOfPeople += additionalPeople &lt;= capacity)
                 </feedback>
             </choice>
 </choices>
-
-    </exercise>
-    <exercise label="AP5-8-3">
-        <statement>
-
-        <p> Consider the following class definition.</p>
-        <program language="java"><code>
-public class Liquid
-{
-    private int currentTemp;
-    private int boilingPoint;
-
-    public Liquid(int ct, int bp)
-    {
-        currentTemp = ct;
-        boilingPoint = bp;
-    }
-
-    public void changeTemp(int newTemp)
-    {
-        currentTemp = newTemp;
-    }
-
-    public void increaseTemp(int howMuch)
-    {
-        currentTemp = newTemp + howMuch;
-    }
-}
-</code></program>
-        <p>Which of the following best explains why the class will not compile?</p>
-</statement><choices><choice><statement id="AP5-8-3_opt_a">        <p>The class is missing an accessor method.</p>
-</statement><feedback id="AP5-8-3_opt_a">
-        <p>The class does not necessarily need an accessor method.</p>
-</feedback></choice><choice><statement id="AP5-8-3_opt_b">        <p>The instance variables currentTemp and boilingPoint should be  public instead of private.</p>
-</statement><feedback id="AP5-8-3_opt_b">
-        <p>Instance variables are usually private.</p>
-</feedback></choice><choice><statement id="AP5-8-3_opt_c">        <p>The Liquid constructor needs a return type.</p>
-</statement><feedback id="AP5-8-3_opt_c">
-        <p>Constructors do not have return types.</p>
-</feedback></choice><choice><statement id="AP5-8-3_opt_d">        <p>The Liquid class is missing a constructor.</p>
-</statement><feedback id="AP5-8-3_opt_d">
-        <p>The class includes a constructor.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-8-3_opt_e">        <p>The variable newTemp is not defined in the increaseTemp method.</p>
-</statement><feedback id="AP5-8-3_opt_e">
-        <p>Correct! newTemp is defined in a different method. The instance variable currentTemp should be used instead.</p>
-</feedback></choice></choices>
-
-    </exercise>
-    <exercise label="AP5-8-4">
-        <statement>
-
-        <p> Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?</p>
-        <program language="java"><code>
-Party p = new Party(20, 15);
-p.orderMoreFood(20);
-p.eatFood(5);
-System.out.println(p.getBoxesOfFood());
-
-public class Party
-{
- private int boxesOfFood;
- private int numOfPeople;
-
- public Party(int people, int foodBoxes)
- {
-     numOfPeople = people;
-     boxesOfFood = foodBoxes;
- }
-
- public void orderMoreFood(int additionalFoodBoxes)
- {
-     int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
-     boxesOfFood = updatedAmountOfFood;
- }
-
- public int getNumOfPeople() {
-     return numOfPeople;
- }
-
- public int getBoxesOfFood() {
-     return boxesOfFood;
- }
-
- public void eatFood(int eatenBoxes)
- {
-     boxesOfFood = updatedAmountOfFood - eatenBoxes;
- }
-}
-</code></program>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>The private variables boxesOfFood and numOfPeople are not properly initialized.</p>
-                </statement>
-                <feedback>
-                    <p>The private variables boxesOfFood and numOfPeople are initialized by the constructor.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>The private variables boxesOfFood and numOfPeople should have been declared public.</p>
-                </statement>
-                <feedback>
-                    <p>Instance variables are usually private.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>The public method getBoxesOfFood should have been declared private.</p>
-                </statement>
-                <feedback>
-                    <p>Methods are usually public.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>The variable updatedAmountOfFood in the eatFood method is not declared in this method.</p>
-                </statement>
-                <feedback>
-                    <p>The variable updatedAmountOfFood in the eatFood method is not declared in this method. It could be replaced by the boxesOfFood instance variable.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.</p>
-                </statement>
-                <feedback>
-                    <p>The variables boxesOfFood and numOfPeople are instance variables.</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-    <exercise label="AP5-9-3">
-        <statement>
-
-        <p> Consider the following class definitions.</p>
-        <program language="java"><code>
-public class Party
-{
-    private String partyHost;
-    private int monthOfParty;
-    private int partyStartTime;
-
-    public Party(String h, int month, int startTime)
-    {
-        partyHost = h;
-        monthOfParty = month;
-        partyStartTime = startTime;
-    }
-
-    public int getMonth()
-    {
-        return monthOfParty;
-    }
-
-    public int getStartTime()
-    {
-        return partyStartTime;
-    }
-
-    public String getHost()
-    {
-        return partyHost;
-    }
-
-    public void addToOptions(PartyOptions o)
-    {
-        o.addParty(this);
-    }
-}
-
-public class PartyOptions
-{
-    private int onlyThisMonth;
-
-    public PartyOptions(int month)
-    {
-        onlyThisMonth = month;
-    }
-
-    /* A Party should only be added to this PartyOption if the party’s month matches onlyThisMonth */
-    public void addParty(Party p)
-    {
-        if (p.getMonth() == onlyThisMonth)
-        {
-            System.out.print("Party by " + p.getHost() + " accepted; ");
-        }
-        else
-        {
-            System.out.print("Party by " + p.getHost() + " rejected; ");
-        }
-    }
-}
-</code></program>
-        <p>Consider the following code segment, which appears in a class other than Party or PartyOptions.</p>
-        <program language="java"><code>
-Party p1 = new Party("Kerry", 10, 7);
-Party p2 = new Party("Jules", 9, 6);
-
-PartyOptions options = new PartyOptions(10);
-p1.addToOptions(options);
-p2.addToOptions(options);
-</code></program>
-</statement><choices><choice><statement id="AP5-9-3_opt_a">        <p>Party by Kerry rejected; Party by Jules rejected;</p>
-</statement><feedback id="AP5-9-3_opt_a">
-        <p>Kerry’s party should be accepted because it is in the 10th month.</p>
-</feedback></choice><choice><statement id="AP5-9-3_opt_b">        <p>Party by Kerry rejected; Party by Jules accepted;</p>
-</statement><feedback id="AP5-9-3_opt_b">
-        <p>Kerry’s party should be accepted because it is in the 10th month. Jules’ party should be rejected because it is not in the 10th month.</p>
-</feedback></choice><choice correct="yes"><statement id="AP5-9-3_opt_c">        <p>Party by Kerry accepted; Party by Jules rejected;</p>
-</statement><feedback id="AP5-9-3_opt_c">
-        <p>Kerry’s party is accepted because it is in the 10th month, and Jules’ party is not.</p>
-</feedback></choice><choice><statement id="AP5-9-3_opt_d">        <p>Party by Kerry accepted; Party by Jules accepted;</p>
-</statement><feedback id="AP5-9-3_opt_d">
-        <p>Jules’ party should be rejected because it is not in the 10th month.</p>
-</feedback></choice></choices>
 
     </exercise>
   </exercises>

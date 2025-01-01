@@ -155,9 +155,9 @@
             <p>Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end.</p>
             <p><term>Code Tracing</term> is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does.</p>
             <p>Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column or row in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceTable.png" width="27%%"/></figure>
+            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceTable.png" width="27%"/></figure>
             <p>or</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceInline.png" width="39%%"/></figure>
+            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceInline.png" width="39%"/></figure>
             <p>Trace through the following code:</p>
             <program language="java"><code>
 int x = 0;

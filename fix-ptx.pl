@@ -34,6 +34,7 @@ while (<>) {
   s/ref=".*lira"/ref="carla-de-lira-id1"/g;
   s/ref=".*mbayo"/ref="camille-mbayo-id1"/g;
   s/xml:id="exercises-1-1"-1/xml:id="recursive-exercises"/g;
+  s/(stories_)+/stories_/g;
 
   # Remove the hard-coded numbering of exercises Q6: or 1-1-1:
   s/Q\-\d+\://g;
