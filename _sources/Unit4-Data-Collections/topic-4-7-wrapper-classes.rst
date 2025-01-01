@@ -251,7 +251,7 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
 
         public PokeSpeed() throws IOException
         {
-            readLines(); // read in the file
+            readFile(); // read in the file
         }
 
         /* This method reads in filename into the pokemonLines array */
