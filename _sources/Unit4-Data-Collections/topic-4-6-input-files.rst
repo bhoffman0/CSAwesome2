@@ -580,13 +580,13 @@ Let's end with a challenge that combines all the skills you have learned so far.
 
    class Pokemon
    {
-       // Add at least 3 String attributes of a Pokemon 
+       // 1. Add at least 3 String attributes of a Pokemon 
        //   including name, type1, and imagefile
 
-       // Add a constructor that initializes the attributes of a Pokemon
+       // 2. Add a constructor that initializes the attributes of a Pokemon
        //  to the values given as arguments
 
-       // Add getters for the attributes
+       // 3. Add getters for the attributes
 
    }
 
@@ -598,10 +598,10 @@ Let's end with a challenge that combines all the skills you have learned so far.
 
        public PokemonArray() throws IOException
        {
-            readFile();
+            readFile(); // read in the data file into pokemonArray
        }
 
-       // 1. Write a method to read in the data file (it may throw an exception).
+       // 4. Write a method to read in the data file (it may throw an exception).
        // Loop through each row to split it into attributes.
        //     Create a new Pokemon object from the attributes.
        //     and save it into the pokemonArray
@@ -610,7 +610,7 @@ Let's end with a challenge that combines all the skills you have learned so far.
 
        }
 
-       // 2. Write a findType method that prints out the type of a Pokemon 
+       // 5. Write a findType method that prints out the type of a Pokemon 
        // given its name as an argument.
        // It should loop through the array to find the Pokemon object with the correct name.
        // It should print and return the type and print the image. 
@@ -635,8 +635,6 @@ Let's end with a challenge that combines all the skills you have learned so far.
        public static void main(String[] args) throws IOException
        {
            PokemonArray obj = new PokemonArray();
-           // Call your method to read in the data using obj.
-
            // Call your method to find the type of a Pokemon and display its image
            System.out.println("Pikachu's type is " + obj.findType("Pikachu"));
 
@@ -808,7 +806,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
            assertTrue(passed);
        }
        @Test
-       public void whileCode()
+       public void arrayCode()
        {
            boolean passed = checkCodeContains("Declares array []", "[]");
            assertTrue(passed);

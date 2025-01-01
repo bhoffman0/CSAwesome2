@@ -249,6 +249,11 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
         private String filename = "pokemon.csv";
         private String[] pokemonLines = new String[152];
 
+        public PokeSpeed() throws IOException
+        {
+            readLines(); // read in the file
+        }
+
         /* This method reads in filename into the pokemonLines array */
         public int readFile() throws IOException
         {
@@ -293,14 +298,12 @@ In the last lesson, we read in a file of Pokemon data. In this exercise, we will
 
             return averageSpeed;
         }
-        
+
         public static void main(String[] args) throws IOException
         {
             PokeSpeed p = new PokeSpeed();
-            int numLines = p.readFile();
             System.out.println("Max speed: " + p.findMaxSpeed());
-            System.out.println("Average speed: " + p.findAverageSpeed());
-            
+            System.out.println("Average speed: " + p.findAverageSpeed());            
         }
     }
     ====
