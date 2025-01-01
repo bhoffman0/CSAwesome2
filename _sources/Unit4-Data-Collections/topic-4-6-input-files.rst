@@ -370,13 +370,8 @@ The following exercise reads in a data file about Pokemon and prints out the fir
        }
    }
 
-Object-Oriented Design with CSV Files
+Split Strings
 ---------------------------------------------
-
-.. image:: https://play.pokemonshowdown.com/sprites/bw/pikachu.png
-   :width: 150px
-   :align: left
-   :alt: Pikachu
 
 If you take a look at the Pokemon CSV file, you'll notice that each line contains multiple data attributes separated by commas. These attributes include each Pokemon's name, type, speed, etc. on each row. Typically, the first line of a CSV file serves as the header, indicating the names of these attributes. 
 
@@ -384,9 +379,6 @@ If you take a look at the Pokemon CSV file, you'll notice that each line contain
 
    // The first line of the Pokemon CSV file
    Number, Pokemon, Type 1, Type 2, HP, Attack, Defense, Speed, PNG, Description
-
-
-To better organize and work with this data, we can create a ``Pokemon`` class that corresponds to these attributes using object-oriented design. A CSV data file can be saved into an array of ``Pokemon`` objects by splitting each line (except the header) into the attributes for one ``Pokemon`` object.
 
 The Java ``String`` class provides a useful method called ``split(String delimeter)`` that allows us to split a string into an array of substrings based on a specified **delimiter** which is a character like a comma or a space that separates the units of data. This method returns a ``String`` array where each element in the array represents a field of data from the line.  
 
@@ -397,7 +389,7 @@ The Java ``String`` class provides a useful method called ``split(String delimet
     //  words = {"A", "quick", "brown", "fox", "jumps"}
     String[] words = sentence.split(" ");
 
-Here is an example of how to use the split method to split a line of data with commas separating the fields from the Pokemon csv file into identifiable chunks of data. The first line of headers in the file indicates that the 0th element of the data array is the Pokemon's number, element 1 is the name, etc. We only need to save the data that we want to use. In this case, we want to save the name, type1, speed, and imageFile. If we want to do math with the speed, we can convert it to an int using the ``Integer.parseInt`` method that will be described in the next lesson.
+Here is an example of how to use the split method to split a line of data with commas separating the fields from the Pokemon csv file into identifiable chunks of data. The first line of headers in the file indicates that the 0th element of the data array is the Pokemon's number, element 1 is the name, etc. We only need to save the data that we want to use. In this case, we want to save the name, type1, speed, and imageFile. If we want to do math or comparisons with the speed, we can convert it to an int using the ``Integer.parseInt`` method that will be described in the next lesson.
 
 .. code-block:: java
 
@@ -531,6 +523,11 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
        }
     }
 
+Object-Oriented Design with CSV Files
+--------------------------------------
+
+To better organize and work with this data, we can create a ``Pokemon`` class that corresponds to these attributes using object-oriented design. A CSV data file can be saved into an array of ``Pokemon`` objects by splitting each line (except the header) into the attributes for one ``Pokemon`` object.
+
 We can use the ``split`` method to extract the individual pieces of data from each line of the CSV file and save this data into a ``Pokemon`` object. We must first create a ``Pokemon`` class with instance variables that correspond to the data attributes, and a constructor that initializes these variables. Assuming that we have already written the ``Pokemon`` class and constructor, the following code creates a Pokemon object from the data using its constructor and saves it into an array of ``Pokemon`` objects.
 
 .. code-block:: java
@@ -565,6 +562,11 @@ Let's try the code to read into an array of Pokemon objects in the challenge exe
 
 |Groupwork| Coding Challenge: Array of Pokemon from Input File
 -------------------------------------------------------------------
+
+.. image:: https://play.pokemonshowdown.com/sprites/bw/pikachu.png
+   :width: 150px
+   :align: left
+   :alt: Pikachu
 
 Let's end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Create a class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an array of Pokemon objects. Write a ``findType`` method that returns to the type of a Pokemon given its name as an argument. It should loop through the array to find the right Pokemon object using the ``getName`` and ``getType`` methods that you will write. It should also display the image for the Pokemon.
 
