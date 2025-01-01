@@ -14,7 +14,7 @@
                 But like molten bronze is reshaped by melting it and pouring it into a mold, our
                 data is reshaped via a <term>cast</term> operator. In Java when you cast you are changing
                 the “shape” (or type) of the value.</p>
-            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%%"/></figure>
+            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%"/></figure>
             <p>The <term>cast operator</term>, which looks like <c>(int)</c> and <c>(double)</c> placed before
                 any expression (a literal, a number, a variable, or more complex expression in
                 parentheses) produces a value of the given type by converting the value of the

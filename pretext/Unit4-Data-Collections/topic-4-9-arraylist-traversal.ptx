@@ -320,20 +320,20 @@ public void numQuest()
 <exercise label="list_1" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
             <p>The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
-<blocks><block order="9">
+<blocks><block order="2">
 <cline>public static int getScore(ArrayList&lt;String&gt; wordList)</cline>
 <cline>{</cline>
-</block><block order="5">
+</block><block order="6">
 <cline>  int score = 0;</cline>
 <cline>  for (String word : wordList)</cline>
 <cline>  {</cline>
-</block><block order="8">
+</block><block order="9">
 <cline>    if (word.length() == 3)</cline>
-</block><block order="7">
+</block><block order="8">
 <cline>    {</cline>
 <cline>      score++;</cline>
 <cline>    }</cline>
-</block><block order="2">
+</block><block order="5">
 <cline>    else if (word.length() == 4)</cline>
 <cline>    {</cline>
 <cline>      score = score + 2;</cline>
@@ -343,34 +343,34 @@ public void numQuest()
 <cline>    {</cline>
 <cline>      score = score + 3;</cline>
 <cline>    }</cline>
-</block><block order="6">
+</block><block order="1">
 <cline>  } // end for</cline>
 </block><block order="4">
 <cline>  return score;</cline>
 <cline>} // end method</cline>
-</block><block order="1" correct="no">
+</block><block order="7" correct="no">
 <cline>if (word.length == 3) </cline>
 </block></blocks></exercise><exercise label="list_2" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
             <p>The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
-<blocks><block order="5">
+<blocks><block order="2">
 <cline>public void insertInOrder(String name)</cline>
 <cline>{</cline>
-</block><block order="3">
+</block><block order="5">
 <cline>  int index = 0;</cline>
-</block><block order="2">
+</block><block order="3">
 <cline>  while (index &lt; nameList.size() &amp;&amp;</cline>
 <cline>         nameList.get(index).compareTo(name) &lt; 0)</cline>
 <cline>  {</cline>
-</block><block order="1">
+</block><block order="6">
 <cline>    index++;</cline>
 </block><block order="8">
 <cline>  } // end while</cline>
-</block><block order="7">
-<cline>  nameList.add(index,name);</cline>
 </block><block order="4">
+<cline>  nameList.add(index,name);</cline>
+</block><block order="7">
 <cline>} // end method</cline>
-</block><block order="6" correct="no">
+</block><block order="1" correct="no">
 <cline>nameList.add(name); </cline>
 </block></blocks></exercise>        </subsection>
   <subsection>
@@ -568,7 +568,7 @@ class WordPair
         </tests>
     </program>
 </exercise>
-            <figure align="left"><image source="Unit4-Data-Collections/Figures/wordpairs.png" width="34%%"/></figure>
+            <figure align="left"><image source="Unit4-Data-Collections/Figures/wordpairs.png" width="34%"/></figure>
             <p>In this FRQ, you are given an array of words and you will create pairs of them
                 by taking the first word and pairing it with all the other words, then taking
                 the second word and pairing it with all but the first one, and so on. For

@@ -4,34 +4,198 @@
   <title>Scope and Access</title><introduction>
     
     <p>The <term>scope</term> of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (<c>{}</c>) – this is its scope.</p>
-    <p>Java has 3 levels of scope that correspond to different types of variables:</p>
-    <p>
-    <ul>
-            <li>
-                <p><term>Class Level Scope</term> for <term>instance variables</term> inside a class.</p>
-            </li>
-            <li>
-                <p><term>Method Level Scope</term> for <term>local variables</term> (including <term>parameter variables</term>) inside a method.</p>
-            </li>
-            <li>
-                <p><term>Block Level Scope</term> for <term>loop variables</term> and other local variables defined inside of blocks of code with { }.</p>
-            </li>
-        </ul>
-  </p>
-    <p>The image below shows these 3 levels of scope.</p>
-    <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Class, Method, and Block Level Scope</caption>
-    <image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%%" alt="Scope Levels"/>
-  </figure>
-    <p><term>Local variables</term> are variables that are declared inside a method, usually at the top of the method. These variables can only be used within the method and do not exist outside of the method. Parameter variables are also considered local variables that only exist for that method. It’s good practice to declare any variables that are used by just one method as local variables in that method.</p>
-    <p>Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have Class scope regardless of whether they are public or private.</p>
-    <p>Another way to look at scope is that a variable’s scope is where it lives and exists. You cannot use the variable in code outside of its scope. The variable does not exist outside of its scope.</p>
-    <p>If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We’ll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword this to refer to this object’s instance variables.</p>
   </introduction>
+  <subsection>
+            <title>Class, Method, and Block Level Scope</title>
+            <p>Java has 3 levels of scope that correspond to different types of variables:</p>
+            <p><ul>
+                <li>
+                    <p><term>Class Level Scope</term> for <term>instance variables</term> inside a class.</p>
+                </li>
+                <li>
+                    <p><term>Method Level Scope</term> for <term>local variables</term> (including <term>parameter variables</term>) inside a method.</p>
+                </li>
+                <li>
+                    <p><term>Block Level Scope</term> for <term>loop variables</term> and other local variables defined inside of blocks of code with { }.</p>
+                </li>
+            </ul></p>
+            <p>The image below shows these 3 levels of scope.</p>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Class, Method, and Block Level Scope</caption><image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%" alt="Scope Levels"/></figure>
+
+<exercise label="name_class_scope">
+    <statement><p>Click on all the variable declarations that are at Class Level Scope.</p></statement>
+<feedback><p>Remember that the instance variables declared at the top of the class have Class Scope.</p></feedback>
+<areas>
+<cline><area correct="no">public class Name</area></cline>
+<cline><area correct="no">{</area></cline>
+<cline>    <area correct="yes">private String first;</area></cline>
+<cline>    <area correct="yes">public String last;</area></cline>
+<cline/>
+<cline>    <area correct="no">public Name(String theFirst, String theLast)</area></cline>
+<cline>    <area correct="no">{</area></cline>
+<cline>        <area correct="no">String firstName = theFirst;</area></cline>
+<cline>        <area correct="no">first = firstName;</area></cline>
+<cline>        <area correct="no">last = theLast;</area></cline>
+<cline>    <area correct="no">}</area></cline>
+<cline><area correct="no">}</area></cline>
+</areas></exercise>
+<exercise label="name_method_scope">
+    <statement><p>Click on all the variable declarations that are at Method Level Scope.</p></statement>
+<feedback><p>Remember that the parameter variables and the local variables declared inside a method have Method Level Scope.</p></feedback>
+<areas>
+<cline><area correct="no">public class Name</area></cline>
+<cline><area correct="no">{</area></cline>
+<cline>    <area correct="no">private String first;</area></cline>
+<cline>    <area correct="no">public String last;</area></cline>
+<cline/>
+<cline>    public Name(<area correct="yes">String theFirst</area>, <area correct="yes">String theLast</area>)</cline>
+<cline>    <area correct="no">{</area></cline>
+<cline>        <area correct="yes">String firstName = theFirst;</area></cline>
+<cline>        <area correct="no">first = firstName;</area></cline>
+<cline>        <area correct="no">last = theLast;</area></cline>
+<cline>    <area correct="no">}</area></cline>
+<cline><area correct="no">}</area></cline>
+</areas></exercise>        </subsection>
+  <subsection>
+            <title>Local Variables</title>
+            <p><term>Local variables</term> are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared.
+                Local variables that are declared inside a method are usually declared at the top of the method. These variables can only be used within the method and do not exist outside of the method.</p>
+            <p>Parameter variables are also considered local variables that only exist for that method or constructor. These variables may only be used within the constructor or method and cannot be declared to be <c>public</c> or <c>private</c>.It’s good practice to declare any variables that are used by just one method as local variables in that method.</p>
+            <p>Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have class scope regardless of whether they are public or private.</p>
+            <p>Another way to look at scope is that a variable’s scope is where it lives and exists. You cannot use the variable in code outside of its scope. The variable does not exist outside of its scope.</p>
+
+<exercise label="PersonScope">
+    <statement>
+            <p>Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can’t access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Person
+{
+    private String name;
+    private String email;
+
+    public Person(String initName, String initEmail)
+    {
+        name = initName;
+        email = initEmail;
+    }
+
+    public String toString()
+    {
+        for (int i = 0; i &lt; 5; i++)
+        {
+            int id = i;
+        }
+        // Can you access the blockScope variables i or id?
+        System.out.println("i at the end of the loop is " + i);
+        System.out.println("The last id is " + id);
+
+        // Can toString() access parameter variables in Person()?
+        return initName + ": " + initEmail;
+    }
+
+    // main method for testing
+    public static void main(String[] args)
+    {
+        // call the constructor to create a new person
+        Person p1 = new Person("Sana", "sana@gmail.com");
+        System.out.println(p1);
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testCodeContains()
+    {
+        boolean passed =
+                checkCodeContains("returning instance variables", "return  name + \": \" + email;");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testCodeContains2()
+    {
+        boolean passed =
+                checkCodeContains("declaration and initialization of id to 0", "int id = 0;");
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+            <p>If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We’ll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword <c>this</c> to refer to this object’s instance variables.</p>
+
+<exercise label="PersonLocalVar">
+    <statement>
+            <p>In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Person
+{
+    private String name;
+    private String email;
+
+    public Person(String initName, String initEmail)
+    {
+        name = initName;
+        email = initEmail;
+    }
+
+    public String toString()
+    {
+        String name = "unknown";
+        // The local variable name here will be used,
+        //  not the instance variable name.
+        return name + ": " + email;
+    }
+
+    // main method for testing
+    public static void main(String[] args)
+    {
+        // call the constructor to create a new person
+        Person p1 = new Person("Sana", "sana@gmail.com");
+        System.out.println(p1);
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "unknown: sana@gmail.com";
+        boolean passed = getResults(expect, output, "Expected output from main", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+        </subsection>
   <subsection>
             <title>Coding Challenge : Debugging</title>
 
-<exercise label="challenge-5-8-Debug">
+<exercise label="challenge-scope-debug">
     <statement>
             <p>Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.</p>
 
@@ -178,13 +342,13 @@ public class RunestoneTests extends CodeTestHelper
                     <p><term>Scope</term> is defined as where a variable is accessible or can be used.</p>
                 </li>
                 <li>
-                    <p>Local variables can be declared in the body of constructors and methods. These variables may only be used within the constructor or method and cannot be declared to be public or private.</p>
+                    <p>(AP 3.8.A.1) <term>Local variables</term> are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared.</p>
                 </li>
                 <li>
-                    <p>When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.</p>
+                    <p>(AP 3.8.A.1) Parameters to constructors or methods are also considered local variables. These variables may only be used within the constructor or method and cannot be declared to be <c>public</c> or <c>private</c>.</p>
                 </li>
                 <li>
-                    <p>Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.</p>
+                    <p>(AP 3.8.A.2) When there is a local variable or parameter with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable within the body of the constructor or method.</p>
                 </li>
             </ul></p>
         </subsection>
@@ -319,165 +483,4 @@ public class Movie
 
     </exercise>
         </subsection>
-  <exercises>
-    <exercise label="name_class_scope">
-    <statement><p>Click on all the variable declarations that are at Class Level Scope.</p></statement>
-<feedback><p>Remember that the instance variables declared at the top of the class have Class Scope.</p></feedback>
-<areas>
-<cline><area correct="no">public class Name</area></cline>
-<cline><area correct="no">{</area></cline>
-<cline>    <area correct="yes">private String first;</area></cline>
-<cline>    <area correct="yes">public String last;</area></cline>
-<cline/>
-<cline>    <area correct="no">public Name(String theFirst, String theLast)</area></cline>
-<cline>    <area correct="no">{</area></cline>
-<cline>        <area correct="no">String firstName = theFirst;</area></cline>
-<cline>        <area correct="no">first = firstName;</area></cline>
-<cline>        <area correct="no">last = theLast;</area></cline>
-<cline>    <area correct="no">}</area></cline>
-<cline><area correct="no">}</area></cline>
-</areas></exercise>
-    <exercise label="name_method_scope">
-    <statement><p>Click on all the variable declarations that are at Method Level Scope.</p></statement>
-<feedback><p>Remember that the parameter variables and the local variables declared inside a method have Method Level Scope.</p></feedback>
-<areas>
-<cline><area correct="no">public class Name</area></cline>
-<cline><area correct="no">{</area></cline>
-<cline>    <area correct="no">private String first;</area></cline>
-<cline>    <area correct="no">public String last;</area></cline>
-<cline/>
-<cline>    public Name(<area correct="yes">String theFirst</area>, <area correct="yes">String theLast</area>)</cline>
-<cline>    <area correct="no">{</area></cline>
-<cline>        <area correct="yes">String firstName = theFirst;</area></cline>
-<cline>        <area correct="no">first = firstName;</area></cline>
-<cline>        <area correct="no">last = theLast;</area></cline>
-<cline>    <area correct="no">}</area></cline>
-<cline><area correct="no">}</area></cline>
-</areas></exercise>
-    <exercise label="PersonScope">
-    <statement>
-        <p>Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can’t access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Person
-{
-    private String name;
-    private String email;
-
-    public Person(String initName, String initEmail)
-    {
-        name = initName;
-        email = initEmail;
-    }
-
-    public String toString()
-    {
-        for (int i = 0; i &lt; 5; i++)
-        {
-            int id = i;
-        }
-        // Can you access the blockScope variables i or id?
-        System.out.println("i at the end of the loop is " + i);
-        System.out.println("The last id is " + id);
-
-        // Can toString() access parameter variables in Person()?
-        return initName + ": " + initEmail;
-    }
-
-    // main method for testing
-    public static void main(String[] args)
-    {
-        // call the constructor to create a new person
-        Person p1 = new Person("Sana", "sana@gmail.com");
-        System.out.println(p1);
-    }
-}
-
-</code><tests>
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void testCodeContains()
-    {
-        boolean passed =
-                checkCodeContains("returning instance variables", "return  name + \": \" + email;");
-        assertTrue(passed);
-    }
-
-    @Test
-    public void testCodeContains2()
-    {
-        boolean passed =
-                checkCodeContains("declaration and initialization of id to 0", "int id = 0;");
-        assertTrue(passed);
-    }
-}
-        </tests>
-    </program>
-</exercise>
-    <exercise label="PersonLocalVar">
-    <statement>
-        <p>In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Person
-{
-    private String name;
-    private String email;
-
-    public Person(String initName, String initEmail)
-    {
-        name = initName;
-        email = initEmail;
-    }
-
-    public String toString()
-    {
-        String name = "unknown";
-        // The local variable name here will be used,
-        //  not the instance variable name.
-        return name + ": " + email;
-    }
-
-    // main method for testing
-    public static void main(String[] args)
-    {
-        // call the constructor to create a new person
-        Person p1 = new Person("Sana", "sana@gmail.com");
-        System.out.println(p1);
-    }
-}
-
-</code><tests>
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void testMain() throws IOException
-    {
-        String output = getMethodOutput("main");
-        String expect = "unknown: sana@gmail.com";
-        boolean passed = getResults(expect, output, "Expected output from main", true);
-        assertTrue(passed);
-    }
-}
-        </tests>
-    </program>
-</exercise>
-  </exercises>
 </section>

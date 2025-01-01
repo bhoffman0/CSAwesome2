@@ -39,7 +39,7 @@ public class GrayImage
             grayscale image with 4 rows and 5 columns.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example before and after a call to processImage</caption>
-      <image source="Unit4-Data-Collections/Figures/grayImageB.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/grayImageB.png" width="100%"/>
     </figure>
     <program language="java">
       <code>
@@ -72,7 +72,7 @@ public class GrayImage
   <subsection>
             <title>How to solve this problem</title>
             <p>Once again, this problem starts with looping through the array of pixels, using a nested for loop for the 2D array. As we loop we will need to subtract pixel values from one another.</p>
-            <exercises line="88" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Subtraction Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Subtraction Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="88" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Subtraction Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Subtraction Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="grayImageB_0">
         <statement>
@@ -112,7 +112,7 @@ public class GrayImage
 
     </exercise>
             </exercises>
-            <exercises line="103" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Looping Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Looping Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="103" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Looping Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Looping Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="grayImageB_1">
         <statement>
@@ -153,7 +153,7 @@ public class GrayImage
     </exercise>
             </exercises>
             <p>When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops.</p>
-            <exercises line="121" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Bounds exercise&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Bounds exercise&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="121" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Bounds exercise&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Bounds exercise&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
                 <p>The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2),
                     but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the <problematic refid="id2">|Java Visualizer|</problematic> or the CodeLens button.</p>
 
@@ -220,7 +220,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 </exercise>
             <p>This set of questions will focus on a solution that starts indexing the array at zero, and stops 2 spaces before the end.</p>
-            <exercises line="185" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="185" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_3">
         <statement>
@@ -269,7 +269,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="203" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="203" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_4">
         <statement>
@@ -318,7 +318,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="220" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Below Zero Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Below Zero Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="220" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Below Zero Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Below Zero Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_5">
         <statement>
@@ -368,7 +368,7 @@ public class RunestoneTests extends CodeTestHelper
     </exercise>
             </exercises>
             <p>Next we will have questions focused on a solution that starts at the beginning of the loop and iterated through the entire thing, but checks for out of bounds errors as it subtracts.</p>
-            <exercises line="239" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_6', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="239" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_6', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_6">
         <statement>
@@ -417,7 +417,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="256" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_7', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="256" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_7', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_7">
         <statement>
@@ -466,7 +466,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
             </exercises>
-            <exercises line="273" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Out of Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Out of Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_8', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
+            <exercises line="273" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Out of Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Out of Bounds Problem&quot;', 'subchapter': 'grayImageB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': '2012GreyScaleB_alg_8', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/grayImageB.rst">
 
     <exercise label="2012GreyScaleB_b">
         <statement>

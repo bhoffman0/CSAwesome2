@@ -436,7 +436,7 @@ public class EnhancedItem extends Item
         </subsection>
   <subsection>
             <title>Coding Challenge : Pet Sounds</title>
-            <image source="Unit5-Inheritance/Figures/animalclinic.png" width="27%%" alt="Pets"/>
+            <image source="Unit5-Inheritance/Figures/animalclinic.png" width="27%" alt="Pets"/>
             <p>The following Pet class keeps track of a pet’s name and type and has a constructor, get method, and a method called speak() that prints an animal noise.</p>
             <p><ol marker="1">
                 <li>

@@ -44,7 +44,7 @@ public class Sound
             <c>-limit</c> are replaced with <c>–limit</c>. The method returns the total number of values that were changed in
             the array. For example, assume that the array samples has been initialized with the following values.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/soundTable.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/soundTable.png" width="100%"/>
     </figure>
     <p>When the statement</p>
     <program language="java">
@@ -54,7 +54,7 @@ int numChanges = limitAmplitude(2000);
     </program>
     <p>is executed, the value of <c>numChanges</c> will be 5, and the array <c>samples</c> will contain the following values.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/soundTable2.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/soundTable2.png" width="100%"/>
     </figure>
   </introduction>
   <subsection>
@@ -67,7 +67,7 @@ int numChanges = limitAmplitude(2000);
                 <p>If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.</p>
                 <p>We will have to return the count of values changed.</p>
             </subsection>
-            <exercises line="95" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'soundA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_sounda_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/soundA.rst">
+            <exercises line="95" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'soundA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_sounda_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundA.rst">
 
     <exercise label="fr_sounda_1">
         <statement>
@@ -149,33 +149,33 @@ int numChanges = limitAmplitude(2000);
   <subsection>
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
-            <exercises line="128" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'soundA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'soundA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/soundA.rst">
+            <exercises line="128" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'soundA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'soundA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundA.rst">
 <exercise label="SoundA" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
                 <p>The method <c>limitAmplitude</c> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.</p>
 </statement>
-<blocks><block order="1">
+<blocks><block order="4">
 <cline>public int limitAmplitude(int limit)</cline>
 <cline>{</cline>
-</block><block order="5">
+</block><block order="7">
 <cline>  int numChanged = 0;</cline>
 <cline>  for (int i = 0; i &lt; samples.length; i++)</cline>
 <cline>  {</cline>
 </block><block order="10">
 <cline>     if (samples[i] &gt; limit)</cline>
 <cline>     {</cline>
-</block><block order="2">
+</block><block order="8">
 <cline>        samples[i] = limit;</cline>
 <cline>        numChanged++;</cline>
-</block><block order="8">
+</block><block order="2">
 <cline>     } // end first if</cline>
 <cline>     if (samples[i] &lt; -limit)</cline>
 <cline>     {</cline>
-</block><block order="4">
+</block><block order="3">
 <cline>        samples[i] = -limit;</cline>
 <cline>        numChanged++;</cline>
-</block><block order="7">
+</block><block order="1">
 <cline>      } // end second if</cline>
-</block><block order="3">
+</block><block order="5">
 <cline>  } // end for</cline>
 </block><block order="9">
 <cline>  return numChanged;</cline>

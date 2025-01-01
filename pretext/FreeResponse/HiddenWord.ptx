@@ -10,7 +10,7 @@
     <p>After a guess is made, the player is given a hint that is based on a comparison between the hidden word and the guess. Each position in the hint contains a character that corresponds to the letter in the same position in the guess. The following rules determine the characters that appear in the hint.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The hints</caption>
-      <image source="FreeResponse/Figures/HiddenWordHints.png" width="100%%"/>
+      <image source="FreeResponse/Figures/HiddenWordHints.png" width="100%"/>
     </figure>
     <p>The <c>HiddenWord</c> class will be used to represent the hidden word in the game.  The hidden word is passed to the constructor.  The class contains a method, <c>getHint</c> that takes a guess and produces a hint.</p>
     <p>For example, suppose the variable <c>puzzle</c> is declared as follows.</p>
@@ -22,7 +22,7 @@ HiddenWord puzzle = new HiddenWord("HARPS");
     <p>The following table shows several guesses and the hints that would be produced.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example guesses and hints</caption>
-      <image source="FreeResponse/Figures/HiddenWordExamples.png" width="100%%"/>
+      <image source="FreeResponse/Figures/HiddenWordExamples.png" width="100%"/>
     </figure>
   </introduction>
   <subsection>

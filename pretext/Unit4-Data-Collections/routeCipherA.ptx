@@ -7,7 +7,7 @@
     <p><term>Question 4.</term>  In this question you will write two methods for a class <c>RouteCipher</c> that encrypts (puts into a coded form) a message by changing the order of the characters in the message. The route cipher fills a two-dimensional array with single-character substrings of the original message in row-major order, encrypting the message by retrieving the single-character substrings in column-major order.</p>
     <p>For example, the word “Surprise” can be encrypted using a 2-row, 4-column array as follows.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/routeCipherFig.png" width="97%%"/>
+      <image source="Unit4-Data-Collections/Figures/routeCipherFig.png" width="97%"/>
     </figure>
     <p>An incomplete implementation of the <c>RouteCipher</c> class is shown below.</p>
     <program language="java">
@@ -72,11 +72,11 @@ public class RouteCipher
     <p>If the length of the parameter <c>str</c> is smaller than the number of elements of the array, the string “A” is placed in each of the unfilled cells. If the length of <c>str</c> is larger than the number of elements in the array, the trailing characters are ignored.</p>
     <p>For example, if <c>letterBlock</c> has 3 rows and 5 columns and <c>str</c> is the string “Meet at noon”, the resulting contents of <c>letterBlock</c> would be as shown in the following table.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/routeCipherTable.png" width="28%%"/>
+      <image source="Unit4-Data-Collections/Figures/routeCipherTable.png" width="28%"/>
     </figure>
     <p>If <c>letterBlock</c> has 3 rows and 5 columns and <c>str</c> is the string “Meet at midnight”, the resulting contents of <c>letterBlock</c> would be as shown in the following table.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/routeCipherTable2.png" width="28%%"/>
+      <image source="Unit4-Data-Collections/Figures/routeCipherTable2.png" width="28%"/>
     </figure>
     <p>The following expression may be used to obtain a single-character string at position <c>k</c> of the string <c>str</c>.</p>
     <program language="java">
@@ -98,7 +98,7 @@ str.substring(k, k + 1)
                 Click on the buttons to reveal the questions.</p>
             <subsection>
                 <p>You will need to access each element in the <c>letterBlock</c> array. What type of loop will you use?</p>
-                <exercises line="123" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Type Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+                <exercises line="123" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Type Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_1.5MC">
         <statement>
@@ -157,7 +157,7 @@ str.substring(k, k + 1)
     </exercise>
                 </exercises>
                 <p>The <c>letterBlock</c> array has two dimensions. How many loops will you use?</p>
-                <exercises line="144" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Amount Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Amount Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.75', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+                <exercises line="144" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Amount Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Amount Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.75', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_1.75MC">
         <statement>
@@ -207,7 +207,7 @@ str.substring(k, k + 1)
     </exercise>
                 </exercises>
             </subsection>
-            <exercises line="161" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="161" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_2MC">
         <statement>
@@ -256,7 +256,7 @@ str.substring(k, k + 1)
 
     </exercise>
             </exercises>
-            <exercises line="178" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="178" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_3MC">
         <statement>
@@ -305,7 +305,7 @@ str.substring(k, k + 1)
 
     </exercise>
             </exercises>
-            <exercises line="195" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal String Method Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide String Method Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="195" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal String Method Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide String Method Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_4MC">
         <statement>
@@ -357,7 +357,7 @@ str.substring(k, k + 1)
         </subsection>
   <subsection>
             <title>The Algorithm</title>
-            <exercises line="214" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Access Formula Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Access Formula Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="214" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Access Formula Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Access Formula Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_5MC">
         <statement>
@@ -406,7 +406,7 @@ str.substring(k, k + 1)
 
     </exercise>
             </exercises>
-            <exercises line="231" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Formula Variable Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Formula Variable Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="231" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Formula Variable Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Formula Variable Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_5.5MC">
         <statement>
@@ -455,7 +455,7 @@ str.substring(k, k + 1)
 
     </exercise>
             </exercises>
-            <exercises line="248" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Conditional Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Conditional Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_6', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            <exercises line="248" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Conditional Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Conditional Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_6', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
 
     <exercise label="routeciphera_6MC">
         <statement>

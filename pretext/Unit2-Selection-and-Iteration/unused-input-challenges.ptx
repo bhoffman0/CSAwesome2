@@ -7,12 +7,12 @@
   </introduction>
   <subsection>
             <title>Programming Challenge : 20 Questions</title>
-            <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%%"/>
+            <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%"/>
             <p>Have you ever played 20 Questions? 20 Questions is a game where one person thinks of an object and the other players ask up to 20 questions to guess what it is.</p>
             <p>There is great online version called <url href="https://en.akinator.com/" visual="https://en.akinator.com/">Akinator</url> that guesses whether you are thinking of a real or fictional character by asking you questions. Akinator is a simple Artificial Intelligence algorithm that uses a decision tree of yes or no questions to pinpoint the answer.
                 Although Akinator needs a very large decision tree, we can create a  guessing game for animals using a much smaller number of if-statements.</p>
             <p>The Animal Guessing program that we will make uses the following decision tree:</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Animal Guessing Game Decision Tree</caption><image source="Unit2-Selection-and-Iteration/Figures/decision-tree.png" width="54%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Animal Guessing Game Decision Tree</caption><image source="Unit2-Selection-and-Iteration/Figures/decision-tree.png" width="54%"/></figure>
             <p><ol marker="1">
                 <li>
                     <p>Try the Animal Guessing game below. In Runestone, you need to provide the input below the code before you run it. It is set to answer the questions with y and y. Run the code to see the result. Change the input below the coding window to y n and n to guess the other animals. It can only guess 3 animals. Let’s add more! To see this program in an interactive input IDE, try it in <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/f99c4277-4ac8-4daf-b7b7-fb3b81cf380a#fdf19797-2354-4be2-9ccc-8c68ac4203ad" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/f99c4277-4ac8-4daf-b7b7-fb3b81cf380a#fdf19797-2354-4be2-9ccc-8c68ac4203ad">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/GuessAnimal#Main.java" visual="https://replit.com/@BerylHoffman/GuessAnimal#Main.java">replit</url> or your local IDE (where you should change the lines with <c>scan.next()</c> to <c>scan.nextLine()</c>).</p>
@@ -199,7 +199,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Coding Challenge : Guessing Game</title>
-            <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%%"/>
+            <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%"/>
             <p>We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like “Too high” or “Too low”. Here’s the pseudocode for the guessing game. <term>Pseudocode</term> is an English description or plan of what your code will do step by step. What’s the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?</p>
             <p><ol marker="1">
                 <li>

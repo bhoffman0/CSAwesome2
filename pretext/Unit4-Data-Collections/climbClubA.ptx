@@ -102,7 +102,7 @@ hikerClub.addClimb("Monadnock", 344);
     </program>
     <p>When the code segment has completed executing, the instance variable <c>climbList</c> would contain the
             following entries.</p>
-    <image source="Unit4-Data-Collections/Figures/climbClubA.png" width="89%%" alt="Picture of the list after the above code executes"/>
+    <image source="Unit4-Data-Collections/Figures/climbClubA.png" width="89%" alt="Picture of the list after the above code executes"/>
   </introduction>
   <subsection>
             <title>How To Solve This</title>
@@ -111,7 +111,7 @@ hikerClub.addClimb("Monadnock", 344);
                 <p>In the <c>addClimb</c> method you need to create a new <c>ClimbInfo</c> object and initialize the <c>peakName</c> and <c>climbTime</c>.  How do you create a new object of a class and initialize the fields?</p>
                 <p>Once you have created the <c>ClimbInfo</c> object you want to add it in the order they were created.  To do this you can add it to the end of the <c>climbList</c>.  How do you add an object to the end of a list?</p>
             </subsection>
-            <exercises line="132" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'climbClubA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_climbA_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/climbClubA.rst">
+            <exercises line="132" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'climbClubA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_climbA_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/climbClubA.rst">
 
     <exercise label="fr_climbA_1">
         <statement>
