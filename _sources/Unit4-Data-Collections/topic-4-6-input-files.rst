@@ -161,13 +161,13 @@ The ``Scanner`` class can be used to read input from the keyboard or from a file
    public class RunestoneTests extends CodeTestHelper
    {
         @Test
-        public void containsNextDouble()
+        public void containsnextDouble()
         {
             boolean passed = checkCodeContains("nextDouble()");
             assertTrue(passed);
         }
         @Test
-        public void containsNextDouble()
+        public void containsdouble()
         {
             boolean passed = checkCodeContains("double");
             assertTrue(passed);
@@ -180,12 +180,12 @@ Notice that the ``nextInt()`` and ``nextDouble()`` methods read in a number but 
 Loop to Read in a File
 -----------------------
 
-A ``while`` loop is usually used to read in a file with multiple lines. The loop can use the method ``hasNextLine`` as the loop condition to detect if the file still contains elements to
+A ``while`` loop is usually used to read in a file with multiple lines. The loop can use the method ``hasNext`` as the loop condition to detect if the file still contains elements to
 read. A loop with this condition will terminate when there are no more lines to read in the file. After the loop is finished reading the data, the ``close`` method from Scanner should be called to close the file.
 
 .. code-block:: java
 
-   while (scan.hasNextLine())
+   while (scan.hasNext())
    {
       String line = scan.nextLine();
       ...
@@ -244,7 +244,7 @@ read. A loop with this condition will terminate when there are no more lines to 
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String expect = "The first word in the dictionary file is: a";
+           String expect = "This file has 10000 lines.";
            boolean passed = getResults(expect, output, "Expected output from main");
            assertTrue(passed);
        }
@@ -256,9 +256,9 @@ read. A loop with this condition will terminate when there are no more lines to 
        }
 
        @Test
-       public void testHasNextLine()
+       public void testHasNext()
        {
-           boolean passed = checkCodeContains("hasNextLine()");
+           boolean passed = checkCodeContains("hasNext()");
            assertTrue(passed);
        }
    }
@@ -272,7 +272,7 @@ We can save a file line by line into an array. In the ``SpellChecker`` class, we
 
    String[] dictionary = new String[10000];
    int i = 0;
-   while(scan.hasNextLine())
+   while(scan.hasNext())
    {
         String line = scan.nextLine();
         dictionary[i] = line;
@@ -338,7 +338,7 @@ The following exercise reads in a data file about Pokemon and prints out the fir
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
-           String[] lines = output.split("\\s+");
+           String[] lines = output.split("\\n");
            boolean passed = lines.length >= 10;
 
            passed =
@@ -357,9 +357,9 @@ The following exercise reads in a data file about Pokemon and prints out the fir
            assertTrue(passed);
        }
        @Test
-       public void testHasNextLine()
+       public void testHasNext()
        {
-           boolean passed = checkCodeContains("hasNextLine()");
+           boolean passed = checkCodeContains("hasNext()");
            assertTrue(passed);
        }
        @Test
@@ -436,7 +436,7 @@ Try the exercise below to display Pokemon images using the ``split`` method to e
             File myFile = new File(filename);
             Scanner scan = new Scanner(myFile);
             int i = 0;
-            while (scan.hasNextLine())
+            while (scan.hasNext())
             {
                 pokemonLines[i] = scan.nextLine();
                 i++; 
@@ -539,30 +539,29 @@ We can use the ``split`` method to extract the individual pieces of data from ea
     Pokemon[] pokemonArray = new Pokemon[152];
 
     int i = 0;
-    while (scan.hasNextLine())
+    while (scan.hasNext())
     {
-        if (i > 0)  // the 0th line in the file is the column headers
-        {
-            String line = scan.nextLine();
-            // Split each line into its attributes name, type1, etc.
-            String[] data = line.split(",");
-            String name = data[1];
-            String type1 = data[2];
-            ...
-            String speed = data[7];
-            String imageFile = data[8];
+        String line = scan.nextLine();
+        // Split each line into its attributes name, type1, etc.
+        String[] data = line.split(",");
+        String name = data[1];
+        String type1 = data[2];
+        ...
+        String speed = data[7];
+        String imageFile = data[8];
            
-
-            // Create a Pokemon object from the split data 
-            Pokemon p = new Pokemon(name, type1, speed, imageFile);
-            // Save p in the array 
-            pokemonArray[i] = p;        
-        }
+        // Create a Pokemon object from the split data 
+        Pokemon p = new Pokemon(name, type1, speed, imageFile);
+        // Save p in the array 
+        pokemonArray[i] = p;        
+        
         i++;
     }
 
 
-Let's try this code in the challenge exercise below.
+Note that sometimes you may need to skip the 0th row in the file if it is column headers. For this file, it will just get split into strings, but if your data file contains numbers that need to be processed, you could skip one like: ``if (i == 0) scan.nextLine();``.
+
+Let's try the code to read into an array of Pokemon objects in the challenge exercise below.
 
 |Groupwork| Coding Challenge: Array of Pokemon from Input File
 -------------------------------------------------------------------
@@ -597,14 +596,21 @@ Let's end with a challenge that combines all the skills you have learned so far.
        private Pokemon[] pokemonArray = new Pokemon[152];
        private String filename = "pokemon.csv";
 
+       public PokemonArray() throws IOException
+       {
+            readFile();
+       }
 
-       // Write a method to read in the data file (it may throw an exception).
+       // 1. Write a method to read in the data file (it may throw an exception).
        // Loop through each row to split it into attributes.
        //     Create a new Pokemon object from the attributes.
        //     and save it into the pokemonArray
+       public void readFile() 
+       {
 
+       }
 
-       // Write a findType method that prints out the type of a Pokemon 
+       // 2. Write a findType method that prints out the type of a Pokemon 
        // given its name as an argument.
        // It should loop through the array to find the Pokemon object with the correct name.
        // It should print and return the type and print the image. 
@@ -632,7 +638,7 @@ Let's end with a challenge that combines all the skills you have learned so far.
            // Call your method to read in the data using obj.
 
            // Call your method to find the type of a Pokemon and display its image
-           // obj.findType("Pikachu");
+           System.out.println("Pikachu's type is " + obj.findType("Pikachu"));
 
        }
    }
@@ -648,7 +654,6 @@ Let's end with a challenge that combines all the skills you have learned so far.
        public RunestoneTests() throws IOException
        {
            super("PokemonArray");
-           readFile();
        }
 
        @Test
@@ -678,7 +683,8 @@ Let's end with a challenge that combines all the skills you have learned so far.
        @Test
        public void callFindType1() throws IOException
        {
-            String output = findType("Pikachu");
+            Object[] args = {"Pikachu"};
+            String output = getMethodOutput("findType", args);
             String expect = "Electric";
             boolean passed = getResults(expect, output, "Expected output from findType(\"Pikachu\")");
             assertTrue(passed);
@@ -686,7 +692,8 @@ Let's end with a challenge that combines all the skills you have learned so far.
         @Test
        public void callFindType2() throws IOException
        {
-            String output = findType("Bulbasaur");
+            Object[] args = {"Bulbasaur"};
+            String output = getMethodOutput("findType", args);
             String expect = "Grass";
             boolean passed = getResults(expect, output, "Expected output from findType(\"Bulbasaur\")");
             assertTrue(passed);
@@ -744,7 +751,7 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
        // Write a method to read in the data (it may throw an exception).
        // Loop through each row to split it into attributes.
        //     Create a new  object from the attributes.
-       //     and save it into the ArrayList.
+       //     and save it into the array.
 
        // Write a method that does something with the data
        // for example find the object with a min or max attribute value
@@ -792,6 +799,18 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
        public void splitCode()
        {
            boolean passed = checkCodeContains("call to split method", ".split");
+           assertTrue(passed);
+       }
+       @Test
+       public void whileCode()
+       {
+           boolean passed = checkCodeContains("while loop", "while");
+           assertTrue(passed);
+       }
+       @Test
+       public void whileCode()
+       {
+           boolean passed = checkCodeContains("Declares array []", "[]");
            assertTrue(passed);
        }
    }
