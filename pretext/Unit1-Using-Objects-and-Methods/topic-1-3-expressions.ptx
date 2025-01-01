@@ -280,7 +280,7 @@ public class RunestoneTests extends CodeTestHelper
                 remainder. That remainder is what is returned by this operator. In the figures
                 below, the remainders are the same values that would be returned by <c>2 % 3</c>
                 and <c>5 % 2</c>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="27%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="27%"/></figure>
             <p>Sometimes people—including Professor Lewis in the next video—will call <c>%</c>
                 the <term>modulo</term>, or <term>mod</term>, operator. That is not actually correct though the
                 difference between remainder and modulo, which uses Euclidean division instead
@@ -416,7 +416,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Coding Challenge : Pay Calculator</title>
-            <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%%"/></figure>
+            <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%"/></figure>
             <p>In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators.</p>
 
 <exercise label="challenge1-3-pay-calculator">

@@ -8,7 +8,7 @@
             zero, and <c>a</c>, <c>b</c>, and <c>c</c> are all integers. The slope of an <title_reference>APLine</title_reference> is defined to be the double value <c>-a / b</c> . A point (represented by integers <c>x</c> and <c>y</c>) is on an <title_reference>APLine</title_reference> if the equation of the <title_reference>APLine</title_reference> is satisfied when those <c>x</c> and <c>y</c> values are substituted into the equation. That is, a point represented by <c>x</c> and <c>y</c> is on the line if
             <c>ax + by + c</c> is equal to 0. Examples of two <title_reference>APLine</title_reference> equations are shown in the following table.</p>
     <figure align="center">
-      <image source="Unit3-Class-Creation/Figures/apLineTable.png" width="100%%"/>
+      <image source="Unit3-Class-Creation/Figures/apLineTable.png" width="100%"/>
     </figure>
     <p>Assume that the following code segment appears in a class other than <title_reference>APLine</title_reference>. The code segment shows an example of using the <title_reference>APLine</title_reference> class to represent the two equations shown in the table.</p>
     <program language="java">

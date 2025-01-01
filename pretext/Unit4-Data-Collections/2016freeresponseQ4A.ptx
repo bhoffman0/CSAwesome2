@@ -11,12 +11,12 @@
             Any leftover spaces are inserted one at a time into the gaps from left to right until there are no more leftover spaces.</p>
     <p>The following three examples illustrate these concepts. In each example, the list of words is to be placed into a formatted string of length 20.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/2016FRQ4A1.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/2016FRQ4A1.png" width="100%"/>
     </figure>
     <p>The leftover spaces are inserted one at a time between the words from left to right until there are no more leftover spaces.
             In this example, the first two gaps get an extra space.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/2016FRQ4A2.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/2016FRQ4A2.png" width="100%"/>
     </figure>
     <p>You will implement three static methods in a class named <c>StringFormatter</c> that is not shown.</p>
   </introduction>
@@ -41,7 +41,7 @@ public static int totalLetters(List&lt;String&gt; wordList)
                     integer variable to keep track of the number of letters and initialize it to 0.  Then we will loop through all of the strings in <c>wordList</c> and
                     add the length of the current string to the number of letters.  When the loop is finished we will return the number of letters.</p>
             </subsection>
-            <exercises line="68" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': '2016freeresponseQ4A', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_formatter_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4A.rst">
+            <exercises line="68" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': '2016freeresponseQ4A', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_formatter_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4A.rst">
 
     <exercise label="fr_formatter_1">
         <statement>
@@ -122,7 +122,7 @@ public static int totalLetters(List&lt;String&gt; wordList)
         </subsection>
   <subsection>
             <title>Put the Code in Order</title>
-            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': '2016freeresponseQ4A', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'stringFormatterA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4A.rst">
+            <exercises line="100" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': '2016freeresponseQ4A', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'stringFormatterA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2016freeresponseQ4A.rst">
 <exercise label="stringFormatterA" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The following has the correct code to solve this problem, but also contains extra code that isn’t needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.</p>
 </statement>

@@ -6,7 +6,7 @@
     <p><term>Nested iteration statements</term> (or <term>nested loops</term>) are iteration statements that appear in the body of another iteration statement. Or in simpler terms, a loop inside of another loop. Nested loops are typically used for working with two dimensions, for example printing a rectangle of stars in rows and columns as shown below.  When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.</p>
     <figure align="center">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Nested Loops</caption>
-    <image source="Unit2-Selection-and-Iteration/Figures/nestedloops.png" width="63%%"/>
+    <image source="Unit2-Selection-and-Iteration/Figures/nestedloops.png" width="63%"/>
   </figure>
     <p>What does the following code print out? Watch the code run in the  <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> by clicking the CodeLens button and then forward. Notice how the inner loop is started over for each row. Can you predict how many rows and columns of stars there will be?</p>
   </introduction>
@@ -23,7 +23,7 @@
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 
@@ -134,7 +134,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 

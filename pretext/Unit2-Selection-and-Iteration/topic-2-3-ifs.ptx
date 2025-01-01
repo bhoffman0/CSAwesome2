@@ -7,13 +7,13 @@
     <p>If you took an AP CSP course or used a block programming language like Scratch, you’ve probably seen if blocks or statements before.  Here’s a comparison of ifs in App Inventor blocks, AP CSP block code and pseudocode, and Java ifs.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparison of App Inventor if block, AP CSP ifs, and Java if statements</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/BlocksIfComparison.png" width="100%%"/>
+      <image source="Unit2-Selection-and-Iteration/Figures/BlocksIfComparison.png" width="100%"/>
     </figure>
   </introduction>
   <subsection>
             <title>One-way selection</title>
             <p>A one-way selection (if statement) is used when there is a segment of code (called the <term>body</term> of the if statement) to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true. If the Boolean expression is false, the body of the if statement is skipped and the program continues with the next statement after the if statement.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%"/></figure>
             <p>The open curly brace <c>{</c> and a close curly brace <c>}</c> are used to group a block of statements together as the body of the if statement.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.</p>
             <program language="java"><code>
 // A single if statement
@@ -349,7 +349,7 @@ else
 </code></program>
             <p>A two-way selection (if-else statement) is used when there are two segments of code—one to be executed when the Boolean expression is true and another segment for when the Boolean expression is false. In this case, the body of the if is executed when the Boolean expression is true, and the body of the else is executed when the Boolean expression is false.</p>
             <p>The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
 
 <exercise label="ifHeads">
     <statement>
@@ -475,7 +475,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Coding Challenge: Magic 8 Ball</title>
-            <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%%" alt="Magic 8 Ball"/>
+            <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%" alt="Magic 8 Ball"/>
             <p>Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like <c>Signs point to yes!</c>, <c>Very doubtful</c>, etc. If you’ve never seen a Magic 8 ball, check out this <url href="https://magic-8ball.com/" visual="https://magic-8ball.com/">simulator</url>. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the <url href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" visual="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html">Math lesson</url> and remember the formula <c>(int) (Math.random() * max) + min</c>.</p>
 
 <exercise label="challenge-Magic8ball">

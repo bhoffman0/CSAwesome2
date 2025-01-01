@@ -28,12 +28,12 @@ public interface MenuItem
     <p>The following diagram shows the relationship between the <c>MenuItem</c> interface and the <c>Sandwich</c>, <c>Salad</c>, <c>Drink</c>, and <c>Trio</c> classes.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">UML class diagram showing MenuItem is implemented by Sandwich, Salad, Drink, and Trio.</caption>
-      <image source="Unit5-Inheritance/Figures/trioUML.png" width="89%%"/>
+      <image source="Unit5-Inheritance/Figures/trioUML.png" width="89%"/>
     </figure>
     <p>For example, assume that the menu includes the following items. The objects listed under each heading are instances of the class indicated by the heading.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example objects</caption>
-      <image source="Unit5-Inheritance/Figures/menuItemObjs.png" width="100%%"/>
+      <image source="Unit5-Inheritance/Figures/menuItemObjs.png" width="100%"/>
     </figure>
     <p>The menu allows customers to create Trio menu items, each of which includes a sandwich, a salad, and a
             drink. The name of the Trio consists of the names of the sandwich, salad, and drink, in that order, each
@@ -50,13 +50,13 @@ public interface MenuItem
   <subsection>
             <title>Grading Rubric</title>
             <p>Below is the grading rubric for the Trio class problem.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The grading rubric for the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioGrading.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The grading rubric for the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioGrading.png" width="100%"/></figure>
         </subsection>
   <subsection>
             <title>Practice Grading</title>
             <p>The following is the second sample student response.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The start of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2a.png" width="100%%"/></figure>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The end of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2b.png" width="100%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The start of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2a.png" width="100%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The end of the second sample student response to the Trio class problem.</caption><image source="Unit5-Inheritance/Figures/TrioStudentSol2b.png" width="100%"/></figure>
             <p>Apply the grading rubric shown above as you answer the following questions.</p>
             <p><em>Apply the Grading Rubric</em></p>
 

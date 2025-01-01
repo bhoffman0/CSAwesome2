@@ -6,7 +6,7 @@
     <p>The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  A statistician is studying sequences of numbers obtained by repeatedly tossing a six-sided number cube. On each side of the number cube is a single number in the range of 1 to 6, inclusive, and no number is repeated on the cube. The statistician is particularly interested in runs of numbers. A run occurs when two or more consecutive tosses of the cube produce the same value. For example, in the following sequence of cube tosses, there are runs starting at positions 1, 6, 12, and 14.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/numberLine.png" width="100%%"/>
+      <image source="Unit4-Data-Collections/Figures/numberLine.png" width="100%"/>
     </figure>
     <program language="java">
       <code>
@@ -43,7 +43,7 @@ public class NumberCube
   <subsection>
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
-            <exercises line="63" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'numberCubeB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'numcubeB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/numberCubeB.rst">
+            <exercises line="63" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'numberCubeB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'numcubeB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/numberCubeB.rst">
 <exercise label="numcubeB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
                 <p>The method <c>getLongestRun</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
@@ -53,25 +53,25 @@ public class NumberCube
 <cline>   int currentLen = 0;</cline>
 <cline>   int maxLen = 0;</cline>
 <cline>   int maxStart = -1;</cline>
-</block><block order="3">
+</block><block order="2">
 <cline>   for (int i = 0; i &lt; values.length-1; i++)</cline>
 <cline>   {</cline>
-</block><block order="1">
+</block><block order="7">
 <cline>      if (values[i] == values[i+1])</cline>
 <cline>      {</cline>
-</block><block order="2">
+</block><block order="6">
 <cline>         currentLen++;</cline>
 <cline>         if (currentLen &gt; maxLen)</cline>
 <cline>         {</cline>
 <cline>             maxLen = currentLen;</cline>
 <cline>             maxStart = i - currentLen + 1;</cline>
 <cline>         }</cline>
-</block><block order="7">
+</block><block order="3">
 <cline>      } else</cline>
 <cline>      {</cline>
 <cline>         currentLen = 0;</cline>
 <cline>      }</cline>
-</block><block order="6">
+</block><block order="1">
 <cline>   } // end for</cline>
 <cline>   return maxStart;</cline>
 </block><block order="4">

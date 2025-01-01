@@ -30,7 +30,7 @@
   <subsection>
             <title>Check your understanding of the question</title>
             <p>There are problems in this section that can help you check your understanding of the question.  You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.</p>
-            <exercises line="55" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="55" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
 <exercise label="delim_find_parts_ca">
     <statement><p>Click on the part of the sentences below with the type of thing passed to the method <code>getDelimitersList</code> and the type it returns.</p></statement>
@@ -40,7 +40,7 @@
 <cline><area correct="no">Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter</area>.</cline>
 <cline><area correct="no">You will write the method </area><area correct="no">getDelimitersList</area>, <area correct="no"> which returns an</area> <area correct="yes">ArrayList</area><area correct="no"> containing all the open and close delimiters found in tokens in their original order.</area></cline>
 </areas></exercise>            </exercises>
-            <exercises line="71" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="71" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_cu_mc_1">
         <statement>
@@ -89,7 +89,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="90" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="90" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_cu_mc_2">
         <statement>
@@ -138,7 +138,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="109" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="109" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_cu_r4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_cu_mc_3">
         <statement>
@@ -207,7 +207,7 @@
                 <p>The method <c>getDelimtersList</c> needs to return an <c>ArrayList</c> of <c>Strings</c> containing all the open and close delimiters found in the <c>tokens</c> array in their original order.</p>
                 <p>This implies that the code needs to create an empty <c>ArrayList</c> of type <c>String</c>.  Let’s call it <c>delList</c>.  The code will loop through the strings in the array <c>tokens</c> from the start to the end and if the current string is equal to either the <c>openDel</c> or <c>closeDel</c> it adds that string to the end of delList.  Finally it should return delList.</p>
             </subsection>
-            <exercises line="154" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="154" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_solve_mc_1">
         <statement>
@@ -256,7 +256,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="173" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="173" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_solve_mc_2">
         <statement>
@@ -305,7 +305,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="192" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="192" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_solve_mc_3">
         <statement>
@@ -354,7 +354,7 @@
 
     </exercise>
             </exercises>
-            <exercises line="211" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
+            <exercises line="211" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide problem&quot;', 'optional': 'data-optional=true', 'subchapter': '2019delimitersQ3a', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'delim_rev_solve_mc_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/2019delimitersQ3a.rst">
 
     <exercise label="delim_solve_mc_4">
         <statement>

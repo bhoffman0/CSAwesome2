@@ -3,7 +3,7 @@
 <section xml:id="topic-2-7-while-loops">
   <title>While Loops</title><introduction>
     
-    <image source="Unit2-Selection-and-Iteration/Figures/loops.png" width="22%%"/>
+    <image source="Unit2-Selection-and-Iteration/Figures/loops.png" width="22%"/>
     <p>When you play a song, you can set it to loop, which means that when it reaches
             the end it starts over at the beginning. A <term>loop</term> in programming, also called
             <term>iteration</term> or <term>repetition</term>, is a way to repeat one or more statements. If
@@ -44,7 +44,7 @@ while (condition)
             lesson). Almost every programming language has a <c>while</c> loop.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor and Java for <literal>while</literal> loops</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/whileInAppInventor.png" width="100%%"/>
+      <image source="Unit2-Selection-and-Iteration/Figures/whileInAppInventor.png" width="100%"/>
     </figure>
     <p>If you’re used to a language like Snap! or Scratch, you may be familiar with the
             Repeat Until loop. However, you have to be very careful comparing repeat until
@@ -54,20 +54,20 @@ while (condition)
             reached x position 100 or is less than 100 as below.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Snap! or Scratch Repeat Until Loop to Java <literal>while</literal> loop</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/ScratchRepeatUntilLoop.png" width="100%%"/>
+      <image source="Unit2-Selection-and-Iteration/Figures/ScratchRepeatUntilLoop.png" width="100%"/>
     </figure>
     <p>The following <url href="https://www.youtube.com/watch?v=Uw9mv53Jnfs" visual="https://www.youtube.com/watch?v=Uw9mv53Jnfs">video</url> introduces while loops.</p>
     <video youtube="Uw9mv53Jnfs"/>
     <p>Here’s what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated. Iteration statements change the flow of control by repeating a segment of code zero or more times as long as the Boolean expression controlling the loop evaluates to true. In while loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the Boolean expression evaluates to false, whereupon the iteration terminates.</p>
     <figure align="center">
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Control Flow in a while Loop</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/WhileLoopFlow.png" width="45%%"/>
+      <image source="Unit2-Selection-and-Iteration/Figures/WhileLoopFlow.png" width="45%"/>
     </figure>
   </introduction>
   <subsection>
             <title>Three Steps to Writing a Loop</title>
             <p>The simplest loops are <term>counter-controlled loops</term> like below, where the <term>loop control variable</term> is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Three Steps of Writing a Loop</caption><image source="Unit2-Selection-and-Iteration/Figures/loop3steps.png" width="71%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Three Steps of Writing a Loop</caption><image source="Unit2-Selection-and-Iteration/Figures/loop3steps.png" width="71%"/></figure>
             <note>
                 <p>Remember these 3 steps to writing a loop:</p>
                 <p><ol marker="1">
@@ -212,7 +212,7 @@ int count = 0;
             <title>Tracing Loops</title>
             <p>A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.</p>
             <p>You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/traceTable.png" width="27%%"/></figure>
+            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/traceTable.png" width="27%"/></figure>
             <p>Watch the following <url href="https://www.youtube.com/watch?v=TZss5ukwN8s" visual="https://www.youtube.com/watch?v=TZss5ukwN8s">video</url> for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output.</p>
 
     <video youtube="TZss5ukwN8s"/>
@@ -459,7 +459,7 @@ while (!statement.equals("Bye"))
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
-	<code>
+<code>
 import java.awt.*;
 import java.util.*;
 

@@ -7,7 +7,7 @@
     <p>This is similar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal.</p>
     <figure align="center">
     <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A see n say toy</caption>
-    <image source="Unit5-Inheritance/Figures/SeeNSay.jpg" width="45%%"/>
+    <image source="Unit5-Inheritance/Figures/SeeNSay.jpg" width="45%"/>
   </figure>
     <p>If you were simulating this toy in software you could create an <c>Animal</c> class that had a <c>makeNoise</c> method. Each subclass of <c>Animal</c> would override the <c>makeNoise</c> method to make the correct noise for that type.  This type of polymorphism is called <term>inheritance-based polymorphism</term>.  You have a common parent class, but the behavior is specified in the child class.</p>
     <note>
@@ -49,7 +49,7 @@ message.indexOf("h"); // ERROR!! Objects don't have indexOf!
   </introduction>
   <subsection>
             <title>Coding Challenge : Shopping Cart 2</title>
-            <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%%" alt="Shopping"/>
+            <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%" alt="Shopping"/>
             <p>In the last lesson, you created a class called <c>DiscountedItem</c> as part of a
                 Shopping Cart application. Please copy your solutions from the <url href="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart" visual="https://runestone.academy/ns/books/published/csawesome/Unit9-Inheritance/topic-9-5-hierarchies.html#groupwork-programming-challenge-shopping-cart">last lesson</url> into
                 the Active Code window below (or in repl or another IDE) before completing this
