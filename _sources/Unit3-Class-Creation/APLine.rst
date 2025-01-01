@@ -1,3 +1,9 @@
+.. include:: ../common.rst
+
+.. qnum::
+   :prefix: 3-17-
+   :start: 1
+
 Free Response Question - APLine
 ================================
 

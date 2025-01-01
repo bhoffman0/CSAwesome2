@@ -1,44 +1,158 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 5-7-
+   :prefix: 3-7-
    :start: 1
 
+|Time45|
 
-Static Variables and Methods
-============================
+Class (static) Variables and Methods
+=======================================
 
-In Unit 2, we explored the Math class and its many static methods like Math.random(), and we've always used a main method which is static. In this lesson, you will learn to write your own static variables and methods.
+.. index::
+   single: class variables
+   single: class methods
+   single: static 
+   single: final 
 
-- **Static** variables and methods belong to a class and are called with the Class Name rather than using object variables, like ClassName.methodName();
+In Unit 1, we learned about methods by using the ``Math`` class and its many **static** methods like ``Math.random()``, and we wrote our own main methods and other methods that were static. These are called **class methods** because they belong to the class and not to any object of the class. 
+In this lesson, you will learn to write your own class variables and methods using the keyword ``static`` and compare them to instance variables and methods.
 
-- There is only one copy of a static variable or method for the whole class. For example, the main method is static because there should only be 1 main method.
+Class Methods
+---------------
 
-- Static methods can be public or private.
-
-- The static keyword is placed right after the public/private modifier and right before the type of variables and methods in their declarations.
+Class methods belong to the class and not to any object of the class. They are called with the class name and the dot operator, like ``ClassName.methodName();``, for example the Math methods like ``Math.random();``. There is only one copy of a class variable or method for the whole class. For example, the main method is a class (static) method because there should only be 1 main method. If the method is in the same class, you can call it with or without the class name from other static methods in the class: ``Classname.methodName();`` or ``staticMethodName();`` or even with an object of the class: ``objectName.methodName();``.
 
 .. code-block:: java
 
-   class ClassName 
+    // Calling class methods
+    // ClassName.methodName();
+    int x = Math.sqrt(9);
+
+     // If the method is in the same class,
+     // you can call it with or without the class name 
+     // from other static methods in the class
+     ClassName.methodName();
+     methodName();
+
+Let's revisit the following flowchart to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods can only be called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using ``object.methodName()``. If you are calling the method from within the same class, you can just call the method using ``methodName()`` which will refer to the current object.
+
+.. figure:: Figures/FlowChartCallingMethods.png
+    :width: 550px
+    :align: center
+    :alt: Comparing method calls to static and instance methods
+    :figclass: align-center
+
+    Figure 1: Comparing Method Calls to Static and Instance Methods
+
+When writing class methods, they can be public or private. The static keyword is placed right after the public/private modifier and right before the type of variables and methods in their declarations.
+
+.. code-block:: java
+
+   public class ClassName 
    {
-     // static variable
+     // static class variable
      public static type variableName;
 
-     // static method
+     // static class method
      public static returnType methodName(parameters) 
      {
            // implementation not shown
      }
    }
-   // To call a static method or variable, use the Class Name
-   System.out.println(ClassName.staticVariable);
-   ClassName.staticMethod();
+
+Class (static) methods can access or change the values of class (static) variables and can call other class (static) methods. However, they cannot access or change the values of (non-static) instance variables or call (nont-static) instance methods without being passed an instance of the class via a parameter. For example, the main method which is static can call other static methods directly with or without the classname, but it cannot call instance methods without first creating an object. Try this below to see "non-static variable or method cannot be referenced from a static context" errors.
+
+.. activecode:: staticmethods
+  :language: java
+  :autograde: unittest
+  :practice: T
+
+  Note that the static method printStatic has errors in it because it cannot access the instance variables and methods. Fix the printStatic method by giving it the Person object as a parameter and using this object to call its instance variables and methods. Also fix the method call to printStatic in main to pass in the object as an argument. 
+  ~~~~
+  public class Person
+  {
+      // instance variables
+      private String name;
+      private String email;
+
+      // constructor
+      public Person(String initName, String initEmail)
+      {
+          name = initName;
+          email = initEmail;
+      }
+
+      // instance method
+      public void print()
+      {
+          System.out.println(name + ": " + email);
+      }
+      
+      // static method 
+      public static void printStatic()
+      {
+          System.out.println("Static methods cannot print out non-static variables.");
+          // The following lines will cause errors
+          
+          // TODO: Fix this by giving it the Person object as a parameter 
+          // Use the object to print out the name and call its instance methods.
+          System.out.println(name);
+          print();
+      }
+
+      public static void main(String[] args)
+      {        
+          Person p = new Person("Jana", "jana@gmail.com");
+
+          // Call p's instance method to print
+          p.print();
+
+          // Call printStatic with the class name
+          // Note this has errors.
+          // TODO: Fix the errors by giving it the object p as an arguments
+          Person.printStatic(); 
+      }
+  }
+  ====
+  import static org.junit.Assert.*;
+
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      @Test
+      public void test1() 
+      {
+          String target = "printStatic(p)";
+          boolean passed = checkCodeContains(target, target);
+          assertTrue(passed);
+      }
+      @Test
+      public void test2() 
+      {
+          String target = "printStatic(Person";
+          boolean passed = checkCodeContains(target, target);
+          assertTrue(passed);
+      }
+  }
+
+This example also shows how instance methods easily share data variables without the need for parameters.  Whereas, static methods cannot directly access the instance methods. They are often used for utility methods, like Math operations, that do not need access to the instance variables of an object. 
+
+Class Variables
+----------------
 
 
-Static methods only have access to other static variables and static methods. Static methods cannot access or change the values of instance variables or the this reference (since there is no calling object for them), and static methods cannot call non-static methods. However, non-static methods have access to all variables (instance or static) and methods (static or non-static) in the class.
+.. |Java visualizer| raw:: html
 
-Since there is only 1 copy of a ``static`` variable or method, static variables are often used to count how many objects are generated. In the following class ``Person``, there is a ``static`` variable called ``personCounter`` that is incremented each time the ``Person`` constructor is called to initialize a new ``Person`` object. The static method ``printCounter`` prints out its value.  You can also watch how it works in the `Java visualizer <http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Static%20counter%20variable%0A%20%20%20%20%20public%20static%20int%20personCounter%20%3D%200%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20static%20method%20to%20print%20out%20counter%0A%20%20%20%20%20public%20static%20void%20printPersonCounter%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22Person%20counter%3A%20%22%20%2B%20personCounter%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%20%20%20personCounter%2B%2B%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20%20name%20%2B%20%22%3A%20%22%20%2B%20email%20%2B%20%22%20%22%20%2B%20phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20Person.printPersonCounter%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false>`_ by clicking the CodeLens button below.
+   <a href="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Static%20counter%20variable%0A%20%20%20%20%20public%20static%20int%20personCounter%20%3D%200%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20static%20method%20to%20print%20out%20counter%0A%20%20%20%20%20public%20static%20void%20printPersonCounter%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22Person%20counter%3A%20%22%20%2B%20personCounter%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%20%20%20personCounter%2B%2B%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20%20name%20%2B%20%22%3A%20%22%20%2B%20email%20%2B%20%22%20%22%20%2B%20phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20Person.printPersonCounter%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">Java visualizer</a>
+
+
+**Class variables** belong to the class, with all objects of a class sharing a single copy of the class variable. Class variables are designated with the ``static`` keyword before the variable type. Class variables that are designated ``public`` are accessed outside of the class by using the class name and the dot operator, since they are associated with a class, not objects of a class.
+
+In the following class ``Person``, there is a ``static`` variable called ``personCounter`` that is incremented each time the ``Person`` constructor is called to initialize a new ``Person`` object. The static method ``printCounter`` prints out its value.  You can also watch how it works in the |Java visualizer| by clicking the CodeLens button below.
 
 .. activecode:: PersonClassStaticCounter
   :language: java
@@ -163,8 +277,11 @@ Another common use for static variables is the keep track of a minimum or maximu
      - maxTemp will not be changed to 65 by the third constructor call because 67 is not > 100.
 
 
+.. |visualizer2| raw:: html
 
-You can see this code in action in the `Java visualizer <http://www.pythontutor.com/visualize.html#code=public%20class%20Temperature%20%0A%7B%0A%20%20%20private%20double%20temperature%3B%0A%20%20%20public%20static%20double%20maxTemp%20%3D%200%3B%0A%20%20%20%0A%20%20%20public%20Temperature%28double%20t%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20temperature%20%3D%20t%3B%0A%20%20%20%20%20%20%20if%20%28t%20%3E%20maxTemp%29%0A%20%20%20%20%20%20%20%20%20%20%20maxTemp%20%3D%20t%3B%0A%20%20%20%7D%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20Temperature%20t1%20%3D%20new%20Temperature%2875%29%3B%0A%20%20%20%20%20%20%20Temperature%20t2%20%3D%20new%20Temperature%28100%29%3B%0A%20%20%20%20%20%20%20Temperature%20t3%20%3D%20new%20Temperature%2865%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Max%20Temp%3A%20%22%20%2B%20Temperature.maxTemp%29%3B%0A%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false>`_.
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Temperature%20%0A%7B%0A%20%20%20private%20double%20temperature%3B%0A%20%20%20public%20static%20double%20maxTemp%20%3D%200%3B%0A%20%20%20%0A%20%20%20public%20Temperature%28double%20t%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20temperature%20%3D%20t%3B%0A%20%20%20%20%20%20%20if%20%28t%20%3E%20maxTemp%29%0A%20%20%20%20%20%20%20%20%20%20%20maxTemp%20%3D%20t%3B%0A%20%20%20%7D%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20Temperature%20t1%20%3D%20new%20Temperature%2875%29%3B%0A%20%20%20%20%20%20%20Temperature%20t2%20%3D%20new%20Temperature%28100%29%3B%0A%20%20%20%20%20%20%20Temperature%20t3%20%3D%20new%20Temperature%2865%29%3B%0A%20%20%20%20%20%20%20System.out.println%28%22Max%20Temp%3A%20%22%20%2B%20Temperature.maxTemp%29%3B%0A%20%20%20%7D%0A%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">Java visualizer</a>
+
+You can see this code in action in the |visualizer2|.
 
 |CodingEx| **Coding Exercise**
 
@@ -173,7 +290,7 @@ You can see this code in action in the `Java visualizer <http://www.pythontutor.
   :autograde: unittest
   :practice: T
 
-  Fix the bugs in the following code.
+  Fix the bugs in the following code. Static methods should only access static variables.
   ~~~~
   public class Temperature
   {
@@ -188,7 +305,7 @@ You can see this code in action in the `Java visualizer <http://www.pythontutor.
                maxTemp = t;
           }
       }
-
+      // This static method should print out the static variable
       public static printMax()
       {
           System.out.println(temperature);
@@ -241,15 +358,17 @@ You can see this code in action in the `Java visualizer <http://www.pythontutor.
        }
    }
 
-The keyword **final** can be used in front of a variable declaration to make it a constant that cannot be changed. Constants are traditionally capitalized.
+final keyword
+--------------
 
+The keyword **final** can be used in front of a variable declaration to make it a constant value that cannot be modified. Constants are traditionally capitalized.
+	
 .. code-block:: java
 
   final double PI = 3.14
 
 |CodingEx| **Coding Exercise:**
 
-**Change this to be a class variable**
 
 .. activecode:: finalPi
    :language: java
@@ -259,14 +378,15 @@ The keyword **final** can be used in front of a variable declaration to make it 
    ~~~~
    public class TestFinal
    {
+       // A static final variable for PI      
+       public static final double PI = 3.14;
+
        public static void main(String[] args)
        {
-           final double PI = 3.14;
            System.out.println(PI);
            PI = 4.2; // This will cause a syntax error
        }
    }
-
    ====
    // should pass if/when they run code
    import static org.junit.Assert.*;
@@ -292,15 +412,49 @@ The keyword **final** can be used in front of a variable declaration to make it 
 |Groupwork| Coding Challenge : Static Song and counter
 ------------------------------------------------------------
 
+.. |The Ants Go Marching| raw:: html
 
+   <a href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" target="_blank">The Ants Go Marching</a>
 
-In the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters>`_, we wrote a class with methods to print out the song `The Ants Go Marching <https://www.youtube.com/watch?v=QPwEZ8Vv2YQ>`_. Notice that this is a class where there are no instance variables and we don't really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With the Song, we can just make the methods static and have just 1 copy of them.
+.. |prevlesson| raw:: html
 
-1. Copy in your class from the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters>`_ into this active code window. Change the method(s) that print out the verses of the Song to be static. In the main method, change how you call the static methods by using just the classname instead of creating an object.
+   <a href="topic-5-6-writing-methods.html#groupwork-programming-challenge-song-with-parameters" target="_blank">last lesson</a>
+
+In Unit 1, we wrote a class with methods to print out the song |The Ants Go Marching|. Here's the song with 3 verses, where the chorus is the last 2 lines of each verse:
+
+.. code-block:: java
+ 
+    Verse 1:
+    The ants go marching one by one, hurrah, hurrah
+    The ants go marching one by one, hurrah, hurrah
+    The ants go marching one by one
+    The little one stops to suck a thumb
+    And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
+
+    Verse 2:
+    The ants go marching two by two, hurrah, hurrah
+    The ants go marching two by two, hurrah, hurrah
+    The ants go marching two by two
+    The little one stops to tie a shoe
+    And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
+
+    Verse 3:
+    The ants go marching three by three, hurrah, hurrah
+    The ants go marching three by three, hurrah, hurrah
+    The ants go marching three by three
+    The little one stops to climb a tree
+    And they all go marching down to the ground
+    To get out of the rain, BOOM! BOOM! BOOM! BOOM!
+
+Let's create a class to print out the song with 2 methods ``chorus()`` and ``verse``, where the verse takes 2 parameters for the numbers and the action. Notice that this is a class where there are no instance variables and we don't really need to generate multiple objects. With students or pets, it makes sense to have multiple objects. With a class printing out a song, we can just make the methods static and have just 1 copy of them.
+
+1. Create a class called ``Song`` with two static methods: ``chorus()`` and ``verse()``. The chorus method prints out the last two lines of each verse. The verse method takes two parameters, a number and an action, and prints out the verse with the number and action.
 
 2. Add a public static variable called **numVerses** to the class that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse.
 
-.. activecode:: challenge-5-7-static-song
+.. activecode:: challenge-static-song
   :language: java
   :autograde: unittest
 
@@ -308,12 +462,15 @@ In the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit
   {
       // Add a public static variable called numVerses
 
-      // Change the method(s) to be static
+      // Add a static chorus method
+
+      // Add a static verse method with two parameters
 
       public static void main(String args[])
       {
-          // Call the static method(s) to print out the Song
           // Print out the static variable numVerses
+          // and call the static methods to print out the Song for 3 verses
+         
 
       }
   }
@@ -325,11 +482,6 @@ In the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit
 
   import java.io.*;
 
-  /* Do NOT change Main or CodeTestHelper.java.
-  Put the active code exercise in a file like ForLoop.java.
-  Put your Junit test in the file RunestoneTests.java.
-  Run. Test by changing ForLoop.java (student code).
-  */
   public class RunestoneTests extends CodeTestHelper
   {
       @After
@@ -490,16 +642,8 @@ In the `last lesson <https://runestone.academy/ns/books/published/csawesome/Unit
 Summary
 -------
 
-- Static methods and variables include the keyword static  before their name in the header or declaration. They can be public or private.
-
-- Static variables belong to the class, with all objects of a class sharing a single static variable.
-
-- Static methods are associated with the class, not objects of the class.
-
-- Static variables are used with the class name and the dot operator, since they are associated with a class, not objects of a class.
-
-- Static methods cannot access or change the values of instance variables, but they can access or change the values of static variables.
-
-- Static methods cannot call non-static methods.
-
-- When a variable is declared final, its value cannot be modified.
+- (AP 3.7.A.1) Class methods cannot access or change the values of instance variables or call instance methods without being passed an instance of the class via a parameter.
+- (AP 3.7.A.2) Class methods can access or change the values of class variables and can call other class methods.
+- (AP 3.7.B.1) Class variables belong to the class, with all objects of a class sharing a single copy of the class variable. Class variables are designated with the **static** keyword before the variable type.
+- (AP 3.7.B.2)	Class variables that are designated ``public`` are accessed outside of the class by using the class name and the dot operator, since they are associated with a class, not objects of a class.
+- (AP 3.7.B.3) When a variable is declared ``final``, its value cannot be modified.

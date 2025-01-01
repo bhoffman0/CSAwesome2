@@ -46,7 +46,7 @@ Java Keyword Summary
 Vocabulary Practice
 ---------------------------
 
-.. dragndrop:: ch2_vocab1
+.. dragndrop:: ch3_vocab1
     :feedback: Review the summaries above.
     :match_1: does the actual work in an object-oriented program.|||object
     :match_2: defines a type|||class
@@ -55,7 +55,7 @@ Vocabulary Practice
 
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct
 
-.. dragndrop:: ch2_vocab2
+.. dragndrop:: ch3_vocab2
     :feedback: Review the summaries above.
     :match_1: initializes the fields of an object after it has been created|||constructor
     :match_2: defines behavior|||method

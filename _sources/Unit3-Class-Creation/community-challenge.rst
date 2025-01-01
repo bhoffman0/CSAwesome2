@@ -1,24 +1,37 @@
 .. include:: ../common.rst
 
+|Time90|
 
 |Groupwork| Design a Class for your Community Project
-==========================================================
+=========================================================
 
+.. |worksheet| raw:: html
 
+   <a href="https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing" target="_blank">worksheet</a>
 
+.. |tutorial on class diagrams| raw:: html
 
+   <a href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" target="_blank">tutorial on class diagrams</a>
 
-In lessons 5.1, 5.2, and 5.6, you were asked to design a class of your own choice
+.. |Creately.com| raw:: html
+
+   <a href="https://creately.com" target="_blank">Creately.com</a>
+
+.. |app diagrams| raw:: html
+
+   <a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
+
+In this unit's challenges, you were asked to design a class of your own choice
 that is relevant to your community. If you would like to do this activity as 1 lab project rather than a piece at a time at the end of each lesson, you can create your complete class here. Or you may choose to create a different class of your own here.
 You can work in pairs on this project.
 
-1. Make your own copy of this `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
+1. Make your own copy of this |worksheet| from the File menu. For question 1, brainstorm and ask people in your community what would be important or useful for them to track in a community organization or activity or to help your community. For example, you could create a Java class to keep track of community events, club activities, athletic games or statistics, community leaders, performers or performances, health tracking, or another subject of your choice.
 
-2. Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. You can use the `worksheet <https://docs.google.com/document/d/11QMyHAZYhPwNLInhURqkTffeY9re05yH97xAsiSJhLg/edit?usp=sharing>`_ to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using `app.diagrams.net <https://app.diagrams.net/>`_ or `Creately.com <https://creately.com>`_ (see `tutorial on class diagrams <https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b>`_).
+2. Come up with your class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing). Come up with at least 3 instance variables that are attributes of things in that class. Think about what data type each variable should be. You can use the |worksheet| to design your class. Optionally, you may want to draw a UML class diagram for your class on paper or using |app diagrams| or |Creately.com| (see |tutorial on class diagrams|).
 
 
 Code your Class
------------------
+------------------
 
 1. Create your class and its instance variables below.
 
@@ -197,11 +210,14 @@ You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array o
 
 
 Optional Swing GUI
----------------------
+------------------------
 
+.. |Java Swing Example| raw:: html
+
+   <a href="https://replit.com/@BerylHoffman/Java-Swing-Input-Form" target="_blank" style="text-decoration:underline">Java Swing Example</a>
 
 An optional additional project is to build a GUI (graphical user interface) for your class (GUIs are not on the AP exam).
-Here's a `Java Swing Example <https://replit.com/@BerylHoffman/Java-Swing-Input-Form>`_ on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
+Here's a |Java Swing Example| on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
 It calls a special method called addActionListener where you can put the code to be executed
 when you click on the button. This program prints out the entered data into a file, although more advanced systems would use a database.
 You can fork this project in replit or copy the code to your local computer to design

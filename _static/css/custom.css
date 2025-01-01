@@ -189,3 +189,7 @@ div.highlight-java + p,
 table.random-recipes tbody tr td:first-child {
   text-align: left;
 }
+
+table .align-default, td {
+  text-align: left;
+}

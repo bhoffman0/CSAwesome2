@@ -1,9 +1,10 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 6-1-
+   :prefix: 4-3-
    :start: 1
 
+|Time90|
 
 Array Creation and Access
 ==========================
@@ -18,8 +19,11 @@ But what if we had 100 exam scores? That would be a lot of variables! Most progr
 
 An **array** is a block of memory that stores a collection of data items (**elements**) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don't need to name each one. Instead you use the array name and a number (called an **index**) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students.
 
+.. |video| raw:: html
 
-Here's a fun `video <https://youtu.be/G7aF-OuLfl4>`_ that introduces the concept of an array and gives an example.
+   <a href="https://youtu.be/G7aF-OuLfl4" target="_blank">video</a>
+
+Here's a fun |video| that introduces the concept of an array and gives an example.
 
 .. youtube:: G7aF-OuLfl4
     :width: 640
@@ -56,7 +60,7 @@ Arrays and lists in most programming languages start counting elements from the 
 Declaring and Creating an Array
 -------------------------------
 
-When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, ``int[] scores`` means we have an array called scores that contains int values.
+When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, ``int[] scores`` means we have an array called scores that contains ``int`` values.
 
 .. code-block:: java
 
@@ -69,8 +73,11 @@ The declarations do not create the array.  Arrays are **objects** in Java, so an
 
 There are two ways to create an array. You can use the keyword **new** to get new memory or use an **initializer list** to set up the values in the array.
 
+.. |video2| raw:: html
 
-Watch the following `video <https://youtu.be/IbPFjw1FNkE>`_ which shows the two ways of creating an array with a physical model of Java memory.
+   <a href="https://youtu.be/IbPFjw1FNkE" target="_blank">video</a>
+
+Watch the following |video2| which shows the two ways of creating an array with a physical model of Java memory.
 
 .. youtube:: IbPFjw1FNkE
     :width: 650
@@ -80,7 +87,7 @@ Watch the following `video <https://youtu.be/IbPFjw1FNkE>`_ which shows the two 
 Using new to Create Arrays
 --------------------------
 
-To create an empty array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array names below. The size of an array is set at the time of creation and cannot be changed after that.
+To create an empty array after declaring the variable, use the **new** keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array ``names`` below. The size of an array is set at the time of creation and cannot be changed after that.
 
 .. code-block:: java
 
@@ -114,7 +121,7 @@ To create an empty array after declaring the variable, use the **new** keyword w
 
 
 
-.. activecode:: lcab1
+.. activecode:: arrayex1
    :language: java
    :autograde: unittest
    :practice: T
@@ -201,14 +208,17 @@ Another way to create an array is to use an **initializer list**. You can initia
 When you create an array of a **primitive type** (like ``int``) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an **object type** (like ``String``) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found.
 
 .. figure:: Figures/intAndStringArrays.png
-    :width: 500px
+    :width: 500
     :align: center
     :figclass: align-center
 
     Figure 4: A primitive array and an object array
 
+.. |video3| raw:: html
 
-Watch the following `video <https://youtu.be/T-YZvVvPOac>`_ which shows an array of String objects with a physical model of Java memory.
+   <a href="https://youtu.be/T-YZvVvPOac" target="_blank">video</a>
+
+Watch the following |video3| which shows an array of String objects with a physical model of Java memory.
 
 .. youtube:: T-YZvVvPOac
     :width: 650
@@ -222,13 +232,11 @@ Watch the following `video <https://youtu.be/T-YZvVvPOac>`_ which shows an array
 Array length
 --------------------------
 
-Arrays know their length (how many elements they can store).  It is a public read-only instance variable so you can use **dot-notation** to access the instance variable (``arrayName.length``).  **Dot-notation** is using variable name followed by a ``.`` and then the instance variable (property) name or a method name. Try the following.
+Arrays know their **length** (how many elements they can store). The length (or size) of an array is established at the time of creation and cannot be changed. The length of an array can be accessed through the ``length``  attribute, which is a public final instance variable that cannot be changed after the array is created. You can use **dot-notation** to access the instance variable, for example ``arrayName.length``.  Try the following.
 
 |CodingEx| **Coding Exercise**
 
-
-
-.. activecode:: lcab2
+.. activecode:: arrayex2
    :language: java
    :autograde: unittest
 
@@ -244,7 +252,6 @@ Arrays know their length (how many elements they can store).  It is a public rea
    }
 
    ====
-   // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -285,16 +292,16 @@ Arrays know their length (how many elements they can store).  It is a public rea
 
 .. note::
 
-   Note that length is an instance variable and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. The length instance variable is declared as a ``public final int``.  ``public`` means you can access it and ``final`` means the value can't change.
+   Note that length is an instance variable and not a method, unlike the String ``length()`` method, so you don't add parentheses after length.  However, if you use parentheses after length during the AP exam, you won't lose any points. The length instance variable is declared as a ``public final int``.  ``public`` means you can access it and ``final`` means the value can't change.
 
 
 
 |Exercise| **Check your understanding**
 
-.. mchoice:: qab_2
+.. mchoice:: qarrayLength
    :practice: T
-   :answer_a: <code>highScores.length</code>
-   :answer_b: <code>highScores.length - 1</code>
+   :answer_a: highScores.length
+   :answer_b: highScores.length - 1
    :correct: b
    :feedback_a: Remember that the first element in an array starts at index 0. If the length (the number of elements) of the array is 5, at what index would you find the last element?
    :feedback_b: Since the first element in an array is at index 0 the last element is the length minus 1.
@@ -327,10 +334,13 @@ An indexed variable like **arrayname[index]** can be used anywhere a regular var
 
 .. note::
 
-    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Use arrayname[index] to access or modify array items.
+    The first value in an array is stored at index 0 and the index of the last value is the length of the array minus one (since the first index is 0). Square brackets ``[]`` are used to access and modify an element in a 1D array using an index, for example ``array[index]``. 
 
+.. |video4| raw:: html
 
-Watch the following `video <https://youtu.be/uagEJw6bTM4>`_ which shows a physical model of Java memory setting array values.
+   <a href="https://youtu.be/uagEJw6bTM4" target="_blank">video</a>
+
+Watch the following |video4| which shows a physical model of Java memory setting array values.
 
 .. youtube:: uagEJw6bTM4
     :width: 650
@@ -394,8 +404,6 @@ If you want to keep track of the top 5 highest scores in a game and the names of
    }
 
    ====
-   // Test for Lesson 6.1.2 - While Loop FindAndReplace lclw1
-
    import static org.junit.Assert.*;
 
    import org.junit.*;
@@ -438,7 +446,7 @@ What happens if you try to access an element that is not there? Try to access a 
 
 .. note::
 
-    Using an index value outside of 0 - (length-1) will result in an ArrayIndexOutOfBoundsException being thrown.
+    Using an index value outside of 0 - (length-1) will result in an ``ArrayIndexOutOfBoundsException`` being thrown.
 
 
 One powerful feature in the array **data abstraction** is that we can use variables for the index! As long as the variable holds an integer, we can use it as an index.
@@ -449,8 +457,8 @@ One powerful feature in the array **data abstraction** is that we can use variab
   int index = 3;
   System.out.println(  highScores[index] );
 
-.. image:: 6-1-images/cow.jpg
-    :width: 150px
+.. image:: array-images/cow.jpg
+    :width: 150
     :align: left
 
 |CodingEx| **Coding Exercise**
@@ -523,8 +531,8 @@ Here's a fun String array of image filenames. The following code displays an onl
 |Groupwork| Coding Challenge : Countries Array
 ---------------------------------------------------------
 
-.. image:: 6-1-images/US.jpg
-    :width: 200px
+.. image:: array-images/US.jpg
+    :width: 200
     :align: left
 
 In this challenge, you will create a guide to different countries using arrays.
@@ -544,7 +552,7 @@ In this challenge, you will create a guide to different countries using arrays.
 
 5. Optional Extra Challenge: If you have more time for this project, you can combine what you learned in the last unit to **refactor** your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 Country objects with the data for each country passed to its constructor, and use a random number to choose a country object from the array and display its attributes. See the array of turtles in the next section below for help on how to create an array of objects.
 
-.. activecode:: challenge-1-6-countries
+.. activecode:: challenge-array-countries
    :language: java
    :autograde: unittest
 
@@ -585,7 +593,6 @@ In this challenge, you will create a guide to different countries using arrays.
    }
 
      ====
-     // Test for Lesson 6.1 - challenge
      import static org.junit.Assert.*;
 
      import org.junit.*;
@@ -753,11 +760,14 @@ And we can use ``array[index].method()`` to call a method of an object in the ar
         }
     }
 
+.. |lesson 3.5| raw:: html
 
-In Unit 5, you came up with a class of your own choice relevant to you or your
+   <a href="../Unit3-Class-Creation/topic-3-5-methods.html#groupwork-design-a-class-for-your-community" target="_blank">lesson 3.5</a>
+
+In the last unit, you came up with a class of your own choice relevant to you or your
 community.  In this unit, you will create an array to hold objects of your class.
 
-1. Copy your class from `lesson 5.6 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community>`_ below.
+1. Copy your class from |lesson 3.5| below.
 
 2. In the main method, create an array of 3 objects of your class.
 
@@ -769,12 +779,12 @@ community.  In this unit, you will create an array to hold objects of your class
   :language: java
   :autograde: unittest
 
-  Community Challenge: Copy your class from `lesson 5.6 <https://runestone.academy/ns/books/published/csawesome/Unit5-Writing-Classes/topic-5-6-writing-methods.html#groupwork-design-a-class-for-your-community>`_ below. Create an array of 3 objects of your class, initialize
+  Community Challenge: Copy your class from |lesson 3.5| below. Create an array of 3 objects of your class, initialize
   them to new objects and call their print methods.
   ~~~~
   public class          // Add your class name here!
   {
-      // 1. Copy your class from lesson 5.6 below.
+      // 1. Copy your class from lesson 3.5 below.
 
 
 
@@ -861,24 +871,12 @@ community.  In this unit, you will create an array to hold objects of your class
 Summary
 --------------------------
 
-- Arrays represent collections of related data all of the same data type.
-
-- The size of an array is established at the time of creation and cannot be changed.
-
-- Arrays can store either primitive data or object reference data.
-
-- When an array is created using the keyword new, all of its elements are initialized with a specific value based on the type of elements:
-
-  - Elements of type int are initialized to 0
-  - Elements of type double are initialized to 0.0
-  - Elements of type boolean are initialized to false
-  - Elements of a reference type are initialized to the reference value null. No objects are automatically created.
-
-- Initializer lists can be used to create and initialize arrays.
-
-- Square brackets ([ ]) are used to access and modify an element in an array using an index. The indexed array variable, for example array[index], can be used anywhere a regular variable can be used, for example to get or assign values.
-
-- The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown.
+- (AP 4.3.A.1) An **array** stores multiple values of the same type. The values can be either primitive values or object references.
+- (AP 4.3.A.2) The length (size) of an array is established at the time of creation and cannot be changed. The length of an array can be accessed through the ``length`` attribute.
+- (AP 4.3.A.3) When an array is created using the keyword ``new``, all of its elements are initialized to the default values for the element data type. The default value for ``int `` is ``0``, for ``double`` is ``0.0``, for ``boolean`` is ``false``, and for a reference type (like ``String`` or a class you have created) is ``null``.
+- (AP 4.3.A.4) Initializer lists can be used to create and initialize arrays.
+- (AP 4.3.A.5) Square brackets ``[]`` are used to access and modify an element in a 1D (one dimensional) array using an index.
+- (AP 4.3.A.6) The valid index values for an array are ``0`` through one less than the length of the array, inclusive. Using an index value outside of this range will result in an ``ArrayIndexOutOfBoundsException``.
 
 
 AP Practice
@@ -891,7 +889,7 @@ For example, ``array[i-1]`` refers to the previous element right before the ith 
 and ``array[i+1]`` refers to the next element after the ith element.  In the problems below, note that
 arrays can be passed in as arguments to methods and returned as values, just like any variable.
 
-.. mchoice:: AP6-1-1
+.. mchoice:: AP-array1
         :practice: T
         :answer_a: [8, 20, 30]
         :answer_b: [4, 8, 15]
@@ -914,7 +912,7 @@ arrays can be passed in as arguments to methods and returned as values, just lik
               a[i] = a[i-1] * 2;
            }
 
-.. mchoice:: AP6-1-2
+.. mchoice:: AP-array2
         :practice: T
 
         Consider the following method. Which of the following code segments, appearing in the same class as the ``mystery`` method,
@@ -966,6 +964,10 @@ arrays can be passed in as arguments to methods and returned as values, just lik
 
 Arrays Game
 --------------------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice arrays. Click on **Arrays** and click on the element of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.

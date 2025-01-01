@@ -1,13 +1,14 @@
 .. qnum::
-   :prefix: 5-14-
+   :prefix: 3-13-
    :start: 1
 
 Multiple-Choice Exercises
 ============================
 
 
-.. mchoice:: AP5-1-3
+.. mchoice:: AP-OOP-1
     :practice: T
+    :random:
 
     The Liquid class will contain two double attributes for a liquid’s boiling point temperature and freezing point temperature. The class will also contain a constructor.
 
@@ -65,7 +66,7 @@ Multiple-Choice Exercises
 
       - The instance variables should be private.
 
-.. mchoice:: AP5-1-4
+.. mchoice:: AP-OOP-2
     :practice: T
     :random:
 
@@ -140,7 +141,7 @@ Multiple-Choice Exercises
 
       - Instance variables should be private, and the constructor should be public.
 
-.. mchoice:: AP5-2-4
+.. mchoice:: AP-OOP-3
     :practice: T
     :random:
 
@@ -183,7 +184,7 @@ Multiple-Choice Exercises
 
       - Strings cannot perform addition.
 
-.. mchoice:: AP5-2-5
+.. mchoice:: AP-OOP-4
    :practice: T
    :random:
    :answer_a: I only
@@ -227,7 +228,7 @@ Multiple-Choice Exercises
     II.  Party b = new Party("Charlie", 0, 70+8);
     III. Party b = new Party("Charlie", 0, 78);
 
-.. mchoice:: AP5-2-6
+.. mchoice:: AP-OOP-5
     :practice: T
     :random:
 
@@ -291,7 +292,7 @@ Multiple-Choice Exercises
 
       - The constructor should be changing the instance variables, not the local variables.
 
-.. mchoice:: AP5-3-3
+.. mchoice:: AP-OOP-6
     :practice: T
     :random:
 
@@ -332,7 +333,7 @@ Multiple-Choice Exercises
 
       - Incorrect. This would again result in freezing point being > boiling point which is impossible.
 
-.. mchoice:: AP5-4-4
+.. mchoice:: AP-OOP-7
    :practice: T
    :random:
    :answer_a: The getAge method should be declared as private.
@@ -366,7 +367,7 @@ Multiple-Choice Exercises
             }
         }
 
-.. mchoice:: AP5-4-3
+.. mchoice:: AP-OOP-8
    :practice: T
    :random:
 
@@ -410,7 +411,7 @@ Multiple-Choice Exercises
      - The getCurrentTemperature method does not have access to the ct variable which is the parameter for the constructor.
 
 
-.. mchoice:: AP5-5-3
+.. mchoice:: AP-OOP-9
     :practice: T
     :random:
 
@@ -468,7 +469,7 @@ Multiple-Choice Exercises
       - currentTemp is initialized to a value by the constructor but it is private and cannot be accessed outside the class.
 
 
-.. mchoice:: AP5-5-4
+.. mchoice:: AP-OOP-10
     :practice: T
     :random:
 
@@ -514,7 +515,7 @@ Multiple-Choice Exercises
       - This mutator method should have a void return value and just change the value of currentTemp without returning a value.
 
 
-.. mchoice:: AP5-6-3
+.. mchoice:: AP-OOP-11
    :practice: T
    :random:
    :answer_a: return (numOfBoxes + priceOfOnePizzaBox) / numOfPeople;
@@ -550,7 +551,7 @@ Multiple-Choice Exercises
             }
         }
 
-.. mchoice:: AP5-6-4
+.. mchoice:: AP-OOP-12
    :practice: T
    :random:
    :answer_a: I only
@@ -617,203 +618,7 @@ Multiple-Choice Exercises
                 return false;
              }
 
-.. mchoice:: AP5-8-3
-    :practice: T
 
-    Consider the following class definition.
-
-    .. code-block:: java
-
-        public class Liquid
-        {
-            private int currentTemp;
-            private int boilingPoint;
-
-            public Liquid(int ct, int bp)
-            {
-                currentTemp = ct;
-                boilingPoint = bp;
-            }
-
-            public void changeTemp(int newTemp)
-            {
-                currentTemp = newTemp;
-            }
-
-            public void increaseTemp(int howMuch)
-            {
-                currentTemp = newTemp + howMuch;
-            }
-        }
-
-    Which of the following best explains why the class will not compile?
-
-    - The class is missing an accessor method.
-
-      - The class does not necessarily need an accessor method.
-
-    - The instance variables currentTemp and boilingPoint should be  public instead of private.
-
-      - Instance variables are usually private.
-
-    - The Liquid constructor needs a return type.
-
-      - Constructors do not have return types.
-
-    - The Liquid class is missing a constructor.
-
-      - The class includes a constructor.
-
-    - The variable newTemp is not defined in the increaseTemp method.
-
-      + Correct! newTemp is defined in a different method. The instance variable currentTemp should be used instead.
-
-
-.. mchoice:: AP5-8-4
-   :practice: T
-   :answer_a: The private variables boxesOfFood and numOfPeople are not properly initialized.
-   :answer_b: The private variables boxesOfFood and numOfPeople should have been declared public.
-   :answer_c: The public method getBoxesOfFood should have been declared private.
-   :answer_d: The variable updatedAmountOfFood in the eatFood method is not declared in this method.
-   :answer_e: The variables boxesOfFood and numOfPeople in the updatedAmountOfFood method are local variables.
-   :correct: d
-   :feedback_a: The private variables boxesOfFood and numOfPeople are initialized by the constructor.
-   :feedback_b: Instance variables are usually private.
-   :feedback_c: Methods are usually public.
-   :feedback_d: The variable updatedAmountOfFood in the eatFood method is not declared in this method. It could be replaced by the boxesOfFood instance variable.
-   :feedback_e: The variables boxesOfFood and numOfPeople are instance variables.
-
-   Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?
-
-   .. code-block:: java
-
-       Party p = new Party(20, 15);
-       p.orderMoreFood(20);
-       p.eatFood(5);
-       System.out.println(p.getBoxesOfFood());
-
-       public class Party
-       {
-        private int boxesOfFood;
-        private int numOfPeople;
-
-        public Party(int people, int foodBoxes)
-        {
-            numOfPeople = people;
-            boxesOfFood = foodBoxes;
-        }
-
-        public void orderMoreFood(int additionalFoodBoxes)
-        {
-            int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
-            boxesOfFood = updatedAmountOfFood;
-        }
-
-        public int getNumOfPeople() {
-            return numOfPeople;
-        }
-
-        public int getBoxesOfFood() {
-            return boxesOfFood;
-        }
-
-        public void eatFood(int eatenBoxes)
-        {
-            boxesOfFood = updatedAmountOfFood - eatenBoxes;
-        }
-       }
-
-
-.. mchoice:: AP5-9-3
-    :practice: T
-
-    Consider the following class definitions.
-
-    .. code-block:: java
-
-        public class Party
-        {
-            private String partyHost;
-            private int monthOfParty;
-            private int partyStartTime;
-
-            public Party(String h, int month, int startTime)
-            {
-                partyHost = h;
-                monthOfParty = month;
-                partyStartTime = startTime;
-            }
-
-            public int getMonth()
-            {
-                return monthOfParty;
-            }
-
-            public int getStartTime()
-            {
-                return partyStartTime;
-            }
-
-            public String getHost()
-            {
-                return partyHost;
-            }
-
-            public void addToOptions(PartyOptions o)
-            {
-                o.addParty(this);
-            }
-        }
-
-        public class PartyOptions
-        {
-            private int onlyThisMonth;
-
-            public PartyOptions(int month)
-            {
-                onlyThisMonth = month;
-            }
-
-            /* A Party should only be added to this PartyOption if the party’s month matches onlyThisMonth */
-            public void addParty(Party p)
-            {
-                if (p.getMonth() == onlyThisMonth)
-                {
-                    System.out.print("Party by " + p.getHost() + " accepted; ");
-                }
-                else
-                {
-                    System.out.print("Party by " + p.getHost() + " rejected; ");
-                }
-            }
-        }
-
-    Consider the following code segment, which appears in a class other than Party or PartyOptions.
-
-    .. code-block:: java
-
-        Party p1 = new Party("Kerry", 10, 7);
-        Party p2 = new Party("Jules", 9, 6);
-
-        PartyOptions options = new PartyOptions(10);
-        p1.addToOptions(options);
-        p2.addToOptions(options);
-
-    - Party by Kerry rejected; Party by Jules rejected;
-
-      - Kerry's party should be accepted because it is in the 10th month.
-
-    - Party by Kerry rejected; Party by Jules accepted;
-
-      - Kerry's party should be accepted because it is in the 10th month. Jules' party should be rejected because it is not in the 10th month.
-
-    - Party by Kerry accepted; Party by Jules rejected;
-
-      + Kerry's party is accepted because it is in the 10th month, and Jules' party is not.
-
-    - Party by Kerry accepted; Party by Jules accepted;
-
-      - Jules' party should be rejected because it is not in the 10th month.
 
 
 
