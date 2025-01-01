@@ -19,10 +19,10 @@ Wrapper Classes - Integer and Double
 
 A **wrapper class** is a class that wraps (encloses) around a primitive data type and gives it an object appearance. The wrapper classes are part of the ``java.lang`` package, which is imported by default into all Java programs. The ``Integer`` class and ``Double`` class are **wrapper classes** that create objects from primitive types of ``int`` and ``double`` respectively. Sometimes you need to create a wrapped object for a primitive type so that you can give it to a method that is expecting an object, or to put it in a collection like an ``ArrayList`` that we will see in the next lesson. The wrapper classes are also used to convert strings to primitive data types and to convert primitive data types to strings which is useful when using the ``Scanner`` class with input.
 
-Creating Integer and Double Objects
------------------------------------
+Creating ``Integer`` and ``Double`` Objects
+--------------------------------------------
 
-Here are some examples of creating Integer and Double objects. In Java version 7, you can use a constructor like ``new Integer(2)`` to create an object with the value 2 in it. In Java 9 and later, you can just use ``Integer i = 2;`` to create an object with the value 2 wrapped in it. 
+Here are some examples of creating ``Integer`` and ``Double`` objects. In Java version 7, you can use a constructor like ``new Integer(2)`` to create an object with the value 2 in it. In Java 9 and later, you can just use ``Integer i = 2;`` to create an object with the value 2 wrapped in it.  ``Integer`` and ``Double`` objects are immutable, meaning once the objects are created, their attributes (their values) cannot be changed.
 
 .. code-block:: java
 
