@@ -943,4 +943,24 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
     <script>      window.scrollTo(0, 0);</script>
 
 
+Review/Practice for Unit 1 Part b on Using Objects
+----------------------------------------------------
 
+|Time90|
+
+This lesson ends the section on Unit 1 part b on Using Objects. 
+You can now do the following review and practice lessons at the end of the unit
+and College Board Progress Checks in the AP Classroom.  
+
+.. raw:: html
+
+   <ul>
+    <li><a href="unit1b-summary.html" target="_blank">Unit 1b Summary</a></li>
+    <li><a href="unit1b-practice-mixed-code.html" target="_blank">Unit 1b Practice Mixed Code</a></li>
+    <li><a href="unit1b-practice-mixed-code-toggle.html" target="_blank">Unit 1b Practice Mixed Code Toggle</a></li>
+    <li><a href="unit1b-practice-coding.html" target="_blank">Unit 1b Practice Coding</a></li>
+    <li><a href="Exercises-objects.html" target="_blank">Exercises on Objects</a></li>
+    <li><a href="practice-test-objects.html" target="_blank">Practice Test on Objects</a></li>
+    <li><a href="JavaSwingGUIs.html" target="_blank">Optional Java Swing GUIs</a></li>
+    <li><a href="frq-practice.html" target="_blank">Unit 1 FRQ Practice</a></li>
+   </ul> 

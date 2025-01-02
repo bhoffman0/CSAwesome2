@@ -563,11 +563,6 @@ Let's try the code to read into an array of Pokemon objects in the challenge exe
 |Groupwork| Coding Challenge: Array of Pokemon from Input File
 -------------------------------------------------------------------
 
-.. image:: https://play.pokemonshowdown.com/sprites/bw/pikachu.png
-   :width: 150px
-   :align: left
-   :alt: Pikachu
-
 Let's end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Create a class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an array of Pokemon objects. Write a ``findType`` method that returns to the type of a Pokemon given its name as an argument. It should loop through the array to find the right Pokemon object using the ``getName`` and ``getType`` methods that you will write. It should also display the image for the Pokemon.
 
 

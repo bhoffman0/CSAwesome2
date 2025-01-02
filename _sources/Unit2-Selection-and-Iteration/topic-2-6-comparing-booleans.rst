@@ -788,3 +788,28 @@ AP Practice
     - message.equals(memo) || memo.equals(note)
 
       - Both of these are false.
+
+Review/Practice for Selection
+------------------------------
+
+|Time90|
+
+This lesson ends the section on selection. 
+You can now do the following review and practice lessons at the end of the unit
+and College Board Progress Checks in the AP Classroom.  
+
+.. raw:: html
+
+   <ul>
+    <li><a href="selection-summary.html" target="_blank">Selection Summary</a></li>
+    <li><a href="selection-practice-mixed-code.html" target="_blank">Selection Practice Mixed Code</a></li>
+    <li><a href="selection-practice-mixed-code-toggle.html" target="_blank">Selection Practice Mixed Code Toggle</a></li>
+    <li><a href="selection-practice-coding.html" target="_blank">Selection Practice Coding</a></li>
+    <li><a href="Exercises-selection.html" target="_blank">Exercises Selection</a></li>
+    <li><a href="frq-game-score.html" target="_blank">FRQ Game Score</a></li>
+    <li><a href="selection-more-practice-coding.html" target="_blank">Selection More Practice Coding</a></li>
+    <li><a href="group-mod-practice.html" target="_blank">Group Mod Practice</a></li>
+    <li><a href="magpieindex.html" target="_blank">Magpie Lab</a></li>
+    </ul>
+   
+ 
