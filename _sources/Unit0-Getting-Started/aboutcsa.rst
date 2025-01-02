@@ -30,41 +30,31 @@ The 4 free response questions cover the following areas (from |AP CSA Free Respo
     specifications and create, traverse, and manipulate elements in 2D array
     objects.
 
-The College Board specifies the AP CSA course in the 10 units shown in the table
+The College Board specifies the AP CSA course in the 4 units shown in the table
 below. On the College Board's AP Portal they provide formative assessments
 called Personal Progress Checks for each unit. This CSAwesome curriculum is
 organized around the AP CSA units and also provides many interactive exercises
-in each unit.
+in each unit. 
 
 The College Board also requires AP CSA courses to provide at least 20 hours of
 lab time for you to practice Java programming.
 
+The table below reflects the 2025-2026 revisions to AP CSA where the content is reorganized into 4 large units. The new unit 1 is a combination of the old units 1 & 2, the new unit 2 is a combination of the old units 3 & 4, the new unit 3 corresponds to the old unit 5, and the new unit 4 is a combination of the old units 6, 7, 8, and 10. The old unit 9 on inheritance is no longer a part of the AP CSA exam but is included as an optional unit 5 in CSAwesome2.
+
 .. container::
    :name: aboutcsa-table
 
-   ======= ======================= =============== ========== ========
-   Unit    Title                   Exam Weight     Class Days Lab Days
-   ======= ======================= =============== ========== ========
-   1       Primitive Types         2.5–5%          8-10
-   ------- ----------------------- --------------- ---------- --------
-   2       Using Objects           5–7.5%          13-15
-   ------- ----------------------- --------------- ---------- --------
-   3       Boolean Exprs/ifs       15–17.5%        11-13      3-5
-   ------- ----------------------- --------------- ---------- --------
-   4       Iteration               17.5–22.5%      14-16      4-6
-   ------- ----------------------- --------------- ---------- --------
-   5       Writing Classes         5-7.5%          12-14      3-6
-   ------- ----------------------- --------------- ---------- --------
-   6       Array                   10–15%          6-8
-   ------- ----------------------- --------------- ---------- --------
-   7       ArrayList               2.5–7.5%        10-12      3-6
-   ------- ----------------------- --------------- ---------- --------
-   8       2D Array                7.5–10%         10-12      4-7
-   ------- ----------------------- --------------- ---------- --------
-   9       Inheritance             5-10%           14-15      3-6
-   ------- ----------------------- --------------- ---------- --------
-   10      Recursion               5–7.5%          3-5
-   ======= ======================= =============== ========== ========
+   ======= ======================= =============== ========== ======== ============
+   Unit    Title                   Exam Weight     Class Days Lab Days Old Map
+   ======= ======================= =============== ========== ======== ============
+   1       Using Objects & Methods 7.5–10%         20-35               old U1 & U2
+   ------- ----------------------- --------------- ---------- -------- ------------
+   2       Selection & Iteration   30–40%          25-30      7-10     old U3 & U4
+   ------- ----------------------- --------------- ---------- -------- ------------
+   3       Writing Classes         5-7.5%          12-14      3-6      old U5
+   ------- ----------------------- --------------- ---------- -------- ------------
+   4       Data Collections        25-50%          30–50      13-21    old 6,7,8,10
+   ======= ======================= =============== ========== ======== ============
 
 For more information on the exam see the College Board |AP CSA site| and the
 200+ page |AP CSA CED|. The |AP CSA past FRQs| are available online. Here is an
@@ -84,7 +74,7 @@ careers!
 
 .. |AP CSA CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a" target="_blank">AP CSA Course and Exam Description (CED)</a>
+   <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-revised-framework-preview.pdf" target="_blank">AP CSA Course and Exam Description 2025-2026 (CED)</a>
 
 .. |CS Careers| raw:: html
 
