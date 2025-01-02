@@ -1,4 +1,4 @@
-.. include:: ../common.html
+.. include:: ../common.rst
 
 .. qnum::
    :prefix: 4-5-

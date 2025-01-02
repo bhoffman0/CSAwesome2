@@ -4,23 +4,23 @@
 
 
 
-
-Teacher PD Pretest for Units 1-6
+Teacher PD Pretest 
 ---------------------------------
 
-Please try the following pretest for Units 1-6. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. It is fine to pick the "I don't know" answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!
+Please try the following pretest. We don't expect you to know the answers to these questions at all yet! So don't worry about it if you don't know the answers. It is fine to pick the "I don't know" answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!
 
 
 .. timed:: teacherPD-pretest
      :nofeedback:
 
      .. mchoice:: PDpretest1
+          :random:
 
-          Unit 1 Primitive Types Skills and Learning Objectives:
+          Unit 1 Output:
 
-          - Skill 5.B: Explain why a code segment will not compile or work as intended.
+          - Practice 3.D: Explain why a code segment will not compile or work as intended.
 
-          - MOD-1.A: Call System class methods to generate output to the console.
+          - LO 1.3.A: Develop code to generate output and determine the result that would be displayed
 
           Consider the following code segment.
 
@@ -73,13 +73,13 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
      .. mchoice:: PDpretest2
 
-          Unit 1 Primitive Types (Expressions) Skills and Learning Objectives:
+          Unit 1 Expressions:
 
-          - VAR-1.C: Declare variables of the correct types to represent primitive data.
+          - LO 1.3.C Develop code for arithmetic expressions and determine the result of these expressions.
 
-          - CON-1: The way variables and operators are sequenced and combined in an expression determines the computed result.
+          - LO 1.4.A Develop code for assignment statements with expressions and determine the value that is stored in the variable as a result of these statements.
 
-          - Skill 2.B: Determine the result or output based on statement execution order in a code segment without method calls.
+          - Practice 3.A: Determine the result or output based on statement execution order in an algorithm.
 
           Consider the following code segment:
 
@@ -119,14 +119,13 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
             -
 
      .. mchoice:: PDpretest3
+        :random:
+        
+        Unit 1 Objects & Constructors:
 
-        Unit 2 Using Objects (Constructors) Skills and Learning Objectives:
+        - Practice 2.B: Write program code involving data abstractions.
 
-        - Skill 3.A: Write program code to create objects of a class and call their methods.
-
-        - VAR-1.D: Define variables of the correct types to represent reference data.
-
-        - MOD-1.D: Create objects by calling constructors with or without parameters.
+        - LO 1.13.C Develop code to create an object by calling a constructor.
 
         Consider the following code segment.
 
@@ -186,11 +185,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest4
+        :random:
 
-        Unit 2 Using Objects (Methods) Skills and Learning Objectives:
+        Unit 1 Methods:
 
-        - Skill 3.A: Write program code to create objects of a class and call their methods.
-        - MOD-1.B: Explain the relationship between a class and an object.
+        - LO 1.14.A Develop code to call instance methods and determine the result of these calls.
+        - LO 1.12.A: Explain the relationship between a class and an object.
 
         Consider the following class.
 
@@ -257,14 +257,13 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest5
+          :random:
 
-          Unit 4 If Statements and Boolean Operators Skills and Learning Objectives:
+          Unit 2 Selection:
 
-          - CON-1.E: Evaluate Boolean expressions that use relational operators in program code.
+          - LO 2.2.A: Develop code to create Boolean expressions with relational operators and determine the result of these expressions.
 
-          - CON-1.F: Evaluate compound Boolean expressions in program code.
-
-          - Skill 2.B  Determine the result or output based on statement execution order in a code segment without method calls.
+          - Practice 3.A: Determine the result or output based on statement execution order in an algorithm.
 
           Consider the following code segment. Assume boolean variables p and q have been initialized.
 
@@ -302,12 +301,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
             -
 
      .. mchoice:: PDpretest6
+          :random:
 
-          Unit 4 If Statements Skills and Learning Objectives:
+          Unit 2 Selection:
 
-          - CON-2.A: Represent branching logical processes by using  conditional statements.
-          - CON-2.B: Represent branching logical processes by using nested conditional statements.
-          - Skill 3.C  Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements.
+          - LO 2.3.A Develop code to represent branching logical processes by using selection statements and determine the result of these processes.
+          - LO 2.4.A Develop code to represent nested branching logical processes and determine the result of these processes.
 
           Consider the following code segment.
 
@@ -360,12 +359,11 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest7
+          :random:
 
-          Unit 4 Loops Skills and Learning Objectives:
+          Unit 2 Loops:
 
-          - CON-2.E Represent iterative processes using a for loop.
-
-          - Skill 3.C  Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements.
+          - LO 2.8.A Develop code to represent iterative processes using for loops and determine the result of these processes.
 
           Complete the loop below by filling in the missing code. The loop should calculate the number of leap years between the variables year1 and year2, inclusive, using a helper method isLeapYear(year) which returns true if year is a leap year and false otherwise.
 
@@ -408,12 +406,11 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest8
+          :random:
 
-          Unit 4 Loops Skills and Learning Objectives:
+          Unit 4 Loops and Strings:
 
-          - CON-2.E Represent iterative processes using a for loop.
-          - Skill 3.C  Write program code to satisfy method specifications using expressions, conditional statements, and iterative statements.
-          - CON-2.F.1 There are standard algorithms that utilize String traversals.
+          - LO 2.10.A Develop code for standard and original algorithms that involve strings and determine the result of these algorithms.
 
           Consider the following method.
 
@@ -456,13 +453,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
             -
 
      .. mchoice:: PDpretest9
+          :random:
 
-          Unit 5 Writing Classes Skills and Learning Objectives:
+          Unit 3 Class Creation:
 
-          - Skill 3B: Write program code to define a new type by creating a class.
-          - MOD-2: Programmers use code to represent a physical object or nonphysical concept, real or imagined, by defining a class based on the attributes and/or behaviors of the object or concept.
-          - MOD-2.A: Designate access and visibility constraints to classes, data, constructors, and methods.
-          - MOD-2.B: Define instance variables for the attributes to be initialized through the constructors of a class.
+          - LO 3.3.A Develop code to designate access and visibility constraints to classes, data, constructors, and methods.
+          - LO 3.4.A Develop code to declare instance variables for the attributestobeinitializedin the body of the constructors of a class.
 
           Consider the following class Cat:
 
@@ -540,11 +536,11 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
             -
 
      .. mchoice:: PDpretest10
+          :random:
 
-          Unit 5 Writing Classes Skills and Learning Objectives:
+          Unit 3 Class Creation:
 
-          - Skill 3B: Write program code to define a new type by creating a class.
-          - MOD-2.E: Define behaviors of an object through methods with or without parameters written in a class.
+          - LO 3.5.A Develop code to define behaviors of an object through methods written in a class using primitive values and determine the result of calling these methods.
 
           Which of the following is the most appropriate header for a method that would set the value of the private instance variable y?
 
@@ -574,12 +570,13 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest11
+          :random:
 
-          Unit 5 Writing Classes Skills and Learning Objectives:
+          Unit 3 Class Creation: 
 
-          - Skill 3B: Write program code to define a new type by creating a class.
-          - Skill 4.B  Identify errors in program code.
-          - MOD-2.D: Define behaviors of an object through non-void methods without parameters written in a class.
+          - Practice 3.C: Determine the result or output based on code that contains procedural abstractions. 
+          - Practice 3.D: Explain why a code segment will not compile or work as intended and modify the code to correct the error.
+          - LO 3.5.A Develop code to define behaviors of an object through methods written in a class using primitive values and determine the result of calling these methods.
 
           Consider the following class definition. The class does not compile.
 
@@ -623,12 +620,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
 
 
      .. mchoice:: PDpretest12
+          :random:
 
-          Unit 6 Arrays Skills and Learning Objectives:
+          Unit 4 Arrays:
 
-          - Skill 3.D: Write program code to create, traverse, and manipulate elements in 1D array or ArrayList objects.
-          - VAR-2.B Traverse the elements in a 1D array.
-          - Skill 4.B  Identify errors in program code
+          - LO 4.3.A Develop code used to represent collections of relateddatausingonedimensional (1D) array objects.
+          - LO 4.4.A Develop code used to traverse the elements in a 1D array and determine the result of these traversals.
 
           Consider an integer array which has been declared and initialized with one or more integer values such as:
 
@@ -679,12 +676,12 @@ Please try the following pretest for Units 1-6. We don't expect you to know the 
             -
 
      .. mchoice:: PDpretest13
+          :random:
 
-          Unit 6 Arrays Skills and Learning Objectives:
+          Unit 4 Arrays:
 
-          - Skill 3.D: Write program code to create, traverse, and manipulate elements in 1D array or ArrayList objects.
-          - VAR-2.B Traverse the elements in a 1D array.
-          - CON-2.I.1 There are standard algorithms that utilize array traversals.
+          - LO 4.4.A Develop code used to traverse the elements in a 1D array and determine the result of these traversals.
+          - LO 4.5.A Develop code for standard and original algorithms for a particular context or specification that involves arrays and determine the result of these algorithms.
 
           Consider the following method. Which of the following statements best describes when it returns true?
 
