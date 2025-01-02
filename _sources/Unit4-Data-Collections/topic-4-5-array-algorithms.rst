@@ -1,4 +1,4 @@
-.. include:: ../common.rst
+.. include:: ../common.html
 
 .. qnum::
    :prefix: 4-5-
@@ -6,7 +6,7 @@
 
 |Time90|
 
-Implementing Array Algorithms (FRQs)
+Implementing Array Algorithms 
 ======================================
 
 
@@ -1203,20 +1203,40 @@ The following programs show how you can reverse an array in place by swapping el
               }
 
 
-FRQ Practice
--------------
+Review and FRQ Practice for Arrays
+------------------------------------
 
 |Time90|
 
-We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice!
+This lesson ends the section on 1-dimensional arrays. 
+You can now do the following review lessons and FRQs at the end of the unit
+and College Board Progress Checks in the AP Classroom.
 
-.. toctree::
-   :maxdepth: 3
+.. raw:: html
 
-   horseBarnA.rst
-   horseBarnB.rst
-   selfDivisorB.rst
-   soundA.rst
-   soundB.rst
-   numberCubeA.rst
-   numberCubeB.rst
+   <ul>
+    <li><a href="array-summary.html" target="_blank">Arrays Summary</a></li>
+    <li><a href="ArrayParsonsPractice.html" target="_blank">Arrays Mixed-up Code Practice</a></li>
+    <li><a href="Arrays-mixed-code-toggle.html" target="_blank">Arrays Toggle Practice</a></li>
+    <li><a href="ArrayPractice.html" target="_blank">Arrays Coding Practice</a></li>
+    <li><a href="MoreArrayPractice.html" target="_blank">More Arrays Coding Practice</a></li>
+    <li><a href="array-Exercises.html" target="_blank">Arrays Multiple-Choice Exercises</a></li>
+    <li><a href="arrayExam.html" target="_blank">Arrays Exam</a></li>
+   </ul>
+
+We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. 
+These will get easier with practice!
+
+.. raw:: html
+
+   <ul>
+    <li><a href="horseBarnA.html" target="_blank">Horse Barn A FRQ</a></li>
+    <li><a href="horseBarnB.html" target="_blank">Horse Barn B FRQ</a></li>
+    <li><a href="selfDivisorB.html" target="_blank">Self Divisor B FRQ</a></li>
+    <li><a href="soundA.html" target="_blank">Sound A FRQ</a></li>
+    <li><a href="soundB.html" target="_blank">Sound B FRQ</a></li>
+    <li><a href="numberCubeA.html" target="_blank">Number Cube A FRQ</a></li>
+    <li><a href="numberCubeB.html" target="_blank">Number Cube B FRQ</a></li>
+    </ul>
+
+

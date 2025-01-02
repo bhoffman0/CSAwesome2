@@ -114,7 +114,9 @@ Long Division with a Remainder
 Consider how you did long division in elementary school where you determined
 what number goes evenly into another number and the remainder.
 
-.. image:: https://i.postimg.cc/VL6rBj0g/mod-ex.png
+.. image:: Figures/mod-ex.png
+    :align: center
+  
 
 .. fillintheblank:: mod-79-mod-5
 

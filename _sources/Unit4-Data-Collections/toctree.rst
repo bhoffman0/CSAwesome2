@@ -30,19 +30,26 @@ AP CSA Exam Weighting:
    topic-4-16-recursion.rst
    topic-4-17-recursive-search-sort.rst
    array-summary.rst
-   ArrayList-summary.rst
-   a2dSummary.rst
-   recursion-summary.rst
    ArrayParsonsPractice.rst
    Arrays-mixed-code-toggle.rst
    ArrayPractice.rst
    MoreArrayPractice.rst
    array-Exercises.rst
-   arrayExam.rst  
+   arrayExam.rst 
+   horseBarnA.rst
+   horseBarnB.rst
+   selfDivisorB.rst
+   soundA.rst
+   soundB.rst
+   numberCubeA.rst
+   numberCubeB.rst
+   ArrayList-summary.rst
    ArrayListParsonsPractice.rst
    ArrayList-toggle-problems.rst
    ArrayListPractice.rst
    ArrayList-Exercises.rst
+   a2dSummary.rst
+   recursion-summary.rst
    Array2dParsonsPractice.rst
    a2d-toggle-problems.rst
    Array2dCodePractice.rst
