@@ -48,6 +48,17 @@ AP CSA Exam Weighting:
    ArrayList-toggle-problems.rst
    ArrayListPractice.rst
    ArrayList-Exercises.rst
+   stringScrambleB.rst
+   climbClubA.rst
+   climbClubB.rst
+   climbClubC.rst
+   cookieOrderA.rst
+   cookieOrderB.rst
+   2016freeresponseQ4A.rst
+   2016freeresponseQ4B.rst
+   2019delimitersQ3a.rst
+   2019delimitersQ3b.rst
+   2013gridworldQ3A.rst
    a2dSummary.rst
    recursion-summary.rst
    Array2dParsonsPractice.rst
