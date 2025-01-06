@@ -426,13 +426,13 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
                                                a)
     {
     =====
-      for(int i=0; i<a.size(); i++)
+      for(int i=0; i< a.size(); i++)
       {
     =====
-        for(int j=i+1; j<a.size(); j++)
+        for(int j=i+1; j< a.size(); j++)
         {
     =====
-        for(int j=i; j<a.size()-1; j++)
+        for(int j=i; j< a.size()-1; j++)
         { #paired
     =====
          if(a.get(i).equals(a.get(j)))
@@ -830,6 +830,15 @@ Some algorithms require multiple ``String``, array, or ``ArrayList`` objects to 
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
+          @Test
+            public void test2()
+            {
+                String code = getCodeWithoutComments();
+                int count = countOccurences(code, "for");
+                boolean passed = count == 1;
+                passed = getResults("1 loop", count + " loop", "use only 1 for loop");
+                assertTrue(passed);
+            }
     }
 
 Summary
