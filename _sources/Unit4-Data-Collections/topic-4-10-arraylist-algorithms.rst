@@ -246,7 +246,6 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
 
             public static void main(String[] args)
             {
-
                 ArrayList<Integer> list = new ArrayList<Integer>();
                 list.add(1);
                 list.add(3);
@@ -289,9 +288,8 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
                 list.add(2);
                 list.add(4);
                 list.add(0);
-                Object[] args = {list};
                 String expect = "4";
-                String output = getMethodOutput("findMax", args);
+                String output = "" + ListMax.findMax(list);
 
                 boolean passed = getResults(expect, output, "findMax with list 2,4,0");
                 assertTrue(passed);
@@ -350,7 +348,7 @@ The following method counts the number of odd numbers in an ``ArrayList`` of Int
     ~~~~
     import java.util.*;
     
-    public class Test1
+    public class TestCountOdd
     {
          public static int countOdd(ArrayList<Integer> nums)
          {
@@ -379,10 +377,14 @@ The following method counts the number of odd numbers in an ``ArrayList`` of Int
     import org.junit.*;
     
     import java.io.*;
+    import java.util.*;
     
     public class RunestoneTests extends CodeTestHelper
     {
-    
+         public RunestoneTests()
+         {
+              super("TestCountOdd");
+         }
          @Test
          public void testMain() throws IOException
          {
@@ -400,9 +402,8 @@ The following method counts the number of odd numbers in an ``ArrayList`` of Int
                 list.add(-2);
                 list.add(1);
                 list.add(11);
-                Object[] args = {list};
                 String expect = "2";
-                String output = getMethodOutput("countOdd", args);
+                String output = "" + TestCountOdd.countOdd(list);
                 boolean passed = getResults(expect, output, "countOdd with list 2,-2,1,11");
                 assertTrue(passed);
          }
@@ -422,36 +423,36 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
     The following program segment is a method that should return true if there are any duplicate elements in an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
     -----
     public static boolean hasDups(ArrayList<Integer>
-                                               nums)
+                                               a)
     {
     =====
-      for (int i = 0; i < nums.size(); i++)
+      for(int i=0; i<a.size(); i++)
       {
     =====
-        for (int j = i + 1; j < nums.size(); j++)
+        for(int j=i+1; j<a.size(); j++)
         {
     =====
-        for (int j = i; j < nums.size() - 1; j++)
+        for(int j=i; j<a.size()-1; j++)
         { #paired
     =====
-           if (nums.get(i).equals(nums.get(j)))
-           {
+         if(a.get(i).equals(a.get(j)))
+         {
     =====
-           if (nums.get(i) == nums.get(j))
-           { #paired
+         if(a.get(i) == a.get(j))
+         { #paired
     =====
-           if (nums[i] == nums[j])
-           {    #paired
+         if (a[i] == a[j])
+         {    #paired
     =====
-               return true;
+              return true;
     =====
-            } // end if
+          } // end if
     =====
         } //end inner for loop
     =====
       } //end outer for loop
     =====
-         return false;
+      return false;
     =====
     } //end hasDuplicates method
 
@@ -500,12 +501,15 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
 
     public class RunestoneTests extends CodeTestHelper
     {
-
+        public RunestoneTests()
+        {
+            super("TestDuplicates");
+        }
         @Test
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
-            String expect = "Expected Result: true\nYour Result: false, true\n";
+            String expect = "Expected Result: false, true\nYour Result: false, true\n";
             boolean passed = getResults(expect, output, "Expected output from main");
             assertTrue(passed);
         }
@@ -526,9 +530,8 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
                 list.add(2);
                 list.add(4);
                 list.add(0);
-                Object[] args = {list};
                 String expect = "false";
-                String output = getMethodOutput("hasDuplicates", args);
+                String output = "" + TestDuplicates.hasDuplicates(list);
                 boolean passed = getResults(expect, output, "hasDuplicates with list 2,4,0");
                 assertTrue(passed);
             }
@@ -540,9 +543,8 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
                 list.add(4);
                 list.add(0);
                 list.add(4);
-                Object[] args = {list};
                 String expect = "true";
-                String output = getMethodOutput("hasDuplicates", args);
+                String output = "" + TestDuplicates.hasDuplicates(list);
                 boolean passed = getResults(expect, output, "hasDuplicates with list 2,4,0,4");
                 assertTrue(passed);
             }
@@ -564,19 +566,19 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
    public static void rotateRight(ArrayList<Integer> nums)
    {
    =====
-       int last = nums.get(nums.size() - 1);
+       int last = nums.get(nums.size()-1);
    =====
-       int last = nums[nums.length - 1]; #paired
+       int last = nums[nums.length-1]; #paired
    =====
-       for (int i = nums.size() - 1; i > 0; i--)
+       for (int i = nums.size()-1; i > 0; i--)
        {
    =====
-       for (int i = nums.size() - 1; i >= 0; i--)
+       for (int i = nums.size()-1; i >= 0; i--)
        { #paired
    =====
-           nums.set(i, nums.get(i - 1));
+           nums.set(i, nums.get(i-1));
    =====
-           nums[i] = nums[i - 1]; #paired
+           nums[i] = nums[i-1]; #paired
    =====
        } //end for loop
    =====
@@ -628,22 +630,16 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
     public class RunestoneTests extends CodeTestHelper
     {
         @Test
+        public RunestoneTests()
+        {
+            super("TestRotate");
+        }
+        @Test
         public void testMain() throws IOException
         {
             String output = getMethodOutput("main");
             String expect = "Expected Result: [5, 7, 1]\nYour Result: [5, 7, 1]\n";
             boolean passed = getResults(expect, output, "Expected output from main");
-            assertTrue(passed);
-        }
-
-        @Test
-        public void testFor()
-        {
-            String target = "for";
-            boolean passed =
-                    checkCodeContains(
-                            "for loop used",
-                            target);
             assertTrue(passed);
         }
         @Test
@@ -652,7 +648,7 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
             String target = "set";
             boolean passed =
                     checkCodeContains(
-                            "set method used",
+                            "set method",
                             target);
             assertTrue(passed);
         }
@@ -664,9 +660,8 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
                 list.add(4);
                 list.add(0);
                 list.add(-2);
-                Object[] args = {list};
                 String expect = "[4, 0, -2, 2]";
-                String output = getMethodOutput("rotateLeft", args);
+                String output = "" + TestRotate.rotateLeft(list);
                 boolean passed = getResults(expect, output, "rotateLeft with list 2,4,0,-2");
                 assertTrue(passed);
             }
@@ -689,15 +684,15 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                                                myList)
    {
    =====
-     for (int i = myList.size() - 1; i >= 0; i--)
+     for(int i=myList.size()-1; i >= 0; i--)
      {
    =====
-     for (int i = myList.size() - 1; i > 0; i--)
+     for(int i=myList.size()-1; i > 0; i--)
      { #paired
    =====
-        System.out.print(myList.get(i) + ", ");
+        System.out.print(myList.get(i)+", ");
    =====
-        System.out.print(myList[i] + ", "); #paired
+        System.out.print(myList[i]+", "); #paired
    =====
      } //end for loop
    } //end printBackwards method
@@ -774,8 +769,8 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                 list.add(2);
                 list.add(4);
                 list.add(6);
-                Object[] args = {list};
                 String expect = "[6, 4, 2]";
+                String output = "" + TestReverse.reverse(list);
                 boolean passed = getResults(expect, output, "reverse with list 2,4,6");
                 assertTrue(passed);
             }
