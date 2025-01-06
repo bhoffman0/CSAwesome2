@@ -11,6 +11,7 @@ ArrayList and its Methods
 
 .. index::
    single: arraylist
+   single: ArrayList
    pair: arraylist; definition
 
 

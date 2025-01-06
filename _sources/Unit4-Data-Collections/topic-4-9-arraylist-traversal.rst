@@ -1,31 +1,37 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 7-3-
+   :prefix: 4-9-
    :start: 1
 
 |Time90|
 
-Traversing ``ArrayList``\ s with Loops
+``ArrayList`` Traversals
 ================================
 
-``ArrayList``\ s can be traversed with ``while`` loops and both regular and
-enhanced ``for`` loops much the same way we use those constructs to loop over an
-array.
+.. index::
+   single: ArrayList traversal
+   single: traversal
+   single: loop
+   single: enhanced for
+   single: IndexOutOfBoundsException
+   single: ConcurrentModificationException
 
-Enhanced For Each Loop
+Traversing an ``ArrayList`` is when iteration (a loop) is used to access all or an ordered sequence of the elements in the ``ArrayList``. Just like with arrays, we can use ``while`` loops, indexed ``for`` loops, or  enhanced ``for`` loops to traverse an  ``ArrayList``. In a later lesson, we'll also talk about recursion which is when a method calls itself over again which is another way you can traverse an array or ``ArrayList``. In this lesson, we'll focus on using loops.
+
+Enhanced For Loop
 ----------------------
 
 .. index::
    pair: list; for-each loop
 
-You can use a enhanced ``for`` loop to traverse all of the items in an
+You can use an enhanced ``for`` loop to traverse all of the items in an
 ``ArrayList``, just like you do with an array when you only care about the
 values in the list and not their indices. An example is shown in the ``main``
 method below.
 
 Note however that you can’t use the enhanced ``for`` loop if you want to add or
-remove elements while traversing an ``ArrayList``. If an ``ArrayList`` is
+remove elements while traversing an ``ArrayList``. If the size of an ``ArrayList`` is
 modified, such as by calling the ``add`` or ``remove`` methods, while it is
 being looped over, it will cause the loop to throw a
 ``ConcurrentModificationException``. If you need to modify an ``ArrayList``
@@ -103,10 +109,50 @@ while looping over it, you’ll need to use a regular ``while`` or ``for`` loop.
        }
    }
 
-For Loop
-----------------------
+.. parsonsprob:: list_1
+   :numbered: left
+   :adaptive:
 
-You can also use a ``while`` loop or a regular ``for`` loop to process list
+   The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
+   -----
+   public static int getScore(ArrayList<String> 
+                               wordList)
+   {
+   =====
+     int score = 0;
+
+     for (String word : wordList)
+     {
+   =====
+       if (word.length() == 3)
+   =====
+       {
+         score++;
+       }
+   =====
+       else if (word.length() == 4)
+       {
+         score = score + 2;
+       }
+   =====
+       else if (word.length() > 4)
+       {
+         score = score + 3;
+       }
+   =====
+     } // end for
+   =====
+     return score;
+
+   } // end method
+   =====
+   if (word.length == 3) #distractor
+
+
+For Loops and IndexOutOfBounds Exception
+-----------------------------------------
+
+You can also use a regular indexed ``for`` loop to process list
 elements accessed using an index. ``ArrayList`` indices starts at 0 just like
 array indices, but instead of using the index operator ``[]`` to access
 elements, you use the ``get(index)`` method to get the value at the index and
@@ -178,8 +224,8 @@ While Loop
 ----------------------
 
 The example below demonstrates a ``while`` loop and an object-oriented approach
-where the list is a field of the current object and you use an instance method
-rather than a class (static) method to loop through the list.
+where the list is a field of the current object and an instance method
+rather than a class (static) method loops through the list.
 
 |CodingEx| **Coding Exercise**
 
@@ -303,46 +349,7 @@ You can step through the code above by clicking on the following `Example <http:
 
 
 
-
-.. parsonsprob:: list_1
-   :numbered: left
-   :adaptive:
-
-   The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.
-   -----
-   public static int getScore(ArrayList<String> wordList)
-   {
-   =====
-     int score = 0;
-
-     for (String word : wordList)
-     {
-   =====
-       if (word.length() == 3)
-   =====
-       {
-         score++;
-       }
-   =====
-       else if (word.length() == 4)
-       {
-         score = score + 2;
-       }
-   =====
-       else if (word.length() > 4)
-       {
-         score = score + 3;
-       }
-   =====
-     } // end for
-   =====
-     return score;
-
-   } // end method
-   =====
-   if (word.length == 3) #distractor
-
-.. parsonsprob:: list_2
+.. parsonsprob:: listInsertParsons
    :numbered: left
    :adaptive:
 
@@ -354,7 +361,8 @@ You can step through the code above by clicking on the following `Example <http:
      int index = 0;
    =====
      while (index < nameList.size() &&
-            nameList.get(index).compareTo(name) < 0)
+        nameList.get(index).compareTo(name) 
+                                < 0)
      {
    =====
        index++;
@@ -594,7 +602,7 @@ Here is the pseudocode for the constructor method.
 
     - Add the new ``WordPair`` formed from the ``i``\ th word and the ``j``\ th word to the ``allPairs`` ``ArrayList``.
 
-.. activecode:: challenge-7-3-WordPairs
+.. activecode:: challenge-WordPairs
    :language: java
    :autograde: unittest
 
@@ -764,18 +772,10 @@ the words array and then uncomment the call to ``numMatches``.
 Summary
 -----------
 
+- (AP 4.9.A.1) Traversing an ``ArrayList`` is when iteration or recursive statements are used to access all or an ordered sequence of the elements in an ``ArrayList``.
 - ``ArrayList``\ s can be traversed with an enhanced ``for`` loop, a ``while``
   loop, or a regular ``for`` loop using an index.
-
-- Deleting elements during a traversal of an ``ArrayList`` requires using
-  special techniques to avoid skipping elements, since ``remove`` moves all the
-  elements above the removed index down.
-
-- Since the indices for an ``ArrayList`` start at 0 and end at the number of
-  elements − 1, accessing an index value outside of this range will result in an
-  ``IndexOutOfBoundsException`` being thrown.
-
-- Changing the size of an ``ArrayList`` while traversing it using an enhanced
-  ``for`` loop can result in a ``ConcurrentModificationException`` being thrown.
-  Therefore, when using an enhanced ``for`` loop to traverse an ``ArrayList``,
-  you should not ``add`` or ``remove`` elements.
+- (AP 4.9.A.2) Deleting elements during a traversal of an ``ArrayList`` requires the use of special techniques to avoid skipping elements (since ``remove`` moves all the
+  elements above the removed index down.)
+- (AP 4.9.A.3) Attempting to access an index value outside of its range will result in an ``IndexOutOfBoundsException``. (The indices for an ``ArrayList`` start at 0 and end at the number of elements − 1).
+- (AP 4.9.A.4) Changing the size of an ``ArrayList`` while traversing it using an enhanced ``for`` loop can result in a ``ConcurrentModifcationException``. Therefore, when using an enhanced ``for`` loop to traverse an ``ArrayList``, you should not add or remove elements.
