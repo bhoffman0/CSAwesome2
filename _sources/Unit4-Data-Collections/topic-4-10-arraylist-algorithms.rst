@@ -184,7 +184,7 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
       {
    =====
       for (int i = 0; i < nums.length; i++)
-      { #distractor
+      { #paired
    =====
           sum += nums.get(i);
    =====
@@ -208,7 +208,7 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
    =====
        int min = nums.get(0);
    =====
-       int min = nums[0]; #distractor
+       int min = nums[0]; #paired
    =====
        for (int i = 0; i < nums.size(); i++) 
        {
@@ -218,11 +218,11 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
    =====
                min = nums.get(i);
    =====
-           }
+           } // end if statement
    =====
        } //end for loop
    =====
-       return smallest;
+       return min;
    =====
    } //end findMin method
 
@@ -254,7 +254,7 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
                 list.add(0);
                 list.add(9);
 
-                System.out.println("Max: ", findMax(list));
+                System.out.println("Max: " + findMax(list));
             } 
         } 
         ====
@@ -264,7 +264,7 @@ You should be able to write code that finds the minimum, maximum, sum, and avera
 
         import java.io.*;
 
-        // import java.util.ArrayList;
+        import java.util.ArrayList;
 
         public class RunestoneTests extends CodeTestHelper
         {
@@ -309,7 +309,7 @@ You should be able to write code that determines if at least one element has a p
    :adaptive:
    :noindent:
 
-   The following program segment is a method that should return true if at least one element in an ArrayList of Integers (the parameter) is even.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
+   The following program segment is a method that should return true if at least one element in an ArrayList of Integers (the parameter) is even.  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
    -----
    public static boolean hasEven(ArrayList<Integer> nums)
    {
@@ -318,14 +318,19 @@ You should be able to write code that determines if at least one element has a p
        {
    =====
        for (int i = 0; i < nums.length; i++)
-       { #distractor
+       { #paired
    =====
            if (nums.get(i) % 2 == 0)
            {
    =====
                return true;
    =====
-           }
+           } // end if statement
+   =====
+           else
+           {
+               return false;        
+           } #distractor
    =====
        } //end for loop
    =====
@@ -388,14 +393,18 @@ The following method counts the number of odd numbers in an ``ArrayList`` of Int
          }
     
          @Test
-         public void testFor()
+         public void testCall()
          {
-              String target = "for";
-              boolean passed =
-                     checkCodeContains(
-                            "for loop used",
-                            target);
-              assertTrue(passed);
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                list.add(2);
+                list.add(-2);
+                list.add(1);
+                list.add(11);
+                Object[] args = {list};
+                String expect = "2";
+                String output = getMethodOutput("countOdd", args);
+                boolean passed = getResults(expect, output, "countOdd with list 2,-2,1,11");
+                assertTrue(passed);
          }
     }
 
@@ -412,37 +421,35 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
     
     The following program segment is a method that should return true if there are any duplicate elements in an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.
     -----
-    public static boolean hasDuplicates(ArrayList<Integer> nums)
+    public static boolean hasDups(ArrayList<Integer>
+                                               nums)
     {
     =====
-         for (int i = 0; i < nums.size(); i++)
-         {
+      for (int i = 0; i < nums.size(); i++)
+      {
     =====
-         for (int i = 0; i < nums.length; i++)
-         { #distractor
+        for (int j = i + 1; j < nums.size(); j++)
+        {
     =====
-              for (int j = i + 1; j < nums.size(); j++)
-              {
+        for (int j = i; j < nums.size() - 1; j++)
+        { #paired
     =====
-              for (int j = i + 1; j < nums.length; j++)
-              { #distractor
+           if (nums.get(i).equals(nums.get(j)))
+           {
     =====
-                if (nums.get(i) == nums.get(j))
-                { #distractor
+           if (nums.get(i) == nums.get(j))
+           { #paired
     =====
-                if (nums[i] == nums[j])
-                {    #distractor
+           if (nums[i] == nums[j])
+           {    #paired
     =====
-                if (nums.get(i).equals(nums.get(j)))
-                {
+               return true;
     =====
-                     return true;
+            } // end if
     =====
-                } // end if
+        } //end inner for loop
     =====
-              } //end inner for loop
-    =====
-         } //end outer for loop
+      } //end outer for loop
     =====
          return false;
     =====
@@ -489,6 +496,7 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
     import org.junit.*;
 
     import java.io.*;
+    import java.util.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
@@ -532,11 +540,10 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
                 list.add(4);
                 list.add(0);
                 list.add(4);
-                list.add(5);
                 Object[] args = {list};
                 String expect = "true";
                 String output = getMethodOutput("hasDuplicates", args);
-                boolean passed = getResults(expect, output, "hasDuplicates with list 2,4,0,4,5");
+                boolean passed = getResults(expect, output, "hasDuplicates with list 2,4,0,4");
                 assertTrue(passed);
             }
     }
@@ -559,23 +566,24 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
    =====
        int last = nums.get(nums.size() - 1);
    =====
-       int last = nums[nums.length - 1]; #distractor
+       int last = nums[nums.length - 1]; #paired
    =====
        for (int i = nums.size() - 1; i > 0; i--)
        {
    =====
        for (int i = nums.size() - 1; i >= 0; i--)
-       { #distractor
+       { #paired
    =====
            nums.set(i, nums.get(i - 1));
    =====
-           nums[i] = nums[i - 1]; #distractor
+           nums[i] = nums[i - 1]; #paired
    =====
        } //end for loop
    =====
        nums.set(0, last);
    =====
-       nums[0] = last; #distractor
+       nums[0] = last; #paired
+   =====
    } //end rotateRight method 
 
 
@@ -615,10 +623,10 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
     import org.junit.*;
 
     import java.io.*;
+    import java.util.*;
 
     public class RunestoneTests extends CodeTestHelper
     {
-
         @Test
         public void testMain() throws IOException
         {
@@ -681,17 +689,17 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                                                myList)
    {
    =====
-       for (int i = myList.size() - 1; i >= 0; i--)
-       {
+     for (int i = myList.size() - 1; i >= 0; i--)
+     {
    =====
-       for (int i = myList.size() - 1; i > 0; i--)
-       { #distractor
+     for (int i = myList.size() - 1; i > 0; i--)
+     { #paired
    =====
-           System.out.print(myList.get(i) + ", ");
+        System.out.print(myList.get(i) + ", ");
    =====
-           System.out.print(myList[i] + ", "); #distractor
+        System.out.print(myList[i] + ", "); #paired
    =====
-       } //end for loop
+     } //end for loop
    } //end printBackwards method
 
 
@@ -704,11 +712,11 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
               ~~~~
               import java.util.*;
 
-              public class Test1
+              public class TestReverse
               {
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
-                      ArrayList<int> reversed = new ArrayList<int>();
+                      ArrayList<Integer> reversed = new ArrayList<Integer>();
                       // Use an enhanced for loop here
 
                       return reversed;
@@ -718,34 +726,32 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                   {
                       // instantiate ArrayList and fill with Integers
                       ArrayList<Integer> values = new ArrayList<Integer>();
-                      int[] nums = {1, 5, 7, 9, -2, 3, 2};
-                      for (int i = 0; i < nums.length; i++)
+                      for (int i = 0; i < 4; i++)
                       {
-                          values.add(nums[i]);
+                          values.add(i);
                       }
                       ArrayList<Integer> result = reverse(values);
-                      System.out.println("Expected Result:\t [2, 3, -2, 9, 7, 5, 1]");
+                      System.out.println("Expected Result:\t [3, 2, 1, 0]");
                       System.out.println("Your Result:\t\t " + result);
                   }
               }
-
               ====
               import static org.junit.Assert.*;
 
               import org.junit.*;
 
               import java.io.*;
+              import java.util.*;
 
               public class RunestoneTests extends CodeTestHelper
               {
-
                   @Test
                   public void testMain() throws IOException
                   {
                       String output = getMethodOutput("main");
                       String expect =
-                              "Expected Result: [2, 3, -2, 9, 7, 5, 1]\n"
-                                      + "Your Result:     [2, 3, -2, 9, 7, 5, 1]\n";
+                              "Expected Result: [3, 2, 1, 0]\n"
+                                      + "Your Result:     [3, 2, 1, 0]\n";
 
                       boolean passed = getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
@@ -754,25 +760,25 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                   @Test
                   public void testAdd()
                   {
-                      String target = "reversed.add(0,element);";
+                      String target = "reversed.add(0";
                       boolean passed =
                               checkCodeContains(
-                                      "add method called to add element to the beginning of ArrayList reversed",
+                                      "add method called to add to the beginning of reversed",
                                       target);
                       assertTrue(passed);
                   }
-                  @Test
-                  public void testFor()
-                  {
-                      String target = "for";
-                      boolean passed =
-                              checkCodeContains(
-                                      "for loop used",
-                                      target);
-                      assertTrue(passed);
-                  }
-                  
-              }
+              @Test
+              public void test2()
+              {
+                ArrayList<Integer> list = new ArrayList<Integer>();
+                list.add(2);
+                list.add(4);
+                list.add(6);
+                Object[] args = {list};
+                String expect = "[6, 4, 2]";
+                boolean passed = getResults(expect, output, "reverse with list 2,4,6");
+                assertTrue(passed);
+            }
 
 
 
@@ -784,8 +790,9 @@ Some algorithms require multiple ``String``, array, or ``ArrayList`` objects to 
 .. activecode:: parallelArrayLists
    :language: java
    :autograde: unittest
+   :practice: T
 
-   Demonstration of parallel ArrayLists.
+   Complete the code below to add the items in parallel ArrayLists to total.
    ~~~~
    import java.util.*;
 
@@ -802,10 +809,11 @@ Some algorithms require multiple ``String``, array, or ``ArrayList`` objects to 
            test1Grades.add(70);
            test2Grades.add(90);
            double total = 0;
-           for (int i = 0; i < test1Grades.size(); i++)
-           {
-               total += test1Grades.get(i) + test2Grades.get(i);
-           }
+           // Write 1 indexed for loop that adds 
+           // test1Grades and test2Grades at index i to total
+           
+
+
            int numberOfGrades = test1Grades.size() * 2;
            System.out.println("Average over two tests: " + total / numberOfGrades);
        }
