@@ -53,7 +53,7 @@ Here are two common ``ArrayList`` traversal loops that can be used for these alg
   }
 
 
-Add/Remove elements
+Add/Remove Elements
 --------------------
 
 You should be able to trace through code that uses all the basic ArrayList methods like the following.
@@ -762,18 +762,19 @@ The following examples reverse the order of the elements in an ``ArrayList`` by 
                                       target);
                       assertTrue(passed);
                   }
-              @Test
-              public void test2()
-              {
-                ArrayList<Integer> list = new ArrayList<Integer>();
-                list.add(2);
-                list.add(4);
-                list.add(6);
-                String expect = "[6, 4, 2]";
-                String output = "" + TestReverse.reverse(list);
-                boolean passed = getResults(expect, output, "reverse with list 2,4,6");
-                assertTrue(passed);
-            }
+                @Test
+                public void test2()
+                {
+                    ArrayList<Integer> list = new ArrayList<Integer>();
+                    list.add(2);
+                    list.add(4);
+                    list.add(6);
+                    String expect = "[6, 4, 2]";
+                    String output = "" + TestReverse.reverse(list);
+                    boolean passed = getResults(expect, output, "reverse with list 2,4,6");
+                    assertTrue(passed);
+                }
+              }
 
 
 
