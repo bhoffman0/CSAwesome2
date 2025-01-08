@@ -25,6 +25,8 @@ while (<>) {
   s/<input>/<code>/g;
   s/<\/input>/<\/code>/g;
 
+  s/language="python"/language="java"/g;
+  
   # Replace section xml:ids with the filename
   s/<section xml:id=".*?">/<section xml:id="$filename">/g;
   s/<section>/<section xml:id="$filename">/g;
