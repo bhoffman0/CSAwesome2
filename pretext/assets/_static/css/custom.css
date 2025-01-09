@@ -40,12 +40,13 @@
 {
     color:  var(--emphasisColor);
     font-weight: bolder;
+    font-style: normal;
 }
 
 .ptx-content .code-inline
 {
   padding: 0;
-  color: var(--codeColor);
+ /* color: var(--codeColor); // use new defaults instead */
   background-color: inherit;
   font-weight: bold;
   font-size: 100%;  

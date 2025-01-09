@@ -19,10 +19,10 @@
     <knowl exercise-inline="no" example="no" listing="no"/>
     <!-- for scratch code language -->
     <calculator activecode="java"/>
-    <!-- Choices at https://github.com/PreTeXtBook/CSS_core -->
-    <!-- Some not bad ones: blue_green, blue_grey, blue_red_dark, bluegreen_grey, darkmartiansands -->
-    <!-- crc centers the page; new wide style -->
-    <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
-    <tableofcontents focused="yes"/>
+    <!--  Deprecated <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
+       New theme styles https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options
+   -->
+   <css theme="salem"/>
+   <tableofcontents focused="yes"/>
   </html>
 </publication>

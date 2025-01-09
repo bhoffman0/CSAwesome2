@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xml:id="introduction-to-algorithms-programming-and-compilers">
+<section xml:id="topic-1-1-intro-algorithms">
   <title>Introduction to Algorithms, Programming, and Compilers</title><introduction>
     
     <p>What do Android phones, Minecraft, and Netflix have in common? They’re all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you’ve used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a <term>programming language</term> that is used worldwide to create software that we all use.</p>
@@ -260,49 +260,42 @@ public class RunestoneTests extends CodeTestHelper
     <video youtube="auv10y-dN4s"/>
                 <p>Let’s practice debugging some code!</p>
             <p> <term>Check Your Understanding: Mixed up programs</term></p>
-<exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
 </statement>
 <blocks><block order="4">
-<c>public class Hello</c>
-<c>{</c>
+<cline>public class Hello</cline>
+<cline>{</cline>
 </block><block order="1">
-<c>   public static void main(String[] args)</c>
-<c>   {</c>
-<c>   </c>
+<cline>   public static void main(String[] args)</cline>
+<cline>   {</cline>
 </block><block order="2">
-<c>      System.out.println("Hi my friend!");</c>
-<c>      </c>
+<cline>      System.out.println("Hi my friend!");</cline>
 </block><block order="3">
-<c>   }</c>
-<c>   </c>
+<cline>   }</cline>
 </block><block order="5">
-<c>}</c>
-</block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<cline>}</cline>
+</block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="6">
-<choice correct="yes"><c>public class Hello</c>
-<c>{</c>
-</choice><choice><c>public Class Hello</c>
-<c>{                         </c>
+<choice correct="yes"><cline>public class Hello</cline>
+<cline>{</cline>
+</choice><choice><cline>public Class Hello</cline>
+<cline>{                         </cline>
 </choice></block><block order="5">
-<choice correct="yes"><c>   public static void main(String[] args)</c>
-<c>   {</c>
-<c>   </c>
-</choice><choice><c>   public static void main()</c>
-<c>   {                         </c>
-<c>   </c>
+<choice correct="yes"><cline>   public static void main(String[] args)</cline>
+<cline>   {</cline>
+</choice><choice><cline>   public static void main()</cline>
+<cline>   {                         </cline>
 </choice></block><block order="8">
-<choice correct="yes"><c>      System.out.println("Hi there!");</c>
-<c>      </c>
-</choice><choice><c>      System.out.println("Hi there!") </c>
-<c>      </c>
+<choice correct="yes"><cline>      System.out.println("Hi there!");</cline>
+</choice><choice><cline>      System.out.println("Hi there!") </cline>
+<cline>      </cline>
 </choice></block><block order="2">
-<c>   }</c>
-<c>   </c>
+<cline>   }</cline>
 </block><block order="4">
-<c>}</c>
+<cline>}</cline>
 </block></blocks></exercise>        </subsection>
   <subsection>
             <title>Reading Error Messages</title>
@@ -662,9 +655,9 @@ System.out.println("Violets are blue, ")  // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
 </code></program>
             <p>The code segment is intended to produce the following output but may not work as intended.</p>
-            <raw format="html" xml:space="preserve">&lt;pre&gt;Roses are red,
+            <raw format="html" xml:space="preserve"><pre>Roses are red,
 Violets are blue,
-Unexpected '}' on line 32.&lt;/pre&gt;</raw>
+Unexpected '}' on line 32.</pre></raw>
             <p>Which change, if any, can be made so that the code segment produces the intended output?</p>
 </statement><choices><choice><statement id="AP1-1-print_opt_a">            <p>Replacing <title_reference>System</title_reference> with <title_reference>system</title_reference> on all lines.</p>
 </statement><feedback id="AP1-1-print_opt_a">
