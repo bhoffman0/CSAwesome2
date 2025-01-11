@@ -6,7 +6,8 @@
   </introduction>
   <subsection>
             <title>Assignment Statements</title>
-            <p><term>Assignment statements</term> initialize or change the value stored in a variable using the assignment operator <c>=</c>.  An assignment statement always has a single variable on the left hand side. The value of the <term>expression</term> (which can contain math operators and other variables) on the right of the <c>=</c> sign is assigned to and stored in the variable on the left side.</p>
+            <p><idx>assignment</idx>
+                <term>Assignment statements</term> initialize or change the value stored in a variable using the assignment operator <c>=</c>.  An assignment statement always has a single variable on the left hand side. The value of the <term>expression</term> (which can contain math operators and other variables) on the right of the <c>=</c> sign is assigned to and stored in the variable on the left side.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Assignment Statement (variable = expression;)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/assignment.png" width="63%"/></figure>
             <p>Instead of saying equals for the = in an assignment statement, say “gets” or “is assigned” to remember that the variable gets or is assigned the value on the right. In the figure above score is assigned the value of the expression 10 times points (which is another variable) plus 5.</p>
             <p>The following <url href="https://www.youtube.com/watch?v=MZwIgM__5C8&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=MZwIgM__5C8&amp;ab_channel=colleenlewis">video</url> by Dr. Colleen Lewis shows how variables can change values in memory using assignment statements.</p>
@@ -15,7 +16,9 @@
                 <p>As we saw in the video, we can set one variable’s value to a <em>copy</em> of the value of another variable like <c>y = x;</c>.  This won’t change the value of the variable that you are copying from.</p>
             <p>Let’s step through the following code in the <url href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&amp;mode=display&amp;origin=opt-frontend.js&amp;cumulative=false&amp;heapPrimitives=false&amp;textReferences=false&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;curInstr=0">Java visualizer</url> to see the values in memory. Click on the Next button at the bottom of the code to see how the values of the variables change. You can run the visualizer on any Active Code in this e-book by just clicking on the Code Lens button at the top of each Active Code.</p>
 
-<program interactive="codelens" language="java">
+<exercise label="codelensAsgn">
+<statement><p>Keep clicking on the Next button at the bottom of the code to see how the values of the variables change as you step through the running program.</p></statement>
+<program interactive="codelens" language="java" label="codeLens1" xml:id="codelensid1">
     <code>
 public class Test2
 {
@@ -35,7 +38,7 @@ public class Test2
 }
     </code>
 </program>
-
+</exercise>
     <exercise label="qasgn1">
         <statement>
 
