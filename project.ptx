@@ -15,7 +15,7 @@ See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manif
   <target name="web">
     <format>html</format>
     <source>pretext/main.ptx</source>
-    <publication>pretext/publication-rs-for-all.xml</publication>
+    <publication>publication/html.xml</publication>
     <output-dir>build/html</output-dir>
     <xsl>pretext/csawesome-pretext-style.xsl</xsl>
     <stringparam key="html.css.extra" value="external/_static/css/custom.css"/>
@@ -23,7 +23,7 @@ See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manif
   <target name="runestone">
       <format>html</format>
       <source>pretext/main.ptx</source>
-      <publication>pretext/publication-rs-academy.ptx</publication>
+      <publication>publication/runestone.xml</publication>
       <output-dir>published/csawesome2ptxbeta</output-dir>
       <xsl>pretext/csawesome-pretext-style.xsl</xsl>
       <stringparam key="html.css.extra" value="external/_static/css/custom.css"/>
