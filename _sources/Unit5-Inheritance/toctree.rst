@@ -5,27 +5,27 @@
 Inheritance
 ::::::::::::
 
-Class Periods: 14-15
+Optional unit
 
-AP CSA Exam Weighting: 5-10%
+No longer on the AP CSA Exam
 
 
 .. toctree::
    :maxdepth: 3
 
-   topic-9-1-inheritance.rst
-   topic-9-2-constructors.rst
-   topic-9-3-overriding.rst
-   topic-9-4-super.rst
-   topic-9-5-hierarchies.rst
-   topic-9-6-polymorphism.rst
-   topic-9-7-Object.rst
+   topic-5-1-inheritance.rst
+   topic-5-2-constructors.rst
+   topic-5-3-overriding.rst
+   topic-5-4-super.rst
+   topic-5-5-hierarchies.rst
+   topic-5-6-polymorphism.rst
+   topic-5-7-Object.rst
    ooSummary.rst
    freeResponse.rst
    ooParsonsPractice.rst
-   topic-9-10-toggle-problems.rst
+   topic-5-10-toggle-problems.rst
    ooCodePractice.rst
-   Exercises.rst
-   CBLabs.rst
+   ooExercises.rst
+   ooCBLabs.rst
 
 

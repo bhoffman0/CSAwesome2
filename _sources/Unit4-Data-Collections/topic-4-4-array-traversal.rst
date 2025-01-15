@@ -1393,7 +1393,7 @@ traverse your array to print out each object.
       public void testprint()
       {
           boolean passed =
-                  checkCodeContains("call to print() in the loop", ".print();");
+                  checkCodeContains("call to .print in the loop", ".print");
           assertTrue(passed);
       }
 

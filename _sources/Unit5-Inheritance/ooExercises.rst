@@ -1,5 +1,5 @@
-Multiple-Choice Exercises
-=========================
+Inheritance Multiple-Choice Exercises
+=======================================
 
 .. toctree::
    :maxdepth: 3

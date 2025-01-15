@@ -518,7 +518,7 @@ and College Board Progress Checks in the AP Classroom.
     <li><a href="loops-practice-mixed-code.html" target="_blank">Loops Practice Mixed Code</a></li>
     <li><a href="loops-practice-mixed-code-toggle.html" target="_blank">Loops Practice Mixed Code Toggle</a></li>
     <li><a href="loops-practice-coding.html" target="_blank">Loops Practice Coding</a></li>
-    <li><a href="Exercises.html" target="_blank">Exercises</a></li>
+    <li><a href="Exercises-loops.html" target="_blank">Multiple-Choice Exercises for Loops</a></li>
     <li><a href="unit2-test.html" target="_blank">Unit 2 Test</a></li>
     <li><a href="FRQcalendar.html" target="_blank">FRQ Calendar</a></li>
     <li><a href="FRQselfDivisorA.html" target="_blank">FRQ Self Divisor</a></li>
