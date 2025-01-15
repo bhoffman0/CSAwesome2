@@ -699,7 +699,7 @@ Here's another challenge that is a lot of fun! Can you use random numbers to mak
           Turtle yertle = new Turtle(world);
 
           // This is a loop that runs 10 times (you will learn to write loops in
-          // Unit 4)
+          // Unit 2)
           for(int i = 1; i <= 10; i++)
           {
            // Can you choose a randomX between 0-500?

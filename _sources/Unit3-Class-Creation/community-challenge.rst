@@ -206,7 +206,7 @@ Code your Class
       }
   }
 
-You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array of objects using your class.
+You will continue this project in Unit 4 to create an array of objects using your class.
 
 
 Optional Swing GUI

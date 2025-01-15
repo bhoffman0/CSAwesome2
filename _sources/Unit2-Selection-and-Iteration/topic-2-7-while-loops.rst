@@ -638,7 +638,7 @@ AP Practice
 
     - 35
 
-      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+      - Keep track of the variables n, d, and result. Watch the tracing video.
 
     - 15
 
@@ -646,7 +646,7 @@ AP Practice
 
     - 10
 
-      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+      - Keep track of the variables n, d, and result. Watch the tracing video.
 
     - 8
 
@@ -654,7 +654,7 @@ AP Practice
 
     - 33
 
-      - Keep track of the variables n, d, and result. Watch the tracing video in lesson 4.1.
+      - Keep track of the variables n, d, and result. Watch the tracing video.
 
 .. mchoice:: AP-while-loop2
     :practice: T
