@@ -375,6 +375,76 @@ You can step through the code above by clicking on the following `Example <http:
    =====
    nameList.add(name); #distractor
 
+Reading in Files with ``java.nio.file``
+----------------------------------------  
+
+Although not covered in the AP CSA exam, the ``java.nio.file`` package (nio stands for new input/output), added in Java version 7, provides a better and easier way to read in files. The ``Files`` class in this package has a method called ``readAllLines`` that reads all of the lines in a file and returns them as a ``List`` of ``String`` objects. The ``readAllLines`` method throws an ``IOException`` if the file cannot be read. (``List`` is an **interface**. Interfaces are not on the AP CSA exam but are quite common in actual Java programming. For now all you need to know is that all the methods we've talked about using with ``ArrayList`` you can use on any ``List`` such as the one returned by ``readAllLines``.)
+
+.. code-block:: java
+
+   import java.nio.file.*;
+   ...
+
+   // This connects and reads in the file in 1 line of code!
+   // It needs to be in a method that throws or handles IOException
+   List<String> lines = Files.readAllLines(Paths.get("data.txt"));
+
+Under the covers ``readAllLines`` is almost certainly using an ``ArrayList`` which is a kind of ``List``. The advantage of storing the lines in a dynamic data structure like an ``ArrayList``, instead of an array, is that you do not need to know how many lines you are going to store when you create the ``ArrayList`` the way you do when you create an array.  The ``ArrayList`` can then grow in size as needed. (If you absolutely need an array, you can convert the ``List`` to an array declared to be the correct size with  ``myArray = lines.toArray(myArray);``)
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: read-pokemon-file-nio
+   :language: java
+   :autograde: unittest
+   :datafile: pokemon.csv
+
+   Complete the code in the main method below to reads all lines of the file using ``Files.readAllLines`` into a ``List<String>`` named ``lines``. Add a loop that prints out the first 10 pokemon.  
+   ~~~~
+   import java.io.*;
+   import java.nio.file.*;
+   import java.util.*;
+
+   public class ReadData
+   {
+       public static void main(String[] args) throws IOException
+       {
+           List<String> lines = Files.readAllLines(Paths.get("pokemon.csv"));
+           // Add a loop that prints out the first 10 elements of the List lines
+           // You can use the get method with Lists just like ArrayLists
+
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+   import org.junit.*;
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests() 
+       {
+           super("ReadData");
+       }
+   
+       @Test
+       public void testMain() throws IOException
+       {
+            String output = getMethodOutput("main");
+            String[] lines = output.split("\\s+");
+            boolean passed = lines.length >= 10;
+
+            passed = getResults("10+ lines of output", lines.length + " lines of output", "Expected output", passed);
+            assertTrue(passed);
+       }
+       @Test
+       public void getMethodTest()
+       {
+          boolean passed = checkCodeContains("call to get method with lines", "lines.get");
+          assertTrue(passed);
+       }
+    }
+
 ArrayList of Student Objects
 ----------------------------
 
@@ -778,4 +848,4 @@ Summary
 - (AP 4.9.A.2) Deleting elements during a traversal of an ``ArrayList`` requires the use of special techniques to avoid skipping elements (since ``remove`` moves all the
   elements above the removed index down.)
 - (AP 4.9.A.3) Attempting to access an index value outside of its range will result in an ``IndexOutOfBoundsException``. (The indices for an ``ArrayList`` start at 0 and end at the number of elements − 1).
-- (AP 4.9.A.4) Changing the size of an ``ArrayList`` while traversing it using an enhanced ``for`` loop can result in a ``ConcurrentModifcationException``. Therefore, when using an enhanced ``for`` loop to traverse an ``ArrayList``, you should not add or remove elements.
+- (AP 4.9.A.4) Changing the size of an ``ArrayList`` while traversing it using an enhanced ``for`` loop can result in a ``ConcurrentModificationException``. Therefore, when using an enhanced ``for`` loop to traverse an ``ArrayList``, you should not add or remove elements.

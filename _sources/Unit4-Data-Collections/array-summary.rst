@@ -1,12 +1,12 @@
 .. qnum::
-   :prefix: 6-5-
+   :prefix: 4-18-
    :start: 1
 
 
-Unit 6 Summary
+Arrays Summary
 -------------------------
 
-In this chapter you learned about **Arrays**.  An **array** is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.
+In this section, you learned about **Arrays**.  An **array** is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.
 
 .. figure:: Figures/arrayIndicies.png
     :width: 200px
@@ -54,7 +54,7 @@ Java Keyword Summary
 Vocabulary Practice
 =====================
 
-.. dragndrop:: ch7_match_1
+.. dragndrop:: arrays_match_1
     :feedback: Review the summaries above.
     :match_1: The index of the last element|||length - 1
     :match_2: The number of elements in the array|||length
@@ -63,7 +63,7 @@ Vocabulary Practice
 
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
 
-.. dragndrop:: ch7_match_2
+.. dragndrop:: arrays_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an integer array named nums|||int[] nums;
     :match_2: Declare and create a String array named list1 that can hold 3 elements|||String[] list1 = new String[3];

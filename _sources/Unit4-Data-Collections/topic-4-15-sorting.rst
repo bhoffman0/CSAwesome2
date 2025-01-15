@@ -341,3 +341,11 @@ Summary
 - (AP 4.15.A.2)	**Selection sort** repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it into its correct (and final) position in the sorted portion of the list.
 - (AP 4.15.A.3)	**Insertion sort** inserts an element from the unsorted portion of a list into its correct (but not necessarily final) position in the sorted portion of the list by shifting elements of the sorted portion to make room for the new element.
 - Informal run-time comparisons of program code segments can be made using statement execution counts.
+
+Search/Sort Multiple-Choice Exercises
+--------------------------------------
+
+Try the following multiple-choice exercises to practice search and sort algorithms: `Search/Sort Multiple-Choice Exercises <Search-Sort-Exercises.html>`_.
+
+
+ 

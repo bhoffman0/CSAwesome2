@@ -1,8 +1,8 @@
 .. qnum::
-   :prefix: 6-8-
+   :prefix: 4-21-
    :start: 1
 
-Code Practice with Arrays
+Arrays Code Practice 
 ============================
 
 .. tabbed:: ch7Ex1
@@ -369,7 +369,11 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSum(int[] arr) {}
+                  public static int getSum(int[] arr) 
+                  {
+                  
+                  
+                  }
 
                   public static void main(String[] args)
                   {
@@ -462,7 +466,11 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSumNonNeg(int[] arr) {}
+                  public static int getSumNonNeg(int[] arr) 
+                  {
+                  
+                  
+                  }
 
                   public static void main(String[] args)
                   {
@@ -640,7 +648,10 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static int getSumChars(String[] strArr) {}
+                  public static int getSumChars(String[] strArr) 
+                  {
+                  
+                  }
 
                   public static void main(String[] args)
                   {
@@ -852,7 +863,11 @@ Code Practice with Arrays
               public class Test1
               {
 
-                  public static double getAverage(int[] arr) {}
+                  public static double getAverage(int[] arr) 
+                  {
+                  
+                  
+                  }
 
                   public static void main(String[] args)
                   {

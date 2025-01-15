@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-10-
+   :prefix: 4-34-
    :start: 1
 
 Code Practice with ArrayLists
@@ -103,7 +103,10 @@ Code Practice with ArrayLists
                   public static ArrayList<Integer> reverse(ArrayList<Integer> list)
                   {
                       ArrayList<int> reversed = new ArrayList<int>();
-                      for (Integer element : list) {}
+                      for (Integer element : list) 
+                      {
+                      
+                      }
 
                       return reversed;
                   }

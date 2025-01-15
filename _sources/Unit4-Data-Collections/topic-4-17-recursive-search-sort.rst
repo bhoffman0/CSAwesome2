@@ -377,3 +377,18 @@ Summary
 - (AP 4.17.C.1) **Merge sort** is a recursive sorting algorithm that can be used to sort elements in an array or ``ArrayList``.
 
 - (AP 4.17.C.2)	Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array.
+
+Summary and Review Exercises
+--------------------------------
+
+.. raw:: html
+
+   <ul>
+    <li><a href="recursion-summary.html" target="_blank">Recursion Summary</a></li>
+    <li><a href="rParsonsPractice.html" target="_blank">Recursion Parsons Practice</a></li>
+    <li><a href="rMixedUpCodePractice.html" target="_blank">Recursion Mixed Up Code Practice</a></li>
+    <li><a href="recursion-toggle-problems.html" target="_blank">Recursion Toggle Problems</a></li>
+    <li><a href="recursionCodePractice.html" target="_blank">Recursion Code Practice</a></li>
+    <li><a href="recursion-Exercises.html" target="_blank">Recursion Exercises</a></li>
+    </ul>
+   
