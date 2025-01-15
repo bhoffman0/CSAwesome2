@@ -54,22 +54,27 @@ AP CSA Exam Weighting:
    climbClubC.rst
    cookieOrderA.rst
    cookieOrderB.rst
-   2016freeresponseQ4A.rst
-   2016freeresponseQ4B.rst
-   2019delimitersQ3a.rst
-   2019delimitersQ3b.rst
-   2013gridworldQ3A.rst
-   a2dSummary.rst
-   recursion-summary.rst
+   stringFormatterA.rst
+   stringFormatterB.rst
+   delimitersQ3a.rst
+   delimitersQ3b.rst
+   gridworldQ3A.rst
+   Search-Sort-Exercises.rst
+   a2dSummary.rst 
    Array2dParsonsPractice.rst
    a2d-toggle-problems.rst
    Array2dCodePractice.rst
    Array2dMoreCodePractice.rst
    a2d-Exercises.rst
+   grayImageA.rst
+   grayImageB.rst
+   routeCipherA.rst
+   routeCipherB.rst
+   recursion-summary.rst
    rParsonsPractice.rst
    rMixedUpCodePractice.rst
    recursion-toggle-problems.rst
    recursionCodePractice.rst
    recursion-Exercises.rst
-   CBLabs.rst
+   U4CBLabs.rst
    pictureLab.rst

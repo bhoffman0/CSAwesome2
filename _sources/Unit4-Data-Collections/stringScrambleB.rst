@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 7-4-1-
+   :prefix: 4-36-
    :start: 1
 
 Free Response - String Scramble B
@@ -51,13 +51,13 @@ Assume that the method ``scrambleWord`` works as intended and is in the same cla
 
 How to solve this problem
 ===========================
-.. shortanswer:: 2014string_algorithm_partB
+.. shortanswer:: string_algorithm_partB
 
    Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
 
 This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.
 
-.. reveal:: 2014strng_algorithm_B
+.. reveal:: strng_algorithm_B
     :showtitle: Reveal Algorithm Structure Hint
     :hidetitle: Hide Algorithm Structure Hint
 

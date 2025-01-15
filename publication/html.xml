@@ -27,8 +27,10 @@
 
  <!--  Deprecated <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
        New theme styles https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options
+     blue #007d9f, bright blue #04B2D9, in-between blue #00A1E4
+     mcsp: #00B3E3
    -->
-   <css theme="salem" color-main="#007d9f"/> 
+   <css theme="salem" color-main="#00A1E4" /> 
    <tableofcontents focused="yes"/>
   </html>
 

@@ -1,10 +1,10 @@
 .. qnum::
-   :prefix: 7-11-
+   :prefix: 4-35-
    :start: 1
 
 
-Multiple-Choice Exercises
-=========================
+ArrayList Multiple-Choice Exercises
+======================================
 
 .. toctree::
    :maxdepth: 3
@@ -12,9 +12,7 @@ Multiple-Choice Exercises
    listEasyMC.rst
    listMedMC.rst
    listHardMC.rst
-   ssEasyMC.rst
-   ssMedMC.rst
-   ssHardMC.rst
+
 
 
 

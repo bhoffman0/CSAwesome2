@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 10-7-1-
+   :prefix: 4-55-
    :start: 1
 
-Base Case Practice
-====================
+Recursion Base Case Practice
+===============================
 
 A recursive method contains a call to itself.  The recursion stops when a base case test is true and a value is returned.
 

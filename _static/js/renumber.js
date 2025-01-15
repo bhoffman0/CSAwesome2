@@ -30,8 +30,8 @@ const numbers = [
 ];
 
 // Adjust these two values. They are indices, not the unit numbers.
-const practiceUnitsStart = 10;
-const practiceUnits = 5;
+const practiceUnitsStart = 6;
+const practiceUnits = 4;
 const unitsAfterPractice = 1;
 
 // Derived
