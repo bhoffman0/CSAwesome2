@@ -381,6 +381,13 @@ Summary
 Summary and Review Exercises
 --------------------------------
 
+|Time90|    
+
+This lesson is the last lesson in Unit 4! Congratulations! Now, it's time to practice before the exam. 
+
+You can now do the following review lessons about recursion at the end of the unit
+and College Board Progress Checks in the AP Classroom. The rest of this unit consists of the reviews for each section of the unit.
+
 .. raw:: html
 
    <ul>

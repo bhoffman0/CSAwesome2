@@ -2,12 +2,11 @@
     :width: 350
     :align: center
 
-Inheritance
-::::::::::::
+Inheritance (optional)
+::::::::::::::::::::::::
 
-Optional unit
 
-No longer on the AP CSA Exam
+Optional unit. Inheritance is no longer on the AP CSA Exam.
 
 
 .. toctree::
