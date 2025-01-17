@@ -26,17 +26,6 @@ ATTENTION high school women of color taking AP CSA or CSP: if you identify as fe
 
     <ul id="small_toc"></ul>
 
-.. Here is where you specify the content and order of your new book.
-
-.. Each section heading (e.g. "SECTION 1: A Random Section") will be
-   a heading in the table of contents. Source files that should be
-   generated and included in that section should be placed on individual
-   lines, with one line separating the first source filename and the
-   :maxdepth: line.
-
-.. Sources can also be included from subfolders of this directory.
-   (e.g. "DataStructures/queues.rst").
-
 
 Table of Contents
 :::::::::::::::::
@@ -80,9 +69,9 @@ Index
 
 If you see errors or bugs, please report them with this `errors form <https://forms.gle/4gMBsv4W71vG5mNe8>`_. If you are a teacher who is interested in CSAwesome PDs or community, please fill out this `PD interest form <https://docs.google.com/forms/d/e/1FAIpQLSdN4JKrFnktQakID4sHBHBuBEHCvwv8YsSMBcVm1tB-nYUukA/viewform?usp=sf_link>`_ and join the `teaching CSAwesome group <https://groups.google.com/forum/#!forum/teaching-csawesome>`_ which will give you access to lesson plans at `csawesome.org <http://csawesome.org>`_.
 
-(last revised 1/6/2024)
+(last revised 1/2025)
 
-© Copyright 2014-2024 Barb Ericson, Univ. Michigan; 2019-2024 Beryl Hoffman,
-Elms College; 2023-2024 Peter Seibel, Berkeley High School. All rights reserved.
+© Copyright 2014-2025 Barb Ericson, Univ. Michigan; 2019-2025 Beryl Hoffman,
+Elms College; 2023-2025 Peter Seibel, Berkeley High School. All rights reserved.
 
 Created using `Runestone  <http://runestone.academy>`_.

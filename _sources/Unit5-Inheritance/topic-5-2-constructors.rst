@@ -1,7 +1,7 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 9-2-
+   :prefix: 5-2-
    :start: 1
 
 
@@ -161,7 +161,7 @@ initializes an instance variable in the ``Person`` class to hold the name.
 Chain of initialization
 -----------------------
 
-As you may recall from Unit 5, if you do not write a constructor your class will
+As you may recall from Unit 3, if you do not write a constructor your class will
 automatically get a default no-argument constructor. In addition to initializing
 all instance variables to the default value for their type, the default
 no-argument constructor calls the superclass's no-argument constructor.

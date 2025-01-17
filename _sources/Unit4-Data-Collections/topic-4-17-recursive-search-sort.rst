@@ -1,20 +1,21 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 10-2-
+   :prefix: 4-17-
    :start: 1
 
 
+|Time90|
 
 Recursive Searching and Sorting
-===============================
+=================================
 
-In Unit 7, we learned about searching and sorting algorithms using iteration (loops) to search or sort arrays and ArrayLists. In this lesson, we will take a look at a **recursive binary search** algorithm and a **recursive merge-sort** algorithm.
+In previous lessons, we learned about searching and sorting algorithms using iteration (loops) to search or sort arrays and ``ArrayLists``. In this lesson, we will take a look at a **recursive binary search** algorithm and a **recursive merge-sort** algorithm. Recursion can be used to traverse ``String`` objects, arrays, and ``ArrayList`` objects.
 
 Recursive Binary Search
 -------------------------
 
-In Unit 7, we learned about two search algorithms, linear search and binary search. Linear search searches for an element in an array or ArrayList by checking each element in order. Binary search is more efficient (faster) because it starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList each pass through the algorithm. Binary search only works on sorted data. It can be written with iteration (using a loop) like below or recursively.
+We have already seen two search algorithms using loops, linear search and binary search. Linear search searches for an element in an array or ArrayList by checking each element in order. Binary search is more efficient (faster) because it starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList each pass through the algorithm. Binary search only works on sorted data. It can be written with iteration (using a loop) like below or recursively.
 
 .. activecode:: BinarySearchLoop
   :language: java
@@ -53,10 +54,16 @@ In Unit 7, we learned about two search algorithms, linear search and binary sear
       }
   }
 
+.. |Java visualizer| raw:: html
+
+   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+SearchTest%0A++%7B%0A+++++%0A+++++/**+%0A++++++*+Find+the+index+of+a+value+in+an+array+of+integers+sorted+in+ascending+order.%0A++++++*+%40param+elements+an+array+containing+the+items+to+be+searched.+Precondition%3A+items+in+elements+are+sorted+in+ascending+order.%0A++++++*+%40param+target+the+item+to+be+found+in+elements.%0A++++++*+%40return+an+index+of+target+in+elements+if+target+found%3B%0A++++++*+-1+other+wise.%0A++++++*/%0A+++++public+static+int+binarySearch(int%5B%5D+elements,+int+target)+%7B%0A++++++++int+left+%3D+0%3B%0A++++++++int+right+%3D+elements.length+-+1%3B%0A++++++++while+(left+%3C%3D+right)+%0A++++++++%7B%0A+++++++++++int+middle+%3D+(left+%2B+right)+/+2%3B+%0A+++++++++++if+(target+%3C+elements%5Bmiddle%5D)%0A+++++++++++%7B%0A++++++++++++++right+%3D+middle+-+1%3B%0A+++++++++++%7D%0A+++++++++++else+if+(target+%3E+elements%5Bmiddle%5D)+%0A+++++++++++%7B%0A++++++++++++++left+%3D+middle+%2B+1%3B+%0A+++++++++++%7D%0A+++++++++++else+%7B%0A++++++++++++++return+middle%3B+%0A+++++++++++%7D%0A+++++++++%7D%0A+++++++++return+-1%3B%0A++++++%7D%0A++++++%0A++++++public+static+void+main(String%5B%5D+args)%0A++++++%7B%0A+++++++++int%5B%5D+arr1+%3D+%7B-20,+3,+15,+81,+432%7D%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+in+the+array%0A+++++++++int+index+%3D+binarySearch(arr1,-20)%3B%0A+++++++++System.out.println(index)%3B%0A++++++++%0A+++++++++//+test+when+the+target+is+not+in+the+array%0A+++++++++index+%3D+binarySearch(arr1,53)%3B%0A+++++++++System.out.println(index)%3B%0A+++++++%7D%0A++%7D%0A&mode=display&curInstr=0" target="_blank" style="text-decoration:underline">Java visualizer</a>
 
 Watch the iterative binary search code running in the |Java Visualizer|.
 
-Let's write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.
+Let's write a recursive version of Binary Search. 
+**Recursive Binary search** starts at the middle of a sorted array or ``ArrayList`` and eliminates half of the array or ``ArrayList`` in each recursive call until the desired value is found or all elements have been eliminated.
+
+Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.
 
 |Exercise| **Check Your Understanding**
 
@@ -117,29 +124,95 @@ Here is the Java code for a recursive binary search:
       }
   }
 
+.. |Java visualizer link| raw:: html
 
-Try the recursive binary search code in this `Java visualizer link <https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&mode=display&curInstr=28>`_.
+   <a href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&mode=display&curInstr=28" target="_blank" style="text-decoration:underline">Java visualizer link</a>
+
+Try the recursive binary search code in this |Java visualizer link| or with the CodeLens button above.
+
+Here is a version of the recursive binary search that works with an ``ArrayList``. Click on CodeLens to step through the code.
+
+.. activecode:: recursiveBinarySearchArrayList
+  :language: java 
+
+    Here is a version of the recursive binary search that works with an ArrayList. Run the code below. Try searching for the value 3 and then the value 2 which is not in the ArrayList. What happens?
+    ~~~~
+    import java.util.ArrayList;
+
+    public class RecursiveBinarySearchArrayList
+    {
+        public static int recursiveBinarySearch(
+            ArrayList<Integer> list, int start, int end, int target)
+        {
+            int middle = (start + end) / 2;
+            // base case: check middle element
+            if (target == list.get(middle))
+            {
+                return middle;
+            }
+            // base case: check if we've run out of elements
+            if (end < start)
+            {
+                return -1; // not found
+            }
+            // recursive call: search start to middle
+            if (target < list.get(middle))
+            {
+                return recursiveBinarySearch(list, start, middle - 1, target);
+            }
+            // recursive call: search middle to end
+            if (target > list.get(middle))
+            {
+                return recursiveBinarySearch(list, middle + 1, end, target);
+            }
+            return -1;
+        }
+
+        public static void main(String[] args)
+        {
+            ArrayList<Integer> list = new ArrayList<>();
+            list.add(3);
+            list.add(7);
+            list.add(12);
+            list.add(19);
+            list.add(22);
+            list.add(25);
+            list.add(29);
+            list.add(30);
+            int target = 25;
+            int foundIndex = recursiveBinarySearch(list, 0, list.size() - 1, target);
+            System.out.println(target + " was found at index " + foundIndex);
+        }
+    }
 
 Merge Sort
---------------------------
+------------------------
 
 .. index::
    single: merge sort
    pair: sort; merge
 
-In Unit 7, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a **divide and conquer** algorithm.
+In previous lessons, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. **Merge sort** is a recursive sorting algorithm that can be used to sort elements in an array or ``ArrayList``. 
 
-A merge sort recursively breaks the values to be sorted in half until there is only one value to be sorted and then it merges the two sorted lists into one sorted list.  The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.
+Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a **divide and conquer** algorithm.
 
+Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array. The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.
 
-Here is a folk dance `video <https://youtu.be/XaqR3G_NVoo>`_ that shows the merge sort process.
+.. |video| raw:: html
+
+   <a href="https://youtu.be/XaqR3G_NVoo" target="_blank">video</a>
+
+Here is a folk dance |video| that shows the merge sort process.
 
 .. youtube:: XaqR3G_NVoo
     :align: center
     :height: 315
 
+.. |video2| raw:: html
 
-And here is a short `video <https://youtu.be/4VqmGXwpLqc>`_ that describes how merge sort works.
+   <a href="https://youtu.be/4VqmGXwpLqc" target="_blank">video</a>
+
+And here is a short |video2| that describes how merge sort works.
 
 .. youtube:: 4VqmGXwpLqc
     :align: center
@@ -230,8 +303,11 @@ To identify a merge sort look for the following:
        }
    }
 
-You can see this executing using the `Java visualizer for merge sort <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+mergeSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++int+n+%3D+elements.length%3B%0A++++++++int%5B%5D+temp+%3D+new+int%5Bn%5D%3B+%0A++++++++mergeSortHelper(elements,+0,+n+-+1,+temp)%3B%0A+++++%7D%0A+++++%0A+++++private+static+void+mergeSortHelper(int%5B%5D+elements,+int+from,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A+++++++++if+(from+%3C+to)%0A+++++++++%7B%0A++++++++++++int+middle+%3D+(from+%2B+to)+/+2%3B+%0A++++++++++++mergeSortHelper(elements,+from,+middle,+temp)%3B+%0A++++++++++++mergeSortHelper(elements,+middle+%2B+1,+to,+temp)%3B+%0A++++++++++++merge(elements,+from,+middle,+to,+temp)%3B%0A+++++++++%7D%0A+++++%7D%0A+++++%0A+++++private+static+void+merge(int%5B%5D+elements,+int+from,+int+mid,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A++++++++int+i+%3D+from%3B+%0A++++++++int+j+%3D+mid+%2B+1%3B+%0A++++++++int+k+%3D+from%3B%0A++++++++%0A++++++++while+(i+%3C%3D+mid+%26%26+j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++if+(elements%5Bi%5D+%3C+elements%5Bj%5D)+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B%0A++++++++++++++i%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++else+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B%0A++++++++++++++j%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++k%2B%2B%3B+%0A++++++++%7D%0A%0A++++++++while+(i+%3C%3D+mid)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B+%0A+++++++++++i%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++while+(j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B+%0A+++++++++++j%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++for+(k+%3D+from%3B+k+%3C%3D+to%3B+k%2B%2B)+%0A++++++++%7B%0A+++++++++++elements%5Bk%5D+%3D+temp%5Bk%5D%3B+%0A++++++++%7D%0A+++++%7D%0A++++++++%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B86,+3,+43%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++mergeSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_.
+You can see this executing using the |Java visualizer for merge sort|.
 
+.. |Java visualizer for merge sort| raw:: html
+
+   <a href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+mergeSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++int+n+%3D+elements.length%3B%0A++++++++int%5B%5D+temp+%3D+new+int%5Bn%5D%3B+%0A++++++++mergeSortHelper(elements,+0,+n+-+1,+temp)%3B%0A+++++%7D%0A+++++%0A+++++private+static+void+mergeSortHelper(int%5B%5D+elements,+int+from,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A+++++++++if+(from+%3C+to)%0A+++++++++%7B%0A++++++++++++int+middle+%3D+(from+%2B+to)+/+2%3B+%0A++++++++++++mergeSortHelper(elements,+from,+middle,+temp)%3B+%0A++++++++++++mergeSortHelper(elements,+middle+%2B+1,+to,+temp)%3B+%0A++++++++++++merge(elements,+from,+middle,+to,+temp)%3B%0A+++++++++%7D%0A+++++%7D%0A+++++%0A+++++private+static+void+merge(int%5B%5D+elements,+int+from,+int+mid,+int+to,+int%5B%5D+temp)%0A+++++%7B%0A++++++++int+i+%3D+from%3B+%0A++++++++int+j+%3D+mid+%2B+1%3B+%0A++++++++int+k+%3D+from%3B%0A++++++++%0A++++++++while+(i+%3C%3D+mid+%26%26+j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++if+(elements%5Bi%5D+%3C+elements%5Bj%5D)+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B%0A++++++++++++++i%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++else+%0A+++++++++++%7B%0A++++++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B%0A++++++++++++++j%2B%2B%3B+%0A+++++++++++%7D%0A+++++++++++k%2B%2B%3B+%0A++++++++%7D%0A%0A++++++++while+(i+%3C%3D+mid)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bi%5D%3B+%0A+++++++++++i%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++while+(j+%3C%3D+to)+%0A++++++++%7B%0A+++++++++++temp%5Bk%5D+%3D+elements%5Bj%5D%3B+%0A+++++++++++j%2B%2B%3B%0A+++++++++++k%2B%2B%3B%0A++++++++%7D%0A++++++++%0A++++++++for+(k+%3D+from%3B+k+%3C%3D+to%3B+k%2B%2B)+%0A++++++++%7B%0A+++++++++++elements%5Bk%5D+%3D+temp%5Bk%5D%3B+%0A++++++++%7D%0A+++++%7D%0A++++++++%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B86,+3,+43%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++mergeSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0" target="_blank" style="text-decoration:underline">Java visualizer for merge sort</a>
 
 You can trace through a merge sort algorithm given an array by using parentheses or curly braces to show how the array is divided into subarrays and then merged. For example, here is how you could write down the trace of ``mergeSort(arr1)`` where arr1 = {86, 3, 43, 5} like in the example above.
 
@@ -270,31 +346,56 @@ You can trace through a merge sort algorithm given an array by using parentheses
 ----------------------------------------------------------
 
 
-Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a `video <https://youtu.be/AMJjtTo1LLE>`_ that shows merge sort with cards.
+Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here's a |video3| that shows merge sort with cards.
 
+.. |video3| raw:: html
+
+   <a href="https://youtu.be/AMJjtTo1LLE" target="_blank">video</a>
 
 .. youtube:: AMJjtTo1LLE
     :align: center
 
 Work in pairs to do the following tracing problems.
 
-.. shortanswer:: challenge-10-2-mergesort
+.. shortanswer:: challenge-mergesort
 
     Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.
 
-.. shortanswer:: challenge-10-2-binary-search
+.. shortanswer:: challenge-recursive-binary-search
 
     Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?
 
 Summary
 ------------
 
-- The binary search algorithm can be written either iteratively or recursively.
+- (AP 4.17.A.1)	Recursion can be used to traverse ``String`` objects, arrays, and ``ArrayList`` objects.
+	
+- (AP 4.17.B.1)	Data must be in sorted order to use the binary search algorithm. **Binary search** starts at the middle of a sorted array or ``ArrayList`` and eliminates half of the array or ``ArrayList`` in each recursive call until the desired value is found or all elements have been eliminated.
+- (AP 4.17.B.2) Binary search is typically more efficient than linear search.
+- (AP 4.17.B.3) The binary search algorithm can be written either iteratively or recursively.
 
-- Data must be in sorted order to use the binary search algorithm.
+- (AP 4.17.C.1) **Merge sort** is a recursive sorting algorithm that can be used to sort elements in an array or ``ArrayList``.
 
-- The binary search algorithm starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList in until the desired value is found or all elements have been eliminated.
+- (AP 4.17.C.2)	Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array.
 
-- Binary search can be more efficient than sequential/linear search.
+Summary and Review Exercises
+--------------------------------
 
-- Merge sort is a recursive sorting algorithm that can be used to sort elements in an array or ArrayList.
+|Time90|    
+
+This lesson is the last lesson in Unit 4! Congratulations! Now, it's time to practice before the exam. 
+
+You can now do the following review lessons about recursion at the end of the unit
+and College Board Progress Checks in the AP Classroom. The rest of this unit consists of the reviews for each section of the unit.
+
+.. raw:: html
+
+   <ul>
+    <li><a href="recursion-summary.html" target="_blank">Recursion Summary</a></li>
+    <li><a href="rParsonsPractice.html" target="_blank">Recursion Parsons Practice</a></li>
+    <li><a href="rMixedUpCodePractice.html" target="_blank">Recursion Mixed Up Code Practice</a></li>
+    <li><a href="recursion-toggle-problems.html" target="_blank">Recursion Toggle Problems</a></li>
+    <li><a href="recursionCodePractice.html" target="_blank">Recursion Code Practice</a></li>
+    <li><a href="recursion-Exercises.html" target="_blank">Recursion Exercises</a></li>
+    </ul>
+   

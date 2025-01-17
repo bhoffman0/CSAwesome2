@@ -1,71 +1,28 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 8-2-
+   :prefix: 4-12-
    :start: 1
 
+|Time45|
 
-Nested Loops for 2D Arrays 
+2D Array Traversals: Nested Loops
 ===================================
 
-In this lesson, you will learn how to use nested loops to traverse a 2D Array.
+In this lesson, you will learn how to use nested loops to traverse 2D Arrays.
 
-Getting the Number of Rows and Columns
----------------------------------------
-.. index::
-   pair: 2D Array; number of rows
-   pair: 2D Array; number of columns
-
-Arrays know their length (how many elements they can store).  The length is a public read-only field so you can use *dot-notation* to access the field (``arrayName.length``). The length of the outer array is the number of rows and the length of one of the inner arrays is the number of columns.
-
-
-
-.. code-block:: java
-
-  ticketInfo.length // returns the number of rows
-  ticketInfo[0].length // returns the number of columns
-
-.. note::
-
-     Note that length is a field and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. Since for the AP CSA exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
-
-|Exercise| **Check your understanding**
-
-.. mchoice:: qa2ldb_2
-   :practice: T
-   :answer_a: 2
-   :answer_b: 4
-   :answer_c: 8
-   :correct: a
-   :feedback_a: The size of outer list is the number of rows.
-   :feedback_b: The size of the inner list is the number of columns.
-   :feedback_c: This is the total number of items in the array.
-
-   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?
-
-.. mchoice:: qa2ldb_3
-   :practice: T
-   :answer_a: nums[3][2]
-   :answer_b: nums[2][3]
-   :answer_c: nums[2][1]
-   :answer_d: nums[1][2]
-   :correct: c
-   :feedback_a: This would be true if array indices started with 1 but they start with 0.
-   :feedback_b: This would be true if array indices started with 1 and the column was specified first.  However, array indices start at 0 and the row is given first in row-major order.
-   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.
-   :feedback_d: This would be true if the column index was first, but in row-major order the row index is first.
-
-   Which of the following would I use to get the value in the third row and second column from a 2D array called ``nums``?
-
-
-Looping Through a 2D Array
+Nested Loops
 --------------------------
 
 .. index::
-   pair: 2D Array; looping through
+   pair: 2D Array; traversal
    pair: loop; nested
+   single: traversal
+   single: nested loops
 
-Since you can find out the number of rows and columns in a 2D array you can use a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array.
+Nested iteration statements (loops) are used to traverse and access all or an ordered sequence of elements in a 2D array. Since 2D arrays are stored as arrays of arrays, the way 2D arrays are traversed using ``for`` loops and enhanced ``for`` loops is similar to 1D array objects. 
+
+Here is an example of a **nested for loop** (one loop inside of another loop) to loop/traverse through all of the elements of a 2D array.
 
 .. code-block:: java
 
@@ -156,47 +113,10 @@ Some key things to notice about this code are:
 - The number of columns is ``a[0].length``
 - The number of times this loop executes is the number of rows times the number of columns.
 
+Row-Major and Column-Major Traversals
+---------------------------------------
 
-
-|Exercise| **Mixed up programs**
-
-.. parsonsprob:: 9_largest
-   :numbered: left
-   :practice: T
-   :adaptive:
-
-   The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.
-   -----
-   public static int getLargest(int[][] arr)  
-   {
-   =====
-    int largest = arr[0][0];
-    int current = 0;
-    for (int r = 0; r < arr.length; r++)
-    {
-    =====
-      for (int c = 0; c < arr[0].length; c++)
-      {
-    =====
-        current = arr[r][c];
-        if (current > largest)
-        {
-    =====
-          largest = current;
-    =====
-        } // end if
-    =====
-      } // end column loop
-    =====
-    } // end row loop
-    return largest;
-   =====
-   } // end method
-
-You can step through this code using the Java Visualizer by clicking on the following `Java Visualizer <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&mode=display&curInstr=40>`_.
-
-
-Most nested loops with 2D Arrays use "row-major order" where the outer loop goes through each row. However, you can write nested loops that traverse in "column-major order" like below.
+Nested iteration statements can be written to traverse the 2D array in row-major order, column-major order, or a uniquely defined order. **Row-major order** refers to an ordering of 2D array elements where traversal occurs across each row (and is more common), whereas **column-major order** traversal occurs down each column. Here's an example of nested loops that traverse the 2D array in column-major order.
 
 
 |CodingEx| **Coding Exercise**
@@ -244,10 +164,8 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
        }
    }
 
-AP Practice
-------------
 
-.. mchoice:: AP8-2-1
+.. mchoice:: AP-2DArrays
    :practice: T
    :answer_a: 45 44 43 42 41
    :answer_b: 45
@@ -286,8 +204,9 @@ Enhanced For-Each Loop for 2D Arrays
 
 .. index::
    pair: 2D Array; for-each loop
+   single: enhanced for loop
 
-Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row, String[] in the example below for a 2D String array. The type of the variables in the for-each loops must match the type of the array. For-each loops are much simpler since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable val below will not change the original array.
+Since 2D arrays are really arrays of arrays you can also use a nested enhanced for (for each) loop to loop through all elements in an array.  Enhanced for loops are much simpler to use since you don't have to use the indices and the []'s, but you can only use them if you are not going to change the values in an array of primitive types since the variable ``val`` below will not change the original array.
 
 .. code-block:: java
 
@@ -301,6 +220,10 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
          }
       }
 
+
+Memorize this pattern. The outer loop of a nested enhanced ``for`` loop used to traverse a 2D array traverses the rows. Therefore, the enhanced ``for`` loop variable must be the type of each row, which is a 1D array (``String[] innerArray`` in the outer loop in the example above). The inner loop traverses a single row. Therefore, the inner enhanced ``for`` loop variable must be the same type as the elements stored in the 1D array (``String val`` in the inner loop in the example above). The type of the variables in the for-each loops must match the type of the array. 
+
+It is important to remember the limitations of enhanced ``for`` loops. They cannot change the array. Assigning a new value to the enhanced ``for`` loop variable (``val`` above) does not change the value stored in the array.
 
 .. activecode:: getAvgForEach
    :language: java
@@ -350,229 +273,6 @@ Since 2D arrays are really arrays of arrays you can also use a nested enhanced f
        }
    }
 
-In this case the ``for (int[] colArray : a)`` means to loop through each element of the outer array which will set ``colArray`` to the current column array.  Then you can loop through the value in the column array.
-
-
-
-
-
-2D Array Algorithms
--------------------
-
-All of the array algorithms can be applied to 2D arrays too. For example, counting and searching algorithms work very similarly. The following code adds all of the values in a given row.
-
-|CodingEx| **Coding Exercise**
-
-
-
-.. activecode:: lca2dloopPart
-   :language: java
-   :autograde: unittest
-
-   What will the following code print out? Can you complete the  method called ``getTotalForCol`` that gets the total for a column? To do this, you must loop through the rows. The array's length will tell you how many rows you have since it is an array of arrays, while the length of the array's first element will tell you how many columns.
-   ~~~~
-   public class Total
-   {
-
-       public static int getTotalForRow(int row, int[][] a)
-       {
-           int total = 0;
-           for (int col = 0; col < a[0].length; col++)
-           {
-               total = total + a[row][col];
-           }
-           return total;
-       }
-
-       // Complete the method getTotalForCol below
-       public static int getTotalForCol(int col, int[][] a)
-       {
-           int total = 0;
-           // Add a loop here to total a column col
-
-           return total;
-       }
-
-       public static void main(String[] args)
-       {
-           int[][] matrix = { {1, 2, 3}, {4, 5, 6}};
-           System.out.println(getTotalForRow(0, matrix));
-           System.out.println(getTotalForCol(0, matrix));
-       }
-   }
-
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       public RunestoneTests()
-       {
-           super("Total");
-       }
-
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "6\n5";
-           boolean passed = getResults(expect, output, "Expected output from main");
-           assertTrue(passed);
-       }
-
-       @Test
-       public void test2()
-       {
-           int[][] array = { {1, 4, 8}, {6, 7, 9}};
-           int value = 0;
-           Object[] args = {value, array};
-
-           String output = getMethodOutput("getTotalForCol", args);
-           String expect = "7";
-
-           boolean passed =
-                   getResults(expect, output, "Testing getTotalForCol(0, { {1, 4,8},{6, 7, 9} })");
-           assertTrue(passed);
-       }
-   }
-
-.. index::
-   pair: 2D Array; loop range
-
-You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array.
-
-.. activecode:: lca2dloopPart2
-   :language: java
-   :autograde: unittest
-
-   Looping through just part of a 2D array.
-   ~~~~
-   public class Count
-   {
-       public static int countValues(int value, int[][] a, int rowStart, 
-                                  int rowEnd, int colStart, int colEnd)
-       {
-           int count = 0;
-           for (int row = rowStart; row <= rowEnd; row++)
-           {
-               for (int col = colStart; col <= colEnd; col++)
-               {
-                   if (a[row][col] == value)
-                   {
-                        count++;
-                   }
-               }
-           }
-           return count;
-       }
-
-       public static void main(String[] args)
-       {
-           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
-           System.out.println(countValues(3, matrix, 0, 2, 0, 2));
-       }
-   }
-
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       @Test
-       public void testMain() throws IOException
-       {
-           String output = getMethodOutput("main");
-           String expect = "4";
-           boolean passed = getResults(expect, output, "Expected output from main", true);
-           assertTrue(passed);
-       }
-   }
-
-Here is a linear search algorithm where we access each row and then apply a linear search on it to find an element.
-
-|CodingEx| **Coding Exercise**
-
-
-
-.. activecode:: linearSearch2DArrays
-   :language: java
-   :autograde: unittest
-
-   What will the following code print? Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints.
-   ~~~~
-   public class Search
-   {
-       public static boolean search(int[][] array, int value)
-       {
-           boolean found = false;
-           for (int row = 0; row < array.length; row++)
-           {
-               for (int col = 0; col < array[0].length; col++)
-               {
-                   if (array[row][col] == value)
-                   {
-                        found = true;
-                   }
-               }
-           }
-           return found;
-       }
-
-       public static void main(String[] args)
-       {
-           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
-           System.out.println(search(matrix, 10));
-           System.out.println(search(matrix, 11));
-
-           // Comment out the code above, and try these:
-           // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
-           // System.out.println(search(matrix2, "b"));
-
-       }
-   }
-
-   ====
-   import static org.junit.Assert.*;
-
-   import org.junit.*;
-
-   import java.io.*;
-
-   public class RunestoneTests extends CodeTestHelper
-   {
-       public RunestoneTests()
-       {
-           super("Search");
-       }
-
-       @Test
-       public void test2()
-       {
-           String[][] array = { {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
-           String value = "b";
-           Object[] args = {array, value};
-
-           String output = getMethodOutput("search", args);
-           String expect = "true";
-
-           boolean passed =
-                   getResults(
-                           expect,
-                           output,
-                           "Testing search({"
-                               + " {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\""
-                               + " } }, \"b\")");
-           assertTrue(passed);
-       }
-   }
 
 2D Array of Objects
 --------------------
@@ -586,10 +286,29 @@ Here is a linear search algorithm where we access each row and then apply a line
 .. index::
    single: pixels
 
+.. |CB Picture Lab| raw:: html
 
+   <a href= "https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf" style="text-decoration:underline" target="_blank" >College Board Picture Lab</a>
 
+.. |RGB Color Mixer| raw:: html
 
+   <a href= "https://www.rapidtables.com/web/color/RGB_Color.html" style="text-decoration:underline" target="_blank">RGB Color Mixer</a>
 
+.. |replit project| raw:: html
+
+   <a href= "https://replit.com/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Replit Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file" style="text-decoration:underline" target="_blank" >alternative Replit project</a>
+
+.. |Picture Lab A1 to A3| raw:: html
+
+   <a href= "pictureLabA1toA3.html" style="text-decoration:underline" target="_blank">Picture Lab sections A1 to A3</a>
+
+.. |Picture Lab A5| raw:: html
+
+   <a href= "pictureLabA5.html#image-modification-exercises" style="text-decoration:underline" target="_blank">Picture Lab A5 Image Modification Exercises</a>
 
 
 Photographs and images are made up of a 2D array of **pixels** which are tiny picture elements that color in the image.  For example, a pixel is shown at row 173 and column 214 of the image below.
@@ -600,7 +319,7 @@ Photographs and images are made up of a 2D array of **pixels** which are tiny pi
 
 
 The color of a pixel is represented using the RGB (Red, Green, Blue) color
-model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the `RGB Color Mixer <https://www.rapidtables.com/web/color/RGB_Color.html>`_ to experiment. Can you make black? Can you make white? Can you make purple? You can learn more about pixels in the `Picture Lab sections A1 to A3 <pictureLabA1toA3.html>`_.
+model, which stores values for red, green, and blue, each ranging from 0 to 255. You can make any color by mixing these values! Try the |RGB Color Mixer| to experiment. Can you make black? Can you make white? Can you make purple? You can learn more about pixels in the |Picture Lab A1 to A3|.
 
 In Java, we can write a ``Pixel`` class to represent a pixel in an image at a given x and y coordinate. 
 
@@ -613,7 +332,7 @@ In Java, we can write a ``Pixel`` class to represent a pixel in an image at a gi
        /** Implementation not shown * */
    }
 
-The `College Board Picture Lab <https://secure-media.collegeboard.org/digitalServices/pdf/ap/picture-lab-studentguide.pdf>`_ contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
+The |CB Picture Lab| contains a ``Pixel`` class and a ``Picture`` class that loads an image and creates a 2D array of pixels to represent it. For example, the ``Picture`` constructor below loads the image ``beach.jpg``, and the ``getPixels2D`` method returns its 2D array of pixels. You can get and set the red, green, and/or blue value for a Pixel object to change its color.  
 
 .. code-block:: java
 
@@ -626,7 +345,7 @@ The `College Board Picture Lab <https://secure-media.collegeboard.org/digitalSer
       p.setBlue(255);  // set its blue value to 255
 
 
-You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_.
+You can loop through all the Pixel objects in the two-dimensional array to modify the picture. The following code is the ``zeroBlue`` method in the ``Picture`` class. It uses nested loops to visit each pixel in a photo which has a color with red, green, and blue values, and it sets all the blue values to 0. You can experiment with this method and write your own methods to modify the pixels in the challenge below and the extended |Picture Lab A5|.
 
 .. code-block:: java
 
@@ -654,9 +373,9 @@ In this challenge, you will do a part of the Picture Lab to modify the pixels of
 
 Now, write a similar method called ``keepOnlyBlue`` that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called ``switchColors`` that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the ``getRed``, ``getGreen``, ``getBlue`` to get the RGB values of the pixel and then swap them around by using the ``setRed``, ``setGreen``, ``setBlue`` methods and giving them different color values from the get methods as arguments.
 
-You can test the methods in the active code below or in this `Replit Swing project <https://replit.com/@BerylHoffman/Picture-Lab>`_ or this `alternative Replit project <https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file>`_ by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
+You can test the methods in the active code below or in this |replit project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.
 
-.. activecode:: challenge-8-2-picture
+.. activecode:: challenge-picture
     :language: java
     :autograde: unittest
     :datafile: pictureClasses.jar, arch.jpg
@@ -861,37 +580,31 @@ You can test the methods in the active code below or in this `Replit Swing proje
         }
     }
 
-Here are some more exercises from the `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_:
+Here are some more exercises from the |Picture Lab A5|:
 
 - Write a negate method to negate all the pixels in a picture. To negate a picture, set the red value to 255 minus the current red value, the green value to 255 minus the current green value and the blue value to 255 minus the current blue value.
 
 - Write the gray scale method to turn the picture into shades of gray. Set the red, green, and blue values to the average of the current red, green, and blue values (add all three values and divide by 3).
 
 
-You can continue on with the next pages of `Picture Lab A5 Image Modification Exercises <pictureLabA5.html#image-modification-exercises>`_ to mirror images and create collages and detect edges as the first step in recognizing objects in images.
+You can continue on with the next pages of |Picture Lab A5| to mirror images and create collages and detect edges as the first step in recognizing objects in images.
 
 Summary
 ----------
 
-- We can loop through 2D arrays using nested for loops or nested enhanced for each loops.
+- (AP 4.12.A.1)	Nested iteration statements (loops) are used to traverse and access all or an ordered sequence of elements in a 2D array. Since 2D arrays are stored as arrays of arrays, the way 2D arrays are traversed using ``for`` loops and enhanced ``for`` loops is similar to 1D array objects. 
 
-- The outer loop for a 2D array usually traverses the rows, while the inner loop traverses the columns in a single row.
+- (AP 4.12.A.1) Nested iteration statements can be written to traverse the 2D array in row-major order, column-major order, or a uniquely defined order. **Row-major order** refers to an ordering of 2D array elements where traversal occurs across each row, whereas **column-major order** traversal occurs down each column.
+
+- (AP 4.12.A.2)	The outer loop of a nested enhanced ``for`` loop used to traverse a 2D array traverses the rows. Therefore, the enhanced ``for`` loop variable must be the type of each row, which is a 1D array. The inner loop traverses a single row. Therefore, the inner enhanced ``for`` loop variable must be the same type as the elements stored in the 1D array. Assigning a new value to the enhanced ``for`` loop variable does not change the value stored in the array.
 
 - The 2D array's length gives the number of rows. A row's length array[0].length gives the number of columns.
-
-- Nested iteration statements can be written to traverse the 2D array in "row-major order" or "column-major order."
-
-- In an enhanced for each loop, the variable of the outer loop must be the type of each row, which is a 1D array. The inner enhanced for loop variable must be the same type as the elements stored in the array.
-
-- All standard 1D array algorithms can be applied to 2D array objects.
-
-- When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array.
 
 
 AP Practice
 ------------
 
-.. mchoice:: AP8-2-2
+.. mchoice:: AP-2DArrays2
    :practice: T
    :answer_a: 36
    :answer_b: 54
@@ -2031,6 +1744,10 @@ AP Practice
 
 2D Arrays and Loops Game
 -------------------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice loops with 2D arrays. Click on **Arrays** and then check **2D** and check **Loops** and then click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.

@@ -1,32 +1,5 @@
-.. |start| image:: Figures/start.png
-    :height: 24px
-    :align: top
-    :alt: start
-
-.. |next| image:: Figures/next.png
-    :height: 24px
-    :align: top
-    :alt: next
-
-.. |prev| image:: Figures/prev.png
-    :height: 24px
-    :align: top
-    :alt: previous
-
-.. |pause| image:: Figures/pause.png
-    :height: 24px
-    :align: top
-    :alt: pause
-
-.. |finish| image:: Figures/finishExam.png
-    :height: 24px
-    :align: top
-    :alt: finish exam
-
-
-
 .. qnum::
-   :prefix: 1-1-6-
+   :prefix: 0-
    :start: 1
 
 
@@ -37,7 +10,9 @@ Please try the following pretest. We don't expect you to know the answers to the
 
 You will take the same test at the end of the class, and the goal is to see how much you improve. We hope that everyone will see a big improvement!
 
-Please make sure you are logged into Runestone before beginning. Click the |start| button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take.  Click on the |next| button to go to the next question.  Click on the |prev| button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the |pause| button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the |finish| button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
+Please make sure you are logged into Runestone before beginning. Click the start button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take.  Click on the next button to go to the next question.  Click on the prev button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the pause button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the finish button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.
+
+.. .. 17 and 20 skipped because they involve inheritance
 
 .. timed:: pretest1
     :nofeedback:
@@ -192,15 +167,17 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_a: No matter what x is set to originally, the code will reset it to 0.
         :feedback_b: Even if x is &lt; 0, the above code will set it to 0.
         :feedback_c: Even if x is > than 0 originally, it will be set to 0 after the code executes.
-        :feedback_d: The first if statment will always cause the second to be executed unless x already equals 0, such that x will never equal -x
+        :feedback_d: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x
         :feedback_e: The first if statement will always cause the second to be executed unless x already equals 0, such that x will never equal -x
 
         Given the following code segment, which of the following is this equivalent to?
 
         .. code-block:: java
 
-            if ( x > 0) x = -x;
-            if (x < 0) x = 0;
+            if ( x > 0) 
+               x = -x;
+            if (x < 0) 
+               x = 0;
 
     .. mchoice:: qpret_6
         :answer_a: (s == m - 5) &amp;&amp; (s - 3 == 2 * (m - 3))
@@ -211,7 +188,7 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :correct: d
         :feedback_a: This would be true if Susan was 5 years younger than Matt and three years ago she was twice his age. But, how could she be younger than him now and twice his age three years ago?
         :feedback_b: This is almost right. It has Susan as 5 years older than Matt now. But the second part is wrong. Multiplication will be done before addition so (2 * m + 3) won't be correct for in 3 years Susan will be twice as old as Matt. It should be (2 * (m + 3)) or (2 * m + 6).
-        :feedback_c: This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has susan equal to Matt's age minus 5 which would have Matt older than Susan.
+        :feedback_c: This can't be right because Susan is 5 years older than Matt, so the first part is wrong. It has Susan equal to Matt's age minus 5 which would have Matt older than Susan.
         :feedback_d: Susan is 5 years older than Matt so s == m + 5 should be true and in 3 years she will be twice as old so s + 3 = 2 * (m + 3) = 2 * m + 6.
         :feedback_e: The answer is s == m + 5 &amp;&amp; s + 3 == 2 * m + 6.
 
@@ -219,8 +196,10 @@ Please make sure you are logged into Runestone before beginning. Click the |star
 
         .. code-block:: java
 
-            for (int s = 1; s <= 100; s++) {
-               for (int m = 1; m <= 100; m++) {
+            for (int s = 1; s <= 100; s++) 
+            {
+               for (int m = 1; m <= 100; m++) 
+               {
                   if (condition)
                      System.out.println("Susan is " + s + " and Matt is " + m);
                }
@@ -520,54 +499,6 @@ Please make sure you are logged into Runestone before beginning. Click the |star
               }
             }
 
-    .. mchoice:: qpret_17
-        :answer_a: AB
-        :answer_b: ABDC
-        :answer_c: ABCD
-        :answer_d: ABC
-        :answer_e: Nothing is printed due to infinite recursion.
-        :correct: b
-        :feedback_a: This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.
-        :feedback_b: Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class. So the methodOne() in Derived will be called. This method first calls super.methodOne so this will invoke the method in the superclass (which is Base). So next the methodOne in Base will execute. This prints the letter "A" and invokes this.methodTwo(). Since b is really a Derived object, we check there first to see if it has a methodTwo. It does, so execution continues in Derived's methodTwo. This method invokes super.methodTwo. So this will invoke the method in the super class (Base) named methodTwo. This method prints the letter "B" and then returns. Next the execution returns from the call to the super.methodTwo and prints the letter "D". We return to the Base class methodOne and return from that to the Derived class methodOne and print the letter "C".
-        :feedback_c: After the call to methodOne in the super class printing "A", the code continues with the implicit this.methodTwo which resolves from the current object's class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin "B" from methodTwo in the Base class. Then the "D" in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints "C".
-        :feedback_d: The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the "D" is also printed.
-        :feedback_e: This is not an example of recursion. No method is called from within itself.
-
-        Given the following class declarations, and assuming that the following declaration appears in a client program: ``Base b = new Derived();``, what is the result of the call ``b.methodOne();``?
-
-        .. code-block:: java
-
-            public class Base
-            {
-
-                public void methodOne()
-                {
-                    System.out.print("A");
-                    methodTwo();
-                }
-
-                public void methodTwo()
-                {
-                    System.out.print("B");
-                }
-            }
-
-            public class Derived extends Base
-            {
-
-                public void methodOne()
-                {
-                    super.methodOne();
-                    System.out.print("C");
-                }
-
-                public void methodTwo()
-                {
-                    super.methodTwo();
-                    System.out.print("D");
-                }
-            }
-
     .. mchoice:: qpret_18
         :answer_a: a = 6 and b = 7
         :answer_b: a = 6 and b = 13
@@ -603,32 +534,9 @@ Please make sure you are logged into Runestone before beginning. Click the |star
         :feedback_a: Encapsulation is making data private so only code in the same class has direct access.
         :feedback_b: There is no abstract visibility modifier.  You cannot use the keyword abstract on variable declarations.
         :feedback_c: This is the definition of encapsulation and this is done in Java using private (a member is directly accessible only in the class that defines it) and protected (a member is directly accessible only within code in the same package and in subclasses).
-        :feedback_d: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives diredct access to code in classes in the same package and subclasses.
+        :feedback_d: Encapsulation means that only code in the defining class has direct access. The visibility modifier protected gives direct access to code in classes in the same package and subclasses.
         :feedback_e: Encapsulation means that only code in the defining class has direct access. The default package access gives direct access to code in classes in the same package.
 
         What is data encapsulation and how does Java implement it?
 
-    .. mchoice:: qpret_20
-        :answer_a: V.
-        :answer_b: I and II
-        :answer_c: I and III
-        :answer_d: IV
-        :answer_e: I only
-        :correct: d
-        :feedback_a: In fact, all of the reasons listed are valid. Subclasses can reuse methods written for superclasses without code replication, subclasses can be stored in the same array, and passed as arguments to methods meant for the superclass. All of which make writing code more streamlined.
-        :feedback_b: III is also valid. In some cases you might want to store subclasses together in a single array, and inheritance allows for this.
-        :feedback_c: II is also valid. In some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass objects of the subclasses to the same method instead of writing individual methods for each subclass.
-        :feedback_d: All of these are valid reasons to use an inheritance heirarchy.
-        :feedback_e: II and III are also valid, in some cases a single method is applicable for a number of subclasses, and inheritance allows you to pass all the subclasses to the same method instead of writing individual methods for each subclass and you might want to store subclasses together in a single array, and inheritance allows for this.
-
-        Which of the following reasons for using an inheritance heirarchy are valid?
-
-        .. code-block:: java
-
-            I.   Methods from a superclass can be used in a subclass without
-                 rewriting or copying code.
-            II.  Objects from subclasses can be passed as arguments to a method
-                 designed for the superclass
-            III. Objects from subclasses can be stored in the same array
-            IV.  All of the above
-            V.   None of the above
+    

@@ -1,14 +1,14 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 7-6-
+   :prefix: 4-15-
    :start: 1
 
 
 Sorting Algorithms
 ==================
 
-There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CSA exam are:
+There are many sorting algorithms to put an array or ``ArrayList`` elements in alphabetic or numerical order. Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or `ArrayList`. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CSA exam are:
 
 .. index::
    single: selection sort
@@ -16,13 +16,9 @@ There are many sorting algorithms to put an array or ArrayList elements in alpha
    pair: sort; selection
    pair: sort; insertion
 
-* Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don't have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.
-* Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.
-* Merge sort - Break the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one. MergeSort will be covered in Unit 10.
-
-
-
-
+- **Selection sort** repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it into its correct (and final) position in the sorted portion of the list.
+- **Insertion sort** inserts an element from the unsorted portion of a list into its correct (but not necessarily final) position in the sorted portion of the list by shifting elements of the sorted portion to make room for the new element.
+- **Merge sort** breaks the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one. MergeSort will be covered in lesson 4.17.
 
 Selection Sort
 ---------------
@@ -31,7 +27,7 @@ Selection Sort
    single: selection sort
    pair: sort; selection
 
-The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
+Selection sort usually starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
 
 Here is a folk dance `video <https://youtu.be/Ns4TPTC8whw>`_ that shows the selection sort process.
@@ -173,7 +169,7 @@ Insertion Sort
    single: insertion sort
    pair: sort; insertion
 
-The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
+Insertion sort usually starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.
 
 
 Here is a folk dance `video <https://youtu.be/ROalU379l3U>`_ that shows the insertion sort process.
@@ -317,13 +313,22 @@ In the Active code windows for Selection sort and Insertion sort above, add in a
 
     <iframe height="300px" width="100%" src="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing&rm=minimal" style="max-width:90%; margin-left:5%" ></iframe>
 
-.. shortanswer:: challenge7-6-sorting
+.. shortanswer:: challenge-sorting
 
    Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.
 
 Summary
 ---------
 
-- Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or ArrayList.
-
+- (AP 4.15.A.1)	Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or ``ArrayList``.
+- (AP 4.15.A.2)	**Selection sort** repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it into its correct (and final) position in the sorted portion of the list.
+- (AP 4.15.A.3)	**Insertion sort** inserts an element from the unsorted portion of a list into its correct (but not necessarily final) position in the sorted portion of the list by shifting elements of the sorted portion to make room for the new element.
 - Informal run-time comparisons of program code segments can be made using statement execution counts.
+
+Search/Sort Multiple-Choice Exercises
+--------------------------------------
+
+Try the following multiple-choice exercises to practice search and sort algorithms: `Search/Sort Multiple-Choice Exercises <Search-Sort-Exercises.html>`_.
+
+
+ 

@@ -1,12 +1,13 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 8-1-
+   :prefix: 4-11-
    :start: 1
 
+|Time45|
 
-2D Arrays 
-=================
+2D Array Creation and Access 
+===============================
 
 .. index::
     single: 2D Arrays
@@ -28,6 +29,8 @@ Arrays in Java can store many items of the same type.  You can even store items 
 
 Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, or a picture.  In battleship, letters map to the rows (A is the first row, B is the second row, and so on) and the column indices start with 1.
 
+A **2D array** is stored as an array of arrays in Java. The way 2D arrays are created and indexed is similar to 1D array objects. The size of a 2D array is established at the time of creation and cannot be changed. 2D arrays can store either primitive data or object reference data.
+
 Array Storage
 ---------------
 
@@ -48,9 +51,6 @@ Many programming languages actually store two-dimensional array data in a one-di
 
     Figure 2: A 2D array stored in row-major order or column-major order as a 1D array.
 
-How Java Stores 2D Arrays
----------------------------
-
 Java actually stores a two-dimensional array as an array of arrays.  Each element of the outer array has a reference to each inner array.  The picture below shows a 2D array that has 3 rows and 7 columns.  Notice that the array indices start at 0 and end at the length - 1.
 
 .. figure:: Figures/ArrayRowsAndCols.png
@@ -60,7 +60,7 @@ Java actually stores a two-dimensional array as an array of arrays.  Each elemen
 
     Figure 3: Java arrays of arrays
 
-On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called **ragged arrays**).
+On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called **non-rectangular arrays** or **ragged arrays**).
 
 |Exercise| **Check your understanding**
 
@@ -146,33 +146,22 @@ Declaring 2D Arrays
 
 .. index::
    pair: 2D Array; declaration
+   pair: 2D Array; creation 
 
-To declare a 2D array, specify the type of elements that will be stored in the array, then (``[][]``) to show that it is a 2D array of that type, then at least one space, and then a name for the array.  Note that the declarations below just name the variable and say what type of array it will reference.  **The declarations do not create the array**.  Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet).
-
-.. code-block:: java
-
-  int[][] ticketInfo;
-  String[][] seatingChart;
-
-
-
-.. index::
-   pair: 2D Array; creation
-
-To create an array use the **new** keyword, followed by a space, then the type, and then the number of rows in square brackets followed by the number of columns in square brackets, like this ``new int[numRows][numCols]``.
-
-
-
-The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo`` and a 2D array with 3 rows and 2 columns named ``seatingChart``.  The number of elements in a 2D  array is the number of rows times the number of columns.
+2D arrays are declared and created with the following syntax, which is very similar to 1D arrays but include 2 dimensions (``[][]``). The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo`` and a 2D array with 3 rows and 2 columns named ``seatingChart``.  The number of elements in a 2D array is the number of rows times the number of columns. 
 
 .. code-block:: java
 
-  ticketInfo = new int [2][3];
-  seatingChart = new String [3][2];
+  // 2D array declaration
+  // datatype[][] variableName = new datatype[numberRows][numberCols];
+  int[][] ticketInfo = new int[2][3];
+  String[][] seatingChart = new String[3][2];
+ 
+Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn't been created with **new** yet and you try to print the value of the variable, it will print **null** (meaning it doesn't reference any object yet). When a 2D array is created using the keyword ``new``, all of its elements are initialized to the default values for the element data type. The default value for ``int`` is ``0``, for ``double`` is ``0.0``, for ``boolean`` is ``false``, and for a reference type is ``null``.
 
 |Exercise| **Check your understanding**
 
-.. fillintheblank:: 2daNumElfill
+.. fillintheblank:: twodaNumElfill
 
    How many elements are in ticketInfo?
 
@@ -183,12 +172,12 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
 
 
 
-.. activecode:: 2DArrayCreate
+.. activecode:: twoDArrayCreate
   :language: java
   :autograde: unittest
   :practice: T
 
-  What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
+  What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained below.
   ~~~~
   public class TicketInfo
   {
@@ -239,15 +228,34 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   }
 
 
+Initializer Lists for 2D Arrays
+-------------------------------
 
-Set Value(s) in a 2D Array 
+You can also initialize (set) the values for the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the values you give.  The code below creates an array called ``ticketInfo`` with 2 rows and 3 columns.  It also creates an array called ``seatingInfo`` with 3 rows and 2 columns. Note that the initializer list used to create and initialize a 2D array consists of 2 initializer lists that represent 1D arrays for each row. 
+
+.. code-block:: java
+
+  int[][] ticketInfo = { {25,20,25}, {25,20,25} };
+  String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
+
+|Exercise| **Check your understanding**
+
+.. fillintheblank:: twodaGetElfill
+
+   What is the value at ``seatingInfo[2][1]`` after the code above executes? Remember that indices start at 0, and the first index is for rows and the second index is for columns.
+
+   -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
+        :.*: indices start at 0 and the row is first then the column
+
+
+Set Values in a 2D Array 
 ----------------------------------------
 
 .. index::
    pair: 2D Array; initialization
    pair: 2D Array; set value
 
-When arrays are created their contents are automatically initialized to 0 for numeric types, null for object references, and false for type boolean.  To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in square brackets followed by the column index in square brackets and then an ``=`` followed by a value.
+The square brackets ``[row][col]`` are used to access and modify an element in a 2D array. When accessing the element at ``arr[first][second]``, the first index is used for rows, the second index is used for columns. To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in square brackets followed by the column index in square brackets and then an ``=`` followed by a value.
 
 .. code-block:: java
 
@@ -255,12 +263,15 @@ When arrays are created their contents are automatically initialized to 0 for nu
   ticketInfo[0][0] = 15;
 
 
+.. |Java visualizer| raw:: html
+
+   <a href= "http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0" style="text-decoration:underline" target="_blank" >Java Visualizer</a>
 
 |CodingEx| **Coding Exercise**
 
-Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the `Java Visualizer <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_ to see what the values are after this code runs. Edit the code to add in an extra row to the ``seatingChart`` and add your name and a friend's name in the columns of this extra row using assignment statements.
+Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we'll learn how to use nested loops to print out the whole 2D Array. Right now, use the CodeLens button or the |Java visualizer| to see what the values are after this code runs. Edit the code to add in an extra row to the ``seatingChart`` and add your name and a friend's name in the columns of this extra row using assignment statements.
 
-.. activecode:: 2DArraySet
+.. activecode:: twoDArraySet
   :language: java
   :autograde: unittest
 
@@ -366,27 +377,6 @@ Try the code below. Did it print what you expected?  When you print a two dimens
 
    Which of the following sets the value for the 3rd row and 2nd column of a 2D array called ``nums``?
 
-Initializer Lists for 2D Arrays
--------------------------------
-
-You can also initialize (set) the values for the array when you create it.  In this case you don't need to specify the size of the array, it will be determined from the values you give.  The code below creates an array called ``ticketInfo`` with 2 rows and 3 columns.  It also creates an array called ``seatingInfo`` with 3 rows and 2 columns.
-
-.. code-block:: java
-
-  int[][] ticketInfo = { {25,20,25}, {25,20,25} };
-  String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
-
-|Exercise| **Check your understanding**
-
-.. fillintheblank:: 2daGetElfill
-
-   What is the value at ``seatingInfo[2][1]`` after the code above executes?
-
-   -    :Luke$: Correct.  The string at row index 2 and column index 1 is Luke.
-        :.*: indices start at 0 and the row is first then the column
-
-
-
 Get a Value from a 2D Array
 ------------------------------
 
@@ -424,7 +414,7 @@ To get the value in a 2D array give the name of the array followed by the row an
 
 
 
-.. activecode:: 2DArrayInitGet
+.. activecode:: twoDArrayInitGet
   :language: java
   :autograde: unittest
 
@@ -530,17 +520,69 @@ To get the value in a 2D array give the name of the array followed by the row an
       }
   }
 
+2D Array Row and Column length 
+----------------------------------
+.. index::
+   pair: 2D Array; number of rows
+   pair: 2D Array; number of columns
+   single: length
+
+Arrays know their length (how many elements they can store).  The length is a public read-only attribute for array objects. 
+The number of rows contained in a 2D array can be accessed through the array name and the ``length`` attribute:  ``arrayName.length``.  The number of columns contained in a 2D array can be accessed through the ``length`` attribute of one of the rows, for example ``arrayName[0].length``, which gives a single array that is a row of a 2D array using the 2D array name and a single set of square brackets containing the row index.
+
+.. code-block:: java
+
+  ticketInfo.length // returns the number of rows
+  ticketInfo[0].length // returns the number of columns
+
+.. note::
+
+     Note that length is an attribute and not a method, so you don't add parentheses after length.  However, if you use parentheses after length during the exam, you won't lose any points. Since for the AP CSA exam all two-dimensional arrays are rectangular arrays (arrays that have the same number of columns in each row) you can just use the length of the first inner array as the number of columns as shown by ``ticketInfo[0].length``.
+
+The valid row index values for a 2D array are ``0`` through one less than the number of rows or the length of the array, inclusive. The valid column index values for a 2D array are ``0`` through one less than the number of columns or the length of any given row of the array, inclusive. For example, given a 2D array named ``values``, the number of rows is ``values.length`` and the number of columns is ``values[0].length```. Using an index value outside of these ranges will result in an ``ArrayIndexOutOfBoundsException``.
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: qa2ldb_2
+   :practice: T
+   :answer_a: 2
+   :answer_b: 4
+   :answer_c: 8
+   :correct: a
+   :feedback_a: The size of outer list is the number of rows.
+   :feedback_b: The size of the inner list is the number of columns.
+   :feedback_c: This is the total number of items in the array.
+
+   How many rows does ``a`` have if it is created as follows ``int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};``?
+
+.. mchoice:: qa2ldb_3
+   :practice: T
+   :answer_a: nums[3][2]
+   :answer_b: nums[2][3]
+   :answer_c: nums[2][1]
+   :answer_d: nums[1][2]
+   :correct: c
+   :feedback_a: This would be true if array indices started with 1 but they start with 0.
+   :feedback_b: This would be true if array indices started with 1 and the column was specified first.  However, array indices start at 0 and the row is given first in row-major order.
+   :feedback_c: Array indices start with 0 so the third row has an index of 2 and the second column has an index of 1.
+   :feedback_d: This would be true if the column index was first, but in row-major order the row index is first.
+
+   Which of the following could be used to get the value in the third row and second column from a 2D array called ``nums``?
+
 |Groupwork| Coding Challenge : ASCII Art
 ---------------------------------------------------
 
+.. |ASCII art| raw:: html
 
-ASCII is a commonly used character encoding standard where each key you press on the keyboard is translated to an ASCII number to be stored in the computer. ASCII has been mostly replaced by UNICODE which includes characters in other languages like Chinese. In the days before good graphics, some people made ASCII art just using the keyboard characters. Take a look at this `ASCII art <https://www.asciiart.eu/>`_ collection!
+   <a href= "https://www.asciiart.eu/" style="text-decoration:underline" target="_blank" >ASCII art</a>
+
+ASCII is a commonly used character encoding standard where each key you press on the keyboard is translated to an ASCII number to be stored in the computer. ASCII has been mostly replaced by UNICODE which includes characters in other languages like Chinese. In the days before good graphics, some people made ASCII art just using the keyboard characters. Take a look at this |ASCII art| collection!
 
 We can represent ASCII art in a 2D array of rows and columns. What do you think the following code will print out? Try to guess before you run it. The loops to print out the 2D array will be explained in the next lesson. Then, do the following:
 
 1. Change the code to use 2 assignment statements with the 2D array ``asciiArt`` to change the "o" characters to "@" characters. You should figure out what the row and column indices should be for the "o" characters and use them with the array name to set that character to "@". After testing this code, comment it out so that your teacher can still see it.
 
-2. Add a new ``asciiArt`` array with a different `ASCII art <https://www.asciiart.eu/>`_ from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
+2. Add a new ``asciiArt`` array with a different |ASCII art| from the collection or of your own design. Be careful with the special characters like ``"`` and ``\``. You will need to put another backslash in front of these to print them out like ``\"`` and ``\\``.
 
 .. activecode:: challenge-8-1-ascii-art
   :language: java
@@ -656,23 +698,27 @@ We can represent ASCII art in a 2D array of rows and columns. What do you think 
 Summary
 -------
 
-- A 2D array is stored as an array of arrays. And the way 2D arrays are created and indexed is similar to 1D array objects.
+- (AP 4.11.A.1) A **2D array** is stored as an array of arrays. Therefore, the way 2D arrays are created and indexed is similar to 1D array objects. The size of a 2D array is established at the time of creation and cannot be changed. 2D arrays can store either primitive data or object reference data. Nonrectangular 2D array objects (with varying column length for each row) are outside the scope of the AP Computer Science A course and exam.
 
 - 2D arrays are declared and created with the following syntax: ``datatype[][] variableName = new datatype[numberRows][numberCols]``;
 
-- 2D array objects that are not rectangular (that are ragged arrays) are outside the scope of the course and AP Exam.
+- (AP 4.11.A.2)	When a 2D array is created using the keyword ``new``, all of its elements are initialized to the default values for the element data type. The default value for ``int`` is ``0``, for ``double`` is ``0.0``, for ``boolean`` is ``false``, and for a reference type is ``null``.
 
-- For the purposes of the exam, when accessing the element at ``arr[first][second]``, the ``first`` index is used for rows, the ``second`` index is used for columns.
+- (AP 4.11.A.3) The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays; for example, ``int[][] arr2D = { {1, 2, 3}, {4, 5, 6} };``.
 
-- The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays. For example, ``int[][] ticketInfo = { {25,20,25}, {25,20,25} }``;
+- (AP 4.11.A.4) The square brackets ``[row][col]`` are used to access and modify an element in a 2D array. For the purposes of the AP exam, when accessing the element at ``arr[first][second]``, the ``first`` index is used for rows, the ``second`` index is used for columns.
 
-- The square brackets ``[row][col]`` are used to access and modify an element in a 2D array.
+- **Row-major order** refers to an ordering of 2D array elements where traversal occurs across each row, while **column-major order** traversal occurs down each column.
 
-- "Row-major order" refers to an ordering of 2D array elements where traversal occurs across each row, while "column-major order" traversal occurs down each column.
-
+- (AP 4.11.A.5)	A single array that is a row of a 2D array can be accessed using the 2D array name and a single set of square brackets containing the row index.
+- (AP 4.11.A.6) The number of rows contained in a 2D array can be accessed through the ``length`` attribute. The valid row index values for a 2D array are ``0`` through one less than the number of rows or the length of the array, inclusive. The number of columns contained in a 2D array can be accessed through the ``length`` attribute of one of the rows. The valid column index values for a 2D array are ``0`` through one less than the number of columns or the length of any given row of the array, inclusive. For example, given a 2D array named ``values``, the number of rows is ``values.length`` and the number of columns is ``values[0].length```. Using an index value outside of these ranges will result in an ``ArrayIndexOutOfBoundsException``.	
 
 2D Arrays Game
 ----------------
+
+.. |game| raw:: html
+
+   <a href="https://csa-games.netlify.app/" target="_blank">game</a>
 
 
 Try the game below to practice 2D Arrays. Click on **Arrays** and then check on **2D** and click on the elements of the * array that would be printed out by the given code. If you're stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.

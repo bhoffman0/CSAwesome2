@@ -1,5 +1,5 @@
-Multiple-Choice Exercises
-=========================
+2D Arrays Multiple-Choice Exercises
+======================================
 
 
 .. toctree::

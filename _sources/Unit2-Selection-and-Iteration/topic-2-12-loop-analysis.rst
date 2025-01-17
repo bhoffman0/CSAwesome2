@@ -485,3 +485,31 @@ Try the game below to practice loop analysis. Click on **Loops** and click on th
 
     <iframe height="700px" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"></iframe>
     <script>      window.scrollTo(0, 0);</script>
+
+
+Review/Practice for Loops
+------------------------------
+
+|Time90|
+
+This lesson ends the section on loops. 
+You can now do the following review and practice lessons at the end of the unit
+and College Board Progress Checks in the AP Classroom.  
+
+.. raw:: html
+
+   <ul>
+    <li><a href="loops-summary.html" target="_blank">Loops Summary</a></li>
+    <li><a href="loops-practice-mixed-code.html" target="_blank">Loops Practice Mixed Code</a></li>
+    <li><a href="loops-practice-mixed-code-toggle.html" target="_blank">Loops Practice Mixed Code Toggle</a></li>
+    <li><a href="loops-practice-coding.html" target="_blank">Loops Practice Coding</a></li>
+    <li><a href="Exercises-loops.html" target="_blank">Multiple-Choice Exercises for Loops</a></li>
+    <li><a href="unit2-test.html" target="_blank">Unit 2 Test</a></li>
+    <li><a href="FRQcalendar.html" target="_blank">FRQ Calendar</a></li>
+    <li><a href="FRQselfDivisorA.html" target="_blank">FRQ Self Divisor</a></li>
+    <li><a href="FRQstringScrambleA.html" target="_blank">FRQ String Scramble</a></li>
+    <li><a href="ConsumerReviewLab.html" target="_blank">Consumer Review Lab</a></li>
+    </ul>
+
+
+  

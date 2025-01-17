@@ -88,16 +88,16 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public static</cline>       
+                    <c>public static</c>       
                     </block>
                     <block>
-                        <cline>void main(</cline>       
+                        <c>void main(</c>       
                     </block>
                     <block>
-                        <cline>String[]</cline>       
+                        <c>String[]</c>       
                      </block>
                      <block>
-                        <cline>args)</cline>       
+                        <c>args)</c>       
                      </block>
                      <block correct="no">
                         <c>public Static</c>       
@@ -111,22 +111,22 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public</cline>       
+                    <c>public</c>       
                     </block>
                     <block>
-                        <cline>static</cline>       
+                        <c>static</c>       
                         </block>
                     <block>
-                        <cline>void</cline>       
+                        <c>void</c>       
                     </block>
                     <block>
-                        <cline>main(</cline>       
+                        <c>main(</c>       
                         </block>
                     <block>
-                        <cline>String[]</cline>       
+                        <c>String[]</c>       
                      </block>
                      <block>
-                        <cline>args)</cline>       
+                        <c>args)</c>       
                      </block>
                      <block correct="no">
                         <c>Public</c>       
@@ -143,31 +143,31 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>public</cline>       
+                    <c>public</c>       
                     </block>
                     <block>
-                        <cline>static</cline>       
+                        <c>static</c>       
                         </block>
                     <block>
-                        <cline>void</cline>       
+                        <c>void</c>       
                     </block>
                     <block>
-                        <cline>main</cline>       
+                        <c>main</c>       
                         </block>
                     <block>
-                     <cline>(</cline>       
+                     <c>(</c>       
                     </block>
                     <block>
-                        <cline>String</cline>       
+                        <c>String</c>       
                      </block>
                      <block>
-                        <cline>[] </cline>       
+                        <c>[] </c>       
                         </block>
                      <block>
-                        <cline>args</cline>       
+                        <c>args</c>       
                      </block>
                      <block>
-                        <cline>)</cline>       
+                        <c>)</c>       
                         </block>
                      <block correct="no">
                         <c>()</c>       
@@ -183,28 +183,28 @@ public class RunestoneTests extends CodeTestHelper
                 </statement>
                 <blocks layout="horizontal">
                     <block>
-                    <cline>System.</cline>       
+                    <c>System.</c>       
                     </block>
                     <block>
-                        <cline>out</cline>       
+                        <c>out</c>       
                         </block>
                     <block>
-                        <cline>.</cline>       
+                        <c>.</c>       
                     </block>
                     <block>
-                        <cline>println</cline>       
+                        <c>println</c>       
                         </block>
                     <block>
-                     <cline>(</cline>       
+                     <c>(</c>       
                     </block>
                     <block>
-                        <cline>&quot;Hi!&quot;</cline>       
+                        <c>&quot;Hi!&quot;</c>       
                      </block>
                      <block>
-                        <cline>)</cline>       
+                        <c>)</c>       
                         </block>
                      <block>
-                        <cline>;</cline>       
+                        <c>;</c>       
                      </block>
                      <block correct="no">
                         <c>system</c>       
@@ -220,28 +220,28 @@ public class RunestoneTests extends CodeTestHelper
             </statement>
             <blocks layout="horizontal">
                 <block>
-                <cline>System.</cline>       
+                <c>System.</c>       
                 </block>
                 <block>
-                    <cline>out</cline>       
+                    <c>out</c>       
                     </block>
                 <block>
-                    <cline>.</cline>       
+                    <c>.</c>       
                 </block>
                 <block>
-                    <cline>println</cline>       
+                    <c>println</c>       
                     </block>
                  <block>
-                 <cline>(</cline>       
+                 <c>(</c>       
                 </block>
                 <block>
-                    <cline>&quot;Bye!&quot;</cline>       
+                    <c>&quot;Bye!&quot;</c>       
                  </block>
                  <block>
-                    <cline>)</cline>       
+                    <c>)</c>       
                     </block>
                  <block>
-                    <cline>;</cline>       
+                    <c>;</c>       
                  </block>
                  <block correct="no">
                     <c>Out</c>       
@@ -264,46 +264,38 @@ public class RunestoneTests extends CodeTestHelper
             <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
 </statement>
 <blocks><block order="4">
-<c>public class Hello</c>
-<c>{</c>
+<cline>public class Hello</cline>
+<cline>{</cline>
 </block><block order="1">
-<c>   public static void main(String[] args)</c>
-<c>   {</c>
-<c>   </c>
+<cline>   public static void main(String[] args)</cline>
+<cline>   {</cline>
 </block><block order="2">
-<c>      System.out.println("Hi my friend!");</c>
-<c>      </c>
+<cline>      System.out.println("Hi my friend!");</cline>
 </block><block order="3">
-<c>   }</c>
-<c>   </c>
+<cline>   }</cline>
 </block><block order="5">
-<c>}</c>
-</block></blocks></exercise>
-<exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<cline>}</cline>
+</block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="6">
-<choice correct="yes"><c>public class Hello</c>
-<c>{</c>
-</choice><choice><c>public Class Hello</c>
-<c>{                         </c>
+<choice correct="yes"><cline>public class Hello</cline>
+<cline>{</cline>
+</choice><choice><cline>public Class Hello</cline>
+<cline>{                         </cline>
 </choice></block><block order="5">
-<choice correct="yes"><c>   public static void main(String[] args)</c>
-<c>   {</c>
-<c>   </c>
-</choice><choice><c>   public static void main()</c>
-<c>   {                         </c>
-<c>   </c>
+<choice correct="yes"><cline>   public static void main(String[] args)</cline>
+<cline>   {</cline>
+</choice><choice><cline>   public static void main()</cline>
+<cline>   {                         </cline>
 </choice></block><block order="8">
-<choice correct="yes"><c>      System.out.println("Hi there!");</c>
-<c>      </c>
-</choice><choice><c>      System.out.println("Hi there!") </c>
-<c>      </c>
+<choice correct="yes"><cline>      System.out.println("Hi there!");</cline>
+</choice><choice><cline>      System.out.println("Hi there!") </cline>
+<cline>      </cline>
 </choice></block><block order="2">
-<c>   }</c>
-<c>   </c>
+<cline>   }</cline>
 </block><block order="4">
-<c>}</c>
+<cline>}</cline>
 </block></blocks></exercise>        </subsection>
   <subsection>
             <title>Reading Error Messages</title>

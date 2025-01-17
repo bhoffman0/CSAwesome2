@@ -1,19 +1,20 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 10-1-
+   :prefix: 4-16-
    :start: 1
 
 
+|Time45|
 
-What is Recursion? 
+Recursion 
 ===============================
 
 .. index::
     single: recursion
     pair: recursion; definition
 
-**Recursion** is when a method calls itself. See the example method below.
+**Recursion** is when a method calls itself. It is a form of repetition. See the example method below.
 
 .. code-block:: java
   :linenos:
@@ -34,6 +35,12 @@ This is called **infinite recursion**, which is a recursion that never ends. Of
 course, this particular method is not very useful. (Actually, in practice it
 *will* end, crashing with a ``StackOverFlowError`` because there is a limit on how
 many times you can recurse.)
+
+Recursive Call 
+----------------------------
+
+Well-constructed recursive methods contain at least one **base case**, which halts the recursion, and at least one recursive call. 
+
 
 |Exercise| **Check your Understanding**
 
@@ -90,7 +97,7 @@ many times you can recurse.)
 
 
 Why use Recursion?
-------------------
+--------------------
 
 .. index::
     single: fractal
@@ -129,8 +136,8 @@ Recursion can also be used to traverse ``String``\ s, arrays, and ``ArrayList``\
 s just like a loop. In fact, any loop—also known as *iterative* code—can be
 written using recursion. However in most languages, including Java, there are
 limitations on how deeply code can recurse which rules out using recursion for
-infinite or even very long loops so we don’t usually use recursion when a simple
-loop will do.
+infinite or even very long loops, so we don’t usually use recursion when a simple
+loop will do. In theory though, any iterative code can be written recursively and vice versa.
 
 On the other hand, recursion is more powerful than simple loops, especially when
 dealing with branching structures like the file folder example. Computer
@@ -146,7 +153,7 @@ navigate a 2D array a pair of nested ``for`` loops is the way to go. But if you
 need to traverse a tree structure, recursion should be your go to.
 
 Factorial Method
------------------
+--------------------
 
 The following video is also on YouTube at https://youtu.be/V2S_8E_ubBY.  It introduces the concept of recursion and tracing recursion with the factorial method.
 
@@ -358,7 +365,7 @@ case—that’s the equivalent in recursion to incrementing your loop variable i
 
 
 Tracing Recursive Methods 
------------------------------------
+------------------------------
 
 .. index::
     single: call stack
@@ -393,8 +400,7 @@ The code above will cause a run-time error of division by zero when it runs.  Th
 
     Figure 4: A call stack in DrJava with a run-time error
 
-When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed. Each recursive call on the stack has its own set of local variables, including the parameter variables. The parameter values progressively change in each recursive call until we reach the base case which stops the recursion.
-
+When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed. Each recursive call on the stack has its own set of local variables, including the parameter variables. Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop. The parameter values usually change in each recursive call until we reach the base case which stops the recursion when a parameter reaches some base value.
 
 |CodingEx| **Tracing Exercise**
 
@@ -667,7 +673,7 @@ You can step through the code above using the Java Visualizer by clicking on the
 
 
 |Groupwork| Tracing Challenge : Recursion
--------------------------------------------
+------------------------------------------
 
 Working in pairs, trace through the following recursion problems.
 
@@ -801,26 +807,12 @@ Once ``strMethod("y")`` returns, the value from each recursive call on the stack
 
 
 Summary
-------------
+----------
 
-- A recursive method is a method that calls itself.
-
-- Recursive methods that don't recurse infinitely must contain at least one base
-  case when the method can return an answer immediately.
-
-- Each recursive call, like any method call, has its own set of local variables,
-  including its parameters.
-
-- Parameter values capture the progress of a recursive process, much like loop
-  variable values capture the progress of a loop.
-
-- Any iterative procedure can be implemented with recursion but may run into
-  limitations on how deep the call stack can get.
-
-- Some recursive procedures can only be translated into iterative code by using
-  extra data structures to keep track of information that is implicit in the
-  structure of recursive calls in recursive code.
-
-- Writing recursive program code is outside the scope of the course and AP Exam.
-
+- (AP 4.16.A.1)	A **recursive method** is a method that calls itself. 
+- (AP 4.16.A.1) Recursive methods contain at least one **base case**, which halts the recursion, and at least one **recursive call**. (unless it is a case of **infinite recursion**).
+- (AP 4.16.A.1) Recursion is another form of repetition.
+- (AP 4.16.A.2)	Each recursive call has its own set of local variables, including the parameters. Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.
+- (AP 4.16.A.3)	Any recursive solution can be replicated through the use of an iterative approach and vice versa. (although the recursive solution may have memory limitations for the recursive call stack, and the iterative approach may require additional data structures).
+- Note that writing recursive code is outside the scope of the AP Computer Science A course and exam.
 - Recursion can be used to traverse ``String``\ s, arrays, and ``ArrayList``\ s.

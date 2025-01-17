@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 7-4-1-
+   :prefix: 4-36-
    :start: 1
 
 Free Response - String Scramble B
-===================================
+-----------------------------------
 
 .. index::
     single: string scramble
@@ -50,14 +50,14 @@ Assume that the method ``scrambleWord`` works as intended and is in the same cla
    }
 
 How to solve this problem
----------------------------
-.. shortanswer:: 2014string_algorithm_partB
+===========================
+.. shortanswer:: string_algorithm_partB
 
    Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.
 
 This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.
 
-.. reveal:: 2014strng_algorithm_B
+.. reveal:: strng_algorithm_B
     :showtitle: Reveal Algorithm Structure Hint
     :hidetitle: Hide Algorithm Structure Hint
 
@@ -104,7 +104,7 @@ This section contains a plain English explanation of one way to solve this probl
     .. mchoice:: strng_mcalg_answr_1
        :answer_a: (index != wordList.current())
        :answer_b: (int index = wordList.size() - 1; index >= 0; index--)
-       :answer_c: (index &lt; wordList.size())
+       :answer_c: (index < wordList.size())
        :answer_d: (wordList(index) != wordList.size())
        :correct: c
        :feedback_a: the .current() method does not exist
@@ -167,7 +167,7 @@ This section contains a plain English explanation of one way to solve this probl
 
 
 The Algorithm
----------------------------
+===========================
 
 Loop through the list and scramble the current word.  If the scrambled word and original are equal then remove the word from the list and otherwise replace it.  We will have to be careful since the size of the list can change in the loop.  If we remove an element all the other elements will shift left.
 We will only want to increment the index if the word was replaced and not removed. There are many ways to solve this problem but we have outlined 2 in the following optional questions. If you feel that you are ready to solve the problem, please skip ahead to the active code block.
@@ -285,7 +285,7 @@ Another way to solve this problem is to start at the end of the list and loop to
 
 
 Try and Solve It
--------------------
+===================
 
 
 

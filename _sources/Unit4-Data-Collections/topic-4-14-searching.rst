@@ -1,7 +1,7 @@
 .. include:: ../common.rst
 
 .. qnum::
-   :prefix: 7-5-
+   :prefix: 4-14-
    :start: 1
 
 
@@ -19,8 +19,6 @@ Searching Algorithms
 
 Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called **searching**.  For the AP CSA exam you will need to know both **linear (sequential) search** and **binary search** algorithms.
 
-.. the video is Searching.mov
-
 The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It introduces the concept of searching including sequential search and binary search.
 
 .. youtube:: DHLCXXX1OtE
@@ -28,15 +26,14 @@ The following video is also on YouTube at https://youtu.be/DHLCXXX1OtE.  It intr
     :align: center
 
 
-* **Sequential or Linear search** typically starts at the first element in an array or ArrayList and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.
-* **Binary search** can only be used on data that has been **sorted** or stored in order.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.
-
+- **Linear search** is a standard algorithm that checks each element in order until the desired value is found or all elements in the array or ``ArrayList`` have been checked. Linear search algorithms can begin the search process from either end of the array or ``ArrayList``.
+- **Binary search** can only be used on data that has been **sorted** or stored in order.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.
 
 
 If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson.
 
 
-Sequential Search
+Linear Search
 ------------------
 
 .. index::
@@ -45,8 +42,7 @@ Sequential Search
    pair: search; sequential
    pair: search; linear
 
-Sequential or linear search can be used to find a value in *unsorted* data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn't find the value in the array or list. Click on *Show CodeLens* below to see linear search in action.
-
+Linear or Sequential search can be used to find a value in *unsorted* data. It usually starts at the first element and walks through the array or ``ArrayList`` until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn't find the value in the array or list. Click on *Show CodeLens* below to see linear search in action.
 
 
 .. activecode:: seqSearch
@@ -258,6 +254,86 @@ You can also look for a ``String`` in an array or list, but be sure to use ``equ
       }
   }
 
+Linear Search with 2D Arrays
+------------------------------
+
+We can also apply the linear search algorithm to data in a 2D array.  We can loop through each row of the 2D array and then apply the linear search algorithm to each row to find an element.  The code below demonstrates this with a 2D array of integers.  Click on the Code Lens button to step through this code. Then, change it to work with a 2D array of Strings. Remember to use the ``equals`` method to compare Strings.
+
+|CodingEx| **Coding Exercise**
+
+
+.. activecode:: linearSearch2DArrays
+   :language: java
+   :autograde: unittest
+
+   What will the following code print? Click on the Code Lens button to step through this code. Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints. Remember to use the ``equals`` method to compare Strings. 
+   ~~~~
+   public class Search
+   {
+       public static boolean search(int[][] array, int value)
+       {
+           boolean found = false;
+           for (int row = 0; row < array.length; row++)
+           {
+               for (int col = 0; col < array[0].length; col++)
+               {
+                   if (array[row][col] == value)
+                   {
+                        found = true;
+                   }
+               }
+           }
+           return found;
+       }
+
+       public static void main(String[] args)
+       {
+           int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+           System.out.println(search(matrix, 10));
+           System.out.println(search(matrix, 11));
+
+           // Comment out the code above, and try these:
+           // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
+           // System.out.println(search(matrix2, "b"));
+
+       }
+   }
+
+   ====
+   import static org.junit.Assert.*;
+
+   import org.junit.*;
+
+   import java.io.*;
+
+   public class RunestoneTests extends CodeTestHelper
+   {
+       public RunestoneTests()
+       {
+           super("Search");
+       }
+
+       @Test
+       public void test2()
+       {
+           String[][] array = { {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
+           String value = "b";
+           Object[] args = {array, value};
+
+           String output = getMethodOutput("search", args);
+           String expect = "true";
+
+           boolean passed =
+                   getResults(
+                           expect,
+                           output,
+                           "Testing search({"
+                               + " {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\""
+                               + " } }, \"b\")");
+           assertTrue(passed);
+       }
+   }
+
 
 
 Binary Search
@@ -280,7 +356,7 @@ Binary search keeps dividing the sorted search space into half. It compares a ta
 
 Binary search calculates the middle index as ``left + right / 2`` where left starts out at 0 and right starts out at the array length - 1 (the index of the last element). Remember that integer division gives an integer result so 2.5 becomes 2. It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one. If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index. It also stops when left is greater than right which indicates that the value wasn't found and it returns -1.
 
-The code for ``binarySearch`` below is from the AP CSA course description. A recursive version of this algorithm will be covered in Unit 10.
+The code for ``binarySearch`` below is from the AP CSA course description. A recursive version of this algorithm will be covered in lesson 4.17.
 
 .. activecode:: binSearch
   :language: java
@@ -521,13 +597,13 @@ Runtimes can be described with mathematical functions. For an array of size n, l
 
 
 
-Let's go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. The advantage of using an ``ArrayList`` instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.  
+Let's go back to the spellchecker that we created with arrays. Here is a version of the spellchecker below that reads the dictionary file into an ``ArrayList``. The advantage of using an ``ArrayList`` instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.  
 
-In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let's see how much faster we can make it. 
+In the spellchecker challenge, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let's see how much faster we can make it. 
 
 Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use ``size`` and ``get(i)`` instead of [] to get an element in the ``ArrayList`` dictionary at index i. You will need to use the ``equals`` and ``compareTo`` methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning. 
 
-.. activecode:: challenge7-5-search-coding
+.. activecode:: challenge-search-coding
     :language: java
     :datafile: dictionary.txt
     :autograde: unittest
@@ -641,7 +717,7 @@ Run your code with the following test cases and record the runtime for each word
 
 What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.
 
-.. shortanswer:: challenge7-5-binary-search
+.. shortanswer:: challenge-binary-search
 
    After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?
 
@@ -649,12 +725,13 @@ What do you notice? Which one was faster in general? Were there some cases where
 Summary
 ---------
 
-- There are standard algorithms for searching.
+- (AP 4.14.A.1)	**Linear search algorithms** are standard algorithms that check each element in order until the desired value is found or all elements in the array or ``ArrayList`` have been checked. Linear search algorithms can begin the search process from either end of the array or ``ArrayList``.
+- (AP 4.14.A.2)	When applying linear search algorithms to 2D arrays, each row must be accessed then linear search applied to each row of the 2D array.
 
-- Sequential/linear search algorithms check each element in order until the desired value is found or all elements in the array or ArrayList have been checked.
+- The **binary search** algorithm starts at the middle of a sorted array or ``ArrayList`` and eliminates half of the array or ``ArrayList`` in each iteration until the desired value is found or all elements have been eliminated.
 
-- The binary search algorithm starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList in each iteration until the desired value is found or all elements have been eliminated.
-
-- Data must be in sorted order to use the binary search algorithm. This algorithm will be covered more in Unit 10.
+- (AP 4.17.B.1 preview)	Data must be in sorted order to use the binary search algorithm. 
+- (AP 4.17.B.2 preview)	Binary search is typically more efficient than linear search.
+- (AP 4.17.B.3 preview)	The binary search algorithm can be written either iteratively or recursively. (The recursive solution will be presented in lesson 4.17).
 
 - Informal run-time comparisons of program code segments can be made using statement execution counts.

@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <publication>
+
   <source>
     <directories external="assets" generated="generated"/>
   </source>
+
   <!-- This starts chapter numbering at 0 -->
   <numbering>
     <divisions chapter-start="0"/>
   </numbering>
+
   <!-- This turns off showing solutions after an exercise. -->
+  <!-- Instead we will generate <solutions> at the end of a section -->
   <common>
     <exercise-divisional solution="no"/>
     <exercise-inline solution="no"/>
     <project solution="no"/>
   </common>
+
   <html>
-    <platform host="runestone"/>
+    <platform host="web"/>
     <!-- knowled checkpoints interfere with ActiveCode problems -->
     <knowl exercise-inline="no" example="no" listing="no"/>
     <!-- for scratch code language -->
     <calculator activecode="java"/>
-    <!-- Choices at https://github.com/PreTeXtBook/CSS_core -->
-    <!-- Some not bad ones: blue_green, blue_grey, blue_red_dark, bluegreen_grey, darkmartiansands -->
-    <!-- crc centers the page; new wide style -->
-    <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
-    <tableofcontents focused="yes"/>
+
+ <!--  Deprecated <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
+       New theme styles https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options
+     blue #007d9f, bright blue #04B2D9, in-between blue #00A1E4
+     mcsp: #00B3E3
+   -->
+   <css theme="salem" color-main="#00A1E4" /> 
+   <tableofcontents focused="yes"/>
   </html>
+
 </publication>

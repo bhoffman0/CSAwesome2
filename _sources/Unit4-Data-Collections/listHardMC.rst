@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 7-11-3-
+   :prefix: 4-35-3-
    :start: 1
 
-Hard Multiple Choice Questions
-==================================
+ArrayList Hard Multiple Choice Questions
+-----------------------------------------
 
 These problems are about the same or harder than those you will see on the AP CSA exam.
 
@@ -68,8 +68,11 @@ You can step through the code above by clicking on the following `Example-8-13-2
 
 
 
+.. |FRQs| raw:: html
 
-For more practice with free response questions with Lists, look up the following FRQs in this `FRQs <https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit#gid=1826848698>`_ spreadsheet:
+   <a href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit#gid=1826848698" target="_blank" style="text-decoration:underline">FRQs</a>
+
+For more practice with free response questions with Lists, look up the following FRQs in this |FRQs| spreadsheet:
 
 - question 1 from 2012 FRQs
 - question 3 from 2011 FRQs

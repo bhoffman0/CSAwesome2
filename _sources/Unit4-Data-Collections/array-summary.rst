@@ -1,12 +1,12 @@
 .. qnum::
-   :prefix: 6-5-
+   :prefix: 4-18-
    :start: 1
 
 
-Unit 6 Summary
-=========================
+Arrays Summary
+-------------------------
 
-In this chapter you learned about **Arrays**.  An **array** is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.
+In this section, you learned about **Arrays**.  An **array** is consecutive storage for multiple items of the same type like the top five scores in a game.  You learned how to declare arrays, create them, and access array elements.  Array elements are accessed using an index.  The first element in an array is at index 0.
 
 .. figure:: Figures/arrayIndicies.png
     :width: 200px
@@ -32,7 +32,7 @@ In this chapter you learned about **Arrays**.  An **array** is consecutive stora
     single: static keyword
 
 Concept Summary
------------------
+=================
 
 - **Array** - An array can hold many items (elements) of the same type.  You can access an item (element) at an index and set an item (element) at an index.
 - **Array Declaration** - To declare an array specify the type of elements that will be stored in the array, then (``[]``) to show that it is an array of that type, then at least one space, and then a name for the array. Examples:  ``int[] highScores;``  ``String[] names;``
@@ -46,15 +46,15 @@ Concept Summary
 
 
 Java Keyword Summary
--------------------------
+=========================
 
 - **for** - starts both a general for loop and a for-each loop.  The syntax for a for each loop is ``for (type variable : array)``.  Each time through the loop the variable will take on the next value in the array.  The first time through the loop it will hold the value at index 0, then the value at index 1, then the value at index 2, etc.
 - **static** - used to create a class method, which is a method that can be called using the class name like ``Math.abs(-3)``.
 
 Vocabulary Practice
----------------------
+=====================
 
-.. dragndrop:: ch7_match_1
+.. dragndrop:: arrays_match_1
     :feedback: Review the summaries above.
     :match_1: The index of the last element|||length - 1
     :match_2: The number of elements in the array|||length
@@ -63,7 +63,7 @@ Vocabulary Practice
 
     Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.
 
-.. dragndrop:: ch7_match_2
+.. dragndrop:: arrays_match_2
     :feedback: Review the summaries above.
     :match_1: Declare an integer array named nums|||int[] nums;
     :match_2: Declare and create a String array named list1 that can hold 3 elements|||String[] list1 = new String[3];
@@ -72,11 +72,15 @@ Vocabulary Practice
 
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
 
+.. |Quizlet| raw:: html
 
-For more practice, see this `Quizlet <https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/>`_.
+   <a href="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
 
 Common Mistakes
----------------
+===============
 
   -  forgetting to create the array - only declaring it (``int[ ] nums;``)
   -  using 1 as the first index not 0

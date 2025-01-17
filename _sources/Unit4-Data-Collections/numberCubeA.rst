@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 6-4-6-
+   :prefix: 4-30-
    :start: 1
 
 Free Response - Number Cube A

@@ -1,9 +1,9 @@
 .. qnum::
-   :prefix: 7-9-
+   :prefix: 4-32-
    :start: 1
 
-Mixed Up Code Practice
-==============================
+ArrayList Mixed Up Code Practice
+--------------------------------------
 
 Try to solve each of the following. Click the *Check* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren't needed in the correct solution.  Try to solve these on your phone or other mobile device!
 
@@ -333,4 +333,4 @@ Try to solve each of the following. Click the *Check* button to check each solut
           i++; #distractor
    =====
       } //end while loop
-   } //end average method
+   } //end method
