@@ -23,6 +23,8 @@ Strings
 
    Class names in Java, like ``String``, begin with a capital letter.  All primitive types: ``int``, ``double``, and ``boolean``, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types.
 
+String references
+--------------------
 
 .. activecode:: lcsb1
    :language: java

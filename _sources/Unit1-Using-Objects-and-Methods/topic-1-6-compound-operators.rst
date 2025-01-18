@@ -250,3 +250,23 @@ Summary
   add 1 or subtract 1 from the stored value of a numeric variable. The new value is
   assigned to the variable.
 
+
+Review/Practice for Unit 1 Part a
+----------------------------------
+
+|Time90|
+
+This lesson ends the section on Unit 1 part a. 
+You can now do the following review and practice lessons at the end of the unit
+and College Board Progress Checks in the AP Classroom.  
+
+.. raw:: html
+
+   <ul>
+    <li><a href="unit1a-summary.html" target="_blank">Unit 1a Summary</a></li>
+    <li><a href="unit1a-practice-mixed-code.html" target="_blank">Unit 1a Practice</a></li>
+    <li><a href="unit1a-practice-mixed-code-toggle.html" target="_blank">Unit 1a Practice Toggle</a></li>
+    <li><a href="unit1a-practice-coding.html" target="_blank">Unit 1a Practice Coding</a></li>
+    <li><a href="Exercises.html" target="_blank">Exercises</a></li>
+    </ul>
+

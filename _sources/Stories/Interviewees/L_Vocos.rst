@@ -3,10 +3,10 @@
 Lucas Vocos
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"People have this perception of logic based, math based thinking [as] not very creative, very by the book. People have the perception of creativity and design in another way. I am in a unique place where I can do both. I can help build something beautiful but I can also use logic, use math, use methodologies that achieve that goal."</em></font>`
+
+
+"People have this perception of logic based, math based thinking [as] not very creative, very by the book. People have the perception of creativity and design in another way. I am in a unique place where I can do both. I can help build something beautiful but I can also use logic, use math, use methodologies that achieve that goal."
 
 .. image:: ../../../_static/Interviewees/L_Vocos.jpg
     :width: 350

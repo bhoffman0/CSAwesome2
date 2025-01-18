@@ -17,5 +17,4 @@ Free Response Practice
    ArrayTesterB.rst
    NumberGroupB.rst
    NumberGroupC.rst
-   Exercises.rst
 

@@ -196,9 +196,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
    /**
     * A program to carry on conversations with a human user. This version:
     *
-    * <ul>
-    *   <li>Uses advanced search for keywords
-    * </ul>
+    *   Uses advanced search for keywords 
     *
     * @author Laurie White
     * @version April 2012

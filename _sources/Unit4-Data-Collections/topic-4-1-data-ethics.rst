@@ -11,11 +11,11 @@ Ethical and Social Issues Around Data Collection
 
 .. |video1| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=bqWuioPHhz0" target="_blank" style="text-decoration:underline">video</a>
+   <a href="https://www.youtube.com/watch?v=bqWuioPHhz0" target="_blank">video</a>
 
 .. |location| raw:: html
 
-   <a href="https://www.lifewire.com/location-history-google-maps-iphone-1683392" target="_blank" style="text-decoration:underline" >https://www.lifewire.com/location-history-google-maps-iphone-1683392</a>
+   <a href="https://www.lifewire.com/location-history-google-maps-iphone-1683392" target="_blank">https://www.lifewire.com/location-history-google-maps-iphone-1683392</a>
 
 Data Privacy
 --------------
@@ -42,9 +42,9 @@ Here are some interesting video resources about data collection and data privacy
 .. raw:: html
 
     <ul>
-    <li>A short <a href="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" style="text-decoration:underline" target="_blank">1 minute video</a> about the Facebook Cambridge Analytica incident and a longer <a href="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2" style="text-decoration:underline" target="_blank">1 hour PBS special</a> on Facebook.</li>
-    <li><a href="https://www.youtube.com/watch?v=gXiEBcb0Vs8" style="text-decoration:underline" target="_blank">What is Geo-fencing (2 mins)</a></li>
-    <li><a href="https://www.youtube.com/watch?v=j6wwBqfSk-o" style="text-decoration:underline" target="_blank">The European General Data Protection Regulation (GDPR) (3 mins)</a></li></ul>
+    <li>A short <a href="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" target="_blank">1 minute video</a> about the Facebook Cambridge Analytica incident and a longer <a href="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2" target="_blank">1 hour PBS special</a> on Facebook.</li>
+    <li><a href="https://www.youtube.com/watch?v=gXiEBcb0Vs8"  target="_blank">What is Geo-fencing (2 mins)</a></li>
+    <li><a href="https://www.youtube.com/watch?v=j6wwBqfSk-o"  target="_blank">The European General Data Protection Regulation (GDPR) (3 mins)</a></li></ul>
 
 
 Data and Bias
@@ -57,11 +57,11 @@ Bias in data can lead to unfair and unethical outcomes. For instance, facial rec
 
 .. |videoJoy| raw:: html
 
-   <a href="https://www.youtube.com/watch?v=TWWsW1w-BVo" target="_blank" style="text-decoration:underline">Gender Shades video</a>
+   <a href="https://www.youtube.com/watch?v=TWWsW1w-BVo" target="_blank">Gender Shades video</a>
 
 .. |Joy Buolamwini| raw:: html
 
-   <a href="https://www.poetofcode.com/" target="_blank" style="text-decoration:underline">Joy Buolamwini</a>
+   <a href="https://www.poetofcode.com/" target="_blank">Joy Buolamwini</a>
 
 Watch the following |videoJoy| about gender and race bias in face recognition algorithms by computer scientist |Joy Buolamwini| (MIT Media Lab and Algorithmic Justice League).
 

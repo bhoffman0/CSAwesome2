@@ -3,10 +3,10 @@
 Briceida Mariscal
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"I love learning about new technologies and trying them out. I know that if I keep digging at them, it will click, and I will learn them. Just knowing that I know that I can learn helps make me love the field."</em></font>`
+
+
+"I love learning about new technologies and trying them out. I know that if I keep digging at them, it will click, and I will learn them. Just knowing that I know that I can learn helps make me love the field."
 
 **How did she get into computing?**
 

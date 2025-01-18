@@ -3,10 +3,10 @@
 Destini Deinde-Smith
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"I have always identified as someone who really loves being creative but also enjoys things that are sometimes technical.  I feel as though being a software engineer and studying CS —  it's this way to join those two things that I've identified with."</em></font>`
+
+
+"I have always identified as someone who really loves being creative but also enjoys things that are sometimes technical.  I feel as though being a software engineer and studying CS —  it's this way to join those two things that I've identified with."
 
 .. image:: ../../../_static/Interviewees/D_Deinde-Smith.jpg
     :width: 350

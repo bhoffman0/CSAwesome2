@@ -3,10 +3,10 @@
 Dr. Nettrice Gaskins
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"We don't have conversations where software engineers talk to artists, and artists get together just to have conversations about this new field that's emerging. And yet, it is emerging and it is something that I think would really interest a lot of people who would not even enter into computers or computation."</em></font>`
+
+
+"We don't have conversations where software engineers talk to artists, and artists get together just to have conversations about this new field that's emerging. And yet, it is emerging and it is something that I think would really interest a lot of people who would not even enter into computers or computation."
 
 .. image:: ../../../_static/Interviewees/N_Gaskins.jpg
     :width: 350

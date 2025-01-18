@@ -10,5 +10,4 @@ Preparing for the Exam
    test3nt.rst
    test4nt.rst
    test5nt.rst
-   Exercises.rst
 
