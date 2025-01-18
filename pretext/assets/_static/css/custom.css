@@ -36,6 +36,13 @@
   color:  var(--emphasisColor);
 }
 
+/* Add csawesome2 in title for the course name in course home, 
+   but don't diplay that because there's the logo in the banner */ 
+.ptx-banner .title 
+{ 
+   display: none; 
+}
+
 .ptx-content .terminology
 {
     color:  var(--emphasisColor);
@@ -46,8 +53,8 @@
 .ptx-content .code-inline
 {
   padding: 0;
- /* color: var(--codeColor); // use new defaults instead */
-  background-color: inherit;
+ /* color: var(--codeColor); // use new defaults instead 
+  background-color: inherit; */
   font-weight: bold;
   font-size: 100%;  
 
@@ -61,6 +68,12 @@
 
 .ptx-content .summary-links {
   font-size: 1rem;
+}
+
+/* For displaying exercise ids */
+.ptx-content .runestone_caption,
+.runestone_caption {
+  display: block;
 }
 
 /* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */

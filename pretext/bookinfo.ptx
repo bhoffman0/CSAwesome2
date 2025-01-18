@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <docinfo>
   <document-id edition="2">csawesome2ptxbeta</document-id>
-  <!-- Rename Checkpoint for <exercise> to Exercise -->
-  <rename element="inlineexercise">Exercise</rename>
+  <!-- Rename Checkpoint for <exercise> to Activity -->
+  <rename element="inlineexercise">Activity</rename>
   <rename element="chapter">Unit</rename>
   <brandlogo url="." source="_static/CSAwesomeLogo.png" alt="CSAwesome"/>
   <blurb shelf="AP Computer Science">CSAwesome2 is an AP CSA Java curriculum following the College Board 2025-2026 guidelines, and an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School.</blurb>
