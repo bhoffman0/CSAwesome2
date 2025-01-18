@@ -31,23 +31,33 @@ while (<>) {
   s/<section xml:id=".*?">/<section xml:id="$filename">/g;
   s/<section>/<section xml:id="$filename">/g;
 
-  # Translate xml:ids that were generated in the docs to the ones used in the xrefs.
-  s/ref=".*mariscal"/ref="briceida-mariscal-id1"/g;
-  s/ref=".*lira"/ref="carla-de-lira-id1"/g;
-  s/ref=".*mbayo"/ref="camille-mbayo-id1"/g;
-  s/xml:id="exercises-1-1"-1/xml:id="recursive-exercises"/g;
-  s/(stories_)+/stories_/g;
-
   # Remove the hard-coded numbering of exercises Q6: or 1-1-1:
   s/Q\-\d+\://g;
   s/\d+\-\d+\-\d+\://g;
   s/Figure \d\: //g;
 
-  # Replace problematic images - maybe get rid of writing too
-  #s/<problematic refid="id\d+">\|CodingEx\|<\/problematic>/<image class="imgex" source="_static\/codingExercise.png" width="5%" alt="coding exercise"\/>/g;
-  #s/<problematic refid="id\d+">\|Exercise\|<\/problematic>/<image class="imgex" source="_static\/exercise.png" width="5%" alt="exercise"\/>/g;
-  #s/<problematic refid="id\d+">\|Groupwork\|<\/problematic>/<image class="imgex" source="_static\/groupwork.png" width="5%" alt="groupwork"\/>/g;
-  #s/<problematic refid="id\d+">\|.*\|<\/problematic>//g;
+  # Strip out <exercises> and </exercises> tags because it doesn't get added to the total at the bottom of the page
+  s/<exercises.*?>//g;
+  s/<\/exercises>//g;
+
+  # idx for index hacking - try it
+  s/\['single',\\ '(.*?)',.*?\]/<idx>$1<\/idx>\n/g;
+  s/\['pair',\\ '(.*?);\\ (.*?)',.*?\]/<idx><h>$1<\/h><h>$2<\/h><\/idx>\n/g;
+  s/<index entries="//g;
+  s/" inline="False"\/>//g;
+  s/\\ / /g;
+  s/\%\%/\%/g;
+
+  # <ul><li> </li></ul><pre>
+  s/&lt;ul&gt;/<ul>/g;
+  s/&lt;\/ul&gt;/<\/ul>/g;
+  s/&lt;li&gt;/<li>/g;
+  s/&lt;\/li&gt;/<\/li>/g;
+  s/<raw format="html" xml:space="preserve">/<p>/g;
+  s/<\/raw>/<\/p>/g;
+  s/&lt;a href="(.*?)" target="_blank"&gt;(.*?)&lt;\/a&gt;/<url href="$1" visual="$1">$2<\/url>/g;
+  s/&lt;pre&gt;/<pre>/g;
+  s/&lt;\/pre&gt;/<\/pre>/g;
 
   # For tests, put in time-limit to have it generate as a test. Pretests are no-feedback.
   # There are some with 'timelimit': 45, but we could make them all untimed.
