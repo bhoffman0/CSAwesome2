@@ -3,26 +3,33 @@
 <section xml:id="topic-4-15-sorting">
   <title>Sorting Algorithms</title><introduction>
     
-    <p>There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CSA exam are:</p>
+    <p>There are many sorting algorithms to put an array or <c>ArrayList</c> elements in alphabetic or numerical order. Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or <title_reference>ArrayList</title_reference>. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CSA exam are:</p>
+    <idx>selection\ sort</idx>
+ <idx>insertion\ sort</idx>
+ <idx><h>sort</h><h>selection</h></idx>
+ <idx><h>sort</h><h>insertion</h></idx>
+
     <p>
       <ul>
             <li>
-                <p>Selection Sort - Select the smallest item from the current location on to the end of the array and swap it with the value at the current position.  Do this from index 0 to the array length - 2.  You don’t have to process the last element in the array, it will already be sorted when you compare the prior element to the last element.</p>
+                <p><term>Selection sort</term> repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it into its correct (and final) position in the sorted portion of the list.</p>
             </li>
             <li>
-                <p>Insertion Sort - Insert the next unsorted element in the already sorted part of the array by moving larger values to the right.  Start at index 1 and loop through the entire array.</p>
+                <p><term>Insertion sort</term> inserts an element from the unsorted portion of a list into its correct (but not necessarily final) position in the sorted portion of the list by shifting elements of the sorted portion to make room for the new element.</p>
             </li>
             <li>
-                <p>Merge sort - Break the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one. MergeSort will be covered in Unit 10.</p>
+                <p><term>Merge sort</term> breaks the elements into two parts and recursively sort each part.  An array of one item is sorted (base case).  Then merge the two sorted arrays into one. MergeSort will be covered in lesson 4.17.</p>
             </li>
         </ul>
     </p>
   </introduction>
-  <subsection>
+  <subsection xml:id="selection-sort">
             <title>Selection Sort</title>
+            <idx>selection\ sort</idx>
+ <idx><h>sort</h><h>selection</h></idx>
+
             
-            
-            <p>The selection sort that you need to know for the exam starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.</p>
+            <p>Selection sort usually starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.</p>
             <p>Here is a folk dance <url href="https://youtu.be/Ns4TPTC8whw" visual="https://youtu.be/Ns4TPTC8whw">video</url> that shows the selection sort process.</p>
 
     <video youtube="Ns4TPTC8whw"/>
@@ -224,11 +231,13 @@ public static void selectionSort(int[] elements)
     </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+SortTest2%0A%7B%0A+++%0A+++public+static+void+selectionSort(int%5B%5D+elements)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)++++++//+line+1%0A++++++%7B%0A+++++++++int+minIndex+%3D+j%3B+++++++++++++++++++++++++++++++//+line+2%0A+++++++++for+(int+k+%3D+0%3B+k+%3C+elements.length%3B+k%2B%2B)+++++++//+line+3%0A+++++++++%7B%0A++++++++++++if+(elements%5Bk%5D+%3C+elements%5BminIndex%5D)++++++++//+line+4%0A++++++++++++%7B%0A+++++++++++++++minIndex+%3D+k%3B+++++++++++++++++++++++++++++//+line+5%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++elements%5Bj%5D+%3D+elements%5BminIndex%5D%3B%0A+++++++++elements%5BminIndex%5D+%3D+temp%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++selectionSort(arr1)%3B%0A++++++System.out.println(Arrays.toString(arr1))%3B%0A+++%7D%0A++++++%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A%0Apublic+class+SortTest2%0A%7B%0A+++%0A+++public+static+void+selectionSort(int%5B%5D+elements)%0A+++%7B%0A++++++for+(int+j+%3D+0%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)++++++//+line+1%0A++++++%7B%0A+++++++++int+minIndex+%3D+j%3B+++++++++++++++++++++++++++++++//+line+2%0A+++++++++for+(int+k+%3D+0%3B+k+%3C+elements.length%3B+k%2B%2B)+++++++//+line+3%0A+++++++++%7B%0A++++++++++++if+(elements%5Bk%5D+%3C+elements%5BminIndex%5D)++++++++//+line+4%0A++++++++++++%7B%0A+++++++++++++++minIndex+%3D+k%3B+++++++++++++++++++++++++++++//+line+5%0A++++++++++++%7D%0A+++++++++%7D%0A+++++++++int+temp+%3D+elements%5Bj%5D%3B%0A+++++++++elements%5Bj%5D+%3D+elements%5BminIndex%5D%3B%0A+++++++++elements%5BminIndex%5D+%3D+temp%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++selectionSort(arr1)%3B%0A++++++System.out.println(Arrays.toString(arr1))%3B%0A+++%7D%0A++++++%0A%7D&amp;mode=display&amp;curInstr=0">Ex-12-4-2</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="insertion-sort">
             <title>Insertion Sort</title>
+            <idx>insertion\ sort</idx>
+ <idx><h>sort</h><h>insertion</h></idx>
+
             
-            
-            <p>The insertion sort that you need to know for the exam starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.</p>
+            <p>Insertion sort usually starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.</p>
             <p>Here is a folk dance <url href="https://youtu.be/ROalU379l3U" visual="https://youtu.be/ROalU379l3U">video</url> that shows the insertion sort process.</p>
 
     <video youtube="ROalU379l3U"/>
@@ -430,28 +439,38 @@ public static void insertionSort(int[] elements)
     </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)+++++++++++++++++++++++//+line+1%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B++++++++++++++++++++++++++++++++++++++++++//+line+2%0A+++++++++++int+possibleIndex+%3D+j%3B+++++++++++++++++++++++++++++++++++++++++++//+line+3%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)++//+line+4%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B++++++++//+line+5%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A+++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)+++++++++++++++++++++++//+line+1%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B++++++++++++++++++++++++++++++++++++++++++//+line+2%0A+++++++++++int+possibleIndex+%3D+j%3B+++++++++++++++++++++++++++++++++++++++++++//+line+3%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)++//+line+4%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B++++++++//+line+5%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A+++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&amp;mode=display&amp;curInstr=0">Visualization</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-sort-runtimes">
             <title>Coding Challenge : Sort Runtimes</title>
             <p>Selection sort and Insertion sort have similar runtimes. They both have nested loops that run through the data of size n approximately n squared times. However, they perform differently on some data.</p>
             <p>In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this <url href="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy" visual="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy">Google document</url> (login to Google to make your own copy) also seen below.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="54%" width="100%" src="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</raw>
+            <p>&lt;iframe height="54%" width="100%" src="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
 
-<exercise label="challenge7-6-sorting">
+<exercise label="challenge-sorting">
     <statement>
             <p> Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.</p>
 
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-41">
             <title>Summary</title>
             <p><ul>
                 <li>
-                    <p>Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or ArrayList.</p>
+                    <p>(AP 4.15.A.1) Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or <c>ArrayList</c>.</p>
+                </li>
+                <li>
+                    <p>(AP 4.15.A.2) <term>Selection sort</term> repeatedly selects the smallest (or largest) element from the unsorted portion of the list and swaps it into its correct (and final) position in the sorted portion of the list.</p>
+                </li>
+                <li>
+                    <p>(AP 4.15.A.3) <term>Insertion sort</term> inserts an element from the unsorted portion of a list into its correct (but not necessarily final) position in the sorted portion of the list by shifting elements of the sorted portion to make room for the new element.</p>
                 </li>
                 <li>
                     <p>Informal run-time comparisons of program code segments can be made using statement execution counts.</p>
                 </li>
             </ul></p>
+        </subsection>
+  <subsection xml:id="search-sort-multiple-choice-exercises-1">
+            <title>Search/Sort Multiple-Choice Exercises</title>
+            <p>Try the following multiple-choice exercises to practice search and sort algorithms: <url href="Search-Sort-Exercises.html" visual="Search-Sort-Exercises.html">Search/Sort Multiple-Choice Exercises</url>.</p>
         </subsection>
 </section>

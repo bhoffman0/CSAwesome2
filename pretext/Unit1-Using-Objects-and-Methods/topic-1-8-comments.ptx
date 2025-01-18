@@ -4,7 +4,7 @@
   <title>Documentation with Comments and Preconditions</title><introduction>
     
   </introduction>
-  <subsection>
+  <subsection xml:id="comments-1">
             <title>Comments</title>
             <p>Adding comments to your code helps to make it more readable and maintainable. In the commercial world, software development is usually a team effort where many programmers will use your code and maintain it for years. Commenting is essential in this kind of environment and a good habit to develop. Comments will also help you to remember what you were doing when you look back to your code a month or a year from now. Comments are written for both the original programmer and other programmers to understand the code and its functionality, but are ignored by the compiler and are not executed when the program is run.</p>
             <p>There are 3 types of comments in Java:</p>
@@ -116,7 +116,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="preconditions-and-postconditions">
             <title>Preconditions and Postconditions</title>
             <p>Many methods in API libraries have <term>preconditions</term> and the <term>postconditions</term> described in their comments. A <term>precondition</term> is a condition that must be true for your method code to work, for example the assumption that the parameters, the data that you give the method to do its job, have values within limits and are not null. The methods could check for these preconditions, but they do not have to. The precondition is what the method expects in order to do its job properly.</p>
             <p>A <term>postcondition</term> is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned from the method or the changes to the state. These assumptions are very useful to other programmers who want to use that method and get the correct results.</p>
@@ -233,7 +233,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="software-validity-and-use-case-diagrams">
             <title>Software Validity and Use-Case Diagrams</title>
             <p>Preconditions and postconditions are covered on the AP CSA exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CSA exam, but they are described here because they use preconditions and postconditions and are used by professional programmers.</p>
             <p>Determining the preconditions and postconditions help us to test our code and determine the <term>validity</term> of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use.</p>
@@ -263,7 +263,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="agile-software-development">
             <title>Agile Software Development</title>
             <p>There are many different models for software development. The <term>waterfall model</term>, developed in the 1970s, is a step by step model where each phase is finished before the next phase begins. This model has recently been criticized because it is not very adaptable. The more recent <term>Agile</term> development model involves iterative, incremental development where  teams works in short 2-3 week <term>sprints</term> to completely develop, test, and release a component of the project to the customer for feedback. It is very adaptable as project requirements change because of early testing, immediate customer feedback and collaboration.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Waterfall vs Agile Models</caption><image source="Unit1-Using-Objects-and-Methods/Figures/waterfallVsAgile.png" width="89%"/></figure>
@@ -273,7 +273,7 @@ public class RunestoneTests extends CodeTestHelper
                 <p>Group Exercise</p>
             <p>Try the <url href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/" visual="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/">Wake Up In the Morning Game</url> in groups to practice the iterative and incremental agile development process.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-preconditions-in-algorithms">
             <title>Coding Challenge: Preconditions in Algorithms</title>
             <p>Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like <url href="https://creately.com" visual="https://creately.com">Creately.com</url> (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don’t forget to list  the preconditions and postconditions for each step.  You can type in your answer below.</p>
 
@@ -284,7 +284,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-13">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -301,7 +301,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-10">
             <title>AP Practice</title>
 
     <exercise label="AP-preconditions">

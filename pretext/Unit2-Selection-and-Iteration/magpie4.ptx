@@ -28,10 +28,10 @@
 /**
  * A program to carry on conversations with a human user. This version:
  *
- * &lt;ul&gt;
- *   &lt;li&gt;Uses advanced search for keywords
- *   &lt;li&gt;Will transform statements as well as react to keywords
- * &lt;/ul&gt;
+ * 
+ *   Uses advanced search for keywords
+ *   Will transform statements as well as react to keywords
+ * 
  *
  * @author Laurie White
  * @version April 2012
@@ -285,7 +285,7 @@ public class Magpie4
         </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="exercises-4">
             <title>Exercises:</title>
             <p>In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, <c>transformIWantToStatement</c> and <c>transformYouMeStatement</c> and <c>getResponse</c> has been modified to add tests to find “I want to something” statements and “You something me” statements.</p>
             <p>Look at the code. See how it handles “I want to” and you/me statements.</p>

@@ -3,13 +3,16 @@
 <section xml:id="StringCoderB">
   <title>StringCoder - Part B</title><introduction>
     
+    <idx>StringCoder</idx>
+ <idx>free\ response</idx>
+
     <p><term>Part b.</term>  Write the StringCoder method <c>encodeString</c>. A string is encoded by determining the substrings
             in the master string that can be combined to generate the given string. The encoding starts with a string part
             that matches the beginning of the word, followed by a string part that matches the beginning of the rest of
             the word, and so on. The string parts are returned in an array list in the order in which they appear in word.
             The helper method <c>findPart</c> must be used to choose matching string parts in the master string.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-10">
             <title>Try and Solve It</title>
             <p>Complete method <c>encodeString</c> below.</p>
             <p>The code below has a main method for testing your method.</p>

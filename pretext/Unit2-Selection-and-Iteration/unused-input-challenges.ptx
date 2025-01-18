@@ -5,7 +5,7 @@
     
     <p>20 Questions and Guessing Game</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="programming-challenge-20-questions">
             <title>Programming Challenge : 20 Questions</title>
             <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%"/>
             <p>Have you ever played 20 Questions? 20 Questions is a game where one person thinks of an object and the other players ask up to 20 questions to guess what it is.</p>
@@ -197,7 +197,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-guessing-game">
             <title>Coding Challenge : Guessing Game</title>
             <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%"/>
             <p>We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like “Too high” or “Too low”. Here’s the pseudocode for the guessing game. <term>Pseudocode</term> is an English description or plan of what your code will do step by step. What’s the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?</p>

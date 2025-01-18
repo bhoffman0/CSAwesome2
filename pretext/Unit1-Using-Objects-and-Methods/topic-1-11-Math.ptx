@@ -3,12 +3,16 @@
 <section xml:id="topic-1-11-Math">
   <title>Using the Math Class</title><introduction>
     
+    <idx>Math</idx>
+ <idx>random</idx>
+ <idx><h>Math</h><h>random</h></idx>
+
     <p>Games would be boring if the same thing happened each time you played the game.  Random numbers can be used in games to generate different outcomes each time the game is played. In Java, the <c>Math.random()</c> method to is used to generate a random number.</p>
     <p>There are lots of mathematical methods in the <c>Math</c> class
             that you might want to use in your programs, like <c>Math.pow(2,3)</c> which calculates the 2 to the power of 3 which is 8.</p>
     <p>The <c>Math</c> class is part of the <c>java.lang</c> package. Classes in the <c>java.lang</c> package are available by default. The <c>Math</c> methods are <term>class methods</term> (or <term>static</term> methods) which means you can call them by just using <c>ClassName.methodName()</c>.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="mathematical-functions">
             <title>Mathematical Functions</title>
             <p>The <c>Math</c> class contains the following methods that are in the AP CSA subset. There are more <c>Math</c> methods, outside of what you need on the AP exam, that you can find in the <url href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html" visual="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html">Math class Javadocs</url>.</p>
             <p><ul>
@@ -216,7 +220,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="random-numbers">
             <title>Random Numbers</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/dice.png" width="18%" alt="Dice"/>
             <p>The <c>Math.random()</c> method returns a double number greater than or equal to 0.0, and less than 1.0.
@@ -741,7 +745,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-random-numbers">
             <title>Coding Challenge : Random Numbers</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/lock.jpg" width="18%" alt="lock"/>
             <p>You may have a combination lock on your locker at school where you have to spin the dial to 3 separate numbers from 0 up to 40. What if you forgot your combination? Would you be able to guess it?</p>
@@ -753,12 +757,12 @@ int rnd4 = (int)(Math.random()*20) - 10;
                     <p>How many times would you need to run it to guess your combination correctly? Let’s have the code compute the number of permutations possible in your combination lock using <term>Math.pow(number,exponent)</term>. For example, if you had to spin the dial twice on your combination lock where each spin can choose a digit from 0-9 (10 digits), there are 10<superscript>2</superscript> possible permutations. In Java, this would be written as <term>Math.pow(10,2)</term> which means 10 to the power of 2. If you start listing all the permutations possible, you can tell that there are 10<superscript>2</superscript> or 100 possible permutations for a 2 spins on a dial lock from 0-9.</p>
                 </li>
             </ol></p>
-            <raw format="html" xml:space="preserve">&lt;pre&gt;
+            <p>&lt;pre&gt;
 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 ...
 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
-&lt;/pre&gt;</raw>
+</pre></p>
             <p>Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial<superscript>numberOfSpins</superscript>. Write this using the <term>Math.pow()</term> method in your code and save it into a variable and print out.</p>
 
 <exercise label="challenge1-11-random-math">
@@ -870,7 +874,7 @@ public class DancingTurtles
       Turtle yertle = new Turtle(world);
 
       // This is a loop that runs 10 times (you will learn to write loops in
-      // Unit 4)
+      // Unit 2)
       for(int i = 1; i &lt;= 10; i++)
       {
        // Can you choose a randomX between 0-500?
@@ -935,7 +939,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-2">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -971,5 +975,18 @@ public class RunestoneTests extends CodeTestHelper
                     <p><term>(int)(Math.random() * range) + min</term> moves the random number into a range starting from a minimum number. The range is the <term>(max - min + 1)</term>. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: <c>(int)(Math.random()*6) + 5</c>.</p>
                 </li>
             </ul></p>
+        </subsection>
+  <subsection xml:id="review-practice-for-unit-1-part-a">
+            <title>Review/Practice for Unit 1 Part a</title>
+            <p>This lesson ends the section on Unit 1 part a.
+                You can now do the following review and practice lessons at the end of the unit
+                and College Board Progress Checks in the AP Classroom.</p>
+            <p><ul>
+ <li><url href="unit1a-summary.html" visual="unit1a-summary.html">Unit 1a Summary</url></li>
+ <li><url href="unit1a-practice-mixed-code.html" visual="unit1a-practice-mixed-code.html">Unit 1a Practice</url></li>
+ <li><url href="unit1a-practice-mixed-code-toggle.html" visual="unit1a-practice-mixed-code-toggle.html">Unit 1a Practice Toggle</url></li>
+ <li><url href="unit1a-practice-coding.html" visual="unit1a-practice-coding.html">Unit 1a Practice Coding</url></li>
+ <li><url href="Exercises.html" visual="Exercises.html">Exercises</url></li>
+ </ul></p>
         </subsection>
 </section>

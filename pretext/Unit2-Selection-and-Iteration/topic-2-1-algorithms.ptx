@@ -3,6 +3,12 @@
 <section xml:id="topic-2-1-algorithms">
   <title>Algorithms with Selection and Repetition</title><introduction>
     
+    <idx>selection</idx>
+ <idx>repetition</idx>
+ <idx>sequencing</idx>
+ <idx>algorithm</idx>
+ <idx>pseudocode</idx>
+
     <p>Every algorithm consists of a sequence of steps. Up until now, we have been writing code one line at a time in sequence which then gets executed by the computer in that sequential order by default. However, we can create more complex algorithms that do not follow the default sequential order. In this unit, we will learn to branch the code into different paths or repeat a block of code.</p>
     <p>The building blocks of algorithms are <term>sequencing</term>, <term>selection</term>, and <term>repetition</term>. Algorithms can contain selection, through decision making, and repetition, via looping. In fact, it’s been proven that all algorithms for problems that can be solved on a computer can be constructed by using just these three control structures: sequence, selection, and repetition as seen below.</p>
     <figure align="center">
@@ -10,7 +16,7 @@
       <image source="Unit2-Selection-and-Iteration/Figures/algorithms.png" width="63%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="selection">
             <title>Selection</title>
             <p>Selection is the process of making a choice based on a true or false decision.
                 In programming, selection (also called branching) occurs when a choice of how the execution of an algorithm will proceed is based on a true or false decision. An algorithm may take different paths based on certain conditions, often using true/false logic.</p>
@@ -30,7 +36,7 @@
 <cline><area correct="yes">8. Put on your sunglasses if it's sunny.</area></cline>
 <cline><area correct="no">9. Leave for school or work.</area></cline>
 </areas></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="repetition">
             <title>Repetition</title>
             <p>Repetition is when a process repeats itself until a desired outcome is reached. In programming, repetition is achieved through loops. A <term>loop</term> allows an algorithm to repeat certain actions until a specified condition is met. Another term commonly used for repetition is <term>iteration</term>.</p>
 
@@ -48,12 +54,12 @@
 <cline><area correct="yes">7. Repeat packing items until your bag is ready. </area></cline>
 <cline><area correct="no">8. Leave for school or work.</area></cline>
 </areas></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="algorithms-with-pseudocode-and-flowcharts">
             <title>Algorithms with Pseudocode and Flowcharts</title>
             <p>For complex problems, it is important to plan your solution before writing code. <term>Pseudocode</term> is a simplified, informal way of describing the steps in an algorithm in a human language like English but following the sequence, selection, and repetition structure of a programming language.  <term>Flowcharts</term> are diagrams that represent the steps in an algorithm like below. Selection is usually represented as a triangle in a flowchart, and arrows are used to show repetition. Both pseudocode and flowcharts are tools that help you plan your algorithm before writing code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Flowchart for Selection branching the code into two paths</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
             <p>The order in which sequencing, selection, and repetition are used contributes to the outcome of the algorithm.   In the following pseudocode, put the steps of the algorithm in order and then decide what the outcome will be based on the order of the steps and the conditions.</p>
-<exercise label="algorithm-gift" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+<exercise label="algorithm-gift" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>Put the following pseudocode algorithm steps for buying a birthday gift for your friend in order. Make sure some of the steps are indented to be inside the repetition and that you buy the more expensive gifts first. Click on Check Me to see if you are right.</p>
 </statement>
 <blocks><block order="4">
@@ -165,7 +171,7 @@
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-algorithms">
             <title>Coding Challenge : Algorithms</title>
             <p>In this group activity, you will work together to create an algorithm for a common problem: choosing a snack!  Create pseudocode for this problem. Make sure you include selection and repetition in your algorithm. For example, if there is no chocolate, you may want to keep searching for another snack. If you’re thirsty, you may want to consider the drinks in the fridge. You may want to consider every item in the fridge or your leftover halloween candy stash before deciding on the perfect snack. Be creative!</p>
 
@@ -176,7 +182,7 @@
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-15">
             <title>Summary</title>
             <p><ul>
                 <li>

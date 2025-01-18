@@ -17,7 +17,7 @@
         </ol>
     </p>
   </introduction>
-  <subsection>
+  <subsection xml:id="code-your-class">
             <title>Code your Class</title>
             <p><ol marker="1">
                 <li>
@@ -205,9 +205,9 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p>You will continue this project in Unit 6 in lessons 6.1-6.3 to create an array of objects using your class.</p>
+            <p>You will continue this project in Unit 4 to create an array of objects using your class.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="optional-swing-gui">
             <title>Optional Swing GUI</title>
             <p>An optional additional project is to build a GUI (graphical user interface) for your class (GUIs are not on the AP exam).
                 Here’s a <url href="https://replit.com/@BerylHoffman/Java-Swing-Input-Form" visual="https://replit.com/@BerylHoffman/Java-Swing-Input-Form">Java Swing Example</url> on repl and below that sets up a JFrame with JTextfields, JLabels, and a JButton.
@@ -216,6 +216,6 @@ public class RunestoneTests extends CodeTestHelper
                 You can fork this project in replit or copy the code to your local computer to design
                 an input form for your class. You can uncomment the code in the actionlistener that prints the entered data into a file.
                 To learn more about Java Swing, click on the different Swing components in the left navigation column of <url href="https://www.javatpoint.com/java-swing" visual="https://www.javatpoint.com/java-swing">https://www.javatpoint.com/java-swing</url>.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/Java-Swing-Input-Form?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</raw>
+            <p>&lt;iframe height="100%" width="100%" style="max-width:90%; margin-left:5%" src="https://replit.com/@BerylHoffman/Java-Swing-Input-Form?lite=true#Main.java" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</p>
         </subsection>
 </section>

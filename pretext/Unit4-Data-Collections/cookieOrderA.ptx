@@ -3,6 +3,9 @@
 <section xml:id="cookieOrderA">
   <title>Free Response - CookieOrder A</title><introduction>
     
+    <idx>cookieorder</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2010.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  An organization raises money by selling boxes of cookies. A cookie order specifies the variety of cookie and the number of boxes ordered. The declaration of the <c>CookieOrder</c> class is shown below.</p>
     <program language="java">
@@ -76,10 +79,10 @@ public class MasterOrder
     <p><term>Part a.</term>
             The <c>getTotalBoxes</c> method computes and returns the sum of the number of boxes of all cookie orders. If there are no cookie orders in the master order, the method returns 0.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-2">
             <title>How to Solve This</title>
             <p>Click to reveal multiple choice questions that may help you write your solution.</p>
-            <exercises line="91" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'cookieOrderA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_cookieA_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderA.rst">
+            
 
     <exercise label="fr_cookieA_1">
         <statement>
@@ -204,34 +207,34 @@ public int getTotalBoxes()
 </choices>
 
     </exercise>
-            </exercises>
+            
         </subsection>
-  <subsection>
+  <subsection xml:id="mixed-up-code">
             <title>Mixed Up Code</title>
             <p>Click to reveal the  Mixed Up Code for the solution to this problem.</p>
-            <exercises line="145" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'cookieOrderA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'cookieOrderA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/cookieOrderA.rst">
-<exercise label="cookieOrderA" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+            
+<exercise label="cookieOrderA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getTotalBoxes</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="1">
 <cline>public int getTotalBoxes()</cline>
 <cline>{</cline>
-</block><block order="3">
+</block><block order="6">
 <cline>   int sum = 0;</cline>
-</block><block order="7">
+</block><block order="4">
 <cline>   for (CookieOrder co : this.orders)</cline>
 <cline>   {</cline>
-</block><block order="5">
-<cline>      sum += co.getNumBoxes();</cline>
-</block><block order="4">
-<cline>   } // end for</cline>
-</block><block order="1">
-<cline>   return sum;</cline>
 </block><block order="2">
+<cline>      sum += co.getNumBoxes();</cline>
+</block><block order="3">
+<cline>   } // end for</cline>
+</block><block order="5">
+<cline>   return sum;</cline>
+</block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            </exercises>
+</block></blocks></exercise>            
         </subsection>
-  <subsection>
+  <subsection xml:id="solve-part-a">
             <title>Solve Part A</title>
 
 <exercise label="FRQCookieOrderA">

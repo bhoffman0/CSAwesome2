@@ -4,8 +4,17 @@
   <title>Unit Summary 2a Selection (2.1-2.6)</title><introduction>
     
     <p>In the first half of this unit, lessons 2.1 - 2.6, you learned about <term>conditionals</term>.  <term>Conditionals</term> are used to execute code when a <c>boolean</c> expression is <c>true</c> or <c>false</c>.  A <c>boolean</c> expression is one that is either <c>true</c> or <c>false</c> like <c>x &gt; 0</c>.</p>
+    <idx>conditional</idx>
+ <idx>boolean\ expression</idx>
+ <idx>boolean\ variable</idx>
+ <idx>complex\ conditional</idx>
+ <idx>compound\ boolean\ expression</idx>
+ ['single',\ &quot;DeMorgan's\ Laws&quot;,\ 'index-0',\ '',\ None] <idx>logical\ and</idx>
+ <idx>logical\ or</idx>
+ <idx>short\ circuit\ evaluation</idx>
+
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary-index-0-2">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -37,7 +46,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="java-keyword-summary-3">
             <title>Java Keyword Summary</title>
             <p><ul>
                 <li>
@@ -51,7 +60,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-3">
             <title>Vocabulary Practice</title>
 
 <exercise label="vocabcond1">
@@ -63,7 +72,7 @@
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>used to execute code when at least one of two conditions is true</premise><response>logical or</response></match><match order="2"><premise>one or more statements enclosed in a open curly brace and a close curly brace</premise><response>block(s) of statements</response></match><match order="3"><premise>used to start a conditional and execute code if a condition is true</premise><response>if</response></match><match order="4"><premise>used to distribute a negation on a compound boolean expression</premise><response>DeMorgan's Laws</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" visual="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-3">
             <title>Common Mistakes</title>
             <blockquote>
                 <p><ul>

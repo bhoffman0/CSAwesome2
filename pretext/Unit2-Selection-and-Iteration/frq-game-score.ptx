@@ -3,9 +3,13 @@
 <section xml:id="frq-game-score">
   <title>Selection Free Response Question (FRQ) Game Practice (2.1-2.6)</title><introduction>
     
+    <idx>free\ response\ questions</idx>
+ <idx>FRQ</idx>
+ <idx>control\ structures</idx>
+
     <p>The AP CSA exam has 4 free response questions (FRQs) where you have to write Java code in 1.5 hours. The first FRQ is about Methods and Control Structures using expressions, methods, loops, and if statements. In the last unit, we tried a simplified FRQ 1 part a about the points earned in a video game with 3 levels using the class <c>Level</c>. You will now try the complete 2022 FRQ 1 part a from <url href="https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf" visual="https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf">https://apcentral.collegeboard.org/media/pdf/ap22-frq-computer-science-a.pdf</url>.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="frq-1-part-a-description-2022">
             <title>FRQ 1 Part A Description (2022)</title>
             <p>This question involves simulation of the play and scoring of a single-player video game. In the game, a player attempts to complete three levels. A level in the game is represented by the <c>Level</c> class.</p>
             <program language="java"><code>
@@ -89,7 +93,7 @@ public class Game
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="warm-up-exercises">
             <title>Warm up Exercises</title>
             <p>FRQs often have a lot of dense text. It is a good idea to highlight important keywords and the methods and variables that you will need.</p>
             <p><ol marker="1">
@@ -309,7 +313,7 @@ public class Game
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="solve-the-problem">
             <title>Solve the Problem</title>
             <p>Let’s write the code for the <c>getScore()</c> method. The method should use the <c>goalReached()</c> and <c>getPoints()</c> methods of the <c>Level</c> class to calculate the score for the game. It will need to check if the goal is reached for each level using the <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> objects and add the points for each level to the score.  If the game is a bonus game, which can be checked with the <c>isBonus()</c> method (no object needed since it is in the same class), the score will be tripled. At the end of the method, a <c>return</c> statement will return the score to the main method to be printed out.</p>
 
@@ -448,7 +452,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-scoring-rubric">
             <title>AP Scoring Rubric</title>
             <p>Here is the AP rubric for this problem. Did your code meet the requirements for all 4 points? Notice that even a partial solution would get some of the points. It is not all or nothing. In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">AP Rubric</caption><image source="Unit2-Selection-and-Iteration/Figures/ap-frq-scoring.png" width="100%" alt="AP Rubric for part a"/></figure>

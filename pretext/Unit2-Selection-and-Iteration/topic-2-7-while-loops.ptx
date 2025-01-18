@@ -3,6 +3,13 @@
 <section xml:id="topic-2-7-while-loops">
   <title>While Loops</title><introduction>
     
+    <idx>loop</idx>
+ <idx>looping</idx>
+ <idx>iteration</idx>
+ <idx>repetition</idx>
+ <idx>while</idx>
+ <idx><h>loop</h><h>while</h></idx>
+
     <image source="Unit2-Selection-and-Iteration/Figures/loops.png" width="22%"/>
     <p>When you play a song, you can set it to loop, which means that when it reaches
             the end it starts over at the beginning. A <term>loop</term> in programming, also called
@@ -64,7 +71,7 @@ while (condition)
       <image source="Unit2-Selection-and-Iteration/Figures/WhileLoopFlow.png" width="45%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="three-steps-to-writing-a-loop">
             <title>Three Steps to Writing a Loop</title>
             <p>The simplest loops are <term>counter-controlled loops</term> like below, where the <term>loop control variable</term> is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Three Steps of Writing a Loop</caption><image source="Unit2-Selection-and-Iteration/Figures/loop3steps.png" width="71%"/></figure>
@@ -132,7 +139,7 @@ public class RunestoneTests extends CodeTestHelper
             <note>
                 <p>On the free response part of the AP exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.</p>
             </note>
-<exercise label="print_odds_while" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+<exercise label="print_odds_while" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following method has the correct code to print out all the odd values from 1 to 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn’t require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the “Check Me” button.</p>
 </statement>
 <blocks><block order="4">
@@ -208,7 +215,7 @@ int count = 0;
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="tracing-loops-1">
             <title>Tracing Loops</title>
             <p>A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.</p>
             <p>You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.</p>
@@ -319,9 +326,11 @@ while (x &lt; 0)
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-errors-with-loops">
             <title>Common Errors with Loops</title>
-            
+            <idx>infinite\ loop</idx>
+ <idx><h>loop</h><h>infinite</h></idx>
+
             
             <p>One common error with loops is to accidentally create an <term>infinite loop</term>. An
                 infinite loop is one that never stops because the Boolean condition is always true.</p>
@@ -421,7 +430,7 @@ while (i &lt; 10)  // This loop will never run!
 }
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="input-controlled-loops">
             <title>Input-Controlled Loops</title>
             <p>You can use a <c>while</c> loop to repeat the body of the loop a certain number of times in counter-controlled loop as we saw above.  However, a <c>while</c> loop is typically used when you don’t know how many times the loop will execute. It is often used for a <term>input-controlled loop</term> where the user’s input indicates when to stop. For example, in the Magpie chatbot lab code below, the while loop stops when you type in “Bye”. The stopping value is often called the <term>sentinel value</term> for the loop. Notice that if you type in “Bye” right away, the loop will never run. If the loop condition evaluates to false initially, the loop body is not executed at all. Another way to stop the loop prematurely is to put in a <c>return</c> statement that makes it immediately return from the method.</p>
             <program language="java"><code>
@@ -434,7 +443,7 @@ while (!statement.equals("Bye"))
 }
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-turtle-squares">
             <title>Coding Challenge : Turtle Squares</title>
             <p>Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below.  This is a lot of repeated code!</p>
 
@@ -562,7 +571,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-24">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -612,7 +621,7 @@ while (count &lt; 10)  // test the loop variable
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-17">
             <title>AP Practice</title>
 
     <exercise label="AP-while-loop1">

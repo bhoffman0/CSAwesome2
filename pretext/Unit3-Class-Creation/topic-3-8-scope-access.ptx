@@ -3,9 +3,13 @@
 <section xml:id="topic-3-8-scope-access">
   <title>Scope and Access</title><introduction>
     
+    <idx>scope</idx>
+ <idx>access</idx>
+ <idx>local\ variable</idx>
+
     <p>The <term>scope</term> of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (<c>{}</c>) – this is its scope.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="class-method-and-block-level-scope">
             <title>Class, Method, and Block Level Scope</title>
             <p>Java has 3 levels of scope that correspond to different types of variables:</p>
             <p><ul>
@@ -56,7 +60,7 @@
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
 </areas></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="local-variables">
             <title>Local Variables</title>
             <p><term>Local variables</term> are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared.
                 Local variables that are declared inside a method are usually declared at the top of the method. These variables can only be used within the method and do not exist outside of the method.</p>
@@ -192,7 +196,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-debugging">
             <title>Coding Challenge : Debugging</title>
 
 <exercise label="challenge-scope-debug">
@@ -335,7 +339,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-34">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -352,7 +356,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-22">
             <title>AP Practice</title>
 
     <exercise label="AP5-8-1">

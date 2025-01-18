@@ -17,7 +17,10 @@ public static return-type method-name(parameters)
   </introduction>
   <subsection>
             <title>Non-void Methods</title>
-            
+            <idx>return\ value</idx>
+ <idx>void\ method</idx>
+ <idx>non-void\ method</idx>
+
             
             <p>Most of the methods we have used so far have been <term>void methods</term>, which do not return a value. However, many methods act like mathematical functions that calculate and return a value given some arguments. These methods are called <term>non-void methods</term>. You can imagine a non-void method as a calculating machine that takes numbers as arguments and returns a calculated result or like a toaster that takes bread as an argument and changes it to return toast.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method that takes arguments and returns a value</caption><image source="Unit1-Using-Objects-and-Methods/Figures/function.png" width="71%" alt="function"/></figure>
@@ -33,7 +36,9 @@ public static int square(int number)
 </code></program>
             <p>The <term>return</term> statement is used to return a value from the method back to the calling code. The return value must be the same type as the return type in the method header. The return statement also ends the method execution, so any code after the return statement is not executed. Let’s try this below. Click on the next button to step through the code in the <url href="https://pythontutor.com/render.html#code=public%20class%20SquareMethod%0A%7B%0A%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20number%29%20%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20result%20%3D%20number%20*%20number%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20result%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20y%20%3D%20square%28x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%20%3D%204%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20square%28x%29%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=11&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=public%20class%20SquareMethod%0A%7B%0A%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20number%29%20%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20result%20%3D%20number%20*%20number%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20result%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20y%20%3D%20square%28x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%20%3D%204%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20square%28x%29%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=11&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> below and see the variables and the return values.</p>
 
-<program interactive="codelens" language="java">
+<exercise label="codelensSquare">
+<statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run and watch how the argument is passed into the parameter variable and the return value.</p></statement>
+<program interactive="codelens" language="java" label="codeLenssq" xml:id="codelensidsq">
     <code>
 public class SquareMethod
 {
@@ -54,6 +59,7 @@ public class SquareMethod
 }
     </code>
 </program>
+</exercise>
             <p>When calling the <c>square</c> method, the return value can be stored in a variable or used as part of an expression. In the main method above, the variable <c>y</c> is assigned the return value of the <c>square</c> method. The return value can also be used directly in the print statement without storing it in a variable, for example <c>System.out.println(square(4));</c>.</p>
             <program language="java"><code>
 // Saving the returned value of the square method in a variable

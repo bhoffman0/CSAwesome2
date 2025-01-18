@@ -3,6 +3,9 @@
 <section xml:id="RandomStringChooserA2">
   <title>RandomStringChooser - Part A</title><introduction>
     
+    <idx>RandomStringChooser</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2016.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term> This question involves the implementation and extension of a <c>RandomStringChooser</c> class.</p>
     <p><term>Part a.</term>   A <c>RandomStringChooser</c> object is constructed from an array of non-null <c>String</c> values.  When the object is first constructed,
@@ -26,7 +29,7 @@ bus the wheels on NONE NONE
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-again">
             <title>Try and Solve It - Again</title>
             <p>Now that you have had practice with mixed up code, write the entire <c>RandomStringChooser</c> class again. Your implementation must include an appropriate constructor and any necessary methods.  Any instance variables must be <c>private</c>.  The code segment in the example above should have the indicated behavior (that is, it must compile and produce a result like the possible output shown.  Neither the constructor or any of the methods should alter the parameter passed to the constructor, but your implementation may copy the contents of the array.</p>
             <p>The code below has comments to help you get started.  It also has a main method for testing.  Finish writing the class and use the main method to test it.</p>

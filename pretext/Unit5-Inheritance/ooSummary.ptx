@@ -4,8 +4,25 @@
   <title>Inheritance Summary</title><introduction>
     
     <p>In this chapter you learned about <term>inheritance</term>.  In an object-oriented program you write classes that define what objects of each class know (instance variables) and can do (methods).  One class can inherit object instance variables and methods from another, which makes the amount of code that you have to write smaller and makes the classes easier to test and extend.</p>
+    <idx>object</idx>
+ <idx>class</idx>
+ <idx>inheritance</idx>
+ <idx>polymorphism</idx>
+ <idx>parent\ class</idx>
+ <idx>child\ class</idx>
+ <idx>subclass</idx>
+ <idx>superclass</idx>
+ <idx>declared\ type</idx>
+ <idx>run-time\ type</idx>
+ <idx>overrides</idx>
+ <idx>overloads</idx>
+ <idx>getter</idx>
+ <idx>setter</idx>
+ <idx>accessor</idx>
+ <idx>mutator</idx>
+
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary-index-0-7">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -58,7 +75,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="java-keyword-summary-6">
             <title>Java Keyword Summary</title>
             <p><ul>
                 <li>
@@ -81,7 +98,7 @@ ParentName</c>. If no <c>extends</c> keyword is used in the class declaration, t
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-9">
             <title>Vocabulary Practice</title>
 
 <exercise label="ch10oo_match_1">
@@ -97,7 +114,7 @@ ParentName</c>. If no <c>extends</c> keyword is used in the class declaration, t
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>A class that inherits from the specified class</premise><response>subclass</response></match><match order="2"><premise>Two methods with the same method name in a class, but with different parameters</premise><response>overload</response></match><match order="3"><premise>The type the object was declared as</premise><response>declared type</response></match><match order="4"><premise>The class that created the object</premise><response>actual type</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/" visual="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-9">
             <title>Common Mistakes</title>
             <p><ul>
                 <li>

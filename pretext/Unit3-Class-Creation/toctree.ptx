@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <chapter xml:id="unit3" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Class Creation</title>
         <xi:include href='./topic-3-1-abstraction.ptx' />
         <xi:include href='./topic-3-2-impacts.ptx' />
@@ -13,7 +13,7 @@
         <xi:include href='./topic-summary.ptx' />
         <xi:include href='./topic-parsons-practice.ptx' />
         <xi:include href='./topic-toggle-problems.ptx' />
-        <xi:include href='./Exercises.ptx' />
+        <xi:include href='./Exercises-classes.ptx' />
         <xi:include href='./unit3-test.ptx' />
         <xi:include href='./FRQstepTracker.ptx' />
         <xi:include href='./timeFRQ.ptx' />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <chapter xml:id="unit4" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Data Collections</title>
         <xi:include href='./topic-4-1-data-ethics.ptx' />
         <xi:include href='./topic-4-2-data-sets.ptx' />
@@ -19,29 +19,52 @@
         <xi:include href='./topic-4-16-recursion.ptx' />
         <xi:include href='./topic-4-17-recursive-search-sort.ptx' />
         <xi:include href='./array-summary.ptx' />
-        <xi:include href='./ArrayList-summary.ptx' />
-        <xi:include href='./a2dSummary.ptx' />
-        <xi:include href='./recursion-summary.ptx' />
         <xi:include href='./ArrayParsonsPractice.ptx' />
         <xi:include href='./Arrays-mixed-code-toggle.ptx' />
         <xi:include href='./ArrayPractice.ptx' />
         <xi:include href='./MoreArrayPractice.ptx' />
         <xi:include href='./array-Exercises.ptx' />
         <xi:include href='./arrayExam.ptx' />
+        <xi:include href='./horseBarnA.ptx' />
+        <xi:include href='./horseBarnB.ptx' />
+        <xi:include href='./selfDivisorB.ptx' />
+        <xi:include href='./soundA.ptx' />
+        <xi:include href='./soundB.ptx' />
+        <xi:include href='./numberCubeA.ptx' />
+        <xi:include href='./numberCubeB.ptx' />
+        <xi:include href='./ArrayList-summary.ptx' />
         <xi:include href='./ArrayListParsonsPractice.ptx' />
         <xi:include href='./ArrayList-toggle-problems.ptx' />
         <xi:include href='./ArrayListPractice.ptx' />
         <xi:include href='./ArrayList-Exercises.ptx' />
+        <xi:include href='./stringScrambleB.ptx' />
+        <xi:include href='./climbClubA.ptx' />
+        <xi:include href='./climbClubB.ptx' />
+        <xi:include href='./climbClubC.ptx' />
+        <xi:include href='./cookieOrderA.ptx' />
+        <xi:include href='./cookieOrderB.ptx' />
+        <xi:include href='./stringFormatterA.ptx' />
+        <xi:include href='./stringFormatterB.ptx' />
+        <xi:include href='./delimitersQ3a.ptx' />
+        <xi:include href='./delimitersQ3b.ptx' />
+        <xi:include href='./gridworldQ3A.ptx' />
+        <xi:include href='./Search-Sort-Exercises.ptx' />
+        <xi:include href='./a2dSummary.ptx' />
         <xi:include href='./Array2dParsonsPractice.ptx' />
         <xi:include href='./a2d-toggle-problems.ptx' />
         <xi:include href='./Array2dCodePractice.ptx' />
         <xi:include href='./Array2dMoreCodePractice.ptx' />
         <xi:include href='./a2d-Exercises.ptx' />
+        <xi:include href='./grayImageA.ptx' />
+        <xi:include href='./grayImageB.ptx' />
+        <xi:include href='./routeCipherA.ptx' />
+        <xi:include href='./routeCipherB.ptx' />
+        <xi:include href='./recursion-summary.ptx' />
         <xi:include href='./rParsonsPractice.ptx' />
         <xi:include href='./rMixedUpCodePractice.ptx' />
         <xi:include href='./recursion-toggle-problems.ptx' />
         <xi:include href='./recursionCodePractice.ptx' />
         <xi:include href='./recursion-Exercises.ptx' />
-        <xi:include href='./CBLabs.ptx' />
+        <xi:include href='./U4CBLabs.ptx' />
         <xi:include href='./pictureLab.ptx' />
     </chapter>

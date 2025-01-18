@@ -3,6 +3,10 @@
 <section xml:id="topic-2-4-nested-ifs">
   <title>Nested if Statements</title><introduction>
     
+    <idx>Nested\ if\ statements</idx>
+ <idx>Multiway\ selection</idx>
+ <idx>else\ if</idx>
+
     <p>If statements can be nested inside other if statements. Nested if statements consist of if, if-else, or if-else-if statements within if, if-else, or if-else-if statements. The Boolean expression of the inner nested if statement is evaluated only if the Boolean expression of the outer if statement evaluates to true.</p>
     <program language="java">
       <code>
@@ -16,7 +20,7 @@ if (boolean expression)
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="multiway-selection-else-if">
             <title>Multiway selection (else if)</title>
             <p>A single if/else statement allows us to select between 2 branches of code. With nested if/else statements, we can pick between 3 or more branches of code. A multi-way selection (if-else-if) is used when there are a series of expressions with different segments of code for each condition. Multi-way selection is performed such that no more than one segment of code is executed based on the first expression that evaluates to true. If no expression evaluates to true and there is a trailing else statement, then the body of the else is executed.</p>
             <p>Just add <term>else if</term> for each possibility after the first <term>if</term>, and <term>else</term> before the last possibility like below.</p>
@@ -446,7 +450,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="dangling-else-statements">
             <title>Dangling Else Statements</title>
             <p>Sometimes with nested ifs we find a <term>dangling else</term> that could potentially belong to either if statement.
                 The rule is that the else clause will always be a part of the closest unmatched if statement in the same block of code, regardless of indentation.</p>
@@ -458,6 +462,104 @@ if (boolean expression)
    else  // belongs to closest if
       Do other statement;
 </code></program>
+
+<exercise label="danglingelse">
+    <statement>
+            <p>Try the following code with a dangling else. Notice that the indentation does not matter to the compiler (but you should make it your habit to use good indentation just as a best practice). How could you get the else to belong to the first if statement?</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class DanglingElseTest
+{
+    public static void main(String[] args)
+    {
+        boolean sunny = true;
+        boolean hot = false;
+        if (sunny)
+            if (hot)
+               System.out.println("Head for the beach!");
+          else // Which if is else attached to??
+            System.out.println("Bring your umbrella!");
+    }
+}
+
+</code><tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     /*
+     @Test
+     public void testCodeChange1() throws Exception
+     {
+         String className = "Test1";
+
+         String program = getCode();
+         program = program.replace("DangleElse", className).replace("public class", "class");
+         program = program.replaceAll("sunny = true;", "sunny = false;");
+
+         String output = getMethodOutputChangedCode(program, className, "main");
+
+         String expected = "Bring your umbrella!";
+         boolean passed = output.contains(expected);
+         getResults(expected, output, "Checking output if sunny is false", passed);
+         assertTrue(passed);
+     }
+
+     @Test
+     public void testCodeChange2() throws Exception
+     {
+         String className = "Test2";
+
+         String program = getCode();
+         program = program.replace("DangleElse", className).replace("public class", "class");
+         program = program.replaceAll("hot = false", "hot = true");
+
+         String output = getMethodOutputChangedCode(program, className, "main");
+
+         String expected = "Head for the beach!";
+         boolean passed = output.contains(expected);
+         getResults(expected, output, "Checking output if hot is true", passed);
+         assertTrue(passed);
+     }
+
+     @Test
+     public void testCodeChange3() throws Exception
+     {
+         String className = "Test3";
+
+         String program = getCode();
+         program = program.replace("DangleElse", className).replace("public class", "class");
+         program = program.replaceAll("hot = false", "hot = true");
+         program = program.replaceAll("sunny = true;", "sunny = false;");
+
+         String output = getMethodOutputChangedCode(program, className, "main");
+
+         String expected = "Bring your umbrella!";
+         boolean passed = output.contains(expected);
+         getResults(expected, output, "Checking output if sunny is false and hot is true", passed);
+         assertTrue(passed);
+     }
+     */
+
+     @Test
+     public void testMain() throws IOException
+     {
+         String output = getMethodOutput("main");
+         String expect = "";
+         boolean passed =
+                 getResults(expect, output, "Expected output from main (no output if correct)");
+         assertTrue(passed);
+     }
+ }
+        </tests>
+    </program>
+</exercise>
             <p>You can use curly braces (<c>{}</c>) to enclose a nested if and have the else clause belong to the the top level if clause like below:</p>
             <program language="java"><code>
 // Nested if with dangling else
@@ -472,7 +574,7 @@ else  // belongs to first if
             <p>In fact many experienced Java programmers <title_reference>always</title_reference> use curly braces, even when
                 they are not technically required to avoid this kind of confusion.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-adventure">
             <title>Coding Challenge : Adventure</title>
             <image source="Unit2-Selection-and-Iteration/Figures/adventure.jpg" width="36%" alt="Adventure map"/>
             <p>One of the first games coded for early computers in the 1970s was called <url href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" visual="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure">Colossal Cave Adventure</url>. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try <problematic refid="id2">|playing adventure|</problematic> recreated online following some of the commands in this <url href="https://adventuregamers.com/walkthrough/full/colossal-cave" visual="https://adventuregamers.com/walkthrough/full/colossal-cave">walkthrough</url>. Part of the challenge is finding the commands that the code will understand.</p>
@@ -638,7 +740,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-21">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -667,7 +769,7 @@ else
 }
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-14">
             <title>AP Practice</title>
 
     <exercise label="AP-nested-if-else">

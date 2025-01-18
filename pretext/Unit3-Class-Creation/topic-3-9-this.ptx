@@ -8,7 +8,103 @@
             Run the code below and also check it out in the Java visualizer with the Show CodeLens button which shows how this refers to different objects when the code is run.</p>
     <p>The <c>this</c> variable can only be used in instance methods and constructors. Class methods cannot refer to <c>this</c> or instance variables because they are called with the classname, not an object, so there is no <c>this</c> object.</p>
   </introduction>
-  <subsection>
+  <exercise label="PersonClassThis">
+    <statement>
+        <p>Observe the use of the keyword this in the code below. Click on the CodeLens button and then forward to see the memory in action.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Person
+{
+    // instance variables
+    private String name;
+    private String email;
+    private String phoneNumber;
+
+    // constructor
+    public Person(String theName)
+    {
+        this.name = theName;
+    }
+
+    // accessor methods - getters
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public String getEmail()
+    {
+        return this.email;
+    }
+
+    public String getPhoneNumber()
+    {
+        return this.phoneNumber;
+    }
+
+    // mutator methods - setters
+    public void setName(String theName)
+    {
+        this.name = theName;
+    }
+
+    public void setEmail(String theEmail)
+    {
+        this.email = theEmail;
+    }
+
+    public void setPhoneNumber(String thePhoneNumber)
+    {
+        this.phoneNumber = thePhoneNumber;
+    }
+
+    public String toString()
+    {
+        return this.name + " " + this.email + " " + this.phoneNumber;
+    }
+
+    // main method for testing
+    public static void main(String[] args)
+    {
+        Person p1 = new Person("Sana");
+        System.out.println(p1);
+        Person p2 = new Person("Jean");
+        p2.setEmail("jean@gmail.com");
+        p2.setPhoneNumber("404 899-9955");
+        System.out.println(p2);
+    }
+}
+
+</code><tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Person");
+     }
+
+     @Test
+     public void testMain() throws IOException
+     {
+         String output = getMethodOutput("main");
+         String expect = "Sana null null\nJean jean@gmail.com 404 899-9955";
+
+         boolean passed = getResults(expect, output, "Expected output from main", true);
+         assertTrue(passed);
+     }
+ }
+        </tests>
+    </program>
+</exercise>
+  <subsection xml:id="this-instancevariable">
             <title><c>this</c>.instanceVariable</title>
             <p>The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below.</p>
             <note>
@@ -26,7 +122,7 @@ public Person(String name)
 }
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="this-as-an-argument">
             <title><c>this</c> as an Argument</title>
             <p>The <c>this</c> variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, <c>Pay</c> and <c>Overtime</c>. The <c>Pay</c> class declares an <c>Overtime</c> object and passes in <c>this</c> (the current <c>Pay</c> object) to its constructor which computes the overtime with respect to that <c>Pay</c> object. Try this code in the active code exercise below with the Show CodeLens button to trace through it step by step. Here is an image that shows how <c>this</c>, <c>myPay</c> and <c>p</c> all refer to the same object in memory.</p>
             <figure align="center"><image source="Unit3-Class-Creation/Figures/thisTrace.png" width="71%"/></figure>
@@ -173,7 +269,7 @@ System.out.println(one.getPay());
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-bank-account">
             <title>Coding Challenge : Bank Account</title>
             <figure align="left"><image source="Unit3-Class-Creation/Figures/dollarSign.png" width="18%"/></figure>
             <p>Many people keep their money in a bank account. The bank may keep track of the account holder’s name, the acount balance which is the amount of money in the account, and assign an account number to each account. At the bank or an ATM (automatic teller machine) or on a phone app, the account holder can deposit (add) or withdraw (subtract) an amount from their account. Here’s a <url href="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F" visual="https://www.youtube.com/watch?v=YpD1tJK9vIA&amp;ab_channel=Doyouknow%3F">video</url> that shows the steps to use an ATM to withdraw money from a bank acount. Phone apps like Venmo and Paypal connect to your bank account or credit card to send and get money from businesses or friends.</p>
@@ -306,7 +402,7 @@ public class BankAccount {}
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-35">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -323,7 +419,7 @@ public class BankAccount {}
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-23">
             <title>AP Practice</title>
 
     <exercise label="AP-this">
@@ -402,102 +498,4 @@ System.out.println(j.getTotalTemp());
 
     </exercise>
         </subsection>
-  <exercises>
-    <exercise label="PersonClassThis">
-    <statement>
-        <p>Observe the use of the keyword this in the code below. Click on the CodeLens button and then forward to see the memory in action.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Person
-{
-    // instance variables
-    private String name;
-    private String email;
-    private String phoneNumber;
-
-    // constructor
-    public Person(String theName)
-    {
-        this.name = theName;
-    }
-
-    // accessor methods - getters
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public String getEmail()
-    {
-        return this.email;
-    }
-
-    public String getPhoneNumber()
-    {
-        return this.phoneNumber;
-    }
-
-    // mutator methods - setters
-    public void setName(String theName)
-    {
-        this.name = theName;
-    }
-
-    public void setEmail(String theEmail)
-    {
-        this.email = theEmail;
-    }
-
-    public void setPhoneNumber(String thePhoneNumber)
-    {
-        this.phoneNumber = thePhoneNumber;
-    }
-
-    public String toString()
-    {
-        return this.name + " " + this.email + " " + this.phoneNumber;
-    }
-
-    // main method for testing
-    public static void main(String[] args)
-    {
-        Person p1 = new Person("Sana");
-        System.out.println(p1);
-        Person p2 = new Person("Jean");
-        p2.setEmail("jean@gmail.com");
-        p2.setPhoneNumber("404 899-9955");
-        System.out.println(p2);
-    }
-}
-
-</code><tests>
- import static org.junit.Assert.*;
-
- import org.junit.*;
-
- import java.io.*;
-
- public class RunestoneTests extends CodeTestHelper
- {
-     public RunestoneTests()
-     {
-         super("Person");
-     }
-
-     @Test
-     public void testMain() throws IOException
-     {
-         String output = getMethodOutput("main");
-         String expect = "Sana null null\nJean jean@gmail.com 404 899-9955";
-
-         boolean passed = getResults(expect, output, "Expected output from main", true);
-         assertTrue(passed);
-     }
- }
-        </tests>
-    </program>
-</exercise>
-  </exercises>
 </section>

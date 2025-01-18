@@ -3,10 +3,15 @@
 <section xml:id="topic-3-7-static-vars-methods">
   <title>Class (static) Variables and Methods</title><introduction>
     
+    <idx>class\ variables</idx>
+ <idx>class\ methods</idx>
+ <idx>static</idx>
+ <idx>final</idx>
+
     <p>In Unit 1, we learned about methods by using the <c>Math</c> class and its many <term>static</term> methods like <c>Math.random()</c>, and we wrote our own main methods and other methods that were static. These are called <term>class methods</term> because they belong to the class and not to any object of the class.
             In this lesson, you will learn to write your own class variables and methods using the keyword <c>static</c> and compare them to instance variables and methods.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="class-methods">
             <title>Class Methods</title>
             <p>Class methods belong to the class and not to any object of the class. They are called with the class name and the dot operator, like <c>ClassName.methodName();</c>, for example the Math methods like <c>Math.random();</c>. There is only one copy of a class variable or method for the whole class. For example, the main method is a class (static) method because there should only be 1 main method. If the method is in the same class, you can call it with or without the class name from other static methods in the class: <c>Classname.methodName();</c> or <c>staticMethodName();</c> or even with an object of the class: <c>objectName.methodName();</c>.</p>
             <program language="java"><code>
@@ -118,7 +123,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
             <p>This example also shows how instance methods easily share data variables without the need for parameters.  Whereas, static methods cannot directly access the instance methods. They are often used for utility methods, like Math operations, that do not need access to the instance variables of an object.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="class-variables">
             <title>Class Variables</title>
             <p><term>Class variables</term> belong to the class, with all objects of a class sharing a single copy of the class variable. Class variables are designated with the <c>static</c> keyword before the variable type. Class variables that are designated <c>public</c> are accessed outside of the class by using the class name and the dot operator, since they are associated with a class, not objects of a class.</p>
             <p>In the following class <c>Person</c>, there is a <c>static</c> variable called <c>personCounter</c> that is incremented each time the <c>Person</c> constructor is called to initialize a new <c>Person</c> object. The static method <c>printCounter</c> prints out its value.  You can also watch how it works in the <url href="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Static%20counter%20variable%0A%20%20%20%20%20public%20static%20int%20personCounter%20%3D%200%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20static%20method%20to%20print%20out%20counter%0A%20%20%20%20%20public%20static%20void%20printPersonCounter%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22Person%20counter%3A%20%22%20%2B%20personCounter%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%20%20%20personCounter%2B%2B%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20%20name%20%2B%20%22%3A%20%22%20%2B%20email%20%2B%20%22%20%22%20%2B%20phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20Person.printPersonCounter%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&amp;cumulative=false&amp;curInstr=1&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=%20public%20class%20Person%20%0A%20%20%7B%0A%20%20%20%20%20//%20instance%20variables%20%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20String%20phoneNumber%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20Static%20counter%20variable%0A%20%20%20%20%20public%20static%20int%20personCounter%20%3D%200%3B%0A%20%20%20%20%20%0A%20%20%20%20%20//%20static%20method%20to%20print%20out%20counter%0A%20%20%20%20%20public%20static%20void%20printPersonCounter%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22Person%20counter%3A%20%22%20%2B%20personCounter%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20constructor%3A%20construct%20a%20Person%20copying%20in%20the%20data%20into%20the%20instance%20variables%0A%20%20%20%20%20public%20Person%28String%20initName,%20String%20initEmail,%20String%20initPhone%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20phoneNumber%20%3D%20initPhone%3B%0A%20%20%20%20%20%20%20%20personCounter%2B%2B%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20toString%28%29%20method%0A%20%20%20%20%20public%20String%20toString%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20return%20%20name%20%2B%20%22%3A%20%22%20%2B%20email%20%2B%20%22%20%22%20%2B%20phoneNumber%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20call%20the%20constructor%20to%20create%20a%20new%20person%0A%20%20%20%20%20%20%20%20Person%20p1%20%3D%20new%20Person%28%22Sana%22,%20%22sana%40gmail.com%22,%20%22123-456-7890%22%29%3B%0A%20%20%20%20%20%20%20%20Person%20p2%20%3D%20new%20Person%28%22Jean%22,%20%22jean%40gmail.com%22,%20%22404%20899-9955%22%29%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20Person.printPersonCounter%28%29%3B%0A%20%20%20%20%20%7D%0A%20%20%7D%0A%20%20&amp;cumulative=false&amp;curInstr=1&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url> by clicking the CodeLens button below.</p>
@@ -320,7 +325,7 @@ public class Temperature
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="final-keyword">
             <title>final keyword</title>
             <p>The keyword <term>final</term> can be used in front of a variable declaration to make it a constant value that cannot be modified. Constants are traditionally capitalized.</p>
             <program language="java"><code>
@@ -369,7 +374,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-static-song-and-counter">
             <title>Coding Challenge : Static Song and counter</title>
             <p>In Unit 1, we wrote a class with methods to print out the song <url href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" visual="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ">The Ants Go Marching</url>. Here’s the song with 3 verses, where the chorus is the last 2 lines of each verse:</p>
             <program language="java"><code>
@@ -592,7 +597,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-33">
             <title>Summary</title>
             <p><ul>
                 <li>

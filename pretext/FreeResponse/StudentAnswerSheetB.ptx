@@ -35,7 +35,7 @@ public class TestResults
             students may be returned.  You may assume that the size of each answer sheet represented in <c>sheets</c>
             is equal to the size of <c>key</c>.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-12">
             <title>Try and Solve It</title>
             <p>Complete method <c>highestScoringStudent</c> below.</p>
             <p>The code below has a main method for testing the <c>highestScoringStudent</c> method.</p>
