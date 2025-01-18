@@ -425,13 +425,13 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
                                                a)
     {
     =====
-      for(int i=0; i< a.size(); i++)
+      for(int i=0; i < a.size(); i++)
       {
     =====
-        for(int j=i+1; j< a.size(); j++)
+        for(int j=i+1; j < a.size(); j++)
         {
     =====
-        for(int j=i; j< a.size()-1; j++)
+        for(int j=i; j < a.size()-1; j++)
         { #paired
     =====
          if(a.get(i).equals(a.get(j)))
