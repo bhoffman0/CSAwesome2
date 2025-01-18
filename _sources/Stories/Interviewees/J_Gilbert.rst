@@ -3,10 +3,10 @@
 Dr. Juan Gilbert
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"My strength [is] be design and implementation. Being able to look at a problem, design something and build prototypes and things. That's what I enjoy and that's what I would say I'm pretty good at."</em></font>`
+
+
+"My strength [is] be design and implementation. Being able to look at a problem, design something and build prototypes and things. That's what I enjoy and that's what I would say I'm pretty good at."
 
 .. image:: ../../../_static/Interviewees/J_Gilbert.jpg
     :width: 350

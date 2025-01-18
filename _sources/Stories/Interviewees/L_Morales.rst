@@ -3,10 +3,10 @@
 Luisa Morales
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"I feel that I have more empathy than some other software engineers. I am perfectly okay explaining things, where other people might not be."</em></font>`
+
+
+"I feel that I have more empathy than some other software engineers. I am perfectly okay explaining things, where other people might not be."
 
 .. image:: ../../../_static/Interviewees/L_Morales.jpg
     :width: 350

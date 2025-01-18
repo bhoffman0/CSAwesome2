@@ -8,5 +8,5 @@ Timed Multiple-Choice Exams
    test1.rst
    test3.rst
    test4.rst
-   Exercises.rst
+   examX.rst
    apbowla.rst

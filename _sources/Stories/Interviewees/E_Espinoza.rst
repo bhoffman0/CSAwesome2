@@ -3,10 +3,10 @@
 Eric Espinoza
 :::::::::::::::::::::::::::::::::::::
 
-.. role:: raw-html(raw)
-   :format: html
 
-:raw-html:`<font color="CadetBlue"><em>"I don't think that your identity has to be tied to what you do. If anything, the skills needed for the job — learning new ideas and new technologies — identifies an individual that likes to play with things."</em></font>`
+
+
+"I don't think that your identity has to be tied to what you do. If anything, the skills needed for the job — learning new ideas and new technologies — identifies an individual that likes to play with things."
 
 **Why did he choose computing?**
 

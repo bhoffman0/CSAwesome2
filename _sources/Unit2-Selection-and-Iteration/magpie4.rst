@@ -36,11 +36,9 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
    /**
     * A program to carry on conversations with a human user. This version:
     *
-    * <ul>
-    *   <li>Uses advanced search for keywords
-    *   <li>Will transform statements as well as react to keywords
-    * </ul>
-    *
+    *   - Uses advanced search for keywords
+    *   - Will transform statements as well as react to keywords
+    *    
     * @author Laurie White
     * @version April 2012
     */
