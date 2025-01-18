@@ -3,6 +3,9 @@
 <section xml:id="soundB">
   <title>Free Response - Sound B</title><introduction>
     
+    <idx>soundb</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2011.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  Digital sounds can be represented as an array of integer values. For this question, you will write two unrelated methods of the <em>Sound</em> class.</p>
     <p>A partial declaration of the <c>Sound</c> class is shown below.</p>
@@ -52,7 +55,7 @@ public class Sound
       <image source="Unit4-Data-Collections/Figures/soundTable4.png" width="84%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-7">
             <title>How to Solve This</title>
             <p>Click to reveal problems and the algorithm to help you write your solution.</p>
             <subsection>
@@ -65,7 +68,7 @@ public class Sound
                     </li>
                 </ol></p>
             </subsection>
-            <exercises line="84" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_soundb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
+            
 
     <exercise label="fr_soundb_1">
         <statement>
@@ -142,43 +145,43 @@ public class Sound
 </choices>
 
     </exercise>
-            </exercises>
+            
         </subsection>
-  <subsection>
+  <subsection xml:id="mixed-up-code-5">
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
-            <exercises line="116" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'soundB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'soundB_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/soundB.rst">
-<exercise label="SoundB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+            
+<exercise label="SoundB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>trimSilenceFromBeginning</c> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="3">
 <cline>public void trimSilenceFromBeginning()</cline>
 <cline>{</cline>
 <cline>  int i = 0;</cline>
-</block><block order="10">
+</block><block order="2">
 <cline>  while (this.samples[i] == 0)</cline>
 <cline>  {</cline>
-</block><block order="8">
-<cline>     i++;</cline>
-</block><block order="3">
-<cline>  } // end while</cline>
 </block><block order="7">
+<cline>     i++;</cline>
+</block><block order="6">
+<cline>  } // end while</cline>
+</block><block order="9">
 <cline>  int samplesLen = this.samples.length;</cline>
 <cline>  int[] newSamples = new int[samplesLen - i];</cline>
-</block><block order="1">
+</block><block order="5">
 <cline>  for (int j = 0; j &lt; newSamples.length; j++)</cline>
 <cline>  {</cline>
-</block><block order="5">
-<cline>     newSamples[j] = this.samples[j+i];</cline>
 </block><block order="4">
+<cline>     newSamples[j] = this.samples[j+i];</cline>
+</block><block order="10">
 <cline>  } // end for</cline>
-</block><block order="2">
+</block><block order="1">
 <cline>  this.samples = newSamples;</cline>
-</block><block order="9">
+</block><block order="8">
 <cline>} // end method</cline>
-</block></blocks></exercise>            </exercises>
+</block></blocks></exercise>            
         </subsection>
-  <subsection>
+  <subsection xml:id="try-and-solve-part-b-1">
             <title>Try and Solve Part B</title>
 
 <exercise label="FRQSoundB">

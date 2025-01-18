@@ -3,6 +3,10 @@
 <section xml:id="topic-2-3-ifs">
   <title>if Statements</title><introduction>
     
+    <idx>selection</idx>
+ <idx>if</idx>
+ <idx>else</idx>
+
     <p><term>If statements</term> are found in all programming languages as a way to choose between different paths in an algorithm. An if statement is a type of <term>selection</term> statement that changes the sequential execution. It affects the flow of control by executing different segments of code based on the value of a <term>Boolean expression</term>.</p>
     <p>If you took an AP CSP course or used a block programming language like Scratch, you’ve probably seen if blocks or statements before.  Here’s a comparison of ifs in App Inventor blocks, AP CSP block code and pseudocode, and Java ifs.</p>
     <figure align="center">
@@ -10,7 +14,7 @@
       <image source="Unit2-Selection-and-Iteration/Figures/BlocksIfComparison.png" width="100%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="one-way-selection">
             <title>One-way selection</title>
             <p>A one-way selection (if statement) is used when there is a segment of code (called the <term>body</term> of the if statement) to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true. If the Boolean expression is false, the body of the if statement is skipped and the program continues with the next statement after the if statement.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%"/></figure>
@@ -83,7 +87,7 @@ public class RunestoneTests extends CodeTestHelper
         <exercise label="iffalseOutput">
             <statement>
     <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="relational-operators-in-if-statements">
             <title>Relational Operators in If Statements</title>
             <p>Most if statements have a boolean condition that uses relational operators like ==, !=, &lt;, &gt;, &lt;=, &gt;=, as we saw in the last lesson.</p>
 
@@ -324,7 +328,7 @@ System.out.print(x);
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="two-way-selection">
             <title>Two-way selection</title>
             <p>What if you want to pick between two possibilities?  If you are trying to decide between a couple of things to do, you might flip a coin and do one thing if it lands as heads and another if it is tails.  In programming, you can use the <term>if</term> keyword followed by a statement or block of statements and then the <term>else</term> keyword also followed by a statement or block of statements.</p>
             <program language="java"><code>
@@ -401,8 +405,186 @@ public class RunestoneTests extends CodeTestHelper
         <exercise label="falseElse">
             <statement>
     <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
+
+<exercise label="licenseifelse">
+    <statement>
+            <p>Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age’s value to 15 and then run it again to see the result of the print statement in the else part.
+                Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class DriversLicenseTest
+{
+    public static void main(String[] args)
+    {
+        int age = 16;
+        if (age &gt;= 16)
+        {
+            System.out.println("You can get a driver's license in most states!");
+        }
+        else
+        {
+            System.out.println(
+                    "Sorry, you need to be older to get a driver's license.");
+        }
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testCodeContains() throws IOException
+    {
+        String target = "age &gt;= 15";
+        boolean passed = checkCodeContains("check age &gt;= 15", target);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+<exercise label="ifelseevenOdd" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+            <p>The following program should print out “x is even” if the remainder of x divided by 2 is 0 and “x is odd” otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on Check Me to see if you are right.</p>
+</statement>
+<blocks><block order="5">
+<cline>public class EvenOrOdd</cline>
+<cline>{</cline>
+</block><block order="4">
+<cline>    public static void main(String[] args)</cline>
+<cline>    {</cline>
+<cline>    </cline>
+</block><block order="6">
+<cline>        int x = 92;</cline>
+<cline>        </cline>
+</block><block order="1">
+<cline>        if (x % 2 == 0)</cline>
+<cline>        </cline>
+</block><block order="2">
+<cline>        {</cline>
+<cline>            System.out.println("x is even");</cline>
+<cline>        }</cline>
+<cline>        </cline>
+</block><block order="9">
+<cline>        else</cline>
+<cline>        </cline>
+</block><block order="7">
+<cline>        {</cline>
+<cline>            System.out.println("x is odd");</cline>
+<cline>        }</cline>
+<cline>        </cline>
+</block><block order="3">
+<cline>    }</cline>
+<cline>    </cline>
+</block><block order="8">
+<cline>}</cline>
+</block></blocks></exercise>
+<exercise label="scoreifelse">
+    <statement>
+            <p>Try the following code. Add an else statement to the if statement that prints out “Good job!” if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out “Good job” if the score is greater than 20?</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class ScoreTest
+{
+    public static void main(String[] args)
+    {
+        int score = 8;
+        if (score &lt;= 9)
+        {
+            System.out.println("Try for a higher score!");
+        }
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testChangedCode()
+    {
+        String origCode =
+                "public class ScoreTest   {      public static void main(String[] args)      {     "
+                    + "   int score = 8;        if (score &lt;= 9)         {           "
+                    + " System.out.println(\"Try for a higher score!\");        }      }} ";
+
+        boolean changed = codeChanged(origCode);
+        assertTrue(changed);
+    }
+
+    @Test
+    public void testCodeContainsElse()
+    {
+        boolean ifCheck2 = checkCodeContains("else", "else");
+        assertTrue(ifCheck2);
+    }
+
+    @Test
+    public void testCodeContains20()
+    {
+        String target1 = removeSpaces("score &lt;= 20");
+        String target2 = removeSpaces("score &gt; 20");
+
+        String code = removeSpaces(getCode());
+
+        boolean passed = code.contains(target1) || code.contains(target2);
+        getResults("true", "" + passed, "Checking for score &lt;= 20 or score &gt; 20", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testCodeChange1() throws Exception
+    {
+        String className = "Test1";
+
+        String program = getCode();
+        program = program.replace("ScoreTest", className).replace("public class", "class");
+        program = program.replaceAll("= *[0-9]+;", "= 25;");
+
+        String output = getMethodOutputChangedCode(program, className, "main");
+
+        String expected = "Good job!";
+        boolean passed = output.contains(expected);
+        getResults(expected, output, "Checking output if score is 25", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testCodeChange2() throws Exception
+    {
+        String className2 = "Test2";
+
+        String program2 = getCode();
+        program2 = program2.replace("ScoreTest", className2).replace("public class", "class");
+        program2 = program2.replaceAll("= *[0-9]+;", "= 5;");
+
+        String output2 = getMethodOutputChangedCode(program2, className2, "main");
+
+        String expected2 = "Try for a higher score!";
+        boolean passed2 = output2.contains(expected2);
+        getResults(expected2, output2, "Checking output if score is 5", passed2);
+        assertTrue(passed2);
+    }
+}
+        </tests>
+    </program>
+</exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-errors-with-if-statements">
             <title>Common Errors with If Statements</title>
             <p>Here are some rules to follow with if statements to avoid some common errors:</p>
             <blockquote>
@@ -473,7 +655,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-magic-8-ball">
             <title>Coding Challenge: Magic 8 Ball</title>
             <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%" alt="Magic 8 Ball"/>
             <p>Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like <c>Signs point to yes!</c>, <c>Very doubtful</c>, etc. If you’ve never seen a Magic 8 ball, check out this <url href="https://magic-8ball.com/" visual="https://magic-8ball.com/">simulator</url>. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the <url href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" visual="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html">Math lesson</url> and remember the formula <c>(int) (Math.random() * max) + min</c>.</p>
@@ -595,7 +777,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
             <p>You can make this code more interactive by using the <c>Scanner</c> class to have the user ask a question first; you can try your code with input in <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java" visual="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java">replit</url> or a local IDE.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-20">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -648,7 +830,7 @@ else
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-13">
             <title>AP Practice</title>
 
     <exercise label="AP2-3-1">

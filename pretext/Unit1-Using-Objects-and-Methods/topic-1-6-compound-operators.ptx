@@ -3,6 +3,8 @@
 <section xml:id="topic-1-6-compound-operators">
   <title>Compound Assignment Operators</title><introduction>
     
+    <idx>compound\ operators</idx>
+
     <p>Compound assignment operators <c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, and <c>%=</c> are
             shortcuts that do a math operation and assignment in one step. For example, <c>x +=
 1</c> adds 1 to the current value of
@@ -32,7 +34,7 @@
             assignment expressions. You can run the code below the table to see these
             shortcut operators in action!</p>
     <table>
-    <tabular>
+      <tabular>
             
                 
                 
@@ -131,7 +133,7 @@
                 
             
         </tabular>
-  </table>
+    </table>
     <note>
             <p>If you look at real-world Java code, you may occassionally see the <c>++</c> and
                 <c>--</c> operators used before the name of the variable, like <c>++x</c> rather
@@ -150,52 +152,7 @@
                 the postfix operators in a context where the value of the expression matters.</p>
         </note>
   </introduction>
-  <subsection>
-            <title>Code Tracing Challenge and Operators Maze</title>
-            <p>Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end.</p>
-            <p><term>Code Tracing</term> is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does.</p>
-            <p>Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column or row in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceTable.png" width="27%"/></figure>
-            <p>or</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceInline.png" width="39%"/></figure>
-            <p>Trace through the following code:</p>
-            <program language="java"><code>
-int x = 0;
-int y = 5;
-int z = 1;
-x++;
-y -= 3;
-z = x + z;
-x = y * z;
-y %= 2;
-z--;
-</code></program>
-
-<exercise label="challenge1-6">
-    <statement>
-            <p> Write your trace table for x, y, and z here showing their results after each line of code.</p>
-
-    </statement>
-</exercise>
-            <p>After doing this challenge, play the <url href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" visual="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing">Operators Maze game</url>. See if you and your
-                partner can get the highest score!</p>
-        </subsection>
-  <subsection>
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p>(AP 1.6.A.1) Compound assignment operators (<c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, <c>%=</c>) can be
-                        used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the current value of the variable on the left and the value on the right and then assigns the resulting value to the variable on the left.</p>
-                </li>
-                <li>
-                    <p>(AP 1.6.A.2) The increment operator (<c>++</c>) and decrement operator (<c>--</c>) are used to
-                        add 1 or subtract 1 from the stored value of a numeric variable. The new value is
-                        assigned to the variable.</p>
-                </li>
-            </ul></p>
-        </subsection>
-  <exercises>
-    <exercise label="compound-ops">
+  <exercise label="compound-ops">
     <statement>
         <p>Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Create more compound assignment statements with shortcut operators as described below and work with a partner to guess what they would print out before running the code.</p>
 
@@ -256,7 +213,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-    <exercise label="q_trace_increment">
+  <exercise label="q_trace_increment">
         <statement>
 
         <p> What are the values of x, y, and z after the following code executes?</p>
@@ -319,7 +276,7 @@ z+=y;
 </choices>
 
     </exercise>
-    <exercise label="q_trace_increment2">
+  <exercise label="q_trace_increment2">
         <statement>
 
         <p> What are the values of x, y, and z after the following code executes?</p>
@@ -382,5 +339,48 @@ z++;
 </choices>
 
     </exercise>
-  </exercises>
+  <subsection xml:id="code-tracing-challenge-and-operators-maze">
+            <title>Code Tracing Challenge and Operators Maze</title>
+            <p>Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end.</p>
+            <p><term>Code Tracing</term> is a technique used to simulate a dry run through the code or pseudocode line by line by hand as if you are the computer executing the code. Tracing can be used for debugging or proving that your program runs correctly or for figuring out what the code actually does.</p>
+            <p>Trace tables can be used to track the values of variables as they change throughout a program. To trace through code, write down a variable in each column or row in a table and keep track of its value throughout the program. Some trace tables also keep track of the output and the line number you are currently tracing.</p>
+            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceTable.png" width="27%"/></figure>
+            <p>or</p>
+            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/traceInline.png" width="39%"/></figure>
+            <p>Trace through the following code:</p>
+            <program language="java"><code>
+int x = 0;
+int y = 5;
+int z = 1;
+x++;
+y -= 3;
+z = x + z;
+x = y * z;
+y %= 2;
+z--;
+</code></program>
+
+<exercise label="challenge1-6">
+    <statement>
+            <p> Write your trace table for x, y, and z here showing their results after each line of code.</p>
+
+    </statement>
+</exercise>
+            <p>After doing this challenge, play the <url href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" visual="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing">Operators Maze game</url>. See if you and your
+                partner can get the highest score!</p>
+        </subsection>
+  <subsection xml:id="summary-11">
+            <title>Summary</title>
+            <p><ul>
+                <li>
+                    <p>(AP 1.6.A.1) Compound assignment operators (<c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, <c>%=</c>) can be
+                        used in place of the assignment operator in numeric expressions. A compound assignment operator performs the indicated arithmetic operation between the current value of the variable on the left and the value on the right and then assigns the resulting value to the variable on the left.</p>
+                </li>
+                <li>
+                    <p>(AP 1.6.A.2) The increment operator (<c>++</c>) and decrement operator (<c>--</c>) are used to
+                        add 1 or subtract 1 from the stored value of a numeric variable. The new value is
+                        assigned to the variable.</p>
+                </li>
+            </ul></p>
+        </subsection>
 </section>

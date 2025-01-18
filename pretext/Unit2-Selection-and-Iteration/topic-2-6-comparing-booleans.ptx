@@ -3,6 +3,9 @@
 <section xml:id="topic-2-6-comparing-booleans">
   <title>Comparing Boolean Expressions (De Morgan’s Laws)</title><introduction>
     
+    ['single',\ &quot;De\ Morgan's\ Laws&quot;,\ 'index-0',\ '',\ None] <idx>negation</idx>
+ <idx>truth\ table</idx>
+
     <p>What if you heard a rumor about a senior at your high school? And then you heard that the rumor wasn’t true - it wasn’t a senior at your high school. Which part of “a senior at your high school” wasn’t true? Maybe they weren’t a senior? Or maybe they didn’t go to your high school? You could write this as a logic statement like below using negation (<c>!</c>) and the <term>and</term> (<c>&amp;&amp;</c>) operator since both parts have to be true for the whole statement to be true. (Thank you to Kevin Saxton from Kent School, CT for this example.)</p>
     <program language="java">
       <code>
@@ -17,7 +20,7 @@ b = "at our high school"
     </program>
     <p>In this lesson, you will learn about De Morgan’s Laws which simplify statements like this. We know that !(a senior at our high school) could mean !(a senior) or !(at our high school). Let’s learn more about De Morgan’s Laws.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="de-morgan-s-laws">
             <title>De Morgan’s Laws</title>
             <p>De Morgan’s Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an <term>and</term> (<c>&amp;&amp;</c>) or <term>or</term> (<c>||</c>), such as <c>(x &lt; 3) &amp;&amp; (y &gt; 2)</c>. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan’s Laws state the following equivalencies. Here’s an easy way to remember De Morgan’s Laws: <term>move the NOT inside, AND becomes OR</term> and <term>move the NOT inside, OR becomes AND</term>.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">De Morgan’s Laws to simplify complex expressions</caption><image source="Unit2-Selection-and-Iteration/Figures/demorgan.png" width="71%"/></figure>
@@ -63,7 +66,7 @@ b = "at our high school"
                 </ul></p>
             </blockquote>
         </subsection>
-  <subsection>
+  <subsection xml:id="truth-tables-1">
             <title>Truth Tables</title>
             <p>Although you do not have to memorize De Morgan’s Laws for the CSA Exam, you should be able to show that two boolean expressions are equivalent. One way to do this is by using truth tables. For example, we can show that <c>!(a &amp;&amp; b)</c> is equivalent to <c>!a || !b</c> by constructing the truth table below and seeing that they give identical results for the 2 expressions (the last 2 columns in the table below are identical!).</p>
             <table><tabular>
@@ -149,10 +152,51 @@ b = "at our high school"
                 
             </tabular></table>
         </subsection>
-  <subsection>
+  <subsection xml:id="simplifying-boolean-expressions">
             <title>Simplifying Boolean Expressions</title>
             <p>Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan’s Laws to <c>!(x &lt; 3 &amp;&amp; y &gt; 2)</c> yields <c>!(x &lt; 3) || !(y &gt; 2)</c> as seen in the figure below. This can then be simplified further by flipping the relational operators to remove the not.  So, <c>!(x &lt; 3) || !(y &gt; 2)</c> is simplified to <c>(x &gt;= 3 || y &lt;= 2)</c> where the relational operators are flipped and the negation is removed. These two simplification steps are seen below.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An example boolean expression simplified</caption><image source="Unit2-Selection-and-Iteration/Figures/demorganex.png" width="71%"/></figure>
+
+<exercise label="lcdmtest">
+    <statement>
+            <p>For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int x = 2;
+        int y = 3;
+        System.out.println(!(x &lt; 3 &amp;&amp; y &gt; 2));
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testChangedCode()
+    {
+        String origCode =
+                "public class Test1 {public static void main(String[] args) { int x = 2; int y = 3;"
+                    + " System.out.println(!(x &lt; 3 &amp;&amp; y &gt; 2)); } }";
+
+        boolean changed = codeChanged(origCode);
+        assertTrue(changed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
 
     <exercise label="compareBool1">
         <statement>
@@ -234,13 +278,15 @@ else
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="comparing-objects">
             <title>Comparing Objects</title>
             <p>Comparing objects is a little different than comparing primitive typed values like numbers. Objects can be very complex and have many attribute values or instance variables inside them. For example, the <c>Turtle</c> objects have many instance variables like <c>name</c>, <c>width</c>, <c>height</c>, <c>xPos</c>, <c>yPos</c>, etc. When comparing two <c>Turtle</c> objects, we need a specially written <term>equals</term> method to compare all of these values. In the next sections, we will take a look at <c>String</c> objects and the difference between comparing them with <c>==</c> vs. the <c>equals</c> method.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="string-equality">
             <title>String Equality</title>
-            
+            <idx><h>String</h><h>equality</h></idx>
+ <idx><h>String</h><h>equals</h></idx>
+
             
             <p>The <term>equals</term> method for Strings compares two strings letter by letter. <c>s1.equals(s2)</c> is true if <c>s1</c> and <c>s2</c> have all the same characters in the same order. With <c>Strings</c> and other objects, you almost always use <c>equals</c> instead of <c>==</c> to check their equality.</p>
             <p>When the operator <c>==</c> or <c>!=</c> is used to compare object variables, it returns true when the two variables <em>refer to the same object</em>. These variables are called <term>object references</term> and <term>aliases</term> for the same object. With strings this happens when one string variable is set to another.</p>
@@ -293,7 +339,7 @@ public class RunestoneTests extends CodeTestHelper
                 <p>Here’s the representation of memory where s2 and s3 refer to the same String object.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">s2 and s3 are aliases referring to the same String object</caption><image source="Unit2-Selection-and-Iteration/Figures/s2ands3.jpg" width="63%"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="equality-with-new-strings">
             <title>Equality with New Strings</title>
             <p>If you use the <c>new</c> keyword to create a string, it will always create a new string object. So, even if we create two string objects with new that contain all the same characters in the same order, they will not refer to the same object.</p>
 
@@ -503,7 +549,7 @@ String s3 = new String("hi");
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="comparing-with-null">
             <title>Comparing with null</title>
             <p>One common place to use <c>==</c> or <c>!=</c> with objects is to compare them to <term>null</term> to see if they really exist. Sometimes short-circuit evaluation is used to avoid an error if the object doesn’t exist. Remember that <term>short-circuit evaluation</term> is used with <c>&amp;&amp;</c> in Java meaning that if the first part of the if condition is false, it doesn’t even have to check the second condition and it knows the whole <c>&amp;&amp;</c> test is false.</p>
 
@@ -586,7 +632,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <video youtube="GPdoHm1K8HA"/>
             </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-truth-and-tracing-tables-pogil">
             <title>Coding Challenge : Truth and Tracing Tables POGIL</title>
             <p>We encourage you to do this activity as a <problematic refid="id6">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Explore the following problems with your group. You may use <url href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" visual="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing">this worksheet</url> to complete your truth tables. Assume that <c>x</c> is an integer value, for example -1, 0, or 1.</p>
@@ -902,7 +948,7 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-23">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -953,8 +999,64 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-16">
             <title>AP Practice</title>
+
+    <exercise label="apcsa-sample5">
+        <statement>
+
+            <p>  Which of the following best describes the value of the Boolean expression: a &amp;&amp; !(b || a)</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>The value is always true.</p>
+                </statement>
+                <feedback>
+                    <p>Try simplifying !(b ||a) or consider what happens if a and b are true.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>The value is always false.</p>
+                </statement>
+                <feedback>
+                    <p>Yes, a &amp;&amp; !(b || a) = a &amp;&amp; !b &amp;&amp; !a. Since (a &amp;&amp; !a) can never be true, the result will always be false.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The value is true when a has the value false, and is false otherwise.</p>
+                </statement>
+                <feedback>
+                    <p>Try the expression with a = false. Is the result true?</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The value is true when b has the value false, and is false otherwise.</p>
+                </statement>
+                <feedback>
+                    <p>Try the expression with b = false with a = true and then try it with a = false. Is the result ever true?</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>The value is true when either a or b has the value true, and is false otherwise.</p>
+                </statement>
+                <feedback>
+                    <p>Try the expression with a = true. Is the result true?</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
 
     <exercise label="AP-string-equality">
         <statement>
@@ -996,5 +1098,22 @@ if (message.equals(note) &amp;&amp; !message.equals("memo"))
 </feedback></choice></choices>
 
     </exercise>
+        </subsection>
+  <subsection xml:id="review-practice-for-selection">
+            <title>Review/Practice for Selection</title>
+            <p>This lesson ends the section on selection.
+                You can now do the following review and practice lessons at the end of the unit
+                and College Board Progress Checks in the AP Classroom.</p>
+            <p><ul>
+ <li><url href="selection-summary.html" visual="selection-summary.html">Selection Summary</url></li>
+ <li><url href="selection-practice-mixed-code.html" visual="selection-practice-mixed-code.html">Selection Practice Mixed Code</url></li>
+ <li><url href="selection-practice-mixed-code-toggle.html" visual="selection-practice-mixed-code-toggle.html">Selection Practice Mixed Code Toggle</url></li>
+ <li><url href="selection-practice-coding.html" visual="selection-practice-coding.html">Selection Practice Coding</url></li>
+ <li><url href="Exercises-selection.html" visual="Exercises-selection.html">Exercises Selection</url></li>
+ <li><url href="frq-game-score.html" visual="frq-game-score.html">FRQ Game Score</url></li>
+ <li><url href="selection-more-practice-coding.html" visual="selection-more-practice-coding.html">Selection More Practice Coding</url></li>
+ <li><url href="group-mod-practice.html" visual="group-mod-practice.html">Group Mod Practice</url></li>
+ <li><url href="magpieindex.html" visual="magpieindex.html">Magpie Lab</url></li>
+ </ul></p>
         </subsection>
 </section>

@@ -17,7 +17,7 @@
     <p>Watch this short video to review the vocabulary of object-oriented programming:</p>
     <video youtube="LfSaSANJPLg"/>
   </introduction>
-  <subsection>
+  <subsection xml:id="parts-of-a-class">
             <title>Parts of a Class</title>
             <p>Most classes you write will have the keyword <c>public</c> before them though it is
                 not required. The class definition itself always starts with the word <c>class</c>
@@ -82,7 +82,7 @@ public class Person
                 program either to test that one class or sometimes as the entry point to a whole
                 program made up of many classes and objects.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="designing-a-class">
             <title>Designing a Class</title>
             <p>Now that we know what the skeleton of a class looks like and the elements that
                 make up the body of the class, we’re ready to create our own class. Let’s start
@@ -179,13 +179,14 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="data-encapsulation">
             <title>Data encapsulation</title>
             <p><term>Data encapsulation</term> is an object-oriented design technique in which the implementation details of a class are kept hidden from external classes. The keywords <c>public</c> and <c>private</c> are called <term>access modifiers</term>, and they affect how you can the access classes, data, constructors, and methods. The keyword <c>public</c> means anyone can access this; it allows access from classes outside the declaring class. The keyword <c>private</c> restricts access to the declaring class which means that  variables or methods marked private are only accessible inside the class where they are defined. In general, instance variables in a class should be declared <c>private</c> to ensure data encapsulation.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="instance-variables">
             <title>Instance Variables</title>
-            
+            <idx><h>class</h><h>instance\ variables</h></idx>
+
             
             <p><term>Instance Variables</term> (sometimes called <term>attributes</term>, <term>fields</term>, or <term>properties</term>) hold the data for an object. They belong to the object, and each object has its own copy of these variables.</p>
             <p>In general and definitely on the AP CSA exam, instance variables should be
@@ -308,9 +309,10 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="instance-methods">
             <title>Instance Methods</title>
-            
+            <idx><h>class</h><h>method</h></idx>
+
             
             <p><term>Instance methods</term> define what we can actually do with an object, their behaviors and functions. These methods have direct access to the instance variables and can use them and change them to perform their tasks. In Unit 1, we used and wrote static class methods like <c>Math.random()</c> which were called with the classname. Instance methods are not marked static and are always called using an object of the class and can access the object’s instance variables.</p>
             <p>Methods are defined in the class after the instance variables and constructors. They are usually marked as <c>public</c> so they can be accessed from inside or outside the class.  Methods designated as <c>private</c>  are not accessible outside of the class; they can only be used as helper methods by other methods inside the same class.</p>
@@ -444,7 +446,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-virtual-pet-class">
             <title>Coding Challenge : Virtual Pet Class</title>
             <image source="Unit3-Class-Creation/Figures/virtualpet.jpg" width="23%" alt="Virtual Pet"/>
             <p>In the late 1990s and early 2000s, digital pets like in the photo were a huge hit! You had to feed, play, and interact with your virtual pet in order to keep it healthy and happy. Let’s think about how they were programmed.</p>
@@ -623,7 +625,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="design-a-class-for-your-community">
             <title>Design a Class for your Community</title>
             <p>In this unit, you will design a class of your own choice that is relevant to your community.
                 You will improve the class in each lesson of this unit. We suggest that you work in pairs on this project.
@@ -686,7 +688,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-29">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -713,7 +715,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-19">
             <title>AP Practice</title>
 
     <exercise label="APclass1">

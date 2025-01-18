@@ -3,6 +3,9 @@
 <section xml:id="RandomStringChooserB2">
   <title>RandomStringChooser - Part B - 2nd time</title><introduction>
     
+    <idx>RandomLetterChooser</idx>
+ <idx>free\ response</idx>
+
     <p><term>Part b.</term>   The following partially completed <c>RandomLetterChooser</c> class is a subclass of the <c>RandomStringChooser</c> class.  You will write the constructor for the <c>RandomLetterChooser</c> class.</p>
     <program language="java">
       <code>
@@ -52,7 +55,7 @@ public RandomLetterChooser(String str)
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-again-1">
             <title>Try and Solve It - Again</title>
             <p>Complete the <c>RandomLetterChooser</c> constructor below.</p>
             <p>The code below has a main method for testing.  Write the constructor for the <c>RandomLetterChooser</c> class and use the main method to test it.</p>

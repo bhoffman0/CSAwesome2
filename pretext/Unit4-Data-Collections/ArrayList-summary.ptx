@@ -3,11 +3,19 @@
 <section xml:id="ArrayList-summary">
   <title>ArrayList Summary</title><introduction>
     
+    <idx>List</idx>
+ <idx>ArrayList</idx>
+ <idx>interface</idx>
+ <idx>index</idx>
+ <idx>abstract\ method</idx>
+ <idx><h>method</h><h>abstract</h></idx>
+ <idx><h>list</h><h>index</h></idx>
+
     <p>In this chapter you learned about <term>ArrayLists</term> which are dynamic re-sizable arrays.  You learned how to declare and create ArrayLists, add and remove objects from them, set the object at an index, and get the object at an index.</p>
     <p>List are like arrays in that you can store many objects of the same type in a list, just as you can in an array.  Lists are different from arrays in that they can grow or shrink as needed. You can also add an element anywhere in a list and remove an element from any index. The first element in a list is at index 0 just like arrays.</p>
     <p>Lists also differ from arrays in that you can have an array of any of the primitive types: int, double, or boolean, but you can only put objects in a list.   You can use the wrapper classes <c>Integer</c>, <c>Double</c>, and <c>Boolean</c> to wrap a primitive value in an object so that you can put it in a list. Java will also do this automatically for you if you try to add a primitive value to a list or set a primitive variable to an item of a list.  This is called <term>autoboxing</term> and <term>unboxing</term>.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary-1">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -51,7 +59,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-7">
             <title>Vocabulary Practice</title>
 
 <exercise label="ch10_17_match_1">
@@ -63,7 +71,7 @@
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>Declare an integer list named numList</premise><response>List&lt;Integer&gt; numList = null;</response></match><match order="2"><premise>Declare and create a list of strings named list1 </premise><response>List&lt;String&gt; list1 = new ArrayList&lt;String&gt;();</response></match><match order="3"><premise>Declare and create a list of integers named list1 </premise><response>List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();</response></match><match order="4"><premise>Get the first object in a list named list1</premise><response>list1.get(0);</response></match><match order="5"><premise>Get the last object in a list named list1</premise><response>list1.get(list1.size() - 1);</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434082008/cs-awesome-unit-7-vocabulary-flash-cards/" visual="https://quizlet.com/434082008/cs-awesome-unit-7-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-7">
             <title>Common Mistakes</title>
             <blockquote>
                 <p><ul>

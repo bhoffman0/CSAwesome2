@@ -3,6 +3,21 @@
 <section xml:id="javaIDEs">
   <title>Java Development Environments</title><introduction>
     
+    <idx>IDE</idx>
+ <idx>Integrated\ Development\ Environment</idx>
+ <idx>DrJava</idx>
+ <idx>compiler</idx>
+ <idx>replit</idx>
+ <idx>Eclipse</idx>
+ <idx>BlueJ</idx>
+ <idx>Netbeans</idx>
+ <idx>VSCode</idx>
+ <idx>github</idx>
+ <idx>JuiceMind</idx>
+ <idx>jGRASP</idx>
+ <idx>IntelliJ</idx>
+ <idx>PickCode</idx>
+
     <p>The tool that we use to compile a Java source file into a Java class file is called a <term>compiler</term>.  Most programmers use an <term>Integrated Development Environment</term> (IDE) that has the compiler built in and helps you write, compile, run, and debug programs.</p>
     <p>You can learn Java by just using the interactive coding panels called <term>Active Code</term> in this e-book. If you are logged in, the Active Code will remember your changes and even show you a history of your changes to the code if you click on Load History.</p>
     <p>However, it’s a good idea to also try a Java IDE to build code outside of this e-book, especially to try coding with user input which Active Code cannot do. There are many Java IDEs available. Here are some of most popular ones used by AP CSA teachers:</p>

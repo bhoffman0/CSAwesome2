@@ -3,6 +3,9 @@
 <section xml:id="climbClubB">
   <title>Free Response - Climbing Club B</title><introduction>
     
+    <idx>ClimbingClub</idx>
+ <idx>free\ response</idx>
+
     <p>The following is part b of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  A mountain climbing club maintains a record of the climbs that its members have made. Information about a
             climb includes the name of the mountain peak and the amount of time it took to reach the top. The information is
@@ -106,7 +109,7 @@ hikerClub.addClimb("Monadnock", 344);
             following entries in either of the orders shown below.</p>
     <image source="Unit4-Data-Collections/Figures/climbClubB.png" width="89%" alt="Picture of the list after the above code executes"/>
   </introduction>
-  <subsection>
+  <subsection xml:id="walk-through-the-example">
             <title>Walk Through the Example</title>
             <p><ol marker="1">
                 <li>
@@ -123,13 +126,13 @@ hikerClub.addClimb("Monadnock", 344);
                 </li>
             </ol></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-1">
             <title>How To Solve This</title>
             <p>Click to reveal the algorithm and problems to help you write your solution.</p>
             <subsection>
                 <p>Loop through the elements of <c>climbList</c> until you find the index where the new peakName is less than the peakName of the <c>ClimbInfo</c> object at the current index.  Insert the new <c>ClimbInfo</c> object there.</p>
             </subsection>
-            <exercises line="141" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'climbClubB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'fr_climbB_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/climbClubB.rst">
+            
 
     <exercise label="fr_climbB_1">
         <statement>
@@ -243,9 +246,9 @@ if (s1.compareTo(s2) &gt; 0){
 </choices>
 
     </exercise>
-            </exercises>
+            
         </subsection>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-15">
             <title>Try and Solve It</title>
             <p>Complete the method <c>addClimb</c> in the <c>ClimbingClub</c> class in the code below.  It should create a new <c>ClimbInfo</c> object and insert it in alphabetical order by <c>peakName</c> in the <c>climbList</c>.  The code includes a <c>main</c> method that will test the <c>addClimb</c> method.</p>
 
@@ -398,7 +401,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="video-one-way-to-code-the-solution-3">
             <title>Video - One way to code the solution</title>
             <p>There are many possible solutions to this problem.  The video below shows one solution.</p>
             

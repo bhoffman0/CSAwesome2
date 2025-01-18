@@ -4,9 +4,10 @@
   <title>Variables and Data Types</title><introduction>
     
   </introduction>
-  <subsection>
+  <subsection xml:id="what-is-a-variable">
             <title>What is a Variable?</title>
-            
+            <idx>variable</idx>
+
             
             <p>A <term>variable</term> is a memory location in the computer that can store a value that can change or vary while the program is running. The following <url href="https://youtu.be/pHgYlVjagmA" visual="https://youtu.be/pHgYlVjagmA">video</url> explains what a variable is and gives some real word examples of variables.</p>
 
@@ -14,9 +15,21 @@
                 <p>For example, when you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A pong game in <reference name="Scratch" refuri="http://scratch.mit.edu">Scratch</reference><target ids="scratch" names="scratch" refuri="http://scratch.mit.edu"/> with a score shown in the upper left.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="data-types">
             <title>Data Types</title>
-            
+            <idx>integer</idx>
+ <idx>int</idx>
+ <idx>double</idx>
+ <idx>boolean</idx>
+ <idx>String</idx>
+ <idx><h>variable</h><h>types</h></idx>
+ <idx><h>variable</h><h>primitive\ type</h></idx>
+ <idx><h>variable</h><h>object\ type</h></idx>
+ <idx><h>variable</h><h>integer</h></idx>
+ <idx><h>variable</h><h>floating\ point</h></idx>
+ <idx><h>variable</h><h>Boolean</h></idx>
+ <idx><h>variable</h><h>String</h></idx>
+
             
             <p>Every variable has a name and a data type that determines the kind of data it can hold. There are two types of variables in Java: <term>primitive variables</term> that hold values of primitive types like numbers and <term>reference variables</term> that hold a reference to a more complex object.  A reference is a way to find the object (like a UPS tracking number helps you find your package).</p>
             <p>The primitive types on the Advanced Placement Computer Science A exam are:</p>
@@ -284,9 +297,13 @@
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="declaring-variables-in-java">
             <title>Declaring Variables in Java</title>
-            
+            <idx>bit</idx>
+ <idx>binary\ digit</idx>
+ <idx>declare</idx>
+ <idx><h>variable</h><h>declare</h></idx>
+
             
             <p>To create a variable, you must tell Java its data type and its name.  Creating a variable is also called <term>declaring a variable</term>.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a <term>primitive variable</term> Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.</p>
             <p>Computers store all values using <term>bits</term> (binary digits).  A <term>bit</term> can represent two values and we usually say that the value of a bit is either 0 or 1. When you declare a variable, you have to tell Java the type of the variable because Java needs to know how many bits to use and how to represent the value.  The 3 different primitive types
@@ -454,7 +471,7 @@ public class RunestoneTests extends CodeTestHelper
         <exercise label="fillDecVar3">
             <statement>
     <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>            <p><term>Mixed up Code Problems</term></p>
-<exercise label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<exercise label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code declares and initializes variables for storing a number of visits, a person’s temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -467,9 +484,10 @@ public class RunestoneTests extends CodeTestHelper
 <choice correct="yes"><cline>boolean hasInsurance = false;</cline>
 </choice><choice><cline>Boolean hasInsurance = false; </cline>
 </choice></block></blocks></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="naming-variables">
             <title>Naming Variables</title>
-            
+            <idx><h>variable</h><h>names</h></idx>
+
             
             <p>While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores <c>_</c>. It must be all one word with no spaces.</p>
             <p>You can’t use any of the keywords or reserved words as variable names in Java (<c>for</c>, <c>if</c>, <c>class</c>, <c>static</c>, <c>int</c>, <c>double</c>, etc).  For a complete list of keywords and reserved words, see <url href="https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9" visual="https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9">https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9</url>.</p>
@@ -491,7 +509,9 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </note>
-            
+            <idx>camel\ case</idx>
+ <idx><h>variable</h><h>naming\ convention</h></idx>
+
             
             <p>The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example <c>gameScore</c>. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called <term>camel case</term> because it looks like the humps of a camel. Another option is to use underscore <c>_</c> to separate words, but you cannot have spaces in a variable name.</p>
 
@@ -541,7 +561,7 @@ public class RunestoneTests extends CodeTestHelper
         <exercise label="fillName2">
             <statement>
     <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="debugging-challenge-weather-report">
             <title>Debugging Challenge : Weather Report</title>
             <p>Debug the following code that reads out a weather report.
                 Make sure the data types match the values put into the variables.
@@ -598,7 +618,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-mad-libs">
             <title>Coding Challenge : Mad Libs</title>
             <p>Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.</p>
             <p>Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you’re done, try another team’s mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url> to read in input into the variables.</p>
@@ -666,7 +686,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-7">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -701,7 +721,7 @@ double gpa = 3.5;
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-6">
             <title>AP Practice</title>
 
     <exercise label="AP1-2-types">

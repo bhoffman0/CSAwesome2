@@ -3,10 +3,14 @@
 <section xml:id="topic-4-8-arraylists">
   <title>ArrayList and its Methods</title><introduction>
     
+    <idx>arraylist</idx>
+ <idx>ArrayList</idx>
+ <idx><h>arraylist</h><h>definition</h></idx>
+
     <figure align="left">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A couple of lists</caption>
-    <image source="Unit4-Data-Collections/Figures/lists.jpg" width="54%"/>
-  </figure>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A couple of lists</caption>
+      <image source="Unit4-Data-Collections/Figures/lists.jpg" width="54%"/>
+    </figure>
     <p>At the beginning of this unit, we learned about using arrays to hold collections of related
             data. However arrays are not very flexible. Most notably, the size of an array
             is established at the time of creation and cannot be changed. What if you don’t
@@ -33,9 +37,57 @@
                 <c>ArrayList</c>.</p>
         </note>
   </introduction>
-  <subsection>
+  <exercise label="qloopList">
+        <statement>
+
+        <p> Which of the following is a reason to use an ArrayList instead of an array?</p>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>An ArrayList will always use less memory than an array.</p>
+                </statement>
+                <feedback>
+                    <p>No, An ArrayList grows as needed and is typically bigger than the data put into it. If the underlying array in an ArrayList is full when adding in new data, it usually doubles in size.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>An ArrayList can store objects, but arrays can only store primitive types.</p>
+                </statement>
+                <feedback>
+                    <p>No, you can have an array of objects.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>An ArrayList has faster access to the last element than an array.</p>
+                </statement>
+                <feedback>
+                    <p>No, an ArrayList is implemented using an array so it has the same access time to any index as an array does.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>An ArrayList resizes itself as necessary as items are added, but an array does not.</p>
+                </statement>
+                <feedback>
+                    <p>An ArrayList is really a dynamic array (one that can grow or shrink as needed).</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
+  <subsection xml:id="import-java-util-arraylist">
             <title>import java.util.ArrayList</title>
-            
+            <idx>import</idx>
+ <idx>java.util</idx>
+
             
             <p>The <c>ArrayList</c> class is in the <c>java.util</c> package. A <term>package</term> is a set
                 or library of related classes. The classes we have used until now, such as
@@ -54,7 +106,9 @@
 // Import just the ArrayList class from java.util
 import java.util.ArrayList;
 </code></program>
-            
+            <idx>package</idx>
+ <idx><h>statement</h><h>import</h></idx>
+
             
             <p>After such an import statement, anywhere <c>ArrayList</c> is used as a class name
                 in the file it will be taken to mean <c>java.util.ArrayList</c>.</p>
@@ -122,7 +176,7 @@ import java.util.*;
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="declaring-and-creating-arraylists">
             <title>Declaring and Creating ArrayLists</title>
             <p>To declare an ArrayList use <c>ArrayList&lt;Type&gt; name</c> where <em>Type</em>, called a
                 <term>type parameter</term> is the type of objects you want to store in the ArrayList.
@@ -255,9 +309,14 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="arraylist-methods">
             <title>ArrayList Methods</title>
-            
+            <idx><h>arraylist</h><h>size</h></idx>
+ <idx><h>arraylist</h><h>add</h></idx>
+ <idx><h>arraylist</h><h>get</h></idx>
+ <idx><h>arraylist</h><h>set</h></idx>
+ <idx><h>arraylist</h><h>remove</h></idx>
+
             
             <p>The following are the <c>ArrayList</c> methods that you need to know for the AP CSA
                 exam. These are included on the <url href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" visual="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf">AP CSA Java Quick Reference Sheet</url> that you will receive
@@ -285,9 +344,10 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="size">
             <title><c>size()</c></title>
-            
+            <idx><h>arraylist</h><h>size</h></idx>
+
             
             <p>You can get the number of items in a <c>ArrayList</c>
                 using its <c>size()</c> method. The <c>ArrayList</c> starts out empty with a size
@@ -304,9 +364,10 @@ System.out.println( list.size() );
                     <c>ArrayList</c> is 0.</p>
             </note>
         </subsection>
-  <subsection>
+  <subsection xml:id="add-obj">
             <title><c>add(obj)</c></title>
-            
+            <idx><h>arraylist</h><h>add</h></idx>
+
             
             <p>You can add values to an <c>ArrayList</c> using the method <c>add(obj)</c> which will
                 add the object to the end of the list, just like you would join the end of the
@@ -376,7 +437,9 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            
+            <idx><h>list</h><h>autoboxing</h></idx>
+ <idx><h>list</h><h>unboxing</h></idx>
+
             
             <p>Primitive types like <c>int</c> and <c>double</c> are automatically converted to their corresponding wrapper classes  <c>Integer</c> and <c>Double</c> using autoboxing when added to an <c>ArrayList</c>. When you pull an <c>int</c> value out of a list of <c>Integers</c>
                 that is called <term>unboxing</term>.</p>
@@ -387,39 +450,388 @@ list.add(5); // this will work in all Java versions
 </code></program>
             <p>You can put any kind of objects into an <c>ArrayList</c>. Even instances of a class
                 that you wrote. For example, here is an <c>ArrayList</c> of <c>Student</c>s.</p>
+
+<exercise label="StudentArrayList">
+    <statement>
+            <p>An example of an <c>ArrayList</c> of <c>Student</c> objects. Add a new student with
+                your name and info in it.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+import java.util.*;
+
+public class StudentList
+{
+    // main method for testing
+    public static void main(String[] args)
+    {
+        ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
+        roster.add(new Student("Skyler", "skyler@sky.com", 123456));
+        roster.add(new Student("Ayanna", "ayanna@gmail.com", 789012));
+
+        System.out.println(roster);
+    }
+}
+
+class Student
+{
+    private String name;
+    private String email;
+    private int id;
+
+    public Student(String initName, String initEmail, int initId)
+    {
+        name = initName;
+        email = initEmail;
+        id = initId;
+    }
+
+    // toString() method
+    public String toString()
+    {
+        return id + ": " + name + ", " + email;
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("StudentList");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "[123456: Skyler, skyler@sky.com, 789012: Ayanna, ayanna@gmail.com]";
+
+        boolean passed = getResults(expect, output, "main()", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="add-index-obj">
             <title><c>add(index,obj)</c></title>
             <p>There are actually two different <c>add</c> methods in the <c>ArrayList</c> class. The
                 <c>add(obj)</c> method adds the passed object to the end of the list. The
                 <c>add(index,obj)</c> method adds the passed object at the passed index, but first
                 moves over any existing values to higher indices to make room for the new
                 object. The indices for an <c>ArrayList</c> start at <c>0</c> and end at the number of elements <c>- 1</c>.</p>
+
+<exercise label="listAddInt2">
+    <statement>
+            <p>What will the code below print out? Try figuring it out before running it.
+                Remember that <c>ArrayList</c>s start at index 0 and that the add(index,obj) always
+                has the index as the first argument.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+import java.util.*; // import all classes in this package.
+
+public class listAddInt2
+{
+    public static void main(String[] arts)
+    {
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+        list1.add(1);
+        System.out.println(list1);
+        // adds the number 2 to the end of the list
+        list1.add(2);
+        System.out.println(list1);
+        // This will add the number 3 at index 1
+        list1.add(1, 3);
+        System.out.println(list1);
+        // This will add the number 4 at index 1
+        list1.add(1, 4);
+        System.out.println(list1);
+        System.out.println(list1.size());
+    }
+}
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("listAddInt2");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "[1]\n[1, 2]\n[1, 3, 2]\n[1, 4, 3, 2]\n4\n";
+
+        boolean passed = getResults(expect, output, "main()", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
             <note>
                 <p><c>ArrayList</c>s like arrays start numbering their elements from 0.</p>
             </note>
+
+    <exercise label="qalAdd1">
+        <statement>
+
+            <p> What will print when the following code executes?</p>
+            <program language="java"><code>
+ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+list1.add(1);
+list1.add(2);
+list1.add(3);
+list1.add(2, 4);
+list1.add(5);
+System.out.println(list1);
+</code></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>[1, 2, 3, 4, 5]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if all the <code>add</code> method calls were <code>add(value)</code>, but at least one is not.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 4, 2, 3, 5]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if it was <code>add(1, 4)</code></p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>[1, 2, 4, 3, 5]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>add(2, 4)</code> will put the 4 at index 2, but first move the 3 to index 3.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 2, 4, 5]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if the <code>add(2, 4)</code> replaced what was at index 2, but it actually moves the value currently at index 2 to index 3.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
             <p>You can step through the code above by clicking on this <problematic refid="id2">|Java Visualizer 1|</problematic>.</p>
+
+    <exercise label="qalAdd2">
+        <statement>
+
+            <p> What will print when the following code executes?</p>
+            <program language="java"><code>
+ArrayList&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
+list1.add("Anaya");
+list1.add("Layla");
+list1.add("Sharrie");
+list1.add(1, "Sarah");
+System.out.println(list1);
+</code></program>
+
+        </statement>
+<choices>
+
+            <choice correct="yes">
+                <statement>
+                    <p>["Anaya", "Sarah", "Layla", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>add(1, "Sarah")</code> will move any current items to the right and then put "Sarah" at index 1.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>["Anaya", "Layla", "Sharrie", "Sarah"]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if the last one was <code>add("Sarah")</code></p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>["Sarah", "Anaya", "Layla", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if the last one was <code>add(0, "Sarah")</code></p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>["Anaya", "Layla", "Sarah", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if the last one was <code>add(2, "Sarah")</code></p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Java Visualizer</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="remove-index">
             <title><c>remove(index)</c></title>
-            
+            <idx><h>arraylist</h><h>removing\ an\ item</h></idx>
+
             
             <p>You can also remove values from an <c>ArrayList</c> using the <c>remove(index)</c>
                 method. It removes and returns the item at the given index. This will move all
                 the other items over in the underlying array and decrease the size of the
                 <c>ArrayList</c> by 1.</p>
+
+<exercise label="listRem">
+    <statement>
+            <p>What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+import java.util.*; // import all classes in this package.
+
+public class listRem
+{
+    public static void main(String[] arts)
+    {
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        System.out.println(list1);
+        list1.remove(1);
+        System.out.println(list1);
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("listRem");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "[1, 2, 3]\n[1, 3]";
+
+        boolean passed = getResults(expect, output, "main()", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
             <note>
                 <p>The <c>remove(int index)</c> method will remove the object at the given index
                     and shift left any values to the right of that index. It doesn’t remove the
                     object that matches the integer value given. In the example above it doesn’t
                     remove the value 1. It removes the value 2 at index 1.</p>
             </note>
+
+    <exercise label="qListRem">
+        <statement>
+
+            <p> What will print when the following code executes?</p>
+            <program language="java"><code>
+List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+list1.add(1);
+list1.add(2);
+list1.add(3);
+list1.remove(2);
+System.out.println(list1);
+</code></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>[2, 3]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if it was <code>remove(0)</code></p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 2, 3]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>remove</code> will remove a value from the list, so this can't be correct.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>[1, 2]</p>
+                </statement>
+                <feedback>
+                    <p>The 3 (at index 2) is removed</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 3]</p>
+                </statement>
+                <feedback>
+                    <p>This would be true if it was <code>remove(1)</code></p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">RemoveExample</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="get-index-and-set-index-obj">
             <title><c>get(index)</c> and <c>set(index, obj)</c></title>
-            
+            <idx><h>arraylist</h><h>getting\ an\ item</h></idx>
+ <idx><h>arraylist</h><h>setting\ an\ item</h></idx>
+
             
             <p>You can get the object at an index using <c>obj = listName.get(index)</c> and set
                 the object at an index using <c>listName.set(index,obj)</c>. Both methods require
@@ -429,10 +841,188 @@ list.add(5); // this will work in all Java versions
                 index operator that we use with arrays: <c>array[index]</c>. This is because
                 <c>ArrayList</c> is a class with methods, not a built in type with special support
                 in the language like arrays.</p>
+
+<exercise label="listGetSet">
+    <statement>
+            <p>Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+import java.util.*; // import all classes in this package.
+
+public class listGetSet
+{
+    public static void main(String[] args)
+    {
+        ArrayList&lt;String&gt; nameList = new ArrayList&lt;String&gt;();
+        nameList.add("Diego");
+        nameList.add("Grace");
+        nameList.add("Deja");
+        System.out.println(nameList);
+        System.out.println(nameList.get(0));
+        System.out.println(nameList.get(1));
+        nameList.set(1, "John");
+        System.out.println(nameList);
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("listGetSet");
+    }
+
+    @Test
+    public void test1()
+    {
+        boolean passed =
+                checkCodeContainsRegex("nameList.set(0, \"Your name\")", "nameList.set(0, ");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String output = getMethodOutput("main");
+        String searchString = "Deja";
+
+        boolean passed =
+                output.contains("\n" + searchString)
+                        || output.matches("\\s+" + searchString + "\\s+");
+
+        passed = getResults("true", "" + passed, "Prints last item in list (Deja)", passed);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+
+    <exercise label="qListRem1">
+        <statement>
+
+            <p> What will print when the following code executes?</p>
+            <program language="java"><code>
+List&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();
+list1.add(1);
+list1.add(2);
+list1.add(3);
+list1.set(2, 4);
+list1.add(2, 5);
+list1.add(6);
+System.out.println(list1);
+</code></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>[1, 2, 3, 4, 5]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>set</code> will replace the item at index 2 so this can not be right.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 2, 4, 5, 6]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>add</code> with an index of 2 and a value of 5 adds the 5 at index 2 not 3. Remember that the first index is 0.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>[1, 2, 5, 4, 6]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>set</code> will change the item at index 2 to 4.  The add of 5 at index 2 will move everything else to the right and insert 5.  The last <code>add</code> will be at the end of the list.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>[1, 5, 2, 4, 6]</p>
+                </statement>
+                <feedback>
+                    <p>The <code>add</code> with an index of 2 and a value of 5 adds the 5 at index 2 not 1. Remember that the first index is 0.</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example1</url>.</p>
+
+    <exercise label="qListRem2">
+        <statement>
+
+            <p> What will print when the following code executes?</p>
+            <program language="java"><code>
+List&lt;String&gt; list1 = new ArrayList&lt;String&gt;();
+list1.add("Anaya");
+list1.add("Layla");
+list1.add("Sharrie");
+list1.set(1, "Destini");
+list1.add(1, "Sarah");
+System.out.println(list1);
+</code></program>
+
+        </statement>
+<choices>
+
+            <choice>
+                <statement>
+                    <p>["Sarah", "Destini", "Layla", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p>Remember that the first index is 0 not 1.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>["Sarah", "Destini", "Anaya", "Layla", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p><code>set</code> changes the value and the first index is 0 not 1.</p>
+                </feedback>
+            </choice>
+
+            <choice>
+                <statement>
+                    <p>["Anaya", "Sarah", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p><code>add</code> at index 1 adds the new value at that index but moves right any existing values.</p>
+                </feedback>
+            </choice>
+
+            <choice correct="yes">
+                <statement>
+                    <p>["Anaya", "Sarah", "Destini", "Sharrie"]</p>
+                </statement>
+                <feedback>
+                    <p>The list is first ["Anaya", "Layla", "Sharrie"] and then changes to ["Anaya", Destini", "Sharrie"] and then to ["Anaya", "Sarah", "Destini", "Sharrie"]</p>
+                </feedback>
+            </choice>
+</choices>
+
+    </exercise>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(1,+%22Destini%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(1,+%22Destini%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example2</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="comparing-arrays-and-arraylists">
             <title>Comparing arrays and <c>ArrayList</c>s</title>
             <p>When do you use arrays and when do you use <c>ArrayList</c>s? Use an array when
                 you want to store several items of the same type and you know how many items
@@ -662,7 +1252,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-frq-digits">
             <title>Coding Challenge : FRQ Digits</title>
             <p>This coding challenge is based on the <url href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a" visual="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-frq-2017.pdf?course=ap-computer-science-a">2017 Free Response Question</url> part 1a on the 2017 AP CSA
                 exam. In this question, you are asked to write a constructor for a class called
@@ -822,7 +1412,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-49">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -879,52 +1469,4 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <exercises>
-    <exercise label="qloopList">
-        <statement>
-
-        <p> Which of the following is a reason to use an ArrayList instead of an array?</p>
-
-        </statement>
-<choices>
-
-            <choice>
-                <statement>
-                    <p>An ArrayList will always use less memory than an array.</p>
-                </statement>
-                <feedback>
-                    <p>No, An ArrayList grows as needed and is typically bigger than the data put into it. If the underlying array in an ArrayList is full when adding in new data, it usually doubles in size.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>An ArrayList can store objects, but arrays can only store primitive types.</p>
-                </statement>
-                <feedback>
-                    <p>No, you can have an array of objects.</p>
-                </feedback>
-            </choice>
-
-            <choice>
-                <statement>
-                    <p>An ArrayList has faster access to the last element than an array.</p>
-                </statement>
-                <feedback>
-                    <p>No, an ArrayList is implemented using an array so it has the same access time to any index as an array does.</p>
-                </feedback>
-            </choice>
-
-            <choice correct="yes">
-                <statement>
-                    <p>An ArrayList resizes itself as necessary as items are added, but an array does not.</p>
-                </statement>
-                <feedback>
-                    <p>An ArrayList is really a dynamic array (one that can grow or shrink as needed).</p>
-                </feedback>
-            </choice>
-</choices>
-
-    </exercise>
-  </exercises>
 </section>

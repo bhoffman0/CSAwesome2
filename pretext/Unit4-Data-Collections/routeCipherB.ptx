@@ -3,6 +3,9 @@
 <section xml:id="routeCipherB">
   <title>Free Response - Route Cipher B</title><introduction>
     
+    <idx>routecipherb</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2011.  It was question 4 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 4.</term>  In this question you will write two methods for a class <c>RouteCipher</c> that encrypts (puts into a coded form) a message by changing the order of the characters in the message. The route cipher fills a two-dimensional array with single-character substrings of the original message in row-major order, encrypting the message by retrieving the single-character substrings in column-major order.</p>
     <p>For example, the word “Surprise” can be encrypted using a 2-row, 4-column array as follows.</p>
@@ -75,7 +78,7 @@ public class RouteCipher
     <p>In this example, the method returns the string “Mte eati dmnitgAhA”.</p>
     <p>Assume that <c>fillBlock</c> and <c>encryptBlock</c> methods work as specified. Solutions that reimplement the functionality of one or both of these methods will not receive full credit.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-5">
             <title>How to Solve This</title>
 
 <exercise label="routecipherb_short">
@@ -87,7 +90,7 @@ public class RouteCipher
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
                 Click on the buttons to reveal the questions.</p>
             <p>To solve this problem, you have a message that you need to process and concatenate. Do you need to use a loop for this?</p>
-            <exercises line="105" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Type Problem&quot;', 'subchapter': 'routeCipherB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'FRQRouteCipherB_1.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherB.rst">
+            
 
     <exercise label="FRQRouteCipherB_1.5MC">
         <statement>
@@ -135,8 +138,8 @@ public class RouteCipher
 </choices>
 
     </exercise>
-            </exercises>
-            <exercises line="124" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal conditional for loop&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide conditional for loop&quot;', 'subchapter': 'routeCipherB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routecipherB_reg', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherB.rst">
+            
+            
 
     <exercise label="FRQRouteCipherBnorm_1">
         <statement>
@@ -325,39 +328,39 @@ public class RouteCipher
 </choices>
 
     </exercise>
-            </exercises>
+            
             <p>Below is a mixed up version of the correct solution hinted at by the previous questions.</p>
-            <exercises line="182" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Possible Solution Exercise&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Possible Solution Problem&quot;', 'subchapter': 'routeCipherB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routecipherB_pars_sol', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherB.rst">
-<exercise label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+            
+<exercise label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="1">
+<blocks><block order="8">
 <cline>public String encryptMessage(String message)</cline>
 <cline>{</cline>
 <cline>  String encryptedMessage = "";</cline>
 <cline>  int chunkSize = this.numRows * this.numCols;</cline>
-</block><block order="8">
+</block><block order="1">
 <cline>  while (message.length() &gt; 0)</cline>
 <cline>  {</cline>
-</block><block order="7">
+</block><block order="6">
 <cline>    if (chunkSize &gt; message.length())</cline>
 <cline>    {</cline>
 <cline>      chunkSize = message.length();</cline>
-</block><block order="2">
+</block><block order="5">
 <cline>    } // end if</cline>
-</block><block order="3">
+</block><block order="4">
 <cline>    fillBlock(message);</cline>
 <cline>    encryptedMessage += encryptBlock();</cline>
 <cline>    message = message.substring(chunkSize);</cline>
-</block><block order="6">
+</block><block order="3">
 <cline>  } // end while</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>  return encryptedMessage;</cline>
-</block><block order="4">
+</block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            </exercises>
+</block></blocks></exercise>            
         </subsection>
-  <subsection>
+  <subsection xml:id="solve-part-b-1">
             <title>Solve Part B</title>
             <p>Complete method <c>encryptMessage</c> below.</p>
 
@@ -485,12 +488,12 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
         </subsection>
-  <subsection>
+  <subsection xml:id="alternate-recursive-solution">
             <title>Alternate Recursive Solution</title>
             <p>Instead of using loops, this problem can be solved using recursion. If you are unfamiliar with recursion do not worry if the recursive solution does not make immediate sense.
                 It is not necessary that you understand recursion at this point however, once you have completed unit 10 which covers the basics of recursion, feel free to return to this
                 question to practice working through the recursive solution.</p>
-            <exercises line="351" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Recursion Exercises&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Recursion Exercises&quot;', 'subchapter': 'routeCipherB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routecipherB_recursive', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherB.rst">
+            
 
     <exercise label="FRQRouteCipherBrecur_1">
         <statement>
@@ -632,33 +635,33 @@ public class RunestoneTests extends CodeTestHelper
 </choices>
 
     </exercise>
-            </exercises>
+            
             <p>If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.</p>
-            <exercises line="397" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Recursion Solution Exercise&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Recursion Solution Exercise&quot;', 'subchapter': 'routeCipherB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routecipherB_rec??', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherB.rst">
-<exercise label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+            
+<exercise label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="6">
+<blocks><block order="4">
 <cline>public String encryptMessage(String message)</cline>
 <cline>{</cline>
-</block><block order="1">
+</block><block order="3">
 <cline>  if (message.length() == 0)</cline>
 <cline>  {</cline>
 <cline>      return "";</cline>
 <cline>  }</cline>
-</block><block order="2">
+</block><block order="6">
 <cline>  fillBlock(message);</cline>
-</block><block order="5">
+</block><block order="1">
 <cline>  if (message.length() &lt;= this.numRows * this.numCols)</cline>
 <cline>  {</cline>
 <cline>      return encryptBlock();</cline>
 <cline>  }</cline>
-</block><block order="4">
+</block><block order="2">
 <cline>  return (encryptBlock() +</cline>
 <cline>         encryptMessage(message.substring(</cline>
 <cline>            this.numRows * this.numCols)));</cline>
-</block><block order="3">
+</block><block order="5">
 <cline>} // end method</cline>
-</block></blocks></exercise>            </exercises>
+</block></blocks></exercise>            
         </subsection>
 </section>

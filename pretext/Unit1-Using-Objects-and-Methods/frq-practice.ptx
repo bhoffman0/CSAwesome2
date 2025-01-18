@@ -3,9 +3,12 @@
 <section xml:id="frq-practice">
   <title>Unit 1 Free Response Question (FRQ) Practice</title><introduction>
     
+    <idx>free\ response\ questions</idx>
+ <idx>FRQ</idx>
+
     <p>The AP CSA exam has 4 free response questions (FRQs) where you have to write Java code in 1.5 hours. The first FRQ is about Methods and Control Structures using expressions, methods, loops, and <c>if</c> statements. One part of this question usually involves expressions with math operators and calling methods of a given class. Although we have not yet covered enough to complete an FRQ, the following is an adaptation of the 2022 FRQ #1 part a about the points earned in a video game with 3 levels using the class <c>Level</c>. You will try the simplified version of the FRQ in this lesson using just expressions and method calls, and then you will do the complete FRQ part a in the next unit after you learn about <c>if</c> statements.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="frq-description-of-level-class">
             <title>FRQ Description of Level Class</title>
             <p>This question involves simulation of a single-player video game. In the game, a player attempts to complete three levels. A level in the game is represented by the <c>Level</c> class which keeps track of their points in a level and whether they have reached the end or goal of that level.</p>
             <program language="java"><code>
@@ -35,7 +38,7 @@ public class Level
 }
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="frq-practice1">
             <title>FRQ Practice</title>
             <p>In this simplified version of this FRQ, you will declare 3 <c>Level</c> objects for the 3 levels of the game and then call their <c>getPoints()</c> methods to calculate the score for the game. The score is calculated by adding the points from each level, but in this version, level 2 points are doubled and level 3 points are tripled.</p>
 

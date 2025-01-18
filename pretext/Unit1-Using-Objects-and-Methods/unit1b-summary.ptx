@@ -5,7 +5,7 @@
     
     <p>In this unit, you learned to use objects (variables of a class type)  that have been written for you in Java. You learned to use constructors and methods with and without parameters of objects, and built-in Java classes like String, Integer, Double, and Math.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -43,7 +43,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="java-keyword-summary-1">
             <title>Java Keyword Summary</title>
             <p><ul>
                 <li>
@@ -131,16 +131,16 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-1">
             <title>Vocabulary Practice</title>
 
 <exercise label="unit1b_vocab">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>a specific instance of a class with defined attributes</premise><response>object</response></match><match order="2"><premise>defines a new data type with instance variables and methods</premise><response>class</response></match><match order="3"><premise>define the behaviors or functions for objects</premise><response>methods</response></match><match order="4"><premise>code that is used to create new objects and initialize the object's attributes</premise><response>constructors</response></match><match order="5"><premise>the values or data passed to an object's method</premise><response>parameters</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434063730/cs-awesome-unit-2-vocabulary-flash-cards/" visual="https://quizlet.com/434063730/cs-awesome-unit-2-vocabulary-flash-cards/">Quizlet</url> embedded below.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe style="max-width:90%; margin-left:5%" src="https://quizlet.com/434063730/flashcards/embed?i=2cxqxx&amp;x=1jj1" height="500" width="100%" style="border:0"&gt;&lt;/iframe&gt;</raw>
+            <p>&lt;iframe style="max-width:90%; margin-left:5%" src="https://quizlet.com/434063730/flashcards/embed?i=2cxqxx&amp;x=1jj1" height="500" width="100%" style="border:0"&gt;&lt;/iframe&gt;</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-1">
             <title>Common Mistakes</title>
             <p><ul>
                 <li>

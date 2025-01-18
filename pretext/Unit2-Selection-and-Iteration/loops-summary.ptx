@@ -4,8 +4,16 @@
   <title>Unit Summary 2b Loops (2.7-2.12)</title><introduction>
     
     <p>In the second half of this unit, lessons 2.7-2.12, you learned about <term>loops</term>.  <term>Loops</term> are used to repeat a statement or block of statements inside a pair of curly braces.</p>
+    <idx>loop</idx>
+ <idx>body\ of\ a\ loop</idx>
+ <idx>while\ loop</idx>
+ <idx>nested\ loop</idx>
+ <idx>for\ loop</idx>
+ <idx>trace\ code</idx>
+ <idx>out\ of\ bounds\ error</idx>
+
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary-index-0-1">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -34,7 +42,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="java-keyword-summary-2">
             <title>Java Keyword Summary</title>
             <p><ul>
                 <li>
@@ -48,7 +56,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-2">
             <title>Vocabulary Practice</title>
 
 <exercise label="vocabloops1">
@@ -60,7 +68,7 @@
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>the statement or block of statements following a loop header that is repeated</premise><response>body of a loop</response></match><match order="2"><premise>a loop that never ends</premise><response>infinite loop</response></match><match order="3"><premise>writing down the values of variables for each execution of the loop body</premise><response>trace code</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/" visual="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-2">
             <title>Common Mistakes</title>
             <p><ul>
                 <li>

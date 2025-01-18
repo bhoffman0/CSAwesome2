@@ -3,6 +3,9 @@
 <section xml:id="topic-2-10-strings-loops">
   <title>Implementing String Algorithms</title><introduction>
     
+    <idx>string\ processing</idx>
+ <idx><h>string</h><h>loop</h></idx>
+
     <p>Loops are often used for <term>String Traversals</term> or <term>String Processing</term> algorithms where the code steps through a string character by character. In previous lessons, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings. There are standard string algorithms to:</p>
     <p>
       <ul>
@@ -43,7 +46,7 @@
         </ul>
     </p>
   </introduction>
-  <subsection>
+  <subsection xml:id="while-find-and-replace-loop">
             <title>While Find and Replace Loop</title>
             <p>A while loop can be used with the <c>String</c> <c>indexOf</c> method to find certain characters in a string and process them, usually using the <c>substring</c> method.</p>
             <program language="java"><code>
@@ -60,7 +63,7 @@ while (s.indexOf("a") &gt;= 0)
 }
 </code></program>
             <p>The example in the mixed up code below finds and removes all the letter a’s in a string. You can watch it in action in this <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20RemoveAs%20%7B%0A%20%20%20%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20String%20s%20%3D%20%22are%20apples%20tasty%20without%20a's%3F%22%3B%20%0A%20%20%20%20%20%20int%20index%20%3D%200%3B%0A%20%20%20%20%20%20System.out.println%28%22Original%20string%3A%20%22%20%2B%20s%29%3B%0A%0A%20%20%20%20%20%20//%20while%20there%20is%20an%20a%20in%20s%0A%20%20%20%20%20%20while%20%28s.indexOf%28%22a%22%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Find%20the%20next%20index%20for%20an%20a%0A%20%20%20%20%20%20%20%20%20index%20%3D%20s.indexOf%28%22a%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Remove%20the%20a%20at%20index%20by%20concatenating%20%0A%20%20%20%20%20%20%20%20%20//%20substring%20up%20to%20index%20and%20then%20rest%20of%20the%20string.%0A%20%20%20%20%20%20%20%20%20s%20%3D%20s.substring%280,index%29%20%2B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20s.substring%28index%2B1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%20//%20end%20loop%20%0A%20%20%0A%20%20%20%20%20%20System.out.println%28%22String%20with%20a's%20removed%3A%22%20%2B%20s%29%3B%0A%20%20%20%0A%20%20%20%7D%20//%20end%20method%0A%7D&amp;cumulative=false&amp;curInstr=23&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20RemoveAs%20%7B%0A%20%20%20%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20String%20s%20%3D%20%22are%20apples%20tasty%20without%20a's%3F%22%3B%20%0A%20%20%20%20%20%20int%20index%20%3D%200%3B%0A%20%20%20%20%20%20System.out.println%28%22Original%20string%3A%20%22%20%2B%20s%29%3B%0A%0A%20%20%20%20%20%20//%20while%20there%20is%20an%20a%20in%20s%0A%20%20%20%20%20%20while%20%28s.indexOf%28%22a%22%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Find%20the%20next%20index%20for%20an%20a%0A%20%20%20%20%20%20%20%20%20index%20%3D%20s.indexOf%28%22a%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Remove%20the%20a%20at%20index%20by%20concatenating%20%0A%20%20%20%20%20%20%20%20%20//%20substring%20up%20to%20index%20and%20then%20rest%20of%20the%20string.%0A%20%20%20%20%20%20%20%20%20s%20%3D%20s.substring%280,index%29%20%2B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20s.substring%28index%2B1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%20//%20end%20loop%20%0A%20%20%0A%20%20%20%20%20%20System.out.println%28%22String%20with%20a's%20removed%3A%22%20%2B%20s%29%3B%0A%20%20%20%0A%20%20%20%7D%20//%20end%20method%0A%7D&amp;cumulative=false&amp;curInstr=23&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url>.</p>
-<exercise label="removeA" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<exercise label="removeA" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program removes all the a’s from a string, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="4">
@@ -166,7 +169,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="for-loops-reverse-string">
             <title>For Loops: Reverse String</title>
             <p><c>for</c> loops can also be used to process strings, especially in situations where you know you will visit every character.</p>
             <note>
@@ -183,7 +186,7 @@ for(int i=0; i &lt; s.length(); i++)
    ...
 }
 </code></program>
-<exercise label="countEs" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<exercise label="countEs" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following main method has the correct code to count the number of e’s in a string, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="7">
@@ -275,7 +278,7 @@ public class ReverseString
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-string-replacement-cats-and-dogs">
             <title>Coding Challenge : String Replacement Cats and Dogs</title>
             <image source="Unit2-Selection-and-Iteration/Figures/catordog.jpg" width="27%" alt="Cat or Dog"/>
             <p>Are you a cat person or a dog person? The code below prints a nice message about cats, but if you’re a dog person, you might not agree.</p>
@@ -373,7 +376,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-16">
             <title>Summary</title>
             <p><ul>
                 <li>
