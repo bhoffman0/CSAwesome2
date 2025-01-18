@@ -7,14 +7,21 @@
     </xsl:copy>
   </xsl:template>
 
-  <!-- Remove xml:id attribute from all elements except 'section' -->
-  <xsl:template match="@xml:id[not(parent::section)]"/>
+<!-- Remove xml:id attribute from all elements except 'section' and 'subsection' -->
+<xsl:template match="@xml:id[not(parent::section or parent::subsection)]"/>
 
-  <!-- Explicitly keep xml:id on 'section' elements -->
-  <xsl:template match="section/@xml:id">
+<!-- Explicitly keep xml:id on 'section' elements -->
+<xsl:template match="section/@xml:id">
     <xsl:copy-of select="."/>
-  </xsl:template>
+</xsl:template>
 
+<!-- Explicitly keep xml:id on 'subsection' elements -->
+<xsl:template match="subsection/@xml:id">
+    <xsl:copy-of select="."/>
+</xsl:template>
+
+<!-- I think this is messing up things by adding an <exercises> tag and moving exercises to the end -->
+<!-- 
   <xsl:template match="section[exercise]">
     <xsl:copy>
       <xsl:apply-templates select="*[not(name() = 'exercise')]" />
@@ -23,6 +30,7 @@
       </exercises>
     </xsl:copy>
   </xsl:template>
+-->
 
   <xsl:template match="video[@youtube]">
     <!-- <video xml:id="{@youtube}" youtube="{@youtube}"/> -->
