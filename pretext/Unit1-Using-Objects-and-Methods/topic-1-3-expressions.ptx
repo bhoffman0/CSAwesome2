@@ -585,21 +585,21 @@ System.out.println("fun ");
 System.out.print("and cool!");
 </code></program>
             <p>What is printed as a result of executing the code segment?</p>
-</statement><choices><choice><statement id="AP1-3-1_opt_a">            <p>&lt;pre&gt;Java is fun and cool!</pre></p>
+</statement><choices><choice><statement id="AP1-3-1_opt_a">            <p><pre>Java is fun and cool!</pre></p>
 </statement><feedback id="AP1-3-1_opt_a">
             <p>Notice the println in line 2.</p>
-</feedback></choice><choice><statement id="AP1-3-1_opt_b">            <p>&lt;pre&gt;
+</feedback></choice><choice><statement id="AP1-3-1_opt_b">            <p><pre>
 Java isfun
 and cool!
 </pre></p>
 </statement><feedback id="AP1-3-1_opt_b">
             <p>Notice the space after is in the first line.</p>
-</feedback></choice><choice><statement id="AP1-3-1_opt_c">            <p>&lt;pre&gt;Java is
+</feedback></choice><choice><statement id="AP1-3-1_opt_c">            <p><pre>Java is
 fun
 and cool!  </pre></p>
 </statement><feedback id="AP1-3-1_opt_c">
             <p>Notice that the first line is a print, not println.</p>
-</feedback></choice><choice correct="yes"><statement id="AP1-3-1_opt_d">            <p>&lt;pre&gt;Java is fun
+</feedback></choice><choice correct="yes"><statement id="AP1-3-1_opt_d">            <p><pre>Java is fun
 and cool!  </pre></p>
 </statement><feedback id="AP1-3-1_opt_d">
             <p>Correct! Pay attention to which lines are print or println.</p>

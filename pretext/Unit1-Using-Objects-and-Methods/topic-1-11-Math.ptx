@@ -757,7 +757,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
                     <p>How many times would you need to run it to guess your combination correctly? Let’s have the code compute the number of permutations possible in your combination lock using <term>Math.pow(number,exponent)</term>. For example, if you had to spin the dial twice on your combination lock where each spin can choose a digit from 0-9 (10 digits), there are 10<superscript>2</superscript> possible permutations. In Java, this would be written as <term>Math.pow(10,2)</term> which means 10 to the power of 2. If you start listing all the permutations possible, you can tell that there are 10<superscript>2</superscript> or 100 possible permutations for a 2 spins on a dial lock from 0-9.</p>
                 </li>
             </ol></p>
-            <p>&lt;pre&gt;
+            <p><pre>
 00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 ...
