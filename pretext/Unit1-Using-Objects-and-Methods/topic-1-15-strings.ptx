@@ -3,38 +3,187 @@
 <section xml:id="topic-1-15-strings">
   <title>Strings</title><introduction>
     
+    <idx>String</idx>
+ <idx>object reference</idx>
+ <idx>reference</idx>
+ <idx><h>String</h><h>definition</h></idx>
+
     <p><term>Strings</term> in Java are objects of the <c>String</c> class. Strings represent sequences of characters and are used to store text like names, addresses, or messages.  The <c>String</c> class is part of the <c>java.lang package</c> which is available by default in all Java programs.</p>
     <note>
             <p>Class names in Java, like <c>String</c>, begin with a capital letter.  All primitive types: <c>int</c>, <c>double</c>, and <c>boolean</c>, begin with a lowercase letter.  This is one easy way to tell the difference between primitive types and class types.</p>
         </note>
+</introduction>
+
+<subsection>
+    <title>String References</title>
+    
+    
+ <exercise label="lcsb1">
+    <statement>
+        <p>Run the following code.  What does it print?</p>
+    </statement>
+    <program interactive="activecode" language="java">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String greeting = null;
+        System.out.println(greeting);
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "null";
+        boolean passed = getResults(expect, output, "Expected output from main", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+
+
     <p>The code above declares an object variable named <c>greeting</c> and sets the value of greeting to the Java keyword <c>null</c> to show that it doesn’t refer to any object yet.  So <c>System.out.println(greeting);</c> will print <c>null</c>.</p>
     <p>Object variables <term>refer</term> to objects in memory.  A reference is a way to find the actual object, like adding a contact to your phone lets you reach someone without knowing exactly where they are.  The value of greeting is null since the string object has not been created yet.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Initial value for an object reference</caption>
-    <image source="Unit1-Using-Objects-and-Methods/Figures/greeting.png" width="9%"/>
-  </figure>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Initial value for an object reference</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/greeting.png" width="9%"/>
+    </figure>
+
+    <idx><h>String</h><h>creation</h></idx>
+
     <p>In Java there are two ways to create an object of the <c>String</c> class.  You can use the <c>new</c> keyword followed by a space and then the class constructor and then in parentheses you can include values used to initialize the fields of the object.  This is the standard way to create a new object of a class in Java.</p>
     <program language="java">
-    <code>
+      <code>
 String greeting = new String("Hello");
 </code>
-  </program>
+    </program>
+    <idx>String literal</idx>
+ <idx><h>String</h><h>literal</h></idx>
+
     <p>In Java you can also use just a <term>string literal</term>, which is a set of characters enclosed in double quotes (<c>"</c>), to create a <c>String</c> object.</p>
     <program language="java">
-    <code>
+      <code>
 String greeting = "Hello";
 </code>
-  </program>
+    </program>
     <p>In both cases an object of the <c>String</c> class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object.</p>
+      <exercise label="lcsbnew">
+    <statement>
+        <p>The code below creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstName and lastName, one using a string literal and the other using new, and print them out with the greetings.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class StringTest
+{
+    public static void main(String[] args)
+    {
+        String greeting1 = "Hello!";
+        String greeting2 = new String("Welcome!");
+        System.out.println(greeting1);
+        System.out.println(greeting2);
+    }
+}
+
+ </code><tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     @Test
+     public void testChangedCode()
+     {
+         String origCode =
+                 "public class StringTest {      public static void main(String[] args)      {"
+                         + " String greeting1 = \"Hello!\";        String greeting2 = new"
+                         + " String(\"Welcome!\"); System.out.println(greeting1);"
+                         + " System.out.println(greeting2); }    }";
+         boolean changed = codeChanged(origCode);
+         assertTrue(changed);
+     }
+ }
+        </tests>
+    </program>
+</exercise>
+
+  <exercise label="lcsb2">
+    <statement>
+        <p>Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print?</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Test2
+{
+    public static void main(String[] args)
+    {
+        String greeting = "Hello";
+        Class currClass = greeting.getClass();
+        System.out.println(currClass);
+        Class parentClass = currClass.getSuperclass();
+        System.out.println(parentClass);
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "class java.lang.String\nclass java.lang.Object";
+        boolean passed = getResults(expect, output, "Expected output from main", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+
+    <idx>parent class</idx>
+ <idx>superclass</idx>
+ <idx>inheritance</idx>
+ <idx>package</idx>
+ <idx>java.lang</idx>
+ <idx><h>package</h><h>java.lang</h></idx>
+
     <p>The code above will first print class <c>java.lang.String</c> since <c>greeting</c> was created by the <c>String</c> class.  The full name for the <c>String</c> class is <c>java.lang.String</c>.  The <c>java.lang</c> part is the <term>package</term> name.  Every class in the Java language is in a package and the standard classes like <c>String</c> are in the <c>java.lang</c> package.  Every object in Java knows the class that created it.  Also, every class knows its <term>parent</term> class.  Yes, a class can have a parent class, just as people have parents.  But, in Java a class can only have one parent.  A class can <c>inherit</c> object fields and methods from a parent class, just like you might inherit musical ability from a parent.  The last print statement will print <c>class java.lang.Object</c> because the parent class (<term>superclass</term>) of the String class is the Object class.  All classes in Java inherit from the Object class at some point in their ancestry.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Object variable of type String with a reference to a String object which has a reference to the String class which has a reference to the Object class.</caption>
-    <image source="Unit1-Using-Objects-and-Methods/Figures/stringObject.png" width="89%"/>
-  </figure>
-  </introduction>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Object variable of type String with a reference to a String object which has a reference to the String class which has a reference to the Object class.</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/stringObject.png" width="89%"/>
+    </figure>
+  </subsection>
+ 
+  
   <subsection>
             <title>String Operators - Concatenation</title>
-            
+            <idx><h>String</h><h>append</h></idx>
+
             
             <p><c>String</c>s can be added to each other to create a new string using the <c>+</c>
                 or <c>+=</c> operator . This is also called <term>concatenation</term>. You
@@ -151,7 +300,9 @@ s1 = s1 + s2 + "z";
 </choices>
 
     </exercise>
-            
+           <idx>toString</idx>
+ <idx><h>Object</h><h>toString</h></idx>
+
             
             <p>You can even add other items to a <c>String</c> using the <c>+</c> operator. Primitive
                 values like <c>int</c> and <c>boolean</c> will be converted to a <c>String</c> automatically when concatenated with a <c>String</c>.  Any other objects concatenated with a <c>String</c> will be converted to <c>String</c> using their
@@ -213,7 +364,13 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>String Index and Length</title>
-            
+            <idx><h>String</h><h>length</h></idx>
+ <idx><h>String</h><h>substring</h></idx>
+ <idx><h>String</h><h>indexOf</h></idx>
+ <idx><h>String</h><h>compareTo</h></idx>
+ <idx><h>String</h><h>equals</h></idx>
+ <idx><h>String</h><h>methods</h></idx>
+
             
             <p>A string holds characters in a sequence.  Each character is at a position or <term>index</term> which starts with 0 as shown below.  An <term>index</term> is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A string with the position (index) shown above each character</caption><image source="Unit1-Using-Objects-and-Methods/Figures/stringIndicies.png" width="89%" alt="a string with the position (index) shown above each character"/></figure>
@@ -221,7 +378,7 @@ public class RunestoneTests extends CodeTestHelper
                 <p>The first character in a string is at index 0 and the last characters is at <term>length</term> -1. Attempting to access indices outside this range will result in an <term>IndexOutOfBoundsException</term>.</p>
             </note>
         </subsection>
-  <subsection>
+  <subsection xml:id="string-methods-subsection">
             <title>String Methods</title>
             <p>The <c>String</c> class includes many methods to process strings. For the AP CSA exam, you only need to know how to use the following String methods. Their descriptions are included in the <url href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" visual="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf">AP CSA Java Quick Reference Sheet</url> that you get during the exam so you don’t have to memorize these.</p>
             <blockquote>
@@ -1012,124 +1169,24 @@ String s3 = s2.toLowerCase();
             <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
 &lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</raw>
         </subsection>
-  <exercises>
-    <exercise label="lcsb1">
-    <statement>
-        <p>Run the following code.  What does it print?</p>
+  <subsection>
+            <title>Review/Practice for Unit 1 Part b on Using Objects</title>
+            <p>This lesson ends the section on Unit 1 part b on Using Objects.
+                You can now do the following review and practice lessons at the end of the unit
+                and College Board Progress Checks in the AP Classroom.</p>
 
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String greeting = null;
-        System.out.println(greeting);
-    }
-}
-</code><tests>
-import static org.junit.Assert.*;
 
-import org.junit.*;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void testMain() throws IOException
-    {
-        String output = getMethodOutput("main");
-        String expect = "null";
-        boolean passed = getResults(expect, output, "Expected output from main", true);
-        assertTrue(passed);
-    }
-}
-        </tests>
-    </program>
-</exercise>
-    <exercise label="lcsbnew">
-    <statement>
-        <p>The code below creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstName and lastName, one using a string literal and the other using new, and print them out with the greetings.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class StringTest
-{
-    public static void main(String[] args)
-    {
-        String greeting1 = "Hello!";
-        String greeting2 = new String("Welcome!");
-        System.out.println(greeting1);
-        System.out.println(greeting2);
-    }
-}
-
- </code><tests>
- import static org.junit.Assert.*;
-
- import org.junit.*;
-
- import java.io.*;
-
- public class RunestoneTests extends CodeTestHelper
- {
-     @Test
-     public void testChangedCode()
-     {
-         String origCode =
-                 "public class StringTest {      public static void main(String[] args)      {"
-                         + " String greeting1 = \"Hello!\";        String greeting2 = new"
-                         + " String(\"Welcome!\"); System.out.println(greeting1);"
-                         + " System.out.println(greeting2); }    }";
-         boolean changed = codeChanged(origCode);
-         assertTrue(changed);
-     }
- }
-        </tests>
-    </program>
-</exercise>
-    <exercise label="lcsb2">
-    <statement>
-        <p>Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print?</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test2
-{
-    public static void main(String[] args)
-    {
-        String greeting = "Hello";
-        Class currClass = greeting.getClass();
-        System.out.println(currClass);
-        Class parentClass = currClass.getSuperclass();
-        System.out.println(parentClass);
-    }
-}
-
-</code><tests>
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void testMain() throws IOException
-    {
-        String output = getMethodOutput("main");
-        String expect = "class java.lang.String\nclass java.lang.Object";
-        boolean passed = getResults(expect, output, "Expected output from main", true);
-        assertTrue(passed);
-    }
-}
-        </tests>
-    </program>
-</exercise>
-  </exercises>
+<p><ul>
+ <li><url href="unit1b-summary.html" visual="unit1b-summary.html">Unit 1b Summary</url></li>
+ <li><url href="unit1b-practice-mixed-code.html" visual="unit1b-practice-mixed-code.html">Unit 1b Practice Mixed Code</url></li>
+ <li><url href="unit1b-practice-mixed-code-toggle.html" visual="unit1b-practice-mixed-code-toggle.html">Unit 1b Practice Mixed Code Toggle</url></li>
+ <li><url href="unit1b-practice-coding.html" visual="unit1b-practice-coding.html">Unit 1b Practice Coding</url></li>
+ <li><url href="Exercises-objects.html" visual="Exercises-objects.html">Exercises on Objects</url></li>
+ <li><url href="practice-test-objects.html" visual="practice-test-objects.html">Practice Test on Objects</url></li>
+ <li><url href="JavaSwingGUIs.html" visual="JavaSwingGUIs.html">Optional Java Swing GUIs</url></li>
+ <li><url href="frq-practice.html" visual="frq-practice.html">Unit 1 FRQ Practice</url></li>
+    </ul>
+</p>
+     
+   </subsection>
 </section>

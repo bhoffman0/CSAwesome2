@@ -3,6 +3,9 @@
 <section xml:id="RandomStringChooserB">
   <title>RandomStringChooser - Part B</title><introduction>
     
+    <idx>RandomLetterChooser</idx>
+ <idx>free\ response</idx>
+
     <p><term>Part b.</term>   The following partially completed <c>RandomLetterChooser</c> class is a subclass of the <c>RandomStringChooser</c> class.  You will write the constructor for the <c>RandomLetterChooser</c> class.</p>
     <program language="java">
       <code>
@@ -52,11 +55,11 @@ public RandomLetterChooser(String str)
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-6">
             <title>Try and Solve It</title>
             <p>Complete the <c>RandomLetterChooser</c> constructor below Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you have more than one).</p>
             <p>The code below has a main method for testing.  Write the constructor for the <c>RandomLetterChooser</c> class and use the main method to test it.</p>
-            <DataFileNode line="71" runestone_options="{'hide': None, 'subchapter': 'RandomStringChooserB', 'chapter': 'FreeResponse', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'RandomStringChooser.java', 'qnumber': 'Q-1', 'cols': 55, 'rows': 20, 'filecontent': 'import java.util.List;\nimport java.util.ArrayList;\n\npublic class RandomStringChooser\n{\n    /* field */\n    private List&amp;lt;String&amp;gt; words;\n\n    /* constructor */\n    public RandomStringChooser(String[] wordArray)\n    {\n        words = new ArrayList&amp;lt;String&amp;gt;();\n\n        for (String singleWord : wordArray)\n        {\n            words.add(singleWord);\n        }\n    }\n\n    /* getNext method */\n    public String getNext()\n    {\n        int pos = 0;\n\n        if (words.size() &gt; 0)\n        {\n            pos = (int) (Math.random() * words.size());\n\n            return (String) words.remove(pos);\n        }\n        return &quot;NONE&quot;;\n     }\n}\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '7.2.1.1'}" source="/mnt/c/users/hoffmanb/Documents/Github/csawesome2/_fixed_sources/FreeResponse/RandomStringChooserB.rst">
+            <DataFileNode line="71" runestone_options="{'hide': None, 'subchapter': 'RandomStringChooserB', 'chapter': 'FreeResponse', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'RandomStringChooser.java', 'qnumber': 'Q-1', 'cols': 55, 'rows': 20, 'filecontent': 'import java.util.List;\nimport java.util.ArrayList;\n\npublic class RandomStringChooser\n{\n    /* field */\n    private List&amp;lt;String&amp;gt; words;\n\n    /* constructor */\n    public RandomStringChooser(String[] wordArray)\n    {\n        words = new ArrayList&amp;lt;String&amp;gt;();\n\n        for (String singleWord : wordArray)\n        {\n            words.add(singleWord);\n        }\n    }\n\n    /* getNext method */\n    public String getNext()\n    {\n        int pos = 0;\n\n        if (words.size() &gt; 0)\n        {\n            pos = (int) (Math.random() * words.size());\n\n            return (String) words.remove(pos);\n        }\n        return &quot;NONE&quot;;\n     }\n}\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '7.2.1.1'}" source="/mnt/c/Users/hoffmanb/Documents/GitHub/csawesome2/_fixed_sources/FreeResponse/RandomStringChooserB.rst">
             </DataFileNode>
 
 <exercise label="RandomStrChooserB1">

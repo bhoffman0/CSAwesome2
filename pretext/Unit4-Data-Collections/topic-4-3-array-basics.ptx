@@ -3,6 +3,10 @@
 <section xml:id="topic-4-3-array-basics">
   <title>Array Creation and Access</title><introduction>
     
+    <idx>array</idx>
+ <idx>index</idx>
+ <idx><h>array</h><h>index</h></idx>
+
     <p>To keep track of 10 exam scores, we could declare 10 separate variables:  int score1, score2, score3, … , score10;
             But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple <term>data structure</term> for a collection of related data that makes this easier. In many block-based programming languages like App Inventor and Scratch, this is called a list. In Java and many programming languages, this is called an <term>array</term>.</p>
     <p>An <term>array</term> is a block of memory that stores a collection of data items (<term>elements</term>) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don’t need to name each one. Instead you use the array name and a number (called an <term>index</term>) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students.</p>
@@ -10,17 +14,23 @@
     <video youtube="G7aF-OuLfl4"/>
     <p>An array is like a row of small lockers, except that you can’t cram lots of stuff into it. You can only store one value at each locker.</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A row of lockers</caption>
-    <image source="Unit4-Data-Collections/Figures/rowLockers.jpg" width="71%"/>
-  </figure>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A row of lockers</caption>
+      <image source="Unit4-Data-Collections/Figures/rowLockers.jpg" width="71%"/>
+    </figure>
     <p>You can store a value in an array using an <term>index</term> (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index.</p>
     <p>Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. This is similar to how Strings are indexed in Java – the first character is at index 0.  If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!</p>
     <figure align="center">
-    <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor lists and Java arrays</caption>
-    <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="100%"/>
-  </figure>
+      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor lists and Java arrays</caption>
+      <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="100%"/>
+    </figure>
   </introduction>
-  <subsection>
+  <exercise label="arrayAnalogy">
+    <statement>
+        <p> Can you think of another example of something that is like an array (like a row of lockers)?</p>
+
+    </statement>
+</exercise>
+  <subsection xml:id="declaring-and-creating-an-array">
             <title>Declaring and Creating an Array</title>
             <p>When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, <c>int[] scores</c> means we have an array called scores that contains <c>int</c> values.</p>
             <program language="java"><code>
@@ -35,7 +45,7 @@ int[] scores;
 
     <video youtube="IbPFjw1FNkE"/>
             </subsection>
-  <subsection>
+  <subsection xml:id="using-new-to-create-arrays">
             <title>Using new to Create Arrays</title>
             <p>To create an empty array after declaring the variable, use the <term>new</term> keyword with the type and the size of the array (the number of elements it can hold). This will actually create the array in memory.  You can do the declaration and the creation all in one step, see the String array <c>names</c> below. The size of an array is set at the time of creation and cannot be changed after that.</p>
             <program language="java"><code>
@@ -150,7 +160,8 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            
+            <idx><h>array</h><h>initialization</h></idx>
+
             
             <note>
                 <p>Array elements are initialized to default values like the following.</p>
@@ -171,7 +182,7 @@ public class RunestoneTests extends CodeTestHelper
             </note>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two 5 element arrays with their values set to the default values for integer and object arrays.</caption><image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="initializer-lists-to-create-arrays">
             <title>Initializer Lists to Create Arrays</title>
             <p>Another way to create an array is to use an <term>initializer list</term>. You can initialize (set) the values in the array to a list of values in curly braces (<c>{}</c>) when you create it, like below.  In this case you don’t specify the size of the array, it will be determined from the number of values that you specify.</p>
             <program language="java"><code>
@@ -183,10 +194,12 @@ String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
             <p>Watch the following <url href="https://youtu.be/T-YZvVvPOac" visual="https://youtu.be/T-YZvVvPOac">video</url> which shows an array of String objects with a physical model of Java memory.</p>
 
     <video youtube="T-YZvVvPOac"/>
-                
+                <idx>dot-notation</idx>
+ <idx><h>array</h><h>length</h></idx>
+
             
         </subsection>
-  <subsection>
+  <subsection xml:id="array-length-index-2">
             <title>Array length</title>
             <p>Arrays know their <term>length</term> (how many elements they can store). The length (or size) of an array is established at the time of creation and cannot be changed. The length of an array can be accessed through the <c>length</c>  attribute, which is a public final instance variable that cannot be changed after the array is created. You can use <term>dot-notation</term> to access the instance variable, for example <c>arrayName.length</c>.  Try the following.</p>
 
@@ -280,7 +293,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="access-and-modify-array-values">
             <title>Access and Modify Array Values</title>
             <p>To access the items in an array, we use an <term>indexed array variable</term> which is the array name and the index inside of square bracket [ ]. Remember that an <term>index</term> is a number that indicates the position of an item in a list, starting at 0. Here’s a comparison of App Inventor, AP CSP Pseudocode, and Java array access.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Access to App Inventor lists and Java arrays</caption><image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="100%"/></figure>
@@ -445,7 +458,7 @@ public class ImageEx
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-countries-array">
             <title>Coding Challenge : Countries Array</title>
             <image source="Unit4-Data-Collections/array-images/US.jpg" width="36%"/>
             <p>In this challenge, you will create a guide to different countries using arrays.</p>
@@ -612,7 +625,7 @@ public class Countries
         </tests>
     </program>
         </subsection>
-  <subsection>
+  <subsection xml:id="design-an-array-of-objects-for-your-community">
             <title>Design an Array of Objects for your Community</title>
             <p>So far, we have seen arrays of ints and Strings, but we can create an array of any type.
                 For example, the following program creates an array of Turtle objects.
@@ -777,7 +790,7 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void testprint()
     {
-        boolean passed = checkCodeContains("call to print() of array element 0", "[0].print");
+        boolean passed = checkCodeContains("call to print of array element 0", "[0].print");
         assertTrue(passed);
     }
 
@@ -807,7 +820,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-45">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -830,7 +843,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-25">
             <title>AP Practice</title>
             <p>We will see in the next lesson that the index of an array is often a variable named <c>i</c>
                 that is used in loops to traverse an array.
@@ -947,18 +960,10 @@ int[] array2 = mystery(array1, 1, 20);
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="arrays-game">
             <title>Arrays Game</title>
             <p>Try the game below to practice arrays. Click on <term>Arrays</term> and click on the element of the * array that would be printed out by the given code. If you’re stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
-&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</raw>
+            <p>&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
+&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</p>
         </subsection>
-  <exercises>
-    <exercise label="arrayAnalogy">
-    <statement>
-        <p> Can you think of another example of something that is like an array (like a row of lockers)?</p>
-
-    </statement>
-</exercise>
-  </exercises>
 </section>

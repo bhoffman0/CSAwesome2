@@ -3,8 +3,15 @@
 <section xml:id="topic-2-5-compound-ifs">
   <title>Compound Boolean Expressions</title><introduction>
     
+    <idx>and</idx>
+ <idx>or</idx>
+ <idx>truth\ table</idx>
+ <idx><h>logical</h><h>and</h></idx>
+ <idx><h>logical</h><h>or</h></idx>
+ <idx>compound\ boolean</idx>
+
   </introduction>
-  <subsection>
+  <subsection xml:id="and-or-and-not-index-0">
             <title>And (&amp;&amp;), Or (||), and Not (!)</title>
             <p>What if you want two things to be true before the body of the conditional is executed?  Use <c>&amp;&amp;</c> as a logical <term>and</term> to join two Boolean expressions and the body of the condition will only be executed only if both are true.</p>
 
@@ -230,7 +237,7 @@ public class RunestoneTests extends CodeTestHelper
                 <p>In Java, ! will be executed before &amp;&amp;, and &amp;&amp; will be executed before ||, unless there are parentheses. Anything inside parentheses is executed first.</p>
             </note>
         </subsection>
-  <subsection>
+  <subsection xml:id="truth-tables">
             <title>Truth Tables</title>
             <p>The following table (also called a <term>truth table</term>) shows the result for <c>P &amp;&amp; Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>. An expression involving logical operators like <c>P &amp;&amp; Q</c> evaluates to a <c>boolean</c> value, <c>true</c> or <c>false</c>. As you can see below the result of <c>P &amp;&amp; Q</c> is only <c>true</c> if both <c>P</c> and <c>Q</c> are <c>true</c>.</p>
             <table><tabular>
@@ -490,9 +497,11 @@ else
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="short-circuit-evaluation">
             <title>Short Circuit Evaluation</title>
-            
+            <idx>short\ circuit\ evaluation</idx>
+ <idx><h>conditional</h><h>short\ circuit\ evaluation</h></idx>
+
             
             <p>Both <c>&amp;&amp;</c> and <c>||</c> use <term>short circuit evaluation</term>.  That means that the second expression (on the right of the operator) isn’t necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:</p>
             <p><ul>
@@ -600,7 +609,7 @@ else
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-truth-tables-pogil">
             <title>Coding Challenge : Truth Tables POGIL</title>
             <p>We encourage you to do this activity as a <problematic refid="id1">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Explore the following problems with your group:</p>
@@ -704,7 +713,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-22">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -734,7 +743,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-15">
             <title>AP Practice</title>
 
     <exercise label="AP-compound-bools">
@@ -778,10 +787,10 @@ if (x % 2 == 0 &amp;&amp; y % 2 == 0 || x &gt; y)
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="boolean-game">
             <title>Boolean Game</title>
             <p>Try the game below written to practice Booleans. Click on <term>Booleans</term>, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
-&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</raw>
+            <p>&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
+&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</p>
         </subsection>
 </section>

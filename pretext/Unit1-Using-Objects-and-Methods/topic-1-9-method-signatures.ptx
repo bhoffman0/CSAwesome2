@@ -6,7 +6,8 @@
   </introduction>
   <subsection>
             <title>Methods and Procedural Abstraction</title>
-            
+            <idx>method</idx>
+            <idx>procedural abstraction</idx>
             
             <p>Up until now, all of our code has been in the main method, but complex programs are made up of many methods. When faced with a large problem, we can break it down into smaller subproblems and solve each subproblem separately. Each of these subproblems can be a method.</p>
             <p>A <term>method</term> is a named block of code that performs a task when it is called. (A <term>block</term> of code is any section of code that is enclosed in curly braces like <c>{ }</c>.) These named blocks of code go by many names in different programming languages: functions, procedures, subroutines, etc. In Java they are called methods, as in a method of doing something. In this unit, you will learn how to use methods written by other programmers. In latter units, you will learn how to write your own methods.</p>
@@ -14,7 +15,10 @@
         </subsection>
   <subsection>
             <title>Method Calls</title>
-            
+
+            <idx>method call</idx>
+            <idx>flow of control</idx>
+            <idx>tracing</idx>
             
             <p>We divide up a program into multiple methods in order to organize the code to reduce its complexity and to avoid repetition of code. For example, the song “Old MacDonald Had a Farm” has a lot of repetition. Instead of writing the same code over and over in order to print the song, we can write methods that contain the repeated code and run them when needed. Click on all the repeated code in the song below and then we will learn how it can be replaced with methods.</p>
 
@@ -40,7 +44,9 @@ methodName();
 </code></program>
             <p>The Java <url href="https://pythontutor.com/render.html#code=public%20class%20OldMacDonaldSong%0A%7B%0A%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20they%20had%20a%20cow.%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22With%20a%20moo%20moo%20here%20and%20a%20moo%20moo%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22Here%20a%20moo,%20there%20a%20moo,%20everywhere%20moo%20moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=public%20class%20OldMacDonaldSong%0A%7B%0A%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20they%20had%20a%20cow.%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22With%20a%20moo%20moo%20here%20and%20a%20moo%20moo%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22Here%20a%20moo,%20there%20a%20moo,%20everywhere%20moo%20moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> below shows how a song can be divided up into methods. Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run. Execution in Java always begins in the <c>main</c> method in the current class. Then, the <term>flow of control</term> skips from method to method as they are called. Notice that when a method ends, it returns to the line right after the method call. The <c>main()</c> method below calls the <c>intro()</c> method which calls the <c>chorus()</c> method. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus “E-I-E-I-O”, and then returns back to the method that called it. Just like variable names, method names should be descriptive of what the method does. The methods can be in any order, but usually programmers put the main method at the end after all the methods that it uses are defined.</p>
 
-<program interactive="codelens" language="java">
+<exercise label="codelensSong1">
+<statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run.</p></statement>
+<program interactive="codelens" language="java" label="codeLens2" xml:id="codelensid2">
     <code>
 public class OldMacDonaldSong
 {
@@ -67,6 +73,7 @@ public class OldMacDonaldSong
 }
     </code>
 </program>
+</exercise>
             <note>
                 <p>A method call interrupts the sequential execution of statements, causing the program to first execute the statements in the method before continuing. Once the last statement in the method has been executed or a return statement is executed, the flow of control is returned to the point immediately following where the method was called.</p>
             </note>
@@ -234,7 +241,11 @@ public class Song
         </subsection>
   <subsection>
             <title>Methods Signature, Parameters, Arguments</title>
-            
+            <idx>method\ signature</idx>
+<idx>parameter</idx>
+<idx>argument</idx>
+<idx>return\ type</idx>
+<idx>parameter\ list</idx>
             
             <p>When using methods in a library or API, we can look up the <term>method signature</term> (or <term>method header</term>) in its documentation.  A <term>method header</term> is the first line of a method that includes the method name, the return type, and the parameter list of parameters and their data types. The <term>return type</term> is the type of value that the method returns; in this lesson, we’ll just look at <term>void</term> return types which means the method doesn’t return anything. The <term>method signature</term> is the method header without the return type, just the method name and its parameter list.  The <term>parameter list</term> is a list of variables and their data types that are passed to the method when it is called. The parameter list is enclosed in parentheses and separated by commas; it can be empty with no parameters although the parentheses must be present.</p>
             <p>For example, the <c>PrintStream</c> class documented in <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url> contains the following method signatures for <c>println</c> that we use in <c>System.out.println()</c>:</p>
@@ -317,7 +328,9 @@ public static void main(String[] args)
 </code></program>
             <p>Click on the next button below to step through this new version of the code in the <url href="https://pythontutor.com/render.html#code=%20%20%20%20public%20class%20OldMacDonaldSong%0A%20%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20verse%28String%20animal,%20String%20sound%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20on%20this%20farm,%20they%20had%20a%20%22%20%2B%20animal%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22With%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22%20here%20and%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%2B%20%22%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Here%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20there%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20everywhere%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22cow%22,%20%22moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22duck%22,%20%22quack%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=34&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=%20%20%20%20public%20class%20OldMacDonaldSong%0A%20%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20verse%28String%20animal,%20String%20sound%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20on%20this%20farm,%20they%20had%20a%20%22%20%2B%20animal%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22With%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22%20here%20and%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%2B%20%22%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Here%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20there%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20everywhere%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22cow%22,%20%22moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22duck%22,%20%22quack%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=34&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url> and watch how the argument are saved in the parameter variables with each call to the <c>verse</c> method.</p>
 
-<program interactive="codelens" language="java">
+<exercise label="codelensSong2">
+<statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run and watch how the arguments are passed into the parameter variables.</p></statement>
+<program interactive="codelens" language="java" label="codeLens3" xml:id="codelensid3">
     <code>
 public class OldMacDonaldSong
 {
@@ -354,6 +367,7 @@ public class OldMacDonaldSong
 }
     </code>
 </program>
+</exercise>
             <p>Let’s try adding another verse to the song with a goose that honks.</p>
 
 <exercise label="OldMacDonaldSong2">
@@ -452,7 +466,7 @@ verse("cow", "moo");
         </subsection>
   <subsection>
             <title>Overloading</title>
-            
+            <index entries="['single',\ 'overloading',\ 'index-3',\ '',\ None]" inline="False"/>
             
             <p>Methods are said to be <term>overloaded</term> when there are multiple methods with the same name but different signatures with a different number or types of parameters. For example, the <c>println()</c> method in the <c>PrintStream</c> class documented in <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>
                 is overloaded with different parameter types. The method <c>println()</c> with no parameters prints a newline, the method <c>println(String x)</c> prints the given string followed by a newline, the method <c>println(int x)</c> prints the given int number followed by a newline, etc. The compiler determines which method to call based on the number and types of arguments passed to the method.</p>

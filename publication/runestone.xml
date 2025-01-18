@@ -7,12 +7,7 @@
   <numbering>
     <divisions chapter-start="0"/>
   </numbering>
-  <!-- This turns off showing solutions after an exercise. -->
-  <common>
-    <exercise-divisional solution="no"/>
-    <exercise-inline solution="no"/>
-    <project solution="no"/>
-  </common>
+  
   <html>
     <platform host="runestone"/>
     <!-- knowled checkpoints interfere with ActiveCode problems -->

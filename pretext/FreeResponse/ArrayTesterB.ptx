@@ -3,6 +3,9 @@
 <section xml:id="ArrayTesterB">
   <title>ArrayTester - Part B</title><introduction>
     
+    <idx>ArrayTester</idx>
+ <idx>free\ response</idx>
+
     <p><term>Part b.</term>   Write the static method <c>isLatin</c>, which returns <c>true</c> if a given two-dimensional square array is a <c>Latin square</c>, and otherwise, returns false.</p>
     <p>A two-dimensional square array of integers is a Latin square if the following conditions are true.
             1) The first row has no duplicate values.
@@ -19,7 +22,7 @@
             you wrote in part (a). You must use <c>getColumn</c>, <c>hasAllValues</c>, and <c>containsDuplicates</c>
             appropriately to receive full credit.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-1">
             <title>Try and Solve It</title>
 
 <exercise label="isLatinTwo">

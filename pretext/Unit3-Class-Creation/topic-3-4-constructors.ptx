@@ -3,6 +3,8 @@
 <section xml:id="topic-3-4-constructors">
   <title>Writing Constructors</title><introduction>
     
+    <idx><h>class</h><h>constructor</h></idx>
+
     <p>In Unit 1, we learned how to create objects by calling <term>constructors</term>. To
             review, a call to a constructor consists of the word <c>new</c> followed by the
             name of the class being constructed, and then an argument list in parentheses.
@@ -19,7 +21,7 @@ Person p = new Person("Pat", "pat@gmail.com", "123-456-7890");
     </program>
     <p>Now it’s time to learn to write our own constructors.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="constructor-signature">
             <title>Constructor Signature</title>
             <p>In the source code for a class, constructors are usually written after the
                 instance variables and before any methods.</p>
@@ -48,7 +50,7 @@ public class ClassName
                 <p>Constructors must have the same name as the class! Constructors have no return type!</p>
             </note>
         </subsection>
-  <subsection>
+  <subsection xml:id="the-job-of-a-constructor">
             <title>The Job of a Constructor</title>
             <p>The job of a constructor is to set the initial values for the object’s instance
                 variables to useful values. But what does “useful” mean? Sometimes we describe
@@ -366,7 +368,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-student-class">
             <title>Coding Challenge : Student Class</title>
             <p>We encourage you to work in pairs for this challenge to create a Student class with constructors.</p>
             <p><ol marker="1">
@@ -495,7 +497,7 @@ public class Student
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="design-a-class-for-your-community-1">
             <title>Design a Class for your Community</title>
             <p>In the last lesson, you came up with a class of your own choice relevant to you or your community. In this lesson, you will add a constructor to this class.</p>
             <p><ol marker="1">
@@ -628,7 +630,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-30">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -664,7 +666,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-20">
             <title>AP Practice</title>
 
     <exercise label="AP-constructor1">

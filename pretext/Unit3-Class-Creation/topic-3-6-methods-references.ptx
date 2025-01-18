@@ -5,7 +5,7 @@
     
     <p>Programs often consist of many classes that interact with each other. Objects of one class can be instance variables of another class. Objects can be passed as arguments to methods and returned from methods. This is a powerful feature of object-oriented programming that allows for complex interactions between objects.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="objects-as-instance-variables">
             <title>Objects as Instance Variables</title>
             <p>Classes can have complex instance variables that use other classes. For example, a <c>Person</c> class could have an instance variable for the address which can be an object with its own instance variables of street, city, state, and zipcode. This is a <term>has-a</term> relationship where a Person <title_reference>has an</title_reference> Address inside it.</p>
             <program language="java"><code>
@@ -27,7 +27,7 @@ class Person
 </code></program>
             <p>In Java, usually each class is saved in its own file with the same name as the class, so the Person class would be in Person.java and the Address class would be in Address.java. If the files are in the same folder, they can be compiled together so that they can interact. In Runestone, we cannot have separate files, so we put them in 1 coding area. In Runestone, only the class that has the main method can be public; the other classes can leave out the public keyword.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="objects-as-arguments">
             <title>Objects as Arguments</title>
             <p>Java uses <term>Call by Value</term> when it passes arguments to methods and constructors. This means that a copy of the value in the argument is saved in the parameter variable. If the parameter variable changes its value inside the method, the original value outside the method is not changed. With primitive types like int and double, the argument value is copied into the parameter variable as expected. However, if you pass in an argument that holds a reference to an object, like a String or Person or Address or Turtle objects, the reference is copied, not the whole object. Java was designed this way to avoid copying large objects from method to method.</p>
             <p>When a copy of a reference is passed in and saved in the parameter variable, the parameter and the argument are then <term>aliases</term>, both refering to the same object. Remember when we discussed reference aliases with turtle objects who are set equal to one another.</p>
@@ -134,7 +134,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="copying-parameter-objects">
             <title>Copying Parameter Objects</title>
             <p>The <c>Person</c> class above has an <c>Address</c> object as an instance variable. We found that changing the Address object outside the class also changed the address in the Person object. This is because the Address object is mutable, and the reference to the object is passed in as an argument to the constructor.</p>
             <p>When you pass object references as parameters to
@@ -342,7 +342,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="parameter-of-the-same-class-type">
             <title>Parameter of the Same Class Type</title>
             <p>Methods cannot access the private data and methods of a parameter that holds a reference to an object unless the parameter is the same type as the method’s enclosing class. In the following code, the <c>Person</c> class can access the <c>Adress</c> instance variable of another Person object because they are of the same class type, but it cannot access the <c>city</c> instance variable of an <c>Address</c> object directly because it is private and not of the same class.</p>
             <program language="java"><code>
@@ -519,7 +519,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="returning-objects">
             <title>Returning Objects</title>
             <p>Methods can also return objects. Remember that methods can only return the value of a variable. If the return value is of a primitive type like int or double, only a copy of the value is returned; the original variable cannot be changed. But when the return expression evaluates to an object reference, the reference is returned, not a reference to a new copy of the object. This means that there can be multiple references to the same object. If the object is mutable, then any changes made to the object through one reference will be seen through any other references to the object.</p>
             <p>For example, the <c>Person</c> class can have a <c>getAddress</c> method that returns the <c>Address</c> instance variable which is an object. Since <c>Address</c> has set methods which make it mutable, the caller can change the Address object through the reference returned by the method.</p>
@@ -671,7 +671,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-friends-and-birthdays">
             <title>Coding Challenge : Friends and Birthdays</title>
             <image source="Unit3-Class-Creation/Figures/cake.jpg" width="23%" alt="Birthday cake"/>
             <p>In this challenge, you will create a class <c>Friend</c> which keeps track of your friends’ names and birthdays using another class called <c>Date</c>.</p>
@@ -783,7 +783,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-32">
             <title>Summary</title>
             <p><ul>
                 <li>

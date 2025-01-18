@@ -3,13 +3,19 @@
 <section xml:id="topic-4-14-searching">
   <title>Searching Algorithms</title><introduction>
     
+    <idx>sequential\ search</idx>
+ <idx>binary\ search</idx>
+ <idx>recursion</idx>
+ <idx><h>search</h><h>sequential</h></idx>
+ <idx><h>search</h><h>binary</h></idx>
+
     <p>Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called <term>searching</term>.  For the AP CSA exam you will need to know both <term>linear (sequential) search</term> and <term>binary search</term> algorithms.</p>
     <p>The following video is also on YouTube at <url href="https://youtu.be/DHLCXXX1OtE" visual="https://youtu.be/DHLCXXX1OtE">https://youtu.be/DHLCXXX1OtE</url>.  It introduces the concept of searching including sequential search and binary search.</p>
     <video youtube="DHLCXXX1OtE"/>
     <p>
       <ul>
             <li>
-                <p><term>Sequential or Linear search</term> typically starts at the first element in an array or ArrayList and looks through all the items one by one until it either finds the desired value and then it returns the index it found the value at or if it searches the entire array or list without finding the value it returns -1.</p>
+                <p><term>Linear search</term> is a standard algorithm that checks each element in order until the desired value is found or all elements in the array or <c>ArrayList</c> have been checked. Linear search algorithms can begin the search process from either end of the array or <c>ArrayList</c>.</p>
             </li>
             <li>
                 <p><term>Binary search</term> can only be used on data that has been <term>sorted</term> or stored in order.  It checks the middle of the data to see if that middle value is less than, equal, or greater than the desired value and then based on the results of that it narrows the search. It cuts the search space in half each time.</p>
@@ -18,11 +24,15 @@
     </p>
     <p>If binary search requires the values in an array or list to be sorted, how can you do that?  There are many sorting algorithms which are covered in the next lesson.</p>
   </introduction>
-  <subsection>
-            <title>Sequential Search</title>
+  <subsection xml:id="linear-search">
+            <title>Linear Search</title>
+            <idx>sequential\ search</idx>
+ <idx>linear\ search</idx>
+ <idx><h>search</h><h>sequential</h></idx>
+ <idx><h>search</h><h>linear</h></idx>
+
             
-            
-            <p>Sequential or linear search can be used to find a value in <em>unsorted</em> data. It usually starts at the first element and walks through the array or list until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn’t find the value in the array or list. Click on <em>Show CodeLens</em> below to see linear search in action.</p>
+            <p>Linear or Sequential search can be used to find a value in <em>unsorted</em> data. It usually starts at the first element and walks through the array or <c>ArrayList</c> until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn’t find the value in the array or list. Click on <em>Show CodeLens</em> below to see linear search in action.</p>
 
 <exercise label="seqSearch">
     <statement>
@@ -309,16 +319,98 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="linear-search-with-2d-arrays">
+            <title>Linear Search with 2D Arrays</title>
+            <p>We can also apply the linear search algorithm to data in a 2D array.  We can loop through each row of the 2D array and then apply the linear search algorithm to each row to find an element.  The code below demonstrates this with a 2D array of integers.  Click on the Code Lens button to step through this code. Then, change it to work with a 2D array of Strings. Remember to use the <c>equals</c> method to compare Strings.</p>
+
+<exercise label="linearSearch2DArrays">
+    <statement>
+            <p>What will the following code print? Click on the Code Lens button to step through this code. Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints. Remember to use the <c>equals</c> method to compare Strings.</p>
+
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Search
+{
+    public static boolean search(int[][] array, int value)
+    {
+        boolean found = false;
+        for (int row = 0; row &lt; array.length; row++)
+        {
+            for (int col = 0; col &lt; array[0].length; col++)
+            {
+                if (array[row][col] == value)
+                {
+                     found = true;
+                }
+            }
+        }
+        return found;
+    }
+
+    public static void main(String[] args)
+    {
+        int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
+        System.out.println(search(matrix, 10));
+        System.out.println(search(matrix, 11));
+
+        // Comment out the code above, and try these:
+        // String[][] matrix2 = { {"a","b","c"},{"d","e","f"} };
+        // System.out.println(search(matrix2, "b"));
+
+    }
+}
+
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Search");
+    }
+
+    @Test
+    public void test2()
+    {
+        String[][] array = { {"a", "b", "c"}, {"d", "e", "f"}, {"g", "h", "i"}, {"j", "k", "l"}};
+        String value = "b";
+        Object[] args = {array, value};
+
+        String output = getMethodOutput("search", args);
+        String expect = "true";
+
+        boolean passed =
+                getResults(
+                        expect,
+                        output,
+                        "Testing search({"
+                            + " {\"a\",\"b\",\"c\"},{\"d\",\"e\",\"f\"},{\"g\",\"h\",\"i\"},{\"j\",\"k\",\"l\""
+                            + " } }, \"b\")");
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</exercise>
+        </subsection>
+  <subsection xml:id="binary-search">
             <title>Binary Search</title>
-            
+            <idx>binary\ search</idx>
+ <idx><h>search</h><h>binary</h></idx>
+
             
             <p>How do you search for something in a phone book or dictionary that is in alphabetical or numerical order? If you’re looking for something beginning with M or on page 100 in a 200 page book, you wouldn’t want to start with page 1. You would probably start looking somewhere in the middle of the book. This is the idea behind <term>binary search</term>.</p>
             <p>If your array or list is already in order (sorted), binary search will on average find an element or determine that it is missing much more quickly than a linear search. But binary search can only be used if the data is sorted.</p>
             <p>Binary search keeps dividing the sorted search space into half. It compares a target value to the value in the middle of a range of indices.  If the value isn’t found it looks again in either the left or right half of the current range. Each time through the loop it eliminates half the values in the search area until either the value is found or there is no more data to look at.  See the animation below from <url href="https://github.com/AlvaroIsrael/binary-search" visual="https://github.com/AlvaroIsrael/binary-search">https://github.com/AlvaroIsrael/binary-search</url>:</p>
             <figure align="center"><image source="Unit4-Data-Collections/Figures/binary-search-small.gif" width="89%"/></figure>
             <p>Binary search calculates the middle index as <c>left + right / 2</c> where left starts out at 0 and right starts out at the array length - 1 (the index of the last element). Remember that integer division gives an integer result so 2.5 becomes 2. It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one. If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index. It also stops when left is greater than right which indicates that the value wasn’t found and it returns -1.</p>
-            <p>The code for <c>binarySearch</c> below is from the AP CSA course description. A recursive version of this algorithm will be covered in Unit 10.</p>
+            <p>The code for <c>binarySearch</c> below is from the AP CSA course description. A recursive version of this algorithm will be covered in lesson 4.17.</p>
 
 <exercise label="binSearch">
     <statement>
@@ -480,7 +572,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="runtimes">
             <title>Runtimes</title>
             <p>How do we choose between two algorithms that solve the same problem? They usually have different characteristics and <term>runtimes</term> which measures how fast they run. For the searching problem, it depends on your data.</p>
             <p>Binary search is much faster than linear search, especially on large data sets, but it can only be used on sorted data. Often with runtimes, computer scientist think about the <term>worst case behavior</term>. With searching, the worst case is usually if you cannot find the item. With linear search, you would have to go through the whole array before realizing that it is not there, but binary search is much faster even in this case because it eliminates half the data set in each step. We can measure an informal runtime by just counting the number of steps.</p>
@@ -748,13 +840,13 @@ III. The array must not contain duplicate values.
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-search-runtimes">
             <title>Coding Challenge : Search Runtimes</title>
-            <p>Let’s go back to the spellchecker that we created in Unit 6. Here is a version of the spellchecker below that reads the dictionary file into an <c>ArrayList</c>. The advantage of using an <c>ArrayList</c> instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.</p>
-            <p>In Unit 6, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
+            <p>Let’s go back to the spellchecker that we created with arrays. Here is a version of the spellchecker below that reads the dictionary file into an <c>ArrayList</c>. The advantage of using an <c>ArrayList</c> instead of an array for the dictionary is that we do not need to know or declare the size of the dictionary in advance.</p>
+            <p>In the spellchecker challenge, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
             <p>Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use <c>size</c> and <c>get(i)</c> instead of [] to get an element in the <c>ArrayList</c> dictionary at index i. You will need to use the <c>equals</c> and <c>compareTo</c> methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.</p>
 
-<exercise label="challenge7-5-search-coding">
+<exercise label="challenge-search-coding">
     <statement>
             <p>This spellchecker uses an ArrayList for the dictionary. Write a <c>linearSearch(word)</c> and a <c>binarySearch(word)</c> method. Use <c>get(i)</c>, <c>size()</c>, <c>equals</c>, and <c>compareTo</c>. Return a count of the number of words checked.</p>
 
@@ -862,30 +954,36 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
             <p>Run your code with the following test cases and record the runtime for each word in this <url href="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" visual="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing">Google document</url> (do File/Make a Copy) also seen below to record your answers.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="71%" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</raw>
+            <p>&lt;iframe height="71%" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
             <p>What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.</p>
 
-<exercise label="challenge7-5-binary-search">
+<exercise label="challenge-binary-search">
     <statement>
             <p> After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
 
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-40">
             <title>Summary</title>
             <p><ul>
                 <li>
-                    <p>There are standard algorithms for searching.</p>
+                    <p>(AP 4.14.A.1) <term>Linear search algorithms</term> are standard algorithms that check each element in order until the desired value is found or all elements in the array or <c>ArrayList</c> have been checked. Linear search algorithms can begin the search process from either end of the array or <c>ArrayList</c>.</p>
                 </li>
                 <li>
-                    <p>Sequential/linear search algorithms check each element in order until the desired value is found or all elements in the array or ArrayList have been checked.</p>
+                    <p>(AP 4.14.A.2) When applying linear search algorithms to 2D arrays, each row must be accessed then linear search applied to each row of the 2D array.</p>
                 </li>
                 <li>
-                    <p>The binary search algorithm starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList in each iteration until the desired value is found or all elements have been eliminated.</p>
+                    <p>The <term>binary search</term> algorithm starts at the middle of a sorted array or <c>ArrayList</c> and eliminates half of the array or <c>ArrayList</c> in each iteration until the desired value is found or all elements have been eliminated.</p>
                 </li>
                 <li>
-                    <p>Data must be in sorted order to use the binary search algorithm. This algorithm will be covered more in Unit 10.</p>
+                    <p>(AP 4.17.B.1 preview) Data must be in sorted order to use the binary search algorithm.</p>
+                </li>
+                <li>
+                    <p>(AP 4.17.B.2 preview) Binary search is typically more efficient than linear search.</p>
+                </li>
+                <li>
+                    <p>(AP 4.17.B.3 preview) The binary search algorithm can be written either iteratively or recursively. (The recursive solution will be presented in lesson 4.17).</p>
                 </li>
                 <li>
                     <p>Informal run-time comparisons of program code segments can be made using statement execution counts.</p>

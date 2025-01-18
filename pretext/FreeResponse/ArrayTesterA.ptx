@@ -3,6 +3,9 @@
 <section xml:id="ArrayTesterA">
   <title>ArrayTester - Part A</title><introduction>
     
+    <idx>ArrayTester</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2018.  It was question 4 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 4.</term> This question involves reasoning about arrays of integers. You will write two static methods, both of which are in a class named <c>ArrayTester</c>.</p>
     <program language="java">
@@ -57,7 +60,7 @@ public class ArrayTester
     <p>When the code segment has completed execution, the variable result <c>result</c> will have the following contents.
             <c>result: {1, 4, 7, 5}</c></p>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it">
             <title>Try and Solve It</title>
 
 <exercise label="isLatin">

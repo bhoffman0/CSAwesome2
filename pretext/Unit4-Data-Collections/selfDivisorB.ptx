@@ -3,10 +3,13 @@
 <section xml:id="selfDivisorB">
   <title>Free Response - Self Divisor B</title><introduction>
     
+    <idx>self\ divisor</idx>
+ <idx>free\ response</idx>
+
     <p>The following is part b of a free response question from 2007.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  A positive integer is called a “self-divisor” if every decimal digit of the number is a divisor of the number, that is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a self-divisor because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0 digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
     <p><term>Part b.</term>  Write method firstNumSelfDivisors, which takes two positive integers as parameters, representing a start value and a number of values. Method firstNumSelfDivisors returns an array of size num that contains the first num self-divisors that are greater than or equal to start.
-            For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote in a Unit 4.10.</p>
+            For example, the call firstNumSelfDivisors(10, 3) should return an array containing the values 11, 12, and 15, because the first three self-divisors that are greater than or equal to 10 are 11, 12, and 15.  Be sure to use the method isSelfDivisor in your answer which we wrote previously.</p>
     <program language="java">
       <code>
 public class SelfDivisor
@@ -68,14 +71,14 @@ public class SelfDivisor
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-problem-6">
             <title>How to solve this problem</title>
             <p>Click to reveal the algorithm and problems to help you write your solution.</p>
             <subsection>
                 <p>The first thing to do is try to solve the example by hand.  The question tells us to return an array of size num so we need to create an array of that size.  We need
                     to loop as long as we haven’t found 3 self divisors and try the current value.  If the current value is a self-divisor then we add it to the array.  When we have found 3 self divisors then return the array. We will need to keep track of the number of self divisors that we have found.  We would try 10 (false), 11 (true so add to the array), 12 (true so add to the array), 13 (false), 14 (false), 15 (true so add to the array and return the array since we found 3).</p>
             </subsection>
-            <exercises line="91" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'selfDivisorB', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'frsdb_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/selfDivisorB.rst">
+            
 
     <exercise label="frsdb_1">
         <statement>
@@ -170,7 +173,7 @@ public class SelfDivisor
 </choices>
 
     </exercise>
-            </exercises>
+            
             <p>Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15, and then 22, 24, 33, 36, and 44.</p>
 
 <exercise label="lcfrsdb">
@@ -275,7 +278,7 @@ public class SelfDivisor
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="video-one-way-to-code-the-solution-8">
             <title>Video - One way to code the solution</title>
             <p>There are many possible solutions to this problem.  The video below (at <url href="https://www.youtube.com/watch?v=2VBz-pX1Xos" visual="https://www.youtube.com/watch?v=2VBz-pX1Xos">https://www.youtube.com/watch?v=2VBz-pX1Xos</url> ) shows one solution.</p>
 

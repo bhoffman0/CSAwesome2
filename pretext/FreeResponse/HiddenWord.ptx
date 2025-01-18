@@ -3,6 +3,9 @@
 <section xml:id="HiddenWord">
   <title>Hidden Word - Write Class</title><introduction>
     
+    <idx>Hidden\ Word</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2015.  It was question 2 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 2.</term> Consider a guessing game in which a player tries to guess a hidden word. The hidden word contains only capital
             letters and has a length known to the player. A guess contains only capital letters and has the same length as the
@@ -25,7 +28,7 @@ HiddenWord puzzle = new HiddenWord("HARPS");
       <image source="FreeResponse/Figures/HiddenWordExamples.png" width="100%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-2">
             <title>Try and Solve It</title>
             <p>Write the complete <c>HiddenWord</c> class, including any necessary instance variables, its constructor, and the method,
                 <c>getHint</c>, described above. You may assume that the length of the guess is the same as the length of

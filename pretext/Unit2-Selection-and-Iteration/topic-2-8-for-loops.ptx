@@ -3,6 +3,9 @@
 <section xml:id="topic-2-8-for-loops">
   <title>For Loops</title><introduction>
     
+    <idx>for\ loop</idx>
+ <idx><h>loop</h><h>for</h></idx>
+
     <p>Another type of loop (or iteration) in Java is a <term>for loop</term>. It is usually used when you know how many times you want the loop to execute, as a simple <term>counter-controlled loop</term> to do the loop body a set number of times.</p>
     <p>If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. If you have used a language like Scratch or Snap!, you may remember the repeat(n) block where you type in a number of times you want the code to be repeated, just like the AP pseudocode REPEAT block. In fact, almost every programming language has a <c>for</c> or <c>repeat</c> loop.</p>
     <figure align="center">
@@ -10,7 +13,7 @@
       <image source="Unit2-Selection-and-Iteration/Figures/loopAppInv.png" width="100%"/>
     </figure>
   </introduction>
-  <subsection>
+  <subsection xml:id="three-parts-of-a-for-loop">
             <title>Three Parts of a For Loop</title>
             <p>A for-loop combines all 3 parts of writing a loop in one line to initialize, test, and update the loop control variable.  The 3 parts are separated by semicolons (<c>;</c>).  Each of the three parts of a <c>for</c> loop declaration is optional (initialization; Boolean expression; update), but the semicolons are not optional.</p>
             <program language="java"><code>
@@ -305,7 +308,7 @@ for (int i = 3; i &lt;= 9; i++)
 </choices>
 
     </exercise>
-<exercise label="print_evens" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+<exercise label="print_evens" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn’t require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the “Check Me” button.</p>
 </statement>
 <blocks><block order="1">
@@ -321,7 +324,7 @@ for (int i = 3; i &lt;= 9; i++)
 </block><block order="3">
 <cline>} // end method</cline>
 </block></blocks></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="decrementing-loops">
             <title>Decrementing Loops</title>
             <p>You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, <c>for (int i=5; i &gt; 0; i--)</c> counts from 5 down to 1.</p>
 
@@ -446,7 +449,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-turtles-drawing-shapes">
             <title>Coding Challenge : Turtles Drawing Shapes</title>
             <p>Let’s use a <c>for</c> loop to have a Turtle draw different shapes. We encourage you to work in pairs.</p>
             <p>The following code has 4 methods to draw shapes using a Turtle t passed in as an argument.</p>
@@ -616,7 +619,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-25">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -636,7 +639,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-18">
             <title>AP Practice</title>
 
     <exercise label="AP-for-loop-1">

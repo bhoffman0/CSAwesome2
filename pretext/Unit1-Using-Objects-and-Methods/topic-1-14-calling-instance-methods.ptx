@@ -3,16 +3,22 @@
 <section xml:id="topic-1-14-calling-instance-methods">
   <title>Calling Instance Methods</title><introduction>
     
+    <idx>instance\ methods</idx>
+ <idx>object\ methods</idx>
+ <idx>method</idx>
+ <idx>parameter</idx>
+ <idx>argument</idx>
+
     <p>In object-oriented programming, <term>methods</term> define the behavior and actions that an object can perform. For example, <c>Turtle</c> objects can go forward or turn left using method calls like <c>yertle.forward()</c> and  <c>yertle.turnRight()</c> to change its position. These methods are sometimes called <term>instance methods</term> or <term>object methods</term> because they are called using an instance or object of the class, in this case a specific <c>Turtle</c> object like <c>yertle</c>.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="class-methods-vs-instance-methods">
             <title>Class Methods vs. Instance Methods</title>
             <p>In lessons 1.9 and 1.10, we learned how to call <term>class methods</term> (also called <term>static methods</term>).  Class methods are called using the class name followed by the dot (.) operator and the method name,  example, <c>Math.sqrt(25);</c> calls the <c>sqrt</c> method in the <c>Math</c> class to find the square root of 25. Class methods use the keyword <c>static</c> in their method signature. They do not access or change the attributes of an object.</p>
             <p>In this lesson, we will learn more about <term>instance methods</term> which are always called using an object of the class. They are not static methods. They access and change the attributes of the object they are called on, for example <c>yertle.forward()</c> changes the <c>Turtle</c> object yertle’s position.</p>
             <p>The following flowchart shows the difference between calling class (static) methods and instance methods. Static methods are called using the class name, for example, <c>Math.sqrt(25);</c>. Instance methods are called using an object of the class, for example, <c>yertle.forward();</c>. Traditionally, class names are capitalized, and object variables are lowercase.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Calling static vs. instance methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/calling-static-vs-instance-methods.png" width="63%" alt="Calling static vs. instance methods"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="method-signatures">
             <title>Method Signatures</title>
             <p>The <term>method signature</term> defines the method’s name and the number and types of parameters it takes. In a class definition or in documentation of a library, instance methods are usually defined after the instance variables (attributes) and constructors in a class. For example, see the <c>Student</c> class below. Notice that the methods do not use the keyword <c>static</c>. They are instance methods that are called using an object of the class and can access and change the object’s attributes.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Student class showing instance variables, constructors, and methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/StudentClass.png" width="89%" alt="A Student class showing instance variables, constructors, and methods"/></figure>
@@ -43,7 +49,7 @@
 <cline>     <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
 </areas></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="method-calls">
             <title>Method Calls</title>
             <p>To use an object’s method, you must use the object name and the dot (.) operator followed by the method name, for example, <c>yertle.forward();</c> calls <c>yertle</c>’s <c>forward</c> method to move a turtle object forward 100 pixels. Object methods work with the <term>attributes</term> of the object, such as the direction the turtle is heading or its position.</p>
             <p>Methods inside the same class can call each other using just <c>methodName()</c>, but to call instance methods in another class or from a main method, you must first create an object of that class and then call its methods using <c>object.methodName()</c>.</p>
@@ -100,7 +106,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>The following flowchart can be used to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods are called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using <c>object.methodName()</c>. If you are calling the method from within the same class, you can just call the method using <c>methodName()</c> which will refer to the current object.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Method Calls to Static and Instance Methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/FlowChartCallingMethods.png" width="98%" alt="Comparing method calls to static and instance methods"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="methods-calls-with-arguments">
             <title>Methods Calls with Arguments</title>
             <p>In the last lessons, we used simple <term>methods</term> like <c>forward</c> and <c>turnRight</c> to make the turtle draw lines. You may have noticed that <c>forward()</c> and <c>backward()</c> always move the same number of pixels (100 pixels), and <c>turnRight()</c> and <c>turnLeft()</c> always turn at right angles (90 degrees). This is a little limiting. What if we wanted to draw a triangle or the letter A? These require smaller angles to draw diagonal lines and different length lines. Luckily, there are more complex methods in the <c>Turtle</c> class that let you specify the number of pixels to move forward or the number of degrees to turn. These values that you can give to methods to help them do their job are called <term>arguments</term> or <term>parameters</term>. For example, we can give the argument 200 in <c>forward(200)</c> to make the turtle go forward 200 pixels instead of the default of 100 or the argument 30 in <c>turn(30)</c> to make the turtle turn 30 degrees instead of 90 degrees.</p>
             <note>
@@ -238,7 +244,7 @@ public class RunestoneTests extends CodeTestHelper
 </exercise>
             <image source="Unit1-Using-Objects-and-Methods/Figures/house.png" width="27%" alt="simple house"/>
             <p>Try the following mixed up code to draw a simple house made of a square and a triangle roof.</p>
-<exercise label="DrawAHouse" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<exercise label="DrawAHouse" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code uses a turtle to draw a simple house, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw a square for the house and then a red triangle for the roof.  Click on the “Check Me” button to check your solution.  You can type this code in the Active Code window above to see it in action.</p>
 </statement>
 <blocks><block order="6">
@@ -286,7 +292,7 @@ public class RunestoneTests extends CodeTestHelper
 </block><block order="1">
 <cline>}</cline>
 </block></blocks></exercise>        </subsection>
-  <subsection>
+  <subsection xml:id="methods-that-return-values">
             <title>Methods that Return Values</title>
             <p>All the methods on <c>Turtle</c> that we’ve discussed so far are <term>void methods</term> with <c>void</c>
                 return type. This means they don’t return anything.  Because a
@@ -820,7 +826,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-turtle-house">
             <title>Coding Challenge : Turtle House</title>
             <image source="Unit1-Using-Objects-and-Methods/Figures/houseWithWindows.png" width="36%" alt="simple house"/>
             <p>This creative challenge is fun to do collaboratively in pairs. Design a house and have the turtle draw it with different colors below. Can you add windows and a door? Come up with your own house design as a team.</p>
@@ -930,7 +936,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-5">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -962,7 +968,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-4">
             <title>AP Practice</title>
 
     <exercise label="AP-Party-Methods">

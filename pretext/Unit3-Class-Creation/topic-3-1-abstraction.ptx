@@ -7,7 +7,7 @@
             Java or written by other programmers, for example the <c>Turtle</c> class. In this unit, you will learn to write your
             own classes and make your own objects! Prior to implementing a class, it is helpful to take time to design each class including its attributes and behaviors. This design can be represented using natural language or diagrams. In this lesson, you will learn about abstraction and how it can be used to design a program.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="object-oriented-design">
             <title>Object-Oriented Design</title>
             <p>In <term>object-oriented design</term> (OOD), programmers often start by deciding which classes are needed to solve a problem and then figure out the data and methods in each class.</p>
             <p>When you are given a problem specification, you can identify classes you’ll need
@@ -26,7 +26,7 @@
 </exercise>
             <p>The two nouns in the problem description above, <term>Student</term> and <term>Course</term> would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. For example, for the Student class, you might need to keep track of the student’s name and grade level. For the Course class, you might need to keep track of the course name and the teacher’s name. What other attributes did you and your classmates come up with?</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="uml-class-diagrams">
             <title>UML Class Diagrams</title>
             <p>Sometimes it’s useful, when designing a complex system with lots of classes, to
                 make diagrams of the classes that show you at a glance what instance variables
@@ -40,17 +40,17 @@
                 <url href="https://creately.com" visual="https://creately.com">Creately.com</url> are good free online drawing tools for UML class diagrams.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit3-Class-Creation/Figures/turtleUMLClassDiagram.png" width="63%" alt="Turtle class diagram"/></figure>
         </subsection>
-  <subsection>
+  <subsection xml:id="abstraction">
             <title>Abstraction</title>
             <p><term>Abstraction</term> is the process of reducing complexity by focusing on the main idea. By hiding details irrelevant to the question at hand and bringing together related and useful details, abstraction reduces complexity and allows one to focus on the idea.</p>
             <p>The class diagram above is an example of abstraction. It shows the main idea of the Turtle class without showing all the details of the class. The diagram shows the attributes and methods of the class, but it does not show the details of how the methods are implemented.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="data-abstraction">
             <title>Data Abstraction</title>
             <p><term>Data abstraction</term> provides a separation between the abstract properties of a data type and the concrete details of its representation. For example, we can use the <c>Turtle</c> class and type without needed to know how it is implemented. Data abstraction manages complexity by giving data a name without referencing the specific details of the representation. Data can take the form of a single variable or a collection of data, such as in a class like <c>Turtle</c>.</p>
             <p>An <term>attribute</term> is a type of data abstraction that is defined in a class, for example the width or height of a Turtle object.  An <term>instance variable</term> is an attribute whose value is unique to each instance of the class. For example, each turtle object could have different width or height values.  A <term>class variable</term> is an attribute shared by all instances of the class. For example, we could keep a count of how many turtles have been created in a class variable. We will see more examples of these in the next lesson.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="procedural-abstraction">
             <title>Procedural Abstraction</title>
             <p><term>Procedural abstraction</term> provides a name for a process and allows a method to be used only knowing what it does, not how it does it. Through <term>method decomposition</term>, a programmer breaks down larger behaviors of the class into smaller behaviors by creating methods to represent each individual smaller behavior.  For example, in the Turtle class, the <c>forward()</c> method is a procedural abstraction that allows the turtle to move forward without needing to know exactly how the turtle is animated to move forward.</p>
             <p>Here are some of the main reasons to use procedural abstraction and multiple methods in your programs:</p>
@@ -173,7 +173,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="group-challenge-game-design">
             <title>Group Challenge : Game Design</title>
             <p>Working in groups, let’s explore making a computer game that is an adaptation of a board game that you know. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games):</p>
             <p><ul>
@@ -191,7 +191,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-27">
             <title>Summary</title>
             <p><ul>
                 <li>

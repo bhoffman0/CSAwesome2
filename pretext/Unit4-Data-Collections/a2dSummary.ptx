@@ -8,8 +8,16 @@
       <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Java arrays of arrays</caption>
       <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%"/>
     </figure>
+    <idx><h>2d-array</h><h>index</h></idx>
+ <idx><h>2d-array</h><h>declaration</h></idx>
+ <idx><h>2d-array</h><h>creation</h></idx>
+ <idx><h>2d-array</h><h>element\ reference</h></idx>
+ <idx><h>2d-array</h><h>initialization</h></idx>
+ <idx><h>2d-array</h><h>num\ rows</h></idx>
+ <idx><h>2d-array</h><h>num\ columns</h></idx>
+
   </introduction>
-  <subsection>
+  <subsection xml:id="concept-summary-index-0-4">
             <title>Concept Summary</title>
             <p><ul>
                 <li>
@@ -41,7 +49,7 @@
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="vocabulary-practice-5">
             <title>Vocabulary Practice</title>
 
 <exercise label="ch2darr_match_1">
@@ -53,7 +61,7 @@
     <feedback><p>Review the summaries above.</p></feedback>
 <matches><match order="1"><premise>Declare an 2d integer array named nums</premise><response>int[][] nums;</response></match><match order="2"><premise>Declare and create a String 2d array named list1 that has 3 rows and 2 columns</premise><response>String[][] list1 = new String[3][2];</response></match><match order="3"><premise>Initialize a 2d array of integers named nums so that it has 1,2,3 in the first row and 4,5,6 in the second row.</premise><response>int[][] nums = { {1,2,3},{4,5,6}};</response></match><match order="4"><premise>Initialize a 2d String array named list1 so that it has a,b,c in the first row and d,e,f in the second row.</premise><response>String[][] list1 = { {"a","b","c"},{"d","e","f"}};</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434082842/cs-awesome-unit-8-vocabulary-flash-cards/" visual="https://quizlet.com/434082842/cs-awesome-unit-8-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="common-mistakes-5">
             <title>Common Mistakes</title>
             <blockquote>
                 <p><ul>

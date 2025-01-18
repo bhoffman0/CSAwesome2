@@ -3,6 +3,9 @@
 <section xml:id="routeCipherA">
   <title>Free Response - Route Cipher A</title><introduction>
     
+    <idx>routeciphera</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2011.  It was question 4 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 4.</term>  In this question you will write two methods for a class <c>RouteCipher</c> that encrypts (puts into a coded form) a message by changing the order of the characters in the message. The route cipher fills a two-dimensional array with single-character substrings of the original message in row-major order, encrypting the message by retrieving the single-character substrings in column-major order.</p>
     <p>For example, the word “Surprise” can be encrypted using a 2-row, 4-column array as follows.</p>
@@ -85,7 +88,7 @@ str.substring(k, k + 1)
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve-this-4">
             <title>How to Solve This</title>
 
 <exercise label="routeciphera_short">
@@ -98,7 +101,7 @@ str.substring(k, k + 1)
                 Click on the buttons to reveal the questions.</p>
             <subsection>
                 <p>You will need to access each element in the <c>letterBlock</c> array. What type of loop will you use?</p>
-                <exercises line="123" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Type Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Type Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+                
 
     <exercise label="routeciphera_1.5MC">
         <statement>
@@ -155,9 +158,9 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-                </exercises>
+                
                 <p>The <c>letterBlock</c> array has two dimensions. How many loops will you use?</p>
-                <exercises line="144" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Loop Amount Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Loop Amount Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_1.75', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+                
 
     <exercise label="routeciphera_1.75MC">
         <statement>
@@ -205,9 +208,9 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-                </exercises>
+                
             </subsection>
-            <exercises line="161" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Outer Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Outer Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_2', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
 
     <exercise label="routeciphera_2MC">
         <statement>
@@ -255,8 +258,8 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
-            <exercises line="178" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Inner Bounds Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Inner Bounds Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_3', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
+            
 
     <exercise label="routeciphera_3MC">
         <statement>
@@ -304,8 +307,8 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
-            <exercises line="195" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal String Method Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide String Method Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_4', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
+            
 
     <exercise label="routeciphera_4MC">
         <statement>
@@ -353,11 +356,11 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
+            
         </subsection>
-  <subsection>
+  <subsection xml:id="the-algorithm">
             <title>The Algorithm</title>
-            <exercises line="214" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Access Formula Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Access Formula Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
 
     <exercise label="routeciphera_5MC">
         <statement>
@@ -405,8 +408,8 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
-            <exercises line="231" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Formula Variable Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Formula Variable Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_5.5', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
+            
 
     <exercise label="routeciphera_5.5MC">
         <statement>
@@ -454,8 +457,8 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
-            <exercises line="248" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Conditional Problem&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Conditional Problem&quot;', 'subchapter': 'routeCipherA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'routeciphera_6', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/routeCipherA.rst">
+            
+            
 
     <exercise label="routeciphera_6MC">
         <statement>
@@ -503,44 +506,44 @@ str.substring(k, k + 1)
 </choices>
 
     </exercise>
-            </exercises>
+            
             <p>The exercises above have been guiding you towards just one of many possible solutions. To read through a different solution, click on the Reveal
                 button below and complete the problem.</p>
             <subsection>
-<exercise label="RouteCipherA" adaptive="yes" indentation="show" language="python"><statement>
+<exercise label="RouteCipherA" adaptive="yes" indentation="show" language="java"><statement>
                     <p>The method fillBlock below contains the correct code for one solution to this problem,
                         but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
                         correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="4">
+<blocks><block order="5">
 <cline>public void fillBlock(String str)</cline>
 <cline>{</cline>
 <cline>  int pos = 0;</cline>
-</block><block order="3">
+</block><block order="1">
 <cline>  for (int r = 0; r &lt; this.numRows; r++ )</cline>
 <cline>  {</cline>
 </block><block order="7">
 <cline>      for (int c = 0; c &lt; this.numCols; c++ )</cline>
 <cline>      {</cline>
-</block><block order="2">
+</block><block order="3">
 <cline>          if (pos &lt; str.length())</cline>
 <cline>          {</cline>
-</block><block order="5">
+</block><block order="2">
 <cline>              String subStr = str.substring(pos, pos+1);</cline>
 <cline>              this.letterBlock[r][c] = subStr;</cline>
 <cline>              pos++;</cline>
-</block><block order="6">
+</block><block order="4">
 <cline>          } else</cline>
 <cline>          {</cline>
 <cline>              this.letterBlock[r][c] = "A";</cline>
 <cline>          } // end else block</cline>
-</block><block order="1">
+</block><block order="6">
 <cline>      } // end inner for</cline>
 <cline>  } // end outer for</cline>
 <cline>} // end method</cline>
 </block></blocks></exercise>                </subsection>
         </subsection>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-18">
             <title>Try And Solve It</title>
 
 <exercise label="FRQRouteCipherA">

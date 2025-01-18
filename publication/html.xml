@@ -10,14 +10,6 @@
     <divisions chapter-start="0"/>
   </numbering>
 
-  <!-- This turns off showing solutions after an exercise. -->
-  <!-- Instead we will generate <solutions> at the end of a section -->
-  <common>
-    <exercise-divisional solution="no"/>
-    <exercise-inline solution="no"/>
-    <project solution="no"/>
-  </common>
-
   <html>
     <platform host="web"/>
     <!-- knowled checkpoints interfere with ActiveCode problems -->

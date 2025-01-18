@@ -3,6 +3,10 @@
 <section xml:id="topic-1-13-constructors">
   <title>Creating and Initializing Objects: Constructors</title><introduction>
     
+    <idx><h>class</h><h>constructor</h></idx>
+ <idx>constructors</idx>
+ <idx>new</idx>
+
     <p>A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has <term>constructors</term> which are used to initialize the attributes in a newly created object. <term>Constructors</term> have the same name as the class.</p>
     <p>A new object is created with the <c>new</c> keyword followed by the class name which is a call to the constructor (<c>new ClassName()</c>).  For example, <c>new World()</c> creates and initializes a new object of the <c>World</c> class, and <c>new Turtle(habitat)</c> creates and initializes a new <c>Turtle</c> object in the World habitat. The new object is saved in a variable of a <term>reference type</term> which holds an object reference or <c>null</c> if there is no object.</p>
     <program language="java">
@@ -14,7 +18,7 @@ Turtle t = new Turtle(habitat); // create a new Turtle object
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="the-world-class-constructors">
             <title>The World Class Constructors</title>
             <p>There can be more than one constructor defined in a class. This is called <term>overloading</term> the constructor. The <c>World</c> class has the 2 constructors seen below. One doesn’t take any arguments and creates a default sized world and one takes the world’s width and height arguments to create a world of a specific size. An <term>argument</term> is a value that is passed into a constructor. Arguments are used to initialize the attributes of an object, in this case, the size of the world.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two World constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/worldConstructors.png" width="63%" alt="Two World constructors"/></figure>
@@ -127,7 +131,7 @@ World world2 = new World(300,400); // creates a 300x400 world
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="the-turtle-class-constructors">
             <title>The Turtle Class Constructors</title>
             <p>The <c>Turtle</c> class also has multiple constructors, although it always requires a world as a argument in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.</p>
             <p>There is another <c>Turtle</c> constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.</p>
@@ -252,9 +256,11 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="object-variables-and-references">
             <title>Object Variables and References</title>
-            
+            <idx>reference</idx>
+ <idx>null</idx>
+
             
             <p>New objects are saved in variables of a <term>reference type</term> which holds a reference to an object. A <term>reference</term> is a way to find the object in memory. It is like a tracking number that you can use to track the location of a package in the mail.</p>
             <p>A special reference value <term>null</term> (which means none) can be used when a variable doesn’t refer to any object. For instance, you can declare a variable and initialize it to <term>null</term> (<c>Turtle t1 = null;</c>) meaning the variable doesn’t refer to any object yet.</p>
@@ -270,9 +276,14 @@ t1 = new Turtle(world1);
 Turtle t2 = new Turtle(world1);
 </code></program>
         </subsection>
-  <subsection>
+  <subsection xml:id="constructor-signatures">
             <title>Constructor Signatures</title>
-            
+            <idx>signature</idx>
+ <idx>parameters</idx>
+ <idx>arguments</idx>
+ <idx>call\ by\ value</idx>
+ <idx>overloading</idx>
+
             
             <p>When you use a class that someone has already written for you in a <term>library</term> that you can import like the <c>Turtle</c> class above, you can look up how to use the constructors and methods in the <url href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" visual="https://www2.cs.uic.edu/~i101/doc/Turtle.html">documentation</url> for that class.  The documentation will list the <term>signatures</term> (or headers) of the constructors or methods which will tell you their name and parameter list. The <term>parameter list</term>, in the <term>header</term> of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the argument values passed into the constructor.</p>
             <p>Constructors are said to be <term>overloaded</term> when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the <c>Turtle</c> class that take different parameters:</p>
@@ -413,7 +424,7 @@ Turtle t2 = new Turtle(world1);
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="arguments-parameters-and-call-by-value">
             <title>Arguments, Parameters, and Call by Value</title>
             <p>When a constructor like <c>Date(2005,9,1)</c> is called, the <term>parameters</term>, (<c>year</c>, <c>month</c>, and <c>day</c>), are set to copies of the  <term>arguments</term>, (<c>2005</c>, <c>9</c>, and <c>1</c>).  This is <term>call by value</term> which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object’s attributes. A constructor call interrupts the sequential execution of statements in that the program executes the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%" alt="Parameter Mapping"/></figure>
@@ -581,7 +592,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>This lesson introduces a lot of vocabulary, but don’t worry if you don’t understand everything about classes and constructors yet. You will learn more about how this all works in later units when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.</p>
             <image source="Unit1-Using-Objects-and-Methods/Figures/customTurtles.png" width="36%"/>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-custom-turtles">
             <title>Coding Challenge: Custom Turtles</title>
             <p>Working in pairs, you will now look at a new class called CustomTurtle and design some colorful turtles with its constructors. The CustomTurtle class in the ActiveCode below inherits many of its attributes and methods from the Turtle class. However, it has some new constructors with more parameters to customize a turtle with its body color, shell color, width, and height. CustomTurtle has 3 constructors:</p>
             <program language="java"><code>
@@ -764,7 +775,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-4">
             <title>Summary</title>
             <p><ul>
                 <li>
@@ -805,7 +816,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="ap-practice-3">
             <title>AP Practice</title>
 
     <exercise label="AP-constructors">

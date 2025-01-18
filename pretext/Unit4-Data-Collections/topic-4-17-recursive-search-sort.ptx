@@ -3,11 +3,11 @@
 <section xml:id="topic-4-17-recursive-search-sort">
   <title>Recursive Searching and Sorting</title><introduction>
     
-    <p>In Unit 7, we learned about searching and sorting algorithms using iteration (loops) to search or sort arrays and ArrayLists. In this lesson, we will take a look at a <term>recursive binary search</term> algorithm and a <term>recursive merge-sort</term> algorithm.</p>
+    <p>In previous lessons, we learned about searching and sorting algorithms using iteration (loops) to search or sort arrays and <c>ArrayLists</c>. In this lesson, we will take a look at a <term>recursive binary search</term> algorithm and a <term>recursive merge-sort</term> algorithm. Recursion can be used to traverse <c>String</c> objects, arrays, and <c>ArrayList</c> objects.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="recursive-binary-search">
             <title>Recursive Binary Search</title>
-            <p>In Unit 7, we learned about two search algorithms, linear search and binary search. Linear search searches for an element in an array or ArrayList by checking each element in order. Binary search is more efficient (faster) because it starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList each pass through the algorithm. Binary search only works on sorted data. It can be written with iteration (using a loop) like below or recursively.</p>
+            <p>We have already seen two search algorithms using loops, linear search and binary search. Linear search searches for an element in an array or ArrayList by checking each element in order. Binary search is more efficient (faster) because it starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList each pass through the algorithm. Binary search only works on sorted data. It can be written with iteration (using a loop) like below or recursively.</p>
 
     <program interactive="activecode" language="java">
         <code>
@@ -47,7 +47,9 @@ public class IterativeBinarySearch
         </code>
     </program>
             <p>Watch the iterative binary search code running in the <problematic refid="id3">|Java Visualizer|</problematic>.</p>
-            <p>Let’s write a recursive version of Binary Search. Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.</p>
+            <p>Let’s write a recursive version of Binary Search.
+                <term>Recursive Binary search</term> starts at the middle of a sorted array or <c>ArrayList</c> and eliminates half of the array or <c>ArrayList</c> in each recursive call until the desired value is found or all elements have been eliminated.</p>
+            <p>Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.</p>
 
 <exercise label="baseCaseQ">
     <statement>
@@ -111,14 +113,72 @@ public class RecursiveBinarySearch
         </code>
     </program>
 </exercise>
-            <p>Try the recursive binary search code in this <url href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28" visual="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28">Java visualizer link</url>.</p>
+            <p>Try the recursive binary search code in this <url href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28" visual="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28">Java visualizer link</url> or with the CodeLens button above.</p>
+            <p>Here is a version of the recursive binary search that works with an <c>ArrayList</c>. Click on CodeLens to step through the code.</p>
+
+    <program interactive="activecode" language="java">
+        <code>
+  Here is a version of the recursive binary search that works with an ArrayList. Run the code below. Try searching for the value 3 and then the value 2 which is not in the ArrayList. What happens?
+  ~~~~
+  import java.util.ArrayList;
+
+  public class RecursiveBinarySearchArrayList
+  {
+      public static int recursiveBinarySearch(
+          ArrayList&lt;Integer&gt; list, int start, int end, int target)
+      {
+          int middle = (start + end) / 2;
+          // base case: check middle element
+          if (target == list.get(middle))
+          {
+              return middle;
+          }
+          // base case: check if we've run out of elements
+          if (end &lt; start)
+          {
+              return -1; // not found
+          }
+          // recursive call: search start to middle
+          if (target &lt; list.get(middle))
+          {
+              return recursiveBinarySearch(list, start, middle - 1, target);
+          }
+          // recursive call: search middle to end
+          if (target &gt; list.get(middle))
+          {
+              return recursiveBinarySearch(list, middle + 1, end, target);
+          }
+          return -1;
+      }
+
+      public static void main(String[] args)
+      {
+          ArrayList&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+          list.add(3);
+          list.add(7);
+          list.add(12);
+          list.add(19);
+          list.add(22);
+          list.add(25);
+          list.add(29);
+          list.add(30);
+          int target = 25;
+          int foundIndex = recursiveBinarySearch(list, 0, list.size() - 1, target);
+          System.out.println(target + " was found at index " + foundIndex);
+      }
+  }
+        </code>
+    </program>
         </subsection>
-  <subsection>
+  <subsection xml:id="merge-sort">
             <title>Merge Sort</title>
+            <idx>merge\ sort</idx>
+ <idx><h>sort</h><h>merge</h></idx>
+
             
-            
-            <p>In Unit 7, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a <term>divide and conquer</term> algorithm.</p>
-            <p>A merge sort recursively breaks the values to be sorted in half until there is only one value to be sorted and then it merges the two sorted lists into one sorted list.  The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.</p>
+            <p>In previous lessons, we looked at two sorting algorithms, Selection Sort and Insertion Sort. In this lesson, we will look at a third sorting algorithm, Merge Sort, which uses recursion. <term>Merge sort</term> is a recursive sorting algorithm that can be used to sort elements in an array or <c>ArrayList</c>.</p>
+            <p>Merge Sort is actually more efficient (faster) than Selection Sort and Insertion Sort because it divides the problem in half each time like binary search. This is called a <term>divide and conquer</term> algorithm.</p>
+            <p>Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array. The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.</p>
             <p>Here is a folk dance <url href="https://youtu.be/XaqR3G_NVoo" visual="https://youtu.be/XaqR3G_NVoo">video</url> that shows the merge sort process.</p>
 
     <video youtube="XaqR3G_NVoo"/>
@@ -306,45 +366,62 @@ public class SortTest
 
     </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="tracing-challenge-recursive-search-and-sort">
             <title>Tracing Challenge : Recursive Search and Sort</title>
             <p>Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here’s a <url href="https://youtu.be/AMJjtTo1LLE" visual="https://youtu.be/AMJjtTo1LLE">video</url> that shows merge sort with cards.</p>
 
     <video youtube="AMJjtTo1LLE"/>
                 <p>Work in pairs to do the following tracing problems.</p>
 
-<exercise label="challenge-10-2-mergesort">
+<exercise label="challenge-mergesort">
     <statement>
             <p> Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
 
     </statement>
 </exercise>
 
-<exercise label="challenge-10-2-binary-search">
+<exercise label="challenge-recursive-binary-search">
     <statement>
             <p> Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
 
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-43">
             <title>Summary</title>
             <p><ul>
                 <li>
-                    <p>The binary search algorithm can be written either iteratively or recursively.</p>
+                    <p>(AP 4.17.A.1) Recursion can be used to traverse <c>String</c> objects, arrays, and <c>ArrayList</c> objects.</p>
                 </li>
                 <li>
-                    <p>Data must be in sorted order to use the binary search algorithm.</p>
+                    <p>(AP 4.17.B.1) Data must be in sorted order to use the binary search algorithm. <term>Binary search</term> starts at the middle of a sorted array or <c>ArrayList</c> and eliminates half of the array or <c>ArrayList</c> in each recursive call until the desired value is found or all elements have been eliminated.</p>
                 </li>
                 <li>
-                    <p>The binary search algorithm starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList in until the desired value is found or all elements have been eliminated.</p>
+                    <p>(AP 4.17.B.2) Binary search is typically more efficient than linear search.</p>
                 </li>
                 <li>
-                    <p>Binary search can be more efficient than sequential/linear search.</p>
+                    <p>(AP 4.17.B.3) The binary search algorithm can be written either iteratively or recursively.</p>
                 </li>
                 <li>
-                    <p>Merge sort is a recursive sorting algorithm that can be used to sort elements in an array or ArrayList.</p>
+                    <p>(AP 4.17.C.1) <term>Merge sort</term> is a recursive sorting algorithm that can be used to sort elements in an array or <c>ArrayList</c>.</p>
+                </li>
+                <li>
+                    <p>(AP 4.17.C.2) Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array.</p>
                 </li>
             </ul></p>
+        </subsection>
+  <subsection xml:id="summary-and-review-exercises">
+            <title>Summary and Review Exercises</title>
+            <p>This lesson is the last lesson in Unit 4! Congratulations! Now, it’s time to practice before the exam.</p>
+            <p>You can now do the following review lessons about recursion at the end of the unit
+                and College Board Progress Checks in the AP Classroom. The rest of this unit consists of the reviews for each section of the unit.</p>
+            <p><ul>
+ <li><url href="recursion-summary.html" visual="recursion-summary.html">Recursion Summary</url></li>
+ <li><url href="rParsonsPractice.html" visual="rParsonsPractice.html">Recursion Parsons Practice</url></li>
+ <li><url href="rMixedUpCodePractice.html" visual="rMixedUpCodePractice.html">Recursion Mixed Up Code Practice</url></li>
+ <li><url href="recursion-toggle-problems.html" visual="recursion-toggle-problems.html">Recursion Toggle Problems</url></li>
+ <li><url href="recursionCodePractice.html" visual="recursionCodePractice.html">Recursion Code Practice</url></li>
+ <li><url href="recursion-Exercises.html" visual="recursion-Exercises.html">Recursion Exercises</url></li>
+ </ul></p>
         </subsection>
 </section>

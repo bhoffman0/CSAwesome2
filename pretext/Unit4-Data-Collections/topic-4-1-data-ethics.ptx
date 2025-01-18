@@ -4,7 +4,7 @@
   <title>Ethical and Social Issues Around Data Collection</title><introduction>
     
   </introduction>
-  <subsection>
+  <subsection xml:id="data-privacy">
             <title>Data Privacy</title>
             <p>Your phone keeps a lot of information about you, including where you have been, what you buy, what games you play, etc. Here’s a <url href="https://www.youtube.com/watch?v=bqWuioPHhz0" visual="https://www.youtube.com/watch?v=bqWuioPHhz0">video</url> about the massive amounts of data our smart phones and computers collect about us. If you have used your phone to give you directions to go somewhere, it probably tracks your location. Follow the directions in <url href="https://www.lifewire.com/location-history-google-maps-iphone-1683392" visual="https://www.lifewire.com/location-history-google-maps-iphone-1683392">https://www.lifewire.com/location-history-google-maps-iphone-1683392</url> to see if you have location history settings on. You can also turn off location tracking, but it is useful when you want directions and it’s free. Do the benefits of apps that provide driving directions outweigh the lack of privacy for you? In what situations would it be beneficial or harmful for the app to track your location?</p>
             <figure align="center"><image source="Unit4-Data-Collections/Figures/googletimeline.png" width="100%"/></figure>
@@ -18,12 +18,12 @@
     </statement>
 </exercise>
             <p>Here are some interesting video resources about data collection and data privacy:</p>
-            <raw format="html" xml:space="preserve">&lt;ul&gt;
-&lt;li&gt;A short &lt;a href="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" style="text-decoration:underline" target="_blank"&gt;1 minute video&lt;/a&gt; about the Facebook Cambridge Analytica incident and a longer &lt;a href="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2" style="text-decoration:underline" target="_blank"&gt;1 hour PBS special&lt;/a&gt; on Facebook.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=gXiEBcb0Vs8" style="text-decoration:underline" target="_blank"&gt;What is Geo-fencing (2 mins)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=j6wwBqfSk-o" style="text-decoration:underline" target="_blank"&gt;The European General Data Protection Regulation (GDPR) (3 mins)&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</raw>
+            <p><ul>
+<li>A short <url href="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" style="text-decoration:underline" visual="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" >1 minute video</url> about the Facebook Cambridge Analytica incident and a longer <url href="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2" style="text-decoration:underline" visual="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2">1 hour PBS special</url> on Facebook.</li>
+<li><url href="https://www.youtube.com/watch?v=gXiEBcb0Vs8" style="text-decoration:underline" visual="https://www.youtube.com/watch?v=gXiEBcb0Vs8" >What is Geo-fencing (2 mins)</url></li>
+<li><url href="https://www.youtube.com/watch?v=j6wwBqfSk-o" style="text-decoration:underline" visual="https://www.youtube.com/watch?v=j6wwBqfSk-o">The European General Data Protection Regulation (GDPR) (3 mins)</url></li></ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="data-and-bias">
             <title>Data and Bias</title>
             <p>The fields of <term>AI (Artificial Intelligence)</term> and <term>Machine Learning (ML)</term> are rapidly growing and increasingly involve ethical questions about data collection, privacy, and resource use. Machine learning algorithms to create software like ChatGPT require massive amounts of data to learn from as well as massive amounts of energy use. But where does this data come from? Often the data is collected from the internet, and the internet is full of biases. For example, if you search for professions like “programmer”, “doctor”, “CEO” in <url href="https://images.google.com/" visual="https://images.google.com/">https://images.google.com/</url>, you will probably see mostly images of white men. This reflects a bias in our world that AIs may learn. An AI could then generate text or images that are biased against historically underrepresented groups. For example, a prominent tech company in 2014 started building an automated hiring tool, a resume filtering AI trained on their current employees resumes, and ended up with an AI system that was biased against women (<url href="https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against" visual="https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against">https://www.aclu.org/news/womens-rights/why-amazons-automated-hiring-tool-discriminated-against</url>). This is a problem because the AI is learning from biased data and then creating biased outcomes that could affect people’s lives.</p>
             <p><term>Algorithmic bias</term> describes systemic and repeated errors in a program that create unfair outcomes for a specific group of users.
@@ -39,10 +39,10 @@
     </statement>
 </exercise>
             <p>Here are some other interesting videos to watch about bias in algorithms:</p>
-            <raw format="html" xml:space="preserve">&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=QxuyfWoVV98" target="_blank"&gt;AI, Ain't I a Woman?&lt;/a&gt;, a poem by Joy Buolamwini&lt;/li&gt;
-&lt;li&gt;Ted Talk video on &lt;a href="https://www.youtube.com/watch?v=UG_X_7g63rY" target="_blank"&gt;Bias in Facial Recognition&lt;/a&gt; by Joy Buolamwini,&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=7lpCWxlRFAw" target="_blank"&gt;A report on police crime prediction software and bias&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</raw>
+            <p><ul><li><url href="https://www.youtube.com/watch?v=QxuyfWoVV98" visual="https://www.youtube.com/watch?v=QxuyfWoVV98">AI, Ain't I a Woman?</url>, a poem by Joy Buolamwini</li>
+<li>Ted Talk video on <url href="https://www.youtube.com/watch?v=UG_X_7g63rY" visual="https://www.youtube.com/watch?v=UG_X_7g63rY">Bias in Facial Recognition</url> by Joy Buolamwini,</li>
+<li><url href="https://www.youtube.com/watch?v=7lpCWxlRFAw" visual="https://www.youtube.com/watch?v=7lpCWxlRFAw">A report on police crime prediction software and bias</url></li>
+</ul></p>
             <p>Programmers should be aware of the data set collection method and the potential for bias before using the data to extrapolate new information or drawing conclusions. Some data sets are incomplete or contain inaccurate data. Using such data in the development or use of a program can cause the program to work incorrectly or inefficiently. Or the contents of a data set might be related to a specific question or topic and might not be appropriate to give correct answers or extrapolate information for a different question or topic.</p>
             <p>It is important for programmers and data scientists to take steps to mitigate bias in data collection and use. This can include using diverse and representative datasets, regularly testing algorithms for bias, and being transparent about the limitations of the software. Here are some steps that can be taken to address bias in machine learning:</p>
             <p><ul>
@@ -70,7 +70,7 @@
     </statement>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-36">
             <title>Summary</title>
             <p><ul>
                 <li>

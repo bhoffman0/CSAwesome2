@@ -3,6 +3,20 @@
 <section xml:id="topic-2-9-loop-algorithms">
   <title>Implementing Selection and Iteration Algorithms</title><introduction>
     
+    <idx>loop\ algorithms</idx>
+ <idx>accumulator</idx>
+ <idx>sum</idx>
+ <idx>average</idx>
+ <idx>minimum</idx>
+ <idx>maximum</idx>
+ <idx>divisible</idx>
+ <idx>remainder</idx>
+ <idx>mod</idx>
+ <idx>prime</idx>
+ <idx>digits</idx>
+ <idx>frequency</idx>
+ <idx>counter</idx>
+
     <p>In this lesson, you will learn how to implement algorithms that use loops to solve problems. You will learn how to use the accumulator pattern to calculate sums and averages, how to find minimum and maximum values, how to determine if a number is evenly divisible by another number, and how to count the frequency of a specific criterion. There are standard algorithms that use loops and selection to:</p>
     <p>
       <ul>
@@ -24,7 +38,7 @@
         </ul>
     </p>
   </introduction>
-  <subsection>
+  <subsection xml:id="accumulator-pattern-for-sum-average">
             <title>Accumulator Pattern for Sum/Average</title>
             <p>The <term>accumulator pattern</term> is an algorithm that iterates through a set of values using a loop and updates an accumulator variable with those values, for example to compute a sum or average of a set of values. The accumulator pattern has 4 steps:</p>
             <p><ol marker="1">
@@ -160,7 +174,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="input-controlled-loop">
             <title>Input-Controlled Loop</title>
             <p>Here’s an example of an <term>input-controlled loop</term> that calculates the average of positive numbers using the accumulator pattern with a <c>while</c> loop. The number -1 is used as the <term>sentinel value</term>. The <c>while</c> loop will run while the user does not input -1. What would happen if you forgot step 3 (update the loop variable - get a new input)? Remember that skipping step 3 will often lead to an infinite loop!</p>
             <program language="java"><code>
@@ -267,7 +281,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="loop-with-if-and-minimum-maximum">
             <title>Loop with if and Minimum/Maximum</title>
             <p>A common variation of the accumulator pattern is to have an <c>if</c> statement inside the loop that tests each value being considered in the loop. This is a very common pattern in the AP exam for FRQ #1.</p>
             <p>To determine the minimum or maximum value in a sequence of numbers, use a variable to store the current minimum or maximum value. Use a loop to go through the sequence of numbers and update the minimum or maximum value if you find a number that is lower or higher than the current minimum or maximum. For example, this loop chooses 10 random numbers and finds the minimum value among them.</p>
@@ -363,7 +377,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="divisibility">
             <title>Divisibility</title>
             <p>To determine if an integer is evenly divisible by another integer, you can use the remainder operator <c>%</c>. If you divide two numbers and there is no remainder, then the first number is evenly divisible by the second number. The remainder operator is often used to check if a number is even or odd: if <c>num % 2 == 0</c> is true, then <c>num</c> is even. But it can be used to check if any number is divisible by another. For example, 10 is evenly divisible by 5 because 10 divided by 5 is 2 with no (0) remainder.</p>
             <program language="java"><code>
@@ -468,7 +482,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="finding-digits-with-and">
             <title>Finding Digits with / and %</title>
             <p>We can also use division (<c>/</c>) and remainder (<c>%</c>) to find the digits of a number by dividing by 10. For example, 1234 divided by 10 is 123 with a remainder of 4. Remember that in integer
                 division the result truncates (cuts off) everything to the right of the decimal point, so we get the number without the last digit when we divide by 10. The remainder is the last digit of the number. You could use this algorithm to add the digits of a number, reverse the digits of a number, or check if a digit is equal to a certain number, etc.</p>
@@ -591,7 +605,7 @@ int minutes = totalMinutes % 60; // Number of minutes left over, i.e. 45
                 </li>
             </ul></p>
         </subsection>
-  <subsection>
+  <subsection xml:id="math-random-in-if-statements">
             <title>Math.random() in if Statements</title>
             <p>The <c>Math.random()</c> method returns a random number between 0.0 and 1.0.  You can use this method with <c>if</c> statements to simulate a coin flip or an event occuring a certain percentage of the time. For example, if you want to simulate a coin flip, you can check if the random number is less than 0.5 (halfway between 0 and 1) to simulate a 50% chance of heads or tails. (Thank you to Kate McDonnell from Cherry Creek Schools for the ideas in this section).</p>
             <program language="java"><code>
@@ -724,7 +738,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="frequency">
             <title>Frequency</title>
             <p>You can use a counter variable inside a loop to determine the frequency with which a specific criteria is met.  For example, you can count the number of even numbers in a sequence of numbers. You can use a loop and increment the counter each time an even number is found like below:</p>
             <program language="java"><code>
@@ -740,7 +754,7 @@ System.out.println("There are " + count + " even numbers from 1 to 100.");
 </code></program>
             <p>The AP exam often gives a boolean method for students to use to determine some criteria in a set of values. For example, in the following challenge, you can count the number of prime numbers from 1 to 100 given a boolean method to use <c>isPrime(n)</c> which returns true or false.</p>
         </subsection>
-  <subsection>
+  <subsection xml:id="coding-challenge-prime-number-finder">
             <title>Coding Challenge : Prime Number Finder</title>
             <p>Prime numbers (numbers that are only divisible by 1 and themselves) are used every day in encryption algorithms that safely transmit your username and password whenever you login on the internet. Two large prime numbers are multiplied together to generate partial keys for encoding and decoding in encryption algorithms. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the prime factors of a large number to decode it. Small prime numbers can be easily guessed, so encryption only uses very large prime numbers with hundreds of digits. Finding these large prime numbers is a very hard problem. As numbers grow, primes become less frequent, due to the increasing likelihood of divisibility by smaller primes. If you’re curious about the use of prime numbers in encryption, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
             <p>In the challenge below,</p>
@@ -860,7 +874,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </exercise>
         </subsection>
-  <subsection>
+  <subsection xml:id="summary-26">
             <title>Summary</title>
             <p><ul>
                 <li>

@@ -3,6 +3,9 @@
 <section xml:id="StringCoderA">
   <title>StringCoder - Part A</title><introduction>
     
+    <idx>StringPart</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2008.  It was question 2 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 2.</term> Consider a method of encoding and decoding words that is based on a <em>master string</em>. This master string
             will contain all the letters of the alphabet, some possibly more than once. An example of a master string is
@@ -104,7 +107,7 @@ public class StringCoder
 </code>
     </program>
   </introduction>
-  <subsection>
+  <subsection xml:id="try-and-solve-it-9">
             <title>Try and Solve It</title>
             <p><term>Part a.</term>  Finish writing the <c>StringCoder</c> method <c>decodeString</c>. This method retrieves the substrings in the master
                 string represented by each of the <c>StringPart</c> objects in parts, concatenates them in the order in

@@ -3,6 +3,9 @@
 <section xml:id="numberCubeA">
   <title>Free Response - Number Cube A</title><introduction>
     
+    <idx>numbercubea</idx>
+ <idx>free\ response</idx>
+
     <p>The following is a free response question from 2009.  It was question 1 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 1.</term>  A statistician is studying sequences of numbers obtained by repeatedly tossing a six-sided number cube. On each side of the number cube is a single number in the range of 1 to 6, inclusive, and no number is repeated on the cube. The statistician is particularly interested in runs of numbers. A run occurs when two or more consecutive tosses of the cube produce the same value. For example, in the following sequence of cube tosses, there are runs starting at positions 1, 6, 12, and 14.</p>
     <figure align="center">
@@ -27,13 +30,13 @@ public class NumberCube
     <p><term>Part a.</term> Write the method <c>getCubeTosses</c> that takes a number cube and a number of tosses as parameters. The
             method should return an array of the values produced by tossing the number cube the given number of times.</p>
   </introduction>
-  <subsection>
+  <subsection xml:id="how-to-solve">
             <title>How to Solve</title>
             <p>Click to reveal the algorithm and problems to help you write your solution.</p>
             <subsection>
                 <p>You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call <c>toss</c>.  You will need to loop that number of times and each time set the value of the array at that index to the result of the <c>toss</c>.  Return the array.</p>
             </subsection>
-            <exercises line="51" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Problems&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Problems&quot;', 'optional': 'data-optional=true', 'subchapter': 'numberCubeA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optclass': '', 'divid': 'numbercubea_r1', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/numberCubeA.rst">
+            
 
     <exercise label="numbercubea_1">
         <statement>
@@ -148,36 +151,36 @@ public class NumberCube
 </choices>
 
     </exercise>
-            </exercises>
+            
         </subsection>
-  <subsection>
+  <subsection xml:id="mixed-up-code-2">
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
-            <exercises line="96" runestone_options="{'showtitle': 'data-showtitle=&quot;Reveal Mixed Up Code&quot;', 'hidetitle': 'data-hidetitle=&quot;Hide Mixed Up Code&quot;', 'subchapter': 'numberCubeA', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'numcubeA_parsons', 'instructoronly': '', 'is_dynamic': 'True'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/numberCubeA.rst">
-<exercise label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="python"><statement>
+            
+<exercise label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getCubeTosses</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
-<blocks><block order="7">
+<blocks><block order="4">
 <cline>public static int[] getCubeTosses(</cline>
 <cline>                          NumberCube cube,</cline>
 <cline>                          int numTosses)</cline>
 <cline>{</cline>
-</block><block order="2">
-<cline>  int[] cubeTosses = new int[numTosses];</cline>
 </block><block order="1">
+<cline>  int[] cubeTosses = new int[numTosses];</cline>
+</block><block order="3">
 <cline>  for (int i = 0; i &lt; numTosses; i++)</cline>
 <cline>  {</cline>
-</block><block order="4">
-<cline>     cubeTosses[i] = cube.toss();</cline>
-</block><block order="6">
-<cline>  } // end for</cline>
-</block><block order="3">
-<cline>  return cubeTosses;</cline>
 </block><block order="5">
+<cline>     cubeTosses[i] = cube.toss();</cline>
+</block><block order="2">
+<cline>  } // end for</cline>
+</block><block order="6">
+<cline>  return cubeTosses;</cline>
+</block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            </exercises>
+</block></blocks></exercise>            
         </subsection>
-  <subsection>
+  <subsection xml:id="try-and-solve-part-a">
             <title>Try and Solve Part A</title>
 
 <exercise label="FRQNumberCubeA">
