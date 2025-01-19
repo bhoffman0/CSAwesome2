@@ -97,7 +97,7 @@ public class Magpie2
     <p>The response to “The weather is nice.” is one of the random responses. Look at the code to see how the <c>if</c> statement assigns a value to the response and returns that response.
             The method <c>getRandomResponse</c> generates a random number and uses that to assign the response. Modify the code above to add other random responses.</p>
   </introduction>
-  <exercise label="lc-magpie2">
+  <activity label="lc-magpie2">
     <statement>
         <p>Run to see the results. Try changing the input in main.</p>
 
@@ -195,7 +195,7 @@ public class Magpie2
  }
         </tests>
     </program>
-</exercise>
+</activity>
   <subsection xml:id="exercises-3">
             <title>Exercises</title>
             <p>Alter the code above or in your own IDE (see section below) to do the following. We encourage you to work in pairs.</p>
@@ -244,12 +244,12 @@ public class Magpie2
                 </li>
             </ul></p>
 
-<exercise label="short-lab1b1" data-optional="true">
+<activity label="short-lab1b1" data-optional="true">
     <statement>
             <p> What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” which contains no and “I like vegetables smothered in cheese” which contains mother. Explain the problem with the responses to these statements.</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="activity-2-actual-code-optional">
             <title>Activity 2: Actual Code - (Optional)</title>

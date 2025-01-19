@@ -4,7 +4,7 @@
         <title>Recursion Easier Multiple Choice Questions</title>
         <p>These problems are easier than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qre_1">
+    <activity label="qre_1">
         <statement>
 
         <p> Which line has the recursive call?</p>
@@ -62,9 +62,9 @@ public static int factorial(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qre_2">
+    <activity label="qre_2">
         <statement>
 
         <p> Which line has the recursive call?</p>
@@ -131,9 +131,9 @@ public String starString(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qre_3">
+    <activity label="qre_3">
         <statement>
 
         <p> How many recursive calls does the following method contain?</p>
@@ -195,9 +195,9 @@ public static int fibonacci(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qre_4">
+    <activity label="qre_4">
         <statement>
 
         <p> How many recursive calls does the following method contain?</p>
@@ -255,5 +255,5 @@ public static int multiplyEvens(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

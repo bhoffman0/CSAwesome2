@@ -4,7 +4,7 @@
         <title>Exam 2 for the AP CSA Exam (not timed)</title>
         <p>The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.</p>
 
-    <exercise label="qtnt2_1">
+    <activity label="qtnt2_1">
         <statement>
 
         <p> Consider the <c>Animal</c>, <c>Fish</c>, and <c>Goldfish</c> classes shown below.  Which of the following object declarations will compile without error?</p>
@@ -80,9 +80,9 @@ III. Fish glub = new Goldfish();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_2">
+    <activity label="qtnt2_2">
         <statement>
 
         <p> Assume that <c>list</c> has been instantiated as an ArrayList of integers containing <c>[6, 2, 9]</c> . What are the contents of <c>list</c> after the code is executed?</p>
@@ -142,9 +142,9 @@ list.set(2, 7);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_3">
+    <activity label="qtnt2_3">
         <statement>
 
         <p> A sorted array of integers containing 2000 elements is to be searched for <c>key</c> using a binary search method. Assuming <c>key</c> is in the array, what is the maximum number of iterations needed to find <c>key</c>?</p>
@@ -198,9 +198,9 @@ list.set(2, 7);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_4">
+    <activity label="qtnt2_4">
         <statement>
 
         <p> Which of the following code segments creates a 7 x 9 array of integers and fills every space in the array with multiples of two (not including the value 0)?</p>
@@ -282,9 +282,9 @@ III. int[][] arr = new int [7][9];
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_5">
+    <activity label="qtnt2_5">
         <statement>
 
         <p> Consider the method <c>printString</c> shown below. What is printed as a result of printString(“sandwich”)?</p>
@@ -348,9 +348,9 @@ public void printString(String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_6">
+    <activity label="qtnt2_6">
         <statement>
 
         <p> The Dog class is shown below. The GoldenRetriever class inherits from the Dog class. Which methods does the GoldenRetriever class inherit?</p>
@@ -432,9 +432,9 @@ III. getName()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_7">
+    <activity label="qtnt2_7">
         <statement>
 
         <p> Which of these loops will output <c>02468</c>?</p>
@@ -506,9 +506,9 @@ III. for (int i = 0; i &lt;= 8; i +=2)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_8">
+    <activity label="qtnt2_8">
         <statement>
 
         <p> Consider the following method <c>mystery</c>. Assuming x is an integer greater than 1, in which case does <c>mystery</c> result in an infinite loop?</p>
@@ -571,9 +571,9 @@ public int mystery(int x, int y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_9">
+    <activity label="qtnt2_9">
         <statement>
 
         <p> Consider the following classes <c>Cat</c> and <c>FluffyCat</c>. What is the result of executing the following code?
@@ -646,9 +646,9 @@ public class FluffyCat extends Cat
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_10">
+    <activity label="qtnt2_10">
         <statement>
 
         <p> Consider the class <c>showMe</c>, shown below. What is printed as a result of <c>showMe(10)</c>?</p>
@@ -716,9 +716,9 @@ public static void showMe(int arg)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_11">
+    <activity label="qtnt2_11">
         <statement>
 
         <p> Consider the following code. What is printed as a result of executing this code?</p>
@@ -785,9 +785,9 @@ System.out.println(sum);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_12">
+    <activity label="qtnt2_12">
         <statement>
 
         <p> You are trying to write a method <c>sumRow</c> that finds the sum of the values in a specified row of a symmetrical 2-D matrix. Which of the following code segments could replace <c>/* to be determined */</c> to make the code work correctly?</p>
@@ -874,9 +874,9 @@ while (col &lt; values[0].length)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_13">
+    <activity label="qtnt2_13">
         <statement>
 
         <p> You have an array <c>values</c> filled with 50 integers. Which of the following correctly produces a random index of <c>values</c>?</p>
@@ -930,9 +930,9 @@ while (col &lt; values[0].length)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_14">
+    <activity label="qtnt2_14">
         <statement>
 
         <p> Given the following code, what is returned by mystery(5364)?</p>
@@ -1000,9 +1000,9 @@ public static int mystery(int num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_15">
+    <activity label="qtnt2_15">
         <statement>
 
         <p> Consider an array of integers that contains <c>[12, 8, 4, 6, 13, 29, 7]</c>. If the array is sorted from smallest to largest using an insertion sort method, what will be the order of the array after the third iteration of the sorting method?</p>
@@ -1056,9 +1056,9 @@ public static int mystery(int num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_16">
+    <activity label="qtnt2_16">
         <statement>
 
         <p> Consider the classes <c>Car</c> and <c>Minivan</c>, shown below. If <c>obj</c> has been instantiated later in the class as a <c>Minivan</c>, what is printed as a result of <c>obj.drive()</c>?</p>
@@ -1130,9 +1130,9 @@ public class Minivan extends Car
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_17">
+    <activity label="qtnt2_17">
         <statement>
 
         <p> Consider the following method <c>changeArray</c>. An array is created that contains <c>[2, 8, 10, 9, 6]</c> and is passed to <c>changeArray</c>. What are the contents of the array after the <c>changeArray</c> method executes?</p>
@@ -1193,9 +1193,9 @@ public void changeArray(int[] data)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_18">
+    <activity label="qtnt2_18">
         <statement>
 
         <p> Which statement is equivalent to <c>!( (x &gt; 7) &amp;&amp; !(y &lt; 12) )</c>?</p>
@@ -1249,9 +1249,9 @@ public void changeArray(int[] data)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_19">
+    <activity label="qtnt2_19">
         <statement>
 
         <p> Consider the following method <c>evens</c>, which finds the number of even numbers present in an array. Which of the following segments of code would correctly replace <c>/* to be completed */</c>?</p>
@@ -1334,9 +1334,9 @@ if (x / 2 == 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt2_20">
+    <activity label="qtnt2_20">
         <statement>
 
         <p> Consider the method <c>findMax</c>, which uses sequential search to find the index of the largest value of an array. In which case would <c>findMax</c> not work properly?</p>
@@ -1407,5 +1407,5 @@ public int findMax(int[] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

@@ -80,7 +80,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
             <p>Work in pairs or groups to read through the problem statement and determine the instance variables required for this class. During the exam, it helps to circle the words that are important and may describe the instance variables. Different groups may come up with different variables that will still work. Groups should report back and compare answers in class to determine the best variables before writing the class.</p>
             <p>It may help to first identify the variables that are needed for the constructor and the accessor and mutator methods.</p>
 
-<exercise label="steptracker_instance_variables">
+<activity label="steptracker_instance_variables">
     <statement><p>Select the phrases below which probably mention an instance variable. Note that some of these may be referring to the same variable or to local variables.</p></statement>
 <feedback><p>Think about phrases that indicate a value that is being stored or changed or returned.</p></feedback>
 <areas>
@@ -100,10 +100,10 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
 <cline>     - averageSteps, which returns <area correct="yes">the average number of steps per day</area></cline>
 <cline>       calculated by dividing <area correct="yes">the total number of steps taken</area></cline>
 <cline>       by <area correct="yes">the number of days tracked.</area></cline>
-</areas></exercise>            <p>Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods.</p>
+</areas></activity>            <p>Click to reveal multiple choice questions that will help you to determine the instance variables through the constructor parameters and accessor and mutator methods.</p>
             
 
-    <exercise label="steptracker-constructor">
+    <activity label="steptracker-constructor">
         <statement>
 
                 <p> Given the StepTracker class description above, which of these statements describes an instance variable that the StepTracker constructor should set using a parameter?</p>
@@ -157,11 +157,11 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="steptracker-accessor">
+    <activity label="steptracker-accessor">
         <statement>
 
                 <p> Which of the following methods is an accessor method that returns the value of an instance variable?</p>
@@ -197,11 +197,11 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="steptracker-mutator">
+    <activity label="steptracker-mutator">
         <statement>
 
                 <p> Which of the following methods is a mutator method that changes the value of an instance variable?</p>
@@ -246,21 +246,21 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
 
-<exercise label="steptracker-variables">
+<activity label="steptracker-variables">
     <statement>
             <p> What are the instance variables (at least 4!) that you need for the StepTracker class? What are the data types for each instance variable?</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="writing-the-class-header-and-constructor">
             <title>Writing the Class Header and Constructor</title>
             <p>You will receive at least 1 point if you write the class header and a constructor that has the same name as the class and no return type. You will receive another point for creating <term>private</term> instance variables inside the class. Complete the class definition below with the class name, the instance variables you determined above, and the constructor. Remember that for this problem, a StepTracker object is created (with a constructor) with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The constructor will often have a parameter which it should assign to an instance variable. It should also assign default values to the other instance variables.</p>
 
-<exercise label="stepTrackerCode1">
+<activity label="stepTrackerCode1">
     <statement>
             <p>Write the first draft of the class StepTracker below with the class name, the instance variables, and the constructor with a parameter for the minimum number of steps threshold for active days. Make sure it compiles.</p>
 
@@ -322,7 +322,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is the rubric for the instance variables and the constructor for this problem. Did you receive all 3 points? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for instance variables and constructor</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric1.png" width="100%" alt="Rubric for instance variables and constructor"/></figure>
         </subsection>
@@ -347,7 +347,7 @@ class ExampleClass
             <p>Click to reveal a multiple choice problem to help you determine the accessor method header.</p>
             
 
-    <exercise label="steptracker-accessor-header">
+    <activity label="steptracker-accessor-header">
         <statement>
 
                 <p> Which of the following is a good method header for the accessor method activeDays()?</p>
@@ -401,10 +401,10 @@ class ExampleClass
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
 
-<exercise label="stepTrackerCode2">
+<activity label="stepTrackerCode2">
     <statement>
             <p>Copy the code from your first draft of the class StepTracker above  with the instance variables and constructor. Write the accessor methods <term>activeDays</term> which returns the number of active days.</p>
 
@@ -464,7 +464,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is the rubric for the accessor method <c>activeDays</c> for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive the point for this method? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for accessor method activeDays()</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric3.png" width="100%" alt="Rubric for acccessor methods"/></figure>
         </subsection>
@@ -490,7 +490,7 @@ class Example
             <p>Click to reveal a multiple choice problem to help you determine the mutator method header.</p>
             
 
-    <exercise label="steptracker-mutator-header">
+    <activity label="steptracker-mutator-header">
         <statement>
 
                 <p> Which of the following is a good method header for the mutator method addDailySteps?</p>
@@ -544,7 +544,7 @@ class Example
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>The code for this mutator method is a little more complex than the template above, because it needs to change more than 1 instance variable. Notice the comments in the sample code execution:</p>
             <p>&lt;style&gt;    td { text-align: left; } &lt;/style&gt;
@@ -562,7 +562,7 @@ class Example
             <p>Consider each of your instance variables and whether this method should change them. The problem which you can reveal below may help you.</p>
             
 
-    <exercise label="steptracker-mutator-changes">
+    <activity label="steptracker-mutator-changes">
         <statement>
 
                 <p> Which of the following values does the mutator method addDailySteps need to change? (check all that apply)</p>
@@ -616,10 +616,10 @@ class Example
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
 
-<exercise label="stepTrackerCode3">
+<activity label="stepTrackerCode3">
     <statement>
             <p>Copy the code from your draft of the class StepTracker above  with the class name, the instance variables, constructor, and accessory method. Write the mutator method <term>addDailySteps</term> which takes a parameter and adds it to the appropriate instance variable and changes other instance variables appropriately.</p>
 
@@ -700,7 +700,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is the rubric for the mutator method for this problem. The second column is small mistakes that will still earn the point but the third column is larger mistakes that will not earn the point. Did you receive all the points? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for mutator method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric2.png" width="100%" alt="Rubric for mutator method"/></figure>
         </subsection>
@@ -710,7 +710,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Click to reveal a multiple choice problem to help you determine the accessor method header.</p>
             
 
-    <exercise label="steptracker-accessor-header2">
+    <activity label="steptracker-accessor-header2">
         <statement>
 
                 <p> Which of the following is a good method header for the accessor method averageSteps() which returns the average number of steps per day?</p>
@@ -764,7 +764,7 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>The complex accessor method <term>averageSteps()</term> must calculate the average number of steps from your instance variables. Notice that the first time it is called in the sample code execution, it returns 0.0 since there are no steps recorded. This avoids a divide by 0 error.</p>
             <p>&lt;style&gt;    th,td { text-align: left;  padding-left: 4px; }
@@ -774,7 +774,7 @@ table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
 &lt;td&gt;0.0&lt;/td&gt;&lt;td&gt;When no step data have been recorded, the averageSteps method returns 0.0.&lt;/td&gt;&lt;/tr&gt;
 &lt;/table&gt;&lt;p&gt;</p>
 
-<exercise label="stepTrackerCode4">
+<activity label="stepTrackerCode4">
     <statement>
             <p>Copy the code from your draft of the class StepTracker above  with the instance variables, constructor, accessor and mutator methods. Write the accessor method <term>averageSteps</term> which returns the average number of steps per day, calculated by dividing the total number of steps taken by the number of days tracked.</p>
 
@@ -891,7 +891,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is the rubric for the <c>averageSteps</c> method for this problem.  Did you receive all the points? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for averageSteps method</caption><image source="Unit3-Class-Creation/Figures/stepTrackerRubric4.png" width="100%" alt="Rubric for acccessor methods"/></figure>
         </subsection>

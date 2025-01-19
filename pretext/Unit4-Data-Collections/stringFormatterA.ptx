@@ -46,7 +46,7 @@ public static int totalLetters(List&lt;String&gt; wordList)
             </subsection>
             
 
-    <exercise label="fr_formatter_1">
+    <activity label="fr_formatter_1">
         <statement>
 
                 <p> Which loop would be best for this problem?</p>
@@ -82,9 +82,9 @@ public static int totalLetters(List&lt;String&gt; wordList)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_formatter_2">
+    <activity label="fr_formatter_2">
         <statement>
 
                 <p> What is the correct way to access the length of a String str?</p>
@@ -120,13 +120,13 @@ public static int totalLetters(List&lt;String&gt; wordList)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="put-the-code-in-order">
             <title>Put the Code in Order</title>
             
-<exercise label="stringFormatterA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="stringFormatterA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The following has the correct code to solve this problem, but also contains extra code that isn’t needed in a correct solution.  Drag the needed blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong or are in the wrong order.  You will also be told if the indention is wrong.</p>
 </statement>
 <blocks><block order="8">
@@ -145,12 +145,12 @@ public static int totalLetters(List&lt;String&gt; wordList)
 </choice><choice><cline>   return numletters; </cline>
 </choice></block><block order="6">
 <cline>} //end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="write-the-code-4">
             <title>Write the Code</title>
 
-<exercise label="lcfrsTotalLetters">
+<activity label="lcfrsTotalLetters">
     <statement>
             <p>Finish writing the <c>totalLetters</c> method below so that it returns the number of letters for all the strings in <c>wordList</c>.  The <c>main</c> method below will test your code to check that you solved it correctly.</p>
 
@@ -224,6 +224,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

@@ -3,7 +3,7 @@
 <section xml:id="Ex-array-orig">
         <title>Parsons Problems for Experiments</title>
         <p>Try to solve each of the following. Click the <em>Check Me</em> button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren’t needed in the correct solution.  Try to solve these on your phone or other mobile device!</p>
-<exercise label="ex-array-nd-has22" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="ex-array-nd-has22" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>boolean has22(int[] arr)</c> that takes an array of ints, <c>arr</c>,
             and returns <c>true</c> if there are at least two items in the array <c>arr</c> that are adjacent
             and both equal to <c>2</c>.
@@ -25,7 +25,7 @@
 <cline>    return false;</cline>
 </block><block order="2">
 <cline>}</cline>
-</block></blocks></exercise><exercise label="ex-array-wd-has22" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</block></blocks></activity><activity label="ex-array-wd-has22" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>has22(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns <c>true</c> if there are at least two items in the array <c>arr</c> that are adjacent
             and both equal to <c>2</c>.
@@ -49,8 +49,8 @@
 <cline>    return false;</cline>
 </block><block order="9">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="has22_written">
+</block></blocks></activity>
+<activity label="has22_written">
     <statement>
         <p>Write the method <c>has22(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns <c>true</c> if there are at least two items in the array <c>arr</c> that are
@@ -112,8 +112,8 @@ public class has22Tester extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="ex-array-wd-has3OddOrEven" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="ex-array-wd-has3OddOrEven" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>has3OddOrEven(int[] arr)</c> that takes an array of ints, <c>arr</c>
             and returns <c>true</c> if the array contains either 3 odd or even values that are adjacent.
             For example <c>has3OddOrEven({2, 1, 3, 5})</c> returns <c>true</c> and <c>has3OddOrEven({2, 1, 2, 5})</c> returns <c>false</c>.</p>
@@ -137,7 +137,7 @@ public class has22Tester extends CodeTestHelper
 <cline>    return false;</cline>
 </block><block order="7">
 <cline>}</cline>
-</block></blocks></exercise><exercise label="ex-array-nd-has3OddOrEven" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</block></blocks></activity><activity label="ex-array-nd-has3OddOrEven" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>has3OddOrEven(int[] arr)</c> that takes an array of ints, <c>arr</c>
             and returns <c>true</c> if the array contains either 3 odd or even values that are adjacent.
             For example <c>has3OddOrEven({2, 1, 3, 5})</c> returns <c>true</c> and <c>has3OddOrEven({2, 1, 2, 5})</c> returns <c>false</c>.</p>
@@ -160,8 +160,8 @@ public class has22Tester extends CodeTestHelper
 <cline>    return false;</cline>
 </block><block order="9">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="has3OddOrEven_written">
+</block></blocks></activity>
+<activity label="has3OddOrEven_written">
     <statement>
         <p>Write the method <c>has3OddOrEven(int[] arr)</c> that takes an array of ints, <c>arr</c>
             and returns <c>true</c> if the array contains either 3 even or 3 odd values all next to each other.
@@ -221,8 +221,8 @@ import java.nio.file.Paths;
 }
         </tests>
     </program>
-</exercise>
-<exercise label="ex-array-nd-isascending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="ex-array-nd-isascending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isAscending(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns <c>true</c> if the all of the elements in the array are in ascending order.
             For example, <c>isAscending({1, 2, 3})</c> returns <c>true</c> and <c>isAscending({1, 2, 3, 2})</c>
@@ -244,7 +244,7 @@ import java.nio.file.Paths;
 <cline>    return true;</cline>
 </block><block order="2">
 <cline>}</cline>
-</block></blocks></exercise><exercise label="ex-array-wd-isascending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</block></blocks></activity><activity label="ex-array-wd-isascending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isAscending(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns <c>true</c> if the all of the elements in the array are in ascending order.
             For example, <c>isAscending({1, 2, 3})</c> returns <c>true</c> and <c>isAscending({1, 2, 3, 2})</c>
@@ -268,8 +268,8 @@ import java.nio.file.Paths;
 <cline>    return true;</cline>
 </block><block order="1">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="isAscending_written">
+</block></blocks></activity>
+<activity label="isAscending_written">
     <statement>
         <p>Write the method <c>isAscending(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns <c>true</c> if the all of the elements in the array are in ascending order.
@@ -331,8 +331,8 @@ public class isAscendingTester extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="ex-array-nd-isdescending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="ex-array-nd-isdescending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isDescending(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns true if the all of the elements in the array are in descending order.
             For example, <c>isDescending({3, 2, 1})</c> returns <c>true</c> and <c>isDescending({3, 2, 1, 2})</c>
@@ -354,7 +354,7 @@ public class isAscendingTester extends CodeTestHelper
 <cline>    return true;</cline>
 </block><block order="1">
 <cline>}</cline>
-</block></blocks></exercise><exercise label="ex-array-wd-isdescending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</block></blocks></activity><activity label="ex-array-wd-isdescending" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isDescending(int[] arr)</c> that takes an array of ints, <c>arr</c> and
             returns true if the all of the elements in the array are in descending order.
             For example, <c>isDescending({3, 2, 1})</c> returns <c>true</c> and <c>isDescending({3, 2, 1, 2})</c>
@@ -378,8 +378,8 @@ public class isAscendingTester extends CodeTestHelper
 <cline>    return true;</cline>
 </block><block order="6">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="isDescending_written">
+</block></blocks></activity>
+<activity label="isDescending_written">
     <statement>
         <p>Write the method <c>isDescending(int[] arr)</c> that takes an array of ints, <c>arr</c>
             and returns true if the all of the elements in the array are in descending order.
@@ -441,8 +441,8 @@ public class isDescendingTester extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="ex-array-nd-islevel" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="ex-array-nd-islevel" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isLevel(int[] arr, int x)</c> that takes an array of ints, <c>arr</c> and returns <c>false</c> if the
             difference between any two adjacent values is greater than the passed value, <c>x</c>.
             For example, <c>isLevel({3, 4, 6}, 2)</c> returns <c>true</c> and <c>isLevel({3, 5, 8, 6}, 2)</c> returns <c>false</c>.</p>
@@ -463,7 +463,7 @@ public class isDescendingTester extends CodeTestHelper
 <cline>    return true;</cline>
 </block><block order="5">
 <cline>}</cline>
-</block></blocks></exercise><exercise label="ex-array-wd-islevel" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</block></blocks></activity><activity label="ex-array-wd-islevel" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Create the method <c>isLevel(int[] arr, int x)</c> that takes an array of ints, <c>arr</c> and returns <c>false</c> if the
             difference between any two adjacent values is greater than the passed value, <c>x</c>.
             For example, <c>isLevel({3, 4, 6}, 2)</c> returns <c>true</c> and <c>isLevel({3, 5, 8, 6}, 2)</c> returns <c>false</c>.</p>
@@ -486,8 +486,8 @@ public class isDescendingTester extends CodeTestHelper
 <cline>    return true;</cline>
 </block><block order="4">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="isLevel_written">
+</block></blocks></activity>
+<activity label="isLevel_written">
     <statement>
         <p>Write the method <c>isLevel(int[] arr, int x)</c> that takes an array of ints, <c>arr</c>
             and returns <c>false</c> if the difference between any two adjacent values is greater
@@ -549,5 +549,5 @@ public class isLevelTester extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

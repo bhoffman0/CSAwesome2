@@ -30,7 +30,7 @@
                 from <c>Object</c> method and the <c>Student</c> class then overrides it again. In
                 each class the new <c>toString</c> method adds the new attributes from that class.</p>
 
-<exercise label="toStringDemo">
+<activity label="toStringDemo">
     <statement>
             <p>After trying the code below, complete the subclass called <c>APStudent</c> that
                 extends <c>Student</c> with a new attribute called <c>APscore</c> and override the
@@ -136,7 +136,7 @@ class APStudent extends Student
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="equals-method">
             <title><c>equals</c> Method</title>
@@ -151,7 +151,7 @@ obj)</c> method. This method is used to test if the current object and the passe
                 <c>Object</c> only returns <c>true</c> if the two objects references refer to the same
                 object. In other words it is does the same test as <c>==</c>.</p>
 
-<exercise label="ObjEquals">
+<activity label="ObjEquals">
     <statement>
             <p>Try to guess what this code will print out before running it.</p>
 
@@ -206,7 +206,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A picture from the Java Visualizer showing that only p3 and p4 refer to the same object.</caption><image source="Unit5-Inheritance/Figures/equalsEx.png" width="54%"/></figure>
         </subsection>
   <subsection xml:id="overriding-the-equals-method">
@@ -226,7 +226,7 @@ public class RunestoneTests extends CodeTestHelper
                 objects with <c>equals</c> that new method will be called instead of the inherited
                 one.</p>
 
-<exercise label="StringTest1">
+<activity label="StringTest1">
     <statement>
             <p>Try to guess what this code will print out before running it.</p>
 
@@ -272,7 +272,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>However, overriding <c>equals</c> is a bit more involved than overriding
                 <c>toString</c>. While the <c>toString</c> method is only required to produce a
                 reasonable human-readable <c>String</c> representation of an object, <c>equals</c> has
@@ -317,7 +317,7 @@ public class RunestoneTests extends CodeTestHelper
                 with different meanings such as “pie” which in English is a tasty baked treat
                 and in Spanish is what we call a “foot” in English.</p>
 
-<exercise label="OverrideEquals">
+<activity label="OverrideEquals">
     <statement>
             <p>Try to guess what this code will print out before running it. Click on the
                 CodeLens button to step forward through the code and watch the memory.</p>
@@ -409,7 +409,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>The basic recipe for writing your own equals method, is:</p>
             <p><ol marker="1">
                 <li>
@@ -477,7 +477,7 @@ ClassifiedWord</c>. In general you should only provide an overridden <c>equals</
                 </li>
             </ol></p>
 
-<exercise label="challenge-9-7-savingsaccount">
+<activity label="challenge-9-7-savingsaccount">
     <statement>
             <p>Complete the subclass <c>SavingsAccount</c> below which inherits from
                 <c>Account</c> and adds an interest rate variable. Write a constructor with 3
@@ -593,7 +593,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-57">
             <title>Summary</title>

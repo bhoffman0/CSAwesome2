@@ -90,7 +90,7 @@ while (condition)
                 </ol></p>
             </note>
 
-<exercise label="whileloop">
+<activity label="whileloop">
     <statement>
             <p>Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10?</p>
 
@@ -134,12 +134,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Java doesn’t require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is standard practice to do so.</p>
             <note>
                 <p>On the free response part of the AP exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.</p>
             </note>
-<exercise label="print_odds_while" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="print_odds_while" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following method has the correct code to print out all the odd values from 1 to 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn’t require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the “Check Me” button.</p>
 </statement>
 <blocks><block order="4">
@@ -159,8 +159,8 @@ public class RunestoneTests extends CodeTestHelper
 </block><block order="2">
 <cline>   } // end while</cline>
 <cline>} // end method</cline>
-</block></blocks></exercise>
-    <exercise label="while1">
+</block></blocks></activity>
+    <activity label="while1">
         <statement>
 
             <p> Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out “0 2 4 6 8 10”?</p>
@@ -213,7 +213,7 @@ int count = 0;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="tracing-loops-1">
             <title>Tracing Loops</title>
@@ -224,7 +224,7 @@ int count = 0;
 
     <video youtube="TZss5ukwN8s"/>
     
-    <exercise label="while2">
+    <activity label="while2">
         <statement>
 
             <p> Consider the following code segment. What is count’s value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)</p>
@@ -277,10 +277,10 @@ count = count - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>Step through the code above with the <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualizer</url>.</p>
 
-    <exercise label="while3">
+    <activity label="while3">
         <statement>
 
             <p> What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)</p>
@@ -324,7 +324,7 @@ while (x &lt; 0)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="common-errors-with-loops">
             <title>Common Errors with Loops</title>
@@ -370,7 +370,7 @@ while (i &lt; 10)
                 one too many or one too few times. This is usually a problem with step 2 the
                 test condition and using the incorrect relational operator <c>&lt;</c> or <c>&lt;=</c>.</p>
 
-<exercise label="whileloopbugs">
+<activity label="whileloopbugs">
     <statement>
             <p>The while loop should print out the numbers 1 to 8, but it has 2 errors that
                 cause an infinite loop and an off-by-one error. Can you fix the errors? If
@@ -419,7 +419,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Another possible error is not realizing that the loop body of an iterative statement will not execute if the Boolean expression initially evaluates to false. This is often a problem with the initial value of the loop control variable. For example, if you initialize the loop variable to 10 and test if it is less than 10, the loop body will not execute at all.</p>
             <program language="java"><code>
 int i = 10;
@@ -447,7 +447,7 @@ while (!statement.equals("Bye"))
             <title>Coding Challenge : Turtle Squares</title>
             <p>Do you remember when we used the turtle objects to draw shapes? To create a square without loops we had to repeat code to go forward and turn 90 degrees to the right 4 times like below.  This is a lot of repeated code!</p>
 
-<exercise label="repeatedcode-square">
+<activity label="repeatedcode-square">
     <statement><p>Click on the lines of code that are repeated after the first two lines.</p></statement>
 <feedback><p>Which lines are identical to the first two lines?</p></feedback>
 <areas>
@@ -459,10 +459,10 @@ while (!statement.equals("Bye"))
 <cline><area correct="yes">yertle.turn(90);</area></cline>
 <cline><area correct="yes">yertle.forward(100);</area></cline>
 <cline><area correct="yes">yertle.turn(90);</area></cline>
-</areas></exercise>            <p>Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!</p>
+</areas></activity>            <p>Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!</p>
             <p>(If the code below does not work for you, you can copy the code into  this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit link</url> (refresh page after forking and if it gets stuck) or download the files <url href="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
 
-<exercise label="challenge-turtle-square-while">
+<activity label="challenge-turtle-square-while">
     <statement>
             <p>Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square?</p>
 
@@ -569,7 +569,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-24">
             <title>Summary</title>
@@ -624,7 +624,7 @@ while (count &lt; 10)  // test the loop variable
   <subsection xml:id="ap-practice-17">
             <title>AP Practice</title>
 
-    <exercise label="AP-while-loop1">
+    <activity label="AP-while-loop1">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -657,9 +657,9 @@ System.out.println(result);
             <p>Keep track of the variables n, d, and result. Watch the tracing video.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-while-loop2">
+    <activity label="AP-while-loop2">
         <statement>
 
             <p> Consider the following code segment which is intended to print out the even numbers from 0 to 8 (including 8).</p>
@@ -693,6 +693,6 @@ int count = 0;
             <p>This would print out one too many numbers, 0, 2, 4, 6, 8, 10.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

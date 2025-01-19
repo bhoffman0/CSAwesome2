@@ -84,7 +84,7 @@ public class MasterOrder
             <p>Click to reveal multiple choice questions that may help you write your solution.</p>
             
 
-    <exercise label="fr_cookieA_1">
+    <activity label="fr_cookieA_1">
         <statement>
 
                 <p> What type of loop is best for this problem?</p>
@@ -120,9 +120,9 @@ public class MasterOrder
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_cookieA_2">
+    <activity label="fr_cookieA_2">
         <statement>
 
                 <p> What will you return at the end of this method?</p>
@@ -158,9 +158,9 @@ public class MasterOrder
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_cookieA_3">
+    <activity label="fr_cookieA_3">
         <statement>
 
                 <p> What is wrong with this code?</p>
@@ -206,14 +206,14 @@ public int getTotalBoxes()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="mixed-up-code">
             <title>Mixed Up Code</title>
             <p>Click to reveal the  Mixed Up Code for the solution to this problem.</p>
             
-<exercise label="cookieOrderA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="cookieOrderA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getTotalBoxes</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="1">
@@ -232,12 +232,12 @@ public int getTotalBoxes()
 <cline>   return sum;</cline>
 </block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="solve-part-a">
             <title>Solve Part A</title>
 
-<exercise label="FRQCookieOrderA">
+<activity label="FRQCookieOrderA">
     <statement>
             <p>FRQ Cookie Order Part A: Complete the method <c>getTotalBoxes</c> below.</p>
 
@@ -399,6 +399,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

@@ -4,7 +4,7 @@
         <title>Exam 4 for the AP CSA Exam (not timed)</title>
         <p>The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.</p>
 
-    <exercise label="qtnt4_1">
+    <activity label="qtnt4_1">
         <statement>
 
         <p> Consider the method <c>minVal</c>, shown below. <c>minVal</c> compares every value in the given array to <c>min</c> to find the smallest value, which is then returned. At the beginning of the code, <c>min</c> is set to 1. Which of the following is the best value to set <c>min</c> so that the method will compile and work as intended?</p>
@@ -75,9 +75,9 @@ public int minVal (int[][] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_2">
+    <activity label="qtnt4_2">
         <statement>
 
         <p> The <c>fibonacci</c> method is shown below. What is returned as a result of <c>fibonacci(5)</c>?</p>
@@ -141,9 +141,9 @@ public int fibonacci (int num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_3">
+    <activity label="qtnt4_3">
         <statement>
 
         <p> Which of the following is equivalent to <c>! (!(x &gt;= 7) &amp;&amp; (x &gt; 2))</c>?</p>
@@ -197,9 +197,9 @@ public int fibonacci (int num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_4">
+    <activity label="qtnt4_4">
         <statement>
 
         <p> You want to write a method that multiplies an integer <c>num</c> by itself exactly 10 times. Which of the following loops could you use?</p>
@@ -278,9 +278,9 @@ for (int i : 10)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_5">
+    <activity label="qtnt4_5">
         <statement>
 
         <p> Consider the <c>Animal</c> and <c>Cat</c> classes, shown below. In another class, the line <c>Animal fluffy = new Cat ("orange", "Fluffy", 11)</c> appears. Which of the following declarations will compile without error?</p>
@@ -378,9 +378,9 @@ III. fluffy.makeNoise();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_6">
+    <activity label="qtnt4_6">
         <statement>
 
         <p> The <c>mysteryNum</c> method is shown below. What is returned as a result of <c>mysteryNum(5)</c>?</p>
@@ -445,9 +445,9 @@ public int mysteryNum (int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_8">
+    <activity label="qtnt4_8">
         <statement>
 
         <p> Consider the <c>binSearch</c> method shown below, which uses a binary search algorithm to locate an integer <c>key</c> in an array. Assume <c>intArr</c> is an array of integers containing <c>[5, 7, 9, 11, 21, 29, 36, 45]</c>. How many iterations of the while loop occur in <c>binSearch(5, intArr)</c>?</p>
@@ -525,9 +525,9 @@ public int binSearch(int key, int[] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_9">
+    <activity label="qtnt4_9">
         <statement>
 
         <p> The method <c>numList</c> is shown below. What is returned as a result of <c>numList(5)</c>?</p>
@@ -592,9 +592,9 @@ public String numList (int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_10">
+    <activity label="qtnt4_10">
         <statement>
 
         <p> An ArrayList of integers <c>numbers</c> contains the values <c>[7, 2, 4, 6, 3]</c>. What are the contents of <c>numbers</c> after the following code has been executed?</p>
@@ -655,9 +655,9 @@ numbers.set(5, 5);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_12">
+    <activity label="qtnt4_12">
         <statement>
 
         <p> The method <c>columnSum</c> is shown below. <c>columnSum</c> returns the sum of all of the values in a specified column <c>col</c> of a 2-D array. Which of the following should replace <c>/* to be completed */</c> so that the method will work as intended?</p>
@@ -724,9 +724,9 @@ public int columnSum (int col, int[][] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_13">
+    <activity label="qtnt4_13">
         <statement>
 
         <p> The array <c>intArray</c> contains <c>[8, 12, 34, 6, 10, 14, 2, 4]</c>. What are the contents of <c>intArray</c> after 3 passes of insertion sort?</p>
@@ -780,9 +780,9 @@ public int columnSum (int col, int[][] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_14">
+    <activity label="qtnt4_14">
         <statement>
 
         <p> The <c>Vehicle</c>, <c>Bike</c>, and <c>Car</c> classes are shown. The objects <c>a</c> and <c>b</c> have been declared in a different class. Which of the following lines will compile without error?</p>
@@ -888,9 +888,9 @@ IV. a.color;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_15">
+    <activity label="qtnt4_15">
         <statement>
 
         <p> The <c>wordMixer</c> class is shown below. What is returned as a result of <c>wordMixer("penguin")</c>?</p>
@@ -954,9 +954,9 @@ public String wordMixer (String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_16">
+    <activity label="qtnt4_16">
         <statement>
 
         <p> The method <c>divisible</c> is shown below. In order for <c>divisible</c> to compile and run as intended, the method must return true if x is evenly divisible by y with no remainder, returning false otherwise. Which of the following could replace <c>/* to be completed */</c> to make the code work as intended?</p>
@@ -1020,9 +1020,9 @@ public String wordMixer (String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_17">
+    <activity label="qtnt4_17">
         <statement>
 
         <p> A database containing 2,000 sorted integers must be searched using a binary search algorithm. What is the maximum number of iterations of the binary search method that   must occur in order to find a specified value or guarantee that it is not in the database?</p>
@@ -1076,9 +1076,9 @@ public String wordMixer (String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_18">
+    <activity label="qtnt4_18">
         <statement>
 
         <p> The <c>Person</c> and <c>Student</c> classes are located below. Which of the following methods contains an example of method overloading?</p>
@@ -1186,9 +1186,9 @@ public class Student extends Person
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_19">
+    <activity label="qtnt4_19">
         <statement>
 
         <p> You are trying to write the <c>countDown</c> method. The <c>countDown</c> method takes a parameter <c>num</c> and decrements it by 1, printing every time until <c>num</c> equals 0. Which of the following loops will make the <c>countDown</c> method compile and work as intended?</p>
@@ -1263,9 +1263,9 @@ for (int i : num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt4_20">
+    <activity label="qtnt4_20">
         <statement>
 
         <p> Consider the method <c>threes</c>. What is returned as a result of <c>threes(4)</c>?</p>
@@ -1329,5 +1329,5 @@ public int threes (int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

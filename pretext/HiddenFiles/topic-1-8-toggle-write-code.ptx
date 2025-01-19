@@ -4,7 +4,7 @@
         <title>Unit 1 Write Code for Toggle Code</title>
         <p>This is the write code problems associated with the mixed up code problems.</p>
 
-<exercise label="u1_muc_wc1">
+<activity label="u1_muc_wc1">
     <statement>
         <p>Write code that prints Maria’s first name on one line and her last name on the next line.</p>
 
@@ -50,9 +50,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc2">
+<activity label="u1_muc_wc2">
     <statement>
         <p>Write code that prints the poem <c>Roses are red</c> <c>Violets are blue</c> <c>Sugar is sweet</c> <c>And so are you</c> with 1 sentence on each line.</p>
 
@@ -95,9 +95,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc3">
+<activity label="u1_muc_wc3">
     <statement>
         <p>Write code that prints Marcus’s name on one line and his favorite color (Blue) on the next line.</p>
 
@@ -143,9 +143,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc4">
+<activity label="u1_muc_wc4">
     <statement>
         <p>Write code that figures out the cost for each shirt if you buy 2 and get the third free and they are originally $45 each. Make sure your answer is a double.</p>
 
@@ -189,9 +189,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc5">
+<activity label="u1_muc_wc5">
     <statement>
         <p>Write code that figures out the cost per person for a dinner including the tip. Assume the bill was $89.23, there are three people, and the tip should be 20%. Make sure your answer is a double.</p>
 
@@ -236,9 +236,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc6">
+<activity label="u1_muc_wc6">
     <statement>
         <p>Write code that calculates and prints the number of seconds in 5 days.</p>
 
@@ -281,9 +281,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc7">
+<activity label="u1_muc_wc7">
     <statement>
         <p>Write code that calculates and prints the number of months it would take you to save $500 if you make $50 a week. Make sure your answer is a double.</p>
 
@@ -326,9 +326,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc8">
+<activity label="u1_muc_wc8">
     <statement>
         <p>Write code that prints the name on one line followed by the age on the next line. Your output should look like <c>Your name is Layla</c> and <c>Your age is 16</c>.</p>
 
@@ -374,9 +374,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc9">
+<activity label="u1_muc_wc9">
     <statement>
         <p>Write code that prints the name on one line and the favorite food on the next line. Your output should look like <c>Your name is Julian</c> <c>Your favorite food is chicken wings</c></p>
 
@@ -422,9 +422,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc10">
+<activity label="u1_muc_wc10">
     <statement>
         <p>Write code that calculates and prints the cost of a trip that is 200 miles when the price of gas is 2.20 and the miles per gallon is 42. Make sure your answer is a double.</p>
 
@@ -467,9 +467,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc11">
+<activity label="u1_muc_wc11">
     <statement>
         <p>Write code that calculates how many miles you can go on half a tank of gas if the miles per gallon is 26 and your tank holds 15 gallons.</p>
 
@@ -512,9 +512,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc12">
+<activity label="u1_muc_wc12">
     <statement>
         <p>Write code that calculates and prints how many chicken wings you can buy with $3.50 if the wings are $.60 each. Make sure your answer is an integer.</p>
 
@@ -569,9 +569,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc13">
+<activity label="u1_muc_wc13">
     <statement>
         <p>Write code that calculates how much you will have to pay for an item that is 60 percent off the original price of $52.99.</p>
 
@@ -617,9 +617,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u1_muc_wc14">
+<activity label="u1_muc_wc14">
     <statement>
         <p>Write code that calculates and prints how much the per item costs is for shorts that are buy 2 and get the third free. The shorts are $39.99 each.</p>
 
@@ -678,5 +678,5 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

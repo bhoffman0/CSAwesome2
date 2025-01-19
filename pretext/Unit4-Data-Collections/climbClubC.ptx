@@ -132,7 +132,7 @@ public int distinctPeakNames()
 </code>
     </program>
   </introduction>
-  <exercise label="frqccc_1">
+  <activity label="frqccc_1">
         <statement>
 
         <p> Does this implementation of the <c>distinctPeakNames</c> method work as intended when the <c>addClimb</c> method stores the <c>ClimbInfo</c> objects in the order they were added as described in part (a)?</p>
@@ -159,8 +159,8 @@ public int distinctPeakNames()
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="frqccc_2">
+    </activity>
+  <activity label="frqccc_2">
         <statement>
 
         <p> Does this implementation of the <c>distinctPeakNames</c> method work as intended when the <c>addClimb</c> method stores the <c>ClimbInfo</c> objects in alphabetical order by name as described in part (b)?</p>
@@ -187,11 +187,11 @@ public int distinctPeakNames()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
   <subsection xml:id="try-it-out">
             <title>Try it Out</title>
 
-<exercise label="ClimbClubC">
+<activity label="ClimbClubC">
     <statement>
             <p>FRQ ClimbClub C: Try the code.</p>
 
@@ -397,6 +397,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

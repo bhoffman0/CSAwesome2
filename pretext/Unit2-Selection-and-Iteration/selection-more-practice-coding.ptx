@@ -11,7 +11,7 @@ public static return-type method-name(param-type param-var1, param-type param-va
 }
 </code></program>
 
-<exercise label="front_back_written">
+<activity label="front_back_written">
     <statement>
         <p>Create the method <c>front_back(str, start, end)</c> that takes three strings and returns
             a string based on the following conditions.</p>
@@ -138,9 +138,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="squirrelPlay_written">
+<activity label="squirrelPlay_written">
     <statement>
         <p>The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an <c>int temperature</c> and a <c>boolean isSummer</c>, return <c>true</c> if the squirrels play and <c>false</c> otherwise.</p>
         <table><tabular>
@@ -229,9 +229,9 @@ public class RunestoneTests extends CodeTestHelper {
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="alarmClock_written">
+<activity label="alarmClock_written">
     <statement>
         <p>Given a <c>day</c> of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a <c>boolean</c> indicating if we are on <c>vacation</c>, return a string of the form <c>"7:00"</c> indicating when the alarm clock should ring. Weekdays, the alarm should be <c>"7:00"</c> and on the weekend it should be <c>"10:00"</c>. Unless we are on vacation – then on weekdays it should be <c>"10:00"</c> and weekends it should be <c>"off"</c>.</p>
         <table><tabular>
@@ -319,9 +319,9 @@ public class RunestoneTests extends CodeTestHelper {
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="dateFashion_written">
+<activity label="dateFashion_written">
     <statement>
         <p>You and your date are trying to get a table at a restaurant. The parameter <c>you</c> is the stylishness of your clothes, in the range 0..10, and <c>date</c> is the stylishness of your date’s clothes. The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is <c>2</c> (yes). With the exception that if either of you has style of 2 or less, then the result is <c>0</c> (no). Otherwise the result is <c>1</c> (maybe).</p>
         <table><tabular>
@@ -410,5 +410,5 @@ public class RunestoneTests extends CodeTestHelper {
  }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

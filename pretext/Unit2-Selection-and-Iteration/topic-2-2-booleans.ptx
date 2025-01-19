@@ -25,7 +25,7 @@
     <video youtube="bO9bejT0jwE"/>
                 <p>The following code shows how <c>==</c> is used with primitive types like <c>int</c>.</p>
 
-<exercise label="bool1">
+<activity label="bool1">
     <statement>
             <p>What will the code below print out? Try to guess before you run it! Note that 1 equal sign (<c>=</c>) is used for assigning a value and 2 equal signs (<c>==</c>) for testing values. Then, add 3 more lines of code that sets year to 15 and prints out whether age is equal to year and whether age is not equal to year.</p>
 
@@ -71,11 +71,11 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>We can also use <c>==</c> or <c>!=</c> to test if two reference values, like <c>Turtle</c> and <c>String</c> objects,  refer to the same object. In the figure below, we are creating two separate <c>Turtle</c> objects called <c>juan</c> and <c>mia</c>. They do not refer to same object or turtle. Then, we create a reference variable called <c>friend</c> that is set to <c>mia</c>. The turtle <c>mia</c> will have two ways (<term>references</term> or <term>aliases</term>) to name her – she’s both <c>mia</c> and <c>friend</c>, and these variables refer to the same object (same <c>Turtle</c>) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with <c>==</c> will return true which you can see in the code below.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Reference Equality</caption><image source="Unit2-Selection-and-Iteration/Figures/turtleEquality.png" width="89%"/></figure>
 
-<exercise label="boolRef">
+<activity label="boolRef">
     <statement>
             <p>What will the code below print out? Try to guess before you run it! Then, add another Turtle friend2 and set it to juan. Does friend2 == juan? Does friend2 == friend? Print out the Boolean expressions for these.</p>
 
@@ -124,7 +124,7 @@ public class BoolTestRef
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="relational-operators">
             <title>Relational Operators (&lt;, &gt;)</title>
@@ -162,7 +162,7 @@ public class BoolTestRef
                 write them in the same order you would say them in English: “less than or equal
                 to” not “equal to or less than”.</p>
 
-<exercise label="bool2">
+<activity label="bool2">
     <statement>
             <p>Try to guess what the code below will print out before you run it. Then, set year to 15 and print the boolean expression for whether age is less than or equal to year.</p>
 
@@ -211,7 +211,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p><term>Boolean</term> variables or expressions have <term>true</term> or <term>false</term> values. Relational operators can be used to compare two variables or compare a variable against a constant value or expression. For example, the following Boolean expressions can be used to see whether a number is positive or negative by seeing if it is greater than 0 or less than 0:</p>
             <program language="java"><code>
 // Test if a number is positive
@@ -220,10 +220,10 @@ public class RunestoneTests extends CodeTestHelper
 (number &lt; 0)
 </code></program>
 
-<exercise label="BooleanExps">
+<activity label="BooleanExps">
     <statement><p>Drag the boolean expression from the left and drop it on what it is testing on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the relational operators above.</p></feedback>
-<matches><match order="1"><premise>x &gt; 0</premise><response>x is positive</response></match><match order="2"><premise>x == y</premise><response>x equals y</response></match><match order="3"><premise>x &lt; 0</premise><response>x is negative</response></match><match order="4"><premise>x != y</premise><response>x does not equal y</response></match><match order="5"><premise>x &lt; y </premise><response>x is less than y</response></match><match order="6"><premise>x &gt; y </premise><response>x is greater than y</response></match><match order="7"><premise>x &gt;= y </premise><response>x is greater than or equal to y</response></match></matches></exercise>        </subsection>
+<matches><match order="1"><premise>x &gt; 0</premise><response>x is positive</response></match><match order="2"><premise>x == y</premise><response>x equals y</response></match><match order="3"><premise>x &lt; 0</premise><response>x is negative</response></match><match order="4"><premise>x != y</premise><response>x does not equal y</response></match><match order="5"><premise>x &lt; y </premise><response>x is less than y</response></match><match order="6"><premise>x &gt; y </premise><response>x is greater than y</response></match><match order="7"><premise>x &gt;= y </premise><response>x is greater than or equal to y</response></match></matches></activity>        </subsection>
   <subsection xml:id="testing-with-remainder">
             <title>Testing with remainder (%)</title>
             <p>The remainder operator (%) is very useful in coding. The following Boolean expressions can be used to test whether a number is even or odd by seeing if there is a remainder when it is divided by 2 or if it is divisible by another number:</p>
@@ -236,7 +236,7 @@ public class RunestoneTests extends CodeTestHelper
 (number % x == 0)
 </code></program>
 
-<exercise label="boolRem">
+<activity label="boolRem">
     <statement>
             <p>Try the expressions containing the % operator below to see how they can be used to check for even or odd numbers. All even numbers are divisible (with no remainder) by 2. Then, add another expression that tests to see if age1 is divisible by 3.</p>
 
@@ -292,7 +292,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>A warning: because Java’s <c>%</c> is a remainder operator and not a true
                     mathematical modulo operator, you
@@ -309,7 +309,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>We encourage you to do this activity as a <problematic refid="id2">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>In this activity, you will write a Java program that uses boolean expressions to determine if a number is prime. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it’s only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it’s divisible by 2 as well as 1 and 4. You will write methods that test whether a number is positive, negative, odd, even, and divisible by another number. You will then experiment with these methods to determine if the numbers 5, 6, and 7 are prime. And to ask questions about prime numbers like whether all odd numbers are prime.</p>
 
-<exercise label="challenge-primeNumbers">
+<activity label="challenge-primeNumbers">
     <statement>
             <p>Complete the methods below to determine if a number is positive, negative, odd, even, or divisible by another number by returning boolean expressions testing the argument number. Then, experiment with these methods to determine if the numbers 5, 6, and 7 are prime.</p>
 
@@ -412,10 +412,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>With your POGIL group, use the code you completed above to experiment to see if 5, 6, and 7 are prime. Answer the following questions:</p>
 
-    <exercise label="prime1">
+    <activity label="prime1">
         <statement>
 
             <p> Is 5 prime?</p>
@@ -442,9 +442,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="prime2">
+    <activity label="prime2">
         <statement>
 
             <p> Is 6 prime?</p>
@@ -471,9 +471,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="prime3">
+    <activity label="prime3">
         <statement>
 
             <p> Is 7 prime?</p>
@@ -500,14 +500,14 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-        <exercise label="prime4">
+        <activity label="prime4">
             <statement>
-    <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? <var/>  </p></statement><setup><var><condition string="^\s*^9$\s*$"><feedback><p>Yes, 9 is not prime because it is divisible by 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 3-10 in your code.</p></feedback></condition></var></setup></exercise>
-        <exercise label="prime5">
+    <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? <var/>  </p></statement><setup><var><condition string="^\s*^9$\s*$"><feedback><p>Yes, 9 is not prime because it is divisible by 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 3-10 in your code.</p></feedback></condition></var></setup></activity>
+        <activity label="prime5">
             <statement>
-    <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 2-10 in your code.</p></feedback></condition></var></setup></exercise>            <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
+    <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 2-10 in your code.</p></feedback></condition></var></setup></activity>            <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
         </subsection>
   <subsection xml:id="summary-19">
             <title>Summary</title>
@@ -529,7 +529,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-12">
             <title>AP Practice</title>
 
-    <exercise label="AP2-2-1">
+    <activity label="AP2-2-1">
         <statement>
 
             <p> Consider the following statement.</p>
@@ -554,9 +554,9 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
             <p>The boolean x should hold true or false.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-2-2">
+    <activity label="AP2-2-2">
         <statement>
 
             <p> Consider the following Boolean expression in which the int variables x and y have been properly declared and initialized.</p>
@@ -581,7 +581,7 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
             <p>Correct! Both sides are false! This is tricky!</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="relational-operators-practice-game">
             <title>Relational Operators Practice Game</title>

@@ -63,7 +63,7 @@ public interface MenuItem
             <p>Apply the grading rubric shown above as you answer the following questions.</p>
             <p><em>Apply the Grading Rubric</em></p>
 
-    <exercise label="qtrio2_1">
+    <activity label="qtrio2_1">
         <statement>
 
             <p> Should the student earn 1 point for the correct declaration of the <c>Trio</c> class?</p>
@@ -90,9 +90,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_2">
+    <activity label="qtrio2_2">
         <statement>
 
             <p> Should the student earn 1 point for declaring the private instance variables (sandwich, salad, and drink or name and price)?</p>
@@ -119,9 +119,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_3">
+    <activity label="qtrio2_3">
         <statement>
 
             <p> Should the student earn 1 point for declaring the the constructor correctly?</p>
@@ -148,9 +148,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_4">
+    <activity label="qtrio2_4">
         <statement>
 
             <p> Should the student earn 1 point for correctly initializing the appropriate instance variables in the constructor?</p>
@@ -177,9 +177,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_5">
+    <activity label="qtrio2_5">
         <statement>
 
             <p> Should the student earn 1 point for correctly declaring the methods in the <c>MenuItem</c> interface (getName and getPrice)?</p>
@@ -206,9 +206,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_6">
+    <activity label="qtrio2_6">
         <statement>
 
             <p> Should the student earn 1 point for correctly constructing the string to return from <c>getName</c> and making it available to be returned?</p>
@@ -235,9 +235,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_7">
+    <activity label="qtrio2_7">
         <statement>
 
             <p> Should the student earn 1 point for returning a constructed string from <c>getName</c>?</p>
@@ -264,9 +264,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_8">
+    <activity label="qtrio2_8">
         <statement>
 
             <p> Should the student earn 1 point for correctly calculating the price and making it available to be returned from <c>getPrice</c>?</p>
@@ -293,9 +293,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtrio2_9">
+    <activity label="qtrio2_9">
         <statement>
 
             <p> Should the student earn 1 point for returning the calculated price in <c>getPrice</c>?</p>
@@ -322,9 +322,9 @@ public interface MenuItem
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-        <exercise label="qtrio2_total">
+        <activity label="qtrio2_total">
             <statement>
-    <p> What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^6$\s*$"><feedback><p>Correct.  The answer lost a total of 3 points.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Subtract 1 point for each no response from the 9 possible points</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^6$\s*$"><feedback><p>Correct.  The answer lost a total of 3 points.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Subtract 1 point for each no response from the 9 possible points</p></feedback></condition></var></setup></activity>        </subsection>
 </section>

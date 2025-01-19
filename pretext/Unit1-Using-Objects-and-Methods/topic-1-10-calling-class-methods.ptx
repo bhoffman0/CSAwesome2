@@ -36,7 +36,7 @@ public static int square(int number)
 </code></program>
             <p>The <term>return</term> statement is used to return a value from the method back to the calling code. The return value must be the same type as the return type in the method header. The return statement also ends the method execution, so any code after the return statement is not executed. Let’s try this below. Click on the next button to step through the code in the <url href="https://pythontutor.com/render.html#code=public%20class%20SquareMethod%0A%7B%0A%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20number%29%20%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20result%20%3D%20number%20*%20number%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20result%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20y%20%3D%20square%28x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%20%3D%204%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20square%28x%29%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=11&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=public%20class%20SquareMethod%0A%7B%0A%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20number%29%20%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20result%20%3D%20number%20*%20number%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20result%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20x%20%3D%205%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20y%20%3D%20square%28x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20x%20%3D%204%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22The%20square%20of%20%22%20%2B%20x%20%2B%20%22%20is%20%22%20%2B%20square%28x%29%29%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=11&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> below and see the variables and the return values.</p>
 
-<exercise label="codelensSquare">
+<activity label="codelensSquare">
 <statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run and watch how the argument is passed into the parameter variable and the return value.</p></statement>
 <program interactive="codelens" language="java" label="codeLenssq" xml:id="codelensidsq">
     <code>
@@ -59,7 +59,7 @@ public class SquareMethod
 }
     </code>
 </program>
-</exercise>
+</activity>
             <p>When calling the <c>square</c> method, the return value can be stored in a variable or used as part of an expression. In the main method above, the variable <c>y</c> is assigned the return value of the <c>square</c> method. The return value can also be used directly in the print statement without storing it in a variable, for example <c>System.out.println(square(4));</c>.</p>
             <program language="java"><code>
 // Saving the returned value of the square method in a variable
@@ -69,7 +69,7 @@ System.out.println(y); // prints 25
 System.out.println(square(4)); // prints 16
 </code></program>
 
-<exercise label="squareMethod">
+<activity label="squareMethod">
     <statement>
             <p>Add another call to the square method in the main method that prints out the square of 6.</p>
 
@@ -116,9 +116,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="traceMethods1">
+    <activity label="traceMethods1">
         <statement>
 
             <p> What does the following code print out? (<url href="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=%20%20%20%20%20%20public%20class%20MethodTrace%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20*%20x%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20%28x%20/%20y%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28square%283%29%20%2B%20divide%285,2%29%29%3B%20%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url>)</p>
@@ -191,14 +191,14 @@ public class MethodTrace
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Common Errors with Methods</title>
             <p>A common error with non-void methods is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out. To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression.</p>
             <p>Another common error is a mismatch in types or order for the arguments or return values. For example, if a method returns a double value, you cannot assign it to an int variable.</p>
 
-<exercise label="fixMethodCalls">
+<activity label="fixMethodCalls">
     <statement>
             <p>Fix the method calls below in the main method. Make sure the type, how many, and order of the arguments match what the methods expect. Are the returned values saved in the right type of variables? Do not change the methods other than main.</p>
 
@@ -272,7 +272,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Methods Outside the Class</title>
@@ -313,7 +313,7 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
                 of your beloved’s room in the tower and the width of the moat since you have
                 to place the base of the ladder on the edge of the moat.</p>
 
-    <exercise label="hypotenuse-java-mc">
+    <activity label="hypotenuse-java-mc">
         <statement>
 
             <p> Which of the following are correct Java expressions to compute the hypotenuse of
@@ -339,9 +339,9 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
                 length of the hypotenuse.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="challenge-1-10-pythagorean">
+<activity label="challenge-1-10-pythagorean">
     <statement>
             <p>Complete the <c>ladderSizeNeeded</c> method below using the Pythagorean Theorem and the <c>Math.sqrt</c> method. Then in the main method, write a method call to test the <c>ladderSizeNeeded</c> method with arguments for the height of 30 and the width of 40. The method should return the length of the ladder needed to reach the window of your beloved.</p>
 
@@ -414,7 +414,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Summary</title>
@@ -445,7 +445,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>AP Practice</title>
 
-    <exercise label="AP1-10-static-method">
+    <activity label="AP1-10-static-method">
         <statement>
 
             <p> Consider the following method.</p>
@@ -471,9 +471,9 @@ public static double calculatePizzaBoxes(int numOfPeople, double slicesPerBox)
             <p>The variable result has not been declared (with an appropriate data type).</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP1-10-static-method2">
+    <activity label="AP1-10-static-method2">
         <statement>
 
             <p> Consider the following methods:</p>
@@ -507,6 +507,6 @@ public void static printInCentimeters(double inches, double centimeters)
             <p>Correct! centimeters = 10 * 2.54 = 25.4.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

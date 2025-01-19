@@ -14,7 +14,7 @@
   <subsection xml:id="try-and-solve-it-3">
             <title>Try and Solve It</title>
 
-<exercise label="NumberGroupB">
+<activity label="NumberGroupB">
     <statement>
             <p>Complete the class <c>Range</c> below with instance variables, a constructor, and a contains method.</p>
 
@@ -112,6 +112,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

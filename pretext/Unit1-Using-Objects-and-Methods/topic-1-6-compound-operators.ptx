@@ -152,7 +152,7 @@
                 the postfix operators in a context where the value of the expression matters.</p>
         </note>
   </introduction>
-  <exercise label="compound-ops">
+  <activity label="compound-ops">
     <statement>
         <p>Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Create more compound assignment statements with shortcut operators as described below and work with a partner to guess what they would print out before running the code.</p>
 
@@ -212,8 +212,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-  <exercise label="q_trace_increment">
+</activity>
+  <activity label="q_trace_increment">
         <statement>
 
         <p> What are the values of x, y, and z after the following code executes?</p>
@@ -275,8 +275,8 @@ z+=y;
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="q_trace_increment2">
+    </activity>
+  <activity label="q_trace_increment2">
         <statement>
 
         <p> What are the values of x, y, and z after the following code executes?</p>
@@ -338,7 +338,7 @@ z++;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
   <subsection xml:id="code-tracing-challenge-and-operators-maze">
             <title>Code Tracing Challenge and Operators Maze</title>
             <p>Use paper and pencil or the question response area below to trace through the following program to determine the values of the variables at the end.</p>
@@ -360,12 +360,12 @@ y %= 2;
 z--;
 </code></program>
 
-<exercise label="challenge1-6">
+<activity label="challenge1-6">
     <statement>
             <p> Write your trace table for x, y, and z here showing their results after each line of code.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>After doing this challenge, play the <url href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" visual="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing">Operators Maze game</url>. See if you and your
                 partner can get the highest score!</p>
         </subsection>

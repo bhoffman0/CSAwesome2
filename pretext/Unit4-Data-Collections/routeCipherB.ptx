@@ -81,18 +81,18 @@ public class RouteCipher
   <subsection xml:id="how-to-solve-this-5">
             <title>How to Solve This</title>
 
-<exercise label="routecipherb_short">
+<activity label="routecipherb_short">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
                 Click on the buttons to reveal the questions.</p>
             <p>To solve this problem, you have a message that you need to process and concatenate. Do you need to use a loop for this?</p>
             
 
-    <exercise label="FRQRouteCipherB_1.5MC">
+    <activity label="FRQRouteCipherB_1.5MC">
         <statement>
 
                 <p> What type of loop could you use to solve this problem?</p>
@@ -137,11 +137,11 @@ public class RouteCipher
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="FRQRouteCipherBnorm_1">
+    <activity label="FRQRouteCipherBnorm_1">
         <statement>
 
                 <p> What should your while statement conditional be?</p>
@@ -186,9 +186,9 @@ public class RouteCipher
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="FRQRouteCipherBnorm_2">
+    <activity label="FRQRouteCipherBnorm_2">
         <statement>
 
                 <p> How can you determine how large the “chunk size” should be?</p>
@@ -233,9 +233,9 @@ public class RouteCipher
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="FRQRouteCipherBnorm_3">
+    <activity label="FRQRouteCipherBnorm_3">
         <statement>
 
                 <p> If chunkSize is greater that message.length(), what should you set chunkSize to?</p>
@@ -280,9 +280,9 @@ public class RouteCipher
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="FRQRouteCipherBnorm_4">
+    <activity label="FRQRouteCipherBnorm_4">
         <statement>
 
                 <p> What method needs to be called on message before you can call “encryptBlock()”?</p>
@@ -327,11 +327,11 @@ public class RouteCipher
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Below is a mixed up version of the correct solution hinted at by the previous questions.</p>
             
-<exercise label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="8">
@@ -358,7 +358,7 @@ public class RouteCipher
 <cline>  return encryptedMessage;</cline>
 </block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="solve-part-b-1">
             <title>Solve Part B</title>
@@ -495,7 +495,7 @@ public class RunestoneTests extends CodeTestHelper
                 question to practice working through the recursive solution.</p>
             
 
-    <exercise label="FRQRouteCipherBrecur_1">
+    <activity label="FRQRouteCipherBrecur_1">
         <statement>
 
                 <p> What is your base case?</p>
@@ -540,9 +540,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="FRQRouteCipherBrecur_2">
+    <activity label="FRQRouteCipherBrecur_2">
         <statement>
 
                 <p> What kind of recursion will you use?</p>
@@ -587,9 +587,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="FRQRouteCipherBrecur_3">
+    <activity label="FRQRouteCipherBrecur_3">
         <statement>
 
                 <p> What is your tail recursive call?</p>
@@ -634,11 +634,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.</p>
             
-<exercise label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="4">
@@ -662,6 +662,6 @@ public class RunestoneTests extends CodeTestHelper
 <cline>            this.numRows * this.numCols)));</cline>
 </block><block order="5">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
 </section>

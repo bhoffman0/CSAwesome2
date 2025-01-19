@@ -121,7 +121,7 @@ public Person()
 }
 </code></program>
 
-<exercise label="name_constructor">
+<activity label="name_constructor">
     <statement><p>Click on all the lines of code that are part of constructors in the following class.</p></statement>
 <feedback><p>Constructors are public and have the same name as the class.</p></feedback>
 <areas>
@@ -147,8 +147,8 @@ public Person()
 <cline>    <area correct="no">}</area></cline>
 <cline/>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-    <exercise label="constructor-purpose">
+</areas></activity>
+    <activity label="constructor-purpose">
         <statement>
 
             <p> What best describes the purpose of a class’s constructor?</p>
@@ -193,9 +193,9 @@ public Person()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="class-Fraction">
+<activity label="class-Fraction">
     <statement>
             <p>The following class defines a <c>Fraction</c> with the instance variables
                 <c>numerator</c> and <c>denominator</c>. Complete the body of its 2 constructors. The
@@ -295,9 +295,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="class-Car">
+<activity label="class-Car">
     <statement>
             <p>The following class defines a Car with the instance variables model and year,
                 for example a Honda 2010 car. However, some of the code is missing. First, fill in
@@ -366,7 +366,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-student-class">
             <title>Coding Challenge : Student Class</title>
@@ -386,7 +386,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-Student-class">
+<activity label="challenge-Student-class">
     <statement>
             <p>Create a class Student with 4 instance variables, a constructor, and a print method. Write a main method that creates 2 Student objects with the constructor and calls their print() method.</p>
 
@@ -495,7 +495,7 @@ public class Student
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community-1">
             <title>Design a Class for your Community</title>
@@ -515,7 +515,7 @@ public class Student
                 </li>
             </ol></p>
 
-<exercise label="community-challenge2">
+<activity label="community-challenge2">
     <statement>
             <p>Copy your class with its 3 instance variables from <url href="topic-3-3-anatomy-of-class.html#groupwork-design-a-class-for-your-community" visual="topic-3-3-anatomy-of-class.html#groupwork-design-a-class-for-your-community">lesson 3.3 Community Challenge</url>. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.</p>
 
@@ -628,7 +628,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-30">
             <title>Summary</title>
@@ -669,7 +669,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-20">
             <title>AP Practice</title>
 
-    <exercise label="AP-constructor1">
+    <activity label="AP-constructor1">
         <statement>
 
             <p> Consider the definition of the Cat class below. The class uses the instance variable isSenior to indicate whether a cat is old enough to be considered a senior cat or not.</p>
@@ -713,9 +713,9 @@ public class Cat
             <p>An integer should be passed in as the second parameter and isSenior would be undefined outside of the class.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-constructor2">
+    <activity label="AP-constructor2">
         <statement>
 
             <p> Consider the following class definition. Each object of the class Cat will store the cat’s name as name, the cat’s age as age, and the number of kittens the cat has as kittens. Which of the following code segments, found in a class other than Cat, can be used to create a cat that is 5 years old with no kittens?</p>
@@ -795,9 +795,9 @@ III. Cat c = new Cat("Luna", 5);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-constructor3">
+    <activity label="AP-constructor3">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -860,6 +860,6 @@ public Cat(String c, boolean h)
             <p>Correct!</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

@@ -34,7 +34,7 @@
             
             <p>Linear or Sequential search can be used to find a value in <em>unsorted</em> data. It usually starts at the first element and walks through the array or <c>ArrayList</c> until it finds the value it is looking for and returns its index. If it reaches the end of the array or list without finding the value, the search method usually returns a -1 to show that it didn’t find the value in the array or list. Click on <em>Show CodeLens</em> below to see linear search in action.</p>
 
-<exercise label="seqSearch">
+<activity label="seqSearch">
     <statement>
             <p>The code for <c>sequentialSearch</c> for arrays below is from a previous AP CSA course description. Click on the Code Lens button to see this code running in the Java visualizer.</p>
 
@@ -94,10 +94,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is the same search with an <c>ArrayList</c>. The same algorithms can be used with arrays or <c>ArrayList</c>s, but notice that <c>size()</c> and <c>get(i)</c> are used with <c>ArrayList</c>s instead of <c>length</c> and <c>[i]</c> which are used in arrays. Many of our examples will use arrays for simplicity since with arrays, we know how many items we have and the size won’t change during runtime. There are methods such as <c>contains</c> that can be used in ArrayLists instead of writing your own algorithms. However, they are not in the AP CSA Java subset.</p>
 
-<exercise label="seqSearchList">
+<activity label="seqSearchList">
     <statement>
             <p>Here is a linear search using ArrayLists. Notice that size() and get(i) is used with ArrayLists instead of length and [i] which are used in arrays. Click on the Code Lens button to step through this code in the visualizer.</p>
 
@@ -164,9 +164,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="qss_1">
+    <activity label="qss_1">
         <statement>
 
             <p> Which will cause the <em>longest</em> execution of a sequential search looking for a value in an array of integers?</p>
@@ -211,9 +211,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qss_2">
+    <activity label="qss_2">
         <statement>
 
             <p> Which will cause the <em>shortest</em> execution of a sequential search looking for a value in an array of integers?</p>
@@ -258,10 +258,10 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can also look for a <c>String</c> in an array or list, but be sure to use <c>equals</c> rather than <c>==</c>.  Remember that <c>==</c> is only true when the two references refer to the same <c>String</c> object, while <c>equals</c> returns true if the characters in the two <c>String</c> objects are the same.</p>
 
-<exercise label="seqSearchStr">
+<activity label="seqSearchStr">
     <statement>
             <p>Demonstration of a linear search for a String. Click on the Code Lens button or the link below to step through this code.</p>
 
@@ -317,13 +317,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="linear-search-with-2d-arrays">
             <title>Linear Search with 2D Arrays</title>
             <p>We can also apply the linear search algorithm to data in a 2D array.  We can loop through each row of the 2D array and then apply the linear search algorithm to each row to find an element.  The code below demonstrates this with a 2D array of integers.  Click on the Code Lens button to step through this code. Then, change it to work with a 2D array of Strings. Remember to use the <c>equals</c> method to compare Strings.</p>
 
-<exercise label="linearSearch2DArrays">
+<activity label="linearSearch2DArrays">
     <statement>
             <p>What will the following code print? Click on the Code Lens button to step through this code. Can you change the code to work for a String 2D array instead of an int array? Note that the indices row and col will still be ints. Remember to use the <c>equals</c> method to compare Strings.</p>
 
@@ -397,7 +397,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="binary-search">
             <title>Binary Search</title>
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Binary search calculates the middle index as <c>left + right / 2</c> where left starts out at 0 and right starts out at the array length - 1 (the index of the last element). Remember that integer division gives an integer result so 2.5 becomes 2. It compares the value at the middle index with the target value (the value you are searching for).  If the target value is less than the value at the middle it sets right to middle minus one. If the target value is greater than the value at the middle it sets left to middle plus one. Otherwise the values match and it returns the middle index. It also stops when left is greater than right which indicates that the value wasn’t found and it returns -1.</p>
             <p>The code for <c>binarySearch</c> below is from the AP CSA course description. A recursive version of this algorithm will be covered in lesson 4.17.</p>
 
-<exercise label="binSearch">
+<activity label="binSearch">
     <statement>
             <p>Demonstration of iterative binary search. Click on the Code Lens button to step through this code.</p>
 
@@ -486,7 +486,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>You can also use binary search with a <c>String</c> array.  But, when you look for a <c>String</c>, be sure to use <c>compareTo</c> method rather than <c>&lt;</c> or <c>&gt;</c> which can only be used with primitive types.  Remember how the <c>String</c> method <c>compareTo</c> works:</p>
             <blockquote>
                 <p><ul>
@@ -496,7 +496,7 @@ public class RunestoneTests extends CodeTestHelper
                 </ul></p>
             </blockquote>
 
-<exercise label="binSearchStrings">
+<activity label="binSearchStrings">
     <statement>
             <p>Demonstration of binary search with strings using compareTo. Click on the Code Lens button to step through the code.</p>
 
@@ -570,7 +570,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="runtimes">
             <title>Runtimes</title>
@@ -656,7 +656,7 @@ public class RunestoneTests extends CodeTestHelper
             </tabular></table>
             <p>Runtimes can be described with mathematical functions. For an array of size n, linear search runtime is a linear function, and binary search runtime is a function of log base 2 of n (or log n + 1 comparisons). This is called the big-O runtime function in computer science, for example O(log n) vs. O(n). You can compare the growth of functions like n and log<subscript>2</subscript>n as n, the data size, grows and see that binary search runs much faster for any n.  You don’t need to know the log n runtime growth function for the AP exam, but you should be able to calculate how many steps binary search takes for a given n by counting how many times you can divide it in half. Or you can start at 1 and keep a count of how many times you can double it with the powers of two (1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, etc.) until you reach a number that is slightly above n.</p>
 
-    <exercise label="qbs_1">
+    <activity label="qbs_1">
         <statement>
 
             <p> Which will cause the <em>shortest</em> execution of a binary search looking for a value in an array of integers?</p>
@@ -701,9 +701,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qbs_2">
+    <activity label="qbs_2">
         <statement>
 
             <p> Which of the following conditions must be true in order to search for a value using binary search?</p>
@@ -753,9 +753,9 @@ III. The array must not contain duplicate values.
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qbs_3">
+    <activity label="qbs_3">
         <statement>
 
             <p> How many times would the loop in the binary search run for an array  int[] arr = {2, 10, 23, 31, 55, 86} with binarySearch(arr,55)?</p>
@@ -791,9 +791,9 @@ III. The array must not contain duplicate values.
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qbs_4">
+    <activity label="qbs_4">
         <statement>
 
             <p> If you had an ordered array of size 500, what is the maximum number of iterations required to find an element with binary search?</p>
@@ -838,7 +838,7 @@ III. The array must not contain duplicate values.
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-search-runtimes">
             <title>Coding Challenge : Search Runtimes</title>
@@ -846,7 +846,7 @@ III. The array must not contain duplicate values.
             <p>In the spellchecker challenge, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
             <p>Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use <c>size</c> and <c>get(i)</c> instead of [] to get an element in the <c>ArrayList</c> dictionary at index i. You will need to use the <c>equals</c> and <c>compareTo</c> methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.</p>
 
-<exercise label="challenge-search-coding">
+<activity label="challenge-search-coding">
     <statement>
             <p>This spellchecker uses an ArrayList for the dictionary. Write a <c>linearSearch(word)</c> and a <c>binarySearch(word)</c> method. Use <c>get(i)</c>, <c>size()</c>, <c>equals</c>, and <c>compareTo</c>. Return a count of the number of words checked.</p>
 
@@ -952,17 +952,17 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Run your code with the following test cases and record the runtime for each word in this <url href="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" visual="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing">Google document</url> (do File/Make a Copy) also seen below to record your answers.</p>
             <p>&lt;iframe height="71%" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
             <p>What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.</p>
 
-<exercise label="challenge-binary-search">
+<activity label="challenge-binary-search">
     <statement>
             <p> After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-40">
             <title>Summary</title>

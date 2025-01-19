@@ -36,7 +36,7 @@ public class Motorcycle extends Vehicle
             <p>Inheritance is also useful for <term>specialization</term> which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram Showing Inheritance</caption><image source="Unit5-Inheritance/Figures/person.png" width="54%"/></figure>
 
-    <exercise label="qoo10-1-1">
+    <activity label="qoo10-1-1">
         <statement>
 
             <p> If you don’t specify the parent class in a class declaration which of the following is true?</p>
@@ -81,9 +81,9 @@ public class Motorcycle extends Vehicle
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoo10-1-2">
+    <activity label="qoo10-1-2">
         <statement>
 
             <p> If the class Vehicle has the instance fields make and model and the class Car inherits from the class Vehicle, will a car object have a make and model?</p>
@@ -110,9 +110,9 @@ public class Motorcycle extends Vehicle
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoo10-1-3">
+    <activity label="qoo10-1-3">
         <statement>
 
             <p> If I had a class ParkingGarage should it inherit from the class Vehicle?</p>
@@ -139,9 +139,9 @@ public class Motorcycle extends Vehicle
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoo10-1-4">
+    <activity label="qoo10-1-4">
         <statement>
 
             <p> In Java how many parents can a class have?</p>
@@ -186,10 +186,10 @@ public class Motorcycle extends Vehicle
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>The Student class can also inherit from the class Person just like Employee and Customer because a Student is a type of Person.</p>
 
-<exercise label="StudentInheritance">
+<activity label="StudentInheritance">
     <statement>
             <p>What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the <term>instanceof</term> operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?</p>
 
@@ -241,7 +241,7 @@ public class Student
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="is-a-vs-has-a-relationships">
             <title>is-a vs. has-a Relationships</title>
@@ -271,7 +271,7 @@ public class CoursePeriod
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram for Student, Course, APcourse</caption><image source="Unit5-Inheritance/Figures/APcourseUML.png" width="63%"/></figure>
             <p>We can represent the diagram in Figure 4 in the code below. The Course class has an ArrayList of Student objects in it as the roster attribute. And an APcourse extends Course. What do you think the following code will print out?</p>
 
-<exercise label="apclass">
+<activity label="apclass">
     <statement>
             <p>What do you think the following code will print out?</p>
 
@@ -324,7 +324,7 @@ public class APcourse extends Course
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="is-a-substitution-test">
             <title>is-a Substitution Test</title>
@@ -333,7 +333,7 @@ public class APcourse extends Course
                 <p>Only use inheritance when the child class is really a type of the parent class, otherwise use association.</p>
             </note>
 
-    <exercise label="qoo_1">
+    <activity label="qoo_1">
         <statement>
 
             <p>  An online store is working on an online ordering system for Books and Movies. For each type of Published Material (books and movies) they need to track the id, title, date published, and price. Which of the following would be the best design?</p>
@@ -387,9 +387,9 @@ public class APcourse extends Course
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoo_2">
+    <activity label="qoo_2">
         <statement>
 
             <p>  An online site shows information about Books and Authors. What kind of relationship do these two classes have?</p>
@@ -425,9 +425,9 @@ public class APcourse extends Course
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoo_3">
+    <activity label="qoo_3">
         <statement>
 
             <p> What Java keyword is used to set up an inheritance relationship between a subclass and a superclass?</p>
@@ -472,7 +472,7 @@ public class APcourse extends Course
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-online-store">
             <title>Coding Challenge : Online Store</title>
@@ -492,7 +492,7 @@ public class APcourse extends Course
                 </li>
             </ul></p>
 
-<exercise label="challenge-inheritance-online-store">
+<activity label="challenge-inheritance-online-store">
     <statement>
             <p>Declare at least 2 instance variables for each of the classes below. Create an inheritance or association relationship for some of them.</p>
 
@@ -635,7 +635,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-51">
             <title>Summary</title>

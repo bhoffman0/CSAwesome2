@@ -3,7 +3,7 @@
 <section xml:id="peer_in_U4">
         <title>Peer Instruction: Unit 4 Multiple Choice Questions</title>
 
-    <exercise label="bs-forloops-05-09">
+    <activity label="bs-forloops-05-09">
         <statement>
 
         <p> Which statement best describes what this code does?</p>
@@ -66,9 +66,9 @@ for (Pixel pO: pixelArray)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-whileloops-06-07">
+    <activity label="bs-whileloops-06-07">
         <statement>
 
         <p> How many times is each set of code executed?</p>
@@ -114,9 +114,9 @@ for (Pixel pO: pixelArray)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-forloops-09-04">
+    <activity label="bs-forloops-09-04">
         <statement>
 
         <p> How many times is each set of code executed?</p>
@@ -162,9 +162,9 @@ for (Pixel pO: pixelArray)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-nestedloops-10-04">
+    <activity label="bs-nestedloops-10-04">
         <statement>
 
         <p> What picture most accurately describes what this code does?</p>
@@ -221,9 +221,9 @@ for (int foo = 0; foo &lt; getWidth();  bar++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-nestedloops-10-05">
+    <activity label="bs-nestedloops-10-05">
         <statement>
 
         <p> What picture most accurately describes what this code does?</p>
@@ -280,9 +280,9 @@ for (int bar = 0; bar &lt; getHeight();  bar++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-nestedloops-11-10">
+    <activity label="bs-nestedloops-11-10">
         <statement>
 
         <p> What are the parameter values we use to index leftPixel and rightPixel for the first three iterations of the loop? (assume picture has a height = 50 and width = 100)</p>
@@ -341,5 +341,5 @@ for (int y = 0; y &lt; getHeight);  y++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

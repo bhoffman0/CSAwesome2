@@ -22,7 +22,7 @@
             
             <p>We divide up a program into multiple methods in order to organize the code to reduce its complexity and to avoid repetition of code. For example, the song “Old MacDonald Had a Farm” has a lot of repetition. Instead of writing the same code over and over in order to print the song, we can write methods that contain the repeated code and run them when needed. Click on all the repeated code in the song below and then we will learn how it can be replaced with methods.</p>
 
-<exercise label="repeatedcode-old-mcdonald">
+<activity label="repeatedcode-old-mcdonald">
     <statement><p>Click on all the lines that are completely identical and repeated.</p></statement>
 <feedback><p>Look for lines that are completely identical.</p></feedback>
 <areas>
@@ -36,7 +36,7 @@
 <cline>    <area correct="yes">System.out.println("Old MacDonald had a farm");</area></cline>
 <cline>    <area correct="yes">System.out.println("E-I-E-I-O");</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>            <p>Did you find some repeated lines? You may have noticed that the first two lines are repeated. When you see repeated code, that is a signal for you to make a new method!</p>
+</areas></activity>            <p>Did you find some repeated lines? You may have noticed that the first two lines are repeated. When you see repeated code, that is a signal for you to make a new method!</p>
             <p>A <term>method call</term> is when the code “calls out” the method’s name in order to run the code in the method. The method call always includes the method name and parentheses <c>()</c> and sometimes some data inside the parentheses if the method needs that to do its job. For example, when we write <c>System.out.println("Hello World");</c>, we are calling the <c>println()</c> method to print out “Hello World”.</p>
             <program language="java"><code>
 // Method call
@@ -44,7 +44,7 @@ methodName();
 </code></program>
             <p>The Java <url href="https://pythontutor.com/render.html#code=public%20class%20OldMacDonaldSong%0A%7B%0A%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20they%20had%20a%20cow.%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22With%20a%20moo%20moo%20here%20and%20a%20moo%20moo%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22Here%20a%20moo,%20there%20a%20moo,%20everywhere%20moo%20moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=public%20class%20OldMacDonaldSong%0A%7B%0A%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22And%20on%20that%20farm%20they%20had%20a%20cow.%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22With%20a%20moo%20moo%20here%20and%20a%20moo%20moo%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.print%28%22Here%20a%20moo,%20there%20a%20moo,%20everywhere%20moo%20moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> below shows how a song can be divided up into methods. Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run. Execution in Java always begins in the <c>main</c> method in the current class. Then, the <term>flow of control</term> skips from method to method as they are called. Notice that when a method ends, it returns to the line right after the method call. The <c>main()</c> method below calls the <c>intro()</c> method which calls the <c>chorus()</c> method. When you call the chorus() method, it skips to the chorus code, executes and prints out the chorus “E-I-E-I-O”, and then returns back to the method that called it. Just like variable names, method names should be descriptive of what the method does. The methods can be in any order, but usually programmers put the main method at the end after all the methods that it uses are defined.</p>
 
-<exercise label="codelensSong1">
+<activity label="codelensSong1">
 <statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run.</p></statement>
 <program interactive="codelens" language="java" label="codeLens2" xml:id="codelensid2">
     <code>
@@ -73,13 +73,13 @@ public class OldMacDonaldSong
 }
     </code>
 </program>
-</exercise>
+</activity>
             <note>
                 <p>A method call interrupts the sequential execution of statements, causing the program to first execute the statements in the method before continuing. Once the last statement in the method has been executed or a return statement is executed, the flow of control is returned to the point immediately following where the method was called.</p>
             </note>
             <p>Try writing your own method calls below to add another verse to the song.</p>
 
-<exercise label="song-add-calls">
+<activity label="song-add-calls">
     <statement>
             <p>Scroll down to the main method below and add lines of code to the main method for the second verse of the Old MacDonald Song by calling the intro() and chorus() methods and printing out lines about a duck or another animal.</p>
 
@@ -152,9 +152,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="songMethodsTrace">
+    <activity label="songMethodsTrace">
         <statement>
 
             <p> What does the following code print out?</p>
@@ -236,7 +236,7 @@ public class Song
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>Try this <url href="https://pythontutor.com/render.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20%20%20%20%20public%20static%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22I%20like%20to%20%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20fruit%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20fruit%28%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22apples%20and%20bananas!%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20public%20static%20void%20eat%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22eat%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20print%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=15&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=public%20class%20Song%20%7B%0A%20%20%0A%20%20%20%20%20%20%20%20public%20static%20void%20print%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22I%20like%20to%20%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20eat%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20fruit%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20fruit%28%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%22apples%20and%20bananas!%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20public%20static%20void%20eat%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22eat%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20print%28%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=15&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> to see this code in action. Figuring out what the code does is called <term>tracing</term> through the code. You can do this by hand or use a tool like the one above to help you see what happens when the code runs.</p>
         </subsection>
   <subsection>
@@ -276,7 +276,7 @@ public class Song
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method Signature and Method Call</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-parts.png" width="89%" alt="Method Signature and Method Call"/></figure>
             <p>Let’s take another look at the Old MacDonald Song and see if we can replace more repeated code with methods with parameters. Each verse of the song is similar except it is about a different animal and the sound it makes. Click on the words that are different in the lines that are repeated to discover what parameters we need to add to the methods.</p>
 
-<exercise label="different-code-old-mcdonald">
+<activity label="different-code-old-mcdonald">
     <statement><p>Click on the words that are different in the lines that are repeated.</p></statement>
 <feedback><p>Look for lines that are similar except for a single word and click on that word.</p></feedback>
 <areas>
@@ -296,7 +296,7 @@ public class Song
 <cline>    <area correct="no">System.out.println("Old MacDonald had a farm");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>            <p>Did you notice that there are lines that are identical except for the animal name and the sound that they make?</p>
+</areas></activity>            <p>Did you notice that there are lines that are identical except for the animal name and the sound that they make?</p>
             <p>We can make methods even more powerful and more abstract by giving them parameters for data that they need to do their job. A <term>parameter</term> (sometimes called a <term>formal parameter</term>) is a variable declared in the header of a method or constructor and can be used inside the body of the method. This allows values or arguments to be passed and used by a method. An <term>argument</term> (sometimes called an <term>actual parameter</term>) is a value that is passed into a method when the method is called and is saved in the parameter variable.</p>
             <p>We can make a method called <c>verse</c> that takes the animal and its sound to print out any verse! The parameter variables <c>animal</c> and <c>sound</c> will hold different values when the method is called.</p>
             <program language="java"><code>
@@ -328,7 +328,7 @@ public static void main(String[] args)
 </code></program>
             <p>Click on the next button below to step through this new version of the code in the <url href="https://pythontutor.com/render.html#code=%20%20%20%20public%20class%20OldMacDonaldSong%0A%20%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20verse%28String%20animal,%20String%20sound%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20on%20this%20farm,%20they%20had%20a%20%22%20%2B%20animal%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22With%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22%20here%20and%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%2B%20%22%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Here%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20there%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20everywhere%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22cow%22,%20%22moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22duck%22,%20%22quack%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=34&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="https://pythontutor.com/render.html#code=%20%20%20%20public%20class%20OldMacDonaldSong%0A%20%20%20%20%7B%0A%20%20%20%20%20%20public%20static%20void%20intro%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20chorus%28%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20verse%28String%20animal,%20String%20sound%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20on%20this%20farm,%20they%20had%20a%20%22%20%2B%20animal%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22With%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22%20here%20and%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%20%2B%20%22%20there%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Here%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20there%20a%20%22%20%2B%20sound%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%2B%20%22,%20everywhere%20a%20%22%20%2B%20sound%20%2B%20%22%20%22%20%2B%20sound%29%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22cow%22,%20%22moo%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%20%20verse%28%22duck%22,%20%22quack%22%29%3B%0A%20%20%20%20%20%20%20%20intro%28%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=34&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url> and watch how the argument are saved in the parameter variables with each call to the <c>verse</c> method.</p>
 
-<exercise label="codelensSong2">
+<activity label="codelensSong2">
 <statement><p>Click on the next button below the code to step through the code and watch the red arrow jump to the method that is being run and watch how the arguments are passed into the parameter variables.</p></statement>
 <program interactive="codelens" language="java" label="codeLens3" xml:id="codelensid3">
     <code>
@@ -367,10 +367,10 @@ public class OldMacDonaldSong
 }
     </code>
 </program>
-</exercise>
+</activity>
             <p>Let’s try adding another verse to the song with a goose that honks.</p>
 
-<exercise label="OldMacDonaldSong2">
+<activity label="OldMacDonaldSong2">
     <statement>
             <p>Run the following code to see the song Old MacDonald using the verse and chorus methods.  You can also see this code run in the visualizer by clicking on the Show Code Lens button below. Scroll down to the main method, and add another verse with the animal goose and the sound honk by calling the verse method with the appropriate arguments. Then call intro again. Repeat with another animal and sound of your choice.</p>
 
@@ -448,7 +448,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>When a method is called, the right method definition is found by checking the <term>method signature</term> or <term>header</term> at the top of the method definition to match the method name, the number of arguments, the data types for the arguments and the return type. A method signature for a method with parameters consists of the method name and the ordered list of parameter types. A method signature for a method without parameters consists of the method name and an empty parameter list.</p>
             <p>Here’s what that looks like with the two method calls above. The arguments like “cow” and “moo” are saved into the parameter variables <c>animal</c> and <c>sound</c> with each method call.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Matching Arguments to Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/args2paramsFarm.png" width="89%" alt="Arguments to Parameters"/></figure>
@@ -475,7 +475,7 @@ verse("cow", "moo");
             <title>Coding Challenge: Song with Parameters</title>
             <p>Here’s another song, <url href="https://youtu.be/QPwEZ8Vv2YQ" visual="https://youtu.be/QPwEZ8Vv2YQ">The Ants Go Marching</url>, that is very similar in its repetitive structure. The verses below have a lot of repeated words and phrases. Click on the words or phrases that are different in each verse. These will be the arguments that you will pass to the methods in your song code.</p>
 
-<exercise label="clickDifferentAntSong">
+<activity label="clickDifferentAntSong">
     <statement><p>Click on the phrases that are different in each verse.</p></statement>
 <feedback><p>Look for words that are different in verse 1, 2, and 3.</p></feedback>
 <areas>
@@ -499,8 +499,8 @@ verse("cow", "moo");
 <cline><area correct="no">The little one stops to </area><area correct="yes">climb a tree</area></cline>
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
-</areas></exercise>
-<exercise label="challenge-1-9-song">
+</areas></activity>
+<activity label="challenge-1-9-song">
     <statement>
             <p>Write code in the main method that calls the verse method to print out all three verses for the Ants Go Marching song above.</p>
 
@@ -607,15 +607,15 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Summary</title>
 
-<exercise label="vocab1_9">
+<activity label="vocab1_9">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summary below.</p></feedback>
-<matches><match order="1"><premise>named block of code to perform a task</premise><response>method</response></match><match order="2"><premise>where execution starts</premise><response>main method</response></match><match order="3"><premise>method name, return type, and parameter list</premise><response>method signature</response></match><match order="4"><premise>a variable declared in the header of a method</premise><response>parameter</response></match><match order="5"><premise>value passed into a method when it is called</premise><response>argument</response></match></matches></exercise>            <p><ul>
+<matches><match order="1"><premise>named block of code to perform a task</premise><response>method</response></match><match order="2"><premise>where execution starts</premise><response>main method</response></match><match order="3"><premise>method name, return type, and parameter list</premise><response>method signature</response></match><match order="4"><premise>a variable declared in the header of a method</premise><response>parameter</response></match><match order="5"><premise>value passed into a method when it is called</premise><response>argument</response></match></matches></activity>            <p><ul>
                 <li>
                     <p>(AP 1.9.A.1) A <term>method</term> is a named block of code that only runs when it is called. A block of code is any section of code that is enclosed in braces.</p>
                 </li>
@@ -645,7 +645,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>AP Practice</title>
 
-    <exercise label="AP-trace-method-calls">
+    <activity label="AP-trace-method-calls">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -697,6 +697,6 @@ purr()
             <p>This would cause a syntax error since those are not the names of the methods.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

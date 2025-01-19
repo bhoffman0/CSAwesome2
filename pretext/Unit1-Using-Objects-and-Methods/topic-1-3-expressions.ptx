@@ -22,7 +22,7 @@
             </ul></p>
             <p><c>System.out.println("Hi there!");</c> prints out the characters between the first <c>"</c> and the second <c>"</c> followed by a new line.  The <c>"Hi there!"</c> is called a <term>string literal</term> which is zero to many characters enclosed in starting and ending double quotes. A <term>literal</term> is the code representation of a fixed value, which can be a string or a numerical value.</p>
 
-<exercise label="printCommands">
+<activity label="printCommands">
     <statement>
             <p>Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there keeping all 3 print statements?</p>
 
@@ -81,10 +81,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>What if you wanted to print out a double quote ” character? Since the double quote ” is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a <term>backslash escape sequence</term>. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \n which will put in a newline.</p>
 
-<exercise label="bhescape">
+<activity label="bhescape">
     <statement>
             <p>Here are the escape sequences that may be used in the AP course.</p>
 
@@ -123,7 +123,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="expressions-and-operators">
             <title>Expressions and Operators</title>
@@ -150,7 +150,7 @@ public class RunestoneTests extends CodeTestHelper
                 An arithmetic expression that uses at least one <c>double</c> value will evaluate
                 to a <c>double</c> value. This means that when you are doing division with two integers, you will get an integer result and the decimal part of the result will be thrown away. This is called <term>truncating division</term>. If you want a double result, you should make at least one of the values in the expression a double like 2.0.</p>
 
-<exercise label="lcop1">
+<activity label="lcop1">
     <statement>
             <p>Run the code below to see all the operators in action. Do all of those operators do what you expected? What about 2 / 3? Isn’t it surprising that it prints 0?  See the note above about truncating division with integers. Change the code to make it print the decimal part of the division too. You can do this by making at least one of the numbers a double like 2.0.</p>
 
@@ -186,10 +186,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Math errors sometimes lead to runtime errors in code. For example, when the Hubble Space Telescope was launched to space in 1990, a math coding error in a formula caused it to point in the wrong direction! It missed its target stars by about half a degree which is about the width of the moon seen from Earth (<url href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm" visual="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough testing is the only way to make sure there are no logic errors that will cause runtime errors in your code. Try the following example that tries to convert centimeters to inches. Can you fix the runtime error?</p>
 
-<exercise label="cm2in-runtime-error">
+<activity label="cm2in-runtime-error">
     <statement>
             <p>The following code is trying to convert centimeters to inches, but it has a math error. Run the code to see that there are no error messages, but it simply does the wrong calculation! Can you fix the logic error in the code? 1 inch = 2.54 cms.</p>
 
@@ -230,14 +230,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Another runtime error that is possible in math expressions is dividing by zero which is undefined in mathematics. An attempt to divide an integer by the integer 0 will result in an <term>ArithmeticException</term> in Java, as we saw in the first lesson. Try it in one of the active codes to see what happens.</p>
         </subsection>
   <subsection xml:id="compound-expressions">
             <title>Compound Expressions</title>
             <p>Expressions can be combined into <term>compound expressions</term> with multiple operators.  When compound expressions are evaluated, <term>operator precedence</term> rules are used, just like when we do math (remember PEMDAS?), so that multiplication <c>*</c>, division <c>/</c>, and remainder <c>%</c> are done before addition <c>+</c> and subtraction <c>-</c>. However, anything in parentheses is done first. It doesn’t hurt to put in extra parentheses if you are unsure as to what will be done first or just to make it more clear.</p>
 
-<exercise label="compound1">
+<activity label="compound1">
     <statement>
             <p>In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider <term>operator precedence</term>. How do the parentheses change the precedence?</p>
 
@@ -276,7 +276,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="the-remainder-operator">
             <title>The Remainder Operator</title>
@@ -303,7 +303,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <video youtube="jp-T9lFISlI"/>
     
-<exercise label="lcop2">
+<activity label="lcop2">
     <statement>
             <p>In the example below, try to guess what it will print out and then run it to see if you are right.</p>
 
@@ -343,7 +343,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>The result of x % y when x is smaller than y is always x.  The value y can’t go into x at all (goes in 0 times), since x is smaller than y, so the result is just x.  So if you see 2 % 3 the result is 2.</p>
             </note>
@@ -354,7 +354,7 @@ public class RunestoneTests extends CodeTestHelper
 
             
 
-    <exercise label="mcq-rem1">
+    <activity label="mcq-rem1">
         <statement>
 
             <p> What is the result of 158 % 10?</p>
@@ -390,9 +390,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq-rem2">
+    <activity label="mcq-rem2">
         <statement>
 
             <p> What is the result of 3 % 8?</p>
@@ -428,14 +428,14 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-pay-calculator">
             <title>Coding Challenge : Pay Calculator</title>
             <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%"/></figure>
             <p>In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators.</p>
 
-<exercise label="challenge1-3-pay-calculator">
+<activity label="challenge1-3-pay-calculator">
     <statement>
             <p>Complete the following expressions for a pay calculator.</p>
 
@@ -525,7 +525,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-8">
             <title>Summary</title>
@@ -575,7 +575,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-7">
             <title>AP Practice</title>
 
-    <exercise label="AP1-3-1">
+    <activity label="AP1-3-1">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -605,9 +605,9 @@ and cool!  </pre></p>
             <p>Correct! Pay attention to which lines are print or println.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="apcsa_sample1_exp">
+    <activity label="apcsa_sample1_exp">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -665,6 +665,6 @@ System.out.println(5 + 5 / 2 * 3 - 1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

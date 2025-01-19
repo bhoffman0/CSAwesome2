@@ -77,7 +77,7 @@ System.out.println("The average of 10 random numbers is " + average);
 </code></program>
             <p>Try the accumulator practice below.</p>
 
-<exercise label="accumulator-practice">
+<activity label="accumulator-practice">
     <statement>
             <p>Complete the methods below to compute the sum and average of a set of numbers.</p>
 
@@ -172,7 +172,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="input-controlled-loop">
             <title>Input-Controlled Loop</title>
@@ -198,7 +198,7 @@ System.out.println("The average is " + average);
 </code></program>
             <p>You can try this below on the input numbers below the code or for more interactive input, try it in your own IDE online with <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#9c210139-7c72-441f-88c8-d68482488aa1" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#9c210139-7c72-441f-88c8-d68482488aa1">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Average#Main.java" visual="https://replit.com/@BerylHoffman/Average#Main.java">replit</url>.</p>
 
-<exercise label="input-controlled-loop">
+<activity label="input-controlled-loop">
     <statement>
             <p>Try the code below with an input-controlled loop that prints out the numbers entered by the user until -1 is entered. Then, change it to calculate the sum and average of the numbers entered.</p>
 
@@ -279,7 +279,7 @@ public class RunestoneTests extends CodeTestHelper
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="loop-with-if-and-minimum-maximum">
             <title>Loop with if and Minimum/Maximum</title>
@@ -299,7 +299,7 @@ for (int i = 0; i &lt; 10; i++)
 System.out.println("The minimum value is " + min);
 </code></program>
 
-<exercise label="min-max-practice">
+<activity label="min-max-practice">
     <statement>
             <p>Run to see the min method in action. Then, complete the max method below to find the maximum of a set of random numbers.</p>
 
@@ -375,7 +375,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="divisibility">
             <title>Divisibility</title>
@@ -394,7 +394,7 @@ else
 </code></program>
             <p>The selection statement above can be put in a loop to determine if a number is divisible by a range of numbers. For example, you can determine if a number is prime by checking if it is divisible by any number between 2 and n-1 (or even the square root of the number since multiples of numbers repeat after the square root). Remember that a prime number is a number that is only divisible by 1 and itself, so if you find any other divisor, the number is not prime.</p>
 
-<exercise label="isPrimeLoop">
+<activity label="isPrimeLoop">
     <statement>
             <p>Complete the isPrime method below to determine if a number n is prime by checking if it is evenly divisible by any number between 2 and n-1 or the square root of n.</p>
 
@@ -480,14 +480,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="finding-digits-with-and">
             <title>Finding Digits with / and %</title>
             <p>We can also use division (<c>/</c>) and remainder (<c>%</c>) to find the digits of a number by dividing by 10. For example, 1234 divided by 10 is 123 with a remainder of 4. Remember that in integer
                 division the result truncates (cuts off) everything to the right of the decimal point, so we get the number without the last digit when we divide by 10. The remainder is the last digit of the number. You could use this algorithm to add the digits of a number, reverse the digits of a number, or check if a digit is equal to a certain number, etc.</p>
 
-<exercise label="checkDigit">
+<activity label="checkDigit">
     <statement>
             <p>Complete the checkDigit method below to determine if a positive number has a given single-digit number as one of its digits.</p>
 
@@ -573,7 +573,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>The <term>remainder</term> operator has been used quite a bit on the AP CSA exam. Keep it in mind for the following uses:</p>
             <p><ul>
                 <li>
@@ -632,7 +632,7 @@ else
 }
 </code></program>
 
-    <exercise label="mcq-rnd-ifs">
+    <activity label="mcq-rnd-ifs">
         <statement>
 
             <p> The weather report says there is approximately 25% chance of rain today. Which of the following if statements would print Rain or No Rain to simulate a day with the correct percentages following the weather report?</p>
@@ -658,9 +658,9 @@ if (Math.random() &lt; 0.75) { System.out.println("No Rain"); }
             <p>Correct! This code will print “No Rain” 75% of the time, so it will rain 25% of the time.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="randomShapes">
+<activity label="randomShapes">
     <statement>
             <p>Add an if/else statement that uses Math.random() to do a coin flip to decide whether to call yertle.turnRight() or yertle.turnLeft. Run the code to see the turtle draw a random shape.</p>
 
@@ -736,7 +736,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="frequency">
             <title>Frequency</title>
@@ -767,7 +767,7 @@ System.out.println("There are " + count + " even numbers from 1 to 100.");
                 </li>
             </ol></p>
 
-<exercise label="challenge-find-primes">
+<activity label="challenge-find-primes">
     <statement>
             <p>Copy your isPrime method from the previous exercise and write a method findPrimes that takes two integers as arguments and prints the prime numbers between them. It should return a count of the prime numbers found.</p>
 
@@ -872,7 +872,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-26">
             <title>Summary</title>

@@ -29,7 +29,7 @@
                 can be either 0 or 1. A group of 8 bits is called a <term>byte</term>. The binary number 110 means 0 ones (2<superscript>0</superscript>) plus 1 two (2<superscript>1</superscript>) plus 1 four (2<superscript>2</superscript>), for a total of 6.</p>
             <p>Questions:</p>
 
-    <exercise label="picture-lab-A1-1">
+    <activity label="picture-lab-A1-1">
         <statement>
 
             <p> How many bits does it take to represent the values from 0 to 255? See <url href="https://mobile-csp.org/webapps/numbers/binaryConverter.html" visual="https://mobile-csp.org/webapps/numbers/binaryConverter.html">https://mobile-csp.org/webapps/numbers/binaryConverter.html</url> for help.</p>
@@ -74,9 +74,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-lab-A1-2">
+    <activity label="picture-lab-A1-2">
         <statement>
 
             <p> How many bytes does it take to represent a color in the RGB color model?</p>
@@ -121,9 +121,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-lab-A1-3">
+    <activity label="picture-lab-A1-3">
         <statement>
 
             <p> How many pixels are in a picture that is 640 pixels wide and 480 pixels high?</p>
@@ -168,7 +168,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="a2-picking-a-color">
             <title>A2: Picking a Color</title>
@@ -177,7 +177,7 @@
             <p>In Java, there is a ColorChooser that you can use in code, see <url href="https://firewalledreplit.com/@BerylHoffman/ColorChooser" visual="https://firewalledreplit.com/@BerylHoffman/ColorChooser">https://firewalledreplit.com/@BerylHoffman/ColorChooser</url> and click on the RGB tab. Java represents color using the java.awt.Color class described here <url href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html</url>. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement <c>import java.awt.Color;</c>.</p>
             <p>Questions:</p>
 
-<exercise label="pictureLabA2Qs">
+<activity label="pictureLabA2Qs">
     <statement>
             <p> Use the color chooser above to answer the following questions.</p>
             <p><ol marker="1">
@@ -199,7 +199,7 @@
             </ol></p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="a3-exploring-a-picture">
             <title>A3: Exploring a Picture</title>
@@ -214,7 +214,7 @@
                 storing picture data using lossy compression. Lossy compression means that the amount of data that is
                 stored is much smaller than the available data, but the part that is not stored is data we won’t miss.</p>
 
-    <exercise label="picture-day3-0a">
+    <activity label="picture-day3-0a">
         <statement>
 
             <p> What is the row index for the top left corner of the 640x480 beach picture?</p>
@@ -259,9 +259,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-1a">
+    <activity label="picture-day3-1a">
         <statement>
 
             <p> What is the column index for the top left corner of the 640x480 beach picture?</p>
@@ -306,9 +306,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-2a">
+    <activity label="picture-day3-2a">
         <statement>
 
             <p> What is the right most column index of the 640x480 beach picture? You can click on the Maximize button on the top right to see the scroll bars or use the right arrows.</p>
@@ -353,9 +353,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-3a">
+    <activity label="picture-day3-3a">
         <statement>
 
             <p> What is the bottom most row index of the 640x480 beach picture? You can click on the Maximize button on the top right to see the scroll bars or use the right arrows.</p>
@@ -400,9 +400,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-4a">
+    <activity label="picture-day3-4a">
         <statement>
 
             <p> Does the row index increase from left to right or top to bottom?</p>
@@ -447,9 +447,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-5a">
+    <activity label="picture-day3-5a">
         <statement>
 
             <p> Does the column index increase from left to right or top to bottom?</p>
@@ -494,9 +494,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-day3-6a">
+    <activity label="picture-day3-6a">
         <statement>
 
             <p> Use the Zoom menu to set the zoom to 500%. Can you see squares of color? This is called pixelation. What is pixelation?</p>
@@ -541,7 +541,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>Through your exploration, you have discovered that the top left corner coordinate for an image is (0,0) and the bottom left is (width, height) for the width and height of an image. In the next lessons, we will modify Java code to manipulate the color values of each pixel in 2D arrays.</p>
         </subsection>
 </section>

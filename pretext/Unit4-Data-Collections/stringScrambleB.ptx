@@ -43,19 +43,19 @@ public class ScrambledStrings
   <subsection xml:id="how-to-solve-this-problem-7">
             <title>How to solve this problem</title>
 
-<exercise label="string_algorithm_partB">
+<activity label="string_algorithm_partB">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
             <subsection>
                 <p>In the example the first word (at index 0) <c>TAN</c> is scrambled and replaced. The second word <c>ABRACADABRA</c> (at index 1) is scrambled and replaced. The third word <c>WHOA</c> (at index 2) is removed. The fourth word <c>APPLE</c> (at index 3) is scrambled and replaced. The fifth word <c>EGGS</c> (at index 4) is removed since the scrambled word is the same as the original. What method of List allows you to replace an element in a list? What method of list allows you to remove an element from a list? How can you loop through a list and not always increment the current index?</p>
             </subsection>
             
 
-    <exercise label="strng_mcalg_answr_0">
+    <activity label="strng_mcalg_answr_0">
         <statement>
 
                 <p> What is returned by this method?</p>
@@ -100,11 +100,11 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="strng_mcalg_answr_0_5">
+    <activity label="strng_mcalg_answr_0_5">
         <statement>
 
                 <p> This method accepts an <c>ArrayList</c>, what is the datatype of the objects contained in this <c>ArrayList</c>?</p>
@@ -149,11 +149,11 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="strng_mcalg_answr_1">
+    <activity label="strng_mcalg_answr_1">
         <statement>
 
                 <p> There are many ways to use loops to solve this problem. If we were to use a while loop, what conditional could we write to make sure the loop does not go out of bounds? (Assume an integer index has already been initialized).</p>
@@ -198,11 +198,11 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="strng_mcalg_answr_2">
+    <activity label="strng_mcalg_answr_2">
         <statement>
 
                 <p> You can also use a for loop to solve this problem instead of a while loop. what conditional could we write to make sure the loop does not go out of bounds?</p>
@@ -247,11 +247,11 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="strng_mcalg_answr_3">
+    <activity label="strng_mcalg_answr_3">
         <statement>
 
                 <p> How would you access each element in wordList assuming you already have an integer index properly initialized.</p>
@@ -296,11 +296,11 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="strng_mcalg_answr_4">
+    <activity label="strng_mcalg_answr_4">
         <statement>
 
                 <p> How would you check that a string <c>word</c> is equal to a different string called <c>other</c>?</p>
@@ -345,7 +345,7 @@ public class ScrambledStrings
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="the-algorithm-1">
@@ -370,7 +370,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
 </code></program>
             </subsection>
             
-<exercise label="StringScrambleB1" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="StringScrambleB1" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="9">
@@ -400,7 +400,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
 <cline>  } // end while</cline>
 </block><block order="8">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
             <p>Another way to solve this problem is to start at the end of the list and loop towards the front of the list. That way you don’t have to worry about the index being off if you remove an item from the list.</p>
             <subsection>
                 <program language="java"><code>
@@ -419,7 +419,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
 </code></program>
             </subsection>
             
-<exercise label="StringScrambleB2" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="StringScrambleB2" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="5">
@@ -444,12 +444,12 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
 <cline>   } // end for</cline>
 </block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="try-and-solve-it-19">
             <title>Try and Solve It</title>
 
-<exercise label="frqScrambleOrRemove">
+<activity label="frqScrambleOrRemove">
     <statement>
             <p>Write the method <c>scrambleOrRemove</c> below. The main has code to test the result.</p>
 
@@ -605,6 +605,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

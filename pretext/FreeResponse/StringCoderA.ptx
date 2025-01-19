@@ -114,7 +114,7 @@ public class StringCoder
                 which they appear in parts, and returns the result.</p>
             <p>The code below contains a main method for testing the <c>decodeString</c> method.</p>
 
-<exercise label="StringCoderA">
+<activity label="StringCoderA">
     <statement>
             <p>Finish writing the <c>StringCoder</c> method <c>decodeString</c>.</p>
 
@@ -276,6 +276,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

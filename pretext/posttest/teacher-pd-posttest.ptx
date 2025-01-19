@@ -5,7 +5,7 @@
         <p>Please complete the following post-test.</p>
         
 
-    <exercise label="PDposttest1">
+    <activity label="PDposttest1">
         <statement>
 
             <p> Unit 1 Output:</p>
@@ -51,9 +51,9 @@ III. In lines 1, 2, and 3, the text inside the parentheses should be in quotatio
             <p>print is correct since a new line is not printed after the first line of output.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest2">
+    <activity label="PDposttest2">
         <statement>
 
             <p> Unit 1 Expressions:</p>
@@ -95,9 +95,9 @@ y = y * z;
             <p>Integer division is used since x is an int.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest3">
+    <activity label="PDposttest3">
         <statement>
 
             <p> Unit 1 Objects:</p>
@@ -153,9 +153,9 @@ III. Party otherParty = new Party();
             <p>Private instance variables like numInvited are not accessible outside of the class.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest4">
+    <activity label="PDposttest4">
         <statement>
 
             <p> Unit 1 Methods:</p>
@@ -218,9 +218,9 @@ Liquid liquid = new Liquid();
             <p>The freeze method does not have a parameter.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest5">
+    <activity label="PDposttest5">
         <statement>
 
             <p> Unit 2 Selection:</p>
@@ -257,9 +257,9 @@ if (!p || q)
             <p>It will be printed if p is false or q is true.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest6">
+    <activity label="PDposttest6">
         <statement>
 
             <p> Unit 2 Selection:</p>
@@ -310,9 +310,9 @@ System.out.print("on ");
             <p>The first if statement is true since a is = 100.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest7">
+    <activity label="PDposttest7">
         <statement>
 
             <p> Unit 2 Loops:</p>
@@ -350,9 +350,9 @@ int count = 0;
             <p>The for-loop should initialize, test, and increment the loop variable y.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest8">
+    <activity label="PDposttest8">
         <statement>
 
             <p> Unit 4 Loops and Strings:</p>
@@ -391,9 +391,9 @@ public static String changeStr(String str)
             <p>The character A is at index 0, but the loop starts at index 1.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest9">
+    <activity label="PDposttest9">
         <statement>
 
             <p> Unit 3 Class Creation:</p>
@@ -470,9 +470,9 @@ public Cat(String n, int a)
             <p>name should be set to n, not the n to name, and the instance variables should be private.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest10">
+    <activity label="PDposttest10">
         <statement>
 
             <p> Unit 3 Class Creation:</p>
@@ -499,9 +499,9 @@ public Cat(String n, int a)
             <p>Correct. The public set method sets the instance variable y to the parameter value.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest11">
+    <activity label="PDposttest11">
         <statement>
 
             <p> Unit 3 Class Creation:</p>
@@ -546,9 +546,9 @@ public class Student
             <p>Correct.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest12">
+    <activity label="PDposttest12">
         <statement>
 
             <p> Unit 4 Arrays:</p>
@@ -597,9 +597,9 @@ III. for (int i = 1; i &lt;= array.length; i++)
             <p>I is an infinite loop. III will have an array index out of bounds error.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="PDposttest13">
+    <activity label="PDposttest13">
         <statement>
 
             <p> Unit 4 Arrays:</p>
@@ -640,6 +640,6 @@ public boolean mystery(int array[], int value)
             <p>Many elements can be equal to value, as long as the last one is equal.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         
     </section>

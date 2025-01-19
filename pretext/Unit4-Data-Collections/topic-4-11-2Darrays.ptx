@@ -36,7 +36,7 @@
             <p>On the exam assume that any 2 dimensional (2D) array is in row-major order.  The outer array can be thought of as the rows and the inner arrays the columns.  On the exam all inner arrays will have the same length even though it is possible in Java to have inner arrays of different lengths (also called <term>non-rectangular arrays</term> or <term>ragged arrays</term>).</p>
             <p>Try to answer the following questions.  Click on the value or values to select them.  Click again to unselect a value.</p>
 
-<exercise label="clicktd1">
+<activity label="clicktd1">
     <statement><p>Click on all the values in the row at index 2</p></statement>
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
@@ -92,8 +92,8 @@
                     
                 
             </tabular></table>
-</areas></exercise>
-<exercise label="clicktd2">
+</areas></activity>
+<activity label="clicktd2">
     <statement><p>Click on all the values in the column at index 1</p></statement>
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
@@ -149,8 +149,8 @@
                     
                 
             </tabular></table>
-</areas></exercise>
-<exercise label="clicktd3">
+</areas></activity>
+<activity label="clicktd3">
     <statement><p>Click on the value at row index 2 and column index 1</p></statement>
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
@@ -206,8 +206,8 @@
                     
                 
             </tabular></table>
-</areas></exercise>
-<exercise label="clicktd4">
+</areas></activity>
+<activity label="clicktd4">
     <statement><p>Click on the value at row index 0 and column index 2</p></statement>
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
@@ -263,8 +263,8 @@
                     
                 
             </tabular></table>
-</areas></exercise>
-<exercise label="clicktd5">
+</areas></activity>
+<activity label="clicktd5">
     <statement><p>Click on the value at row index 1 and column index 1</p></statement>
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
@@ -320,7 +320,7 @@
                     
                 
             </tabular></table>
-</areas></exercise>        </subsection>
+</areas></activity>        </subsection>
   <subsection xml:id="declaring-2d-arrays">
             <title>Declaring 2D Arrays</title>
             <idx><h>2D\ Array</h><h>declaration</h></idx>
@@ -336,10 +336,10 @@ String[][] seatingChart = new String[3][2];
 </code></program>
             <p>Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn’t been created with <term>new</term> yet and you try to print the value of the variable, it will print <term>null</term> (meaning it doesn’t reference any object yet). When a 2D array is created using the keyword <c>new</c>, all of its elements are initialized to the default values for the element data type. The default value for <c>int</c> is <c>0</c>, for <c>double</c> is <c>0.0</c>, for <c>boolean</c> is <c>false</c>, and for a reference type is <c>null</c>.</p>
 
-        <exercise label="twodaNumElfill">
+        <activity label="twodaNumElfill">
             <statement>
-    <p> How many elements are in ticketInfo? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  2 * 3 = 6</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Multiply the number of rows and the number of columns</p></feedback></condition></var></setup></exercise>
-<exercise label="twoDArrayCreate">
+    <p> How many elements are in ticketInfo? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  2 * 3 = 6</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Multiply the number of rows and the number of columns</p></feedback></condition></var></setup></activity>
+<activity label="twoDArrayCreate">
     <statement>
             <p>What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained below.</p>
 
@@ -395,7 +395,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="initializer-lists-for-2d-arrays">
             <title>Initializer Lists for 2D Arrays</title>
@@ -405,9 +405,9 @@ int[][] ticketInfo = { {25,20,25}, {25,20,25} };
 String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
 </code></program>
 
-        <exercise label="twodaGetElfill">
+        <activity label="twodaGetElfill">
             <statement>
-    <p> What is the value at <c>seatingInfo[2][1]</c> after the code above executes? Remember that indices start at 0, and the first index is for rows and the second index is for columns. <var/>  </p></statement><setup><var><condition string="^\s*Luke$\s*$"><feedback><p>Correct.  The string at row index 2 and column index 1 is Luke.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>indices start at 0 and the row is first then the column</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the value at <c>seatingInfo[2][1]</c> after the code above executes? Remember that indices start at 0, and the first index is for rows and the second index is for columns. <var/>  </p></statement><setup><var><condition string="^\s*Luke$\s*$"><feedback><p>Correct.  The string at row index 2 and column index 1 is Luke.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>indices start at 0 and the row is first then the column</p></feedback></condition></var></setup></activity>        </subsection>
   <subsection xml:id="set-values-in-a-2d-array">
             <title>Set Values in a 2D Array</title>
             <idx><h>2D\ Array</h><h>initialization</h></idx>
@@ -421,7 +421,7 @@ ticketInfo[0][0] = 15;
 </code></program>
             <p>Try the code below. Did it print what you expected?  When you print a two dimensional array you just get the reference to the object. In the next lesson, we’ll learn how to use nested loops to print out the whole 2D Array. Right now, use the CodeLens button or the <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%0A++%7B%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++//+declare+arrays%0A++++++++int%5B%5D%5B%5D+ticketInfo%3B%0A++++++++String%5B%5D%5B%5D+seatingChart%3B%0A++++++++%0A++++++++//+create+arrays%0A++++++++ticketInfo+%3D+new+int+%5B2%5D%5B3%5D%3B%0A++++++++seatingChart+%3D++new+String+%5B3%5D%5B2%5D%3B%0A++++++++%0A++++++++//+initialize+the+array+elements%0A++++++++ticketInfo%5B0%5D%5B0%5D+%3D+15%3B%0A++++++++ticketInfo%5B0%5D%5B1%5D+%3D+10%3B%0A++++++++ticketInfo%5B0%5D%5B2%5D+%3D+15%3B%0A++++++++ticketInfo%5B1%5D%5B0%5D+%3D+25%3B%0A++++++++ticketInfo%5B1%5D%5B1%5D+%3D+20%3B%0A++++++++ticketInfo%5B1%5D%5B2%5D+%3D+25%3B%0A++++++++seatingChart%5B0%5D%5B0%5D+%3D+%22Jamal%22%3B%0A++++++++seatingChart%5B0%5D%5B1%5D+%3D+%22Maria%22%3B%0A++++++++seatingChart%5B1%5D%5B0%5D+%3D+%22Jacob%22%3B%0A++++++++seatingChart%5B1%5D%5B1%5D+%3D+%22Suzy%22%3B%0A++++++++seatingChart%5B2%5D%5B0%5D+%3D+%22Emma%22%3B%0A++++++++seatingChart%5B2%5D%5B1%5D+%3D+%22Luke%22%3B%0A++++++++%0A++++++++//+print+the+contents%0A++++++++System.out.println(ticketInfo)%3B%0A++++++++System.out.println(seatingChart)%3B%0A+++++%7D%0A++%7D&amp;mode=display&amp;curInstr=0">Java Visualizer</url> to see what the values are after this code runs. Edit the code to add in an extra row to the <c>seatingChart</c> and add your name and a friend’s name in the columns of this extra row using assignment statements.</p>
 
-<exercise label="twoDArraySet">
+<activity label="twoDArraySet">
     <statement>
             <p>Add another row of data to the arrays by changing the size of the arrays and adding in the assignment statements for the cells in those rows.</p>
 
@@ -513,9 +513,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="qa2dab_1">
+    <activity label="qa2dab_1">
         <statement>
 
             <p> Which of the following sets the value for the 3rd row and 2nd column of a 2D array called <c>nums</c>?</p>
@@ -560,7 +560,7 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="get-a-value-from-a-2d-array">
             <title>Get a Value from a 2D Array</title>
@@ -575,7 +575,7 @@ int value = ticketInfo[1][0];
 String name = seatingInfo[0][1];
 </code></program>
 
-    <exercise label="qa2dab_2">
+    <activity label="qa2dab_2">
         <statement>
 
             <p> What is the value of <c>name</c> after the code above executes?</p>
@@ -629,9 +629,9 @@ String name = seatingInfo[0][1];
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="twoDArrayInitGet">
+<activity label="twoDArrayInitGet">
     <statement>
             <p>Add another row to seatingInfo initialized to your name and a friend’s name. Get these names out of the array using the correct indices and then print them out.</p>
 
@@ -739,7 +739,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="d-array-row-and-column-length">
             <title>2D Array Row and Column length</title>
@@ -759,7 +759,7 @@ ticketInfo[0].length // returns the number of columns
             </note>
             <p>The valid row index values for a 2D array are <c>0</c> through one less than the number of rows or the length of the array, inclusive. The valid column index values for a 2D array are <c>0</c> through one less than the number of columns or the length of any given row of the array, inclusive. For example, given a 2D array named <c>values</c>, the number of rows is <c>values.length</c> and the number of columns is <c>values[0].length`</c>. Using an index value outside of these ranges will result in an <c>ArrayIndexOutOfBoundsException</c>.</p>
 
-    <exercise label="qa2ldb_2">
+    <activity label="qa2ldb_2">
         <statement>
 
             <p> How many rows does <c>a</c> have if it is created as follows <c>int[][] a = { {2, 4, 6, 8}, {1, 2, 3, 4}};</c>?</p>
@@ -795,9 +795,9 @@ ticketInfo[0].length // returns the number of columns
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qa2ldb_3">
+    <activity label="qa2ldb_3">
         <statement>
 
             <p> Which of the following could be used to get the value in the third row and second column from a 2D array called <c>nums</c>?</p>
@@ -842,7 +842,7 @@ ticketInfo[0].length // returns the number of columns
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-ascii-art">
             <title>Coding Challenge : ASCII Art</title>
@@ -857,7 +857,7 @@ ticketInfo[0].length // returns the number of columns
                 </li>
             </ol></p>
 
-<exercise label="challenge-8-1-ascii-art">
+<activity label="challenge-8-1-ascii-art">
     <statement>
             <p>Part 1: Add 2 assignment statements for the 2D array asciiArt to change the “o” characters to “@” characters. Part 2: Create a new asciiArt array and print it out.</p>
 
@@ -970,7 +970,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-38">
             <title>Summary</title>

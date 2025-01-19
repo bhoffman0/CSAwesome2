@@ -41,7 +41,7 @@
             <title>Try and Solve It</title>
             <p>Write the method <c>contains</c> below in the class MultiGroups. (Note that the original AP Question involved a NumberGroup interface which has been replaced with inheritance here).</p>
 
-<exercise label="NumberGroupC">
+<activity label="NumberGroupC">
     <statement>
             <p>Write the method <c>contains</c> below in the class MultiGroups.</p>
 
@@ -178,6 +178,6 @@ public class MultiGroups extends NumberGroup
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

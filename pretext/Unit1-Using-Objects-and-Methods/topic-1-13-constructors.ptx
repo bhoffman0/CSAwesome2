@@ -28,7 +28,7 @@ World world1 = new World(); // creates a default size 640x480 world
 World world2 = new World(300,400); // creates a 300x400 world
 </code></program>
 
-    <exercise label="mcq_world_constructor">
+    <activity label="mcq_world_constructor">
         <statement>
 
             <p> Which of these is valid syntax for creating and initializing a World object?</p>
@@ -82,9 +82,9 @@ World world2 = new World(300,400); // creates a 300x400 world
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq_overload_constructor">
+    <activity label="mcq_overload_constructor">
         <statement>
 
             <p> Which of these is overloading the constructor?</p>
@@ -129,7 +129,7 @@ World world2 = new World(300,400); // creates a 300x400 world
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="the-turtle-class-constructors">
             <title>The Turtle Class Constructors</title>
@@ -143,7 +143,7 @@ Turtle t2 = new Turtle(50, 100, world1);
                 <p>Notice that the order of the arguments matter. The <c>Turtle</c> constructor takes <c>(x,y,world)</c> as arguments in that order. If you mix up the order of the arguments it will cause an error, because the arguments will not be the data types that it expects. This is one reason why programming languages have data types – to allow for error-checking.</p>
             </note>
 
-    <exercise label="const_turtle">
+    <activity label="const_turtle">
         <statement>
 
             <p> Which of these is valid syntax for creating and initializing a Turtle object in world1?</p>
@@ -188,9 +188,9 @@ Turtle t2 = new Turtle(50, 100, world1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="TurtleConstructorTest">
+<activity label="TurtleConstructorTest">
     <statement>
             <p>Try changing the code below to create a <c>World</c> object with 300x400 pixels. Where is the turtle placed by default? What arguments do you need to pass to the <c>Turtle</c> constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the arguments?</p>
 
@@ -254,7 +254,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="object-variables-and-references">
             <title>Object Variables and References</title>
@@ -289,7 +289,7 @@ Turtle t2 = new Turtle(world1);
             <p>Constructors are said to be <term>overloaded</term> when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the <c>Turtle</c> class that take different parameters:</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Constructor Signatures and Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/TurtleClassDefn.png" width="100%" alt="Turtle Class Constructor Signatures and Parameters"/></figure>
 
-    <exercise label="TurtleClass1">
+    <activity label="TurtleClass1">
         <statement>
 
             <p> Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?</p>
@@ -343,11 +343,11 @@ Turtle t2 = new Turtle(world1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>In Unit 3, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called <c>Date</c>, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Date class showing attributes and constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/DateClass.png" width="89%" alt="A Date class showing attributes and constructors"/></figure>
 
-<exercise label="date_constructor">
+<activity label="date_constructor">
     <statement><p>Click on the constructor headers (signatures)</p></statement>
 <feedback><p>Constructors are public and have the same name as the class. Click on the constructor headers which are the first line of the constructors showing their name and parameters.</p></feedback>
 <areas>
@@ -367,8 +367,8 @@ Turtle t2 = new Turtle(world1);
 <cline>        <area correct="no">{ /** Implementation not shown */ }</area></cline>
 <cline/>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-    <exercise label="DateClass1">
+</areas></activity>
+    <activity label="DateClass1">
         <statement>
 
             <p> Given the <c>Date</c> class in the figure above and assuming that months in the <c>Date</c> class are numbered starting at 1, which of the following code segments will create a <c>Date</c> object for the date September 20, 2020 using the correct constructor?</p>
@@ -422,7 +422,7 @@ Turtle t2 = new Turtle(world1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="arguments-parameters-and-call-by-value">
             <title>Arguments, Parameters, and Call by Value</title>
@@ -430,7 +430,7 @@ Turtle t2 = new Turtle(world1);
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%" alt="Parameter Mapping"/></figure>
             <p>The type of the values being passed in as arguments have to match the type of the parameter variables. We cannot give a constructor a <c>String</c> object when it is expecting an <c>int</c>. The order of the arguments also matters. If you mix up the month and the day in the <c>Date</c> constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).</p>
 
-    <exercise label="mcq_params">
+    <activity label="mcq_params">
         <statement>
 
             <p> In <c>public World(int width, int height)</c> what are <c>width</c> and <c>height</c>?</p>
@@ -475,9 +475,9 @@ Turtle t2 = new Turtle(world1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq_arguments">
+    <activity label="mcq_arguments">
         <statement>
 
             <p> In <c>new World(150, 200)</c> what are <c>150</c> and <c>200</c>?</p>
@@ -522,9 +522,9 @@ Turtle t2 = new Turtle(world1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="TurtleConstructorDebug">
+<activity label="TurtleConstructorDebug">
     <statement>
             <p>Debug the following code.</p>
 
@@ -588,7 +588,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>This lesson introduces a lot of vocabulary, but don’t worry if you don’t understand everything about classes and constructors yet. You will learn more about how this all works in later units when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.</p>
             <image source="Unit1-Using-Objects-and-Methods/Figures/customTurtles.png" width="36%"/>
         </subsection>
@@ -620,7 +620,7 @@ public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h
                 </li>
             </ol></p>
 
-<exercise label="challenge-CustomTurtles">
+<activity label="challenge-CustomTurtles">
     <statement>
             <p>Use the CustomTurtle constructors to create the following turtles.</p>
 
@@ -773,7 +773,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-4">
             <title>Summary</title>
@@ -819,7 +819,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-3">
             <title>AP Practice</title>
 
-    <exercise label="AP-constructors">
+    <activity label="AP-constructors">
         <statement>
 
             <p>  Consider the following class. Which of the following successfully creates a new Cat object?</p>
@@ -903,9 +903,9 @@ III. String color = "orange";
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-constructors2">
+    <activity label="AP-constructors2">
         <statement>
 
             <p> Consider the following class.  Which of the following code segments will construct a Movie object m with a title of “Lion King” and rating of 8.0?</p>
@@ -984,6 +984,6 @@ public class Movie
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

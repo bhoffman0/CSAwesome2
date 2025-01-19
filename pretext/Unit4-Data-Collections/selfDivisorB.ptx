@@ -80,7 +80,7 @@ public class SelfDivisor
             </subsection>
             
 
-    <exercise label="frsdb_1">
+    <activity label="frsdb_1">
         <statement>
 
                 <p> Which loop should you use to solve this problem?</p>
@@ -116,9 +116,9 @@ public class SelfDivisor
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="frsdb_2">
+    <activity label="frsdb_2">
         <statement>
 
                 <p> Which of the following correctly declares and creates the array to return?</p>
@@ -172,11 +172,11 @@ public class SelfDivisor
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Try to write the code for firstNumSelfDivisors.  Run the main to check your answer. It should print 11, 12, and 15, and then 22, 24, 33, 36, and 44.</p>
 
-<exercise label="lcfrsdb">
+<activity label="lcfrsdb">
     <statement>
             <p>FRQ SelfDivisor B: write the method firstNumSelfDivisors below.</p>
 
@@ -276,7 +276,7 @@ public class SelfDivisor
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-8">
             <title>Video - One way to code the solution</title>

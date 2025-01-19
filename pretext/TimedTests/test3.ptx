@@ -6,7 +6,7 @@
         <p>Click the <image source="TimedTests/Figures/start.png" width="50%" alt="start"/> button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the <image source="TimedTests/Figures/next.png" width="50%" alt="next"/> button to go to the next question.  Click on the <image source="TimedTests/Figures/prev.png" width="50%" alt="previous"/> button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the <image source="TimedTests/Figures/pause.png" width="50%" alt="pause"/> button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the <image source="TimedTests/Figures/finishExam.png" width="50%" alt="finish exam"/> button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
         
 
-    <exercise label="pe3_1">
+    <activity label="pe3_1">
         <statement>
 
             <p> What is the value of total after the following code executes?</p>
@@ -69,9 +69,9 @@ for (int row = 0; row &lt; matrix.length; row++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_3">
+    <activity label="pe3_3">
         <statement>
 
             <p> Assume that list has been initialized with the following Integer objects: [9, 3, 17, 2, 16, 4, 1].  Which of the following shows the values in list after a call of mystery(4)?</p>
@@ -136,9 +136,9 @@ public void mystery(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_4">
+    <activity label="pe3_4">
         <statement>
 
             <p> Given the following two class declarations, what is the relationship between Dog and DogOwner?</p>
@@ -214,9 +214,9 @@ public class DogOwner
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_5">
+    <activity label="pe3_5">
         <statement>
 
             <p> Which of the following expressions can be use to replace the body of mystery so that mystery will return the same result for all values of y?</p>
@@ -278,9 +278,9 @@ public static int mystery(int y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_6">
+    <activity label="pe3_6">
         <statement>
 
             <p> Class C extends class B, which extends class A. Also, all of the three classes implement a public method test(). How can a method in an object of class C invoke the test() method defined in class A (without creating a new instance of class A)?</p>
@@ -334,9 +334,9 @@ public static int mystery(int y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_7">
+    <activity label="pe3_7">
         <statement>
 
             <p> Which of the following is a correct call to the <c>test</c> method?</p>
@@ -410,9 +410,9 @@ public class VehicleTest
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_8">
+    <activity label="pe3_8">
         <statement>
 
             <p> Given the following method declaration. What value is returned from recur(5)?</p>
@@ -475,9 +475,9 @@ public static int recur(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_9">
+    <activity label="pe3_9">
         <statement>
 
             <p> What is printed when the following code is run?</p>
@@ -538,9 +538,9 @@ for (int k = 0; k &lt; 20; k = k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_10">
+    <activity label="pe3_10">
         <statement>
 
             <p> What is printed when the following code executes (runs)?</p>
@@ -604,9 +604,9 @@ System.out.println(list);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_11">
+    <activity label="pe3_11">
         <statement>
 
             <p> Assume that Parent p = new Child(); appears in a client program.  What is the result of the call p.m1()?</p>
@@ -690,9 +690,9 @@ public class Child extends Parent
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_12">
+    <activity label="pe3_12">
         <statement>
 
             <p> Assume the following classes.</p>
@@ -771,9 +771,9 @@ III.  ((Bear) b).growl();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_13">
+    <activity label="pe3_13">
         <statement>
 
             <p> Which of the following best explains what the method m does?</p>
@@ -840,9 +840,9 @@ public void m(int[][]p)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_14">
+    <activity label="pe3_14">
         <statement>
 
             <p> What is the output from mystery(4321) when mystery is defined as follows?</p>
@@ -909,9 +909,9 @@ public static void mystery (int x)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_15">
+    <activity label="pe3_15">
         <statement>
 
             <p> A classroom is a room and a building has many rooms. If the three classes Room, Classroom, and Building create objects that have the same relationship which of the following is the most appropriate set of declarations?</p>
@@ -965,9 +965,9 @@ public static void mystery (int x)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_16">
+    <activity label="pe3_16">
         <statement>
 
             <p> Given the following code which of the answers best describes the conditions needed for temp to be true when it is returned?</p>
@@ -1032,9 +1032,9 @@ return temp;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_17">
+    <activity label="pe3_17">
         <statement>
 
             <p> What is the output from the following code segment?</p>
@@ -1095,9 +1095,9 @@ for (int j = 1; j &lt;=5; j++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_18">
+    <activity label="pe3_18">
         <statement>
 
             <p> Consider the following methods. Which of method1, method2, and method3 would give the same result as sample?</p>
@@ -1225,9 +1225,9 @@ public void method3(int num1, int num2)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_19">
+    <activity label="pe3_19">
         <statement>
 
             <p> What are the first and last values output by the following code segment?</p>
@@ -1289,9 +1289,9 @@ while (t &lt; 29)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="pe3_20">
+    <activity label="pe3_20">
         <statement>
 
             <p> Given the following code.</p>
@@ -1356,6 +1356,6 @@ IV. s2 == s3;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         
     </section>

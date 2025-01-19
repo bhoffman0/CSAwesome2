@@ -4,7 +4,7 @@
         <title>Recursion Hard Multiple Choice Questions</title>
         <p>These problems are about the same or harder than those that you will typically see on the AP CSA exam.</p>
 
-    <exercise label="qrh_1">
+    <activity label="qrh_1">
         <statement>
 
         <p> Given the following method declaration, this method will return true if and only if:</p>
@@ -57,10 +57,10 @@ public static boolean check(String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+check(String+s)%0A+++%7B%0A++++++return+s.length()+%3E%3D+2+%26%26%0A++++++++++(s.charAt(0)+%3D%3D+s.charAt(1)+%7C%7C%0A+++++++++++check(s.substring(1)))%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(check(%22xyyz%22))%3B%0A++++++System.out.println(check(%22xyxyz%22))%3B%0A++++++System.out.println(check(%22zyxzyy%22))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+check(String+s)%0A+++%7B%0A++++++return+s.length()+%3E%3D+2+%26%26%0A++++++++++(s.charAt(0)+%3D%3D+s.charAt(1)+%7C%7C%0A+++++++++++check(s.substring(1)))%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(check(%22xyyz%22))%3B%0A++++++System.out.println(check(%22xyxyz%22))%3B%0A++++++System.out.println(check(%22zyxzyy%22))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-8-1</url>.</p>
 
-    <exercise label="qrh_2">
+    <activity label="qrh_2">
         <statement>
 
         <p> Given the following method declaration, what will <c>redo(82, 3)</c> return?</p>
@@ -127,6 +127,6 @@ public static int redo(int i, int j)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+redo(int+i,+int+j)%0A+++%7B%0A++++++if+(i%3D%3D0)%0A+++++++++return+0%3B%0A++++++else+%0A+++++++++return+redo(i/j,+j)%2B1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(redo(82,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+int+redo(int+i,+int+j)%0A+++%7B%0A++++++if+(i%3D%3D0)%0A+++++++++return+0%3B%0A++++++else+%0A+++++++++return+redo(i/j,+j)%2B1%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(redo(82,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-8-2</url>.</p>
     </section>

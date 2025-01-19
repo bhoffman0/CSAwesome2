@@ -134,7 +134,7 @@ hikerClub.addClimb("Monadnock", 344);
             </subsection>
             
 
-    <exercise label="fr_climbB_1">
+    <activity label="fr_climbB_1">
         <statement>
 
                 <p> What type of loop should you use to find the first place that the new peakName is less than the current element’s peakName?</p>
@@ -170,9 +170,9 @@ hikerClub.addClimb("Monadnock", 344);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_climbB_2">
+    <activity label="fr_climbB_2">
         <statement>
 
                 <p> What ArrayList method allows you to add a new element at a specific index in a list?</p>
@@ -208,9 +208,9 @@ hikerClub.addClimb("Monadnock", 344);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_climbB_3">
+    <activity label="fr_climbB_3">
         <statement>
 
                 <p> What will be stored in value after running this code:</p>
@@ -245,14 +245,14 @@ if (s1.compareTo(s2) &gt; 0){
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="try-and-solve-it-15">
             <title>Try and Solve It</title>
             <p>Complete the method <c>addClimb</c> in the <c>ClimbingClub</c> class in the code below.  It should create a new <c>ClimbInfo</c> object and insert it in alphabetical order by <c>peakName</c> in the <c>climbList</c>.  The code includes a <c>main</c> method that will test the <c>addClimb</c> method.</p>
 
-<exercise label="ClimbClubB">
+<activity label="ClimbClubB">
     <statement>
             <p>FRQ Climb Club B: complete the method addClimb below.</p>
 
@@ -399,7 +399,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-3">
             <title>Video - One way to code the solution</title>

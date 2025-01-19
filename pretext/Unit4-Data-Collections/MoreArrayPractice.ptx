@@ -3,7 +3,7 @@
 <section xml:id="MoreArrayPractice">
         <title>More Code Practice with Arrays</title>
 
-<exercise label="sum13_written">
+<activity label="sum13_written">
     <statement>
         <p>Create a method <c>sum13(nums)</c> that takes an array of integers, <c>nums</c> and
             returns the sum of the numbers in the array. However, the number 13 is
@@ -121,9 +121,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="has22_written2">
+<activity label="has22_written2">
     <statement>
         <p>Create a method <c>has22(nums)</c> that takes an array of integers, <c>nums</c>
             and returns <c>true</c> if there are at least two items in the list that are
@@ -235,9 +235,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="total89_written">
+<activity label="total89_written">
     <statement>
         <p>Create the <c>total89(nums)</c> method below that takes an array of integers,
             <c>nums</c>, and returns the total of the numbers in <c>nums</c> except for all numbers
@@ -330,9 +330,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="twoSum_written">
+<activity label="twoSum_written">
     <statement>
         <p>Create a method <c>twoSum(nums, target)</c> that takes an array of integers
             <c>nums</c> and an integer <c>target</c> and returns an array with the indices of
@@ -431,5 +431,5 @@ public class RunestoneTests extends CodeTestHelper {
  }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

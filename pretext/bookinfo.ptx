@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <docinfo>
   <document-id edition="2">csawesome2ptxbeta</document-id>
-  <!-- Rename Checkpoint for <exercise> to Activity -->
+  <!-- Rename Checkpoint for exercise to Activity -->
   <rename element="inlineexercise">Activity</rename>
   <rename element="chapter">Unit</rename>
   <brandlogo url="." source="_static/CSAwesomeLogo.png" alt="CSAwesome"/>

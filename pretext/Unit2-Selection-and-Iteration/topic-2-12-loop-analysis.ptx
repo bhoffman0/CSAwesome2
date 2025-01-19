@@ -10,7 +10,7 @@
             <p>Let’s practice tracing through loops with many variables. Remember to make a tracing table to keep track of all the variables, the iterations, and the output.</p>
             <p>Here is a complex loop.  See if you can trace the code on paper by making a tracing table to predict what the code will do when you run it. Click on the this <url href="https://goo.gl/qEHnpg" visual="https://goo.gl/qEHnpg">Java visualizer</url> link or the Code Lens button to help you step through the code.</p>
 
-<exercise label="example_trace_loop">
+<activity label="example_trace_loop">
     <statement>
             <p>Can you trace through this code? Add in output statements <c>System.out.println("var1: " + var1 + " var2: " + var2);</c> before the loop and inside the loop at the end to keep track of the variables and run. Click on the Code Lens button to visualize the code step by step.</p>
 
@@ -52,11 +52,11 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Did your trace table look like the following?</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/whileLoopTrace.png" width="27%"/></figure>
 
-    <exercise label="loop-trace-count">
+    <activity label="loop-trace-count">
         <statement>
 
             <p> What are the values of var1 and var2 when the code finishes executing?</p>
@@ -120,9 +120,9 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="loop-trace-count2">
+    <activity label="loop-trace-count2">
         <statement>
 
             <p> What are the values of x and y when the code finishes executing?</p>
@@ -186,12 +186,12 @@ while (y &gt; 2 &amp;&amp; x &lt; y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Counting Loop Iterations</title>
             <p>Loops can be also analyzed to determine how many times they run.  This is called <term>run-time analysis</term> or a <term>statement execution count</term>. A <term>statement execution count</term> indicates the number of times a statement is executed by the program. Statement execution counts are often calculated informally through tracing and analysis of the iterative statements.</p>
-<exercise label="countstars1">
+<activity label="countstars1">
     <statement>
             <p>How many stars are printed out in this loop? How many times does the loop run? Figure it out on paper before you run the code.</p>
 
@@ -230,7 +230,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>If you made a trace table, you would know that the loop runs when i = 3, 4, 5, 6 but finishes as soon as i becomes 7 since that is not less than 7. So, the loop runs 4 times. Or you can use the shortcut formula in the note below.</p>
             <note>
                 <p>The number of times a loop executes can be calculated by <em>(largestValue - smallestValue + 1)</em>.</p>
@@ -250,7 +250,7 @@ public class RunestoneTests extends CodeTestHelper
 <p>
 Nested loops are loops within loops. The number of times a nested loop runs is the number of times the outer loop runs <term>times</term> the number of times the inner loop runs. Here is an example of a nested loop that prints a rectangle of stars:</p>
 
-<exercise label="countstars">
+<activity label="countstars">
     <statement>
             <p>How many stars are printed out by the following loops? How many times do the loops run? Calculate on paper before you run the code.</p>
 
@@ -293,7 +293,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>The number of times a nested for loop body is executed is the number of times the outer loop runs multiplied by the number of times the inner loop runs (outer loop runs * inner loop runs).</p>
             </note>
@@ -304,7 +304,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>We encourage you to do this activity as a <problematic refid="id2">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Do the following exercises in your group. Make sure you draw the trace tables keeping track of all the variables in the loops. Use the formulas to determine how many times the loops run. If your group finishes early, do some of the multiple-choice problems in the 4.6 Practice and Summary section of this unit.</p>
 
-    <exercise label="qln1">
+    <activity label="qln1">
         <statement>
 
             <p> How many times does the following code print a <c>*</c>?</p>
@@ -359,9 +359,9 @@ for (int i = 3; i &lt; 8; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qln2">
+    <activity label="qln2">
         <statement>
 
             <p> What does the following code print?</p>
@@ -416,9 +416,9 @@ for (int i = 2; i &lt; 8; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qln3">
+    <activity label="qln3">
         <statement>
 
             <p> What does the following print?</p>
@@ -473,9 +473,9 @@ for (int i = 3; i &lt;= 9; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qln4">
+    <activity label="qln4">
         <statement>
 
             <p> Consider the following code segment. How many times is the string “Hi!” printed as a result of executing the code segment?</p>
@@ -531,7 +531,7 @@ while (i &lt;= 4)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Summary</title>

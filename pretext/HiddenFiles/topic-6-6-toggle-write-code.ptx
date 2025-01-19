@@ -4,7 +4,7 @@
         <title>Unit 6 Write Code for Toggle Code</title>
         <p>This is the write code problems associated with the mixed up code problems.</p>
 
-<exercise label="u6_muc_wc1">
+<activity label="u6_muc_wc1">
     <statement>
         <p>Write a loop that traverses the array arr from 0 to less than the length of the array. In the loop, double each element in the array arr and print out each new value on the same line separated by “, “. The finished code should print “2, 4, 6, 8, 10, “.</p>
 
@@ -59,9 +59,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc2">
+<activity label="u6_muc_wc2">
     <statement>
         <p>Write a for loop that fills an array with elements that count up from 0 to 50 by 5 (0 5 10 15 20 … 50) and prints out each element on a separate line.</p>
 
@@ -116,9 +116,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc3">
+<activity label="u6_muc_wc3">
     <statement>
         <p>Write an enhanced for each loop to traverse the array and print out an element if it is even.</p>
 
@@ -172,9 +172,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc4">
+<activity label="u6_muc_wc4">
     <statement>
         <p>Finish the method to return the smallest integer in an array arr given as the parameter.</p>
 
@@ -259,9 +259,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc5">
+<activity label="u6_muc_wc5">
     <statement>
         <p>Finish the method to return the average of the elements in an array arr given as the parameter. The method should return the average.</p>
 
@@ -346,9 +346,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc6">
+<activity label="u6_muc_wc6">
     <statement>
         <p>Finish the method to return the largest integer in an array arr given as the parameter.</p>
 
@@ -431,9 +431,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc7">
+<activity label="u6_muc_wc7">
     <statement>
         <p>Finish the method that given an array as a parameter, returns the elements “right shifted” by one – so <c>{6, 2, 5, 3}</c> returns <c>{3, 6, 2, 5}</c>.</p>
 
@@ -519,9 +519,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc8">
+<activity label="u6_muc_wc8">
     <statement>
         <p>Finish the method to return a new array of length 2 containing the middle two elements of a given array of integers of even length (the parameter) – so <c>{1,2,3,4}</c> should return <c>{2,3}</c>.</p>
 
@@ -610,9 +610,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc9">
+<activity label="u6_muc_wc9">
     <statement>
         <p>Finish the method that should return string array that is in reverse order – so <c>{"b", "a", "z"}</c> should return <c>{"z", "a", "b"}</c>.</p>
 
@@ -698,9 +698,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u6_muc_wc10">
+<activity label="u6_muc_wc10">
     <statement>
         <p>Finish the method so that it copies the first half of an array given as an argument to the method into a result array which is returned.</p>
 
@@ -785,5 +785,5 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

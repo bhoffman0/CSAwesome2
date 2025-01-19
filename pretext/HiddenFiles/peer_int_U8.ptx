@@ -3,7 +3,7 @@
 <section xml:id="peer_int_U8">
         <title>Peer Instruction: 2D Arrays Multiple Choice Questions</title>
 
-    <exercise label="bs-2d-arrays-7-6">
+    <activity label="bs-2d-arrays-7-6">
         <statement>
 
         <p>  What does this code do?</p>
@@ -71,9 +71,9 @@ while (index &lt; pixelArray.length)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-8-6">
+    <activity label="bs-2d-arrays-8-6">
         <statement>
 
         <p>  For debugging, where is the best place to put a print statement?</p>
@@ -136,9 +136,9 @@ while (index &lt; pixelArray.length) //Location B
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-8-7">
+    <activity label="bs-2d-arrays-8-7">
         <statement>
 
         <p>  This code should swap the red and blue components at each pixel, what does it actually do?</p>
@@ -199,9 +199,9 @@ while (index &lt; pixelArray.length)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-8-9">
+    <activity label="bs-2d-arrays-8-9">
         <statement>
 
         <p>  Which code chunk should be inserted into the marked location to swap the red and blue components at each pixel?</p>
@@ -267,9 +267,9 @@ pix.setBlue(pix.getRed());</p>
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-9-7">
+    <activity label="bs-2d-arrays-9-7">
         <statement>
 
         <p>  Why does this code have an error?</p>
@@ -337,9 +337,9 @@ for(int index = 0; index &lt; pixelArray.length; index++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-10-7">
+    <activity label="bs-2d-arrays-10-7">
         <statement>
 
         <p>  Why does this code have an error?</p>
@@ -398,9 +398,9 @@ for (int bar = 0; bar &lt; getWidth(); bar++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-11-9">
+    <activity label="bs-2d-arrays-11-9">
         <statement>
 
         <p>  Which of the following is the best answer?</p>
@@ -470,9 +470,9 @@ for (int y = 0; y &lt; getHeight); y++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-11-15">
+    <activity label="bs-2d-arrays-11-15">
         <statement>
 
         <p>  What does this code do?</p>
@@ -543,9 +543,9 @@ for(int y = 0; y &lt; getHeight(); y++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-12-6">
+    <activity label="bs-2d-arrays-12-6">
         <statement>
 
         <p>  This code makes a red box of size (width, height)</p>
@@ -603,9 +603,9 @@ for(int y = 40; y &lt; 50; y++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-12-7">
+    <activity label="bs-2d-arrays-12-7">
         <statement>
 
         <p>  This code makes a red box of size (width, height)</p>
@@ -663,9 +663,9 @@ for(int y = 40; y &lt;= 50; y++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-12-8">
+    <activity label="bs-2d-arrays-12-8">
         <statement>
 
         <p> What are the correct loop headers to make a black box of width x and height y?</p>
@@ -726,9 +726,9 @@ public void foo(int x, int y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-14-5">
+    <activity label="bs-2d-arrays-14-5">
         <statement>
 
         <p>  How many times is the variable pix assigned a value?</p>
@@ -798,9 +798,9 @@ public void everyColumn(Color newColor)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-14-8">
+    <activity label="bs-2d-arrays-14-8">
         <statement>
 
         <p>  How many iterations of the loop body are executed?</p>
@@ -870,9 +870,9 @@ public void everyOtherColumn(Color newColor)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-14-9">
+    <activity label="bs-2d-arrays-14-9">
         <statement>
 
         <p>  Adding which if statement at the marked line would result in the inner body of the for loop running the same way it would if the inner for loop was “for (int bbb = 0; bbb &lt; this.getWidth(); bbb = bbb + 2)”?</p>
@@ -937,9 +937,9 @@ public void everyOtherColumn(Color newColor)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-15-6">
+    <activity label="bs-2d-arrays-15-6">
         <statement>
 
         <p>  What is this code doing?</p>
@@ -999,9 +999,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-15-10">
+    <activity label="bs-2d-arrays-15-10">
         <statement>
 
         <p>  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
@@ -1056,9 +1056,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-15-11">
+    <activity label="bs-2d-arrays-15-11">
         <statement>
 
         <p>  Which is most true about ONE execution of this code (for a specific diffValue)?</p>
@@ -1115,9 +1115,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-15-12">
+    <activity label="bs-2d-arrays-15-12">
         <statement>
 
         <p>  Which best describes the conditions under which we change pixel color?</p>
@@ -1184,9 +1184,9 @@ for (int x = 0; x &lt; this.getWidth(); x++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-16-6">
+    <activity label="bs-2d-arrays-16-6">
         <statement>
 
         <p> How would you call and display a flipped picture of Picture p?</p>
@@ -1240,9 +1240,9 @@ for (int x = 0; x &lt; this.getWidth(); x++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-16-7">
+    <activity label="bs-2d-arrays-16-7">
         <statement>
 
         <p>  How many times is the marked line below executed?</p>
@@ -1318,9 +1318,9 @@ public void makeConvict()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-16-8">
+    <activity label="bs-2d-arrays-16-8">
         <statement>
 
         <p>  How many times is the marked line below executed?</p>
@@ -1396,9 +1396,9 @@ public void makeConvict()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-16-9">
+    <activity label="bs-2d-arrays-16-9">
         <statement>
 
         <p> Which of these statements is true?</p>
@@ -1463,9 +1463,9 @@ public void makeConvict()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-2d-arrays-20-11">
+    <activity label="bs-2d-arrays-20-11">
         <statement>
 
         <p>  What does this code do?</p>
@@ -1513,5 +1513,5 @@ for(int i = pixelArray.length/4; i &lt; 3*pixelArray.length/4; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

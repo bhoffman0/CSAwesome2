@@ -4,7 +4,7 @@
         <title>Unit 9 Write Code for Toggle Code</title>
         <p>This is the write code problems associated with the mixed up code problems.</p>
 
-<exercise label="u9_muc_wc2">
+<activity label="u9_muc_wc2">
     <statement>
         <p>Fix the class header so that the <c>Dog</c> class inherits from the <c>Animal</c> class.</p>
 
@@ -44,9 +44,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc3">
+<activity label="u9_muc_wc3">
     <statement>
         <p>Overload the <c>talk</c> method in the <c>Person</c> class so it can take in a String <c>name</c> and print <c>"Hello {name}!"</c> (e.g., calling <c>p.talk("Sarah")</c> on a <c>Person</c> <c>p</c> would print <c>"Hello Sarah!"</c>).</p>
 
@@ -102,9 +102,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc5">
+<activity label="u9_muc_wc5">
     <statement>
         <p>There is a <c>Car</c> class whose with a private int instance variable <c>numWheels</c> set to <c>4</c> and a private int instance variable <c>numSeats</c> whose value is set in the constructor. The <c>Sedan</c> class inherits from <c>Car</c>. Fill in the <c>Sedan</c> constructor so that <c>numSeats</c> is already initialized as <c>5</c>.</p>
 
@@ -173,9 +173,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc6">
+<activity label="u9_muc_wc6">
     <statement>
         <p>There is a <c>Person</c> class with private String instance variables <c>firstName</c> and <c>lastName</c> and a constructor that takes them in that order. There is also a <c>Customer</c> class that should inherit from <c>Person</c>, adding an <c>id</c> String instance variable. The only missing component is a <c>Customer</c> constructor that should take <c>firstName</c>, <c>lastName</c>, and <c>id</c> in that order.</p>
 
@@ -265,9 +265,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc7">
+<activity label="u9_muc_wc7">
     <statement>
         <p>There is a <c>House</c> class with private int instance variables <c>numWindows</c> and <c>numDoors</c> and a constructor that takes those in that order. Create a <c>MobileHouse</c> class that inherits from <c>House</c> while adding a <c>numWheels</c> instance variable (and thus has a constructor that takes <c>numWindows</c>, <c>numDoors</c>, and <c>numWheels</c> in that order) and a <c>getNumWheels()</c> method. your solution.</p>
 
@@ -347,9 +347,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc8">
+<activity label="u9_muc_wc8">
     <statement>
         <p>There is a <c>Entity</c> class with private int instance variable <c>healthPoints</c> and a constructor that takes that as an argument. Finish the <c>Hero</c> class so that it initializes with a <c>healthPoints</c> of <c>100</c> and so that its <c>fight()</c> method prints <c>"Attacked the enemy!"</c>.</p>
 
@@ -436,9 +436,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc9">
+<activity label="u9_muc_wc9">
     <statement>
         <p>There is a <c>Furniture</c> class with a String instance variable <c>material</c> and an int instance variable <c>cost</c>. The <c>Furniture</c> class also includes an <c>equals()</c> method that should return <c>true</c> if two <c>Furniture</c> objects have the same <c>material</c> and <c>cost</c>. Fill in this <c>equals()</c> method.</p>
 
@@ -507,9 +507,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc10">
+<activity label="u9_muc_wc10">
     <statement>
         <p>There is a <c>Car</c> class with a method called <c>drive()</c> that prints <c>"vroom"</c>. There is a subclass of <c>Car</c> called <c>Racecar</c>. The <c>Racecar</c> class should override <c>drive()</c> with a new <c>drive()</c> method that prints <c>"vroom"</c> twice by calling <c>Car</c>’s <c>drive()</c> method twice.</p>
 
@@ -572,9 +572,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc11">
+<activity label="u9_muc_wc11">
     <statement>
         <p>There is a <c>Computer</c> class with private String instance variables <c>name</c> and <c>company</c>. You should override the Object <c>equals</c> method to evaluate whether both <c>Computers</c> have the same <c>name</c> and <c>company</c>, in which case they are “equal”. There is also a <c>Laptop</c> class that inherits from <c>Computer</c> while adding a String <c>keyboardType</c> instance variable. The <c>Laptop</c> class should override the <c>equals</c> method from <c>Computer</c>, instead evaluating whether the <c>name</c>, <c>company</c>, and <c>keyboardType</c> are the same (remember that <c>name</c> and <c>company</c> are not readable to <c>Laptop</c> so some polymorphism might be needed). Fill in the code so that both <c>equals()</c> methods work.</p>
 
@@ -655,9 +655,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u9_muc_wc12">
+<activity label="u9_muc_wc12">
     <statement>
         <p>There is a <c>Food</c> class with a private <c>numCalories</c> integer instance variable. <c>Food</c> has a <c>chomp()</c> method that returns nothing and prints <c>"{numCalories} calories consumed"</c> (e.g., <c>"5 calories consumed"</c>). There should also be a <c>Fruit</c> subclass that inherits from <c>Food</c> and adds the private <c>color</c> String instance variable. The <c>Fruit</c> class should override the <c>Food</c> <c>chomp()</c> method to return nothing, print <c>"{numCalories} calories consumed"</c>, and print <c>"the fruit is {color}"</c> (on a new line). Finally, there should be an <c>Apple</c> subclass that inherits from <c>Fruit</c>, sets <c>color</c> to <c>"red"</c>, and adds a <c>variety</c> String private instance variable. The <c>Apple</c> class should have an overriden <c>chomp()</c> method that returns nothing, prints <c>"{numCalories} calories consumed"</c>, prints <c>"the fruit is {color}"</c>, and prints <c>"ate {variety} apple"</c> (all separated by new lines). Remember that the <c>numCalories</c> and <c>color</c> variables are private, so the <c>Apple</c> class does NOT have access to their values.</p>
 
@@ -756,5 +756,5 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

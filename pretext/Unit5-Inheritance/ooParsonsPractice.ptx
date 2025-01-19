@@ -3,7 +3,7 @@
 <section xml:id="ooParsonsPractice">
         <title>Mixed Up Code Practice</title>
         <p>Try to solve each of the following. Click the <em>Check</em> button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren’t needed in the correct solution.  Try to solve these on your phone or other mobile device!</p>
-<exercise label="oopex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="oopex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment should create an empty Dog class that is a child of the Animal class. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="3">
@@ -20,7 +20,7 @@
 <cline>{</cline>
 </block><block order="1">
 <cline>} // end class</cline>
-</block></blocks></exercise><exercise label="oopex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program should overload a void method talk with no parameters. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="2">
@@ -50,7 +50,7 @@
 <cline>   } </cline>
 </block><block order="1">
 <cline>} // end class</cline>
-</block></blocks></exercise><exercise label="oopex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>There is a <c>Car</c> class whose implementation is not shown with a private int instance variable <c>numWheels</c> set to <c>4</c> and a no-argument constructor. There should also be a <c>Sedan</c> class that inherits from <c>Car</c> while adding an integer <c>numSeats</c> instance variable set to <c>5</c>. The <c>Minivan</c> class should also inherit from <c>Car</c> while having its own <c>numSeats</c> instance variable that is set to 7. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -73,7 +73,7 @@
 <cline>      super();</cline>
 <cline>   }</cline>
 <cline>} // end Minivan</cline>
-</block></blocks></exercise><exercise label="oopex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program should create a class <c>Person</c> that has <c>firstName</c> and <c>lastName</c> as String instance variables &amp; also has a constructor that takes those in that order. Next, the program should create a <c>Customer</c> class that inherits from <c>Person</c> (initializing the instance variables too) and also has a String instance variable called <c>id</c>. All three of these should be addressed in the <c>Customer</c> constructor. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="6">
@@ -105,7 +105,7 @@
 </choice></block><block order="1">
 <cline>   } // end Customer constructor</cline>
 <cline>} // end Customer class</cline>
-</block></blocks></exercise><exercise label="oopex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>There should be a <c>House</c> class with private int instance variables <c>numWindows</c> and <c>numDoors</c> and a constructor that takes those in that order. There should also be a <c>MobileHouse</c> class that inherits from <c>House</c> while adding a <c>numWheels</c> instance variable (and thus has a constructor that takes <c>numWindows</c>, <c>numDoors</c>, and <c>numWheels</c> in that order). But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="5">
@@ -136,7 +136,7 @@
 </block><block order="9">
 <cline>   }</cline>
 <cline>} // end MobileHouse</cline>
-</block></blocks></exercise><exercise label="oopex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program should create a class <c>Entity</c> that has <c>healthPoints</c> as an integer instance variable, a constructor that takes that as an argument, and a <c>fight()</c> method that prints <c>"Attacked the hero!"</c> and returns nothing. Next, the program should create a <c>Hero</c> class that inherits from <c>Entity</c> and has a zero-argument constructor that initializes <c>healthPoints</c> to 100. Finally, the <c>Hero</c> class should override the <c>fight()</c> method, instead printing <c>"Attacked the enemy!"</c>. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="6">
@@ -172,7 +172,7 @@
 <cline>   } </cline>
 </choice></block><block order="5">
 <cline>} // end Hero</cline>
-</block></blocks></exercise><exercise label="oopex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program should create a <c>Furniture</c> class. The class should have a String instance variable <c>material</c> and a integer instance variable <c>cost</c>. The <c>Furniture</c> class should also include an <c>equals()</c> method that returns <c>true</c> if two <c>Furniture</c> objects have the same <c>material</c> and <c>cost</c>. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -189,7 +189,7 @@
 </block><block order="2">
 <cline>   } // end equals</cline>
 <cline>} // end class</cline>
-</block></blocks></exercise><exercise label="oopex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>There is a <c>Car</c> class whose implementation is not shown. The <c>Car</c> class has a method called <c>drive()</c> that prints <c>"vroom"</c>. The following program should create a subclass of <c>Car</c> called <c>Racecar</c>. The <c>Racecar</c> class should override <c>drive()</c> with a new <c>drive()</c> method that prints <c>"vroom"</c> twice by calling <c>Car</c>’s <c>drive()</c> method twice. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -210,7 +210,7 @@
 </choice></block><block order="6">
 <cline>   } // end drive</cline>
 <cline>} // end class</cline>
-</block></blocks></exercise><exercise label="oopex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>There is a <c>Computer</c> class with private String instance variables <c>name</c> and <c>company</c>. You should override the Object <c>equals</c> method to evaluate whether both <c>Computers</c> have the same <c>name</c> and <c>company</c>, in which case they are “equal”. There is also a <c>Laptop</c> class that inherits from <c>Computer</c> while adding a String <c>keyboardType</c> instance variable. The <c>Laptop</c> class should override the <c>equals</c> method from <c>Computer</c>, instead evaluating whether the <c>name</c>, <c>company</c>, and <c>keyboardType</c> are the same (remember that <c>name</c> and <c>company</c> are not readable to <c>Laptop</c> so some polymorphism might be needed). But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="3">
@@ -236,7 +236,7 @@
 </choice></block><block order="5">
 <cline>   } // end equals</cline>
 <cline>} // end Laptop</cline>
-</block></blocks></exercise><exercise label="oopex12muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="oopex12muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>There is a <c>Food</c> class (whose implementation is not shown) with a private <c>numCalories</c> integer instance variable. <c>Food</c> has a <c>chomp()</c> method that returns nothing and prints <c>"{numCalories} calories consumed"</c> (e.g., <c>"5 calories consumed"</c>). There should also be a <c>Fruit</c> subclass that inherits from <c>Food</c> and adds the private <c>color</c> String instance variable. The <c>Fruit</c> class should override the <c>Food</c> <c>chomp()</c> method to return nothing, print <c>"{numCalories} calories consumed"</c>, and print <c>"fruit is {color}"</c> (on a new line). Finally, there should be an <c>Apple</c> subclass that inherits from <c>Fruit</c>, sets <c>color</c> to <c>"red"</c>, and adds a <c>variety</c> String private instance variable. The <c>Apple</c> class should have an overriden <c>chomp()</c> method that returns nothing, prints <c>"{numCalories} calories consumed"</c>, prints <c>"fruit is {color}"</c>, and prints <c>"ate {variety} apple"</c> (all separated by new lines). Remember that the <c>numCalories</c> and <c>color</c> variables are private, so the <c>Apple</c> class does NOT have access to their values. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="7">
@@ -266,4 +266,4 @@
 <cline>      System.out.println("ate " + variety + " apple");</cline>
 <cline>   }</cline>
 <cline>} // end Apple</cline>
-</block></blocks></exercise>    </section>
+</block></blocks></activity>    </section>

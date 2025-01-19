@@ -30,10 +30,10 @@ public static void neverEnd()
             <title>Recursive Call</title>
             <p>Well-constructed recursive methods contain at least one <term>base case</term>, which halts the recursion, and at least one recursive call.</p>
 
-        <exercise label="recurb1fill">
+        <activity label="recurb1fill">
             <statement>
-    <p> Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*4$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>
-    <exercise label="qrb_1">
+    <p> Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*4$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></activity>
+    <activity label="qrb_1">
         <statement>
 
             <p>  Is the following method recursive?</p>
@@ -73,9 +73,9 @@ public static int mystery()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrb_2">
+    <activity label="qrb_2">
         <statement>
 
             <p> Is the following method recursive?</p>
@@ -111,7 +111,7 @@ public static int mystery2(int x)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="why-use-recursion">
             <title>Why use Recursion?</title>
@@ -176,10 +176,10 @@ public static int factorial(int n)
             <p>You can also play with an interactive demonstration of the recursive factorial
                 computation at <url href="https://gigamonkeys.com/misc/factorial/#java" visual="https://gigamonkeys.com/misc/factorial/#java">https://gigamonkeys.com/misc/factorial/#java</url>.</p>
 
-        <exercise label="recurb2fill">
+        <activity label="recurb2fill">
             <statement>
-    <p> Which line in the method factorial contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></exercise>
-<exercise label="FactorialTest">
+    <p> Which line in the method factorial contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></activity>
+<activity label="FactorialTest">
     <statement>
             <p>Run the code below to test the factorial method. What’s the factorial of 6? Add another test to print out the factorial of 6. What’s the factorial of 1? Add another test to print out the factorial of 1.</p>
 
@@ -228,7 +228,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="base-case">
             <title>Base Case</title>
@@ -259,7 +259,7 @@ public class RunestoneTests extends CodeTestHelper
                 case—that’s the equivalent in recursion to incrementing your loop variable in a
                 <c>for</c> loop.</p>
 
-<exercise label="rec_base1">
+<activity label="rec_base1">
     <statement><p>Click on the line or lines that contain the test for the base case</p></statement>
 <feedback><p>When a base case test is true a value is returned and the recursion stops.</p></feedback>
 <areas>
@@ -270,8 +270,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    <area correct="no">else</area></cline>
 <cline>        <area correct="no">return n * factorial(n-1);</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-    <exercise label="qrb_3">
+</areas></activity>
+    <activity label="qrb_3">
         <statement>
 
             <p> What is the value of n when this method stops calling itself (when it reaches the base case)?</p>
@@ -318,9 +318,9 @@ public static int product(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrb_4">
+    <activity label="qrb_4">
         <statement>
 
             <p> What is/are the values of the variable bunnies when this method stops calling itself (when it reaches the base case)?</p>
@@ -366,9 +366,9 @@ public static int bunnyEars(int bunnies)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrb_5-new">
+    <activity label="qrb_5-new">
         <statement>
 
             <p> Is the following method recursive?</p>
@@ -408,7 +408,7 @@ public static int bunnyEars(int bunnies)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="tracing-recursive-methods">
             <title>Tracing Recursive Methods</title>
@@ -463,7 +463,7 @@ factorial(0) returns 1
             
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A call tree in Jeliot</caption><image source="Unit4-Data-Collections/Figures/callTree.png" width="54%"/></figure>
 
-    <exercise label="qrb_5-old">
+    <activity label="qrb_5-old">
         <statement>
 
             <p>  Given the method defined below what does the following return: factorial(6)?</p>
@@ -523,9 +523,9 @@ public static int factorial(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrb_6">
+    <activity label="qrb_6">
         <statement>
 
             <p>  Given the method defined below what does the following return: mystery(5)?</p>
@@ -585,10 +585,10 @@ public static int mystery(int n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n)+%0A+++%7B+%0A++++++++if+(n+%3D%3D+0)+%0A+++++++++++return+1%3B%0A++++++++else+%0A+++++++++++return+2+*+mystery+(n+-+1)%3B+%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-2</url>.</p>
 
-    <exercise label="qrb_7">
+    <activity label="qrb_7">
         <statement>
 
             <p>  Given the method defined below what does the following print: mystery(4,3)?</p>
@@ -654,7 +654,7 @@ public static int mystery(int n, int a)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(int+n,+int+a)%0A+++%7B%0A+++++++if+(n+%3D%3D+1)+return+a%3B%0A+++++++return+a+*+mystery(n-1,a)%3B%0A+++%7D+%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(4,3))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-3</url>.</p>
             <p>Let’s trace the execution of the bunny ears method defined below.</p>
             <program language="java"><code>
@@ -691,7 +691,7 @@ bunnyEars(1) returns 2
 </code></program>
             <p>So <c>bunnyEars(5)</c> returns 10.  You can step through this code using the Java Visualizer by clicking on this link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A++public+static+int+bunnyEars(int+bunnies)+%0A++%7B%0A+++++if+(bunnies+%3D%3D+0)+return+0%3B%0A+++++else+if+(bunnies+%3D%3D+1)+return+2%3B%0A+++++else+return+2+%2B+bunnyEars(bunnies+-+1)%3B+%0A++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(bunnyEars(5))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">bunnyEars</url>.</p>
 
-    <exercise label="qrb_8">
+    <activity label="qrb_8">
         <statement>
 
             <p>  Given the method defined below what does the following print: mystery(1234)?</p>
@@ -758,10 +758,10 @@ public static void mystery (int x) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+void+mystery+(int+x)+%0A+++%7B%0A++++++++System.out.print(x+%25+10)%3B+%0A%0A++++++++if+((x+/+10)+!%3D+0)+%7B%0A+++++++++++mystery(x+/+10)%3B+%0A++++++++%7D+%0A++++++++System.out.print(x+%25+10)%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++mystery(1234)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-4</url>.</p>
 
-    <exercise label="qrb_9">
+    <activity label="qrb_9">
         <statement>
 
             <p>  Given the method defined below what does the following return: mystery(“xyzxyxy”)? Note that this recursive method traverses a String.</p>
@@ -837,7 +837,7 @@ public static int mystery(String str)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+mystery(String+str)+%0A+++%7B%0A++++++++if+(str.length()+%3D%3D+1)+return+0%3B%0A++++++++else%0A++++++++%7B%0A+++++++++++if+(str.substring(0,1).equals(%22y%22))+return+1+%2B+%0A++++++++++++++++++++++++++++++++mystery(str.substring(1))%3B%0A+++++++++++else+return+mystery(str.substring(1))%3B%0A++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(mystery(%22xyzxyxy%22))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Ex-11-3-5</url></p>
         </subsection>
   <subsection xml:id="tracing-challenge-recursion">
@@ -866,9 +866,9 @@ mystery(1) returns 3 * mystery(0)
 mystery(0) returns A
 </code></program>
 
-        <exercise label="recBase1">
+        <activity label="recBase1">
             <statement>
-    <p> What is the value of A in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from mystery(0)?</p></feedback></condition></var></setup></exercise>            <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
+    <p> What is the value of A in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from mystery(0)?</p></feedback></condition></var></setup></activity>            <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
             <program language="java"><code>
 mystery(4) returns 3 * mystery(3) = 3 * X = Y
 mystery(3) returns 3 * mystery(2) = 3 * 9 = 27
@@ -877,12 +877,12 @@ mystery(1) returns 3 * mystery(0) = 3 * 1 = 3
 mystery(0) returns 1
 </code></program>
 
-        <exercise label="recFBTracex1">
+        <activity label="recFBTracex1">
             <statement>
-    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^27$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of mystery(3)?</p></feedback></condition></var></setup></exercise>
-        <exercise label="recFBTracey1">
+    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^27$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of mystery(3)?</p></feedback></condition></var></setup></activity>
+        <activity label="recFBTracey1">
             <statement>
-    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^81$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of 3 * mystery(3)?</p></feedback></condition></var></setup></exercise>            <p>Consider the following recursive method:</p>
+    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^81$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of 3 * mystery(3)?</p></feedback></condition></var></setup></activity>            <p>Consider the following recursive method:</p>
             <program language="java"><code>
 public static int strMethod(String str)
 {
@@ -911,9 +911,9 @@ strMethod("ry") returns strMethod("y")
 strMethod("y") returns B
 </code></program>
 
-        <exercise label="recFBBase2">
+        <activity label="recFBBase2">
             <statement>
-    <p> What is the value of B in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“y”)?</p></feedback></condition></var></setup></exercise>            <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
+    <p> What is the value of B in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“y”)?</p></feedback></condition></var></setup></activity>            <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
             <program language="java"><code>
 strMethod("every") returns 1 + strMethod("very") = Z
 strMethod("very") returns strMethod("ery") = Y
@@ -922,15 +922,15 @@ strMethod("ry") returns strMethod("y") = 0
 strMethod("y") returns 0
 </code></program>
 
-        <exercise label="recFBRetX2">
+        <activity label="recFBRetX2">
             <statement>
-    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ry”)?</p></feedback></condition></var></setup></exercise>
-        <exercise label="recFBRetY2">
+    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ry”)?</p></feedback></condition></var></setup></activity>
+        <activity label="recFBRetY2">
             <statement>
-    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ery”)?</p></feedback></condition></var></setup></exercise>
-        <exercise label="recFBRetZ2">
+    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ery”)?</p></feedback></condition></var></setup></activity>
+        <activity label="recFBRetZ2">
             <statement>
-    <p> What is the value of Z in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“every”)?</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the value of Z in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“every”)?</p></feedback></condition></var></setup></activity>        </subsection>
   <subsection xml:id="summary-42">
             <title>Summary</title>
             <p><ul>

@@ -4,7 +4,7 @@
         <title>Medium Multiple Choice Questions</title>
         <p>These problems are similar to those you will see on the AP CSA exam.</p>
 
-    <exercise label="qoom_1">
+    <activity label="qoom_1">
         <statement>
 
         <p> Given the following class declarations, what is the output from <c>Student s1 = new GradStudent();</c> followed by <c>s1.getInfo();</c>?</p>
@@ -80,9 +80,9 @@ public class GradStudent extends Student
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoom_2">
+    <activity label="qoom_2">
         <statement>
 
         <p> Given the following class declarations, and <c>EnhancedItem enItemObj = new EnhancedItem();</c> in a client class, which of the following statements would compile?</p>
@@ -164,9 +164,9 @@ III. enItemObj.setX(52);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoom_3">
+    <activity label="qoom_3">
         <statement>
 
         <p> Given the following class declarations and initializations in a client program, which of the following is a correct call to <c>method1</c>?</p>
@@ -242,9 +242,9 @@ Test3 t3 = new Test3();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoom_4">
+    <activity label="qoom_4">
         <statement>
 
         <p> If you have a parent class <c>Animal</c> that has a method <c>speak()</c> which returns: Awk. <c>Cat</c> has a <c>speak</c> method that returns: Meow.  <c>Bird</c> does not have a <c>speak</c> method.  <c>Dog</c> has a <c>speak</c> method that returns: Woof.  <c>Pig</c> does not have a <c>speak</c> method.  <c>Cow</c> has a <c>speak</c> method that returns: Moo.   What is the output from looping through the array <c>a</c> created below and asking each element to <c>speak()</c>?</p>
@@ -301,9 +301,9 @@ Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoom_5">
+    <activity label="qoom_5">
         <statement>
 
         <p> Given the following class declarations and code, what is the result when the code is run?</p>
@@ -385,9 +385,9 @@ fastCar.display();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qoom_6">
+    <activity label="qoom_6">
         <statement>
 
         <p> Given the following class declarations and code, what is the result when the code is run?</p>
@@ -471,9 +471,9 @@ III. ((Dictionary) b).getDefinition("wonderful");
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsh_3">
+    <activity label="qsh_3">
         <statement>
 
         <p> What is the output of the following code?</p>
@@ -552,5 +552,5 @@ public class MainClass
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

@@ -3,7 +3,7 @@
 <section xml:id="Exercises">
         <title>Multiple Choice Exercises for Unit 1a (1.1-1.6)</title>
 
-    <exercise label="qve_1">
+    <activity label="qve_1">
         <statement>
 
         <p> What does the following code print?</p>
@@ -51,9 +51,9 @@ System.out.println(2 % 3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_2">
+    <activity label="qve_2">
         <statement>
 
         <p> What does the following code print?</p>
@@ -101,9 +101,9 @@ System.out.println(19 % 5);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_3">
+    <activity label="qve_3">
         <statement>
 
         <p> What does the following code print?</p>
@@ -160,9 +160,9 @@ System.out.println(1 / 3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_4">
+    <activity label="qve_4">
         <statement>
 
         <p> What does the following code print?</p>
@@ -210,9 +210,9 @@ System.out.println(2 + 3 * 5 - 1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_5">
+    <activity label="qve_5">
         <statement>
 
         <p> Given the following code segment, what is the value of b when it finishes executing?</p>
@@ -264,9 +264,9 @@ b = (int) a;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_new7">
+    <activity label="qve_new7">
         <statement>
 
         <p> What does the following code do when it is executed?</p>
@@ -316,9 +316,9 @@ System.out.println(5 / 0);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_new9">
+    <activity label="qve_new9">
         <statement>
 
         <p> What will the following code print?</p>
@@ -368,9 +368,9 @@ System.out.println(1.0 / 3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_new10">
+    <activity label="qve_new10">
         <statement>
 
         <p> What are the values of x, y, and z after the following code executes?</p>
@@ -423,6 +423,6 @@ x++;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.</p>
     </section>

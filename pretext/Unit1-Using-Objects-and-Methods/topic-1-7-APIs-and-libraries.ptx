@@ -22,14 +22,14 @@
             <p>The <c>java.lang</c> package contains built-in classes and interfaces that are fundamental to the Java programming language, such as the <c>String</c> class and the <c>System</c> class which we use in <c>System.out.println</c>. Take a look at the documentation for the <c>java.lang</c> package at <url href="https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html" visual="https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html">https://docs.oracle.com/javase/8/docs/api/java/lang/package-summary.html</url>. Can you find the <c>System</c> class in the documentation?</p>
             <p><term>Documentation</term> found in API specifications and libraries is essential to understanding the attributes and behaviors of a class defined by the API. The <c>System</c> class has an object called <c>out</c> that is type <c>PrintStream</c>, and the <c>PrintStream</c> class has a method called <c>println()</c> that we use to print to the screen. How many <c>println()</c> methods are there in the PrintStream class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>?  One for each type that it can print!</p>
 
-        <exercise label="count-println">
+        <activity label="count-println">
             <statement>
-    <p> How many <c>println</c> methods are there in the <c>PrintStream</c> class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>? <var/>  </p></statement><setup><var><condition number="[10, 10]"><feedback><p>Correct.  One for each type</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Only count the println methods, not print or printf methods.</p></feedback></condition></var></setup></exercise>
-<exercise label="API_vocab_match">
+    <p> How many <c>println</c> methods are there in the <c>PrintStream</c> class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>? <var/>  </p></statement><setup><var><condition number="[10, 10]"><feedback><p>Correct.  One for each type</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Only count the println methods, not print or printf methods.</p></feedback></condition></var></setup></activity>
+<activity label="API_vocab_match">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right. Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>A collection of classes written by other programmers</premise><response>library</response></match><match order="2"><premise>A collection of related classes organized to be imported into your code</premise><response>package</response></match><match order="3"><premise>A specification that tells the programmer how to use classes in a library</premise><response>API</response></match><match order="4"><premise>The building blocks of Java and object-oriented programming</premise><response>class</response></match><match order="5"><premise>A block of code that performs a specific task</premise><response>method</response></match></matches></exercise>
-    <exercise label="purpose_apis">
+<matches><match order="1"><premise>A collection of classes written by other programmers</premise><response>library</response></match><match order="2"><premise>A collection of related classes organized to be imported into your code</premise><response>package</response></match><match order="3"><premise>A specification that tells the programmer how to use classes in a library</premise><response>API</response></match><match order="4"><premise>The building blocks of Java and object-oriented programming</premise><response>class</response></match><match order="5"><premise>A block of code that performs a specific task</premise><response>method</response></match></matches></activity>
+    <activity label="purpose_apis">
         <statement>
 
             <p> What is the purpose of APIs and libraries in programming?</p>
@@ -74,7 +74,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="turtle-library">
             <title>Turtle Library</title>
@@ -91,7 +91,7 @@ yertle.forward();
 yertle.turnRight();
 </code></program>
 
-<exercise label="TurtleAPI">
+<activity label="TurtleAPI">
     <statement>
             <p>Try clicking the run button below to see what the following program does. Then add 1 more line of code on line 16 to make yertle go forward() again.
                 (If the code below does not work or is too slow in your browser, you can also see the <c>Turtle</c> code in action at this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit link</url> (refresh page after forking and if it gets stuck) or download the files <url href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
@@ -150,9 +150,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="turtle_dir">
+    <activity label="turtle_dir">
         <statement>
 
             <p> Which way does a turtle face when it is first created?</p>
@@ -197,9 +197,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="turtle_type">
+    <activity label="turtle_type">
         <statement>
 
             <p> What type of thing is Turtle in the program above?</p>
@@ -244,9 +244,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="type_turn_right">
+    <activity label="type_turn_right">
         <statement>
 
             <p> What type of thing is turnRight in the program above?</p>
@@ -291,9 +291,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="type_position">
+    <activity label="type_position">
         <statement>
 
             <p> What type of thing is the position of a turtle in a world?</p>
@@ -338,9 +338,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="attributes_class">
+    <activity label="attributes_class">
         <statement>
 
             <p> What are attributes of a class?</p>
@@ -385,9 +385,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <image source="Unit1-Using-Objects-and-Methods/Figures/turtleForwardLeftForward.png" width="36%"/>
-<exercise label="parsons_TurtleL" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="parsons_TurtleL" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program uses a turtle to draw a sideways capital L as seen in the image, but the lines are mixed up.  The program should do all necessary set-up. Then it should ask the turtle to turn right, go forward, turn left, and then go forward 50 pixels. Next, it should ask the habitat to show itself. Drag the needed blocks of statements from the left column to the right column and put them in the right order.  There are 2 extra blocks that are not needed in a correct solution.  Then click on Check Me to see if you are right. You will be told if any of the lines are in the wrong order or are the wrong blocks.</p>
 </statement>
 <blocks><block order="12">
@@ -415,7 +415,7 @@ public class RunestoneTests extends CodeTestHelper
 </block><block order="11">
 <cline>    } // end main</cline>
 <cline>} // end class</cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection xml:id="coding-challenge-turtle-drawing">
             <title>Coding Challenge : Turtle Drawing</title>
             <p>Make yertle the Turtle draw a shape.  For example, have it draw a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times. We encourage you to work in pairs for this challenge. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use or check the API at <url href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html" visual="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html</url>:</p>
@@ -440,7 +440,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
 
-<exercise label="challenge1-7-TurtleShape">
+<activity label="challenge1-7-TurtleShape">
     <statement>
             <p>Have yertle draw a shape, for example a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times.</p>
 
@@ -543,7 +543,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-12">
             <title>Summary</title>

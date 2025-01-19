@@ -40,7 +40,7 @@ else
 }
 </code></program>
 
-<exercise label="TryElseIf">
+<activity label="TryElseIf">
     <statement>
             <p>Run the code below and try changing the value of x to get each of the three possible lines in the conditional to print.</p>
 
@@ -91,14 +91,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is a flowchart for a conditional with 3 options like in the code above.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional with 3 options: if, else if, and else</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-three.png" width="80%"/></figure>
             <note>
                 <p>Another way to handle 3 or more conditional cases is to use the <c>switch</c> and <c>break</c> keywords, but these will not be on the exam.  For a tutorial on using switch see <url href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html" visual="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html</url>.</p>
             </note>
 
-    <exercise label="trace-nested-if">
+    <activity label="trace-nested-if">
         <statement>
 
             <p> What does the following code print when x has been set to -5?</p>
@@ -148,9 +148,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="trace-nested-ifs2">
+    <activity label="trace-nested-ifs2">
         <statement>
 
             <p> What does the following code print when x has been set to 2000?</p>
@@ -200,9 +200,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="trace-nested-ifs3">
+    <activity label="trace-nested-ifs3">
         <statement>
 
             <p> What does the following code print when x has been set to .8?</p>
@@ -265,9 +265,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="ifElseIfDebug">
+<activity label="ifElseIfDebug">
     <statement>
             <p>The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Use the Code Lens button. Then, fix the code by adding in 3 else’s to connect the if statements and see if it works.</p>
 
@@ -384,9 +384,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="ifelseifBattery">
+<activity label="ifelseifBattery">
     <statement>
             <p>Finish the following code so that it prints “Plug in your phone!” if the battery is below 50, “Unplug your phone!” if it is above 100, and “All okay!” otherwise. Change the battery value to test all 3 conditions.</p>
 
@@ -448,7 +448,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="dangling-else-statements">
             <title>Dangling Else Statements</title>
@@ -463,7 +463,7 @@ if (boolean expression)
       Do other statement;
 </code></program>
 
-<exercise label="danglingelse">
+<activity label="danglingelse">
     <statement>
             <p>Try the following code with a dangling else. Notice that the indentation does not matter to the compiler (but you should make it your habit to use good indentation just as a best practice). How could you get the else to belong to the first if statement?</p>
 
@@ -559,7 +559,7 @@ public class DanglingElseTest
  }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>You can use curly braces (<c>{}</c>) to enclose a nested if and have the else clause belong to the the top level if clause like below:</p>
             <program language="java"><code>
 // Nested if with dangling else
@@ -588,7 +588,7 @@ else  // belongs to first if
                 </li>
             </ol></p>
 
-<exercise label="challenge-ElseIf-Adventure">
+<activity label="challenge-ElseIf-Adventure">
     <statement>
             <p>This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in <term>else if</term> statements to go in the directions of “s” for south, “e” for east, “w” for west, and an else statement that says “You can’t go in that direction”. Be creative and come up with different situations in each direction. You can change the initial location of the game and add more nested if statements to make the game more complex.</p>
 
@@ -738,7 +738,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-21">
             <title>Summary</title>
@@ -772,7 +772,7 @@ else
   <subsection xml:id="ap-practice-14">
             <title>AP Practice</title>
 
-    <exercise label="AP-nested-if-else">
+    <activity label="AP-nested-if-else">
         <statement>
 
             <p> Assume an int variable x has been properly declared and initialized.
@@ -833,6 +833,6 @@ III. if (x &gt;= 66)
             <p>If x is 66, the code in III. will print out more than one thing.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

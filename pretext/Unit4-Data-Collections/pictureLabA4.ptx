@@ -14,7 +14,7 @@
             to bottom and the column number (index) increases from left to right.</p>
         <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A 2D array stored in row-major order or column-major order as a 1D array.</caption><image source="Unit4-Data-Collections/Figures/rowMajor.png" width="45%"/></figure>
 
-    <exercise label="picture-lab-A4-0a">
+    <activity label="picture-lab-A4-0a">
         <statement>
 
         <p> Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in row-major order?</p>
@@ -59,9 +59,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="picture-lab-A4-1a">
+    <activity label="picture-lab-A4-1a">
         <statement>
 
         <p> Given an array A = { 2  4  6 }, {1  3  5} how would A be stored in a 1D array in column-major order?</p>
@@ -106,7 +106,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>Java actually uses arrays of arrays to represent 2D arrays. This means that each element in the outer array is a reference to another array. The data can be in either row-major or column-major order.
             The AP Computer Science A course specification tells you to assume that all 2D arrays are row-major, which means that the outer array in Java represents the rows and the inner arrays represent the columns.</p>
         <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Java arrays of arrays</caption><image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%"/></figure>
@@ -114,7 +114,7 @@
             row index and one is used to change the column index. You can use nested loops, which is one for
             loop inside of another, to loop through all the values in a 2D array. Let’s try some nested loops with 2D arrays.</p>
 
-    <exercise label="picture-lab-A4-2a">
+    <activity label="picture-lab-A4-2a">
         <statement>
 
         <p> Here is a mysteryMethod in the <c>IntArrayWorker</c> class that uses a private instance variable which is a 2D array
@@ -144,7 +144,7 @@ public int mysteryMethod() {
         <p>correct!</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         <p>Here is the code for the <c>getTotal</c> method in the <c>IntArrayWorker</c> class that totals all the values in a 2D array of integers in
             a private instance variable (field in the class) named <c>matrix</c>. Notice the nested <c>for</c> loop and how it
             uses <c>matrix.length</c> to get the number of rows and <c>matrix[0].length</c> to get the number of
@@ -184,7 +184,7 @@ public int getTotalNested()
 }
 </code></program>
 
-    <exercise label="picture-lab-A4-3a">
+    <activity label="picture-lab-A4-3a">
         <statement>
 
         <p> Which of these methods correctly sum up the values in a 2D array? Assume the 2D array is called <c>matrix</c>.</p>
@@ -253,12 +253,12 @@ public int getSum() {
         <p>This does not return the correct amount.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         <p>1. Write a <c>getCount</c> method in the <c>IntArrayWorker</c> class that returns the count of the
             number of times a passed integer value is found in the matrix. There is already a method to test
             this in IntArrayWorkerTester.</p>
 
-<exercise label="picture-lab-A4-getCount">
+<activity label="picture-lab-A4-getCount">
     <statement>
         <p>Write a <c>getCount</c> method in the <c>IntArrayWorker</c> class that returns the count of the number of times a passed integer value is found in the matrix.</p>
 
@@ -361,11 +361,11 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         <p>2. Write a <c>getLargest</c> method in the <c>IntArrayWorker</c> class that returns the largest value
             in the matrix. There is already a method to test this in IntArrayWorkerTester.</p>
 
-<exercise label="picture-lab-A4-getLargest">
+<activity label="picture-lab-A4-getLargest">
     <statement>
         <p>Write a <c>getLargest</c> method in the <c>IntArrayWorker</c> class that returns the largest value in the matrix.</p>
 
@@ -485,12 +485,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         <p>3. Write a <c>getColTotal</c> method in the <c>IntArrayWorker</c> class that returns the total of all
             integers in a specified column. There is already a method to test this in
             IntArrayWorkerTester.</p>
 
-<exercise label="picture-lab-A4-getColTotal">
+<activity label="picture-lab-A4-getColTotal">
     <statement>
         <p>Write a <c>getColTotal</c> method in the <c>IntArrayWorker</c> class that returns the total of all integers in a specified column.</p>
 
@@ -602,5 +602,5 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

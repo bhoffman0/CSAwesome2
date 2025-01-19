@@ -147,7 +147,7 @@ public class APCalendar
             <p>Next, plan your loop. Click to reveal some problems that may help you to plan the loop.</p>
             
 
-    <exercise label="callooptype">
+    <activity label="callooptype">
         <statement>
 
                 <p> Which loop should you use to count the number of leap years between year1 and year2?</p>
@@ -174,9 +174,9 @@ public class APCalendar
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="calloop2">
+    <activity label="calloop2">
         <statement>
 
                 <p> What is the starting and ending values for the loop to count the leap years between year 1 and year 2?</p>
@@ -221,7 +221,7 @@ public class APCalendar
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <subsection>
                 <p>It is usually easiest to use a <term>for loop</term> if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don’t have to worry about year1 and year2 being out of order or below 0. So don’t waste time on error-checking these values. Here’s a possible loop:</p>
@@ -239,7 +239,7 @@ if (isLeapYear(i))
                 <p>Put all of the code together to solve this problem.</p>
             </subsection>
 
-<exercise label="APCalendarFRQPartA">
+<activity label="APCalendarFRQPartA">
     <statement>
             <p>Write the code for the method numberOfLeapYears below and run to test it.</p>
 
@@ -320,7 +320,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In the 2019 AP exam, part A numberOfLeapYears method was worth 5 points using the rubric below. Did you receive all 5 points? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the numberOfLeapYears method</caption><image source="Unit2-Selection-and-Iteration/Figures/numberOfLeapYearsRubric.png" width="100%" alt="Rubric for the numberOfLeapYears method"/></figure>
         </subsection>
@@ -338,7 +338,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples by revealing the problems below.</p>
             
 
-    <exercise label="dow1">
+    <activity label="dow1">
         <statement>
 
                 <p> If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week is Jan. 4th 2019?</p>
@@ -383,11 +383,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="dow2">
+    <activity label="dow2">
         <statement>
 
                 <p> Which of the following expressions return the right value for the day of the week (5) for Jan. 4th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,4,2019) returns 4?</p>
@@ -432,11 +432,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="dow3">
+    <activity label="dow3">
         <statement>
 
                 <p> If firstDayOfYear(2019) returns 2 for a Tuesday for 1/1/2019, what day of the week from (0-6 where 0 is Sunday) is Jan. 8th 2019?</p>
@@ -481,7 +481,7 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
                 <p>If we used the formula in the exercise above for the date 1/8/2019, we would get 9:</p>
                 <p><ul>
                     <li>
@@ -505,7 +505,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Try the <c>%</c> operator below.</p>
             
 
-<exercise label="mod">
+<activity label="mod">
     <statement>
                 <p>Complete the program below to figure out a day of the week from 0-6 where 0 is Sunday and 6 is Saturday for 7 days of the week. What value would you use for the divisor?</p>
 
@@ -552,11 +552,11 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             
             
 
-    <exercise label="dow4">
+    <activity label="dow4">
         <statement>
 
                 <p> Which of the following expressions return the right value for the day of the week (2) for Jan. 8th 2019 given that firstDayOfYear(2019) returns 2 and dayOfYear(1,8,2019) returns 8?</p>
@@ -610,11 +610,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Complete the code for the method dayOfWeek below for Part B of this FRQ.</p>
 
-<exercise label="APCalendarFRQPartB">
+<activity label="APCalendarFRQPartB">
     <statement>
             <p>Write the code for the method dayOfWeek below and run to test it. Then, try it with today’s date and see if it returns the right value.</p>
 
@@ -713,7 +713,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In the 2019 AP exam, part B dayOfWeek method was worth 4 points using the rubric below. Did you receive all 4 points? In class, your teacher may have you grade each others’ code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Rubric for the dayOfWeek method</caption><image source="Unit2-Selection-and-Iteration/Figures/dayOfWeekRubric.png" width="100%" alt="Rubric for the dayOfWeek method"/></figure>
         </subsection>

@@ -101,18 +101,18 @@ ParentName</c>. If no <c>extends</c> keyword is used in the class declaration, t
   <subsection xml:id="vocabulary-practice-9">
             <title>Vocabulary Practice</title>
 
-<exercise label="ch10oo_match_1">
+<activity label="ch10oo_match_1">
     <statement><p>Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>A class that extends another class</premise><response>child class</response></match><match order="2"><premise>A class that is being extended</premise><response>parent class</response></match><match order="3"><premise>Using the run-time type of an object to determine which method to call</premise><response>polymorphism</response></match><match order="4"><premise>Providing a method in a child class with the same declaration as a parent method</premise><response>override</response></match></matches></exercise>
-<exercise label="ch10oo_match_2">
+<matches><match order="1"><premise>A class that extends another class</premise><response>child class</response></match><match order="2"><premise>A class that is being extended</premise><response>parent class</response></match><match order="3"><premise>Using the run-time type of an object to determine which method to call</premise><response>polymorphism</response></match><match order="4"><premise>Providing a method in a child class with the same declaration as a parent method</premise><response>override</response></match></matches></activity>
+<activity label="ch10oo_match_2">
     <statement><p>Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>What does the actual work in an object-oriented program</premise><response>object</response></match><match order="2"><premise>Defines what all objects of the class know and can do</premise><response>class</response></match><match order="3"><premise>Returns the value of an instance variable</premise><response>getter</response></match><match order="4"><premise>Sets the value of an instance variable</premise><response>setter</response></match></matches></exercise>
-<exercise label="ch10oo_match_3">
+<matches><match order="1"><premise>What does the actual work in an object-oriented program</premise><response>object</response></match><match order="2"><premise>Defines what all objects of the class know and can do</premise><response>class</response></match><match order="3"><premise>Returns the value of an instance variable</premise><response>getter</response></match><match order="4"><premise>Sets the value of an instance variable</premise><response>setter</response></match></matches></activity>
+<activity label="ch10oo_match_3">
     <statement><p>Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>A class that inherits from the specified class</premise><response>subclass</response></match><match order="2"><premise>Two methods with the same method name in a class, but with different parameters</premise><response>overload</response></match><match order="3"><premise>The type the object was declared as</premise><response>declared type</response></match><match order="4"><premise>The class that created the object</premise><response>actual type</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/" visual="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/">Quizlet</url>.</p>
+<matches><match order="1"><premise>A class that inherits from the specified class</premise><response>subclass</response></match><match order="2"><premise>Two methods with the same method name in a class, but with different parameters</premise><response>overload</response></match><match order="3"><premise>The type the object was declared as</premise><response>declared type</response></match><match order="4"><premise>The class that created the object</premise><response>actual type</response></match></matches></activity>            <p>For more practice, see this <url href="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/" visual="https://quizlet.com/434083291/cs-awesome-unit-9-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
   <subsection xml:id="common-mistakes-9">
             <title>Common Mistakes</title>

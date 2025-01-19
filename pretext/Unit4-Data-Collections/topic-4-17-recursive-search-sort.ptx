@@ -51,22 +51,22 @@ public class IterativeBinarySearch
                 <term>Recursive Binary search</term> starts at the middle of a sorted array or <c>ArrayList</c> and eliminates half of the array or <c>ArrayList</c> in each recursive call until the desired value is found or all elements have been eliminated.</p>
             <p>Note that you can write solutions to many problems using recursion or iteration. Iteration is usually preferred and more efficient, but recursive solutions can be elegant and require less code.</p>
 
-<exercise label="baseCaseQ">
+<activity label="baseCaseQ">
     <statement>
             <p> What’s the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.</p>
 
     </statement>
-</exercise>
+</activity>
 
-<exercise label="recursiveCallQ">
+<activity label="recursiveCallQ">
     <statement>
             <p> Given a recursive binary search method with the method signature “boolean binarySearch(int[] array, int startIndex, int endIndex, int target)”, what recursive method call would search the array from index 0 to the middle index?</p>
 
     </statement>
-</exercise>
+</activity>
             <p>Here is the Java code for a recursive binary search:</p>
 
-<exercise label="recursiveBinarySearch">
+<activity label="recursiveBinarySearch">
     <statement>
             <p>Run the code below. Try searching for the value 3 and then the value 2 which is not in the array. What would happen if we removed the second base case checking if end &lt; start? Try it and see.</p>
 
@@ -112,7 +112,7 @@ public class RecursiveBinarySearch
 }
         </code>
     </program>
-</exercise>
+</activity>
             <p>Try the recursive binary search code in this <url href="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28" visual="https://cscircles.cemc.uwaterloo.ca/java_visualize/#code=++public+class+RecursiveBinarySearch%0A++%7B%0A+++++public+static+int+recursiveBinarySearch(int%5B%5D+array,+int+target,+int+start,+int+end)%0A+++++%7B%0A+++++++int+middle+%3D+(start+%2B+end)/2%3B%0A%09+++%0A+++++++if+(target+%3D%3D+array%5Bmiddle%5D)+%7B%0A%09%09%09return+middle%3B%0A%09+++%7D%09%0A%09+++if(end+%3C+start)%7B%0A%09%09%09+return+-1%3B+//+not+found%0A%09++++%7D+%0A%09%09%0A%09++++if+(target+%3C+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+start,+middle+-+1)%3B%0A%09%09%7D%0A%09%09%0A%09%09if+(target+%3E+array%5Bmiddle%5D)%7B%0A%09%09%09return+recursiveBinarySearch(array,+target,+middle+%2B+1,+end)%3B%0A%09%09%7D%0A%0A%09%09return+-1%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++int%5B%5D+array+%3D+%7B+3,+7,+12,+19,+22,+25,+29,+30+%7D%3B%0A++++++int+foundIndex+%3D+recursiveBinarySearch(array,25,0,array.length)%3B%0A++++++System.out.println(%2225+was+found+at+index+%22+%2B+foundIndex)%3B%0A+++%7D%0A++%7D&amp;mode=display&amp;curInstr=28">Java visualizer link</url> or with the CodeLens button above.</p>
             <p>Here is a version of the recursive binary search that works with an <c>ArrayList</c>. Click on CodeLens to step through the code.</p>
 
@@ -290,7 +290,7 @@ public class SortTest
                 </li>
             </ol></p>
 
-    <exercise label="qms_1">
+    <activity label="qms_1">
         <statement>
 
             <p> Under what condition will a merge sort execute faster?</p>
@@ -326,9 +326,9 @@ public class SortTest
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qms_2">
+    <activity label="qms_2">
         <statement>
 
             <p> Which sort should be the fastest most of the time?</p>
@@ -364,7 +364,7 @@ public class SortTest
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="tracing-challenge-recursive-search-and-sort">
             <title>Tracing Challenge : Recursive Search and Sort</title>
@@ -373,19 +373,19 @@ public class SortTest
     <video youtube="AMJjtTo1LLE"/>
                 <p>Work in pairs to do the following tracing problems.</p>
 
-<exercise label="challenge-mergesort">
+<activity label="challenge-mergesort">
     <statement>
             <p> Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
 
     </statement>
-</exercise>
+</activity>
 
-<exercise label="challenge-recursive-binary-search">
+<activity label="challenge-recursive-binary-search">
     <statement>
             <p> Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-43">
             <title>Summary</title>

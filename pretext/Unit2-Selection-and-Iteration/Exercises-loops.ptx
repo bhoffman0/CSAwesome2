@@ -8,7 +8,7 @@
             <title>Easier Multiple Choice Questions</title>
             <p>These problems are easier than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qle_1">
+    <activity label="qle_1">
         <statement>
 
             <p> What does the following code print?</p>
@@ -59,9 +59,9 @@ for (int i = 3; i &lt;= 12; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_2">
+    <activity label="qle_2">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -112,9 +112,9 @@ for (int i = 3; i &lt; 9; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_3">
+    <activity label="qle_3">
         <statement>
 
             <p> What does the following code print?</p>
@@ -158,9 +158,9 @@ while (x &lt; 0)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_4">
+    <activity label="qle_4">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -211,9 +211,9 @@ for (int i = 5; i &lt;= 12; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_5">
+    <activity label="qle_5">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -255,9 +255,9 @@ for (int i = 1; i &lt; 5; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_6">
+    <activity label="qle_6">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -299,9 +299,9 @@ for (int i = 0; i &lt;= 8; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_7">
+    <activity label="qle_7">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -343,9 +343,9 @@ for (int x = 0; x &lt; 5; x++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_8">
+    <activity label="qle_8">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -387,9 +387,9 @@ for (int x = 2; x &lt; 8; x++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_9">
+    <activity label="qle_9">
         <statement>
 
             <p> What does the following code print?</p>
@@ -442,9 +442,9 @@ while (x &lt;= 5)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qle_10">
+    <activity label="qle_10">
         <statement>
 
             <p> What does the following code print?</p>
@@ -505,13 +505,13 @@ while (x &lt; 9)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="medium-multiple-choice-questions-1">
             <title>Medium Multiple Choice Questions</title>
             <p>These problems are similar to those you will see on the AP CSA exam.</p>
 
-    <exercise label="qlm_1">
+    <activity label="qlm_1">
         <statement>
 
             <p> How many stars are output when the following code is executed?</p>
@@ -571,9 +571,9 @@ for (int i = 0; i &lt; 5; i++) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qlm_2">
+    <activity label="qlm_2">
         <statement>
 
             <p> Which of the following code segments will produce the displayed output?</p>
@@ -669,9 +669,9 @@ V.   for (int i = 0; i &lt; 5; i++) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qlm_3">
+    <activity label="qlm_3">
         <statement>
 
             <p> What is printed as a result of the following code segment?</p>
@@ -731,9 +731,9 @@ for (int k = 0; k &lt; 20; k+=2) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qlm_4">
+    <activity label="qlm_4">
         <statement>
 
             <p> Which of the following code segments will produce the displayed output?</p>
@@ -829,9 +829,9 @@ V.   for (int j = 1; j &lt;= 5; j++) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qlm_5n">
+    <activity label="qlm_5n">
         <statement>
 
             <p> What are the values of var1 and var2 after the following code segment is executed and the while loop finishes?</p>
@@ -894,7 +894,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0)) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="more-practice">
             <title>More Practice</title>

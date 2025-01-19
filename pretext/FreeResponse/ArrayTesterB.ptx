@@ -25,7 +25,7 @@
   <subsection xml:id="try-and-solve-it-1">
             <title>Try and Solve It</title>
 
-<exercise label="isLatinTwo">
+<activity label="isLatinTwo">
     <statement>
             <p>Complete the method <c>isLatin</c> below.</p>
 
@@ -183,6 +183,6 @@ public class ArrayTester
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

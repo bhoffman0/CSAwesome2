@@ -48,7 +48,7 @@ public static double sentimentVal( String word )
 </code></program>
             <p>Notice that <c>sentimentVal</c> is a <c>static</c> method. We’ve seen <c>static</c> methods before in the <c>Math</c> class, such as <c>Math.random</c>. How do you call <c>static</c> methods? You don’t need to create an object; you can just use the class name. Note that this method takes an argument (the word to check) and has a return value (the sentiment value of that word). You will need to call it correctly and print out what it returns to see the results.</p>
 
-    <exercise label="staticMethodCall">
+    <activity label="staticMethodCall">
         <statement>
 
             <p> Which of the following correctly calls the method sentimentVal?</p>
@@ -102,7 +102,7 @@ public static double sentimentVal( String word )
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="activity-2-total-sentiment-value-and-star-ratings">
             <title>Activity 2 :Total Sentiment Value and Star Ratings</title>
