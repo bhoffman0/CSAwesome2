@@ -56,7 +56,7 @@ message.indexOf("h"); // ERROR!! Objects don't have indexOf!
     <p>You can step through this code using the Java Visualizer by clicking on the following link <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&amp;mode=display&amp;curInstr=10" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Pizza%22%3B%0A+++%7D%0A+++%0A+++public+String+getInfo()++%7B+%0A++++++return+this.getFood()%3B+%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Student+s1+%3D+new+GradStudent()%3B%0A++++++System.out.println(s1.getInfo())%3B%0A+++%7D%0A%7D%0A%0Aclass+GradStudent+extends+Student+%7B%0A+++%0A+++public+String+getFood()+%7B%0A++++++return+%22Taco%22%3B%0A+++%7D%0A++++++++%0A+++%0A%7D%0A&amp;mode=display&amp;curInstr=10">Student Example</url>.</p>
     <p>You can step through the code using the Java Visualizer by clicking on the following link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Car%0A%7B%0A+++private+int+fuel%3B%0A%0A+++public+Car()+%7B+fuel+%3D+0%3B+%7D+%0A+++public+Car(int+g)+%7B+fuel+%3D+g%3B+%7D%0A%0A+++public+void+addFuel()+%7B+fuel%2B%2B%3B+%7D%0A+++public+void+display()+%7B+System.out.print(fuel+%2B+%22+%22)%3B+%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Car+car+%3D+new+Car(5)%3B%0A++++++Car+fastCar+%3D+new+RaceCar(5)%3B%0A++++++car.display()%3B%0A++++++car.addFuel()%3B%0A++++++car.display()%3B%0A++++++fastCar.display()%3B%0A++++++fastCar.addFuel()%3B%0A++++++fastCar.display()%3B%0A++++%7D%0A%7D%0A%0Aclass+RaceCar+extends+Car%0A%7B%0A+++public+RaceCar(int+g)+%7B+super(2*g)%3B+%7D%0A%7D+%0A&amp;mode=display&amp;curInstr=0">Car Example</url>.</p>
   </introduction>
-  <exercise label="qoo_10">
+  <activity label="qoo_10">
         <statement>
 
         <p> What is the output from running the main method in the Shape class?</p>
@@ -158,8 +158,8 @@ class Circle extends Oval
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="qoo_11">
+    </activity>
+  <activity label="qoo_11">
         <statement>
 
         <p> What is the output from running the <c>main</c> method in the <c>Student</c> class?</p>
@@ -234,8 +234,8 @@ class GradStudent extends Student
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="qoo_12">
+    </activity>
+  <activity label="qoo_12">
         <statement>
 
         <p> What is the output from running the <c>main</c> method in the <c>Car</c> class?</p>
@@ -326,8 +326,8 @@ class RaceCar extends Car
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="qoo_13">
+    </activity>
+  <activity label="qoo_13">
         <statement>
 
         <p> Given the following class definitions and a declaration of <c>Book b = new Dictionary()</c> which of the following will cause a compile-time error?</p>
@@ -382,7 +382,7 @@ public class Dictionary extends Book
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
   <subsection xml:id="coding-challenge-shopping-cart-2">
             <title>Coding Challenge : Shopping Cart 2</title>
             <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%" alt="Shopping"/>
@@ -413,7 +413,7 @@ public class Dictionary extends Book
                 </li>
             </ul></p>
 
-<exercise label="challenge-9-6-shopping2">
+<activity label="challenge-9-6-shopping2">
     <statement>
             <p>Copy in your code for <c>DiscountedItem</c> below and then write a method called
                 <c>countDiscountedItems</c> which traverses the polymorphic <c>ArrayList&lt;Item&gt;</c>.
@@ -637,7 +637,7 @@ class Item
      }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-56">
             <title>Summary</title>

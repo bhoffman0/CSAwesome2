@@ -91,19 +91,19 @@ str.substring(k, k + 1)
   <subsection xml:id="how-to-solve-this-4">
             <title>How to Solve This</title>
 
-<exercise label="routeciphera_short">
+<activity label="routeciphera_short">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
                 Click on the buttons to reveal the questions.</p>
             <subsection>
                 <p>You will need to access each element in the <c>letterBlock</c> array. What type of loop will you use?</p>
                 
 
-    <exercise label="routeciphera_1.5MC">
+    <activity label="routeciphera_1.5MC">
         <statement>
 
                     <p> What type of loop should you use?</p>
@@ -157,12 +157,12 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
                 
                 <p>The <c>letterBlock</c> array has two dimensions. How many loops will you use?</p>
                 
 
-    <exercise label="routeciphera_1.75MC">
+    <activity label="routeciphera_1.75MC">
         <statement>
 
                     <p> How many Loops should you use?</p>
@@ -207,12 +207,12 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
                 
             </subsection>
             
 
-    <exercise label="routeciphera_2MC">
+    <activity label="routeciphera_2MC">
         <statement>
 
                 <p> What can you use to set the outer bound while you iterate through your 2D array?</p>
@@ -257,11 +257,11 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="routeciphera_3MC">
+    <activity label="routeciphera_3MC">
         <statement>
 
                 <p> What can you use to set the inner bound while you iterate through your 2D array?</p>
@@ -306,11 +306,11 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="routeciphera_4MC">
+    <activity label="routeciphera_4MC">
         <statement>
 
                 <p> Which <c>String</c> method can you use to access partial or full strings within another string?</p>
@@ -355,14 +355,14 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="the-algorithm">
             <title>The Algorithm</title>
             
 
-    <exercise label="routeciphera_5MC">
+    <activity label="routeciphera_5MC">
         <statement>
 
                 <p> What is the formula for obtaining a single-character string at position <c>k</c> of the string <c>str</c>?</p>
@@ -407,11 +407,11 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="routeciphera_5.5MC">
+    <activity label="routeciphera_5.5MC">
         <statement>
 
                 <p> How can one find the aforementioned <c>k</c>? (this is hard to visualize, try drawing out some examples)</p>
@@ -456,11 +456,11 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="routeciphera_6MC">
+    <activity label="routeciphera_6MC">
         <statement>
 
                 <p> What conditional can you write to make sure trailing characters are ignored?</p>
@@ -505,12 +505,12 @@ str.substring(k, k + 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>The exercises above have been guiding you towards just one of many possible solutions. To read through a different solution, click on the Reveal
                 button below and complete the problem.</p>
             <subsection>
-<exercise label="RouteCipherA" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="RouteCipherA" adaptive="yes" indentation="show" language="java"><statement>
                     <p>The method fillBlock below contains the correct code for one solution to this problem,
                         but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
                         correct indention so that the code would work correctly.</p>
@@ -541,12 +541,12 @@ str.substring(k, k + 1)
 <cline>      } // end inner for</cline>
 <cline>  } // end outer for</cline>
 <cline>} // end method</cline>
-</block></blocks></exercise>                </subsection>
+</block></blocks></activity>                </subsection>
         </subsection>
   <subsection xml:id="try-and-solve-it-18">
             <title>Try And Solve It</title>
 
-<exercise label="FRQRouteCipherA">
+<activity label="FRQRouteCipherA">
     <statement>
             <p>Complete the method <c>fillBlock</c> below.</p>
 
@@ -670,6 +670,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

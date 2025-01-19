@@ -70,14 +70,14 @@
   <subsection xml:id="vocabulary-practice-6">
             <title>Vocabulary Practice</title>
 
-<exercise label="arrays_match_1">
+<activity label="arrays_match_1">
     <statement><p>Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>The index of the last element</premise><response>length - 1</response></match><match order="2"><premise>The number of elements in the array</premise><response>length</response></match><match order="3"><premise>The index of the first element</premise><response>0</response></match><match order="4"><premise>The index of the second element</premise><response>1</response></match></matches></exercise>
-<exercise label="arrays_match_2">
+<matches><match order="1"><premise>The index of the last element</premise><response>length - 1</response></match><match order="2"><premise>The number of elements in the array</premise><response>length</response></match><match order="3"><premise>The index of the first element</premise><response>0</response></match><match order="4"><premise>The index of the second element</premise><response>1</response></match></matches></activity>
+<activity label="arrays_match_2">
     <statement><p>Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>Declare an integer array named nums</premise><response>int[] nums;</response></match><match order="2"><premise>Declare and create a String array named list1 that can hold 3 elements</premise><response>String[] list1 = new String[3];</response></match><match order="3"><premise>Initialize an array of integers named nums to contain the first 3 whole numbers</premise><response>int[] nums = {1,2,3};</response></match><match order="4"><premise>Initialize a String array named list1 to contain the first 3 letters of the alphabet as separate strings</premise><response>String[] list1 = {"a", "b", "c"};</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/" visual="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/">Quizlet</url>.</p>
+<matches><match order="1"><premise>Declare an integer array named nums</premise><response>int[] nums;</response></match><match order="2"><premise>Declare and create a String array named list1 that can hold 3 elements</premise><response>String[] list1 = new String[3];</response></match><match order="3"><premise>Initialize an array of integers named nums to contain the first 3 whole numbers</premise><response>int[] nums = {1,2,3};</response></match><match order="4"><premise>Initialize a String array named list1 to contain the first 3 letters of the alphabet as separate strings</premise><response>String[] list1 = {"a", "b", "c"};</response></match></matches></activity>            <p>For more practice, see this <url href="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/" visual="https://quizlet.com/434081272/cs-awesome-unit-6-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
   <subsection xml:id="common-mistakes-6">
             <title>Common Mistakes</title>

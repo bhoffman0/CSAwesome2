@@ -38,7 +38,7 @@ public class NumberCube
             </subsection>
             
 
-    <exercise label="numbercubea_1">
+    <activity label="numbercubea_1">
         <statement>
 
                 <p> Which Java expression correctly generates a random number between 1 and 6?</p>
@@ -74,9 +74,9 @@ public class NumberCube
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="numbercubea_2">
+    <activity label="numbercubea_2">
         <statement>
 
                 <p> Which of the following correctly creates an array of size numTosses?</p>
@@ -112,9 +112,9 @@ public class NumberCube
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="numbercubea_3">
+    <activity label="numbercubea_3">
         <statement>
 
                 <p> Which of the following correctly loops numTosses number of times?</p>
@@ -150,14 +150,14 @@ public class NumberCube
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="mixed-up-code-2">
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
             
-<exercise label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getCubeTosses</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="4">
@@ -178,12 +178,12 @@ public class NumberCube
 <cline>  return cubeTosses;</cline>
 </block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="try-and-solve-part-a">
             <title>Try and Solve Part A</title>
 
-<exercise label="FRQNumberCubeA">
+<activity label="FRQNumberCubeA">
     <statement>
             <p>FRQ Number Cube A: Write the method <c>getCubeTosses</c> that takes a number cube and a number of tosses as parameters. The method should return an array of the values produced by tossing the number cube the given number of times.</p>
 
@@ -302,6 +302,6 @@ public class NumberCube
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

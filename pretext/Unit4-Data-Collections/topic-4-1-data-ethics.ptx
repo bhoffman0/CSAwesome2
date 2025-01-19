@@ -11,12 +11,12 @@
             <p>As users, we often don’t realize how much personal data we are giving away. If you use a computer or phone, your personal privacy is at risk. As computer programmers, we must be aware of the risks to data privacy when our code collects and stores personal data on computer systems. Programmers should attempt to safeguard the personal privacy of the user. Legally and ethically, we must ask the users for permission to access and store their data. And if there are data breaches where the data is stolen, we must inform the affected users. The laws are slowly catching up to our technology, and many countries and states are passing laws to protect data privacy.</p>
             <p>Computer use and programs have beneficial and/or harmful impacts on personal security. Software apps for maps and driving directions are very useful, but they have impacts on personal security and privacy if they keep track of your location. This information could be beneficial, for example if you are lost and need to be found, but could be harmful and unsafe if someone unauthorized gains access to your location.</p>
 
-<exercise label="privacy">
+<activity label="privacy">
     <statement>
             <p> Explore a popular app or web site and its data collecting practices. Explain the risks to privacy from collecting and storing personal data on computer systems.  Discuss the ethical and legal problems that may arise and how programmers can try to avoid them. We encourage you to work on this activity in pairs or groups.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>Here are some interesting video resources about data collection and data privacy:</p>
             <p><ul>
 <li>A short <url href="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" style="text-decoration:underline" visual="https://www.cnbc.com/video/2018/03/23/everything-you-need-to-know-about-the-cambridge-analytica-scandal.html" >1 minute video</url> about the Facebook Cambridge Analytica incident and a longer <url href="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2" style="text-decoration:underline" visual="https://www.pbs.org/wgbh/frontline/film/facebook-dilemma/#video-2">1 hour PBS special</url> on Facebook.</li>
@@ -32,12 +32,12 @@
 
     <video youtube="TWWsW1w-BVo"/>
     
-<exercise label="bias">
+<activity label="bias">
     <statement>
             <p> Explain the importance of recognizing data quality and potential issues such as data bias when using a data set in AI/ML applications. (A data set or dataset is a collection or set of data.) We encourage you to work on this activity in pairs or groups.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>Here are some other interesting videos to watch about bias in algorithms:</p>
             <p><ul><li><url href="https://www.youtube.com/watch?v=QxuyfWoVV98" visual="https://www.youtube.com/watch?v=QxuyfWoVV98">AI, Ain't I a Woman?</url>, a poem by Joy Buolamwini</li>
 <li>Ted Talk video on <url href="https://www.youtube.com/watch?v=UG_X_7g63rY" visual="https://www.youtube.com/watch?v=UG_X_7g63rY">Bias in Facial Recognition</url> by Joy Buolamwini,</li>
@@ -63,12 +63,12 @@
                 </li>
             </ul></p>
 
-<exercise label="datasets">
+<activity label="datasets">
     <statement>
             <p> Go to <url href="https://datasetsearch.research.google.com/" visual="https://datasetsearch.research.google.com/">https://datasetsearch.research.google.com/</url> and search for a dataset for “face recognition” or another topic you are interested in. Find an appropriate (“good”) dataset and an inappropriate (“bad”) dataset for your topic and put links to them below. Explain why the datasets are appropriate or inappropriate, for example the inappropriate dataset might be too small or incomplete or biased. Explain how the choice of your dataset could affect the results of a program that uses the data. We encourage you to work on this activity in pairs or groups.</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-36">
             <title>Summary</title>

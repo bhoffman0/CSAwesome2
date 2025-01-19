@@ -69,7 +69,7 @@ public class GrayImage
             <p>To solve this problem, we will need to loop through the entire 2D array, looking for instances of a <c>WHITE</c> pixel, keeping track of our count during the loop.</p>
             
 
-    <exercise label="frgia_1">
+    <activity label="frgia_1">
         <statement>
 
                 <p> What kind of loop could you use to solve this problem?</p>
@@ -105,11 +105,11 @@ public class GrayImage
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="frgia_1.5">
+    <activity label="frgia_1.5">
         <statement>
 
                 <p> What is another kind of loop you could use to solve this problem?</p>
@@ -145,7 +145,7 @@ public class GrayImage
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Looping through a 2D array is more complicated than the simple arrays we usually see, requiring nested for loops. Check out the questions and code below, which displays how nested for loops work to display a block of numbers.</p>
             <subsection>
@@ -196,15 +196,15 @@ public class Test
             <title>Algorithm</title>
             <p>When approaching this problem, it can be helpful to look for keywords or hints that maybe be in the problem statement. This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
 
-<exercise label="gray_image_A">
+<activity label="gray_image_A">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             
 
-    <exercise label="2012GreyScale_alg_ans">
+    <activity label="2012GreyScale_alg_ans">
         <statement>
 
                 <p> Which class is <c>countWhitePixels</c> a method in?</p>
@@ -249,11 +249,11 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScale_alg1_ans">
+    <activity label="2012GreyScale_alg1_ans">
         <statement>
 
                 <p> What array will you be modifying in this method?</p>
@@ -298,13 +298,13 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>There are many ways to solve this question, but we will only cover two in this section. Although it is a good exercise to be able to write the solution in multiple ways, you do not need to write both for the AP exam and you can just look at the problems below which relate to the method that is more intuitive to you.</p>
             <p>If you want to solve this problem using nested for loops, complete the three questions below.</p>
             
 
-    <exercise label="2012GreyScale_alg2_ans">
+    <activity label="2012GreyScale_alg2_ans">
         <statement>
 
                 <p> What could you write for the outer for loop so that it iterates through the rows of the array?</p>
@@ -349,11 +349,11 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScale_alg3_ans">
+    <activity label="2012GreyScale_alg3_ans">
         <statement>
 
                 <p> What could you write for the inner for loop so that it iterates through the columns of the array?</p>
@@ -398,11 +398,11 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScale_alg4_ans">
+    <activity label="2012GreyScale_alg4_ans">
         <statement>
 
                 <p> how could you check if the current value is white?</p>
@@ -447,12 +447,12 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Alternatively, if you want to solve this problem using nested for each loops, complete the three questions below.</p>
             
 
-    <exercise label="2012GreyScale_alg5_ans">
+    <activity label="2012GreyScale_alg5_ans">
         <statement>
 
                 <p> What could you write for the outer for loop so that it iterates through the rows of the array?</p>
@@ -497,11 +497,11 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScale_alg6_ans">
+    <activity label="2012GreyScale_alg6_ans">
         <statement>
 
                 <p> What could you write for the inner for loop so that it iterates through the columns of the array?</p>
@@ -546,11 +546,11 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScale_alg7_ans">
+    <activity label="2012GreyScale_alg7_ans">
         <statement>
 
                 <p> How will you check if pv is white?</p>
@@ -595,13 +595,13 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="try-and-solve-it-16">
             <title>Try and Solve It</title>
 
-<exercise label="lcfrgia2">
+<activity label="lcfrgia2">
     <statement>
             <p>FRQ Gray Image A: write the code for the method <c>countWhitePixels</c>. When you are ready click “Run” to test your solution.</p>
 
@@ -720,7 +720,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-4">
             <title>Video - One way to code the solution</title>

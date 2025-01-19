@@ -62,7 +62,7 @@
                 about <c>String</c> objects later.</p>
             <p>A data type is a set of values (a domain) and a set of operations on them. For example, you can do addition operations with <c>int</c>s and <c>double</c>s but not with <c>boolean</c>s and <c>String</c>s.</p>
 
-    <exercise label="chooseType1">
+    <activity label="chooseType1">
         <statement>
 
             <p> What type should you use to represent the average grade for a course?</p>
@@ -107,9 +107,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="chooseType2">
+    <activity label="chooseType2">
         <statement>
 
             <p> What type should you use to represent the number of people in a household?</p>
@@ -154,9 +154,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="chooseType3">
+    <activity label="chooseType3">
         <statement>
 
             <p> What type should you use to hold the first name of a person?</p>
@@ -201,9 +201,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="chooseType4">
+    <activity label="chooseType4">
         <statement>
 
             <p> What type should you use to record if it is raining or not?</p>
@@ -248,9 +248,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="chooseType5">
+    <activity label="chooseType5">
         <statement>
 
             <p> What type should you use to represent the amount of money you have?</p>
@@ -295,7 +295,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="declaring-variables-in-java">
             <title>Declaring Variables in Java</title>
@@ -325,7 +325,7 @@ int score = 4;
 </code></program>
             <p>When you are printing out variables, you can use the <term>string concatenation</term> operator <c>+</c> to add them to another string inside System.out.print. Never put variables inside quotes <c>""</c> because that will print out the variable name letter by letter. You do not want to print out the variable name, but the value of the variable in memory. If you’re not sure what this means, try putting quotes around the variable and see what happens. In the print out, if you want spaces between words and variables, you must put the space in the quotes. If you forget to add spaces, you will get smushed output like “HiJose” instead of “Hi Jose”.</p>
 
-<exercise label="strConcatDemo">
+<activity label="strConcatDemo">
     <statement>
             <p>Run the following code to see what is printed. Then, change the values and run it again. Try adding quotes to variables and removing spaces in the print statements to see what happens.</p>
 
@@ -377,12 +377,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Variables are never put inside quotes (“”) in System.out.print statements. This would print the variable name out letter by letter instead of printing its value.</p>
             </note>
 
-<exercise label="var_declare">
+<activity label="var_declare">
     <statement><p>Click on all of the variable declarations in the following code.</p></statement>
 <feedback><p>Variable declarations start with a type and then a name.</p></feedback>
 <areas>
@@ -401,8 +401,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>        <area correct="no">System.out.println(powerUp);</area></cline>
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-<exercise label="var_init">
+</areas></activity>
+<activity label="var_init">
     <statement><p>Click on all of the variable initializations (first time the variable is set to a value) in the following code.</p></statement>
 <feedback><p>Variables are initialized using name = value;</p></feedback>
 <areas>
@@ -419,9 +419,9 @@ public class RunestoneTests extends CodeTestHelper
 <cline>        <area correct="no">System.out.println(powerUp);</area></cline>
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>            <p>The equal sign here <c>=</c> doesn’t mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a <em>copy</em> of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the <c>=</c> and a value or expression on the right.</p>
+</areas></activity>            <p>The equal sign here <c>=</c> doesn’t mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location associated with the variable name on the left to a <em>copy</em> of the value on the right. The first line above sets the value in the box called score to 4.  A variable always has to be on the left side of the <c>=</c> and a value or expression on the right.</p>
 
-<exercise label="asgn_order">
+<activity label="asgn_order">
     <statement>
             <p>This assignment statement below is in the wrong order. Try to fix it to compile and run.</p>
 
@@ -460,18 +460,18 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-        <exercise label="fillDecVar1">
+        <activity label="fillDecVar1">
             <statement>
-    <p> Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5. <var/>  <var/>  </p></statement><setup><var><condition string="^\s*int\s*$"><feedback><p>Correct.  You typically use whole numbers for ages after age 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Remember that Java uses just the first 3 letters of integer</p></feedback></condition></var><var><condition number="[5, 5]"><feedback><p>Correct.  You can initialize to a value.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use 5 in the second blank</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillDecVar2">
+    <p> Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5. <var/>  <var/>  </p></statement><setup><var><condition string="^\s*int\s*$"><feedback><p>Correct.  You typically use whole numbers for ages after age 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Remember that Java uses just the first 3 letters of integer</p></feedback></condition></var><var><condition number="[5, 5]"><feedback><p>Correct.  You can initialize to a value.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use 5 in the second blank</p></feedback></condition></var></setup></activity>
+        <activity label="fillDecVar2">
             <statement>
-    <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillDecVar3">
+    <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></activity>
+        <activity label="fillDecVar3">
             <statement>
-    <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>            <p><term>Mixed up Code Problems</term></p>
-<exercise label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+    <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></activity>            <p><term>Mixed up Code Problems</term></p>
+<activity label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code declares and initializes variables for storing a number of visits, a person’s temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -483,7 +483,7 @@ public class RunestoneTests extends CodeTestHelper
 </choice></block><block order="3">
 <choice correct="yes"><cline>boolean hasInsurance = false;</cline>
 </choice><choice><cline>Boolean hasInsurance = false; </cline>
-</choice></block></blocks></exercise>        </subsection>
+</choice></block></blocks></activity>        </subsection>
   <subsection xml:id="naming-variables">
             <title>Naming Variables</title>
             <idx><h>variable</h><h>names</h></idx>
@@ -515,7 +515,7 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example <c>gameScore</c>. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called <term>camel case</term> because it looks like the humps of a camel. Another option is to use underscore <c>_</c> to separate words, but you cannot have spaces in a variable name.</p>
 
-<exercise label="varCaseSensitive">
+<activity label="varCaseSensitive">
     <statement>
             <p>Java is case sensitive so <c>gameScore</c> and <c>gamescore</c> are not the same.  Run and fix the code below to use the right variable name.</p>
 
@@ -553,14 +553,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-        <exercise label="fillName1">
+        <activity label="fillName1">
             <statement>
-    <p> What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillName2">
+    <p> What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></activity>
+        <activity label="fillName2">
             <statement>
-    <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></activity>        </subsection>
   <subsection xml:id="debugging-challenge-weather-report">
             <title>Debugging Challenge : Weather Report</title>
             <p>Debug the following code that reads out a weather report.
@@ -568,7 +568,7 @@ public class RunestoneTests extends CodeTestHelper
                 Can you find all the bugs and get the code to run?
                 Work with a programming buddy if you get stuck.</p>
 
-<exercise label="challenge1-2-weather">
+<activity label="challenge1-2-weather">
     <statement>
             <p>Debug the following code. Can you find the all the bugs and get the code to run?</p>
 
@@ -616,14 +616,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-mad-libs">
             <title>Coding Challenge : Mad Libs</title>
             <p>Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.</p>
             <p>Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you’re done, try another team’s mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url> to read in input into the variables.</p>
 
-<exercise label="challengeMadLibs">
+<activity label="challengeMadLibs">
     <statement>
             <p>Replace the text “Replace” below with silly words following the description in the variable names (for example, “cats” for a plural noun, “blue” for a color, etc.) to create a silly poem. Run the code to see the poem. Then, create your own silly story using 5 more String variables.</p>
 
@@ -684,7 +684,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-7">
             <title>Summary</title>
@@ -724,7 +724,7 @@ double gpa = 3.5;
   <subsection xml:id="ap-practice-6">
             <title>AP Practice</title>
 
-    <exercise label="AP1-2-types">
+    <activity label="AP1-2-types">
         <statement>
 
             <p> Which of the following pairs of declarations are the most appropriate to store a student’s average course grade in the variable GPA and the number of students in the variable numStudents?</p>
@@ -778,6 +778,6 @@ double gpa = 3.5;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

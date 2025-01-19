@@ -18,7 +18,7 @@
     <title>String References</title>
     
     
- <exercise label="lcsb1">
+ <activity label="lcsb1">
     <statement>
         <p>Run the following code.  What does it print?</p>
     </statement>
@@ -53,7 +53,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
 
     <p>The code above declares an object variable named <c>greeting</c> and sets the value of greeting to the Java keyword <c>null</c> to show that it doesn’t refer to any object yet.  So <c>System.out.println(greeting);</c> will print <c>null</c>.</p>
@@ -81,7 +81,7 @@ String greeting = "Hello";
 </code>
     </program>
     <p>In both cases an object of the <c>String</c> class will be created in memory and the value of the variable greeting will be set to an object reference, a way to find that object.</p>
-      <exercise label="lcsbnew">
+      <activity label="lcsbnew">
     <statement>
         <p>The code below creates two greeting strings: one using a string literal and the other using new and the String constructor. Change the code to add 2 new strings called firstName and lastName, one using a string literal and the other using new, and print them out with the greetings.</p>
 
@@ -122,9 +122,9 @@ public class StringTest
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-  <exercise label="lcsb2">
+  <activity label="lcsb2">
     <statement>
         <p>Now that greeting refers to an actual object we can ask the object what class created it. Try the following.  What does it print?</p>
 
@@ -163,7 +163,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
     <idx>parent class</idx>
  <idx>superclass</idx>
@@ -196,7 +196,7 @@ public class RunestoneTests extends CodeTestHelper
                 <c>String</c> by adding something to the current value of a variable and then
                 assigning that new value back into the variable, again just like with numbers.</p>
 
-<exercise label="lcso1">
+<activity label="lcso1">
     <statement>
             <p>Try the following code. Add another variable for a lastname that is “Hernandez”. Use += or + to add the lastname variable after name to the result. Use += or + to add 2 more exclamation points (!) to the end of the happy birthday greeting in result.</p>
 
@@ -235,12 +235,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Note that spaces are not added between strings automatically.  If you want a space between two strings then add one using + ” ” +. If you forget to add spaces, you will get smushed output like “HiJose” instead of “Hi Jose”.  And remember that variables are never put inside the quotes (“”) since this would print the variable name out letter by letter instead of its value.</p>
             </note>
 
-    <exercise label="qse_1">
+    <activity label="qse_1">
         <statement>
 
             <p> Given the following code segment, what is in the string referenced by s1?</p>
@@ -299,7 +299,7 @@ s1 = s1 + s2 + "z";
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
            <idx>toString</idx>
  <idx><h>Object</h><h>toString</h></idx>
 
@@ -309,7 +309,7 @@ s1 = s1 + s2 + "z";
                 <c>toString</c> method. All objects inherit a
                 <c>toString</c> method from the <c>Object</c> class that returns a <c>String</c> representation of the object and many classes <term>override</term> it to produce a useful human-readable value. Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass, but the behavior of the method is specific to the subclass (overriding toString is no longer covered on the AP CSA exam).</p>
 
-<exercise label="lcso2">
+<activity label="lcso2">
     <statement>
             <p>What do you think the following will print? Guess before you hit run. If you want the addition to take place before the numbers are turned into a string what should you do? Try to modify the code  so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.</p>
 
@@ -356,7 +356,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>If you are appending a number to a string it will be converted to a string first before being appended.</p>
             </note>
@@ -405,7 +405,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>String Methods: length, substring, indexOf</title>
             <p>Run the code below to see the output from the String methods <c>length</c>, <c>substring</c>, and <c>indexOf</c>. The length method returns the number of characters in the string, not the last index which is length -1. The <c>str.substring(from,to)</c> method returns the substring from the <c>from</c> index up to (but not including) the <c>to</c> index. The method <c>str.indexOf(substring)</c> searches for the substring in str and returns the index of where it finds substring in str or -1 if it is not there.</p>
 
-<exercise label="lcsm1">
+<activity label="lcsm1">
     <statement>
             <p>This code shows the output from String methods length, substring, and indexOf. How many letters does substring(0,3) return? What does indexOf return when its argument is not found?</p>
 
@@ -457,12 +457,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Remember that substring(from,to) does not include the character at the <c>to</c> index! To return a single character at index i, use <c>str.substring(i, i + 1)</c>.</p>
             </note>
 
-<exercise label="substring-preconditions">
+<activity label="substring-preconditions">
     <statement>
             <p>The following code breaks the preconditions of the substring method and throws an IndexOutOfBoundsException. Can you fix the code by changing the arguments for the substring method to print out the substring “o”?</p>
 
@@ -503,9 +503,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="qsb_3">
+    <activity label="qsb_3">
         <statement>
 
             <p> What is the value of pos after the following code executes?</p>
@@ -554,9 +554,9 @@ int pos = s1.indexOf("b");
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsb_3b">
+    <activity label="qsb_3b">
         <statement>
 
             <p> What is the value of len after the following code executes?</p>
@@ -605,9 +605,9 @@ int len = s1.length();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsb_3c">
+    <activity label="qsb_3c">
         <statement>
 
             <p> What is the value of s2 after the following code executes?</p>
@@ -656,9 +656,9 @@ String s2 = s1.substring(0,3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsb_4b">
+    <activity label="qsb_4b">
         <statement>
 
             <p> What is the value of s2 after the following code executes?</p>
@@ -716,7 +716,7 @@ String s2 = s1.substring(2);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>CompareTo and Equals</title>
@@ -726,7 +726,7 @@ String s2 = s1.substring(2);
             <p>The <c>equals</c> method compares the two strings character by character and returns <c>true</c> or <c>false</c>. Both <c>compareTo</c> and <c>equals</c> are case-sensitive. There are case-insensitive versions of these methods, <c>compareToIgnoreCase</c> and <c>equalsIgnoreCase</c>, which are not on the AP exam.</p>
             <p>Run the example below to see the output from <c>compareTo</c> and <c>equals</c>. Since <c>"Hello!"</c> would be alphabetically ordered after <c>"And"</c>, <c>compareTo</c> returns a positive number. Since <c>"Hello!"</c> would be alphabetically ordered before <c>"Zoo"</c>, <c>compareTo</c> returns a negative number.  Notice that <c>equals</c> is case-sensitive.</p>
 
-<exercise label="lcsm2">
+<activity label="lcsm2">
     <statement>
             <p>Run the code to see how the String methods equals and compareTo work. Is equals case-sensitive? When does compareTo return a negative number?</p>
 
@@ -768,18 +768,18 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>There are lots of other methods in the String class.  You can look through the Java documentation for the <url href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" visual="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String class</url> online.   You don’t have to know all of these for the exam, but you can use them if you want to on the exam.</p>
 
-<exercise label="ch4_str1">
+<activity label="ch4_str1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct</p></statement>
     <feedback><p>Review the vocabulary.</p></feedback>
-<matches><match order="1"><premise>the position of a character in a string</premise><response>index</response></match><match order="2"><premise>a new string that is a part of another string with 0 to all characters copied from the original string</premise><response>substring</response></match><match order="3"><premise>doesn't change</premise><response>immutable</response></match><match order="4"><premise>the number of characters in a string</premise><response>length</response></match></matches></exercise>
-<exercise label="ch4_str2">
+<matches><match order="1"><premise>the position of a character in a string</premise><response>index</response></match><match order="2"><premise>a new string that is a part of another string with 0 to all characters copied from the original string</premise><response>substring</response></match><match order="3"><premise>doesn't change</premise><response>immutable</response></match><match order="4"><premise>the number of characters in a string</premise><response>length</response></match></matches></activity>
+<activity label="ch4_str2">
     <statement><p>Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the vocabulary.</p></feedback>
-<matches><match order="1"><premise>Returns true if the characters in two strings are the same</premise><response>equals</response></match><match order="2"><premise>Returns the position of one string in another or -1</premise><response>indexOf</response></match><match order="3"><premise>Returns a number to indicate if one string is less than, equal to, or greater than another</premise><response>compareTo</response></match><match order="4"><premise>Returns a string representing the object that is passed to this method</premise><response>toString</response></match></matches></exercise>
-    <exercise label="qsb_8-new">
+<matches><match order="1"><premise>Returns true if the characters in two strings are the same</premise><response>equals</response></match><match order="2"><premise>Returns the position of one string in another or -1</premise><response>indexOf</response></match><match order="3"><premise>Returns a number to indicate if one string is less than, equal to, or greater than another</premise><response>compareTo</response></match><match order="4"><premise>Returns a string representing the object that is passed to this method</premise><response>toString</response></match></matches></activity>
+    <activity label="qsb_8-new">
         <statement>
 
             <p> What is the value of answer after the following code executes?</p>
@@ -820,13 +820,13 @@ int answer = s1.compareTo(s2);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Common Mistakes with Strings</title>
             <p>The following code shows some common mistakes with strings.</p>
 
-<exercise label="stringMistakes">
+<activity label="stringMistakes">
     <statement>
             <p>This code contains some common mistakes with strings. Fix the code to use the string methods correctly.</p>
 
@@ -876,7 +876,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is a list of common mistakes made with Strings.</p>
             <blockquote>
                 <p><ul>
@@ -907,7 +907,7 @@ public class RunestoneTests extends CodeTestHelper
             <p><image source="Unit1-Using-Objects-and-Methods/Figures/pig.png" width="18%" alt="pig latin"/> Can you speak Pig Latin? In Pig Latin, you take the first letter and put it at the end of the word and add the letters “ay” to the end. For example, “pig” becomes “igpay”.</p>
             <p>Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word’s length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).</p>
 
-<exercise label="challenge-PigLatin">
+<activity label="challenge-PigLatin">
     <statement>
             <p>Write code in the pigLatin method below to use the substring method to transform a word given as its argument into Pig Latin where the first letter is put at the end and “ay” is added. The word pig is igpay in Pig Latin. Change the input below to try it on other words.</p>
 
@@ -984,7 +984,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Summary</title>
@@ -1056,7 +1056,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>AP Practice</title>
 
-    <exercise label="AP-substring">
+    <activity label="AP-substring">
         <statement>
 
             <p> What is the value of s2 after the following code executes?</p>
@@ -1106,9 +1106,9 @@ String s2 = s1.substring(0,pos);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-immutable">
+    <activity label="AP-immutable">
         <statement>
 
             <p> What is the value of s1 after the following code executes?</p>
@@ -1158,7 +1158,7 @@ String s3 = s2.toLowerCase();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <note>
                 <p>Strings are <term>immutable</term> which means that they can’t change. Anything that you do to modify a string (like creating a substring or appending strings) returns a new string. The original string is not changed.</p>
             </note>

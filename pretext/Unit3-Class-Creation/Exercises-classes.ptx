@@ -3,7 +3,7 @@
 <section xml:id="Exercises-classes">
         <title>Multiple-Choice Exercises - Objects and Classes</title>
 
-    <exercise label="AP-OOP-1">
+    <activity label="AP-OOP-1">
         <statement>
 
         <p> The Liquid class will contain two double attributes for a liquid’s boiling point temperature and freezing point temperature. The class will also contain a constructor.</p>
@@ -57,9 +57,9 @@ public Liquid(double freezingPoint, double boilingPoint)
         <p>The instance variables should be private.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-2">
+    <activity label="AP-OOP-2">
         <statement>
 
         <p> The Cat class below will contain two String attributes and one int attribute for name, color, and age; a constructor; and an adoptCat method. The adoptCat method is intended to be accessed outside the class.</p>
@@ -128,9 +128,9 @@ public void adoptCat(String n, String c, int a)
         <p>Instance variables should be private, and the constructor should be public.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-3">
+    <activity label="AP-OOP-3">
         <statement>
 
         <p> Consider the definition of the Party class below. The class uses the instance variable numOfPeople to indicate how many people are at the party.</p>
@@ -167,9 +167,9 @@ that represents a party that has three people at it?
         <p>Strings cannot perform addition.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-4">
+    <activity label="AP-OOP-4">
         <statement>
 
         <p> Consider the following class definition. Each object of the class Party will store the party host’s name as partyHost, the number of people as numOfPeople, and the capacity that the event can hold as capacity. Which of the following code segments, found in a class other than Party, can be used to create a party hosted by Charlie without anyone there initially, but the place can hold 78 people ?</p>
@@ -249,9 +249,9 @@ III. Party b = new Party("Charlie", 0, 78);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-5">
+    <activity label="AP-OOP-5">
         <statement>
 
         <p> Consider the following class definition.</p>
@@ -308,9 +308,9 @@ public Party(int first, double second)
         <p>The constructor should be changing the instance variables, not the local variables.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-6">
+    <activity label="AP-OOP-6">
         <statement>
 
         <p> Consider the following class definition that defines a Liquid class with a boilingPoint, a currentTemperature, and a freezingPoint. For example, Liquid water = new Liquid(100, 50, 0); defines a water object with a boiling point of 100, a current temperature of 50, and a freezing temperature of 0.</p>
@@ -345,9 +345,9 @@ public class Liquid
         <p>Incorrect. This would again result in freezing point being &gt; boiling point which is impossible.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-7">
+    <activity label="AP-OOP-7">
         <statement>
 
         <p>  Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?</p>
@@ -419,9 +419,9 @@ public class Cat
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-8">
+    <activity label="AP-OOP-8">
         <statement>
 
         <p> Consider the following Liquid class. The currentTemperature is stored in the method’s int attribute. The getCurrentTemp method is intended to allow methods in other classes to access a Liquid object’s currentTemperature value; however, it does not work as intended. Which of the following best explains why the getCurrentTemperature method does NOT work as intended?</p>
@@ -458,9 +458,9 @@ public class Liquid
         <p>The getCurrentTemperature method does not have access to the ct variable which is the parameter for the constructor.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-9">
+    <activity label="AP-OOP-9">
         <statement>
 
         <p> Consider the following class definition.</p>
@@ -508,9 +508,9 @@ System.out.println("The temperature of the liquid is " + liq.currentTemp);
         <p>currentTemp is initialized to a value by the constructor but it is private and cannot be accessed outside the class.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-10">
+    <activity label="AP-OOP-10">
         <statement>
 
         <p> In the Liquid class below, the raiseTemperature method is intended to increase the value of the instance variable currentTemp by the value of the parameter increase. The method does not work as intended.</p>
@@ -548,9 +548,9 @@ public class Liquid
         <p>This mutator method should have a void return value and just change the value of currentTemp without returning a value.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-11">
+    <activity label="AP-OOP-11">
         <statement>
 
         <p> Consider the following class definition. The calculatePizzaCostPerPerson method is intended to calculate the amount each person at the party must pay for pizza. The amount is equal to the total price of all the pizza boxes divided by the number of people at the party. Which of the following code segments should replace <em>missing code</em> so that the calculatePizzaCostPerPerson method will work as intended?</p>
@@ -621,9 +621,9 @@ public class Party
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-OOP-12">
+    <activity label="AP-OOP-12">
         <statement>
 
         <p> Consider the Party class below.</p>
@@ -724,5 +724,5 @@ III. if (numOfPeople += additionalPeople &lt;= capacity)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

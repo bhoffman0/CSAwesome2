@@ -47,7 +47,7 @@ while (i &lt; highScores.length)
                 <p>Using a variable as the index is a powerful <term>data abstraction</term> feature because it allows us to use loops with arrays where the loop counter variable is the index of the array! This allows our code to generalize to work for the whole array.</p>
             </note>
 
-<exercise label="arraytrace2">
+<activity label="arraytrace2">
     <statement>
             <p>What do you think the following code will print out? First trace through it on paper keeping track of the array and the index variable. Then, run it to see if you were right. Try the Code Lens button. Then, try adding your name and a friend’s name to the array names and run the code again. Did the code work without changing the loop?</p>
 
@@ -107,13 +107,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Arrays as Objects and Parameters</title>
             <p>The following code demonstrates a loop that changes the values in an array. In this code, the array is passed as an argument to the static methods in the class.  Arrays in Java are objects. The array variables are references to an address in memory. Since arrays can be very large, we do not want to copy them when we pass them into methods. When an array is passed as an argument to a method, the name of the array refers to its address in memory. Therefore, any changes to the array in the method will affect the original array. You can also try the code in the <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url>.</p>
 
-<exercise label="arrayMethodTrace">
+<activity label="arrayMethodTrace">
     <statement>
             <p>What does the following code print out? Trace through it keeping track of the array values and the output. Then run it to see if you’re right. Notice that in this code, the array is passed as an argument to the methods. You can also try the code in the <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20ArrayLoop%0A%20%20%20%7B%0A%0A%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20multAll%28int%5B%5D%20values,%20int%20amt%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%5D%20*%20amt%3B%0A%20%20%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%7D%20%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20//%20What%20does%20this%20method%20do%3F%0A%20%20%20%20%20%20public%20static%20void%20printValues%28int%5B%5D%20values%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20%20values%5Bi%5D%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20numArray%20%3D%20%20%7B2,%206,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20multAll%28numArray,%202%29%3B%0A%20%20%20%20%20%20%20%20printValues%28numArray%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url> with the Code Lens button.</p>
 
@@ -174,11 +174,11 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Arrays in Java are objects. When arrays are passed in as arguments to methods, any changes to the array in the method will affect the original array, since the array name is a reference value refering to the address of the array in memory.</p>
             </note>
-<exercise label="patdonsArraySubtract" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
+<activity label="patdonsArraySubtract" numbered="yes" adaptive="yes" indentation="hide" language="python"><statement>
             <p>The following method has the correct code to subtract amt from all the values in the array values, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order.</p>
 </statement>
 <blocks><block order="2">
@@ -198,14 +198,14 @@ public class RunestoneTests extends CodeTestHelper
 <cline>     } // end for loop</cline>
 </block><block order="3">
 <cline>} // end method</cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection>
             <title>Looping through Part of an Array</title>
             
             
             <p>You don’t have to loop through all of the elements of an array.  You can loop through just some of the elements of an array using a for loop.  The following code doubles the first five elements in an array.  Notice that it uses a complex conditional (<c>&amp;&amp;</c>) on line 14 to make sure that the loop doesn’t go beyond the length of the array, because if you had an array that had less than 5 elements, you wouldn’t want the code to try to double the 5th element which doesn’t exist! Notice that in this code, the array is a private instance variable of the class ArrayWorker. It is created in the constructor and changed or accessed by the methods.</p>
 
-<exercise label="tripleFirstFour">
+<activity label="tripleFirstFour">
     <statement>
             <p>What will the following code print out? Can you write a similar method called tripleFirstFour() that triples the first 4 elements of the array? Make sure you test it in main.</p>
 
@@ -310,9 +310,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="mcq_array_doublelast">
+    <activity label="mcq_array_doublelast">
         <statement>
 
             <p> Given the following values of a and the method doubleLast what will the values of a be after you execute: doubleLast()?</p>
@@ -369,9 +369,9 @@ public void doubleLast()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq_array_mystery">
+    <activity label="mcq_array_mystery">
         <statement>
 
             <p> Given the following values of a and the method mystery what will the values of a be after you execute: mystery()?</p>
@@ -437,13 +437,13 @@ public void mystery()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Common Errors When Looping Through an Array</title>
             <p>When processing all array elements, be careful to start at the first index which is <c>0</c> and end at the last index. Usually loops are written so that the index starts at 0 and continues while the index is less than <c>arrayName.length</c> since (<c>arrayName.length - 1</c>) is the index for the last element in the array. Make sure you do not use <c>&lt;=</c> instead of <c>&lt;</c>! If the index is less than 0 or greater than (<c>arrayName.length - 1</c>), an <term>ArrayIndexOutOfBoundsException</term> will be  thrown.  <term>Off by one</term> errors, where you go off the array by 1 element, are easy to make when traversing an array which result in an <term>ArrayIndexOutOfBoundsException</term> being thrown.</p>
 
-    <exercise label="qIndexOutOfBounds">
+    <activity label="qIndexOutOfBounds">
         <statement>
 
             <p> Which of the following loop headers will cause an ArrayIndexOutOfBounds error while traversing the array scores?</p>
@@ -464,9 +464,9 @@ public void mystery()
             <p>This will cause an error because i++ will continue to increment the index past the end of the array. It should be replaced with i– to avoid this error.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="offbyone">
+<activity label="offbyone">
     <statement>
             <p>The following code has an ArrayIndexOutOfBoundsException. It has 2 common off-by-one errors in the loop. Can you fix it and make the loop print out all the scores?</p>
 
@@ -530,10 +530,10 @@ import static org.junit.Assert.*;
  }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Be careful not to jump out of loop too early when you are looking for a value in an array.  The method below uses <term>return</term> statements to stop the execution of the method and return a value to the method that called this method.  However, you must be careful not to stop the loop too soon.</p>
 
-<exercise label="find_loop_early_return_error">
+<activity label="find_loop_early_return_error">
     <statement>
             <p>What is wrong with the code below?  The first time through the loop it will start with the element at index 0 and check if the item at the array index equals the passed target string.  If they have the same characters in the same order it will return 0, otherwise it will return -1.  But, it has only processed one element of the array.  How would you fix the code to work correctly (process all array elements before returning)?</p>
 
@@ -618,9 +618,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="mcq_array_infinite">
+    <activity label="mcq_array_infinite">
         <statement>
 
             <p> Given the following code segment, which of the following will cause an infinite loop?  Assume that <c>temp</c> is an int variable initialized to be greater than zero and that <c>a</c> is an array of integers.</p>
@@ -683,7 +683,7 @@ for ( int k = 0; k &lt; a.length; k++ )
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Enhanced For-Loop (For-Each) for Arrays</title>
@@ -712,7 +712,7 @@ for (String name : names)
 </code></program>
             <p>Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don’t need to know their index and don’t need to change their values.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. This type of loop can only be used with arrays and some other collections of items like ArrayLists which we will see in the next unit.</p>
 
-<exercise label="foreach1">
+<activity label="foreach1">
     <statement>
             <p>Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.</p>
 
@@ -778,10 +778,10 @@ public class ForEachDemo
  }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Code written using an enhanced <c>for</c> loop to traverse elements in an array can be rewritten using an indexed <c>for</c> loop or a <c>while</c> loop and vice versa. They are equivalent in terms of functionality, but the enhanced <c>for</c> loop is more concise and easier to read.</p>
 
-<exercise label="evenLoop">
+<activity label="evenLoop">
     <statement>
             <p>Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!</p>
 
@@ -836,13 +836,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Enhanced For Loop Limitations</title>
             <p>What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop would change, not the real array values. Assigning a new value to the enhanced <c>for</c> loop variable does not change the value stored in the array. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the <url href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> by clicking the CodeLens button and step through the code to see why it doesn’t work.</p>
 
-<exercise label="incrementLoop">
+<activity label="incrementLoop">
     <statement>
             <p>The for-each loop below cannot change the values in the array because only the loop variable value will change. Run it with the CodeLens button to see why this is. Then, change the loop to an indexed for loop to make it change the array values.</p>
 
@@ -910,7 +910,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Enhanced for each loops cannot be used in all situations. Only use for-each loops when you want to loop through <term>all</term> the values in an array without changing their values.</p>
                 <p><ul>
@@ -926,7 +926,7 @@ public class RunestoneTests extends CodeTestHelper
                 </ul></p>
             </note>
 
-    <exercise label="mcq_for_each1">
+    <activity label="mcq_for_each1">
         <statement>
 
             <p> What are some of the reasons you would use an enhanced for-each loop instead of a for loop?</p>
@@ -976,9 +976,9 @@ III: If you wish to refer to elements through a variable name instead of an arra
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcqfor-each2">
+    <activity label="mcqfor-each2">
         <statement>
 
             <p> What is the output of the following code segment?</p>
@@ -1007,7 +1007,7 @@ for (int num : numbers)
             <p>This code will compile.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection>
             <title>Traversing Arrays of Objects</title>
@@ -1017,7 +1017,7 @@ for (int num : numbers)
                 with multiple classes, only the class that has the main method should be public, and the other classes should
                 start with <c>class</c> instead of <c>public class</c>.</p>
 
-<exercise label="student-array">
+<activity label="student-array">
     <statement>
             <p>Run the StudentArray class below. Note that it uses the class Student below it and creates
                 an array of Students. Using the StudentArray print() method as a guide,
@@ -1183,7 +1183,7 @@ class Student
   }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Remember that normally an enhanced for loop cannot be used to modify primitive values in an array because the loop variable does not refer to the real object in the array. However, when an array stores object references, the attributes can be modified by calling methods on the enhanced <c>for</c> loop variable. The references stored in the array are unchanged, but since loop variable is another reference to the same objects, you can change the attributes of an object in an array using the enhanced for loop using its public mutator methods.</p>
         </subsection>
   <subsection>
@@ -11212,7 +11212,7 @@ zus
 
 
 
-<exercise label="challenge-spellchecker">
+<activity label="challenge-spellchecker">
     <statement>
             <p>Write print10 and spellcheck methods using for loops. Spellcheck should take a word as a parameter and return true if it is in the dictionary array. Return false if it is not found.</p>
 
@@ -11364,7 +11364,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Design an Array of Objects for your Community</title>
@@ -11373,7 +11373,7 @@ public class RunestoneTests extends CodeTestHelper
                 Copy your array of objects code from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url>. In this challenge, add a loop to
                 traverse your array to print out each object.</p>
 
-<exercise label="community-challenge-array-loop">
+<activity label="community-challenge-array-loop">
     <statement>
             <p>Copy your class from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url> below.
                 It should create an array of 3 objects of your class and initialize
@@ -11458,7 +11458,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection>
             <title>Summary</title>

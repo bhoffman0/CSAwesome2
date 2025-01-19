@@ -3,7 +3,7 @@
 <section xml:id="peer_int_U6">
         <title>Peer Instruction: Arrays Multiple Choice Questions</title>
 
-    <exercise label="bs-arrays-21-8">
+    <activity label="bs-arrays-21-8">
         <statement>
 
         <p>  What does this code do?</p>
@@ -71,9 +71,9 @@ public void lab7Quiz3(Sound mySound)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-21-9">
+    <activity label="bs-arrays-21-9">
         <statement>
 
         <p>  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
@@ -147,9 +147,9 @@ public void guess()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-21-10">
+    <activity label="bs-arrays-21-10">
         <statement>
 
         <p>  What is printed by this code when it is called on the object {60, 80, 60, 65, 100, 90, 0, 0, 0, 0}?</p>
@@ -223,9 +223,9 @@ public void guess()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-22-6">
+    <activity label="bs-arrays-22-6">
         <statement>
 
         <p>  What does this code do for the object {60, 80, 60, 65, 90, 0, 0, 0, 0}?</p>
@@ -295,9 +295,9 @@ for (int i=0;i&lt;noiseArray.length; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-22-8">
+    <activity label="bs-arrays-22-8">
         <statement>
 
         <p>  How does the sound sample change if funky() is called on [40, 60, 30, 30]?</p>
@@ -372,9 +372,9 @@ public void funky()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-22-11">
+    <activity label="bs-arrays-22-11">
         <statement>
 
         <p>  What if all positive values (including zero) were (set to) the maximum value (32,767) and all negative values were set to the minimum value (-32,768)? Which line would complete the code block to accomplish this?</p>
@@ -440,9 +440,9 @@ for (int i = 0; i &lt; foo.length; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-23-5">
+    <activity label="bs-arrays-23-5">
         <statement>
 
         <p>  What is the resulting soundSample if the original soundSample is [40, 50, 60, 70, 100, 130, 150, 100, 110, 90] and foo is equal to 5?</p>
@@ -510,9 +510,9 @@ public Sound funky2(int foo)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-23-13">
+    <activity label="bs-arrays-23-13">
         <statement>
 
         <p>  What code would you replace &lt;&lt;X&gt;&gt; with is order to create a new sound of correct length 1/2 ?</p>
@@ -578,9 +578,9 @@ public void raiseP()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-23-14">
+    <activity label="bs-arrays-23-14">
         <statement>
 
         <p>  What lines should be inserted into the for loop in order to fill in our new higher array, which is 1/2 the length of the “this” array?</p>
@@ -649,9 +649,9 @@ public void raiseP()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-24-9">
+    <activity label="bs-arrays-24-9">
         <statement>
 
         <p>  What header/value combo should we use in ored to modify an existing sound?</p>
@@ -719,9 +719,9 @@ public Sound funky2(int foo)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-arrays-24-10">
+    <activity label="bs-arrays-24-10">
         <statement>
 
         <p>  What is the result of running this code if noiseArr is [10, 15, 20, 25, 30, 35, 40, 45, 50, 55]?</p>
@@ -784,5 +784,5 @@ for(int i = 0; i &lt; noiseAr.length; i+=2)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

@@ -66,7 +66,7 @@ public class ScrambledStrings
             <title>Figuring out the algorithm</title>
             <p>It can help to write out what you need to do to get each of the characters to compare.</p>
 
-<exercise label="lcfrssa3">
+<activity label="lcfrssa3">
     <statement>
             <p>The following shows what to do to solve the example with “ABRACADABRA”.</p>
 
@@ -118,10 +118,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In this example we are looping through the characters from left to right one at a time and comparing the two adjacent characters.  If the first is an “A” and the second is not we will swap the characters and then need to increment the index to not check the ones we swapped again.  So we start checking the characters at index 0 and 1 and then swap them, but then move to comparing 2 and 3 rather than 1 and 2 which means we increment the current index by 2.  If we don’t swap the characters we only increment the index by 1.</p>
 
-<exercise label="lcfrssa4">
+<activity label="lcfrssa4">
     <statement>
             <p>The following shows what to do to solve the example with “WHOA”.</p>
 
@@ -176,7 +176,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In this case since we didn’t swap any characters we only increment the index by 1 each time through the loop.</p>
             <p>The code will need to loop through the characters in the string and compare two adjacent characters.  There are two ways to compare two adjacent characters without going beyond the bounds of the loop.  One way is to start the index at 0 and loop while the index is less than one less than the length of the string and then get the characters at the index and at the index plus one. Another way is to start the index at 1 and loop while the index is less than the length of the string and then get the characters at one less than the index and at the index.  If the first character is an “A” and the second is not an “A” then swap them and increment the index to make sure that you don’t check characters that have already been swapped.  Each time through the loop also increment the index.</p>
         </subsection>
@@ -184,7 +184,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Write the Code</title>
             <p>Write the method <c>scrambleWord</c> below.</p>
 
-<exercise label="lcfrssa5">
+<activity label="lcfrssa5">
     <statement>
             <p>FRQ StringScramble A: Write the method scrambleWord.</p>
 
@@ -331,7 +331,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-1">
             <title>Video - One way to code the solution</title>

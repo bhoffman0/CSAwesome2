@@ -22,10 +22,10 @@
             <p>The special characters <c>//</c> are used to mark the rest of the line as a comment in many programming languages.  If the comment is going to be multiple lines, we use <c>/*</c> to start the comment and <c>*/</c> to end the comment.</p>
             <p>There is also a special version of the multi-line comment, <c>/**</c>  <c>*/</c>, called the documentation comment. Java has a cool tool called <url href="https://www.tutorialspoint.com/java/java_documentation.htm" visual="https://www.tutorialspoint.com/java/java_documentation.htm">javadoc</url> that comes with the <url href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" visual="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK</url> that will pull out all of these comments to make documentation of a class as a web page.  This tool generates the official Java documentation too, for example for the <url href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html" visual="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html">String class</url>. Although you do not have to use this in the AP exam, it’s a good idea to use the documentation comment in front of classes, methods, and instance variables in case you want to use this tool later on to save your code as a library.</p>
 
-<exercise label="comments">
+<activity label="comments">
     <statement><p>Drag the definition from the left and drop it on the correct symbols on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the section above.</p></feedback>
-<matches><match order="1"><premise>single-line comment</premise><response>//</response></match><match order="2"><premise>multi-line comment</premise><response>/* */</response></match><match order="3"><premise>Java documentation comment</premise><response>/** */</response></match></matches></exercise>            <p>The compiler will skip over comments, and they don’t affect how your program runs. They are for you, your teacher, and other programmers working with you.  Here are some examples of good commenting:</p>
+<matches><match order="1"><premise>single-line comment</premise><response>//</response></match><match order="2"><premise>multi-line comment</premise><response>/* */</response></match><match order="3"><premise>Java documentation comment</premise><response>/** */</response></match></matches></activity>            <p>The compiler will skip over comments, and they don’t affect how your program runs. They are for you, your teacher, and other programmers working with you.  Here are some examples of good commenting:</p>
             <program language="java"><code>
 /**
 * MyClass.java
@@ -63,7 +63,7 @@ public class MyClass()
                 </li>
             </ul></p>
 
-<exercise label="commentExercise">
+<activity label="commentExercise">
     <statement>
             <p>The code below will read in the 2 numbers below it and multiply them.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to read in, calculate, and print the result to describe what it does.</p>
 
@@ -114,7 +114,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="preconditions-and-postconditions">
             <title>Preconditions and Postconditions</title>
@@ -122,7 +122,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>A <term>postcondition</term> is a condition that is true after running the method. It is what the method promises to do. Postconditions describe the outcome of running the method, for example what is being returned from the method or the changes to the state. These assumptions are very useful to other programmers who want to use that method and get the correct results.</p>
             <p>One precondition that we talked about is that divisors cannot be zero in expressions because that will cause the code to have a runtime error or exception. Many math functions have preconditions about their operands because not every mathematical operation is defined for every value. For example, computing the square root of a negative number is undefined, so the <c>Math.sqrt(num)</c> Java method, which we will learn later, will return a special value <c>NaN</c> which stands for “not a number” if num is negative. But since you can’t really do anything useful with <c>NaN</c> it’s better to think of <c>sqrt</c> as having a precondition that says it only works properly if given a positive argument. These are described as special cases in the API documentation, for example in <url href="https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double" visual="https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double">https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double</url>-. Try this out below.</p>
 
-<exercise label="math-preconditions">
+<activity label="math-preconditions">
     <statement>
             <p>The following code uses the square root method in Java which has a precondition that the number that you give it is not negative.  When you click on run, the compiler will not catch the error, but it will return the error value <c>NaN</c>.  Can you fix the value of num so that it does not return <c>NaN</c>?  What is the precondition for the Math.sqrt method?</p>
 
@@ -156,7 +156,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here is an example of preconditions, postconditions, and @param in the Turtle code that we use for animating turtle drawings. The Turtle <c>forward</c> method’s precondition is that the amount of <c>pixels</c> forward should be between 0 and the width and height of the world. If it receives value out of this range, it sets <c>pixels</c> to the closest legal values that it can so that the turtle appears just at the edge of the world.</p>
             <program language="java"><code>
 /**
@@ -175,7 +175,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Try to break the preconditions of the <c>Turtle forward</c> method below. Try to make the turtle go completely off screen by changing the number of pixels given to the forward method. What happens if you put in negative numbers?
                 (If the code below does not work for you, you can copy the code into  this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit.com link</url> (refresh page after forking and if it gets stuck) or download the files <url href="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
 
-<exercise label="turtle-preconditions">
+<activity label="turtle-preconditions">
     <statement>
             <p>Try to break the preconditions of the Turtle forward method below. Can you make it go completely off screen by changing the number of pixels given to the forward method in line 13? What happens if you put in negative numbers?</p>
 
@@ -231,7 +231,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="software-validity-and-use-case-diagrams">
             <title>Software Validity and Use-Case Diagrams</title>
@@ -256,12 +256,12 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
 
-<exercise label="payconditions">
+<activity label="payconditions">
     <statement>
             <p> What are the preconditions and postconditions of the use-case “Pay for food”? Remember that these are often related to the other use-case conditions “order food” and “eat food”.</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="agile-software-development">
             <title>Agile Software Development</title>
@@ -277,12 +277,12 @@ public class RunestoneTests extends CodeTestHelper
             <title>Coding Challenge: Preconditions in Algorithms</title>
             <p>Working in pairs or groups, come up with 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step. You could pretend to buy something online to come up with the steps. (You could use an online drawing tool like <url href="https://creately.com" visual="https://creately.com">Creately.com</url> (choose Use-Case Diagrams) to draw a Use-Case diagram for the Online Store System, but it is not required). Don’t forget to list  the preconditions and postconditions for each step.  You can type in your answer below.</p>
 
-<exercise label="challenge-1-8-use-case-preconditions">
+<activity label="challenge-1-8-use-case-preconditions">
     <statement>
             <p> Write down 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step.</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-13">
             <title>Summary</title>
@@ -304,7 +304,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-10">
             <title>AP Practice</title>
 
-    <exercise label="AP-preconditions">
+    <activity label="AP-preconditions">
         <statement>
 
             <p> Consider the following method.</p>
@@ -368,6 +368,6 @@ Which of the following preconditions are reasonable for the computeScore method?
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

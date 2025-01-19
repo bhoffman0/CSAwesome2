@@ -35,17 +35,17 @@
             <p>There are problems in this section that can help you check your understanding of the question.  You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.</p>
             
 
-<exercise label="delim_find_parts_ca">
+<activity label="delim_find_parts_ca">
     <statement><p>Click on the part of the sentences below with the type of thing passed to the method <code>getDelimitersList</code> and the type it returns.</p></statement>
 <feedback><p>Variable declarations start with a type and then a name.</p></feedback>
 <areas>
 <cline><area correct="no">A string</area> <area correct="no">containing text and possibly delimiters has been split into *tokens* and stored in Test2</area> <area correct="yes">String[] tokens</area>.</cline>
 <cline><area correct="no">Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter</area>.</cline>
 <cline><area correct="no">You will write the method </area><area correct="no">getDelimitersList</area>, <area correct="no"> which returns an</area> <area correct="yes">ArrayList</area><area correct="no"> containing all the open and close delimiters found in tokens in their original order.</area></cline>
-</areas></exercise>            
+</areas></activity>            
             
 
-    <exercise label="delim_cu_mc_1">
+    <activity label="delim_cu_mc_1">
         <statement>
 
                 <p> What type is tokens?</p>
@@ -90,11 +90,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="delim_cu_mc_2">
+    <activity label="delim_cu_mc_2">
         <statement>
 
                 <p> What type of thing is in tokens?</p>
@@ -139,11 +139,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="delim_cu_mc_3">
+    <activity label="delim_cu_mc_3">
         <statement>
 
                 <p> What type of thing does getDelimitersList return?</p>
@@ -188,7 +188,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="how-to-solve-part-a">
@@ -199,12 +199,12 @@
                 delimiter. You will write the method <c>getDelimitersList</c>, which returns an <c>ArrayList</c>
                 containing all the open and close delimiters found in <c>tokens</c> in their original order.</p>
 
-<exercise label="delim_algorithm">
+<activity label="delim_algorithm">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on a button to reveal the algorithm or problem.</p>
             <subsection>
                 <p>The method <c>getDelimtersList</c> needs to return an <c>ArrayList</c> of <c>Strings</c> containing all the open and close delimiters found in the <c>tokens</c> array in their original order.</p>
@@ -212,7 +212,7 @@
             </subsection>
             
 
-    <exercise label="delim_solve_mc_1">
+    <activity label="delim_solve_mc_1">
         <statement>
 
                 <p> Which Java expression correctly creates an empty ArrayList of type String called delList?</p>
@@ -257,11 +257,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="delim_solve_mc_2">
+    <activity label="delim_solve_mc_2">
         <statement>
 
                 <p> Which loop would be best for this situation?</p>
@@ -306,11 +306,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="delim_solve_mc_3">
+    <activity label="delim_solve_mc_3">
         <statement>
 
                 <p> Which code adds item to the end of the list called delList?</p>
@@ -355,11 +355,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="delim_solve_mc_4">
+    <activity label="delim_solve_mc_4">
         <statement>
 
                 <p> Which code correctly checks if token is equal to (has the same characters as) openDel or closeDel?</p>
@@ -404,7 +404,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="write-the-code-1">
@@ -414,7 +414,7 @@
                 delimiter. You will write the method <c>getDelimitersList</c>, which returns an <c>ArrayList</c>
                 containing all the open and close delimiters found in <c>tokens</c> in their original order.</p>
 
-<exercise label="frq2019Q3A-delim">
+<activity label="frq2019Q3A-delim">
     <statement>
             <p>Write the method getDelimitersList in the code below. The main method contains code to test your solution.</p>
 
@@ -540,6 +540,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

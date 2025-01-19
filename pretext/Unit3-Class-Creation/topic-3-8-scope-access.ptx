@@ -26,7 +26,7 @@
             <p>The image below shows these 3 levels of scope.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Class, Method, and Block Level Scope</caption><image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%" alt="Scope Levels"/></figure>
 
-<exercise label="name_class_scope">
+<activity label="name_class_scope">
     <statement><p>Click on all the variable declarations that are at Class Level Scope.</p></statement>
 <feedback><p>Remember that the instance variables declared at the top of the class have Class Scope.</p></feedback>
 <areas>
@@ -42,8 +42,8 @@
 <cline>        <area correct="no">last = theLast;</area></cline>
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-<exercise label="name_method_scope">
+</areas></activity>
+<activity label="name_method_scope">
     <statement><p>Click on all the variable declarations that are at Method Level Scope.</p></statement>
 <feedback><p>Remember that the parameter variables and the local variables declared inside a method have Method Level Scope.</p></feedback>
 <areas>
@@ -59,7 +59,7 @@
 <cline>        <area correct="no">last = theLast;</area></cline>
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>        </subsection>
+</areas></activity>        </subsection>
   <subsection xml:id="local-variables">
             <title>Local Variables</title>
             <p><term>Local variables</term> are variables declared in the headers or bodies of blocks of code. Local variables can only be accessed in the block in which they are declared.
@@ -68,7 +68,7 @@
             <p>Instance variables at class scope are shared by all the methods in the class and can be marked as public or private with respect to their access outside of the class. They have class scope regardless of whether they are public or private.</p>
             <p>Another way to look at scope is that a variable’s scope is where it lives and exists. You cannot use the variable in code outside of its scope. The variable does not exist outside of its scope.</p>
 
-<exercise label="PersonScope">
+<activity label="PersonScope">
     <statement>
             <p>Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can’t access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope.</p>
 
@@ -136,10 +136,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>If there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable, as seen below. We’ll see in the next lesson, that we can distinguish between the local variable and the instance variable using the keyword <c>this</c> to refer to this object’s instance variables.</p>
 
-<exercise label="PersonLocalVar">
+<activity label="PersonLocalVar">
     <statement>
             <p>In this example, the local variable is used instead of the instance variable of the same name. What will the code print out? Try it with the CodeLens button.</p>
 
@@ -194,12 +194,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-debugging">
             <title>Coding Challenge : Debugging</title>
 
-<exercise label="challenge-scope-debug">
+<activity label="challenge-scope-debug">
     <statement>
             <p>Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.</p>
 
@@ -337,7 +337,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-34">
             <title>Summary</title>
@@ -359,7 +359,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-22">
             <title>AP Practice</title>
 
-    <exercise label="AP5-8-1">
+    <activity label="AP5-8-1">
         <statement>
 
             <p> Consider the following class definitions. Which of the following best explains why the class will not compile?</p>
@@ -437,9 +437,9 @@ public class Party
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP5-8-2">
+    <activity label="AP5-8-2">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -485,6 +485,6 @@ public class Movie
             <p>Accessor methods are usually public.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

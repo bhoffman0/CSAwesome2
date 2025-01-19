@@ -4,7 +4,7 @@
         <title>Unit 2 Write Code for Toggle Code</title>
         <p>This is the write code problems associated with the mixed up code problems.</p>
 
-<exercise label="u2_muc_wc1">
+<activity label="u2_muc_wc1">
     <statement>
         <p>Write code that prints a random number from 1 to 50.</p>
 
@@ -77,9 +77,9 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u2_muc_wc2">
+<activity label="u2_muc_wc2">
     <statement>
         <p>Write code that prints the first 2 characters of the message followed by the last 2 characters of the message using the appropriate String methods.</p>
 
@@ -136,9 +136,9 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u2_muc_wc3">
+<activity label="u2_muc_wc3">
     <statement>
         <p>Write code that prints the first letters in first, middle, and last in lowercase letters using the appropriate String methods.</p>
 
@@ -184,9 +184,9 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u2_muc_wc4">
+<activity label="u2_muc_wc4">
     <statement>
         <p>Write code that prints the message in all uppercase letters using the appropriate String methods.</p>
 
@@ -231,9 +231,9 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u2_muc_wc5">
+<activity label="u2_muc_wc5">
     <statement>
         <p>Write code that prints the first 3 letters of the message in uppercase letters using the appropriate String methods.</p>
 
@@ -277,9 +277,9 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u2_muc_wc6">
+<activity label="u2_muc_wc6">
     <statement>
         <p>Write code that print the part of the message starting with the word “nice” using the appropriate String methods.</p>
 
@@ -323,5 +323,5 @@ public class Test1
  }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

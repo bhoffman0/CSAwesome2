@@ -34,7 +34,7 @@
                 You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.</p>
             
 
-<exercise label="grid_find_parts">
+<activity label="grid_find_parts">
     <statement><p>The question statement is listed below. Click on the part of the sentences below with the data type of the object passed to  getEmptyLocations and the datatype of the returned object.</p></statement>
 <feedback><p>The method header for getEmptyLocations is "public static ? getEmptyLocations (?)". What information should replace the "?" and what does that tell you about the method?</p></feedback>
 <areas>
@@ -42,10 +42,10 @@
 <cline>If there are no empty <area correct="no">locations</area> in <area correct="yes">Grid,</area> the <area correct="no">method</area> returns an empty <area correct="yes">Arraylist.</area></cline>
 <cline>Otherwise, it returns an Arraylist of all <area correct="no">empty</area> <area correct="no">locations in Grid</area>.</cline>
 <cline>Each <area correct="no">empty location</area> should appear exactly once in the Arraylist.</cline>
-</areas></exercise>            
+</areas></activity>            
             
 
-    <exercise label="grid_wrld_cu_mc_1">
+    <activity label="grid_wrld_cu_mc_1">
         <statement>
 
                 <p> In which class is the method <c>getEmptyLocations</c> written?</p>
@@ -90,11 +90,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grid_wrld_cu_mc_2">
+    <activity label="grid_wrld_cu_mc_2">
         <statement>
 
                 <p> When this method returns an <c>ArrayList</c>, what is the datatype of the objects in the <c>ArrayList</c>?</p>
@@ -139,11 +139,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grid_wrld_cu_mc_3">
+    <activity label="grid_wrld_cu_mc_3">
         <statement>
 
                 <p> How can one find the height of the <c>grid</c> that is passed to this method?</p>
@@ -188,11 +188,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grid_wrld_cu_mc_4">
+    <activity label="grid_wrld_cu_mc_4">
         <statement>
 
                 <p> How can one find the width of the <c>grid</c> that is passed to this method?</p>
@@ -237,7 +237,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="how-to-solve-part-a-1">
@@ -247,12 +247,12 @@
                 in grid, the method returns an empty <c>Arraylist</c>. Otherwise, it returns an <c>Arraylist</c> of all empty locations in
                 grid. Each empty location should appear exactly once in the <c>Arraylist</c>.</p>
 
-<exercise label="grid_algorithm">
+<activity label="grid_algorithm">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
             <subsection>
                 <p>The method <c>getEmptyLocations</c> needs to return an <c>ArrayList</c> of <c>Location</c> objects containing all the places in the grid that are empty.</p>
@@ -261,7 +261,7 @@
             </subsection>
             
 
-    <exercise label="grdwrld_mcalg_answr_1">
+    <activity label="grdwrld_mcalg_answr_1">
         <statement>
 
                 <p> Which Java expression correctly creates an empty <c>ArrayList</c> of type <c>Location</c> called locs?</p>
@@ -306,11 +306,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grdwrld_mcalg_answr_2">
+    <activity label="grdwrld_mcalg_answr_2">
         <statement>
 
                 <p> Which loop would be best for this situation?</p>
@@ -355,11 +355,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grdwrld_mcalg_answr_3">
+    <activity label="grdwrld_mcalg_answr_3">
         <statement>
 
                 <p>  Assuming we have our nested for loop that uses r and c to iterate through the <c>grid</c>, how do we initialize a <c>Location</c> object (called locToCheck) to add our <c>ArrayList</c> locs?</p>
@@ -404,11 +404,11 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grdwrld_mcalg_answr_4">
+    <activity label="grdwrld_mcalg_answr_4">
         <statement>
 
                 <p> How can you check if the current location, “locToCheck” is empty?</p>
@@ -453,7 +453,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="write-the-code-3">
@@ -463,7 +463,7 @@
                 grid. Each empty location should appear exactly once in the <c>Arraylist</c>.</p>
             <p>Write the method <c>getEmptyLocations</c> in the code below.</p>
 
-<exercise label="frq2013Q3A-grid">
+<activity label="frq2013Q3A-grid">
     <statement>
             <p>Complete the getEmptyLocations() method below.</p>
 
@@ -1122,7 +1122,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <DataFileNode line="896" runestone_options="{'hide': None, 'subchapter': 'gridworldQ3A', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'GridWorld.jar', 'qnumber': 'Q-12', 'cols': 65, 'rows': 20, 'filecontent': 'import java.util.ArrayList;\n\n/**\n * Grid provides an interface for a two-dimensional, grid-like\n * environment containing arbitrary objects.\n */\npublic interface Grid&lt;E&gt;\n{\n    /**\n     * Returns the number of rows in this grid.\n     * @return the number of rows, or -1 if this grid is unbounded\n     */\n    int getNumRows();\n\n    /**\n     * Returns the number of columns in this grid.\n     * @return the number of columns, or -1 if this grid is unbounded\n     */\n    int getNumCols();\n\n    /**\n     * Checks whether a location is valid in this grid.\n     * Precondition: loc is not null\n     * @param loc the location to check\n     * @return true if loc is valid in this grid,\n     * false otherwise\n     */\n    boolean isValid(Location loc);\n\n    /**\n     * Puts an object at a given location in this grid.\n     * Precondition: (1) loc is valid in this grid (2)\n     * obj is not null\n     * @param loc the location at which to put the object\n     * @param obj the new object to be added\n     * @return the object previously at loc (or null\n     * if the location was previously unoccupied)\n     */\n    E put(Location loc, E obj);\n\n    /**\n     * Removes the object at a given location from this grid.\n     * Precondition: loc is valid in this grid\n     * @param loc the location of the object that is to be removed\n     * @return the object that was removed (or null if the location\n     *  is unoccupied)\n     */\n    E remove(Location loc);\n\n    /**\n     * Returns the object at a given location in this grid.\n     * Precondition: loc is valid in this grid\n     * @param loc a location in this grid\n     * @return the object at location loc (or null\n     *  if the location is unoccupied)\n     */\n    E get(Location loc);\n\n    /**\n     * Gets the locations in this grid that contain objects.\n     * @return an array list of all occupied locations in this grid\n     */\n    ArrayList&lt;Location&gt; getOccupiedLocations();\n\n    /**\n     * Gets the valid locations adjacent to a given location in all eight\n     * compass directions (north, northeast, east, southeast, south, southwest,\n     * west, and northwest).\n     * Precondition: loc is valid in this grid\n     * @param loc a location in this grid\n     * @return an array list of the valid locations adjacent to loc\n     * in this grid\n     */\n    ArrayList&lt;Location&gt; getValidAdjacentLocations(Location loc);\n\n    /**\n     * Gets the valid empty locations adjacent to a given location in all eight\n     * compass directions (north, northeast, east, southeast, south, southwest,\n     * west, and northwest).\n     * Precondition: loc is valid in this grid\n     * @param loc a location in this grid\n     * @return an array list of the valid empty locations adjacent to\n     * loc in this grid\n     */\n    ArrayList&lt;Location&gt; getEmptyAdjacentLocations(Location loc);\n\n    /**\n     * Gets the valid occupied locations adjacent to a given location in all\n     * eight compass directions (north, northeast, east, southeast, south,\n     * southwest, west, and northwest).\n     * Precondition: loc is valid in this grid\n     * @param loc a location in this grid\n     * @return an array list of the valid occupied locations adjacent to\n     * loc in this grid\n     */\n    ArrayList&lt;Location&gt; getOccupiedAdjacentLocations(Location loc);\n\n    /**\n     * Gets the neighboring occupants in all eight compass directions (north,\n     * northeast, east, southeast, south, southwest, west, and northwest).\n     *\n     * Precondition: loc is valid in this grid\n     * @param loc a location in this grid\n     * @return returns an array list of the objects in the occupied locations\n     * adjacent to loc in this grid\n     */\n    ArrayList&lt;E&gt; getNeighbors(Location loc);\n}\n // End of Class Grid\n\n// Location Class\n\n/**\n * A Location object represents the row and column of a location\n * in a two-dimensional grid.\n * The API of this class is testable on the AP CSA and AB exams.\n */\npublic class Location implements Comparable\n{\n    private int row; // row location in grid\n    private int col; // column location in grid\n\n    /**\n     * The turn angle for turning 90 degrees to the left.\n     */\n    public static final int LEFT = -90;\n    /**\n     * The turn angle for turning 90 degrees to the right.\n     */\n    public static final int RIGHT = 90;\n    /**\n     * The turn angle for turning 45 degrees to the left.\n     */\n    public static final int HALF_LEFT = -45;\n    /**\n     * The turn angle for turning 45 degrees to the right.\n     */\n    public static final int HALF_RIGHT = 45;\n    /**\n     * The turn angle for turning a full circle.\n     */\n    public static final int FULL_CIRCLE = 360;\n    /**\n     * The turn angle for turning a half circle.\n     */\n    public static final int HALF_CIRCLE = 180;\n    /**\n     * The turn angle for making no turn.\n     */\n    public static final int AHEAD = 0;\n\n    /**\n     * The compass direction for north.\n     */\n    public static final int NORTH = 0;\n    /**\n     * The compass direction for northeast.\n     */\n    public static final int NORTHEAST = 45;\n    /**\n     * The compass direction for east.\n     */\n    public static final int EAST = 90;\n    /**\n     * The compass direction for southeast.\n     */\n    public static final int SOUTHEAST = 135;\n    /**\n     * The compass direction for south.\n     */\n    public static final int SOUTH = 180;\n    /**\n     * The compass direction for southwest.\n     */\n    public static final int SOUTHWEST = 225;\n    /**\n     * The compass direction for west.\n     */\n    public static final int WEST = 270;\n    /**\n     * The compass direction for northwest.\n     */\n    public static final int NORTHWEST = 315;\n\n    /**\n     * Constructs a location with given row and column coordinates.\n     * @param r the row\n     * @param c the column\n     */\n    public Location(int r, int c)\n    {\n        row = r;\n        col = c;\n    }\n\n    /**\n     * Gets the row coordinate.\n     * @return the row of this location\n     */\n    public int getRow()\n    {\n        return row;\n    }\n\n    /**\n     * Gets the column coordinate.\n     * @return the column of this location\n     */\n    public int getCol()\n    {\n        return col;\n    }\n\n    /**\n     * Gets the adjacent location in any one of the eight compass directions.\n     * @param direction the direction in which to find a neighbor location\n     * @return the adjacent location in the direction that is closest to\n     * &lt;tt&gt;direction&lt;/tt&gt;\n     */\n    public Location getAdjacentLocation(int direction)\n    {\n        // reduce mod 360 and round to closest multiple of 45\n        int adjustedDirection = (direction + HALF_RIGHT / 2) % FULL_CIRCLE;\n        if (adjustedDirection &lt; 0)\n            adjustedDirection += FULL_CIRCLE;\n\n        adjustedDirection = (adjustedDirection / HALF_RIGHT) * HALF_RIGHT;\n        int dc = 0;\n        int dr = 0;\n        if (adjustedDirection == EAST)\n            dc = 1;\n        else if (adjustedDirection == SOUTHEAST)\n        {\n            dc = 1;\n            dr = 1;\n        }\n        else if (adjustedDirection == SOUTH)\n            dr = 1;\n        else if (adjustedDirection == SOUTHWEST)\n        {\n            dc = -1;\n            dr = 1;\n        }\n        else if (adjustedDirection == WEST)\n            dc = -1;\n        else if (adjustedDirection == NORTHWEST)\n        {\n            dc = -1;\n            dr = -1;\n        }\n        else if (adjustedDirection == NORTH)\n            dr = -1;\n        else if (adjustedDirection == NORTHEAST)\n        {\n            dc = 1;\n            dr = -1;\n        }\n        return new Location(getRow() + dr, getCol() + dc);\n    }\n\n    /**\n     * Returns the direction from this location toward another location. The\n     * direction is rounded to the nearest compass direction.\n     * @param target a location that is different from this location\n     * @return the closest compass direction from this location toward\n     * target\n     */\n    public int getDirectionToward(Location target)\n    {\n        int dx = target.getCol() - getCol();\n        int dy = target.getRow() - getRow();\n        // y axis points opposite to mathematical orientation\n        int angle = (int) Math.toDegrees(Math.atan2(-dy, dx));\n\n        // mathematical angle is counterclockwise from x-axis,\n        // compass angle is clockwise from y-axis\n        int compassAngle = RIGHT - angle;\n        // prepare for truncating division by 45 degrees\n        compassAngle += HALF_RIGHT / 2;\n        // wrap negative angles\n        if (compassAngle &lt; 0)\n            compassAngle += FULL_CIRCLE;\n        // round to nearest multiple of 45\n        return (compassAngle / HALF_RIGHT) * HALF_RIGHT;\n    }\n\n    /**\n     * Indicates whether some other Location object is &quot;equal to&quot;\n     * this one.\n     * @param other the other location to test\n     * @return true if other is a\n     * Location with the same row and column as this location;\n     * false otherwise\n     */\n    public boolean equals(Object other)\n    {\n        if (!(other instanceof Location))\n            return false;\n\n        Location otherLoc = (Location) other;\n        return getRow() == otherLoc.getRow() &amp;&amp; getCol() == otherLoc.getCol();\n    }\n\n    /**\n     * Generates a hash code.\n     * @return a hash code for this location\n     */\n    public int hashCode()\n    {\n        return getRow() * 3737 + getCol();\n    }\n\n    /**\n     * Compares this location to other for ordering. Returns a\n     * negative integer, zero, or a positive integer as this location is less\n     * than, equal to, or greater than other. Locations are\n     * ordered in row-major order.\n     * (Precondition: other is a Location object.)\n     * @param other the other location to test\n     * @return a negative integer if this location is less than\n     * other, zero if the two locations are equal, or a positive\n     * integer if this location is greater than other\n     */\n    public int compareTo(Object other)\n    {\n        Location otherLoc = (Location) other;\n        if (getRow() &lt; otherLoc.getRow())\n            return -1;\n        if (getRow() &gt; otherLoc.getRow())\n            return 1;\n        if (getCol() &lt; otherLoc.getCol())\n            return -1;\n        if (getCol() &gt; otherLoc.getCol())\n            return 1;\n        return 0;\n    }\n\n    /**\n     * Creates a string that describes this location.\n     * @return a string with the row and column of this location, in the format\n     * (row, col)\n     */\n    public String toString()\n    {\n        return &quot;(&quot; + getRow() + &quot;, &quot; + getCol() + &quot;)&quot;;\n    }\n}\n\n// End of Class\n\n// BoundedGrid Class\n\nimport java.util.ArrayList;\n\n/**\n * A BoundedGrid is a rectangular grid with a finite number of\n * rows and columns.\n * The implementation of this class is testable on the AP CS AB exam.\n */\npublic class BoundedGrid&lt;E&gt; extends AbstractGrid&lt;E&gt;\n{\n    private Object[][] occupantArray; // the array storing the grid elements\n\n    /**\n     * Constructs an empty bounded grid with the given dimensions.\n     * (Precondition: rows &gt; 0 and cols &gt; 0.)\n     * @param rows number of rows in BoundedGrid\n     * @param cols number of columns in BoundedGrid\n     */\n    public BoundedGrid(int rows, int cols)\n    {\n        if (rows &lt;= 0)\n            throw new IllegalArgumentException(&quot;rows &lt;= 0&quot;);\n        if (cols &lt;= 0)\n            throw new IllegalArgumentException(&quot;cols &lt;= 0&quot;);\n        occupantArray = new Object[rows][cols];\n    }\n\n    public int getNumRows()\n    {\n        return occupantArray.length;\n    }\n\n    public int getNumCols()\n    {\n        // Note: according to the constructor precondition, numRows() &gt; 0, so\n        // theGrid[0] is non-null.\n        return occupantArray[0].length;\n    }\n\n    public boolean isValid(Location loc)\n    {\n        return 0 &lt;= loc.getRow() &amp;&amp; loc.getRow() &lt; getNumRows()\n                &amp;&amp; 0 &lt;= loc.getCol() &amp;&amp; loc.getCol() &lt; getNumCols();\n    }\n\n    public ArrayList&lt;Location&gt; getOccupiedLocations()\n    {\n        ArrayList&lt;Location&gt; theLocations = new ArrayList&lt;Location&gt;();\n\n        // Look at all grid locations.\n        for (int r = 0; r &lt; getNumRows(); r++)\n        {\n            for (int c = 0; c &lt; getNumCols(); c++)\n            {\n                // If there\'s an object at this location, put it in the array.\n                Location loc = new Location(r, c);\n                if (get(loc) != null)\n                    theLocations.add(loc);\n            }\n        }\n\n        return theLocations;\n    }\n\n    @SuppressWarnings(&quot;unchecked&quot;)\n    public E get(Location loc)\n    {\n        if (!isValid(loc))\n            throw new IllegalArgumentException(&quot;Location &quot; + loc\n                    + &quot; is not valid&quot;);\n        return (E) occupantArray[loc.getRow()][loc.getCol()]; // unavoidable warning\n    }\n\n    public E put(Location loc, E obj)\n    {\n        if (!isValid(loc))\n            throw new IllegalArgumentException(&quot;Location &quot; + loc\n                    + &quot; is not valid&quot;);\n        if (obj == null)\n            throw new NullPointerException(&quot;obj == null&quot;);\n\n        // Add the object to the grid.\n        E oldOccupant = get(loc);\n        occupantArray[loc.getRow()][loc.getCol()] = obj;\n        return oldOccupant;\n    }\n\n    public E remove(Location loc)\n    {\n        if (!isValid(loc))\n            throw new IllegalArgumentException(&quot;Location &quot; + loc\n                    + &quot; is not valid&quot;);\n\n        // Remove the object from the grid.\n        E r = get(loc);\n        occupantArray[loc.getRow()][loc.getCol()] = null;\n        return r;\n    }\n}\n\n// End of Class\n\n// Class AbstractGrid\n\nimport java.util.ArrayList;\n\n/**\n * AbstractGrid contains the methods that are common to grid\n * implementations.\n * The implementation of this class is testable on the AP CS AB exam.\n */\npublic abstract class AbstractGrid&lt;E&gt; implements Grid&lt;E&gt;\n{\n    public ArrayList&lt;E&gt; getNeighbors(Location loc)\n    {\n        ArrayList&lt;E&gt; neighbors = new ArrayList&lt;E&gt;();\n        for (Location neighborLoc : getOccupiedAdjacentLocations(loc))\n            neighbors.add(get(neighborLoc));\n        return neighbors;\n    }\n\n    public ArrayList&lt;Location&gt; getValidAdjacentLocations(Location loc)\n    {\n        ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;();\n\n        int d = Location.NORTH;\n        for (int i = 0; i &lt; Location.FULL_CIRCLE / Location.HALF_RIGHT; i++)\n        {\n            Location neighborLoc = loc.getAdjacentLocation(d);\n            if (isValid(neighborLoc))\n                locs.add(neighborLoc);\n            d = d + Location.HALF_RIGHT;\n        }\n        return locs;\n    }\n\n    public ArrayList&lt;Location&gt; getEmptyAdjacentLocations(Location loc)\n    {\n        ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;();\n        for (Location neighborLoc : getValidAdjacentLocations(loc))\n        {\n            if (get(neighborLoc) == null)\n                locs.add(neighborLoc);\n        }\n        return locs;\n    }\n\n    public ArrayList&lt;Location&gt; getOccupiedAdjacentLocations(Location loc)\n    {\n        ArrayList&lt;Location&gt; locs = new ArrayList&lt;Location&gt;();\n        for (Location neighborLoc : getValidAdjacentLocations(loc))\n        {\n            if (get(neighborLoc) != null)\n                locs.add(neighborLoc);\n        }\n        return locs;\n    }\n\n    /**\n     * Creates a string that describes this grid.\n     * @return a string with descriptions of all objects in this grid (not\n     * necessarily in any particular order), in the format {loc=obj, loc=obj,\n     * ...}\n     */\n        public String toString()\n        {\n            String s = &quot;{&quot;;\n            for (Location loc : getOccupiedLocations())\n            {\n                if (s.length() &gt; 1)\n                    s += &quot;, &quot;;\n                s += loc + &quot;=&quot; + get(loc);\n            }\n            return s + &quot;}&quot;;\n        }\n}\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '5.47.4.2'}" source="/mnt/c/Users/hoffmanb/Documents/GitHub/csawesome2/_fixed_sources/Unit4-Data-Collections/gridworldQ3A.rst">
             </DataFileNode>
         </subsection>

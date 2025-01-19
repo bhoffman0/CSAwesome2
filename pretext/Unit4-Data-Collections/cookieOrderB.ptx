@@ -105,7 +105,7 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
             <p>Click to reveal multiple choice questions that may help you write your solution.</p>
             
 
-    <exercise label="fr_cookieB_1">
+    <activity label="fr_cookieB_1">
         <statement>
 
                 <p> What type of loop is best to check the variety of each cookie order in the list of orders?</p>
@@ -141,9 +141,9 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_cookieB_2">
+    <activity label="fr_cookieB_2">
         <statement>
 
                 <p> How would you remove the third item from an ArrayList&lt;String&gt; list of size 6?</p>
@@ -179,9 +179,9 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_cookieB_3">
+    <activity label="fr_cookieB_3">
         <statement>
 
                 <p> How would you compare the values of two Strings str1 and str2?</p>
@@ -217,14 +217,14 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="mixed-up-code-1">
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
             
-<exercise label="cookieOrderB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="cookieOrderB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>removeVariety</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.</p>
 </statement>
 <blocks><block order="5">
@@ -255,12 +255,12 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
 <cline>   return numBoxesRemoved;</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="solve-part-b">
             <title>Solve Part B</title>
 
-<exercise label="FRQCookieOrderB">
+<activity label="FRQCookieOrderB">
     <statement>
             <p>FRQ Cookie Order B: Complete the method <c>removeVariety</c> below.</p>
 
@@ -473,6 +473,6 @@ public class MasterOrder
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

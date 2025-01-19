@@ -42,7 +42,7 @@ if (boolean expression)
             </note>
             <p>Imagine that your cell phone wanted to remind you to take an umbrella if it was currently raining in your area when it detected that you were leaving the house.  This type of thing is going to become more common in the future and it is an area of research called Human Computer Interaction (HCI) or Ubiquitous Computing (computers are everywhere).</p>
 
-<exercise label="if-raining">
+<activity label="if-raining">
     <statement>
             <p>The variable <c>isRaining</c> is a boolean variable that is either true or false. If it is true then the message <c>Take an umbrella!</c> will be printed and then execution will continue with the next statement which will print <c>Drive carefully</c>. Run the code below to see this.</p>
 
@@ -82,16 +82,16 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-        <exercise label="iffalseOutput">
+        <activity label="iffalseOutput">
             <statement>
-    <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>        </subsection>
   <subsection xml:id="relational-operators-in-if-statements">
             <title>Relational Operators in If Statements</title>
             <p>Most if statements have a boolean condition that uses relational operators like ==, !=, &lt;, &gt;, &lt;=, &gt;=, as we saw in the last lesson.</p>
 
-<exercise label="if-relational">
+<activity label="if-relational">
     <statement>
             <p>Run the following active code a couple times until you see all the possible outputs. It prints out whether a random number is positive or equal to 0. Add another if statement that tests if it is a negative number.</p>
 
@@ -255,12 +255,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>A common mistake in if statements is using = instead of == in the condition by mistake. You should always <term>use ==</term>, not =, in the condition of an if statement to test a variable. One equal sign (=) assigns a value to a variable, and two equal signs (==) test if a variable has a certain value.</p>
             </note>
 
-    <exercise label="mcq-if-trace">
+    <activity label="mcq-if-trace">
         <statement>
 
             <p> Consider the following code segment. What is printed as a result of executing the code segment?</p>
@@ -326,7 +326,7 @@ System.out.print(x);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="two-way-selection">
             <title>Two-way selection</title>
@@ -355,7 +355,7 @@ else
             <p>The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
 
-<exercise label="ifHeads">
+<activity label="ifHeads">
     <statement>
             <p>Try the following code. If <c>isHeads</c> is true it will print <c>Let's go to the game</c> and then <c>after conditional</c>.</p>
 
@@ -400,13 +400,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-        <exercise label="falseElse">
+        <activity label="falseElse">
             <statement>
-    <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></exercise>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
+    <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
 
-<exercise label="licenseifelse">
+<activity label="licenseifelse">
     <statement>
             <p>Run the following code to see what it prints out when the variable age is set to the value 16. Change the variable age’s value to 15 and then run it again to see the result of the print statement in the else part.
                 Can you change the if-statement to indicate that you can get a license at age 15 instead of 16? Use 2 test cases for the value of age to test your code to see the results of both print statements.</p>
@@ -450,8 +450,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="ifelseevenOdd" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</activity>
+<activity label="ifelseevenOdd" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program should print out “x is even” if the remainder of x divided by 2 is 0 and “x is odd” otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on Check Me to see if you are right.</p>
 </statement>
 <blocks><block order="5">
@@ -485,8 +485,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    </cline>
 </block><block order="8">
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="scoreifelse">
+</block></blocks></activity>
+<activity label="scoreifelse">
     <statement>
             <p>Try the following code. Add an else statement to the if statement that prints out “Good job!” if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out “Good job” if the score is greater than 20?</p>
 
@@ -582,7 +582,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="common-errors-with-if-statements">
             <title>Common Errors with If Statements</title>
@@ -604,7 +604,7 @@ public class RunestoneTests extends CodeTestHelper
                 </ul></p>
             </blockquote>
 
-<exercise label="if-missing-curlies">
+<activity label="if-missing-curlies">
     <statement>
             <p>The code below doesn’t work as expected.  Fix it to only print <c>Wear a coat</c> and <c>Wear gloves</c> when isCold is true.</p>
 
@@ -653,14 +653,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-magic-8-ball">
             <title>Coding Challenge: Magic 8 Ball</title>
             <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%" alt="Magic 8 Ball"/>
             <p>Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like <c>Signs point to yes!</c>, <c>Very doubtful</c>, etc. If you’ve never seen a Magic 8 ball, check out this <url href="https://magic-8ball.com/" visual="https://magic-8ball.com/">simulator</url>. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the <url href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" visual="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html">Math lesson</url> and remember the formula <c>(int) (Math.random() * max) + min</c>.</p>
 
-<exercise label="challenge-Magic8ball">
+<activity label="challenge-Magic8ball">
     <statement>
             <p>Complete the <c>printRandomResponse()</c> method to print out 1 of 8 random responses and the <c>lucky()</c> method to toss a coin and print out “Lucky!” or “No Luck!” based on the result. Run the code multiple times to see the responses.</p>
 
@@ -774,7 +774,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>You can make this code more interactive by using the <c>Scanner</c> class to have the user ask a question first; you can try your code with input in <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java" visual="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java">replit</url> or a local IDE.</p>
         </subsection>
   <subsection xml:id="summary-20">
@@ -833,7 +833,7 @@ else
   <subsection xml:id="ap-practice-13">
             <title>AP Practice</title>
 
-    <exercise label="AP2-3-1">
+    <activity label="AP2-3-1">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -876,9 +876,9 @@ System.out.println(speed);
             <p>The second if statement would run since rain is false.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-3-2">
+    <activity label="AP2-3-2">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -915,9 +915,9 @@ System.out.print(2*x + 1);
             <p>Correct! The first if statement is not true. The second one is true since 5 is odd, and x becomes 2. And 2*2 + 1 = 5 is printed out.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-3-if-else">
+    <activity label="AP2-3-if-else">
         <statement>
 
             <p> Consider the following code segment where a range of “High”, “Middle”, or “Low” is being determined
@@ -955,6 +955,6 @@ else
             <p>This would print out “Low” which is correct according to this problem description.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

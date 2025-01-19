@@ -104,7 +104,7 @@ public class Person
                 we called <c>print</c> on was created. Click on the Show CodeLens button below and
                 the Next button to run the code step by step.</p>
 
-<exercise label="PersonClass">
+<activity label="PersonClass">
     <statement>
             <p>The following Person class keeps track of the name, email, and phone number of a person.
                 Try changing the Person p2 object in the main method to your name.
@@ -177,7 +177,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="data-encapsulation">
             <title>Data encapsulation</title>
@@ -215,7 +215,7 @@ public class RunestoneTests extends CodeTestHelper
                 box above). When designing a class you get to decide what data to make accessible or
                 modifiable from other classes by what <c>public</c> methods you provide.</p>
 
-<exercise label="name_instance_variables">
+<activity label="name_instance_variables">
     <statement><p>Click on all the instance  variable declarations in the following class</p></statement>
 <feedback><p>Remember, instance  variables are private and are declared after the class declaration.</p></feedback>
 <areas>
@@ -240,8 +240,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>        <area correct="no">last = theLast;</area></cline>
 <cline>     <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-<exercise label="PersonClass2">
+</areas></activity>
+<activity label="PersonClass2">
     <statement>
             <p>The following Person class keeps track of the name, email, and phone number of a person.
                 What other data could you keep track of about a Person? Add another private instance variable of your choice. Do not worry about changing the constructor or other methods yet.</p>
@@ -307,7 +307,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="instance-methods">
             <title>Instance Methods</title>
@@ -351,7 +351,7 @@ Person p1 = new Person("Sana", "sana@gmail.com", "123-456-7890");
 p1.print();
 </code></program>
 
-<exercise label="name_methods">
+<activity label="name_methods">
     <statement><p>Click on all the lines of code that are part of a method in the following class.</p></statement>
 <feedback><p>Methods follow the constructor.  They include a return type in case they returns something from the method.</p></feedback>
 <areas>
@@ -377,8 +377,8 @@ p1.print();
 <cline>    <area correct="yes">}</area></cline>
 <cline/>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>
-<exercise label="class-add-print-method">
+</areas></activity>
+<activity label="class-add-print-method">
     <statement>
             <p>The following Name class keeps track of the first and last name of a person.
                 Add a method print that prints out the instance variables first and last. Note that the methods have direct access and share the instance variables.</p>
@@ -444,7 +444,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-virtual-pet-class">
             <title>Coding Challenge : Virtual Pet Class</title>
@@ -465,7 +465,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-VirtualPet-Class">
+<activity label="challenge-VirtualPet-Class">
     <statement>
             <p>Complete the VirtualPet class below.  Add at least 3 instance variables, a print method, a feed method, and at least 1 other method that changes an instance variable.  Then complete the main method to construct at least 2 VirtualPet objects, call the feed and print method with one of them.</p>
 
@@ -623,7 +623,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community">
             <title>Design a Class for your Community</title>
@@ -643,7 +643,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="community-challenge1">
+<activity label="community-challenge1">
     <statement>
             <p>Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.</p>
 
@@ -686,7 +686,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-29">
             <title>Summary</title>
@@ -718,7 +718,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-19">
             <title>AP Practice</title>
 
-    <exercise label="APclass1">
+    <activity label="APclass1">
         <statement>
 
             <p> Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.</p>
@@ -772,9 +772,9 @@ private Cat(String name, int age)
             <p>Constructor should be public.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="APclass2">
+    <activity label="APclass2">
         <statement>
 
             <p> Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.</p>
@@ -832,6 +832,6 @@ private void startParty()
             <p>Methods should be public.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

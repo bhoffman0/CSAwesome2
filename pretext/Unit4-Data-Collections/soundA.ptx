@@ -72,7 +72,7 @@ int numChanges = limitAmplitude(2000);
             </subsection>
             
 
-    <exercise label="fr_sounda_1">
+    <activity label="fr_sounda_1">
         <statement>
 
                 <p> Which loop would be best for this problem?</p>
@@ -108,9 +108,9 @@ int numChanges = limitAmplitude(2000);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_sounda_2">
+    <activity label="fr_sounda_2">
         <statement>
 
                 <p> Which is the correct code for changing the current value to the negative of the limit?</p>
@@ -146,14 +146,14 @@ int numChanges = limitAmplitude(2000);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="mixed-up-code-4">
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
             
-<exercise label="SoundA" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="SoundA" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
                 <p>The method <c>limitAmplitude</c> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.</p>
 </statement>
 <blocks><block order="5">
@@ -184,12 +184,12 @@ int numChanges = limitAmplitude(2000);
 <cline>  return numChanged;</cline>
 </block><block order="10">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="try-and-solve-part-a-1">
             <title>Try and Solve Part A</title>
 
-<exercise label="FRQSoundA">
+<activity label="FRQSoundA">
     <statement>
             <p>FRQ Sound A: Write the method <c>limitAmplitude</c> that will change any value that has an amplitude greater than the given limit. Values that are greater than <c>limit</c> are replaced with <c>limit</c>, and values that are less than <c>-limit</c> are replaced with <c>–limit</c>. The method returns the total number of values that were changed in the array.  The <c>main</c> method has code to test your solution.</p>
 
@@ -304,6 +304,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

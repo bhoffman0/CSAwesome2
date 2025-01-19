@@ -45,7 +45,7 @@ else
                 </li>
             </ol></p>
 
-<exercise label="challenge-IfElse-20Questionss">
+<activity label="challenge-IfElse-20Questionss">
     <statement>
             <p>The code below is a simple 20 questions game that guesses an animal. In Runestone, you need to provide the input below the code before you run it. It is set to answer the questions with y and y. Run the code to see the result. Change the input to guess the other animals. It can only guess 3 animals. Let’s add more! Add a question and if/else statement on line 20 to distinguish a cat and a dog and on line 31 to distinguish a turtle and a bird. Add more input below the code to test your new questions.</p>
 
@@ -195,7 +195,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-guessing-game">
             <title>Coding Challenge : Guessing Game</title>
@@ -230,7 +230,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>When you finish and run your program, what is a good guessing strategy for guessing a number between 0 and 100? What was your first guess? One great strategy is to always split the guessing space into two and eliminating half, so guessing 50 for the first guess. This is called a <term>divide and conquer</term> or <term>binary search</term> algorithm. If your guess is between 0-100, you should be able to guess the number within 7 guesses. Another extension to this challenge is to test whether the user got it in 7 guesses or less and provide feedback on how well they did.</p>
             <p>For this project, you can use the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url> for input and <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#bb8a2ea3-cfb8-401f-9f58-62605edf4106" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#bb8a2ea3-cfb8-401f-9f58-62605edf4106">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Guessing-Game#Main.java" visual="https://replit.com/@BerylHoffman/Guessing-Game#Main.java">replit</url> or another IDE of your choice.</p>
 
-<exercise label="challenge4-1-loop-GuessingGame-autograde">
+<activity label="challenge4-1-loop-GuessingGame-autograde">
     <statement>
             <p>Complete the code for the guessing game below. If you did this code in <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#bb8a2ea3-cfb8-401f-9f58-62605edf4106" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#bb8a2ea3-cfb8-401f-9f58-62605edf4106">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Guessing-Game#Main.java" visual="https://replit.com/@BerylHoffman/Guessing-Game#Main.java">replit</url> or your own IDE, you can paste in your code to see if it passes the autograder tests. Note that this code will only run with the autograder’s input and will not ask the user for input.</p>
 
@@ -381,6 +381,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

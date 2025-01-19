@@ -26,7 +26,7 @@ Double d = 3.5;
 </code></program>
             <p>These wrapper classes are also useful because they have some special values (like the minimum and maximum values for the type) and methods that you can use. Try the following code to see the minimum and maximum values possible for the type int.</p>
 
-<exercise label="lcmm1">
+<activity label="lcmm1">
     <statement>
             <p>What’s the minimum and maximum numbers for an int? What happens if you go beyond these limits with - 1 or + 1?</p>
 
@@ -64,7 +64,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>The int type in Java can be used to represent any whole number from -2147483648 to 2147483647.  Why those numbers?  Integers in Java are represented in 2’s complement binary and each integer gets 32 bits of space.  In 32 bits of space with one bit used to represent the sign you can represent that many values.  Why is there one more negative number than positive number?  It is because 0 is considered a positive number.</p>
             <idx>overflow</idx>
 
@@ -85,10 +85,10 @@ Integer i = 2;  // autoboxing - wrap 2
 int number = i; // unboxing - back to primitive type
 </code></program>
 
-<exercise label="WrapperClasses">
+<activity label="WrapperClasses">
     <statement><p>Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the vocabulary.</p></feedback>
-<matches><match order="1"><premise>automatic conversion from the primitive type to the wrapper object</premise><response>autoboxing</response></match><match order="2"><premise>automatic conversion from the wrapper object to the primitive type</premise><response>unboxing</response></match><match order="3"><premise>Integer</premise><response>wrapper class</response></match><match order="4"><premise>int</premise><response>primitive type</response></match><match order="5"><premise>Integer.MAX_VALUE + 1</premise><response>overflow</response></match><match order="6"><premise>Integer.MIN_VALUE - 1 </premise><response>underflow</response></match></matches></exercise>        </subsection>
+<matches><match order="1"><premise>automatic conversion from the primitive type to the wrapper object</premise><response>autoboxing</response></match><match order="2"><premise>automatic conversion from the wrapper object to the primitive type</premise><response>unboxing</response></match><match order="3"><premise>Integer</premise><response>wrapper class</response></match><match order="4"><premise>int</premise><response>primitive type</response></match><match order="5"><premise>Integer.MAX_VALUE + 1</premise><response>overflow</response></match><match order="6"><premise>Integer.MIN_VALUE - 1 </premise><response>underflow</response></match></matches></activity>        </subsection>
   <subsection xml:id="parsing-strings-to-numbers">
             <title>Parsing Strings to Numbers</title>
             <p>The <c>Integer</c> and <c>Double</c> classes have methods called <c>Integer.parseInt</c> and <c>Double.parseDouble</c> that can be used to convert strings to numbers. They are often used with the <c>Scanner</c> class to convert input which is read in as a <c>String</c> into an <c>int</c> or <c>double</c> so that you can create arithmetic expressions (do math) or create logical conditions that test the values against other numbers using relational operators like <c>&lt;</c> and <c>&gt;</c>.  These methods are listed on the Java Quick Reference Sheet provided during the AP exam.</p>
@@ -102,7 +102,7 @@ int number = i; // unboxing - back to primitive type
             </ul></p>
             <p>Here’s an example of using these methods:</p>
 
-<exercise label="parseMethods">
+<activity label="parseMethods">
     <statement>
             <p>Run the code below to see useful parse methods in the Integer and Double wrapper classes.</p>
 
@@ -152,9 +152,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="wrapperDebug">
+<activity label="wrapperDebug">
     <statement>
             <p>Find and fix the bugs below to use the correct Integer and Double methods and variables.</p>
 
@@ -211,13 +211,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-pokemon-speed">
             <title>Coding Challenge: Pokemon Speed</title>
             <p>In the last lesson, we read in a file of Pokemon data. In this exercise, we will read in the file and calculate the average Pokemon speed and find the Pokemon with the highest speed. The speed is the 8th column in the file; when a row of data is split into an array with the index starting at 0, the speed will have the 7th index.  We will use the <c>Integer.parseInt</c> method to convert the speed from a string to an integer so we can compare the speeds.</p>
 
-<exercise label="challenge-pokespeed">
+<activity label="challenge-pokespeed">
     <statement>
             <p>This program reads in each line from the pokemon file into a String array of lines. Complete the <c>findMaxSpeed</c> and <c>findAverageSpeed</c> methods below.</p>
 
@@ -345,7 +345,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-48">
             <title>Summary</title>

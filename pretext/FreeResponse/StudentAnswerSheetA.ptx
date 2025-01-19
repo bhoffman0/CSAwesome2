@@ -59,7 +59,7 @@ public class StudentAnswerSheet
             <p>Complete method <c>getScore</c> below.</p>
             <p>The code below has a main method for testing the <c>getScore</c> method.</p>
 
-<exercise label="StudentAnswerKeyA">
+<activity label="StudentAnswerKeyA">
     <statement>
             <p>Complete method <c>getScore</c> below.</p>
 
@@ -228,6 +228,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

@@ -28,7 +28,7 @@
                 an <c>int</c> by a <c>double</c> or an <c>int</c> cast to a <c>double</c> divided by an
                 <c>int</c>.</p>
 
-<exercise label="cast-division">
+<activity label="cast-division">
     <statement>
             <p>What happens when you divide an int by an int or with a double operand or with the type cast (double) or (int) on one of the operands? Add another line that divides 5 by 2 using a (double) cast. What is the result?</p>
 
@@ -77,7 +77,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>When Java divides two <c>int</c>s, it produces an <c>int</c> result by truncating
                 the actual mathematical result, removing anything after the decimal point. Thus
                 <c>9 / 10</c> evaluates to <c>0</c>, not <c>0.9</c>. It also does not evaluate to <c>1</c>;
@@ -135,7 +135,7 @@ int nearestNegInt = (int)(negNumber – 0.5);
                 <c>1.25</c>, only gets us to <c>1.75</c> which truncates back to <c>1</c> which is the
                 nearest integer to <c>1.25</c>.</p>
 
-<exercise label="nearestInt">
+<activity label="nearestInt">
     <statement>
             <p>Run the code below to see how the formula of adding or subtracting .5 and
                 then casting with (int) rounds a positive or negative double number to the
@@ -190,7 +190,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="range-of-values">
             <title>Range of Values</title>
@@ -203,7 +203,7 @@ public class RunestoneTests extends CodeTestHelper
                 numbers in an <c>int</c> variable, it will result in an <term>integer overflow</term> where an
                 incorrect value could be stored. Try it below.</p>
 
-<exercise label="overfl">
+<activity label="overfl">
     <statement>
             <p>Try the code below to see two integer overflows for a positive and negative number. An int cannot hold that many digits! Fix the integer overflow by deleting the last 0 in the numbers to store less digits.</p>
 
@@ -243,14 +243,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Computers allot a specified amount of memory to store data based on the data type. For <c>double</c> values, computers allot twice as much memory than for <c>int</c>s—8 bytes rather than 4. However it’s still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest <c>double</c> representable in 8 bytes. For example, repeating decimals like 0.333333333333333333 will be cut off after about 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an <c>int</c> value.</p>
             <idx><h>double</h><h>precision\ format</h></idx>
 
             
             <p>Although it’s not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code using <c>printf</c> a formatted print method or <c>format</c> instead of <c>println</c>. It takes a format string like <c>%.02f</c> which tells <c>printf</c> to print a floating point number indicated by the <c>%</c> with 2 digits after the decimal point. See <url href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html" visual="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">https://docs.oracle.com/javase/tutorial/java/data/numberformat.html</url> for more information. You can also use escape characters like <c>\n</c> in the format string to do a newline. Try it below.</p>
 
-<exercise label="double_precision">
+<activity label="double_precision">
     <statement>
             <p>Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point. Try it with 2.0/3.</p>
 
@@ -296,9 +296,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="q_round">
+    <activity label="q_round">
         <statement>
 
             <p> True or false: Java rounds up automatically when you do integer division.</p>
@@ -325,9 +325,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="q_cast">
+    <activity label="q_cast">
         <statement>
 
             <p> True or false: casting always results in a double type.</p>
@@ -354,13 +354,13 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-average-3-numbers">
             <title>Coding Challenge : Average 3 Numbers</title>
             <p>This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.</p>
 
-<exercise label="challenge1-5-average">
+<activity label="challenge1-5-average">
     <statement>
             <p>Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on replit.com (see template and links below), please paste your repl link here to turn it in.</p>
 
@@ -617,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Your teacher may suggest that you use a different Java IDE for this challenge so that you can use input to get these values using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url>, for example with this <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/5f00d71e-df8f-448f-a767-ed49e7af6f05#cb460a02-de03-4328-b310-ba057cb47a39" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/5f00d71e-df8f-448f-a767-ed49e7af6f05#cb460a02-de03-4328-b310-ba057cb47a39">JuiceMind template</url> or <url href="https://replit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" visual="https://replit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java">replit template</url> that you can use if you want to try the challenge with input.</p>
         </subsection>
   <subsection xml:id="bonus-challenge-unicode">
@@ -652,7 +652,7 @@ public class RunestoneTests extends CodeTestHelper
                 to get the decimal number.) Can you print out letters from 3 different
                 languages?</p>
 
-<exercise label="challenge1-6-unicode">
+<activity label="challenge1-6-unicode">
     <statement>
             <p>Can you print out a letter from 3 different languages using this <problematic refid="id4">|Unicode
                     Lookup|</problematic> site?</p>
@@ -701,7 +701,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-10">
             <title>Summary</title>
@@ -747,7 +747,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-9">
             <title>AP Practice</title>
 
-    <exercise label="AP_casting">
+    <activity label="AP_casting">
         <statement>
 
             <p> Which of the following returns the correct average for a total that is the sum of 3 int values?</p>
@@ -792,6 +792,6 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

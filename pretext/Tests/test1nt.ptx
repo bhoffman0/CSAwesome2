@@ -4,7 +4,7 @@
         <title>Exam 1 for the AP CSA Exam (not timed)</title>
         <p>The following problems are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.</p>
 
-    <exercise label="qtnt1_1">
+    <activity label="qtnt1_1">
         <statement>
 
         <p> Which of the following is equivalent to the statement below? Recall DeMorgan’s Law.</p>
@@ -61,9 +61,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_2">
+    <activity label="qtnt1_2">
         <statement>
 
         <p> Consider the following recursive method. What does <c>mystery(4)</c> return?</p>
@@ -129,9 +129,9 @@ public int mystery(int m)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_3">
+    <activity label="qtnt1_3">
         <statement>
 
         <p> In which of these cases will an ascending order (from smallest to largest) insertion sort have the fastest run time?</p>
@@ -190,9 +190,9 @@ III. An array that is in random order (not already sorted).
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_4">
+    <activity label="qtnt1_4">
         <statement>
 
         <p> Which of these loops will output <c>01234</c>?</p>
@@ -272,9 +272,9 @@ for (int i = max; i &gt; 0; i--)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_5">
+    <activity label="qtnt1_5">
         <statement>
 
         <p> Consider the following block of code. What are the first and last numbers printed after running the code?</p>
@@ -336,9 +336,9 @@ while (value &lt; 30)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_6">
+    <activity label="qtnt1_6">
         <statement>
 
         <p> Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
@@ -410,9 +410,9 @@ public int solution(int limit)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_7">
+    <activity label="qtnt1_7">
         <statement>
 
         <p> Given that both <c>count</c> and <c>n</c> are integer values, which of the following statements is true about both code blocks?</p>
@@ -481,9 +481,9 @@ while (count &lt;= n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_8">
+    <activity label="qtnt1_8">
         <statement>
 
         <p> Consider the following class declarations. Which statements are true?</p>
@@ -552,9 +552,9 @@ III. Cat can override existing public methods of Animal
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_9">
+    <activity label="qtnt1_9">
         <statement>
 
         <p> Consider the following code. What is the maximum amount of times that <c>HELLO</c> could possibly be printed?</p>
@@ -617,9 +617,9 @@ for (int i = 0; i &lt;= k; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_10">
+    <activity label="qtnt1_10">
         <statement>
 
         <p> When will the method <c>stringRecursion</c> produce a run time error?</p>
@@ -684,9 +684,9 @@ public void stringRecursion(String s)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_11">
+    <activity label="qtnt1_11">
         <statement>
 
         <p> Consider the following class definitions. Which of I, II and III below would cause an error when used in place of the missing code in the main method?</p>
@@ -777,9 +777,9 @@ III objectC.method2(objectB);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_12">
+    <activity label="qtnt1_12">
         <statement>
 
         <p> Which of these declarations will <em>not</em> cause an error?</p>
@@ -838,9 +838,9 @@ III ArrayList&lt;String&gt; stringList = new ArrayList&lt;String&gt;();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_14">
+    <activity label="qtnt1_14">
         <statement>
 
         <p> Suppose that the following method takes in a two dimensional array called <c>matrix</c>. After the method call <c>printMatrix(matrix)</c> what will the output be? Possible options are listed below the method definition.</p>
@@ -939,9 +939,9 @@ IV.
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_15">
+    <activity label="qtnt1_15">
         <statement>
 
         <p> If randomList is an <c>ArrayList</c> of <c>Integer</c> objects and is initially set to {0, 1, 2, 3}, what will randomList look like after the following code is executed?</p>
@@ -1003,9 +1003,9 @@ randomList.set(1, 8);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_16">
+    <activity label="qtnt1_16">
         <statement>
 
         <p> Consider the following code segment. What will be printed as a result of executing the code below?</p>
@@ -1068,9 +1068,9 @@ while(counter &lt; str.length() - 1)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_17">
+    <activity label="qtnt1_17">
         <statement>
 
         <p> Consider the following class declarations. Which of the following statements will not compile?</p>
@@ -1150,9 +1150,9 @@ public class C extends B
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_18">
+    <activity label="qtnt1_18">
         <statement>
 
         <p> Consider the following method.  Assume that <c>String s = "rain";</c> and <c>int b = 4;</c> have been executed.  What are the values of <c>s</c> and <c>b</c> after <c>test(s,b)</c> is executed?</p>
@@ -1213,9 +1213,9 @@ public static void test(String str, int y)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_19">
+    <activity label="qtnt1_19">
         <statement>
 
         <p> Which of the following is/are true about using insertion sort versus using merge sort?</p>
@@ -1274,9 +1274,9 @@ III. Insertion sort is almost always less efficient than mergesort.
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qtnt1_20">
+    <activity label="qtnt1_20">
         <statement>
 
         <p> What would the contents of <c>matrix</c>, a 2-D array of integers, be after a call to <c>alter(1)</c>? The method alter is defined below.</p>
@@ -1370,5 +1370,5 @@ V. 1 5 7 7
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

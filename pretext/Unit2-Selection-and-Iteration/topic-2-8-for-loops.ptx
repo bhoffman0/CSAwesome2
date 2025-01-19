@@ -30,7 +30,7 @@ for (initialize; test; update)
                 <p>Here is a control flow diagram for a for loop. In a <c>for</c> loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a <term>loop control variable</term>. The Boolean expression is evaluated immediately after the loop control variable is initialized and then followed by each execution of the increment statement until it is false. In each iteration, the update is executed after the entire loop body is executed and before the Boolean expression is evaluated again. When the loop condition is finally false, we jump out of the loop and continue at the next statement after the body of the loop.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Control flow in a for loop</caption><image source="Unit2-Selection-and-Iteration/Figures/ForLoopFlow.png" width="45%"/></figure>
 
-<exercise label="forloop">
+<activity label="forloop">
     <statement>
             <p>Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10?</p>
 
@@ -68,9 +68,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="forloopfromwhile">
+<activity label="forloopfromwhile">
     <statement>
             <p>Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?</p>
 
@@ -132,7 +132,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Two common patterns in for-loops are to count from 0 up to an number (using &lt;) or count from 1 to the number including the number (using &lt;=). Remember that if you start at 0 use &lt;, and if you start at 1, use &lt;=. The two loops below using these two patterns both run 10 times. The variable i (for index) is often used as a counter in for-loops.</p>
                 <program language="java"><code>
@@ -150,7 +150,7 @@ for(int i = 1; i &lt;= 10; i++)
 </code></program>
             </note>
 
-    <exercise label="mcq-for-1">
+    <activity label="mcq-for-1">
         <statement>
 
             <p> What does the following code print?</p>
@@ -201,9 +201,9 @@ for (int i = 3; i &lt; 8; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq-for-2">
+    <activity label="mcq-for-2">
         <statement>
 
             <p> What does the following code print?</p>
@@ -254,9 +254,9 @@ for (int i = 1; i &lt;= 10; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq-for-3">
+    <activity label="mcq-for-3">
         <statement>
 
             <p> How many times does the following method print a <c>*</c>?</p>
@@ -307,8 +307,8 @@ for (int i = 3; i &lt;= 9; i++)
             </choice>
 </choices>
 
-    </exercise>
-<exercise label="print_evens" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+    </activity>
+<activity label="print_evens" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following method has the correct code to print out all the even values from 0 to the value of 10, but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly.  Even though Java doesn’t require indention it is a good habit to get into. You will be told if any of the blocks are in the wrong order or not indented correctly when you click the “Check Me” button.</p>
 </statement>
 <blocks><block order="1">
@@ -323,12 +323,12 @@ for (int i = 3; i &lt;= 9; i++)
 <cline>   } // end for</cline>
 </block><block order="3">
 <cline>} // end method</cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection xml:id="decrementing-loops">
             <title>Decrementing Loops</title>
             <p>You can also count backwards in a loop starting from the last number and decrementing down to 0 or 1. All 3 parts of the loop must change to count backwards including the test of when to stop. For example, <c>for (int i=5; i &gt; 0; i--)</c> counts from 5 down to 1.</p>
 
-<exercise label="for-bottles-backwards">
+<activity label="for-bottles-backwards">
     <statement>
             <p>What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i’s value to 3? Try the Code Lens button to visualize and trace through this code.</p>
 
@@ -406,10 +406,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>The method <term>printPopSong</term> prints the words to a song.  It initializes the value of the variable i equal to 5 and then checks if i is greater than 0.  Since 5 is greater than 0, the body of the loop executes.  Before the condition is checked again, i is decreased by 1.  When the value in i is equal to 0 the loop stops executing.</p>
 
-<exercise label="forloop-backwards">
+<activity label="forloop-backwards">
     <statement>
             <p>Can you make the loop count by 2s backwards? It should print out 5 3 1? Remember to change all 3 parts of the for loop.</p>
 
@@ -447,7 +447,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-turtles-drawing-shapes">
             <title>Coding Challenge : Turtles Drawing Shapes</title>
@@ -471,7 +471,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-TurtleLoopShapes">
+<activity label="challenge-TurtleLoopShapes">
     <statement>
             <p>Complete the methods below with for-loops to draw a square, triangle, pentagon, and then any polygon using a variable n that holds the number of sides. Call 1 more call to the method drawShapes in main. Note that the angles in the turns have to add up to 360.</p>
 
@@ -617,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-25">
             <title>Summary</title>
@@ -642,7 +642,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-18">
             <title>AP Practice</title>
 
-    <exercise label="AP-for-loop-1">
+    <activity label="AP-for-loop-1">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -705,9 +705,9 @@ III. int sum = 0;
             <p>Note that I has an extra count++ at the beginning of the loop body that should be deleted.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-for-loop-2">
+    <activity label="AP-for-loop-2">
         <statement>
 
             <p> Consider the following code segment.</p>
@@ -737,6 +737,6 @@ System.out.println(result);
             <p>It will not cause an error.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

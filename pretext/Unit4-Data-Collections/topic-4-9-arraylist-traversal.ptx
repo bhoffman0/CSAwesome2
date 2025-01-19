@@ -28,7 +28,7 @@
                 <c>ConcurrentModificationException</c>. If you need to modify an <c>ArrayList</c>
                 while looping over it, you’ll need to use a regular <c>while</c> or <c>for</c> loop.</p>
 
-<exercise label="listForEachLoop">
+<activity label="listForEachLoop">
     <statement>
             <p>What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them. Print out the product after the new loop.</p>
 
@@ -99,8 +99,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="list_1" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="list_1" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following has the correct code for the method getScore plus at least one extra unneeded code statement.  This method will calculate and return the score for a word game.  The code should loop through all of the elements in wordList and if the length of the current word is 3 it should add one to the score, if the length of the word is 4 it should add 2 to the score, and if the length is greater than 4 it should add 3 to the score.  The method should return the score.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
 <blocks><block order="9">
@@ -134,7 +134,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>} // end method</cline>
 </block><block order="2" correct="no">
 <cline>if (word.length == 3) </cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection xml:id="for-loops-and-indexoutofbounds-exception">
             <title>For Loops and IndexOutOfBounds Exception</title>
             <p>You can also use a regular indexed <c>for</c> loop to process list
@@ -148,7 +148,7 @@ public class RunestoneTests extends CodeTestHelper
                 thrown if you use the index operator on an array with an index out of bounds for
                 that array.</p>
 
-<exercise label="listForLoop">
+<activity label="listForLoop">
     <statement>
             <p>The following code will throw an <c>IndexOutOfBoundsException</c>. Can you fix
                 it?</p>
@@ -202,7 +202,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="while-loop">
             <title>While Loop</title>
@@ -210,7 +210,7 @@ public class RunestoneTests extends CodeTestHelper
                 where the list is a field of the current object and an instance method
                 rather than a class (static) method loops through the list.</p>
 
-<exercise label="listForEachLoopObj">
+<activity label="listForEachLoopObj">
     <statement>
             <p>The following code removes a name from a list. Set the found variable to the appropriate true or false values at line 13 and line 20 to make the code work.</p>
 
@@ -280,7 +280,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Be careful when you remove items from a list as you loop through it. Notice how
                 the method above only increments the index if an item was not removed from the
                 list. This is because removing an item from a list will shift the remaining
@@ -292,7 +292,7 @@ public class RunestoneTests extends CodeTestHelper
                 remove allows the shifted-down element to be processed on the next time through
                 the loop.</p>
 
-    <exercise label="qloopList_1">
+    <activity label="qloopList_1">
         <statement>
 
             <p> Assume that <c>nums</c> has been created as an <c>ArrayList</c> object and it initially contains the following <c>Integer</c> values [0, 0, 4, 2, 5, 0, 3, 0]. What will <c>nums</c> contain as a result of executing <c>numQuest</c>?</p>
@@ -355,9 +355,9 @@ public void numQuest()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0A%0Apublic+class+ListWorker+%7B%0A%0A+++private+List%3CInteger%3E+nums%3B%0A+++%0A+++public+ListWorker(List%3CInteger%3E+theNums)%0A+++%7B%0A++++++nums+%3D+theNums%3B%0A+++%7D%0A%0A+++//+precondition%3A+nums.size()+%3E+0%3B%0A+++//+nums+contains+Integer+objects%0A+++public+void+numQuest()%0A+++%7B%0A++++++int+k+%3D+0%3B%0A++++++Integer+zero+%3D+new+Integer(0)%3B%0A++++++while+(k+%3C+nums.size())%0A++++++%7B%0A+++++++++if+(nums.get(k).equals(zero))%0A++++++++++++nums.remove(k)%3B%0A+++++++++k%2B%2B%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+numList+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(4)%3B%0A++++++numList.add(2)%3B%0A++++++numList.add(5)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(3)%3B%0A++++++numList.add(0)%3B%0A++++++System.out.println(numList)%3B%0A++++++ListWorker+listW+%3D+new+ListWorker(numList)%3B%0A++++++listW.numQuest()%3B%0A++++++System.out.println(numList)%3B%0A+++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=11" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0A%0Apublic+class+ListWorker+%7B%0A%0A+++private+List%3CInteger%3E+nums%3B%0A+++%0A+++public+ListWorker(List%3CInteger%3E+theNums)%0A+++%7B%0A++++++nums+%3D+theNums%3B%0A+++%7D%0A%0A+++//+precondition%3A+nums.size()+%3E+0%3B%0A+++//+nums+contains+Integer+objects%0A+++public+void+numQuest()%0A+++%7B%0A++++++int+k+%3D+0%3B%0A++++++Integer+zero+%3D+new+Integer(0)%3B%0A++++++while+(k+%3C+nums.size())%0A++++++%7B%0A+++++++++if+(nums.get(k).equals(zero))%0A++++++++++++nums.remove(k)%3B%0A+++++++++k%2B%2B%3B%0A++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+numList+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(4)%3B%0A++++++numList.add(2)%3B%0A++++++numList.add(5)%3B%0A++++++numList.add(0)%3B%0A++++++numList.add(3)%3B%0A++++++numList.add(0)%3B%0A++++++System.out.println(numList)%3B%0A++++++ListWorker+listW+%3D+new+ListWorker(numList)%3B%0A++++++listW.numQuest()%3B%0A++++++System.out.println(numList)%3B%0A+++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=11">Example</url>.</p>
-<exercise label="listInsertParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="listInsertParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following has the correct code for a method called insertInOrder plus at least one extra unneeded code statement. This method should add the passed name in alphabetic order to a private list field called nameList.  Drag the needed blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks.  There is one extra block that is not needed in a correct solution.</p>
 </statement>
 <blocks><block order="8">
@@ -380,7 +380,7 @@ public void numQuest()
 <cline>} // end method</cline>
 </block><block order="2" correct="no">
 <cline>nameList.add(name); </cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection xml:id="reading-in-files-with-java-nio-file">
             <title>Reading in Files with <c>java.nio.file</c></title>
             <p>Although not covered in the AP CSA exam, the <c>java.nio.file</c> package (nio stands for new input/output), added in Java version 7, provides a better and easier way to read in files. The <c>Files</c> class in this package has a method called <c>readAllLines</c> that reads all of the lines in a file and returns them as a <c>List</c> of <c>String</c> objects. The <c>readAllLines</c> method throws an <c>IOException</c> if the file cannot be read. (<c>List</c> is an <term>interface</term>. Interfaces are not on the AP CSA exam but are quite common in actual Java programming. For now all you need to know is that all the methods we’ve talked about using with <c>ArrayList</c> you can use on any <c>List</c> such as the one returned by <c>readAllLines</c>.)</p>
@@ -394,7 +394,7 @@ List&lt;String&gt; lines = Files.readAllLines(Paths.get("data.txt"));
 </code></program>
             <p>Under the covers <c>readAllLines</c> is almost certainly using an <c>ArrayList</c> which is a kind of <c>List</c>. The advantage of storing the lines in a dynamic data structure like an <c>ArrayList</c>, instead of an array, is that you do not need to know how many lines you are going to store when you create the <c>ArrayList</c> the way you do when you create an array.  The <c>ArrayList</c> can then grow in size as needed. (If you absolutely need an array, you can convert the <c>List</c> to an array declared to be the correct size with  <c>myArray = lines.toArray(myArray);</c>)</p>
 
-<exercise label="read-pokemon-file-nio">
+<activity label="read-pokemon-file-nio">
     <statement>
             <p>Complete the code in the main method below to reads all lines of the file using <c>Files.readAllLines</c> into a <c>List&lt;String&gt;</c> named <c>lines</c>. Add a loop that prints out the first 10 pokemon.</p>
 
@@ -447,7 +447,7 @@ public class RunestoneTests extends CodeTestHelper
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="arraylist-of-student-objects">
             <title>ArrayList of Student Objects</title>
@@ -455,7 +455,7 @@ public class RunestoneTests extends CodeTestHelper
                 <c>ArrayList</c> of <c>Student</c>s. Although the print statement works here, you
                 may want a nicer printout.</p>
 
-<exercise label="StudentList">
+<activity label="StudentList">
     <statement>
             <p>Add a for each loop that prints out each student and then a new line.</p>
 
@@ -525,7 +525,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-frq-word-pairs">
             <title>Coding Challenge : FRQ Word Pairs</title>
@@ -563,7 +563,7 @@ class WordPair
             <p>First, see if you can create an <c>ArrayList</c> of <c>WordPair</c> objects below.
                 Look at the <c>StudentList</c> example above for help.</p>
 
-<exercise label="ArrayListWordPair1">
+<activity label="ArrayListWordPair1">
     <statement>
             <p>Create an Arraylist of WordPair objects.</p>
 
@@ -643,7 +643,7 @@ class WordPair
  }
         </tests>
     </program>
-</exercise>
+</activity>
             <figure align="left"><image source="Unit4-Data-Collections/Figures/wordpairs.png" width="34%"/></figure>
             <p>In this FRQ, you are given an array of words and you will create pairs of them
                 by taking the first word and pairing it with all the other words, then taking
@@ -673,7 +673,7 @@ class WordPair
                 </li>
             </ul></p>
 
-<exercise label="challenge-WordPairs">
+<activity label="challenge-WordPairs">
     <statement>
             <p>FRQ WordPairs Challenge: Complete the constructor for <c>WordPairsList</c> below
                 which will add pairs of words from a given array to the <c>ArrayList</c>. Then,
@@ -826,7 +826,7 @@ class WordPair
  }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In the next part of the FRQ challenge, you are asked to write a method called
                 <c>numMatches</c> that counts and returns the number of pairs where the first word
                 is the same as the second word. For example, if the word array is

@@ -47,7 +47,7 @@ public class NumberCube
             <title>Mixed Up Code</title>
             <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
             
-<exercise label="numcubeB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="numcubeB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getLongestRun</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="5">
@@ -79,12 +79,12 @@ public class NumberCube
 <cline>   return maxStart;</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></exercise>            
+</block></blocks></activity>            
         </subsection>
   <subsection xml:id="try-and-solve-part-b">
             <title>Try and Solve Part B</title>
 
-<exercise label="FRQNumberCubeB">
+<activity label="FRQNumberCubeB">
     <statement>
             <p>FRQ Number Cube B: Write the method <c>getLongestRun</c> that takes as its parameter an array of integer values representing a series of number cube tosses. The method returns the starting index in the array of a run of maximum size. A run is defined as the repeated occurrence of the same value in two or more consecutive positions in the array.</p>
 
@@ -185,6 +185,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

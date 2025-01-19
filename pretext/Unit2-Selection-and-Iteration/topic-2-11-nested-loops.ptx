@@ -13,7 +13,7 @@
     </figure>
     <p>What does the following code print out? Watch the code run in the  <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&amp;cumulative=false&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> by clicking the CodeLens button and then forward. Notice how the inner loop is started over for each row. Can you predict how many rows and columns of stars there will be?</p>
   </introduction>
-  <exercise label="lcfcnl1">
+  <activity label="lcfcnl1">
     <statement>
         <p>Can you change the code to print a rectangle with 10 rows and 8 columns of stars? You can also try replacing line 10 with this print statement to see the rows and columns: <c>System.out.print(row + "-" + col + " ");</c></p>
 
@@ -61,8 +61,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-  <exercise label="nested1">
+</activity>
+  <activity label="nested1">
         <statement>
 
         <p> What does the following code print?</p>
@@ -117,8 +117,8 @@ for (int i = 1; i &lt; 7; i++)
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="nested2">
+    </activity>
+  <activity label="nested2">
         <statement>
 
         <p> What does the following code print?</p>
@@ -173,8 +173,8 @@ for (int i = 0; i &lt; 5; i++)
             </choice>
 </choices>
 
-    </exercise>
-  <exercise label="nestedParsons1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+    </activity>
+  <activity label="nestedParsons1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The main method in the following class should print 10 rows with 5 *s in each row.   But, the blocks have been mixed up and include one extra block that isn’t needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="9">
@@ -201,12 +201,12 @@ for (int i = 0; i &lt; 5; i++)
 </block><block order="3">
 <cline>    }</cline>
 <cline>}</cline>
-</block></blocks></exercise>
+</block></blocks></activity>
   <subsection xml:id="nested-loops-with-turtles">
             <title>Nested Loops with Turtles</title>
             <p>Try nested loops with turtles to create a snowflake design!</p>
 
-<exercise label="TurtleNestedLoop">
+<activity label="TurtleNestedLoop">
     <statement>
             <p>The turtle below is trying to draw a square many times to create a snowflake pattern.
                 Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15.</p>
@@ -294,7 +294,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-turtle-snowflakes">
             <title>Coding Challenge : Turtle Snowflakes</title>
@@ -317,7 +317,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-Turtle-Nested-Loop-Snowflakes">
+<activity label="challenge-Turtle-Nested-Loop-Snowflakes">
     <statement>
             <p>Use nested for-loops to have the turtle draw a snowflake of polygons.
                 Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.</p>
@@ -442,7 +442,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-17">
             <title>Summary</title>

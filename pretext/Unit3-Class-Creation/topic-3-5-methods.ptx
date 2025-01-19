@@ -95,7 +95,7 @@ public void methodName()
             <p>The following flowchart can be used to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods which are discussing in this lesson are called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using <c>object.methodName()</c>. If you are calling the method from within the same class, you can just call the method using <c>methodName()</c> which will refer to the current object.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Method Calls to Static and Instance Methods</caption><image source="Unit3-Class-Creation/Figures/FlowChartCallingMethods.png" width="98%" alt="Comparing method calls to static and instance methods"/></figure>
 
-<exercise label="PersonPrint">
+<activity label="PersonPrint">
     <statement>
             <p>Try the following code. Add a print() method in the Person class that prints out all the attributes (name, email, phonenumber) of a person object.</p>
 
@@ -145,7 +145,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="void-methods">
             <title>void Methods</title>
@@ -257,7 +257,7 @@ class Student
             <p>Note, that getters only return the <em>value</em> of the variable.</p>
             <p>Try the following code. Note that this active code window has 2 classes! The main method is in a separate <term>Tester</term> or <term>Driver</term> class. It does not have access to the private instance variables in the other Student class. Note that when you use multiple classes in an IDE, you usually put them in separate files, and you give the files the same name as the public class in them. In active code and IDEs, you can put 2 classes in 1 file, as demonstrated here, but only 1 of them can be public and have a main method in it. You can also view the fixed code in the <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20TesterClass%20%0A%20%20%7B%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Skyler%22,%20%22skyler%40sky.com%22,%20123456%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Name%3A%22%20%2B%20%20s1.getName%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Email%3A%22%20%2B%20%20s1.getEmail%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22ID%3A%20%22%20%2B%20s1.getId%28%29%20%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%0A%20%20class%20Student%20%0A%20%20%7B%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%0A%20%20%20%20%20public%20Student%28String%20initName,%20String%20initEmail,%20int%20initId%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20id%20%3D%20initId%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20accessor%20methods%20-%20getters%20%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20name%20*/%0A%20%20%20%20%20public%20String%20getName%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20name%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getEmail%28%29%20%20%40return%20email%20*/%0A%20%20%20%20%20public%20String%20getEmail%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20email%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20id%20*/%0A%20%20%20%20%20public%20int%20getId%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20id%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&amp;cumulative=false&amp;curInstr=26&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20TesterClass%20%0A%20%20%7B%0A%20%20%20%20%20//%20main%20method%20for%20testing%0A%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Student%20s1%20%3D%20new%20Student%28%22Skyler%22,%20%22skyler%40sky.com%22,%20123456%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Name%3A%22%20%2B%20%20s1.getName%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Email%3A%22%20%2B%20%20s1.getEmail%28%29%20%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22ID%3A%20%22%20%2B%20s1.getId%28%29%20%29%3B%0A%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%0A%20%20class%20Student%20%0A%20%20%7B%0A%20%20%20%20%20private%20String%20name%3B%0A%20%20%20%20%20private%20String%20email%3B%0A%20%20%20%20%20private%20int%20id%3B%0A%20%20%20%20%20%0A%20%20%20%20%20public%20Student%28String%20initName,%20String%20initEmail,%20int%20initId%29%0A%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20name%20%3D%20initName%3B%0A%20%20%20%20%20%20%20%20email%20%3D%20initEmail%3B%0A%20%20%20%20%20%20%20%20id%20%3D%20initId%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20%0A%20%20%20%20%20//%20accessor%20methods%20-%20getters%20%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20name%20*/%0A%20%20%20%20%20public%20String%20getName%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20name%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getEmail%28%29%20%20%40return%20email%20*/%0A%20%20%20%20%20public%20String%20getEmail%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20email%3B%0A%20%20%20%20%20%7D%0A%20%20%20%20%20/**%20getName%28%29%20%20%40return%20id%20*/%0A%20%20%20%20%20public%20int%20getId%28%29%20%0A%20%20%20%20%20%7B%20%0A%20%20%20%20%20%20%20%20return%20id%3B%0A%20%20%20%20%20%7D%0A%20%20%7D&amp;cumulative=false&amp;curInstr=26&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url>.</p>
 
-<exercise label="StudentObjExample">
+<activity label="StudentObjExample">
     <statement>
             <p>Try the following code. Note that it has a bug! It tries to access the private instance variable email from outside the class Student.  Change the main method in Tester class so that it uses the appropriate public accessor method (get method) to access the email value instead.</p>
 
@@ -339,7 +339,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="tostring">
             <title><c>toString</c></title>
@@ -357,7 +357,7 @@ public class RunestoneTests extends CodeTestHelper
                 Watch how the control moves to the <c>toString</c> method and then comes back to <c>main</c>
                 in the Java visualizer by using the Show CodeLens button.</p>
 
-<exercise label="StudentToString">
+<activity label="StudentToString">
     <statement>
             <p>See the toString() method in action. Add another student object and print it out.</p>
 
@@ -416,7 +416,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="mutators-setters">
             <title>Mutators / Setters</title>
@@ -493,7 +493,7 @@ class Student
                 in the <c>`Student</c> class. Change the <c>main</c> method so that it uses a
                 <c>public</c> setter to change the value instead.</p>
 
-<exercise label="StudentObjExample2">
+<activity label="StudentObjExample2">
     <statement>
             <p>Fix the main method to include a call to the appropriate set method.</p>
 
@@ -597,9 +597,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="setSignature">
+    <activity label="setSignature">
         <statement>
 
             <p> Consider the class Party which keeps track of the number of people at the party.</p>
@@ -633,7 +633,7 @@ public class Party
             <p>The parameter of this set method should be called people in order to match the code in the method body.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
             <p>Mutator methods do not have to have a name with “set” in it, although most do. They can be any methods that change the value of an instance variable in the class. Most mutator methods are non-void methods. Mutator methods do not have to have parameters, but they usually do.</p>
         </subsection>
   <subsection xml:id="parameters">
@@ -647,7 +647,7 @@ public class Party
             <title>Methods with Parameters that Return Calculated values</title>
             <p>Not all methods that return values are accessor/get methods. Some methods have parameters and return values that are found or calculated in a more complex algorithm. The following method uses a loop to find a letter in a text string given as a parameter. It returns true if the letter is found and false otherwise. Change it to return the count of how many times the letter is found in the text instead.</p>
 
-<exercise label="StringFind">
+<activity label="StringFind">
     <statement>
             <p>Run the following program which contains a method called findLetter that takes a letter and a text as parameters and uses a loop to see if that letter is in the text and returns true if it is, false otherwise. Set the variables <c>letter</c> and <c>message</c> to new values in the main method and run it again to try finding a different letter. Then, change the code of the findLetter method to return how many times it finds letter in text, using a new variable called <c>count</c>. How would the return type change?</p>
 
@@ -761,7 +761,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-class-pet">
             <title>Coding Challenge : Class Pet</title>
@@ -810,7 +810,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-Pet-Class">
+<activity label="challenge-Pet-Class">
     <statement>
             <p>Create a Pet class that keeps track of the name, age, weight, type of animal,
                 and breed for records at an animal clinic. Create a constructor, getter, setter, and toString() methods. Create 2 Pet objects in the main method and test all your methods.</p>
@@ -961,7 +961,7 @@ public class TesterClass
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community-2">
             <title>Design a Class for your Community</title>
@@ -984,7 +984,7 @@ public class TesterClass
                 </li>
             </ol></p>
 
-<exercise label="community-challenge3">
+<activity label="community-challenge3">
     <statement>
             <p>Copy your class from <url href="topic-3-4-constructors.html#groupwork-design-a-class-for-your-community" visual="topic-3-4-constructors.html#groupwork-design-a-class-for-your-community">lesson 3.4</url>. Add get, set, toString, and a method that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is “plain” or “table”.</p>
 
@@ -1140,7 +1140,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-31">
             <title>Summary</title>
@@ -1186,14 +1186,14 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
 
-<exercise label="AccessorMutator">
+<activity label="AccessorMutator">
     <statement><p>Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the vocabulary.</p></feedback>
-<matches><match order="1"><premise>gets and returns the value of an instance variable</premise><response>accessor method</response></match><match order="2"><premise>sets the instance variable to a value in its parameter</premise><response>mutator method</response></match><match order="3"><premise>initializes the instance variables to values</premise><response>constructor</response></match><match order="4"><premise>accessible from outside the class</premise><response>public</response></match><match order="5"><premise>accessible only inside the class</premise><response>private</response></match></matches></exercise>        </subsection>
+<matches><match order="1"><premise>gets and returns the value of an instance variable</premise><response>accessor method</response></match><match order="2"><premise>sets the instance variable to a value in its parameter</premise><response>mutator method</response></match><match order="3"><premise>initializes the instance variables to values</premise><response>constructor</response></match><match order="4"><premise>accessible from outside the class</premise><response>public</response></match><match order="5"><premise>accessible only inside the class</premise><response>private</response></match></matches></activity>        </subsection>
   <subsection xml:id="ap-practice-21">
             <title>AP Practice</title>
 
-    <exercise label="AP-get1">
+    <activity label="AP-get1">
         <statement>
 
             <p>  Consider the following Party class. The getNumOfPeople method is intended to allow methods in other classes to access a Party object’s numOfPeople instance variable value; however, it does not work as intended. Which of the following best explains why the getNumOfPeople method does NOT work as intended?</p>
@@ -1265,9 +1265,9 @@ public class Party
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-get2">
+    <activity label="AP-get2">
         <statement>
 
             <p> Consider the following class definition. The class does not compile.</p>
@@ -1301,9 +1301,9 @@ public class Student
             <p>Correct! Accessor methods have a return type of the instance variable they are returning.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-mutator1">
+    <activity label="AP-mutator1">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -1341,9 +1341,9 @@ public class Liquid
             <p>Instance variables should be private variables.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-mutator2">
+    <activity label="AP-mutator2">
         <statement>
 
             <p> In the <c>Party</c> class below, the <c>addPeople</c> method is intended to increase the value of the instance variable <c>numOfPeople</c> by the value of the parameter <c>additionalPeople</c>. The method does not work as intended.</p>
@@ -1414,6 +1414,6 @@ public class Party
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

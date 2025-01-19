@@ -3,7 +3,7 @@
 <section xml:id="peer_in_U2">
         <title>Peer Instruction: Unit 2 Multiple Choice Questions</title>
 
-    <exercise label="bs-strings-05-08">
+    <activity label="bs-strings-05-08">
         <statement>
 
         <p> What is stored in the variable name after the following line of code is executed?</p>
@@ -51,9 +51,9 @@ String name = "Bob";
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-objects-11-07">
+    <activity label="bs-objects-11-07">
         <statement>
 
         <p> Match the scenario to the constructor call.</p>
@@ -99,5 +99,5 @@ String name = "Bob";
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

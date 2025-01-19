@@ -3,7 +3,7 @@
 <section xml:id="peer_int_pic_U6">
         <title>Peer Instruction: Unit 6 Multiple Choice Questions (with pictures)</title>
 
-    <exercise label="bs-array-06-09">
+    <activity label="bs-array-06-09">
         <statement>
 
         <p> What is the type of each indicated variable?</p>
@@ -49,9 +49,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-array-07-07">
+    <activity label="bs-array-07-07">
         <statement>
 
         <p> What pixels does this code modify (assuming Pixel objects in pixelArray follow this pattern: [(0,0), (0,1), (0,2)…])?</p>
@@ -117,9 +117,9 @@ while (index &lt; pixelArray.length/4)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-array-09-05">
+    <activity label="bs-array-09-05">
         <statement>
 
         <p> What picture most accurately describes what this code does ?</p>
@@ -178,9 +178,9 @@ for(int index = 0; index &lt; pixelArray.length-1; index++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-array-09-06">
+    <activity label="bs-array-09-06">
         <statement>
 
         <p> What picture most accurately describes what this code does ?</p>
@@ -239,9 +239,9 @@ for(int index = 0; index &lt; pixelArray.length-1; index++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-soundarray-20-05">
+    <activity label="bs-soundarray-20-05">
         <statement>
 
         <p> How would we fill in this SampleSound[]?</p>
@@ -287,9 +287,9 @@ for(int index = 0; index &lt; pixelArray.length-1; index++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-soundarray-20-09">
+    <activity label="bs-soundarray-20-09">
         <statement>
 
         <p> Which code which makes the following changes?</p>
@@ -332,9 +332,9 @@ SoundSample[] noiseArray = noise.getSamples();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-soundarray-20-14">
+    <activity label="bs-soundarray-20-14">
         <statement>
 
         <p> What does this code do?</p>
@@ -399,5 +399,5 @@ for (int i = noiseArray.length/2; i &lt; noiseArray.length)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

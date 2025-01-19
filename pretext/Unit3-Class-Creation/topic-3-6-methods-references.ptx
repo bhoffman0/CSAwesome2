@@ -35,7 +35,7 @@ class Person
             <p>There can be unexpected results if the parameter refers to a mutable object; the method or constructor can use this reference to alter the state of the original object. Some classes like <c>String</c> are immutable, so they cannot be changed by any method; for example, when <c>s.toUpperCase()</c> is called, it returns a new String object with the uppercase letters, but the original String object is not changed. Any new classes that you write that have setters or methods that change the state of the object will be mutable. So, if you pass in an object of a class that you write into a method as an argument, you need to be careful that the method does not change the object unless that is the intended behavior. It is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.</p>
             <p>Try the code below. Add code in the main method that changes the original address to your city. Does it also change in the person object? This can be a problem with references to mutable objects. In the next subsection, we’ll copy the Address object to avoid this problem.</p>
 
-<exercise label="AddressPerson">
+<activity label="AddressPerson">
     <statement>
             <p>Try the following code. Scroll down to see both the Person and the Address class definitions. The Person class has an Address object as an instance variable. Add code in the main method that changes the original address to your city. Does it also change in the person object? This can be a problem with references to mutable objects.</p>
 
@@ -132,7 +132,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="copying-parameter-objects">
             <title>Copying Parameter Objects</title>
@@ -213,7 +213,7 @@ class Person
 </code></program>
             <p>Try the variation of the code below where the constructor copies the Address object so that it is separate from the original object. Add code in the main method that changes the original address to your city. It will not change the address in the Person object because it was copied.</p>
 
-<exercise label="PersonAddressCopy">
+<activity label="PersonAddressCopy">
     <statement>
             <p>In the following Person class, the constructor method copies the Address object so that it is separate from the original object. Complete the setAddress method in Person so that it also makes a copy of otherAddr object like the constructor. Then, add code in the main method that changes the original address to your city. It should not change the copy! Add code that uses the setAddress method. It should not change the original!</p>
 
@@ -340,7 +340,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="parameter-of-the-same-class-type">
             <title>Parameter of the Same Class Type</title>
@@ -368,7 +368,7 @@ public class Person
 </code></program>
             <p>Try it in the code below.</p>
 
-<exercise label="PersonAddressGet">
+<activity label="PersonAddressGet">
     <statement>
             <p>Run the code to see that the Person class can directly access the instance variables of objects of the same class, but cannot directly access the instance variable of an Address object because it is not of the same class. Change the code in the copyAddressFromAddress() method to use get/set methods instead.</p>
 
@@ -517,7 +517,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="returning-objects">
             <title>Returning Objects</title>
@@ -547,7 +547,7 @@ public class Person
 </code></program>
             <p>Try it in the code below.</p>
 
-<exercise label="PersonReturnAddress">
+<activity label="PersonReturnAddress">
     <statement>
             <p>Run the code to see that the Person class can return the Address object which is mutable. Add code in the main method that changes the zipcode of the Address object returned by the getAddress method. It will change the zipcode in the Person object too.</p>
 
@@ -669,7 +669,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-friends-and-birthdays">
             <title>Coding Challenge : Friends and Birthdays</title>
@@ -693,7 +693,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="challenge-friend-birthday">
+<activity label="challenge-friend-birthday">
     <statement>
             <p>Complete the Date and Friend classes below. The Friend class should have a method isBirthday that returns true if the birthdate matches the given date parameter. Test your methods in the main method.</p>
 
@@ -781,7 +781,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-32">
             <title>Summary</title>

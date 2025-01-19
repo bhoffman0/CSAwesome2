@@ -64,7 +64,7 @@ public class HorseBarn
             <p>While we are looping through the <c>spaces</c> array, we need to check for non-null positions. Click to reveal a practice problem about checking for null values.</p>
             
 
-    <exercise label="frhbb_2">
+    <activity label="frhbb_2">
         <statement>
 
                 <p> How do we check if the space at the current index isn’t null?</p>
@@ -100,11 +100,11 @@ public class HorseBarn
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Try to write the code for the method <c>consolidate</c> in the <c>HorseBarn</c> class. When you are ready click “Run” to test your solution.</p>
 
-<exercise label="lcfrhbb1">
+<activity label="lcfrhbb1">
     <statement>
             <p>Try to write the code for the method <c>consolidate</c> in the <c>HorseBarn</c> class. When you are ready click “Run” to test your solution.</p>
 
@@ -269,7 +269,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-7">
             <title>Video - One way to code the solution</title>

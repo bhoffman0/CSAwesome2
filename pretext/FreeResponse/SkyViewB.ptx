@@ -22,7 +22,7 @@
   <subsection xml:id="try-and-solve-it-8">
             <title>Try and Solve It</title>
 
-<exercise label="SkyViewB">
+<activity label="SkyViewB">
     <statement>
             <p>Finish writing the <c>getAverage</c> method in the class below.</p>
 
@@ -157,6 +157,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

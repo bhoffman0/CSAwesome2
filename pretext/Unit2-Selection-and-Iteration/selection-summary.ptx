@@ -63,14 +63,14 @@
   <subsection xml:id="vocabulary-practice-3">
             <title>Vocabulary Practice</title>
 
-<exercise label="vocabcond1">
+<activity label="vocabcond1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>joins two conditions and it will only be true if both of the conditions are true</premise><response>logical and</response></match><match order="2"><premise>used to execute code only when a Boolean condition is true</premise><response>conditional</response></match><match order="3"><premise>an expression that is either true or false</premise><response>Boolean expression</response></match><match order="4"><premise>an expression with two or more expressions joined together with logical ands or ors</premise><response>compound boolean expression</response></match></matches></exercise>
-<exercise label="vocabcond2">
+<matches><match order="1"><premise>joins two conditions and it will only be true if both of the conditions are true</premise><response>logical and</response></match><match order="2"><premise>used to execute code only when a Boolean condition is true</premise><response>conditional</response></match><match order="3"><premise>an expression that is either true or false</premise><response>Boolean expression</response></match><match order="4"><premise>an expression with two or more expressions joined together with logical ands or ors</premise><response>compound boolean expression</response></match></matches></activity>
+<activity label="vocabcond2">
     <statement><p>Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>used to execute code when at least one of two conditions is true</premise><response>logical or</response></match><match order="2"><premise>one or more statements enclosed in a open curly brace and a close curly brace</premise><response>block(s) of statements</response></match><match order="3"><premise>used to start a conditional and execute code if a condition is true</premise><response>if</response></match><match order="4"><premise>used to distribute a negation on a compound boolean expression</premise><response>DeMorgan's Laws</response></match></matches></exercise>            <p>For more practice, see this <url href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" visual="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/">Quizlet</url>.</p>
+<matches><match order="1"><premise>used to execute code when at least one of two conditions is true</premise><response>logical or</response></match><match order="2"><premise>one or more statements enclosed in a open curly brace and a close curly brace</premise><response>block(s) of statements</response></match><match order="3"><premise>used to start a conditional and execute code if a condition is true</premise><response>if</response></match><match order="4"><premise>used to distribute a negation on a compound boolean expression</premise><response>DeMorgan's Laws</response></match></matches></activity>            <p>For more practice, see this <url href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" visual="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
   <subsection xml:id="common-mistakes-3">
             <title>Common Mistakes</title>

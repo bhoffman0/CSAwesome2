@@ -65,7 +65,7 @@ Math.sqrt(9); // returns 3.0
 System.out.println("The square root of 9 is " + Math.sqrt(9));
 </code></program>
 
-<exercise label="trymath">
+<activity label="trymath">
     <statement>
             <p>Try the Math methods below. Change the code so that it computes the absolute value of -4, the square root of 9, and 3 raised to the power of 2.</p>
 
@@ -105,9 +105,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="call-sqrt-mc">
+    <activity label="call-sqrt-mc">
         <statement>
 
             <p> Knowing that <c>Math.sqrt</c> takes a single argument, Which of these are
@@ -133,9 +133,9 @@ public class RunestoneTests extends CodeTestHelper
                 <c>Math.sqrt</c> which is perfectly fine.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="distance-mc">
+    <activity label="distance-mc">
         <statement>
 
             <p> The distance between two numbers on the number line is defined as the absolute value of their
@@ -157,9 +157,9 @@ public class RunestoneTests extends CodeTestHelper
             <p>❌ We need to start with the difference between <c>a</c> and <c>b</c>, not their sum.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="distance-abs">
+<activity label="distance-abs">
     <statement>
             <p>The distance between two numbers on a number line, as we discussed in the problem
                 above, is defined as the absolute value of their difference.
@@ -218,7 +218,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="random-numbers">
             <title>Random Numbers</title>
@@ -234,7 +234,7 @@ public class RunestoneTests extends CodeTestHelper
                 ranges in Java are expressed this way, as you’ll see later on with an inclusive
                 bottom and exclusive top.</p>
 
-<exercise label="random1">
+<activity label="random1">
     <statement>
             <p>Try the following code.  Run it several times to see what it prints each time.</p>
 
@@ -270,7 +270,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Getting a number between 0, inclusive, and 1, exclusive, may not seem all that
                 useful. But we can expand the range easily enough. To see how, imagine you had
                 less than a dollar to your name and you wanted to be richer—you’d want to find a
@@ -285,7 +285,7 @@ public class RunestoneTests extends CodeTestHelper
                 the initial amount of money in your pocket, always a bit less than $1. If you
                 multiply that value by any amount, it will stretch it into the range you want:</p>
 
-<exercise label="random-example-stretched">
+<activity label="random-example-stretched">
     <statement>
             <p>Try the following code. Run it several times to see what it prints each
                 time. Did you ever see 0.0? How about 1.0?</p>
@@ -321,7 +321,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>You may have noticed that while the numbers generated were always in the range 0
                 to 10, all the numbers probably had a lot a digits after the decimal point.
                 Often we want a random integer, with nothing after the decimal point. Easy
@@ -341,7 +341,7 @@ int rnd = (int)(Math.random()*10);
 int rnd = (int)(Math.random()*10) + 1;
 </code></program>
 
-<exercise label="randomRange">
+<activity label="randomRange">
     <statement>
             <p>Run the code below several times to see how the value changes each time. How could you change the code to return a random integer from 1 to 10?  Modify the code and see if your answer is correct. Try removing the parentheses from around (Math.random() * 10) and run the code several times. What happens? The parentheses are necessary because (int) will cast the closest expression, and (int)Math.random() will always be 0 since anything after the decimal point is dropped.</p>
 
@@ -375,7 +375,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p><ul>
                     <li>
@@ -537,7 +537,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
                 
             </tabular></table>
 
-    <exercise label="qrand_1">
+    <activity label="qrand_1">
         <statement>
 
             <p> Which of the following would be true about 40% of the time?</p>
@@ -573,9 +573,9 @@ int rnd4 = (int)(Math.random()*20) - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrand_2">
+    <activity label="qrand_2">
         <statement>
 
             <p> Which of the following would return a random number from 1 to 5 inclusive?</p>
@@ -611,9 +611,9 @@ int rnd4 = (int)(Math.random()*20) - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrand_3">
+    <activity label="qrand_3">
         <statement>
 
             <p> Which of the following would return a random number from 0 to 10 inclusive?</p>
@@ -649,9 +649,9 @@ int rnd4 = (int)(Math.random()*20) - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qrand_4">
+    <activity label="qrand_4">
         <statement>
 
             <p> Which of the following would be true about 75% of the time?</p>
@@ -687,9 +687,9 @@ int rnd4 = (int)(Math.random()*20) - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="apcsa_sample3">
+    <activity label="apcsa_sample3">
         <statement>
 
             <p> Which of the following statements assigns a random integer between 25 and 60, inclusive, to rn?</p>
@@ -743,7 +743,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-random-numbers">
             <title>Coding Challenge : Random Numbers</title>
@@ -765,7 +765,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
 </pre></p>
             <p>Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial<superscript>numberOfSpins</superscript>. Write this using the <term>Math.pow()</term> method in your code and save it into a variable and print out.</p>
 
-<exercise label="challenge1-11-random-math">
+<activity label="challenge1-11-random-math">
     <statement>
             <p>Complete the combination lock challenge below.</p>
 
@@ -852,10 +852,10 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Here’s another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by CSA teacher Zac Martin.</p>
 
-<exercise label="challenge-random-dancing-turtles">
+<activity label="challenge-random-dancing-turtles">
     <statement>
             <p>Complete the random numbers using Math.random() in the correct ranges to choose x, y coordinates and random color in the range of 0-255 for the turtle. Put on some music and watch your turtle dance!</p>
 
@@ -937,7 +937,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-2">
             <title>Summary</title>

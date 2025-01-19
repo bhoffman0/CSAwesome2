@@ -8,7 +8,7 @@
             Run the code below and also check it out in the Java visualizer with the Show CodeLens button which shows how this refers to different objects when the code is run.</p>
     <p>The <c>this</c> variable can only be used in instance methods and constructors. Class methods cannot refer to <c>this</c> or instance variables because they are called with the classname, not an object, so there is no <c>this</c> object.</p>
   </introduction>
-  <exercise label="PersonClassThis">
+  <activity label="PersonClassThis">
     <statement>
         <p>Observe the use of the keyword this in the code below. Click on the CodeLens button and then forward to see the memory in action.</p>
 
@@ -103,7 +103,7 @@ public class Person
  }
         </tests>
     </program>
-</exercise>
+</activity>
   <subsection xml:id="this-instancevariable">
             <title><c>this</c>.instanceVariable</title>
             <p>The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below.</p>
@@ -127,7 +127,7 @@ public Person(String name)
             <p>The <c>this</c> variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, <c>Pay</c> and <c>Overtime</c>. The <c>Pay</c> class declares an <c>Overtime</c> object and passes in <c>this</c> (the current <c>Pay</c> object) to its constructor which computes the overtime with respect to that <c>Pay</c> object. Try this code in the active code exercise below with the Show CodeLens button to trace through it step by step. Here is an image that shows how <c>this</c>, <c>myPay</c> and <c>p</c> all refer to the same object in memory.</p>
             <figure align="center"><image source="Unit3-Class-Creation/Figures/thisTrace.png" width="71%"/></figure>
 
-<exercise label="PayClassThis">
+<activity label="PayClassThis">
     <statement>
             <p>What does this code print out? Trace through the code with the Show CodeLens button. Notice how the this Pay object is passed to the Overtime constructor.</p>
 
@@ -199,9 +199,9 @@ class Overtime
  }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="AP-this-arg">
+    <activity label="AP-this-arg">
         <statement>
 
             <p> Consider the following class definitions.</p>
@@ -267,7 +267,7 @@ System.out.println(one.getPay());
             <p>Incorrect. The code will compile.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-bank-account">
             <title>Coding Challenge : Bank Account</title>
@@ -292,7 +292,7 @@ System.out.println(one.getPay());
                 </li>
             </ul></p>
 
-<exercise label="challenge-BankAccount">
+<activity label="challenge-BankAccount">
     <statement>
             <p>Create a class called BankAccount that keeps track of the account holder’s name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.</p>
 
@@ -400,7 +400,7 @@ public class BankAccount {}
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-35">
             <title>Summary</title>
@@ -422,7 +422,7 @@ public class BankAccount {}
   <subsection xml:id="ap-practice-23">
             <title>AP Practice</title>
 
-    <exercise label="AP-this">
+    <activity label="AP-this">
         <statement>
 
             <p> Consider the following class definitions.</p>
@@ -496,6 +496,6 @@ System.out.println(j.getTotalTemp());
             <p>Incorrect. The totalTemp is never used outside its scope.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

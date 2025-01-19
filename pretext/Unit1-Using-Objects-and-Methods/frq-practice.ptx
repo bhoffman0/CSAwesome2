@@ -42,7 +42,7 @@ public class Level
             <title>FRQ Practice</title>
             <p>In this simplified version of this FRQ, you will declare 3 <c>Level</c> objects for the 3 levels of the game and then call their <c>getPoints()</c> methods to calculate the score for the game. The score is calculated by adding the points from each level, but in this version, level 2 points are doubled and level 3 points are tripled.</p>
 
-<exercise label="frq-simple-game-score">
+<activity label="frq-simple-game-score">
     <statement>
             <p>In the main method, declare 3 objects of the <c>Level</c> class called <c>level1</c>, <c>level2</c>, and <c>level3</c> with the following points and goals: 100 points and true, 100 points and true, and 200 points and true. Then, calculate the score for the game by adding the points from each level using their <c>getPoints()</c> method, but double the level 2 points and triple the level 3 points.</p>
 
@@ -136,6 +136,6 @@ public class RunestoneTests extends CodeTestHelper
    }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

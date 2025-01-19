@@ -6,7 +6,7 @@
         <p>We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.</p>
         
 
-    <exercise label="AP2-1-3">
+    <activity label="AP2-1-3">
         <statement>
 
             <dl>
@@ -79,9 +79,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-1-4">
+    <activity label="AP2-1-4">
         <statement>
 
             <dl>
@@ -154,9 +154,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-2-3">
+    <activity label="AP2-2-3">
         <statement>
 
             <p>  Which of the following code segments correctly creates an instance of a new Party object?</p>
@@ -236,9 +236,9 @@ III. int numOfFriends = 6;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-2-4">
+    <activity label="AP2-2-4">
         <statement>
 
             <p>  Consider the following class. Which of the following code segments, when placed in a method in a class other than Liquid, will construct a Liquid object l with a boilingPoint of 98.6 ?</p>
@@ -311,9 +311,9 @@ public class Liquid
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-3-3">
+    <activity label="AP2-3-3">
         <statement>
 
             <p>  Consider the following class. Assume that the Liquid object liquid has been properly declared and initialized in a method in a class other than Liquid.  Which of the following statements are valid?</p>
@@ -397,9 +397,9 @@ public class Liquid
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-3-4">
+    <activity label="AP2-3-4">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -459,9 +459,9 @@ a.wag();
             <p>This would just print “Wag Tail “.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-4-3">
+    <activity label="AP2-4-3">
         <statement>
 
             <p> Consider the following methods, which appear in the same class.</p>
@@ -495,9 +495,9 @@ public void printTemperature(double celsius, double fahrenheit)
             <p>Correct! (5 * 9)/5 + 32 = 41 and doubles print out with .0 at the end.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-4-4">
+    <activity label="AP2-4-4">
         <statement>
 
             <p> Consider the following methods, which appear in the same class.</p>
@@ -531,9 +531,9 @@ public void printOrder(int number)
             <p>This would not call the printOrder method.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-5-3">
+    <activity label="AP2-5-3">
         <statement>
 
             <p> Consider the following method in the Movie class.</p>
@@ -559,9 +559,9 @@ public double calculateMovieRating(int numOfPeople, double rating)
             <p>The method has 2 parameters.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-5-4">
+    <activity label="AP2-5-4">
         <statement>
 
             <p> Consider the following methods, which appear in the same class.</p>
@@ -627,6 +627,6 @@ public int anotherThing(int i, int j)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         
     </section>

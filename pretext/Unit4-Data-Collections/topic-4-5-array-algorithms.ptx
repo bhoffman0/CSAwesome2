@@ -88,7 +88,7 @@ for (int val : values)
 double average = sum / values.length;
 System.out.println("Average is " + average);
 </code></program>
-<exercise label="parsons_array_avg" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="parsons_array_avg" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following program has the correct code to return the average of the first 3 items in the array a, but the code is mixed up.  Drag the blocks from the left into the correct order on the right. You will be told if any of the blocks are in the wrong order or are indented incorrectly.</p>
 </statement>
 <blocks><block order="2">
@@ -106,9 +106,9 @@ System.out.println("Average is " + average);
 <cline>  return total / 3;</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></exercise>            <p>Here is an object-oriented example that has the array as a private instance variable in the class and provides public methods sum and average that use enhanced for loops.  You can use the <problematic refid="id4">|Java Visualizer|</problematic> or the Code Lens button to step through this code.</p>
+</block></blocks></activity>            <p>Here is an object-oriented example that has the array as a private instance variable in the class and provides public methods sum and average that use enhanced for loops.  You can use the <problematic refid="id4">|Java Visualizer|</problematic> or the Code Lens button to step through this code.</p>
 
-<exercise label="enhanced-for-loop-avg">
+<activity label="enhanced-for-loop-avg">
     <statement>
             <p>Try the code below that computes the average of the elements in the array. Can you add another method to compute the sum of the elements?</p>
 
@@ -187,7 +187,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="min-max-search-algorithms">
             <title>Min, Max, Search Algorithms</title>
@@ -205,7 +205,7 @@ for(int i=0; i &lt; array.length; i++)
        ...
 }
 </code></program>
-<exercise label="parsons_for_each_largest" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="parsons_for_each_largest" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following method has the correct code to return the largest value in an integer array called <title_reference>vals</title_reference> (an instance variable of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
 </statement>
 <blocks><block order="6">
@@ -228,9 +228,9 @@ for(int i=0; i &lt; array.length; i++)
 <cline>  return largest;</cline>
 </block><block order="7">
 <cline>} // end method</cline>
-</block></blocks></exercise>            <p>If you want to step through the correct code to see what it does in the Java Visualizer click on the following <url href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A+++%0A+++public+int+getLargest()%0A+++%7B%0A++%0A+++++int+largest+%3D+values%5B0%5D%3B%0A%0A+++++for+(int+item+%3A+values)%0A+++++%7B%0A%0A+++++++if+(item+%3E+largest)%0A+++++++%7B%0A%0A+++++++++largest+%3D+item%3B%0A%0A+++++++%7D++//+end+if+%0A%0A+++++%7D+//+end+for%0A+++++return+largest%3B%0A%0A+++%7D+//+end+method%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getLargest())%3B%0A+++%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A+++%0A+++public+int+getLargest()%0A+++%7B%0A++%0A+++++int+largest+%3D+values%5B0%5D%3B%0A%0A+++++for+(int+item+%3A+values)%0A+++++%7B%0A%0A+++++++if+(item+%3E+largest)%0A+++++++%7B%0A%0A+++++++++largest+%3D+item%3B%0A%0A+++++++%7D++//+end+if+%0A%0A+++++%7D+//+end+for%0A+++++return+largest%3B%0A%0A+++%7D+//+end+method%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getLargest())%3B%0A+++%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=0">Java visualizer link</url>.</p>
+</block></blocks></activity>            <p>If you want to step through the correct code to see what it does in the Java Visualizer click on the following <url href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A+++%0A+++public+int+getLargest()%0A+++%7B%0A++%0A+++++int+largest+%3D+values%5B0%5D%3B%0A%0A+++++for+(int+item+%3A+values)%0A+++++%7B%0A%0A+++++++if+(item+%3E+largest)%0A+++++++%7B%0A%0A+++++++++largest+%3D+item%3B%0A%0A+++++++%7D++//+end+if+%0A%0A+++++%7D+//+end+for%0A+++++return+largest%3B%0A%0A+++%7D+//+end+method%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getLargest())%3B%0A+++%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker%0A%7B%0A+++private+int%5B+%5D+values%3B%0A%0A+++public+ArrayWorker(int%5B%5D+theValues)%0A+++%7B%0A++++++values+%3D+theValues%3B%0A+++%7D%0A%0A+++public+double+getAverage()%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A+++%0A+++public+int+getLargest()%0A+++%7B%0A++%0A+++++int+largest+%3D+values%5B0%5D%3B%0A%0A+++++for+(int+item+%3A+values)%0A+++++%7B%0A%0A+++++++if+(item+%3E+largest)%0A+++++++%7B%0A%0A+++++++++largest+%3D+item%3B%0A%0A+++++++%7D++//+end+if+%0A%0A+++++%7D+//+end+for%0A+++++return+largest%3B%0A%0A+++%7D+//+end+method%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B%5D+numArray+%3D++%7B2,+6,+7,+12,+5%7D%3B%0A+++++ArrayWorker+aWorker+%3D+new+ArrayWorker(numArray)%3B%0A+++++System.out.println(aWorker.getLargest())%3B%0A+++%7D%0A%7D%0A%0A&amp;mode=display&amp;curInstr=0">Java visualizer link</url>.</p>
 
-<exercise label="minmax">
+<activity label="minmax">
     <statement>
             <p>The code below finds the minimum (smallest element) in an array. Try it in the <url href="http://www.pythontutor.com/visualize.html#code=%20%20public%20class%20MinMax%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20int%20min%20%3D%20values%5B0%5D%3B%20//%20initialize%20min%20to%20the%20first%20element%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20if%20%28val%20%3C%20min%29%20//%20found%20a%20new%20min!%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20min%20%3D%20val%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20System.out.println%28%22Min%20is%20%22%20%2B%20min%20%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D&amp;cumulative=false&amp;curInstr=20&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=%20%20public%20class%20MinMax%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20int%20min%20%3D%20values%5B0%5D%3B%20//%20initialize%20min%20to%20the%20first%20element%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20if%20%28val%20%3C%20min%29%20//%20found%20a%20new%20min!%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20min%20%3D%20val%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20System.out.println%28%22Min%20is%20%22%20%2B%20min%20%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D&amp;cumulative=false&amp;curInstr=20&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> with the CodeLens button. Can you change it to find the maximum element instead? Can you also compute the average of the elements?</p>
 
@@ -305,10 +305,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>When searching for an element or a minimum or maximum, it is important not to leave the loop early before finding the correct value and not to replace the value with subsequent ones.</p>
 
-<exercise label="early_return_error">
+<activity label="early_return_error">
     <statement>
             <p>Run the following code. Does it find 7 in the array? Click on Code Lens to trace through the code to see why not. Fix the early return error in the following code.</p>
 
@@ -377,9 +377,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="mcq_array_error1">
+    <activity label="mcq_array_error1">
         <statement>
 
             <p> Given that <c>array</c> is an array of integers and <c>target</c> is an integer value, which of the following best describes the conditions under which the following code segment will return false?</p>
@@ -441,9 +441,9 @@ public boolean find(int[] array, int target)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq_array_error2">
+    <activity label="mcq_array_error2">
         <statement>
 
             <p> Given that <c>array</c> is an array of integers and <c>target</c> is an integer value, which of the following best describes the conditions under which the following code segment will return true?</p>
@@ -496,7 +496,7 @@ return temp;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="looping-from-back-to-front">
             <title>Looping From Back to Front</title>
@@ -505,7 +505,7 @@ return temp;
             
             <p>You don’t have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  In the example below,  the method <c>getIndexOfLastElementSmallerThanTarget</c> returns the index of the last element in the array that is smaller than the given argument.  The <term>return</term> statement inside the loop stops the execution of the loop and the method and returns the index that is found immediately back to the main method. It returns -1 if there is no number in the array that is smaller than the given number.</p>
 
-<exercise label="arrayFindSmaller">
+<activity label="arrayFindSmaller">
     <statement>
             <p>What does the following code print out? Notice that the array and the target are passed in as arguments to the getIndexOfLastElementSmallerThanTarget method. Trace through it keeping track of the array values and the output. Then run it to see if you’re right.  You can also try the code in the <url href="http://www.pythontutor.com/java.html#code=%20%20%20public%20class%20ArrayFindSmallest%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20/**%20%40return%20index%20of%20the%20last%20number%20smaller%20than%20target%20*/%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20int%20getIndexOfLastElementSmallerThanTarget%28int%5B%20%5D%20values,%20int%20target%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20for%20%28int%20index%20%3D%20values.length%20-%201%3B%20index%20%3E%3D%200%3B%20index--%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28values%5Bindex%5D%20%3C%20target%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20index%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20return%20-1%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%20%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20int%5B%5D%20theArray%20%3D%20%7B-30,%20-5,%208,%2023,%2046%7D%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2050%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2050%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2030%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2030%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2010%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2010%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%200%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,0%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-20%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-20%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-30%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-30%29%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/java.html#code=%20%20%20public%20class%20ArrayFindSmallest%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20/**%20%40return%20index%20of%20the%20last%20number%20smaller%20than%20target%20*/%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20int%20getIndexOfLastElementSmallerThanTarget%28int%5B%20%5D%20values,%20int%20target%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20for%20%28int%20index%20%3D%20values.length%20-%201%3B%20index%20%3E%3D%200%3B%20index--%29%0A%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%20%28values%5Bindex%5D%20%3C%20target%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20index%3B%0A%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20return%20-1%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%20%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20int%5B%5D%20theArray%20%3D%20%7B-30,%20-5,%208,%2023,%2046%7D%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2050%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2050%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2030%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2030%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%2010%3A%20%22%20%2B%20getIndexOfLastElementSmallerThanTarget%28theArray,%2010%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%200%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,0%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-20%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-20%29%29%3B%0A%20%20%20%20%20%20%20%20%20System.out.println%28%22Last%20index%20of%20element%20smaller%20than%20-30%3A%20%22%20%2BgetIndexOfLastElementSmallerThanTarget%28theArray,-30%29%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Java visualizer</url> with the Code Lens button. Can you add another method that finds the index of the last element greater than the target instead of smaller than the target and have main print out a test of it? Call this method getIndexOfLastElementGreaterThanTarget and give it 2 arguments and a return value like the method below.</p>
 
@@ -627,9 +627,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="mcq_array_loop1">
+    <activity label="mcq_array_loop1">
         <statement>
 
             <p> Given the following code segment (which is identical to the method above) what will be returned when you execute: <c>getIndexOfLastElementSmallerThanTarget(values,-13)</c>;</p>
@@ -687,9 +687,9 @@ public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int comp
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="mcq_array_loop2">
+    <activity label="mcq_array_loop2">
         <statement>
 
             <p> Given the following code segment (which is not quite identical to the method above) what will be returned when you execute: <c>getIndexOfLastElementSmallerThanTarget(values, 7)</c>;</p>
@@ -747,7 +747,7 @@ public static int getIndexOfLastElementSmallerThanTarget(int[] values, int compa
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="test-property">
             <title>Test Property</title>
@@ -795,7 +795,7 @@ for (int val : values)
     }
 }
 </code></program>
-<exercise label="parsons-even-array" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="parsons-even-array" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following program segment should count the number of elements in the array that are even using an enhanced for each loop.  But, the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="2">
@@ -813,8 +813,8 @@ for (int val : values)
 <cline>    } //end conditional</cline>
 </block><block order="4">
 <cline>} //end for loop</cline>
-</block></blocks></exercise>
-<exercise label="exAllOdd">
+</block></blocks></activity>
+<activity label="exAllOdd">
     <statement>
             <p>Write the method allOdd to return true if all the values in the array are odd. First write the helper function isEven to return true or false for one value, using %.</p>
 
@@ -891,7 +891,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="pairs-and-duplicates-in-array">
             <title>Pairs and Duplicates in Array</title>
@@ -923,7 +923,7 @@ for (int i = 0; i &lt; values.length; i++)
 return false;
 </code></program>
 
-<exercise label="sumPairs">
+<activity label="sumPairs">
     <statement>
             <p>Create a method <c>sumPairs10(nums)</c> returns <c>true</c> if there are at least two items in the array <c>nums</c> that are adjacent (next to each other) that add up to 10, otherwise return <c>false</c>.</p>
 
@@ -984,9 +984,9 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="noDups">
+<activity label="noDups">
     <statement>
             <p>Create a method <c>noDups(nums)</c> returns <c>true</c> if there are no repeated (duplicate) items in the array <c>nums</c>. It should return false if it does find a repeated element using nested loops.</p>
 
@@ -1046,12 +1046,12 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="rotating-array-elements">
             <title>Rotating Array Elements</title>
             <p>Rotating an array means shifting all the elements in the array to the right or left by one position. For example, if the array is {6, 2, 5, 3}, rotating it to the right would give {3, 6, 2, 5}. To rotate an array, we need to copy the last element to the first position and then copy all the other elements to the next position. We can use a temporary variable to store the last element before overwriting it. If you do not want to change the original array, you can return a new array by copying in the rotated elements.</p>
-<exercise label="rotateRightParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="rotateRightParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following program segment is a method that should return an integer array that is rotated to the right – so {6, 2, 5, 3} returns {3, 6, 2, 5} (the parameter). Note that the method return type is int[] which means it will return an int array. But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="3">
@@ -1075,9 +1075,9 @@ public class RunestoneTests extends CodeTestHelper {
 <cline>    return result;</cline>
 </block><block order="6">
 <cline>} //end shiftRight method</cline>
-</block></blocks></exercise>            <p>We can also rotate in place without constructing another array. We can copy the last element to the first position and then copy all the other elements to the next position. We need to use an indexed loop to access the elements at different indices. When you pass an array to a method, you’re actually passing a reference to the array’s memory location. This means that any changes made to the array within the method will affect the original array.</p>
+</block></blocks></activity>            <p>We can also rotate in place without constructing another array. We can copy the last element to the first position and then copy all the other elements to the next position. We need to use an indexed loop to access the elements at different indices. When you pass an array to a method, you’re actually passing a reference to the array’s memory location. This means that any changes made to the array within the method will affect the original array.</p>
 
-<exercise label="rotate">
+<activity label="rotate">
     <statement>
             <p>The code below rotates array elements to the left in place without constructing another array. Try it in the <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20Rotate%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20int%20first%20%3D%20values%5B0%5D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%3D0%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20//%20if%20it's%20not%20the%20last%20element,%20copy%20the%20next%20one%20over%0A%20%20%20%20%20%20%20%20%20%20if%20%28i%20%3C%20values.length%20-%201%29%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%2B1%5D%3B%0A%20%20%20%20%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20//%20last%20element%20gets%20first%0A%20%20%20%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20first%3B%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20print%20them%20out%20to%20see%20the%20results%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28val%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%7D%0A%20%20&amp;cumulative=false&amp;curInstr=47&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20Rotate%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20int%20first%20%3D%20values%5B0%5D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%3D0%3B%20i%20%3C%20values.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20//%20if%20it's%20not%20the%20last%20element,%20copy%20the%20next%20one%20over%0A%20%20%20%20%20%20%20%20%20%20if%20%28i%20%3C%20values.length%20-%201%29%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20values%5Bi%2B1%5D%3B%0A%20%20%20%20%20%20%20%20%20%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20//%20last%20element%20gets%20first%0A%20%20%20%20%20%20%20%20%20%20%20%20%20values%5Bi%5D%20%3D%20first%3B%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20print%20them%20out%20to%20see%20the%20results%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20System.out.print%28val%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%0A%20%20%20%7D%0A%20%20&amp;cumulative=false&amp;curInstr=47&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false&amp;curInstr=0">Java visualizer</url> with the CodeLens button. Can you change it to rotate the elements to the right instead? Hint: use a backwards loop.</p>
 
@@ -1146,7 +1146,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="reversing-an-array">
             <title>Reversing an Array</title>
@@ -1159,7 +1159,7 @@ int temp = array[i];  // pour milk into temp cup
 array[i] = array[j];  // pour orange juice into milk glass
 array[j] = temp;      // pour milk from temp into oj glass
 </code></program>
-<exercise label="parsons_array_reverse" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="parsons_array_reverse" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following method reverses an array in place using an indexed for loop and a temp variable to swap the first and last items, but the code blocks are mixed up. Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="8">
@@ -1182,7 +1182,7 @@ array[j] = temp;      // pour milk from temp into oj glass
 <cline>  } // end for</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></exercise><exercise label="parsons_array_reverse2" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="parsons_array_reverse2" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following method reverses an array in place using a while loop and a temp variable to swap the first and last items.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="4">
@@ -1211,8 +1211,8 @@ array[j] = temp;      // pour milk from temp into oj glass
 </block><block order="8">
 <cline>   }</cline>
 <cline>}</cline>
-</block></blocks></exercise>
-<exercise label="reverseArrayCode">
+</block></blocks></activity>
+<activity label="reverseArrayCode">
     <statement>
             <p>Create a method <c>reverse</c> that reverses an array in place using a temp variable.</p>
 
@@ -1273,7 +1273,7 @@ public class ReverseTest
       }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="review-and-frq-practice-for-arrays">
             <title>Review and FRQ Practice for Arrays</title>

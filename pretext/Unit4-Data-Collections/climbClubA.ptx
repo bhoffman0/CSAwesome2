@@ -116,7 +116,7 @@ hikerClub.addClimb("Monadnock", 344);
             </subsection>
             
 
-    <exercise label="fr_climbA_1">
+    <activity label="fr_climbA_1">
         <statement>
 
                 <p> How would you create a new object newClimb of the ClimbInfo class, with a peakName of Everest and climbTime of 600?</p>
@@ -152,9 +152,9 @@ hikerClub.addClimb("Monadnock", 344);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="fr_climbA_2">
+    <activity label="fr_climbA_2">
         <statement>
 
                 <p> How do you append a new item, 7, to the end of a non-empty ArrayList&lt;Integer&gt; list?</p>
@@ -190,13 +190,13 @@ hikerClub.addClimb("Monadnock", 344);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="try-and-solve-it-14">
             <title>Try and Solve It</title>
 
-<exercise label="ClimbClubA">
+<activity label="ClimbClubA">
     <statement>
             <p>Complete the method <c>addClimb</c> in the <c>ClimbingClub</c> class in the code below.  The code includes a <c>main</c> method that will test the <c>addClimb</c> method.</p>
 
@@ -359,7 +359,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-2">
             <title>Video - One way to code the solution</title>

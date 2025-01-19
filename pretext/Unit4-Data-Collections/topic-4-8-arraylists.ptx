@@ -37,7 +37,7 @@
                 <c>ArrayList</c>.</p>
         </note>
   </introduction>
-  <exercise label="qloopList">
+  <activity label="qloopList">
         <statement>
 
         <p> Which of the following is a reason to use an ArrayList instead of an array?</p>
@@ -82,7 +82,7 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
   <subsection xml:id="import-java-util-arraylist">
             <title>import java.util.ArrayList</title>
             <idx>import</idx>
@@ -129,7 +129,7 @@ import java.util.*;
                 <p>Don’t worry about adding import statements on the AP CSA exam.  Any that you need will be provided for you.</p>
             </note>
 
-    <exercise label="qlib_1">
+    <activity label="qlib_1">
         <statement>
 
             <p> Which of the following is true about import statements?</p>
@@ -174,7 +174,7 @@ import java.util.*;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="declaring-and-creating-arraylists">
             <title>Declaring and Creating ArrayLists</title>
@@ -199,7 +199,7 @@ ArrayList&lt;String&gt; shoppingList = new ArrayList&lt;String&gt;();
                 Also remember that you can’t call methods on <c>null</c> so trying to call <c>size</c>
                 on the value of <c>list2</c> at line 10 below causes a <c>NullPointerException</c>.</p>
 
-<exercise label="ArrayListCreateStr">
+<activity label="ArrayListCreateStr">
     <statement>
             <p>The following code demonstrates a NullPointerException. Change the list2 declaration so that it creates a new ArrayList to remove the NullPointerException.</p>
 
@@ -244,7 +244,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>You can also create ArrayLists of integer and double values. However, you have
                 to use the wrapper classes <c>Integer</c> or <c>Double</c> as the type parameter because <c>ArrayList</c>s
                 can only hold objects, not primitive values. All primitive types must be
@@ -262,7 +262,7 @@ ArrayList&lt;Integer&gt; numList = new ArrayList&lt;Integer&gt;();
 ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
 </code></program>
 
-    <exercise label="qArrayListInteger">
+    <activity label="qArrayListInteger">
         <statement>
 
             <p> Which of the following is the correct way to create an ArrayList of integers?</p>
@@ -307,7 +307,7 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="arraylist-methods">
             <title>ArrayList Methods</title>
@@ -374,7 +374,7 @@ System.out.println( list.size() );
                 line to board a bus. Note that we can add objects of any type to an
                 <c>ArrayList</c>. The following code has a <c>String</c> list and an <c>Integer</c> list.</p>
 
-<exercise label="listAdd">
+<activity label="listAdd">
     <statement>
             <p>Can you add another item to the shopping list and print out the new list?</p>
 
@@ -436,7 +436,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <idx><h>list</h><h>autoboxing</h></idx>
  <idx><h>list</h><h>unboxing</h></idx>
 
@@ -451,7 +451,7 @@ list.add(5); // this will work in all Java versions
             <p>You can put any kind of objects into an <c>ArrayList</c>. Even instances of a class
                 that you wrote. For example, here is an <c>ArrayList</c> of <c>Student</c>s.</p>
 
-<exercise label="StudentArrayList">
+<activity label="StudentArrayList">
     <statement>
             <p>An example of an <c>ArrayList</c> of <c>Student</c> objects. Add a new student with
                 your name and info in it.</p>
@@ -520,7 +520,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="add-index-obj">
             <title><c>add(index,obj)</c></title>
@@ -530,7 +530,7 @@ public class RunestoneTests extends CodeTestHelper
                 moves over any existing values to higher indices to make room for the new
                 object. The indices for an <c>ArrayList</c> start at <c>0</c> and end at the number of elements <c>- 1</c>.</p>
 
-<exercise label="listAddInt2">
+<activity label="listAddInt2">
     <statement>
             <p>What will the code below print out? Try figuring it out before running it.
                 Remember that <c>ArrayList</c>s start at index 0 and that the add(index,obj) always
@@ -586,12 +586,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p><c>ArrayList</c>s like arrays start numbering their elements from 0.</p>
             </note>
 
-    <exercise label="qalAdd1">
+    <activity label="qalAdd1">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -645,10 +645,10 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on this <problematic refid="id2">|Java Visualizer 1|</problematic>.</p>
 
-    <exercise label="qalAdd2">
+    <activity label="qalAdd2">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -701,7 +701,7 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Java Visualizer</url>.</p>
         </subsection>
   <subsection xml:id="remove-index">
@@ -714,7 +714,7 @@ System.out.println(list1);
                 the other items over in the underlying array and decrease the size of the
                 <c>ArrayList</c> by 1.</p>
 
-<exercise label="listRem">
+<activity label="listRem">
     <statement>
             <p>What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.</p>
 
@@ -763,7 +763,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>The <c>remove(int index)</c> method will remove the object at the given index
                     and shift left any values to the right of that index. It doesn’t remove the
@@ -771,7 +771,7 @@ public class RunestoneTests extends CodeTestHelper
                     remove the value 1. It removes the value 2 at index 1.</p>
             </note>
 
-    <exercise label="qListRem">
+    <activity label="qListRem">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -824,7 +824,7 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(2)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">RemoveExample</url>.</p>
         </subsection>
   <subsection xml:id="get-index-and-set-index-obj">
@@ -842,7 +842,7 @@ System.out.println(list1);
                 <c>ArrayList</c> is a class with methods, not a built in type with special support
                 in the language like arrays.</p>
 
-<exercise label="listGetSet">
+<activity label="listGetSet">
     <statement>
             <p>Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?</p>
 
@@ -905,9 +905,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="qListRem1">
+    <activity label="qListRem1">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -962,10 +962,10 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++ArrayList%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(1)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(3)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,5)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(6)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example1</url>.</p>
 
-    <exercise label="qListRem2">
+    <activity label="qListRem2">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -1019,7 +1019,7 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(1,+%22Destini%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CString%3E+list1+%3D+new+ArrayList%3CString%3E()%3B%0A++++++list1.add(%22Anaya%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Layla%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(%22Sharrie%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(1,+%22Destini%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+%22Sarah%22)%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example2</url>.</p>
         </subsection>
   <subsection xml:id="comparing-arrays-and-arraylists">
@@ -1108,7 +1108,7 @@ ArrayList&lt;String&gt; nameList = new ArrayList&lt;String&gt;();
                 and <c>String</c>s made by AP CSA teacher Sam Procopio of Bishop Blanchet High
                 School.</p>
 
-<exercise label="array-to-arraylist">
+<activity label="array-to-arraylist">
     <statement>
             <p>Rewrite the following code that uses an array to use an <c>ArrayList</c>
                 instead. In the comments write why you think an <c>ArrayList</c> is a better
@@ -1199,13 +1199,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>Although it is not on the AP exam, you can convert an array to a <c>List</c> using
                 the static method <c>asList</c> from the <c>Arrays</c> helper class:
                 <c>Arrays.asList(arrayname)</c>. Note that <c>ArrayList</c> has a <c>toString</c> method
                 that is automatically called to print the list in a nice format.</p>
 
-<exercise label="ArrayListFromArray">
+<activity label="ArrayListFromArray">
     <statement>
             <p>Example code creating an ArrayList from an array.</p>
 
@@ -1250,7 +1250,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-frq-digits">
             <title>Coding Challenge : FRQ Digits</title>
@@ -1266,7 +1266,7 @@ public class RunestoneTests extends CodeTestHelper
                 after dividing by 10? Try a different number and guess what it will print and
                 then run to check.</p>
 
-<exercise label="divideby10">
+<activity label="divideby10">
     <statement>
             <p>Set number to a different number and guess what number / and % will return. Which operator gives you a digit in number?</p>
 
@@ -1311,7 +1311,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>We can use a while loop to print out each digit in reverse order starting from
                 the right (4, 5, 1 for the number 154) while dividing it by 10. You can try it
                 in the active code above. Here is the pseudocode:</p>
@@ -1334,7 +1334,7 @@ public class RunestoneTests extends CodeTestHelper
                 the right order, you can use the <c>add(index, obj)</c> method to add the digit to
                 the beginning of the <c>ArrayList</c> instead of the end.</p>
 
-<exercise label="challenge-digits">
+<activity label="challenge-digits">
     <statement>
             <p>Complete the challenge below to put the digits of a number in an ArrayList.</p>
 
@@ -1410,7 +1410,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-49">
             <title>Summary</title>

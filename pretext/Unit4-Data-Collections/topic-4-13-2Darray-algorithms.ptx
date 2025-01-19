@@ -92,7 +92,7 @@ for (int[] row : array)
             <title>Sum, Average, Min, Max 2D Array Algorithms</title>
             <p>For example, counting and searching algorithms work very similarly in 1D and 2D arrays. The following code adds all of the values in a given row.</p>
 
-<exercise label="lca2dloopPart">
+<activity label="lca2dloopPart">
     <statement>
             <p>What will the following code print out? Can you complete the  method called <c>getTotalForCol</c> that gets the total for a column? To do this, you must loop through the rows. The array’s length will tell you how many rows you have since it is an array of arrays, while the length of the array’s first element will tell you how many columns.</p>
 
@@ -169,8 +169,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
-<exercise label="max2DArrayParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+</activity>
+<activity label="max2DArrayParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.</p>
 </statement>
 <blocks><block order="3">
@@ -205,7 +205,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline> return largest;</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></exercise>            <p>You can step through this code using the Java Visualizer by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=40" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=40">Java Visualizer</url>.</p>
+</block></blocks></activity>            <p>You can step through this code using the Java Visualizer by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=40" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+getLargest(int%5B%5D%5B%5D+arr)++%7B%0A++++int+largest+%3D+arr%5B0%5D%5B0%5D%3B%0A++++for+(int+row+%3D+0%3B+row+%3C+arr.length%3B+row%2B%2B)++%7B%0A++++++for+(int+col+%3D+0%3B+col+%3C+arr%5B0%5D.length%3B+col%2B%2B)++%7B%0A++++++++if+(arr%5Brow%5D%5Bcol%5D+%3E+largest)++%7B%0A++++++++++largest+%3D+arr%5Brow%5D%5Bcol%5D%3B%0A++++++++%7D+//+end+if%0A++++++%7D+//+end+column+loop%0A++++%7D+//+end+row+loop%0A++++return+largest%3B%0A+++%7D+//+end+method%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D%5B%5D+testArray+%3D+%7B%7B-32,+-6,+-3%7D,+%7B-392,+-93,+-2%7D%7D%3B%0A++++++System.out.println(getLargest(testArray))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=40">Java Visualizer</url>.</p>
         </subsection>
   <subsection xml:id="subsection-of-a-2d-array-for-a-property">
             <title>Subsection of a 2D Array for a Property</title>
@@ -214,7 +214,7 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array. The following code counts the number of times a value appears in a part of the 2D array indicated by the row and column start and end values.</p>
 
-<exercise label="lca2dloopPart2">
+<activity label="lca2dloopPart2">
     <statement>
             <p>Looping through just part of a 2D array.</p>
 
@@ -267,14 +267,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="duplicates-in-2d-arrays">
             <title>Duplicates in 2D Arrays</title>
             <p>You can determine the presence or absence of duplicate elements in the 2D array or in a designated row, column, or other subsection.
                 With 1D arrays, we sometimes needed 2 nested loops to check for duplicates or pairs. With 2D arrays, you often need 4 nested loop to check the whole array!</p>
 
-<exercise label="noDups2DArray">
+<activity label="noDups2DArray">
     <statement>
             <p>The method <c>noDups(nums)</c> returns <c>true</c> if there are no repeated (duplicate) items in the array <c>nums</c>. It should return false if it does find a repeated element using nested loops.</p>
 
@@ -312,13 +312,13 @@ public class Duplicates
 }
         </code>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="rotate-and-reverse">
             <title>Rotate and Reverse</title>
             <p>We can also rotate or reverse the order of the elements in a row or column. The following code rotates the elements in a row to the right by one position. This algorithm is very similar to the 1D array rotation algorithm since we are dealing with a single row or column.</p>
 
-<exercise label="rotate2DArray">
+<activity label="rotate2DArray">
     <statement>
             <field_list>
                 <field>
@@ -409,7 +409,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="review-and-frq-practice-with-2d-arrays">
             <title>Review and FRQ Practice with 2D arrays</title>

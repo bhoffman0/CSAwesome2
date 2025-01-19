@@ -159,7 +159,7 @@ public class RunestoneTests extends CodeTestHelper
             </subsection>
             
 
-    <exercise label="frsda_1">
+    <activity label="frsda_1">
         <statement>
 
                 <p> Which loop should you use to loop through all the digits of the number?</p>
@@ -195,9 +195,9 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="frsda_2">
+    <activity label="frsda_2">
         <statement>
 
                 <p> What should you use as the test in the while loop?</p>
@@ -233,11 +233,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Try to write the code for the method isSelfDivisor.  When you are ready click “Run” to test your solution. Remember that it should return true for 128, false for 26, false for 120, and false for 102.</p>
 
-<exercise label="lcfrsda5">
+<activity label="lcfrsda5">
     <statement>
             <p>FRQ SelfDivisor: Write the method isSelfDivisor.</p>
 
@@ -361,7 +361,7 @@ public class SelfDivisor
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution">
             <title>Video - One way to code the solution</title>

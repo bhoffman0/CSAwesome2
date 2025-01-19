@@ -23,7 +23,7 @@
             <p>The <term>method signature</term> defines the method’s name and the number and types of parameters it takes. In a class definition or in documentation of a library, instance methods are usually defined after the instance variables (attributes) and constructors in a class. For example, see the <c>Student</c> class below. Notice that the methods do not use the keyword <c>static</c>. They are instance methods that are called using an object of the class and can access and change the object’s attributes.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Student class showing instance variables, constructors, and methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/StudentClass.png" width="89%" alt="A Student class showing instance variables, constructors, and methods"/></figure>
 
-<exercise label="student_methods">
+<activity label="student_methods">
     <statement><p>Click on the method headers (signatures) in the following class. Do not click on the constructors.</p></statement>
 <feedback><p>Methods follow the constructors. The method header is the first line of a method.</p></feedback>
 <areas>
@@ -48,7 +48,7 @@
 <cline>        <area correct="no">System.out.println(name + ":" + email);</area></cline>
 <cline>     <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
-</areas></exercise>        </subsection>
+</areas></activity>        </subsection>
   <subsection xml:id="method-calls">
             <title>Method Calls</title>
             <p>To use an object’s method, you must use the object name and the dot (.) operator followed by the method name, for example, <c>yertle.forward();</c> calls <c>yertle</c>’s <c>forward</c> method to move a turtle object forward 100 pixels. Object methods work with the <term>attributes</term> of the object, such as the direction the turtle is heading or its position.</p>
@@ -59,7 +59,7 @@
             </note>
             <p>Before you call a method from <c>main</c> or from outside of the current class, you must make sure that you have created and initialized an object. However, if you just declare an object reference without setting it to refer to a new object, the value will be <c>null</c>, meaning that it doesn’t reference an object. If you call a method on a variable whose value is <c>null</c>, you will get a <term>NullPointerException</term> error, where a <term>pointer</term> is another name for a reference.</p>
 
-<exercise label="nullPointerTest">
+<activity label="nullPointerTest">
     <statement>
             <p>Run the code below to see a NullPointerException. Fix the code by using <c>new Turtle(habitat)</c> to create a new Turtle object before calling its methods.</p>
 
@@ -102,7 +102,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>The following flowchart can be used to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods are called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using <c>object.methodName()</c>. If you are calling the method from within the same class, you can just call the method using <c>methodName()</c> which will refer to the current object.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Method Calls to Static and Instance Methods</caption><image source="Unit1-Using-Objects-and-Methods/Figures/FlowChartCallingMethods.png" width="98%" alt="Comparing method calls to static and instance methods"/></figure>
         </subsection>
@@ -115,16 +115,16 @@ public class RunestoneTests extends CodeTestHelper
             <p>When you create your own method, the variables you define for it are called <term>parameters</term>. When you call the method to do its job, you give or pass in <term>arguments</term> to it that are then saved in the parameter variables. So, in the definition of the <c>forward</c> method, it has a parameter variable called <c>pixels</c>, and in the call to <c>forward(200)</c>, the argument is the value 200 which will get saved in the parameter variable pixels. You will learn to write your own methods in Unit 3. In this unit, you will learn to call methods that are already written for you.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method signatures with parameters and method calls arguments</caption><image source="Unit1-Using-Objects-and-Methods/Figures/method-param-arg.png" width="98%" alt="Method parameters and arguments"/></figure>
 
-<exercise label="methodVocab">
+<activity label="methodVocab">
     <statement><p>Drag the definition from the left and drop it on the correct word on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the vocabulary above.</p></feedback>
-<matches><match order="1"><premise>an object's behaviors or functions that can be used or called to do its job</premise><response>methods</response></match><match order="2"><premise>the values or data passed to an object's method</premise><response>arguments</response></match><match order="3"><premise>the variables in a method's definition that hold the arguments</premise><response>parameters</response></match><match order="4"><premise>asking to run the method</premise><response>method call</response></match></matches></exercise>            <p>Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle that are written for you.</p>
+<matches><match order="1"><premise>an object's behaviors or functions that can be used or called to do its job</premise><response>methods</response></match><match order="2"><premise>the values or data passed to an object's method</premise><response>arguments</response></match><match order="3"><premise>the variables in a method's definition that hold the arguments</premise><response>parameters</response></match><match order="4"><premise>asking to run the method</premise><response>method call</response></match></matches></activity>            <p>Here is the Turtle class diagram again that shows some of the variables and methods inherited from the SimpleTurtle class in the class Turtle that are written for you.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleUMLClassDiagram.png" width="71%" alt="Turtle class diagram"/></figure>
             <p>Methods are said to be <term>overloaded</term> when there
                 are multiple methods with the same name but a
                 different <term>method signature</term>, where it requires a different number or type of parameters. For example, we have two different forward methods, <c>forward()</c> with no arguments and <c>forward(100)</c> which has an argument that tells it how much to move forward. The arguments given to the method need to correspond to the order and types of the parameters in the method signature.</p>
 
-<exercise label="TurtleTestMethods1">
+<activity label="TurtleTestMethods1">
     <statement>
             <p><ol marker="1">
                 <li>
@@ -241,10 +241,10 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <image source="Unit1-Using-Objects-and-Methods/Figures/house.png" width="27%" alt="simple house"/>
             <p>Try the following mixed up code to draw a simple house made of a square and a triangle roof.</p>
-<exercise label="DrawAHouse" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="DrawAHouse" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code uses a turtle to draw a simple house, but the lines are mixed up.  Drag the code blocks to the right and put them in the correct order to first draw a square for the house and then a red triangle for the roof.  Click on the “Check Me” button to check your solution.  You can type this code in the Active Code window above to see it in action.</p>
 </statement>
 <blocks><block order="6">
@@ -291,7 +291,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>   </cline>
 </block><block order="1">
 <cline>}</cline>
-</block></blocks></exercise>        </subsection>
+</block></blocks></activity>        </subsection>
   <subsection xml:id="methods-that-return-values">
             <title>Methods that Return Values</title>
             <p>All the methods on <c>Turtle</c> that we’ve discussed so far are <term>void methods</term> with <c>void</c>
@@ -334,7 +334,7 @@ System.out.println("Yertle's y position is: " + yertle.getYPos() );
                 <p>A common error is forgetting to do something with the value returned from a method. When you call a method that returns a value, you should do something with that value like assigning it to a variable or printing it out.</p>
             </note>
 
-<exercise label="TurtleTestGetSet">
+<activity label="TurtleTestGetSet">
     <statement>
             <p>Try the code below that prints out the turtle’s current position using <c>getXPos()</c> and <c>getYPos()</c>. Can you make it go to position (0,0) or as close to it as possible?</p>
 
@@ -409,9 +409,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="TurtleArea">
+<activity label="TurtleArea">
     <statement>
             <p>Fix the errors in the code below so that it prints out the area of the space
                 that the turtle occupies by multiplying its width and height. Remember that
@@ -489,14 +489,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>We will save a deeper discussion of actually writing getters and other methods
                 until Unit 3, but for the AP progress checks for this unit, you should be able to
                 trace through method calls like the ones below. Notice that the <term>return
                     statement</term> in a method returns the value, and it must match declared return type
                 of the method. The calling method must then do something useful with that value.</p>
 
-    <exercise label="traceCircleArea">
+    <activity label="traceCircleArea">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -572,9 +572,9 @@ System.out.println(c.getArea());
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="traceRectangleArea">
+    <activity label="traceRectangleArea">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -658,9 +658,9 @@ System.out.println(r.getArea());
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="traceReturnMethods">
+    <activity label="traceReturnMethods">
         <statement>
 
             <p> What does the following code print out? (If you get stuck, try this <url href="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/visualize.html#code=public%20class%20MethodTrace%20%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20public%20int%20square%28int%20x%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20return%20x*x%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20int%20divide%28int%20x,%20int%20y%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20x/y%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20MethodTrace%20traceObj%20%3D%20new%20MethodTrace%28%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%20traceObj.square%282%29%20%2B%20traceObj.divide%286,2%29%20%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%7D&amp;cumulative=false&amp;curInstr=16&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">visualization</url> to see this code in action.)</p>
@@ -734,12 +734,12 @@ public class MethodTrace
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>The <c>Turtle</c> class has a method called
                 <c>getDistance(x,y)</c> which will return the turtle’s distance from a point (x,y). Can you find yertle’s distance from the point (0,0)? In the exercise below, add another turtle and make both turtles move. Then find the distance between them. You must use the <c>getXPos</c> and <c>getYPos</c> methods as well as the
                 <c>getDistance</c> method.</p>
 
-<exercise label="TurtleDistance">
+<activity label="TurtleDistance">
     <statement>
             <p>Use the <c>getXPos</c>, <c>getYPos</c>, and <c>getDistance(x,y)</c> methods to find yertle’s distance from the point (0,0). Add another turtle, move both turtles to different positions, and find the distance between the two turtles.</p>
 
@@ -824,7 +824,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-turtle-house">
             <title>Coding Challenge : Turtle House</title>
@@ -838,7 +838,7 @@ t.penDown();
 </code></program>
             <p>It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. When planning your coordinates for the house, remember that the turtle starts at the center of the screen (150,150) and the top left corner is (0,0).</p>
 
-<exercise label="challenge-TurtleHouse">
+<activity label="challenge-TurtleHouse">
     <statement>
             <p>Draw a Turtle House! Make sure you use forward, turn, penUp, penDown, moveTo methods as well as different colors. Have fun!</p>
 
@@ -934,7 +934,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-5">
             <title>Summary</title>
@@ -971,7 +971,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="ap-practice-4">
             <title>AP Practice</title>
 
-    <exercise label="AP-Party-Methods">
+    <activity label="AP-Party-Methods">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -1016,9 +1016,9 @@ public class Party
             <p>This would cause an error because the void method cancelParty() does not return a String that could be printed.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-Cat-trace">
+    <activity label="AP-Cat-trace">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -1077,9 +1077,9 @@ a.meow();
             <p>This would just print “Meow “.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-Liquid-return">
+    <activity label="AP-Liquid-return">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -1130,9 +1130,9 @@ System.out.println(water.getTemp());
             <p>Correct, the Liquid() constructor sets the currentTemp instance variable to 50, and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value as a double.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-Pizza-trace-args">
+    <activity label="AP-Pizza-trace-args">
         <statement>
 
             <p> Consider the following methods, which appear in the same class.</p>
@@ -1166,6 +1166,6 @@ public void printSlices(int slices)
             <p>This would not call the printSlices method.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

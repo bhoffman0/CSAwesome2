@@ -54,7 +54,7 @@ public interface MenuItem
   <subsection xml:id="try-and-solve-it-20">
             <title>Try and Solve It</title>
 
-<exercise label="frqTrio">
+<activity label="frqTrio">
     <statement>
             <p>Write the Trio class (near the end of the code below) that implements the MenuItem interface (which is like extending a class). Your implementation must include a constructor that takes three parameters representing a sandwich, salad, and drink.  The main method has code to test the result.</p>
 
@@ -272,6 +272,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>

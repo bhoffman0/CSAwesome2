@@ -21,7 +21,7 @@
             <p>Selection is the process of making a choice based on a true or false decision.
                 In programming, selection (also called branching) occurs when a choice of how the execution of an algorithm will proceed is based on a true or false decision. An algorithm may take different paths based on certain conditions, often using true/false logic.</p>
 
-<exercise label="clickSelection">
+<activity label="clickSelection">
     <statement><p>Click on all of the selection (decision or branching) phrases in the following algorithm.</p></statement>
 <feedback><p>Selections are made based on a true or false decision. Look for the word "if" to identify selections.</p></feedback>
 <areas>
@@ -35,12 +35,12 @@
 <cline><area correct="yes">7. Check if you have homework due. If so, pack it in your bag.</area></cline>
 <cline><area correct="yes">8. Put on your sunglasses if it's sunny.</area></cline>
 <cline><area correct="no">9. Leave for school or work.</area></cline>
-</areas></exercise>        </subsection>
+</areas></activity>        </subsection>
   <subsection xml:id="repetition">
             <title>Repetition</title>
             <p>Repetition is when a process repeats itself until a desired outcome is reached. In programming, repetition is achieved through loops. A <term>loop</term> allows an algorithm to repeat certain actions until a specified condition is met. Another term commonly used for repetition is <term>iteration</term>.</p>
 
-<exercise label="clickRepetition">
+<activity label="clickRepetition">
     <statement><p>Click on all of the repetition phrases in the following algorithm.</p></statement>
 <feedback><p>Repetition is when a process repeats itself until a desired outcome is reached. Look for the word "repeat" or "all" or "keep" to identify repetition.</p></feedback>
 <areas>
@@ -53,13 +53,13 @@
 <cline><area correct="no">6. Check if you have homework due. If so, pack it in your bag.</area></cline>
 <cline><area correct="yes">7. Repeat packing items until your bag is ready. </area></cline>
 <cline><area correct="no">8. Leave for school or work.</area></cline>
-</areas></exercise>        </subsection>
+</areas></activity>        </subsection>
   <subsection xml:id="algorithms-with-pseudocode-and-flowcharts">
             <title>Algorithms with Pseudocode and Flowcharts</title>
             <p>For complex problems, it is important to plan your solution before writing code. <term>Pseudocode</term> is a simplified, informal way of describing the steps in an algorithm in a human language like English but following the sequence, selection, and repetition structure of a programming language.  <term>Flowcharts</term> are diagrams that represent the steps in an algorithm like below. Selection is usually represented as a triangle in a flowchart, and arrows are used to show repetition. Both pseudocode and flowcharts are tools that help you plan your algorithm before writing code.</p>
             <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Flowchart for Selection branching the code into two paths</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
             <p>The order in which sequencing, selection, and repetition are used contributes to the outcome of the algorithm.   In the following pseudocode, put the steps of the algorithm in order and then decide what the outcome will be based on the order of the steps and the conditions.</p>
-<exercise label="algorithm-gift" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+<activity label="algorithm-gift" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>Put the following pseudocode algorithm steps for buying a birthday gift for your friend in order. Make sure some of the steps are indented to be inside the repetition and that you buy the more expensive gifts first. Click on Check Me to see if you are right.</p>
 </statement>
 <blocks><block order="4">
@@ -76,8 +76,8 @@
 <cline>   If total more than $1, buy a card and subtract 1 from total.</cline>
 </block><block order="1">
 <cline>   Otherwise, give them the change.</cline>
-</block></blocks></exercise>
-    <exercise label="trace-algorithm-gift1">
+</block></blocks></activity>
+    <activity label="trace-algorithm-gift1">
         <statement>
 
             <p> Given the pseudocode for buying a gift above, assume you have $16 to spend. What will be the outcome of the algorithm?</p>
@@ -122,9 +122,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="trace-algorithm-gift2">
+    <activity label="trace-algorithm-gift2">
         <statement>
 
             <p> Given the pseudocode for buying a gift above, assume you have $22 to spend. What will be the outcome of the algorithm?</p>
@@ -169,18 +169,18 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-algorithms">
             <title>Coding Challenge : Algorithms</title>
             <p>In this group activity, you will work together to create an algorithm for a common problem: choosing a snack!  Create pseudocode for this problem. Make sure you include selection and repetition in your algorithm. For example, if there is no chocolate, you may want to keep searching for another snack. If you’re thirsty, you may want to consider the drinks in the fridge. You may want to consider every item in the fridge or your leftover halloween candy stash before deciding on the perfect snack. Be creative!</p>
 
-<exercise label="challenge-algorithm-snack">
+<activity label="challenge-algorithm-snack">
     <statement>
             <p> Write your pseudocode for choosing a snack here. Include selection and repetition in your algorithm. Be creative!</p>
 
     </statement>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-15">
             <title>Summary</title>

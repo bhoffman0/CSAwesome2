@@ -4,7 +4,7 @@
         <title>Hard Search/Sort Multiple Choice Questions</title>
         <p>These problems are harder than those you will see on the AP CSA exam.</p>
 
-    <exercise label="qssm_1">
+    <activity label="qssm_1">
         <statement>
 
         <p> What is printed when the following main method is executed? The break; statement used in this code breaks out of or terminates the loop at that point. It is not used on the AP CSA exam.</p>
@@ -89,10 +89,10 @@ public class AlphaSort
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/zqWPtU" visual="https://goo.gl/zqWPtU">Ex-12-8-1</url>.</p>
 
-    <exercise label="qssm_2">
+    <activity label="qssm_2">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -155,10 +155,10 @@ public class NumberCount
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/MGwTeT" visual="https://goo.gl/MGwTeT">Ex-12-8-2</url>.</p>
 
-    <exercise label="qssm_3">
+    <activity label="qssm_3">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -229,10 +229,10 @@ public class GuestList
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/MGXSF2" visual="https://goo.gl/MGXSF2">Ex-12-8-3</url>.</p>
 
-    <exercise label="qssm_4">
+    <activity label="qssm_4">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -299,10 +299,10 @@ public class OddEvenMod
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/Rpc4o4" visual="https://goo.gl/Rpc4o4">Ex-12-8-4</url>.</p>
 
-    <exercise label="qssm_5">
+    <activity label="qssm_5">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -381,10 +381,10 @@ public class PrimeOrNot
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="http://www.pythontutor.com/java.html#code=public%20class%20PrimeOrNot%0A%7B%0A%20%20%20%20private%20static%20boolean%20check%28int%20n%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%28int%20i%20%3D%202%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28n%20%25%20i%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20arr%20%3D%20%7B5,3,2,9,3,4%7D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20arr.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28check%28arr%5Bi%5D%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20temp%20%3D%20arr%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5B0%5D%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bi%5D%20%3D%20temp%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20for%20%28int%20t%20%3D%200%3B%20t%20%3C%20arr.length%3B%20t%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%28arr%5Bt%5D%29%20%2B%20%22,%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=111&amp;heapPrimitives=false&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" visual="http://www.pythontutor.com/java.html#code=public%20class%20PrimeOrNot%0A%7B%0A%20%20%20%20private%20static%20boolean%20check%28int%20n%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20for%28int%20i%20%3D%202%3B%20i%20%3C%20n%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28n%20%25%20i%20%3D%3D%200%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%5D%20arr%20%3D%20%7B5,3,2,9,3,4%7D%3B%0A%20%20%20%20%20%20%20%20for%20%28int%20i%20%3D%200%3B%20i%20%3C%20arr.length%3B%20i%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20if%28check%28arr%5Bi%5D%29%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20int%20temp%20%3D%20arr%5B0%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5B0%5D%20%3D%20arr%5Bi%5D%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20arr%5Bi%5D%20%3D%20temp%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20for%20%28int%20t%20%3D%200%3B%20t%20%3C%20arr.length%3B%20t%2B%2B%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%28arr%5Bt%5D%29%20%2B%20%22,%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%7D&amp;cumulative=false&amp;curInstr=111&amp;heapPrimitives=false&amp;mode=display&amp;origin=opt-frontend.js&amp;py=java&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false">Ex-12-8-5</url>.</p>
 
-    <exercise label="qssm_6">
+    <activity label="qssm_6">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -462,10 +462,10 @@ public class GradeSort
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/rXzB1c" visual="https://goo.gl/rXzB1c">Ex-12-8-6</url>.</p>
 
-    <exercise label="qssm_7">
+    <activity label="qssm_7">
         <statement>
 
         <p> What is printed when the following main method is executed?</p>
@@ -541,6 +541,6 @@ public class DivisibleBy2or3
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         <p>You can step through the code above by clicking on the following link <url href="https://goo.gl/LrbUuu" visual="https://goo.gl/LrbUuu">Ex-12-8-7</url>.</p>
     </section>

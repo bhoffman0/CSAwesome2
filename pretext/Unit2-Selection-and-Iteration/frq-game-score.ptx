@@ -106,7 +106,7 @@ public class Game
             </ol></p>
             <p>Let’s practice this below.</p>
 
-    <exercise label="frq_which_method">
+    <activity label="frq_which_method">
         <statement>
 
             <p> Which method are you asked to write for part a?</p>
@@ -151,9 +151,9 @@ public class Game
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="frqifs">
+<activity label="frqifs">
     <statement><p>Select the phrases below which will probably correspond to an if clause of a conditional statement.</p></statement>
 <feedback><p>Look for the word if</p></feedback>
 <areas>
@@ -164,8 +164,8 @@ public class Game
 <cline>- Level three points are earned only <area correct="yes">if the goals of all three levels are reached.</area></cline>
 <cline>- The score for the game is <area correct="no">the sum of the points earned for levels one, two, and three.</area></cline>
 <cline>- <area correct="yes">If the game is a bonus game</area> , the score for the game is tripled.</cline>
-</areas></exercise>
-    <exercise label="frq_which_methods_used">
+</areas></activity>
+    <activity label="frq_which_methods_used">
         <statement>
 
             <p> What are some methods given to you that you will need to use for part a?</p>
@@ -210,15 +210,15 @@ public class Game
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>There are two classes given to you in this FRQ. Which method belongs to each class?</p>
 
-<exercise label="frq_method_class_match">
+<activity label="frq_method_class_match">
     <statement><p>Drag the method from the left and drop it on the correct class that it belongs to on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the FRQ description above.</p></feedback>
-<matches><match order="1"><premise>getPoints()</premise><response>Level</response></match><match order="2"><premise>isBonus()</premise><response>Game</response></match></matches></exercise>            <p>Notice that the <c>Game</c> class has 3 instance variables to represent each level, <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> which are object of class type <c>Level</c>. You will need to use these variables to get their points and check if the goal is reached for each level.</p>
+<matches><match order="1"><premise>getPoints()</premise><response>Level</response></match><match order="2"><premise>isBonus()</premise><response>Game</response></match></matches></activity>            <p>Notice that the <c>Game</c> class has 3 instance variables to represent each level, <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> which are object of class type <c>Level</c>. You will need to use these variables to get their points and check if the goal is reached for each level.</p>
 
-    <exercise label="frq_call_method">
+    <activity label="frq_call_method">
         <statement>
 
             <p> How would you call the <c>goalReached()</c> method of the <c>levelOne</c> object?</p>
@@ -263,10 +263,10 @@ public class Game
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>Let’s simplify the problem by first writing the code to add the points for <c>levelOne</c> to a variable called <c>score</c>.</p>
 
-    <exercise label="frq_expression">
+    <activity label="frq_expression">
         <statement>
 
             <p> Which expression would add the points for <c>levelOne</c> into a variable called <c>score</c>?</p>
@@ -311,13 +311,13 @@ public class Game
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="solve-the-problem">
             <title>Solve the Problem</title>
             <p>Let’s write the code for the <c>getScore()</c> method. The method should use the <c>goalReached()</c> and <c>getPoints()</c> methods of the <c>Level</c> class to calculate the score for the game. It will need to check if the goal is reached for each level using the <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> objects and add the points for each level to the score.  If the game is a bonus game, which can be checked with the <c>isBonus()</c> method (no object needed since it is in the same class), the score will be tripled. At the end of the method, a <c>return</c> statement will return the score to the main method to be printed out.</p>
 
-<exercise label="frq-getScore">
+<activity label="frq-getScore">
     <statement>
             <p>Write the code for the <c>getScore()</c> method of the <c>Game</c> class. The method should use the <c>goalReached()</c> and <c>getPoints()</c> methods of the <c>levelOne</c>, <c>levelTwo</c> and <c>levelThree</c> objects to calculate the score for the game. If it is a <c>isBonus()</c> game, the score should be tripled.</p>
 
@@ -450,7 +450,7 @@ public class RunestoneTests extends CodeTestHelper
    }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="ap-scoring-rubric">
             <title>AP Scoring Rubric</title>

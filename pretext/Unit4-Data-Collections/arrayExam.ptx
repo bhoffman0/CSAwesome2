@@ -7,7 +7,7 @@
         <p>Click the “Start” button when you are ready to begin the exam, but only then as you can only take the exam once.  Click the “Pause” button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the “Finish Exam” button at the end only when you are done.  It will display the number correct, number wrong, and number skipped after the “Finish Exam” button.</p>
         
 
-    <exercise label="arrayEx1">
+    <activity label="arrayEx1">
         <statement>
 
             <p> What is the value of <c>i</c> after the following code has executed?</p>
@@ -63,9 +63,9 @@ while ((sum &lt; limit) &amp;&amp; (i &lt; x.length))
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx2">
+    <activity label="arrayEx2">
         <statement>
 
             <p> What is the value of <c>count</c> after the following code has executed?</p>
@@ -134,9 +134,9 @@ while ((i1 &gt; 0 ) &amp;&amp; (i2 &gt; 0 ))
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx3">
+    <activity label="arrayEx3">
         <statement>
 
             <p> What is the value of <c>count</c> after the following code has executed?</p>
@@ -206,9 +206,9 @@ for (int i = 0; i &lt; b.length; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx4">
+    <activity label="arrayEx4">
         <statement>
 
             <p> What is the value of <c>count</c> after the following code has executed?</p>
@@ -286,9 +286,9 @@ while ( (i1 &lt; x1.length) &amp;&amp;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx5">
+    <activity label="arrayEx5">
         <statement>
 
             <p> After the following code is executed which of the following are the values in <c>x</c>?</p>
@@ -356,9 +356,9 @@ while (i &lt; j)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx6">
+    <activity label="arrayEx6">
         <statement>
 
             <p> Which of the following is the missing code from the method <c>isSorted</c> so that it correctly checks that all elements in <c>x</c> are sorted in ascending order?</p>
@@ -464,9 +464,9 @@ return false;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx7">
+    <activity label="arrayEx7">
         <statement>
 
             <p> What is the value of <c>i</c> after the following code executes?</p>
@@ -531,9 +531,9 @@ while ((sum&lt;limit) &amp;&amp; (i&lt;x.length))
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx8">
+    <activity label="arrayEx8">
         <statement>
 
             <p> If any two numbers in an array of integers, not necessarily consecutive numbers in the array, are out of order (i.e. the number that occurs first in the array is larger than the number that occurs second), then that is called an inversion. For example, consider an array <c>x</c> that has the values {1, 4, 3, 2}.  Then there are three inversions since 4 is greater than both 3 and 2 and 3 is greater than 2.  Which of the following can be used to replace the missing code so that the code correctly counts the number of inversions?</p>
@@ -589,9 +589,9 @@ for (int i=0 ; i &lt; x.length - 1 ; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx9">
+    <activity label="arrayEx9">
         <statement>
 
             <p> Which of the following correctly copies all the even numbers from <c>array1</c> to <c>array2</c> in the same order as they are in <c>array1</c> without any errors?  Assume that <c>array2</c> is large enough for all the copied values.</p>
@@ -693,9 +693,9 @@ for (int a1=0 ; a1 &lt;= array1.length ; a1++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="arrayEx10">
+    <activity label="arrayEx10">
         <statement>
 
             <p> After the following code executes what are the values in <c>array2</c>?</p>
@@ -753,6 +753,6 @@ for (int a1=1; a1 &lt; array1.length; a1++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         
     </section>

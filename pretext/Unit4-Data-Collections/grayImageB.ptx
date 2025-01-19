@@ -77,7 +77,7 @@ public class GrayImage
             <p>Once again, this problem starts with looping through the array of pixels, using a nested for loop for the 2D array. As we loop we will need to subtract pixel values from one another.</p>
             
 
-    <exercise label="grayImageB_0">
+    <activity label="grayImageB_0">
         <statement>
 
                 <p> Which is the simplest way to subtract one integer value from another integer value?</p>
@@ -113,11 +113,11 @@ public class GrayImage
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="grayImageB_1">
+    <activity label="grayImageB_1">
         <statement>
 
                 <p> Which loop is the best for iterating through the image?</p>
@@ -153,14 +153,14 @@ public class GrayImage
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops.</p>
             
                 <p>The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2),
                     but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the <problematic refid="id2">|Java Visualizer|</problematic> or the CodeLens button.</p>
 
-<exercise label="lcfrgib3">
+<activity label="lcfrgib3">
     <statement>
                 <p>Fix the terminating conditions of the loops so that we do not go beyond the array bounds</p>
 
@@ -208,7 +208,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             
         </subsection>
   <subsection xml:id="algorithm-1">
@@ -216,16 +216,16 @@ public class RunestoneTests extends CodeTestHelper
             <p>There are several ways to solve this problem, we will focus on two possible solutions below. It is not required for you to
                 come up with both solutions but it would be good practice. If you wish to solve these exercises, click on the buttons to reveal them.</p>
 
-<exercise label="gray_image_B">
+<activity label="gray_image_B">
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
     </statement>
-</exercise>
+</activity>
             <p>This set of questions will focus on a solution that starts indexing the array at zero, and stops 2 spaces before the end.</p>
             
 
-    <exercise label="2012GreyScaleB_3">
+    <activity label="2012GreyScaleB_3">
         <statement>
 
                 <p> What could you write for the outer for loop so that it iterates through the rows but stops 2 before the end?</p>
@@ -270,11 +270,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScaleB_4">
+    <activity label="2012GreyScaleB_4">
         <statement>
 
                 <p> What could you write for the Inner for loop so that it iterates through the rows but stops 2 before the bottom?</p>
@@ -319,11 +319,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScaleB_5">
+    <activity label="2012GreyScaleB_5">
         <statement>
 
                 <p> The question requires if any value is less than the value <c>BLACK</c> after subtraction, it needs to be replaced with the value <c>BLACK</c>. How could you write this?</p>
@@ -368,12 +368,12 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             <p>Next we will have questions focused on a solution that starts at the beginning of the loop and iterated through the entire thing, but checks for out of bounds errors as it subtracts.</p>
             
 
-    <exercise label="2012GreyScaleB_6">
+    <activity label="2012GreyScaleB_6">
         <statement>
 
                 <p> What could you write for the outer for loop so that it iterates through the rows?</p>
@@ -418,11 +418,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScaleB_7">
+    <activity label="2012GreyScaleB_7">
         <statement>
 
                 <p> What could you write for the Inner for loop so that it iterates through the columns?</p>
@@ -467,11 +467,11 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
             
 
-    <exercise label="2012GreyScaleB_b">
+    <activity label="2012GreyScaleB_b">
         <statement>
 
                 <p> Since you don’t limit the iteration through the array, how can you check to make sure the subtraction isn’t going out of bounds?</p>
@@ -516,13 +516,13 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             
         </subsection>
   <subsection xml:id="try-and-solve-it-17">
             <title>Try and Solve It</title>
 
-<exercise label="lcfrgib4">
+<activity label="lcfrgib4">
     <statement>
             <p>FRQ Gray Image B: write the code for the method <c>processImage</c>. Please use row and col for your loop variables.</p>
 
@@ -637,7 +637,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="video-one-way-to-code-the-solution-5">
             <title>Video - One way to code the solution</title>

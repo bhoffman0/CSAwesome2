@@ -8,7 +8,7 @@
             <title>Easier Multiple Choice Questions</title>
             <p>These problems are easier than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qaeasy_1">
+    <activity label="qaeasy_1">
         <statement>
 
             <p> Which index is the last element in an array called <c>nums</c> at?</p>
@@ -35,9 +35,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qaeasy_2new">
+    <activity label="qaeasy_2new">
         <statement>
 
             <p> Which of the following declarations will cause a compile time error?</p>
@@ -91,9 +91,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qaeasy_3">
+    <activity label="qaeasy_3">
         <statement>
 
             <p> What is returned from <c>arr[3]</c> if <c>arr={6, 3, 1, 2}</c>?</p>
@@ -147,9 +147,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qaeasy_4">
+    <activity label="qaeasy_4">
         <statement>
 
             <p> What is returned from <c>mystery</c> when it is passed <c>{10, 30, 30, 60}</c>?</p>
@@ -214,10 +214,10 @@ public static double mystery(int[] arr)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+double+mystery(int%5B%5D+arr)%0A+++%7B%0A++++++double+output+%3D+0%3B%0A++++++for+(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)%0A++++++%7B%0A+++++++++output+%3D+output+%2B+arr%5Bi%5D%3B%0A++++++%7D%0A++++++return+output+/+arr.length%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+test+%3D+%7B10,+30,+30,+60%7D%3B%0A++++++System.out.println(mystery(test))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+double+mystery(int%5B%5D+arr)%0A+++%7B%0A++++++double+output+%3D+0%3B%0A++++++for+(int+i+%3D+0%3B+i+%3C+arr.length%3B+i%2B%2B)%0A++++++%7B%0A+++++++++output+%3D+output+%2B+arr%5Bi%5D%3B%0A++++++%7D%0A++++++return+output+/+arr.length%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+test+%3D+%7B10,+30,+30,+60%7D%3B%0A++++++System.out.println(mystery(test))%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-9-4</url>.</p>
 
-    <exercise label="qaeasy_5old3">
+    <activity label="qaeasy_5old3">
         <statement>
 
             <p> Given the following values of <c>a</c> and the method <c>doubleLast</c> what will the values of <c>a</c> be after you execute: <c>doubleLast()</c>?</p>
@@ -274,10 +274,10 @@ public void doubleLast()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link <url href="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B+%5D+a+%3D+%7B-10,+-5,+1,+4,+8,+30%7D%3B%0A%0A+++public+void+doubleLast()%0A+++%7B%0A++++%0A+++++++for+(int+i+%3D+a.length+/+2%3B+i+%3C+a.length%3B+i%2B%2B)%0A+++++++%7B%0A+++++++++++a%5Bi%5D+%3D+a%5Bi%5D+*+2%3B%0A+++++++%7D%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++Test+myTest+%3D+new+Test()%3B%0A++++++myTest.doubleLast()%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-9-5</url>.</p>
 
-    <exercise label="qaeasy_6">
+    <activity label="qaeasy_6">
         <statement>
 
             <p> What are the values in a after multAll(3) executes?</p>
@@ -335,9 +335,9 @@ public void multAll(int amt)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qaeasy">
+    <activity label="qaeasy">
         <statement>
 
             <p> What are the values in a after mult(2) executes?</p>
@@ -394,13 +394,13 @@ public void mult(int amt)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="medium-multiple-choice-questions-3">
             <title>Medium Multiple Choice Questions</title>
             <p>These problems are similar to those you will see on the AP CSA exam.</p>
 
-    <exercise label="qamed_1">
+    <activity label="qamed_1">
         <statement>
 
             <p> Which of the following statements is a valid conclusion. Assume that variable <c>b</c> is an array of <c>k</c> integers and that the following is true:</p>
@@ -457,9 +457,9 @@ b[0] != b[i] for all i from 1 to k-1
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qamed_2">
+    <activity label="qamed_2">
         <statement>
 
             <p> Consider the following code segment. Which of the following statements best describes the condition when it returns true?</p>
@@ -521,10 +521,10 @@ return temp;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+test(int%5B%5D+a,int+val)+%7B%0A++++++boolean+temp+%3D+false%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)+%7B%0A++++++++temp+%3D+(a%5Bi%5D+%3D%3D+val)%3B%0A+++++%7D%0A+++++return(temp)%3B%0A+++%7D%0A++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+myArray+%3D+%7B9,+-3,+81,+-3028,+5%7D%3B%0A++++++System.out.println(test(myArray,9))%3B%0A++++++System.out.println(test(myArray,5))%3B%0A++++++System.out.println(test(myArray,0))%3B%0A++++++System.out.println(test(myArray,-3))%3B+%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++%0A+++public+static+boolean+test(int%5B%5D+a,int+val)+%7B%0A++++++boolean+temp+%3D+false%3B%0A+++++for+(int+i+%3D+0%3B+i+%3C+a.length%3B+i%2B%2B)+%7B%0A++++++++temp+%3D+(a%5Bi%5D+%3D%3D+val)%3B%0A+++++%7D%0A+++++return(temp)%3B%0A+++%7D%0A++++++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+myArray+%3D+%7B9,+-3,+81,+-3028,+5%7D%3B%0A++++++System.out.println(test(myArray,9))%3B%0A++++++System.out.println(test(myArray,5))%3B%0A++++++System.out.println(test(myArray,0))%3B%0A++++++System.out.println(test(myArray,-3))%3B+%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-2</url>.</p>
 
-    <exercise label="qamed_3">
+    <activity label="qamed_3">
         <statement>
 
             <p> Consider the following data field and method <c>findLongest</c>. Method <c>findLongest</c> is intended to find the longest consecutive block of the value <c>target</c> occurring in the array <c>nums</c>; however, <c>findLongest</c> does not work as intended. For example given the code below the call <c>findLongest(10)</c> should return 3, the length of the longest consecutive block of 10s. Which of the following best describes the value actually returned by a call to <c>findLongest</c>?</p>
@@ -602,10 +602,10 @@ public int findLongest(int target)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+nums%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theNums)%0A++++%7B%0A+++++++nums+%3D+theNums%3B%0A++++%7D%0A+++%0A+++++public+int+findLongest(int+target)+%7B%0A++++++++int+lenCount+%3D+0%3B%0A++++++++int+maxLen+%3D+0%3B%0A++++++++for+(int+k+%3D+0%3B+k+%3C+nums.length%3B+k%2B%2B)+%7B%0A+++++++++++if+(nums%5Bk%5D+%3D%3D+target)+%7B%0A++++++++++++++lenCount%2B%2B%3B%0A+++++++++++%7D+else+if+(lenCount+%3E+maxLen)+%7B%0A++++++++++++++maxLen+%3D+lenCount%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++if+(lenCount+%3E+maxLen)+%7B%0A+++++++++++maxLen+%3D+lenCount%3B%0A++++++++%7D%0A++++++++return+maxLen%3B%0A+++++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+10,+10,+15,+15,+15,+15,+10,+10,+10,+15,+10,+10%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++System.out.println(arrayWorker.findLongest(10))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+nums%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theNums)%0A++++%7B%0A+++++++nums+%3D+theNums%3B%0A++++%7D%0A+++%0A+++++public+int+findLongest(int+target)+%7B%0A++++++++int+lenCount+%3D+0%3B%0A++++++++int+maxLen+%3D+0%3B%0A++++++++for+(int+k+%3D+0%3B+k+%3C+nums.length%3B+k%2B%2B)+%7B%0A+++++++++++if+(nums%5Bk%5D+%3D%3D+target)+%7B%0A++++++++++++++lenCount%2B%2B%3B%0A+++++++++++%7D+else+if+(lenCount+%3E+maxLen)+%7B%0A++++++++++++++maxLen+%3D+lenCount%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++if+(lenCount+%3E+maxLen)+%7B%0A+++++++++++maxLen+%3D+lenCount%3B%0A++++++++%7D%0A++++++++return+maxLen%3B%0A+++++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+10,+10,+15,+15,+15,+15,+10,+10,+10,+15,+10,+10%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++System.out.println(arrayWorker.findLongest(10))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-3</url>.  Can you fix the code in the Java Visualizer so that it works as intended?</p>
 
-    <exercise label="qamed_4">
+    <activity label="qamed_4">
         <statement>
 
             <p> Consider the following data field and method. Which of the following best describes the contents of <c>myStuff</c> in terms of <c>m</c> and <c>n</c> after the following statement has been executed?</p>
@@ -678,10 +678,10 @@ int m = mystery(n)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+myStuff%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theStuff)%0A++++%7B%0A+++++++myStuff+%3D+theStuff%3B%0A++++%7D%0A%0A+++++//precondition%3A+myStuff+contains%0A+++++//+++integers+in+no+particular+order%0A+++++public+int+mystery(int+num)+%7B%0A++++++++for+(int+k+%3D+myStuff.length+-+1%3B+k+%3E%3D+0%3B+k--)+%7B%0A+++++++++++if+(myStuff%5Bk%5D+%3C+num)+%7B%0A+++++++++++++++return+k%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++return+-1%3B%0A+++++%7D%0A%0A+++++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B-3,+1,+3,+2,+6%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++int+m+%3D+arrayWorker.mystery(2)%3B%0A++++++System.out.println(m)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ArrayWorker+%7B%0A+++%0A++++private+int%5B%5D+myStuff%3B%0A+++%0A++++public+ArrayWorker(int%5B%5D+theStuff)%0A++++%7B%0A+++++++myStuff+%3D+theStuff%3B%0A++++%7D%0A%0A+++++//precondition%3A+myStuff+contains%0A+++++//+++integers+in+no+particular+order%0A+++++public+int+mystery(int+num)+%7B%0A++++++++for+(int+k+%3D+myStuff.length+-+1%3B+k+%3E%3D+0%3B+k--)+%7B%0A+++++++++++if+(myStuff%5Bk%5D+%3C+num)+%7B%0A+++++++++++++++return+k%3B%0A+++++++++++%7D%0A++++++++%7D%0A++++++++return+-1%3B%0A+++++%7D%0A%0A+++++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B-3,+1,+3,+2,+6%7D%3B%0A++++++ArrayWorker+arrayWorker+%3D+new+ArrayWorker(temp)%3B%0A++++++int+m+%3D+arrayWorker.mystery(2)%3B%0A++++++System.out.println(m)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-4</url>.</p>
 
-    <exercise label="qamed_5">
+    <activity label="qamed_5">
         <statement>
 
             <p> Consider the following field <c>arr</c> and method <c>checkArray</c>.  Which of the following best describes what <c>checkArray</c> returns?</p>
@@ -752,10 +752,10 @@ public int checkArray()
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B5,+93,+3,+20,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++private+int%5B%5D+arr+%3D+null%3B%0A+++%0A+++public+Test(int%5B%5D+theArr)%0A+++%7B%0A++++++arr+%3D+theArr%3B%0A+++%7D%0A%0A+++//+precondition%3A+arr.length+!%3D+0%0A+++public+int+checkArray()%0A+++%7B%0A++++++int+loc+%3D+arr.length+/+2%3B%0A++++++for+(int+k+%3D+0%3B+k+%3C+arr.length%3B+k%2B%2B)%0A++++++%7B%0A++++++++if+(arr%5Bk%5D+%3E+arr%5Bloc%5D)%0A++++++++%7B%0A++++++++++++loc+%3D+k%3B%0A++++++++%7D%0A++++++%7D%0A++++++return+loc%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B5,+93,+3,+20,+81%7D%3B%0A++++++Test+myTest+%3D+new+Test(temp)%3B%0A++++++System.out.println(myTest.checkArray())%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-5</url>.</p>
 
-    <exercise label="qamed_6">
+    <activity label="qamed_6">
         <statement>
 
             <p> Given the following field and method declaration, what is the value in <c>a[1]</c> when <c>m1(a)</c> is run?</p>
@@ -818,10 +818,10 @@ public static int m1(int[] a)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+int+m1(int%5B%5D+a)%0A+++%7B%0A++++++a%5B1%5D--%3B%0A++++++return+(a%5B1%5D+*+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+3,+-1%7D%3B%0A++++++System.out.println(temp%5B1%5D)%3B%0A++++++m1(temp)%3B%0A++++++System.out.println(temp%5B1%5D)%3B+%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+int+m1(int%5B%5D+a)%0A+++%7B%0A++++++a%5B1%5D--%3B%0A++++++return+(a%5B1%5D+*+2)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp+%3D+%7B7,+3,+-1%7D%3B%0A++++++System.out.println(temp%5B1%5D)%3B%0A++++++m1(temp)%3B%0A++++++System.out.println(temp%5B1%5D)%3B+%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-6</url>.</p>
 
-    <exercise label="qamed_7">
+    <activity label="qamed_7">
         <statement>
 
             <p> Consider the following code. What is the <em>maximum</em> amount of times that <c>HELLO</c> could possibly be printed?</p>
@@ -884,10 +884,10 @@ for (int i = 1; i &lt; k; i++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+arr+%3D+%7B1,+5,+3%7D%3B%0A++++++int+someValue+%3D+10%3B%0A++++++int+k+%3D+3%3B%0A++++++%0A++++++for+(int+i+%3D+1%3B+i+%3C+k%3B+i%2B%2B)%0A++++++%7B%0A+++++++++if+(arr%5Bi%5D+%3C+someValue)%0A+++++++++%7B%0A++++++++++++System.out.print(%22HELLO%22)%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+arr+%3D+%7B1,+5,+3%7D%3B%0A++++++int+someValue+%3D+10%3B%0A++++++int+k+%3D+3%3B%0A++++++%0A++++++for+(int+i+%3D+1%3B+i+%3C+k%3B+i%2B%2B)%0A++++++%7B%0A+++++++++if+(arr%5Bi%5D+%3C+someValue)%0A+++++++++%7B%0A++++++++++++System.out.print(%22HELLO%22)%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-7</url>.</p>
 
-    <exercise label="qamed_8">
+    <activity label="qamed_8">
         <statement>
 
             <p> Consider the following method <c>changeArray</c>. An array is created that contains <c>{2, 8, 10, 9, 6}</c> and is passed to <c>changeArray</c>. What are the contents of the array after the <c>changeArray</c> method executes?</p>
@@ -948,10 +948,10 @@ public static void changeArray(int[] data)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++public+static+void+changeArray(int%5B%5D+data)%0A+++%7B%0A++++++for+(int+k+%3D+data.length+-+1%3B+k+%3E+0%3B+k--)%0A+++++++++data%5Bk+-+1%5D+%3D+data%5Bk%5D+%2B+data%5Bk+-+1%5D%3B%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+temp+%3D+%7B2,+8,+10,+9,+6%7D%3B%0A++++++changeArray(temp)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A+++public+static+void+changeArray(int%5B%5D+data)%0A+++%7B%0A++++++for+(int+k+%3D+data.length+-+1%3B+k+%3E+0%3B+k--)%0A+++++++++data%5Bk+-+1%5D+%3D+data%5Bk%5D+%2B+data%5Bk+-+1%5D%3B%0A+++%7D%0A+++%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+temp+%3D+%7B2,+8,+10,+9,+6%7D%3B%0A++++++changeArray(temp)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-8</url>.</p>
 
-    <exercise label="qamed_9">
+    <activity label="qamed_9">
         <statement>
 
             <p> Assume that <c>arr1={1, 5, 3, -8, 6}</c> and <c>arr2={-2, -1, -5, 3, -4}</c> what will the contents of <c>arr1</c> be after <c>copyArray</c> finishes executing?</p>
@@ -1014,10 +1014,10 @@ public static void copyArray(int[] arr1, int[] arr2)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above with the Java Visualizer by clicking the following link <url href="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+void+copyArray(int%5B%5D+arr1,+int%5B%5D+arr2)%0A+++%7B%0A+++++++++for+(int+i+%3D+arr1.length+/+2%3B+i+%3C+arr1.length%3B+i%2B%2B)%0A+++++++++%7B%0A++++++++++++arr1%5Bi%5D+%3D+arr2%5Bi%5D%3B%0A+++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp1+%3D+%7B1,+5,+3,+-8,+6%7D%3B%0A++++++int%5B%5D+temp2+%3D+%7B-2,+-1,+-5,+3,+-4%7D%3B%0A++++++copyArray(temp1,temp2)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+Test+%7B%0A+++%0A%0A+++public+static+void+copyArray(int%5B%5D+arr1,+int%5B%5D+arr2)%0A+++%7B%0A+++++++++for+(int+i+%3D+arr1.length+/+2%3B+i+%3C+arr1.length%3B+i%2B%2B)%0A+++++++++%7B%0A++++++++++++arr1%5Bi%5D+%3D+arr2%5Bi%5D%3B%0A+++++++++%7D%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++int%5B%5D+temp1+%3D+%7B1,+5,+3,+-8,+6%7D%3B%0A++++++int%5B%5D+temp2+%3D+%7B-2,+-1,+-5,+3,+-4%7D%3B%0A++++++copyArray(temp1,temp2)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-9</url>.</p>
 
-    <exercise label="qamed_10">
+    <activity label="qamed_10">
         <statement>
 
             <p> Given the following code segment, which of the following will cause an infinite loop?  Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of ints.</p>
@@ -1080,10 +1080,10 @@ for ( int k = 0; k &lt; a.length; k++ )
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above using the Java Visualizer by clicking on the following link <url href="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+a+%3D+%7B1,+5,+2,+-1,+3%7D%3B%0A++++++int+temp+%3D+10%3B%0A++++++%0A++++++for+(+int+k+%3D+0%3B+k+%3C+a.length%3B+k%2B%2B+)%0A++++++%7B%0A+++++++++while+(+a%5B+k+%5D+%3C+temp+)%0A+++++++++%7B%0A++++++++++++a%5B+k+%5D+*%3D+2%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://www.pythontutor.com/java.html#code=public+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++int%5B%5D+a+%3D+%7B1,+5,+2,+-1,+3%7D%3B%0A++++++int+temp+%3D+10%3B%0A++++++%0A++++++for+(+int+k+%3D+0%3B+k+%3C+a.length%3B+k%2B%2B+)%0A++++++%7B%0A+++++++++while+(+a%5B+k+%5D+%3C+temp+)%0A+++++++++%7B%0A++++++++++++a%5B+k+%5D+*%3D+2%3B%0A+++++++++%7D%0A++++++%7D%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Prob-7-10-10</url>. Can you fix the code so that it won’t result in an infinite loop?</p>
 
-    <exercise label="qab_4">
+    <activity label="qab_4">
         <statement>
 
             <p> Given the following array instance variable and method, which of the following best describes the contents of <c>myStuff</c> after (<c>int m = mystery(n);</c>) has been executed?</p>
@@ -1146,13 +1146,13 @@ public int mystery(int num)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="hard-multiple-choice-questions-2">
             <title>Hard Multiple Choice Questions</title>
             <p>These problems are harder than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qahard_1">
+    <activity label="qahard_1">
         <statement>
 
             <p> Consider the following data field and incomplete method, <c>partialSum</c>, which is intended to return an integer array <c>sum</c> such that for all <c>i</c>, <c>sum[i]</c> is equal to <c>arr[0] + arr[1] + ... + arr[i]</c>. For instance, if arr contains the values <c>{1, 4, 1, 3}</c>, the array <c>sum</c> will contain the values <c>{1, 5, 6, 9}</c>. Which of the following is true about the two implementations of <c>missing code</c> on line 9 that are proposed?</p>
@@ -1233,6 +1233,6 @@ for (int j = 0; j &lt; arr.length; j++)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

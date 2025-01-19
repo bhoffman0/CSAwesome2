@@ -3,7 +3,7 @@
 <section xml:id="peer_in_turtle_U2">
         <title>Peer Instruction: Unit 2 Turtle Multiple Choice Questions</title>
 
-    <exercise label="bs-objectsandclasses-02-19">
+    <activity label="bs-objectsandclasses-02-19">
         <statement>
 
         <p> What are the components of the second line of code?</p>
@@ -43,9 +43,9 @@ turtle1.turn(-45);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-methods-03-07">
+    <activity label="bs-methods-03-07">
         <statement>
 
         <p> Why is this code incorrect? Assume this method is a method of the Turtle class (There are multiple correct answers)</p>
@@ -111,9 +111,9 @@ public bethsSquare(int size) {
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-methods-03-10">
+    <activity label="bs-methods-03-10">
         <statement>
 
         <p> What’s the right way to call the bethsSquare method to draw a square (void method that takes one parameter)?</p>
@@ -142,9 +142,9 @@ t = bethssquare(50);</pre>
         <p>Correct! The correct “call” to the method to draw a square would be t.bethSquare(50), accounting for the fact that that the method is void, the correct spelling of the method, and the parameter.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="bs-methods-03-17">
+    <activity label="bs-methods-03-17">
         <statement>
 
         <p> What types are returned by these method calls?</p>
@@ -208,5 +208,5 @@ new Picture();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
     </section>

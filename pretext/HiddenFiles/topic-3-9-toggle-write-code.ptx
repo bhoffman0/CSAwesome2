@@ -4,7 +4,7 @@
         <title>Unit 3 Write Code for Toggle Code</title>
         <p>This is the write code problems associated with the mixed up code problems.</p>
 
-<exercise label="u3_muc_wc1">
+<activity label="u3_muc_wc1">
     <statement>
         <p>Write code that tests guess to see if it is equal to answer or too high or too low. If it is too high as in the example below, it should print out <c>Your guess is too high</c>.</p>
 
@@ -76,9 +76,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc2">
+<activity label="u3_muc_wc2">
     <statement>
         <p>Write code that prints <c>You can go out</c> if you don’t have any homework and have cleaned and otherwise prints <c>You can not go out</c>.</p>
 
@@ -141,9 +141,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc3">
+<activity label="u3_muc_wc3">
     <statement>
         <p>Write code that tests if x is between 1 and 10, and prints <c>1 &lt;= x &lt;= 10</c> or <c>x is not in range</c>.</p>
 
@@ -212,9 +212,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc4">
+<activity label="u3_muc_wc4">
     <statement>
         <p>Write code that prints out if the string <c>message</c> has the word <c>ringing</c> in it or not. It should print out <c>Answer the phone!</c> if <c>ringing</c> is in <c>message</c>, and <c>I don't hear anything.</c> if not.</p>
 
@@ -273,9 +273,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc5">
+<activity label="u3_muc_wc5">
     <statement>
         <p>Write code that prints if your favorite food is junk food (pizza or wings) or not. Your code should check to see if the variable <c>favFood</c> value is <c>pizza</c> or <c>wings</c>. If it is, it should print out <c>Your fav is junk food</c>. If not, it should print <c>Your fav is not junk</c>.</p>
 
@@ -335,9 +335,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc6">
+<activity label="u3_muc_wc6">
     <statement>
         <p>Write code that prints your fine if you are speeding. If you are going over 65 but less than 75, the fine is <c>50</c>. If you are going at least 75 and less than 85, the fine is <c>100</c>. Over that the fine is <c>200</c>. It should not print anything if you are not speeding.</p>
 
@@ -393,9 +393,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc7">
+<activity label="u3_muc_wc7">
     <statement>
         <p>Write code that prints the alarm time. If it is a weekday you should get up at <c>7:00am</c> and if not get up at <c>10:00am</c>.</p>
 
@@ -462,9 +462,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc8">
+<activity label="u3_muc_wc8">
     <statement>
         <p>Write code that prints if you <c>Can text now</c> or <c>Can't text now</c>. You can text if you are not driving and not eating.</p>
 
@@ -532,9 +532,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc9">
+<activity label="u3_muc_wc9">
     <statement>
         <p>Write code that prints whether your name <c>Starts with a vowel</c> (a, e, i, o, u) or <c>Starts wwith a consonant</c>.</p>
 
@@ -601,9 +601,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
 
-<exercise label="u3_muc_wc10">
+<activity label="u3_muc_wc10">
     <statement>
         <p>Write code that prints the letter grade with your score. For a score greater than 90, it should print <c>A</c>. For a score between 80 and 90, it should print <c>B</c>. For a score between 70 and 80, it should print <c>C</c>. For a score between 60 and 70, it should print <c>D</c>. For all other scores, it should print <c>E</c>.</p>
 
@@ -672,5 +672,5 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
     </section>

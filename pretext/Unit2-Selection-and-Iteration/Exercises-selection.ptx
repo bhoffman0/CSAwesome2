@@ -8,7 +8,7 @@
             <title>Easier Multiple Choice Questions</title>
             <p>These problems are easier than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qce_1">
+    <activity label="qce_1">
         <statement>
 
             <p> What does the following code print when x has been set to 187?</p>
@@ -58,9 +58,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qce_2">
+    <activity label="qce_2">
         <statement>
 
             <p> What is printed when the following code executes and x equals 4 and y equals 3?</p>
@@ -93,9 +93,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qce_3">
+    <activity label="qce_3">
         <statement>
 
             <p> What is the value of grade when the following code executes and score is 80?</p>
@@ -171,9 +171,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qce_4">
+    <activity label="qce_4">
         <statement>
 
             <p> What is printed when the following code executes and x has been set to zero and y is set to 3?</p>
@@ -219,13 +219,13 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="medium-multiple-choice-questions-2">
             <title>Medium Multiple Choice Questions</title>
             <p>These problems are similar to those you will see on the AP CSA exam.</p>
 
-    <exercise label="qcm_1">
+    <activity label="qcm_1">
         <statement>
 
             <p> Which of the following expressions is equivalent to !(c || d) ?</p>
@@ -279,9 +279,9 @@ else
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qcm_2">
+    <activity label="qcm_2">
         <statement>
 
             <p> Which of the following is equivalent to the code segment below?</p>
@@ -332,9 +332,9 @@ if (x &gt; 4)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qcm_3">
+    <activity label="qcm_3">
         <statement>
 
             <p> Which of the following is equivalent to the code segment below?</p>
@@ -394,9 +394,9 @@ if (x &lt; 0)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qcm_4">
+    <activity label="qcm_4">
         <statement>
 
             <p> At a certain high school students receive letter grades based on the following scale: 93 or above is an A, 84 to 92 is a B, 75 to 83 is a C, and below 75 is an F. Which of the following code segments will assign the correct string to grade for a given integer score?</p>
@@ -478,13 +478,13 @@ III. if (score &gt;= 93)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="hard-multiple-choice-questions-1">
             <title>Hard Multiple Choice Questions</title>
             <p>These problems are harder than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qch_3">
+    <activity label="qch_3">
         <statement>
 
             <p> Assuming that x and y have been declared as valid integer values, which of the following is equivalent to this statement?</p>
@@ -532,9 +532,9 @@ III. if (score &gt;= 93)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qch_4">
+    <activity label="qch_4">
         <statement>
 
             <p> What would the following print?</p>
@@ -601,9 +601,9 @@ System.out.print("third");
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qch_5">
+    <activity label="qch_5">
         <statement>
 
             <p> What would the following print?</p>
@@ -655,6 +655,6 @@ if (y / x &gt; 0)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
 </section>

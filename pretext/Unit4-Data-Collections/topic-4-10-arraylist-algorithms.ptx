@@ -72,7 +72,7 @@ for(int i=0; i &lt; list.size(); i++)
             <title>Add/Remove Elements</title>
             <p>You should be able to trace through code that uses all the basic ArrayList methods like the following.</p>
 
-    <exercise label="qListRem3">
+    <activity label="qListRem3">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -127,10 +127,10 @@ System.out.println(numList);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(6))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.set(2,+new+Integer(4))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(1,+new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(6))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example1</url>.</p>
 
-    <exercise label="qListRem4">
+    <activity label="qListRem4">
         <statement>
 
             <p> What will print when the following code executes?</p>
@@ -183,10 +183,10 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>You can step through the code above by clicking on the following <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(1)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(1)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Example2</url>.</p>
 
-<exercise label="arrayListRemoveInLoop">
+<activity label="arrayListRemoveInLoop">
     <statement>
             <p>The following code is supposed to initialize the ArrayList arr to [0,1,2,3,4] and then remove every other element to get [1,3]. However, when you remove an element the size of the array changes and elements move up an index! See if you can figure out why you get the unexpected result. Try the CodeLens button to trace through the code.</p>
 
@@ -236,7 +236,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>If you use add or remove inside a loop that traverses an <c>ArrayList</c>, you may get unexpected results because the size of the <c>ArrayList</c> has changed! Enhanced <c>for</c> should not be used to remove elements from an <c>ArrayList</c>.</p>
             </note>
@@ -244,7 +244,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="min-max-sum-average">
             <title>Min, Max, Sum, Average</title>
             <p>You should be able to write code that finds the minimum, maximum, sum, and average of the elements in an <c>ArrayList</c>.</p>
-<exercise label="arraylistAvgParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="arraylistAvgParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following method should calculate the average from an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -265,7 +265,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>   return (sum / nums.size());</cline>
 </block><block order="7">
 <cline>} //end average method</cline>
-</block></blocks></exercise><exercise label="arraylistMinParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="arraylistMinParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program segment is a method that should return the minimum int given an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="8">
@@ -290,8 +290,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    return min;</cline>
 </block><block order="3">
 <cline>} //end findMin method</cline>
-</block></blocks></exercise>
-<exercise label="arraylistMax">
+</block></blocks></activity>
+<activity label="arraylistMax">
     <statement>
             <p>Create a <c>findMax</c> method that finds and returns the largest value in an ArrayList of Integers.</p>
 
@@ -362,12 +362,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="finding-a-property">
             <title>Finding a property</title>
             <p>You should be able to write code that determines if at least one element has a particular property, if all elements have a particular property, or the number of elements having a particular property. This means that you will need to use an <c>if</c> statement to check for the property inside a loop. In the AP exam, the property is often given as boolean method for you to use inside the loop, for example <c>isEven(num)</c> returns true if the number is even.</p>
-<exercise label="arraylistEvenParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="arraylistEvenParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program segment is a method that should return true if at least one element in an ArrayList of Integers (the parameter) is even.  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="4">
@@ -396,9 +396,9 @@ public class RunestoneTests extends CodeTestHelper
 <cline>    return false;</cline>
 </block><block order="8">
 <cline>} //end hasEven method</cline>
-</block></blocks></exercise>            <p>The following method counts the number of odd numbers in an <c>ArrayList</c> of Integers.</p>
+</block></blocks></activity>            <p>The following method counts the number of odd numbers in an <c>ArrayList</c> of Integers.</p>
 
-<exercise label="countOddArrayList">
+<activity label="countOddArrayList">
     <statement>
             <p>Write a method <c>countOdd</c> that returns the number of odd numbers in an ArrayList of Integers.</p>
 
@@ -469,12 +469,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="pairs-and-duplicates">
             <title>Pairs and Duplicates</title>
             <p>In the last lesson, the coding challenge involved finding pairs. You should be able to write code that accesses all consecutive pairs of elements in an <c>ArrayList</c> and determines the presence or absence of duplicate elements. These problems often require nested loops.</p>
-<exercise label="arraylistDuplicatesParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="arraylistDuplicatesParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program segment is a method that should return true if there are any duplicate elements in an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -509,8 +509,8 @@ public class RunestoneTests extends CodeTestHelper
 <cline>  return false;</cline>
 </block><block order="2">
 <cline>} //end hasDuplicates method</cline>
-</block></blocks></exercise>
-<exercise label="arraylistDuplicates">
+</block></blocks></activity>
+<activity label="arraylistDuplicates">
     <statement>
             <p>Write a method <c>hasDuplicates</c> that returns true if there are any duplicate elements in an ArrayList of Integers.</p>
 
@@ -605,12 +605,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="shift-rotate-an-arraylist">
             <title>Shift/Rotate an <c>ArrayList</c></title>
             <p>We can write code that shifts or rotates elements left or right in an <c>ArrayList</c>. The following code rotates the elements in an <c>ArrayList</c> to the right by one position.</p>
-<exercise label="rotateArrayListParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="rotateArrayListParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program segment is a method that should rotate the elements in an ArrayList of Integers (the parameter) to the right by one position.  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="9">
@@ -634,8 +634,8 @@ public class RunestoneTests extends CodeTestHelper
 </choice><choice><cline>    nums[0] = last; </cline>
 </choice></block><block order="8">
 <cline>} //end rotateRight method</cline>
-</block></blocks></exercise>
-<exercise label="rotateNewList">
+</block></blocks></activity>
+<activity label="rotateNewList">
     <statement>
             <p>Write a method <c>rotateLeft</c> that rotates the elements in an <c>ArrayList</c> of Integers to the left by one position.</p>
 
@@ -714,12 +714,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="reversing-an-arraylist">
             <title>Reversing an <c>ArrayList</c></title>
             <p>The following examples reverse the order of the elements in an <c>ArrayList</c> by adding each element to the beginning of a new <c>String</c> or <c>ArrayList</c>.</p>
-<exercise label="reverseArrayListParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="reverseArrayListParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following program segment should be a method that traverses through an ArrayList of Strings (the parameter) and print out the elements in reverse order – so  {“cat”, “dog”, “mouse”} should print “mouse, dog, cat, ” as output.  Assume the ArrayList “myList” has been instantiated and filled with Strings.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="3">
@@ -737,8 +737,8 @@ public class RunestoneTests extends CodeTestHelper
 </choice></block><block order="4">
 <cline>  } //end for loop</cline>
 <cline>} //end printBackwards method</cline>
-</block></blocks></exercise>
-<exercise label="reverseNewList">
+</block></blocks></activity>
+<activity label="reverseNewList">
     <statement>
             <p>Complete the method <c>reverse</c> below to return an   <c>ArrayList</c> containing Integers in the reversed order of the ArrayList parameter <c>list</c>. Hint: use a for loop with one line inside it to add to the new list.</p>
 
@@ -817,13 +817,13 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="multiple-or-parallel-data-structures">
             <title>Multiple or Parallel Data Structures</title>
             <p>Some algorithms require multiple <c>String</c>, array, or <c>ArrayList</c> objects to be traversed simultaneously. For example, the following code traverses two parallel <c>ArrayList</c>s that hold the grades for different tests.</p>
 
-<exercise label="parallelArrayLists">
+<activity label="parallelArrayLists">
     <statement>
             <p>Complete the code below to add the items in parallel ArrayLists to total.</p>
 
@@ -883,7 +883,7 @@ public class ParallelTests
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-37">
             <title>Summary</title>

@@ -9,7 +9,7 @@
             <title>Easier Multiple Choice Questions</title>
             <p>These problems are mostly easier than what you will see on the AP CSA exam.</p>
 
-    <exercise label="AP2-1-5">
+    <activity label="AP2-1-5">
         <statement>
 
             <dl>
@@ -82,9 +82,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP2-1-6">
+    <activity label="AP2-1-6">
         <statement>
 
             <dl>
@@ -157,9 +157,9 @@
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qse_5">
+    <activity label="qse_5">
         <statement>
 
             <p> Which of the following code segments will correctly create an instance of a Person object?</p>
@@ -226,9 +226,9 @@ public class Person
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qse_2">
+    <activity label="qse_2">
         <statement>
 
             <p> What is the value of len after the following executes?</p>
@@ -268,9 +268,9 @@ int len = s1.length();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qse_3">
+    <activity label="qse_3">
         <statement>
 
             <p> What is the value of pos after the following code executes?</p>
@@ -319,9 +319,9 @@ int pos = s1.indexOf("d");
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qse_4">
+    <activity label="qse_4">
         <statement>
 
             <p> What is the value of s1 after the following code executes?</p>
@@ -371,13 +371,13 @@ String s3 = s2.toLowerCase();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="medium-multiple-choice-questions">
             <title>Medium Multiple Choice Questions</title>
             <p>These problems are similar to those that you will see on the AP CSA exam.</p>
 
-    <exercise label="AP2-2-5">
+    <activity label="AP2-2-5">
         <statement>
 
             <p>  Consider the following class.  Which of the following code segments would successfully create a new Movie object?</p>
@@ -458,9 +458,9 @@ public class Movie
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qse_6">
+    <activity label="qse_6">
         <statement>
 
             <p> Given the BankAccount class definition below, what is the output of the code in the main method?</p>
@@ -541,9 +541,9 @@ public class BankAccount
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_new6">
+    <activity label="qve_new6">
         <statement>
 
             <p> Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
@@ -594,9 +594,9 @@ int num = (int) (value * 5) + 5;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qve_new8">
+    <activity label="qve_new8">
         <statement>
 
             <p> Given the following code segment, what is the value of <c>num</c> when it finishes executing? Math.random() returns a random decimal number between 0 and up to 1, for example 0.4.</p>
@@ -647,9 +647,9 @@ int num = (int) (value * 11) - 5;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_1">
+    <activity label="qsm_1">
         <statement>
 
             <p> After the following code is executed, which of I, II and/or III will evaluate to true?</p>
@@ -712,9 +712,9 @@ III. s1 == s3
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_2">
+    <activity label="qsm_2">
         <statement>
 
             <p> What is output from the following code?</p>
@@ -775,9 +775,9 @@ System.out.println(s3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_3">
+    <activity label="qsm_3">
         <statement>
 
             <p> Given the following code segment, what is the value of s1 after the code executes?</p>
@@ -840,9 +840,9 @@ s4 = null;
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_4">
+    <activity label="qsm_4">
         <statement>
 
             <p> There is a method called checkString that determines whether a string is the same forwards and backwards. The following data set inputs can be used for testing the method. What advantage does Data Set 2 have over Data Set 1?</p>
@@ -902,9 +902,9 @@ aBa
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_5">
+    <activity label="qsm_5">
         <statement>
 
             <p> A car dealership needs a program to store information about the cars for sale.For each car, they want to keep track of the following information: the number of doors (2 or 4),its average number of miles per gallon, and whether the car has air conditioning. Which of the following is the best design?</p>
@@ -958,9 +958,9 @@ aBa
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsm_6">
+    <activity label="qsm_6">
         <statement>
 
             <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of the code in main()?</p>
@@ -1028,13 +1028,13 @@ public class MainClass
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="hard-multiple-choice-questions">
             <title>Hard Multiple Choice Questions</title>
             <p>These problems are harder than most of those that you will usually see on the AP CSA exam.</p>
 
-    <exercise label="qsm_7">
+    <activity label="qsm_7">
         <statement>
 
             <p> What is the output of the following code?</p>
@@ -1099,9 +1099,9 @@ public class Test
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsh_1">
+    <activity label="qsh_1">
         <statement>
 
             <p> Given the following code segment, which of the following is true?</p>
@@ -1165,9 +1165,9 @@ IV.  (s2.equals(s3))
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsh_2">
+    <activity label="qsh_2">
         <statement>
 
             <p> What does the following code print?</p>
@@ -1224,9 +1224,9 @@ System.out.println("13" + 5 + 3);
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsh_4">
+    <activity label="qsh_4">
         <statement>
 
             <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
@@ -1286,9 +1286,9 @@ public class MainClass
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="qsh_5">
+    <activity label="qsh_5">
         <statement>
 
             <p> Assume that SomeClass and MainClass are properly defined in separate files. What is the output of main()?</p>
@@ -1348,7 +1348,7 @@ public class MainClass
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
             <p>The Mark Complete button and green check mark are intentionally not included for this page because there may be many quiz-bank exercises on this page.</p>
         </subsection>
 </section>

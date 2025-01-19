@@ -24,12 +24,12 @@
       <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="100%"/>
     </figure>
   </introduction>
-  <exercise label="arrayAnalogy">
+  <activity label="arrayAnalogy">
     <statement>
         <p> Can you think of another example of something that is like an array (like a row of lockers)?</p>
 
     </statement>
-</exercise>
+</activity>
   <subsection xml:id="declaring-and-creating-an-array">
             <title>Declaring and Creating an Array</title>
             <p>When we declare a variable, we specify its type and then the variable name.  To make a variable into an array, we put square brackets after the data type. For example, <c>int[] scores</c> means we have an array called scores that contains <c>int</c> values.</p>
@@ -57,7 +57,7 @@ highScores = new int[5];
 String[] names = new String[5];
 </code></program>
 
-    <exercise label="createarray">
+    <activity label="createarray">
         <statement>
 
             <p> Which of the following creates an array of 10 doubles called prices?</p>
@@ -102,9 +102,9 @@ String[] names = new String[5];
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-<exercise label="arrayex1">
+<activity label="arrayex1">
     <statement>
             <p>In the following code, add another two more array declarations, one that creates an array of 5 doubles called prices and another of 5 Strings called names. Then add <c>System.out.println</c> calls to print their lengths.</p>
 
@@ -159,7 +159,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <idx><h>array</h><h>initialization</h></idx>
 
             
@@ -203,7 +203,7 @@ String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
             <title>Array length</title>
             <p>Arrays know their <term>length</term> (how many elements they can store). The length (or size) of an array is established at the time of creation and cannot be changed. The length of an array can be accessed through the <c>length</c>  attribute, which is a public final instance variable that cannot be changed after the array is created. You can use <term>dot-notation</term> to access the instance variable, for example <c>arrayName.length</c>.  Try the following.</p>
 
-<exercise label="arrayex2">
+<activity label="arrayex2">
     <statement>
             <p>Try running the code below to see the length. Try adding another value to the highScores initializer list and run again to see the length value change.</p>
 
@@ -259,12 +259,12 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <note>
                 <p>Note that length is an instance variable and not a method, unlike the String <c>length()</c> method, so you don’t add parentheses after length.  However, if you use parentheses after length during the AP exam, you won’t lose any points. The length instance variable is declared as a <c>public final int</c>.  <c>public</c> means you can access it and <c>final</c> means the value can’t change.</p>
             </note>
 
-    <exercise label="qarrayLength">
+    <activity label="qarrayLength">
         <statement>
 
             <p> Which index is for the last element of an array called <c>highScores</c>?</p>
@@ -291,7 +291,7 @@ public class RunestoneTests extends CodeTestHelper
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="access-and-modify-array-values">
             <title>Access and Modify Array Values</title>
@@ -311,14 +311,14 @@ System.out.println( highScores[0] );
 
     <video youtube="uagEJw6bTM4"/>
     
-        <exercise label="array-access1">
+        <activity label="array-access1">
             <statement>
-    <p>  Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Access cars array to get Volvo</p></var></setup></exercise>
-        <exercise label="array-access2">
+    <p>  Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Access cars array to get Volvo</p></var></setup></activity>
+        <activity label="array-access2">
             <statement>
-    <p>  Fill in the blank with code to access the cars array. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Set the first item of the cars array to be Toyota</p></var></setup></exercise>            <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
+    <p>  Fill in the blank with code to access the cars array. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Set the first item of the cars array to be Toyota</p></var></setup></activity>            <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
 
-<exercise label="array-set">
+<activity label="array-set">
     <statement>
             <p>Try out the following code which has two parallel arrays, highScores and names. Can you print out Mateo’s score? Can you change Sofia’s score to 97 using an assignment statement in the code? Can you change the arrays so that they have 6 elements and add your name and score and print them out?</p>
 
@@ -379,7 +379,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>What happens if you try to access an element that is not there? Try to access a <c>highScore</c> or <c>name</c> at index 7 above to see what happens. The index must be between 0 and the length of the array - 1 or it will give an error message called <c>ArrayIndexOutOfBoundsException</c>.</p>
             <note>
                 <p>Using an index value outside of 0 - (length-1) will result in an <c>ArrayIndexOutOfBoundsException</c> being thrown.</p>
@@ -393,7 +393,7 @@ System.out.println(  highScores[index] );
             <image source="Unit4-Data-Collections/array-images/cow.jpg" width="27%"/>
             <p>Here’s a fun String array of image filenames. The following code displays an online image using an HTML tag. (Note that this just works in this Active Code window which interprets HTML. In other Java IDEs you would need to use Java Swing graphics instead). Run the code and see that it displays images[0] which is “cow.jpg”. The images array holds 5 images.</p>
 
-<exercise label="imageArray">
+<activity label="imageArray">
     <statement>
             <p>Can you change the index variable’s value so that it prints out the puppy image? Can you print out the reindeer? Try all of them! What indices did you need to use? Then try using a random number for the index instead. Remember that (int)(Math.random()*max) will return a number from 0 up to max. What’s the maximum number it can be for this array?</p>
 
@@ -456,7 +456,7 @@ public class ImageEx
  }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="coding-challenge-countries-array">
             <title>Coding Challenge : Countries Array</title>
@@ -641,7 +641,7 @@ array[index] = new ClassName();
 array[index].method();
 </code></program>
 
-<exercise label="TurtleArray">
+<activity label="TurtleArray">
     <statement>
             <p>Run the code below to see the 2 turtles in the array.
                 Can you change the array size to 3 and create and add 1 more Turtle object to the array?
@@ -705,7 +705,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
             <p>In the last unit, you came up with a class of your own choice relevant to you or your
                 community.  In this unit, you will create an array to hold objects of your class.</p>
             <p><ol marker="1">
@@ -723,7 +723,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<exercise label="community-challenge-6-1">
+<activity label="community-challenge-6-1">
     <statement>
             <p>Community Challenge: Copy your class from <url href="../Unit3-Class-Creation/topic-3-5-methods.html#groupwork-design-a-class-for-your-community" visual="../Unit3-Class-Creation/topic-3-5-methods.html#groupwork-design-a-class-for-your-community">lesson 3.5</url> below. Create an array of 3 objects of your class, initialize
                 them to new objects and call their print methods.</p>
@@ -818,7 +818,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-45">
             <title>Summary</title>
@@ -852,7 +852,7 @@ public class RunestoneTests extends CodeTestHelper
                 and <c>array[i+1]</c> refers to the next element after the ith element.  In the problems below, note that
                 arrays can be passed in as arguments to methods and returned as values, just like any variable.</p>
 
-    <exercise label="AP-array1">
+    <activity label="AP-array1">
         <statement>
 
             <p> Consider the following method. Given an <c>array</c> initialized to <c>{4, 10, 15}</c>, which of the following represents the contents of the array after a call to <c>mystery(array, 2)</c>?</p>
@@ -912,9 +912,9 @@ public void mystery(int[] a, int i)
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
 
-    <exercise label="AP-array2">
+    <activity label="AP-array2">
         <statement>
 
             <p> Consider the following method. Which of the following code segments, appearing in the same class as the <c>mystery</c> method,
@@ -958,7 +958,7 @@ int[] array2 = mystery(array1, 1, 20);
             <p>This would result in <c>{5, 10, 30}</c>.</p>
 </feedback></choice></choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="arrays-game">
             <title>Arrays Game</title>

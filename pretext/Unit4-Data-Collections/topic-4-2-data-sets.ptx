@@ -12,7 +12,7 @@
     <p>What if your school wants to print out an honor roll of students with a GPA of 3.5 or higher? How would you write an algorithm to do this?</p>
     <p>In the next lessons, we will learn about data structures like Java arrays that can be used to store data sets. We will use loops to access and manipulate the data in the arrays.</p>
   </introduction>
-  <exercise label="algorithm-avg-gpa" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+  <activity label="algorithm-avg-gpa" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>Put the following pseudocode algorithm steps for calculating the average GPA of the students in the table above. Make sure some of the steps are indented to be inside the loop. Click on Check Me to see if you are right.</p>
 </statement>
 <blocks><block order="1">
@@ -24,13 +24,13 @@
 </block><block order="3">
 <cline>Divide *sum* by the number of rows in the table</cline>
 <cline>to get the average GPA.</cline>
-</block></blocks></exercise>
-  <exercise label="honorroll">
+</block></blocks></activity>
+  <activity label="honorroll">
     <statement>
         <p> Write pseudocode for an algorithm that prints out the names of students with a GPA of 3.5 or higher given a table of student data where one column is the GPA. Make sure you use repetition (loop) and selection (if) in your algorithm.</p>
 
     </statement>
-</exercise>
+</activity>
   <subsection xml:id="summary-44">
             <title>Summary</title>
             <p><ul>

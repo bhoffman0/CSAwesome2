@@ -17,18 +17,18 @@
             you should never use inheritance just to reuse code if there isn’t a true “is-a”
             relationship between the subclass and the superclass.</p>
   </introduction>
-  <exercise label="hierarchy1" data-optional="true">
+  <activity label="hierarchy1" data-optional="true">
     <statement>
         <p> What variables and methods might be inherited from the superclass Shape in the inheritance hierarchy above?</p>
 
     </statement>
-</exercise>
-  <exercise label="hierarchy2" data-optional="true">
+</activity>
+  <activity label="hierarchy2" data-optional="true">
     <statement>
         <p> Can you make a 3 level inheritance hierarchy for living things on Earth?</p>
 
     </statement>
-</exercise>
+</activity>
   <subsection xml:id="superclass-references">
             <title>Superclass References</title>
             <p>A superclass reference variable can hold an object of that superclass or of any of its subclasses. For example, a Shape reference variable can hold a Rectangle or Square object. (This is a type of <term>polymorphism</term> which will be defined in the next lesson).</p>
@@ -49,7 +49,7 @@ Shape s3 = new Square();
 </code></program>
             <p>Why is using a superclass reference for subclass objects useful? Because now, we can write methods with parameters of type Shape or have arrays of type Shape and use them with any of its subclasses as seen in the next sections.</p>
 
-    <exercise label="qinherRef">
+    <activity label="qinherRef">
         <statement>
 
             <p> A class Student inherits from the superclass Person. Which of the following assignment statements will give a compiler error?</p>
@@ -94,7 +94,7 @@ Shape s3 = new Square();
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="superclass-method-parameters">
             <title>Superclass Method Parameters</title>
@@ -108,7 +108,7 @@ public void print(Shape s)
 </code></program>
             <p>Notice that in the following code, the print method has a parameter of type <c>Person</c>, but it can be called with <c>Student</c> or <c>Person</c> objects in the <c>main</c> method. Which <c>toString</c> method is called? It depends on whether a <c>Person</c> or <c>Student</c> is passed in at runtime. What would happen if you commented out the <c>toString</c> method in <c>Student</c>? Which one would be called now?</p>
 
-<exercise label="superclassMethod">
+<activity label="superclassMethod">
     <statement>
             <p>Which toString() method is called below? What would happen if you commented out the Student toString() method? Which one would be called now?</p>
 
@@ -190,7 +190,7 @@ class Student extends Person
   }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="superclass-arrays-and-arraylists">
             <title>Superclass Arrays and ArrayLists</title>
@@ -213,7 +213,7 @@ shapeList.add(new Square());
                 objects. Notice that the loop works with a variable of type <c>Pet</c> because a
                 <c>Dog</c> is a <c>Pet</c> too!</p>
 
-<exercise label="superclassArray">
+<activity label="superclassArray">
     <statement>
             <p>Scroll down to look at the <c>Dog</c> class and add a similar <c>Cat</c> class that
                 extends <c>Pet</c>. Don’t make the <c>Cat</c> class public because there can only be
@@ -327,9 +327,9 @@ class Dog extends Pet
   }
         </tests>
     </program>
-</exercise>
+</activity>
 
-    <exercise label="qoo_4">
+    <activity label="qoo_4">
         <statement>
 
             <dl>
@@ -406,7 +406,7 @@ class Dog extends Pet
             </choice>
 </choices>
 
-    </exercise>
+    </activity>
         </subsection>
   <subsection xml:id="coding-challenge-shopping-cart">
             <title>Coding Challenge : Shopping Cart</title>
@@ -435,7 +435,7 @@ class Dog extends Pet
                 </li>
             </ol></p>
 
-<exercise label="challenge-9-5-shopping">
+<activity label="challenge-9-5-shopping">
     <statement>
             <p>Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Uncomment the testing code in main to add discounted items to the cart.</p>
 
@@ -699,7 +699,7 @@ class Item
      }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
   <subsection xml:id="summary-55">
             <title>Summary</title>

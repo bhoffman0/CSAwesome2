@@ -62,7 +62,7 @@ public RandomLetterChooser(String str)
             <DataFileNode line="71" runestone_options="{'hide': None, 'subchapter': 'RandomStringChooserB', 'chapter': 'FreeResponse', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'RandomStringChooser.java', 'qnumber': 'Q-1', 'cols': 55, 'rows': 20, 'filecontent': 'import java.util.List;\nimport java.util.ArrayList;\n\npublic class RandomStringChooser\n{\n    /* field */\n    private List&amp;lt;String&amp;gt; words;\n\n    /* constructor */\n    public RandomStringChooser(String[] wordArray)\n    {\n        words = new ArrayList&amp;lt;String&amp;gt;();\n\n        for (String singleWord : wordArray)\n        {\n            words.add(singleWord);\n        }\n    }\n\n    /* getNext method */\n    public String getNext()\n    {\n        int pos = 0;\n\n        if (words.size() &gt; 0)\n        {\n            pos = (int) (Math.random() * words.size());\n\n            return (String) words.remove(pos);\n        }\n        return &quot;NONE&quot;;\n     }\n}\n', 'hidden': 'data-hidden', 'edit': 'false', 'question_label': '7.2.1.1'}" source="/mnt/c/Users/hoffmanb/Documents/GitHub/csawesome2/_fixed_sources/FreeResponse/RandomStringChooserB.rst">
             </DataFileNode>
 
-<exercise label="RandomStrChooserB1">
+<activity label="RandomStrChooserB1">
     <statement>
             <p>Complete the <c>RandomLetterChooser</c> constructor below (which can be 1 line of code). Copy in your RandomStringChooser class from the previous lesson (delete the public from in front of it since there can only be 1 public class if you have more than one).</p>
 
@@ -176,6 +176,6 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</exercise>
+</activity>
         </subsection>
 </section>
