@@ -580,7 +580,7 @@ public class RunestoneTests extends CodeTestHelper
 
             <p> Consider the following code segment.</p>
             <program language="java"><code>
-System.out.println("Java is ");
+System.out.print("Java is ");
 System.out.println("fun ");
 System.out.print("and cool!");
 </code></program>

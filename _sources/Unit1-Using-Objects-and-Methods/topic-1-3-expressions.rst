@@ -546,7 +546,7 @@ AP Practice
 
     .. code-block:: java
 
-       System.out.println("Java is ");
+       System.out.print("Java is ");
        System.out.println("fun ");
        System.out.print("and cool!");
 
