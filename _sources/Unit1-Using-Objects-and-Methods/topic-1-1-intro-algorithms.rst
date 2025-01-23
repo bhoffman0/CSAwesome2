@@ -297,9 +297,8 @@ Let's practice debugging some code!
       =====
          System.out.println("Hi my friend!");
          =====
-      }
-      =====
-   }
+      } // end of main
+   } // end of class
 
 .. parsonsprob:: mixed-hi-paired
    :numbered: left
@@ -324,9 +323,8 @@ Let's practice debugging some code!
          =====
          System.out.println("Hi there!") #paired
          =====
-      }
-      =====
-   }
+      } // end of main
+   } // end of class
 
 
 

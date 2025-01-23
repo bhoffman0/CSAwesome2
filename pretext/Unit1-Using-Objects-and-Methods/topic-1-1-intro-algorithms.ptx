@@ -273,7 +273,6 @@ public class RunestoneTests extends CodeTestHelper
 <cline>      System.out.println("Hi my friend!");</cline>
 </block><block order="3">
 <cline>   }</cline>
-</block><block order="5">
 <cline>}</cline>
 </block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
@@ -294,7 +293,6 @@ public class RunestoneTests extends CodeTestHelper
 <cline>      </cline>
 </choice></block><block order="2">
 <cline>   }</cline>
-</block><block order="4">
 <cline>}</cline>
 </block></blocks></exercise>        </subsection>
   <subsection>

@@ -462,9 +462,58 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
 
-        <exercise label="fillDecVar1">
-            <statement>
-    <p> Fill in the following: [blank] age = [blank]; to declare age to be an integer and set its value to 5. <var/>  <var/>  </p></statement><setup><var><condition string="^\s*int\s*$"><feedback><p>Correct.  You typically use whole numbers for ages after age 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Remember that Java uses just the first 3 letters of integer</p></feedback></condition></var><var><condition number="[5, 5]"><feedback><p>Correct.  You can initialize to a value.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use 5 in the second blank</p></feedback></condition></var></setup></exercise>
+    <activity label="fillDecVar1">
+      <statement>
+        <p>Fill in the following to declare age to be an integer and set its value to 5:</p>
+        <p>
+          <fillin answer="int"/>
+          <c>age =</c>
+          <fillin mode="number" answer="5"/>
+          <!-- this will use a number input -->
+          <c>;</c>
+        </p>
+      </statement>
+      <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+                Correct! You typically use whole numbers for ages after age 1.
+              </feedback>
+            </test>
+            <test>
+              <strcmp>int.+</strcmp>
+              <feedback>
+                Remember that Java uses just the first 3 letters of integer
+              </feedback>
+            </test>
+            <test>
+              <!-- No test is equivalent to <strcmp>.*</strcmp> -->
+              <feedback>
+                This should be the data type for the variable
+              </feedback>
+            </test>
+        </evaluate>
+        <evaluate>
+            <test>
+              <numcmp use-answer="yes"/>
+              <feedback>
+                Correct! You can initialize to a value.
+              </feedback>
+            </test>
+            <test>
+              <feedback>
+                Use 5 in the second blank
+              </feedback>
+            </test>
+        </evaluate>
+      </evaluation>
+    </activity>
+
+  
+
+      
+
         <exercise label="fillDecVar2">
             <statement>
     <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
