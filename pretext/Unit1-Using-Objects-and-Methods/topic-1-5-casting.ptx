@@ -17,7 +17,7 @@
                 But like molten bronze is reshaped by melting it and pouring it into a mold, our
                 data is reshaped via a <term>cast</term> operator. In Java when you cast you are changing
                 the “shape” (or type) of the value.</p>
-            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%"/></figure>
+            <figure align="center"><caption>Bronze casting changes the shape of the metal.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/bronze-casting.jpg" width="54%"/></figure>
             <p>The <term>cast operator</term>, which looks like <c>(int)</c> and <c>(double)</c> placed before
                 any expression (a literal, a number, a variable, or more complex expression in
                 parentheses) produces a value of the given type by converting the value of the
@@ -102,9 +102,9 @@ double average = (double) total / count;
                 <c>double</c> is considered a wider data type than an <c>int</c>.</p>
             <note>
                 <p><c>int</c>s in Java are always 32-bit signed values which mean they can
-                    represent values from <math>-2^{31}</math> to <math>2^{31} - 1</math>, inclusive, while
+                    represent values from <m>-2^{31}</m> to <m>2^{31} - 1</m>, inclusive, while
                     the range of consecutive integer values that can be represented by a double
-                    is from <math>-2^{53}</math> to <math>2^{53}</math>, inclusive. (A <c>double</c> can also
+                    is from <m>-2^{53}</m> to <m>2^{53}</m>, inclusive. (A <c>double</c> can also
                     represent much larger values but with limited precision.) You can refer to
                     the minimum and maximum <c>int</c> values with the constants
                     <c>Integer.MIN_VALUE</c> and <c>Integer.MAX_VALUE</c>.</p>

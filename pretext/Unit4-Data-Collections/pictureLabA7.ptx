@@ -7,7 +7,7 @@
             you want to mirror in temple.jpg to produce the picture on the right. If you do this you will find that you can mirror
             the rows from 27 to 96 (inclusive) and the columns from 13 to 275 (inclusive). You can change the
             starting and ending points for the row and column values to mirror just part of the picture.</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Greek temple before (left) and after (right) mirroring the pediment</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror5.png" width="89%"/></figure>
+        <figure align="center"><caption>Greek temple before (left) and after (right) mirroring the pediment</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror5.png" width="89%"/></figure>
         <p>To work with just part of a picture, change the starting and ending values for the nested for loops
             as shown in the following <c>mirrorTemple</c> method. This method also calculates the distance the
             current column is from the <c>mirrorPoint</c> and then adds that distance to the <c>mirrorPoint</c>

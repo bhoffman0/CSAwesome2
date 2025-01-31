@@ -137,7 +137,7 @@ public static int mystery2(int x)
             <p>Recursion can also be used to create fractals. A simple example is Sierpinski’s
                 triangle in which you subdivide a triangle into 4 new triangles as shown below.
                 You can then do the some procedure with each new triangle except the center one.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A sequence of Sierpinski’s triangles</caption><image source="Unit4-Data-Collections/Figures/triangleSub.png" width="81%"/></figure>
+            <figure align="center"><caption>A sequence of Sierpinski’s triangles</caption><image source="Unit4-Data-Collections/Figures/triangleSub.png" width="81%"/></figure>
             <p>Recursion can also be used to traverse <c>String</c>s, arrays, and <c>ArrayList</c>s just like a loop. In fact, any loop—also known as <em>iterative</em> code—can be
                 written using recursion. However in most languages, including Java, there are
                 limitations on how deeply code can recurse which rules out using recursion for
@@ -159,7 +159,7 @@ public static int mystery2(int x)
             <title>Factorial Method</title>
             <p>The following video is also on YouTube at <url href="https://youtu.be/V2S_8E_ubBY" visual="https://youtu.be/V2S_8E_ubBY">https://youtu.be/V2S_8E_ubBY</url>.  It introduces the concept of recursion and tracing recursion with the factorial method.</p>
 
-    <video youtube="V2S_8E_ubBY"/>
+    <video youtube="V2S_8E_ubBY" label="video-factorial"/>
                 <idx>factorial</idx>
 
             
@@ -417,12 +417,12 @@ public static int bunnyEars(int bunnies)
 
             
             <p>In Java, the <term>call stack</term> keeps track of the methods that you have called since the main method executes.   A <term>stack</term> is a way of organizing data that adds and removes items only from the top of the stack.  An example is a stack of cups.  You can grap a cup from the top of the stack or add more cups at the top of the stack.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Stacks of cups</caption><image source="Unit4-Data-Collections/Figures/cupStack.jpg" width="54%"/></figure>
+            <figure align="center"><caption>Stacks of cups</caption><image source="Unit4-Data-Collections/Figures/cupStack.jpg" width="54%"/></figure>
             <p>When you are executing one method (method a) and it calls another method (method b) the method call is placed on the call stack along with information about where it was called from, which tells the run-time where to return to when the current method finishes executing.  When method b finishes executing the run-time pops the method b off of the call stack and returns execution to the next line to be executed in method a.</p>
             <p>Consider the following class definition.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Code with a divide by zero in a method.</caption><image source="Unit4-Data-Collections/Figures/codeForCallStack.png" width="71%"/></figure>
+            <figure align="center"><caption>Code with a divide by zero in a method.</caption><image source="Unit4-Data-Collections/Figures/codeForCallStack.png" width="71%"/></figure>
             <p>The code above will cause a run-time error of division by zero when it runs.  The <c>main</c> method calls the method <c>test1</c> (at line 20) which calls the method <c>test2</c> (at line 6) which has the divide by zero error (line 14).  This can be seen in the call stack shown below which shows the call stack from the top (most recent method) to the bottom (first method call).</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A call stack in DrJava with a run-time error</caption><image source="Unit4-Data-Collections/Figures/errorCallStack.png" width="100%"/></figure>
+            <figure align="center"><caption>A call stack in DrJava with a run-time error</caption><image source="Unit4-Data-Collections/Figures/errorCallStack.png" width="100%"/></figure>
             <p>When a method calls itself the new method call gets added to the top of the call stack. Execution of the current method pauses while the recursive call is being processed. Each recursive call on the stack has its own set of local variables, including the parameter variables. Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop. The parameter values usually change in each recursive call until we reach the base case which stops the recursion when a parameter reaches some base value.</p>
             <p>Let’s trace the execution of the factorial method defined below.</p>
             <program language="java"><code>
@@ -461,7 +461,7 @@ factorial(0) returns 1
             <p>You can step through this code using the Java Visualizer by clicking on this link: <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Test+%7B%0A+++%0A+++public+static+int+factorial(int+n)%0A+++%7B%0A+++++if+(n+%3D%3D+0)%0A+++++++return+1%3B%0A+++++else%0A+++++++return+n+*+factorial(n-1)%3B%0A+++%7D%0A+++%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++System.out.println(factorial(5))%3B%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">factorial</url>.</p>
             <p>Another way to see the call stack in action is to download and use the Jeloit software (see <url href="http://cs.joensuu.fi/jeliot/" visual="http://cs.joensuu.fi/jeliot/">http://cs.joensuu.fi/jeliot/</url>).</p>
             
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A call tree in Jeliot</caption><image source="Unit4-Data-Collections/Figures/callTree.png" width="54%"/></figure>
+            <figure align="center"><caption>A call tree in Jeliot</caption><image source="Unit4-Data-Collections/Figures/callTree.png" width="54%"/></figure>
 
     <activity label="qrb_5-old">
         <statement>

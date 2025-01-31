@@ -23,7 +23,7 @@
                 white light. The RGB color model sometimes also stores an alpha value as well as the red, green, and blue
                 values. The alpha value indicates how transparent or opaque the color is. A color that is transparent will
                 let you see some of the color beneath it.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">RGB values and the resulting colors displayed in rows and columns</caption><image source="Unit4-Data-Collections/Figures/rgb1.png" width="63%"/></figure>
+            <figure align="center"><caption>RGB values and the resulting colors displayed in rows and columns</caption><image source="Unit4-Data-Collections/Figures/rgb1.png" width="63%"/></figure>
             <p>How does the computer represent the values from 0 to 255? A decimal number uses the digits 0 to 9 and
                 powers of 10 to represent values. The decimal number 325 means 5 ones (10<superscript>0</superscript>) plus 2 tens (10<superscript>1</superscript>) plus 3 hundreds (10<superscript>2</superscript>) for a total of three hundred and twenty-five. Computers use <term>binary numbers</term>, which use the digits 0 and 1 and powers of 2 to represent values using groups of bits. A <term>bit</term> is a binary digit, which
                 can be either 0 or 1. A group of 8 bits is called a <term>byte</term>. The binary number 110 means 0 ones (2<superscript>0</superscript>) plus 1 two (2<superscript>1</superscript>) plus 1 four (2<superscript>2</superscript>), for a total of 6.</p>
@@ -198,7 +198,7 @@
                 </li>
             </ol></p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="a3-exploring-a-picture">

@@ -93,7 +93,7 @@ public void methodName()
                 </li>
             </ol></p>
             <p>The following flowchart can be used to compare three different ways of calling methods. Class (static) methods are called using the class name. Instance methods which are discussing in this lesson are called using an object of the class. If you are calling the instance method from the main method or from another class, you must first create an object of that class and then call its methods using <c>object.methodName()</c>. If you are calling the method from within the same class, you can just call the method using <c>methodName()</c> which will refer to the current object.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Method Calls to Static and Instance Methods</caption><image source="Unit3-Class-Creation/Figures/FlowChartCallingMethods.png" width="98%" alt="Comparing method calls to static and instance methods"/></figure>
+            <figure align="center"><caption>Comparing Method Calls to Static and Instance Methods</caption><image source="Unit3-Class-Creation/Figures/FlowChartCallingMethods.png" width="98%" alt="Comparing method calls to static and instance methods"/></figure>
 
 <activity label="PersonPrint">
     <statement>
@@ -205,7 +205,7 @@ public returnType methodName()
                 you can declare UI objects like Button1, Button2 from the Button class and use
                 their get/set methods for any property like below. (We’ll talk about setters in
                 Java in the next section.)</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">App Inventor Set and Get blocks for object Button1</caption><image source="Unit3-Class-Creation/Figures/AppInvSetGet.png" width="54%"/></figure>
+            <figure align="center"><caption>App Inventor Set and Get blocks for object Button1</caption><image source="Unit3-Class-Creation/Figures/AppInvSetGet.png" width="54%"/></figure>
             <p>You don’t need to write a getter for every instance variable in a class but if
                 you want code outside the class to be able to get the value of one of your
                 instance variables, you’ll need to write a getter that looks like the following.</p>
@@ -483,7 +483,7 @@ class Student
                 Getters return an instance variable’s value and have the same return type as
                 this variable and no parameters. Setters have a void return type and take a new
                 value as a parameter to change the value of the instance variable.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparison of setters and getters</caption><image source="Unit3-Class-Creation/Figures/get-set-comparison.png" width="100%"/></figure>
+            <figure align="center"><caption>Comparison of setters and getters</caption><image source="Unit3-Class-Creation/Figures/get-set-comparison.png" width="100%"/></figure>
             <p>Try the <c>Student</c> class below which has had some setters added. Notice that
                 there is no <c>setId</c> method even though there is a <c>getId</c>. This is
                 presumably because in the system this class is part of, while it makes sense for
@@ -641,7 +641,7 @@ public class Party
             <p>The setter methods above contained parameters. A <term>parameter</term> is a variable in a method’s header that is used to pass in data that the method needs to do its job. In a setter, the parameter is the new value that you want to assign to the instance variable. Methods with parameters receive values through those parameters and use those values in accomplishing the method’s task.</p>
             <p>An <term>argument</term> is a value that is passed into a method when the method is called. It is saved into a parameter variable. The arguments passed to a method must be compatible in number and order with the types identified in the parameter list of the method signature. When calling methods, arguments are passed using call by value. <term>Call by value</term> initializes the parameters with copies of the arguments.
                 When an argument is a primitive value, the parameter is initialized with a copy of that value. Changes to the parameter have no effect on the corresponding argument.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Method signatures with parameters and method calls arguments</caption><image source="Unit3-Class-Creation/Figures/method-param-arg.png" width="98%" alt="Method parameters and arguments"/></figure>
+            <figure align="center"><caption>Method signatures with parameters and method calls arguments</caption><image source="Unit3-Class-Creation/Figures/method-param-arg.png" width="98%" alt="Method parameters and arguments"/></figure>
         </subsection>
   <subsection xml:id="methods-with-parameters-that-return-calculated-values">
             <title>Methods with Parameters that Return Calculated values</title>

@@ -6,7 +6,7 @@
     <p>One of the really useful features of Object-Oriented programming is <term>inheritance</term>.  You may have heard of someone coming into an inheritance, which often means they were left something from a relative who died.  Or, you might hear someone say that they have inherited musical ability from a parent.  In Java all classes can <term>inherit</term> attributes (instance variables) and behaviors (methods) from another class.  The class being inherited from is called the <term>parent class</term> or <term>superclass</term>.  The class that is inheriting is called the <term>child class</term> or <term>subclass</term>.</p>
     <p>When one class inherits from another, we can say that it is the <em>same kind of thing</em> as the <term>parent class</term> (the class it inherits from).  For example, a car is a kind of vehicle.  This is sometimes called the <em>is-a</em> relationship, but more accurately it’s a <em>is-a kind of</em> relationship.  A motorcycle is another kind of vehicle.  All vehicles have a make, model, and year that they were created.  All vehicles can go forward, backward, turn left and turn right.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram Showing Inheritance</caption>
+      <caption>A UML Class Diagram Showing Inheritance</caption>
       <image source="Unit5-Inheritance/Figures/vehicle.png" width="71%"/>
     </figure>
     <p>A <term>UML (Unified Modeling Language) class diagram</term> shows classes and the relationships between the classes as seen in Figure 1.  An open triangle points to the parent class.  The parent class for <c>Car</c> and <c>Motorcycle</c> is <c>Vehicle</c>. The <c>Vehicle</c> class has two child classes or subclasses: <c>Car</c> and <c>Motorcycle</c>.</p>
@@ -34,7 +34,7 @@ public class Motorcycle extends Vehicle
             
             <p>Inheritance allows you to reuse data and behavior from the parent class.  If you notice that several classes share the same data and/or behavior,  you can pull that out into a parent class.  This is called <term>generalization</term>. For example,  Customers and Employees are both people so it makes sense use the general Person class as seen below.</p>
             <p>Inheritance is also useful for <term>specialization</term> which is when you want most of the behavior of a parent class, but want to do at least one thing differently and/or add more data.  The example below can also be seen as specialization.  An employee is a person but also has a unique id.  A customer is a person, but also has a credit card.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram Showing Inheritance</caption><image source="Unit5-Inheritance/Figures/person.png" width="54%"/></figure>
+            <figure align="center"><caption>A UML Class Diagram Showing Inheritance</caption><image source="Unit5-Inheritance/Figures/person.png" width="54%"/></figure>
 
     <activity label="qoo10-1-1">
         <statement>
@@ -251,7 +251,7 @@ public class Student
 
             
             <p>Another type of relationship between classes is the <term>has-a</term> relationship or <term>association</term> relationship.  Use this when the object of one class contains a reference to one or more of another class.  For example, a course can have many course periods associated with it as shown below.  The <c>1</c> near the <c>Course</c> means that <c>1</c> course object is associated with the number shown near the other class.  In this case it is <c>*</c> which means 0 to many.  So one course is associated with 0 to many course periods.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram showing Association</caption><image source="Unit5-Inheritance/Figures/assoc.png" width="54%"/></figure>
+            <figure align="center"><caption>A UML Class Diagram showing Association</caption><image source="Unit5-Inheritance/Figures/assoc.png" width="54%"/></figure>
             <p>In the code, the <c>Course</c> class <term>has</term> an array or ArrayList of <c>CoursePeriod</c> objects as an attribute inside it.</p>
             <program language="java"><code>
 public class Course
@@ -268,7 +268,7 @@ public class CoursePeriod
 }
 </code></program>
             <p>Here is another example. Consider the classes Student, Course, and  APcourse. An APcourse is a special type of Course. Students are in Courses. What are the relationships between these classes? The UML diagram below shows the inherits (is-a) relationship between Course and APcourse and the associate (has-a) relationship between Course and Students.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class Diagram for Student, Course, APcourse</caption><image source="Unit5-Inheritance/Figures/APcourseUML.png" width="63%"/></figure>
+            <figure align="center"><caption>A UML Class Diagram for Student, Course, APcourse</caption><image source="Unit5-Inheritance/Figures/APcourseUML.png" width="63%"/></figure>
             <p>We can represent the diagram in Figure 4 in the code below. The Course class has an ArrayList of Student objects in it as the roster attribute. And an APcourse extends Course. What do you think the following code will print out?</p>
 
 <activity label="apclass">

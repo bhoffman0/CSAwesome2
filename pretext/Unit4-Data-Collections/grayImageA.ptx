@@ -34,7 +34,7 @@ public class GrayImage
     </program>
     <p><term>Part a.</term>  Write the method <c>countWhitePixels</c> that returns the number of pixels in the image that contain the value <c>WHITE</c>.  For example, assume that <c>pixelValues</c> contains the following image.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example 2D array</caption>
+      <caption>Example 2D array</caption>
       <image source="Unit4-Data-Collections/Figures/grayImageA.png" width="54%"/>
     </figure>
     <p>A call to <c>countWhitePixels</c> method would return 5 because there are 5 entries (shown in boldface)
@@ -200,7 +200,7 @@ public class Test
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
             
 
@@ -727,6 +727,6 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>The following video is also on YouTube at <url href="https://youtu.be/Rx4bPs0wkxU" visual="https://youtu.be/Rx4bPs0wkxU">https://youtu.be/Rx4bPs0wkxU</url>.  It walks through coding a solution.</p>
 
-    <video youtube="Rx4bPs0wkxU"/>
+    <video youtube="Rx4bPs0wkxU" label="video-grayImageA"/>
             </subsection>
 </section>

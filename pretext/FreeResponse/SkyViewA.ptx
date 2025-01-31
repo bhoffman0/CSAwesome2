@@ -12,7 +12,7 @@
             and forth across the sky (alternating between left to right and right to left) in the pattern indicated below by the
             arrows. The back-and-forth ordering of the values received from the scan is called telescope order.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The first row is left to right and the second is right to left and so on.</caption>
+      <caption>The first row is left to right and the second is right to left and so on.</caption>
       <image source="FreeResponse/Figures/SkyViewOrder.png" width="50%"/>
     </figure>
     <p>The telescope records the data in telescope order into a 1-dimensional array of <c>double</c> values. This
@@ -75,24 +75,24 @@ public class SkyView
             sky view is oriented properly.</p>
     <p>For example, suppose <c>scanned</c> contains values, as shown in the following array.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">First example scanned array values</caption>
+      <caption>First example scanned array values</caption>
       <image source="FreeResponse/Figures/SkyViewExArray.png" width="50%"/>
     </figure>
     <p>Using the scanned array above, a <c>SkyView</c> object created with
             <c>new SkyView(4, 3, values)</c>, would have <c>view</c> initialized with the following values.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The resulting view from the first example scanned array</caption>
+      <caption>The resulting view from the first example scanned array</caption>
       <image source="FreeResponse/Figures/SkyViewRes1.png" width="50%"/>
     </figure>
     <p>For another example, suppose <c>scanned</c> contains the following values.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Second example scanned array values</caption>
+      <caption>Second example scanned array values</caption>
       <image source="FreeResponse/Figures/SkyViewEx2Array.png" width="50%"/>
     </figure>
     <p>A <c>SkyView</c> object created with <c>new SkyView(3, 2, values)</c>, would have <c>view</c> initialized
             with the following values.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The resulting view from the second example scanned array</caption>
+      <caption>The resulting view from the second example scanned array</caption>
       <image source="FreeResponse/Figures/SkyViewRes2.png" width="50%"/>
     </figure>
   </introduction>

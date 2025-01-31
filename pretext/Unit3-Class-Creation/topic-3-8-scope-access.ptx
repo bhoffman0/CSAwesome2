@@ -24,7 +24,7 @@
                 </li>
             </ul></p>
             <p>The image below shows these 3 levels of scope.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Class, Method, and Block Level Scope</caption><image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%" alt="Scope Levels"/></figure>
+            <figure align="center"><caption>Class, Method, and Block Level Scope</caption><image source="Unit3-Class-Creation/Figures/scopeDiagram.png" width="89%" alt="Scope Levels"/></figure>
 
 <activity label="name_class_scope">
     <statement><p>Click on all the variable declarations that are at Class Level Scope.</p></statement>

@@ -8,7 +8,7 @@
     <p><term>Polymorphism</term> is a big word that you can break down into “poly” which means many and “morphism” which means form.  So, it just means many forms.  In Java it means that the method that gets called at <term>run-time</term> (when the code is run) depends on the <em>type</em> of the object at run-time.</p>
     <p>This is similar to a toddler toy that has pictures of animals and when a handle is pulled an arrow spins.  When the arrow stops the toy plays the sound associated with that animal.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A see n say toy</caption>
+      <caption>A see n say toy</caption>
       <image source="Unit5-Inheritance/Figures/SeeNSay.jpg" width="45%"/>
     </figure>
     <p>If you were simulating this toy in software you could create an <c>Animal</c> class that had a <c>makeNoise</c> method. Each subclass of <c>Animal</c> would override the <c>makeNoise</c> method to make the correct noise for that type.  This type of polymorphism is called <term>inheritance-based polymorphism</term>.  You have a common parent class, but the behavior is specified in the child class.</p>

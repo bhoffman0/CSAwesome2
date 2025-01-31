@@ -22,7 +22,7 @@
     <statement>
             <p> You’ve been hired by your school to create a program that keeps track of “students at your school and the courses they are taking”. Name 2 classes that you would create in your program. Name 2 attributes (data kept in instance variables) for each class.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
             <p>The two nouns in the problem description above, <term>Student</term> and <term>Course</term> would make good class names! Then, you can think about what data you need to keep track of for students and courses and what methods you need. For example, for the Student class, you might need to keep track of the student’s name and grade level. For the Course class, you might need to keep track of the course name and the teacher’s name. What other attributes did you and your classmates come up with?</p>
         </subsection>
@@ -38,7 +38,7 @@
                 of the methods indicate that they are public. We’ll learn about these more later on). Here is a <url href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" visual="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b">tutorial on class diagrams</url> that explains it in more detail if you are curious (Class diagrams are
                 not on the AP CSA exam). If you want to draw your own, <url href="https://app.diagrams.net/" visual="https://app.diagrams.net/">app.diagrams.net</url> or
                 <url href="https://creately.com" visual="https://creately.com">Creately.com</url> are good free online drawing tools for UML class diagrams.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Diagram</caption><image source="Unit3-Class-Creation/Figures/turtleUMLClassDiagram.png" width="63%" alt="Turtle class diagram"/></figure>
+            <figure align="center"><caption>Turtle Class Diagram</caption><image source="Unit3-Class-Creation/Figures/turtleUMLClassDiagram.png" width="63%" alt="Turtle class diagram"/></figure>
         </subsection>
   <subsection xml:id="abstraction">
             <title>Abstraction</title>
@@ -188,7 +188,7 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
             <p> Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): “Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything.” What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables. Then, come up with 2 methods (look for verbs) for the class that use the data in the instance variables.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-27">

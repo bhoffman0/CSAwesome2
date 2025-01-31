@@ -5,7 +5,7 @@
     
     <p>If you have multiple subclasses that inherit from a superclass, you can form an <term>inheritance hierarchy</term>. Every subclass is-a or is a kind of the superclass. For example, here is an inheritance hierarchy of Shapes. Square is-a Rectangle and a subclass of Rectangle. Rectangle is-a Shape and a subclass of Shape. In Java, the class <term>Object</term> is at the top of hierarchy. Every class in Java inherits from Object and is-an Object.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An Inheritance Hierarchy of Shapes</caption>
+      <caption>An Inheritance Hierarchy of Shapes</caption>
       <image source="Unit5-Inheritance/Figures/shapes.png" width="71%"/>
     </figure>
     <p>One of the main reasons to use an inheritance hierarchy is that all the classes
@@ -21,13 +21,13 @@
     <statement>
         <p> What variables and methods might be inherited from the superclass Shape in the inheritance hierarchy above?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
   <activity label="hierarchy2" data-optional="true">
     <statement>
         <p> Can you make a 3 level inheritance hierarchy for living things on Earth?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
   <subsection xml:id="superclass-references">
             <title>Superclass References</title>

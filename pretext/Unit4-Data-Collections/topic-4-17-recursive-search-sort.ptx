@@ -55,14 +55,14 @@ public class IterativeBinarySearch
     <statement>
             <p> What’s the base case for a recursive version of Binary Search (where we want the recursion to stop)? Remember that in binary search, we always check the middle element first when looking for a target element from a startIndex to an endIndex.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
 
 <activity label="recursiveCallQ">
     <statement>
             <p> Given a recursive binary search method with the method signature “boolean binarySearch(int[] array, int startIndex, int endIndex, int target)”, what recursive method call would search the array from index 0 to the middle index?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
             <p>Here is the Java code for a recursive binary search:</p>
 
@@ -181,10 +181,10 @@ public class RecursiveBinarySearch
             <p>Merge sort repeatedly divides an array into smaller subarrays until each subarray is one element and then recursively merges the sorted subarrays back together in sorted order to form the final sorted array. The code shown below uses a second array the same size as the original array for merging the values in order.  Then it copies all of the sorted values back into the original array.</p>
             <p>Here is a folk dance <url href="https://youtu.be/XaqR3G_NVoo" visual="https://youtu.be/XaqR3G_NVoo">video</url> that shows the merge sort process.</p>
 
-    <video youtube="XaqR3G_NVoo"/>
+    <video youtube="XaqR3G_NVoo" label="video-dance-merge"/>
                 <p>And here is a short <url href="https://youtu.be/4VqmGXwpLqc" visual="https://youtu.be/4VqmGXwpLqc">video</url> that describes how merge sort works.</p>
 
-    <video youtube="4VqmGXwpLqc"/>
+    <video youtube="4VqmGXwpLqc" label="video-mergesort"/>
                 <p>The code for <c>mergeSort</c> below is from the AP CSA course description.</p>
             <p>To identify a merge sort look for the following:</p>
             <p><ul>
@@ -370,21 +370,21 @@ public class SortTest
             <title>Tracing Challenge : Recursive Search and Sort</title>
             <p>Working in pairs, practice the recursive binary search and merge sort algorithms with a deck of cards or pieces of paper with numbers or names on them.  Here’s a <url href="https://youtu.be/AMJjtTo1LLE" visual="https://youtu.be/AMJjtTo1LLE">video</url> that shows merge sort with cards.</p>
 
-    <video youtube="AMJjtTo1LLE"/>
+    <video youtube="AMJjtTo1LLE" label="video-mergesort-cards"/>
                 <p>Work in pairs to do the following tracing problems.</p>
 
 <activity label="challenge-mergesort">
     <statement>
             <p> Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
 
 <activity label="challenge-recursive-binary-search">
     <statement>
             <p> Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-43">

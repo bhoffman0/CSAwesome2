@@ -39,7 +39,7 @@ public void copy(Picture fromPic,int startRow, int startCol)
         <p>You can create a collage by copying several small pictures onto a larger picture. You can do some picture
             manipulations like zero blue before you copy the picture as well. You can even mirror the result to get a
             nice artistic effect (Figure 1).</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Collage with vertical mirror</caption><image source="Unit4-Data-Collections/Figures/picturelabcollage.png" width="63%"/></figure>
+        <figure align="center"><caption>Collage with vertical mirror</caption><image source="Unit4-Data-Collections/Figures/picturelabcollage.png" width="63%"/></figure>
         <p>The following method shows how to create a simple collage using the copy method.</p>
         <program language="java"><code>
 public void createCollage()

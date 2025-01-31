@@ -407,6 +407,6 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>The following video is also on YouTube at <url href="https://youtu.be/Fye33yPQk-g" visual="https://youtu.be/Fye33yPQk-g">https://youtu.be/Fye33yPQk-g</url>.  It walks through coding a solution.</p>
 
-    <video youtube="Fye33yPQk-g"/>
+    <video youtube="Fye33yPQk-g" label="video-climbB"/>
             </subsection>
 </section>

@@ -7,7 +7,7 @@
  <idx>algorithms</idx>
  <idx><h>array</h><h>algorithms</h></idx>
  <idx><h>array</h><h>FRQ</h></idx>
- <idx>loop\ algorithms</idx>
+ <idx>loop algorithms</idx>
  <idx>accumulator</idx>
  <idx>sum</idx>
  <idx>average</idx>
@@ -1152,7 +1152,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Reversing an Array</title>
             <p>Reversing an array is similar to rotating it. We can copy the first element to the last position, the second element to the second-to-last position, and so on. We can use a temporary variable to store the value of the element we are overwriting. We usually need an indexed loop to access the elements at different indices unless we use a temporary array to store the reversed elements. Note that arrays are passed as references to methods, so any changes made to the array within the method will affect the original array.</p>
             <p>The following programs show how you can reverse an array in place by swapping elements. The first uses a while loop and the second an indexed for loop. To swap two elements, you need to use a temp variable to store the value of the element you are overwriting. Imagine that you have a glass of milk and a glass of orange juice. How would you swap the contents of the two glasses without making a huge mess? You would need a third glass to hold the contents of one of the glasses while you pour the contents of the other glass into it. Then you can pour the contents of the third glass into the other glass. This is the same idea behind swapping elements in an array.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Swapping elements in an array</caption><image source="Unit4-Data-Collections/Figures/swap.png" width="54%"/></figure>
+            <figure align="center"><caption>Swapping elements in an array</caption><image source="Unit4-Data-Collections/Figures/swap.png" width="54%"/></figure>
             <program language="java"><code>
 // Swapping 2 elements at index i and j
 int temp = array[i];  // pour milk into temp cup

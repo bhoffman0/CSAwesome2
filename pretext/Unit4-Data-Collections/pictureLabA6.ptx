@@ -6,11 +6,11 @@
             vertical mirror to reflect that half to see the whole car. What if we want to see what a picture would look
             like if we placed a mirror on a vertical line in the center of the width of the picture to reflect the left side
             (Figure 1)?</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Original picture (left) and picture after mirroring (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror1.png" width="80%"/></figure>
+        <figure align="center"><caption>Original picture (left) and picture after mirroring (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror1.png" width="80%"/></figure>
         <p>How can we write a method to mirror a picture in this way? One way to figure out the algorithm, which
             is a description of the steps for solving a problem, is to try it on smaller and simpler data. Figure 2 shows
             the result of mirroring a two-dimensional array of numbers from left to right vertically.</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two-Dimensional array of numbers (left) and mirrored result (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror2.png" width="80%"/></figure>
+        <figure align="center"><caption>Two-Dimensional array of numbers (left) and mirrored result (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror2.png" width="80%"/></figure>
         <p>Can you figure out the algorithm for this process? Test your algorithm on different sizes of twodimensional arrays of integers. Will it work for 2D arrays with an odd number of columns? Will it work
             for 2D arrays with an even number of columns?</p>
         <p>One algorithm is to loop through all the rows and half the columns. You need to get a pixel from the left
@@ -258,7 +258,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>2. Write the method <c>mirrorHorizontal</c> that mirrors a picture around a mirror placed
             horizontally at the middle of the height of the picture. Mirror from top to bottom as shown in the
             pictures below (Figure 3).</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Original picture (left) and mirrored from top to bottom (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror3.png" width="89%"/></figure>
+        <figure align="center"><caption>Original picture (left) and mirrored from top to bottom (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror3.png" width="89%"/></figure>
 
 <activity label="picture-lab-A6-mirrorHorizontal">
     <statement>
@@ -686,7 +686,7 @@ public class RunestoneTests extends CodeTestHelper
             left triangle and then (while the paint is still wet) folding the paper up to the top right again. The
             paint would be copied from the bottom left to the top right as shown in the pictures below
             (Figure 2).</p>
-        <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Original picture (left) and mirrored around the diagonal line with copying from bottom left to top right (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror4.png" width="89%"/></figure>
+        <figure align="center"><caption>Original picture (left) and mirrored around the diagonal line with copying from bottom left to top right (right)</caption><image source="Unit4-Data-Collections/Figures/picturelabmirror4.png" width="89%"/></figure>
 
 <activity label="picture-lab-A6-mirrorDiagonal">
     <statement>

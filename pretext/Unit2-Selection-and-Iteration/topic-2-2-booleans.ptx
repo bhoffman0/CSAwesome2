@@ -22,7 +22,7 @@
             </note>
             <p>Watch the following <url href="https://www.youtube.com/watch?v=bO9bejT0jwE&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=bO9bejT0jwE&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url> which shows what happens in memory as primitive types like <c>int</c> and reference types like <c>Dog</c> are compared with <c>==</c> in a physical model of Java memory.</p>
 
-    <video youtube="bO9bejT0jwE"/>
+    <video youtube="bO9bejT0jwE" label="video-ref-model"/>
                 <p>The following code shows how <c>==</c> is used with primitive types like <c>int</c>.</p>
 
 <activity label="bool1">
@@ -73,7 +73,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <p>We can also use <c>==</c> or <c>!=</c> to test if two reference values, like <c>Turtle</c> and <c>String</c> objects,  refer to the same object. In the figure below, we are creating two separate <c>Turtle</c> objects called <c>juan</c> and <c>mia</c>. They do not refer to same object or turtle. Then, we create a reference variable called <c>friend</c> that is set to <c>mia</c>. The turtle <c>mia</c> will have two ways (<term>references</term> or <term>aliases</term>) to name her – she’s both <c>mia</c> and <c>friend</c>, and these variables refer to the same object (same <c>Turtle</c>) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with <c>==</c> will return true which you can see in the code below.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Reference Equality</caption><image source="Unit2-Selection-and-Iteration/Figures/turtleEquality.png" width="89%"/></figure>
+            <figure align="center"><caption>Turtle Reference Equality</caption><image source="Unit2-Selection-and-Iteration/Figures/turtleEquality.png" width="89%"/></figure>
 
 <activity label="boolRef">
     <statement>
