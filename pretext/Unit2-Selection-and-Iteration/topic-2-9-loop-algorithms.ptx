@@ -241,7 +241,8 @@ public class InputLoop
   }
 }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>80 90 100</stdin>
+<tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;

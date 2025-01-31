@@ -66,14 +66,10 @@ public class MyClass()
 <activity label="commentExercise">
     <statement>
             <p>The code below will read in the 2 numbers below it and multiply them.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to read in, calculate, and print the result to describe what it does.</p>
-
     </statement>
     <program interactive="activecode" language="java">
         <code>
-import java.util.Scanner;
-
-
-
+ import java.util.Scanner;
 
  public class Multiply
  {
@@ -90,7 +86,8 @@ import java.util.Scanner;
       }
  }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>2 3</stdin>
+    <tests>
 import static org.junit.Assert.*;
 
 import org.junit.Test;

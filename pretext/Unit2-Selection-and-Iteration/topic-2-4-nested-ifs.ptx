@@ -621,7 +621,7 @@ public class Adventure
    }
 }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>n</stdin><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
