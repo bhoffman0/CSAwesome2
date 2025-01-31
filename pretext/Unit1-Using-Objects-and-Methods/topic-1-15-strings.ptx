@@ -451,7 +451,7 @@ public class RunestoneTests extends CodeTestHelper
     public void testMain() throws IOException
     {
         String output = getMethodOutput("main").trim();
-        boolean passed = getResults(output, output, "Expected output from main", passed);
+        boolean passed = getResults(output, output, "Expected output from main", true);
         assertTrue(passed);
     }
 }
@@ -938,7 +938,8 @@ public class PigLatin
    }
 }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>pig</stdin>
+<tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
