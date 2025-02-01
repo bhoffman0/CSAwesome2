@@ -509,17 +509,52 @@ public class RunestoneTests extends CodeTestHelper
         </evaluate>
       </evaluation>
     </activity>
-
-  
-
       
 
-        <exercise label="fillDecVar2">
+        <activity label="fillDecVar2">
             <statement>
-    <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillDecVar3">
+    <p> What type should you use for a shoe size like 8.5? </p>
+        <p>
+          <fillin answer="double"/></p>    
+        </statement>
+          <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+               Correct.  Any variable that needs to values after the decimal point should be declared as a double.
+              </feedback>
+            </test>
+            <test>
+              <!-- else -->
+              <feedback>
+              What type allows for a decimal value?</feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity>    
+    
+
+        <activity label="fillDecVar3">
             <statement>
-    <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>
+    <p> What type should you use for a number of tickets?  </p>
+        <p><fillin answer="int"/></p></statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>Use a type that represents whole numbers like 1, 2, 3, etc.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+
                     <p><term>Mixed up Code Problems</term></p>
 <activity label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code declares and initializes variables for storing a number of visits, a person’s temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the “Check Me” button to check your solution.</p>
@@ -605,12 +640,46 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
 
-        <exercise label="fillName1">
+        <activity label="fillName1">
             <statement>
-    <p> What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillName2">
+    <p> What is the camel case variable name for a variable that represents a shoe size?   </p><p><fillin answer="shoeSize"/></p></statement>
+         <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word.</p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>In camel case just append the words after each other but capitalize the first letter of each word after the 1st word.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+                
+        
+        <activity label="fillName2">
             <statement>
-    <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the camel case variable name for a variable that represents the top score?</p><p> <fillin answer="topScore"/>  </p></statement>
+         <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct. </p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>In camel case just append the words after each other but capitalize the first letter of each word after the 1st word.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+            
+       </subsection>
   <subsection xml:id="debugging-challenge-weather-report">
             <title>Debugging Challenge : Weather Report</title>
             <p>Debug the following code that reads out a weather report.
