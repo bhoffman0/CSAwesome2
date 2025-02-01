@@ -622,7 +622,7 @@ public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h
 
 <activity label="challenge-CustomTurtles">
     <statement>
-            <p>Use the CustomTurtle constructors to create the following turtles.
+            <p>Use the CustomTurtle constructors with the signatures below to create the  turtles with the colors and positions described in the comments of the program.
               <program language="java"><code>
 /** Constructs a CustomTurtle in the middle of the world */
 public CustomTurtle(World w)

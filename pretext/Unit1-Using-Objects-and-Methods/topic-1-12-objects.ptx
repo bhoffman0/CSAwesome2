@@ -57,6 +57,14 @@ Turtle myrtle;
     <response/>
     
 </activity>
+<exercise label="cats2">
+    <statement>
+            <p> Try response box with exercise markup.
+                </p>
+    </statement>
+    <response/>
+    
+</exercise>
             <p>The following picture of a turtle shows some of the Turtle <term>attributes</term> like name, width, height, color in the body of the turtle and its <term>methods</term> like forward(), backward(), written around the turtle.</p>
             <figure align="center"><caption>Turtle Attributes and Behaviors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="63%" alt="Turtle attributes and behaviors"/></figure>
 
