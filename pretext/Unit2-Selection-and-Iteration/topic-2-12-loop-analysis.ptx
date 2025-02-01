@@ -54,7 +54,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <p>Did your trace table look like the following?</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/whileLoopTrace.png" width="27%"/></figure>
+            <figure align="center"><caption>A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.</caption><image source="Unit2-Selection-and-Iteration/Figures/whileLoopTrace.png" width="27%"/></figure>
 
     <activity label="loop-trace-count">
         <statement>

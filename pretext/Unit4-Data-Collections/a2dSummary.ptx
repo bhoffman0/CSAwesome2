@@ -5,7 +5,7 @@
     
     <p>In this chapter you learned about <term>two dimensional arrays</term>.  A <term>two dimensional array</term> stores objects in a 2d table.  You can think of it as storing objects in rows and columns, but it actually uses an array of arrays to store the objects as shown below.  In this chapter you learned how to declare 2d arrays, create them, and access array elements.  Array elements are accessed using a row and column index.  The first element in a 2d array is at row 0 and column 0.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Java arrays of arrays</caption>
+      <caption>Java arrays of arrays</caption>
       <image source="Unit4-Data-Collections/Figures/ArrayRowsAndCols.png" width="54%"/>
     </figure>
     <idx><h>2d-array</h><h>index</h></idx>

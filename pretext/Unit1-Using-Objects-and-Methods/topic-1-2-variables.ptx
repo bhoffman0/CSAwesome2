@@ -11,9 +11,9 @@
             
             <p>A <term>variable</term> is a memory location in the computer that can store a value that can change or vary while the program is running. The following <url href="https://youtu.be/pHgYlVjagmA" visual="https://youtu.be/pHgYlVjagmA">video</url> explains what a variable is and gives some real word examples of variables.</p>
 
-    <video youtube="pHgYlVjagmA"/>
+    <video youtube="pHgYlVjagmA" label="video-variables"/>
                 <p>For example, when you play a game, it will often have a score.  Scores often start at 0 and increase, so they can change.  A score can be stored in a variable.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A pong game in <reference name="Scratch" refuri="http://scratch.mit.edu">Scratch</reference><target ids="scratch" names="scratch" refuri="http://scratch.mit.edu"/> with a score shown in the upper left.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%"/></figure>
+            <figure align="center"><caption>A pong game in <reference name="Scratch" refuri="http://scratch.mit.edu">Scratch</reference><target ids="scratch" names="scratch" refuri="http://scratch.mit.edu"/> with a score shown in the upper left.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%"/></figure>
         </subsection>
   <subsection xml:id="data-types">
             <title>Data Types</title>
@@ -42,7 +42,7 @@
                     <p><c>double</c> which can represent non-integer numbers like 6.3 -0.9, and
                         60293.93032. Computer people call these “floating point” numbers because the
                         decimal point “floats” relative to the magnitude of the number, similar to the
-                        way it does in scientific notation like <math>6.5 ✕ 10^8</math>. The name
+                        way it does in scientific notation like <m>6.5 ✕ 10^8</m>. The name
                         <c>double</c> comes from the fact that <c>double</c>s are represented using 64
                         bits, double the 32 bits used for the type <c>float</c> which used to be the
                         normal size floating point number when most computers did math in units of
@@ -308,7 +308,7 @@
             <p>To create a variable, you must tell Java its data type and its name.  Creating a variable is also called <term>declaring a variable</term>.  The type is a keyword like int, double, or boolean, but you get to make up the name for the variable.  When you create a <term>primitive variable</term> Java will set aside enough bits in memory for that primitive type and associate that memory location with the name that you used.</p>
             <p>Computers store all values using <term>bits</term> (binary digits).  A <term>bit</term> can represent two values and we usually say that the value of a bit is either 0 or 1. When you declare a variable, you have to tell Java the type of the variable because Java needs to know how many bits to use and how to represent the value.  The 3 different primitive types
                 all require different number of bits.  An integer gets 32 bits of memory, a double gets 64 bits of memory and a boolean could be represented by just one bit.</p>
-            <figure align=""><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Examples of variables with names and values.  Notice that the different types get a different amount of memory space.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/typesAndSpace.png" width="89%"/></figure>
+            <figure align="center"><caption>Examples of variables with names and values.  Notice that the different types get a different amount of memory space.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/typesAndSpace.png" width="89%"/></figure>
             <p>To <term>declare</term> (create) a variable, you  specify the type, leave at least one space, then the name for the variable and end the line with a semicolon (<c>;</c>). Java uses the keyword <term>int</term> for integer, <term>double</term> for a floating point number (a double precision number), and <term>boolean</term> for a Boolean value (true or false).</p>
             <p>Here is an example declaration of a variable called score.</p>
             <program language="java"><code>
@@ -509,17 +509,52 @@ public class RunestoneTests extends CodeTestHelper
         </evaluate>
       </evaluation>
     </activity>
-
-  
-
       
 
-        <exercise label="fillDecVar2">
+        <activity label="fillDecVar2">
             <statement>
-    <p> What type should you use for a shoe size like 8.5? <var/>  </p></statement><setup><var><condition string="^\s*^\s*double$\s*$"><feedback><p>Correct.  Any variable that needs to values after the decimal point should be declared as a double.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What type allows for a decimal value</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillDecVar3">
+    <p> What type should you use for a shoe size like 8.5? </p>
+        <p>
+          <fillin answer="double"/></p>    
+        </statement>
+          <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+               Correct.  Any variable that needs to values after the decimal point should be declared as a double.
+              </feedback>
+            </test>
+            <test>
+              <!-- else -->
+              <feedback>
+              What type allows for a decimal value?</feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity>    
+    
+
+        <activity label="fillDecVar3">
             <statement>
-    <p> What type should you use for a number of tickets? <var/>  </p></statement><setup><var><condition string="^\s*^\s*int$\s*$"><feedback><p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Use a type that represents whole numbers like 1, 2, 3, etc.</p></feedback></condition></var></setup></exercise>
+    <p> What type should you use for a number of tickets?  </p>
+        <p><fillin answer="int"/></p></statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct. You can’t buy half a ticket so this will be an integer.</p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>Use a type that represents whole numbers like 1, 2, 3, etc.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+
                     <p><term>Mixed up Code Problems</term></p>
 <activity label="declareVars1" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following code declares and initializes variables for storing a number of visits, a person’s temperature, and if the person has insurance or not.  It also includes extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left area into the correct order (declaring numVisits, temp, and hasInsurance in that order) in the right area.  Click on the “Check Me” button to check your solution.</p>
@@ -605,12 +640,46 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
 
-        <exercise label="fillName1">
+        <activity label="fillName1">
             <statement>
-    <p> What is the camel case variable name for a variable that represents a shoe size? <var/>  </p></statement><setup><var><condition string="^\s*^\s*shoeSize$\s*$"><feedback><p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just appended the words after each other but uppercase the first letter of each word after the 1st word</p></feedback></condition></var></setup></exercise>
-        <exercise label="fillName2">
+    <p> What is the camel case variable name for a variable that represents a shoe size?   </p><p><fillin answer="shoeSize"/></p></statement>
+         <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  Start with the first word in all lowercase and uppercase the first letter of each additional word.</p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>In camel case just append the words after each other but capitalize the first letter of each word after the 1st word.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+                
+        
+        <activity label="fillName2">
             <statement>
-    <p> What is the camel case variable name for a variable that represents the top score? <var/>  </p></statement><setup><var><condition string="^\s*^\s*topScore$\s*$"><feedback><p>Correct.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>In camel case just put the words after each other but uppercase the first letter of each word after the 1st word.</p></feedback></condition></var></setup></exercise>        </subsection>
+    <p> What is the camel case variable name for a variable that represents the top score?</p><p> <fillin answer="topScore"/>  </p></statement>
+         <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct. </p></feedback>
+                </test>
+            <test>
+            <feedback>
+                <p>In camel case just append the words after each other but capitalize the first letter of each word after the 1st word.</p>
+                         </feedback>
+                         </test>
+        </evaluate>
+    </evaluation>
+        </activity>
+            
+       </subsection>
   <subsection xml:id="debugging-challenge-weather-report">
             <title>Debugging Challenge : Weather Report</title>
             <p>Debug the following code that reads out a weather report.

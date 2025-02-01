@@ -32,10 +32,10 @@
             <p>Selection sort usually starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.</p>
             <p>Here is a folk dance <url href="https://youtu.be/Ns4TPTC8whw" visual="https://youtu.be/Ns4TPTC8whw">video</url> that shows the selection sort process.</p>
 
-    <video youtube="Ns4TPTC8whw"/>
+    <video youtube="Ns4TPTC8whw" label="video-dance1"/>
                 <p>And a short <url href="https://youtu.be/g-PGLbMth_g" visual="https://youtu.be/g-PGLbMth_g">video</url> that describes how selection sort works.</p>
 
-    <video youtube="g-PGLbMth_g"/>
+    <video youtube="g-PGLbMth_g" label="video-sort1"/>
                 <p>To identify a selection sort look for the following:</p>
             <p><ul>
                 <li>
@@ -240,10 +240,10 @@ public static void selectionSort(int[] elements)
             <p>Insertion sort usually starts at index 1 and inserts the value at index 1 into its correct place in the already sorted part (the part to the left of the current index). It moves any value larger than the value stored in temp to the right until it either finds the appropriate place to put temp or gets to the front of the array.</p>
             <p>Here is a folk dance <url href="https://youtu.be/ROalU379l3U" visual="https://youtu.be/ROalU379l3U">video</url> that shows the insertion sort process.</p>
 
-    <video youtube="ROalU379l3U"/>
+    <video youtube="ROalU379l3U" label="video-dance2"/>
                 <p>And a short <url href="https://youtu.be/JU767SDMDvA" visual="https://youtu.be/JU767SDMDvA">video</url> that describes how insertion sort works.</p>
 
-    <video youtube="JU767SDMDvA"/>
+    <video youtube="JU767SDMDvA" label="video-sort2"/>
                 <p>To identify an insertion sort look for the following:</p>
             <p><ul>
                 <li>
@@ -449,7 +449,7 @@ public static void insertionSort(int[] elements)
     <statement>
             <p> Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-41">

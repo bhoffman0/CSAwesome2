@@ -21,7 +21,7 @@ Turtle t = new Turtle(habitat); // create a new Turtle object
   <subsection xml:id="the-world-class-constructors">
             <title>The World Class Constructors</title>
             <p>There can be more than one constructor defined in a class. This is called <term>overloading</term> the constructor. The <c>World</c> class has the 2 constructors seen below. One doesn’t take any arguments and creates a default sized world and one takes the world’s width and height arguments to create a world of a specific size. An <term>argument</term> is a value that is passed into a constructor. Arguments are used to initialize the attributes of an object, in this case, the size of the world.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two World constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/worldConstructors.png" width="63%" alt="Two World constructors"/></figure>
+            <figure align="center"><caption>Two World constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/worldConstructors.png" width="63%" alt="Two World constructors"/></figure>
             <p>The <term>no-argument constructor</term> <c>World()</c>, with no arguments inside the parentheses following the name of the constructor, creates a graphical window with a default size of 640x480 pixels. No-argument constructors usually set the attributes of the object to default values. The second <c>World(int width, int height)</c> constructor takes two integer arguments, and initializes the <c>World</c> object’s width and height to them, for example <c>new World(300,400)</c> creates a 300x400 pixel world.</p>
             <program language="java"><code>
 World world1 = new World(); // creates a default size 640x480 world
@@ -266,7 +266,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>A special reference value <term>null</term> (which means none) can be used when a variable doesn’t refer to any object. For instance, you can declare a variable and initialize it to <term>null</term> (<c>Turtle t1 = null;</c>) meaning the variable doesn’t refer to any object yet.</p>
             <p>Watch the <url href="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url> below about null.</p>
 
-    <video youtube="5fpjgXAV2BU"/>
+    <video youtube="5fpjgXAV2BU" label="video-null"/>
                 <p>The code <c>Turtle t1 = null;</c> creates a variable <c>t1</c> that refers to a <c>Turtle</c> object, but the <c>null</c> means that it doesn’t refer to an object yet. You could later create the object and set the object variable to refer to that new object (<c>t1 = new Turtle(world1)</c>).  Or more commonly, you can declare an object variable and initialize it in the same line of code (<c>Turtle t2 = new Turtle(world1);</c>).</p>
             <program language="java"><code>
 World world1 = new World();
@@ -281,13 +281,13 @@ Turtle t2 = new Turtle(world1);
             <idx>signature</idx>
  <idx>parameters</idx>
  <idx>arguments</idx>
- <idx>call\ by\ value</idx>
+ <idx>call by value</idx>
  <idx>overloading</idx>
 
             
             <p>When you use a class that someone has already written for you in a <term>library</term> that you can import like the <c>Turtle</c> class above, you can look up how to use the constructors and methods in the <url href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" visual="https://www2.cs.uic.edu/~i101/doc/Turtle.html">documentation</url> for that class.  The documentation will list the <term>signatures</term> (or headers) of the constructors or methods which will tell you their name and parameter list. The <term>parameter list</term>, in the <term>header</term> of a constructor, is an ordered list of variable declarations  which includes data types. The parameter variables will store the argument values passed into the constructor.</p>
             <p>Constructors are said to be <term>overloaded</term> when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are the two constructors for the <c>Turtle</c> class that take different parameters:</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Turtle Class Constructor Signatures and Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/TurtleClassDefn.png" width="100%" alt="Turtle Class Constructor Signatures and Parameters"/></figure>
+            <figure align="center"><caption>Turtle Class Constructor Signatures and Parameters</caption><image source="Unit1-Using-Objects-and-Methods/Figures/TurtleClassDefn.png" width="100%" alt="Turtle Class Constructor Signatures and Parameters"/></figure>
 
     <activity label="TurtleClass1">
         <statement>
@@ -345,7 +345,7 @@ Turtle t2 = new Turtle(world1);
 
     </activity>
             <p>In Unit 3, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called <c>Date</c>, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A Date class showing attributes and constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/DateClass.png" width="89%" alt="A Date class showing attributes and constructors"/></figure>
+            <figure align="center"><caption>A Date class showing attributes and constructors</caption><image source="Unit1-Using-Objects-and-Methods/Figures/DateClass.png" width="89%" alt="A Date class showing attributes and constructors"/></figure>
 
 <activity label="date_constructor">
     <statement><p>Click on the constructor headers (signatures)</p></statement>
@@ -427,7 +427,7 @@ Turtle t2 = new Turtle(world1);
   <subsection xml:id="arguments-parameters-and-call-by-value">
             <title>Arguments, Parameters, and Call by Value</title>
             <p>When a constructor like <c>Date(2005,9,1)</c> is called, the <term>parameters</term>, (<c>year</c>, <c>month</c>, and <c>day</c>), are set to copies of the  <term>arguments</term>, (<c>2005</c>, <c>9</c>, and <c>1</c>).  This is <term>call by value</term> which means that copies of the argument values are passed to the constructor.  These values are used to initialize the object’s attributes. A constructor call interrupts the sequential execution of statements in that the program executes the statements in the constructor before continuing. Once the last statement in the constructor has been executed, the flow of control is returned to the point immediately following where the constructor was called.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%" alt="Parameter Mapping"/></figure>
+            <figure align="center"><caption>Parameter Mapping</caption><image source="Unit1-Using-Objects-and-Methods/Figures/parameterMappingDate.png" width="80%" alt="Parameter Mapping"/></figure>
             <p>The type of the values being passed in as arguments have to match the type of the parameter variables. We cannot give a constructor a <c>String</c> object when it is expecting an <c>int</c>. The order of the arguments also matters. If you mix up the month and the day in the <c>Date</c> constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).</p>
 
     <activity label="mcq_params">
@@ -622,7 +622,20 @@ public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h
 
 <activity label="challenge-CustomTurtles">
     <statement>
-            <p>Use the CustomTurtle constructors to create the following turtles.</p>
+            <p>Use the CustomTurtle constructors with the signatures below to create the  turtles with the colors and positions described in the comments of the program.
+              <program language="java"><code>
+/** Constructs a CustomTurtle in the middle of the world */
+public CustomTurtle(World w)
+
+/** Constructs a CustomTurtle with a specific body color,
+    shell color, and width and height in the middle of the world */
+public CustomTurtle(World w, Color body, Color shell, int w, int h)
+
+/** Constructs a CustomTurtle with a specific body color,
+    shell color, and width and height at position (x,y) in the world */
+public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h)
+</code></program>
+            </p>
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">

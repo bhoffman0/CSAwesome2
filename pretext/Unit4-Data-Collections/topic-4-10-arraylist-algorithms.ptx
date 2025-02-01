@@ -3,7 +3,7 @@
 <section xml:id="topic-4-10-arraylist-algorithms">
   <title>Implementing <c>ArrayList</c> Algorithms</title><introduction>
     
-    <idx>ArrayList\ algorithms</idx>
+    <idx>ArrayList algorithms</idx>
  <idx>minimum</idx>
  <idx>maximum</idx>
  <idx>sum</idx>
@@ -498,7 +498,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>     if (a[i] == a[j])</cline>
 <cline>     {    </cline>
 </block><block order="12">
-<cline>          return true;</cline>
+<cline>        return true;</cline>
 </block><block order="7">
 <cline>      } // end if</cline>
 </block><block order="10">
@@ -655,10 +655,10 @@ public class TestRotate
     {
         // instantiate ArrayList and fill with Integers
         ArrayList&lt;Integer&gt; values = new ArrayList&lt;Integer&gt;();
-        int[] nums = {1, 5, 7};
-        for (int i = 0; i &lt; nums.length; i++)
+        int[] arrnums = {1, 5, 7};
+        for (int i = 0; i &lt; arrnums.length; i++)
         {
-            values.add(nums[i]);
+            values.add(arrnums[i]);
         }
         rotateLeft(values);
         System.out.println("Expected Result: [5, 7, 1]");
@@ -675,7 +675,6 @@ import java.util.*;
 
 public class RunestoneTests extends CodeTestHelper
 {
-    @Test
     public RunestoneTests()
     {
         super("TestRotate");
@@ -707,11 +706,12 @@ public class RunestoneTests extends CodeTestHelper
             list.add(0);
             list.add(-2);
             String expect = "[4, 0, -2, 2]";
-            String output = "" + TestRotate.rotateLeft(list);
+            TestRotate.rotateLeft(list);
+            String output = "" + list;
             boolean passed = getResults(expect, output, "rotateLeft with list 2,4,0,-2");
             assertTrue(passed);
         }
-}
+    }
         </tests>
     </program>
 </activity>

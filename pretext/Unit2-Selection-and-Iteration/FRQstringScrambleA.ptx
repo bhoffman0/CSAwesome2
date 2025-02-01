@@ -24,7 +24,7 @@
     </p>
     <p>The following table shows several examples of words and their scrambled versions.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example calls and results</caption>
+      <caption>Example calls and results</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/scrambleA.png" width="89%"/>
     </figure>
     <program language="java">
@@ -57,9 +57,9 @@ public class ScrambledStrings
             <title>How to solve this problem</title>
             <p>The first thing to do is try to solve the examples by hand.</p>
             <p>First try to solve “TAN”.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">How to solve “TAN”</caption><image source="Unit2-Selection-and-Iteration/Figures/stringScrambleA-TAN.png" width="54%"/></figure>
+            <figure align="center"><caption>How to solve “TAN”</caption><image source="Unit2-Selection-and-Iteration/Figures/stringScrambleA-TAN.png" width="54%"/></figure>
             <p>Now try to solve “ABRACADABRA”.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">How to solve “ABRACADABRA”</caption><image source="Unit2-Selection-and-Iteration/Figures/stringScrambleA-ABRACADABRA.png" width="71%"/></figure>
+            <figure align="center"><caption>How to solve “ABRACADABRA”</caption><image source="Unit2-Selection-and-Iteration/Figures/stringScrambleA-ABRACADABRA.png" width="71%"/></figure>
             <p>Try to figure out the last two examples on your own.</p>
         </subsection>
   <subsection xml:id="figuring-out-the-algorithm">
@@ -339,6 +339,6 @@ public class RunestoneTests extends CodeTestHelper
             
             <p>The following video is also on YouTube at <url href="https://youtu.be/HlVdo9Nij44" visual="https://youtu.be/HlVdo9Nij44">https://youtu.be/HlVdo9Nij44</url>.  It walks through coding a solution.</p>
 
-    <video youtube="HlVdo9Nij44"/>
+    <video youtube="HlVdo9Nij44" label="video-string-scramble"/>
             </subsection>
 </section>

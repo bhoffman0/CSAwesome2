@@ -23,7 +23,7 @@ b = "at our high school"
   <subsection xml:id="de-morgan-s-laws">
             <title>De Morgan’s Laws</title>
             <p>De Morgan’s Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an <term>and</term> (<c>&amp;&amp;</c>) or <term>or</term> (<c>||</c>), such as <c>(x &lt; 3) &amp;&amp; (y &gt; 2)</c>. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan’s Laws state the following equivalencies. Here’s an easy way to remember De Morgan’s Laws: <term>move the NOT inside, AND becomes OR</term> and <term>move the NOT inside, OR becomes AND</term>.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">De Morgan’s Laws to simplify complex expressions</caption><image source="Unit2-Selection-and-Iteration/Figures/demorgan.png" width="71%"/></figure>
+            <figure align="center"><caption>De Morgan’s Laws to simplify complex expressions</caption><image source="Unit2-Selection-and-Iteration/Figures/demorgan.png" width="71%"/></figure>
             <p>In Java, De Morgan’s Laws are written with the following operators:</p>
             <blockquote>
                 <p><ul>
@@ -155,7 +155,7 @@ b = "at our high school"
   <subsection xml:id="simplifying-boolean-expressions">
             <title>Simplifying Boolean Expressions</title>
             <p>Often, you can simplify boolean expressions to create equivalent expressions. For example, applying De Morgan’s Laws to <c>!(x &lt; 3 &amp;&amp; y &gt; 2)</c> yields <c>!(x &lt; 3) || !(y &gt; 2)</c> as seen in the figure below. This can then be simplified further by flipping the relational operators to remove the not.  So, <c>!(x &lt; 3) || !(y &gt; 2)</c> is simplified to <c>(x &gt;= 3 || y &lt;= 2)</c> where the relational operators are flipped and the negation is removed. These two simplification steps are seen below.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">An example boolean expression simplified</caption><image source="Unit2-Selection-and-Iteration/Figures/demorganex.png" width="71%"/></figure>
+            <figure align="center"><caption>An example boolean expression simplified</caption><image source="Unit2-Selection-and-Iteration/Figures/demorganex.png" width="71%"/></figure>
 
 <activity label="lcdmtest">
     <statement>
@@ -290,7 +290,7 @@ else
             
             <p>The <term>equals</term> method for Strings compares two strings letter by letter. <c>s1.equals(s2)</c> is true if <c>s1</c> and <c>s2</c> have all the same characters in the same order. With <c>Strings</c> and other objects, you almost always use <c>equals</c> instead of <c>==</c> to check their equality.</p>
             <p>When the operator <c>==</c> or <c>!=</c> is used to compare object variables, it returns true when the two variables <em>refer to the same object</em>. These variables are called <term>object references</term> and <term>aliases</term> for the same object. With strings this happens when one string variable is set to another.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">String aliases</caption><image source="Unit2-Selection-and-Iteration/Figures/stringEquality.png" width="54%"/></figure>
+            <figure align="center"><caption>String aliases</caption><image source="Unit2-Selection-and-Iteration/Figures/stringEquality.png" width="54%"/></figure>
 
 <activity label="lcse1">
     <statement>
@@ -335,9 +335,9 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
             <p>The following <url href="https://www.youtube.com/watch?v=hhYBVgmC-vw" visual="https://www.youtube.com/watch?v=hhYBVgmC-vw">video</url> traces through the code above and shows how <c>==</c> and <c>equals</c> work with String objects in memory.</p>
 
-    <video youtube="hhYBVgmC-vw"/>
+    <video youtube="hhYBVgmC-vw" label="video-strings"/>
                 <p>Here’s the representation of memory where s2 and s3 refer to the same String object.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">s2 and s3 are aliases referring to the same String object</caption><image source="Unit2-Selection-and-Iteration/Figures/s2ands3.jpg" width="63%"/></figure>
+            <figure align="center"><caption>s2 and s3 are aliases referring to the same String object</caption><image source="Unit2-Selection-and-Iteration/Figures/s2ands3.jpg" width="63%"/></figure>
         </subsection>
   <subsection xml:id="equality-with-new-strings">
             <title>Equality with New Strings</title>
@@ -411,9 +411,9 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
             <p>Watch the <url href="https://www.youtube.com/watch?v=xZroaSGhgxA" visual="https://www.youtube.com/watch?v=xZroaSGhgxA">video below</url> to see how this code works in memory. Since we used the <c>new</c> keyword, two different <c>String</c> objects will be created that each have the characters <c>Hello</c> in them.  So <c>s1 == s2</c> will be false since they don’t refer to the same object, but <c>s1.equals(s2)</c> is true since the two different objects contain the same characters in the same order.</p>
 
-    <video youtube="xZroaSGhgxA"/>
+    <video youtube="xZroaSGhgxA" label="video-equals"/>
                 <p>Here is the representation of these String objects in memory.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two strings that are equal with <literal>equals</literal> but not with <literal>==</literal>.</caption><image source="Unit2-Selection-and-Iteration/Figures/s1ands2.jpg" width="63%"/></figure>
+            <figure align="center"><caption>Two strings that are equal with <literal>equals</literal> but not with <literal>==</literal>.</caption><image source="Unit2-Selection-and-Iteration/Figures/s1ands2.jpg" width="63%"/></figure>
             <p>Note that you can also create <c>Strings</c> using string literals instead of new, like <c>String s = "Hello"</c>. <c>String</c> literals behave a little differently because they are re-used if they already exist instead of creating a new object. But you should not see questions with string literals and <c>==</c> on the AP exam.</p>
             <note>
                 <p>Only use <c>==</c> and <c>!=</c> with primitive types like <c>int</c> or to test if two strings (or objects) refer to the same object.  Use <c>equals</c>, not <c>==</c> or <c>!=</c>, with strings to test if they are equal letter by letter, and with other objects to see if all of their relevant attributes are equal.</p>
@@ -630,7 +630,7 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
             <p>The <url href="https://www.youtube.com/watch?v=GPdoHm1K8HA" visual="https://www.youtube.com/watch?v=GPdoHm1K8HA">following video</url> shows how the null string reference works in memory.</p>
 
-    <video youtube="GPdoHm1K8HA"/>
+    <video youtube="GPdoHm1K8HA" label="video-null-string"/>
             </subsection>
   <subsection xml:id="coding-challenge-truth-and-tracing-tables-pogil">
             <title>Coding Challenge : Truth and Tracing Tables POGIL</title>
@@ -945,7 +945,7 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
     <statement>
             <p> Write your tracing table here that keeps track of s1, s2, s3, s4 and the output.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-23">

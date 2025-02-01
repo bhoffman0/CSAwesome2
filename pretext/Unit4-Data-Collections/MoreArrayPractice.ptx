@@ -182,7 +182,6 @@ public class RunestoneTests extends CodeTestHelper {
     </statement>
     <program interactive="activecode" language="java">
         <code>
-import java.util.Scanner;
 import java.util.Arrays;
 
 public class Has22
@@ -213,7 +212,7 @@ public class Has22
 }
 
 </code>
-	<stdin> </stdin><tests>
+<tests>
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.io.IOException;

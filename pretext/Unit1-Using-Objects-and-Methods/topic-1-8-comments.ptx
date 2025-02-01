@@ -66,14 +66,10 @@ public class MyClass()
 <activity label="commentExercise">
     <statement>
             <p>The code below will read in the 2 numbers below it and multiply them.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to read in, calculate, and print the result to describe what it does.</p>
-
     </statement>
     <program interactive="activecode" language="java">
         <code>
-import java.util.Scanner;
-
-
-
+ import java.util.Scanner;
 
  public class Multiply
  {
@@ -90,7 +86,8 @@ import java.util.Scanner;
       }
  }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>2 3</stdin>
+    <tests>
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -239,7 +236,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Determining the preconditions and postconditions help us to test our code and determine the <term>validity</term> of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use.</p>
             <p>Good software testers actually try to break the code! They try all kinds of input to see what the software will do because you never know what users will try or what conditions there will be. So, always think what the preconditions of your code are and see what happens when you break them, and then see if you can protect or warn against that.</p>
             <p>Preconditions and postconditions can also help us to design better software systems. Software designers often first draw a high-level <term>Use-Case Diagram</term> of a system that shows the different ways that a user might interact with a system before they build it. Here is a simple Use-Case Diagram of a restaurant system. It shows 2 actors in the system: the customer and the staff at the restaurant, and 3 use-cases in circles. A <term>Use-case</term> is a particular user interaction or situation in the system or software, and they often become methods in the program.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Use-Case Diagram of a Restaurant System</caption><image source="Unit1-Using-Objects-and-Methods/Figures/use-case-restaurant.png" width="89%" alt="Use Case Diagram"/></figure>
+            <figure align="center"><caption>Use-Case Diagram of a Restaurant System</caption><image source="Unit1-Using-Objects-and-Methods/Figures/use-case-restaurant.png" width="89%" alt="Use Case Diagram"/></figure>
             <p>After drawing a Use-Case Diagram, designers write down the preconditions and the postconditions for each Use-Case. Often the successful post-condition for one use-case becomes the preconditions for the next use-case. For example, for the “Order Food” and “Eat Food” Use Cases:</p>
             <p><ul>
                 <li>
@@ -260,16 +257,16 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
             <p> What are the preconditions and postconditions of the use-case “Pay for food”? Remember that these are often related to the other use-case conditions “order food” and “eat food”.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="agile-software-development">
             <title>Agile Software Development</title>
             <p>There are many different models for software development. The <term>waterfall model</term>, developed in the 1970s, is a step by step model where each phase is finished before the next phase begins. This model has recently been criticized because it is not very adaptable. The more recent <term>Agile</term> development model involves iterative, incremental development where  teams works in short 2-3 week <term>sprints</term> to completely develop, test, and release a component of the project to the customer for feedback. It is very adaptable as project requirements change because of early testing, immediate customer feedback and collaboration.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Waterfall vs Agile Models</caption><image source="Unit1-Using-Objects-and-Methods/Figures/waterfallVsAgile.png" width="89%"/></figure>
+            <figure align="center"><caption>Waterfall vs Agile Models</caption><image source="Unit1-Using-Objects-and-Methods/Figures/waterfallVsAgile.png" width="89%"/></figure>
             <p>One very popular type of agile development is called <term>Scrum</term>. The following short <url href="https://www.youtube.com/watch?v=TRcReyRYIMg" visual="https://www.youtube.com/watch?v=TRcReyRYIMg">video</url> describes software development  with Scrum.</p>
 
-    <video youtube="TRcReyRYIMg"/>
+    <video youtube="TRcReyRYIMg" label="video-agile"/>
                 <p>Group Exercise</p>
             <p>Try the <url href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/" visual="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/">Wake Up In the Morning Game</url> in groups to practice the iterative and incremental agile development process.</p>
         </subsection>
@@ -281,7 +278,7 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
             <p> Write down 4 steps that a user must do to purchase a product, for example a book on Java, in an online store, and list the preconditions and postconditions for each step.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-13">

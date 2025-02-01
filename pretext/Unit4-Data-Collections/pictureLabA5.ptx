@@ -9,7 +9,7 @@
   <subsection xml:id="picture-classes-uml-and-inheritance">
             <title>Picture Classes: UML and Inheritance</title>
             <p>The <c>Picture</c> class inherits attributes and methods from the <c>SimplePicture</c> class and the <c>SimplePicture</c> class implements the <c>DigitalPicture</c> interface as shown in the <term>Unified Modeling Language (UML)</term> class diagram in the figure below.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A UML Class diagram</caption><image source="Unit4-Data-Collections/Figures/UML.png" width="100%"/></figure>
+            <figure align="center"><caption>A UML Class diagram</caption><image source="Unit4-Data-Collections/Figures/UML.png" width="100%"/></figure>
             <p>A UML class diagram shows classes and the relationships between the classes. Each class is shown in a box with the class name at the top.
                 The middle area shows attributes (instance or class variables) and the bottom area shows methods. The open triangle points to the class that the connected class inherits from.
                 The straight line links show associations between classes. Association is also called a “has-a” relationship. The numbers at the end of the association links give the number of objects associated with an object at the other end.</p>

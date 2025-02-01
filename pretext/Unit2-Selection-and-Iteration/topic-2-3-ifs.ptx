@@ -10,14 +10,14 @@
     <p><term>If statements</term> are found in all programming languages as a way to choose between different paths in an algorithm. An if statement is a type of <term>selection</term> statement that changes the sequential execution. It affects the flow of control by executing different segments of code based on the value of a <term>Boolean expression</term>.</p>
     <p>If you took an AP CSP course or used a block programming language like Scratch, you’ve probably seen if blocks or statements before.  Here’s a comparison of ifs in App Inventor blocks, AP CSP block code and pseudocode, and Java ifs.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparison of App Inventor if block, AP CSP ifs, and Java if statements</caption>
+      <caption>Comparison of App Inventor if block, AP CSP ifs, and Java if statements</caption>
       <image source="Unit2-Selection-and-Iteration/Figures/BlocksIfComparison.png" width="100%"/>
     </figure>
   </introduction>
   <subsection xml:id="one-way-selection">
             <title>One-way selection</title>
             <p>A one-way selection (if statement) is used when there is a segment of code (called the <term>body</term> of the if statement) to execute under a certain condition. In this case, the body is executed only when the Boolean expression is true. If the Boolean expression is false, the body of the if statement is skipped and the program continues with the next statement after the if statement.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%"/></figure>
+            <figure align="center"><caption>The order that statements execute in a conditional</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition.png" width="36%"/></figure>
             <p>The open curly brace <c>{</c> and a close curly brace <c>}</c> are used to group a block of statements together as the body of the if statement.  It is recommended to always put in the curly braces even if you have just one statement under the if statement. The questions you will see on the AP exam will use curly braces.</p>
             <program language="java"><code>
 // A single if statement
@@ -353,7 +353,7 @@ else
 </code></program>
             <p>A two-way selection (if-else statement) is used when there are two segments of code—one to be executed when the Boolean expression is true and another segment for when the Boolean expression is false. In this case, the body of the if is executed when the Boolean expression is true, and the body of the else is executed when the Boolean expression is false.</p>
             <p>The following flowchart demonstrates that if the condition (the boolean expression) is true, one block of statements is executed, but if the condition is false, a different block of statements inside the else clause is executed.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
+            <figure align="center"><caption>The order that statements execute in a if/else statement</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-two.png" width="63%"/></figure>
 
 <activity label="ifHeads">
     <statement>

@@ -11,7 +11,7 @@
     <p><term>Part b.</term> Write the method <c>scrambleOrRemove</c>, which replaces each word in the parameter <c>wordList</c> with its scrambled version and removes any words that are unchanged after scrambling.  The relative order of the words in <c>wordList</c> remains the same as before the call to <c>scrambleOrRemove</c>.</p>
     <p>The following example shows how the contents of <c>wordList</c> would be modified as a result of calling <c>scrambleOrRemove</c>.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Example call and result</caption>
+      <caption>Example call and result</caption>
       <image source="Unit4-Data-Collections/Figures/stringScrambleB.png" width="89%"/>
     </figure>
     <p>Assume that the method <c>scrambleWord</c> works as intended and is in the same class.  It will return the scrambled word or the same word.  You will write the <c>scrambleOrRemove</c> method to replace each original word with the scrambled word or remove the word if it was not scrambled.</p>
@@ -47,7 +47,7 @@ public class ScrambledStrings
     <statement>
             <p> Explain in plain English what your code will have to do to answer this question.  Use the variable names given above.</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
             <subsection>

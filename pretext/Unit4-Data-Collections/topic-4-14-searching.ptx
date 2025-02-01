@@ -11,7 +11,7 @@
 
     <p>Computers store vast amounts of data. One of the strengths of computers is their ability to find things quickly.  This ability is called <term>searching</term>.  For the AP CSA exam you will need to know both <term>linear (sequential) search</term> and <term>binary search</term> algorithms.</p>
     <p>The following video is also on YouTube at <url href="https://youtu.be/DHLCXXX1OtE" visual="https://youtu.be/DHLCXXX1OtE">https://youtu.be/DHLCXXX1OtE</url>.  It introduces the concept of searching including sequential search and binary search.</p>
-    <video youtube="DHLCXXX1OtE"/>
+    <video youtube="DHLCXXX1OtE" label="video-search"/>
     <p>
       <ul>
             <li>
@@ -961,7 +961,7 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
             <p> After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
         </subsection>
   <subsection xml:id="summary-40">

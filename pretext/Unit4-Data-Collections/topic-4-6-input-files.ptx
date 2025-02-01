@@ -147,7 +147,7 @@ public class Multiply
       }
  }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>2 3</stdin><tests>
 import static org.junit.Assert.*;
 
 import org.junit.Test;

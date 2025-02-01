@@ -93,7 +93,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <p>Here is a flowchart for a conditional with 3 options like in the code above.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">The order that statements execute in a conditional with 3 options: if, else if, and else</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-three.png" width="80%"/></figure>
+            <figure align="center"><caption>The order that statements execute in a conditional with 3 options: if, else if, and else</caption><image source="Unit2-Selection-and-Iteration/Figures/Condition-three.png" width="80%"/></figure>
             <note>
                 <p>Another way to handle 3 or more conditional cases is to use the <c>switch</c> and <c>break</c> keywords, but these will not be on the exam.  For a tutorial on using switch see <url href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html" visual="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html</url>.</p>
             </note>
@@ -621,7 +621,7 @@ public class Adventure
    }
 }
 </code>
-	<stdin> </stdin><tests>
+	<stdin>n</stdin><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;

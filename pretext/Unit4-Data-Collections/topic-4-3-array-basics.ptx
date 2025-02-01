@@ -11,16 +11,16 @@
             But what if we had 100 exam scores? That would be a lot of variables! Most programming languages have a simple <term>data structure</term> for a collection of related data that makes this easier. In many block-based programming languages like App Inventor and Scratch, this is called a list. In Java and many programming languages, this is called an <term>array</term>.</p>
     <p>An <term>array</term> is a block of memory that stores a collection of data items (<term>elements</term>) of the same type under one name. Arrays are useful whenever you have many elements of data of the same type that you want to keep track of, but you don’t need to name each one. Instead you use the array name and a number (called an <term>index</term>) for the position of an item in the array. You can make arrays of ints, doubles, Strings, and even classes that you have written like Students.</p>
     <p>Here’s a fun <url href="https://youtu.be/G7aF-OuLfl4" visual="https://youtu.be/G7aF-OuLfl4">video</url> that introduces the concept of an array and gives an example.</p>
-    <video youtube="G7aF-OuLfl4"/>
+    <video youtube="G7aF-OuLfl4" label="video-arrays"/>
     <p>An array is like a row of small lockers, except that you can’t cram lots of stuff into it. You can only store one value at each locker.</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A row of lockers</caption>
+      <caption>A row of lockers</caption>
       <image source="Unit4-Data-Collections/Figures/rowLockers.jpg" width="71%"/>
     </figure>
     <p>You can store a value in an array using an <term>index</term> (location in the array). An array index is like a locker number.  It helps you find a particular place to store your stuff and retrieve stuff.    You can get or store a value from or to an array using an index.</p>
     <p>Arrays and lists in most programming languages start counting elements from the number 0, so the first element in an array is at index 0. This is similar to how Strings are indexed in Java – the first character is at index 0.  If you used App Inventor in the past, you might remember that list elements there start at 1 instead of 0, so make sure you remember that in Java, arrays start the index at 0!</p>
     <figure align="center">
-      <caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing App Inventor lists and Java arrays</caption>
+      <caption>Comparing App Inventor lists and Java arrays</caption>
       <image source="Unit4-Data-Collections/Figures/appinvListComparison.png" width="100%"/>
     </figure>
   </introduction>
@@ -28,7 +28,7 @@
     <statement>
         <p> Can you think of another example of something that is like an array (like a row of lockers)?</p>
 
-    </statement>
+    </statement>    <response/>
 </activity>
   <subsection xml:id="declaring-and-creating-an-array">
             <title>Declaring and Creating an Array</title>
@@ -43,7 +43,7 @@ int[] scores;
             <p>There are two ways to create an array. You can use the keyword <term>new</term> to get new memory or use an <term>initializer list</term> to set up the values in the array.</p>
             <p>Watch the following <url href="https://youtu.be/IbPFjw1FNkE" visual="https://youtu.be/IbPFjw1FNkE">video</url> which shows the two ways of creating an array with a physical model of Java memory.</p>
 
-    <video youtube="IbPFjw1FNkE"/>
+    <video youtube="IbPFjw1FNkE" label="video-array-memory"/>
             </subsection>
   <subsection xml:id="using-new-to-create-arrays">
             <title>Using new to Create Arrays</title>
@@ -180,7 +180,7 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </note>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Two 5 element arrays with their values set to the default values for integer and object arrays.</caption><image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%"/></figure>
+            <figure align="center"><caption>Two 5 element arrays with their values set to the default values for integer and object arrays.</caption><image source="Unit4-Data-Collections/Figures/arrayIndicies.png" width="36%"/></figure>
         </subsection>
   <subsection xml:id="initializer-lists-to-create-arrays">
             <title>Initializer Lists to Create Arrays</title>
@@ -190,10 +190,10 @@ int[ ] highScores = {99,98,98,88,68};
 String[ ] names = {"Jamal", "Emily", "Destiny", "Mateo", "Sofia"};
 </code></program>
             <p>When you create an array of a <term>primitive type</term> (like <c>int</c>) with initial values specified, space is allocated for the specified number of items of that type and the values in the array are set to the specified values.  When you create an array of an <term>object type</term> (like <c>String</c>) with initial values, space is set aside for that number of object references.  The objects are created and the object references set so that the objects can be found.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">A primitive array and an object array</caption><image source="Unit4-Data-Collections/Figures/intAndStringArrays.png" width="89%"/></figure>
+            <figure align="center"><caption>A primitive array and an object array</caption><image source="Unit4-Data-Collections/Figures/intAndStringArrays.png" width="89%"/></figure>
             <p>Watch the following <url href="https://youtu.be/T-YZvVvPOac" visual="https://youtu.be/T-YZvVvPOac">video</url> which shows an array of String objects with a physical model of Java memory.</p>
 
-    <video youtube="T-YZvVvPOac"/>
+    <video youtube="T-YZvVvPOac" label="video-string-array"/>
                 <idx>dot-notation</idx>
  <idx><h>array</h><h>length</h></idx>
 
@@ -296,7 +296,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="access-and-modify-array-values">
             <title>Access and Modify Array Values</title>
             <p>To access the items in an array, we use an <term>indexed array variable</term> which is the array name and the index inside of square bracket [ ]. Remember that an <term>index</term> is a number that indicates the position of an item in a list, starting at 0. Here’s a comparison of App Inventor, AP CSP Pseudocode, and Java array access.</p>
-            <figure align="center"><caption xmlns:c="https://www.sphinx-doc.org/" xmlns:changeset="https://www.sphinx-doc.org/" xmlns:citation="https://www.sphinx-doc.org/" xmlns:cpp="https://www.sphinx-doc.org/" xmlns:index="https://www.sphinx-doc.org/" xmlns:js="https://www.sphinx-doc.org/" xmlns:math="https://www.sphinx-doc.org/" xmlns:py="https://www.sphinx-doc.org/" xmlns:rst="https://www.sphinx-doc.org/" xmlns:std="https://www.sphinx-doc.org/">Comparing Access to App Inventor lists and Java arrays</caption><image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="100%"/></figure>
+            <figure align="center"><caption>Comparing Access to App Inventor lists and Java arrays</caption><image source="Unit4-Data-Collections/Figures/appinvSelectComparison.png" width="100%"/></figure>
             <p>An indexed variable like <term>arrayname[index]</term> can be used anywhere a regular variable can be used, for example to assign a new value or to get a value from the array like below.</p>
             <program language="java"><code>
 // assign a new value 99 to the first element in the array
@@ -309,7 +309,7 @@ System.out.println( highScores[0] );
             </note>
             <p>Watch the following <url href="https://youtu.be/uagEJw6bTM4" visual="https://youtu.be/uagEJw6bTM4">video</url> which shows a physical model of Java memory setting array values.</p>
 
-    <video youtube="uagEJw6bTM4"/>
+    <video youtube="uagEJw6bTM4" label="video-array-values-memory"/>
     
         <activity label="array-access1">
             <statement>
