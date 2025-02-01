@@ -18,8 +18,8 @@
             <title>What are Classes and Objects?</title>
             <p>You can think of a class as something like a blueprint of a house that is used to construct houses (objects), or like a cookie cutter that is used to create the cookies (objects). The cookie cutter (class) can
                 be used to create as many cookies (objects) as you want. The cookies (objects) are all the same shape and size, but they can have different colors and decorations.</p>
-            <figure align="center"><image source="Unit1-Using-Objects-and-Methods/Figures/blueprint.png" width="71%"/></figure>
-            <figure align="center"><caption>Using a blueprint (class) to construct houses (objects) or a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%"/></figure>
+            <figure align="center"><caption>Using a blueprint (class) to construct houses (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/blueprint.png" width="71%"/></figure>
+            <figure align="center"><caption>Using a cookie cutter (class) to make cookies (objects)</caption><image source="Unit1-Using-Objects-and-Methods/Figures/cookieCutterLabelled.png" width="89%"/></figure>
             <p>You can also think of a class as defining a new data type. In this lesson, we will use the class <c>Turtle</c> to make animated turtle objects. Just like you use <c>int</c> to
                 declare variables that hold numbers, you can use <c>Turtle</c> to declare many variables, animated turtle objects, who are <term>instances</term> of the <c>Turtle</c> class.</p>
             <program language="java"><code>
@@ -28,15 +28,18 @@ Turtle yertle;
 Turtle myrtle;
 </code></program>
             <p>Watch the following <url href="https://www.youtube.com/watch?v=64DOwDu5SVo&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=64DOwDu5SVo&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url> by Dr. Colleen Lewis about classes and objects:</p>
-
+<figure align="center"><caption>Classes and Objects</caption>
     <video youtube="64DOwDu5SVo" label="video-objects"/>
+    </figure>
             </subsection>
   <subsection xml:id="attributes-and-behaviors">
             <title>Attributes and Behaviors</title>
             <p>A class defines the <term>attributes</term> (data) and <term>behaviors</term> (methods) that all objects of that class will have. The objects are the specific <term>instances</term> of the class that have their own values for the attributes.  <term>Attributes</term> are the data or properties that an object knows about itself, for example, a turtle object’s color and size. <term>Behaviors</term> are the things that an object can do. For example, a turtle object can go forward, turn left, or turn right. The attributes and behaviors of a class are defined in the class, but each object has its own values for the attributes.</p>
             <p>This <url href="https://www.youtube.com/watch?v=Y9vn6u3901Y&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=Y9vn6u3901Y&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url> shows another class called <c>Belt</c> and how it has 3 instance variables to define its attributes. Every belt object can have different values stored in the instance variables.</p>
+<figure align="center"><caption>Belt Object Attributes</caption>
 
     <video youtube="Y9vn6u3901Y" label="video-belt-object"/>
+    </figure>
                 <p>The following picture has lots of cats (objects of the type cat). They are all
                 different, but they share the same attributes and behaviors that make up a cat.
                 They are all <term>instances</term> of cat with different values for their attributes.
@@ -258,8 +261,9 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <p>The following <url href="https://www.youtube.com/watch?v=TFmmG4_KK8I&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis" visual="https://www.youtube.com/watch?v=TFmmG4_KK8I&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url> shows how the program creates a <c>World</c> object called <c>habitat</c> and a <c>Turtle</c> object called <c>yertle</c> in memory.</p>
-
+<figure align="center"><caption>Turtle Memory Model</caption>
     <video youtube="TFmmG4_KK8I" label="video-turtle"/>
+    </figure>
                 <p>The <term>dot operator</term> (.) is used to run an object’s method. You can think of the (.) as asking the object to do something (execute one of its methods).  For example, <c>yertle.forward()</c> asks the turtle <c>yertle</c> to go <c>forward</c>. It doesn’t tell <c>yertle</c> how much to go forward, so it goes forward 100 pixels by default. The parentheses <c>()</c> after a method name are there in case you need to give the method <term>arguments</term> (some data) to do its job, for example to go forward 50 pixels instead of 100 in <c>yertle.forward(50);</c> Try changing the code above to go forward 50 pixels instead and then run it again.</p>
 
 <activity label="TurtleTest2">
