@@ -24,7 +24,25 @@
 
         <activity label="count-println">
             <statement>
-    <p> How many <c>println</c> methods are there in the <c>PrintStream</c> class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>? <var/>  </p></statement><setup><var><condition number="[10, 10]"><feedback><p>Correct.  One for each type</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Only count the println methods, not print or printf methods.</p></feedback></condition></var></setup></activity>
+    <p> How many <c>println</c> methods are there in the <c>PrintStream</c> class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>?   </p>
+        <p><fillin answer="10"/></p>
+        </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  One for each type.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback><p>
+              Only count the println methods, not print or printf methods.</p></feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity> 
+        
 <activity label="API_vocab_match">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right. Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>

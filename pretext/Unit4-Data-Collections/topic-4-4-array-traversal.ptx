@@ -11495,7 +11495,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Arrays Game</title>
             <p>Try the game below to practice loops with arrays. Click on <term>Arrays</term> and then check on <term>Loops</term> and click on the elements of the * array that would be printed out by the given code. If you’re stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
-&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</raw>
+            <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/>
+
         </subsection>
 </section>

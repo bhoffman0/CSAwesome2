@@ -241,7 +241,7 @@ public class InputLoop
   }
 }
 </code>
-	<stdin>80 90 100</stdin>
+	<stdin>80 90 100 -1</stdin>
 <tests>
 import static org.junit.Assert.*;
 
@@ -666,7 +666,7 @@ if (Math.random() &lt; 0.75) { System.out.println("No Rain"); }
             <p>Add an if/else statement that uses Math.random() to do a coin flip to decide whether to call yertle.turnRight() or yertle.turnLeft. Run the code to see the turtle draw a random shape.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <code>
 import java.util.*;
 import java.awt.*;

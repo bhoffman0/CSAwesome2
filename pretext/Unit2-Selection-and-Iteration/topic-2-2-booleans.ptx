@@ -306,7 +306,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="coding-challenge-prime-numbers-pogil">
             <title>Coding Challenge : Prime Numbers POGIL</title>
-            <p>We encourage you to do this activity as a <problematic refid="id2">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <p>We encourage you to do this activity as a <url href="https://pogil.org/about-pogil/what-is-pogil" visual="https://pogil.org/about-pogil/what-is-pogil">POGIL</url> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>In this activity, you will write a Java program that uses boolean expressions to determine if a number is prime. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it’s only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it’s divisible by 2 as well as 1 and 4. You will write methods that test whether a number is positive, negative, odd, even, and divisible by another number. You will then experiment with these methods to determine if the numbers 5, 6, and 7 are prime. And to ask questions about prime numbers like whether all odd numbers are prime.</p>
 
 <activity label="challenge-primeNumbers">
@@ -504,10 +504,46 @@ public class RunestoneTests extends CodeTestHelper
 
         <activity label="prime4">
             <statement>
-    <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? <var/>  </p></statement><setup><var><condition string="^\s*^9$\s*$"><feedback><p>Yes, 9 is not prime because it is divisible by 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 3-10 in your code.</p></feedback></condition></var></setup></activity>
+    <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? </p>
+        <p><fillin answer="9"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Yes, 9 is not prime because it is divisible by 3.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback><p>
+              Try numbers 3-10 in your code.</p></feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity> 
+      
         <activity label="prime5">
             <statement>
-    <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try numbers 2-10 in your code.</p></feedback></condition></var></setup></activity>            <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
+    <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime?   </p>
+        <p><fillin answer="2"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Yes, 2 is prime because it is only divisible by 1 and 2.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback><p>
+              Try numbers 2-10 in your code.</p></feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity> 
+    <p>Prime numbers are very useful in encryption algorithms because they can be used as keys for encoding and decoding. If you have the key, you can use it to divide a large number that represents something encrypted to decode it, but if you don’t have the key, it’s very hard to guess the factors of a large number to decode it. If you’re curious about this, watch this <url href="https://www.youtube.com/watch?v=M7kEpw1tn50" visual="https://www.youtube.com/watch?v=M7kEpw1tn50">Numberphile video</url>.</p>
         </subsection>
   <subsection xml:id="summary-19">
             <title>Summary</title>
@@ -586,6 +622,6 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
   <subsection xml:id="relational-operators-practice-game">
             <title>Relational Operators Practice Game</title>
             <p>Try the game below to practice. Click on <term>Relationals</term>,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.</p>
-            <p>&lt;iframe id="page-embed" class="init" height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;</p>
+            <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/>
         </subsection>
 </section>

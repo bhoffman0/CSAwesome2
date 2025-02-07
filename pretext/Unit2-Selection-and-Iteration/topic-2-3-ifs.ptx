@@ -84,9 +84,28 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
 
-        <activity label="iffalseOutput">
+<activity label="iffalseOutput">
             <statement>
-    <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? <var/>  </p></statement><setup><var><condition string="^\s*^Drive\s+carefully$\s*$"><feedback><p>Correct.  If the boolean is false, it will skip executing the print statement after the if.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>        </subsection>
+    <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? 
+    </p>
+    <p><fillin answer="Drive carefully"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct. If the boolean is false, it will skip executing the print statement after the if.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback>
+              Try changing it to false and run it. Type in the output exactly with the D capitalized and 1 space in between the words.</feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity>   
+         </subsection>
   <subsection xml:id="relational-operators-in-if-statements">
             <title>Relational Operators in If Statements</title>
             <p>Most if statements have a boolean condition that uses relational operators like ==, !=, &lt;, &gt;, &lt;=, &gt;=, as we saw in the last lesson.</p>
@@ -404,7 +423,26 @@ public class RunestoneTests extends CodeTestHelper
 
         <activity label="falseElse">
             <statement>
-    <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before the <c>after conditional</c>? <var/>  </p></statement><setup><var><condition string="^\s*^Let's\s+watch\s+a\s+movie$\s*$"><feedback><p>Correct.  If the boolean value is false, the statement following the else will execute</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>            <p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
+    <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before <c>after conditional</c>?  </p>
+        <p><fillin answer="Let's watch a movie"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  If the boolean value is false, the else statement will execute.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback><p>
+              Try it and see.</p></feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity> 
+    
+<p>If/else statements can also be used with relational operators and numbers like below. If your code has an if/else statement, you need to test it with 2 test-cases to make sure that both parts of the code work.</p>
 
 <activity label="licenseifelse">
     <statement>
@@ -472,7 +510,7 @@ public class RunestoneTests extends CodeTestHelper
 <cline>            System.out.println("x is even");</cline>
 <cline>        }</cline>
 <cline>        </cline>
-</block><block order="9">
+</block><block order="8">
 <cline>        else</cline>
 <cline>        </cline>
 </block><block order="7">
@@ -482,10 +520,9 @@ public class RunestoneTests extends CodeTestHelper
 <cline>        </cline>
 </block><block order="3">
 <cline>    }</cline>
-<cline>    </cline>
-</block><block order="8">
 <cline>}</cline>
-</block></blocks></activity>
+</block>
+</blocks></activity>
 <activity label="scoreifelse">
     <statement>
             <p>Try the following code. Add an else statement to the if statement that prints out “Good job!” if the score is greater than 9. Change the value of score to test it. Can you change the boolean test to only print out “Good job” if the score is greater than 20?</p>
@@ -767,7 +804,7 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void testElse()
     {
-        String expect = "else";
+        String target = "else";
         boolean passed = checkCodeContains("else statement in lucky() method", target);
         assertTrue(passed);
     }
