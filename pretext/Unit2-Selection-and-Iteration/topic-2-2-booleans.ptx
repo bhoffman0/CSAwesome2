@@ -622,6 +622,6 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
   <subsection xml:id="relational-operators-practice-game">
             <title>Relational Operators Practice Game</title>
             <p>Try the game below to practice. Click on <term>Relationals</term>,  evaluate the relational expression and click on None, All, or the numbers that make the expression true. Check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.</p>
-            <p>&lt;iframe id="page-embed" class="init" height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;</p>
+            <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/>
         </subsection>
 </section>
