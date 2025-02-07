@@ -3,9 +3,9 @@
 <section xml:id="topic-2-4-nested-ifs">
   <title>Nested if Statements</title><introduction>
     
-    <idx>Nested\ if\ statements</idx>
- <idx>Multiway\ selection</idx>
- <idx>else\ if</idx>
+    <idx>Nested  if  statements</idx>
+ <idx>Multiway  selection</idx>
+ <idx>else  if</idx>
 
     <p>If statements can be nested inside other if statements. Nested if statements consist of if, if-else, or if-else-if statements within if, if-else, or if-else-if statements. The Boolean expression of the inner nested if statement is evaluated only if the Boolean expression of the outer if statement evaluates to true.</p>
     <program language="java">
@@ -577,7 +577,7 @@ else  // belongs to first if
   <subsection xml:id="coding-challenge-adventure">
             <title>Coding Challenge : Adventure</title>
             <image source="Unit2-Selection-and-Iteration/Figures/adventure.jpg" width="36%" alt="Adventure map"/>
-            <p>One of the first games coded for early computers in the 1970s was called <url href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" visual="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure">Colossal Cave Adventure</url>. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try <problematic refid="id2">|playing adventure|</problematic> recreated online following some of the commands in this <url href="https://adventuregamers.com/walkthrough/full/colossal-cave" visual="https://adventuregamers.com/walkthrough/full/colossal-cave">walkthrough</url>. Part of the challenge is finding the commands that the code will understand.</p>
+            <p>One of the first games coded for early computers in the 1970s was called <url href="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure" visual="https://en.wikipedia.org/wiki/Colossal_Cave_Adventure">Colossal Cave Adventure</url>. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try <url href="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure" visual="http://www.web-adventures.org/cgi-bin/webfrotz?s=Adventure">playing adventure</url> recreated online following some of the commands in this <url href="https://adventuregamers.com/walkthrough/full/colossal-cave" visual="https://adventuregamers.com/walkthrough/full/colossal-cave">walkthrough</url>. Part of the challenge is finding the commands that the code will understand.</p>
             <p>In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.</p>
             <p><ol marker="1">
                 <li>
@@ -647,6 +647,7 @@ public class RunestoneTests extends CodeTestHelper
     public void test1()
     {
         //String input = input1.replaceAll(" ", "\n");
+        String input = input1;
         String output = getMethodOutputWithInput("main", input);
         output1 = output;
 
@@ -667,24 +668,29 @@ public class RunestoneTests extends CodeTestHelper
     public void test2()
     {
         //String input = input2.replaceAll(" ", "\n");
+        String input = input2;
         String output = getMethodOutputWithInput("main", input);
         output2 = output;
 
         //input = input3.replaceAll(" ", "\n");
+        String input = input3;
         output = getMethodOutputWithInput("main", input);
         output3 = output;
 
         //input = input4.replaceAll(" ", "\n");
+        String input = input4;
         output = getMethodOutputWithInput("main", input);
         output4 = output;
 
         //input = input5.replaceAll(" ", "\n");
+        String input = input5;
         output = getMethodOutputWithInput("main", input);
         output5 = output;
 
         if (output1 == null)
         {
             //input = input1.replaceAll(" ", "\n");
+            String input = input1;
             output1 = getMethodOutputWithInput("main", input);
         }
 

@@ -5,10 +5,10 @@
     
     <idx>and</idx>
  <idx>or</idx>
- <idx>truth\ table</idx>
+ <idx>truth table</idx>
  <idx><h>logical</h><h>and</h></idx>
  <idx><h>logical</h><h>or</h></idx>
- <idx>compound\ boolean</idx>
+ <idx>compound boolean</idx>
 
   </introduction>
   <subsection xml:id="and-or-and-not-index-0">
@@ -241,11 +241,6 @@ public class RunestoneTests extends CodeTestHelper
             <title>Truth Tables</title>
             <p>The following table (also called a <term>truth table</term>) shows the result for <c>P &amp;&amp; Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>. An expression involving logical operators like <c>P &amp;&amp; Q</c> evaluates to a <c>boolean</c> value, <c>true</c> or <c>false</c>. As you can see below the result of <c>P &amp;&amp; Q</c> is only <c>true</c> if both <c>P</c> and <c>Q</c> are <c>true</c>.</p>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
                         <row header="yes">
                             <cell>
                                 P
@@ -257,8 +252,7 @@ public class RunestoneTests extends CodeTestHelper
                                 P &amp;&amp; Q
                             </cell>
                         </row>
-                    
-                    
+    
                         <row>
                             <cell>
                                 true
@@ -302,20 +296,33 @@ public class RunestoneTests extends CodeTestHelper
                             <cell>
                                 false
                             </cell>
-                        </row>
-                    
-                
+                        </row>            
             </tabular></table>
 
         <activity label="truthTableFill">
             <statement>
-    <p> The truth table above is missing one result.  What is the result of <c>P &amp;&amp; Q</c> when <c>P=true</c> and <c>Q=false</c>? <var/>  </p></statement><setup><var><condition string="^\s*^false$\s*$"><feedback><p>Correct.  Both values must be true for &amp;&amp; to return true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>            <p>The following table shows the result for <c>P || Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>.  As you can see below the result of <c>P || Q</c> is <c>true</c> if either <c>P</c> or <c>Q</c> is <c>true</c>.  It is also <c>true</c> when both of them are <c>true</c>.</p>
+    <p> The truth table above is missing one result.  What is the result of <c>P &amp;&amp; Q</c> when <c>P=true</c> and <c>Q=false</c>?   </p>
+        <p><fillin answer="false"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  Both values must be true for &amp;&amp; to return true.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback>
+              Both values must be true for &amp;&amp; to return true.</feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity>   
+                 
+        
+          <p>The following table shows the result for <c>P || Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>.  As you can see below the result of <c>P || Q</c> is <c>true</c> if either <c>P</c> or <c>Q</c> is <c>true</c>.  It is also <c>true</c> when both of them are <c>true</c>.</p>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
                         <row header="yes">
                             <cell>
                                 P
@@ -373,13 +380,29 @@ public class RunestoneTests extends CodeTestHelper
                                 false
                             </cell>
                         </row>
-                    
-                
             </tabular></table>
 
         <activity label="truthTableFill2">
             <statement>
-    <p> The truth table above is missing one result.  What is the result of <c>P || Q</c> when <c>P=false</c> and <c>Q=true</c>? <var/>  </p></statement><setup><var><condition string="^\s*^true$\s*$"><feedback><p>Correct.  Only one of the two has to be true with || so this will print true.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Try it and see</p></feedback></condition></var></setup></activity>
+    <p> The truth table above is missing one result.  What is the result of <c>P || Q</c> when <c>P=false</c> and <c>Q=true</c>?   </p>
+        <p><fillin answer="true"/></p>
+        </statement>
+              <evaluation>
+        <evaluate>
+            <test>
+              <strcmp use-answer="yes"/>
+              <feedback>
+            <p>Correct.  Only one of the two has to be true with || so this will print true.</p></feedback>
+                </test>
+                <test>
+              <!-- else -->
+              <feedback>
+              If at least 1 value is true, || will return true.</feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+        </activity>   
+       
     <activity label="traceCompoundBools">
         <statement>
 
@@ -499,8 +522,8 @@ else
         </subsection>
   <subsection xml:id="short-circuit-evaluation">
             <title>Short Circuit Evaluation</title>
-            <idx>short\ circuit\ evaluation</idx>
- <idx><h>conditional</h><h>short\ circuit\ evaluation</h></idx>
+            <idx>short circuit evaluation</idx>
+ <idx><h>conditional</h><h>short circuit evaluation</h></idx>
 
             
             <p>Both <c>&amp;&amp;</c> and <c>||</c> use <term>short circuit evaluation</term>.  That means that the second expression (on the right of the operator) isn’t necessarily checked, if the result from the first expression is enough to tell if the compound boolean expression is true or false:</p>
@@ -611,11 +634,11 @@ else
         </subsection>
   <subsection xml:id="coding-challenge-truth-tables-pogil">
             <title>Coding Challenge : Truth Tables POGIL</title>
-            <p>We encourage you to do this activity as a <problematic refid="id1">|POGIL|</problematic> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
+            <p>We encourage you to do this activity as a <url href="https://pogil.org/about-pogil/what-is-pogil" visual="https://pogil.org/about-pogil/what-is-pogil">POGIL</url> (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>Explore the following problems with your group:</p>
             <p><ol marker="1">
                 <li>
-                    <p>Draw or print a <problematic refid="id3">|Venn diagram|</problematic> of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using <c>==</c>, <c>&lt;</c>, <c>&gt;</c>, and <c>&amp;&amp;</c>, for example Ada’s age <c>&gt;</c> Alan’s age <c>&amp;&amp;</c> Alan’s age <c>==</c> Grace’s age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using <c>==</c>, <c>!=</c>, and <c>&amp;&amp;</c>, for example Ada’s movie <c>==</c> Alan’s movie <c>&amp;&amp;</c> Alan’s movie <c>!=</c> Grace’s movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).</p>
+                    <p>Draw or print a <url href="https://docs.google.com/document/d/1lpjk0LS_KdAddRurMayJZmaFzeyEg4FyhviZcSTXvtU/edit?usp=sharing" visual="https://docs.google.com/document/d/1lpjk0LS_KdAddRurMayJZmaFzeyEg4FyhviZcSTXvtU/edit?usp=sharing">Venn diagram</url> of 4 intersecting circles. Put the names of the 4 people in your group one in each circle. Write down the age of each person in your group in the circles. If two or more people are the same age, put the age in the intersecting parts of their circles. Write a Boolean expression that compares the age of each person in the group using <c>==</c>, <c>&lt;</c>, <c>&gt;</c>, and <c>&amp;&amp;</c>, for example Ada’s age <c>&gt;</c> Alan’s age <c>&amp;&amp;</c> Alan’s age <c>==</c> Grace’s age. Then, ask each person in your group their favorite movie. If two or more people have the same favorite movie, put the movie in the intersecting parts of their circles. Write a Boolean expression that compares the favorite movies in the group using <c>==</c>, <c>!=</c>, and <c>&amp;&amp;</c>, for example Ada’s movie <c>==</c> Alan’s movie <c>&amp;&amp;</c> Alan’s movie <c>!=</c> Grace’s movie. Think of 1 more comparison and write it in the circles and as a Boolean expression. Share the Boolean expressions with the class. (Thank you to Jill Westerlund of Hoover High School and Art Lopez of Sweetwater High School for this activity suggestion).</p>
                 </li>
                 <li>
                     <p>Write the sentence “If it’s sunny, OR if the temperature is greater than 80 and it’s not raining, I will go to the beach.” as a Java if statement using an int variable <c>temperature</c> and boolean variables <c>sunny</c> and <c>raining</c>.  If the conditional is true, print out “Go to the beach!”. So, you will go to the beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it’s not raining.</p>
@@ -790,7 +813,8 @@ if (x % 2 == 0 &amp;&amp; y % 2 == 0 || x &gt; y)
   <subsection xml:id="boolean-game">
             <title>Boolean Game</title>
             <p>Try the game below written to practice Booleans. Click on <term>Booleans</term>, look at the color and number in the block and evaluate the boolean expression to choose true or false. Then, check on Compound for an added challenge. We encourage you to work in pairs and see how high a score you can get.</p>
-            <p>&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
-&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</p>
+
+                <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/>
+            
         </subsection>
 </section>

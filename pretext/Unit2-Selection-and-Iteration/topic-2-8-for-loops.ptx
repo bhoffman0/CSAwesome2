@@ -473,7 +473,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <activity label="challenge-TurtleLoopShapes">
     <statement>
-            <p>Complete the methods below with for-loops to draw a square, triangle, pentagon, and then any polygon using a variable n that holds the number of sides. Call 1 more call to the method drawShapes in main. Note that the angles in the turns have to add up to 360.</p>
+            <p>Complete the methods below with for-loops to draw a square, triangle, pentagon, and then any polygon using a variable n that holds the number of sides. Add 1 more call to the method drawShapes in main. Note that the angles in the turns have to add up to 360.</p>
 
     </statement>
     <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
@@ -584,21 +584,21 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void test2()
     {
-        boolean passed = checkCodeContains("drawSquare for loop should count up to 4","4");
+        boolean passed = checkCodeContains("for-loop in drawSquare counting up to 4;","4;");
         assertTrue(passed);
     }
 
     @Test
     public void test3()
     {
-        boolean passed = checkCodeContains("drawTriangle for loop should count up to 3","3");
+        boolean passed = checkCodeContains("for-loop in drawTriangle counting up to 3;","3;");
         assertTrue(passed);
     }
 
     @Test
     public void test4()
     {
-        boolean passed = checkCodeContains("drawPentagon for loop should count up to 5","5");
+        boolean passed = checkCodeContains("for-loop in drawPentagon counting up to 5;","5;");
         assertTrue(passed);
     }
 

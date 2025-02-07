@@ -611,6 +611,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
       public void test1()
       {
           //String input = input1.replaceAll(" ", "\n");
+          String input = input1;
           String output = getMethodOutputWithInput("main", input);
           output1 = output;
 
@@ -631,24 +632,29 @@ In a game like Adventure, else if statements can be used to respond to commands 
       public void test2()
       {
           //String input = input2.replaceAll(" ", "\n");
+          String input = input2;
           String output = getMethodOutputWithInput("main", input);
           output2 = output;
 
           //input = input3.replaceAll(" ", "\n");
+          String input = input3;
           output = getMethodOutputWithInput("main", input);
           output3 = output;
 
           //input = input4.replaceAll(" ", "\n");
+          String input = input4;
           output = getMethodOutputWithInput("main", input);
           output4 = output;
 
           //input = input5.replaceAll(" ", "\n");
+          String input = input5;
           output = getMethodOutputWithInput("main", input);
           output5 = output;
 
           if (output1 == null)
           {
               //input = input1.replaceAll(" ", "\n");
+              String input = input1;
               output1 = getMethodOutputWithInput("main", input);
           }
 
