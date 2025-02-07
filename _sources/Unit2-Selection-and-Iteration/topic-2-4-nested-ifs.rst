@@ -573,8 +573,8 @@ In a game like Adventure, else if statements can be used to respond to commands 
         {
             System.out.println("You enter the forest and hear some rustling. \nThere may be tigers here or maybe it's just monkeys.");
             System.out.println("... What do want to do now?");
-            String command2 = scan.next(); // use nextLine() in your own IDE
             // Add more nested if statements for the next action
+            // String command2 = scan.next(); // use nextLine() in your own IDE
 
 
         }
@@ -599,7 +599,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
           //super("Main", input1.replaceAll(" ", "\n")); // For Book
       }
 
-      private static int goal = 5;
+      private static int goal = 8;
       private static String input1 = "n"; // s e w y y y y y y y y y y y y y y";
       private static String input2 = "s"; // e w y n y y y y y y y y y y y y y";
       private static String input3 = "e"; // w y n s y y y y y y y y y y y y y";
@@ -631,45 +631,22 @@ In a game like Adventure, else if statements can be used to respond to commands 
       @Test
       public void test2()
       {
-          //String input = input2.replaceAll(" ", "\n");
-          String input = input2;
-          String output = getMethodOutputWithInput("main", input);
-          output2 = output;
+           String outputN = getMethodOutputWithInput("main", "n");
+           String outputS = getMethodOutputWithInput("main", "s");
+           String outputE = getMethodOutputWithInput("main", "e");
+           String outputW = getMethodOutputWithInput("main", "w");
 
-          //input = input3.replaceAll(" ", "\n");
-          input = input3;
-          output = getMethodOutputWithInput("main", input);
-          output3 = output;
-
-          //input = input4.replaceAll(" ", "\n");
-          input = input4;
-          output = getMethodOutputWithInput("main", input);
-          output4 = output;
-
-          //input = input5.replaceAll(" ", "\n");
-          input = input5;
-          output = getMethodOutputWithInput("main", input);
-          output5 = output;
-
-          if (output1 == null)
-          {
-              //input = input1.replaceAll(" ", "\n");
-              input = input1;
-              output1 = getMethodOutputWithInput("main", input);
-          }
-
-          boolean passed =
-                  !output1.equals(output2)
-                          && !output1.equals(output3)
-                          && !output1.equals(output4)
-                          && !output1.equals(output5);
+           boolean passed =
+                   !outputN.equals(outputS)
+                           && !outputN.equals(outputE)
+                           && !outputN.equals(outputW);
 
           passed =
                   getResults(
                           "true",
                           "" + passed,
-                          "Outputs different results for different inputs",
-                          passed);
+                          "Outputs different results for n, s, e, w"
+                          );
           assertTrue(passed);
       }
 
