@@ -1167,8 +1167,9 @@ String s3 = s2.toLowerCase();
   <subsection>
             <title>String Methods Game</title>
             <p>Try the game below written by AP CSA teacher Chandan Sarkar. Click on <term>Strings</term> and then on the letters that would be the result of the string method calls. We encourage you to work in pairs and see how high a score you can get.</p>
-            <raw format="html" xml:space="preserve">&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;
-&lt;script&gt;      window.scrollTo(0, 0);&lt;/script&gt;</raw>
+            
+            <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/>
+
         </subsection>
   <subsection>
             <title>Review/Practice for Unit 1 Part b on Using Objects</title>

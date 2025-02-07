@@ -676,6 +676,6 @@ for (int[] x : arr)
   <subsection xml:id="d-arrays-and-loops-game">
             <title>2D Arrays and Loops Game</title>
             <p>Try the game below to practice loops with 2D arrays. Click on <term>Arrays</term> and then check <term>2D</term> and check <term>Loops</term> and then click on the elements of the * array that would be printed out by the given code. If you’re stuck, check on Labels to see the indices. We encourage you to work in pairs and see how high a score you can get.</p>
-            <p>&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://csa-games.netlify.app/"&gt;&lt;/iframe&gt;</p>
+            <p><interactive iframe="iframe/csagames.html" width="95%" aspect="1:1"/></p>
         </subsection>
 </section>
