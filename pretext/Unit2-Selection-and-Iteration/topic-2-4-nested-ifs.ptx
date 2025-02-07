@@ -673,24 +673,24 @@ public class RunestoneTests extends CodeTestHelper
         output2 = output;
 
         //input = input3.replaceAll(" ", "\n");
-        String input = input3;
+        input = input3;
         output = getMethodOutputWithInput("main", input);
         output3 = output;
 
         //input = input4.replaceAll(" ", "\n");
-        String input = input4;
+        input = input4;
         output = getMethodOutputWithInput("main", input);
         output4 = output;
 
         //input = input5.replaceAll(" ", "\n");
-        String input = input5;
+        input = input5;
         output = getMethodOutputWithInput("main", input);
         output5 = output;
 
         if (output1 == null)
         {
             //input = input1.replaceAll(" ", "\n");
-            String input = input1;
+            input = input1;
             output1 = getMethodOutputWithInput("main", input);
         }
 
