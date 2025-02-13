@@ -3,8 +3,8 @@
 <section xml:id="topic-1-14-calling-instance-methods">
   <title>Calling Instance Methods</title><introduction>
     
-    <idx>instance\ methods</idx>
- <idx>object\ methods</idx>
+    <idx>instance methods</idx>
+ <idx>object methods</idx>
  <idx>method</idx>
  <idx>parameter</idx>
  <idx>argument</idx>
@@ -853,7 +853,7 @@ public class TurtleHouse
     public static void main(String[] args)
     {
         World world = new World(300, 300);
-        Turtle t = new Turtle(habitat);
+        Turtle t = new Turtle(world);
         // Use t to draw a house
 
 
