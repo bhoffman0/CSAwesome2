@@ -5,7 +5,7 @@
     
     <idx>scope</idx>
  <idx>access</idx>
- <idx>local\ variable</idx>
+ <idx>local variable</idx>
 
     <p>The <term>scope</term> of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (<c>{}</c>) – this is its scope.</p>
   </introduction>

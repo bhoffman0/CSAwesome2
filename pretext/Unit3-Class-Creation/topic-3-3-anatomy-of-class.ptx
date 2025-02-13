@@ -185,7 +185,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="instance-variables">
             <title>Instance Variables</title>
-            <idx><h>class</h><h>instance\ variables</h></idx>
+            <idx><h>class</h><h>instance variables</h></idx>
 
             
             <p><term>Instance Variables</term> (sometimes called <term>attributes</term>, <term>fields</term>, or <term>properties</term>) hold the data for an object. They belong to the object, and each object has its own copy of these variables.</p>

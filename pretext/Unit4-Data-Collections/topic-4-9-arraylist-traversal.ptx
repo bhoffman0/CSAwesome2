@@ -3,10 +3,10 @@
 <section xml:id="topic-4-9-arraylist-traversal">
   <title><c>ArrayList</c> Traversals</title><introduction>
     
-    <idx>ArrayList\ traversal</idx>
+    <idx>ArrayList traversal</idx>
  <idx>traversal</idx>
  <idx>loop</idx>
- <idx>enhanced\ for</idx>
+ <idx>enhanced for</idx>
  <idx>IndexOutOfBoundsException</idx>
  <idx>ConcurrentModificationException</idx>
 
@@ -14,7 +14,7 @@
   </introduction>
   <subsection xml:id="enhanced-for-loop">
             <title>Enhanced For Loop</title>
-            <idx><h>list</h><h>for-each\ loop</h></idx>
+            <idx><h>list</h><h>for-each loop</h></idx>
 
             
             <p>You can use an enhanced <c>for</c> loop to traverse all of the items in an

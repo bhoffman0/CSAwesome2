@@ -23,10 +23,10 @@
  <idx>boolean</idx>
  <idx>String</idx>
  <idx><h>variable</h><h>types</h></idx>
- <idx><h>variable</h><h>primitive\ type</h></idx>
- <idx><h>variable</h><h>object\ type</h></idx>
+ <idx><h>variable</h><h>primitive type</h></idx>
+ <idx><h>variable</h><h>object type</h></idx>
  <idx><h>variable</h><h>integer</h></idx>
- <idx><h>variable</h><h>floating\ point</h></idx>
+ <idx><h>variable</h><h>floating point</h></idx>
  <idx><h>variable</h><h>Boolean</h></idx>
  <idx><h>variable</h><h>String</h></idx>
 
@@ -300,7 +300,7 @@
   <subsection xml:id="declaring-variables-in-java">
             <title>Declaring Variables in Java</title>
             <idx>bit</idx>
- <idx>binary\ digit</idx>
+ <idx>binary digit</idx>
  <idx>declare</idx>
  <idx><h>variable</h><h>declare</h></idx>
 
@@ -594,8 +594,8 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </note>
-            <idx>camel\ case</idx>
- <idx><h>variable</h><h>naming\ convention</h></idx>
+            <idx>camel case</idx>
+ <idx><h>variable</h><h>naming convention</h></idx>
 
             
             <p>The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example <c>gameScore</c>. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called <term>camel case</term> because it looks like the humps of a camel. Another option is to use underscore <c>_</c> to separate words, but you cannot have spaces in a variable name.</p>

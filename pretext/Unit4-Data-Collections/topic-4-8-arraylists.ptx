@@ -706,7 +706,7 @@ System.out.println(list1);
         </subsection>
   <subsection xml:id="remove-index">
             <title><c>remove(index)</c></title>
-            <idx><h>arraylist</h><h>removing\ an\ item</h></idx>
+            <idx><h>arraylist</h><h>removing an item</h></idx>
 
             
             <p>You can also remove values from an <c>ArrayList</c> using the <c>remove(index)</c>
@@ -829,8 +829,8 @@ System.out.println(list1);
         </subsection>
   <subsection xml:id="get-index-and-set-index-obj">
             <title><c>get(index)</c> and <c>set(index, obj)</c></title>
-            <idx><h>arraylist</h><h>getting\ an\ item</h></idx>
- <idx><h>arraylist</h><h>setting\ an\ item</h></idx>
+            <idx><h>arraylist</h><h>getting an item</h></idx>
+ <idx><h>arraylist</h><h>setting an item</h></idx>
 
             
             <p>You can get the object at an index using <c>obj = listName.get(index)</c> and set

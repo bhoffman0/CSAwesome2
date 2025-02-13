@@ -8,7 +8,7 @@
             <title>Casting</title>
             <idx>cast</idx>
  <idx>casting</idx>
- <idx>type\ casting</idx>
+ <idx>type casting</idx>
 
             
             <p>In Java, <term>type casting</term> is used to convert values from one type to another. By
@@ -194,7 +194,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="range-of-values">
             <title>Range of Values</title>
-            <idx><h>double</h><h>number\ of\ digits</h></idx>
+            <idx><h>double</h><h>number of digits</h></idx>
 
             
             <p>What happens to repeating decimal numbers like 3.333333…?  Java limits the number of digits you can save for any <c>double</c> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
@@ -245,7 +245,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <p>Computers allot a specified amount of memory to store data based on the data type. For <c>double</c> values, computers allot twice as much memory than for <c>int</c>s—8 bytes rather than 4. However it’s still possible that an expression would evaluate to a mathematical value that requires more precision than can be stored in even 8 bytes. In that case a round-off error occurs and the result is rounded to the nearest <c>double</c> representable in 8 bytes. For example, repeating decimals like 0.333333333333333333 will be cut off after about 15 digits. To avoid round-off errors, you can choose to round the result to a specified number of digits after the decimal point or to an <c>int</c> value.</p>
-            <idx><h>double</h><h>precision\ format</h></idx>
+            <idx><h>double</h><h>precision format</h></idx>
 
             
             <p>Although it’s not on the AP exam, you can format long decimal numbers to just show 2 digits after the decimal point with the following code using <c>printf</c> a formatted print method or <c>format</c> instead of <c>println</c>. It takes a format string like <c>%.02f</c> which tells <c>printf</c> to print a floating point number indicated by the <c>%</c> with 2 digits after the decimal point. See <url href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html" visual="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">https://docs.oracle.com/javase/tutorial/java/data/numberformat.html</url> for more information. You can also use escape characters like <c>\n</c> in the format string to do a newline. Try it below.</p>

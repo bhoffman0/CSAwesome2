@@ -500,7 +500,7 @@ return temp;
         </subsection>
   <subsection xml:id="looping-from-back-to-front">
             <title>Looping From Back to Front</title>
-            <idx><h>loop</h><h>from\ back\ to\ front</h></idx>
+            <idx><h>loop</h><h>from back to front</h></idx>
 
             
             <p>You don’t have to loop through an array from the front to the back.  You can loop by starting at the back of the array and move toward the front during each time through the loop.  In the example below,  the method <c>getIndexOfLastElementSmallerThanTarget</c> returns the index of the last element in the array that is smaller than the given argument.  The <term>return</term> statement inside the loop stops the execution of the loop and the method and returns the index that is found immediately back to the main method. It returns -1 if there is no number in the array that is smaller than the given number.</p>

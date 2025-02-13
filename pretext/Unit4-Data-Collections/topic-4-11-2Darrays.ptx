@@ -3,13 +3,13 @@
 <section xml:id="topic-4-11-2Darrays">
   <title>2D Array Creation and Access</title><introduction>
     
-    <idx>2D\ Arrays</idx>
+    <idx>2D Arrays</idx>
  <idx>row</idx>
  <idx>column</idx>
  <idx><h>arrays</h><h>2D</h></idx>
- <idx><h>2D\ Array</h><h>definition</h></idx>
- <idx><h>2D\ Array</h><h>row</h></idx>
- <idx><h>2D\ Array</h><h>column</h></idx>
+ <idx><h>2D Array</h><h>definition</h></idx>
+ <idx><h>2D Array</h><h>row</h></idx>
+ <idx><h>2D Array</h><h>column</h></idx>
 
     <p>Arrays in Java can store many items of the same type.  You can even store items in <term>two-dimensional</term> (2D) arrays which are arrays that have both <term>rows</term> and <term>columns</term>.  A <term>row</term> has horizontal elements.  A <term>column</term> has vertical elements.  In the picture below there are 3 rows of lockers and 6 columns.</p>
     <figure align="center">
@@ -21,12 +21,12 @@
   </introduction>
   <subsection xml:id="array-storage">
             <title>Array Storage</title>
-            <idx>row-major\ order</idx>
- <idx>column-major\ order</idx>
- <idx>array\ of\ arrays</idx>
- <idx><h>2D\ Array</h><h>row-major\ order</h></idx>
- <idx><h>2D\ Array</h><h>column-major\ order</h></idx>
- <idx><h>2D\ Array</h><h>array\ of\ arrays</h></idx>
+            <idx>row-major order</idx>
+ <idx>column-major order</idx>
+ <idx>array of arrays</idx>
+ <idx><h>2D Array</h><h>row-major order</h></idx>
+ <idx><h>2D Array</h><h>column-major order</h></idx>
+ <idx><h>2D Array</h><h>array of arrays</h></idx>
 
             
             <p>Many programming languages actually store two-dimensional array data in a one-dimensional array.  The typical way to do this is to store all the data for the first row followed by all the data for the second row and so on.  This is called <term>row-major</term> order.  Some languages store all the data for the first column followed by all the data for the second column and so on.  This called <term>column-major</term> order.</p>
@@ -323,8 +323,8 @@
 </areas></activity>        </subsection>
   <subsection xml:id="declaring-2d-arrays">
             <title>Declaring 2D Arrays</title>
-            <idx><h>2D\ Array</h><h>declaration</h></idx>
- <idx><h>2D\ Array</h><h>creation</h></idx>
+            <idx><h>2D Array</h><h>declaration</h></idx>
+ <idx><h>2D Array</h><h>creation</h></idx>
 
             
             <p>2D arrays are declared and created with the following syntax, which is very similar to 1D arrays but include 2 dimensions (<c>[][]</c>). The code below creates a 2D array with 2 rows and 3 columns named <c>ticketInfo</c> and a 2D array with 3 rows and 2 columns named <c>seatingChart</c>.  The number of elements in a 2D array is the number of rows times the number of columns.</p>
@@ -410,8 +410,8 @@ String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"
     <p> What is the value at <c>seatingInfo[2][1]</c> after the code above executes? Remember that indices start at 0, and the first index is for rows and the second index is for columns. <var/>  </p></statement><setup><var><condition string="^\s*Luke$\s*$"><feedback><p>Correct.  The string at row index 2 and column index 1 is Luke.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>indices start at 0 and the row is first then the column</p></feedback></condition></var></setup></activity>        </subsection>
   <subsection xml:id="set-values-in-a-2d-array">
             <title>Set Values in a 2D Array</title>
-            <idx><h>2D\ Array</h><h>initialization</h></idx>
- <idx><h>2D\ Array</h><h>set\ value</h></idx>
+            <idx><h>2D Array</h><h>initialization</h></idx>
+ <idx><h>2D Array</h><h>set value</h></idx>
 
             
             <p>The square brackets <c>[row][col]</c> are used to access and modify an element in a 2D array. When accessing the element at <c>arr[first][second]</c>, the first index is used for rows, the second index is used for columns. To explicitly put a value in an array, you can use assignment statements with the name of the array followed by the row index in square brackets followed by the column index in square brackets and then an <c>=</c> followed by a value.</p>
@@ -564,7 +564,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="get-a-value-from-a-2d-array">
             <title>Get a Value from a 2D Array</title>
-            <idx><h>2D\ Array</h><h>access\ value</h></idx>
+            <idx><h>2D Array</h><h>access value</h></idx>
 
             
             <p>To get the value in a 2D array give the name of the array followed by the row and column indices in square brackets. The code below will get the value at row index 1 and column index 0 from <c>ticketInfo</c>.  It will also get the value at row index 0 and column index 1 from <c>seatingChart</c>.</p>
@@ -743,8 +743,8 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="d-array-row-and-column-length">
             <title>2D Array Row and Column length</title>
-            <idx><h>2D\ Array</h><h>number\ of\ rows</h></idx>
- <idx><h>2D\ Array</h><h>number\ of\ columns</h></idx>
+            <idx><h>2D Array</h><h>number of rows</h></idx>
+ <idx><h>2D Array</h><h>number of columns</h></idx>
  <idx>length</idx>
 
             

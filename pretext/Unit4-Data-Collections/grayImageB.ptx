@@ -3,8 +3,8 @@
 <section xml:id="grayImageB">
   <title>Free Response - Gray Image B</title><introduction>
     
-    <idx>gray\ image</idx>
- <idx>free\ response</idx>
+    <idx>gray image</idx>
+ <idx>free response</idx>
 
     <p>The following is part b of a free response question from 2012.  It was question 4 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 4.</term>  A grayscale image is represented by a 2-dimensional rectangular array of pixels (picture elements). A pixel is an integer value that represents a shade of gray. In this question, pixel values can be in the range from 0 through 255, inclusive. A black pixel is represented by 0, and a white pixel is represented by 255. The declaration of the <c>GrayImage</c> class is shown below.</p>

@@ -3,7 +3,7 @@
 <section xml:id="topic-2-10-strings-loops">
   <title>Implementing String Algorithms</title><introduction>
     
-    <idx>string\ processing</idx>
+    <idx>string processing</idx>
  <idx><h>string</h><h>loop</h></idx>
 
     <p>Loops are often used for <term>String Traversals</term> or <term>String Processing</term> algorithms where the code steps through a string character by character. In previous lessons, we learned to use String objects and built-in string methods to process strings. In this lesson, we will write our own loops to process strings. There are standard string algorithms to:</p>

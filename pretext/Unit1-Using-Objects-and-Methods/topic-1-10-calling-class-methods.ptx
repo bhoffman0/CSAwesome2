@@ -17,9 +17,9 @@ public static return-type method-name(parameters)
   </introduction>
   <subsection>
             <title>Non-void Methods</title>
-            <idx>return\ value</idx>
- <idx>void\ method</idx>
- <idx>non-void\ method</idx>
+            <idx>return value</idx>
+ <idx>void method</idx>
+ <idx>non-void method</idx>
 
             
             <p>Most of the methods we have used so far have been <term>void methods</term>, which do not return a value. However, many methods act like mathematical functions that calculate and return a value given some arguments. These methods are called <term>non-void methods</term>. You can imagine a non-void method as a calculating machine that takes numbers as arguments and returns a calculated result or like a toaster that takes bread as an argument and changes it to return toast.</p>

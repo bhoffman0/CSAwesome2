@@ -7,10 +7,10 @@
   </introduction>
   <subsection xml:id="nested-loops">
             <title>Nested Loops</title>
-            <idx><h>2D\ Array</h><h>traversal</h></idx>
+            <idx><h>2D Array</h><h>traversal</h></idx>
  <idx><h>loop</h><h>nested</h></idx>
  <idx>traversal</idx>
- <idx>nested\ loops</idx>
+ <idx>nested loops</idx>
 
             
             <p>Nested iteration statements (loops) are used to traverse and access all or an ordered sequence of elements in a 2D array. Since 2D arrays are stored as arrays of arrays, the way 2D arrays are traversed using <c>for</c> loops and enhanced <c>for</c> loops is similar to 1D array objects.</p>
@@ -235,8 +235,8 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="enhanced-for-each-loop-for-2d-arrays">
             <title>Enhanced For-Each Loop for 2D Arrays</title>
-            <idx><h>2D\ Array</h><h>for-each\ loop</h></idx>
- <idx>enhanced\ for\ loop</idx>
+            <idx><h>2D Array</h><h>for-each loop</h></idx>
+ <idx>enhanced for loop</idx>
 
             
             <p>Since 2D arrays are really arrays of arrays you can also use a nested enhanced for (for each) loop to loop through all elements in an array.  Enhanced for loops are much simpler to use since you don’t have to use the indices and the []’s, but you can only use them if you are not going to change the values in an array of primitive types since the variable <c>val</c> below will not change the original array.</p>
