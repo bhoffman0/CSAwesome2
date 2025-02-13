@@ -439,7 +439,7 @@ Run the code below to see the output from the String methods ``length``, ``subst
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main").trim();
-           boolean passed = getResults(output, output, "Expected output from main", passed);
+           boolean passed = getResults(output, output, "Expected output from main", true);
            assertTrue(passed);
        }
    }

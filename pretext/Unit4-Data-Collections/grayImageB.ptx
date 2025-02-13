@@ -158,7 +158,7 @@ public class GrayImage
             <p>When comparing our pixel values to values deeper in the array, we need to be careful to correctly set the terminating conditions on the for loops.</p>
             
                 <p>The code below prints out the pixel value at position (row, col) after it is decreased by the value at position (row + 2, col + 2),
-                    but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the <problematic refid="id2">|Java Visualizer|</problematic> or the CodeLens button.</p>
+                    but what if (row+2,col+2) is beyond the array bounds? Can you fix the terminating conditions of the loops so that we do not go beyond the array bounds? You can step through the code using the CodeLens button.</p>
 
 <activity label="lcfrgib3">
     <statement>
