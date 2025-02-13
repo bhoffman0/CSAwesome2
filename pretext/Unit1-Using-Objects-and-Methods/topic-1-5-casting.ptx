@@ -624,7 +624,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Bonus Challenge : Unicode</title>
             <p>If you get done early with the previous challenge, here’s something else fun you
                 can do in Java, although it’s not covered in the AP exam.</p>
-            <p>Java was one of the first programming languages to use <problematic refid="id2">|UNICODE|</problematic> for its
+            <p>Java was one of the first programming languages to use <url href="https://en.wikipedia.org/wiki/List_of_Unicode_characters" visual="https://en.wikipedia.org/wiki/List_of_Unicode_characters">UNICODE</url> for its
                 characters rather than ASCII. While ASCII could represent 128 characters which
                 was plenty for English, Unicode is an international standard that tries to
                 assign a number (which they like to call a “codepoint”) to every character in
@@ -654,8 +654,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <activity label="challenge1-6-unicode">
     <statement>
-            <p>Can you print out a letter from 3 different languages using this <problematic refid="id4">|Unicode
-                    Lookup|</problematic> site?</p>
+            <p>Can you print out a letter from 3 different languages using this <url href="https://unicodelookup.com/" visual="https://unicodelookup.com/">Unicode Lookup</url> site?</p>
 
     </statement>
     <program interactive="activecode" language="java">

@@ -106,7 +106,7 @@ System.out.println("Average is " + average);
 <cline>  return total / 3;</cline>
 </block><block order="4">
 <cline>} // end method</cline>
-</block></blocks></activity>            <p>Here is an object-oriented example that has the array as a private instance variable in the class and provides public methods sum and average that use enhanced for loops.  You can use the <problematic refid="id4">|Java Visualizer|</problematic> or the Code Lens button to step through this code.</p>
+</block></blocks></activity>            <p>Here is an object-oriented example that has the array as a private instance variable in the class and provides public methods sum and average that use enhanced for loops.  You can use the Code Lens button to step through this code.</p>
 
 <activity label="enhanced-for-loop-avg">
     <statement>

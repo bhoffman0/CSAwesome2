@@ -3,7 +3,7 @@
 <section xml:id="topic-1-6-compound-operators">
   <title>Compound Assignment Operators</title><introduction>
     
-    <idx>compound\ operators</idx>
+    <idx>compound operators</idx>
 
     <p>Compound assignment operators <c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, and <c>%=</c> are
             shortcuts that do a math operation and assignment in one step. For example, <c>x +=
