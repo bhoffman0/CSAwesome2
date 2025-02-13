@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <chapter xml:id="unit2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Selection and Iteration</title>
         <xi:include href='./topic-2-1-algorithms.ptx' />
         <xi:include href='./topic-2-2-booleans.ptx' />
