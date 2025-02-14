@@ -3,7 +3,7 @@
 <section xml:id="topic-1-6-compound-operators">
   <title>Compound Assignment Operators</title><introduction>
     
-    <idx>compound\ operators</idx>
+    <idx>compound operators</idx>
 
     <p>Compound assignment operators <c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, and <c>%=</c> are
             shortcuts that do a math operation and assignment in one step. For example, <c>x +=
@@ -360,12 +360,12 @@ y %= 2;
 z--;
 </code></program>
 
-<activity label="challenge1-6">
+<project label="challenge1-6">
     <statement>
             <p> Write your trace table for x, y, and z here showing their results after each line of code.</p>
 
     </statement>    <response/>
-</activity>
+</project>
             <p>After doing this challenge, play the <url href="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing" visual="https://docs.google.com/document/d/1ZjA8oKeo8FYx2nXX4OOq5lUihopIQQ_HY-eoE5yZkk8/edit?usp=sharing">Operators Maze game</url>. See if you and your
                 partner can get the highest score!</p>
         </subsection>

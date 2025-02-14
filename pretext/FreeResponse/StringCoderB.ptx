@@ -4,7 +4,7 @@
   <title>StringCoder - Part B</title><introduction>
     
     <idx>StringCoder</idx>
- <idx>free\ response</idx>
+ <idx>free response</idx>
 
     <p><term>Part b.</term>  Write the StringCoder method <c>encodeString</c>. A string is encoded by determining the substrings
             in the master string that can be combined to generate the given string. The encoding starts with a string part

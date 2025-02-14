@@ -4,7 +4,7 @@
   <title>Free Response - Route Cipher B</title><introduction>
     
     <idx>routecipherb</idx>
- <idx>free\ response</idx>
+ <idx>free response</idx>
 
     <p>The following is a free response question from 2011.  It was question 4 on the exam.  You can see all the free response questions from past exams at <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.</p>
     <p><term>Question 4.</term>  In this question you will write two methods for a class <c>RouteCipher</c> that encrypts (puts into a coded form) a message by changing the order of the characters in the message. The route cipher fills a two-dimensional array with single-character substrings of the original message in row-major order, encrypting the message by retrieving the single-character substrings in column-major order.</p>

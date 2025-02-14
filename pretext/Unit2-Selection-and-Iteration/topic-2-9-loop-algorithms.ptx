@@ -3,7 +3,7 @@
 <section xml:id="topic-2-9-loop-algorithms">
   <title>Implementing Selection and Iteration Algorithms</title><introduction>
     
-    <idx>loop\ algorithms</idx>
+    <idx>loop algorithms</idx>
  <idx>accumulator</idx>
  <idx>sum</idx>
  <idx>average</idx>
@@ -768,7 +768,7 @@ System.out.println("There are " + count + " even numbers from 1 to 100.");
                 </li>
             </ol></p>
 
-<activity label="challenge-find-primes">
+<project label="challenge-find-primes">
     <statement>
             <p>Copy your isPrime method from the previous exercise and write a method findPrimes that takes two integers as arguments and prints the prime numbers between them. It should return a count of the prime numbers found.</p>
 
@@ -873,7 +873,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-26">
             <title>Summary</title>

@@ -620,7 +620,7 @@ public CustomTurtle(int x, int y, World w, Color body, Color shell, int w, int h
                 </li>
             </ol></p>
 
-<activity label="challenge-CustomTurtles">
+<project label="challenge-CustomTurtles">
     <statement>
             <p>Use the CustomTurtle constructors with the signatures below to create the  turtles with the colors and positions described in the comments of the program.
               <program language="java"><code>
@@ -786,7 +786,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-4">
             <title>Summary</title>

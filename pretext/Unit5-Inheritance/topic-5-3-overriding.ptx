@@ -376,7 +376,7 @@ public class Student extends Person
         </subsection>
   <subsection xml:id="inherited-get-set-methods">
             <title>Inherited Get/Set Methods</title>
-            <idx><h>inheritance</h><h>access\ to\ private\ fields</h></idx>
+            <idx><h>inheritance</h><h>access to private fields</h></idx>
 
             
             <p>Inheritance means that an object of the child class automatically includes the instance variables and methods defined in the parent class.  But if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public <term>accessors</term> (also called getters or get methods) which are methods that get instance variable values and public <term>mutators</term>  (also called modifier methods or setters or set methods) which set their values.</p>
@@ -557,7 +557,7 @@ public class EnhancedItem extends Item
                 </li>
             </ol></p>
 
-<activity label="challenge-9-3-Pet-Sounds">
+<project label="challenge-9-3-Pet-Sounds">
     <statement>
             <p>Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out <c>Woof!</c> or <c>Meow!</c>.</p>
 
@@ -679,7 +679,7 @@ class Dog
  }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-53">
             <title>Summary</title>

@@ -646,7 +646,7 @@ System.out.println(list1);
 </choices>
 
     </activity>
-            <p>You can step through the code above by clicking on this <problematic refid="id2">|Java Visualizer 1|</problematic>.</p>
+            <p>You can step through the code above by clicking on this <url href="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0" visual="http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(2,4)%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(5))%3B%0A++++++System.out.println(list1)%3B%0A++++++%0A+++%7D%0A%7D&amp;mode=display&amp;curInstr=0">Java Visualizer</url>.</p>
 
     <activity label="qalAdd2">
         <statement>
@@ -706,7 +706,7 @@ System.out.println(list1);
         </subsection>
   <subsection xml:id="remove-index">
             <title><c>remove(index)</c></title>
-            <idx><h>arraylist</h><h>removing\ an\ item</h></idx>
+            <idx><h>arraylist</h><h>removing an item</h></idx>
 
             
             <p>You can also remove values from an <c>ArrayList</c> using the <c>remove(index)</c>
@@ -829,8 +829,8 @@ System.out.println(list1);
         </subsection>
   <subsection xml:id="get-index-and-set-index-obj">
             <title><c>get(index)</c> and <c>set(index, obj)</c></title>
-            <idx><h>arraylist</h><h>getting\ an\ item</h></idx>
- <idx><h>arraylist</h><h>setting\ an\ item</h></idx>
+            <idx><h>arraylist</h><h>getting an item</h></idx>
+ <idx><h>arraylist</h><h>setting an item</h></idx>
 
             
             <p>You can get the object at an index using <c>obj = listName.get(index)</c> and set
@@ -1334,7 +1334,7 @@ public class RunestoneTests extends CodeTestHelper
                 the right order, you can use the <c>add(index, obj)</c> method to add the digit to
                 the beginning of the <c>ArrayList</c> instead of the end.</p>
 
-<activity label="challenge-digits">
+<project label="challenge-digits">
     <statement>
             <p>Complete the challenge below to put the digits of a number in an ArrayList.</p>
 
@@ -1410,7 +1410,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-49">
             <title>Summary</title>

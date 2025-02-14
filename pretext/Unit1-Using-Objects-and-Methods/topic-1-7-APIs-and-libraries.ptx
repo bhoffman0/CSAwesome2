@@ -9,7 +9,7 @@
  <idx>class</idx>
  <idx>attribute</idx>
  <idx>method</idx>
- <idx>dot\ operator</idx>
+ <idx>dot operator</idx>
  <idx>behavior</idx>
 
     <p>We have been using the <c>System.out.println()</c> method to print to the screen. This method is part of the Java <term>API (Application Programming Interface)</term>. A <term>method</term> is a block of code that performs a specific task. APIs are connected to <term>libraries</term> which are collections of classes written by other programmers that provide a set of methods that can be used to perform specific tasks. An API specification tells the programmer how to use those classes with methods in a library.</p>
@@ -458,7 +458,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
 
-<activity label="challenge1-7-TurtleShape">
+<project label="challenge1-7-TurtleShape">
     <statement>
             <p>Have yertle draw a shape, for example a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times.</p>
 
@@ -561,7 +561,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-12">
             <title>Summary</title>

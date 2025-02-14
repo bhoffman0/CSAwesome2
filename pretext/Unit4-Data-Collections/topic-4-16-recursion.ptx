@@ -16,7 +16,7 @@ public static void neverEnd()
 }
 </code>
     </program>
-    <idx>infinite\ recursion</idx>
+    <idx>infinite recursion</idx>
  <idx><h>recursion</h><h>infinite</h></idx>
 
     <p>This method will print out “This is the method that never ends!” and then call
@@ -232,8 +232,8 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="base-case">
             <title>Base Case</title>
-            <idx>base\ case</idx>
- <idx><h>recursion</h><h>base\ case</h></idx>
+            <idx>base case</idx>
+ <idx><h>recursion</h><h>base case</h></idx>
 
             
             <p>Every non-infinite recursive method must have at least one <term>base case</term> where
@@ -412,7 +412,7 @@ public static int bunnyEars(int bunnies)
         </subsection>
   <subsection xml:id="tracing-recursive-methods">
             <title>Tracing Recursive Methods</title>
-            <idx>call\ stack</idx>
+            <idx>call stack</idx>
  <idx>stack</idx>
 
             

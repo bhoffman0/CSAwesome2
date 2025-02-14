@@ -23,10 +23,10 @@
  <idx>boolean</idx>
  <idx>String</idx>
  <idx><h>variable</h><h>types</h></idx>
- <idx><h>variable</h><h>primitive\ type</h></idx>
- <idx><h>variable</h><h>object\ type</h></idx>
+ <idx><h>variable</h><h>primitive type</h></idx>
+ <idx><h>variable</h><h>object type</h></idx>
  <idx><h>variable</h><h>integer</h></idx>
- <idx><h>variable</h><h>floating\ point</h></idx>
+ <idx><h>variable</h><h>floating point</h></idx>
  <idx><h>variable</h><h>Boolean</h></idx>
  <idx><h>variable</h><h>String</h></idx>
 
@@ -300,7 +300,7 @@
   <subsection xml:id="declaring-variables-in-java">
             <title>Declaring Variables in Java</title>
             <idx>bit</idx>
- <idx>binary\ digit</idx>
+ <idx>binary digit</idx>
  <idx>declare</idx>
  <idx><h>variable</h><h>declare</h></idx>
 
@@ -594,8 +594,8 @@ public class RunestoneTests extends CodeTestHelper
                     </li>
                 </ul></p>
             </note>
-            <idx>camel\ case</idx>
- <idx><h>variable</h><h>naming\ convention</h></idx>
+            <idx>camel case</idx>
+ <idx><h>variable</h><h>naming convention</h></idx>
 
             
             <p>The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example <c>gameScore</c>. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called <term>camel case</term> because it looks like the humps of a camel. Another option is to use underscore <c>_</c> to separate words, but you cannot have spaces in a variable name.</p>
@@ -687,7 +687,7 @@ public class RunestoneTests extends CodeTestHelper
                 Can you find all the bugs and get the code to run?
                 Work with a programming buddy if you get stuck.</p>
 
-<activity label="challenge1-2-weather">
+<project label="challenge1-2-weather">
     <statement>
             <p>Debug the following code. Can you find the all the bugs and get the code to run?</p>
 
@@ -735,14 +735,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="coding-challenge-mad-libs">
             <title>Coding Challenge : Mad Libs</title>
             <p>Have you ever played MAD LIBS? In this game, you first choose a bunch of words following clues like give me a color or a plural noun, without looking at the story, and then those words are filled into the story to make it sound very wacky! Fill in the variables below with silly words, and then run to see the wacky story.</p>
             <p>Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you’re done, try another team’s mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url> to read in input into the variables.</p>
 
-<activity label="challengeMadLibs">
+<project label="challengeMadLibs">
     <statement>
             <p>Replace the text “Replace” below with silly words following the description in the variable names (for example, “cats” for a plural noun, “blue” for a color, etc.) to create a silly poem. Run the code to see the poem. Then, create your own silly story using 5 more String variables.</p>
 
@@ -803,7 +803,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-7">
             <title>Summary</title>

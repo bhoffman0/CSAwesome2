@@ -5,7 +5,7 @@
     
     <idx>scope</idx>
  <idx>access</idx>
- <idx>local\ variable</idx>
+ <idx>local variable</idx>
 
     <p>The <term>scope</term> of a variable is defined as where a variable is accessible or can be used. The scope is determined by where you declare the variable when you write your programs. When you declare a variable, look for the closest enclosing curly braces (<c>{}</c>) – this is its scope.</p>
   </introduction>
@@ -199,7 +199,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="coding-challenge-debugging">
             <title>Coding Challenge : Debugging</title>
 
-<activity label="challenge-scope-debug">
+<project label="challenge-scope-debug">
     <statement>
             <p>Debug the following program that has scope violations. You may need to add methods or use methods that are in the class Fraction appropriately. Then, add comments that label the variable declarations as class, method, or block scope.</p>
 
@@ -337,7 +337,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-34">
             <title>Summary</title>

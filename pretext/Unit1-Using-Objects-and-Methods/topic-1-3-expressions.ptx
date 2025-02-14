@@ -8,7 +8,7 @@
             <title>Output</title>
             <idx>output</idx>
  <idx>String</idx>
- <idx>String\ literal</idx>
+ <idx>String literal</idx>
 
             
             <p>Java has two different methods to print output to the screen:</p>
@@ -435,7 +435,7 @@ public class RunestoneTests extends CodeTestHelper
             <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%"/></figure>
             <p>In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators.</p>
 
-<activity label="challenge1-3-pay-calculator">
+<project label="challenge1-3-pay-calculator">
     <statement>
             <p>Complete the following expressions for a pay calculator.</p>
 
@@ -525,7 +525,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-8">
             <title>Summary</title>

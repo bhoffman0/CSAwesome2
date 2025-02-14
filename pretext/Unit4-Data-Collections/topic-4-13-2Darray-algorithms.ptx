@@ -3,7 +3,7 @@
 <section xml:id="topic-4-13-2Darray-algorithms">
   <title>Implementing 2D Array Algorithms</title><introduction>
     
-    <idx>2D-array\ algorithms</idx>
+    <idx>2D-array algorithms</idx>
  <idx>minimum</idx>
  <idx>maximum</idx>
  <idx>sum</idx>
@@ -209,7 +209,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="subsection-of-a-2d-array-for-a-property">
             <title>Subsection of a 2D Array for a Property</title>
-            <idx><h>2D\ Array</h><h>loop\ range</h></idx>
+            <idx><h>2D Array</h><h>loop range</h></idx>
 
             
             <p>You can loop through just part of a 2D array. You can change the starting value and ending value to loop through a subset of a 2D array. The following code counts the number of times a value appears in a part of the 2D array indicated by the row and column start and end values.</p>

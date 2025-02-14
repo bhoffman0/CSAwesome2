@@ -4,9 +4,9 @@
   <title>Boolean Expressions</title><introduction>
     
     <idx>boolean</idx>
- <idx>boolean\ expression</idx>
- <idx>relational\ operator</idx>
- <idx>remainder\ operator</idx>
+ <idx>boolean expression</idx>
+ <idx>relational operator</idx>
+ <idx>remainder operator</idx>
  <idx>boolean</idx>
  <idx>&lt;</idx>
  <idx>&gt;</idx>
@@ -309,7 +309,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>We encourage you to do this activity as a <url href="https://pogil.org/about-pogil/what-is-pogil" visual="https://pogil.org/about-pogil/what-is-pogil">POGIL</url> (Process Oriented Guided Inquiry Learning) group activity or using Think-Pair-Share collaboration. POGIL groups are self-managed teams of 4 students where everyone has a <url href="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing" visual="https://docs.google.com/document/d/1_NfNLWJxaG4qZ2Jd2x8UctDS05twn1h6p-o3XaAcRv0/edit?usp=sharing">POGIL role</url> and works together to solve the problems, making sure that everyone in the team participates and learns.</p>
             <p>In this activity, you will write a Java program that uses boolean expressions to determine if a number is prime. A prime number is an integer number that is only divisible by 1 and itself. For example, 3 is a prime number because it’s only divisible by 1 and 3 and no other numbers, but 4 is not a prime number because it’s divisible by 2 as well as 1 and 4. You will write methods that test whether a number is positive, negative, odd, even, and divisible by another number. You will then experiment with these methods to determine if the numbers 5, 6, and 7 are prime. And to ask questions about prime numbers like whether all odd numbers are prime.</p>
 
-<activity label="challenge-primeNumbers">
+<project label="challenge-primeNumbers">
     <statement>
             <p>Complete the methods below to determine if a number is positive, negative, odd, even, or divisible by another number by returning boolean expressions testing the argument number. Then, experiment with these methods to determine if the numbers 5, 6, and 7 are prime.</p>
 
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>With your POGIL group, use the code you completed above to experiment to see if 5, 6, and 7 are prime. Answer the following questions:</p>
 
     <activity label="prime1">

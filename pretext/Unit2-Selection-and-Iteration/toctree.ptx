@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+    <chapter xml:id="unit2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Selection and Iteration</title>
         <xi:include href='./topic-2-1-algorithms.ptx' />
         <xi:include href='./topic-2-2-booleans.ptx' />
@@ -15,7 +15,6 @@
         <xi:include href='./topic-2-12-loop-analysis.ptx' />
         <xi:include href='./selection-summary.ptx' />
         <xi:include href='./selection-practice-mixed-code.ptx' />
-        <xi:include href='./selection-practice-mixed-code-toggle.ptx' />
         <xi:include href='./selection-practice-coding.ptx' />
         <xi:include href='./Exercises-selection.ptx' />
         <xi:include href='./frq-game-score.ptx' />
@@ -23,7 +22,6 @@
         <xi:include href='./group-mod-practice.ptx' />
         <xi:include href='./loops-summary.ptx' />
         <xi:include href='./loops-practice-mixed-code.ptx' />
-        <xi:include href='./loops-practice-mixed-code-toggle.ptx' />
         <xi:include href='./loops-practice-coding.ptx' />
         <xi:include href='./Exercises-loops.ptx' />
         <xi:include href='./unit2-test.ptx' />

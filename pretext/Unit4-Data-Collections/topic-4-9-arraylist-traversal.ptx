@@ -3,10 +3,10 @@
 <section xml:id="topic-4-9-arraylist-traversal">
   <title><c>ArrayList</c> Traversals</title><introduction>
     
-    <idx>ArrayList\ traversal</idx>
+    <idx>ArrayList traversal</idx>
  <idx>traversal</idx>
  <idx>loop</idx>
- <idx>enhanced\ for</idx>
+ <idx>enhanced for</idx>
  <idx>IndexOutOfBoundsException</idx>
  <idx>ConcurrentModificationException</idx>
 
@@ -14,7 +14,7 @@
   </introduction>
   <subsection xml:id="enhanced-for-loop">
             <title>Enhanced For Loop</title>
-            <idx><h>list</h><h>for-each\ loop</h></idx>
+            <idx><h>list</h><h>for-each loop</h></idx>
 
             
             <p>You can use an enhanced <c>for</c> loop to traverse all of the items in an
@@ -673,7 +673,7 @@ class WordPair
                 </li>
             </ul></p>
 
-<activity label="challenge-WordPairs">
+<project label="challenge-WordPairs">
     <statement>
             <p>FRQ WordPairs Challenge: Complete the constructor for <c>WordPairsList</c> below
                 which will add pairs of words from a given array to the <c>ArrayList</c>. Then,
@@ -826,7 +826,7 @@ class WordPair
  }
         </tests>
     </program>
-</activity>
+</project>
             <p>In the next part of the FRQ challenge, you are asked to write a method called
                 <c>numMatches</c> that counts and returns the number of pairs where the first word
                 is the same as the second word. For example, if the word array is

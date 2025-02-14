@@ -613,7 +613,7 @@ public class RunestoneTests extends CodeTestHelper
             </ul></p>
             <p>You may notice that it is challenging to have your turtle draw with these simple methods. In the next lessons, we will use more complex <c>Turtle</c> methods where you can indicate how many steps to take or what angle to turn that will make drawing a lot easier!</p>
 
-<activity label="challenge-Turtle_Letter">
+<project label="challenge-Turtle_Letter">
     <statement>
             <p>Have your turtle create a block drawing of the initials of your name. Use straight lines (no curves or diagonals unless you want to try adding arguments to the turtle methods).</p>
 
@@ -686,7 +686,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-3">
             <title>Summary</title>

@@ -241,11 +241,11 @@ public class Song
         </subsection>
   <subsection>
             <title>Methods Signature, Parameters, Arguments</title>
-            <idx>method\ signature</idx>
+            <idx>method signature</idx>
 <idx>parameter</idx>
 <idx>argument</idx>
-<idx>return\ type</idx>
-<idx>parameter\ list</idx>
+<idx>return type</idx>
+<idx>parameter list</idx>
             
             <p>When using methods in a library or API, we can look up the <term>method signature</term> (or <term>method header</term>) in its documentation.  A <term>method header</term> is the first line of a method that includes the method name, the return type, and the parameter list of parameters and their data types. The <term>return type</term> is the type of value that the method returns; in this lesson, we’ll just look at <term>void</term> return types which means the method doesn’t return anything. The <term>method signature</term> is the method header without the return type, just the method name and its parameter list.  The <term>parameter list</term> is a list of variables and their data types that are passed to the method when it is called. The parameter list is enclosed in parentheses and separated by commas; it can be empty with no parameters although the parentheses must be present.</p>
             <p>For example, the <c>PrintStream</c> class documented in <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url> contains the following method signatures for <c>println</c> that we use in <c>System.out.println()</c>:</p>
@@ -466,7 +466,8 @@ verse("cow", "moo");
         </subsection>
   <subsection>
             <title>Overloading</title>
-            <index entries="['single',\ 'overloading',\ 'index-3',\ '',\ None]" inline="False"/>
+            <idx>overloading</idx>
+           
             
             <p>Methods are said to be <term>overloaded</term> when there are multiple methods with the same name but different signatures with a different number or types of parameters. For example, the <c>println()</c> method in the <c>PrintStream</c> class documented in <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>
                 is overloaded with different parameter types. The method <c>println()</c> with no parameters prints a newline, the method <c>println(String x)</c> prints the given string followed by a newline, the method <c>println(int x)</c> prints the given int number followed by a newline, etc. The compiler determines which method to call based on the number and types of arguments passed to the method.</p>
@@ -500,7 +501,7 @@ verse("cow", "moo");
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
 </areas></activity>
-<activity label="challenge-1-9-song">
+<project label="challenge-1-9-song">
     <statement>
             <p>Write code in the main method that calls the verse method to print out all three verses for the Ants Go Marching song above.</p>
 
@@ -607,7 +608,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

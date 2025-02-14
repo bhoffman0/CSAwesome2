@@ -328,7 +328,7 @@ while (x &lt; 0)
         </subsection>
   <subsection xml:id="common-errors-with-loops">
             <title>Common Errors with Loops</title>
-            <idx>infinite\ loop</idx>
+            <idx>infinite loop</idx>
  <idx><h>loop</h><h>infinite</h></idx>
 
             
@@ -461,7 +461,7 @@ while (!statement.equals("Bye"))
 </areas></activity>            <p>Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square? Did you notice that the code becomes a lot shorter? You should only need 1 call to forward and 1 call to turn in the loop. Whenever you find yourself repeating code, try to use a loop instead!</p>
             <p>(If the code below does not work for you, you can copy the code into  this <url href="https://replit.com/@BerylHoffman/Java-Swing-Turtle" visual="https://replit.com/@BerylHoffman/Java-Swing-Turtle">replit link</url> (refresh page after forking and if it gets stuck) or download the files <url href="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip" visual="https://github.com/bhoffman0/csawesome2/tree/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own IDE.)</p>
 
-<activity label="challenge-turtle-square-while">
+<project label="challenge-turtle-square-while">
     <statement>
             <p>Can you change the code below to remove the repeated lines of code and use a while loop to draw 4 sides of the square?</p>
 
@@ -568,7 +568,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-24">
             <title>Summary</title>

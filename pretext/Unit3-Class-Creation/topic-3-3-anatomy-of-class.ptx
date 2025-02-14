@@ -185,7 +185,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="instance-variables">
             <title>Instance Variables</title>
-            <idx><h>class</h><h>instance\ variables</h></idx>
+            <idx><h>class</h><h>instance variables</h></idx>
 
             
             <p><term>Instance Variables</term> (sometimes called <term>attributes</term>, <term>fields</term>, or <term>properties</term>) hold the data for an object. They belong to the object, and each object has its own copy of these variables.</p>
@@ -465,7 +465,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-VirtualPet-Class">
+<project label="challenge-VirtualPet-Class">
     <statement>
             <p>Complete the VirtualPet class below.  Add at least 3 instance variables, a print method, a feed method, and at least 1 other method that changes an instance variable.  Then complete the main method to construct at least 2 VirtualPet objects, call the feed and print method with one of them.</p>
 
@@ -623,7 +623,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community">
             <title>Design a Class for your Community</title>
@@ -643,7 +643,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="community-challenge1">
+<project label="community-challenge1">
     <statement>
             <p>Come up with the class name for your community data-tracking class (it should be a category of people or things, not a specific person or thing) and at least 3 instance variables that are attributes of things in that class.  Your class will not print out anything yet, but it should run without errors.</p>
 
@@ -686,7 +686,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-29">
             <title>Summary</title>

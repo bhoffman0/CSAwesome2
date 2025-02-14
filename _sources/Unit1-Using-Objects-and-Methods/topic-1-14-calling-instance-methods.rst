@@ -527,6 +527,8 @@ Here are some examples of using getters on the ``Turtle`` object ``yertle``.
             int area;
             yertle.getWidth() * getHeight;
             System.out.println("Yertle's area is: ");
+
+            world.show(true);
         }
     }
     ====
@@ -863,7 +865,7 @@ It may help to act out the code pretending you are the turtle. Remember that the
         public static void main(String[] args)
         {
             World world = new World(300, 300);
-            Turtle t = new Turtle(habitat);
+            Turtle t = new Turtle(world);
             // Use t to draw a house 
 
 

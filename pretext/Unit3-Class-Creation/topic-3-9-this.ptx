@@ -292,7 +292,7 @@ System.out.println(one.getPay());
                 </li>
             </ul></p>
 
-<activity label="challenge-BankAccount">
+<project label="challenge-BankAccount">
     <statement>
             <p>Create a class called BankAccount that keeps track of the account holder’s name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.</p>
 
@@ -400,7 +400,7 @@ public class BankAccount {}
  }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-35">
             <title>Summary</title>

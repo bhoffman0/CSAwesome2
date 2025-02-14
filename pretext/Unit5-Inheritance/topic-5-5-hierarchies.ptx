@@ -435,7 +435,7 @@ class Dog extends Pet
                 </li>
             </ol></p>
 
-<activity label="challenge-9-5-shopping">
+<project label="challenge-9-5-shopping">
     <statement>
             <p>Complete the class DiscountedItem below that inherits from Item and adds an discount instance variable with a constructor, get/set, and a toString method. Uncomment the testing code in main to add discounted items to the cart.</p>
 
@@ -699,7 +699,7 @@ class Item
      }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-55">
             <title>Summary</title>

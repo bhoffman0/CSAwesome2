@@ -4,7 +4,7 @@
   <title>ArrayTester - Part B</title><introduction>
     
     <idx>ArrayTester</idx>
- <idx>free\ response</idx>
+ <idx>free response</idx>
 
     <p><term>Part b.</term>   Write the static method <c>isLatin</c>, which returns <c>true</c> if a given two-dimensional square array is a <c>Latin square</c>, and otherwise, returns false.</p>
     <p>A two-dimensional square array of integers is a Latin square if the following conditions are true.

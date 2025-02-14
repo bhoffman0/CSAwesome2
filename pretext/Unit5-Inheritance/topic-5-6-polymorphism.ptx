@@ -12,9 +12,9 @@
       <image source="Unit5-Inheritance/Figures/SeeNSay.jpg" width="45%"/>
     </figure>
     <p>If you were simulating this toy in software you could create an <c>Animal</c> class that had a <c>makeNoise</c> method. Each subclass of <c>Animal</c> would override the <c>makeNoise</c> method to make the correct noise for that type.  This type of polymorphism is called <term>inheritance-based polymorphism</term>.  You have a common parent class, but the behavior is specified in the child class.</p>
-    <idx>declared\ type</idx>
- <idx>actual\ type</idx>
- <idx>run-time\ type</idx>
+    <idx>declared type</idx>
+ <idx>actual type</idx>
+ <idx>run-time type</idx>
  <idx><h>type</h><h>declared</h></idx>
  <idx><h>type</h><h>actual</h></idx>
  <idx><h>type</h><h>run-time</h></idx>
@@ -413,7 +413,7 @@ public class Dictionary extends Book
                 </li>
             </ul></p>
 
-<activity label="challenge-9-6-shopping2">
+<project label="challenge-9-6-shopping2">
     <statement>
             <p>Copy in your code for <c>DiscountedItem</c> below and then write a method called
                 <c>countDiscountedItems</c> which traverses the polymorphic <c>ArrayList&lt;Item&gt;</c>.
@@ -637,7 +637,7 @@ class Item
      }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-56">
             <title>Summary</title>

@@ -765,7 +765,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
 </pre></p>
             <p>Now what about the combination lock for this challenge? You will need to spin the dial 3 times: once to the right, once to the left, and once to the right to 3 different numbers from 0 up to 40 (not including 40). In general, the formula to use is NumbersPerDial<superscript>numberOfSpins</superscript>. Write this using the <term>Math.pow()</term> method in your code and save it into a variable and print out.</p>
 
-<activity label="challenge1-11-random-math">
+<project label="challenge1-11-random-math">
     <statement>
             <p>Complete the combination lock challenge below.</p>
 
@@ -852,10 +852,10 @@ public class RunestoneTests extends CodeTestHelper {
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>Here’s another challenge that is a lot of fun! Can you use random numbers to make dancing turtles? This idea was suggested by CSA teacher Zac Martin.</p>
 
-<activity label="challenge-random-dancing-turtles">
+<project label="challenge-random-dancing-turtles">
     <statement>
             <p>Complete the random numbers using Math.random() in the correct ranges to choose x, y coordinates and random color in the range of 0-255 for the turtle. Put on some music and watch your turtle dance!</p>
 
@@ -937,7 +937,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-2">
             <title>Summary</title>

@@ -1199,7 +1199,7 @@ class Student
                     <p>Write a <c>spellcheck</c> method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found (When can you tell that you have not found a word in the dictionary?). Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a <term>linear search</term> where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.</p>
                 </li>
                 <li>
-                    <p>Optional Challenge: Write a method <c>printStartsWith(String)</c> that prints out the words that start with a <c>String</c> of letters in the <c>dictionary</c> array. Your method should take a parameter for the <c>firstLetters</c> as a <c>String</c>. You could use the Java String <problematic refid="id9">|startsWith()|</problematic> method here if you’d like to, or use <c>indexOf</c> to see if the <c>firstLetters</c> is at index 0 of the string. This is not autograded.</p>
+                    <p>Optional Challenge: Write a method <c>printStartsWith(String)</c> that prints out the words that start with a <c>String</c> of letters in the <c>dictionary</c> array. Your method should take a parameter for the <c>firstLetters</c> as a <c>String</c>. You could use the Java String <url href="https://www.w3schools.com/java/ref_string_startswith.asp" visual="https://www.w3schools.com/java/ref_string_startswith.asp">startsWith()</url> method here if you’d like to, or use <c>indexOf</c> to see if the <c>firstLetters</c> is at index 0 of the string. This is not autograded.</p>
                 </li>
             </ol></p>
 
@@ -11212,7 +11212,7 @@ zus
 
 
 
-<activity label="challenge-spellchecker">
+<project label="challenge-spellchecker">
     <statement>
             <p>Write print10 and spellcheck methods using for loops. Spellcheck should take a word as a parameter and return true if it is in the dictionary array. Return false if it is not found.</p>
 
@@ -11364,7 +11364,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Design an Array of Objects for your Community</title>
@@ -11373,7 +11373,7 @@ public class RunestoneTests extends CodeTestHelper
                 Copy your array of objects code from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url>. In this challenge, add a loop to
                 traverse your array to print out each object.</p>
 
-<activity label="community-challenge-array-loop">
+<project label="community-challenge-array-loop">
     <statement>
             <p>Copy your class from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url> below.
                 It should create an array of 3 objects of your class and initialize
@@ -11458,7 +11458,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

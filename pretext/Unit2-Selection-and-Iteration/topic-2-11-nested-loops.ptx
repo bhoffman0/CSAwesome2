@@ -3,7 +3,7 @@
 <section xml:id="topic-2-11-nested-loops">
   <title>Nested Iteration</title><introduction>
     
-    <idx>nested\ for\ loop</idx>
+    <idx>nested for loop</idx>
  <idx><h>loop</h><h>nested</h></idx>
 
     <p><term>Nested iteration statements</term> (or <term>nested loops</term>) are iteration statements that appear in the body of another iteration statement. Or in simpler terms, a loop inside of another loop. Nested loops are typically used for working with two dimensions, for example printing a rectangle of stars in rows and columns as shown below.  When a loop is nested inside another loop, the inner loop runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration.</p>
@@ -317,7 +317,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-Turtle-Nested-Loop-Snowflakes">
+<project label="challenge-Turtle-Nested-Loop-Snowflakes">
     <statement>
             <p>Use nested for-loops to have the turtle draw a snowflake of polygons.
                 Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.</p>
@@ -442,7 +442,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-17">
             <title>Summary</title>

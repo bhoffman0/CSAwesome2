@@ -3,8 +3,8 @@
 <section xml:id="topic-4-14-searching">
   <title>Searching Algorithms</title><introduction>
     
-    <idx>sequential\ search</idx>
- <idx>binary\ search</idx>
+    <idx>sequential search</idx>
+ <idx>binary search</idx>
  <idx>recursion</idx>
  <idx><h>search</h><h>sequential</h></idx>
  <idx><h>search</h><h>binary</h></idx>
@@ -26,8 +26,8 @@
   </introduction>
   <subsection xml:id="linear-search">
             <title>Linear Search</title>
-            <idx>sequential\ search</idx>
- <idx>linear\ search</idx>
+            <idx>sequential search</idx>
+ <idx>linear search</idx>
  <idx><h>search</h><h>sequential</h></idx>
  <idx><h>search</h><h>linear</h></idx>
 
@@ -401,7 +401,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="binary-search">
             <title>Binary Search</title>
-            <idx>binary\ search</idx>
+            <idx>binary search</idx>
  <idx><h>search</h><h>binary</h></idx>
 
             
@@ -846,7 +846,7 @@ III. The array must not contain duplicate values.
             <p>In the spellchecker challenge, we used linear search to find a word in the dictionary. However, the dictionary file is actually in alphabetical order.  We could have used a much faster binary search algorithm! Let’s see how much faster we can make it.</p>
             <p>Write a linear search method and a binary search method to search for a given word in the dictionary using the code in this lesson as a guide. You will need to use <c>size</c> and <c>get(i)</c> instead of [] to get an element in the <c>ArrayList</c> dictionary at index i. You will need to use the <c>equals</c> and <c>compareTo</c> methods to compare Strings. Have the methods return a count of how many words they had to check before finding the word or returning.</p>
 
-<activity label="challenge-search-coding">
+<project label="challenge-search-coding">
     <statement>
             <p>This spellchecker uses an ArrayList for the dictionary. Write a <c>linearSearch(word)</c> and a <c>binarySearch(word)</c> method. Use <c>get(i)</c>, <c>size()</c>, <c>equals</c>, and <c>compareTo</c>. Return a count of the number of words checked.</p>
 
@@ -952,17 +952,17 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>Run your code with the following test cases and record the runtime for each word in this <url href="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" visual="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing">Google document</url> (do File/Make a Copy) also seen below to record your answers.</p>
             <p>&lt;iframe height="71%" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
             <p>What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.</p>
 
-<activity label="challenge-binary-search">
+<project label="challenge-binary-search">
     <statement>
             <p> After you complete your code, write in your comparison of the linear vs. binary search runtimes based on your test cases. Were there any cases where one was faster than the other? How did each perform in the worst case when a word is misspelled?</p>
 
     </statement>    <response/>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-40">
             <title>Summary</title>
