@@ -386,7 +386,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-Student-class">
+<project label="challenge-Student-class">
     <statement>
             <p>Create a class Student with 4 instance variables, a constructor, and a print method. Write a main method that creates 2 Student objects with the constructor and calls their print() method.</p>
 
@@ -495,7 +495,7 @@ public class Student
   }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community-1">
             <title>Design a Class for your Community</title>
@@ -515,7 +515,7 @@ public class Student
                 </li>
             </ol></p>
 
-<activity label="community-challenge2">
+<project label="community-challenge2">
     <statement>
             <p>Copy your class with its 3 instance variables from <url href="topic-3-3-anatomy-of-class.html#groupwork-design-a-class-for-your-community" visual="topic-3-3-anatomy-of-class.html#groupwork-design-a-class-for-your-community">lesson 3.3 Community Challenge</url>. Add a constructor with 3 parameters to set all of the instance variables to the given parameters. Write a print() method that uses System.out.println to print out all the instance variables. Write a main method that constructs at least 2 objects of your class using the constructors and then calls their print() methods.</p>
 
@@ -628,7 +628,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-30">
             <title>Summary</title>

@@ -1334,7 +1334,7 @@ public class RunestoneTests extends CodeTestHelper
                 the right order, you can use the <c>add(index, obj)</c> method to add the digit to
                 the beginning of the <c>ArrayList</c> instead of the end.</p>
 
-<activity label="challenge-digits">
+<project label="challenge-digits">
     <statement>
             <p>Complete the challenge below to put the digits of a number in an ArrayList.</p>
 
@@ -1410,7 +1410,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-49">
             <title>Summary</title>

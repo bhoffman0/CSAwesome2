@@ -298,7 +298,7 @@ III. public NamedPoint(int d1, int d2, String name)
                 </li>
             </ol></p>
 
-<activity label="challenge-5-2-Square-Rectangle">
+<project label="challenge-5-2-Square-Rectangle">
     <statement>
             <p><ol marker="1">
                 <li>
@@ -436,7 +436,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>For a more complex example of drawing shapes, try running this <url href="https://replit.com/@BerylHoffman/Shapes" visual="https://replit.com/@BerylHoffman/Shapes">replit.com Java
                     Swing code</url> (or download the <url href="https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip" visual="https://www.dropbox.com/s/2lmkd1m2sfh3xqc/ShapeExample.zip">files here</url> by clicking on Download on the top
                 right and use the files in your own Java IDE). When the yellow panel comes up,

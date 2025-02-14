@@ -477,7 +477,7 @@ ClassifiedWord</c>. In general you should only provide an overridden <c>equals</
                 </li>
             </ol></p>
 
-<activity label="challenge-9-7-savingsaccount">
+<project label="challenge-9-7-savingsaccount">
     <statement>
             <p>Complete the subclass <c>SavingsAccount</c> below which inherits from
                 <c>Account</c> and adds an interest rate variable. Write a constructor with 3
@@ -593,7 +593,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-57">
             <title>Summary</title>

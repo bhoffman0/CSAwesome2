@@ -299,7 +299,7 @@ public class ReverseString
                 </li>
             </ol></p>
 
-<activity label="challenge-string-replace">
+<project label="challenge-string-replace">
     <statement>
             <p>Write a while loop that replaces every occurrence of “cat” in the message with “dog” using the indexOf and substring methods.</p>
 
@@ -374,7 +374,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-16">
             <title>Summary</title>

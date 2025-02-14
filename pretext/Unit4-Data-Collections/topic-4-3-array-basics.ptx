@@ -497,7 +497,12 @@ public class ImageEx
                     <p>Optional Extra Challenge: If you have more time for this project, you can combine what you learned in the last unit to <term>refactor</term> your code (which means restructure without changing the functionality) to make it object-oriented. Create a Country class that stores the country name, capital, language, and image file. In the main method, create an array of 10 Country objects with the data for each country passed to its constructor, and use a random number to choose a country object from the array and display its attributes. See the array of turtles in the next section below for help on how to create an array of objects.</p>
                 </li>
             </ol></p>
-
+<project label="challenge-countries">
+<statement>
+    <p>
+        Create 4 parallel arrays to keep information about countries. Randomly pick an index to show the information about the countries.
+    </p>
+</statement>
     <program interactive="activecode" language="java">
         <code>
 public class Countries
@@ -624,6 +629,7 @@ public class Countries
   }
         </tests>
     </program>
+    </project>
         </subsection>
   <subsection xml:id="design-an-array-of-objects-for-your-community">
             <title>Design an Array of Objects for your Community</title>
@@ -723,7 +729,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="community-challenge-6-1">
+<project label="community-challenge-6-1">
     <statement>
             <p>Community Challenge: Copy your class from <url href="../Unit3-Class-Creation/topic-3-5-methods.html#groupwork-design-a-class-for-your-community" visual="../Unit3-Class-Creation/topic-3-5-methods.html#groupwork-design-a-class-for-your-community">lesson 3.5</url> below. Create an array of 3 objects of your class, initialize
                 them to new objects and call their print methods.</p>
@@ -818,7 +824,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-45">
             <title>Summary</title>

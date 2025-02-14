@@ -703,7 +703,7 @@ while (scan.hasNext())
             
             <p>Let’s end with a challenge that combines all the skills you have learned so far. You could work in pairs for this challenge. Create a class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an array of Pokemon objects. Write a <c>findType</c> method that returns to the type of a Pokemon given its name as an argument. It should loop through the array to find the right Pokemon object using the <c>getName</c> and <c>getType</c> methods that you will write. It should also display the image for the Pokemon.</p>
 
-<activity label="challenge-pokemon-file">
+<project label="challenge-pokemon-file">
     <statement>
             <p>Design the class Pokemon that has at least 3 attributes that can be found in the Pokemon file, including its name, type1, and imagefile, and any other attributes from the file that you would like. Write a constructor and getters for these attributes. Then, read in the data from the pokemon file, split each line, and save the data in an array of Pokemon objects. Write a <c>findType</c> method that loops through the array to find the Pokemon with the given name as argument and print out and return its type and its image.</p>
 
@@ -834,7 +834,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Optional Challenge with a Dataset</title>
@@ -3627,7 +3627,7 @@ Wyoming,584910,11.5,17.4,101,17.6,99,/nchs/pressroom/states/wyoming/wyoming.htm
                 </li>
             </ol></p>
 
-<activity label="challenge-file">
+<project label="challenge-file">
     <statement>
             <p><term>Input File Challenge:</term> Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an array of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.</p>
 
@@ -3721,7 +3721,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

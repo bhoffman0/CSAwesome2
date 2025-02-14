@@ -231,7 +231,7 @@ public class Derived extends Base
                 </li>
             </ol></p>
 
-<activity label="challenge-9-4-Customer-super">
+<project label="challenge-9-4-Customer-super">
     <statement>
             <p>Complete the OnlineCustomer class below to inherit from Customer and add an email address, a constructor, and override the toString() method.</p>
 
@@ -333,7 +333,7 @@ class OnlineCustomer
  }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-54">
             <title>Summary</title>

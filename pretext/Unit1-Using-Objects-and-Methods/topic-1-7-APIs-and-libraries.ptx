@@ -458,7 +458,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ul></p>
 
-<activity label="challenge1-7-TurtleShape">
+<project label="challenge1-7-TurtleShape">
     <statement>
             <p>Have yertle draw a shape, for example a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times.</p>
 
@@ -561,7 +561,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-12">
             <title>Summary</title>

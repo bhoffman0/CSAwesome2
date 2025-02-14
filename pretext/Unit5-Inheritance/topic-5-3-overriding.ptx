@@ -557,7 +557,7 @@ public class EnhancedItem extends Item
                 </li>
             </ol></p>
 
-<activity label="challenge-9-3-Pet-Sounds">
+<project label="challenge-9-3-Pet-Sounds">
     <statement>
             <p>Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out <c>Woof!</c> or <c>Meow!</c>.</p>
 
@@ -679,7 +679,7 @@ class Dog
  }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-53">
             <title>Summary</title>

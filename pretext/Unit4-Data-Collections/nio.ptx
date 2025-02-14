@@ -9,7 +9,7 @@
             </li>
         </ol></p>
 
-<activity label="challenge-6-3-spellchecker2">
+<project label="challenge-6-3-spellchecker2">
     <statement>
         <p>Write a spellcheck() method using an enhanced for-each loop that takes a word as a parameter and returns true if it is in the dictionary array. Return false if it is not found. Write a checkText() method that takes a String[] parameter which is a sentence of text and then calls your spellcheck method above to check if each word in that text is spelled correctly using an enhanced for-each loop. It should return a count of the misspelled words.</p>
 

@@ -317,7 +317,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-Turtle-Nested-Loop-Snowflakes">
+<project label="challenge-Turtle-Nested-Loop-Snowflakes">
     <statement>
             <p>Use nested for-loops to have the turtle draw a snowflake of polygons.
                 Use the variable turnAmount to turn after each shape and the variable n for the sides of the polygon.</p>
@@ -442,7 +442,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-17">
             <title>Summary</title>

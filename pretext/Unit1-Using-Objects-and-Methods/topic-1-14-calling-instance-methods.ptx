@@ -838,7 +838,7 @@ t.penDown();
 </code></program>
             <p>It may help to act out the code pretending you are the turtle. Remember that the angles you turn depend on which direction you are facing, and the turtle begins facing up. When planning your coordinates for the house, remember that the turtle starts at the center of the screen (150,150) and the top left corner is (0,0).</p>
 
-<activity label="challenge-TurtleHouse">
+<project label="challenge-TurtleHouse">
     <statement>
             <p>Draw a Turtle House! Make sure you use forward, turn, penUp, penDown, moveTo methods as well as different colors. Have fun!</p>
 
@@ -934,7 +934,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-5">
             <title>Summary</title>

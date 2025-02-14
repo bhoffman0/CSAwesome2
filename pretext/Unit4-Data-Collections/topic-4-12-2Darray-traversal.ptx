@@ -362,7 +362,7 @@ public void zeroBlue()
             <p>Now, write a similar method called <c>keepOnlyBlue</c> that visits every pixel and sets the red and green values to zero but does not change the blue ones. Then, write a method called <c>switchColors</c> that swaps the red pixels with green pixels or blue pixels to change the colors around. You will need to use the <c>getRed</c>, <c>getGreen</c>, <c>getBlue</c> to get the RGB values of the pixel and then swap them around by using the <c>setRed</c>, <c>setGreen</c>, <c>setBlue</c> methods and giving them different color values from the get methods as arguments.</p>
             <p>You can test the methods in the active code below or in this <url href="https://replit.com/@BerylHoffman/Picture-Lab" visual="https://replit.com/@BerylHoffman/Picture-Lab">Replit Swing project</url> or this <url href="https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file" visual="https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file">alternative Replit project</url> by teacher Jason Stark from LA (click output.jpg to see the result) or your own IDE to see what it does.</p>
 
-<activity label="challenge-picture">
+<project label="challenge-picture">
     <statement>
             <p>Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it.</p>
 
@@ -568,7 +568,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>Here are some more exercises from the <url href="pictureLabA5.html#image-modification-exercises" visual="pictureLabA5.html#image-modification-exercises">Picture Lab A5 Image Modification Exercises</url>:</p>
             <p><ul>
                 <li>

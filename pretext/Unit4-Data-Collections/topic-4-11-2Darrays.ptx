@@ -857,7 +857,7 @@ ticketInfo[0].length // returns the number of columns
                 </li>
             </ol></p>
 
-<activity label="challenge-8-1-ascii-art">
+<project label="challenge-8-1-ascii-art">
     <statement>
             <p>Part 1: Add 2 assignment statements for the 2D array asciiArt to change the “o” characters to “@” characters. Part 2: Create a new asciiArt array and print it out.</p>
 
@@ -970,7 +970,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-38">
             <title>Summary</title>

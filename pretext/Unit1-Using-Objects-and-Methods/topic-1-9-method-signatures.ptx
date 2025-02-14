@@ -501,7 +501,7 @@ verse("cow", "moo");
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
 </areas></activity>
-<activity label="challenge-1-9-song">
+<project label="challenge-1-9-song">
     <statement>
             <p>Write code in the main method that calls the verse method to print out all three verses for the Ants Go Marching song above.</p>
 
@@ -608,7 +608,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

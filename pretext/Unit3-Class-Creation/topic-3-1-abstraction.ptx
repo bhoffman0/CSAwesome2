@@ -184,12 +184,12 @@ public class RunestoneTests extends CodeTestHelper
             <p>What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables. Then, come up with 2 methods (look for verbs) for the class that use the data in the instance variables. Write your answers below.</p>
             <p>If your class has time, you could explore drawing a UML class diagram for your class using an online tool like <url href="https://creately.com" visual="https://creately.com">Creately.com</url> or <url href="https://app.diagrams.net/" visual="https://app.diagrams.net/">app.diagrams.net</url> using this <url href="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b" visual="https://medium.com/@smagid_allThings/uml-class-diagrams-tutorial-step-by-step-520fd83b300b">tutorial on class diagrams</url></p>
 
-<activity label="OOD2">
+<project label="OOD2">
     <statement>
             <p> Say you wanted to make a computer game from a board game that you are playing. Think about what objects are in the game. For example, here is the description for Monopoly (trademark Hasbro games): “Buy, sell, dream and scheme your way to riches. Players buy, sell and trade to win. Build houses and hotels on your properties and bankrupt your opponents to win it all. Chance and Community Chest cards can change everything.” What classes would you need to create a computer version of this game? (Remember to look for the nouns). Take one of the classes you listed, and try to come up with 2 pieces of data in that class that will be the instance variables. Then, come up with 2 methods (look for verbs) for the class that use the data in the instance variables.</p>
 
     </statement>    <response/>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-27">
             <title>Summary</title>

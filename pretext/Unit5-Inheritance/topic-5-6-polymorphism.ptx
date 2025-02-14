@@ -413,7 +413,7 @@ public class Dictionary extends Book
                 </li>
             </ul></p>
 
-<activity label="challenge-9-6-shopping2">
+<project label="challenge-9-6-shopping2">
     <statement>
             <p>Copy in your code for <c>DiscountedItem</c> below and then write a method called
                 <c>countDiscountedItems</c> which traverses the polymorphic <c>ArrayList&lt;Item&gt;</c>.
@@ -637,7 +637,7 @@ class Item
      }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-56">
             <title>Summary</title>

@@ -471,7 +471,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-TurtleLoopShapes">
+<project label="challenge-TurtleLoopShapes">
     <statement>
             <p>Complete the methods below with for-loops to draw a square, triangle, pentagon, and then any polygon using a variable n that holds the number of sides. Add 1 more call to the method drawShapes in main. Note that the angles in the turns have to add up to 360.</p>
 
@@ -617,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-25">
             <title>Summary</title>

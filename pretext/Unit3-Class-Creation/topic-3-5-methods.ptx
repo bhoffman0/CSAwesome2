@@ -810,7 +810,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-Pet-Class">
+<project label="challenge-Pet-Class">
     <statement>
             <p>Create a Pet class that keeps track of the name, age, weight, type of animal,
                 and breed for records at an animal clinic. Create a constructor, getter, setter, and toString() methods. Create 2 Pet objects in the main method and test all your methods.</p>
@@ -961,7 +961,7 @@ public class TesterClass
  }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="design-a-class-for-your-community-2">
             <title>Design a Class for your Community</title>
@@ -984,7 +984,7 @@ public class TesterClass
                 </li>
             </ol></p>
 
-<activity label="community-challenge3">
+<project label="community-challenge3">
     <statement>
             <p>Copy your class from <url href="topic-3-4-constructors.html#groupwork-design-a-class-for-your-community" visual="topic-3-4-constructors.html#groupwork-design-a-class-for-your-community">lesson 3.4</url>. Add get, set, toString, and a method that takes a parameter. For example, there could be a print method with arguments that indicate how you want to print out the information, print(format) where format is “plain” or “table”.</p>
 
@@ -1140,7 +1140,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-31">
             <title>Summary</title>

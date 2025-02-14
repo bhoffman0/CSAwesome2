@@ -360,7 +360,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Coding Challenge : Average 3 Numbers</title>
             <p>This would be a good project to work together in pairs, and switch drivers (who has control of the keyboard in pair programming) after every line of code. In the code below, type in three made up int grades and then sum and average them. Use casting to report the result as a double. For example, if the grades are 90, 100, and 94, the sum of the three numbers is 90 + 100 + 94 = 284, and the average is the sum 284 divided by 3 which casted to a double is 94.666667. You should use your variables instead of the numbers in your formulas. Follow the pseudocode below.</p>
 
-<activity label="challenge1-5-average">
+<project label="challenge1-5-average">
     <statement>
             <p>Type in three made up int grades and then sum and average them. Use type casting to report the result as a double. If you do this challenge on replit.com (see template and links below), please paste your repl link here to turn it in.</p>
 
@@ -617,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>Your teacher may suggest that you use a different Java IDE for this challenge so that you can use input to get these values using the <url href="https://www.w3schools.com/java/java_user_input.asp" visual="https://www.w3schools.com/java/java_user_input.asp">Scanner class</url>, for example with this <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/5f00d71e-df8f-448f-a767-ed49e7af6f05#cb460a02-de03-4328-b310-ba057cb47a39" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/5f00d71e-df8f-448f-a767-ed49e7af6f05#cb460a02-de03-4328-b310-ba057cb47a39">JuiceMind template</url> or <url href="https://replit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java" visual="https://replit.com/@BerylHoffman/Challenge1-6-Average-Template#Main.java">replit template</url> that you can use if you want to try the challenge with input.</p>
         </subsection>
   <subsection xml:id="bonus-challenge-unicode">
@@ -652,7 +652,7 @@ public class RunestoneTests extends CodeTestHelper
                 to get the decimal number.) Can you print out letters from 3 different
                 languages?</p>
 
-<activity label="challenge1-6-unicode">
+<project label="challenge1-6-unicode">
     <statement>
             <p>Can you print out a letter from 3 different languages using this <url href="https://unicodelookup.com/" visual="https://unicodelookup.com/">Unicode Lookup</url> site?</p>
 
@@ -700,7 +700,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-10">
             <title>Summary</title>

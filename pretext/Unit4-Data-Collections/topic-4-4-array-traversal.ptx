@@ -11212,7 +11212,7 @@ zus
 
 
 
-<activity label="challenge-spellchecker">
+<project label="challenge-spellchecker">
     <statement>
             <p>Write print10 and spellcheck methods using for loops. Spellcheck should take a word as a parameter and return true if it is in the dictionary array. Return false if it is not found.</p>
 
@@ -11364,7 +11364,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Design an Array of Objects for your Community</title>
@@ -11373,7 +11373,7 @@ public class RunestoneTests extends CodeTestHelper
                 Copy your array of objects code from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url>. In this challenge, add a loop to
                 traverse your array to print out each object.</p>
 
-<activity label="community-challenge-array-loop">
+<project label="community-challenge-array-loop">
     <statement>
             <p>Copy your class from the <url href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community" visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last lesson</url> below.
                 It should create an array of 3 objects of your class and initialize
@@ -11458,7 +11458,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

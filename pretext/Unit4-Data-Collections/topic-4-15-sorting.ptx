@@ -445,12 +445,12 @@ public static void insertionSort(int[] elements)
             <p>In the Active code windows for Selection sort and Insertion sort above, add in a counter and increment it inside the inner loop to count the number of iterations. Add in print statements that will print the counter value after the loops. Run the code on the following data and record the runtimes in this <url href="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy" visual="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/copy">Google document</url> (login to Google to make your own copy) also seen below.</p>
             <p>&lt;iframe height="54%" width="100%" src="https://docs.google.com/document/d/1uGhFyrcGqokcOWQC-f8Cz-kow7I_xs6s5G-p-qXZ7wA/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
 
-<activity label="challenge-sorting">
+<project label="challenge-sorting">
     <statement>
             <p> Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.</p>
 
     </statement>    <response/>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-41">
             <title>Summary</title>

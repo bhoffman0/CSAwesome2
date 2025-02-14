@@ -373,19 +373,19 @@ public class SortTest
     <video youtube="AMJjtTo1LLE" label="video-mergesort-cards"/>
                 <p>Work in pairs to do the following tracing problems.</p>
 
-<activity label="challenge-mergesort">
+<project label="challenge-mergesort">
     <statement>
             <p> Trace through mergeSort(array) where array = {5, 2, 20, 22, 17, 15, 8, 10} writing down each split and merge.</p>
 
     </statement>    <response/>
-</activity>
+</project>
 
-<activity label="challenge-recursive-binary-search">
+<project label="challenge-recursive-binary-search">
     <statement>
             <p> Trace through recursiveBinarySearch(sortedArray, 0, 8, 22) looking for the target number 22 where sortedArray = {2, 5, 8, 10, 11, 15, 17, 20, 22}. Write down each middle element that is checked and the start and end index for each recursive call. How many elements did the binary search have to check before finding 22?  How would this compare to a linear search?</p>
 
     </statement>    <response/>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-43">
             <title>Summary</title>

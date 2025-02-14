@@ -697,7 +697,7 @@ public class RunestoneTests extends CodeTestHelper
             <image source="Unit2-Selection-and-Iteration/Figures/Magic_eight_ball.png" width="18%" alt="Magic 8 Ball"/>
             <p>Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like <c>Signs point to yes!</c>, <c>Very doubtful</c>, etc. If you’ve never seen a Magic 8 ball, check out this <url href="https://magic-8ball.com/" visual="https://magic-8ball.com/">simulator</url>. In the exercise below, come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see the <url href="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html" visual="../Unit1-Using-Objects-and-Methods/topic-1-11-Math.html">Math lesson</url> and remember the formula <c>(int) (Math.random() * max) + min</c>.</p>
 
-<activity label="challenge-Magic8ball">
+<project label="challenge-Magic8ball">
     <statement>
             <p>Complete the <c>printRandomResponse()</c> method to print out 1 of 8 random responses and the <c>lucky()</c> method to toss a coin and print out “Lucky!” or “No Luck!” based on the result. Run the code multiple times to see the responses.</p>
 
@@ -811,7 +811,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
             <p>You can make this code more interactive by using the <c>Scanner</c> class to have the user ask a question first; you can try your code with input in <url href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e" visual="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e">JuiceMind</url> or <url href="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java" visual="https://replit.com/@BerylHoffman/Magic8BallTemplate#Main.java">replit</url> or a local IDE.</p>
         </subsection>
   <subsection xml:id="summary-20">

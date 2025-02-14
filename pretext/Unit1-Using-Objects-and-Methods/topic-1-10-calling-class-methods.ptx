@@ -341,7 +341,7 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
 
     </activity>
 
-<activity label="challenge-1-10-pythagorean">
+<project label="challenge-1-10-pythagorean">
     <statement>
             <p>Complete the <c>ladderSizeNeeded</c> method below using the Pythagorean Theorem and the <c>Math.sqrt</c> method. Then in the main method, write a method call to test the <c>ladderSizeNeeded</c> method with arguments for the height of 30 and the width of 40. The method should return the length of the ladder needed to reach the window of your beloved.</p>
 
@@ -414,7 +414,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection>
             <title>Summary</title>

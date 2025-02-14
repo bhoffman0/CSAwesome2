@@ -693,7 +693,7 @@ public class RunestoneTests extends CodeTestHelper
                 </li>
             </ol></p>
 
-<activity label="challenge-friend-birthday">
+<project label="challenge-friend-birthday">
     <statement>
             <p>Complete the Date and Friend classes below. The Friend class should have a method isBirthday that returns true if the birthdate matches the given date parameter. Test your methods in the main method.</p>
 
@@ -781,7 +781,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-32">
             <title>Summary</title>

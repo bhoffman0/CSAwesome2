@@ -588,7 +588,7 @@ else  // belongs to first if
                 </li>
             </ol></p>
 
-<activity label="challenge-ElseIf-Adventure">
+<project label="challenge-ElseIf-Adventure">
     <statement>
             <p>This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in <term>else if</term> statements to go in the directions of “s” for south, “e” for east, “w” for west, and an else statement that says “You can’t go in that direction”. Be creative and come up with different situations in each direction. You can change the initial location of the game and add more nested if statements to make the game more complex.</p>
 
@@ -720,7 +720,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</project>
         </subsection>
   <subsection xml:id="summary-21">
             <title>Summary</title>
