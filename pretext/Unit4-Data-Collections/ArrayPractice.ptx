@@ -4,12 +4,15 @@
   <title>Arrays Code Practice</title><introduction>
     
   </introduction>
-  <activity>
+  <subsection xml:id="subsec-ArraysPractice">
+    <title>Practice Problems</title>
+    
+  <activity label="ArraysPractice1">
     <statement>
                 <p>Fix the following code so that it prints every other value in the array <c>arr1</c> starting with the value at index 0.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -71,38 +74,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Change line 5 to add the [] on the declaration of arr1 to show that it is an array of integer values.  Change line 6 to index &lt; arr1.length so that you don’t go out of bounds (the last valid index is the length minus one).  Change line 8 to print arr1[index].
-
-
-    
-                Solution to question above.
-
-    
-    <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] arr1 = {1, 3, 7, 9, 15, 17};
-        for (int index = 0; index &lt; arr1.length; index += 2)
-        {
-            System.out.print(arr1[index] + ", ");
-        }
-    }
-}
-        </code>
-    </program>
-
-            
+               
                 <p>Change line 5 to add the <c>[]</c> on the declaration of <c>arr1</c> to show that it is an array of integer values.  Change line 6 to <c>index &lt; arr1.length</c> so that you don’t go out of bounds (the last valid index is the length minus one).  Change line 8 to print <c>arr1[index]</c>.</p>
 
-<activity label="ch7Ex1a">
-    <statement>
-                <p>Solution to question above.</p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <program  language="java">
         <code>
 public class Test1
 {
@@ -117,15 +93,15 @@ public class Test1
 }
         </code>
     </program>
-</activity>
+
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice2">
     <statement>
                 <p>Fix the following to print the values in the array <c>a1</c> starting with the value at the last index and then backwards to the value at the first index.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -183,13 +159,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Change line 6 to a1.length - 1 since the last valid index is one less than the length of the array and i &gt;= 0 since the first valid index is 0. Change line 7 to a1.
+                
+                <p>Change line 6 to <c>a1.length - 1</c> since the last valid index is one less than the length of the array and <c>i &gt;= 0</c> since the first valid index is 0. Change line 7 to <c>a1</c>.</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -206,38 +179,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Change line 6 to <c>a1.length - 1</c> since the last valid index is one less than the length of the array and <c>i &gt;= 0</c> since the first valid index is 0. Change line 7 to <c>a1</c>.</p>
-
-<activity label="ch7Ex2a">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] a1 = {1, 3, 7, 9, 15};
-        for (int i = a1.length - 1; i &gt;= 0; i--)
-        {
-            System.out.print(a1[i] + ", ");
-        }
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice3">
     <statement>
                 <p>Rewrite the following code so that it prints all the values in an array <c>arr1</c> using a for-each loop instead of a <c>for</c> loop.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -280,38 +229,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                In a for-each loop you specify the type of the values in the array, a name for the current value, and then a : and then the name of the array.  The first time through the loop the value will be the one at index 0.  The next time the one at index 1 and so on until you reach the last value in the array.
-
-
-    
-                Solution to question above.
-
-    
-    <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] arr1 = {1, 3, 7, 9};
-        for (int value : arr1)
-        {
-            System.out.print(value + ", ");
-        }
-    }
-}
-        </code>
-    </program>
-
-            
+              
                 <p>In a for-each loop you specify the type of the values in the array, a name for the current value, and then a <c>:</c> and then the name of the array.  The first time through the loop the value will be the one at index 0.  The next time the one at index 1 and so on until you reach the last value in the array.</p>
 
-<activity label="ch7Ex3a">
-    <statement>
-                <p>Solution to question above.</p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <program  language="java">
         <code>
 public class Test1
 {
@@ -326,15 +248,15 @@ public class Test1
 }
         </code>
     </program>
-</activity>
+
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice4">
     <statement>
                 <p>Finish the following code so that it prints out all of the odd values in the array <c>a1</c>. Hint: use % to check for odd values.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -377,13 +299,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                If the remainder of the value divided by 2 is 1 then it is odd so print it out followed by a space (to keep the values separated).
+               
+                <p>If the remainder of the value divided by 2 is 1 then it is odd so print it out followed by a space (to keep the values separated).</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -403,41 +322,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>If the remainder of the value divided by 2 is 1 then it is odd so print it out followed by a space (to keep the values separated).</p>
-
-<activity label="ch7Ex4a">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] a1 = {0, 3, 6, 7, 9, 10};
-        for (int value : a1)
-        {
-            if (value % 2 == 1)
-            {
-                System.out.print(value + " ");
-            }
-        }
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice5">
     <statement>
                 <p>Finish the following method <c>getSum</c> to return the sum of all values in the passed array.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -491,13 +383,12 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Declare a variable to hold the sum and initialize it to zero.  Loop through all the values in the array using a for-each loop and add each value to the sum.  Return the sum.
+     
+
+            
+                <p>Declare a variable to hold the <c>sum</c> and initialize it to zero.  Loop through all the values in the array using a for-each loop and add each value to the <c>sum</c>.  Return the <c>sum</c>.</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -522,46 +413,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Declare a variable to hold the <c>sum</c> and initialize it to zero.  Loop through all the values in the array using a for-each loop and add each value to the <c>sum</c>.  Return the <c>sum</c>.</p>
-
-<activity label="ch7Ex5a">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-    public static int getSum(int[] arr)
-    {
-        int sum = 0;
-        for (int value : arr)
-        {
-            sum = sum + value;
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] a1 = {1, 2, 5, 3};
-        System.out.println(
-                "It should print 11 " + " and your answer is: " + getSum(a1));
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice6">
     <statement>
                 <p>Finish the following method to return the sum of all of the non-negative values in the passed array.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -617,13 +476,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Declare a variable to hold the sum and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the sum.  Return the sum.
+
+                <p>Declare a variable to hold the <c>sum</c> and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the <c>sum</c>.  Return the <c>sum</c>.</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -657,55 +513,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Declare a variable to hold the <c>sum</c> and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the <c>sum</c>.  Return the <c>sum</c>.</p>
-
-<activity label="ch7Ex6a">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-
-    public static int getSumNonNeg(int[] arr)
-    {
-        int sum = 0;
-        for (int value : arr)
-        {
-            if (value &gt;= 0)
-            {
-                 sum = sum + value;
-            }
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] a1 =
-        {
-            1, 2, 5, 3, -1, -20,
-        };
-        System.out.println(
-                "The code should print 11 "
-                        + "and your answer is: "
-                        + getSumNonNeg(a1));
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice7">
     <statement>
                 <p>Finish the following code to print the strings at the odd indices in the array.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -744,13 +559,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Use a for loop and start the index at 1 and increment it by 2 each time through the loop.  Print the value at the index.
+           
+                <p>Use a for loop and start the index at 1 and increment it by 2 each time through the loop.  Print the value at the index.</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -767,38 +579,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Use a for loop and start the index at 1 and increment it by 2 each time through the loop.  Print the value at the index.</p>
-
-<activity label="ch7Ex7na">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
-        for (int i = 1; i &lt; stArr1.length; i += 2)
-        {
-            System.out.println(stArr1[i]);
-        }
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice8">
     <statement>
                 <p>Finish the method <c>getSumChars</c> below to return the total number of characters in the array of strings <c>strArr</c>.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -864,45 +652,11 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Declare the sum and initialize it to 0.  Use a for-each loop to loop through each string in the array.  Add the length of the current string to the sum.  Return the sum.
-
-
-    
-                Solution to question above.
-
-    
-    <program language="java">
-        <code>
-public class Test1
-{
-    public static int getSumChars(String[] strArr)
-    {
-        int sum = 0;
-        for (String str : strArr)
-        {
-            sum = sum + str.length();
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        String[] strArr = {"hi", "bye", "hola"};
-        System.out.println(getSumChars(strArr));
-    }
-}
-        </code>
-    </program>
-
             
                 <p>Declare the <c>sum</c> and initialize it to 0.  Use a for-each loop to loop through each string in the array.  Add the length of the current string to the <c>sum</c>.  Return the <c>sum</c>.</p>
 
-<activity label="ch7Ex8na">
-    <statement>
-                <p>Solution to question above.</p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <program  language="java">
         <code>
 public class Test1
 {
@@ -924,15 +678,15 @@ public class Test1
 }
         </code>
     </program>
-</activity>
+
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice9">
     <statement>
                 <p>Finish the method <c>findMin</c> so that it finds and returns the minimum value in the array.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -991,13 +745,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Declare a variable to hold the minimum value found and initialize it to the first value in the array.  Loop from 1 to the length of the array minus one and get the value at that index.  If the value is less than the minimum found so far reset the minimum found so far to the value.  Return the minimum.
-
-
     
-                Solution to question above.
+                <p>Declare a variable to hold the minimum value found and initialize it to the first value in the array.  Loop from 1 to the length of the array minus one and get the value at that index.  If the value is less than the minimum found so far reset the minimum found so far to the value.  Return the minimum.</p>
 
-    
+
     <program language="java">
         <code>
 public class Test1
@@ -1027,51 +778,14 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Declare a variable to hold the minimum value found and initialize it to the first value in the array.  Loop from 1 to the length of the array minus one and get the value at that index.  If the value is less than the minimum found so far reset the minimum found so far to the value.  Return the minimum.</p>
-
-<activity label="ch7Ex9na">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-
-    public static int findMin(int[] arr)
-    {
-        int min = arr[0];
-        int value = 0;
-        for (int i = 1; i &lt; arr.length; i++)
-        {
-            value = arr[i];
-            if (value &lt; min)
-            {
-                min = value;
-            }
-        }
-        return min;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] arr = {20, -3, 18, 55, 4};
-        System.out.println(findMin(arr));
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
-  <activity>
+  <activity label="ArraysPractice10">
     <statement>
                 <p>Finish the method <c>getAverage</c> to calculate and return the average of all of the values in the array.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="">
+    <program interactive="activecode" language="java">
         <code>
 public class Test1
 {
@@ -1132,13 +846,10 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
     <solution>
-                Declare a variable to hold the total and it should be of type double so that the average is a double.  Initialize it to 0.  Loop through all the values in the array and add each to the total.  Return the total divided by the length of the array.
+            
+                <p>Declare a variable to hold the <c>total</c> and it should be of type <c>double</c> so that the average is a <c>double</c>.  Initialize it to 0.  Loop through all the values in the array and add each to the <c>total</c>.  Return the <c>total</c> divided by the length of the array.</p>
 
 
-    
-                Solution to question above.
-
-    
     <program language="java">
         <code>
 public class Test1
@@ -1163,40 +874,9 @@ public class Test1
         </code>
     </program>
 
-            
-                <p>Declare a variable to hold the <c>total</c> and it should be of type <c>double</c> so that the average is a <c>double</c>.  Initialize it to 0.  Loop through all the values in the array and add each to the <c>total</c>.  Return the <c>total</c> divided by the length of the array.</p>
-
-<activity label="ch7Ex10na">
-    <statement>
-                <p>Solution to question above.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-public class Test1
-{
-
-    public static double getAverage(int[] arr)
-    {
-        double total = 0;
-        for (int value : arr)
-        {
-            total = total + value;
-        }
-        return total / arr.length;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] arr = {20, 3, 18, 55, 4};
-        System.out.println(getAverage(arr));
-    }
-}
-        </code>
-    </program>
-</activity>
             </solution>
   </activity>
+  </subsection>
   <subsection xml:id="more-practice-2">
             <title>More Practice</title>
             <p>For practice with simple array manipulation and conditionals, but no loops see <url href="http://codingbat.com/java/Array-1" visual="http://codingbat.com/java/Array-1">http://codingbat.com/java/Array-1</url>.
