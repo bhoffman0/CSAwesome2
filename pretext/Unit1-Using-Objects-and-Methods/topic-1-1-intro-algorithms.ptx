@@ -28,12 +28,12 @@ public class MyClass
     }
 }
 </code></program>
-            <note>
-                <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
-            </note>
-            <p><term>Coding Exercise</term>: Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting <c>"</c> and ending <c>"</c>.  Click on the run button to run the modified code. </p>
 
-<activity label="printName">
+<p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
+            
+<p>Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting and ending quotes ".  Click on the run button to run the modified code. </p>
+
+<exercise label="printName">
     <statement>
             <p>Run this code to see the output below it. Then change the code to print your name, for example “Hi Pat!”, and run again.</p>
 
@@ -70,7 +70,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</exercise>
         </subsection>
   <subsection>
             <title>Compiling and Running Java Programs</title>
@@ -82,7 +82,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Java Keywords</title>
             <p><term>Keywords</term> are reserved words that have special meaning in Java. Keywords such as <c>public</c>, <c>class</c>, and <c>void</c>  must be in lowercase, but class names such as <c>System</c> and <c>String</c> are capitalized.</p>
-            <activity label="mp-main-method-order-1" adaptive="yes">
+            <exercise label="mp-main-method-order-1" adaptive="yes">
                 <statement>
                 <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
                 </statement>
@@ -103,9 +103,9 @@ public class RunestoneTests extends CodeTestHelper
                         <c>public Static</c>       
                      </block>
                 </blocks>
-            </activity>
+            </exercise>
 
-            <activity label="mp-main-method-order-2" adaptive="yes">
+            <exercise label="mp-main-method-order-2" adaptive="yes">
                 <statement>
                 <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
                 </statement>
@@ -135,9 +135,9 @@ public class RunestoneTests extends CodeTestHelper
                         <c>Static</c>       
                      </block>
                 </blocks>
-            </activity>
+            </exercise>
             
-            <activity label="mp-main-method-order-3" adaptive="yes">
+            <exercise label="mp-main-method-order-3" adaptive="yes">
                 <statement>
                 <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
                 </statement>
@@ -173,11 +173,11 @@ public class RunestoneTests extends CodeTestHelper
                         <c>()</c>       
                      </block>
                 </blocks>
-            </activity>
+            </exercise>
            
             <p>Lines in a Java program that express a complete action such as printing output must end with a semicolon (<c>;</c>). Such a line is called a <term>statement</term>. You can think of the semicolon (<c>;</c>) in Java like a period (<c>.</c>) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon, but the Java compiler is not so lenient; your program won’t compile without it. Note also that not <em>every</em> line ends with a semicolon; if the line starts a construct like an <title_reference>if</title_reference> statement, there is no semicolon before the opening <c>{</c> nor one after the closing <c>}</c>.</p>
           
-            <activity label="mp-print-order-1" adaptive="yes">
+            <exercise label="mp-print-order-1" adaptive="yes">
                 <statement>
                 <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print “Hi!”. There are extra blocks that you don’t need.</p>
                 </statement>
@@ -211,10 +211,10 @@ public class RunestoneTests extends CodeTestHelper
                      </block>
                      
                 </blocks>
-            </activity>
+            </exercise>
           
 
-          <activity label="mp-print-order-2" adaptive="yes">
+          <exercise label="mp-print-order-2" adaptive="yes">
             <statement>
             <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print Bye!”. There are extra blocks that you don’t need.</p>
             </statement>
@@ -247,7 +247,7 @@ public class RunestoneTests extends CodeTestHelper
                     <c>Out</c>       
                  </block>
             </blocks>
-        </activity>
+        </exercise>
 
         </subsection>
   <subsection>
@@ -260,7 +260,7 @@ public class RunestoneTests extends CodeTestHelper
     <video youtube="auv10y-dN4s" label="video-debugging"/>
                 <p>Let’s practice debugging some code!</p>
             <p> <term>Check Your Understanding: Mixed up programs</term></p>
-<activity label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
 </statement>
 <blocks><block order="4">
@@ -274,7 +274,7 @@ public class RunestoneTests extends CodeTestHelper
 </block><block order="3">
 <cline>   }</cline>
 <cline>}</cline>
-</block></blocks></activity><activity label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
             <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
 </statement>
 <blocks><block order="6">
@@ -294,7 +294,7 @@ public class RunestoneTests extends CodeTestHelper
 </choice></block><block order="2">
 <cline>   }</cline>
 <cline>}</cline>
-</block></blocks></activity>        </subsection>
+</block></blocks></exercise>        </subsection>
   <subsection>
             <title>Reading Error Messages</title>
             <p>In the exercise below, you should click on the run button to
@@ -343,7 +343,7 @@ FirstClass.java:5: error: unclosed string literal
                 common mistakes and will get much quicker at finding your syntax errors.</p>
             <p><term>Coding Exercise: Compile Time Error 1</term></p>
 
-<activity label="sc2error1">
+<exercise label="sc2error1">
     <statement>
             <p>Fix the code below.</p>
 
@@ -379,14 +379,14 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</exercise>
             <p><term>Coding Exercise: Compile Time Error 2</term></p>
             <p>Click on the run button below to try and run the following code. Look
                 for an error message after the code. This time the error message will probably
                 point even more exactly at the problem than in the previous exercise. Try to fix
                 the code and run it again.</p>
 
-<activity label="sc2error2">
+<exercise label="sc2error2">
     <statement>
             <p>Fix the code below.</p>
 
@@ -423,7 +423,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</exercise>
             <p><term>Coding Exercise: Compile Time Error 3</term></p>
             <p>Click on the run button below to try and run the following code. What is
                 wrong this time? The first error message will probably point you directly at the
@@ -439,7 +439,7 @@ public class RunestoneTests extends CodeTestHelper
                 you can fix both errors in this code. A hint for the second error:
                 capitalization matters.</p>
 
-<activity label="sc2error3">
+<exercise label="sc2error3">
     <statement>
             <p>Fix the code below.</p>
 
@@ -477,7 +477,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</exercise>
             <p>Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?</p>
         </subsection>
   <subsection>
@@ -485,7 +485,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Some errors cannot be detected by the compiler. These are called <term>run-time errors</term>. These errors occur when the program is running, after the code is compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn’t exist or a logic error in the code.</p>
             <p>An <term>exception</term> is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an <term>ArithmeticException</term> while running. Try this out in the code below.</p>
 
-<activity label="divideByZeroDemo">
+<exercise label="divideByZeroDemo">
     <statement>
             <p>The following code has a run-time error. When you click on run, the compiler will not catch it since it is not a syntax error. The program will run and try to compute 3 divided by 0 which cannot be computed. This will cause a run-time error, and the program will report an <term>ArithmeticException</term>. Try it out!</p>
 
@@ -519,7 +519,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
+</exercise>
             <p>Run-time errors can be difficult to find because they don’t always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A <term>logic error</term> is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome. We’ll see an example of this after learning about expressions in the next lessons.</p>
         </subsection>
   <subsection>
@@ -544,7 +544,7 @@ int max = 10; // this keeps track of the max score
             <p>In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you’re working alone, you may want to explain the code to a rubber duck or another toy using <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url>.</p>
             <p>Working in pairs, debug the following code. Can you find all the bugs and get the code to run?</p>
 
-<project label="challenge1-1">
+<exercise label="challenge1-1">
     <statement>
             <p>Fix the code below.</p>
 
@@ -583,7 +583,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</project>
+</exercise>
         </subsection>
   <subsection>
             <title>Summary</title>
@@ -643,7 +643,7 @@ public class MyClass
   <subsection>
             <title>AP Practice</title>
 
-    <activity label="AP1-1-print">
+    <exercise label="AP1-1-print">
         <statement>
 
             <p>Consider the following code segment.</p>
@@ -671,7 +671,7 @@ Unexpected '}' on line 32.</pre></raw>
             <p>Correct! The semicolon should go after each statement but not in the comment.</p>
 </feedback></choice></choices>
 
-    </activity>
+    </exercise>
 
     <datafile label="turtleClasses" filename="turtleClasses.jar" editable="no" hide="yes">
         <pre>
