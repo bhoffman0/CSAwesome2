@@ -556,7 +556,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
   :autograde: unittest
   :stdin: n e
 
-  This is a text adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in static methods below main for each direction. 
+  This is a text adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in static methods below main for each direction. There are 5 TODO steps below.
   ~~~~
   import java.util.Scanner;
 
@@ -566,7 +566,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
       
       public static void main(String[] args) 
       {
-          // Change the adventure text below. Be creative!
+          // TODO #1: Change the adventure text below. Be creative!
           System.out.println("You are on an island surrounded by water.");
           System.out.println("There is a path to the forest to the north, "
                            + "the sea to the south, ? to the east, and ? to the west."); 
@@ -577,7 +577,10 @@ In the main method, add in **else if** statements to go in the directions of "s"
               System.out.println("You go north.");
               forest();
           }
-          // Add else-ifs for command equals s, e, w, and an else for any other input. Be creative!
+          // TODO #2: Add else-ifs for command equals s, e, or w,
+          //  calling a method you will write below for each location.
+          // Add an else error message "You can't go in that direction!" 
+          
 
               
         
@@ -585,7 +588,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
           scan.close();
      }    
 
-    // Complete this method 
+    // TODO #3 Complete this method 
     // north from main goes to the forest
     public static void forest()
     {
@@ -602,6 +605,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
         }
     }
 
+    // TODO #4: Complete this method. 
     // south from main or east from forest goes to the sea  
     public static void sea()
     {
@@ -611,8 +615,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
         // Move to different locations
 
     }
-    
-    /* Add at least 2 more static functions for 2 more locations */
+    // TODO #5: Add at least 2 more static functions for 2 more locations 
   
   }
   ====
@@ -624,91 +627,45 @@ In the main method, add in **else if** statements to go in the directions of "s"
 
   public class RunestoneTests extends CodeTestHelper
   {
-      public RunestoneTests()
-      { 
-          super("Adventure", input1);
-          //super("Main", input1.replaceAll(" ", "\n")); 
-      }
+    public RunestoneTests()
+    {
+        super("Adventure");
+    }
 
-      private static int goal = 5;
-      private static String input1 = "n e";  
-      
-      @Test
-      public void test1()
-      {
-          //String input = input1.replaceAll(" ", "\n");
-          String input = input1;
-          String output = getMethodOutputWithInput("main", input);
+    @Test
+    public void testIf()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "if");
+        boolean passed = num >= 5;
 
-          String[] lines = output.split("\n");
+        getResults("5", "" + num, "Number of if statements", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = lines.length >= goal;
+    @Test
+    public void testElseIf()
+    {
+        String code = getCode();
+        int elseif = countOccurences(code, "else if");
+        boolean passed = elseif >= 3;
 
-          passed =
-                  getResults(
-                          goal + "+ lines",
-                          "" + lines.length + " lines",
-                          "Outputs at least " + goal + " lines when going n",
-                          passed);
-          assertTrue(passed);
-      }
+        getResults("" + 3, "" + elseif, "Number of else if statements", passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test2()
-      {
-           String outputN = getMethodOutputWithInput("main", "n");
-           String outputS = getMethodOutputWithInput("main", "s");
-           String outputE = getMethodOutputWithInput("main", "e");
-           String outputW = getMethodOutputWithInput("main", "w");
+    @Test
+    public void testElse()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "else") - countOccurences(code, "else if");
+        boolean passed = num >= 1;
 
-           boolean passed =
-                   !outputN.equals(outputS)
-                           && !outputN.equals(outputE)
-                           && !outputN.equals(outputW);
-
-          passed =
-                  getResults(
-                          "true",
-                          "" + passed,
-                          "Outputs different results for n, s, e, w"
-                          );
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test3()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "if");
-          boolean passed = num >= 4;
-
-          getResults("4", "" + num, "Number of if statements", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test4()
-      {
-          String code = getCode();
-          int elseif = countOccurences(code, "else if");
-          boolean passed = elseif >= 3;
-
-          getResults("" + 3, "" + elseif, "Number of else if statements", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test5()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "else") - countOccurences(code, "else if");
-          boolean passed = num >= 1;
-
-          getResults("1", "" + num, "Ending else statement", passed);
-          assertTrue(passed);
-      }
-      @Test
-      public void test6()
+        getResults("1", "" + num, "Ending else statement", passed);
+        assertTrue(passed);
+    }
+     @Test
+      public void testMoreMethods()
       {
           String code = getCode();
           int num = countOccurences(code, "public static");
