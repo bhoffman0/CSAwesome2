@@ -787,7 +787,7 @@ Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake i
        @Test
        public void testElse()
        {
-           String expect = "else";
+           String target = "else";
            boolean passed = checkCodeContains("else statement in lucky() method", target);
            assertTrue(passed);
        }
