@@ -588,7 +588,7 @@ else  // belongs to first if
 
 <project label="challenge-ElseIf-Adventure">
     <statement>
-            <p>This is a text adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in <term>else if</term> statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in static methods below main for each direction. </p>
+            <p>This is a text adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in <term>else if</term> statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in static methods below main for each direction. There are 5 TODO steps below. </p>
 
     </statement>
     <program interactive="activecode" language="java">
@@ -601,7 +601,8 @@ else  // belongs to first if
       
       public static void main(String[] args) 
       {
-          // Change the adventure text below. Be creative!
+          // TODO #1. Change the adventure text below, especially the ?'s. 
+          // Be creative!
           System.out.println("You are on an island surrounded by water.");
           System.out.println("There is a path to the forest to the north, "
                            + "the sea to the south, ? to the east, and ? to the west."); 
@@ -612,7 +613,10 @@ else  // belongs to first if
               System.out.println("You go north.");
               forest();
           }
-          // Add else-ifs for command equals s, e, w, and an else for any other input. Be creative!
+          // TODO #2: Add else-ifs for command equals s, e, or w,
+          //  calling a method you will write below for each location.
+          // Add an else error message "You can't go in that direction!" 
+     !
 
               
         
@@ -620,7 +624,7 @@ else  // belongs to first if
           scan.close();
      }    
 
-    // Complete this method 
+    // TODO #3: Complete this method 
     // north from main goes to the forest
     public static void forest()
     {
@@ -637,7 +641,9 @@ else  // belongs to first if
         }
     }
 
-    // south from main or east from forest goes to the sea  
+    // TODO #4: Complete this method
+    // south from main or east from forest goes to the sea 
+    // (feel free to rename to another location of your choice)  
     public static void sea()
     {
         // Print a description
@@ -647,7 +653,7 @@ else  // belongs to first if
 
     }
     
-    /* Add at least 2 more static functions for 2 more locations */
+    // TODO #5:  Add at least 2 more static functions for 2 more locations 
   
   }
 </code>
@@ -662,67 +668,22 @@ public class RunestoneTests extends CodeTestHelper
 {
     public RunestoneTests()
     {
-        super("Adventure", input1);
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
-    }
-
-    private static int goal = 5;
-    private static String input1 = "n e";
-
-    @Test
-    public void test1()
-    {
-        //String input = input1.replaceAll(" ", "\n");
-        String input = input1;
-        String output = getMethodOutputWithInput("main", input);
-
-        String[] lines = output.split("\n");
-
-        boolean passed = lines.length &gt;= goal;
-
-        passed =
-                getResults(
-                        goal + "+ lines",
-                        "" + lines.length + " lines",
-                        "Outputs at least " + goal + " lines when going n",
-                        passed);
-        assertTrue(passed);
+        super("Adventure");
     }
 
     @Test
-    public void test2()
-    {
-        String outputN = getMethodOutputWithInput("main", "n");
-        String outputS = getMethodOutputWithInput("main", "s");
-        String outputE = getMethodOutputWithInput("main", "e");
-        String outputW = getMethodOutputWithInput("main", "w");
-
-        boolean passed =
-                   !outputN.equals(outputS)
-                           &amp;&amp; !outputN.equals(outputE)
-                           &amp;&amp; !outputN.equals(outputW);
-        passed =
-                getResults(
-                        "true",
-                        "" + passed,
-                        "Outputs different results for n, s, e, w"
-                        );
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test3()
+    public void testIf()
     {
         String code = getCode();
         int num = countOccurences(code, "if");
-        boolean passed = num &gt;= 4;
+        boolean passed = num &gt;= 5;
 
-        getResults("4", "" + num, "Number of if statements", passed);
+        getResults("5", "" + num, "Number of if statements", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test4()
+    public void testElseIf()
     {
         String code = getCode();
         int elseif = countOccurences(code, "else if");
@@ -733,7 +694,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 
     @Test
-    public void test5()
+    public void testElse()
     {
         String code = getCode();
         int num = countOccurences(code, "else") - countOccurences(code, "else if");
@@ -743,7 +704,7 @@ public class RunestoneTests extends CodeTestHelper
         assertTrue(passed);
     }
      @Test
-      public void test6()
+      public void testMoreMethods()
       {
           String code = getCode();
           int num = countOccurences(code, "public static");
