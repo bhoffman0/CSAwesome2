@@ -100,7 +100,7 @@ public class RunestoneTests extends CodeTestHelper
                 <test>
               <!-- else -->
               <feedback>
-              Try changing it to false and run it. Type in the output exactly with the D capitalized and 1 space in between the words.</feedback>
+              <p>Try changing it to false and run it. Type in the output exactly with the D capitalized and 1 space in between the words.</p></feedback>
             </test>
         </evaluate>
     </evaluation>

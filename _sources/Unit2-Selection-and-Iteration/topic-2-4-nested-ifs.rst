@@ -546,44 +546,74 @@ they are not technically required to avoid this kind of confusion.
 
 One of the first games coded for early computers in the 1970s was called |Colossal Cave Adventure|. It was a text-based interactive fiction game where you had to make your way through an elaborate cave. The program only understood one word or phrase commands like north, south, enter, take, etc. You can try |playing adventure| recreated online following some of the commands in this |walkthrough|. Part of the challenge is finding the commands that the code will understand.
 
-In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w.
+In a game like Adventure, else if statements can be used to respond to commands from the user like n, s, e, w. Try the program below (or in an interactive input IDE like |JuiceMind| or |replit|). This current adventure game asks the user whether they want to move n, s, e, or w, but right now only the north direction is coded. It leads to a new method called ``forest()``. 
 
-1. Try the program below or in an interactive input IDE like |JuiceMind| or |replit|. This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north.
-
-2. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. You will need to change the input below the code to s or e or w and then run to test these branches. How many test-cases are needed to test all branches of your code? If your class has time, your teacher may ask you to expand this game further with more nested if/else statements and to come up with a different adventure location.
+In the main method, add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in each direction. Have each direction call a static method that you will write. The ``forest()`` and ``sea()`` methods are shown as examples for two of the diretions. You will need to change the input below the code to s or e or w and then run to test these branches. How many test-cases are needed to test all branches of your code? You can also connect locations to one another by calling their methods. If you have time, you can expand this game further with more nested if/else statements and come up with a different adventure location. 
 
 
 .. activecode:: challenge-ElseIf-Adventure
   :language: java
   :autograde: unittest
-  :stdin: n
+  :stdin: n e
 
-  This is a very simple adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different situations in each direction. You can change the initial location of the game and add more nested if statements to make the game more complex. 
+  This is a text adventure game that lets the user move in 4 different directions. Right now, it only lets the user move north. Add in **else if** statements to go in the directions of "s" for south, "e" for east, "w" for west, and an else statement that says "You can't go in that direction". Be creative and come up with different locations in static methods below main for each direction. 
   ~~~~
   import java.util.Scanner;
 
   public class Adventure 
   {
-    public static void main(String[] args) 
-    {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("\n\n You are on an island surrounded by water.\n There is a path to the woods to the north, the sea to the south, and a beach shack to the east. \n Which way do you want to go (n,e,s,w)?");
-        String command = scan.next(); // use nextLine() in your own IDE
-        if (command.equals("n")) 
-        {
-            System.out.println("You enter the forest and hear some rustling. \nThere may be tigers here or maybe it's just monkeys.");
-            System.out.println("... What do want to do now?");
-            // Add more nested if statements for the next action
-            // String command2 = scan.next(); // use nextLine() in your own IDE
+      private static Scanner scan = new Scanner(System.in);
+      
+      public static void main(String[] args) 
+      {
+          // Change the adventure text below. Be creative!
+          System.out.println("You are on an island surrounded by water.");
+          System.out.println("There is a path to the forest to the north, "
+                           + "the sea to the south, ? to the east, and ? to the west."); 
+          System.out.println("Which way do you want to go (n,e,s,w)?");
+          String command = scan.next(); // use nextLine() in your own IDE
+          if (command.equals("n"))
+          {
+              System.out.println("You go north.");
+              forest();
+          }
+          // Add else-ifs for command equals s, e, w, and an else for any other input. Be creative!
 
-
-        }
-        // Add else-ifs for command equals s, e, w, and an else for any other input. Be creative!
-                
+              
         
-        System.out.println("End of adventure!");   
-        scan.close();
-     }
+          System.out.println("End of adventure!");   
+          scan.close();
+     }    
+
+    // Complete this method 
+    // north from main goes to the forest
+    public static void forest()
+    {
+        System.out.println("You enter a dark forest and see ?");
+        System.out.println("Do you want to walk e or w?");
+
+        // Add more if/else-if statements for the next action
+        //  and call your other functions to move to other locations
+        String command = scan.next(); // use nextLine() in your own IDE
+        if (command.equals("e"))
+        {
+            System.out.println("You move east and reach the sea");
+            sea();
+        }
+    }
+
+    // south from main or east from forest goes to the sea  
+    public static void sea()
+    {
+        // Print a description
+        // Ask for input
+        // Add more if/else-if statements for the next action
+        // Move to different locations
+
+    }
+    
+    /* Add at least 2 more static functions for 2 more locations */
+  
   }
   ====
   import static org.junit.Assert.*;
@@ -595,25 +625,20 @@ In a game like Adventure, else if statements can be used to respond to commands 
   public class RunestoneTests extends CodeTestHelper
   {
       public RunestoneTests()
-      {
-          //super("Main", input1.replaceAll(" ", "\n")); // For Book
+      { 
+          super("Adventure", input1);
+          //super("Main", input1.replaceAll(" ", "\n")); 
       }
 
-      private static int goal = 8;
-      private static String input1 = "n"; // s e w y y y y y y y y y y y y y y";
-      private static String input2 = "s"; // e w y n y y y y y y y y y y y y y";
-      private static String input3 = "e"; // w y n s y y y y y y y y y y y y y";
-      private static String input4 = "w"; // y n s e y y y y y y y y y y y y y";
-      private static String input5 = "y"; // n s e w y y y y y y y y y y y y y";
-      private String output1, output2, output3, output4, output5;
-
+      private static int goal = 5;
+      private static String input1 = "n e";  
+      
       @Test
       public void test1()
       {
           //String input = input1.replaceAll(" ", "\n");
           String input = input1;
           String output = getMethodOutputWithInput("main", input);
-          output1 = output;
 
           String[] lines = output.split("\n");
 
@@ -623,7 +648,7 @@ In a game like Adventure, else if statements can be used to respond to commands 
                   getResults(
                           goal + "+ lines",
                           "" + lines.length + " lines",
-                          "Outputs at least " + goal + " lines",
+                          "Outputs at least " + goal + " lines when going n",
                           passed);
           assertTrue(passed);
       }
@@ -680,6 +705,16 @@ In a game like Adventure, else if statements can be used to respond to commands 
           boolean passed = num >= 1;
 
           getResults("1", "" + num, "Ending else statement", passed);
+          assertTrue(passed);
+      }
+      @Test
+      public void test6()
+      {
+          String code = getCode();
+          int num = countOccurences(code, "public static");
+          boolean passed = num >= 5;
+
+          getResults("5", "" + num, "Number of public static methods", passed);
           assertTrue(passed);
       }
   }
