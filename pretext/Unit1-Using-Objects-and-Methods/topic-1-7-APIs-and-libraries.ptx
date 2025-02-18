@@ -25,7 +25,7 @@
         <activity label="count-println">
             <statement>
     <p> How many <c>println</c> methods are there in the <c>PrintStream</c> class documented at <url href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html" visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>?   </p>
-        <p><fillin answer="10"/></p>
+        <p><fillin  mode="string" answer="10"/></p>
         </statement>
     <evaluation>
         <evaluate>

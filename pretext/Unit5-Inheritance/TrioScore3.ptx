@@ -324,6 +324,28 @@ public interface MenuItem
     </activity>
 
         <activity label="qtrio3_total">
-            <statement>
-    <p> What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct.  This solution only got 2 points</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Add 1 point for each yes response</p></feedback></condition></var></setup></activity>        </subsection>
+    <statement>
+        <p> What should the total score be for this student response (out of 9 points)? Enter it as a number (like 3). </p>
+        <p>
+            <fillin answer="2" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! This solution only got 2 points.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Add 1 point for each "yes" response.
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+    </activity>
+     </subsection>
 </section>

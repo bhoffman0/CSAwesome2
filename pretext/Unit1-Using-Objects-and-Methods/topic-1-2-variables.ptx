@@ -466,7 +466,7 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>Fill in the following to declare age to be an integer and set its value to 5:</p>
         <p>
-          <fillin answer="int"/>
+          <fillin answer="int"  mode="string"/>
           <c>age =</c>
           <fillin mode="number" answer="5"/>
           <!-- this will use a number input -->
@@ -515,7 +515,7 @@ public class RunestoneTests extends CodeTestHelper
             <statement>
     <p> What type should you use for a shoe size like 8.5? </p>
         <p>
-          <fillin answer="double"/></p>    
+          <fillin answer="double"  mode="string"/></p>    
         </statement>
           <evaluation>
         <evaluate>
@@ -538,7 +538,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="fillDecVar3">
             <statement>
     <p> What type should you use for a number of tickets?  </p>
-        <p><fillin answer="int"/></p></statement>
+        <p><fillin answer="int"  mode="string"/></p></statement>
               <evaluation>
         <evaluate>
             <test>
@@ -642,7 +642,8 @@ public class RunestoneTests extends CodeTestHelper
 
         <activity label="fillName1">
             <statement>
-    <p> What is the camel case variable name for a variable that represents a shoe size?   </p><p><fillin answer="shoeSize"/></p></statement>
+    <p> What is the camel case variable name for a variable that represents a shoe size?   </p><p>
+        <fillin answer="shoeSize"  mode="string"/></p></statement>
          <evaluation>
         <evaluate>
             <test>
@@ -662,7 +663,8 @@ public class RunestoneTests extends CodeTestHelper
         
         <activity label="fillName2">
             <statement>
-    <p> What is the camel case variable name for a variable that represents the top score?</p><p> <fillin answer="topScore"/>  </p></statement>
+    <p> What is the camel case variable name for a variable that represents the top score?</p><p> 
+        <fillin answer="topScore"  mode="string"/>  </p></statement>
          <evaluation>
         <evaluate>
             <test>

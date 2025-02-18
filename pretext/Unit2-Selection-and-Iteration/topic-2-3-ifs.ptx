@@ -88,7 +88,7 @@ public class RunestoneTests extends CodeTestHelper
             <statement>
     <p> Try changing the code above to <c>boolean isRaining = false;</c>.  What will it print? 
     </p>
-    <p><fillin answer="Drive carefully"/></p>
+    <p><fillin answer="Drive carefully"  mode="string"/></p>
         </statement>
               <evaluation>
         <evaluate>
@@ -424,7 +424,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="falseElse">
             <statement>
     <p> Try changing the code above to <c>boolean isHeads = false;</c>.  What line will be printed before <c>after conditional</c>?  </p>
-        <p><fillin answer="Let's watch a movie"/></p>
+        <p><fillin answer="Let's watch a movie"  mode="string"/></p>
         </statement>
               <evaluation>
         <evaluate>

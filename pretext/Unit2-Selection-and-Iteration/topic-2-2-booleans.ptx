@@ -505,7 +505,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="prime4">
             <statement>
     <p> Are all odd numbers prime? Can you find an odd number that is not prime by using your code above? What is the smallest odd number that is not prime and has divisors other than 1 and itself? </p>
-        <p><fillin answer="9"/></p>
+        <p><fillin answer="9"  mode="string"/></p>
         </statement>
               <evaluation>
         <evaluate>
@@ -526,7 +526,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="prime5">
             <statement>
     <p>  Are all even numbers not prime? Can you find an even prime number using your code above? What is the smallest even number that is prime?   </p>
-        <p><fillin answer="2"/></p>
+        <p><fillin answer="2"  mode="string"/></p>
         </statement>
               <evaluation>
         <evaluate>

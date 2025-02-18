@@ -311,12 +311,59 @@ System.out.println( highScores[0] );
 
     <video youtube="uagEJw6bTM4" label="video-array-values-memory"/>
     
-        <activity label="array-access1">
-            <statement>
-    <p>  Fill in the blank with code to access the cars array. NOTE: The semicolon is provided for you after the box. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Access cars array to get Volvo</p></var></setup></activity>
-        <activity label="array-access2">
-            <statement>
-    <p>  Fill in the blank with code to access the cars array. <var/>  </p></statement><setup><var><p>String[] cars = {“Honda”, “Volvo”, “BMW”};</p><p>// Set the first item of the cars array to be Toyota</p></var></setup></activity>            <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
+    <activity label="array-access1">
+    <statement>
+        <p> Fill in the blank with code to access the cars array to get "Volvo" using the following array:
+            String[] cars = {“Honda”, “Volvo”, “BMW”};</p>
+        <p>
+            <fillin answer="cars[1]" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Array indices start at 0, so "Volvo" is at index 1.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Remember, array indices start at 0. Which index corresponds to "Volvo"?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
+<activity label="array-access2">
+    <statement>
+        <p> Fill in the blank with code to get "Honda" out of the array: String[] cars = {“Honda”, “Volvo”, “BMW”}; </p>
+        
+            <fillin answer="cars[0]" mode="string"/>
+        
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Honda is at index 0.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback><p>
+                    Remember, arrays start
+                    at index 0.</p>
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+                                   
+        <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
 
 <activity label="array-set">
     <statement>

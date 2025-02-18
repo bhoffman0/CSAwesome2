@@ -596,7 +596,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
         System.out.println("Do you want to walk e or w?");
 
         // Add more if/else-if statements for the next action
-        //  and call your other functions to move to other locations
+        //  and call your other methods to move to other locations
         String command = scan.next(); // use nextLine() in your own IDE
         if (command.equals("e"))
         {
@@ -615,7 +615,7 @@ In the main method, add in **else if** statements to go in the directions of "s"
         // Move to different locations
 
     }
-    // TODO #5: Add at least 2 more static functions for 2 more locations 
+    // TODO #5: Add at least 2 more static methods for 2 more locations 
   
   }
   ====

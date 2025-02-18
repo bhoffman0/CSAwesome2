@@ -37,21 +37,107 @@ public class ModModl1
         </code>
     </program>
 </activity>
-  <activity label="mod-which-returns-zero">
-            <statement>
-    <p> Review the code above.  What is the first number (n) above such that <c>n % 4</c> returns zero? <var/>  </p></statement><setup><var><condition number="[12, 12]"><feedback><p>Four goes into twelve 3 times with 0 remainder</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the first number above that is evenly divisible by 4 (num % 4 returns 0)?</p></feedback></condition></var></setup></activity>
-  <activity label="mod-next-returns-zero">
-            <statement>
-    <p> Review the code above.  What is the next number (n) (greater than 16) such that <c>n % 4</c> returns zero? <var/>  </p></statement><setup><var><condition number="[20, 20]"><feedback><p>Four goes into twenty 5 times with a remainder of 0.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?</p></feedback></condition></var></setup></activity>
+ <activity label="mod-which-returns-zero">
+    <statement>
+        <p> Review the code above. What is the first number (n) such that <c>n % 4</c> returns zero? </p>
+        <p>
+            <fillin answer="12" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into twelve 3 times with 0 remainder.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the first number above that is evenly divisible by 4 (num % 4 returns 0)?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-next-returns-zero">
+    <statement>
+        <p> Review the code above. What is the next number (n) (greater than 16) such that <c>n % 4</c> returns zero? </p>
+        <p>
+            <fillin answer="20" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into twenty 5 times with a remainder of 0.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Which next number larger than 16 is evenly divisible by 4 (num % 4 returns 0)?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
   <subsection xml:id="going-beyond-remainder-4">
             <title>Going Beyond Remainder 4</title>
+<activity label="mod-return-zero-mod-five">
+    <statement>
+        <p> What is the first number from 1 to 10 that is evenly divisible by five (<c>n % 5</c> returns 0)? </p>
+        <p>
+            <fillin answer="5" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Five goes into five one time with a remainder of zero.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the first number from 1 to 10 that is evenly divisible by five?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-return-zero-mod-five-last">
+    <statement>
+        <p> What is the last number from 1 to 10 that is evenly divisible by five (<c>n % 5</c> returns 0)? </p>
+        <p>
+            <fillin answer="10" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Five goes into ten two times with a remainder of 0.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the last number from 1 to 10 that is evenly divisible by five?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
 
-        <activity label="mod-return-zero-mod-five">
-            <statement>
-    <p> What is the first number from to 1 to 10 that is evenly divisible by five (<c>n % 5</c> returns 0)? <var/>  </p></statement><setup><var><condition number="[5, 5]"><feedback><p>Five goes into five one time with a remainder of zero.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the first number from to 1 to 10 that is evenly divisible by five?</p></feedback></condition></var></setup></activity>
-        <activity label="mod-return-zero-mod-five-last">
-            <statement>
-    <p> What is the last number from to 1 to 10 that is evenly divisible by five (<c>n % 5</c> returns 0)? <var/>  </p></statement><setup><var><condition number="[10, 10]"><feedback><p>Five goes into ten two times with a remainer of 0.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the last number from to 1 to 10 that is evenly divisible by five?</p></feedback></condition></var></setup></activity>        </subsection>
+             </subsection>
   <subsection xml:id="look-deeper">
             <title>Look Deeper</title>
 
@@ -64,19 +150,104 @@ public class ModModl1
         </subsection>
   <subsection xml:id="more-practice-1">
             <title>More Practice</title>
+<activity label="mod-18-mod-4">
+    <statement>
+        <p> What is the number returned from <c>18 % 4</c>? </p>
+        <p>
+            <fillin answer="2" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into 18 four times (16) with a remainder of 2.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 18 by 4?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-19-mod-4">
+    <statement>
+        <p> What is the number returned from <c>19 % 4</c>? </p>
+        <p>
+            <fillin answer="3" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into 19 four times (16) with a remainder of 3.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 19 by 4?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-19-mod-5">
+    <statement>
+        <p> What is the number returned from <c>19 % 5</c>? </p>
+        <p>
+            <fillin answer="4" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Five goes into 19 three times (15) with a remainder of 4.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 19 by 5?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-19-mod-6">
+    <statement>
+        <p> What is the number returned from <c>19 % 6</c>? </p>
+        <p>
+            <fillin answer="1" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Six goes into 19 three times (18) with a remainder of 1.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 19 by 6?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
 
-        <activity label="mod-18-mod-4">
-            <statement>
-    <p> What is the number returned from <c>18 % 4</c>? <var/>  </p></statement><setup><var><condition number="[2, 2]"><feedback><p>Four goes into 18 four times (16) with a remainder of 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 18 by 4?</p></feedback></condition></var></setup></activity>
-        <activity label="mod-19-mod-4">
-            <statement>
-    <p> What is the number returned from <c>19 % 4</c>? <var/>  </p></statement><setup><var><condition number="[3, 3]"><feedback><p>Four goes into 19 four times (16) with a remainder of 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 19 by 4?</p></feedback></condition></var></setup></activity>
-        <activity label="mod-19-mod-5">
-            <statement>
-    <p> What is the number returned from <c>19 % 5</c>? <var/>  </p></statement><setup><var><condition number="[4, 4]"><feedback><p>Five goes into 19 three times (15) with a remainder of 4.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 19 by 5?</p></feedback></condition></var></setup></activity>
-        <activity label="mod-19-mod-6">
-            <statement>
-    <p> What is the number returned from <c>19 % 6</c>? <var/>  </p></statement><setup><var><condition number="[1, 1]"><feedback><p>Six goes into 19 three times (18) with a remainder of 1.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 19 by 6?</p></feedback></condition></var></setup></activity>        </subsection>
+         </subsection>
   <subsection xml:id="long-division-with-a-remainder">
             <title>Long Division with a Remainder</title>
             <p>Consider how you did long division in elementary school where you determined
@@ -84,20 +255,85 @@ public class ModModl1
             <image source="Unit2-Selection-and-Iteration/Figures/mod-ex.png" width="50%"/>
 
         <activity label="mod-79-mod-5">
-            <statement>
-    <p> What number is the remainder when you divide 79 by 5? <var/>  </p></statement><setup><var><condition number="[4, 4]"><feedback><p>Five goes into 79 - 15 times (15 * 5 is 75) with a reminder of 4.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 79 evenly by 5?</p></feedback></condition></var></setup></activity>        </subsection>
+    <statement>
+        <p> What number is the remainder when you divide 79 by 5? </p>
+        <p>
+            <fillin answer="4" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Five goes into 79 15 times (15 * 5 = 75) with a remainder of 4.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 79 evenly by 5?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+        </subsection>
   <subsection xml:id="dividing-evenly">
             <title>Dividing Evenly</title>
             <p>Imagine if you were given candies to evenly divide amoung members of a group of four people.
                 Follow kindergarten rules where every group member gets the same number of candies and
                 the extras go back to the teacher.</p>
+<activity label="mod-11-mod-4">
+    <statement>
+        <p> How many candies go back to the teacher when you are given 11 candies? </p>
+        <p>
+            <fillin answer="3" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into 11 two times (4 * 2 = 8) with a remainder of 3.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 11 by 4?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+<activity label="mod-2-mod-4">
+    <statement>
+        <p> How many candies go back to the teacher when you are given 2 candies? </p>
+        <p>
+            <fillin answer="2" mode="string"/>
+        </p>
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! Four goes into two zero times with a remainder of 2.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the remainder when you divide 2 by 4?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
 
-        <activity label="mod-11-mod-4">
-            <statement>
-    <p> How many candies go back to the teacher when you are given 11 candies? <var/>  </p></statement><setup><var><condition number="[3, 3]"><feedback><p>Four goes into 11 two times (4 * 2 = 8) with a remainder of 3.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 11 by 8?</p></feedback></condition></var></setup></activity>
-        <activity label="mod-2-mod-4">
-            <statement>
-    <p> How many candies go back to the teacher when you are given 2 candies? <var/>  </p></statement><setup><var><condition number="[2, 2]"><feedback><p>Four goes into two zero times with a remainder of 2.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the remainder when you divide 2 by 4?</p></feedback></condition></var></setup></activity>        </subsection>
+                </subsection>
   <subsection xml:id="describe-the-remainder-operator">
             <title>Describe the Remainder (%) Operator</title>
 

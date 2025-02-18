@@ -324,6 +324,28 @@ public interface MenuItem
     </activity>
 
         <activity label="qtrio1_total">
-            <statement>
-    <p> What should the total score be for this student response (out of 9 points)?  Enter it as a number (like 3). <var/>  </p></statement><setup><var><condition string="^\s*^8$\s*$"><feedback><p>Correct.  This solution lost one point</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Subtract 1 point for each no response from the 9 possible points</p></feedback></condition></var></setup></activity>        </subsection>
+    <statement>
+        <p> What should the total score be for this student response (out of 9 points)? Enter it as a number (like 3). </p>
+        <p>
+            <fillin answer="8" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! This solution lost one point.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Subtract 1 point for each no response from the 9 possible points.
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+       </subsection>
 </section>
