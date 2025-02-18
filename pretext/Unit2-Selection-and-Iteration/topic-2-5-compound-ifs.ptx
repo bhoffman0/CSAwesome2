@@ -302,7 +302,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="truthTableFill">
             <statement>
     <p> The truth table above is missing one result.  What is the result of <c>P &amp;&amp; Q</c> when <c>P=true</c> and <c>Q=false</c>?   </p>
-        <p><fillin answer="false"/></p>
+        <p><fillin  mode="string" answer="false"/></p>
         </statement>
               <evaluation>
         <evaluate>
@@ -385,7 +385,7 @@ public class RunestoneTests extends CodeTestHelper
         <activity label="truthTableFill2">
             <statement>
     <p> The truth table above is missing one result.  What is the result of <c>P || Q</c> when <c>P=false</c> and <c>Q=true</c>?   </p>
-        <p><fillin answer="true"/></p>
+        <p><fillin  mode="string" answer="true"/></p>
         </statement>
               <evaluation>
         <evaluate>

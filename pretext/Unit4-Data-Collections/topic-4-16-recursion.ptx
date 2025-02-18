@@ -30,9 +30,31 @@ public static void neverEnd()
             <title>Recursive Call</title>
             <p>Well-constructed recursive methods contain at least one <term>base case</term>, which halts the recursion, and at least one recursive call.</p>
 
-        <activity label="recurb1fill">
-            <statement>
-    <p> Which line in the method neverEnd (shown above) contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*4$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></activity>
+     <activity label="recurb1fill">
+    <statement>
+        <p> Which line in the method <c>neverEnd</c> (shown above) contains the recursive call (the call to the same method)? </p>
+        <p>
+            <fillin answer="4" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! This line contains a call to the same method, making it a recursive method.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Look for a call to the same method name within the method body.
+                </feedback>
+            </test>
+            </evaluate>
+    </evaluation>
+</activity>
+
     <activity label="qrb_1">
         <statement>
 
@@ -177,8 +199,30 @@ public static int factorial(int n)
                 computation at <url href="https://gigamonkeys.com/misc/factorial/#java" visual="https://gigamonkeys.com/misc/factorial/#java">https://gigamonkeys.com/misc/factorial/#java</url>.</p>
 
         <activity label="recurb2fill">
-            <statement>
-    <p> Which line in the method factorial contains the recursive call (the call to the same method)? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  This line contains a call to the same method, which makes it a recursive method.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Look for a call to the same method name</p></feedback></condition></var></setup></activity>
+    <statement>
+        <p> Which line in the method <c>factorial</c> contains the recursive call (the call to the same method)? </p>
+        <p>
+            <fillin answer="6" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! This line contains a call to the same method, making it a recursive method.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Look for a call to the same method name within the method body.
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
 <activity label="FactorialTest">
     <statement>
             <p>Run the code below to test the factorial method. What’s the factorial of 6? Add another test to print out the factorial of 6. What’s the factorial of 1? Add another test to print out the factorial of 1.</p>
@@ -867,8 +911,30 @@ mystery(0) returns A
 </code></program>
 
         <activity label="recBase1">
-            <statement>
-    <p> What is the value of A in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from mystery(0)?</p></feedback></condition></var></setup></activity>            <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
+    <statement>
+        <p> What is the value of A in the trace above? </p>
+        <p>
+            <fillin answer="1" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the value returned from <c>mystery(0)</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+         <p>Once mystery(0) returns 1 the value for each call to mystery can now be calculated and returned.</p>
             <program language="java"><code>
 mystery(4) returns 3 * mystery(3) = 3 * X = Y
 mystery(3) returns 3 * mystery(2) = 3 * 9 = 27
@@ -877,12 +943,56 @@ mystery(1) returns 3 * mystery(0) = 3 * 1 = 3
 mystery(0) returns 1
 </code></program>
 
-        <activity label="recFBTracex1">
-            <statement>
-    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^27$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of mystery(3)?</p></feedback></condition></var></setup></activity>
+ <activity label="recFBTracex1">
+    <statement>
+        <p> What is the value of X in the trace above? </p>
+        <p>
+            <fillin answer="27" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the result of <c>mystery(3)</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
         <activity label="recFBTracey1">
-            <statement>
-    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^81$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the result of 3 * mystery(3)?</p></feedback></condition></var></setup></activity>            <p>Consider the following recursive method:</p>
+    <statement>
+        <p> What is the value of Y in the trace above? </p>
+        <p>
+            <fillin answer="81" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the result of <c>3 * mystery(3)</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+           <p>Consider the following recursive method:</p>
             <program language="java"><code>
 public static int strMethod(String str)
 {
@@ -910,10 +1020,32 @@ strMethod("ery") returns 1 + strMethod("ry")
 strMethod("ry") returns strMethod("y")
 strMethod("y") returns B
 </code></program>
+<activity label="recFBBase2">
+    <statement>
+        <p> What is the value of B in the trace above? </p>
+        <p>
+            <fillin answer="0" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the value returned from <c>strMethod("y")</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
 
-        <activity label="recFBBase2">
-            <statement>
-    <p> What is the value of B in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“y”)?</p></feedback></condition></var></setup></activity>            <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
+                 <p>Once <c>strMethod("y")</c> returns, the value from each recursive call on the stack can be calculated and returned.</p>
             <program language="java"><code>
 strMethod("every") returns 1 + strMethod("very") = Z
 strMethod("very") returns strMethod("ery") = Y
@@ -922,15 +1054,81 @@ strMethod("ry") returns strMethod("y") = 0
 strMethod("y") returns 0
 </code></program>
 
-        <activity label="recFBRetX2">
-            <statement>
-    <p> What is the value of X in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^0$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ry”)?</p></feedback></condition></var></setup></activity>
+       <activity label="recFBRetX2">
+    <statement>
+        <p> What is the value of X in the trace above? </p>
+        <p>
+            <fillin answer="0" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the value returned from <c>strMethod("ry")</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
         <activity label="recFBRetY2">
-            <statement>
-    <p> What is the value of Y in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^1$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“ery”)?</p></feedback></condition></var></setup></activity>
+    <statement>
+        <p> What is the value of Y in the trace above? </p>
+        <p>
+            <fillin answer="1" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the value returned from <c>strMethod("ery")</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
         <activity label="recFBRetZ2">
-            <statement>
-    <p> What is the value of Z in the trace above? <var/>  </p></statement><setup><var><condition string="^\s*^2$\s*$"><feedback><p>Correct!</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>What is the value returned from strMethod(“every”)?</p></feedback></condition></var></setup></activity>        </subsection>
+    <statement>
+        <p> What is the value of Z in the trace above? </p>
+        <p>
+            <fillin answer="2" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct!
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    What is the value returned from <c>strMethod("every")</c>?
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+      </subsection>
   <subsection xml:id="summary-42">
             <title>Summary</title>
             <p><ul>

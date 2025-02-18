@@ -337,8 +337,30 @@ String[][] seatingChart = new String[3][2];
             <p>Arrays are objects in Java, so any variable that declares an array holds a reference to an object.  If the array hasn’t been created with <term>new</term> yet and you try to print the value of the variable, it will print <term>null</term> (meaning it doesn’t reference any object yet). When a 2D array is created using the keyword <c>new</c>, all of its elements are initialized to the default values for the element data type. The default value for <c>int</c> is <c>0</c>, for <c>double</c> is <c>0.0</c>, for <c>boolean</c> is <c>false</c>, and for a reference type is <c>null</c>.</p>
 
         <activity label="twodaNumElfill">
-            <statement>
-    <p> How many elements are in ticketInfo? <var/>  </p></statement><setup><var><condition string="^\s*6$\s*$"><feedback><p>Correct.  2 * 3 = 6</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>Multiply the number of rows and the number of columns</p></feedback></condition></var></setup></activity>
+    <statement>
+        <p> How many elements are in <c>ticketInfo</c>? </p>
+        <p>
+            <fillin answer="6" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! 2 × 3 = 6.
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Multiply the number of rows and the number of columns.
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+
 <activity label="twoDArrayCreate">
     <statement>
             <p>What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained below.</p>
@@ -405,9 +427,32 @@ int[][] ticketInfo = { {25,20,25}, {25,20,25} };
 String[][] seatingInfo = { {"Jamal", "Maria"}, {"Jake", "Suzy"}, {"Emma", "Luke"} };
 </code></program>
 
-        <activity label="twodaGetElfill">
-            <statement>
-    <p> What is the value at <c>seatingInfo[2][1]</c> after the code above executes? Remember that indices start at 0, and the first index is for rows and the second index is for columns. <var/>  </p></statement><setup><var><condition string="^\s*Luke$\s*$"><feedback><p>Correct.  The string at row index 2 and column index 1 is Luke.</p></feedback></condition><condition string="^\s*.*\s*$"><feedback><p>indices start at 0 and the row is first then the column</p></feedback></condition></var></setup></activity>        </subsection>
+       <activity label="twodaGetElfill">
+    <statement>
+        <p> What is the value at <c>seatingInfo[2][1]</c> after the code above executes? </p>
+        <p> Remember that indices start at 0, and the first index is for rows and the second index is for columns. </p>
+        <p>
+            <fillin answer="Luke" mode="string"/>
+        </p>    
+    </statement>
+    <evaluation>
+        <evaluate>
+            <test>
+                <strcmp use-answer="yes"/>
+                <feedback>
+                    Correct! The string at row index 2 and column index 1 is "Luke."
+                </feedback>
+            </test>
+            <test>
+                <!-- else -->
+                <feedback>
+                    Remember, indices start at 0, and the row index comes first, followed by the column index.
+                </feedback>
+            </test>
+        </evaluate>
+    </evaluation>
+</activity>
+     </subsection>
   <subsection xml:id="set-values-in-a-2d-array">
             <title>Set Values in a 2D Array</title>
             <idx><h>2D Array</h><h>initialization</h></idx>
