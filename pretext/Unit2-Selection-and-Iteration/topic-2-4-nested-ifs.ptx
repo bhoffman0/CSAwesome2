@@ -93,7 +93,7 @@ public class RunestoneTests extends CodeTestHelper
         String result = "positive";
             String output = getMethodOutputWithInput("main", x);
 
-            boolean passed = output.contains("positive") && !output.contains("negative") && !output.contains("0");
+            boolean passed = output.contains("positive") &amp;&amp; !output.contains("negative") &amp;&amp; !output.contains("0");
 
             passed =
                     getResults(
@@ -112,7 +112,7 @@ public class RunestoneTests extends CodeTestHelper
         String result = "0";
         String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = !output.contains("positive") && !output.contains("negative") && output.contains("0");
+        boolean passed = !output.contains("positive") &amp;&amp; !output.contains("negative") &amp;&amp; output.contains("0");
 
         passed =
                 getResults(
@@ -131,7 +131,7 @@ public class RunestoneTests extends CodeTestHelper
         String result = "negative";
         String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = !output.contains("positive") && output.contains("negative") && !output.contains("0");;
+        boolean passed = !output.contains("positive") &amp;&amp; output.contains("negative") &amp;&amp; !output.contains("0");;
 
         passed =
                 getResults(
