@@ -47,11 +47,16 @@ else
     </statement>
     <program interactive="activecode" language="java">
         <code>
+import java.util.Scanner;
+
 public class TryElseIf
 {
     public static void main(String[] args)
     {
-        int x = 2;
+        Scanner scan = new Scanner(System.in);
+        
+        int x = scan.nextInt();
+        
         if (x &lt; 0)
         {
             System.out.println("x is negative");
@@ -68,25 +73,73 @@ public class TryElseIf
     }
 }
 
-</code><tests>
+</code><stdin>10</stdin><tests>
 import static org.junit.Assert.*;
-
 import org.junit.*;
-
 import java.io.*;
 
 public class RunestoneTests extends CodeTestHelper
 {
-    @Test
-    public void testChangedCode()
+    public RunestoneTests()
     {
-        String origCode =
-                "public class TestElseIf { public static void main(String[] args) { int x = 2; if"
-                    + " (x &lt; 0) { System.out.println(\"x is negative\");  } else if (x == 0) { "
-                    + " System.out.println(\"x is 0\"); } else { System.out.println(\"x is"
-                    + " positive\"); } System.out.println(\"after conditional\"); } }";
-        boolean changed = codeChanged(origCode);
-        assertTrue(changed);
+        super("TryElseIf"); // for Book
+    }
+
+    @Test
+    public void test01()
+    {
+        //String input = input1.replaceAll(" ", "\n");
+        String x = "5";
+        String result = "positive";
+            String output = getMethodOutputWithInput("main", x);
+
+            boolean passed = output.contains("positive") && !output.contains("negative") && !output.contains("0");
+
+            passed =
+                    getResults(
+                            "x is " + result,
+                            output,
+                            "Result for x = " + x,
+                            passed);
+            assertTrue(passed);
+    }
+
+    @Test
+    public void test02()
+    {
+        //String input = input1.replaceAll(" ", "\n");
+        String x = "0";
+        String result = "0";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = !output.contains("positive") && !output.contains("negative") && output.contains("0");
+
+        passed =
+                getResults(
+                        "x is " + result,
+                        output,
+                        "Result for x = " + x,
+                        passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        //String input = input1.replaceAll(" ", "\n");
+        String x = "-5";
+        String result = "negative";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = !output.contains("positive") && output.contains("negative") && !output.contains("0");;
+
+        passed =
+                getResults(
+                        "x is " + result,
+                        output,
+                        "Result for x = " + x,
+                        passed);
+        assertTrue(passed);
     }
 }
         </tests>
