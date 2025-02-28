@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <chapter xml:id="unit2" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+        <introduction>
+            <p>
+This unit introduces selection (if statements) and iteration (loops) in Java. 
+            </p>
+              <p><ul>
+                    <li> <p>
+                            AP Exam Weighting: 25–35%
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             Class Periods: ~29-31
+                        </p>
+                    </li>
+                    <li><p>
+                      AP Classroom Progress Check Unit 2 Part 1: Topics 2.1–2.6, Multiple-choice: ~18 questions, Free-response: 1 question, Methods and Control Structures (partial)
+                       </p></li>
+                       <li><p>AP Classroom Progress Check Unit 2 Part 2: Topics 2.7–2.12,Multiple-choice: ~21 questions, Free-response: 2 question, Methods and Control Structures (partial)
+                       </p></li>
+                </ul>
+                </p>
+        </introduction>
+       
         <title>Selection and Iteration</title>
         <xi:include href='./topic-2-1-algorithms.ptx' />
         <xi:include href='./topic-2-2-booleans.ptx' />
