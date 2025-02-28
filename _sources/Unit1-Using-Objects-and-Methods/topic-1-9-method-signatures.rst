@@ -714,3 +714,8 @@ AP Practice
          purr()
 
       - This would cause a syntax error since those are not the names of the methods.
+
+AP Classroom Progress Check Unit 1 Part 2
+------------------------------------------
+
+This lesson ends the section for the College Board Unit 1 part 2. You can now do the College Board Progress Check for Unit 1 Part 2 in the AP Classroom.  
