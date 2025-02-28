@@ -954,7 +954,10 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </project>
             <p>Run your code with the following test cases and record the runtime for each word in this <url href="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing" visual="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing">Google document</url> (do File/Make a Copy) also seen below to record your answers.</p>
-            <p>&lt;iframe height="71%" width="100%" src="https://docs.google.com/document/d/1VrQf7wFIEIu7qfOg7FYUTeNWrdrRsPw4eJSdehhz4dM/edit?usp=sharing&amp;rm=minimal" style="max-width:90%; margin-left:5%" &gt;&lt;/iframe&gt;</p>
+              
+                <interactive iframe="iframe/search.html" width="100%" aspect="1:1"/>
+
+        
             <p>What do you notice? Which one was faster in general? Were there some cases where each was faster? How fast were they with misspelled words? Record your answers in the window below.</p>
 
 <project label="challenge-binary-search">
