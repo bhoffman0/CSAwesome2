@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <chapter xml:id="unit1" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Using Objects and Methods</title>
+
+        <introduction>
+            <p>
+This unit introduces the Java programming language and the use of variables and classes. Students will learn about three built-in data types and how to create variables, store values, and interact with those variables using basic operations and writing arithmetic expressions. Students also learn to use Math and String class methods and using objects like Turtles and their methods to draw on the screen.  
+            </p>
+              <p>
+                <ul>
+                    <li>
+                        <p>
+                            AP Exam Weighting: 15–25%
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             Class Periods: ~32–34
+                        </p>
+                    </li>
+                    <li><p>
+                      AP Classroom Progress Check Unit 1 Part 1: Topics 1.1–1.4, Multiple-choice: ~12 questions 
+                       </p></li>
+                       <li><p>AP Classroom Progress Check Unit 1 Part 2: Topics 1.5–1.9, Multiple-choice: ~15 questions 
+                       </p></li>
+                       <li><p>AP Classroom Progress Check Unit 1 Part 3: Topics 1.10–1.15, Multiple-choice: ~18 questions, Free-response: 1 question on Methods and Control Structures (partial)    
+                    </p>
+                    </li>
+                </ul>
+                </p>
+          
+        </introduction>
+
         <xi:include href='./topic-1-1-intro-algorithms.ptx' />
         <xi:include href='./topic-1-2-variables.ptx' />
         <xi:include href='./topic-1-3-expressions.ptx' />

@@ -22,9 +22,9 @@ The 4 free response questions cover the following areas (from |AP CSA Free Respo
     type by creating a class and satisfy method specifications using
     expressions, conditional statements, and iterative statements.
 
-  - **Question 3**: Array/ArrayList—You’ll be asked to write program code to satisfy
+  - **Question 3**: ArrayList—You’ll be asked to write program code to satisfy
     method specifications and create, traverse, and manipulate elements in 1D
-    array or ArrayList objects.
+    ArrayList objects.
 
   - **Question 4**: 2D Array—You’ll be asked to write program code to satisfy method
     specifications and create, traverse, and manipulate elements in 2D array
@@ -47,13 +47,13 @@ The table below reflects the 2025-2026 revisions to AP CSA where the content is 
    ======= ======================= =============== ========== ======== ============
    Unit    Title                   Exam Weight     Class Days Lab Days Old Map
    ======= ======================= =============== ========== ======== ============
-   1       Using Objects & Methods 7.5–10%         20-35               old U1 & U2
+   1       Using Objects & Methods 15-25%          32-34               old U1 & U2
    ------- ----------------------- --------------- ---------- -------- ------------
-   2       Selection & Iteration   30–40%          25-30      7-10     old U3 & U4
+   2       Selection & Iteration   25-30%          29-31      7-10     old U3 & U4
    ------- ----------------------- --------------- ---------- -------- ------------
-   3       Writing Classes         5-7.5%          12-14      3-6      old U5
+   3       Class Creation          10-18%          20-22      3-6      old U5
    ------- ----------------------- --------------- ---------- -------- ------------
-   4       Data Collections        25-50%          30–50      13-21    old 6,7,8,10
+   4       Data Collections        30-40%          50–52      13-21    old 6,7,8,10
    ======= ======================= =============== ========== ======== ============
 
 For more information on the exam see the College Board |AP CSA site| and the
@@ -74,7 +74,7 @@ careers!
 
 .. |AP CSA CED| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-revised-framework-preview.pdf" target="_blank">AP CSA Course and Exam Description 2025-2026 (CED)</a>
+   <a href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf" target="_blank">AP CSA Course and Exam Description 2025-2026 (CED)</a>
 
 .. |CS Careers| raw:: html
 
