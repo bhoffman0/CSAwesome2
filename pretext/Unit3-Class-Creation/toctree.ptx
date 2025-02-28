@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <chapter xml:id="unit3" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Class Creation</title>
+            <introduction>
+            <p>
+In this unit, students will learn how to create their own classes with instance variables, constructors, and methods. 
+            </p>
+              <p><ul>
+                    <li> <p>
+                            AP Exam Weighting: 10–18%
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             Class Periods: ~20-22
+                        </p>
+                    </li>
+                    <li><p>
+                      Progress Check Unit 3 Part 1: Topics 3.1–3.4, Multiple-choice: ~12 questions  
+                      </p></li>
+                       <li><p> Progress Check Unit 3 Part 2: Topics 3.5–3.9, Multiple-choice: ~15 questions, Free-response: 2 questions on Class Design       
+                        </p></li>
+                </ul>
+                </p>
+        </introduction>
         <xi:include href='./topic-3-1-abstraction.ptx' />
         <xi:include href='./topic-3-2-impacts.ptx' />
         <xi:include href='./topic-3-3-anatomy-of-class.ptx' />

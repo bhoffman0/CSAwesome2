@@ -945,14 +945,14 @@ Try the game below written by AP CSA teacher Chandan Sarkar. Click on **Strings*
     <script>      window.scrollTo(0, 0);</script>
 
 
-Review/Practice for Unit 1 Part b on Using Objects
+Review/Practice for Unit 1 Part 3 on Using Objects
 ----------------------------------------------------
 
 |Time90|
 
-This lesson ends the section on Unit 1 part b on Using Objects. 
+This lesson ends the section on Unit 1 part 3 on Using Objects. 
 You can now do the following review and practice lessons at the end of the unit
-and College Board Progress Checks in the AP Classroom.  
+and College Board Progress Check for Unit 1 Part 3 in the AP Classroom.  
 
 .. raw:: html
 

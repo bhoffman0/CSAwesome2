@@ -173,8 +173,9 @@
   <subsection xml:id="a2-picking-a-color">
             <title>A2: Picking a Color</title>
             <p>Try the following Color Chooser by moving the sliders to see the RGB values for each color:</p>
-            <p>&lt;iframe height="100%" width="100%" style="margin-left:10%;max-width:80%" src="https://www.cssscript.com/demo/rgb-color-picker-slider/"&gt;&lt;/iframe&gt;</p>
-            <p>In Java, there is a ColorChooser that you can use in code, see <url href="https://firewalledreplit.com/@BerylHoffman/ColorChooser" visual="https://firewalledreplit.com/@BerylHoffman/ColorChooser">https://firewalledreplit.com/@BerylHoffman/ColorChooser</url> and click on the RGB tab. Java represents color using the java.awt.Color class described here <url href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html</url>. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement <c>import java.awt.Color;</c>.</p>
+                <interactive iframe="iframe/colorpicker.html" width="100%" aspect="1:1"/>
+            
+            <p>In Java, there is a ColorChooser that you can use in code, see <url href="https://replit.com/@BerylHoffman/ColorChooser" visual="https://replit.com/@BerylHoffman/ColorChooser">https://replit.com/@BerylHoffman/ColorChooser</url> and click on the RGB tab. Java represents color using the java.awt.Color class described here <url href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html</url>. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement <c>import java.awt.Color;</c>.</p>
             <p>Questions:</p>
 
 <activity label="pictureLabA2Qs">
@@ -203,13 +204,13 @@
         </subsection>
   <subsection xml:id="a3-exploring-a-picture">
             <title>A3: Exploring a Picture</title>
-            <p>Try the following PictureExplorer Java program and click on pixels in the image to see their RGB values and their row and column indices in the 2D array for the image. You can use the
+            <p>Try the following PictureExplorer Java program at <url href="https://replit.com/@BerylHoffman/PictureExplorer" visual="https://replit.com/@BerylHoffman/PictureExplorer">https://replit.com/@BerylHoffman/PictureExplorer</url> or try this site <url href="https://imagecolorpicker.com/" visual="https://imagecolorpicker.com/">https://imagecolorpicker.com/</url> where you can upload your own images and explore their RGB values. In the replit code, you can click on pixels in the image to see their RGB values and their row and column indices in the 2D array for the image. You can use the
                 explorer tool to explore the pixels in a picture. Click any location (pixel) in the picture and it will display
                 the row index, column index, and red, green, and blue values for that location. The location will be
                 highlighted with yellow crosshairs. You can click on the arrow keys or even type in values and hit the
                 enter button to update the display. You can also use the menu to change the zoom level.</p>
-            <p>&lt;iframe height="89%" width="100%" style="max-width:90%; margin-left:5%"  src="https://firewalledreplit.com/@BerylHoffman/PictureExplorer?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"&gt;&lt;/iframe&gt;</p>
-            <p>If you fork to make a copy of this program <url href="https://firewalledreplit.com/@BerylHoffman/PictureExplorer" visual="https://firewalledreplit.com/@BerylHoffman/PictureExplorer">https://firewalledreplit.com/@BerylHoffman/PictureExplorer</url>, you can upload your own images, or try this site <url href="https://imagecolorpicker.com/" visual="https://imagecolorpicker.com/">https://imagecolorpicker.com/</url> where you can upload your own images and explore their RGB values.
+            
+            <p>
                 Images are often stored as jpg or jpeg files. A JPEG file is one that follows an international standard for
                 storing picture data using lossy compression. Lossy compression means that the amount of data that is
                 stored is much smaller than the available data, but the part that is not stored is data we won’t miss.</p>

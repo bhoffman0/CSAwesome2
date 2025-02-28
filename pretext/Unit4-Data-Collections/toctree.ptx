@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <chapter xml:id="unit4" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
         <title>Data Collections</title>
+         <introduction>
+            <p>
+This unit introduces the Java data structures of array, ArrayList, and 2D array, which are used to represent collections of data. Searching and sorting algorithms using iteration and recursion are also covered.            </p>
+              <p><ul>
+                    <li> <p>
+                            AP Exam Weighting: 30–40%
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                             Class Periods: ~50-52
+                        </p>
+                    </li>
+                    <li><p>
+                     Progress Check Unit 4 Part 1: Topics 4.1–4.5, Multiple-choice: ~18 questions, Free-response: 2 questions on Data Analysis with Array (partial)
+                      </p></li>
+                       <li><p> Progress Check Unit 4 Part 2: Topics 4.6–4.10, Multiple-choice: ~21 questions, Free-response: 2 questions on Data Analysis with ArrayList      
+                        </p></li>
+                         <li><p> Progress Check Unit 4 Part 3: Topics 4.11–4.17, Multiple-choice: ~21 questions, Free-response: 2 questions on 2D Array    
+                        </p></li>
+                </ul>
+                </p>
+        </introduction>
         <xi:include href='./topic-4-1-data-ethics.ptx' />
         <xi:include href='./topic-4-2-data-sets.ptx' />
         <xi:include href='./topic-4-3-array-basics.ptx' />

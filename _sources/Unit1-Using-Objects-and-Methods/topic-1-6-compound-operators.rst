@@ -251,14 +251,13 @@ Summary
   assigned to the variable.
 
 
-Review/Practice for Unit 1 Part a
+Review/Practice for Unit 1 Part 1
 ----------------------------------
 
 |Time90|
 
-This lesson ends the section on Unit 1 part a. 
 You can now do the following review and practice lessons at the end of the unit
-and College Board Progress Checks in the AP Classroom.  
+and College Board Progress Check for Unit 1 Part 1 in the AP Classroom.  
 
 .. raw:: html
 

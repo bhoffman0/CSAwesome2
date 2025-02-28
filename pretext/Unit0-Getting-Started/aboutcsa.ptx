@@ -4,35 +4,25 @@
         <title>About the AP CSA Exam</title>
         <p>This curriculum will prepare you for the Advanced Placement Computer Science A
             Exam which tests your programming skills in Java.</p>
-        <p>The AP CSA exam is 3 hours long and has two sections—multiple choice and
+        <p>The AP CSA exam is 3 hours long and has two sections: multiple choice and
             free-response. You will be given one hour and 30 minutes for each part. The
-            first part has 40 multiple-choice questions, and the second part has 4 free
-            response questions where you have to write Java code by hand. Each part is worth
-            50% of your grade. During the exam, you will have access to the <url href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" visual="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf">|AP CSA
+            first part has 42 multiple-choice questions worth 55% of your grade, and the second part has 4 free
+            response questions (FRQs), where you write Java code, worth 45% of your grade. During the exam, you will have access to the <url href="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf" visual="https://apstudents.collegeboard.org/ap/pdf/ap-computer-science-a-java-quick-reference_0.pdf">AP CSA Java Quick 
                 Reference Sheet</url>.</p>
-        <p>The 4 free response questions cover the following areas (from <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment">AP CSA Free Response</url>):</p>
+        <p>The 4 free response questions are shorter than previous years and cover the following areas to total 25 points (from <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/assessment">AP CSA Free Response</url>):</p>
         <blockquote>
             <p><ul>
                 <li>
-                    <p><term>Question 1</term>: Methods and Control Structures—You’ll be asked to write program
-                        code to create objects of a class and call methods, and satisfy method
-                        specifications using expressions, conditional statements, and iterative
-                        statements.</p>
+                    <p><term>Free Response Question 1 Methods and Control Structures (7 points)</term>: Students will write two methods or one constructor and one method of a given class based on provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. In Part B (3 points), the method or constructor will require calling <term>String</term> methods (which is different from AP FRQs prior to 2026).</p>
                 </li>
                 <li>
-                    <p><term>Question 2</term>: Classes—You’ll be asked to write program code to define a new
-                        type by creating a class and satisfy method specifications using
-                        expressions, conditional statements, and iterative statements.</p>
+                    <p><term>Free Response Question 2 Class Design (7 points)</term>: Students will be instructed to design and implement a class based on provided specifications and examples. A second class might also be included. Students will be provided with a scenario and specifications in the form of a table demonstrating ways to interact with the class and the results. The class must include a class header, instance variables, a constructor, a method, and implementation of the constructor and required method. (Inheritance is no longer covered in the AP exam and FRQs.)</p>
                 </li>
                 <li>
-                    <p><term>Question 3</term>: Array/ArrayList—You’ll be asked to write program code to satisfy
-                        method specifications and create, traverse, and manipulate elements in 1D
-                        array or ArrayList objects.</p>
+                    <p><term>Free Response Question 3 Data Analysis with ArrayList (5 points)</term>: Students will be provided with a scenario and its associated class(es).Students will write one method of a given class based on provided specifications and examples. The method requires students to use, analyze,and manipulate data in an <term>ArrayList</term> structure. (Arrays will not be tested in an FRQ.)</p>
                 </li>
                 <li>
-                    <p><term>Question 4</term>: 2D Array—You’ll be asked to write program code to satisfy method
-                        specifications and create, traverse, and manipulate elements in 2D array
-                        objects.</p>
+                    <p><term>Free Response Question 4 2D Array (6 points)</term>:Students will be provided with a scenario and its associated class(es). Students will write one method of a given class based on provided specifications and examples. The method requires students to use, analyze,and manipulate data in a <term>2D array</term> structure. (This usually requires the use of nested loops)</p>
                 </li>
             </ul></p>
         </blockquote>
@@ -46,14 +36,6 @@
         <p>The table below reflects the 2025-2026 revisions to AP CSA where the content is reorganized into 4 large units. The new unit 1 is a combination of the old units 1 &amp; 2, the new unit 2 is a combination of the old units 3 &amp; 4, the new unit 3 corresponds to the old unit 5, and the new unit 4 is a combination of the old units 6, 7, 8, and 10. The old unit 9 on inheritance is no longer a part of the AP CSA exam but is included as an optional unit 5 in CSAwesome2.</p>
         <container names="aboutcsa-table">
             <table><tabular>
-                
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                         <row header="yes">
                             <cell>
                                 Unit
@@ -84,10 +66,10 @@
                                 Using Objects &amp; Methods
                             </cell>
                             <cell>
-                                7.5–10%
+                                15-25%
                             </cell>
                             <cell>
-                                20-35
+                                32-34
                             </cell>
                             <cell>
                             </cell>
@@ -103,10 +85,10 @@
                                 Selection &amp; Iteration
                             </cell>
                             <cell>
-                                30–40%
+                                25–30%
                             </cell>
                             <cell>
-                                25-30
+                                29-31
                             </cell>
                             <cell>
                                 7-10
@@ -120,13 +102,13 @@
                                 3
                             </cell>
                             <cell>
-                                Writing Classes
+                                Class Creation
                             </cell>
                             <cell>
-                                5-7.5%
+                                10-18%
                             </cell>
                             <cell>
-                                12-14
+                                20-22
                             </cell>
                             <cell>
                                 3-6
@@ -143,10 +125,10 @@
                                 Data Collections
                             </cell>
                             <cell>
-                                25-50%
+                                30-40%
                             </cell>
                             <cell>
-                                30–50
+                                50-52
                             </cell>
                             <cell>
                                 13-21
@@ -155,12 +137,10 @@
                                 old 6,7,8,10
                             </cell>
                         </row>
-                    
-                
             </tabular></table>
         </container>
         <p>For more information on the exam see the College Board <url href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" visual="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a">AP CSA site</url> and the
-             <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-revised-framework-preview.pdf" visual="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-revised-framework-preview.pdf">AP CSA Course and Exam Description 2025-2026 (CED)</url>. The <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">AP CSA Past Free Response Questions</url> are available online. Here is an
+             <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf" visual="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf">AP CSA Course and Exam Description 2025-2026 (CED)</url>. The <url href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year" visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">AP CSA Past Free Response Questions</url> are available online. Here is an
             <url href="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing" visual="https://docs.google.com/spreadsheets/d/1Q0pbL9qawN8XlUctkDIiqsP6XdwR-IcWZ_cwauHy0-U/edit?usp=sharing">FRQ resource</url> that categorizes the past FRQs by topic and provides links to
             their solutions (which are available online in many places). The College Board
             provides a question bank and formative assessment quizzes for each unit online
