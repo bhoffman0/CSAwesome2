@@ -181,7 +181,7 @@ public class DistanceCalculator
         return distance;
     }
 
-    public static void main(String[] argv)
+    public static void main(String[] arg)
     {
         System.out.println("distance(13.5, 26.2) = " + distance(13.5, 26.2));
         System.out.println("distance(26.2, 13.5) = " + distance(26.2, 13.5));

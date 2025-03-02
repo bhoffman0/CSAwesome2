@@ -330,7 +330,7 @@ To determine the minimum or maximum value in a sequence of numbers, use a variab
             return min;
         }
 
-        // max calculates and returns the minimum of n random numbers
+        // max calculates and returns the maximum of n random numbers
         public static int max(int n)
         {
             int max = Integer.MIN_VALUE;

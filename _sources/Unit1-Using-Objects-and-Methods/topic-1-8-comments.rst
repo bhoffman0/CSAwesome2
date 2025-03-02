@@ -115,13 +115,17 @@ Notice that there are some special tags that you can use in Java documentation. 
         @Test
         public void containsOp1()
         {
-            boolean passed = checkCodeContains("/*", "/*");
+            String code = getCodeWithComments();
+            boolean passed = code.contains("/*");
+            getResults("true",passed+"","Contains /*");
             assertTrue(passed);
         }
         @Test
         public void containsOp2()
         {
-            boolean passed = checkCodeContains("//", "//");
+            String code = getCodeWithComments();
+            boolean passed = code.contains("//");
+            getResults("true",passed+"","Contains //");
             assertTrue(passed);
         }
    }
@@ -255,7 +259,7 @@ Try to break the preconditions of the ``Turtle forward`` method below. Try to ma
             boolean passed = !(code.contains("forward(100)"));
             passed = getResults("true", "" + passed, "Change forward(100) to try to break preconditions", passed);
             assertTrue(passed);
-        }
+        } 
     }
 
 

@@ -63,26 +63,33 @@ public class MyClass()
                 </li>
             </ul></p>
 
-<activity label="commentingEx">
+<activity label="commentExercise">
     <statement>
-            <p>The code below multiplies 2 variable values.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to initialize the variables, calculate, and print the result to describe what it does.</p>
+            <p>The code below will read in the 2 numbers below it and multiply them.  Add a multiline comment above the public class to describe what the class does and add single-line comments above each section of the code to read in, calculate, and print the result to describe what it does.
+  </p>
     </statement>
     <program interactive="activecode" language="java">
         <code>
+   import java.util.Scanner;
 
- public class CommentMultiply
- {
-      public static void main(String[] args)
-      {
-           int num1 = 5;
-           int num2 = 10;
 
-           int result = num1 * num2;
 
-           System.out.println(num1 + " x " + num2 + " = " + result);
-      }
- }
-</code>
+
+    public class Multiply
+    {
+         public static void main(String[] args)
+         {
+              Scanner scan = new Scanner(System.in);
+              int num1 = scan.nextInt();
+              int num2 = scan.nextInt();
+              
+              int result = num1 * num2;
+              
+              System.out.println(num1 + " x " + num2 + " = " + result); 
+              scan.close();
+         }
+    }
+</code><stdin>5 3</stdin>
     <tests>
 import static org.junit.Assert.*;
 
@@ -96,18 +103,22 @@ public class RunestoneTests extends CodeTestHelper
     {
         super("CommentMultiply");
      }
-     @Test
-     public void containsComment1()
-     {
-         boolean passed = checkCodeContains("/*", "/*");
-         assertTrue(passed);
-     }
-     @Test
-     public void containsComment2()
-     {
-         boolean passed = checkCodeContains("//", "//");
-         assertTrue(passed);
-     }
+         @Test
+        public void containsOp1()
+        {
+            String code = getCodeWithComments();
+            boolean passed = code.contains("/*");
+            getResults("true",passed+"","Contains /*");
+            assertTrue(passed);
+        }
+        @Test
+        public void containsOp2()
+        {
+            String code = getCodeWithComments();
+            boolean passed = code.contains("//");
+            getResults("true",passed+"","Contains //");
+            assertTrue(passed);
+        }
 }
         </tests>
     </program>
