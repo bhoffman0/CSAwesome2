@@ -102,7 +102,7 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
   </introduction>
   <subsection xml:id="how-to-solve-this-3">
             <title>How to Solve This</title>
-            <p>Click to reveal multiple choice questions that may help you write your solution.</p>
+            <p>These multiple choice questions may help you write your solution.</p>
             
 
     <activity label="fr_cookieB_1">
@@ -222,7 +222,6 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
         </subsection>
   <subsection xml:id="mixed-up-code-1">
             <title>Mixed Up Code</title>
-            <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
             
 <activity label="cookieOrderB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>removeVariety</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.</p>

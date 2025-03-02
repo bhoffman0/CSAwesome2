@@ -38,12 +38,11 @@ public static int totalLetters(List&lt;String&gt; wordList)
         </subsection>
   <subsection xml:id="how-to-solve-part-a-2">
             <title>How to Solve Part A</title>
-            <p>Click to reveal the algorithm and multiple choice problems that may help you write your solution.</p>
-            <subsection>
+           
                 <p>We need to return the total number of letters for all of the strings in <c>wordList</c>.  We will need to create an
                     integer variable to keep track of the number of letters and initialize it to 0.  Then we will loop through all of the strings in <c>wordList</c> and
                     add the length of the current string to the number of letters.  When the loop is finished we will return the number of letters.</p>
-            </subsection>
+         
             
 
     <activity label="fr_formatter_1">

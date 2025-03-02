@@ -109,11 +109,10 @@ hikerClub.addClimb("Monadnock", 344);
   </introduction>
   <subsection xml:id="how-to-solve-this">
             <title>How To Solve This</title>
-            <p>Click to reveal the algorithm and practice problems to help you write your solution.</p>
-            <subsection>
+            
                 <p>In the <c>addClimb</c> method you need to create a new <c>ClimbInfo</c> object and initialize the <c>peakName</c> and <c>climbTime</c>.  How do you create a new object of a class and initialize the fields?</p>
                 <p>Once you have created the <c>ClimbInfo</c> object you want to add it in the order they were created.  To do this you can add it to the end of the <c>climbList</c>.  How do you add an object to the end of a list?</p>
-            </subsection>
+            
             
 
     <activity label="fr_climbA_1">

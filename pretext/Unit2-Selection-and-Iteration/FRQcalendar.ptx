@@ -144,7 +144,7 @@ public class APCalendar
     return numLeapYears;
  }
 </code></program>
-            <p>Next, plan your loop. Click to reveal some problems that may help you to plan the loop.</p>
+            <p>Next, plan your loop. The following exercises will help you to plan your loop.</p>
             
 
     <activity label="callooptype">
@@ -223,7 +223,6 @@ public class APCalendar
 
     </activity>
             
-            <subsection>
                 <p>It is usually easiest to use a <term>for loop</term> if you know how many times the loop should execute using the given information. Figure out what the initial and ending values of the loop variable should be. Some of the method parameters will usually be used for these. In this case, we need to loop from year1 to year2.  The preconditions stated for the method tells us that we don’t have to worry about year1 and year2 being out of order or below 0. So don’t waste time on error-checking these values. Here’s a possible loop:</p>
                 <program language="java"><code>
 for(int i = year1 ; i &lt;= year2 ; i++)
@@ -237,7 +236,7 @@ if (isLeapYear(i))
     ...
 </code></program>
                 <p>Put all of the code together to solve this problem.</p>
-            </subsection>
+            
 
 <activity label="APCalendarFRQPartA">
     <statement>
@@ -335,7 +334,8 @@ public class RunestoneTests extends CodeTestHelper
                     <p><term>dayOfYear(month, day, year)</term> returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</p>
                 </li>
             </ul></p>
-            <p>If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples by revealing the problems below.</p>
+            <p>If you know that 1/1/2019 was a Tuesday (2) using the firstDayYear method, and you know that today is the nth day of the year using the dayOfYear method, you can figure out what day of the week today is by adding those together. Try some examples below.
+            </p>
             
 
     <activity label="dow1">

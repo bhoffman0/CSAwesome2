@@ -62,14 +62,13 @@ int numChanges = limitAmplitude(2000);
   </introduction>
   <subsection xml:id="how-to-solve-this-6">
             <title>How to Solve This</title>
-            <p>Click to reveal problems and the algorithm to help you write your solution.</p>
-            <subsection>
+            
                 <p>We will have to loop through each value in the array and compare the value to the limit. We will need to keep track of the number of values changed.</p>
                 <p>If the current value is greater than the
                     limit, it should be reset to the limit and the count of the values changed should be incremented.</p>
                 <p>If the current value is less than the negative of the limit, then it should be reset to the negative of the limit and the count of values should be incremented.</p>
                 <p>We will have to return the count of values changed.</p>
-            </subsection>
+           
             
 
     <activity label="fr_sounda_1">
@@ -151,7 +150,6 @@ int numChanges = limitAmplitude(2000);
         </subsection>
   <subsection xml:id="mixed-up-code-4">
             <title>Mixed Up Code</title>
-            <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
             
 <activity label="SoundA" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
                 <p>The method <c>limitAmplitude</c> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.</p>

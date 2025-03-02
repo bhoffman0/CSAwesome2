@@ -57,8 +57,7 @@ public class Sound
   </introduction>
   <subsection xml:id="how-to-solve-this-7">
             <title>How to Solve This</title>
-            <p>Click to reveal problems and the algorithm to help you write your solution.</p>
-            <subsection>
+           
                 <p><ol marker="1">
                     <li>
                         <p>You will need to loop through each element in the array until you reach a non-zero element. You will also need to keep track of the number of leading zeros.</p>
@@ -67,7 +66,7 @@ public class Sound
                         <p>Remember that you must replace the samples array with a new array without the leading zeros.  How do you create an array of a particular size?</p>
                     </li>
                 </ol></p>
-            </subsection>
+        
             
 
     <activity label="fr_soundb_1">
@@ -149,7 +148,6 @@ public class Sound
         </subsection>
   <subsection xml:id="mixed-up-code-5">
             <title>Mixed Up Code</title>
-            <p>Click to reveal the Mixed Up Code for the solution of this problem.</p>
             
 <activity label="SoundB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>trimSilenceFromBeginning</c> below contains correct code for one solution to this problem, but it is mixed up.  Drag the code blocks from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>

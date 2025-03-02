@@ -32,10 +32,8 @@ public class NumberCube
   </introduction>
   <subsection xml:id="how-to-solve">
             <title>How to Solve</title>
-            <p>Click to reveal the algorithm and problems to help you write your solution.</p>
-            <subsection>
+            
                 <p>You will need to create an array to hold the results of each cube toss.  The size of the array should be the passed number of times you will call <c>toss</c>.  You will need to loop that number of times and each time set the value of the array at that index to the result of the <c>toss</c>.  Return the array.</p>
-            </subsection>
             
 
     <activity label="numbercubea_1">
@@ -155,7 +153,6 @@ public class NumberCube
         </subsection>
   <subsection xml:id="mixed-up-code-2">
             <title>Mixed Up Code</title>
-            <p>Click to reveal the Mixed Up Code for the solution to this problem.</p>
             
 <activity label="numcubeA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getCubeTosses</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>

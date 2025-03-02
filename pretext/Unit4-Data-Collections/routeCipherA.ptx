@@ -98,8 +98,8 @@ str.substring(k, k + 1)
     </statement>    <response/>
 </activity>
             <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.
-                Click on the buttons to reveal the questions.</p>
-            <subsection>
+                </p>
+           
                 <p>You will need to access each element in the <c>letterBlock</c> array. What type of loop will you use?</p>
                 
 
@@ -209,7 +209,6 @@ str.substring(k, k + 1)
 
     </activity>
                 
-            </subsection>
             
 
     <activity label="routeciphera_2MC">
@@ -507,9 +506,8 @@ str.substring(k, k + 1)
 
     </activity>
             
-            <p>The exercises above have been guiding you towards just one of many possible solutions. To read through a different solution, click on the Reveal
-                button below and complete the problem.</p>
-            <subsection>
+            <p>The exercises above have been guiding you towards just one of many possible solutions. </p>
+           
 <activity label="RouteCipherA" adaptive="yes" indentation="show" language="java"><statement>
                     <p>The method fillBlock below contains the correct code for one solution to this problem,
                         but it is mixed up.  Drag the needed code from the left to the right and put them in order with the
@@ -541,7 +539,7 @@ str.substring(k, k + 1)
 <cline>      } // end inner for</cline>
 <cline>  } // end outer for</cline>
 <cline>} // end method</cline>
-</block></blocks></activity>                </subsection>
+</block></blocks></activity>                
         </subsection>
   <subsection xml:id="try-and-solve-it-18">
             <title>Try And Solve It</title>

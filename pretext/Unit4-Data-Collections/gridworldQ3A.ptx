@@ -31,7 +31,7 @@
   <subsection xml:id="check-your-understanding-of-the-question-2">
             <title>Check your understanding of the question</title>
             <p>The problems in this section are to help you check your understanding and guide you towards a solution.
-                You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.</p>
+                You can skip these if you think you know what to do already. </p>
             
 
 <activity label="grid_find_parts">
@@ -253,12 +253,12 @@
 
     </statement>    <response/>
 </activity>
-            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
-            <subsection>
+            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  </p>
+          
                 <p>The method <c>getEmptyLocations</c> needs to return an <c>ArrayList</c> of <c>Location</c> objects containing all the places in the grid that are empty.</p>
                 <p>This implies that the code needs to create an empty <c>ArrayList</c> of type <c>Location</c>.  Let’s call it <c>locs</c>. We need to have our program loop through the squares in <c>grid</c> from the start to the end (without going out of bounds). If the current square is empty, we need to add that position to the end of <c>locs</c>.
                     Finally our method should end by returning <c>locs</c>.</p>
-            </subsection>
+          
             
 
     <activity label="grdwrld_mcalg_answr_1">

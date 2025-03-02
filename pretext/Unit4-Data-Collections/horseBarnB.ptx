@@ -61,7 +61,8 @@ public class HorseBarn
             <title>How to solve this problem</title>
             <p>One way to solve this problem is to create a temporary array the same size as <c>spaces</c> and then loop through the current <c>spaces</c> array and if the current element isn’t null copy it to the temporary array. What kind of loop should you use? A for loop or an enhanced for loop would work for this problem. You will need an index for at least the temporary array.</p>
             
-            <p>While we are looping through the <c>spaces</c> array, we need to check for non-null positions. Click to reveal a practice problem about checking for null values.</p>
+            <p>While we are looping through the <c>spaces</c> array, we need to check for non-null positions. 
+            Here's a practice problem about checking for null values.</p>
             
 
     <activity label="frhbb_2">
