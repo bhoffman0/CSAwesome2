@@ -412,6 +412,10 @@ To get out of the rain, BOOM! BOOM! BOOM! BOOM!
                 </li>
             </ol></p>
 
+<project label="antsong-static-challenge">
+    <statement>
+            <p>This class should print out the <url href="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ" visual="https://www.youtube.com/watch?v=QPwEZ8Vv2YQ">The Ants Go Marching</url> Song using two static methods: <c>chorus()</c> and <c>verse()</c>. The chorus method should print out the last two lines of each verse. The verse method should take two parameters, a number and an action, and print out the verse with the number and action. Add a public static variable called <term>numVerses</term>  that keeps track of the number of verses. Increment this variable in the method verse and print it out at the beginning of the verse.</p>
+    </statement>
     <program interactive="activecode" language="java">
         <code>
 public class Song
@@ -430,7 +434,6 @@ public class Song
 
     }
 }
-
 </code><tests>
 import static org.junit.Assert.*;
 
@@ -596,6 +599,8 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
+    </project>
+
         </subsection>
   <subsection xml:id="summary-33">
             <title>Summary</title>

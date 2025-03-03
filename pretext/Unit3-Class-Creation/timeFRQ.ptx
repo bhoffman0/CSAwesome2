@@ -100,6 +100,11 @@ public class Time
         <p>Use conditionals (if statements) to check for each of these conditions and take the appropriate actions when each condition is true.</p>
         <p><term>Part a.</term>  Write the method <c>tick</c> which increases the number of seconds by one.  If the number of seconds is 60 it adds one to the number of minutes and resets seconds to 0.  If the number of minutes is 59 it adds one to the number of hours and resets the number of minutes to 0.  If the number of hours reaches 24 it should be reset to 0.   When you have finished writing the method, click “Run” to test your solution.  The main method has code that will test your solution using several different times.</p>
 
+<activity label="TimeFRQ-tick">
+<statement><p>
+    Write the method <c>tick</c> which increases the number of seconds by one.  If the number of seconds is 60 it adds one to the number of minutes and resets seconds to 0.  If the number of minutes is 59 it adds one to the number of hours and resets the number of minutes to 0.  If the number of hours reaches 24 it should be reset to 0. 
+</p>
+</statement>
     <program interactive="activecode" language="java">
         <code>
 /**
@@ -317,8 +322,15 @@ public class Time
  }
         </tests>
     </program>
+    </activity>
+
         <p><term>Part b.</term>  Write the method <c>add(Time offset)</c> which adds the seconds together and makes sure the result is 59 or less (incrementing the minutes as needed), adds the minutes together and makes sure the result is 59 or less (increments the hours as needed), and adds the hours together (resetting the hours to 0 if it reaches 24).  When you have finished writing the method, click “Run” to test your solution.  The main method has code that will test your solution using several different times.</p>
 
+<activity label="TimeFRQ-add">
+<statement><p>
+    Write the method <c>add(Time offset)</c> which adds the seconds together and makes sure the result is 59 or less (incrementing the minutes as needed), adds the minutes together and makes sure the result is 59 or less (increments the hours as needed), and adds the hours together (resetting the hours to 0 if it reaches 24).
+    </p>
+</statement>
     <program interactive="activecode" language="java">
         <code>
 /**
@@ -547,4 +559,5 @@ public class Time
  }
         </tests>
     </program>
+    </activity>
     </section>

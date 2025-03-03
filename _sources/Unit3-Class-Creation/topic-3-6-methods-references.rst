@@ -752,7 +752,7 @@ In this challenge, you will create a class ``Friend`` which keeps track of your 
       {
           // Create a Date object with your friend's birthday date 
          
-          // Create a Friend object with a friend's name, phonenumber, and birthday
+          // Create a Friend object with a friend's name and birthday
 
           // Create a Date object with today's date
 
