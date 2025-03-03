@@ -368,7 +368,7 @@ public class LadderHelper
         return ladderSize;
     }
 
-    public static void main(String[] argv)
+    public static void main(String[] args)
     {
         double size;
         // TODO: Call the ladderSizeNeeded method

@@ -128,10 +128,9 @@ hikerClub.addClimb("Monadnock", 344);
         </subsection>
   <subsection xml:id="how-to-solve-this-1">
             <title>How To Solve This</title>
-            <p>Click to reveal the algorithm and problems to help you write your solution.</p>
-            <subsection>
+           
                 <p>Loop through the elements of <c>climbList</c> until you find the index where the new peakName is less than the peakName of the <c>ClimbInfo</c> object at the current index.  Insert the new <c>ClimbInfo</c> object there.</p>
-            </subsection>
+           
             
 
     <activity label="fr_climbB_1">

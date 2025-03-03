@@ -81,7 +81,7 @@ public class MasterOrder
   </introduction>
   <subsection xml:id="how-to-solve-this-2">
             <title>How to Solve This</title>
-            <p>Click to reveal multiple choice questions that may help you write your solution.</p>
+            <p>These multiple choice questions may help you write your solution.</p>
             
 
     <activity label="fr_cookieA_1">
@@ -211,7 +211,7 @@ public int getTotalBoxes()
         </subsection>
   <subsection xml:id="mixed-up-code">
             <title>Mixed Up Code</title>
-            <p>Click to reveal the  Mixed Up Code for the solution to this problem.</p>
+           
             
 <activity label="cookieOrderA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method <c>getTotalBoxes</c> below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>

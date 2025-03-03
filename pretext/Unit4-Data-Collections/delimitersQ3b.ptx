@@ -22,7 +22,7 @@
         </subsection>
   <subsection xml:id="check-your-understanding-of-the-question-1">
             <title>Check your understanding of the Question</title>
-            <p>The problems in this section can help you check your understanding of part B.  You can skip these if you think you know what to do already.  Click on a button to reveal a question.</p>
+            <p>The problems in this section can help you check your understanding of part B.  You can skip these if you think you know what to do already.  </p>
             
 
     <activity label="delim_cub_mc_1">
@@ -142,12 +142,12 @@
 
     </statement>    <response/>
 </activity>
-            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on a button to reveal the algorithm or problem.</p>
-            <subsection>
+            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  </p>
+           
                 <p>The method <c>isBalanced</c> will loop through <c>delimiters</c> and keep track of the number of open and close delimiters we have found so far.  To do that we can create two integer variables: <c>totalOpen</c> and <c>totalClose</c> and set them to 0
                     initially. Each time through the loop we will check if the current string which we will call currString is equal to <c>openDel</c> and if so increment <c>totalOpen</c>, otherwise if it is equal to <c>closeDel</c> increment <c>totalClose</c>.   Next if <c>totalClose</c> &gt; <c>totalOpen</c> the method should return false.  A
                     After the loop return <c>totalOpen</c> == <c>totalClose</c>.  This will return true if they are equal and false otherwise.</p>
-            </subsection>
+           
             
 
     <activity label="delim_solveb_mc_1">

@@ -62,7 +62,7 @@ public class HorseBarn
   <subsection xml:id="how-to-solve-this-problem-4">
             <title>How to solve this problem</title>
             <p>In order to find the index of the horse with the same name we are looking for, we will need to loop through the array <c>spaces</c>. As we loop, we will compare the name we are looking for with the <c>Horse</c> object’s name at the current index.
-                We will have to watch out for spaces that are empty (are null).  Click to reveal a practice problem about objects.</p>
+                We will have to watch out for spaces that are empty (are null).  </p>
             
 
     <activity label="frhba_1">
@@ -103,7 +103,7 @@ public class HorseBarn
 
     </activity>
             
-            <p>Once we have the name of the current <c>Horse</c> object, we need to compare this name to the name we are looking for. Click to reveal a practice problem about String comparisons.</p>
+            <p>Once we have the name of the current <c>Horse</c> object, we need to compare this name to the name we are looking for. Here's a practice problem about String comparisons.</p>
             
 
     <activity label="frhba_2">

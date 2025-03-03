@@ -49,10 +49,9 @@ public class ScrambledStrings
 
     </statement>    <response/>
 </activity>
-            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
-            <subsection>
+            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things. </p>
+          
                 <p>In the example the first word (at index 0) <c>TAN</c> is scrambled and replaced. The second word <c>ABRACADABRA</c> (at index 1) is scrambled and replaced. The third word <c>WHOA</c> (at index 2) is removed. The fourth word <c>APPLE</c> (at index 3) is scrambled and replaced. The fifth word <c>EGGS</c> (at index 4) is removed since the scrambled word is the same as the original. What method of List allows you to replace an element in a list? What method of list allows you to remove an element from a list? How can you loop through a list and not always increment the current index?</p>
-            </subsection>
             
 
     <activity label="strng_mcalg_answr_0">
@@ -352,7 +351,7 @@ public class ScrambledStrings
             <title>The Algorithm</title>
             <p>Loop through the list and scramble the current word.  If the scrambled word and original are equal then remove the word from the list and otherwise replace it.  We will have to be careful since the size of the list can change in the loop.  If we remove an element all the other elements will shift left.
                 We will only want to increment the index if the word was replaced and not removed. There are many ways to solve this problem but we have outlined 2 in the following optional questions. If you feel that you are ready to solve the problem, please skip ahead to the active code block.</p>
-            <subsection>
+           
                 <program language="java"><code>
 public static void scrambleOrRemove(List&lt;String&gt; wordList)
     initialize index counter
@@ -368,7 +367,6 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
           reassign the current word in wordList to be the scrambled version
           iterate the index
 </code></program>
-            </subsection>
             
 <activity label="StringScrambleB1" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method test below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
@@ -402,7 +400,7 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
 <cline>} // end method</cline>
 </block></blocks></activity>            
             <p>Another way to solve this problem is to start at the end of the list and loop towards the front of the list. That way you don’t have to worry about the index being off if you remove an item from the list.</p>
-            <subsection>
+            
                 <program language="java"><code>
 public static void scrambleOrRemove(List&lt;String&gt; wordList)
       for( int i = wordList size - 1; i &gt;= 0; i--)
@@ -417,7 +415,6 @@ public static void scrambleOrRemove(List&lt;String&gt; wordList)
               reassign the current word in wordList to be the scrambled version
               iterate the index
 </code></program>
-            </subsection>
             
 <activity label="StringScrambleB2" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
                 <p>The method test below contains the correct code for another solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>

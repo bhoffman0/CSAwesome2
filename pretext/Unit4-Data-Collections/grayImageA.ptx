@@ -148,7 +148,7 @@ public class GrayImage
     </activity>
             
             <p>Looping through a 2D array is more complicated than the simple arrays we usually see, requiring nested for loops. Check out the questions and code below, which displays how nested for loops work to display a block of numbers.</p>
-            <subsection>
+         
 
     <program interactive="activecode" language="java">
         <code>
@@ -168,8 +168,7 @@ public class Test
 }
         </code>
     </program>
-            </subsection>
-            <subsection>
+            
 
     <program interactive="activecode" language="java">
         <code>
@@ -190,11 +189,11 @@ public class Test
  }
         </code>
     </program>
-            </subsection>
+           
         </subsection>
   <subsection xml:id="algorithm">
             <title>Algorithm</title>
-            <p>When approaching this problem, it can be helpful to look for keywords or hints that maybe be in the problem statement. This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on the buttons to reveal the questions.</p>
+            <p>When approaching this problem, it can be helpful to look for keywords or hints that maybe be in the problem statement. This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  </p>
 
 <activity label="gray_image_A">
     <statement>

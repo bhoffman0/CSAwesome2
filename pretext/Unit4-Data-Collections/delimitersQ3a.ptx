@@ -32,7 +32,8 @@
         </subsection>
   <subsection xml:id="check-your-understanding-of-the-question">
             <title>Check your understanding of the question</title>
-            <p>There are problems in this section that can help you check your understanding of the question.  You can skip these if you think you know what to do already.  Click the buttons to reveal the problems if you want to do them.</p>
+            <p>There are problems in this section that can help you check your understanding of the question.  You can skip these if you think you know what to do already. 
+            </p>
             
 
 <activity label="delim_find_parts_ca">
@@ -205,11 +206,10 @@
 
     </statement>    <response/>
 </activity>
-            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things.  Click on a button to reveal the algorithm or problem.</p>
-            <subsection>
+            <p>This section contains a plain English explanation of one way to solve this problem as well as problems that test your understanding of how to write the code to do those things. </p>
+           
                 <p>The method <c>getDelimtersList</c> needs to return an <c>ArrayList</c> of <c>Strings</c> containing all the open and close delimiters found in the <c>tokens</c> array in their original order.</p>
                 <p>This implies that the code needs to create an empty <c>ArrayList</c> of type <c>String</c>.  Let’s call it <c>delList</c>.  The code will loop through the strings in the array <c>tokens</c> from the start to the end and if the current string is equal to either the <c>openDel</c> or <c>closeDel</c> it adds that string to the end of delList.  Finally it should return delList.</p>
-            </subsection>
             
 
     <activity label="delim_solve_mc_1">
