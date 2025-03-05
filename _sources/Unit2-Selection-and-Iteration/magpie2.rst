@@ -201,7 +201,7 @@ When different methods are called from the main method, the control flows to the
 
 .. |Magpie lab on replit.com| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java" target="_blank">Magpie lab on replit.com</a>
+   <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java" target="_blank">Magpie lab on replit.com</a>
 
 You can also run a version of the |Magpie lab on replit.com| that uses the Scanner class for input so that you can type in your own input to interact with it.
 

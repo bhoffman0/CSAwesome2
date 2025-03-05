@@ -8,7 +8,7 @@
             Statements like “I like cats”, “I like math class”, and “I like Spain” all have the form “I like something”.
             The response could be “What do you like about something?” This activity will respond to groupings
             of words.</p>
-    <p>Try each of the following as the value for the <c>statement</c> in the main method and see what they print.  Or you can try it on <url href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" visual="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java">replit.com version 4</url>.</p>
+    <p>Try each of the following as the value for the <c>statement</c> in the main method and see what they print.  Or you can try it on <url href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" visual="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java">replit.com version 4</url>.</p>
     <p>
       <ul>
             <li>
@@ -289,7 +289,7 @@ public class Magpie4
             <title>Exercises:</title>
             <p>In this activity, the chatbot is altered to look not only for keywords, but also specific phrases.  Magpie4.java adds two new methods, <c>transformIWantToStatement</c> and <c>transformYouMeStatement</c> and <c>getResponse</c> has been modified to add tests to find “I want to something” statements and “You something me” statements.</p>
             <p>Look at the code. See how it handles “I want to” and you/me statements.</p>
-            <p>Then add two new methods, <c>transformIWantStatement</c> and <c>transformIYouStatement</c>, and calls to each as described below. Alter the code either above in the active code window or on <url href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" visual="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java">replit.com version 4</url> or in an IDE of your choice:</p>
+            <p>Then add two new methods, <c>transformIWantStatement</c> and <c>transformIYouStatement</c>, and calls to each as described below. Alter the code either above in the active code window or on <url href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" visual="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java">replit.com version 4</url> or in an IDE of your choice:</p>
             <p><ul>
                 <li>
                     <p>In a method <c>transformIWantStatement</c>, have it respond to “I want something” statements with “Would you really be happy if you had something?” You can use the already written <c>transformIWantToStatement</c> method as a guide. In doing this, you need to be careful about where you place the call to the method so it calls the right one. Test with the following:</p>

@@ -65,7 +65,7 @@ public void createCollage()
         <p>Picture Lab A8: Run to see createCollage() working.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -274,7 +274,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Picture Lab A8: Create a second copy method called copyPartial that adds parameters to allow you to copy just part of the fromPic. You will need to add parameters that specify the start row, end row, start column, and end column to copy from. Use it in your collage.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -513,14 +513,14 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
         <p>2. Create a <c>myCollage</c> method that has at least three pictures (can be the same picture) copied
-            three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this <url href="https://replit.com/@BerylHoffman/Picture-Lab" visual="https://replit.com/@BerylHoffman/Picture-Lab">replit.com Swing project</url> or this <url href="https://firewalledreplit.com/@jds7184/PictureLab" visual="https://firewalledreplit.com/@jds7184/PictureLab">alternative replit.com project</url> (click output.jpg to see the result) or download the project files form replit to your own IDE.</p>
+            three times with three different picture manipulations and at least one mirroring. You can use the pictures flower1.jpg, flower2.jpg, snowflake.jpg, butterfly.jpg in this lesson. To use your own images, you can fork this <url href="https://replit.com/@BerylHoffman/Picture-Lab" visual="https://replit.com/@BerylHoffman/Picture-Lab">replit.com Swing project</url> or this <url href="https://replit.com/@jds7184/PictureLab" visual="https://replit.com/@jds7184/PictureLab">alternative replit.com project</url> (click output.jpg to see the result) or download the project files form replit to your own IDE.</p>
 
 <activity label="picture-lab-A8-myCollage">
     <statement>
         <p>Picture Lab A8: Create a myCollage method that has at least three pictures (can be the same picture) copied three times with three different picture manipulations and at least one mirroring.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
