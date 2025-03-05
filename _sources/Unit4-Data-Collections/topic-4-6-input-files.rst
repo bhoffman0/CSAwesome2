@@ -744,12 +744,13 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
        // Declare an array of your class type
 
        // Write a method to read in the data (it may throw an exception).
-       // Loop through each row to split it into attributes.
+       // Use a while loop to split each row into attributes.
        //     Create a new  object from the attributes.
        //     and save it into the array.
 
        // Write a method that does something with the data
-       // for example find the object with a min or max attribute value
+       // with a for loop, for example 
+       // find the object with a min or max attribute value
        // or print out all the objects of a certain attribute value.
 
        public static void main(String[] args) throws IOException
@@ -781,16 +782,6 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
        }
 
        @Test
-       public void testConstructor3()
-       {
-           String output = checkConstructor(3);
-           String expect = "pass";
-
-           boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-           assertTrue(passed);
-       }
-
-       @Test
        public void splitCode()
        {
            boolean passed = checkCodeContains("call to split method", ".split");
@@ -803,9 +794,9 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
            assertTrue(passed);
        }
        @Test
-       public void arrayCode()
+       public void forCode()
        {
-           boolean passed = checkCodeContains("Declares array []", "[]");
+           boolean passed = checkCodeContains("for loop", "for");
            assertTrue(passed);
        }
    }
