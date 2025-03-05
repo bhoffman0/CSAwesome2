@@ -3,7 +3,7 @@
 <section xml:id="pictureLabA7">
         <title>Picture Lab A7: Mirroring Part of a Picture</title>
         <p>Sometimes you only want to mirror part of a picture. For example, Figure 1 shows a temple in Greece
-            that is missing a part of the roof called the pediment. You can use the <url href="https://firewalledreplit.com/@BerylHoffman/PictureExplorer" visual="https://firewalledreplit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> to find the area that
+            that is missing a part of the roof called the pediment. You can use the <url href="https://replit.com/@BerylHoffman/PictureExplorer" visual="https://replit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> to find the area that
             you want to mirror in temple.jpg to produce the picture on the right. If you do this you will find that you can mirror
             the rows from 27 to 96 (inclusive) and the columns from 13 to 275 (inclusive). You can change the
             starting and ending points for the row and column values to mirror just part of the picture.</p>
@@ -41,7 +41,7 @@ public void mirrorTemple()
         <p>Picture Lab A7: Run to see mirrorTemple() working.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -305,7 +305,7 @@ for (int row = 7; row &lt; 17; row++)
         <p>Picture Lab A7 Mirroring: Check the calculation of the number of times the body of the nested loop executes by adding an integer count variable to the mirrorTemple method that starts out at 0 and increments inside the body of the loop. Print the value of count after the nested loop ends which should be 18410.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -461,7 +461,7 @@ public class RunestoneTests extends CodeTestHelper
         <image source="Unit4-Data-Collections/Figures/mirrorarms.png" width="27%"/>
         <p><ol marker="1">
             <li>
-                <p>Write the method <c>mirrorArms</c> to mirror the arms on the snowperson (“snowperson.jpg”) to make a snowperson with 4 arms. Fork <url href="https://firewalledreplit.com/@BerylHoffman/PictureExplorer" visual="https://firewalledreplit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.</p>
+                <p>Write the method <c>mirrorArms</c> to mirror the arms on the snowperson (“snowperson.jpg”) to make a snowperson with 4 arms. Fork <url href="https://replit.com/@BerylHoffman/PictureExplorer" visual="https://replit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> and change it to explore snowperson.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.</p>
             </li>
         </ol></p>
 
@@ -470,7 +470,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Picture Lab A7 Mirroring: Write the method mirrorArms to mirror the arms on the snowperson (“snowperson.jpg”) to make a snowperson with 4 arms.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -634,14 +634,14 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
         <image source="Unit4-Data-Collections/Figures/mirrorgull.png" width="27%"/>
         <p>3. Write the method <c>mirrorGull</c> to mirror the seagull (“seagull.jpg”) to the right so
-            that there are two seagulls on the beach near each other. Fork <url href="https://firewalledreplit.com/@BerylHoffman/PictureExplorer" visual="https://firewalledreplit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.</p>
+            that there are two seagulls on the beach near each other. Fork <url href="https://replit.com/@BerylHoffman/PictureExplorer" visual="https://replit.com/@BerylHoffman/PictureExplorer">Picture Explorer Repl</url> and change it to explore seagull.jpg and find out the pixel coordinates to start and end the mirroring and the mirror point.</p>
 
 <activity label="picture-lab-A7-mirrorGull">
     <statement>
         <p>Picture Lab A7 Mirroring: Write the method mirrorGull to mirror the seagull (“seagull.jpg”) to the right so that there are two seagulls on the beach near each other.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar">
 <code>
 import java.awt.*;
 import java.awt.font.*;
