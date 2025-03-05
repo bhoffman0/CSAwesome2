@@ -272,9 +272,9 @@ while(scan.hasNext())
      i++;
  }
 </code></program>
-            <p>The following exercise reads in a data file about Pokemon and prints out the first 10 lines in the file. This file has the extension <em>csv</em> which stands for <term>Comma Separated Values</term>. All spreadsheets can be saved as CSV text files, and spreadsheet software can easily open CSV files as spreadsheets.</p>
+            <p>The following exercise reads in a data file about Pokemon and prints out the first 10 lines in the file. This file has the extension <em>csv</em> which stands for <term>Comma Separated Values</term>. All spreadsheets can be saved as CSV text files, and spreadsheet software can easily open CSV files as spreadsheets. You can take a look at the  <url href="external/_static/datasets/pokemon.csv" visual="external/_static/datasets/pokemon.csv">pokemon.csv</url> file contents below:</p>
 
-    <datafile label="pokemon" filename="pokemon.csv" editable="no" hide="yes">
+    <datafile label="pokemon" filename="pokemon.csv" editable="no" hide="no">
         <pre>
         <![CDATA[
             Number,Pokemon,Type 1,Type 2,HP,Attack,Defense,Speed,PNG,Description
@@ -838,9 +838,191 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Optional Challenge with a Dataset</title>
-            <p>If your class has time, you can try the following open-ended challenge that uses a dataset of your choice. You could work in pairs for this challenge. Choose a dataset from the files below to read into an array of objects. Look at the columns of the dataset you have chosen to decide on the name and at least 3 attributes for your class. Each row in the data file will be an object of your class that you will add to the array. If you find another data CSV file online that you would like to use, you can read from a URL instead of a file in Java using the <c>java.net</c> package following the directions here <url href="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html" visual="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html">https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html</url>.</p>
+            <p>If your class has time, you can try the following open-ended challenge that uses a dataset of your choice. You could work in pairs for this challenge. Choose a dataset from the files <url href="external/_static/datasets/pokemon.csv" visual="external/_static/datasets/pokemon.csv">pokemon.csv</url>, <url href="external/_static/datasets/WorldIndicators2000.csv" visual="external/_static/datasets/WorldIndicators2000.csv">WorldIndicators2000.csv</url>, or <url href="external/_static/datasets/StateData2020-CDC-Census.csv" visual="external/_static/datasets/StateData2020-CDC-Census.csv">StateData2020-CDC-Census.csv</url> to read into an array of objects. The activecode window below is set up to use these files. Look at the columns of the dataset you have chosen at the bottom of this web page to decide on the name and at least 3 attributes for your class. Each row in the data file will be an object of your class that you will add to the array. If you find another data CSV file online that you would like to use, you can read from a URL instead of a file in Java using the <c>java.net</c> package following the directions here <url href="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html" visual="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html">https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html</url>.</p>
 
- <datafile label="world" filename="WorldIndicators2000.csv" editable="no" hide="yes">
+                 <p>After you have chosen an input file, use the Pokemon exercise in the section above as a guide to:</p>
+            <p><ol marker="1">
+                <li>
+                    <p>Design a class for the input file that you have chosen. Choose at least 3 attributes that can be found in the file for your class. Write a constructor that takes in these attributes as parameters and saves them into instance variables. You may need to add some getters and a <c>toString</c> method as well.</p>
+                </li>
+                <li>
+                    <p>Declare an array of your class type.</p>
+                </li>
+                <li>
+                    <p>Read in the data from the file.</p>
+                </li>
+                <li>
+                    <p>Inside a loop, split each line into its attributes and create an object for your class using its constructor. Add the object to the array.</p>
+                </li>
+                <li>
+                    <p>Do something interesting with the data using a loop, for example you could find the maximum or minimum value of an attribute or print out all the objects that have the same attribute value.</p>
+                </li>
+            </ol></p>
+
+<project label="challenge-file">
+    <statement>
+            <p><term>Input File Challenge:</term> Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an array of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value. You can use the files pokemon.csv, WorldIndicators2000.csv, or StateData2020-CDC-Census.csv.</p>
+
+    </statement>
+    <program interactive="activecode" language="java"
+    datafile="pokemon.csv, WorldIndicators2000.csv, StateData2020-CDC-Census.csv">
+        <code>
+import java.io.*;
+import java.util.*;
+
+/* Change this class name to a meaningful name for one record from the dataset. */
+class OneItem
+{
+    // Add at least 3 attributes found in the data file
+
+    // Add a constructor that initializes the attributes
+
+    // Add any getters and toString methods that you need
+
+}
+
+/* Change this class name to a meaningful name for the whole dataset. */
+public class Data
+{
+    // Declare an array of your class type
+
+    // Write a method to read in the data (it may throw an exception).
+    // Use a while loop to split each row into attributes.
+    //     Create a new  object from the attributes.
+    //     and save it into the array.
+
+    // Write a method that does something with the data
+    // with a for loop, for example 
+    // find the object with a min or max attribute value
+    // or print out all the objects of a certain attribute value.
+
+    public static void main(String[] args) throws IOException
+    {
+        Data obj = new Data(); // change to your class name
+        // Call your method to read in the data
+
+        // Call your method to do something with the data
+
+    }
+}
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testPrivateVariables()
+    {
+        String code = getCode();
+        int count = countOccurences(code, "private");
+        boolean passed = count &gt;= 3;
+        getResults("3", count + "", "Number of private instance variables", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void splitCode()
+    {
+        boolean passed = checkCodeContains("call to split method", ".split");
+        assertTrue(passed);
+    }
+    @Test
+    public void whileCode()
+    {
+        boolean passed = checkCodeContains("while loop", "while");
+        assertTrue(passed);
+    }
+    @Test
+    public void forCode()
+    {
+        boolean passed = checkCodeContains("for loop", "for");
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</project>
+        </subsection>
+  <subsection>
+            <title>Summary</title>
+            <p><ul>
+                <li>
+                    <p>(AP 4.6.A.1) A <term>file</term> is storage for data that persists when the program is not running. The data in a file can be retrieved during program execution.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.2) A file can be connected to the program using the <c>File</c> and <c>Scanner</c> classes.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.3) A file can be opened by creating a <c>File</c> object, using the name of the file as the argument of the constructor. <c>File(String str)</c> is the <c>File</c> constructor that accepts a <c>String</c> file name to open for reading, where <c>str</c> is the pathname for the file.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.4) When using the <c>File</c> class, it is required to indicate what to do if the file with the provided name cannot be opened. One way to accomplish this is to add <c>throws IOException</c> to the header of the method that uses the file. If the file name is invalid, the program will terminate.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.5) The <c>File</c> and <c>IOException</c> classes are part of the <c>java.io</c> package. An <c>import</c> statement must be used to make these classes available for use in the program.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.6) The following <c>Scanner</c> methods and constructor—including what they do and when they are used—are part of the Java Quick Reference provided during the AP CSA exam:</p>
+                    <blockquote>
+                        <p><ul>
+                            <li>
+                                <p><c>Scanner(File f)</c> the Scanner constructor that accepts a File for reading.</p>
+                            </li>
+                            <li>
+                                <p><c>int nextInt()</c> returns the next int read from the file or input source. If the next <c>int</c> does not exist, it will result in an <c>InputMismatchException</c>. Note that this method does not read the end of the line, so the next call to <c>nextLine()</c> will return the rest of the line which will be empty.</p>
+                            </li>
+                            <li>
+                                <p><c>double nextDouble()</c> returns the next double read from the file or input source. If the next <c>double</c> does not exist, it will result in an <c>InputMismatchException</c>.</p>
+                            </li>
+                            <li>
+                                <p><c>boolean nextBoolean()</c> returns the next Boolean read from the file or input source. If the next <c>boolean</c> does not exist, it will result in an <c>InputMismatchException</c>.</p>
+                            </li>
+                            <li>
+                                <p><c>String nextLine()</c> returns the next line of text up until the end of the line as a <c>String</c> read from the file or input source; returns the empty string if called immediately after another <c>Scanner</c> method like <c>nextInt</c> that is reading from the file or input source;returns null if there is no next line.</p>
+                            </li>
+                            <li>
+                                <p><c>String next()</c> returns the next String up until a white space read from the file or input source.</p>
+                            </li>
+                            <li>
+                                <p><c>boolean hasNext()</c> returns true if there is a next item to read in the file or input source; false otherwise.</p>
+                            </li>
+                            <li>
+                                <p><c>void close()</c> closes the input stream.</p>
+                            </li>
+                        </ul></p>
+                    </blockquote>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.7) Using <c>nextLine</c> and the other <c>Scanner</c> methods together on the same input source sometimes requires code to adjust for the methods’ different ways of handling whitespace.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.8) The following additional <c>String</c> method—including what it does and when it is used—is part of the Java Quick Reference provided during the AP CSA Exam:</p>
+                    <blockquote>
+                        <p><ul>
+                            <li>
+                                <p><c>String[] split(String del)</c> returns a <c>String</c> array where each element is a substring of <c>this String</c>, which has been split around matches of the given expression <c>del</c>.</p>
+                            </li>
+                            <li>
+                                <p>For example, <c>String[] data = line.split(",");</c> splits a line from a csv file along the commas and saves the substrings into the array <c>data</c>.</p>
+                            </li>
+                        </ul></p>
+                    </blockquote>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.9) A <c>while</c> loop can be used to detect if the file still contains elements to read by using the <c>hasNext</c> method as the condition of the loop.</p>
+                </li>
+                <li>
+                    <p>(AP 4.6.A.10) A file should be closed when the program is finished using it. The <c>close</c> method from <c>Scanner</c> is called to close the file.</p>
+                </li>
+            </ul></p>
+       
+
+
+ <datafile label="world" filename="WorldIndicators2000.csv" editable="no" hide="no">
         <pre>
         <![CDATA[
             Country,Year,Birth Rate,Business Tax Rate,CO2 Emissions,Days to Start Business,Ease of Business,Energy Usage,GDP,Health Exp % GDP,Health Exp/Capita,Hours to do Tax,Infant Mortality Rate,Internet Usage,Lending Interest,Life Expectancy Female,Life Expectancy Male,Mobile Phone Usage,Number of Records,Population 0-14,Population 15-64,Population 65+,Population Total,Population Urban,Region,Tourism Inbound,Tourism Outbound
@@ -3546,10 +3728,17 @@ Trinidad and Tobago,12/1/2012,0.015,0.291,,41,63,,23436342520,0.054,972,210,0.02
 Turks and Caicos Islands,12/1/2012,,,,,,,,,,,,,,,,,1,,,,32427,0.911,The Americas,,
 United States,12/1/2012,0.013,0.464,,5,4,2132446,16244600000000,0.179,8895,175,0.006,0.793,0.033,81,76,0.96,1,0.196,0.667,0.136,313873685,0.811,The Americas,200092000000,
 Uruguay,12/1/2012,0.015,0.419,,7,85,,50004354667,0.089,1308,310,0.01,0.545,0.112,80,74,1.471,1,0.22,0.639,0.14,3395253,0.948,The Americas,2222000000,1028000000
-&quot;Venezuela, RB&quot;,12/1/2012,0.02,0.619,,144,180,,381286000000,0.046,593,792,0.013,0.491,0.164,78,72,1.021,1,0.288,0.652,0.06,29954782,0.889,The Americas,904000000,3202000000
-Virgin Islands (U.S.),12/1/2012,0.011,,,,,,,,,,,0.405,,83,76,,1,0.206,0.641,0.152,105275,0.949,The Americas,\n', 'hidden': '', 'edit': 'false', 'question_label': '5.6.8.1'}" source="/mnt/c/Users/hoffmanb/Documents/Github/CSAwesome2/_fixed_sources/Unit4-Data-Collections/topic-4-6-input-files.rst">
-            </DataFileNode>
-            <DataFileNode line="710" runestone_options="{'fromfile': '../_static/datasets/StateData2020-CDC-Census.csv', 'subchapter': 'topic-4-6-input-files', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'StateData2020-CDC-Census.csv', 'qnumber': 'Q-9', 'cols': 65, 'rows': 20, 'filecontent': 'STATE,Population in 2016 from census.gov,Non-insured percentage (percentage of people who do not have health insurance in 2016 from CDC.gov),Firearms Death RATE of death from firearms for every 100K population in 2016 from CDC.gov,Firearm Deaths totals in 2016,Drug Overdose death rates per 100K population 2016,Drug overdose deaths total,URL for state info: base url https://www.cdc.gov
+Venezuela,12/1/2012,0.02,0.619,,144,180,,381286000000,0.046,593,792,0.013,0.491,0.164,78,72,1.021,1,0.288,0.652,0.06,29954782,0.889,The Americas,904000000,3202000000
+Virgin Islands (U.S.),12/1/2012,0.011,,,,,,,,,,,0.405,,83,76,,1,0.206,0.641,0.152,105275,0.949,The Americas
+]]>
+</pre>
+</datafile>
+           
+<datafile label="stateData" 
+filename="StateData2020-CDC-Census.csv">
+<pre>
+<![CDATA[
+STATE,Population in 2016 from census.gov,Non-insured percentage (percentage of people who do not have health insurance in 2016 from CDC.gov),Firearms Death RATE of death from firearms for every 100K population in 2016 from CDC.gov,Firearm Deaths totals in 2016,Drug Overdose death rates per 100K population 2016,Drug overdose deaths total,URL for state info: base url https://www.cdc.gov
 Alabama,4860545,10,21.5,1046,16.2,756,/nchs/pressroom/states/alabama/alabama.htm
 Alaska,741522,14,23.3,177,16.8,128,/nchs/pressroom/states/alaska/alaska.htm
 Arizona,6908642,11,15.2,1094,20.3,1382,/nchs/pressroom/states/arizona/arizona.htm
@@ -3603,197 +3792,8 @@ West Virginia,1828637,6.2,17.5,332,52,884,/nchs/pressroom/states/westvirginia/we
 Wisconsin,5772917,6.5,11.4,664,19.3,1074,/nchs/pressroom/states/wisconsin/wisconsin.htm
 Wyoming,584910,11.5,17.4,101,17.6,99,/nchs/pressroom/states/wyoming/wyoming.htm
 ]]>
-
 </pre>
 </datafile>
 
-
-            <p>After you have chosen an input file, use the Pokemon exercise in the section above as a guide to:</p>
-            <p><ol marker="1">
-                <li>
-                    <p>Design a class for the input file that you have chosen. Choose at least 3 attributes that can be found in the file for your class. Write a constructor that takes in these attributes as parameters and saves them into instance variables. You may need to add some getters and a <c>toString</c> method as well.</p>
-                </li>
-                <li>
-                    <p>Declare an array of your class type.</p>
-                </li>
-                <li>
-                    <p>Read in the data from the file.</p>
-                </li>
-                <li>
-                    <p>Inside a loop, split each line into its attributes and create an object for your class using its constructor. Add the object to the array.</p>
-                </li>
-                <li>
-                    <p>Do something interesting with the data using a loop, for example you could find the maximum or minimum value of an attribute or print out all the objects that have the same attribute value.</p>
-                </li>
-            </ol></p>
-
-<project label="challenge-file">
-    <statement>
-            <p><term>Input File Challenge:</term> Design the class for your input file that has at least 3 attributes that can be found in the file. Then, read in the data from the file, split each line, and save the data in an array of objects. Finally, do something interesting with the data using a loop, for example you could find the object with the max or min attribute value or print out all the objects of a certain attribute value.</p>
-
-    </statement>
-    <program interactive="activecode" language="java">
-        <code>
-import java.io.*;
-import java.util.*;
-
-/* Change this class name to a meaningful name for one record from the dataset. */
-class OneItem
-{
-    // Add at least 3 attributes found in the data file
-
-    // Add a constructor that initializes the attributes
-
-    // Add any getters and toString methods that you need
-
-}
-
-/* Change this class name to a meaningful name for the whole dataset. */
-public class Data
-{
-    // Declare an array of your class type
-
-    // Write a method to read in the data (it may throw an exception).
-    // Loop through each row to split it into attributes.
-    //     Create a new  object from the attributes.
-    //     and save it into the array.
-
-    // Write a method that does something with the data
-    // for example find the object with a min or max attribute value
-    // or print out all the objects of a certain attribute value.
-
-    public static void main(String[] args) throws IOException
-    {
-        Data obj = new Data(); // change to your class name
-        // Call your method to read in the data
-
-        // Call your method to do something with the data
-
-    }
-}
-</code><tests>
-import static org.junit.Assert.*;
-
-import org.junit.*;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void testPrivateVariables()
-    {
-        String code = getCode();
-        int count = countOccurences(code, "private");
-        boolean passed = count &gt;= 3;
-        getResults("3", count + "", "Number of private instance variables", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void testConstructor3()
-    {
-        String output = checkConstructor(3);
-        String expect = "pass";
-
-        boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-        assertTrue(passed);
-    }
-
-    @Test
-    public void splitCode()
-    {
-        boolean passed = checkCodeContains("call to split method", ".split");
-        assertTrue(passed);
-    }
-    @Test
-    public void whileCode()
-    {
-        boolean passed = checkCodeContains("while loop", "while");
-        assertTrue(passed);
-    }
-    @Test
-    public void arrayCode()
-    {
-        boolean passed = checkCodeContains("Declares array []", "[]");
-        assertTrue(passed);
-    }
-}
-        </tests>
-    </program>
-</project>
-        </subsection>
-  <subsection>
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p>(AP 4.6.A.1) A <term>file</term> is storage for data that persists when the program is not running. The data in a file can be retrieved during program execution.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.2) A file can be connected to the program using the <c>File</c> and <c>Scanner</c> classes.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.3) A file can be opened by creating a <c>File</c> object, using the name of the file as the argument of the constructor. <c>File(String str)</c> is the <c>File</c> constructor that accepts a <c>String</c> file name to open for reading, where <c>str</c> is the pathname for the file.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.4) When using the <c>File</c> class, it is required to indicate what to do if the file with the provided name cannot be opened. One way to accomplish this is to add <c>throws IOException</c> to the header of the method that uses the file. If the file name is invalid, the program will terminate.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.5) The <c>File</c> and <c>IOException</c> classes are part of the <c>java.io</c> package. An <c>import</c> statement must be used to make these classes available for use in the program.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.6) The following <c>Scanner</c> methods and constructor—including what they do and when they are used—are part of the Java Quick Reference provided during the AP CSA exam:</p>
-                    <blockquote>
-                        <p><ul>
-                            <li>
-                                <p><c>Scanner(File f)</c> the Scanner constructor that accepts a File for reading.</p>
-                            </li>
-                            <li>
-                                <p><c>int nextInt()</c> returns the next int read from the file or input source. If the next <c>int</c> does not exist, it will result in an <c>InputMismatchException</c>. Note that this method does not read the end of the line, so the next call to <c>nextLine()</c> will return the rest of the line which will be empty.</p>
-                            </li>
-                            <li>
-                                <p><c>double nextDouble()</c> returns the next double read from the file or input source. If the next <c>double</c> does not exist, it will result in an <c>InputMismatchException</c>.</p>
-                            </li>
-                            <li>
-                                <p><c>boolean nextBoolean()</c> returns the next Boolean read from the file or input source. If the next <c>boolean</c> does not exist, it will result in an <c>InputMismatchException</c>.</p>
-                            </li>
-                            <li>
-                                <p><c>String nextLine()</c> returns the next line of text up until the end of the line as a <c>String</c> read from the file or input source; returns the empty string if called immediately after another <c>Scanner</c> method like <c>nextInt</c> that is reading from the file or input source;returns null if there is no next line.</p>
-                            </li>
-                            <li>
-                                <p><c>String next()</c> returns the next String up until a white space read from the file or input source.</p>
-                            </li>
-                            <li>
-                                <p><c>boolean hasNext()</c> returns true if there is a next item to read in the file or input source; false otherwise.</p>
-                            </li>
-                            <li>
-                                <p><c>void close()</c> closes the input stream.</p>
-                            </li>
-                        </ul></p>
-                    </blockquote>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.7) Using <c>nextLine</c> and the other <c>Scanner</c> methods together on the same input source sometimes requires code to adjust for the methods’ different ways of handling whitespace.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.8) The following additional <c>String</c> method—including what it does and when it is used—is part of the Java Quick Reference provided during the AP CSA Exam:</p>
-                    <blockquote>
-                        <p><ul>
-                            <li>
-                                <p><c>String[] split(String del)</c> returns a <c>String</c> array where each element is a substring of <c>this String</c>, which has been split around matches of the given expression <c>del</c>.</p>
-                            </li>
-                            <li>
-                                <p>For example, <c>String[] data = line.split(",");</c> splits a line from a csv file along the commas and saves the substrings into the array <c>data</c>.</p>
-                            </li>
-                        </ul></p>
-                    </blockquote>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.9) A <c>while</c> loop can be used to detect if the file still contains elements to read by using the <c>hasNext</c> method as the condition of the loop.</p>
-                </li>
-                <li>
-                    <p>(AP 4.6.A.10) A file should be closed when the program is finished using it. The <c>close</c> method from <c>Scanner</c> is called to close the file.</p>
-                </li>
-            </ul></p>
-        </subsection>
+ </subsection>
 </section>

@@ -399,7 +399,7 @@ List&lt;String&gt; lines = Files.readAllLines(Paths.get("data.txt"));
             <p>Complete the code in the main method below to reads all lines of the file using <c>Files.readAllLines</c> into a <c>List&lt;String&gt;</c> named <c>lines</c>. Add a loop that prints out the first 10 pokemon.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="pokemon.csv">
         <code>
 import java.io.*;
 import java.nio.file.*;
