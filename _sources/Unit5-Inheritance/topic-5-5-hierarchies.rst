@@ -345,7 +345,7 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
 
 .. |replit.com link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit.com link</a>
+   <a href="https://replit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit.com link</a>
 
 .. image:: Figures/shoppingcart.png
     :width: 100

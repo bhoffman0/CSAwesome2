@@ -282,7 +282,7 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
 .. |replit link| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit link</a>
+   <a href="https://replit.com/@BerylHoffman/Shopping-Cart" target="_blank" style="text-decoration:underline">replit link</a>
 
 .. |last lesson| raw:: html
 

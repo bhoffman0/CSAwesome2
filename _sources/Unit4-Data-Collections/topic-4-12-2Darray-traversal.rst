@@ -300,7 +300,7 @@ It is important to remember the limitations of enhanced ``for`` loops. They cann
 
 .. |repl 2| raw:: html
 
-   <a href= "https://firewalledreplit.com/@BerylHoffman/PictureLab-with-output-file" style="text-decoration:underline" target="_blank" >alternative Replit project</a>
+   <a href= "https://replit.com/@BerylHoffman/PictureLab-with-output-file" style="text-decoration:underline" target="_blank" >alternative Replit project</a>
 
 .. |Picture Lab A1 to A3| raw:: html
 

@@ -538,7 +538,7 @@ three times with three different picture manipulations and at least one mirrorin
 
 .. |repl 2| raw:: html
 
-   <a href= "https://firewalledreplit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
+   <a href= "https://replit.com/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative replit.com project</a>
 
 
 

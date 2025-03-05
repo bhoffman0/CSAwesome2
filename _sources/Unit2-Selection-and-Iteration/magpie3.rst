@@ -164,7 +164,7 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
 
 .. |replit.com version 3| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java" target="_blank">replit.com version 3</a>
+   <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java" target="_blank">replit.com version 3</a>
 
 Run the code below or this |replit.com version 3| to see this new method ``findKeyword`` in action. It is called from the ``getResponse`` method to print out an appropriate response based on a keyword. For example, looking for the word ``"no"`` to print out ``"Why so negative?"``, but it won't match no inside of another word like ``"another"``.
 

@@ -309,7 +309,7 @@ Look at the code. See how it handles “I want to” and you/me statements.
 
 .. |replit.com version 4| raw:: html
 
-   <a href="https://firewalledreplit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" target="_blank">replit.com version 4</a>
+   <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v4#Main.java" target="_blank">replit.com version 4</a>
 
 
 Then add two new methods, ``transformIWantStatement`` and ``transformIYouStatement``, and calls to each as described below. Alter the code either above in the active code window or on |replit.com version 4| or in an IDE of your choice:
