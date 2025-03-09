@@ -29,9 +29,9 @@ Run the code below and also check it out in the Java visualizer with the Show Co
       private String phoneNumber;
 
       // constructor
-      public Person(String theName)
+      public Person(String name)
       {
-          this.name = theName;
+          this.name = name;
       }
 
       // accessor methods - getters
@@ -51,19 +51,19 @@ Run the code below and also check it out in the Java visualizer with the Show Co
       }
 
       // mutator methods - setters
-      public void setName(String theName)
+      public void setName(String name)
       {
-          this.name = theName;
+          this.name = name;
       }
 
-      public void setEmail(String theEmail)
+      public void setEmail(String email)
       {
-          this.email = theEmail;
+          this.email = email;
       }
 
-      public void setPhoneNumber(String thePhoneNumber)
+      public void setPhoneNumber(String phoneNumber)
       {
-          this.phoneNumber = thePhoneNumber;
+          this.phoneNumber = phoneNumber;
       }
 
       public String toString()
@@ -113,7 +113,7 @@ The ``this`` variable can only be used in instance methods and constructors. Cla
 ``this``.instanceVariable
 ---------------------------
 
-The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below.
+The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below, but ``name`` on its own looks for the closest local variable, the parameter variable, whereas ``this.name`` refers to this object's instance variable.
 
 .. note::
 
@@ -321,10 +321,24 @@ For this challenge, you can work in pairs to:
   :language: java
   :autograde: unittest
 
-  Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors, a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.
+  Create a class called BankAccount that keeps track of the account holder's name, the account number, and the balance in the account. Create 2 constructors using ``this`` (one constructor to initialize all 3 instance variables and one that only has 2 parameters for the name and account number and initializes the balance to 0), a toString() method, and withdraw(amount) and deposit(amount) methods. Use the this keyword in the constructor and methods. Test your class in a main method.
   ~~~~
-  public class BankAccount {}
+  public class BankAccount
+  {
+      // 3 instance variables
 
+      // 2 constructors using this
+
+
+      // toString method
+      // deposit(amount) method
+      // withdraw(amount) method
+      // main method for testing
+
+
+
+
+  }
   ====
    import static org.junit.Assert.*;
 
