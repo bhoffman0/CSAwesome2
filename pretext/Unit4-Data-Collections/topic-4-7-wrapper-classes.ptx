@@ -222,7 +222,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>This program reads in each line from the pokemon file into a String array of lines. Complete the <c>findMaxSpeed</c> and <c>findAverageSpeed</c> methods below.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="pokemon.csv">
         <code>
 import java.io.*;
 import java.util.*;
@@ -263,7 +263,7 @@ public class PokeSpeed
         // 1. Loop through the pokemonLines array starting at index 1
         //     (0 is the column headers)
             // 2. Split the line on commas into a data array
-            // 3. Use parseInt on the 7th element of the data array to get the  speed
+            // 3. Use parseInt on the 7th indexed element of the data array to get the speed
             // 4. If speed is larger than maxSpeed, update maxSpeed and maxPokemonName
 
         // 5. Print out the maxPokemonName and return the maxSpeed
