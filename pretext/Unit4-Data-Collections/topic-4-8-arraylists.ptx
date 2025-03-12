@@ -281,7 +281,7 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
 
             <choice>
                 <statement>
-                    <p>ArrayList&lt;String&amp;gt; numbers = new ArrayList();</p>
+                    <p>ArrayList&lt;String&gt; numbers = new ArrayList();</p>
                 </statement>
                 <feedback>
                     <p>String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.</p>
@@ -290,7 +290,7 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
 
             <choice>
                 <statement>
-                    <p>ArrayList&lt;int&amp;gt; numbers = new ArrayList&lt;int&amp;gt;();</p>
+                    <p>ArrayList&lt;int&gt; numbers = new ArrayList&lt;int&gt;();</p>
                 </statement>
                 <feedback>
                     <p>ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.</p>
@@ -299,7 +299,7 @@ ArrayList&lt;Student&gt; roster = new ArrayList&lt;Student&gt;();
 
             <choice correct="yes">
                 <statement>
-                    <p>ArrayList&lt;Integer&amp;gt; numbers = new ArrayList&lt;Integer&amp;gt;();</p>
+                    <p>ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();</p>
                 </statement>
                 <feedback>
                     <p>The wrapper class Integer is used to hold integers in an ArrayList.</p>
@@ -1045,7 +1045,7 @@ ArrayList&lt;String&gt; nameList = new ArrayList&lt;String&gt;();
                 <c>ArrayList</c>s. Note that <c>ArrayList</c>s have a method <c>size()</c> instead of a
                 <c>length</c> property, and <c>ArrayList</c>s use <c>get</c>/<c>set</c> methods instead of
                 the index operator (<c>[]</c>).</p>
-            <table><tabular>
+            <table><tabular row-headers="yes">
                 
                     
                     
