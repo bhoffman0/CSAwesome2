@@ -39,39 +39,44 @@
                 </li>
             </ul></p>
             <p>The following table contains a sample code execution sequence and the corresponding results.</p>
-            <p>&lt;style&gt;    th,td { text-align: left;  padding-left: 4px; }
-table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
-&lt;table border width="100%"&gt;&lt;tr&gt;&lt;th&gt;Statements and Expressions&lt;/th&gt;&lt;th width="15%"&gt;Value Returned (blank if no value)&lt;/th&gt;&lt;th&gt;Comment&lt;/th&gt; &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;StepTracker tr = new StepTracker(10000); &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;Days with at least 10,000 steps are considered active. Assume that the parameter is positive.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays(); &lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;&lt;td&gt;No data have been recorded yet.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.averageSteps(); &lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;&lt;td&gt;When no step data have been recorded, the averageSteps method returns 0.0.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(9000);&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This is too few steps for the day to be considered active.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(5000);&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This is too few steps for the day to be considered active.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays(); &lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;&lt;td&gt;No day had at least 10,000 steps.
-&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.averageSteps(); &lt;/td&gt;
-&lt;td&gt;7000.0&lt;/td&gt;&lt;td&gt;The average number of steps per day is (14000 / 2).&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(13000); &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This represents an active day.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays();  &lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Of the three days for which step data were entered, one day had at least 10,000 steps.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.averageSteps(); &lt;/td&gt;
-&lt;td&gt;9000.0&lt;/td&gt;&lt;td&gt;The average number of steps per day is (27000 / 3).&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(23000); &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This represents an active day.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(1111); &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This is too few steps for the day to be considered active.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays(); &lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Of the five days for which step data were entered, two days had at least 10,000 steps.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.averageSteps(); &lt;/td&gt;
-&lt;td&gt;10222.2&lt;/td&gt;&lt;td&gt;The average number of steps per day is (51111 / 5). &lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;&lt;p&gt;</p>
+           
+<table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
+
+<row header="yes" left="minor">
+ <cell bottom="minor" right="minor">Statements and Expressions</cell><cell bottom="minor" right="minor">Value Returned (blank if no value)</cell><cell bottom="minor" right="minor">Comment</cell> </row>
+<row left="minor"><cell bottom="minor" right="minor">StepTracker tr = new StepTracker(10000); </cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor"><line>Days with at least 10,000 steps are considered active.</line> <line>Assume that the parameter is positive.</line></cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays(); </cell>
+<cell bottom="minor" right="minor">0</cell><cell bottom="minor" right="minor">No data have been recorded yet.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.averageSteps(); </cell>
+<cell bottom="minor" right="minor">0.0</cell><cell bottom="minor" right="minor">When no step data have been recorded, the averageSteps method returns 0.0.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(9000);</cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This is too few steps for the day to be considered active.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(5000);</cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This is too few steps for the day to be considered active.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays(); </cell>
+<cell bottom="minor" right="minor">0</cell><cell bottom="minor" right="minor">No day had at least 10,000 steps.
+</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.averageSteps(); </cell>
+<cell bottom="minor" right="minor">7000.0</cell><cell bottom="minor" right="minor">The average number of steps per day is (14000 / 2).</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(13000); </cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This represents an active day.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays();  </cell>
+<cell bottom="minor" right="minor">1</cell><cell bottom="minor" right="minor">Of the three days for which step data were entered, one day had at least 10,000 steps.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.averageSteps(); </cell>
+<cell bottom="minor" right="minor">9000.0</cell><cell bottom="minor" right="minor">The average number of steps per day is (27000 / 3).</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(23000); </cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This represents an active day.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(1111); </cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This is too few steps for the day to be considered active.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays(); </cell>
+<cell bottom="minor" right="minor">2</cell><cell bottom="minor" right="minor">Of the five days for which step data were entered, two days had at least 10,000 steps.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.averageSteps(); </cell>
+<cell bottom="minor" right="minor">10222.2</cell><cell bottom="minor" right="minor">The average number of steps per day is (51111 / 5). </cell></row>
+</tabular></table>
+
+
             <p>This question asks you to write the complete StepTracker class, including the constructor and any required instance variables and
                 methods. Your implementation must meet all specifications and conform to the example.</p>
         </subsection>
@@ -547,18 +552,24 @@ class Example
     </activity>
             
             <p>The code for this mutator method is a little more complex than the template above, because it needs to change more than 1 instance variable. Notice the comments in the sample code execution:</p>
-            <p>&lt;style&gt;    td { text-align: left; } &lt;/style&gt;
-&lt;table border width="100%"&gt;&lt;tr&gt;&lt;th&gt;Statements and Expressions&lt;/th&gt;&lt;th width="15%"&gt;Value Returned (blank if no value)&lt;/th&gt;&lt;th&gt;Comment&lt;/th&gt; &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(5000);&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This is too few steps for the day to be considered active.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays(); &lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;&lt;td&gt;No day had at least 10,000 steps.
-&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.addDailySteps(13000); &lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;&lt;td&gt;This represents an active day.&lt;/td&gt;&lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.activeDays();  &lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Of the three days for which step data were entered, one day had at least 10,000 steps.&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;&lt;p&gt;</p>
+          
+<table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
+
+<row header="yes" left="minor">
+ <cell bottom="minor" right="minor">Statements and Expressions</cell><cell bottom="minor" right="minor">Value Returned (blank if no value)</cell><cell bottom="minor" right="minor">Comment</cell> </row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(5000);</cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This is too few steps for the day to be considered active.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays(); </cell>
+<cell bottom="minor" right="minor">0</cell><cell bottom="minor" right="minor">No day had at least 10,000 steps.
+</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.addDailySteps(13000); </cell>
+<cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">This represents an active day.</cell></row>
+<row left="minor"><cell bottom="minor" right="minor">tr.activeDays();  </cell>
+<cell bottom="minor" right="minor">1</cell><cell bottom="minor" right="minor">Of the three days for which step data were entered, one day had at least 10,000 steps.</cell></row>
+</tabular></table>
+
+
             <p>Consider each of your instance variables and whether this method should change them. The problem below may help you.</p>
             
 
@@ -767,12 +778,17 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
             
             <p>The complex accessor method <term>averageSteps()</term> must calculate the average number of steps from your instance variables. Notice that the first time it is called in the sample code execution, it returns 0.0 since there are no steps recorded. This avoids a divide by 0 error.</p>
-            <p>&lt;style&gt;    th,td { text-align: left;  padding-left: 4px; }
-table, tr, td, th { border: 1px solid black;} &lt;/style&gt;
-&lt;table border width="100%"&gt;&lt;tr&gt;&lt;th&gt;Statements and Expressions&lt;/th&gt;&lt;th width="15%"&gt;Value Returned (blank if no value)&lt;/th&gt;&lt;th&gt;Comment&lt;/th&gt; &lt;/tr&gt;
-&lt;tr&gt;&lt;td&gt;tr.averageSteps(); &lt;/td&gt;
-&lt;td&gt;0.0&lt;/td&gt;&lt;td&gt;When no step data have been recorded, the averageSteps method returns 0.0.&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;&lt;p&gt;</p>
+            
+<table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
+
+<row header="yes" left="minor">
+ <cell bottom="minor" right="minor">Statements and Expressions</cell><cell bottom="minor" right="minor">Value Returned (blank if no value)</cell><cell bottom="minor" right="minor">Comment</cell> </row>
+<row left="minor"><cell bottom="minor" right="minor">tr.averageSteps(); </cell>
+<cell bottom="minor" right="minor">0.0</cell><cell bottom="minor" right="minor">When no step data have been recorded, the averageSteps method returns 0.0.</cell></row>
+</tabular></table>
+
+
 
 <activity label="stepTrackerCode4">
     <statement>
@@ -789,8 +805,12 @@ public class StepTracker
 
     // copy the accessor method activeDays() here.
 
-    // Write the mutator method addDailySteps here.
-    // @param number of steps taken that day
+    // copy the mutator method addDailySteps here.
+   
+   
+    // TODO: write the accessor method getAverageSteps() here
+    // @return average number of steps per day
+    
 
     public static void main(String[] args)
     {

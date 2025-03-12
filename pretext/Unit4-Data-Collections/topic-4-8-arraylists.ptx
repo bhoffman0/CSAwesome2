@@ -1046,54 +1046,55 @@ ArrayList&lt;String&gt; nameList = new ArrayList&lt;String&gt;();
                 <c>length</c> property, and <c>ArrayList</c>s use <c>get</c>/<c>set</c> methods instead of
                 the index operator (<c>[]</c>).</p>
             <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
                 
                     
                     
                     
                     
-                        <row header="yes">
-                            <cell>
+                        <row header="yes" left="minor">
+                            <cell bottom="minor" right="minor">
                                 Operation
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 array
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 ArrayList
                             </cell>
                         </row>
                     
                     
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 length/size
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 array.length
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 list.size()
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 Access
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 value = array[index];
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 value = list.get(index);
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 Modify
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 array[index] = value;
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 list.set(index,value);
                             </cell>
                         </row>

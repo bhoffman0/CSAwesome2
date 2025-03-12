@@ -316,7 +316,7 @@ System.out.println( highScores[0] );
         <p> Fill in the blank with code to access the cars array to get "Volvo" using the following array:
             String[] cars = {“Honda”, “Volvo”, “BMW”};</p>
         <p>
-            <fillin answer="cars[1]" mode="string"/>
+            <fillin answer="cars\[1\]" mode="string"/>
         </p>    
     </statement>
     <evaluation>
@@ -339,10 +339,10 @@ System.out.println( highScores[0] );
 
 <activity label="array-access2">
     <statement>
-        <p> Fill in the blank with code to get "Honda" out of the array: String[] cars = {“Honda”, “Volvo”, “BMW”}; </p>
-        
-            <fillin answer="cars[0]" mode="string"/>
-        
+        <p> At what index is "Honda" in the array: String[] cars = {“Honda”, “Volvo”, “BMW”}; </p>
+        <p>
+            <fillin answer="0" mode="string"/>
+        </p>
     </statement>
     <evaluation>
         <evaluate>
@@ -355,8 +355,7 @@ System.out.println( highScores[0] );
             <test>
                 <!-- else -->
                 <feedback><p>
-                    Remember, arrays start
-                    at index 0.</p>
+                    Fill in just a number. What index do Java arrays start at?</p>
                 </feedback>
             </test>
         </evaluate>
