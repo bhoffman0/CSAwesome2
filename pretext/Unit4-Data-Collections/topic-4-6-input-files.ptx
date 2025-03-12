@@ -630,7 +630,13 @@ public class RunestoneTests extends CodeTestHelper
    @Test
    public void randomTest()
    {
-       boolean passed = checkCodeContains("(int) (Math.random()*length) + 1");
+       boolean passed = checkCodeContains("(int)(Math.random()*length");
+       assertTrue(passed);
+   }
+   @Test
+   public void randomTest2()
+   {
+       boolean passed = checkCodeContains("+ 1 in Math.random() line", "+ 1");
        assertTrue(passed);
    }
 
