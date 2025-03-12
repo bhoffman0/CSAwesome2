@@ -240,60 +240,61 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="truth-tables">
             <title>Truth Tables</title>
             <p>The following table (also called a <term>truth table</term>) shows the result for <c>P &amp;&amp; Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>. An expression involving logical operators like <c>P &amp;&amp; Q</c> evaluates to a <c>boolean</c> value, <c>true</c> or <c>false</c>. As you can see below the result of <c>P &amp;&amp; Q</c> is only <c>true</c> if both <c>P</c> and <c>Q</c> are <c>true</c>.</p>
-            <table><tabular>
-                        <row header="yes">
-                            <cell>
+            <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
+                        <row header="yes" left="minor">
+                            <cell bottom="minor" right="minor">
                                 P
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 Q
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 P &amp;&amp; Q
                             </cell>
                         </row>
     
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 ?
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
                         </row>            
@@ -322,61 +323,62 @@ public class RunestoneTests extends CodeTestHelper
                  
         
           <p>The following table shows the result for <c>P || Q</c> when <c>P</c> and <c>Q</c> are both expressions that can be <c>true</c> or <c>false</c>.  As you can see below the result of <c>P || Q</c> is <c>true</c> if either <c>P</c> or <c>Q</c> is <c>true</c>.  It is also <c>true</c> when both of them are <c>true</c>.</p>
-            <table><tabular>
-                        <row header="yes">
-                            <cell>
+            <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/><col top="minor"/>
+                        <row header="yes" left="minor">
+                            <cell bottom="minor" right="minor">
                                 P
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 Q
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 P || Q
                             </cell>
                         </row>
                     
                     
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 ?
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
                         </row>

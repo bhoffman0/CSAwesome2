@@ -76,75 +76,75 @@ b = "at our high school"
                     
                     
                     
-                        <row header="yes">
-                            <cell>
+                        <row header="yes" left="minor">
+                            <cell bottom="minor" right="minor">
                                 a
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 b
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 !(a &amp;&amp; b)
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 !a || !b
                             </cell>
                         </row>
                     
                     
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 false
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 true
                             </cell>
                         </row>

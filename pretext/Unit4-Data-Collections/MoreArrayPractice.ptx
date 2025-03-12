@@ -10,58 +10,59 @@
             very unlucky, so do not add it or the number that comes immediately
             after a 13 to the sum.    Return <c>0</c> if <c>nums</c> is an empty array.</p>
         <blockquote>
-            <table><tabular>
+            <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
                 
                     
                     
                     
-                        <row header="yes">
-                            <cell>
+                        <row header="yes" left="minor">
+                            <cell bottom="minor" right="minor">
                                 Example Input
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 Expected Output
                             </cell>
                         </row>
                     
                     
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 <c>sum13({13, 1, 2})</c>
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 <c>2</c>
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 <c>sum13({1,13})</c>
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 <c>1</c>
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 <c>sum13({4, 13, 8})</c>
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 <c>4</c>
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 <c>sum13({13, 1, 13, 3, 2})</c>
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 <c>2</c>
                             </cell>
                         </row>
-                        <row>
-                            <cell>
+                        <row left="minor">
+                            <cell bottom="minor" right="minor">
                                 <c>sum13({})</c>
                             </cell>
-                            <cell>
+                            <cell bottom="minor" right="minor">
                                 <c>0</c>
                             </cell>
                         </row>
@@ -128,50 +129,51 @@ public class RunestoneTests extends CodeTestHelper {
         <p>Create a method <c>has22(nums)</c> that takes an array of integers, <c>nums</c>
             and returns <c>true</c> if there are at least two items in the list that are
             adjacent and both equal to <c>2</c>, otherwise return <c>false</c>.</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>has22({1, 2, 2})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>true</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>has22({2, 1, 2})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>false</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>has22({2, 2, 8})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>true</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>has22({3, 3, 5})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>false</c>
                         </cell>
                     </row>
@@ -241,42 +243,43 @@ public class RunestoneTests extends CodeTestHelper {
         <p>Create the <c>total89(nums)</c> method below that takes an array of integers,
             <c>nums</c>, and returns the total of the numbers in <c>nums</c> except for all numbers
             in the array between an 8 and a 9 (inclusive).</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>total89({1, 2})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>3</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>total89({2, 8, 3, 9, 2})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>4</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>total89({8, 3, 5, 9, 6})</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>6</c>
                         </cell>
                     </row>
@@ -338,42 +341,43 @@ public class RunestoneTests extends CodeTestHelper {
             two numbers such that they add up to <c>target</c>. If no two numbers add up to
             <c>target</c>, it returns an empty array. Assume that each input has exactly one
             solution, and you may not use the same element twice.</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>twoSum({2,7,11,15}, 9)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>{0, 1}</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>twoSum({2,7,11,15}, 13)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>{0, 2}</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>twoSum({2,7,11,15}, 5)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>{}</c>
                         </cell>
                     </row>

@@ -29,58 +29,56 @@ public static return-type method-name(param-type param-var1, param-type param-va
                 <p>Otherwise return <c>"n"</c>.</p>
             </li>
         </ul></p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
-                
-                
-                
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>front_back("Open at noon", "Open", "noon")</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>"s_e"</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>front_back("Opening time", "Open", "noon")</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>"s"</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>front_back("Afternoon", "Open", "noon")</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>"e"</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>front_back("Closed", "Open", "noon")</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>"n"</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>front_back("It is noon now", "open", "noon")</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>"n"</c>
                         </cell>
                     </row>
@@ -143,42 +141,43 @@ public class RunestoneTests extends CodeTestHelper {
 <activity label="squirrelPlay_written">
     <statement>
         <p>The squirrels in Palo Alto spend most of the day playing. In particular, they play if the temperature is between 60 and 90 (inclusive). Unless it is summer, then the upper limit is 100 instead of 90. Given an <c>int temperature</c> and a <c>boolean isSummer</c>, return <c>true</c> if the squirrels play and <c>false</c> otherwise.</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>squirrelPlay(70, false)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>true</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>squirrelPlay(95, false)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>false</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>squirrelPlay(95, true)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>true</c>
                         </cell>
                     </row>
@@ -234,42 +233,43 @@ public class RunestoneTests extends CodeTestHelper {
 <activity label="alarmClock_written">
     <statement>
         <p>Given a <c>day</c> of the week encoded as 0=Sun, 1=Mon, 2=Tue, …6=Sat, and a <c>boolean</c> indicating if we are on <c>vacation</c>, return a string of the form <c>"7:00"</c> indicating when the alarm clock should ring. Weekdays, the alarm should be <c>"7:00"</c> and on the weekend it should be <c>"10:00"</c>. Unless we are on vacation – then on weekdays it should be <c>"10:00"</c> and weekends it should be <c>"off"</c>.</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>alarmClock(1, false)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>7:00</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>alarmClock(5, false)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>7:00</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>alarmClock(0, false)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>10:00</c>
                         </cell>
                     </row>
@@ -324,42 +324,43 @@ public class RunestoneTests extends CodeTestHelper {
 <activity label="dateFashion_written">
     <statement>
         <p>You and your date are trying to get a table at a restaurant. The parameter <c>you</c> is the stylishness of your clothes, in the range 0..10, and <c>date</c> is the stylishness of your date’s clothes. The result getting the table is encoded as an int value with 0=no, 1=maybe, 2=yes. If either of you is very stylish, 8 or more, then the result is <c>2</c> (yes). With the exception that if either of you has style of 2 or less, then the result is <c>0</c> (no). Otherwise the result is <c>1</c> (maybe).</p>
-        <table><tabular>
+        <table><tabular row-headers="yes">
+<col top="minor"/><col top="minor"/>
             
                 
                 
                 
-                    <row header="yes">
-                        <cell>
+                    <row header="yes" left="minor">
+                        <cell bottom="minor" right="minor">
                             Example Input
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             Expected Output
                         </cell>
                     </row>
                 
                 
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>dateFashion(5, 10)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>2</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>dateFashion(8, 2)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>0</c>
                         </cell>
                     </row>
-                    <row>
-                        <cell>
+                    <row left="minor">
+                        <cell bottom="minor" right="minor">
                             <c>dateFashion(5, 5)</c>
                         </cell>
-                        <cell>
+                        <cell bottom="minor" right="minor">
                             <c>1</c>
                         </cell>
                     </row>
