@@ -671,7 +671,7 @@ for (int[] x : arr)
 
     <hidden>
     <datafile label="arch" filename="arch.jpg"> 
-    <image source="../_static/arch.jpg"/>
+    <image source="_static/arch.jpg"/>
     </datafile>
    
     <datafile label="pictureLab" filename="pictureLab.jar"
