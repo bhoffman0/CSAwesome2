@@ -852,7 +852,7 @@ III. The array must not contain duplicate values.
             <p>This spellchecker uses an ArrayList for the dictionary. Write a <c>linearSearch(word)</c> and a <c>binarySearch(word)</c> method. Use <c>get(i)</c>, <c>size()</c>, <c>equals</c>, and <c>compareTo</c>. Return a count of the number of words checked.</p>
 
     </statement>
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="dictionary.txt">
         <code>
 import java.io.*;
 import java.nio.file.*;

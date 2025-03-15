@@ -41,53 +41,48 @@
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
-                    
+          <col top="minor"/>   <col top="minor"/>  <col top="minor"/>  <col top="minor"/>   
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
-                                8
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
+                             8
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -1
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 5
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 0
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -7
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -5
-                            </cell>
+                            </area></cell>
                         </row>
                     
                 
@@ -98,53 +93,48 @@
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
-                    
+           <col top="minor"/>   <col top="minor"/>  <col top="minor"/>  <col top="minor"/>        
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 8
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -1
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 5
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 0
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -7
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -5
-                            </cell>
+                            </area></cell>
                         </row>
                     
                 
@@ -155,53 +145,49 @@
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
-                    
+                   <col top="minor"/>   <col top="minor"/>  <col top="minor"/>  <col top="minor"/> 
+                   
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 8
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -1
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 5
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 0
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -7
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 -3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -5
-                            </cell>
+                            </area></cell>
                         </row>
                     
                 
@@ -212,53 +198,49 @@
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
-                    
+                   <col top="minor"/>   <col top="minor"/>  <col top="minor"/>  <col top="minor"/> 
+                   
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 8
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -1
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 5
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 0
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -7
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -5
-                            </cell>
+                            </area></cell>
                         </row>
                     
                 
@@ -269,53 +251,49 @@
 <feedback><p>Rows are horizontal and columns are vertical and both start with index 0.</p></feedback>
 <areas>
             <table><tabular>
-                
-                    
-                    
-                    
-                    
+                   <col top="minor"/>   <col top="minor"/>  <col top="minor"/>  <col top="minor"/>   
                     
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 8
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -1
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="yes">
                                 5
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 0
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -7
-                            </cell>
+                            </area></cell>
                         </row>
                         <row left="minor">
-                            <cell bottom="minor" right="minor">
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 2
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -3
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -4
-                            </cell>
-                            <cell bottom="minor" right="minor">
+                            </area></cell>
+                            <cell bottom="minor" right="minor"><area correct="no">
                                 -5
-                            </cell>
+                            </area></cell>
                         </row>
                     
                 

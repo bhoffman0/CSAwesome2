@@ -171,7 +171,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
 <activity label="max2DArrayParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
-            <p>The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right and indent them as well. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order or have the wrong indention.</p>
+            <p>The following has the correct code to find the largest value in a 2D array. Drag the blocks from the left into the correct order on the right. Check your solution by clicking on the Check button.  You will be told if any of the blocks are in the wrong order.</p>
 </statement>
 <blocks><block order="3">
 <cline>public int getLargest(int[][] arr)</cline>
@@ -320,28 +320,7 @@ public class Duplicates
 
 <activity label="rotate2DArray">
     <statement>
-            <field_list>
-                <field>
-                    <field_name>language</field_name>
-                    <field_body>
-                        <p>java</p>
-                    </field_body>
-                </field>
-                <field>
-                    <field_name>autograde</field_name>
-                    <field_body>
-                        <p>unittest</p>
-                    </field_body>
-                </field>
-                <field>
-                    <field_name>practice</field_name>
-                    <field_body>
-                        <p>T</p>
-                    </field_body>
-                </field>
-            </field_list>
             <p>Create a method <c>rotateRowRight</c> that rotates the elements in a row to the right by one position. It should return the rotated array.</p>
-
     </statement>
     <program interactive="activecode" language="java">
         <code>
@@ -392,6 +371,7 @@ public class RunestoneTests extends CodeTestHelper
           boolean passed = getResults(expect, output, "Expected output from main", true);
           assertTrue(passed);
      }
+     /* // giving strange error converting int to Object array.
      @Test
         public void test2()
         {
@@ -406,6 +386,7 @@ public class RunestoneTests extends CodeTestHelper
                     getResults(expect, output, "Testing rotateRowRight({ {1, 4,8},{6, 7, 9} }, 1)");
             assertTrue(passed);
         }
+        */
 }
         </tests>
     </program>

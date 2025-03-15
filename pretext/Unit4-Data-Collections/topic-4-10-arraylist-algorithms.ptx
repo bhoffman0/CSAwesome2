@@ -474,34 +474,35 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="pairs-and-duplicates">
             <title>Pairs and Duplicates</title>
             <p>In the last lesson, the coding challenge involved finding pairs. You should be able to write code that accesses all consecutive pairs of elements in an <c>ArrayList</c> and determines the presence or absence of duplicate elements. These problems often require nested loops.</p>
-<activity label="arraylistDuplicatesParsons" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="arraylistDuplicatesParsons" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
             <p>The following program segment is a method that should return true if there are any duplicate elements in an ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
-<cline>public static boolean hasDups(ArrayList&lt;Integer&gt;</cline>
-<cline>                                           a)</cline>
+<cline>public static boolean hasDups(ArrayList&lt;Integer&gt; a)</cline>
 <cline>{</cline>
 </block><block order="3">
 <cline>  for(int i=0; i &lt; a.size(); i++)</cline>
 <cline>  {</cline>
 </block><block order="4">
-<choice correct="yes"><cline>    for(int j=i+1; j &lt; a.size(); j++)</cline>
+<choice correct="yes">
+<cline>    for(int j=i+1; j &lt; a.size(); j++)</cline>
 <cline>    {</cline>
-</choice><choice><cline>    for(int j=i; j &lt; a.size()-1; j++)</cline>
+</choice><choice>
+<cline>    for(int j=i; j &lt; a.size()-1; j++)</cline>
 <cline>    { </cline>
 </choice></block><block order="8">
-<choice correct="yes"><cline>     if(a.get(i).equals(a.get(j)))</cline>
-<cline>     {</cline>
-</choice><choice><cline>     if(a.get(i) == a.get(j))</cline>
-<cline>     { </cline>
-</choice></block><block order="11">
-<cline>     if (a[i] == a[j])</cline>
-<cline>     {    </cline>
-</block><block order="12">
-<cline>        return true;</cline>
+<choice correct="yes">
+<cline>       if(a.get(i).equals(a.get(j)))</cline>
+<cline>       {</cline>
+</choice><choice>
+<cline>       if(a.get(i) == a.get(j))</cline>
+<cline>       { </cline>
+</choice></block>
+<block order="10">
+<cline>           return true;</cline>
 </block><block order="7">
-<cline>      } // end if</cline>
-</block><block order="10">
+<cline>       } // end if</cline>
+</block><block order="9">
 <cline>    } //end inner for loop</cline>
 </block><block order="6">
 <cline>  } //end outer for loop</cline>
@@ -510,6 +511,7 @@ public class RunestoneTests extends CodeTestHelper
 </block><block order="2">
 <cline>} //end hasDuplicates method</cline>
 </block></blocks></activity>
+
 <activity label="arraylistDuplicates">
     <statement>
             <p>Write a method <c>hasDuplicates</c> that returns true if there are any duplicate elements in an ArrayList of Integers.</p>

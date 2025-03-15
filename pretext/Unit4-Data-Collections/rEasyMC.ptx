@@ -8,7 +8,7 @@
         <statement>
 
         <p> Which line has the recursive call?</p>
-        <program language="java"><code>
+        <program language="java" line-numbers="yes"><code>
 public static int factorial(int n)
 {
     if (n == 0)
@@ -68,7 +68,7 @@ public static int factorial(int n)
         <statement>
 
         <p> Which line has the recursive call?</p>
-        <program language="java"><code>
+        <program language="java" line-numbers="yes"><code>
 public String starString(int n)
 {
     if (n == 0)

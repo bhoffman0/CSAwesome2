@@ -117,9 +117,9 @@ public class RecursiveBinarySearch
             <p>Here is a version of the recursive binary search that works with an <c>ArrayList</c>. Click on CodeLens to step through the code.</p>
 
     <program interactive="activecode" language="java">
+        <statement><p> Here is a version of the recursive binary search that works with an ArrayList. Run the code below. Try searching for the value 3 and then the value 2 which is not in the ArrayList. What happens?
+        </p></statement>
         <code>
-  Here is a version of the recursive binary search that works with an ArrayList. Run the code below. Try searching for the value 3 and then the value 2 which is not in the ArrayList. What happens?
-  ~~~~
   import java.util.ArrayList;
 
   public class RecursiveBinarySearchArrayList

@@ -367,7 +367,7 @@ public void zeroBlue()
             <p>Picture Lab: 1) write a method called keepOnlyBlue() that keeps only the blue values by setting the red and green values to zero. Uncomment the code in main to test it. 2) write a method called switchColors() that replaces red values (using p.setRed) with green or blue values (using p.getGreen(), etc.) to change the colors around. Uncomment the code in main to test it.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="pictureLab.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar,arch.jpg">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -668,7 +668,11 @@ for (int[] x : arr)
 </choices>
 
     </activity>
-    <datafile label="arch" filename="arch.jpg" source="../_static/arch.jpg" editable="no" hide="yes"></datafile>
+
+    <hidden>
+    <datafile label="arch" filename="arch.jpg"> 
+    <image source="_static/arch.jpg"/>
+    </datafile>
    
     <datafile label="pictureLab" filename="pictureLab.jar"
     editable="no" hide="yes">
@@ -1776,6 +1780,7 @@ for (int[] x : arr)
         ]]>
         </pre>
         </datafile>
+        </hidden>
 
         </subsection>
   <subsection xml:id="array2d-game">
