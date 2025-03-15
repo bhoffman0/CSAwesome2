@@ -7,8 +7,8 @@
  <idx><h>recursion</h><h>definition</h></idx>
 
     <p><term>Recursion</term> is when a method calls itself. It is a form of repetition. See the example method below.</p>
-    <program language="java">
-      <code>
+    <program language="java" line-numbers="yes">
+      <code line-numbers="yes">
 public static void neverEnd()
 {
   System.out.println("This is the method that never ends!");
@@ -28,11 +28,11 @@ public static void neverEnd()
   </introduction>
   <subsection xml:id="recursive-call">
             <title>Recursive Call</title>
-            <p>Well-constructed recursive methods contain at least one <term>base case</term>, which halts the recursion, and at least one recursive call.</p>
+            <p>Well-constructed recursive methods contain at least one <term>base case</term>, which halts the recursion, and at least one <term>recursive call</term>.</p>
 
      <activity label="recurb1fill">
     <statement>
-        <p> Which line in the method <c>neverEnd</c> (shown above) contains the recursive call (the call to the same method)? </p>
+        <p> Which line number contains the recursive call (the call to the same method) in the method <c>neverEnd</c> (shown above)? </p>
         <p>
             <fillin answer="4" mode="string"/>
         </p>    
@@ -186,7 +186,7 @@ public static int mystery2(int x)
 
             
             <p>See the method <title_reference>factorial</title_reference> below that calculates the <term>factorial</term> of a number.  The <term>factorial</term> of a number is defined as 1 for 0 and <c>n * factorial (n-1)</c> for any other number.</p>
-            <program language="java"><code>
+            <program language="java" line-numbers="yes"><code>
 public static int factorial(int n)
 {
     if (n == 0)
@@ -200,7 +200,7 @@ public static int factorial(int n)
 
         <activity label="recurb2fill">
     <statement>
-        <p> Which line in the method <c>factorial</c> contains the recursive call (the call to the same method)? </p>
+        <p> Which line number in the method <c>factorial</c> above contains the recursive call (the call to the same method)? </p>
         <p>
             <fillin answer="6" mode="string"/>
         </p>    
