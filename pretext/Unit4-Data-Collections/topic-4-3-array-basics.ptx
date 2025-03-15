@@ -311,56 +311,88 @@ System.out.println( highScores[0] );
 
     <video youtube="uagEJw6bTM4" label="video-array-values-memory"/>
     
-    <activity label="array-access1">
+    <activity label="array-access-mcq1">
     <statement>
-        <p> Fill in the blank with code to access the cars array to get "Volvo" using the following array:
-            String[] cars = {“Honda”, “Volvo”, “BMW”};</p>
-        <p>
-            <fillin answer="cars\[1\]" mode="string"/>
-        </p>    
+        <p>Which code below accesses "Honda" using the following array:
+<c>String[] cars = {“Honda”, “Volvo”, “BMW”};</c></p>
+            
     </statement>
-    <evaluation>
-        <evaluate>
-            <test>
-                <strcmp use-answer="yes"/>
+<choices>
+            <choice correct="yes">
+                <statement>
+                    <p>cars[0]</p>
+                </statement>
                 <feedback>
-                    Correct! Array indices start at 0, so "Volvo" is at index 1.
+                    <p>Yes, this would access "Honda". Remember that the first element in an array starts at index 0. </p>
                 </feedback>
-            </test>
-            <test>
-                <!-- else -->
+            </choice>
+            <choice>
+                <statement>
+                    <p>cars[1]</p>
+                </statement>
                 <feedback>
-                    Remember, array indices start at 0. Which index corresponds to "Volvo"?
+                    <p>No, this would access "Volvo". Remember that the first element in an array starts at index 0. </p>
                 </feedback>
-            </test>
-        </evaluate>
-    </evaluation>
-</activity>
+            </choice>
+            <choice>
+                <statement>
+                    <p>cars[2]</p>
+                </statement>
+                <feedback>
+                    <p>No, this would access "BMW". Remember that the first element in an array starts at index 0. </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>cars[3]</p>
+                </statement>
+                <feedback>
+                    <p>No, this would result in an IndexOutOfBounds error. Remember that the first element in an array starts at index 0. </p>
+                </feedback>
+            </choice>
+</choices>
+    </activity>
+   
 
-<activity label="array-access2">
+<activity label="array-access-mcq2">
     <statement>
-        <p> At what index is "Honda" in the array: String[] cars = {“Honda”, “Volvo”, “BMW”}; </p>
-        <p>
-            <fillin answer="0" mode="string"/>
-        </p>
+        <p> Which code below accesses "BMW" in the array: <c>String[] cars = {“Honda”, “Volvo”, “BMW”};</c> </p>
     </statement>
-    <evaluation>
-        <evaluate>
-            <test>
-                <strcmp use-answer="yes"/>
+    <choices>
+            <choice>
+                <statement>
+                    <p>cars[0]</p>
+                </statement>
                 <feedback>
-                    Correct! Honda is at index 0.
+                    <p>No, this would access "Honda". Remember that the first element in an array starts at index 0. </p>
                 </feedback>
-            </test>
-            <test>
-                <!-- else -->
-                <feedback><p>
-                    Fill in just a number. What index do Java arrays start at?</p>
+            </choice>
+            <choice>
+                <statement>
+                    <p>cars[1]</p>
+                </statement>
+                <feedback>
+                    <p>No, this would access "Volvo". Remember that the first element in an array starts at index 0. </p>
                 </feedback>
-            </test>
-        </evaluate>
-    </evaluation>
-</activity>
+            </choice>
+            <choice correct="yes">
+                <statement>
+                    <p>cars[2]</p>
+                </statement>
+                <feedback>
+                    <p>Yes, this would access "BMW". If there are n elements and you start indexing at 0, the last element is at index n-1.</p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>cars[3]</p>
+                </statement>
+                <feedback>
+                    <p>No, this would result in an IndexOutOfBounds error. Remember that the first element in an array starts at index 0. </p>
+                </feedback>
+            </choice>
+</choices>
+    </activity>
                                    
         <p>If you want to keep track of the top 5 highest scores in a game and the names of the people with those scores, you could use two <term>parallel arrays</term>.  One array could keep track of the scores and the other the names. You have to make sure you keep them in the same order so that the same index can be used to get correponding names and scores.</p>
 
