@@ -9,7 +9,9 @@
   <numbering>
     <divisions chapter-start="0"/>
   </numbering>
-
+  <common>
+       <tableofcontents level="3" focused="yes"/>
+  </common>
   <html>
     <platform host="runestone"/>
     <!-- knowled checkpoints interfere with ActiveCode problems -->
