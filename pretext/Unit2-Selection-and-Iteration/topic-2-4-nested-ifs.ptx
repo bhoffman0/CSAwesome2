@@ -53,10 +53,7 @@ public class TryElseIf
 {
     public static void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
-        
-        int x = scan.nextInt();
-        
+        int x = 2;
         if (x &lt; 0)
         {
             System.out.println("x is negative");
@@ -73,73 +70,82 @@ public class TryElseIf
     }
 }
 
-</code><stdin>10</stdin><tests>
+</code><tests>
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.io.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
-public class RunestoneTests extends CodeTestHelper
-{
-    public RunestoneTests()
-    {
+public class RunestoneTests extends CodeTestHelper {
+    public RunestoneTests() {
         super("TryElseIf"); // for Book
     }
 
     @Test
-    public void test01()
-    {
-        //String input = input1.replaceAll(" ", "\n");
-        String x = "5";
-        String result = "positive";
-            String output = getMethodOutputWithInput("main", x);
+    public void test01() {
+        String code = getCode();
+        String actual = "";
+        int num = 2;
 
-            boolean passed = output.contains("positive") &amp;&amp; !output.contains("negative") &amp;&amp; !output.contains("0");
+        Pattern pattern = Pattern.compile("x\\s*=\\s*(-?\\d+)");
+        Matcher matcher = pattern.matcher(code);
+        if (matcher.find()) {
+            actual = matcher.group();
+        }
 
-            passed =
-                    getResults(
-                            "x is " + result,
-                            output,
-                            "Result for x = " + x,
-                            passed);
-            assertTrue(passed);
-    }
+        boolean passed = !stringMatch(code, "x = 2;");
 
-    @Test
-    public void test02()
-    {
-        //String input = input1.replaceAll(" ", "\n");
-        String x = "0";
-        String result = "0";
-        String output = getMethodOutputWithInput("main", x);
-
-        boolean passed = !output.contains("positive") &amp;&amp; !output.contains("negative") &amp;&amp; output.contains("0");
-
-        passed =
-                getResults(
-                        "x is " + result,
-                        output,
-                        "Result for x = " + x,
-                        passed);
+        getResults("x = ?;", actual, "Checking that x has been changed.", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test03()
-    {
-        //String input = input1.replaceAll(" ", "\n");
-        String x = "-5";
-        String result = "negative";
-        String output = getMethodOutputWithInput("main", x);
+    public void test02() {
+        String code = getCode();
+        String actual = "";
+        int num = 2;
 
-        boolean passed = !output.contains("positive") &amp;&amp; output.contains("negative") &amp;&amp; !output.contains("0");;
+        Pattern pattern = Pattern.compile("x\\s*=\\s*(-?\\d+)");
+        Matcher matcher = pattern.matcher(code);
+        if (matcher.find()) {
+            actual = matcher.group();
+            //num = Integer.parseInt(matcher.group(1));
+        }
 
-        passed =
-                getResults(
-                        "x is " + result,
-                        output,
-                        "Result for x = " + x,
-                        passed);
+        boolean passed = actual.contains("-") || actual.contains("0");
+
+        getResults("x &lt;= 0", actual, "Checking that x is zero or negative", passed);
         assertTrue(passed);
+    }
+
+    @Test
+    public void test03() {
+        String output = getMethodOutput("main").split("\n")[0];
+        String expect = "x is negative";
+
+        String code = getCode();
+        String actual = "";
+        int num = 2;
+
+        Pattern pattern = Pattern.compile("x\\s*=\\s*(-?\\d+)");
+        Matcher matcher = pattern.matcher(code);
+        if (matcher.find()) {
+            actual = matcher.group();
+            num = Integer.parseInt(matcher.group(1));
+        }
+
+        if (num == 0) expect = "x is zero";
+
+        boolean passed = getResults(expect, output, "Checking for correct output");
+        assertTrue(passed);
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll("\\s", "");
+        str2 = str2.replaceAll("\\s", "");
+
+        return str1.contains(str2);
     }
 }
         </tests>
@@ -327,11 +333,15 @@ else
     </statement>
     <program interactive="activecode" language="java">
         <code>
+import java.util.Scanner;
+
 public class IfDebug
 {
     public static void main(String[] args)
     {
-        int score = 93;
+        Scanner scan = new Scanner(System.in);
+        int score = scan.nextInt();
+        
         String grade = "";
 
         if (score &gt;= 90)
@@ -359,145 +369,208 @@ public class IfDebug
     }
 }
 
-</code><tests>
+</code>
+<stdin>93</stdin>
+<tests>
 import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
+import org.junit.*;
 import java.io.*;
 
-public class RunestoneTests extends CodeTestHelper {
-    public RunestoneTests() {
-        super("IfDebug");
+public class RunestoneTests extends CodeTestHelper
+{
+
+    public RunestoneTests()
+    {
+        super("IfDebug"); // for Book
     }
+
+    private static String input1 = "93"; 
 
     @Test
-    public void testCodeContainsFourElses() {
-        String code = getCode();
-        int expectedElseCount = 4;
-        int actualElseCount = countOccurences(code, "else");
+    public void test01()
+    {
+        String x = "95";
+        String result = "A";
+        String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = getResults("" + expectedElseCount, "" + actualElseCount, "Expected number of else's");
-        assertTrue(passed);
+        boolean passed = output.contains(result);
 
-    }
-
-    private int[] grades = { 100, 95, 83, 79, 65, 50 };
-    String[] outs = { "A", "A", "B", "C", "D", "F" };
-
-    @Test
-    public void testGrades0() throws Exception {
-        changeAndTestCode(0);
-    }
-
-    @Test
-    public void testGrades1() throws Exception {
-        changeAndTestCode(1);
-    }
-
-    @Test
-    public void testGrades2() throws Exception {
-        changeAndTestCode(2);
-    }
-
-    @Test
-    public void testGrades3() throws Exception {
-        changeAndTestCode(3);
-    }
-
-    @Test
-    public void testGrades4() throws Exception {
-        changeAndTestCode(4);
-    }
-
-    @Test
-    public void testGrades5() throws Exception {
-        changeAndTestCode(5);
-    }
-
-    public void changeAndTestCode(int i) throws Exception {
-        String output = getOutputChangedCode(grades[i]);
-
-        String expected = outs[i];
-        boolean passed = output.contains(expected);
-        getResults(expected, output, "Checking output for grade = " + grades[i], passed);
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for score = " + x,
+            passed);
         assertTrue(passed);
     }
 
-    public String getOutputChangedCode(int newVal) throws Exception {
-        String className = "Test" + newVal;
+    @Test
+    public void test02()
+    {
+        String x = "85";
+        String result = "B";
+        String output = getMethodOutputWithInput("main", x);
 
-        String program = getCode();
-        program = program.replace("IfDebug", className).replace("public class", "class");
-        program = program.replaceAll("int score\\s*=\\s*\\d+", "int score = " + newVal);
+        boolean passed = output.contains(result);
 
-        return getMethodOutputChangedCode(program, className, "main");
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for score = " + x,
+            passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        String x = "75";
+        String result = "C";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for score = " + x,
+            passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04()
+    {
+        String x = "65";
+        String result = "D";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for score = " + x,
+            passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05()
+    {
+        String x = "55";
+        String result = "F";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for score = " + x,
+            passed);
+        assertTrue(passed);
     }
 }
+
         </tests>
     </program>
 </activity>
 
 <activity label="ifelseifBattery">
     <statement>
-            <p>Finish the following code so that it prints “Plug in your phone!” if the battery is below 50, “Unplug your phone!” if it is above 100, and “All okay!” otherwise. Change the battery value to test all 3 conditions.</p>
+            <p>Finish the following code so that it prints “Plug in your phone!” if the battery is below 50, “Unplug your phone!” if it is at or above 100, and “All okay!” otherwise. Change the battery value to test all 3 conditions.</p>
 
     </statement>
     <program interactive="activecode" language="java">
         <code>
+import java.util.Scanner;
+
 public class BatteryTest
 {
     public static void main(String[] args)
     {
-        int battery = 60;
+        Scanner scan = new Scanner(System.in);
+        int battery = scan.nextInt();
 
         System.out.println("All okay!");
     }
 }
 
-</code><tests>
+</code>
+<stdin>75</stdin>
+<tests>
 import static org.junit.Assert.*;
-
 import org.junit.*;
-
 import java.io.*;
 
 public class RunestoneTests extends CodeTestHelper
 {
-    @Test
-    public void testChangedCode()
-    {
-        String origCode =
-                "public class BatteryTest {  public static void main(String[] args)  {  int battery"
-                    + " = 60;  System.out.println(\"All okay!\");  }  }";
 
-        boolean changed = codeChanged(origCode);
-        assertTrue(changed);
+    public RunestoneTests()
+    {
+        super("BatteryTest"); // for Book
+    }
+
+    private static String input1 = "93"; 
+
+    @Test
+    public void test01()
+    {
+        String x = "95";
+        String result = "All okay!";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for battery = " + x,
+            passed);
+        assertTrue(passed);
     }
 
     @Test
-    public void testCodeContains3()
+    public void test02()
     {
-        boolean ifCheck1 =
-                checkCodeContains("if statement for battery above 100", "if (battery &gt; 100)");
-        assertTrue(ifCheck1);
+        String x = "100";
+        String result = "Unplug your phone!";
+        String output = getMethodOutputWithInput("main", x);
+
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for battery = " + x,
+            passed);
+        assertTrue(passed);
     }
 
     @Test
-    public void testCodeContains5()
+    public void test03()
     {
-        boolean ifCheck1 =
-                checkCodeContains("if statement for battery less than 50", "if (battery &lt; 50)");
-        assertTrue(ifCheck1);
-    }
+        String x = "45";
+        String result = "Plug in your phone!";
+        String output = getMethodOutputWithInput("main", x);
 
-    @Test
-    public void testCodeContains4()
-    {
-        boolean ifCheck2 = checkCodeContains("else", "else");
-        assertTrue(ifCheck2);
-    }
+        boolean passed = output.contains(result);
+
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for battery = " + x,
+            passed);
+        assertTrue(passed);
+    }    
 }
         </tests>
     </program>
@@ -523,12 +596,16 @@ if (boolean expression)
     </statement>
     <program interactive="activecode" language="java">
         <code>
+import java.util.Scanner;
+
 public class DanglingElseTest
 {
     public static void main(String[] args)
     {
-        boolean sunny = true;
-        boolean hot = false;
+        Scanner in = new Scanner(System.in);
+        
+        boolean sunny = in.nextBoolean();
+        boolean hot = in.nextBoolean();
         if (sunny)
             if (hot)
                System.out.println("Head for the beach!");
@@ -537,79 +614,94 @@ public class DanglingElseTest
     }
 }
 
-</code><tests>
- import static org.junit.Assert.*;
+</code>
+<stdin>true false</stdin>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
 
- import org.junit.*;
+public class RunestoneTests extends CodeTestHelper
+{
 
- import java.io.*;
+    public RunestoneTests()
+    {
+        super("DanglingElseTest"); // for Book
+    }
 
- public class RunestoneTests extends CodeTestHelper
- {
-     /*
-     @Test
-     public void testCodeChange1() throws Exception
-     {
-         String className = "Test1";
+    @Test
+    public void test01()
+    {
+        String x = "true false";
+        String result = "";
+        String output = getMethodOutputWithInput("main", x);
 
-         String program = getCode();
-         program = program.replace("DangleElse", className).replace("public class", "class");
-         program = program.replaceAll("sunny = true;", "sunny = false;");
+        boolean passed = output.equals(result);
 
-         String output = getMethodOutputChangedCode(program, className, "main");
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for input = " + x,
+            passed);
+        assertTrue(passed);
+    } 
 
-         String expected = "Bring your umbrella!";
-         boolean passed = output.contains(expected);
-         getResults(expected, output, "Checking output if sunny is false", passed);
-         assertTrue(passed);
-     }
+    @Test
+    public void test02()
+    {
+        String x = "true true";
+        String result = "Head for the beach!";
+        String output = getMethodOutputWithInput("main", x);
 
-     @Test
-     public void testCodeChange2() throws Exception
-     {
-         String className = "Test2";
+        boolean passed = output.equals(result);
 
-         String program = getCode();
-         program = program.replace("DangleElse", className).replace("public class", "class");
-         program = program.replaceAll("hot = false", "hot = true");
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for input = " + x,
+            passed);
+        assertTrue(passed);
+    }  
 
-         String output = getMethodOutputChangedCode(program, className, "main");
+    @Test
+    public void test03()
+    {
+        String x = "false false";
+        String result = "Bring your umbrella!";
+        String output = getMethodOutputWithInput("main", x);
 
-         String expected = "Head for the beach!";
-         boolean passed = output.contains(expected);
-         getResults(expected, output, "Checking output if hot is true", passed);
-         assertTrue(passed);
-     }
+        boolean passed = output.equals(result);
 
-     @Test
-     public void testCodeChange3() throws Exception
-     {
-         String className = "Test3";
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for input = " + x,
+            passed);
+        assertTrue(passed);
+    }  
 
-         String program = getCode();
-         program = program.replace("DangleElse", className).replace("public class", "class");
-         program = program.replaceAll("hot = false", "hot = true");
-         program = program.replaceAll("sunny = true;", "sunny = false;");
+    @Test
+    public void test04()
+    {
+        String x = "false true";
+        String result = "Bring your umbrella!";
+        String output = getMethodOutputWithInput("main", x);
 
-         String output = getMethodOutputChangedCode(program, className, "main");
+        boolean passed = output.equals(result);
 
-         String expected = "Bring your umbrella!";
-         boolean passed = output.contains(expected);
-         getResults(expected, output, "Checking output if sunny is false and hot is true", passed);
-         assertTrue(passed);
-     }
-     */
+        passed =
+        getResults(
+            result,
+            output,
+            "Result for input = " + x,
+            passed);
+        assertTrue(passed);
+    }  
+}
 
-     @Test
-     public void testMain() throws IOException
-     {
-         String output = getMethodOutput("main");
-         String expect = "";
-         boolean passed =
-                 getResults(expect, output, "Expected output from main (no output if correct)");
-         assertTrue(passed);
-     }
- }
         </tests>
     </program>
 </activity>
