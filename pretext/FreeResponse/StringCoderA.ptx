@@ -13,7 +13,7 @@
             shown below.</p>
     <figure align="center">
       <caption>An example string with indices</caption>
-      <image source="FreeResponse/Figures/StringCoderEx.png" width="50%"/>
+      <image source="FreeResponse/Figures/StringCoderEx.png" width="100%"/>
     </figure>
     <p>An encoded string is defined by a list of string parts. A string part is defined by its starting index in the
             master string and its length. For example, the string <c>"overeager"</c> is encoded as the list of string parts

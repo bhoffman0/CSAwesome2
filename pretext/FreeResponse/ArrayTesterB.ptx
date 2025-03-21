@@ -12,11 +12,11 @@
             2) All values in the first row of the square appear in each row of the square.
             3) All values in the first row of the square appear in each column of the square.</p>
     <figure align="center">
-      <image source="FreeResponse/Figures/LatinSquareEx.png" width="50%"/>
+      <image source="FreeResponse/Figures/LatinSquareEx.png" width="100%"/>
     </figure>
     <p>The <c>ArrayTester</c> class provides two helper methods: <c>containsDuplicates</c> and <c>hasAllValues</c>. The method <c>containsDuplicates</c> returns <c>true</c> if the given one-dimensional array <c>arr</c> contains any duplicate values and <c>false</c> otherwise. The method <c>hasAllValues</c> returns <c>true</c> if and only if every value in <c>arr1</c> appears in <c>arr2</c>. You do not need to write the code for these methods.</p>
     <figure align="center">
-      <image source="FreeResponse/Figures/LatinSquareEx2.png" width="50%"/>
+      <image source="FreeResponse/Figures/LatinSquareEx2.png" width="100%"/>
     </figure>
     <p>Complete method <c>isLatin</c> below. Assume that <c>getColumn</c> works as specified, regardless of what
             you wrote in part (a). You must use <c>getColumn</c>, <c>hasAllValues</c>, and <c>containsDuplicates</c>

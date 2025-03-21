@@ -13,7 +13,7 @@
             arrows. The back-and-forth ordering of the values received from the scan is called telescope order.</p>
     <figure align="center">
       <caption>The first row is left to right and the second is right to left and so on.</caption>
-      <image source="FreeResponse/Figures/SkyViewOrder.png" width="50%"/>
+      <image source="FreeResponse/Figures/SkyViewOrder.png" width="100%"/>
     </figure>
     <p>The telescope records the data in telescope order into a 1-dimensional array of <c>double</c> values. This
             1-dimensional array of information received from a single scan will be transferred into a 2-dimensional array,
@@ -76,24 +76,24 @@ public class SkyView
     <p>For example, suppose <c>scanned</c> contains values, as shown in the following array.</p>
     <figure align="center">
       <caption>First example scanned array values</caption>
-      <image source="FreeResponse/Figures/SkyViewExArray.png" width="50%"/>
+      <image source="FreeResponse/Figures/SkyViewExArray.png" width="100%"/>
     </figure>
     <p>Using the scanned array above, a <c>SkyView</c> object created with
             <c>new SkyView(4, 3, values)</c>, would have <c>view</c> initialized with the following values.</p>
     <figure align="center">
       <caption>The resulting view from the first example scanned array</caption>
-      <image source="FreeResponse/Figures/SkyViewRes1.png" width="50%"/>
+      <image source="FreeResponse/Figures/SkyViewRes1.png" width="100%"/>
     </figure>
     <p>For another example, suppose <c>scanned</c> contains the following values.</p>
     <figure align="center">
       <caption>Second example scanned array values</caption>
-      <image source="FreeResponse/Figures/SkyViewEx2Array.png" width="50%"/>
+      <image source="FreeResponse/Figures/SkyViewEx2Array.png" width="100%"/>
     </figure>
     <p>A <c>SkyView</c> object created with <c>new SkyView(3, 2, values)</c>, would have <c>view</c> initialized
             with the following values.</p>
     <figure align="center">
       <caption>The resulting view from the second example scanned array</caption>
-      <image source="FreeResponse/Figures/SkyViewRes2.png" width="50%"/>
+      <image source="FreeResponse/Figures/SkyViewRes2.png" width="100%"/>
     </figure>
   </introduction>
   <subsection xml:id="try-and-solve-it-7">
