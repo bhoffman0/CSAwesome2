@@ -283,16 +283,19 @@ public class Song
 <cline><area correct="no">public static void main(String args[]) {</area></cline>
 <cline>    <area correct="no">System.out.println("Old MacDonald had a farm.");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
-<cline>    <area correct="no">System.out.println("And on this farm, they had a </area><area correct="yes">cow</area><area correct="no">.");</area></cline>
+<cline>    <area correct="no">System.out.println("And on this farm, they had a </area> <area correct="yes"> cow</area><area correct="no">.");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
-<cline>    <area correct="no">System.out.println("With a </area><area correct="yes">moo moo </area><area correct="no">here and a </area><area correct="yes">moo moo </area><area correct="no">there");</area></cline>
-<cline>    <area correct="no">System.out.println("Here a </area><area correct="yes">moo</area><area correct="no">, there a </area><area correct="yes">moo</area><area correct="no">, everywhere a </area><area correct="yes">moo moo</area><area correct="no">");</area></cline>
+<cline>    <area correct="no">System.out.println("With a </area><area correct="yes"> moo moo </area><area correct="no">here and a </area><area correct="yes"> moo moo </area><area correct="no">there");</area></cline>
+<cline>    <area correct="no">System.out.println("Here a </area><area correct="yes"> moo</area><area correct="no">, there a </area> <area correct="yes">  moo </area> <area correct="no">, everywhere a </area> <area correct="yes"> moo moo</area><area correct="no">");</area></cline>
 <cline>    <area correct="no">System.out.println("Old MacDonald had a farm");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
-<cline>    <area correct="no">System.out.println("And on this farm, they had a </area><area correct="yes">duck</area><area correct="no">.");</area></cline>
+<cline>    <area correct="no">System.out.println("And on this farm, they had a </area> 
+<area correct="yes"> duck</area><area correct="no">.");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
-<cline>    <area correct="no">System.out.println("With a </area><area correct="yes">quack quack </area><area correct="no">here and a </area><area correct="yes">quack quack </area><area correct="no">there");</area></cline>
-<cline>    <area correct="no">System.out.println("Here a </area><area correct="yes">quack</area><area correct="no">, there a </area><area correct="yes">quack</area><area correct="no">, everywhere a </area><area correct="yes">quack quack</area><area correct="no">");</area></cline>
+<cline>    <area correct="no">System.out.println("With a </area> <area correct="yes"> quack quack </area><area correct="no"> here and a </area><area correct="yes"> quack quack </area><area correct="no"> there");</area></cline>
+<cline>    <area correct="no">System.out.println("Here a </area>
+ <area correct="yes"> quack</area><area correct="no">, there a </area>
+  <area correct="yes"> quack</area><area correct="no">, everywhere a </area><area correct="yes"> quack quack </area><area correct="no">");</area></cline>
 <cline>    <area correct="no">System.out.println("Old MacDonald had a farm");</area></cline>
 <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
 <cline><area correct="no">}</area></cline>
@@ -480,24 +483,24 @@ verse("cow", "moo");
     <statement><p>Click on the phrases that are different in each verse.</p></statement>
 <feedback><p>Look for words that are different in verse 1, 2, and 3.</p></feedback>
 <areas>
-<cline><area correct="no">The ants go marching </area><area correct="yes">one by one</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">one by one</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">one by one</area></cline>
-<cline><area correct="no">The little one stops to </area><area correct="yes">suck a thumb</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> one by one</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> one by one</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> one by one</area></cline>
+<cline><area correct="no">The little one stops to </area><area correct="yes"> suck a thumb</area></cline>
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
 <cline/>
-<cline><area correct="no">The ants go marching </area><area correct="yes">two by two</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">two by two</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">two by two</area></cline>
-<cline><area correct="no">The little one stops to </area><area correct="yes">tie a shoe</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> two by two</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> two by two</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> two by two</area></cline>
+<cline><area correct="no">The little one stops to </area><area correct="yes"> tie a shoe</area></cline>
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
 <cline/>
-<cline><area correct="no">The ants go marching </area><area correct="yes">three by three</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">three by three</area><area correct="no">, hurrah, hurrah</area></cline>
-<cline><area correct="no">The ants go marching </area><area correct="yes">three by three</area></cline>
-<cline><area correct="no">The little one stops to </area><area correct="yes">climb a tree</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> three by three</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> three by three</area><area correct="no">, hurrah, hurrah</area></cline>
+<cline><area correct="no">The ants go marching </area><area correct="yes"> three by three</area></cline>
+<cline><area correct="no">The little one stops to </area><area correct="yes"> climb a tree</area></cline>
 <cline><area correct="no">And they all go marching down to the ground</area></cline>
 <cline><area correct="no">To get out of the rain, BOOM! BOOM! BOOM! BOOM!</area></cline>
 </areas></activity>

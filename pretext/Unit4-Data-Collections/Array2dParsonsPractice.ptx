@@ -3,7 +3,7 @@
 <section xml:id="Array2dParsonsPractice">
         <title>2D Arrays Mixed Up Code Practice</title>
         <p>Try to solve each of the following. Click the <em>Check Me</em> button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems have an extra block or two that aren’t needed in the correct solution.  Try to solve these on your phone or other mobile device!</p>
-<activity label="ch9ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+<activity label="array2Dex1muc" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>The following program segment should create a 10 by 10 two-dimensional int array. It should fill this array with numbers 0 to 99 from left to right, top row to bottom row and print the output (in row-column order).  But, the blocks have been mixed up and contain an extra block that is not needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -11,44 +11,48 @@
 </block><block order="6">
 <cline>for (int row = 0; row &lt; table.length; row++)</cline>
 <cline>{</cline>
-<cline>     for (int col = 0; col &lt; table[row].length; col++)</cline>
-<cline>     {</cline>
+<cline>  for (int col = 0; col &lt; table[row].length; col++)</cline>
+<cline>  {</cline>
 <cline> </cline>
 </block><block order="4">
-<choice correct="yes"><cline>        table[row][col] = col + 10 * row;</cline>
-</choice><choice><cline>        table[row][col] = row + 10 * col; </cline>
+<choice correct="yes">
+<cline>     table[row][col] = col + 10 * row;</cline>
+</choice><choice>
+<cline>     table[row][col] = row + 10 * col; </cline>
 </choice></block><block order="2">
-<cline>        System.out.print(table[row][col] + "\t");</cline>
+<cline>     System.out.print(table[row][col] + "\t");</cline>
 </block><block order="5">
-<cline>    } //end inner for loop</cline>
+<cline>  } //end inner for loop</cline>
 <cline>} //end outer for loop</cline>
-</block></blocks></activity><activity label="ch9ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="array2Dex2muc" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>The following program segment should create a 8 by 8 two-dimensional int array. It should fill this array with a checkered pattern of 0s and 1s – starting with a 1 in the top left corner and print the output (in row-column order).  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="8">
 <cline>int[][] checkerboard = new int[8][8];</cline>
 </block><block order="7">
-<cline>for (int row = 0; row &lt; checkerboard.length; row++)</cline>
+<cline>for(int row=0; row&lt;checkerboard.length; row++)</cline>
 <cline>{</cline>
-<cline>     for (int col = 0; col &lt; checkerboard[row].length; col++)</cline>
-<cline>     {</cline>
+<cline>  for(int col=0; col&lt;checkerboard[row].length; col++)</cline>
+<cline>  {</cline>
 <cline> </cline>
 </block><block order="5">
-<choice correct="yes"><cline>        if ( (row + col) % 2 == 0)</cline>
-<cline>        {</cline>
+<choice correct="yes">
+<cline>     if ( (row + col) % 2 == 0)</cline>
+<cline>     {</cline>
 <cline> </cline>
-</choice><choice><cline>        if ( (row + col) % 2 == 1)</cline>
-<cline>        { </cline>
+</choice><choice>
+<cline>     if ( (row + col) % 2 == 1)</cline>
+<cline>     { </cline>
 </choice></block><block order="1">
-<cline>            checkerboard[row][col] = 1;</cline>
+<cline>        checkerboard[row][col] = 1;</cline>
 </block><block order="2">
-<cline>        } //end if</cline>
+<cline>     } //end if</cline>
 </block><block order="4">
-<cline>        System.out.print(checkerboard[row][col] + " ");</cline>
+<cline>     System.out.print(checkerboard[row][col] + " ");</cline>
 </block><block order="3">
-<cline>    } //end inner for loop</cline>
+<cline>  } //end inner for loop</cline>
 <cline>} //end outer for loop</cline>
-</block></blocks></activity><activity label="ch9ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="array2Dex3muc" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional int array and return the sum of all of its values.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="1">
@@ -79,7 +83,8 @@
 <cline>   return sum;</cline>
 </block><block order="5">
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity>
+<activity label="array2Dex4muc" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional String array “image” and flip the “image” 180 degrees vertically. For example:   1 2 3 4  -&gt;    4 3 2 1.
             But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
@@ -88,24 +93,27 @@
 <cline>{</cline>
 <cline> </cline>
 </block><block order="5">
-<cline>    for (int row = 0; row &lt; image.length; row++)</cline>
-<cline>    {</cline>
+<cline>   for(int row=0; row&lt;image.length; row++)</cline>
+<cline>   {</cline>
 <cline> </cline>
 </block><block order="2">
-<cline>        for (int col = 0; col &lt; image[0].length / 2; col++)</cline>
-<cline>        {</cline>
+<cline>      for (int col=0; col&lt;image[0].length/2; col++)</cline>
+<cline>      {</cline>
 <cline> </cline>
 </block><block order="3">
-<choice correct="yes"><cline>            String temp = image[row][col];</cline>
-<cline>            image[row][col] = image[row][image[row].length - 1 - col];</cline>
-<cline>            image[row][image[row].length - 1 - col] = temp;</cline>
-</choice><choice><cline>            image[row][col] = image[row][image[row].length - 1 - col]; </cline>
-<cline>            image[row][image[row].length - 1 - col] = image[row][col];</cline>
+<choice correct="yes">
+<cline>         String temp = image[row][col];</cline>
+<cline>         image[row][col] = image[row][image[row].length-1-col];</cline>
+<cline>         image[row][image[row].length-1-col] = temp;</cline>
+</choice><choice>
+<cline>         image[row][col] = image[row][image[row].length-1-col];</cline>
+<cline>         image[row][image[row].length-1-col] = image[row][col];</cline>
 </choice></block><block order="4">
-<cline>        } //end inner for loop</cline>
-<cline>    } //end outer for loop</cline>
+<cline>    } //end inner for loop</cline>
+<cline>  } //end outer for loop</cline>
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity>
+<activity label="array2Dex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional array of ints and edit it such that all even numbers are replaced by zero.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="2">
@@ -138,7 +146,7 @@
 </block><block order="1">
 <cline>    } //end outer for loop</cline>
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="array2Dex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional array of ints and a desired int and return the number of occurrences of the desired int in the two-dimensional array.  But, the blocks have been mixed up and include two extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="2">
@@ -172,7 +180,7 @@
 </block><block order="8">
 <cline>    return occurrences;</cline>
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="array2Dex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional int array and return a single dimensional (normal) int array containing the average of each of the columns.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="10">
@@ -207,7 +215,8 @@
 <cline>    } //end outer for loop</cline>
 <cline>    return averages;</cline>
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity>
+<activity label="array2Dex8muc" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional int array and return a new two-dimensional int array containing only the odd index rows.  But, the blocks have been mixed up and include three extra blocks that are not needed in a correct solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="8">
@@ -218,53 +227,52 @@
 <cline>public static int[] oddRows(int[][] nums)</cline>
 <cline>{  </cline>
 </block><block order="4">
-<cline>    int[][] odds = new int[nums.length / 2][nums[0].length];</cline>
+<cline>   int[][] odds = new int[nums.length/2][nums[0].length];</cline>
 </block><block order="11" correct="no">
-<cline>    int[][] odds = new int[nums.length][nums[0].length]; </cline>
+<cline>   int[][] odds = new int[nums.length][nums[0].length]; </cline>
 </block><block order="3">
-<cline>    int index = 0;</cline>
-<cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
-<cline>    {</cline>
+<cline>   int index = 0;</cline>
+<cline>   for (int i = 0; i &lt; nums.length; i++)</cline>
+<cline>   {</cline>
 <cline> </cline>
 </block><block order="10">
-<cline>        if (i % 2 == 1)</cline>
-<cline>        {</cline>
+<cline>     if (i % 2 == 1)</cline>
+<cline>     {</cline>
 <cline> </cline>
 </block><block order="1">
-<cline>            for (int j = 0; j &lt; nums[i].length; j++)</cline>
-<cline>            {</cline>
-<cline>                 odds[index][j] = nums[i][j];</cline>
-<cline>            }</cline>
+<cline>         for (int j = 0; j &lt; nums[i].length; j++)</cline>
+<cline>         {</cline>
+<cline>              odds[index][j] = nums[i][j];</cline>
+<cline>         }</cline>
 </block><block order="5" correct="no">
-<cline>            for (int j = 0; j &lt; nums[i].length; j++) </cline>
-<cline>            {</cline>
-<cline>                 odds[index][j] = nums[j][i];</cline>
-<cline>            }</cline>
+<cline>         for (int j = 0; j &lt; nums[i].length; j++) </cline>
+<cline>         {</cline>
+<cline>              odds[index][j] = nums[j][i];</cline>
+<cline>         }</cline>
 </block><block order="9">
-<cline>            index++;</cline>
+<cline>         index++;</cline>
 </block><block order="2">
-<cline>        } //end if</cline>
+<cline>     } //end if</cline>
 </block><block order="7">
-<cline>    } //end outer for loop</cline>
-<cline>    return odds;</cline>
+<cline>  } //end outer for loop</cline>
+<cline>  return odds;</cline>
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="array2Dex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional String array, in which each row contains the characters of a word.  The method should return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array.</p>
-        <dl>
-            <li>
-                <title>Take for example, the input 2d array: { {“b”, “a”, “t”, “h”},</title>
+       
+                <p>Take for example, the input 2d array: 
+<pre>{ {“b”, “a”, “t”, “h”},
+       {“t”, “e”, “n”, “s”},
+       {“j”, “a”, “c”, “k”},
+       {“l”, “a”, “z”, “y”} }
+</pre></p>
                 
-                    <p>{“t”, “e”, “n”, “s”},
-                        {“j”, “a”, “c”, “k”},
-                        {“l”, “a”, “z”, “y”}}</p>
-                
-            </li>
-        </dl>
+            
         <p>Resulting array: {“bath”, “tens”, “jack”, “lazy”}</p>
         <p>But, the blocks have been mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="5">
-<cline>public static String[] breakIntoLetters(String[][] words)</cline>
+<cline>public static String[] getLetters(String[][] words)</cline>
 <cline>{</cline>
 <cline> </cline>
 </block><block order="1">
@@ -287,7 +295,8 @@
 <cline>   return result;</cline>
 </block><block order="4">
 <cline>} //end method</cline>
-</block></blocks></activity><activity label="ch9ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity>
+<activity label="array2Dex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program segment is a method that should accept a two-dimensional int array, and return a single-dimensional (normal) int array containing the max of each row.  But, the blocks have been mixed up and include one extra block that is not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="7">

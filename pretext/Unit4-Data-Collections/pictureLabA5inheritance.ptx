@@ -77,14 +77,11 @@
     <activity label="picture-day5-1a">
         <statement>
 
-                <dl>
-                    <li>
-                        <title> This question is about interfaces which are not covered in the AP exam. Interfaces are like abstract templates of a class that specify the method headers but not the definitions. Does the following code compile? Try it in the main method if you do not know.</title>
+               <p> This question is about interfaces which are not covered in the AP exam. Interfaces are like abstract templates of a class that specify the method headers but not the definitions. Does the following code compile? Try it in the main method if you do not know.</p>
                         
                             <p>DigitalPicture p = new DigitalPicture();</p>
                         
-                    </li>
-                </dl>
+                    
 
         </statement>
 <choices>
@@ -113,14 +110,11 @@
     <activity label="picture-day5-2a">
         <statement>
 
-                <dl>
-                    <li>
-                        <title> This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for SimplePicture, would the following code compile?</title>
+               <p> This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for SimplePicture, would the following code compile?</p>
                         
                             <p>DigitalPicture p = new SimplePicture();</p>
                         
-                    </li>
-                </dl>
+                    
 
         </statement>
 <choices>
@@ -149,14 +143,11 @@
     <activity label="picture-day5-3a">
         <statement>
 
-                <dl>
-                    <li>
-                        <title> This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for Picture, would the following code compile?</title>
+               <p> This question is about interfaces which are not covered in the AP exam. Assuming that a no-argument constructor exists for Picture, would the following code compile?</p>
                         
                             <p>DigitalPicture p = new Picture();</p>
                         
-                    </li>
-                </dl>
+                    
 
         </statement>
 <choices>
@@ -185,14 +176,11 @@
     <activity label="picture-day5-4a">
         <statement>
 
-                <dl>
-                    <li>
-                        <title> Assuming that a no-argument constructor exists for Picture, does the following code compile?</title>
+               <p> Assuming that a no-argument constructor exists for Picture, does the following code compile?</p>
                         
                             <p>SimplePicture p = new Picture();</p>
                         
-                    </li>
-                </dl>
+                    
 
         </statement>
 <choices>
@@ -221,14 +209,11 @@
     <activity label="picture-day5-5a">
         <statement>
 
-                <dl>
-                    <li>
-                        <title> Assuming that a no-argument constructor exists for SimplePicture, does the following code compile?</title>
+               <p> Assuming that a no-argument constructor exists for SimplePicture, does the following code compile?</p>
                         
                             <p>Picture p = new SimplePicture();</p>
                         
-                    </li>
-                </dl>
+                    
 
         </statement>
 <choices>

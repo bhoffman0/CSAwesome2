@@ -879,9 +879,7 @@ public class RunestoneTests extends CodeTestHelper
             <title>Summary</title>
             <p><ul>
                 <li>
-                    <dl>
-                        <li>
-                            <title>(AP 2.9.1) There are standard algorithms that use loops and selection to:</title>
+                 <p>(AP 2.9.1) There are standard algorithms that use loops and selection to:</p>
                             
                                 <p><ul>
                                     <li>
@@ -900,9 +898,7 @@ public class RunestoneTests extends CodeTestHelper
                                         <p>determine the frequency with which a specific criterion is met.</p>
                                     </li>
                                 </ul></p>
-                            
-                        </li>
-                    </dl>
+                        
                 </li>
                 <li>
                     <p>The <term>accumulator</term> pattern is an algorithm that involves storing and updating an accumulator value within a loop, for example to compute a sum or average of a set of values.</p>

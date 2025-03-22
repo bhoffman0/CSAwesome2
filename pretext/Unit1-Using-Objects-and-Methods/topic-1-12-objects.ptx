@@ -721,9 +721,7 @@ public class RunestoneTests extends CodeTestHelper
     <activity label="AP-attributes">
         <statement>
 
-            <dl>
-                <li>
-                    <title> A student has created a <c>Dog</c> class. The class contains variables to represent the following.</title>
+         <p>A student has created a <c>Dog</c> class. The class contains variables to represent the following.</p>
                     
                         <p><ul>
                             <li>
@@ -738,9 +736,7 @@ public class RunestoneTests extends CodeTestHelper
                         </ul></p>
                         <p>The object <c>pet</c> is declared as type Dog.
                             Which of the following descriptions is accurate?</p>
-                    
-                </li>
-            </dl>
+                
 
         </statement>
 <choices>
@@ -796,9 +792,7 @@ public class RunestoneTests extends CodeTestHelper
     <activity label="AP-objects">
         <statement>
 
-            <dl>
-                <li>
-                    <title>  A student has created a <c>Party</c> class. The class contains variables to represent the following.</title>
+         <p>  A student has created a <c>Party</c> class. The class contains variables to represent the following.</p>
                     
                         <p><ul>
                             <li>
@@ -813,8 +807,7 @@ public class RunestoneTests extends CodeTestHelper
                         </ul></p>
                         <p>The object <c>myParty</c> is declared as type Party. Which of the following descriptions is accurate?</p>
                     
-                </li>
-            </dl>
+               
 
         </statement>
 <choices>

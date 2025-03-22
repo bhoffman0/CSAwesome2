@@ -151,8 +151,8 @@ int numChanges = limitAmplitude(2000);
   <subsection xml:id="mixed-up-code-4">
             <title>Mixed Up Code</title>
             
-<activity label="SoundA" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
-                <p>The method <c>limitAmplitude</c> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order with the correct indentation so that the code would work correctly.</p>
+<activity label="SoundA" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
+                <p>The method <c>limitAmplitude</c> below contains the correct code for a solution to this problem, but the code blocks are mixed up.  Drag the blocks from the left to the right and put them in order so that the code would work correctly.</p>
 </statement>
 <blocks><block order="5">
 <cline>public int limitAmplitude(int limit)</cline>
@@ -165,17 +165,17 @@ int numChanges = limitAmplitude(2000);
 <cline>     if (samples[i] &gt; limit)</cline>
 <cline>     {</cline>
 </block><block order="8">
-<cline>        samples[i] = limit;</cline>
-<cline>        numChanged++;</cline>
+<cline>       samples[i] = limit;</cline>
+<cline>       numChanged++;</cline>
 </block><block order="2">
 <cline>     } // end first if</cline>
 <cline>     if (samples[i] &lt; -limit)</cline>
 <cline>     {</cline>
 </block><block order="3">
-<cline>        samples[i] = -limit;</cline>
-<cline>        numChanged++;</cline>
+<cline>       samples[i] = -limit;</cline>
+<cline>       numChanged++;</cline>
 </block><block order="7">
-<cline>      } // end second if</cline>
+<cline>     } // end second if</cline>
 </block><block order="6">
 <cline>  } // end for</cline>
 </block><block order="4">
