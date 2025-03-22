@@ -5,8 +5,8 @@
         <p>The following questions are similar to what you might see on the AP CSA exam.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.</p>
         <p>We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.</p>
         
-
-    <activity label="u2_1">
+<exercises label="u2-test" time-limit="1000" timer="no" feedback="yes" results="yes">
+    <exercise label="u2_1">
         <statement>
 
             <p> Which of the following code segments will produce the displayed output?</p>
@@ -116,9 +116,9 @@ for (int i = 0; i &lt; 5; i++) {
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_2">
+    <exercise label="u2_2">
         <statement>
 
             <p> Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
@@ -196,9 +196,9 @@ public static void conditionTest(int num1, int num2)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_3">
+    <exercise label="u2_3">
         <statement>
 
             <p> Which of these loops will output <c>01234</c>?</p>
@@ -276,9 +276,9 @@ for (int i = max; i &gt; 0; i--)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_4">
+    <exercise label="u2_4">
         <statement>
 
             <p> Consider the following block of code. What value is returned from <c>solution(5)</c>?</p>
@@ -349,9 +349,9 @@ public int solution(int limit)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_5">
+    <exercise label="u2_5">
         <statement>
 
             <p> Which of the following is equivalent to !((x &gt; 10) &amp;&amp; (x &lt;= 5)) ?</p>
@@ -405,9 +405,9 @@ public int solution(int limit)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_6">
+    <exercise label="u2_6">
         <statement>
 
             <p> Consider the following class with the method <c>test</c>. What is the output after the main method is executed calling <c>test(s,b)</c>?</p>
@@ -479,9 +479,9 @@ public class Test1
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_7">
+    <exercise label="u2_7">
         <statement>
 
             <p> What are the values of <c>var1</c> and <c>var2</c> after the following code segment is executed and the while loop finishes?</p>
@@ -544,9 +544,9 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_8">
+    <exercise label="u2_8">
         <statement>
 
             <p> What does the following code print?</p>
@@ -608,9 +608,9 @@ while (x &lt; 0)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_9">
+    <exercise label="u2_9">
         <statement>
 
             <p> What will be printed after this code is executed?</p>
@@ -673,9 +673,9 @@ for (int i = 0; i &lt;= 15; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_10">
+    <exercise label="u2_10">
         <statement>
 
             <p> Which option will evaluate to true, if and only if both a and b are false?</p>
@@ -729,9 +729,9 @@ for (int i = 0; i &lt;= 15; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_11">
+    <exercise label="u2_11">
         <statement>
 
             <p> After the following code is executed, what does the variable <c>mystery</c> hold?</p>
@@ -802,9 +802,9 @@ public class Mysterious
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_12">
+    <exercise label="u2_12">
         <statement>
 
             <p> What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
@@ -867,9 +867,9 @@ for (int i = 1; i &lt;= 6; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_13">
+    <exercise label="u2_13">
         <statement>
 
             <p> Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
@@ -932,9 +932,9 @@ s4 = null;
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u2_14">
+    <exercise label="u2_14">
         <statement>
 
             <p> Given following code, which of the following statements is a valid assignment statement using these variables?</p>
@@ -984,6 +984,6 @@ int c = 4;
             </choice>
 </choices>
 
-    </activity>
-        
-    </section>
+    </exercise>
+</exercises>
+</section>

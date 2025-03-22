@@ -3,10 +3,11 @@
 <section xml:id="test4">
         <title>Practice Exam 3 for the AP CSA Exam</title>
         <p>The following 20 questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.</p>
-        <p>Click the <image source="TimedTests/Figures/start.png" width="100%" alt="start"/> button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the <image source="TimedTests/Figures/next.png" width="100%" alt="next"/> button to go to the next question.  Click on the <image source="TimedTests/Figures/prev.png" width="100%" alt="previous"/> button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the <image source="TimedTests/Figures/pause.png" width="100%" alt="pause"/> button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the <image source="TimedTests/Figures/finishExam.png" width="100%" alt="finish exam"/> button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
+        <p>Click the Start button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the Next button to go to the next question.  Click on the Previous button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the Pause button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the Finish button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
         
+ <exercises label="test4" time-limit="45" timer="yes">
 
-    <activity label="pe4_1">
+    <exercise label="pe4_1">
         <statement>
 
             <p> Consider the following partial class definitions.  Which of the constructors shown below (I, II, and III) are valid for C2?</p>
@@ -88,9 +89,9 @@ III. public C2 (String label) { super(label); }
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_2">
+    <exercise label="pe4_2">
         <statement>
 
             <p> The Boolean expression (x==y &amp;&amp; !(x==y)) || ( x!=y &amp;&amp; !(x!=y)) can be simplified to which of the following?</p>
@@ -144,9 +145,9 @@ III. public C2 (String label) { super(label); }
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_3">
+    <exercise label="pe4_3">
         <statement>
 
             <p> Which of the following could be used to replace the missing code so that the method sort will sort the array a in ascending order?</p>
@@ -223,9 +224,9 @@ public static void sort(int[] a)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_5">
+    <exercise label="pe4_5">
         <statement>
 
             <p> Consider the following declarations.  If matrix is initialized to be: { {-1, -2, 3},{4, -5, 6}}.  What will the values in matrix be after changeMatrix(matrix) is called?</p>
@@ -290,9 +291,9 @@ public static void changeMatrix(int[][] matrix )
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_6">
+    <exercise label="pe4_6">
         <statement>
 
             <p> What are the values of a and b after the for loop finishes?</p>
@@ -356,9 +357,9 @@ for (int i=1; i&lt;=4; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_7">
+    <exercise label="pe4_7">
         <statement>
 
             <p> Condsider the following method.  What value is returned from a call of mystery(4)?</p>
@@ -421,9 +422,9 @@ public static int mystery(int n)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_8">
+    <exercise label="pe4_8">
         <statement>
 
             <p> Which of the following correctly shows the iterations of an ascending (from left to right) insertion sort on an array with the following elements: {6,3,8,5,1}?</p>
@@ -477,9 +478,9 @@ public static int mystery(int n)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_9">
+    <exercise label="pe4_9">
         <statement>
 
             <p> Consider the following code segment.  How many times will a * be printed?</p>
@@ -540,9 +541,9 @@ for(int i = 0; i &lt; 3; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_10">
+    <exercise label="pe4_10">
         <statement>
 
             <p> Consider the following method.   What is the output from conditionTest(-3,2)?</p>
@@ -620,9 +621,9 @@ public static void conditionTest(int num1, int num2)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_11">
+    <exercise label="pe4_11">
         <statement>
 
             <p> What is value of s1 after the code below executes?</p>
@@ -685,9 +686,9 @@ s4 = null;
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_12">
+    <exercise label="pe4_12">
         <statement>
 
             <p> What is the output from the following code?</p>
@@ -748,9 +749,9 @@ System.out.println(s3);
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_13">
+    <exercise label="pe4_13">
         <statement>
 
             <p> Given the following class declarations, which declaration below will result in a compiler error?</p>
@@ -797,9 +798,9 @@ public class Dictionary extends Book
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_14">
+    <exercise label="pe4_14">
         <statement>
 
             <p> What will the method below return when called with mystery(“xxzxyxx”)?</p>
@@ -867,9 +868,9 @@ public static int mystery(String str)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_15">
+    <exercise label="pe4_15">
         <statement>
 
             <p> Which will cause the longest execution of a binary search looking for a value in an array of 9 integers?</p>
@@ -923,9 +924,9 @@ public static int mystery(String str)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_16">
+    <exercise label="pe4_16">
         <statement>
 
             <p> Given the following array declaration and the fact that Animal is the parent class for Bird, Dog, Pig, Cat, and Cow, what is output from looping through this array of animals and asking each object to speak()?</p>
@@ -989,9 +990,9 @@ Cat has a speak method that returns "Meow"
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_17">
+    <exercise label="pe4_17">
         <statement>
 
             <p> What is the result of 17 (in base 16) - 13 (in base 8)?</p>
@@ -1045,9 +1046,9 @@ Cat has a speak method that returns "Meow"
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_18">
+    <exercise label="pe4_18">
         <statement>
 
             <p> Consider the following method and code.  What are the values of s and b after the following has executed?</p>
@@ -1113,9 +1114,9 @@ test(s,b);
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_19">
+    <exercise label="pe4_19">
         <statement>
 
             <p> Which of the following is (are) true?</p>
@@ -1176,9 +1177,9 @@ III.  Selection sort takes less time to execute if the array is already sorted
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe4_20">
+    <exercise label="pe4_20">
         <statement>
 
             <p> Given the following code, how many calls to mystery are made (including the first call) when mystery(0, 4, 5) is executed when arr = {1, 2, 3, 5, 7}?</p>
@@ -1256,6 +1257,7 @@ public int mystery(int low, int high, int num)
             </choice>
 </choices>
 
-    </activity>
-        
+    </exercise>
+  </exercises>       
+       
     </section>

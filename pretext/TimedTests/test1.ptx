@@ -3,10 +3,11 @@
 <section xml:id="test1">
         <title>Practice Exam 1 for the AP CSA Exam</title>
         <p>The following 20 questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability.</p>
-        <p>Click the <image source="TimedTests/Figures/start.png" width="100%" alt="start"/> button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the <image source="TimedTests/Figures/next.png" width="100%" alt="next"/> button to go to the next question.  Click on the <image source="TimedTests/Figures/prev.png" width="100%" alt="previous"/> button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the <image source="TimedTests/Figures/pause.png" width="100%" alt="pause"/> button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the <image source="TimedTests/Figures/finishExam.png" width="100%" alt="finish exam"/> button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
+        <p>Click the Start button when you are ready to begin the exam, but only then as you can only take the exam once.  Click on the Next button to go to the next question.  Click on the Previous button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the Pause button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the Finish button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
+ <exercises label="test1" time-limit="45" timer="yes">
         
 
-    <activity label="pe1_1">
+    <exercise label="pe1_1">
         <statement>
 
             <p> Given the following method.  What is the output when <c>m1(5)</c> is called?</p>
@@ -69,9 +70,9 @@ public int m1 (int a)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_2">
+    <exercise label="pe1_2">
         <statement>
 
             <p> What will the following code print when it is executed?</p>
@@ -132,9 +133,9 @@ for (int j = 1; j &lt;= 3; j++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_3">
+    <exercise label="pe1_3">
         <statement>
 
             <p> What value is returned as the result of <c>mystery(7)</c>?</p>
@@ -197,9 +198,9 @@ public int mystery(int n)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_4">
+    <exercise label="pe1_4">
         <statement>
 
             <p> Given the following code.  Which of the following would return true?</p>
@@ -264,9 +265,9 @@ V. (int2 == int3)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_5">
+    <exercise label="pe1_5">
         <statement>
 
             <p> Under which of these conditions will a sequential search be faster than a binary search?</p>
@@ -320,9 +321,9 @@ V. (int2 == int3)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_6">
+    <exercise label="pe1_6">
         <statement>
 
             <p> There is a method called <c>checkString</c> that determines whether a string is the same forwards and backwards. The following data sets can be used for testing the method.  Which is a best set of test cases?</p>
@@ -380,9 +381,9 @@ Data set 2: "bcb", "bcd", "c"
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_7">
+    <exercise label="pe1_7">
         <statement>
 
             <p> Which of the following code will produce this output:</p>
@@ -497,9 +498,9 @@ for (int i = 0; i &lt; 5; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_8">
+    <exercise label="pe1_8">
         <statement>
 
             <p> What will the following print?</p>
@@ -563,9 +564,9 @@ System.out.println(list1);
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_9">
+    <exercise label="pe1_9">
         <statement>
 
             <p> Consider the following declaration for a class that will be used to represent points in the xy-coordinate plane.  Which of these constructors would be legal for the NamedPoint class?</p>
@@ -669,9 +670,9 @@ III. public NamedPoint(int d1, int d2, String name)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_10">
+    <exercise label="pe1_10">
         <statement>
 
             <p> Given the following incomplete class declaration:</p>
@@ -791,9 +792,9 @@ III. public NamedPoint(int d1, int d2, String name)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_11">
+    <exercise label="pe1_11">
         <statement>
 
             <p> Consider the following class definitions, which of the following can replace the missing code?</p>
@@ -898,9 +899,9 @@ V.
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_12">
+    <exercise label="pe1_12">
         <statement>
 
             <p> Which will cause the longest execution of a sequential search looking for a value in an array of 10 integers?</p>
@@ -954,9 +955,9 @@ V.
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_13">
+    <exercise label="pe1_13">
         <statement>
 
             <p> Which of the following reasons for using an inheritance hierarchy are valid?</p>
@@ -1019,9 +1020,9 @@ V.   None of the above
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_14">
+    <exercise label="pe1_14">
         <statement>
 
             <p> Consider the following method and if <c>int[] a = {8, 3, 1}</c>, what is the value in <c>a[1]</c> after <c>m1(a);</c> is run?</p>
@@ -1082,9 +1083,9 @@ public int m1(int[] a)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_15">
+    <exercise label="pe1_15">
         <statement>
 
             <p> What are the values of <c>a</c> and <c>b</c> after the <c>for</c> loop finishes?</p>
@@ -1147,9 +1148,9 @@ for (int i=1; i&lt;=6; i++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_16">
+    <exercise label="pe1_16">
         <statement>
 
             <p> Consider the following code.  What string is referenced by <c>s1</c> after the code executes?</p>
@@ -1212,9 +1213,9 @@ s4 = null;
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_17">
+    <exercise label="pe1_17">
         <statement>
 
             <p> Consider the following code segment.  What value is in sum after this code executes?</p>
@@ -1278,9 +1279,9 @@ for (int row = 0; row &lt; 4; row++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_18">
+    <exercise label="pe1_18">
         <statement>
 
             <p> Consider the following code segment, what are the contents of mat after the code segment has executed?</p>
@@ -1349,9 +1350,9 @@ for (int row = 0; row &lt; mat.length; row++)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_19">
+    <exercise label="pe1_19">
         <statement>
 
             <p> Assume that <c>temp</c> is an <c>int</c> variable initialized to be greater than zero and that <c>a</c> is an array of type <c>int</c>.  Also, consider the following code segment.  What of the following will cause an infinite loop?</p>
@@ -1414,9 +1415,9 @@ for ( int k = 0; k &lt; a.length; k++ )
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="pe1_20">
+    <exercise label="pe1_20">
         <statement>
 
             <p> Consider the following method.  What is the output from <c>conditionTest(3,-2);</c>?</p>
@@ -1494,6 +1495,6 @@ for ( int k = 0; k &lt; a.length; k++ )
             </choice>
 </choices>
 
-    </activity>
-        
+    </exercise>
+       </exercises> 
     </section>
