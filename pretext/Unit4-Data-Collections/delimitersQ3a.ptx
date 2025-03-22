@@ -12,11 +12,11 @@
             with each pair having an open delimiter and a close delimiter. There will be only one type of delimiter for each
             string. The following are examples of delimiters.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/2019del1.png" width="50%"/>
+      <image source="Unit4-Data-Collections/Figures/2019del1.png" width="100%"/>
     </figure>
     <p>In this question, you will write two methods in the following <c>Delimiters</c> class.</p>
     <figure align="center">
-      <image source="Unit4-Data-Collections/Figures/2019del2.png" width="50%"/>
+      <image source="Unit4-Data-Collections/Figures/2019del2.png" width="100%"/>
     </figure>
   </introduction>
   <subsection xml:id="part-a">
@@ -27,8 +27,8 @@
                 containing all the open and close delimiters found in <c>tokens</c> in their original order.</p>
             <p>The following examples show the contents of an <c>ArrayList</c> returned by <c>getDelimitersList</c> for
                 different open and close delimiters and different <c>tokens</c> arrays.</p>
-            <figure align="center"><image source="Unit4-Data-Collections/Figures/2019del3.png" width="50%"/></figure>
-            <figure align="center"><image source="Unit4-Data-Collections/Figures/2019del4.png" width="50%"/></figure>
+            <figure align="center"><image source="Unit4-Data-Collections/Figures/2019del3.png" width="100%"/></figure>
+            <figure align="center"><image source="Unit4-Data-Collections/Figures/2019del4.png" width="100%"/></figure>
         </subsection>
   <subsection xml:id="check-your-understanding-of-the-question">
             <title>Check your understanding of the question</title>
@@ -40,9 +40,13 @@
     <statement><p>Click on the part of the sentences below with the type of thing passed to the method <code>getDelimitersList</code> and the type it returns.</p></statement>
 <feedback><p>Variable declarations start with a type and then a name.</p></feedback>
 <areas>
-<cline><area correct="no">A string</area> <area correct="no">containing text and possibly delimiters has been split into *tokens* and stored in Test2</area> <area correct="yes">String[] tokens</area>.</cline>
-<cline><area correct="no">Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter</area>.</cline>
-<cline><area correct="no">You will write the method </area><area correct="no">getDelimitersList</area>, <area correct="no"> which returns an</area> <area correct="yes">ArrayList</area><area correct="no"> containing all the open and close delimiters found in tokens in their original order.</area></cline>
+<cline><area correct="no">A string</area> <area correct="no">containing text and possibly delimiters has been split into *tokens*</area></cline>
+<cline><area correct="no">and stored in Test2</area> 
+<area correct="yes">String[] tokens</area>.</cline>
+<cline><area correct="no">Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter.</area></cline>
+<cline><area correct="no">You will write the method </area><area correct="no"> getDelimitersList, </area> 
+<area correct="no"> which returns an </area> <area correct="yes"> ArrayList </area></cline>
+<cline><area correct="no"> containing all the open and close delimiters found in tokens in their original order.</area></cline>
 </areas></activity>            
             
 
@@ -222,7 +226,7 @@
 
             <choice>
                 <statement>
-                    <p>delList = new ArrayList&lt;String&amp;gt;();</p>
+                    <p>delList = new ArrayList&lt;String&gt;();</p>
                 </statement>
                 <feedback>
                     <p>You must declare the type for delList</p>
@@ -231,7 +235,7 @@
 
             <choice>
                 <statement>
-                    <p>ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;;</p>
+                    <p>ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;;</p>
                 </statement>
                 <feedback>
                     <p>You must include the () when creating a new object</p>
@@ -240,7 +244,7 @@
 
             <choice>
                 <statement>
-                    <p>ArrayList&lt;String&amp;gt; delList = new List&lt;String&amp;gt;();</p>
+                    <p>ArrayList&lt;String&gt; delList = new List&lt;String&gt;();</p>
                 </statement>
                 <feedback>
                     <p>You must create an ArrayList using a concrete subclass like ArrayList</p>
@@ -249,7 +253,7 @@
 
             <choice correct="yes">
                 <statement>
-                    <p>ArrayList&lt;String&amp;gt; delList = new ArrayList&lt;String&amp;gt;();</p>
+                    <p>ArrayList&lt;String&gt; delList = new ArrayList&lt;String&gt;();</p>
                 </statement>
                 <feedback>
                     <p>The declared type must be the same or a parent class of the actual type.</p>
