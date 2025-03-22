@@ -46,7 +46,7 @@ public class StudentAnswerSheet
             answers, and one omitted answer.  The student’s score is ((6 * 1) - (3 * 0.25)) = 5.25.</p>
     <figure align="center">
       <caption>The answer key and student answers and point values</caption>
-      <image source="FreeResponse/Figures/StudentAnswerSheetEx.png" width="50%"/>
+      <image source="FreeResponse/Figures/StudentAnswerSheetEx.png" width="100%"/>
     </figure>
     <p><term>Part a.</term>  Write the <c>StudentAnswerSheet</c> method <c>getScore</c>.  The parameter passed to method <c>getScore</c>
             is a <c>List</c> of strings representing the correct answer key for the test being scored.  The method

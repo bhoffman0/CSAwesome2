@@ -4,9 +4,11 @@
   <title>Data Sets</title><introduction>
     
     <p>A <term>data set</term> is a collection of specific pieces of information or data. For example, the following table is a data set that keeps track of information about students. Data can be represented in a diagram by using a chart or table. Here it is shown as a spreadsheet table with columns for the first name, last name, email, and GPA. Spreadsheet software like Excel and Google Sheets store data in a table and provide functions to manipulate and calculate with the data.</p>
-    <p>Type in another row of data to the table below on row 4 with your choice of values for the name, email, and GPA.</p>
-    <SpreadSheetNode line="15" runestone_options="{'mindimensions': 'data-mindimensions=[4,4]', 'colwidths': 'data-colwidths=[100,100,200,100]', 'coltitles': &quot;data-coltitles=['firstname','lastname','email','GPA']&quot;, 'subchapter': 'topic-4-2-data-sets', 'chapter': 'Unit4-Data-Collections', 'basecourse': 'csawesome2beta', 'optional': '', 'optclass': '', 'divid': 'disneySheet', 'qnumber': 'Q-1', 'asserts': StringList(['assert A4 != &quot;Type here&quot;'], items=[('/mnt/c/Users/hoffmanb/Documents/GitHub/csawesome2/_fixed_sources/Unit4-Data-Collections/topic-4-2-data-sets.rst', 24)]), 'autograde': 'data-autograde=&quot;true&quot;', 'data': [['Mickey', 'Mouse', 'mickey@disney.com', 3.5], ['Minnie', 'Mouse', 'minnie@disney.com', 4.0], ['Donald', 'Duck', 'donald@disney.com', 3.0], ['Type here', '', '', '']], 'question_label': '5.2.1'}" source="/mnt/c/Users/hoffmanb/Documents/GitHub/csawesome2/_fixed_sources/Unit4-Data-Collections/topic-4-2-data-sets.rst">
-        </SpreadSheetNode>
+    
+    <figure align="center">
+      <caption>A spreadsheet</caption>
+      <image source="Unit4-Data-Collections/Figures/disney-spreadsheet.png" width="85%"/>
+    </figure>
     <p>Data sets can be manipulated and analyzed to solve a problem or answer a question. Data in a table or chart can be used to plan the algorithm that will be used to manipulate the data. For example, how would you find the average GPA of the students in the table above? You would need to access each GPA value in the table and then add them up and then divide by the number of rows.</p>
     <p>When analyzing data sets, values within the set are accessed and utilized one at a time and then processed according to the desired outcome. Loops can be used to access and process each value in a data set. Let’s practice this with pseudocode.</p>
     <p>What if your school wants to print out an honor roll of students with a GPA of 3.5 or higher? How would you write an algorithm to do this?</p>

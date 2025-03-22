@@ -18,7 +18,7 @@
             </ol></p>
             <p>Consider a <c>Delimiters</c> object for which <title_reference>openDel`</title_reference> is <c>"&lt;sup&gt;"</c> and <c>closeDel</c> is <c>"&lt;/sup&gt;"</c>.  The examples below show different <c>ArrayList</c> objects that could
                 be returned by calls to <c>getDelimitersList</c> and the value that would be returned by a call to <c>isBalanced</c>.</p>
-            <figure align="center"><image source="Unit4-Data-Collections/Figures/frq-delim-2019-q3b.png" width="50%"/></figure>
+            <figure align="center"><image source="Unit4-Data-Collections/Figures/frq-delim-2019-q3b.png" width="100%"/></figure>
         </subsection>
   <subsection xml:id="check-your-understanding-of-the-question-1">
             <title>Check your understanding of the Question</title>

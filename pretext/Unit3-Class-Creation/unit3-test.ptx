@@ -5,8 +5,8 @@
         <p>The following questions are similar to what you might see on the AP CSA exam.  You may only take this test once while logged in. There are no time limits, but it will keep track of how much time you take. Click on the finish button after you have answered all the questions, and the number correct and feedback on the answers will be displayed.</p>
         <p>We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.</p>
         
-
-    <activity label="u3_1">
+<exercises label="u3-test" time-limit="1000" timer="no" feedback="yes" results="yes">
+    <exercise label="u3_1">
         <statement>
 
             <p> Consider the following <c>Cat</c> class that has an <c>age</c> attribute of type int. The <c>getAge</c> method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the <c>getAge</c> method does NOT work as intended?</p>
@@ -76,9 +76,9 @@ public class Cat
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_2">
+    <exercise label="u3_2">
         <statement>
 
             <p> Which of the following statements are TRUE about local variables?</p>
@@ -143,9 +143,9 @@ public class Cat
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_3">
+    <exercise label="u3_3">
         <statement>
 
             <p> Which of the following statements are TRUE about <term>static</term> methods?</p>
@@ -210,9 +210,9 @@ public class Cat
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_4">
+    <exercise label="u3_4">
         <statement>
 
             <p> Consider the following declaration for a class that will be used to represent points in time.  Which of these options correctly implement <c>addMinutes()</c>?</p>
@@ -320,9 +320,9 @@ IV.  public void addMinutes(int additionMinutes)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_5">
+    <exercise label="u3_5">
         <statement>
 
             <p> What does the method <c>mystery</c> do?</p>
@@ -386,9 +386,9 @@ public void mystery(String tester)
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_6">
+    <exercise label="u3_6">
         <statement>
 
             <p> Which of the following code segments correctly creates an instance of a new <c>Party</c> object?</p>
@@ -468,9 +468,9 @@ III. int numOfFriends = 6;
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_7">
+    <exercise label="u3_7">
         <statement>
 
             <p> Consider the following class, which uses the instance variable dollars to represent the money in a wallet in dollars.</p>
@@ -518,9 +518,9 @@ return dollars;
             <p>dollars should be incremented by amount.</p>
 </feedback></choice></choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_8">
+    <exercise label="u3_8">
         <statement>
 
             <p> Consider the Liquid class below.</p>
@@ -586,9 +586,9 @@ III. if (amount + currentTemp &gt;= boilingPoint)
             <p>II does not check against the boilingPoint and does not return only boolean values.</p>
 </feedback></choice></choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_9">
+    <exercise label="u3_9">
         <statement>
 
             <p> Consider the following class definition.</p>
@@ -633,9 +633,9 @@ public class Liquid
             <p>Correct! newTemp is defined in a different method. The instance variable currentTemp should be used instead.</p>
 </feedback></choice></choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_10">
+    <exercise label="u3_10">
         <statement>
 
             <p> Consider the following class definition for Party.  The following code segment appears in a method in a class other than Party. The code segment is intended to print the value 30, but does not print the correct value because of an error in the Party class. Which of the following best explains why the correct value isn’t printed?</p>
@@ -726,9 +726,9 @@ public class Party
             </choice>
 </choices>
 
-    </activity>
+    </exercise>
 
-    <activity label="u3_11">
+    <exercise label="u3_11">
         <statement>
 
             <p> Consider the following class definitions.</p>
@@ -813,6 +813,6 @@ p2.addToOptions(options);
             <p>Jules’ party should be rejected because it is not in the 10th month.</p>
 </feedback></choice></choices>
 
-    </activity>
-        
-    </section>
+    </exercise>
+</exercises>
+</section>

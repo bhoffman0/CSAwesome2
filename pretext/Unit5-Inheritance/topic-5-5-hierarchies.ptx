@@ -332,9 +332,7 @@ class Dog extends Pet
     <activity label="qoo_4">
         <statement>
 
-            <dl>
-                <li>
-                    <title>  Which of the following reasons for using an inheritance hierarchy are valid?</title>
+           <p> Which of the following reasons for using an inheritance hierarchy are valid?</p>
                     
                         <p><ol marker="I">
                             <li>
@@ -354,8 +352,6 @@ class Dog extends Pet
                             </li>
                         </ol></p>
                     
-                </li>
-            </dl>
 
         </statement>
 <choices>
