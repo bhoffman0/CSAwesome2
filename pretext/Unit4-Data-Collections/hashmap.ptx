@@ -90,7 +90,7 @@ public class RunestoneTests extends CodeTestHelper
                 "cat in Spanish is gato\n" +
                 "dog in Spanish is perro\n";;
 
-        passed = getResults(expect, output, "Expected output");
+        boolean passed = getResults(expect, output, "Expected output");
         assertTrue(passed);
     }
 }
