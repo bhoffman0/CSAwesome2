@@ -172,7 +172,8 @@
         </subsection>
   <subsection xml:id="a2-picking-a-color">
             <title>A2: Picking a Color</title>
-            <p>Try the following Color Chooser by moving the sliders to see the RGB values for each color:</p>
+            <p>Try the following Color Chooser (also at <url href="https://www.cssscript.com/demo/rgb-color-picker-slider/" visual="https://www.cssscript.com/demo/rgb-color-picker-slider/">https://www.cssscript.com/demo/rgb-color-picker-slider/</url>)
+            by moving the sliders to see the RGB values for each color:</p>
                 <interactive iframe="iframe/colorpicker.html" width="100%" aspect="1:1"/>
             
             <p>In Java, there is a ColorChooser that you can use in code, see <url href="https://replit.com/@BerylHoffman/ColorChooser" visual="https://replit.com/@BerylHoffman/ColorChooser">https://replit.com/@BerylHoffman/ColorChooser</url> and click on the RGB tab. Java represents color using the java.awt.Color class described here <url href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html</url>. This is the full name for the Color class,  which includes the package name of java.awt followed by a period and then the class name Color. Java groups related classes into packages. The awt stands for Abstract Windowing Toolkit, which is the package that contains the original Graphical User Interface (GUI) classes developed for Java. You can use just the short name for a class, like Color, as long as you include an import statement at the beginning of a class source file, as shown below. The Picture class contains the following import statement <c>import java.awt.Color;</c>.</p>
