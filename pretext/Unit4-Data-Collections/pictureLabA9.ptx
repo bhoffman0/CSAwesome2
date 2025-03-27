@@ -60,7 +60,7 @@ public void edgeDetection(int edgeDist)
             <p>Picture Lab A9: Run to see edgeDetection working.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="pictureLab.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar,swan.jpg, temple.jpg">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -214,7 +214,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Picture Lab A9: Improve the edgeDetection method by adding another nested loop that compares the current pixel with the pixel below it and sets the current pixel color to black as well, when the color distance is greater than the specified edge distance.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="pictureLab.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar,swan.jpg, temple.jpg">
 <code>
 import java.awt.*;
 import java.awt.font.*;
@@ -416,7 +416,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>Picture Lab A9: Come up with another algorithm for edgeDetection in a method called myEdgeDetection.</p>
 
     </statement>
-    <program interactive="activecode" language="java" datafile="pictureLab.jar">
+    <program interactive="activecode" language="java" datafile="pictureLab.jar,swan.jpg, temple.jpg">
 <code>
 import java.awt.*;
 import java.awt.font.*;

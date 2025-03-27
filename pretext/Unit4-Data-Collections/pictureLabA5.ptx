@@ -818,11 +818,14 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <image source="Unit4-Data-Collections/Figures/changetshirt.png" width="27%"/>
-            <p><ol marker="1">
+            <p><ol marker="5">
                 <li>
                     <p>Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.</p>
                 </li>
             </ol></p>
+<p>Try the following Color Chooser (also at <url href="https://www.cssscript.com/demo/rgb-color-picker-slider/" visual="https://www.cssscript.com/demo/rgb-color-picker-slider/">https://www.cssscript.com/demo/rgb-color-picker-slider/</url>)
+            by moving the sliders to try to match the red color of the shirt and see what range and limits the RGB color values need to be for your if statement:</p>
+                <interactive iframe="iframe/colorpicker.html" width="100%" aspect="1:1"/>
 
 <activity label="picture-lab-A5-tshirt-color">
     <statement>
@@ -936,7 +939,12 @@ public class Picture extends SimplePicture
     }
 
     /*
-      changeTshirt(): Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100).
+      changeTshirt(): Can you change just the t-shirt color in student.jpg? 
+      You will need to use an if statement inside the loops 
+      to look for the red t-shirt color and then change it. 
+      The red pixels probably have a high red value (for 
+      example greater than 200) and low green and blue values 
+      (for example less than 100).
 
        Add new method here.
     */
