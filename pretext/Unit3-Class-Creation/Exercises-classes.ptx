@@ -525,7 +525,7 @@ public class Liquid
     }
 
     public void raiseTemperature(int increase) // Line 10
-            {
+    {
         return currentTemp + increase; // Line 12
     }
 }
@@ -566,7 +566,7 @@ public class Party
 
     public double calculatePizzaCostPerPerson(
             int numOfBoxes, double priceOfOnePizzaBox)
-            {
+    {
         /* missing code */
     }
 }

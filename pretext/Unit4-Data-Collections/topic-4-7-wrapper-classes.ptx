@@ -203,7 +203,7 @@ public class RunestoneTests extends CodeTestHelper
         assertTrue(passed);
     }
     @Test
-    public void testCode() throws IOException
+    public void testDouble() throws IOException
     {
         boolean passed = checkCodeContains("Double.parseDouble");
         assertTrue(passed);
