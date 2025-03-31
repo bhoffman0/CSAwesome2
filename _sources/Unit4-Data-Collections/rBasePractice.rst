@@ -54,7 +54,12 @@ A recursive method contains a call to itself.  The recursion stops when a base c
 
    :click-incorrect:public static void mystery (int x) {:endclick:
        :click-incorrect:System.out.print(x % 10);:endclick:
-       :click-correct:if ((x / 10) != 0):endclick:
+       :click-correct:if ((x / 10) == 0):endclick:
+       :click-incorrect:{:endclick:
+              :click-incorrect:System.out.print(x % 10);:endclick:
+              :click-incorrect:return;:endclick:    
+       :click-incorrect:}:endclick:  
+       :click-incorrect:else:endclick:      
        :click-incorrect:{:endclick:
            :click-incorrect:mystery(x / 10);:endclick:
        :click-incorrect:}:endclick:

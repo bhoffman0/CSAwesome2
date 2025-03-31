@@ -332,7 +332,7 @@ public class RouteCipher
             <p>Below is a mixed up version of the correct solution hinted at by the previous questions.</p>
             
 <activity label="RouteCipherB" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
-                <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
+                <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="8">
 <cline>public String encryptMessage(String message)</cline>
@@ -362,8 +362,10 @@ public class RouteCipher
         </subsection>
   <subsection xml:id="solve-part-b-1">
             <title>Solve Part B</title>
-            <p>Complete method <c>encryptMessage</c> below.</p>
-
+            <p>Complete the method <c>encryptMessage</c> below.</p>
+<activity label="routecipherbCoding">
+<statement><p>Complete the method <c>encryptMessage</c> below.    </p>
+    </statement>
     <program interactive="activecode" language="java">
         <code>
 public class RouteCipher
@@ -487,6 +489,7 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
+    </activity>
         </subsection>
   <subsection xml:id="alternate-recursive-solution">
             <title>Alternate Recursive Solution</title>
@@ -639,7 +642,7 @@ public class RunestoneTests extends CodeTestHelper
             <p>If you still feel unsure of the recursive solution, it is recommended that you return to the recursion unit to do some more practice as this problem is quite challenging to solve recursively.</p>
             
 <activity label="RouteCipherB_recurpar" numbered="yes" adaptive="yes" indentation="show" language="java"><statement>
-                <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up and contains extra blocks that are not needed.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
+                <p>The method encryptMessage below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.</p>
 </statement>
 <blocks><block order="4">
 <cline>public String encryptMessage(String message)</cline>

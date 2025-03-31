@@ -40,13 +40,19 @@
 <cline>    <area correct="no">}</area></cline>
 <cline><area correct="no">}</area></cline>
 </areas></activity>
+
 <activity label="rec_base4">
     <statement><p>Click on the line or lines that contain the test for the base case</p></statement>
 <feedback><p>When a base case test is true a value is returned and the recursion stops</p></feedback>
 <areas>
 <cline><area correct="no">public static void mystery (int x) {</area></cline>
 <cline>    <area correct="no">System.out.print(x % 10);</area></cline>
-<cline>    <area correct="yes">if ((x / 10) != 0)</area></cline>
+<cline>    <area correct="yes">if ((x / 10) == 0)</area></cline>
+<cline>    <area correct="no">{</area></cline>
+<cline>        <area correct="no">System.out.print(x % 10);</area></cline>
+<cline>        <area correct="no">return;</area></cline>
+<cline>    <area correct="no">}</area></cline>
+<cline>    <area correct="no">else</area></cline>
 <cline>    <area correct="no">{</area></cline>
 <cline>        <area correct="no">mystery(x / 10);</area></cline>
 <cline>    <area correct="no">}</area></cline>

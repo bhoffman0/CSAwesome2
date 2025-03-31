@@ -802,10 +802,12 @@ if (x % 2 == 0 &amp;&amp; y % 2 == 0 || x &gt; y)
 </feedback></choice><choice><statement id="AP-compound-bools_opt_c">            <p>Third</p>
 </statement><feedback id="AP-compound-bools_opt_c">
             <p>Third cannot be printed out unless First is printed out first.</p>
-</feedback></choice><choice correct="yes"><statement id="AP-compound-bools_opt_d">            <p>FirstSecond</p>
+</feedback></choice><choice correct="yes"><statement id="AP-compound-bools_opt_d">            
+<p>First Second</p>
 </statement><feedback id="AP-compound-bools_opt_d">
             <p>Good tracing!</p>
-</feedback></choice><choice><statement id="AP-compound-bools_opt_e">            <p>FirstThird</p>
+</feedback></choice><choice><statement id="AP-compound-bools_opt_e">            
+<p>First Third</p>
 </statement><feedback id="AP-compound-bools_opt_e">
             <p>Take another look at the second condition.</p>
 </feedback></choice></choices>
