@@ -47,8 +47,6 @@ else
     </statement>
     <program interactive="activecode" language="java">
         <code>
-import java.util.Scanner;
-
 public class TryElseIf
 {
     public static void main(String[] args)
@@ -60,7 +58,7 @@ public class TryElseIf
         }
         else if (x == 0)
         {
-            System.out.println("x is 0");
+            System.out.println("x is zero");
         }
         else
         {
@@ -368,7 +366,6 @@ public class IfDebug
         System.out.println(grade);
     }
 }
-
 </code>
 <stdin>93</stdin>
 <tests>
