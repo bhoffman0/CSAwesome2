@@ -87,8 +87,7 @@ public class RunestoneTests extends CodeTestHelper
     {
         String output = getMethodOutput("main");
         String expect =
-                "cat in Spanish is gato\n" +
-                "dog in Spanish is perro\n";;
+                "dog in Spanish is perro\n";
 
         boolean passed = getResults(expect, output, "Expected output");
         assertTrue(passed);

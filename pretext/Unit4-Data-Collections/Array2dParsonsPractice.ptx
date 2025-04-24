@@ -93,21 +93,21 @@
 <cline>{</cline>
 <cline> </cline>
 </block><block order="5">
-<cline>   for(int row=0; row&lt;image.length; row++)</cline>
-<cline>   {</cline>
+<cline>  for(int row=0; row&lt;image.length; row++)</cline>
+<cline>  {</cline>
 <cline> </cline>
 </block><block order="2">
-<cline>      for (int col=0; col&lt;image[0].length/2; col++)</cline>
-<cline>      {</cline>
+<cline>    for (int col=0; col&lt;image[0].length/2; col++)</cline>
+<cline>    {</cline>
 <cline> </cline>
 </block><block order="3">
 <choice correct="yes">
-<cline>         String temp = image[row][col];</cline>
-<cline>         image[row][col] = image[row][image[row].length-1-col];</cline>
-<cline>         image[row][image[row].length-1-col] = temp;</cline>
+<cline>      String temp = image[row][col];</cline>
+<cline>      image[row][col] = image[row][image[row].length-1-col];</cline>
+<cline>      image[row][image[row].length-1-col] = temp;</cline>
 </choice><choice>
-<cline>         image[row][col] = image[row][image[row].length-1-col];</cline>
-<cline>         image[row][image[row].length-1-col] = image[row][col];</cline>
+<cline>      image[row][col] = image[row][image[row].length-1-col];</cline>
+<cline>      image[row][image[row].length-1-col] = image[row][col];</cline>
 </choice></block><block order="4">
 <cline>    } //end inner for loop</cline>
 <cline>  } //end outer for loop</cline>
@@ -222,37 +222,34 @@
 <blocks><block order="8">
 <cline>public static int[][] oddRows(int[][] nums)</cline>
 <cline>{</cline>
-<cline> </cline>
 </block><block order="6" correct="no">
 <cline>public static int[] oddRows(int[][] nums)</cline>
 <cline>{  </cline>
 </block><block order="4">
-<cline>   int[][] odds = new int[nums.length/2][nums[0].length];</cline>
+<cline>  int[][] odds=new int[nums.length/2][nums[0].length];</cline>
 </block><block order="11" correct="no">
-<cline>   int[][] odds = new int[nums.length][nums[0].length]; </cline>
+<cline>  int[][] odds=new int[nums.length][nums[0].length];</cline>
 </block><block order="3">
-<cline>   int index = 0;</cline>
-<cline>   for (int i = 0; i &lt; nums.length; i++)</cline>
-<cline>   {</cline>
-<cline> </cline>
+<cline>  int index = 0;</cline>
+<cline>  for(int i = 0; i &lt; nums.length; i++)</cline>
+<cline>  {</cline>
 </block><block order="10">
-<cline>     if (i % 2 == 1)</cline>
-<cline>     {</cline>
-<cline> </cline>
+<cline>    if (i % 2 == 1)</cline>
+<cline>    {</cline>
 </block><block order="1">
-<cline>         for (int j = 0; j &lt; nums[i].length; j++)</cline>
-<cline>         {</cline>
-<cline>              odds[index][j] = nums[i][j];</cline>
-<cline>         }</cline>
+<cline>      for(int j = 0; j &lt; nums[i].length; j++)</cline>
+<cline>      {</cline>
+<cline>        odds[index][j] = nums[i][j];</cline>
+<cline>      }</cline>
 </block><block order="5" correct="no">
-<cline>         for (int j = 0; j &lt; nums[i].length; j++) </cline>
-<cline>         {</cline>
-<cline>              odds[index][j] = nums[j][i];</cline>
-<cline>         }</cline>
+<cline>      for(int j = 0; j &lt; nums[i].length; j++) </cline>
+<cline>      {</cline>
+<cline>        odds[index][j] = nums[j][i];</cline>
+<cline>      }</cline>
 </block><block order="9">
-<cline>         index++;</cline>
+<cline>      index++;</cline>
 </block><block order="2">
-<cline>     } //end if</cline>
+<cline>    } //end if</cline>
 </block><block order="7">
 <cline>  } //end outer for loop</cline>
 <cline>  return odds;</cline>
