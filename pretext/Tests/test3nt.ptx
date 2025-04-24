@@ -908,9 +908,9 @@ public static int numFun(int num)
     <activity label="qtnt3_13">
         <statement>
 
-        <p> Consider the method <c>emptyList</c>, shown below. The method returns true if a <c>List</c> of integers is filled with zeros and false otherwise. Which of the following should replace <c>/* to be completed */</c> so that the method will work as intended?</p>
+        <p> Consider the method <c>emptyList</c>, shown below. The method returns true if an <c>ArrayList</c> of integers is filled with zeros and false otherwise. Which of the following should replace <c>/* to be completed */</c> so that the method will work as intended?</p>
         <program language="java"><code>
-public boolean emptyList (List &lt;Integer&gt; list)
+public boolean emptyList (ArrayList &lt;Integer&gt; list)
 {
      /* to be completed */
 }
