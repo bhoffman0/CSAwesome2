@@ -4,7 +4,7 @@
         <title>Short PD Pretest</title>
         <p>Please try the following short pretest. We don’t expect you to know the answers to these questions at all yet! So don’t worry about it if you don’t know the answers. It is fine to pick the “I don’t know” answer option. You will take the same test at the end of the PD and see the answers after that. We hope that everyone will see a big improvement!</p>
         
-        <exercises label="short-pretest" time-limit="1000" timer="no" feedback="no" results="yes">
+        <exercises label="short-pretest" time-limit="1000" timer="no" feedback="no">
 
     <exercise label="PDpretest1">
         <statement>
@@ -82,7 +82,7 @@ y += x;
 y = y * z;
 </code></program>
             <p>What is the value in variable y when the code segment is executed?</p>
-</statement><choices><choice><statement id="PDpretest2_opt_a">            <p>2</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest2_opt_a">            <p>2</p>
 </statement><feedback id="PDpretest2_opt_a">
 </feedback></choice><choice><statement id="PDpretest2_opt_b">            <p>8</p>
 </statement><feedback id="PDpretest2_opt_b">
@@ -199,7 +199,7 @@ public class Liquid
 Liquid liquid = new Liquid();
 </code></program>
             <p>Which of the following statements is valid?</p>
-</statement><choices><choice><statement id="PDpretest4_opt_a">            <p>Liquid.freezingPoint;</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest4_opt_a">            <p>Liquid.freezingPoint;</p>
 </statement><feedback id="PDpretest4_opt_a">
 </feedback></choice><choice><statement id="PDpretest4_opt_b">            <p>liquid.currentTemp();</p>
 </statement><feedback id="PDpretest4_opt_b">
@@ -235,7 +235,7 @@ if (!p || q)
 }
 </code></program>
             <p>For what values of p and q will “winner” be printed?</p>
-</statement><choices><choice correct="yes"><statement id="PDpretest5_opt_a">            <p>“winner” will be printed when p is false, regardless of the value of q.</p>
+</statement><choices randomize="yes"><choice correct="yes"><statement id="PDpretest5_opt_a">            <p>“winner” will be printed when p is false, regardless of the value of q.</p>
 </statement><feedback id="PDpretest5_opt_a">
 </feedback></choice><choice><statement id="PDpretest5_opt_b">            <p>“winner” will be printed when q is false, regardless of the value of p.</p>
 </statement><feedback id="PDpretest5_opt_b">
@@ -285,7 +285,7 @@ if (a &gt;= 100)
 System.out.print("on ");
 </code></program>
             <p>What is printed when the code segment above is executed?</p>
-</statement><choices><choice><statement id="PDpretest6_opt_a">            <p>go on</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest6_opt_a">            <p>go on</p>
 </statement><feedback id="PDpretest6_opt_a">
 </feedback></choice><choice><statement id="PDpretest6_opt_b">            <p>it up on</p>
 </statement><feedback id="PDpretest6_opt_b">
@@ -322,7 +322,7 @@ int count = 0;
           count++;
 }
 </code></program>
-</statement><choices><choice><statement id="PDpretest7_opt_a">            <p>for (int year1 = 2000; int year2 = 2020; count++)</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest7_opt_a">            <p>for (int year1 = 2000; int year2 = 2020; count++)</p>
 </statement><feedback id="PDpretest7_opt_a">
 </feedback></choice><choice><statement id="PDpretest7_opt_b">            <p>for (int y = year2 - year1; y &lt; year2; y++)</p>
 </statement><feedback id="PDpretest7_opt_b">
@@ -360,7 +360,7 @@ public static String changeStr(String str)
 }
 </code></program>
             <p>What value is returned as a result of the method call <term>changeStr(“ABCDE”)</term>?</p>
-</statement><choices><choice><statement id="PDpretest8_opt_a">            <p>“ABCDE”</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest8_opt_a">            <p>“ABCDE”</p>
 </statement><feedback id="PDpretest8_opt_a">
 </feedback></choice><choice><statement id="PDpretest8_opt_b">            <p>“BCDE”</p>
 </statement><feedback id="PDpretest8_opt_b">
@@ -462,7 +462,7 @@ public Cat(String n, int a)
                 </li>
             </ul></p>
             <p>Which of the following is the most appropriate header for a method that would set the value of the private instance variable y?</p>
-</statement><choices><choice><statement id="PDpretest10_opt_a">            <p>private int setY(int value)</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest10_opt_a">            <p>private int setY(int value)</p>
 </statement><feedback id="PDpretest10_opt_a">
 </feedback></choice><choice><statement id="PDpretest10_opt_b">            <p>private void setY()</p>
 </statement><feedback id="PDpretest10_opt_b">
@@ -506,7 +506,7 @@ public class Student
 }
 </code></program>
             <p>The accessor method getId is intended to return the id of a Student object. Which of the following best explains why the class does not compile?</p>
-</statement><choices><choice><statement id="PDpretest11_opt_a">            <p>The getId method should be declared as private.</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest11_opt_a">            <p>The getId method should be declared as private.</p>
 </statement><feedback id="PDpretest11_opt_a">
 </feedback></choice><choice><statement id="PDpretest11_opt_b">            <p>The getId method should have a parameter.</p>
 </statement><feedback id="PDpretest11_opt_b">
@@ -594,7 +594,7 @@ public boolean mystery(int array[], int value)
      return temp;
 }
 </code></program>
-</statement><choices><choice><statement id="PDpretest13_opt_a">            <p>Whenever the first element in array is equal to value</p>
+</statement><choices randomize="yes"><choice><statement id="PDpretest13_opt_a">            <p>Whenever the first element in array is equal to value</p>
 </statement><feedback id="PDpretest13_opt_a">
 </feedback></choice><choice><statement id="PDpretest13_opt_b">            <p>Whenever array contains any element which equals value</p>
 </statement><feedback id="PDpretest13_opt_b">

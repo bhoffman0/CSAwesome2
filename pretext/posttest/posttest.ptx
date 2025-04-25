@@ -5,7 +5,7 @@
         <p>The following questions are similar to what you might see on the AP CSA exam.  Please answer each to the best of your ability, and complete the few survey questions at the bottom too.</p>
         <p>Please make sure you are logged in on Runestone so that your answers are saved. Click the start button when you are ready to begin the exam. You can only take the exam once. There are no time limits, but it will keep track of how much time you take. Click on the next button to go to the next question.  Click on the previous button to go to the previous question.  Use the number buttons to jump to a particular question.  Click the pause button to pause the exam (you will not be able to see the questions when the exam is paused).  Click on the finish button after you have answered all the questions.  The number correct, number wrong, and number skipped will be displayed.</p>
         <p>Please note that this is a difficult exam. We estimate that a score of about 50% on this test would correspond to the passing grade of 3 on the AP exam, a score of 65% to a 4, and a score of 80% and above to a 5 on the AP exam. These are just estimates and may not correspond to individual scores.</p>
-        <exercises label="posttest1" time-limit="1000" timer="no" feedback="yes" results="yes">
+        <exercises label="posttest1" time-limit="1000" timer="no">
 
 
     <exercise label="pe2_1-14">
@@ -14,7 +14,7 @@
             <p> Under which of these conditions will a sequential search be faster than a binary search?</p>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice correct="yes">
                 <statement>
@@ -73,7 +73,7 @@
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -129,7 +129,7 @@
             <p> What is encapsulation and how does Java implement it?</p>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -194,7 +194,7 @@ for (int k = 0; k &lt; a.length; k++ )
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -256,7 +256,7 @@ if (x &lt; 0)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -322,7 +322,7 @@ System.out.println(list1);
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -392,7 +392,7 @@ public void mystery (int x)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -457,7 +457,7 @@ for (int i=1; i&lt;=6; i++)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -520,7 +520,7 @@ for (int index = 0; index &lt; test.length() - 1; index = index + 1)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -586,7 +586,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice correct="yes">
                 <statement>
@@ -650,7 +650,7 @@ for (int s = 1; s &lt;= 100; s++) {
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -721,7 +721,7 @@ for (int s = 1; s &lt;= 100; s++) {
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -786,7 +786,7 @@ s4 = null;
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -865,7 +865,7 @@ s4 = null;
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -949,7 +949,7 @@ public int findLongest(int target)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -1012,7 +1012,7 @@ public static int m1(int[] a)
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
@@ -1191,7 +1191,7 @@ public class TimeRecord
 </code></program>
 
         </statement>
-<choices>
+<choices randomize="yes">
 
             <choice>
                 <statement>
