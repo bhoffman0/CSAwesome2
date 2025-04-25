@@ -252,7 +252,7 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = false;
 
         ArrayList&lt;StringPart&gt; csawesome = new ArrayList&lt;StringPart&gt;();
-        csawesome.add(new StringPart(19, 0));
+        csawesome.add(new StringPart(19, 1));
         csawesome.add(new StringPart(0, 1));
         csawesome.add(new StringPart(46, 1));
         csawesome.add(new StringPart(12, 2));
