@@ -591,7 +591,7 @@ int result = 13 - 3 * 6 / 4 % 3
     <activity label="qtnt5_10">
         <statement>
 
-        <p> Consider the following code segment. Assume <c>k</c> is some positive integer greater than 2. How many times will “SMALL” be printed?</p>
+        <p> Consider the following code segment. Assume <c>k</c> is some positive integer greater than 2.  What is the maximum number of times “SMALL” could be printed?</p>
         <program language="Java"><code>
 for(int i = 2; i &lt;= k; i++)
 {

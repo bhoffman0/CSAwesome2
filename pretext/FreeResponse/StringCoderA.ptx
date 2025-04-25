@@ -265,9 +265,8 @@ public class RunestoneTests extends CodeTestHelper
         output += "Decoding we get " + key.decodeString(csawesome) + " and should be csawesome";
 
         String expect =
-                "csawesome is encoded as [(19, 0), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9,"
-                    + " 1)]\n"
-                    + "Decoding we get sawesome and should be csawesome";
+                "csawesome is encoded as [(19, 1), (0, 1), (46, 1), (12, 2), (0, 1), (31, 2), (9, 1)]\n"
+                    + "Decoding we get csawesome and should be csawesome";
 
         passed = getResults(expect, output, "Checking for expected results for \"csawesome\"");
 

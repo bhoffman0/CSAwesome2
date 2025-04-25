@@ -102,11 +102,9 @@ public void zeroBlue()
 }
 </code></program>
             <image source="Unit4-Data-Collections/Figures/keepOnlyBlue.png" width="45%"/>
-            <p><ol marker="1">
-                <li>
-                    <p>You may have done this exercise in the coding challenge in lesson 8.2. Using the <c>zeroBlue</c> method as a starting point, write the method <c>keepOnlyBlue</c> that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the <c>main</c> method.</p>
-                </li>
-            </ol></p>
+            
+                    <p>1. You may have done this exercise in the coding challenge in lesson 8.2. Using the <c>zeroBlue</c> method as a starting point, write the method <c>keepOnlyBlue</c> that will keep only the blue values, that is, it will set the red and green values to zero. Be sure to call the new test method in the <c>main</c> method.</p>
+                
             <p>You can use beach.jpg or one of the other images seen at the bottom of this lesson in the active codes below which are autograded. To use your own images, you can fork this <url href="https://replit.com/@BerylHoffman/Picture-Lab" visual="https://replit.com/@BerylHoffman/Picture-Lab">replit.com Swing project</url> or this <url href="https://replit.com/@jds7184/PictureLab" visual="https://replit.com/@jds7184/PictureLab">alternative replit.com project</url> (click output.jpg to see the result) or download the project files form replit to your own IDE.</p>
 
 <activity label="picture-lab-A5-keepOnlyBlue">
@@ -818,11 +816,8 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <image source="Unit4-Data-Collections/Figures/changetshirt.png" width="27%"/>
-            <p><ol marker="5">
-                <li>
-                    <p>Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.</p>
-                </li>
-            </ol></p>
+           <p>5. Extra Challenge — This exercise is not in the original picture lab. Can you change just the t-shirt color in student.jpg? You will need to use an if statement inside the loops to look for the red t-shirt color and then change it. The red pixels probably have a high red value (for example greater than 200) and low green and blue values (for example less than 100). After changing the t-shirt color, try changing the background color or the hair color.</p>
+              
 <p>Try the following Color Chooser (also at <url href="https://www.cssscript.com/demo/rgb-color-picker-slider/" visual="https://www.cssscript.com/demo/rgb-color-picker-slider/">https://www.cssscript.com/demo/rgb-color-picker-slider/</url>)
             by moving the sliders to try to match the red color of the shirt and see what range and limits the RGB color values need to be for your if statement:</p>
                 <interactive iframe="iframe/colorpicker.html" width="100%" aspect="1:1"/>
