@@ -329,9 +329,9 @@ public class Present
         @Test
         public void test2()
         {          
-            String results = checkConstructor(2);
+            String results = checkConstructor(3);
     
-            boolean passed = getResults("pass", results, "Checking constructor with 2 parameters");
+            boolean passed = getResults("pass", results, "Checking constructor with 3 parameters");
             assertTrue(passed);
         }
     
