@@ -661,9 +661,10 @@ public class StringFind
      *
      * @param String letter to look for
      * @param String text to look in
-     * @return boolean true if letter is in text After running the code, change
-     *     this method to return an int count of how many times letter is in the
-     *     text.
+     * @return boolean true if letter is in text 
+     * After running the code, change this method 
+     * to return an int count of how many times letter is in 
+     * the text.
      */
     public boolean findLetter(String letter, String text)
     {

@@ -107,22 +107,22 @@
         }
         @Test
         public void test4() {
-          boolean passed = checkCodeContains("public void water(int", "Checking for public water method with an int parameter");
+          boolean passed = checkCodeContains("public water method with an int parameter", "public void water(int");
          assertTrue(passed);
         }
         @Test
         public void test5() {
-          boolean passed = checkCodeContains("public void cut()", "Checking for public cut method");
+          boolean passed = checkCodeContains("public cut method", "public void cut()");
          assertTrue(passed);
         }
         @Test 
         public void test6() {
-          boolean passed = checkCodeContains("public String woodType()", "Checking for public woodType method that returns a String");
+          boolean passed = checkCodeContains("public woodType method that returns a String", "public String woodType()");
          assertTrue(passed);
         }
         @Test
         public void test7() {
-          boolean passed = checkCodeContains("public int getHeight()", "Checking for public getHeight method that returns an int");
+          boolean passed = checkCodeContains("public getHeight method that returns an int", "public int getHeight()");
          assertTrue(passed);
         }
       }
@@ -175,15 +175,15 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
           System.out.println(hp.getName());
           System.out.println(hp.isHardCover());
           System.out.println(hp.getDamages());
-          System.out.println(hp.repairBook());
+          System.out.println(hp.repairBook()); // should be false
     
           hp.addDamages(49);
           System.out.println(hp.getDamages());
-          System.out.println(hp.repairBook());
+          System.out.println(hp.repairBook()); // should be false
     
           hp.addDamages(1);
           System.out.println(hp.getDamages());
-          System.out.println(hp.repairBook());
+          System.out.println(hp.repairBook()); // should be true
       }
     }
     </code><tests>
@@ -217,26 +217,28 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
     
         @Test
         public void test3()
-        {
-            String actual = testPrivateInstanceVariables();
-            String expected = "3 Private";
-    
-            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+        {  
+            String expect = "3 Private";
+            String output = testPrivateInstanceVariables();
+            boolean passed = false;
+            if (Integer.parseInt(expect.substring(0, 1)) &lt;= Integer.parseInt(output.substring(0, 1)))
+                passed = true;
+            passed = getResults(expect, output, "Checking private instance variables", passed);
             assertTrue(passed);
         }
         @Test
         public void test4() {
-          boolean passed = checkCodeContains("public void addDamages(int", "Checking for public addDamages method with an int parameter");
+          boolean passed = checkCodeContains("public addDamages method with an int parameter", "public void addDamages(int");
          assertTrue(passed);
         }
         @Test
         public void test5() {
-          boolean passed = checkCodeContains("public boolean repairBook()", "Checking for public repairBook method that returns a boolean");
+          boolean passed = checkCodeContains("public repairBook method that returns a boolean", "public boolean repairBook()");
          assertTrue(passed);
         }
         @Test
         public void test6() {
-          boolean passed = checkCodeContains("public int getNumPages()", "Checking for public getNumPages method that returns an int");
+          boolean passed = checkCodeContains("public getNumPages method that returns an int", "public int getNumPages()");
          assertTrue(passed);
         }
       }
@@ -249,43 +251,36 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
     <subsection xml:id="FRQ2practicePresent">
     <title>Present Class</title>
 <p>
-Write a class called Present that has the appropriate instance variables and methods described in the main method below.</p>
-//below is the TestPresent Class
-//use this class to give you hints at what 
-//methods should be in your Present class
+Write a class called Present that describes a gift for an occasion. Use the method calls in the main method below to create the the appropriate instance variables and methods for the Present class.</p>
 
-import java.util.Scanner;
-
-public class TestPresent
-{
+<program language="java">
+    <code>
     public static void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
+        //creates a Present object
+        Present gift = new Present("Birthday", 29.99, "Legos");
 
-        //prompts the user to enter name of occasion
-        System.out.print("Enter the occasion: ");
-        String occasion = scan.nextLine();
-
-        //creates a present object
-        Present gift = new Present(49.99, "legos");
-
-        //prints out the gift type and cost by calling two methods
-        System.out.println("The gift is " + gift.getName() + ", and it costs $" + gift.getPrice() );
+        //prints out the gift name and cost 
+        System.out.println("The gift is " + gift.getName() 
+                  + ", and it costs $" + gift.getPrice() );
         
-        System.out.println("The reaction when opening the gift was " + gift.reaction() );
-        
+        // prints out the reaction "Wow!"
+        System.out.println("The reaction when opening the gift was " 
+                + gift.reaction() ); 
+        // Prints out "Purchased at local store"
         gift.purchasedAt("local store");
     } 
 }
+</code>
+</program>
 
 <activity label="classPresent">
         <statement>
-        <p>Write the class Present below with the appropriate instance variables, constructor, and methods described in main method in the TestPresent class. </p>
+        <p>Write the class Present below with the appropriate instance variables, constructor, and methods described in main method. </p>
         </statement>
         <program interactive="activecode" language="java">
             <code>
-import java.util.Scanner;
-class Present
+public class Present
 {
     // Write the instance variables here
 
@@ -294,34 +289,24 @@ class Present
     // Write the methods here
   
   
-  
-}
-//below is the TestPresent Class
-//use this class to give you hints at what 
-//methods should be in your Present class
-public class TestPresent
-{
     public static void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
+        //creates a Present object
+        Present gift = new Present("Birthday", 29.99, "Legos");
 
-        //prompts the user to enter name of occasion
-        System.out.print("Enter the occasion: ");
-        String occasion = scan.nextLine();
-
-        //creates a present object
-        Present gift = new Present(49.99, "legos");
-
-        //prints out the gift type and cost by calling two methods
-        System.out.println("The gift is " + gift.getName() + ", and it costs $" + gift.getPrice() );
+        //prints out the gift name and cost
+        System.out.println("The gift is " + gift.getName() 
+                  + ", and it costs $" + gift.getPrice() );
         
-        System.out.println("The reaction when opening the gift was " + gift.reaction() );
-        
+        // prints out the reaction "Wow!"
+        System.out.println("The reaction when opening the gift was " 
+                + gift.reaction() ); 
+        // Prints out "Purchased at local store"
         gift.purchasedAt("local store");
     } 
 }
 </code>
-<stdin>Birthday</stdin><tests>
+<tests>
     import static org.junit.Assert.*; 
     import org.junit.*;
     import java.io.*;
@@ -335,7 +320,7 @@ public class TestPresent
         @Test
         public void testMain()
         {
-            String expected = "Enter the occassion: \nThe gift is legos, and it costs $49.99\nThe reaction when opening the gift was Wow!\nPurchased at local store\n";
+            String expected = "The gift is Legos, and it costs $29.99\nThe reaction when opening the gift was Wow!\nPurchased at local store\n";
             String output = getMethodOutput("main");
 
             boolean passed = getResults(expected, output, "Checking main method output", true);
@@ -353,30 +338,32 @@ public class TestPresent
         @Test
         public void test3()
         {
-            String actual = testPrivateInstanceVariables();
-            String expected = "2 Private";
-    
-            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+            String expect = "2 Private";
+            String output = testPrivateInstanceVariables();
+            boolean passed = false;
+            if (Integer.parseInt(expect.substring(0, 1)) &lt;= Integer.parseInt(output.substring(0, 1)))
+                passed = true;
+            passed = getResults(expect, output, "Checking private instance variable(s)", passed);
             assertTrue(passed);
         }
         @Test
         public void test4() {
-          boolean passed = checkCodeContains("public String getName()", "Checking for public getName method that returns a String");
+          boolean passed = checkCodeContains("public getName method that returns a String", "public String getName()");
          assertTrue(passed);
         }
         @Test
         public void test5() {
-          boolean passed = checkCodeContains("public double getPrice()", "Checking for public getPrice method that returns a double");
+          boolean passed = checkCodeContains("public getPrice method that returns a double", "public double getPrice()");
          assertTrue(passed);
         }
         @Test
         public void test6() {
-          boolean passed = checkCodeContains("public String reaction()", "Checking for public reaction method that returns a String");
+          boolean passed = checkCodeContains("public reaction method that returns a String", "public String reaction()");
          assertTrue(passed);
         }
         @Test
         public void test7() {
-          boolean passed = checkCodeContains("public void purchasedAt(String", "Checking for public purchasedAt method with a String parameter");
+          boolean passed = checkCodeContains("public purchasedAt method with a String parameter", "public void purchasedAt(String");
          assertTrue(passed);
         }
       }
