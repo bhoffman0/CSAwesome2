@@ -65,7 +65,203 @@ public class Test1
             
 
 
+<activity label="circleMethods">
+    <statement>
+        <p>Given the Circle class below, use its constructor to create a circle of radius 5.0 and then print out its area using its getArea method.</p>
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Circle
+{
+    private double radius;
           
+    public Circle(double r)
+    {
+        radius = r;
+    }
+            
+    public double getArea()
+    {
+        return 3.14159 * radius * radius;
+    }
+            
+    public static void main(String[] args)
+    {
+        // 1. Create a circle object with a radius of 5.0
+    
+        // 2. Print out its area using its getArea method
+
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+@Test
+public void testMain() throws IOException
+{
+    String output = getMethodOutput("main");
+    String expect = "78.53975";
+    boolean passed = getResults(expect, output, "Expected output from main");
+    assertTrue(passed);
+}
+@Test
+public void test1()
+{
+    String code = "new Circle(5";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+@Test
+public void test2()
+{
+    String code = ".getArea()";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+}
+    </tests>
+</program>
+<solution>
+    <p>  Create a new Circle object with a radius of 5.0 and then print out its area using the getArea method.</p>
+    <program language="java">
+        <code>
+    public static void main(String[] args)
+    {
+        Circle c1 = new Circle(5.0);
+        System.out.println(c1.getArea());
+    }
+</code>
+    </program>  
+</solution>
+</activity>
+
+<activity label="tvMethods">
+    <statement>
+        <p>Given the Television class below, use its constructor to create a Television object with the brand <c>Sony</c> and price <c>499.99</c>.  Then print out its brand and price.  Finally, set the number of pixels to <c>1080</c> and print it out.
+        </p>
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+            class Television
+            {
+                private double price;
+                private String brand;
+                private int pixels;
+                
+                /* Constructor */
+                public Television(String b, double p)
+                {
+                    brand = b;
+                    price = p;
+                }
+
+                /* Returns price of TV */
+                public double getPrice()
+                {
+                    return price;
+                }
+
+                /* Prints out the brand of the TV */
+                public void printBrand()
+                {
+                    System.out.println("Brand: " + brand);
+                }
+                
+                /* Sets the number of pixels for the tv
+                   to the argument pixs and prints it out */
+                public void setHighDef(int pixs)
+                {
+                    pixels = pixs;
+                    System.out.println("High Def: " + pixels);
+                }
+            }
+            public class TestTelevision
+            {
+                public static void main(String[] args)
+                {
+                    // 1. Create a Television object with the brand "Sony" and price 499.99
+                    // 2. Print out its brand 
+                    // 3. Print out its price 
+                    // 4. Set the number of pixels to 1080 
+
+                }
+            }
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+@Test
+public void testMain() throws IOException
+{
+    String output = getMethodOutput("main");
+    String expect = "Brand: Sony\nPrice: 499.99\nHigh Def: 1080";
+    boolean passed = getResults(expect, output, "Expected output from main");
+    assertTrue(passed);
+}
+@Test
+public void test1()
+{
+    String code = "new Television(\"Sony\", 499.99)";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+@Test
+public void test2()
+{
+    String code = ".printBrand()";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+@Test
+public void test3()
+{
+    String code = ".getPrice()";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+@Test
+public void test4()
+{
+    String code = ".setHighDef(1080)";
+    boolean passed = checkCodeContains(code);
+    assertTrue(passed);
+}
+}
+    </tests>
+</program>
+<solution>
+    <p>  Create a new Television object with 
+a brand of "Sony" and a price of 499.99.  
+Print out its brand and price using the methods in the class.  
+Set the number of pixels to 1080 using the setHighDef method.
+    </p>
+    <program language="java">
+        <code>
+            public static void main(String[] args)
+            {
+                // 1. Create a Television object with the brand "Sony" and price 499.99
+                Television tv = new Television("Sony", 499.99);
+                // 2. Print out its brand 
+                tv.printBrand();
+                // 3. Print out its price
+                System.out.println("Price: " + tv.getPrice()); 
+                // 4. Set the number of pixels to 1080 
+                tv.setHighDef(1080);
+            }
+</code>
+    </program>  
+</solution>
+</activity>
+
         <activity label="exFirstLetter"><statement>
                 <p>The following code should get the first letter of the first name, middle name, and last name and append (concatenate) them together and then return them all in lowercase.  However, the code has errors.  Fix the code so that it compiles and runs correctly.</p>
 

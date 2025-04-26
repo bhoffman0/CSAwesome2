@@ -366,6 +366,7 @@ public class Person
     }
 }
 </code></program>
+
             <p>Try it in the code below.</p>
 
 <activity label="PersonAddressGet">
@@ -537,7 +538,9 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "Anystate", "12345"));
+        Person p1 = new Person("Skyler", 
+                          new Address("123 Main St", 
+                              "Anytown","Anystate","12345"));
         System.out.println(p1);
         Address a = p1.getAddress();
         a.setCity("Othertown");
@@ -545,12 +548,14 @@ public class Person
     }
 }
 </code></program>
-            <p>Try it in the code below.</p>
+<p>Notice that we created the new Address object above inside the call to the <c>Person</c> constructor, instead of saving it into a variable first: <c>Person p1 = new Person("Skyler", new Address("123 Main St", 
+    "Anytown","Anystate","12345"))</c>.  This is called an <term>anonymous object</term> where we create a new object without associating it with a variable. This is useful when you only need the object for a short time. This new Address object will be copied into the instance variable <c>addr</c> in the <c>Person</c> constructor. </p> 
+    
+<p>Try it in the code below.</p>
 
 <activity label="PersonReturnAddress">
     <statement>
             <p>Run the code to see that the Person class can return the Address object which is mutable. Add code in the main method that changes the zipcode of the Address object returned by the getAddress method. It will change the zipcode in the Person object too.</p>
-
     </statement>
     <program interactive="activecode" language="java">
         <code>
@@ -585,7 +590,9 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person p1 = new Person("Skyler", new Address("123 Main St", "Anytown", "Anystate", "12345"));
+        Person p1 = new Person("Skyler", 
+                        new Address("123 Main St", 
+                           "Anytown", "Anystate", "12345"));
         System.out.println(p1);
         Address a = p1.getAddress();
         // TODO: add code to change a's zipcode to "11111"
@@ -671,7 +678,217 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
         </subsection>
-  <subsection xml:id="coding-challenge-friends-and-birthdays">
+        <subsection xml:id="method-chaining">
+            <title>Chaining Method Calls</title>
+    <p>Programmers will sometimes call methods in a chain, one after another on the same line, for example <c>p.getAddress().getCity()</c>. The method calls are separated by a dot and the return value of each method is used as the object for the next method call. It is important to know the types that each method returns so that you can call the methods of that object. For example, if the first method returns a String, the next method must be one that is defined for a String object. In the code below, the <c>getAddress</c> method returns an Address object, and then the <c>getCity</c> method is called on that Address object.</p>
+            <program language="java"><code>
+                Person p1 = new Person("Skyler", 
+                                new Address("123 Main St", 
+                                "Anytown", "Anystate","12345"));
+                System.out.println( p1.getAddress().getCity() );
+</code></program>
+
+<activity label="fillAddress1">
+    <statement>
+<p>What is printed out by <c>p1.getAddress().getCity()</c> above? </p>
+<p>
+  <fillin answer="Anytown"  mode="string"/></p>    
+</statement>
+  <evaluation>
+<evaluate>
+    <test>
+      <strcmp use-answer="yes"/>
+      <feedback>
+       Correct. 
+      </feedback>
+    </test>
+    <test>
+      <!-- else -->
+      <feedback>
+       Look at the arguments to the Address constructor in: <c>Person p1 = new Person("Skyler", 
+        new Address("123 Main St", 
+        "Anytown", "Anystate","12345"));</c>
+      </feedback>
+    </test>
+</evaluate>
+</evaluation>
+</activity> 
+
+<activity label="fillAddress2">
+    <statement>
+<p>What is the type of the object returned by the <c>getAddress</c> method? </p>
+<p>
+  <fillin answer="Address"  mode="string"/></p>    
+</statement>
+  <evaluation>
+<evaluate>
+    <test>
+      <strcmp use-answer="yes"/>
+      <feedback>
+       Correct. 
+      </feedback>
+    </test>
+    <test>
+      <!-- else -->
+      <feedback>
+     <p> Is it type Person, Address, or String?</p>
+      </feedback>
+    </test>
+</evaluate>
+</evaluation>
+</activity> 
+
+<activity label="fillAddress3">
+    <statement>
+<p>What is the type of the object returned by the <c>getCity</c> method?</p>
+<p>
+  <fillin answer="String"  mode="string"/></p>    
+</statement>
+  <evaluation>
+<evaluate>
+    <test>
+      <strcmp use-answer="yes"/>
+      <feedback>
+       Correct. 
+      </feedback>
+    </test>
+    <test>
+      <!-- else -->
+      <feedback>
+        <p> Is it type Person, Address, or String?</p>
+      </feedback>
+    </test>
+</evaluate>
+</evaluation>
+</activity> 
+
+            
+<activity label="method-chain">
+    <statement>
+            <p>Print out the first two letters of the state in the address of the person below by chaining together the method calls in one line.</p>
+    </statement>
+    <program interactive="activecode" language="java">
+        <code>
+public class Person
+{
+    // instance variables
+    private String name;
+    private Address addr;  // instance variable of type Address defined below
+
+    // constructor: initialize instance variable and call Address constructor to
+    // make a copy
+    public Person(String initName, Address initAddr)
+    {
+        name = initName;
+        // Defensive copy of the Address argument
+        addr =  new Address(
+                           initAddr.getStreet(),
+                           initAddr.getCity(),
+                           initAddr.getState(),
+                           initAddr.getZipcode());
+    }
+
+    public Address getAddress()
+    {
+        return addr;
+    }
+
+    public String toString()
+    {
+        return "Name:" + name + "\n" + "Address:" + addr;
+    }
+
+    public static void main(String[] args)
+    {
+        Person kay = new Person("Kay", 
+                        new Address("123 Main St", 
+                           "Boston", "Massachusetts", "01234"));
+        // TODO: print out the first two letters of the state 
+        // in the address of kay in 1 line
+
+     
+    }
+}
+class Address
+{
+      // instance variables
+      private String street;
+      private String city;
+      private String state;
+      private String zipcode;
+      // constructor
+      public Address(String initStreet, String initCity,
+                     String initState, String initZipcode)
+      {
+          street = initStreet;
+          city = initCity;
+          state = initState;
+          zipcode = initZipcode;
+      }
+      public String toString()
+      {
+          return street + "\n" + city + ", " + state + " " + zipcode;
+      }
+      public String getStreet()
+      {
+          return street;
+      }
+      public String getCity()
+      {
+          return city;
+      }
+      public String getState()
+      {
+          return state;
+      }
+      public String getZipcode()
+      {
+          return zipcode;
+      }
+      // Setters (makes the class mutable)
+      public void setCity(String initCity)
+      {
+          city = initCity;
+      }
+      public void setZipcode(String initZipcode)
+      {
+          zipcode = initZipcode;
+      }
+ }
+</code><tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test1()
+    {
+        String target = "kay.getAddress().getState().substring";
+        boolean passed = checkCodeContains("kay's getAddress and then getState and then substring", target);
+        assertTrue(passed);
+    }
+    @Test
+    public void test2()
+    {
+         String output = getMethodOutput("main");
+         String expect = "Ma";
+
+         boolean passed = getResults(expect, output, "Ma in output");
+         assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</activity>
+     
+        
+</subsection>
+
+<subsection xml:id="coding-challenge-friends-and-birthdays">
             <title>Coding Challenge : Friends and Birthdays</title>
             <image source="Unit3-Class-Creation/Figures/cake.jpg" width="23%" alt="Birthday cake"/>
             <p>In this challenge, you will create a class <c>Friend</c> which keeps track of your friends’ names and birthdays using another class called <c>Date</c>.</p>

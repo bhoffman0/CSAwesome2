@@ -660,6 +660,89 @@ System.out.println(r.getArea());
 
     </activity>
 
+    <p>Let's try calling the constructor and methods of this Rectangle class in an active code exercise below.</p>
+
+    <activity label="rectangleMethods">
+        <statement>
+            <p>Given the Rectangle class below, use its constructor to create a 5x10 rectangle, then call its resize method to add 10 to its width, and then print out its area using its getArea method.</p>
+        </statement>
+        <program interactive="activecode" language="java">
+            <code>
+public class Rectangle
+{
+    private int width;
+    private int height;
+
+    public Rectangle(int w, int h)
+    {
+        width = w;
+        height = h;
+    }
+
+    public void resize(int amt)
+    {
+        width += amt;
+    }
+
+    public int getArea()
+    {
+        return width * height;
+    }
+
+    public static void main(String[] args)
+    {
+        // 1. Create a rectangle with width 5 and height 10
+
+        // 2. Call the resize method to add 10 to its width
+        
+        // 3. Print out its area using its getArea method
+    
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "150";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+    @Test
+    public void test1()
+    {
+        String code = "new Rectangle(5,10)";
+        boolean passed = checkCodeContains(code);
+        assertTrue(passed);
+    }
+    @Test
+    public void test2()
+    {
+        String code = ".resize(10)";
+        boolean passed = checkCodeContains(code);
+        assertTrue(passed);
+    }
+    @Test
+    public void test3()
+    {
+        String code = ".getArea()";
+        boolean passed = checkCodeContains(code);
+        assertTrue(passed);
+    }
+}
+        </tests>
+    </program>
+</activity>
+
+          
+
     <activity label="traceReturnMethods">
         <statement>
 
