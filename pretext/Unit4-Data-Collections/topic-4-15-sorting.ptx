@@ -29,7 +29,7 @@
  <idx><h>sort</h><h>selection</h></idx>
 
             
-            <p>Selection sort usually starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.</p>
+            <p>Selection sort usually starts at index 0 and looks through the entire array keeping track of the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.</p>
             <p>Here is a folk dance <url href="https://youtu.be/Ns4TPTC8whw" visual="https://youtu.be/Ns4TPTC8whw">video</url> that shows the selection sort process.</p>
 
     <video youtube="Ns4TPTC8whw" label="video-dance1"/>

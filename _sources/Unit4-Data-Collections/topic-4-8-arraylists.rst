@@ -1178,7 +1178,7 @@ Summary
 - (AP 4.8.A.3) Java allows the generic type ``ArrayList<E>``, where the generic type ``E`` specifies the type of the elements. (Without it, the type will be ``Object``). When ``ArrayList<E>`` is specified, the types of the reference parameters and
   return type when using its methods are type ``E``.
 
-- (AP 4.8.A.3) ``ArrayList<E>`` is preferred over ``ArrayList`` (which creates an list of of type ``Object``). For example, ``ArrayList<String> names = new ArrayList<String>();`` allows the compiler to find errors that would otherwise be found at run time.
+- (AP 4.8.A.3) ``ArrayList<E>`` is preferred over ``ArrayList`` (which creates an list of type ``Object``). For example, ``ArrayList<String> names = new ArrayList<String>();`` allows the compiler to find errors that would otherwise be found at run time.
 
 - ``ArrayList``\ s cannot hold primitive types like ``int`` or ``double``, so
   you must use the wrapper classes ``Integer`` or ``Double`` to put numerical

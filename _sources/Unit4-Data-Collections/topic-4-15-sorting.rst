@@ -28,7 +28,7 @@ Selection Sort
    single: selection sort
    pair: sort; selection
 
-Selection sort usually starts at index 0 and looks through the entire array keeping track of the the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
+Selection sort usually starts at index 0 and looks through the entire array keeping track of the index of the smallest value in the array (a findMin algorithm) and then swaps the value at the smallest index with the value at index 0.  Then it does the same thing for index 1, then 2, and so on until it reaches the length of the array minus one.  At this point the array is sorted in ascending order.
 
 .. |video| raw:: html
 

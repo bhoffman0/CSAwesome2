@@ -784,7 +784,7 @@ public class Dictionary extends Book
                     <p>Dictionary d = new Book();</p>
                 </statement>
                 <feedback>
-                    <p>The declared type must the the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.</p>
+                    <p>The declared type must the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.</p>
                 </feedback>
             </choice>
 

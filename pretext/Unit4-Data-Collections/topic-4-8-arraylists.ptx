@@ -1434,7 +1434,7 @@ public class RunestoneTests extends CodeTestHelper
                         return type when using its methods are type <c>E</c>.</p>
                 </li>
                 <li>
-                    <p>(AP 4.8.A.3) <c>ArrayList&lt;E&gt;</c> is preferred over <c>ArrayList</c> (which creates an list of of type <c>Object</c>). For example, <c>ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();</c> allows the compiler to find errors that would otherwise be found at run time.</p>
+                    <p>(AP 4.8.A.3) <c>ArrayList&lt;E&gt;</c> is preferred over <c>ArrayList</c> (which creates an list of type <c>Object</c>). For example, <c>ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();</c> allows the compiler to find errors that would otherwise be found at run time.</p>
                 </li>
                 <li>
                     <p><c>ArrayList</c>s cannot hold primitive types like <c>int</c> or <c>double</c>, so
