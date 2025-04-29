@@ -351,7 +351,7 @@ Click the |start| button when you are ready to begin the exam, but only then as 
        :answer_c: Book b = new Dictionary();
        :correct: b
        :feedback_a: A object can always be declared to be of the type of the class that creates it.
-       :feedback_b: The declared type must the the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.
+       :feedback_b: The declared type must be the type of the class that creates the object or the type of any parent class.   Dictionary is not a parent of the Book class.
        :feedback_c: The declared type can be the actual type (the class that creates the object) or any parent of the actual type.
 
        Given the following class declarations, which declaration below will result in a compiler error?

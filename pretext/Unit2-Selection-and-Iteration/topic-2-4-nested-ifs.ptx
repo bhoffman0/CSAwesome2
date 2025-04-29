@@ -702,7 +702,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </activity>
-            <p>You can use curly braces (<c>{}</c>) to enclose a nested if and have the else clause belong to the the top level if clause like below:</p>
+            <p>You can use curly braces (<c>{}</c>) to enclose a nested if and have the else clause belong to the top level if clause like below:</p>
             <program language="java"><code>
 // Nested if with dangling else
 if (boolean expression)

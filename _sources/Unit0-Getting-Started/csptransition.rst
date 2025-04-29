@@ -57,7 +57,7 @@ Here is a comparison of some App Inventor blocks compared to AP CSP pseudocode a
 
     <iframe src="https://docs.google.com/document/d/1xhSAfzF1pH0nlUL94lmpdvd8fO4sa38cOuunXnJU4Bs/view" style="max-width:100%; margin-left:5%; width:90%;"  height="600px"></iframe>
 
-And here is a a comparison of |code.org App Lab code to Java|:
+And here is a comparison of |code.org App Lab code to Java|:
 
 .. raw:: html
 

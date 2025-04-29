@@ -116,7 +116,7 @@ Apply the grading rubric shown above as you answer the following questions.
    :feedback_a: This solution declares the constructor as <code>public Trio(Sandwich sandwich, Salad salad, Drink drink)</code>
    :feedback_b: What do you think is wrong with the constructor declaration?
 
-   Should the student earn 1 point for declaring the the constructor correctly?
+   Should the student earn 1 point for declaring the constructor correctly?
 
 .. mchoice:: qtrio3_4
    :answer_a: Yes

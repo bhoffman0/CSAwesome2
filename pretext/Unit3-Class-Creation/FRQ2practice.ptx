@@ -4,7 +4,7 @@
   <title>FRQ 2 Practice with Classes</title>
   <introduction>
     <p>Many of the FRQs on the AP exam contain a table which shows output or return values
-      from methods in a class. In this practice, you will be a table that shows method calls and their output. 
+      from methods in a class. In these practice exercises, you will be given a table that shows method calls and their output. 
       You will need to write a class with the described methods that will produce the output shown in the table. Thank you to Sam Procopio from Bishop Blanchet High School in Seattle, WA, for these exercises.
     </p> </introduction>
 
@@ -251,7 +251,7 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
     <subsection xml:id="FRQ2practicePresent">
     <title>Present Class</title>
 <p>
-Write a class called Present that describes a gift for an occasion. Use the method calls in the main method below to create the the appropriate instance variables and methods for the Present class.</p>
+Write a class called Present that describes a gift for an occasion. Use the method calls in the main method below to create the appropriate instance variables and methods for the Present class.</p>
 
 <program language="java">
     <code>
