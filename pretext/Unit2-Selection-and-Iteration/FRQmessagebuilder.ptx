@@ -399,12 +399,11 @@ public class RunestoneTests extends CodeTestHelper
       then <c>getAbbreviation()</c> should return <c>"asap"</c>.
     </p>
 
-    <p>This method requires the use of arrays and the <c>String</c> <c>split</c> method covered in Unit 4. We have simplified this question to write a method that only returns the first letter of a single word. 
-    </p>
+    
 
 <activity label="msgbuilder-string-methods">
   <statement>
-    <p>Which of the following <code>String</code> methods can be used to return the first letter of a word? </p>
+    <p>Which of the following <code>String</code> method can be used to return the first letter of a word? </p>
   </statement>
   <choices>
    <choice>
@@ -430,15 +429,66 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
 
 
-    <p>
-      Complete the simplified <c>getAbbreviation(String word)</c> method below.
-    </p>
+<activity label="msgbuilder-string-methods2">
+  <statement>
+    <p>Which of the following <code>String</code> method can be used to find a space character in the message? </p>
+  </statement>
+  <choices>
+   <choice>
+      <statement><p><code>length()</code></p></statement>
+      <feedback><p>You do not need to know the length of the string.</p></feedback>
+    </choice>
+    <choice correct="yes">
+      <statement><p><code>indexOf(String s)</code></p></statement>
+      <feedback><p>You can use indexOf(" ") to find the index of a space in a string.</p></feedback>
+    </choice>
+    <choice>
+      <statement><p><code>substring(int start, int end)</code></p></statement>
+      <feedback><p>substring only works if you know the index of the space. </p></feedback>
+    </choice>
+    
+    <choice>
+      <statement><p><code>equals(String another)</code></p></statement>
+      <feedback><p><code>equals</code> is used for comparisons, which are not needed here.</p></feedback>
+    </choice>
+  </choices>
+</activity>
 
+<activity label="msgbuilder-partb-loop">
+  <statement>
+    <p>Which of the following loop patterns can be used to find the next space in the message?</p>
+  </statement>
+  <choices>
+   <choice>
+      <statement><p>for(int i=0; i &lt; message.length; i++)</p></statement>
+      <feedback><p>This iterates through the message letter by letter, but it doesn't find the next space.</p></feedback>
+    </choice>
+  <choice>
+      <statement><p>while(message.substring(0,1) == " ")</p></statement>
+      <feedback><p>This while loop would only check the first character.</p></feedback>
+    </choice>
+    <choice correct="yes">
+      <statement><p>while( message.indexOf(" ") &gt;= 0 ) </p></statement>
+      <feedback><p>You can use indexOf(" ") to find the index of a space in a string.</p></feedback>
+    </choice>
+    
+  
+  </choices>
+</activity>
+  
+</subsection>
+
+<subsection xml:id="msgbuilder-partb-solve">
+  <title>Solve MessageBuilder Part B</title>
+  
+    <p>
+      Complete the <c>getAbbreviation()</c> method below which returns a String that consists of the first letter of each word in the message.  Assume that <c>message</c> consists of two or more words, each separated by a single space.
+    </p>
 
 
     <activity label="FRQmessageBuilderPartB">
     <statement>
-            <p> Complete the simplified <c>getAbbreviation(word)</c> method below that returns the first letter of the word parameter. This will be used to construct an abbreviation consisting of the first letter of each word in <c>message</c>. Assume that <c>message</c> consists of two or more words, each separated by a single space.
+            <p> Complete the  <c>getAbbreviation()</c> method below that returns a String that consists of the first letter of each word in the message.  Assume that <c>message</c> consists of two or more words, each separated by a single space.
            </p>
     </statement>
     <program interactive="activecode" language="java">
@@ -455,10 +505,9 @@ public class MessageBuilder
         numWords = n;
     }
 
-    /* getAbbreviation(String) returns the first letter of the word parameter */
-    public String getAbbreviation(String word)
+    public String getAbbreviation()
     {
-        // Complete the method to return the first letter of the word parameter
+        // Complete the method to return the abbreviation of message
        
     }
 
@@ -470,16 +519,7 @@ public class MessageBuilder
     {
         return numWords;
     }
-    // Part B method for testing
-    public String getAbbreviation()
-    {
-        String abbreviation = "";
-        
-        for(String word : message.split(" "))
-            abbreviation += getAbbreviation(word);
-        
-        return abbreviation;
-    }
+    
 
     public static void main(String[] args) 
     {
@@ -518,6 +558,11 @@ public class RunestoneTests extends CodeTestHelper
      @Test
         public void testSubstr() {
           boolean passed = checkCodeContains("substring","substring");
+         assertTrue(passed);
+        }
+         @Test
+        public void testIndexOf() {
+          boolean passed = checkCodeContains("indexOf","indexOf");
          assertTrue(passed);
         }
 }
