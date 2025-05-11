@@ -305,8 +305,8 @@ public class MessageBuilder
     /* These variables and methods were added to simulate Example 1 for testing purposes 
      (implementation not shown in AP exam)
      */
-    static String[] wordsForTesting = {"the", "book", "on", "the", "table"};
-    static int currentWordIndex = 0;
+    private String[] wordsForTesting = {"the", "book", "on", "the", "table"};
+    private int currentWordIndex = 0;
     
     public String getNextWord(String s)
     {   
@@ -351,7 +351,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 
     @Test
-    public void test1()
+    public void testMain()
     {
         String output = getMethodOutput("main");
         String expect = "Message: the book on the table\nNumber of words: 5\n";
@@ -366,16 +366,15 @@ public class RunestoneTests extends CodeTestHelper
          assertTrue(passed);
         }
         @Test
-        public void testNumWords() {
-          boolean passed = checkCodeContains("incrementing numWords","numWords+");
+        public void testNumWordsInc() {
+          boolean passed = checkCodeContains("numWords++");
          assertTrue(passed);
         }
         @Test
-        public void testNextWord() {
-          boolean passed = checkCodeContains("call to getNextWord with the nextWord variable","getNextWord(nextWord)");
+        public void testNextWordCall() {
+          boolean passed = checkCodeContains("getNextWord(nextWord)");
          assertTrue(passed);
         }
-
 }
         </tests>
     </program>
