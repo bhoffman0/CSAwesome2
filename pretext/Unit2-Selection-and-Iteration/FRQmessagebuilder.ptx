@@ -112,10 +112,9 @@ public class MessageBuilder
       returns the next word in the message based on the word most recently added. When there are no more
       words to be added, <c>getNextWord</c> returns <c>null</c>.
     </p>
-  <subsubsection xml:id="example1-msgbldr">
-  <title>Example 1</title>
+  
   <p>
-    Consider the following calls to <c>getNextWord</c>, which are made within the <c>MessageBuilder</c> class. The return value of each call is used in the next call.
+  <term>Example 1:</term>  Consider the following calls to <c>getNextWord</c>, which are made within the <c>MessageBuilder</c> class. The return value of each call is used in the next call.
   </p>
 
   <table>
@@ -153,10 +152,8 @@ public class MessageBuilder
     should set the instance variable <c>message</c> to <c>"the book on the table"</c> and should set
     the instance variable <c>numWords</c> to <c>5</c>.
   </p>
-</subsubsection>
-<subsubsection xml:id="example2-msgbldr">
-  <title>Example 2</title>
-  <p>
+
+  <p>  <term>Example 2:</term> 
     Now consider a different set of calls to <c>getNextWord</c>. Again, the return value of each call is used as input to the next.
   </p>
 
@@ -186,10 +183,10 @@ public class MessageBuilder
     Based on this, a call to the <c>MessageBuilder</c> constructor with argument <c>"good"</c>
     should set <c>message</c> to <c>"good morning sunshine"</c> and <c>numWords</c> to <c>3</c>.
   </p>
-</subsubsection>
+</subsection>
 
 
-    <subsubsection xml:id="how-to-solve-messagebuilder-a">
+    <subsection xml:id="how-to-solve-messagebuilder-a">
   <title>How to solve the MessageBuilder constructor</title>
 
 
@@ -252,10 +249,10 @@ public class MessageBuilder
     </choices>
   </activity>
 
-</subsubsection>
+</subsection>
 
 
-<subsubsection xml:id="msgbuilder-solve-part-a">
+<subsection xml:id="msgbuilder-solve-part-a">
   <title>Solve MessageBuilder Part A</title>
     <p>
       Complete the <c>MessageBuilder</c> constructor.
@@ -385,7 +382,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
     
-</subsubsection>
+
   </subsection>
 
 <subsection xml:id="partb-messagebuilder">
