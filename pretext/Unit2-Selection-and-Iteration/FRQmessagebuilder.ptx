@@ -249,6 +249,14 @@ public class MessageBuilder
     </choices>
   </activity>
 
+  <p>As you write the loop for this method, remember the 3 steps of the loop: </p>
+    <ol><li><p>Initialize the loop variable <c>nextWord</c> using the <c>getNextWord</c> method with the starting word as an argument.</p></li>
+     <li> <p>Test the loop variable to make sure it is not <c>null</c>.       
+      </p>
+    </li>
+    <li><p>Change the loop variable to the next word using the getNextWord method with the last word as an argument.</p></li>
+  </ol>
+
 </subsection>
 
 
@@ -289,20 +297,19 @@ public class MessageBuilder
         numWords = 1; 
         
         // Complete the loop to build the message using the getNextWord method and increment numWords
+        // Remember the 3 steps of writing a loop!
 
 
     }
   
-    /* These variables and methods were added for testing purposes  (not shown in AP exam)*/
+    /* These variables and methods were added to simulate Example 1 for testing purposes 
+     (implementation not shown in AP exam)
+     */
     static String[] wordsForTesting = {"the", "book", "on", "the", "table"};
-    static String[] wordsForTesting2 = {"good", "morning", "sunshine"};
     static int currentWordIndex = 0;
     
     public String getNextWord(String s)
-    {
-        if( !s.equals(wordsForTesting[currentWordIndex]) )
-            throw new IllegalStateException("getNextWord called with wrong word");
-        
+    {   
         if(currentWordIndex &lt; wordsForTesting.length - 1)
         {
             currentWordIndex++;
@@ -324,14 +331,6 @@ public class MessageBuilder
     public static void main(String[] args) 
     {
         MessageBuilder builder = new MessageBuilder("the");
-
-        System.out.println("Message: " + builder.getMessage());
-        System.out.println("Number of words: " + builder.getNumWords());
-
-        // Test with the second set of words
-        currentWordIndex = 0;
-        wordsForTesting = wordsForTesting2;
-        builder = new MessageBuilder("good");
         System.out.println("Message: " + builder.getMessage());
         System.out.println("Number of words: " + builder.getNumWords());
     }
@@ -355,7 +354,7 @@ public class RunestoneTests extends CodeTestHelper
     public void test1()
     {
         String output = getMethodOutput("main");
-        String expect = "Message: the book on the table\nNumber of words: 5\nMessage: good morning sunshine\nNumber of words: 3\n";
+        String expect = "Message: the book on the table\nNumber of words: 5\n";
 
         boolean passed = getResults(expect, output, "Running main");
         assertTrue(passed);
