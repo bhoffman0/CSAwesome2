@@ -363,7 +363,7 @@ public class IfDebug
             grade = "F";
         }
 
-        System.out.println(grade);
+        System.out.println(score + " = " + grade);
     }
 }
 </code>
@@ -394,7 +394,7 @@ public class RunestoneTests extends CodeTestHelper
 
         passed =
         getResults(
-            result,
+            x + " = " + result,
             output,
             "Result for score = " + x,
             passed);
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
 
         passed =
         getResults(
-            result,
+            x + " = " + result,
             output,
             "Result for score = " + x,
             passed);
@@ -430,7 +430,7 @@ public class RunestoneTests extends CodeTestHelper
 
         passed =
         getResults(
-            result,
+            x + " = " + result,
             output,
             "Result for score = " + x,
             passed);
@@ -448,7 +448,7 @@ public class RunestoneTests extends CodeTestHelper
 
         passed =
         getResults(
-            result,
+            x + " = " + result,
             output,
             "Result for score = " + x,
             passed);
@@ -466,7 +466,7 @@ public class RunestoneTests extends CodeTestHelper
 
         passed =
         getResults(
-            result,
+            x + " = " + result,
             output,
             "Result for score = " + x,
             passed);
@@ -493,6 +493,7 @@ public class BatteryTest
     {
         Scanner scan = new Scanner(System.in);
         int battery = scan.nextInt();
+        System.out.println("battery = " + battery);
 
         System.out.println("All okay!");
     }
@@ -603,6 +604,9 @@ public class DanglingElseTest
         
         boolean sunny = in.nextBoolean();
         boolean hot = in.nextBoolean();
+        System.out.println("sunny = " + sunny);
+        System.out.println("hot = " + hot);
+
         if (sunny)
             if (hot)
                System.out.println("Head for the beach!");
@@ -623,17 +627,22 @@ public class RunestoneTests extends CodeTestHelper
 
     public RunestoneTests()
     {
+        //super("DanglingElseTest", input1); // for Repl.it
         super("DanglingElseTest"); // for Book
     }
 
+    private static String input1 = "true false"; 
+    private static String output1 = "Head for the beach!";
+    private static String output2 = "Bring your umbrella!";
+
     @Test
-    public void test01()
+    public void test02()
     {
         String x = "true false";
-        String result = "";
+        String result = "sunny = true\nhot = false\n";
         String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = output.equals(result);
+        boolean passed = !output.contains(output1) &amp;&amp; !output.contains(output2);
 
         passed =
         getResults(
@@ -645,59 +654,60 @@ public class RunestoneTests extends CodeTestHelper
     } 
 
     @Test
-    public void test02()
-    {
-        String x = "true true";
-        String result = "Head for the beach!";
-        String output = getMethodOutputWithInput("main", x);
+        public void test01()
+        {
+            String x = "true true";
+            String result = "sunny = true\nhot = true\nHead for the beach!";
+            String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = output.equals(result);
+            boolean passed = output.contains(output1) &amp;&amp; !output.contains(output2);
 
-        passed =
-        getResults(
-            result,
-            output,
-            "Result for input = " + x,
-            passed);
-        assertTrue(passed);
-    }  
-
-    @Test
-    public void test03()
-    {
-        String x = "false false";
-        String result = "Bring your umbrella!";
-        String output = getMethodOutputWithInput("main", x);
-
-        boolean passed = output.equals(result);
-
-        passed =
-        getResults(
-            result,
-            output,
-            "Result for input = " + x,
-            passed);
-        assertTrue(passed);
-    }  
+            passed =
+            getResults(
+                result,
+                output,
+                "Result for input = " + x,
+                passed);
+            assertTrue(passed);
+        }  
 
     @Test
-    public void test04()
-    {
-        String x = "false true";
-        String result = "Bring your umbrella!";
-        String output = getMethodOutputWithInput("main", x);
+        public void test04()
+        {
+            String x = "false false";
+            String result = "sunny = false\nhot = false\nBring your umbrella!";
+            String output = getMethodOutputWithInput("main", x);
 
-        boolean passed = output.equals(result);
+            boolean passed = output.contains(output2) &amp;&amp; !output.contains(output1);
 
-        passed =
-        getResults(
-            result,
-            output,
-            "Result for input = " + x,
-            passed);
-        assertTrue(passed);
-    }  
+            passed =
+            getResults(
+                result,
+                output,
+                "Result for input = " + x,
+                passed);
+            assertTrue(passed);
+        }  
+
+    @Test
+        public void test03()
+        {
+            String x = "false true";
+            String result = "sunny = false\nhot = true\nBring your umbrella!";
+            String output = getMethodOutputWithInput("main", x);
+
+            boolean passed = output.contains(output2) &amp;&amp; !output.contains(output1);
+
+            passed =
+            getResults(
+                result,
+                output,
+                "Result for input = " + x,
+                passed);
+            assertTrue(passed);
+        }  
 }
+
 
         </tests>
     </program>
@@ -756,7 +766,7 @@ else  // belongs to first if
               forest();
           }
           // TODO #2: Add else-ifs for command equals s, e, or w,
-          //  calling a method you will write below for each location.
+          // calling a method you will write below for each location.
           // Add an else error message "You can't go in that direction!" 
           // Change the input below the coding area to test these.
      
