@@ -286,9 +286,9 @@ public class MessageBuilder
   
     /**
     *  Part A: MessageBuilder(startingWord) constructor
-    *  Builds a message starting with the word specified by the
-    *  parameter and counts the number of words in the message,
-    *  as described above.)
+    *  Builds a message of words with spaces in betwee
+    *  starting with the word in the parameter
+    *  and counts the number of words in the message.
     *  Precondition: startingWord is a single word with no spaces.
     */    
     public MessageBuilder(String startingWord)
