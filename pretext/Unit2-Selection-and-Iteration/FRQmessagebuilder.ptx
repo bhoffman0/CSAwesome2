@@ -456,20 +456,20 @@ public class RunestoneTests extends CodeTestHelper
 
 <activity label="msgbuilder-partb-loop">
   <statement>
-    <p>Which of the following loop patterns can be used to find the next space in the message?</p>
+    <p>Which of the following loop patterns can be used to find the next space in a String?</p>
   </statement>
   <choices>
    <choice>
       <statement><p>for(int i=0; i &lt; message.length; i++)</p></statement>
-      <feedback><p>This iterates through the message letter by letter, but it doesn't find the next space.</p></feedback>
+      <feedback><p>This iterates through the message letter by letter, but it doesn't find the next space. You could make it work with an if statement inside to find the space, but there is another solution.</p></feedback>
     </choice>
   <choice>
       <statement><p>while(message.substring(0,1) == " ")</p></statement>
-      <feedback><p>This while loop would only check the first character.</p></feedback>
+      <feedback><p>This while loop would only check the first character. You could make this work if you used an index variable i but there is another solution.</p></feedback>
     </choice>
     <choice correct="yes">
-      <statement><p>while( message.indexOf(" ") &gt;= 0 ) </p></statement>
-      <feedback><p>You can use indexOf(" ") to find the index of a space in a string.</p></feedback>
+      <statement><p>while( tempMessage.indexOf(" ") &gt;= 0 ) </p></statement>
+      <feedback><p>You can use indexOf(" ") to find the index of a space in a string easily. You can copy message into tempMessage so that you can change it to skip to the next word.</p></feedback>
     </choice>
     
   
@@ -477,6 +477,12 @@ public class RunestoneTests extends CodeTestHelper
 </activity>
   
 </subsection>
+
+<subsection xml:id="ap-scoring-rubric-parta">
+            <title>AP Scoring Rubric</title>
+            <p>Here is the AP rubric for this problem. Did your code meet the requirements for all 4 points? Notice that even a partial solution would get some of the points. It is not all or nothing. In class, your teacher may have you grade each others’ code.</p>
+            <figure align="center"><caption>AP Rubric</caption><image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-parta.png" width="100%" alt="AP Rubric for part a"/></figure>
+        </subsection>
 
 <subsection xml:id="msgbuilder-partb-solve">
   <title>Solve MessageBuilder Part B</title>
@@ -505,9 +511,12 @@ public class MessageBuilder
         numWords = n;
     }
 
+    // Part B: getAbbreviation() returns a String 
+    // that consists of the first letter of each word in the message.
     public String getAbbreviation()
     {
-        // Complete the method to return the abbreviation of message
+        String tempMessage = message;
+        // Complete the method to return the abbreviation of tempMessage
        
     }
 
@@ -560,14 +569,16 @@ public class RunestoneTests extends CodeTestHelper
           boolean passed = checkCodeContains("substring","substring");
          assertTrue(passed);
         }
-         @Test
-        public void testIndexOf() {
-          boolean passed = checkCodeContains("indexOf","indexOf");
-         assertTrue(passed);
-        }
+         
 }
         </tests>
     </program>
 </activity>
 </subsection>
+
+        <subsection xml:id="ap-scoring-rubric-partb">
+            <title>AP Scoring Rubric</title>
+            <p>Here is the AP rubric for this problem. Did your code meet the requirements for all 7 points? Notice that even a partial solution would get some of the points. It is not all or nothing. There are also many other solutions possible. In class, your teacher may have you grade each others’ code.</p>
+            <figure align="center"><caption>AP Rubric</caption><image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-partb.png" width="100%" alt="AP Rubric for part b"/></figure>
+        </subsection>
 </section>
