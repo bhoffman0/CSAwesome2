@@ -198,11 +198,11 @@ public class MessageBuilder
       <li><p>The instance variables <c>message</c> and <c>numWords</c></p></li>
     </ul>
   </p>
-
+<p>We will learn more about writing constructors in the next unit, but for now, you can think of a constructor as a method that is called when an object is created to initialize the instance variables of the class, in this case <c>message</c> and <c>numWords</c>. </p>
   <p>
+    You will write a loop that adds to the <c>message</c> variable using the <c>getNextWord</c> method and increments <c>numWords</c> as you add more words to the message.  
     The constructor starts with <c>startingWord</c> and repeatedly adds the result of
     <c>getNextWord</c> until it returns <c>null</c>. Each word is separated by a space.
-    You must also count how many words are in the message.
   </p>
 
   <p>
@@ -249,7 +249,7 @@ public class MessageBuilder
     </choices>
   </activity>
 
-  <p>As you write the loop for this method, remember the 3 steps of the loop: </p>
+  <p>As you write the loop, remember the 3 steps of the loop: </p>
     <ol><li><p>Initialize the loop variable <c>nextWord</c> using the <c>getNextWord</c> method with the starting word as an argument.</p></li>
      <li> <p>Test the loop variable to make sure it is not <c>null</c>.       
       </p>
@@ -263,16 +263,14 @@ public class MessageBuilder
 <subsection xml:id="msgbuilder-solve-part-a">
   <title>Solve MessageBuilder Part A</title>
     <p>
-      Complete the <c>MessageBuilder</c> constructor.
+      Complete the <c>MessageBuilder</c> constructor below. 
     </p>
 
 <activity label="FRQmessageBuilderPartA">
     <statement>
             <p> Complete the <c>MessageBuilder</c> constructor below that builds a message starting with the <c>startingWord</c> specified by the
-     parameter using the given <c>getNextWord</c> method. The constructor should
-            use a while loop to build the message and count 
-            the number of words and save it in 
-            the instance variable <c>numWords</c>. 
+     parameter. It should 
+            use a while loop to add on to the message using the given <c>getNextWord</c> method and increment <c>numWords</c>. Make sure there are spaces between the words in the message.
            </p>
       
 
@@ -286,9 +284,9 @@ public class MessageBuilder
   
     /**
     *  Part A: MessageBuilder(startingWord) constructor
-    *  Builds a message starting with the word specified by the
-    *  parameter and counts the number of words in the message,
-    *  as described above.)
+    *  Builds a message of words with spaces in betwee
+    *  starting with the word in the parameter
+    *  and counts the number of words in the message.
     *  Precondition: startingWord is a single word with no spaces.
     */    
     public MessageBuilder(String startingWord)
@@ -305,8 +303,8 @@ public class MessageBuilder
     /* These variables and methods were added to simulate Example 1 for testing purposes 
      (implementation not shown in AP exam)
      */
-    static String[] wordsForTesting = {"the", "book", "on", "the", "table"};
-    static int currentWordIndex = 0;
+    private String[] wordsForTesting = {"the", "book", "on", "the", "table"};
+    private int currentWordIndex = 0;
     
     public String getNextWord(String s)
     {   
@@ -351,7 +349,7 @@ public class RunestoneTests extends CodeTestHelper
     }
 
     @Test
-    public void test1()
+    public void testMain()
     {
         String output = getMethodOutput("main");
         String expect = "Message: the book on the table\nNumber of words: 5\n";
@@ -366,16 +364,15 @@ public class RunestoneTests extends CodeTestHelper
          assertTrue(passed);
         }
         @Test
-        public void testNumWords() {
-          boolean passed = checkCodeContains("incrementing numWords","numWords+");
+        public void testNumWordsInc() {
+          boolean passed = checkCodeContains("numWords++");
          assertTrue(passed);
         }
         @Test
-        public void testNextWord() {
-          boolean passed = checkCodeContains("call to getNextWord with the nextWord variable","getNextWord(nextWord)");
+        public void testNextWordCall() {
+          boolean passed = checkCodeContains("getNextWord(nextWord)");
          assertTrue(passed);
         }
-
 }
         </tests>
     </program>
@@ -568,7 +565,6 @@ public class RunestoneTests extends CodeTestHelper
           boolean passed = checkCodeContains("substring","substring");
          assertTrue(passed);
         }
-         
 }
         </tests>
     </program>
