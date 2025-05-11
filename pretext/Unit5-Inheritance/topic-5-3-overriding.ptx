@@ -475,7 +475,7 @@ class Item
 
 public class EnhancedItem extends Item
 {
-    private int y;
+    public int y;
 
     public void setY(int theY)
     {
@@ -527,7 +527,7 @@ public class EnhancedItem extends Item
                     <p>currItem.y = 2;</p>
                 </statement>
                 <feedback>
-                    <p>All code in the same class has direct access to all object fields.</p>
+                    <p>The instance variable y is in the same class and set to public so it can be directly accessed.</p>
                 </feedback>
             </choice>
 </choices>

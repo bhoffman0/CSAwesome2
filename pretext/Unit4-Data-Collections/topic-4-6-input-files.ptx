@@ -552,7 +552,7 @@ public class RunestoneTests extends CodeTestHelper
 // The first line of the Pokemon CSV file
 Number, Pokemon, Type 1, Type 2, HP, Attack, Defense, Speed, PNG, Description
 </code></program>
-            <p>The Java <c>String</c> class provides a useful method called <c>split(String delimeter)</c> that allows us to split a string into an array of substrings based on a specified <term>delimiter</term> which is a character like a comma or a space that separates the units of data. This method returns a <c>String</c> array where each element in the array represents a field of data from the line.</p>
+            <p>The Java <c>String</c> class provides a useful method called <c>split(String delimeter)</c> that  splits a string into an array of substrings based on a specified <term>delimiter</term> which is a character like a comma or a space that separates the units of data. This method returns a <c>String</c> array where each element in the array represents a field of data from the line.</p>
             <program language="java"><code>
 String sentence = "A quick brown fox jumps";
 // Split the sentence into words along spaces to create:
