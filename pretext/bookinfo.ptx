@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <docinfo>
-  <document-id edition="2">csawesome2ptxbeta</document-id>
+  <document-id>csawesome2</document-id>
   <!-- Rename Checkpoint for exercise to Activity -->
   <rename element="inlineexercise">Activity</rename>
   <rename element="chapter">Unit</rename>
   <brandlogo url="./index.html" source="_static/CSAwesomeLogo.png" alt="CSAwesome"/>
-  <blurb shelf="AP Computer Science">CSAwesome2 is an AP CSA Java curriculum following the College Board 2025-2026 guidelines, and an introductory college-level computer programming course in Java.</blurb>
+  <blurb shelf="AP Computer Science">CSAwesome2 is the new AP CSA Java curriculum approved by the College Board in 2025 following the 2025-2026 standards and an introductory college-level computer programming course in Java.</blurb>
   <!-- this is the default, but supresses a warning -->
   <cross-references text="type-global"/>
   <programs language="java"/>

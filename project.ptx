@@ -24,7 +24,7 @@ See https://pretextbook.org/doc/guide/html/processing-CLI.html#cli-project-manif
       <format>html</format>
       <source>pretext/main.ptx</source>
       <publication>publication/runestone.xml</publication>
-      <output-dir>published/csawesome2ptxbeta</output-dir>
+      <output-dir>published/csawesome2</output-dir>
       <xsl>pretext/csawesome-pretext-style.xsl</xsl>
       <stringparam key="html.css.extra" value="external/_static/css/custom.css"/>
     </target>
