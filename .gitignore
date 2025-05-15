@@ -11,6 +11,10 @@ codechat_config.yaml
 published/
 cli.log
 .devcontainer.json
+node_modules
+.cache
+package.json
+package-lock.json
 
 # Miscellaneous source files
 _sources/Tests/test6.rst
