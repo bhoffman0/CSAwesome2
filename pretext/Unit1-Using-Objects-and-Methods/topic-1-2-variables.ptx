@@ -379,7 +379,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
 </activity>
             <note>
-                <p>Variables are never put inside quotes (“”) in System.out.print statements. This would print the variable name out letter by letter instead of printing its value.</p>
+                <p>Variables are never put inside quotes (<c>""</c>) in System.out.print statements. This would print the variable name out letter by letter instead of printing its value.</p>
             </note>
 
 <activity label="var_declare">
@@ -590,14 +590,14 @@ public class RunestoneTests extends CodeTestHelper
                         <p>Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly.</p>
                     </li>
                     <li>
-                        <p>Never put variables inside quotes (” “).</p>
+                        <p>Never put variables inside quotes (<c>""</c>).</p>
                     </li>
                 </ul></p>
             </note>
             <idx>camel case</idx>
  <idx><h>variable</h><h>naming convention</h></idx>
 
-            
+
             <p>The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word, for example <c>gameScore</c>. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called <term>camel case</term> because it looks like the humps of a camel. Another option is to use underscore <c>_</c> to separate words, but you cannot have spaces in a variable name.</p>
 
 <activity label="varCaseSensitive">
