@@ -630,7 +630,7 @@ System.out.println(5 + 5 / 2 * 3 - 1);
 
             <choice>
                 <statement>
-                    <p>9.0</p>
+                    <p>9</p>
                 </statement>
                 <feedback>
                     <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
@@ -639,10 +639,10 @@ System.out.println(5 + 5 / 2 * 3 - 1);
 
             <choice correct="yes">
                 <statement>
-                    <p>10.0</p>
+                    <p>10</p>
                 </statement>
                 <feedback>
-                    <p>Yes, this is equivalent to (5 + ((5/2)*3) - 1).</p>
+                    <p>Yes, this is equivalent to (5 + ((5 / 2) * 3) - 1).</p>
                 </feedback>
             </choice>
 
@@ -657,7 +657,7 @@ System.out.println(5 + 5 / 2 * 3 - 1);
 
             <choice>
                 <statement>
-                    <p>14.0</p>
+                    <p>14</p>
                 </statement>
                 <feedback>
                     <p>Don't forget that division and multiplication will be done first due to operator precedence.</p>
