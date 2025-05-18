@@ -573,11 +573,10 @@ public class RunestoneTests extends CodeTestHelper
             <title>Naming Variables</title>
             <idx><h>variable</h><h>names</h></idx>
 
-            
-            <p>While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores <c>_</c>. It must be all one word with no spaces.</p>
+
+            <p>While you can name your variable almost anything, there are some rules. A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores <c>_</c>. It must be all one word with no spaces.</p>
             <p>You can’t use any of the keywords or reserved words as variable names in Java (<c>for</c>, <c>if</c>, <c>class</c>, <c>static</c>, <c>int</c>, <c>double</c>, etc).  For a complete list of keywords and reserved words, see <url href="https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9" visual="https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9">https://docs.oracle.com/javase/specs/jls/se14/html/jls-3.html#jls-3.9</url>.</p>
-            <p>The name of the variable should describe the data it holds.  A name like <c>score</c> helps make your code easier to read. A name like <c>x</c> is not a good variable name in programming, because it gives no clues as to what kind of data it holds.  Do not name
-                your variables crazy things like <c>thisIsAReallyLongName</c>, especially on the AP exam. You want to make your code easy to understand, not harder.</p>
+            <p>The name of the variable should describe the data it holds. A name like <c>score</c> helps make your code easier to read. A name like <c>x</c> is not a good name for a variable holding a score, because it gives no clues what the variable is used for. On the other hand, don’t use names that are too long like <c>theNumberThatHoldsTheScore</c> as those are also hard to read. Choose names that make your code easier to understand, not harder.</p>
             <note>
                 <p><ul>
                     <li>
