@@ -30,8 +30,8 @@ public class MyClass
 </code></program>
 
 <p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
-            
-<p>Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting and ending quotes ".  Click on the run button to run the modified code. </p>
+
+<p>Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting and ending quotes <c>"</c>.  Click on the run button to run the modified code. </p>
 
 <exercise label="printName">
     <statement>
@@ -74,10 +74,10 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection>
             <title>Compiling and Running Java Programs</title>
-            
-            
+
+
             <p>Code can be written in any text editor, including the small text editor built into the Active Code exercises in this e-book.  However, an <term>Integrated Development Environment (IDE)</term> is often used to write programs because it provides tools for a programmer to write, compile, and run code. For this course, you can use the e-book Active Code exercises or the Scratch button above as your IDE to run your code. Or you can try other IDEs mentioned in the last unit. In other IDEs, you must name the file the same name as the class name with “.java” as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.</p>
-            <p>Computers don’t actually speak Java so we have to <term>compile</term> (translate) Java source files that we write into class files which is code that a computer can understand and run. A <term>compiler</term> checks your code for  errors and translates your code to executable code that can be run. Errors detectable by the compiler need to be fixed before the program can be run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the errors and output are sent back to show on the same page.</p>
+            <p>Computers don’t actually speak Java so we have to <term>compile</term> (translate) Java source files that we write into class files which is code that a computer can understand and run. A <term>compiler</term> checks your code for  errors and translates your code to executable code that can be run. Errors detectable by the compiler need to be fixed before the program can be run. In this e-book, the Java code is actually being sent to a Java server to be compiled and run, and the errors and output are sent back to be shown in the web page.</p>
         </subsection>
   <subsection>
             <title>Java Keywords</title>
@@ -253,7 +253,7 @@ public class RunestoneTests extends CodeTestHelper
   <subsection>
             <title>Syntax Errors and Debugging</title>
             <p><term>Syntax errors</term> are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c> or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the process of removing errors is called <term>debugging</term>. An early computer science pioneer <url href="https://en.wikipedia.org/wiki/Grace_Hopper" visual="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</url> documented a real bug, a moth that flew into a computer in 1947!</p>
-            <figure align="left"><caption>Figure 2: Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%"/></figure><br/>
+            <figure align="left"><caption>Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%"/></figure><br/>
             <p>The compiler tries to run your code, but if your code has <term>syntax errors</term>, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.</p>
             <p>Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url> is a lot of fun!</p>
 
@@ -478,7 +478,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </exercise>
-            <p>Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon?</p>
+            <p>Did you remember that <c>System</c> is capitalized in <c>System.out.println</c>? Did you find the missing semicolon?</p>
         </subsection>
   <subsection>
             <title>Run-time Errors</title>
@@ -612,7 +612,7 @@ public class MyClass
 </code></program>
             <p><ul>
                 <li>
-                    <p>A Java program starts with <term>public class NameOfClass { }</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
+                    <p>A Java program starts with <term>public class NameOfClass {</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
                 </li>
                 <li>
                     <p>Most Java classes have a main method that will be run automatically. It looks like this: <term>public static void main(String[] args) { }</term>.</p>
