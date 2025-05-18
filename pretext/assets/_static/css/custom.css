@@ -20,6 +20,11 @@
   line-height: 1.5;
 }
 
+/* Default spacing between paragraphs is too much. */
+section > .para + .para {
+  margin-top: 0.6em;
+}
+
 .ptx-content section > .heading,
 .ptx-content section section > .heading,
 .ptx-content section section section > .heading
