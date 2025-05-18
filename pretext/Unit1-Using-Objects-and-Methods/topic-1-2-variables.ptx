@@ -253,7 +253,7 @@
     <activity label="chooseType5">
         <statement>
 
-            <p> What type should you use to represent the the mass of a cat in kilograms?</p>
+            <p> What type should you use to represent the time of the gold medal time in an Olympic 100 meter dash?</p>
 
         </statement>
 <choices>
@@ -263,7 +263,7 @@
                     <p>int</p>
                 </statement>
                 <feedback>
-                    <p>The integer type (int) can't be used to represent numbers with fractional parts and it’s unlikely the cat weighs an exact whole number of kilograms.</p>
+                    <p>The integer type (int) can't be used to represent numbers with fractional parts and the difference between gold and silver in the Olympics is often measured in just thousandths of a second.</p>
                 </feedback>
             </choice>
 
@@ -290,7 +290,7 @@
                     <p>String</p>
                 </statement>
                 <feedback>
-                    <p>While you can use a string to represent the a number as a piece of text you can only do calculations with the numeric types (int or double).</p>
+                    <p>While you can use a string to represent a number as a piece of text, you can only do calculations with the numeric types (int or double).</p>
                 </feedback>
             </choice>
 </choices>
