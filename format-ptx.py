@@ -1,5 +1,8 @@
-from sys import argv, stderr
+#!/usr/bin/env python
+
+from argparse import ArgumentParser
 from lxml import etree
+from sys import argv, stderr, stdout
 from textwrap import fill
 import re
 
@@ -144,13 +147,24 @@ def document_elements(root):
 
     return top_level
 
-def main(argv):
-    root = etree.parse(argv[1]).getroot()
+def reformat(filename, inplace):
+    root = etree.parse(filename).getroot()
 
-    print('<?xml version="1.0"?>')
+    f = open(filename, mode="w") if inplace else stdout
+
+    print('<?xml version="1.0"?>', file=f)
     for e in document_elements(root):
-        print(serialize_element(e))
+        print(serialize_element(e), file=f)
 
 if __name__ == '__main__':
 
-    main(argv)
+    parser = ArgumentParser(
+        prog='format-ptx',
+        description='Reformat PreText XML to be semi-human-digestible.')
+
+    parser.add_argument('filename', help='File to reformat')
+    parser.add_argument('-i', '--inplace', action='store_true', help='Reformat in place')
+
+    args = parser.parse_args()
+
+    reformat(args.filename, args.inplace)
