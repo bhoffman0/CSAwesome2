@@ -253,7 +253,7 @@
     <activity label="chooseType5">
         <statement>
 
-            <p> What type should you use to represent the amount of money you have?</p>
+            <p> What type should you use to represent the time of the gold medal winner in the 100 meter dash in the Olympics?</p>
 
         </statement>
 <choices>
@@ -263,7 +263,7 @@
                     <p>int</p>
                 </statement>
                 <feedback>
-                    <p>The integer type (int) can't be used to represent decimal numbers so you couldn't use it if you had any cents.</p>
+                    <p>The integer type (int) can't be used to represent numbers with fractional parts and the difference between gold and silver in the Olympics is often measured in just thousandths of a second.</p>
                 </feedback>
             </choice>
 
@@ -272,7 +272,7 @@
                     <p>double</p>
                 </statement>
                 <feedback>
-                    <p>The double type can be used to represent an amount of money.</p>
+                    <p>The double type is excellently suited to representing measured quantities that might not be whole numbers.</p>
                 </feedback>
             </choice>
 
@@ -290,7 +290,7 @@
                     <p>String</p>
                 </statement>
                 <feedback>
-                    <p>While you can use a string to represent the amount of money you have it is easier to do calculations on the numeric types (int or double).</p>
+                    <p>While you can use a string to represent a number as a piece of text, you can only do calculations with the numeric types (int or double).</p>
                 </feedback>
             </choice>
 </choices>
