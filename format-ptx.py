@@ -15,6 +15,7 @@ WRAP = {"p", "caption"}
 
 NSMAP = {
     "http://www.w3.org/XML/1998/namespace": "xml",
+    "http://www.w3.org/2001/XInclude": "xi",
 }
 
 
@@ -22,25 +23,38 @@ def indent(level):
     return " " * (INDENT * level)
 
 
-def open_tag(elem):
-    s = f"<{elem.tag}"
+def open_tag(elem, ns, empty=False):
+    s = f"<{namespaced(elem.tag)}"
+
     for name, value in elem.attrib.items():
         s += f" {attr(name, value)}"
+
+    for prefix, url in elem.nsmap.items():
+        if prefix not in ns:
+            s += f' xmlns:{prefix}="{url}"'
+
+    if empty:
+        s += " /"
     s += ">"
     return s
 
 
 def attr(name, value):
+    return f"{namespaced(name)}={quoteattr(value)}"
+
+def namespaced(name):
     if name.startswith("{"):
         uri, local = name[1:].split("}")
         prefix = NSMAP.get(uri)
         if prefix:
-            name = f"{prefix}:{local}"
-    return f"{name}={quoteattr(value)}"
-
+            return f"{prefix}:{local}"
+        else:
+            print(f"Unknown namespace {uri}", file=stderr)
+            return name
+    return name
 
 def close_tag(elem):
-    return f"</{elem.tag}>"
+    return f"</{namespaced(elem.tag)}>"
 
 
 def is_inline(elem):
@@ -71,14 +85,14 @@ def wrappable(elem):
     return elem.tag in WRAP and not singleton_child(elem)
 
 
-def render_inline(elem):
-    s = open_tag(elem)
+def render_inline(elem, ns):
+    s = open_tag(elem, ns)
 
     if elem.text and elem.text.strip():
         s += escape(elem.text)
 
     for child in elem:
-        s += render_inline(child)
+        s += render_inline(child, ns | elem.nsmap)
         if child.tail:
             s += child.tail
 
@@ -86,11 +100,11 @@ def render_inline(elem):
     return s
 
 
-def render_block(elem, level=0):
-    tag = f"\n{indent(level)}{open_tag(elem)}"
+def render_block(elem, ns, level=0):
+    tag = f"\n{indent(level)}{open_tag(elem, ns)}"
 
     if is_empty(elem):
-        return f"{tag}{close_tag(elem)}"
+        return f"\n{indent(level)}{open_tag(elem, ns, empty=True)}"
     elif is_just_short_text(elem):
         return f"{tag}{escape((elem.text or '').strip())}{close_tag(elem)}"
     else:
@@ -100,59 +114,56 @@ def render_block(elem, level=0):
             content += escape(elem.text.lstrip())
 
         for child in elem:
-            content += serialize_element(child, level + 1)
+            content += serialize_element(child, ns | elem.nsmap, level + 1)
             if child.tail and child.tail.strip():
                 content += escape(child.tail)
 
         if wrappable(elem):
             content = re.sub(r"\s+", " ", content)
-            i = indent(level + 1)
-            filled = fill(
-                content.strip(), width=WIDTH, initial_indent=i, subsequent_indent=i
-            )
+            filled = fill_with_indent(content.strip(), indent(level + 1))
             return f"{tag}\n{filled}\n{indent(level)}{close_tag(elem)}\n"
         else:
             return f"{tag}\n{indent(level + 1)}{content.strip()}\n{indent(level)}{close_tag(elem)}\n"
 
 
 def fill_with_indent(text, i):
-    return fill(text.strip(), width=WIDTH, initial_indent=i, subsequent_indent=i)
+    return fill(text.strip(), width=WIDTH, initial_indent=i, subsequent_indent=i, break_long_words=False)
 
 
-def render_with_whitespace(elem, level=0):
-    s = f"\n{indent(level)}{open_tag(elem)}"
+def render_with_whitespace(elem, ns, level=0):
+    s = f"\n{indent(level)}{open_tag(elem, ns)}"
     if elem.text and len(elem.text) > 0:
         s += escape(elem.text)
     for child in elem:
-        s += render_child_with_whitespace(child)
+        s += render_child_with_whitespace(child, ns | elem.nsmap)
         if child.tail and len(child.tail) > 0:
             s += child.tail
     s += close_tag(elem)
     return s
 
 
-def render_child_with_whitespace(elem, level=0):
-    s = open_tag(elem)
+def render_child_with_whitespace(elem, ns, level=0):
+    s = open_tag(elem, ns)
     if elem.text and len(elem.text) > 0:
         s += escape(elem.text)
     for child in elem:
-        s += render_child_with_whitespace(child)
+        s += render_child_with_whitespace(child, ns | elem.nsmap)
         if child.tail and len(child.tail) > 0:
             s += child.tail
     s += close_tag(elem)
     return s
 
 
-def serialize_element(elem, level=0):
+def serialize_element(elem, ns={}, level=0):
     if not isinstance(elem.tag, str):
         # This seems to do the trick for comments
         return f"{elem}"
     if is_inline(elem):
-        return render_inline(elem)
+        return render_inline(elem, ns)
     elif preserve_whitespace(elem):
-        return render_with_whitespace(elem, level)
+        return render_with_whitespace(elem, ns, level)
     else:
-        return render_block(elem, level)
+        return render_block(elem, ns, level)
 
 
 def document_elements(root):
@@ -178,7 +189,7 @@ def reformat(filename, inplace):
 
     f = open(filename, mode="w") if inplace else stdout
 
-    print('<?xml version="1.0"?>', file=f)
+    print('<?xml version="1.0" encoding="UTF-8"?>', file=f)
     for e in document_elements(root):
         print(serialize_element(e), file=f)
 
