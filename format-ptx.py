@@ -63,7 +63,7 @@ def is_empty(elem):
 
 
 def is_just_short_text(elem):
-    return len(elem) == 0 and len((elem.text or "")) < 60
+    return len(elem) == 0 and len(re.sub(r"\s+", " ", (elem.text or "").strip())) < 64
 
 
 def preserve_whitespace(elem):
@@ -91,7 +91,7 @@ def render_inline(elem, ns):
     for child in elem:
         s += render_inline(child, ns | elem.nsmap)
         if child.tail:
-            s += child.tail
+            s += escape(child.tail)
 
     s += close_tag(elem, ns)
     return s
@@ -188,6 +188,7 @@ def reformat(filename, inplace):
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=f)
     for e in document_elements(root):
+        #print(re.sub(r"\s+$", "", serialize_element(e)), file=f)
         print(serialize_element(e), file=f)
 
 
