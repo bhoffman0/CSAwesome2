@@ -10,12 +10,12 @@
     <p>
       <term>CSAwesome Units:</term>
     </p>
-    <p>&lt;ul id="small_toc"&gt;</ul></p>
+    <p><ul id="small_toc"></ul></p>
   </introduction>
   <subsection>
             <title>Table of Contents</title>
             <p><ul>
-<li>&lt;a href="/runestone/assignments/chooseAssignment.html"&gt;Assignments&lt;/a&gt;</li>
+<li><a href="/runestone/assignments/chooseAssignment.html">Assignments</a></li>
 </ul></p>
 <xi:include href='./Unit0-Getting-Started/toctree.ptx'/>
 <xi:include href='./Unit1-Using-Objects-and-Methods/toctree.ptx'/>
