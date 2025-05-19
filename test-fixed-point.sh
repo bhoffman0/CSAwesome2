@@ -7,8 +7,6 @@ set -euo pipefail
 sum1=$(shasum first.xml | cut -c -40)
 sum2=$(shasum second.xml | cut -c -40)
 
-if [ "$sum1" == "$sum2" ]; then
-    echo "$1 - ok"
-else
-    echo "$1 - Uh oh!"
+if [ "$sum1" != "$sum2" ]; then
+    echo "$1"
 fi
