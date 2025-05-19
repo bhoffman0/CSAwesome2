@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="unit0" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Getting Started</title>
-        <xi:include href='./preface.ptx' />
-        <xi:include href='./aboutcsa.ptx' />
-        <xi:include href='./csptransition.ptx' />
-        <xi:include href='./javaIDEs.ptx' />
-        <xi:include href='./growthMindset.ptx' />
-        <xi:include href='./short-pd-pretest.ptx' />
-        <xi:include href='./ptest1.ptx' />
-        <xi:include href='./survey.ptx' />
-    </chapter>
+
+<chapter xml:id="unit0" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Getting Started</title>
+  <xi:include href="./preface.ptx" />
+  <xi:include href="./aboutcsa.ptx" />
+  <xi:include href="./csptransition.ptx" />
+  <xi:include href="./javaIDEs.ptx" />
+  <xi:include href="./growthMindset.ptx" />
+  <xi:include href="./short-pd-pretest.ptx" />
+  <xi:include href="./ptest1.ptx" />
+  <xi:include href="./survey.ptx" />
+</chapter>
+

@@ -1,45 +1,133 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="FRQ2practice">
   <title>FRQ 2 Practice with Classes</title>
   <introduction>
-    <p>Many of the FRQs on the AP exam contain a table which shows output or return values
-      from methods in a class. In these practice exercises, you will be given a table that shows method calls and their output. 
-      You will need to write a class with the described methods that will produce the output shown in the table. Thank you to Sam Procopio from Bishop Blanchet High School in Seattle, WA, for these exercises.
-    </p> </introduction>
+    <p>
+      Many of the FRQs on the AP exam contain a table which shows output or
+      return values from methods in a class. In these practice exercises, you
+      will be given a table that shows method calls and their output. You will
+      need to write a class with the described methods that will produce the
+      output shown in the table. Thank you to Sam Procopio from Bishop Blanchet
+      High School in Seattle, WA, for these exercises.
+    </p>
+  </introduction>
 
-   
-<subsection xml:id="FRQ2practiceTree">
+  <subsection xml:id="FRQ2practiceTree">
     <title>Tree Class</title>
-    <p>Write a class called Tree that has the appropriate instance variables and methods to produce the output described in the table below.</p>
+    <p>
+      Write a class called Tree that has the appropriate instance variables and
+      methods to produce the output described in the table below.
+    </p>
 
-<table><tabular row-headers="yes">
-      <col top="minor"/><col top="minor"/><col top="minor"/>    
-      <row header="yes" left="minor">
-        <cell bottom="minor" right="minor"></cell>
-       <cell bottom="minor" right="minor">Method Calls</cell><cell bottom="minor" right="minor">Output</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">Tree birch = new Tree(10, “soft”);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell><cell bottom="minor" right="minor">10</cell></row>      
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">birch.water(5);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell><cell bottom="minor" right="minor">15</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">birch.cut();</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell><cell bottom="minor" right="minor">7</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(birch.woodType());</cell><cell bottom="minor" right="minor">soft wood</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">Tree oak = new Tree(20, “hard”);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell><cell bottom="minor" right="minor">20</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(oak.woodType());</cell><cell bottom="minor" right="minor">hard wood</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">oak.water(2);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell><cell bottom="minor" right="minor">22</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">oak.cut();</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell><cell bottom="minor" right="minor">14</cell></row>
-      </tabular></table>
+    <table>
+      <tabular row-headers="yes">
+        <col top="minor" />
+        <col top="minor" />
+        <col top="minor" />
+        <row header="yes" left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">Method Calls</cell>
+          <cell bottom="minor" right="minor">Output</cell>
+        </row>
 
-<activity label="classTree">
-        <statement>
-        <p>Write the class Tree below with the appropriate instance variables, constructor, and methods described in main method and in the table above. </p>
-        </statement>
-        <program interactive="activecode" language="java">
-            <code>
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">Tree birch = new Tree(10, “soft”);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell>
+          <cell bottom="minor" right="minor">10</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">birch.water(5);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell>
+          <cell bottom="minor" right="minor">15</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">birch.cut();</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(birch.getHeight());</cell>
+          <cell bottom="minor" right="minor">7</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(birch.woodType());</cell>
+          <cell bottom="minor" right="minor">soft wood</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">Tree oak = new Tree(20, “hard”);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell>
+          <cell bottom="minor" right="minor">20</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(oak.woodType());</cell>
+          <cell bottom="minor" right="minor">hard wood</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">oak.water(2);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell>
+          <cell bottom="minor" right="minor">22</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">oak.cut();</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(oak.getHeight());</cell>
+          <cell bottom="minor" right="minor">14</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <activity label="classTree">
+      <statement>
+        <p>
+          Write the class Tree below with the appropriate instance variables,
+          constructor, and methods described in main method and in the table
+          above.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
   public class Tree
   {
       // write instance variable declarations here
@@ -67,7 +155,8 @@
           System.out.println(oak.getHeight());
       }
     }
-    </code><tests>
+    </code>
+        <tests>
     import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;    
@@ -127,41 +216,114 @@
         }
       }
             </tests>
-        </program>
+      </program>
     </activity>
-    </subsection>
-    <subsection xml:id="FRQ2practiceBook">
-    <title>Book Class</title>
-    <p>Based on the table below, write a complete class called Book that has the appropriate instance variables and methods to produce the output described in the table.</p>
-   
-<table> 
-<tabular row-headers="yes">
-      <col top="minor"/> <col top="minor"/><col top="minor"/>
-      
-      <row header="yes" left="minor">
-        <cell bottom="minor" right="minor"></cell>
-       <cell bottom="minor" right="minor">Method Calls</cell><cell bottom="minor" right="minor">Output</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">Book hp = new Book(“Harry Potter”, 150, true);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.getNumPages());</cell><cell bottom="minor" right="minor">150</cell></row>      
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.getName());</cell><cell bottom="minor" right="minor">Harry Potter</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.isHardCover());</cell><cell bottom="minor" right="minor">true</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bottom="minor" right="minor">0</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell><cell bottom="minor" right="minor">false</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">hp.addDamages(49);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bottom="minor" right="minor">49</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell><cell bottom="minor" right="minor">false</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">hp.addDamages(1);</cell><cell bottom="minor" right="minor"></cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell
-bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bottom="minor" right="minor">50</cell></row>
-      <row left="minor"> <cell bottom="minor" right="minor"></cell><cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell><cell bottom="minor" right="minor">true</cell></row>
-      </tabular></table>
+  </subsection>
 
-<activity label="classBook">
-        <statement>
-        <p>Write the class Book below with the appropriate instance variables, constructor, and methods described in main method and in the table above. </p>
-        </statement>
-        <program interactive="activecode" language="java">
-            <code>
+  <subsection xml:id="FRQ2practiceBook">
+    <title>Book Class</title>
+    <p>
+      Based on the table below, write a complete class called Book that has the
+      appropriate instance variables and methods to produce the output described
+      in the table.
+    </p>
+
+    <table>
+      <tabular row-headers="yes">
+        <col top="minor" />
+        <col top="minor" />
+        <col top="minor" />
+        <row header="yes" left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">Method Calls</cell>
+          <cell bottom="minor" right="minor">Output</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">Book hp = new Book(“Harry Potter”, 150, true);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.getNumPages());</cell>
+          <cell bottom="minor" right="minor">150</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.getName());</cell>
+          <cell bottom="minor" right="minor">Harry Potter</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.isHardCover());</cell>
+          <cell bottom="minor" right="minor">true</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.getDamages());</cell>
+          <cell bottom="minor" right="minor">0</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell>
+          <cell bottom="minor" right="minor">false</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">hp.addDamages(49);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.getDamages());</cell>
+          <cell bottom="minor" right="minor">49</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell>
+          <cell bottom="minor" right="minor">false</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">hp.addDamages(1);</cell>
+          <cell bottom="minor" right="minor" />
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.getDamages());</cell>
+          <cell bottom="minor" right="minor">50</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor">System.out.println(hp.repairBook());</cell>
+          <cell bottom="minor" right="minor">true</cell>
+        </row>
+      </tabular>
+    </table>
+
+    <activity label="classBook">
+      <statement>
+        <p>
+          Write the class Book below with the appropriate instance variables,
+          constructor, and methods described in main method and in the table
+          above.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
   public class Book
   {
       // write instance variable declarations here
@@ -186,7 +348,8 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
           System.out.println(hp.repairBook()); // should be true
       }
     }
-    </code><tests>
+    </code>
+        <tests>
     import static org.junit.Assert.*;
     import org.junit.*;
     import java.io.*;
@@ -243,18 +406,20 @@ bottom="minor" right="minor">System.out.println(hp.getDamages());</cell><cell bo
         }
       }
             </tests>
-        </program>
+      </program>
     </activity>
+  </subsection>
 
-    </subsection>
-
-    <subsection xml:id="FRQ2practicePresent">
+  <subsection xml:id="FRQ2practicePresent">
     <title>Present Class</title>
-<p>
-Write a class called Present that describes a gift for an occasion. Use the method calls in the main method below to create the appropriate instance variables and methods for the Present class.</p>
+    <p>
+      Write a class called Present that describes a gift for an occasion. Use
+      the method calls in the main method below to create the appropriate
+      instance variables and methods for the Present class.
+    </p>
 
-<program language="java">
-    <code>
+    <program language="java">
+      <code>
     public static void main(String[] args)
     {
         //creates a Present object
@@ -272,14 +437,18 @@ Write a class called Present that describes a gift for an occasion. Use the meth
     } 
 }
 </code>
-</program>
+    </program>
 
-<activity label="classPresent">
-        <statement>
-        <p>Write the class Present below with the appropriate instance variables, constructor, and methods described in main method. </p>
-        </statement>
-        <program interactive="activecode" language="java">
-            <code>
+    <activity label="classPresent">
+      <statement>
+        <p>
+          Write the class Present below with the appropriate instance variables,
+          constructor, and methods described in main method.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
 public class Present
 {
     // Write the instance variables here
@@ -306,7 +475,7 @@ public class Present
     } 
 }
 </code>
-<tests>
+        <tests>
     import static org.junit.Assert.*; 
     import org.junit.*;
     import java.io.*;
@@ -368,7 +537,8 @@ public class Present
         }
       }
             </tests>
-        </program>
-</activity>
-    </subsection>
-  </section>
+      </program>
+    </activity>
+  </subsection>
+</section>
+

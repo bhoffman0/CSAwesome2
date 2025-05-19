@@ -1,39 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <xi:include href="./bookinfo.ptx"/>
-        <book xml:id="csawesome2" permid="csa">
-            <title>CSAwesome2</title>
-            <subtitle>AP CSA Java 2025+</subtitle>
-          
-            <introduction>
-                <p>
-                    Welcome to CSAwesome2! This version of CSAwesome follows the College Board 2025-2026 revisions. CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the <url href="https://groups.google.com/forum/#!forum/teaching-csawesome" visual="https://groups.google.com/forum/#!forum/teaching-csawesome">teaching CSAwesome group</url> which will give you access to teacher resources at <url href="http://csawesome.org" visual="http://csawesome.org">csawesome.org</url>.</p>
-                    <p>To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. 
-                </p>
-            </introduction> 
-                <xi:include href="./Unit0-Getting-Started/toctree.ptx" />
-                <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx" />
-                <xi:include href="./Unit2-Selection-and-Iteration/toctree.ptx" />
-                <xi:include href="./Unit3-Class-Creation/toctree.ptx" />
-                <xi:include href="./Unit4-Data-Collections/toctree.ptx" />
-                <xi:include href="./Unit5-Inheritance/toctree.ptx" />
-                <xi:include href="./posttest/toctree.ptx" />
-                <xi:include href="./Tests/toctree.ptx" />
-                <xi:include href="./TimedTests/toctree.ptx" />
-                <xi:include href="./MixedFreeResponse/toctree.ptx" />
-                <xi:include href="./FreeResponse/toctree.ptx" />
-                <xi:include href="./Stories/toctree.ptx" />
-                <xi:include href="./Exercises.ptx" /> 
-            <backmatter>
-                <index>
-                    <index-list/>
-                </index>
-                  </backmatter>
-                  <conclusion>
-                    <p>
-                        If you see errors or bugs, please report them with this <url href="https://forms.gle/4gMBsv4W71vG5mNe8" visual="https://forms.gle/4gMBsv4W71vG5mNe8">errors form</url>.
-                    </p>
-                  </conclusion>
-                 
-        </book>
-    </pretext>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <xi:include href="./bookinfo.ptx" />
+  <book xml:id="csawesome2" permid="csa">
+    <title>CSAwesome2</title>
+    <subtitle>AP CSA Java 2025+</subtitle>
+    <introduction>
+      <p>
+        Welcome to CSAwesome2! This version of CSAwesome follows the College
+        Board 2025-2026 revisions. CSAwesome is a College Board endorsed
+        curriculum for AP Computer Science A, an introductory college-level
+        computer programming course in Java. If you are a teacher using this
+        curriculum, please join the <url
+        href="https://groups.google.com/forum/#!forum/teaching-csawesome"
+        visual="https://groups.google.com/forum/#!forum/teaching-
+        csawesome">teaching CSAwesome group</url> which will give you access to
+        teacher resources at <url href="http://csawesome.org"
+        visual="http://csawesome.org">csawesome.org</url>.
+      </p>
+
+      <p>
+        To make sure the site saves your answers on questions, please click on
+        the person icon at the top to register or login to your Runestone
+        course.
+      </p>
+    </introduction>
+
+    <xi:include href="./Unit0-Getting-Started/toctree.ptx" />
+    <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx" />
+    <xi:include href="./Unit2-Selection-and-Iteration/toctree.ptx" />
+    <xi:include href="./Unit3-Class-Creation/toctree.ptx" />
+    <xi:include href="./Unit4-Data-Collections/toctree.ptx" />
+    <xi:include href="./Unit5-Inheritance/toctree.ptx" />
+    <xi:include href="./posttest/toctree.ptx" />
+    <xi:include href="./Tests/toctree.ptx" />
+    <xi:include href="./TimedTests/toctree.ptx" />
+    <xi:include href="./MixedFreeResponse/toctree.ptx" />
+    <xi:include href="./FreeResponse/toctree.ptx" />
+    <xi:include href="./Stories/toctree.ptx" />
+    <xi:include href="./Exercises.ptx" />
+    <backmatter>
+      <index>
+        <index-list />
+      </index>
+    </backmatter>
+
+    <conclusion>
+      <p>
+        If you see errors or bugs, please report them with this <url
+        href="https://forms.gle/4gMBsv4W71vG5mNe8"
+        visual="https://forms.gle/4gMBsv4W71vG5mNe8">errors form</url>.
+      </p>
+    </conclusion>
+  </book>
+</pretext>
+

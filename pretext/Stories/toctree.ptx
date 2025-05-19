@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="stories" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Stories</title>
-        <xi:include href='./challengesInComputing.ptx' />
-        <xi:include href='./Interviewees/A_Taylor.ptx'/>
-<xi:include href='./Interviewees/B_Hickerson.ptx'/>
-<xi:include href='./Interviewees/B_Mariscal.ptx'/>
-<xi:include href='./Interviewees/C_De_Lira.ptx'/>
-<xi:include href='./Interviewees/C_Mbayo.ptx'/>
-<xi:include href='./Interviewees/D_Deinde-Smith.ptx'/>
-<xi:include href='./Interviewees/E_Espinoza.ptx'/>
-<xi:include href='./Interviewees/G_Opoku-Boateng.ptx'/>
-<xi:include href='./Interviewees/J_Gilbert.ptx'/>
-<xi:include href='./Interviewees/L_Morales.ptx'/>
-<xi:include href='./Interviewees/L_Vocos.ptx'/>
-<xi:include href='./Interviewees/L_Diaz.ptx'/>
-<xi:include href='./Interviewees/M_Rodriguez.ptx'/>
-<xi:include href='./Interviewees/N_Gaskins.ptx'/>
-    </chapter>
+
+<chapter xml:id="stories" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Stories</title>
+  <xi:include href="./challengesInComputing.ptx" />
+  <xi:include href="./Interviewees/A_Taylor.ptx" />
+  <xi:include href="./Interviewees/B_Hickerson.ptx" />
+  <xi:include href="./Interviewees/B_Mariscal.ptx" />
+  <xi:include href="./Interviewees/C_De_Lira.ptx" />
+  <xi:include href="./Interviewees/C_Mbayo.ptx" />
+  <xi:include href="./Interviewees/D_Deinde-Smith.ptx" />
+  <xi:include href="./Interviewees/E_Espinoza.ptx" />
+  <xi:include href="./Interviewees/G_Opoku-Boateng.ptx" />
+  <xi:include href="./Interviewees/J_Gilbert.ptx" />
+  <xi:include href="./Interviewees/L_Morales.ptx" />
+  <xi:include href="./Interviewees/L_Vocos.ptx" />
+  <xi:include href="./Interviewees/L_Diaz.ptx" />
+  <xi:include href="./Interviewees/M_Rodriguez.ptx" />
+  <xi:include href="./Interviewees/N_Gaskins.ptx" />
+</chapter>
+
