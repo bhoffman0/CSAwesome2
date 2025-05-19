@@ -70,12 +70,12 @@ def preserve_whitespace(elem):
     return elem.tag in PRESERVE_WHITESPACE
 
 
-def empty(x):
+def empty_text(x):
     return (x or "").strip() == ""
 
 
 def singleton_child(elem):
-    return len(elem) == 1 and empty(elem.text) and empty(elem[0].tail)
+    return len(elem) == 1 and empty_text(elem.text) and empty_text(elem[0].tail)
 
 
 def wrappable(elem):
