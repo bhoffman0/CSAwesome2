@@ -1,18 +1,20 @@
 #!/usr/bin/env python
 
-from xml.sax.saxutils import escape, quoteattr
-from argparse import ArgumentParser
-from lxml import etree
-from sys import argv, stderr, stdout
-from textwrap import fill
 import re
+from argparse import ArgumentParser
+from sys import stderr, stdout
+from textwrap import fill
+from xml.sax.saxutils import escape, quoteattr
+
+from lxml import etree
 
 INDENT = 2
 WIDTH = 80
 INLINE_TAGS = {"term", "url", "c", "h", "area"}
-PRESERVE_WHITESPACE = {"code", "cline", "tests" }
+PRESERVE_WHITESPACE = {"code", "cline", "tests"}
 WRAP = {"p", "caption"}
-DEFAULT_NS = { "xml": "http://www.w3.org/XML/1998/namespace" }
+DEFAULT_NS = {"xml": "http://www.w3.org/XML/1998/namespace"}
+
 
 def indent(level):
     return " " * (INDENT * level)
@@ -37,8 +39,9 @@ def open_tag(elem, ns, empty=False):
 def attr(name, value, ns):
     return f"{namespaced(name, ns)}={quoteattr(value)}"
 
+
 def namespaced(name, ns):
-    reverseNS = { v: k for k, v in ns.items() }
+    reverseNS = {v: k for k, v in ns.items()}
 
     if name.startswith("{"):
         uri, local = name[1:].split("}")
@@ -49,6 +52,7 @@ def namespaced(name, ns):
             print(f"Unknown namespace {uri}", file=stderr)
             return name
     return name
+
 
 def close_tag(elem, ns):
     return f"</{namespaced(elem.tag, ns)}>"
@@ -124,7 +128,13 @@ def render_block(elem, ns, level=0):
 
 
 def fill_with_indent(text, i):
-    return fill(text.strip(), width=WIDTH, initial_indent=i, subsequent_indent=i, break_long_words=False)
+    return fill(
+        text.strip(),
+        width=WIDTH,
+        initial_indent=i,
+        subsequent_indent=i,
+        break_long_words=False,
+    )
 
 
 def render_with_whitespace(elem, ns, level=0):
@@ -189,7 +199,6 @@ def reformat(filename, inplace):
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=f)
     for e in document_elements(root):
-        #print(re.sub(r"\s+$", "", serialize_element(e)), file=f)
         print(serialize_element(e), file=f)
 
 
