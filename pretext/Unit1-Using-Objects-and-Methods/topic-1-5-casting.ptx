@@ -633,9 +633,9 @@ public class RunestoneTests extends CodeTestHelper
                 might see things like <c>U+1F600</c>. But they’re just numbers. That last one is
                 the same as <c>128512</c>.</p>
             <p>When Java was released in an 1996, Unicode had been around for five years and
-                the Unicode people had declared they would only ever need 2<superscript>16</superscript> or 65,536
+                the Unicode people had declared they would only ever need <m>2^{16}</m> or 65,536
                 code points to represent all the characters used in the world. So Java included
-                a <c>char</c> data type that can hold exactly 2<superscript>16</superscript> values. Then, seven
+                a <c>char</c> data type that can hold exactly <m>2^{16}</m> values. Then, seven
                 months later, the Unicode folks, said, “Ooops, that’s not enough”, and extended
                 their system to its current size of 1,112,064 possible codepoints. (As of
                 September 2022, 149,186 have actually been used.)</p>
