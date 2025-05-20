@@ -197,7 +197,7 @@ public class RunestoneTests extends CodeTestHelper
             <idx><h>double</h><h>number of digits</h></idx>
 
             
-            <p>What happens to repeating decimal numbers like 3.333333…?  Java limits the number of digits you can save for any <c>double</c> number to about 14-15 digits. You should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
+            <p>What happens to repeating decimal numbers like 3.333333…?  Such numbers can’t be represented exactly in any finite number of digits so computers have to store an approximation. Java’s <c>double</c>s can store about 14-15 digits worth of precision which is plenty for most purposes but you should be aware that the accuracy of any calculation on a computer is limited by the fact that computers can only hold a limited number of digits.</p>
             <p>For example, int values are stored in 4 bytes of memory. The constant
                 <c>Integer.MAX_VALUE</c> holds the value of the largest possible int value in Java which is  2147483647, and <c>Integer.MIN_VALUE</c> holds the smallest int value -2147483648. Values in an <c>int</c> variable must be within the range of <c>Integer.MIN_VALUE</c> and <c>Integer.MAX_VALUE</c> inclusively. If you try to store any number larger or smaller than these
                 numbers in an <c>int</c> variable, it will result in an <term>integer overflow</term> where an
@@ -633,12 +633,12 @@ public class RunestoneTests extends CodeTestHelper
                 might see things like <c>U+1F600</c>. But they’re just numbers. That last one is
                 the same as <c>128512</c>.</p>
             <p>When Java was released in an 1996, Unicode had been around for five years and
-                the Unicode people had declared they would only ever need 2<superscript>16</superscript> or 65,536
+                the Unicode people had declared they would only ever need <m>2^{16}</m> or 65,536
                 code points to represent all the characters used in the world. So Java included
-                a <c>char</c> data type that can hold exactly 2<superscript>16</superscript> values. Then, seven
+                a <c>char</c> data type that can hold exactly <m>2^{16}</m> values. Then, seven
                 months later, the Unicode folks, said, “Ooops, that’s not enough”, and extended
                 their system to its current size of 1,112,064 possible codepoints. (As of
-                September 2022, 149,186 have actually been used.)</p>
+                September 2024, 154,998 codepoints have actually been assigned characters.)</p>
             <p>That made <c>char</c> kind of obsolete. But while not every Unicode codepoint can
                 be represented in a Java <c>char</c>, you can use an <c>int</c> to represent a
                 codepoint and the method <c>Character.toString</c> to translate an <c>int</c> into a
