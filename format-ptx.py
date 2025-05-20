@@ -10,7 +10,7 @@ import re
 INDENT = 2
 WIDTH = 80
 INLINE_TAGS = {"term", "url", "c", "h", "area"}
-PRESERVE_WHITESPACE = {"code", "cline", "tests", "idx"}
+PRESERVE_WHITESPACE = {"code", "cline", "tests" }
 WRAP = {"p", "caption"}
 DEFAULT_NS = { "xml": "http://www.w3.org/XML/1998/namespace" }
 
@@ -135,7 +135,8 @@ def render_with_whitespace(elem, ns, level=0):
         s += render_child_with_whitespace(child, ns | elem.nsmap)
         if child.tail and len(child.tail) > 0:
             s += child.tail
-    s += close_tag(elem, ns)
+    s = s.rstrip() + "\n"
+    s += f"{indent(level)}{close_tag(elem, ns)}"
     return s
 
 
