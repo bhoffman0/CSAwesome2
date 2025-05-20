@@ -82,7 +82,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </activity>
-            <p>What if you wanted to print out a double quote ” character? Since the double quote ” is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a <term>backslash escape sequence</term>. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \n which will put in a newline.</p>
+            <p>What if you wanted to print out a double quote <c>"</c> character? Since <c>"</c> is a special character with a meaning in Java string literals, we put in a backslash in front of the quote to signal that we want just the character. This is called a <term>backslash escape sequence</term>. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is <c>\n</c> which will put in a newline.</p>
 
 <activity label="bhescape">
     <statement>
