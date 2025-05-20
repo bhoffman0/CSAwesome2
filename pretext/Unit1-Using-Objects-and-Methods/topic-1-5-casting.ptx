@@ -638,7 +638,7 @@ public class RunestoneTests extends CodeTestHelper
                 a <c>char</c> data type that can hold exactly <m>2^{16}</m> values. Then, seven
                 months later, the Unicode folks, said, “Ooops, that’s not enough”, and extended
                 their system to its current size of 1,112,064 possible codepoints. (As of
-                September 2022, 149,186 have actually been used.)</p>
+                September 2024, 154,998 codepoints have actually been assigned characters.)</p>
             <p>That made <c>char</c> kind of obsolete. But while not every Unicode codepoint can
                 be represented in a Java <c>char</c>, you can use an <c>int</c> to represent a
                 codepoint and the method <c>Character.toString</c> to translate an <c>int</c> into a
