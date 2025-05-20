@@ -6,8 +6,7 @@
     <idx>compound operators</idx>
 
     <p>Compound assignment operators <c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, and <c>%=</c> are
-            shortcuts that do a math operation and assignment in one step. For example, <c>x +=
-1</c> adds 1 to the current value of
+            shortcuts that do a math operation and assignment in one step. For example, <c>x += 1</c> adds 1 to the current value of
             <c>x</c> and assigns the result back to <c>x</c>. It is the same as <c>x = x + 1</c>.
             This pattern is possible with any operator put in front of the <c>=</c> sign, as
             seen below.</p>
