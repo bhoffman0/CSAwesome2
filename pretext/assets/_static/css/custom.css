@@ -1,4 +1,4 @@
-/* Most of these rules are from the rst version so might not work in ptx 
+/* Most of these rules are from the rst version so might not work in ptx
    Replaced .runestone-sphinx with .ptx-content. */
 
 :root {
@@ -8,7 +8,7 @@
     --contentWidthWide: calc(var(--contentWidthRegular) + 250px);
 }
 
-:root[data-theme="dark"] {
+:root.dark-mode {
     --emphasisColor: #00b3e3;
     --codeColor: #ffaaaa;
 }
@@ -37,16 +37,16 @@ section > .para + .para {
 }
 
 .ptx-content .heading h4
-{ 
+{
   font-size: 1.4rem;
   color:  var(--emphasisColor);
 }
 
-/* Add csawesome2 in title for the course name in course home, 
-   but don't diplay that because there's the logo in the banner */ 
-.ptx-banner .title 
-{ 
-   display: none; 
+/* Add csawesome2 in title for the course name in course home,
+   but don't diplay that because there's the logo in the banner */
+.ptx-banner .title
+{
+   display: none;
 }
 
 .ptx-content .terminology
@@ -58,13 +58,13 @@ section > .para + .para {
 
 .ptx-content .code-inline
 {
+  color: var(--codeColor);
   padding: 0;
- /* color: var(--codeColor); // use new defaults instead 
-  background-color: inherit; */
-  font-weight: bold;
-  font-size: 100%;  
-
+  border: none;
+  background: none;
+  font-weight: 600;
 }
+
 /* Code listings with <pre> in text washed out in Chrome */
 .ptx-content pre.program
 {
@@ -180,16 +180,16 @@ div.highlight-java + p,
 /* Padding for table of unit test responses.
    until Brad adds it to the template.
 */
-.ptx-content .ac-feedback, 
+.ptx-content .ac-feedback,
 .ptx-runestone-container .ac-feedback {
     border: 1px solid black;
     padding: 3px;
 }
 
-/* Changing font in code window in active codes 
+/* Changing font in code window in active codes
    Default is washed out in Windows Chrome.
 */
-.ptx-runestone-container .ac_section .CodeMirror pre, 
+.ptx-runestone-container .ac_section .CodeMirror pre,
 .ptx-content .ac_section .CodeMirror pre {
   font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
 }
@@ -205,7 +205,7 @@ div.highlight-java + p,
 }
 
 /* For tables in the FRQs (default 0) */
-.ptx-runestone-container td, .ptx-runestone-container th, 
+.ptx-runestone-container td, .ptx-runestone-container th,
 .ptx-content td, .ptx-content th {
     padding: 5px;
 }
