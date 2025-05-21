@@ -216,7 +216,7 @@ public class Game
 <activity label="frq_method_class_match">
     <statement><p>Drag the method from the left and drop it on the correct class that it belongs to on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the FRQ description above.</p></feedback>
-<matches><match order="1"><premise>getPoints()</premise><response>Level</response></match><match order="2"><premise>isBonus()</premise><response>Game</response></match></matches></activity>            <p>Notice that the <c>Game</c> class has 3 instance variables to represent each level, <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> which are object of class type <c>Level</c>. You will need to use these variables to get their points and check if the goal is reached for each level.</p>
+<cardsort><match order="1"><premise>getPoints()</premise><response>Level</response></match><match order="2"><premise>isBonus()</premise><response>Game</response></match></cardsort></activity>            <p>Notice that the <c>Game</c> class has 3 instance variables to represent each level, <c>levelOne</c>, <c>levelTwo</c>, and <c>levelThree</c> which are object of class type <c>Level</c>. You will need to use these variables to get their points and check if the goal is reached for each level.</p>
 
     <activity label="frq_call_method">
         <statement>
