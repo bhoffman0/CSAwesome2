@@ -27,7 +27,7 @@
 <activity label="ch12rec_match_1">
     <statement><p>Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>A method that calls itself</premise><response>recursive method</response></match><match order="2"><premise>The stack of calls to methods</premise><response>call stack</response></match><match order="3"><premise>The case when the method doesn't call itself</premise><response>base case</response></match></matches></activity>        </subsection>
+<cardsort><match order="1"><premise>A method that calls itself</premise><response>recursive method</response></match><match order="2"><premise>The stack of calls to methods</premise><response>call stack</response></match><match order="3"><premise>The case when the method doesn't call itself</premise><response>base case</response></match></cardsort></activity>        </subsection>
   <subsection xml:id="common-mistakes-8">
             <title>Common Mistakes</title>
             <blockquote>
