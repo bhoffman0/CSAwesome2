@@ -133,7 +133,7 @@ World world2 = new World(300,400); // creates a 300x400 world
         </subsection>
   <subsection xml:id="the-turtle-class-constructors">
             <title>The Turtle Class Constructors</title>
-            <p>The <c>Turtle</c> class also has multiple constructors, although it always requires a world as a argument in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.</p>
+            <p>The <c>Turtle</c> class also has multiple constructors, although it always requires a world as an argument in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.</p>
             <p>There is another <c>Turtle</c> constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.</p>
             <program language="java"><code>
 Turtle t1 = new Turtle(world1);

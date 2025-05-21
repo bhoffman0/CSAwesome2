@@ -82,7 +82,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
     </program>
 </activity>
-            <p>What if you wanted to print out a double quote ” character? Since the double quote ” is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a <term>backslash escape sequence</term>. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \n which will put in a newline.</p>
+            <p>What if you wanted to print out a double quote <c>"</c> character? Since <c>"</c> is a special character with a meaning in Java string literals, we put in a backslash in front of the quote to signal that we want just the character. This is called a <term>backslash escape sequence</term>. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is <c>\n</c> which will put in a newline.</p>
 
 <activity label="bhescape">
     <statement>
@@ -96,9 +96,9 @@ public class TestEscape
     public static void main(String[] args)
     {
         String message =
-                "Here is a backslash quote \" "
-                        + " and a backslashed backslash (\\) "
-                        + "Backslash n \n prints out a new line.";
+                "Here is a backslash quote \" " +
+                "and a backslashed backslash (\\) " +
+                "Backslash n \n prints out a new line.";
         System.out.println(message);
     }
 }
@@ -143,7 +143,7 @@ public class RunestoneTests extends CodeTestHelper
                 (<c>-</c>), and division (<c>/</c>). The multiplication operator is written as <c>*</c>, as
                 it is in most programming languages, since the character sets used until
                 relatively recently didn’t have a character for a real multiplication sign,
-                <c>×</c>, and keyboards still don’t have a key for it or for <c>÷</c>. (You may have noticed that <c>+</c> was also used to combine
+                <c>×</c>, and keyboards still don’t have a key for it. For similar reasons the <c>÷</c> symbol is not used in Java. (You may have noticed that <c>+</c> was also used to combine
                 <c>String</c> and other values into new <c>String</c>s. More on this later.)</p>
             <p>Arithmetic expressions can be of type <c>int</c> or <c>double</c>. An arithmetic
                 expression consisting only of <c>int</c> values will evaluate to an <c>int</c> value.
@@ -281,21 +281,26 @@ public class RunestoneTests extends CodeTestHelper
   <subsection xml:id="the-remainder-operator">
             <title>The Remainder Operator</title>
             <p>The operator <c>%</c> in Java is the <term>remainder</term> operator. Like the other
-                arithmetic operators is takes two operands. Mathematically it returns the
+                arithmetic operators it takes two operands. Mathematically it returns the
                 remainder after dividing the first number by the second, using truncating integer division.
                 For instance, <c>5 % 2</c> evaluates to 1 since 2 goes into 5 two times
                 with a remainder of 1.</p>
-            <p>While you may not have heard of remainder as an operator, think back to
-                elementary school math. Remember when you first learned long division, before
-                they taught you about decimals, how when you did a long division that didn’t
-                divide evenly, you gave the answer as the number of even divisions and the
-                remainder. That remainder is what is returned by this operator. In the figures
-                below, the remainders are the same values that would be returned by <c>2 % 3</c>
-                and <c>5 % 2</c>.</p>
+
+            <p>
+              While you may not have heard of remainder as an operator, think
+              back to elementary school math when you first learned long
+              division, before you learned about decimals. You probably learned
+              how to give the answer to a long division that didn’t divide
+              evenly in terms of the number of even divisions and the remainder.
+              The remainder is what is returned by the <c>%</c> operator. In the
+              figures below, the remainders are the same values that would be
+              returned by <c>2 % 3</c> and <c>5 % 2</c>.
+            </p>
+                
             <figure align="center"><caption>Long division showing the integer result and the remainder</caption><image source="Unit1-Using-Objects-and-Methods/Figures/mod-py.png" width="27%"/></figure>
             <p>Sometimes people—including Professor Lewis in the next video—will call <c>%</c>
                 the <term>modulo</term>, or <term>mod</term>, operator. That is not actually correct though the
-                difference between remainder and modulo, which uses Euclidean division instead
+                difference between remainder and modulo, which uses <url href="https://en.wikipedia.org/wiki/Euclidean_division">Euclidean division</url> instead
                 of truncating integer division, only matters when negative operands are involved
                 and the signs of the operands differ. With positive operands, remainder and mod give the same results.
                 Java does have a method <c>Math.floorMod</c> in the <c>Math</c> class if you need to use modulo instead of remainder, but <c>%</c> is all you need in the AP exam.</p>
@@ -432,7 +437,7 @@ public class RunestoneTests extends CodeTestHelper
         </subsection>
   <subsection xml:id="coding-challenge-pay-calculator">
             <title>Coding Challenge : Pay Calculator</title>
-            <figure align="left"><image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%"/></figure>
+            <image source="Unit1-Using-Objects-and-Methods/Figures/dollarSign.png" width="18%"/>
             <p>In this coding challenge, you can work in pairs to create a pay calculator using math expressions and operators.</p>
 
 <project label="challenge1-3-pay-calculator">

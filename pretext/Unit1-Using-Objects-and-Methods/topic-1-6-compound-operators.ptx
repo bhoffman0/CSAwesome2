@@ -6,8 +6,7 @@
     <idx>compound operators</idx>
 
     <p>Compound assignment operators <c>+=</c>, <c>-=</c>, <c>*=</c>, <c>/=</c>, and <c>%=</c> are
-            shortcuts that do a math operation and assignment in one step. For example, <c>x +=
-1</c> adds 1 to the current value of
+            shortcuts that do a math operation and assignment in one step. For example, <c>x += 1</c> adds 1 to the current value of
             <c>x</c> and assigns the result back to <c>x</c>. It is the same as <c>x = x + 1</c>.
             This pattern is possible with any operator put in front of the <c>=</c> sign, as
             seen below.</p>
@@ -30,7 +29,7 @@
                 improved to create C++.</p>
         </note>
     <p>Here’s a table of all the compound arithmetic operators and the extra concise
-            incremend and decrement operators and how they relate to fully written out
+            increment and decrement operators and how they relate to fully written out
             assignment expressions. You can run the code below the table to see these
             shortcut operators in action!</p>
     <table>
@@ -149,7 +148,7 @@
   </introduction>
   <activity label="compound-ops">
     <statement>
-        <p>Run the code below to see what the ++ and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Create more compound assignment statements with shortcut operators as described below and work with a partner to guess what they would print out before running the code.</p>
+        <p>Run the code below to see what the <c>++</c> and shorcut operators do. Click on the Show Code Lens button to trace through the code and the variable values change in the visualizer. Create more compound assignment statements with shortcut operators as described below and work with a partner to guess what they would print out before running the code.</p>
 
     </statement>
     <program interactive="activecode" language="java">
