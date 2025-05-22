@@ -64,7 +64,7 @@ Turtle myrtle;
 <activity label="vocab2_1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>a specific instance of a class with defined attributes</premise><response>object</response></match><match order="2"><premise>defines a new data type that is like a blueprint</premise><response>class</response></match><match order="3"><premise>define what the object knows about itself</premise><response>attributes or instance variables</response></match><match order="4"><premise>define what an object can do</premise><response>behaviors or methods</response></match></matches></activity>
+<cardsort><match order="1"><premise>a specific instance of a class with defined attributes</premise><response>object</response></match><match order="2"><premise>defines a new data type that is like a blueprint</premise><response>class</response></match><match order="3"><premise>define what the object knows about itself</premise><response>attributes or instance variables</response></match><match order="4"><premise>define what an object can do</premise><response>behaviors or methods</response></match></cardsort></activity>
     <activity label="howmanyobjects">
         <statement>
 

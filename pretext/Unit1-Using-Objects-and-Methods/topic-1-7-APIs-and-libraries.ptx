@@ -46,7 +46,7 @@
 <activity label="API_vocab_match">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right. Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<matches><match order="1"><premise>A collection of classes written by other programmers</premise><response>library</response></match><match order="2"><premise>A collection of related classes organized to be imported into your code</premise><response>package</response></match><match order="3"><premise>A specification that tells the programmer how to use classes in a library</premise><response>API</response></match><match order="4"><premise>The building blocks of Java and object-oriented programming</premise><response>class</response></match><match order="5"><premise>A block of code that performs a specific task</premise><response>method</response></match></matches></activity>
+<cardsort><match order="1"><premise>A collection of classes written by other programmers</premise><response>library</response></match><match order="2"><premise>A collection of related classes organized to be imported into your code</premise><response>package</response></match><match order="3"><premise>A specification that tells the programmer how to use classes in a library</premise><response>API</response></match><match order="4"><premise>The building blocks of Java and object-oriented programming</premise><response>class</response></match><match order="5"><premise>A block of code that performs a specific task</premise><response>method</response></match></cardsort></activity>
     <activity label="purpose_apis">
         <statement>
 

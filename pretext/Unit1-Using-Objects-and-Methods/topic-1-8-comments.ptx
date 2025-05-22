@@ -25,7 +25,7 @@
 <activity label="comments">
     <statement><p>Drag the definition from the left and drop it on the correct symbols on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the section above.</p></feedback>
-<matches><match order="1"><premise>single-line comment</premise><response>//</response></match><match order="2"><premise>multi-line comment</premise><response>/* */</response></match><match order="3"><premise>Java documentation comment</premise><response>/** */</response></match></matches></activity>            <p>The compiler will skip over comments, and they don’t affect how your program runs. They are for you, your teacher, and other programmers working with you.  Here are some examples of good commenting:</p>
+<cardsort><match order="1"><premise>single-line comment</premise><response>//</response></match><match order="2"><premise>multi-line comment</premise><response>/* */</response></match><match order="3"><premise>Java documentation comment</premise><response>/** */</response></match></cardsort></activity>            <p>The compiler will skip over comments, and they don’t affect how your program runs. They are for you, your teacher, and other programmers working with you.  Here are some examples of good commenting:</p>
             <program language="java"><code>
 /**
 * MyClass.java
