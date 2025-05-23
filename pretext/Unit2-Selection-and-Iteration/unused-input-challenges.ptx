@@ -97,7 +97,7 @@ public class GuessAnimal
 }
 
 </code>
-	<stdin> </stdin><tests>
+        <stdin> </stdin><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -195,8 +195,9 @@ public class RunestoneTests extends CodeTestHelper
 }
         </tests>
     </program>
-</activity>
-        </subsection>
+  </project>
+</subsection>
+
   <subsection xml:id="coding-challenge-guessing-game">
             <title>Coding Challenge : Guessing Game</title>
             <image source="Unit2-Selection-and-Iteration/Figures/questionmark.jpg" width="18%"/>
@@ -266,7 +267,7 @@ public class Main
   }
 }
 </code>
-	<stdin> </stdin><tests>
+        <stdin> </stdin><tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -380,7 +381,8 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</activity>
-        </subsection>
+      </program>
+    </project>
+  </subsection>
+  
 </section>

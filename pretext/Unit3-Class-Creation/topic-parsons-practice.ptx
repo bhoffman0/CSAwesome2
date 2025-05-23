@@ -148,7 +148,7 @@
 </block><block order="8">
 <cline>  } // end getArea</cline>
 <cline>} // end class</cline>
-</block></blocks></activity>\n<activity label="u3ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
+</block></blocks></activity><activity label="u3ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
         <p>The following program should define a <c>CelestialBody</c> class. The class should have two instance variables: <c>orbitLength</c> and <c>daysSinceDiscovered</c>. The <c>orbitLength</c> variable should be initialized through the constructor, while <c>daysSinceDiscovered</c> should be derived from <c>orbitLength</c> and the <c>orbit</c> method. The <c>orbit(int numberOfTimes)</c> should add <c>orbitLength * numberOfTimes</c> to <c>daysSinceDiscovered</c> (e.g., if Planet X has done two orbits with an orbit length of 12 days, it was discovered 24 days ago. If it then orbits another three times, it was discovered 60 days ago). But the blocks have been mixed up and include pairs of lines where one is unneeded. Drag the necessary code from the left to the right and put them in order so that the code would work correctly. Click the Check button to check your solution.</p>
 </statement>
 <blocks><block order="6">
