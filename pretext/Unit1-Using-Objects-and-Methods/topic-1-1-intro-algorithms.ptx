@@ -1,25 +1,72 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <section xml:id="topic-1-1-intro-algorithms">
-  <title>Introduction to Algorithms, Programming, and Compilers</title><introduction>
-    
-    <p>What do Android phones, Minecraft, and Netflix have in common? They’re all programmed in Java! Many of the apps you use in an Android phone or tablet are written in Java. If you’ve used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a <term>programming language</term> that is used worldwide to create software that we all use.</p>
-    <p>The following <url href="https://www.youtube.com/watch?v=Jn9_HaX3m7s" visual="https://www.youtube.com/watch?v=Jn9_HaX3m7s">video</url> introduces this first lesson in CSAwesome.</p>
-    <video youtube="Jn9_HaX3m7s" label="video-intro"/>
+  <title>Introduction to Algorithms, Programming, and Compilers</title>
+  <introduction>
+    <p>
+      What do Android phones, Minecraft, and Netflix have in common? They’re all
+      programmed in Java! Many of the apps you use in an Android phone or tablet
+      are written in Java. If you’ve used App Inventor before, those apps are
+      translated to Java before they are run on a phone or tablet. Netflix uses
+      Java for some of its software too. Java is a <term>programming
+      language</term> that is used worldwide to create software that we all use.
+    </p>
+
+    <p>
+      The following <url href="https://www.youtube.com/watch?v=Jn9_HaX3m7s"
+      visual="https://www.youtube.com/watch?v=Jn9_HaX3m7s">video</url>
+      introduces this first lesson in CSAwesome.
+    </p>
+
+    <video youtube="Jn9_HaX3m7s" label="video-intro" />
   </introduction>
+
   <subsection>
-            <title>Algorithms</title>
-            
-            
-            <p><term>Algorithms</term> define step-by-step processes in order to complete a task or solve a problem. Algorithms are used in many areas of life, not just in computer science. For example, a recipe is an algorithm for cooking a meal. A set of directions to a friend’s house is an algorithm for getting there. In computer science, algorithms are used to solve problems and to create software. For example, an algorithm can be used to sort a list of numbers, to search for a word in a document, or to code a game.</p>
-            <p>Algorithms can be used to plan and design code by writing the steps down in English or another language or in a diagram or in <term>pseudocode</term> which is writing simplified code on paper. It’s important to plan the algorithm step by step where each step can be implemented by a line of code.  <term>Sequencing</term> defines an order for when steps in a process are completed. Steps in a process are completed one at a time.</p>
-        </subsection>
+    <title>Algorithms</title>
+    <p>
+      <term>Algorithms</term> define step-by-step processes in order to complete
+      a task or solve a problem. Algorithms are used in many areas of life, not
+      just in computer science. For example, a recipe is an algorithm for
+      cooking a meal. A set of directions to a friend’s house is an algorithm
+      for getting there. In computer science, algorithms are used to solve
+      problems and to create software. For example, an algorithm can be used to
+      sort a list of numbers, to search for a word in a document, or to code a
+      game.
+    </p>
+
+    <p>
+      Algorithms can be used to plan and design code by writing the steps down
+      in English or another language or in a diagram or in
+      <term>pseudocode</term> which is writing simplified code on paper. It’s
+      important to plan the algorithm step by step where each step can be
+      implemented by a line of code. <term>Sequencing</term> defines an order
+      for when steps in a process are completed. Steps in a process are
+      completed one at a time.
+    </p>
+  </subsection>
+
   <subsection>
-            <title>First Java Program</title>
-            
-            
-            <p>Every program in Java is written as a <term>class</term>. Java is an <term>object-oriented language</term>, and <term>classes</term> and <term>objects</term> created from classes are the basic building blocks in object-oriented programming. We’ll learn more about classes and objects later in this unit.</p>
-            <p>Inside the class, there can be a <term>main method</term> that starts the program. A <term>method</term> is a block of code that performs a specific task. The main method is the entry point for the program. When you ask the Java run-time to <em>run</em> a class, it will always start execution in the main method. In other programming languages, methods are called functions or procedures. Here is the template for a simple Java program with a main method:</p>
-            <program language="java"><code>
+    <title>First Java Program</title>
+    <p>
+      Every program in Java is written as a <term>class</term>. Java is an
+      <term>object-oriented language</term>, and <term>classes</term> and
+      <term>objects</term> created from classes are the basic building blocks in
+      object-oriented programming. We’ll learn more about classes and objects
+      later in this unit.
+    </p>
+
+    <p>
+      Inside the class, there can be a <term>main method</term> that starts the
+      program. A <term>method</term> is a block of code that performs a specific
+      task. The main method is the entry point for the program. When you ask the
+      Java run-time to <em>run</em> a class, it will always start execution in
+      the main method. In other programming languages, methods are called
+      functions or procedures. Here is the template for a simple Java program
+      with a main method:
+    </p>
+
+    <program language="java">
+      <code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -27,18 +74,31 @@ public class MyClass
         // Put your code here!
     }
 }
-</code></program>
+      </code>
+    </program>
 
-<p>In Java every open curly brace <c>{</c> must have a matched close curly brace <c>}</c>.  These are used to start and end class definitions and method definitions.</p>
+    <p>
+      In Java every open curly brace <c>{</c> must have a matched close curly
+      brace <c>}</c>. These are used to start and end class definitions and
+      method definitions.
+    </p>
 
-<p>Click on the run button below to have the computer execute the <c>main</c> method in the following class. Then, change the code  to print your name.  Be sure to keep the starting and ending quotes <c>"</c>.  Click on the run button to run the modified code. </p>
+    <p>
+      Click on the run button below to have the computer execute the <c>main</c>
+      method in the following class. Then, change the code to print your name.
+      Be sure to keep the starting and ending quotes <c>"</c>. Click on the run
+      button to run the modified code.
+    </p>
 
-<exercise label="printName">
-    <statement>
-            <p>Run this code to see the output below it. Then change the code to print your name, for example “Hi Pat!”, and run again.</p>
+    <exercise label="printName">
+      <statement>
+        <p>
+          Run this code to see the output below it. Then change the code to
+          print your name, for example “Hi Pat!”, and run again.
+        </p>
+      </statement>
 
-    </statement>
-    <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java">
         <code>
 public class MyClass
 {
@@ -47,8 +107,8 @@ public class MyClass
         System.out.println("Hi there!");
     }
 }
-
-</code><tests>
+        </code>
+        <tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -69,286 +129,503 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
+
   <subsection>
-            <title>Compiling and Running Java Programs</title>
+    <title>Compiling and Running Java Programs</title>
+    <p>
+      Code can be written in any text editor, including the small text editor
+      built into the Active Code exercises in this e-book. However, an
+      <term>Integrated Development Environment (IDE)</term> is often used to
+      write programs because it provides tools for a programmer to write,
+      compile, and run code. For this course, you can use the e-book Active Code
+      exercises or the Scratch button above as your IDE to run your code. Or you
+      can try other IDEs mentioned in the last unit. In other IDEs, you must
+      name the file the same name as the class name with “.java” as the
+      extension. All code (programs) in Java must be defined inside a class in a
+      source file, and the name of the class must match the file name.
+    </p>
 
+    <p>
+      Computers don’t actually speak Java so we have to <term>compile</term>
+      (translate) Java source files that we write into class files which is code
+      that a computer can understand and run. A <term>compiler</term> checks
+      your code for errors and translates your code to executable code that can
+      be run. Errors detectable by the compiler need to be fixed before the
+      program can be run. In this e-book, the Java code is actually being sent
+      to a Java server to be compiled and run, and the errors and output are
+      sent back to be shown in the web page.
+    </p>
+  </subsection>
 
-            <p>Code can be written in any text editor, including the small text editor built into the Active Code exercises in this e-book.  However, an <term>Integrated Development Environment (IDE)</term> is often used to write programs because it provides tools for a programmer to write, compile, and run code. For this course, you can use the e-book Active Code exercises or the Scratch button above as your IDE to run your code. Or you can try other IDEs mentioned in the last unit. In other IDEs, you must name the file the same name as the class name with “.java” as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name.</p>
-            <p>Computers don’t actually speak Java so we have to <term>compile</term> (translate) Java source files that we write into class files which is code that a computer can understand and run. A <term>compiler</term> checks your code for  errors and translates your code to executable code that can be run. Errors detectable by the compiler need to be fixed before the program can be run. In this e-book, the Java code is actually being sent to a Java server to be compiled and run, and the errors and output are sent back to be shown in the web page.</p>
-        </subsection>
   <subsection>
-            <title>Java Keywords</title>
-            <p><term>Keywords</term> are reserved words that have special meaning in Java. Keywords such as <c>public</c>, <c>class</c>, and <c>void</c>  must be in lowercase, but class names such as <c>System</c> and <c>String</c> are capitalized.</p>
-            <exercise label="mp-main-method-order-1" adaptive="yes">
-                <statement>
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-                </statement>
-                <blocks layout="horizontal">
-                    <block>
-                    <c>public static</c>       
-                    </block>
-                    <block>
-                        <c>void main(</c>       
-                    </block>
-                    <block>
-                        <c>String[]</c>       
-                     </block>
-                     <block>
-                        <c>args)</c>       
-                     </block>
-                     <block correct="no">
-                        <c>public Static</c>       
-                     </block>
-                </blocks>
-            </exercise>
+    <title>Java Keywords</title>
+    <p>
+      <term>Keywords</term> are reserved words that have special meaning in
+      Java. Keywords such as <c>public</c>, <c>class</c>, and <c>void</c> must
+      be in lowercase, but class names such as <c>System</c> and <c>String</c>
+      are capitalized.
+    </p>
 
-            <exercise label="mp-main-method-order-2" adaptive="yes">
-                <statement>
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-                </statement>
-                <blocks layout="horizontal">
-                    <block>
-                    <c>public</c>       
-                    </block>
-                    <block>
-                        <c>static</c>       
-                        </block>
-                    <block>
-                        <c>void</c>       
-                    </block>
-                    <block>
-                        <c>main(</c>       
-                        </block>
-                    <block>
-                        <c>String[]</c>       
-                     </block>
-                     <block>
-                        <c>args)</c>       
-                     </block>
-                     <block correct="no">
-                        <c>Public</c>       
-                     </block>
-                     <block correct="no">
-                        <c>Static</c>       
-                     </block>
-                </blocks>
-            </exercise>
-            
-            <exercise label="mp-main-method-order-3" adaptive="yes">
-                <statement>
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create the first line for the <c>main</c> method. There are extra blocks that you don’t need.</p>
-                </statement>
-                <blocks layout="horizontal">
-                    <block>
-                    <c>public</c>       
-                    </block>
-                    <block>
-                        <c>static</c>       
-                        </block>
-                    <block>
-                        <c>void</c>       
-                    </block>
-                    <block>
-                        <c>main</c>       
-                        </block>
-                    <block>
-                     <c>(</c>       
-                    </block>
-                    <block>
-                        <c>String</c>       
-                     </block>
-                     <block>
-                        <c>[] </c>       
-                        </block>
-                     <block>
-                        <c>args</c>       
-                     </block>
-                     <block>
-                        <c>)</c>       
-                        </block>
-                     <block correct="no">
-                        <c>()</c>       
-                     </block>
-                </blocks>
-            </exercise>
-           
-            <p>Lines in a Java program that express a complete action such as printing output must end with a semicolon (<c>;</c>). Such a line is called a <term>statement</term>. You can think of the semicolon (<c>;</c>) in Java like a period (<c>.</c>) in English. The same way you use a period to end a sentence in English, you use a semicolon to end a statement in Java.  You will not be penalized on the exam if you forget a needed semicolon, but the Java compiler is not so lenient; your program won’t compile without it. Note also that not <em>every</em> line ends with a semicolon; if the line starts a construct like an <title_reference>if</title_reference> statement, there is no semicolon before the opening <c>{</c> nor one after the closing <c>}</c>.</p>
-          
-            <exercise label="mp-print-order-1" adaptive="yes">
-                <statement>
-                <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print “Hi!”. There are extra blocks that you don’t need.</p>
-                </statement>
-                <blocks layout="horizontal">
-                    <block>
-                    <c>System.</c>       
-                    </block>
-                    <block>
-                        <c>out</c>       
-                        </block>
-                    <block>
-                        <c>.</c>       
-                    </block>
-                    <block>
-                        <c>println</c>       
-                        </block>
-                    <block>
-                     <c>(</c>       
-                    </block>
-                    <block>
-                        <c>&quot;Hi!&quot;</c>       
-                     </block>
-                     <block>
-                        <c>)</c>       
-                        </block>
-                     <block>
-                        <c>;</c>       
-                     </block>
-                     <block correct="no">
-                        <c>system</c>       
-                     </block>
-                     
-                </blocks>
-            </exercise>
-          
+    <exercise label="mp-main-method-order-1" adaptive="yes">
+      <statement>
+        <p>
+          Drag or click on the blocks you need to move them from the top section
+          into the yellow area to create the first line for the <c>main</c>
+          method. There are extra blocks that you don’t need.
+        </p>
+      </statement>
 
-          <exercise label="mp-print-order-2" adaptive="yes">
-            <statement>
-            <p>Drag or click on the blocks you need to move them from the top section into the yellow area to create a Java statement that will print Bye!”. There are extra blocks that you don’t need.</p>
-            </statement>
-            <blocks layout="horizontal">
-                <block>
-                <c>System.</c>       
-                </block>
-                <block>
-                    <c>out</c>       
-                    </block>
-                <block>
-                    <c>.</c>       
-                </block>
-                <block>
-                    <c>println</c>       
-                    </block>
-                 <block>
-                 <c>(</c>       
-                </block>
-                <block>
-                    <c>&quot;Bye!&quot;</c>       
-                 </block>
-                 <block>
-                    <c>)</c>       
-                    </block>
-                 <block>
-                    <c>;</c>       
-                 </block>
-                 <block correct="no">
-                    <c>Out</c>       
-                 </block>
-            </blocks>
-        </exercise>
+      <blocks layout="horizontal">
+        <block>
+          <c>public static</c>
+        </block>
 
-        </subsection>
+        <block>
+          <c>void main(</c>
+        </block>
+
+        <block>
+          <c>String[]</c>
+        </block>
+
+        <block>
+          <c>args)</c>
+        </block>
+
+        <block correct="no">
+          <c>public Static</c>
+        </block>
+      </blocks>
+    </exercise>
+
+    <exercise label="mp-main-method-order-2" adaptive="yes">
+      <statement>
+        <p>
+          Drag or click on the blocks you need to move them from the top section
+          into the yellow area to create the first line for the <c>main</c>
+          method. There are extra blocks that you don’t need.
+        </p>
+      </statement>
+
+      <blocks layout="horizontal">
+        <block>
+          <c>public</c>
+        </block>
+
+        <block>
+          <c>static</c>
+        </block>
+
+        <block>
+          <c>void</c>
+        </block>
+
+        <block>
+          <c>main(</c>
+        </block>
+
+        <block>
+          <c>String[]</c>
+        </block>
+
+        <block>
+          <c>args)</c>
+        </block>
+
+        <block correct="no">
+          <c>Public</c>
+        </block>
+
+        <block correct="no">
+          <c>Static</c>
+        </block>
+      </blocks>
+    </exercise>
+
+    <exercise label="mp-main-method-order-3" adaptive="yes">
+      <statement>
+        <p>
+          Drag or click on the blocks you need to move them from the top section
+          into the yellow area to create the first line for the <c>main</c>
+          method. There are extra blocks that you don’t need.
+        </p>
+      </statement>
+
+      <blocks layout="horizontal">
+        <block>
+          <c>public</c>
+        </block>
+
+        <block>
+          <c>static</c>
+        </block>
+
+        <block>
+          <c>void</c>
+        </block>
+
+        <block>
+          <c>main</c>
+        </block>
+
+        <block>
+          <c>(</c>
+        </block>
+
+        <block>
+          <c>String</c>
+        </block>
+
+        <block>
+          <c>[] </c>
+        </block>
+
+        <block>
+          <c>args</c>
+        </block>
+
+        <block>
+          <c>)</c>
+        </block>
+
+        <block correct="no">
+          <c>()</c>
+        </block>
+      </blocks>
+    </exercise>
+
+    <p>
+      Lines in a Java program that express a complete action such as printing
+      output must end with a semicolon (<c>;</c>). Such a line is called a
+      <term>statement</term>. You can think of the semicolon (<c>;</c>) in Java
+      like a period (<c>.</c>) in English. The same way you use a period to end
+      a sentence in English, you use a semicolon to end a statement in Java. You
+      will not be penalized on the exam if you forget a needed semicolon, but
+      the Java compiler is not so lenient; your program won’t compile without
+      it. Note also that not <em>every</em> line ends with a semicolon; if the
+      line starts a construct like an <title_reference>if</title_reference>
+      statement, there is no semicolon before the opening <c>{</c> nor one after
+      the closing <c>}</c>.
+    </p>
+
+    <exercise label="mp-print-order-1" adaptive="yes">
+      <statement>
+        <p>
+          Drag or click on the blocks you need to move them from the top section
+          into the yellow area to create a Java statement that will print “Hi!”.
+          There are extra blocks that you don’t need.
+        </p>
+      </statement>
+
+      <blocks layout="horizontal">
+        <block>
+          <c>System.</c>
+        </block>
+
+        <block>
+          <c>out</c>
+        </block>
+
+        <block>
+          <c>.</c>
+        </block>
+
+        <block>
+          <c>println</c>
+        </block>
+
+        <block>
+          <c>(</c>
+        </block>
+
+        <block>
+          <c>"Hi!"</c>
+        </block>
+
+        <block>
+          <c>)</c>
+        </block>
+
+        <block>
+          <c>;</c>
+        </block>
+
+        <block correct="no">
+          <c>system</c>
+        </block>
+      </blocks>
+    </exercise>
+
+    <exercise label="mp-print-order-2" adaptive="yes">
+      <statement>
+        <p>
+          Drag or click on the blocks you need to move them from the top section
+          into the yellow area to create a Java statement that will print Bye!”.
+          There are extra blocks that you don’t need.
+        </p>
+      </statement>
+
+      <blocks layout="horizontal">
+        <block>
+          <c>System.</c>
+        </block>
+
+        <block>
+          <c>out</c>
+        </block>
+
+        <block>
+          <c>.</c>
+        </block>
+
+        <block>
+          <c>println</c>
+        </block>
+
+        <block>
+          <c>(</c>
+        </block>
+
+        <block>
+          <c>"Bye!"</c>
+        </block>
+
+        <block>
+          <c>)</c>
+        </block>
+
+        <block>
+          <c>;</c>
+        </block>
+
+        <block correct="no">
+          <c>Out</c>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+
   <subsection>
-            <title>Syntax Errors and Debugging</title>
-            <p><term>Syntax errors</term> are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c> or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the process of removing errors is called <term>debugging</term>. An early computer science pioneer <url href="https://en.wikipedia.org/wiki/Grace_Hopper" visual="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</url> documented a real bug, a moth that flew into a computer in 1947!</p>
-            <figure align="left"><caption>Grace Hopper’s log showing a real bug, 1947.</caption><image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%"/></figure><br/>
-            <p>The compiler tries to run your code, but if your code has <term>syntax errors</term>, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.</p>
-            <p>Watch the following video to see that all coders get bugs. Debugging is a normal part of coding. It can be frustrating at times, but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url> is a lot of fun!</p>
+    <title>Syntax Errors and Debugging</title>
+    <p>
+      <term>Syntax errors</term> are reported to you by the compiler if your
+      Java code is not correctly written. Examples of syntax errors are a
+      semicolon <c>;</c> missing or if the code has a open curly brace <c>{</c>
+      or open quote <c>"</c>, but no close curly brace <c>}</c> or close quote
+      <c>"</c>. Informally, a syntax error is called a <term>bug</term>, and the
+      process of removing errors is called <term>debugging</term>. An early
+      computer science pioneer <url
+      href="https://en.wikipedia.org/wiki/Grace_Hopper"
+      visual="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</url>
+      documented a real bug, a moth that flew into a computer in 1947!
+    </p>
 
-    <video youtube="auv10y-dN4s" label="video-debugging"/>
-                <p>Let’s practice debugging some code!</p>
-            <p> <term>Check Your Understanding: Mixed up programs</term></p>
-<exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
-            <p>The following has all the correct code to print out “Hi my friend!” when the code is run, but the code is mixed up.  Drag the blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution. You will be told if any of the blocks are in the wrong order or if you need to remove one or more blocks. After three incorrect attempts you will be able to use the Help Me button to make the problem easier.</p>
-</statement>
-<blocks><block order="4">
-<cline>public class Hello</cline>
-<cline>{</cline>
-</block><block order="1">
-<cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-</block><block order="2">
-<cline>      System.out.println("Hi my friend!");</cline>
-</block><block order="3">
-<cline>   }</cline>
-<cline>}</cline>
-</block></blocks></exercise><exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java"><statement>
-            <p>The following has all the correct code to print out “Hi there!” when the code is run, but the code is mixed up and contains some extra blocks with errors.  Drag the needed blocks from left to right and put them in the correct order.  Click on the “Check Me” button to check your solution.</p>
-</statement>
-<blocks><block order="6">
-<choice correct="yes"><cline>public class Hello</cline>
-<cline>{</cline>
-</choice><choice><cline>public Class Hello</cline>
-<cline>{                         </cline>
-</choice></block><block order="5">
-<choice correct="yes"><cline>   public static void main(String[] args)</cline>
-<cline>   {</cline>
-</choice><choice><cline>   public static void main()</cline>
-<cline>   {                         </cline>
-</choice></block><block order="8">
-<choice correct="yes"><cline>      System.out.println("Hi there!");</cline>
-</choice><choice><cline>      System.out.println("Hi there!") </cline>
-<cline>      </cline>
-</choice></block><block order="2">
-<cline>   }</cline>
-<cline>}</cline>
-</block></blocks></exercise>        </subsection>
+    <figure align="left">
+      <caption>Grace Hopper’s log showing a real bug, 1947.</caption>
+      <image source="Unit1-Using-Objects-and-Methods/Figures/firstbug.jpg" width="54%" />
+    </figure>
+
+    <br />
+    <p>
+      The compiler tries to run your code, but if your code has <term>syntax
+      errors</term>, you will see error messages displayed below the code.
+      Compiler error messages will tell the line number that the compiler found
+      the error and the type of error. The error messages are not always easy to
+      understand and sometimes the actual error is before the line that the
+      compiler says is the problem.
+    </p>
+
+    <p>
+      Watch the following video to see that all coders get bugs. Debugging is a
+      normal part of coding. It can be frustrating at times, but you will get
+      better at it with practice! Sometimes another pair of eyes really helps,
+      so ask a friend if you get stuck or try explaining your code line by line
+      to someone or even a rubber duck. <url
+      href="https://rubberduckdebugging.com/"
+      visual="https://rubberduckdebugging.com/">Rubber duck debugging</url> is a
+      lot of fun!
+    </p>
+
+    <video youtube="auv10y-dN4s" label="video-debugging" />
+    <p>Let’s practice debugging some code!</p>
+    <p>
+      <term>Check Your Understanding: Mixed up programs</term>
+    </p>
+
+    <exercise label="mixed-hi" numbered="yes" adaptive="yes" indentation="hide" language="java">
+      <statement>
+        <p>
+          The following has all the correct code to print out “Hi my friend!”
+          when the code is run, but the code is mixed up. Drag the blocks from
+          left to right and put them in the correct order. Click on the “Check
+          Me” button to check your solution. You will be told if any of the
+          blocks are in the wrong order or if you need to remove one or more
+          blocks. After three incorrect attempts you will be able to use the
+          Help Me button to make the problem easier.
+        </p>
+      </statement>
+
+      <blocks>
+        <block order="4">
+          <cline>public class Hello</cline>
+          <cline>{</cline>
+        </block>
+
+        <block order="1">
+          <cline>   public static void main(String[] args)</cline>
+          <cline>   {</cline>
+        </block>
+
+        <block order="2">
+          <cline>      System.out.println("Hi my friend!");</cline>
+        </block>
+
+        <block order="3">
+          <cline>   }</cline>
+          <cline>}</cline>
+        </block>
+      </blocks>
+    </exercise>
+
+    <exercise label="mixed-hi-paired" numbered="yes" adaptive="yes" indentation="hide" language="java">
+      <statement>
+        <p>
+          The following has all the correct code to print out “Hi there!” when
+          the code is run, but the code is mixed up and contains some extra
+          blocks with errors. Drag the needed blocks from left to right and put
+          them in the correct order. Click on the “Check Me” button to check
+          your solution.
+        </p>
+      </statement>
+
+      <blocks>
+        <block order="6">
+          <choice correct="yes">
+            <cline>public class Hello</cline>
+            <cline>{</cline>
+          </choice>
+
+          <choice>
+            <cline>public Class Hello</cline>
+            <cline>{</cline>
+          </choice>
+        </block>
+
+        <block order="5">
+          <choice correct="yes">
+            <cline>   public static void main(String[] args)</cline>
+            <cline>   {</cline>
+          </choice>
+
+          <choice>
+            <cline>   public static void main()</cline>
+            <cline>   {</cline>
+          </choice>
+        </block>
+
+        <block order="8">
+          <choice correct="yes">
+            <cline>      System.out.println("Hi there!");</cline>
+          </choice>
+
+          <choice>
+            <cline>      System.out.println("Hi there!")</cline>
+            <cline></cline>
+          </choice>
+        </block>
+
+        <block order="2">
+          <cline>   }</cline>
+          <cline>}</cline>
+        </block>
+      </blocks>
+    </exercise>
+  </subsection>
+
   <subsection>
-            <title>Reading Error Messages</title>
-            <p>In the exercise below, you should click on the run button to
-                compile and run the code. Unfortunately you will find there is a syntax error in
-                the code that you need to fix. Before you try to fix it, look for the error
-                message below the code. This is called a <term>compile time error</term> because it is an
-                error detected by the compiler.</p>
-            <p>It will be a lot easier to find the problem, and other problems like it, if you
-                understand how to read the error message. So let’s take a closer look. It will
-                look something like this:</p>
-            <program language="text"><code>
+    <title>Reading Error Messages</title>
+    <p>
+      In the exercise below, you should click on the run button to compile and
+      run the code. Unfortunately you will find there is a syntax error in the
+      code that you need to fix. Before you try to fix it, look for the error
+      message below the code. This is called a <term>compile time error</term>
+      because it is an error detected by the compiler.
+    </p>
+
+    <p>
+      It will be a lot easier to find the problem, and other problems like it,
+      if you understand how to read the error message. So let’s take a closer
+      look. It will look something like this:
+    </p>
+
+    <program language="text">
+      <code>
 FirstClass.java:5: error: unclosed string literal
        System.out.println("Hi there!);
                           ^
 1 error
-</code></program>
-            <p>The first line starts with the name of the file that was being compiled.
-                Because you submitted your code via this web page you didn’t actually name
-                the file but it was named for you to match the name of your class. Then
-                there’s a colon (<c>:</c>) followed by a number. That number tells you the line
-                number in the file where the compiler detected the error, in this case
-                line 5.</p>
-            <p>Error messages aren’t always 100% accurate about where the error actually is;
-                sometimes you actually need to change something a bit earlier in the program
-                and sometimes a bit later. But the line number is the best place to start
-                looking.</p>
-            <p>After the line number and another colon, you will find the actual error message. These
-                can be kind of cryptic but you should still read it. As you learn more Java
-                vocabulary they will become more meaningful but they almost always contain
-                some useful clues. For instance take this error message: “unclosed string
-                literal”. You may not know what a string literal is (yet) but “unclosed”
-                suggests something was opened and then not closed. Keep that thought in mind.</p>
-            <p>Now look at the next two lines. The very next line is just the line of code
-                from your program. But below that is a very important line containing a
-                single caret (<c>^</c>) positioned to point at exactly where in the line the
-                Java compiler thinks the problem is. In this case it’s pointing at the
-                quotation mark (<c>”</c>) before “Hi”. So it’s complaining about something being
-                unclosed and it’s pointing us at a quotation mark. Usually quotation marks
-                come in pairs called the open quote and the close quote, right? And if you
-                look at the line of code you’ll see that there’s no closing quotation mark.
-                Could that be the problem? Try adding a quotation mark and see if that fixes
-                it!</p>
-            <p>It is worth getting in the habit of really reading error messages. The people
-                who wrote the Java compiler put in lot of work to try to make the error
-                messages useful. If you read them, you’ll soon learn to recognize
-                common mistakes and will get much quicker at finding your syntax errors.</p>
-            <p><term>Coding Exercise: Compile Time Error 1</term></p>
+      </code>
+    </program>
 
-<exercise label="sc2error1">
-    <statement>
-            <p>Fix the code below.</p>
+    <p>
+      The first line starts with the name of the file that was being compiled.
+      Because you submitted your code via this web page you didn’t actually name
+      the file but it was named for you to match the name of your class. Then
+      there’s a colon (<c>:</c>) followed by a number. That number tells you the
+      line number in the file where the compiler detected the error, in this
+      case line 5.
+    </p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <p>
+      Error messages aren’t always 100% accurate about where the error actually
+      is; sometimes you actually need to change something a bit earlier in the
+      program and sometimes a bit later. But the line number is the best place
+      to start looking.
+    </p>
+
+    <p>
+      After the line number and another colon, you will find the actual error
+      message. These can be kind of cryptic but you should still read it. As you
+      learn more Java vocabulary they will become more meaningful but they
+      almost always contain some useful clues. For instance take this error
+      message: “unclosed string literal”. You may not know what a string literal
+      is (yet) but “unclosed” suggests something was opened and then not closed.
+      Keep that thought in mind.
+    </p>
+
+    <p>
+      Now look at the next two lines. The very next line is just the line of
+      code from your program. But below that is a very important line containing
+      a single caret (<c>^</c>) positioned to point at exactly where in the line
+      the Java compiler thinks the problem is. In this case it’s pointing at the
+      quotation mark (<c>”</c>) before “Hi”. So it’s complaining about something
+      being unclosed and it’s pointing us at a quotation mark. Usually quotation
+      marks come in pairs called the open quote and the close quote, right? And
+      if you look at the line of code you’ll see that there’s no closing
+      quotation mark. Could that be the problem? Try adding a quotation mark and
+      see if that fixes it!
+    </p>
+
+    <p>
+      It is worth getting in the habit of really reading error messages. The
+      people who wrote the Java compiler put in lot of work to try to make the
+      error messages useful. If you read them, you’ll soon learn to recognize
+      common mistakes and will get much quicker at finding your syntax errors.
+    </p>
+
+    <p>
+      <term>Coding Exercise: Compile Time Error 1</term>
+    </p>
+
+    <exercise label="sc2error1">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+
+      <program interactive="activecode" language="java">
         <code>
 public class FirstClass
 {
@@ -357,8 +634,8 @@ public class FirstClass
         System.out.println("Hi there!);
     }
 }
-
-</code><tests>
+        </code>
+        <tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -378,20 +655,26 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-            <p><term>Coding Exercise: Compile Time Error 2</term></p>
-            <p>Click on the run button below to try and run the following code. Look
-                for an error message after the code. This time the error message will probably
-                point even more exactly at the problem than in the previous exercise. Try to fix
-                the code and run it again.</p>
+      </program>
+    </exercise>
 
-<exercise label="sc2error2">
-    <statement>
-            <p>Fix the code below.</p>
+    <p>
+      <term>Coding Exercise: Compile Time Error 2</term>
+    </p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <p>
+      Click on the run button below to try and run the following code. Look for
+      an error message after the code. This time the error message will probably
+      point even more exactly at the problem than in the previous exercise. Try
+      to fix the code and run it again.
+    </p>
+
+    <exercise label="sc2error2">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+
+      <program interactive="activecode" language="java">
         <code>
 public class SecondClass
 {
@@ -400,8 +683,8 @@ public class SecondClass
         System.out.println("Hi there!";
     }
 }
-
-</code><tests>
+        </code>
+        <tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -422,29 +705,43 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-            <p><term>Coding Exercise: Compile Time Error 3</term></p>
-            <p>Click on the run button below to try and run the following code. What is
-                wrong this time? The first error message will probably point you directly at the
-                problem. But after you fix that you’ll probably get a <title_reference>new</title_reference> error! That happens
-                sometimes because the compiler can’t even detect the second error until the
-                first one is fixed.</p>
-            <p>This is another reason it’s important to read error messages. It’s very tempting
-                when we see that there’s an error to jump immediately to trying to fix it. Arg,
-                an error! Get rid of it! But if we don’t slow down and read the message in a
-                case like this, we might not notice that we’ve actually fixed the first error.
-                If we don’t notice that we fixed it, we might undo our change and <title_reference>unfix</title_reference> it!</p>
-            <p>So read the error messages—they’re there to help you. With that in mind, see if
-                you can fix both errors in this code. A hint for the second error:
-                capitalization matters.</p>
+      </program>
+    </exercise>
 
-<exercise label="sc2error3">
-    <statement>
-            <p>Fix the code below.</p>
+    <p>
+      <term>Coding Exercise: Compile Time Error 3</term>
+    </p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <p>
+      Click on the run button below to try and run the following code. What is
+      wrong this time? The first error message will probably point you directly
+      at the problem. But after you fix that you’ll probably get a
+      <title_reference>new</title_reference> error! That happens sometimes
+      because the compiler can’t even detect the second error until the first
+      one is fixed.
+    </p>
+
+    <p>
+      This is another reason it’s important to read error messages. It’s very
+      tempting when we see that there’s an error to jump immediately to trying
+      to fix it. Arg, an error! Get rid of it! But if we don’t slow down and
+      read the message in a case like this, we might not notice that we’ve
+      actually fixed the first error. If we don’t notice that we fixed it, we
+      might undo our change and <title_reference>unfix</title_reference> it!
+    </p>
+
+    <p>
+      So read the error messages—they’re there to help you. With that in mind,
+      see if you can fix both errors in this code. A hint for the second error:
+      capitalization matters.
+    </p>
+
+    <exercise label="sc2error3">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+
+      <program interactive="activecode" language="java">
         <code>
 public class ThirdClass
 {
@@ -453,8 +750,8 @@ public class ThirdClass
         system.out.println("Hi there!")
     }
 }
-
-</code><tests>
+        </code>
+        <tests>
 // should pass if/when they run code
 // This doesn't really work because it filters out the \n
 import static org.junit.Assert.*;
@@ -476,21 +773,47 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-            <p>Did you remember that <c>System</c> is capitalized in <c>System.out.println</c>? Did you find the missing semicolon?</p>
-        </subsection>
+      </program>
+    </exercise>
+
+    <p>
+      Did you remember that <c>System</c> is capitalized in
+      <c>System.out.println</c>? Did you find the missing semicolon?
+    </p>
+  </subsection>
+
   <subsection>
-            <title>Run-time Errors</title>
-            <p>Some errors cannot be detected by the compiler. These are called <term>run-time errors</term>. These errors occur when the program is running, after the code is compiled. They can be caused by a variety of things, such as dividing by zero or trying to read from a file that doesn’t exist or a logic error in the code.</p>
-            <p>An <term>exception</term> is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution. Java will sometimes report an exception with a message that tells you what went wrong. For example, if you try to divide by zero, Java will throw (report) an <term>ArithmeticException</term> while running. Try this out in the code below.</p>
+    <title>Run-time Errors</title>
+    <p>
+      Some errors cannot be detected by the compiler. These are called
+      <term>run-time errors</term>. These errors occur when the program is
+      running, after the code is compiled. They can be caused by a variety of
+      things, such as dividing by zero or trying to read from a file that
+      doesn’t exist or a logic error in the code.
+    </p>
 
-<exercise label="divideByZeroDemo">
-    <statement>
-            <p>The following code has a run-time error. When you click on run, the compiler will not catch it since it is not a syntax error. The program will run and try to compute 3 divided by 0 which cannot be computed. This will cause a run-time error, and the program will report an <term>ArithmeticException</term>. Try it out!</p>
+    <p>
+      An <term>exception</term> is a type of run-time error that occurs as a
+      result of an unexpected error that was not detected by the compiler. It
+      interrupts the normal flow of the program’s execution. Java will sometimes
+      report an exception with a message that tells you what went wrong. For
+      example, if you try to divide by zero, Java will throw (report) an
+      <term>ArithmeticException</term> while running. Try this out in the code
+      below.
+    </p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <exercise label="divideByZeroDemo">
+      <statement>
+        <p>
+          The following code has a run-time error. When you click on run, the
+          compiler will not catch it since it is not a syntax error. The program
+          will run and try to compute 3 divided by 0 which cannot be computed.
+          This will cause a run-time error, and the program will report an
+          <term>ArithmeticException</term>. Try it out!
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
         <code>
 public class DivideByZero
 {
@@ -500,7 +823,8 @@ public class DivideByZero
        System.out.println(3/0);
    }
 }
-</code><tests>
+        </code>
+        <tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -518,38 +842,72 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-            <p>Run-time errors can be difficult to find because they don’t always cause the program to crash. Sometimes they just cause the program to behave in unexpected ways because of an error in the logic.  A <term>logic error</term> is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly causing a run-time error. For example, a programmer might have made a math mistake so the wrong value is calculated. Logic errors can be detected by testing the program with specific data to see if it produces the expected outcome. We’ll see an example of this after learning about expressions in the next lessons.</p>
-        </subsection>
+      </program>
+    </exercise>
+
+    <p>
+      Run-time errors can be difficult to find because they don’t always cause
+      the program to crash. Sometimes they just cause the program to behave in
+      unexpected ways because of an error in the logic. A <term>logic
+      error</term> is a mistake in the algorithm or program that causes it to
+      behave incorrectly or unexpectedly causing a run-time error. For example,
+      a programmer might have made a math mistake so the wrong value is
+      calculated. Logic errors can be detected by testing the program with
+      specific data to see if it produces the expected outcome. We’ll see an
+      example of this after learning about expressions in the next lessons.
+    </p>
+  </subsection>
+
   <subsection>
-            <title>Comments</title>
-            <p>In Java and many text-based coding languages, <c>//</c> is used to mark the
-                beginning of a comment. For multi-line comments, use <c>/*</c> to start the comment
-                and <c>*/</c> to end the comment. The compiler will skip over comments. However, it
-                is a good idea to use comments to make notes to yourself and other programmers
-                working with you. Here are some examples of good commenting:</p>
-            <program language="java"><code>
+    <title>Comments</title>
+    <p>
+      In Java and many text-based coding languages, <c>//</c> is used to mark
+      the beginning of a comment. For multi-line comments, use <c>/*</c> to
+      start the comment and <c>*/</c> to end the comment. The compiler will skip
+      over comments. However, it is a good idea to use comments to make notes to
+      yourself and other programmers working with you. Here are some examples of
+      good commenting:
+    </p>
+
+    <program language="java">
+      <code>
 /* MyClass.java
    Programmer: My Name
    Date:
 */
 
 int max = 10; // this keeps track of the max score
-</code></program>
-        </subsection>
+      </code>
+    </program>
+  </subsection>
+
   <subsection>
-            <title> Debugging Challenge</title>
-            <image source="Unit1-Using-Objects-and-Methods/Figures/rubberduck.jpg" width="18%" alt="Rubber Duck"/>
-            <p>In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently. Another option is buddy programming, where two or three coders work on their own computers but help each other as needed. If you’re working alone, you may want to explain the code to a rubber duck or another toy using <url href="https://rubberduckdebugging.com/" visual="https://rubberduckdebugging.com/">Rubber duck debugging</url>.</p>
-            <p>Working in pairs, debug the following code. Can you find all the bugs and get the code to run?</p>
+    <title>Debugging Challenge</title>
+    <image source="Unit1-Using-Objects-and-Methods/Figures/rubberduck.jpg" width="18%" alt="Rubber Duck" />
+    <p>
+      In this course, you are encouraged to work together in pairs to complete
+      the programming challenges. Pair programming is a successful software
+      development technique where two programmers work together at one computer.
+      One, the driver, types in code while the other, the navigator, gives ideas
+      and feedback. The two coders switch roles frequently. Another option is
+      buddy programming, where two or three coders work on their own computers
+      but help each other as needed. If you’re working alone, you may want to
+      explain the code to a rubber duck or another toy using <url
+      href="https://rubberduckdebugging.com/"
+      visual="https://rubberduckdebugging.com/">Rubber duck debugging</url>.
+    </p>
 
-<exercise label="challenge1-1">
-    <statement>
-            <p>Fix the code below.</p>
+    <p>
+      Working in pairs, debug the following code. Can you find all the bugs and
+      get the code to run?
+    </p>
 
-    </statement>
-    <program interactive="activecode" language="java">
+    <exercise label="challenge1-1">
+      <statement>
+        <p>Fix the code below.</p>
+      </statement>
+
+      <program interactive="activecode" language="java">
         <code>
 public class Challenge1_1
 {
@@ -560,8 +918,8 @@ public class Challenge1_1
        System.Print " And good evening!";
 
 }
-
-</code><tests>
+        </code>
+        <tests>
 // should pass if/when they run code
 import static org.junit.Assert.*;
 
@@ -582,26 +940,45 @@ public class RunestoneTests extends CodeTestHelper
     }
 }
         </tests>
-    </program>
-</exercise>
-        </subsection>
+      </program>
+    </exercise>
+  </subsection>
+
   <subsection>
-            <title>Summary</title>
-            <p><ul>
-                <li>
-                    <p><term>Algorithms</term> define step-by-step processes to follow when completing a task or solving a problem. These algorithms can be represented using written language or diagrams.</p>
-                </li>
-                <li>
-                    <p><term>Sequencing</term> defines an order for when steps in a process are completed. Steps in a process are completed one at a time.</p>
-                </li>
-                <li>
-                    <p>An <term>Integrated Development Environment (IDE)</term> is often used to write programs because it provides tools for a programmer to write, compile, and run code.</p>
-                </li>
-                <li>
-                    <p>A basic Java program looks like the following:</p>
-                </li>
-            </ul></p>
-            <program language="java"><code>
+    <title>Summary</title>
+    <p>
+      <ul>
+        <li>
+          <p>
+            <term>Algorithms</term> define step-by-step processes to follow when
+            completing a task or solving a problem. These algorithms can be
+            represented using written language or diagrams.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <term>Sequencing</term> defines an order for when steps in a process
+            are completed. Steps in a process are completed one at a time.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            An <term>Integrated Development Environment (IDE)</term> is often
+            used to write programs because it provides tools for a programmer to
+            write, compile, and run code.
+          </p>
+        </li>
+
+        <li>
+          <p>A basic Java program looks like the following:</p>
+        </li>
+      </ul>
+    </p>
+
+    <program language="java">
+      <code>
 public class MyClass
 {
     public static void main(String[] args)
@@ -609,74 +986,172 @@ public class MyClass
         System.out.println("Hi there!");
     }
 }
-</code></program>
-            <p><ul>
-                <li>
-                    <p>A Java program starts with <term>public class NameOfClass {</term>. If you are using your own files for your code, each class should be in a separate file that matches the class name inside it, for example NameOfClass.java.</p>
-                </li>
-                <li>
-                    <p>Most Java classes have a main method that will be run automatically. It looks like this: <term>public static void main(String[] args) { }</term>.</p>
-                </li>
-                <li>
-                    <p>The <term>System.out.println()</term> method displays information given inside the parentheses on the computer monitor.</p>
-                </li>
-                <li>
-                    <p>Java statements end in <c>;</c> (semicolon). <c>{ }</c> are used to enclose blocks of code. <c>//</c> and <c>/* */</c> are used for comments.</p>
-                </li>
-                <li>
-                    <p>A <term>compiler</term> translates Java code into a class file that can be run on your computer. <term>Syntax errors</term> are reported to you by the compiler if the Java code is not correctly written. Some things to check for are <c>;</c> at end of lines containing complete statements and matching <c>{ }</c>, <c>()</c>, and <c>""</c>.</p>
-                </li>
-                <li>
-                    <p>A <term>syntax error</term> is a mistake in the program where the rules of the programming language are not followed. These errors are detected by the compiler.</p>
-                </li>
-                <li>
-                    <p>A <term>logic error</term> is a mistake in the algorithm or program that causes it to behave incorrectly or unexpectedly. These errors are detected by testing the program with specific data to see if it produces the expected outcome.</p>
-                </li>
-                <li>
-                    <p>A <term>run-time error</term> is a mistake in the program that occurs during the execution of a program. Run-time errors typically cause the program to terminate abnormally.</p>
-                </li>
-                <li>
-                    <p>An <term>exception</term> is a type of run-time error that occurs as a result of an unexpected error that was not detected by the compiler. It interrupts the normal flow of the program’s execution.</p>
-                </li>
-            </ul></p>
-        </subsection>
+      </code>
+    </program>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            A Java program starts with <term>public class NameOfClass {</term>.
+            If you are using your own files for your code, each class should be
+            in a separate file that matches the class name inside it, for
+            example NameOfClass.java.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Most Java classes have a main method that will be run automatically.
+            It looks like this: <term>public static void main(String[] args) {
+            }</term>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The <term>System.out.println()</term> method displays information
+            given inside the parentheses on the computer monitor.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Java statements end in <c>;</c> (semicolon). <c>{ }</c> are used to
+            enclose blocks of code. <c>//</c> and <c>/* */</c> are used for
+            comments.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A <term>compiler</term> translates Java code into a class file that
+            can be run on your computer. <term>Syntax errors</term> are reported
+            to you by the compiler if the Java code is not correctly written.
+            Some things to check for are <c>;</c> at end of lines containing
+            complete statements and matching <c>{ }</c>, <c>()</c>, and
+            <c>""</c>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A <term>syntax error</term> is a mistake in the program where the
+            rules of the programming language are not followed. These errors are
+            detected by the compiler.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A <term>logic error</term> is a mistake in the algorithm or program
+            that causes it to behave incorrectly or unexpectedly. These errors
+            are detected by testing the program with specific data to see if it
+            produces the expected outcome.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            A <term>run-time error</term> is a mistake in the program that
+            occurs during the execution of a program. Run-time errors typically
+            cause the program to terminate abnormally.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            An <term>exception</term> is a type of run-time error that occurs as
+            a result of an unexpected error that was not detected by the
+            compiler. It interrupts the normal flow of the program’s execution.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </subsection>
+
   <subsection>
-            <title>AP Practice</title>
-
+    <title>AP Practice</title>
     <exercise label="AP1-1-print">
-        <statement>
-
-            <p>Consider the following code segment.</p>
-            <program language="java"><code>
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
 System.out.println("Roses are red, ")      // Line 1;
 System.out.println("Violets are blue, ")  // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
-</code></program>
-            <p>The code segment is intended to produce the following output but may not work as intended.</p>
-            <raw format="html" xml:space="preserve"><pre>Roses are red,
-Violets are blue,
-Unexpected '}' on line 32.</pre></raw>
-            <p>Which change, if any, can be made so that the code segment produces the intended output?</p>
-</statement><choices><choice><statement id="AP1-1-print_opt_a">            <p>Replacing <title_reference>System</title_reference> with <title_reference>system</title_reference> on all lines.</p>
-</statement><feedback id="AP1-1-print_opt_a">
-            <p>The class name System is always capitalized.</p>
-</feedback></choice><choice><statement id="AP1-1-print_opt_b">            <p>Replacing println with print on lines 1 and 2.</p>
-</statement><feedback id="AP1-1-print_opt_b">
-            <p>println is correct to print out with a newline in between.</p>
-</feedback></choice><choice><statement id="AP1-1-print_opt_c">            <p>Removing the single quotes in line 3.</p>
-</statement><feedback id="AP1-1-print_opt_c">
-            <p>The single quotes are fine in this line.</p>
-</feedback></choice><choice correct="yes"><statement id="AP1-1-print_opt_d">            <p>Putting the semicolon after the ) on each line.</p>
-</statement><feedback id="AP1-1-print_opt_d">
-            <p>Correct! The semicolon should go after each statement but not in the comment.</p>
-</feedback></choice></choices>
+          </code>
+        </program>
 
+        <p>
+          The code segment is intended to produce the following output but may
+          not work as intended.
+        </p>
+
+        <raw format="html" xml:space="preserve">
+          <pre>Roses are red,
+Violets are blue,
+Unexpected '}' on line 32.</pre>
+        </raw>
+
+        <p>
+          Which change, if any, can be made so that the code segment produces
+          the intended output?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement id="AP1-1-print_opt_a">
+            <p>
+              Replacing <title_reference>System</title_reference> with
+              <title_reference>system</title_reference> on all lines.
+            </p>
+          </statement>
+
+          <feedback id="AP1-1-print_opt_a">
+            <p>The class name System is always capitalized.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement id="AP1-1-print_opt_b">
+            <p>Replacing println with print on lines 1 and 2.</p>
+          </statement>
+
+          <feedback id="AP1-1-print_opt_b">
+            <p>println is correct to print out with a newline in between.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement id="AP1-1-print_opt_c">
+            <p>Removing the single quotes in line 3.</p>
+          </statement>
+
+          <feedback id="AP1-1-print_opt_c">
+            <p>The single quotes are fine in this line.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement id="AP1-1-print_opt_d">
+            <p>Putting the semicolon after the ) on each line.</p>
+          </statement>
+
+          <feedback id="AP1-1-print_opt_d">
+            <p>
+              Correct! The semicolon should go after each statement but not in
+              the comment.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
     </exercise>
 
     <datafile label="turtleClasses" filename="turtleClasses.jar" editable="no" hide="yes">
-        <pre>
-        <![CDATA[
-      import java.awt.Image;
+      <pre>
+        import java.awt.Image;
       import java.awt.image.BufferedImage;
 
       /**
@@ -831,8 +1306,8 @@ Unexpected '}' on line 32.</pre></raw>
         private int width = 1;
 
         /** list of path segment objects to draw */
-        private List<PathSegment> pathSegmentList =
-          new ArrayList<PathSegment>();
+        private List&lt;PathSegment&gt; pathSegmentList =
+          new ArrayList&lt;PathSegment&gt;();
 
         //////////////// constructors ///////////////////
 
@@ -1136,7 +1611,7 @@ Unexpected '}' on line 32.</pre></raw>
           // get the alpha value (starts at 25 so shift right 24)
           // then and it with all 1's for the first 8 bits to keep
           // end up with from 0 to 255
-          int alpha = (value >> 24) & 0xff;
+          int alpha = (value &gt;&gt; 24) &amp; 0xff;
 
           return alpha;
         }
@@ -1157,7 +1632,7 @@ Unexpected '}' on line 32.</pre></raw>
           // get the red value (starts at 17 so shift right 16)
           // then AND it with all 1's for the first 8 bits to
           // end up with a resulting value from 0 to 255
-          int red = (value >> 16) & 0xff;
+          int red = (value &gt;&gt; 16) &amp; 0xff;
 
           return red;
         }
@@ -1169,7 +1644,7 @@ Unexpected '}' on line 32.</pre></raw>
          */
         public static int getRed(int value)
         {
-          int red = (value >> 16) & 0xff;
+          int red = (value &gt;&gt; 16) &amp; 0xff;
           return red;
         }
 
@@ -1187,7 +1662,7 @@ Unexpected '}' on line 32.</pre></raw>
           int value = picture.getBasicPixel(x,y);
 
           // get the green value (starts at 9 so shift right 8)
-          int green = (value >>  8) & 0xff;
+          int green = (value &gt;&gt;  8) &amp; 0xff;
 
           return green;
         }
@@ -1199,7 +1674,7 @@ Unexpected '}' on line 32.</pre></raw>
          */
         public static int getGreen(int value)
         {
-          int green = (value >> 8) & 0xff;
+          int green = (value &gt;&gt; 8) &amp; 0xff;
           return green;
         }
 
@@ -1217,7 +1692,7 @@ Unexpected '}' on line 32.</pre></raw>
           int value = picture.getBasicPixel(x,y);
 
           // get the blue value (starts at 0 so no shift required)
-          int blue = value & 0xff;
+          int blue = value &amp; 0xff;
 
           return blue;
         }
@@ -1229,7 +1704,7 @@ Unexpected '}' on line 32.</pre></raw>
          */
         public static int getBlue(int value)
         {
-          int blue = value & 0xff;
+          int blue = value &amp; 0xff;
           return blue;
         }
 
@@ -1247,13 +1722,13 @@ Unexpected '}' on line 32.</pre></raw>
           // get the red value (starts at 17 so shift right 16)
           // then AND it with all 1's for the first 8 bits to
           // end up with a resulting value from 0 to 255
-          int red = (value >> 16) & 0xff;
+          int red = (value &gt;&gt; 16) &amp; 0xff;
 
           // get the green value (starts at 9 so shift right 8)
-          int green = (value >>  8) & 0xff;
+          int green = (value &gt;&gt;  8) &amp; 0xff;
 
           // get the blue value (starts at 0 so no shift required)
-          int blue = value & 0xff;
+          int blue = value &amp; 0xff;
 
           return new Color(red,green,blue);
         }
@@ -1284,7 +1759,7 @@ Unexpected '}' on line 32.</pre></raw>
         public void updatePicture(int alpha, int red, int green, int blue)
         {
           // create a 32 bit int with alpha, red, green blue from left to right
-          int value = (alpha << 24) + (red << 16) + (green << 8) + blue;
+          int value = (alpha &lt;&lt; 24) + (red &lt;&lt; 16) + (green &lt;&lt; 8) + blue;
 
           // update the picture with the int value
           picture.setBasicPixel(x,y,value);
@@ -1297,9 +1772,9 @@ Unexpected '}' on line 32.</pre></raw>
          */
         private static int correctValue(int value)
         {
-          if (value < 0)
+          if (value &lt; 0)
             value = 0;
-          if (value > 255)
+          if (value &gt; 255)
             value = 255;
           return value;
         }
@@ -1576,14 +2051,14 @@ Unexpected '}' on line 32.</pre></raw>
 
          // loop through the columns
          for (int sourceX = 0, targetX = 0;
-              sourceX < sourcePicture.getWidth() &&
-              targetX < this.getWidth();
+              sourceX &lt; sourcePicture.getWidth() &amp;&amp;
+              targetX &lt; this.getWidth();
               sourceX++, targetX++)
          {
            // loop through the rows
            for (int sourceY = 0, targetY = 0;
-                sourceY < sourcePicture.getHeight() &&
-                targetY < this.getHeight();
+                sourceY &lt; sourcePicture.getHeight() &amp;&amp;
+                targetY &lt; this.getHeight();
                 sourceY++, targetY++)
            {
              sourcePixel = sourcePicture.getPixel(sourceX,sourceY);
@@ -1601,10 +2076,10 @@ Unexpected '}' on line 32.</pre></raw>
        public void setAllPixelsToAColor(Color color)
        {
          // loop through all x
-         for (int x = 0; x < this.getWidth(); x++)
+         for (int x = 0; x &lt; this.getWidth(); x++)
          {
            // loop through all y
-           for (int y = 0; y < this.getHeight(); y++)
+           for (int y = 0; y &lt; this.getHeight(); y++)
            {
              getPixel(x,y).setColor(color);
            }
@@ -1737,8 +2212,8 @@ Unexpected '}' on line 32.</pre></raw>
          Pixel[] pixelArray = new Pixel[width * height];
 
          // loop through height rows from top to bottom
-         for (int row = 0; row < height; row++)
-           for (int col = 0; col < width; col++)
+         for (int row = 0; row &lt; height; row++)
+           for (int col = 0; col &lt; width; col++)
              pixelArray[row * width + col] = new Pixel(this,col,row);
 
          return pixelArray;
@@ -1755,8 +2230,8 @@ Unexpected '}' on line 32.</pre></raw>
          Pixel[][] pixelArray = new Pixel[height][width];
 
          // loop through height rows from top to bottom
-         for (int row = 0; row < height; row++)
-           for (int col = 0; col < width; col++)
+         for (int row = 0; row &lt; height; row++)
+           for (int col = 0; col &lt; width; col++)
              pixelArray[row][col] = new Pixel(this,col,row);
 
          return pixelArray;
@@ -1790,7 +2265,7 @@ Unexpected '}' on line 32.</pre></raw>
                // DatatypeConverter.printBase64Binary(output.toByteArray());
                // using java.util.Base64 instead of java.xml.bind.DataTypeConverter
                Base64.getEncoder().encodeToString(output.toByteArray());
-               System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
+               System.out.println("&amp;lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/&gt;");
            } catch (IOException e) {
                System.out.println("Errors occured in image conversion");
            }
@@ -1808,14 +2283,14 @@ Unexpected '}' on line 32.</pre></raw>
 
          // set the extension
          int posDot = fileName.lastIndexOf('.');
-         if (posDot >= 0)
+         if (posDot &gt;= 0)
            this.extension = fileName.substring(posDot + 1);
 
           //get file location
           String[] paths = fileName.split("/");
           this.pathName = "";
           if(paths.length != 1) {
-              for(int i = 0; i < paths.length - 1; i++) {
+              for(int i = 0; i &lt; paths.length - 1; i++) {
                   this.pathName = this.pathName + paths[i] + "/";
               }
           }
@@ -1991,7 +2466,7 @@ Unexpected '}' on line 32.</pre></raw>
 
          // get the extension
          int posDot = fileName.indexOf('.');
-         if (posDot >= 0)
+         if (posDot &gt;= 0)
              extension = fileName.substring(posDot + 1);
 
          // write the contents of the buffered image to the file
@@ -2086,14 +2561,12 @@ Unexpected '}' on line 32.</pre></raw>
        }
 
       } // end of SimplePicture class
-        ]]>
-        </pre>
-</datafile>
+      </pre>
+    </datafile>
 
-<datafile label="turtleClasses2" filename="turtleClasses2.jar" editable="no" hide="yes">
-  <pre>
-  <![CDATA[
-      import javax.swing.*;
+    <datafile label="turtleClasses2" filename="turtleClasses2.jar" editable="no" hide="yes">
+      <pre>
+        import javax.swing.*;
       import java.awt.*;
       import java.awt.font.*;
       import java.awt.geom.*;
@@ -2280,18 +2753,18 @@ Unexpected '}' on line 32.</pre></raw>
           if (dx == 0)
           {
             // if below the current turtle
-            if (dy > 0)
+            if (dy &gt; 0)
               heading = 180;
 
             // if above the current turtle
-            else if (dy < 0)
+            else if (dy &lt; 0)
               heading = 0;
           }
           // dx isn't 0 so can divide by it
           else
           {
             arcTan = Math.toDegrees(Math.atan(dy / dx));
-            if (dx < 0)
+            if (dx &lt; 0)
               heading = arcTan - 90;
             else
               heading = arcTan + 90;
@@ -2354,7 +2827,7 @@ Unexpected '}' on line 32.</pre></raw>
         public Color getShellColor()
         {
           Color color = null;
-          if (this.shellColor == null && this.bodyColor != null)
+          if (this.shellColor == null &amp;&amp; this.bodyColor != null)
             color = bodyColor.darker();
           else color = this.shellColor;
           return color;
@@ -2560,7 +3033,7 @@ Unexpected '}' on line 32.</pre></raw>
         public void setVisible(boolean value)
         {
           // if the turtle wasn't visible and now is
-          if (visible == false && value == true)
+          if (visible == false &amp;&amp; value == true)
           {
             // update the display
             this.updateDisplay();
@@ -2577,26 +3050,26 @@ Unexpected '}' on line 32.</pre></raw>
         public synchronized void updateDisplay()
         {
           // check that x and y are at least 0
-          if (xPos < 0)
+          if (xPos &lt; 0)
             xPos = 0;
-          if (yPos < 0)
+          if (yPos &lt; 0)
             yPos = 0;
 
           // if picture
           if (picture != null)
           {
-            if (xPos >= picture.getWidth())
+            if (xPos &gt;= picture.getWidth())
               xPos = picture.getWidth() - 1;
-            if (yPos >= picture.getHeight())
+            if (yPos &gt;= picture.getHeight())
               yPos = picture.getHeight() - 1;
             Graphics g = picture.getGraphics();
             paintComponent(g);
           }
           else if (modelDisplay != null)
           {
-            if (xPos >= modelDisplay.getWidth())
+            if (xPos &gt;= modelDisplay.getWidth())
               xPos = modelDisplay.getWidth() - 1;
-            if (yPos >= modelDisplay.getHeight())
+            if (yPos &gt;= modelDisplay.getHeight())
               yPos = modelDisplay.getHeight() - 1;
             modelDisplay.modelChanged();
           }
@@ -2912,7 +3385,7 @@ Unexpected '}' on line 32.</pre></raw>
               int length = filenames.length;
               BufferedImage[] img_list = new BufferedImage[length];
 
-              for (int i = 0; i < length; i++)
+              for (int i = 0; i &lt; length; i++)
               {
                   BufferedImage img = ImageIO.read(new File(filenames[i]));
                   img_list[i] = img;
@@ -2937,10 +3410,10 @@ Unexpected '}' on line 32.</pre></raw>
               //Get bigger Width and Height
               for (BufferedImage img: images)
               {
-                  if(img.getHeight() > maxHeight){
+                  if(img.getHeight() &gt; maxHeight){
                       maxHeight = img.getHeight();
                   }
-                  if(img.getWidth() > maxWidth){
+                  if(img.getWidth() &gt; maxWidth){
                       maxWidth = img.getWidth();
                   }
               }
@@ -2966,7 +3439,7 @@ Unexpected '}' on line 32.</pre></raw>
           // Retrieve gif writer
           private static ImageWriter getWriter() throws IIOException
           {
-              Iterator<ImageWriter> itr = ImageIO.getImageWritersByFormatName("gif");
+              Iterator&lt;ImageWriter&gt; itr = ImageIO.getImageWritersByFormatName("gif");
               if(itr.hasNext())
                   return (ImageWriter)itr.next();
 
@@ -3017,7 +3490,7 @@ Unexpected '}' on line 32.</pre></raw>
 
               app_node.setAttribute("applicationID", "NETSCAPE");
               app_node.setAttribute("authenticationCode", "2.0");
-              app_node.setUserObject(new byte[]{ 0x1, (byte) (0 & 0xFF), (byte) ((0 >> 8) & 0xFF)});
+              app_node.setUserObject(new byte[]{ 0x1, (byte) (0 &amp; 0xFF), (byte) ((0 &gt;&gt; 8) &amp; 0xFF)});
 
               app_extensions.appendChild(app_node);
               root.appendChild(app_extensions);
@@ -3029,7 +3502,7 @@ Unexpected '}' on line 32.</pre></raw>
           {
               IIOMetadataNode node = null;
 
-              for (int i = 0; i < root.getLength(); i++)
+              for (int i = 0; i &lt; root.getLength(); i++)
               {
                   if(root.item(i).getNodeName().compareToIgnoreCase(node_name) == 0)
                   {
@@ -3090,13 +3563,13 @@ Unexpected '}' on line 32.</pre></raw>
         private int delay = 50;
 
         /** the list of turtles in the world */
-        private List<Turtle> turtleList = new ArrayList<Turtle>();
+        private List&lt;Turtle&gt; turtleList = new ArrayList&lt;Turtle&gt;();
 
         /** background picture */
         private Picture picture = null;
 
         /* All world changes*/
-        private List<Picture> worldHistory = new ArrayList<Picture>();
+        private List&lt;Picture&gt; worldHistory = new ArrayList&lt;Picture&gt;();
 
 
         ////////////////// the constructors ///////////////
@@ -3250,7 +3723,7 @@ Unexpected '}' on line 32.</pre></raw>
          * @param speed
          */
         public void setSpeed(int d) {
-           if (d >= 0 && d <= 100)
+           if (d &gt;= 0 &amp;&amp; d &lt;= 100)
                delay = d;
         }
 
@@ -3283,7 +3756,7 @@ Unexpected '}' on line 32.</pre></raw>
             if(showHistory) {
                 try {
                     BufferedImage[] images = new BufferedImage[this.worldHistory.size()];
-                    for(int i = 0; i < this.worldHistory.size(); i++) {
+                    for(int i = 0; i &lt; this.worldHistory.size(); i++) {
                         images[i] = ((Picture) this.worldHistory.get(i)).getBufferedImage();
                     }
                     Giffer.generateFromBI(images, "history.gif", delay, false);
@@ -3301,7 +3774,7 @@ Unexpected '}' on line 32.</pre></raw>
                     System.gc();
                     history.delete();
                     double rand = Math.random();
-                    System.out.println("&lt;img src=\'data:image/gif;base64," + result + "\'/>");
+                    System.out.println("&amp;lt;img src=\'data:image/gif;base64," + result + "\'/&gt;");
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -3320,7 +3793,7 @@ Unexpected '}' on line 32.</pre></raw>
               int bytesRead;
               InputStream stream = toDownload.openStream();
 
-              while ((bytesRead = stream.read(chunk)) > 0) {
+              while ((bytesRead = stream.read(chunk)) &gt; 0) {
                   outputStream.write(chunk, 0, bytesRead);
               }
               //toDownload.close();
@@ -3359,8 +3832,8 @@ Unexpected '}' on line 32.</pre></raw>
         }
 
       } // end of World class
-       ]]> 
-</pre>
-</datafile>
-        </subsection>
+      </pre>
+    </datafile>
+  </subsection>
 </section>
+
