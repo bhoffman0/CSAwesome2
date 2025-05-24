@@ -129,8 +129,8 @@ methodName();
       the <c>chorus()</c> method. When you call the chorus() method, it skips to
       the chorus code, executes and prints out the chorus “E-I-E-I-O”, and then
       returns back to the method that called it. Just like variable names,
-      method names should be descriptive of what the method does. The methods
-      can be in any order, but usually programmers put the main method at the
+      method names should be descriptive of what the method does. Methods can be
+      defined in any order, but usually programmers put the main method at the
       end after all the methods that it uses are defined.
     </p>
 

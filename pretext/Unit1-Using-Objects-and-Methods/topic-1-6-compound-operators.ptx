@@ -14,11 +14,11 @@
     </p>
 
     <p>
-      If you need a mnemonic to remember whether the compound operators are
-      written like <c>+=</c> or <c>=+</c>, just remember that the operation
-      (<c>+</c>) is done first to produce the new value which is then assigned
-      (<c>=</c>) back to the variable. So it’s operator then equal sign:
-      <c>+=</c>.
+      If you need a way to remember the order of the two characters in the
+      compound operators, think about the order things happen: first we use the
+      math operator, such as <c>+</c>, to get the new value and then the value
+      is assigned back to the variable with <c>=</c>. So it’s operator then
+      equals sign: <c>+=</c>.
     </p>
 
     <p>
