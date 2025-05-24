@@ -470,29 +470,22 @@ public class RunestoneTests extends CodeTestHelper
 
       <blocks>
         <block order="4">
-          <cline>public class Hello
-          </cline>
-          <cline>{
-          </cline>
+          <cline>public class Hello</cline>
+          <cline>{</cline>
         </block>
 
         <block order="1">
-          <cline>   public static void main(String[] args)
-          </cline>
-          <cline>   {
-          </cline>
+          <cline>   public static void main(String[] args)</cline>
+          <cline>   {</cline>
         </block>
 
         <block order="2">
-          <cline>      System.out.println("Hi my friend!");
-          </cline>
+          <cline>      System.out.println("Hi my friend!");</cline>
         </block>
 
         <block order="3">
-          <cline>   }
-          </cline>
-          <cline>}
-          </cline>
+          <cline>   }</cline>
+          <cline>}</cline>
         </block>
       </blocks>
     </exercise>
@@ -511,55 +504,42 @@ public class RunestoneTests extends CodeTestHelper
       <blocks>
         <block order="6">
           <choice correct="yes">
-            <cline>public class Hello
-            </cline>
-            <cline>{
-            </cline>
+            <cline>public class Hello</cline>
+            <cline>{</cline>
           </choice>
 
           <choice>
-            <cline>public Class Hello
-            </cline>
-            <cline>{
-            </cline>
+            <cline>public Class Hello</cline>
+            <cline>{</cline>
           </choice>
         </block>
 
         <block order="5">
           <choice correct="yes">
-            <cline>   public static void main(String[] args)
-            </cline>
-            <cline>   {
-            </cline>
+            <cline>   public static void main(String[] args)</cline>
+            <cline>   {</cline>
           </choice>
 
           <choice>
-            <cline>   public static void main()
-            </cline>
-            <cline>   {
-            </cline>
+            <cline>   public static void main()</cline>
+            <cline>   {</cline>
           </choice>
         </block>
 
         <block order="8">
           <choice correct="yes">
-            <cline>      System.out.println("Hi there!");
-            </cline>
+            <cline>      System.out.println("Hi there!");</cline>
           </choice>
 
           <choice>
-            <cline>      System.out.println("Hi there!")
-            </cline>
-            <cline>
-            </cline>
+            <cline>      System.out.println("Hi there!")</cline>
+            <cline></cline>
           </choice>
         </block>
 
         <block order="2">
-          <cline>   }
-          </cline>
-          <cline>}
-          </cline>
+          <cline>   }</cline>
+          <cline>}</cline>
         </block>
       </blocks>
     </exercise>
