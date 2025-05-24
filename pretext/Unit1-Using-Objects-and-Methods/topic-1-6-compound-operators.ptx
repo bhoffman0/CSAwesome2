@@ -11,14 +11,11 @@
             This pattern is possible with any operator put in front of the <c>=</c> sign, as
             seen below.</p>
     
-    <p>If you need a mnemonic to remember whether the compound operators are
-    written like <c>+=</c> or <c>=+</c>, one way is to remember that the
-    operation (<c>+</c>) is done first to produce the new value which is then
-    assigned (<c>=</c>) back to the variable. So it’s operator then equal sign:
-    <c>+=</c>. Another way to remember is to note that spaces aren't significant
-    in Java so <c>x =- 1</c> is just a funny way of writing <c>x = -1</c>, i.e.
-    assigning the value <c>-1</c> to <c>x</c>. Thus the compound operator has to
-    be <c>-=</c>, not <c>=-</c>.</p>
+    <p>If you need a way to remember the order of the two characters in the
+    compound operators, think about the order things happen: first we use the
+    math operator, such as <c>+</c>, to get the new value and then the value is
+    assigned back to the variable with <c>=</c>. So it’s operator then equals
+    sign: <c>+=</c>.
     
     <p>Since changing the value of a variable by one is especially common, there are
             two extra concise operators <c>++</c> and <c>--</c>, also called the plus-plus or
