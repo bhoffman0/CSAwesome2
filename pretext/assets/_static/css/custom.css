@@ -59,7 +59,7 @@ section > .para + .para {
 .ptx-content .code-inline
 {
   color: var(--codeColor);
-  white-space: normal;
+  white-space: collapse nowrap;
   padding: 0;
   border: none;
   background: none;
