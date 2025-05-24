@@ -15,7 +15,7 @@
     compound operators, think about the order things happen: first we use the
     math operator, such as <c>+</c>, to get the new value and then the value is
     assigned back to the variable with <c>=</c>. So it’s operator then equals
-    sign: <c>+=</c>.
+    sign: <c>+=</c>.</p>
     
     <p>Since changing the value of a variable by one is especially common, there are
             two extra concise operators <c>++</c> and <c>--</c>, also called the plus-plus or
