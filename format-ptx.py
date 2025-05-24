@@ -12,6 +12,7 @@ INDENT = 2
 WIDTH = 80
 INLINE_TAGS = {"term", "url", "c", "h", "area"}
 PRESERVE_WHITESPACE = {"code", "cline", "tests"}
+ONE_LINE = {"cline"}
 WRAP = {"p", "caption"}
 DEFAULT_NS = {"xml": "http://www.w3.org/XML/1998/namespace"}
 
@@ -72,6 +73,10 @@ def is_just_short_text(elem):
 
 def preserve_whitespace(elem):
     return elem.tag in PRESERVE_WHITESPACE
+
+
+def is_oneline(elem):
+    return elem.tag in ONE_LINE
 
 
 def empty_text(x):
@@ -145,9 +150,13 @@ def render_with_whitespace(elem, ns, level=0):
         s += render_child_with_whitespace(child, ns | elem.nsmap)
         if child.tail and len(child.tail) > 0:
             s += child.tail
-    s = s.rstrip() + "\n"
-    s += f"{indent(level)}{close_tag(elem, ns)}"
-    return s
+
+    s = s.rstrip()
+
+    if not is_oneline(elem):
+        s += f"\n{indent(level)}"
+
+    return s + close_tag(elem, ns)
 
 
 def render_child_with_whitespace(elem, ns, level=0):
