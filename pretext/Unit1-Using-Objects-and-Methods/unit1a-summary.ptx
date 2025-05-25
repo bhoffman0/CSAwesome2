@@ -225,23 +225,23 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>Specifying the type and name for a variable</premise>
+        <match>
+          <premise order="1">Specifying the type and name for a variable</premise>
           <response>declaring a variable</response>
         </match>
 
-        <match order="2">
-          <premise>A whole number</premise>
+        <match>
+          <premise order="2">A whole number</premise>
           <response>integer</response>
         </match>
 
-        <match order="3">
-          <premise>A name associated with a memory location.</premise>
+        <match>
+          <premise order="3">A name associated with a memory location.</premise>
           <response>variable</response>
         </match>
 
-        <match order="4">
-          <premise>An expression that is either true or false</premise>
+        <match>
+          <premise order="4">An expression that is either true or false</premise>
           <response>Boolean</response>
         </match>
       </cardsort>
@@ -260,23 +260,23 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>Setting the value of a variable the first time</premise>
+        <match>
+          <premise order="1">Setting the value of a variable the first time</premise>
           <response>initialize</response>
         </match>
 
-        <match order="2">
-          <premise>An operator that returns the remainder</premise>
+        <match>
+          <premise order="2">An operator that returns the remainder</premise>
           <response>mod</response>
         </match>
 
-        <match order="3">
-          <premise>a type used to represent decimal values</premise>
+        <match>
+          <premise order="3">a type used to represent decimal values</premise>
           <response>double</response>
         </match>
 
-        <match order="4">
-          <premise>changing the type of a variable</premise>
+        <match>
+          <premise order="4">changing the type of a variable</premise>
           <response>casting</response>
         </match>
       </cardsort>
@@ -350,4 +350,3 @@
     </p>
   </subsection>
 </section>
-

@@ -284,26 +284,26 @@ public class RunestoneTests extends CodeTestHelper
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>
+        <match>
+          <premise order="1">
             an object's behaviors or functions that can be used or called to do its job
           </premise>
 
           <response>methods</response>
         </match>
 
-        <match order="2">
-          <premise>the values or data passed to an object's method</premise>
+        <match>
+          <premise order="2">the values or data passed to an object's method</premise>
           <response>arguments</response>
         </match>
 
-        <match order="3">
-          <premise>the variables in a method's definition that hold the arguments</premise>
+        <match>
+          <premise order="3">the variables in a method's definition that hold the arguments</premise>
           <response>parameters</response>
         </match>
 
-        <match order="4">
-          <premise>asking to run the method</premise>
+        <match>
+          <premise order="4">asking to run the method</premise>
           <response>method call</response>
         </match>
       </cardsort>
@@ -1925,4 +1925,3 @@ public void printSlices(int slices)
     </activity>
   </subsection>
 </section>
-

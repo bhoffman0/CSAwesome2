@@ -968,28 +968,28 @@ public class RunestoneTests extends CodeTestHelper
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>named block of code to perform a task</premise>
+        <match>
+          <premise order="1">named block of code to perform a task</premise>
           <response>method</response>
         </match>
 
-        <match order="2">
-          <premise>where execution starts</premise>
+        <match>
+          <premise order="2">where execution starts</premise>
           <response>main method</response>
         </match>
 
-        <match order="3">
-          <premise>method name, return type, and parameter list</premise>
+        <match>
+          <premise order="3">method name, return type, and parameter list</premise>
           <response>method signature</response>
         </match>
 
-        <match order="4">
-          <premise>a variable declared in the header of a method</premise>
+        <match>
+          <premise order="4">a variable declared in the header of a method</premise>
           <response>parameter</response>
         </match>
 
-        <match order="5">
-          <premise>value passed into a method when it is called</premise>
+        <match>
+          <premise order="5">value passed into a method when it is called</premise>
           <response>argument</response>
         </match>
       </cardsort>

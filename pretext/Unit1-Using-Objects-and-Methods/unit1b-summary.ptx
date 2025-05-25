@@ -316,31 +316,31 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>a specific instance of a class with defined attributes</premise>
+        <match>
+          <premise order="1">a specific instance of a class with defined attributes</premise>
           <response>object</response>
         </match>
 
-        <match order="2">
-          <premise>defines a new data type with instance variables and methods</premise>
+        <match>
+          <premise order="2">defines a new data type with instance variables and methods</premise>
           <response>class</response>
         </match>
 
-        <match order="3">
-          <premise>define the behaviors or functions for objects</premise>
+        <match>
+          <premise order="3">define the behaviors or functions for objects</premise>
           <response>methods</response>
         </match>
 
-        <match order="4">
-          <premise>
+        <match>
+          <premise order="4">
             code that is used to create new objects and initialize the object's attributes
           </premise>
 
           <response>constructors</response>
         </match>
 
-        <match order="5">
-          <premise>the values or data passed to an object's method</premise>
+        <match>
+          <premise order="5">the values or data passed to an object's method</premise>
           <response>parameters</response>
         </match>
       </cardsort>
@@ -428,4 +428,3 @@
     </p>
   </subsection>
 </section>
-

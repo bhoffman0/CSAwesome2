@@ -116,34 +116,34 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>A collection of classes written by other programmers</premise>
+        <match>
+          <premise order="1">A collection of classes written by other programmers</premise>
           <response>library</response>
         </match>
 
-        <match order="2">
-          <premise>
+        <match>
+          <premise order="2">
             A collection of related classes organized to be imported into your code
           </premise>
 
           <response>package</response>
         </match>
 
-        <match order="3">
-          <premise>
+        <match>
+          <premise order="3">
             A specification that tells the programmer how to use classes in a library
           </premise>
 
           <response>API</response>
         </match>
 
-        <match order="4">
-          <premise>The building blocks of Java and object-oriented programming</premise>
+        <match>
+          <premise order="4">The building blocks of Java and object-oriented programming</premise>
           <response>class</response>
         </match>
 
-        <match order="5">
-          <premise>A block of code that performs a specific task</premise>
+        <match>
+          <premise order="5">A block of code that performs a specific task</premise>
           <response>method</response>
         </match>
       </cardsort>
