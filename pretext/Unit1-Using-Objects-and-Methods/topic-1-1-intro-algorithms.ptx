@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="topic-1-1-intro-algorithms">
-  <title>Introduction to Algorithms, Programming, and Compilers</title>
+  <title>
+    Introduction to Algorithms, Programming, and Compilers 
+    <image source="_static/45min.svg" />
+  </title>
+
   <introduction>
     <p>
       What do Android phones, Minecraft, and Netflix have in common? They’re all
@@ -1093,7 +1097,6 @@ Roses are red,
 Violets are blue,
 Unexpected '}' on line 32.
         </pre>
-
         <p>
           Which change, if any, can be made so that the code segment produces
           the intended output?
