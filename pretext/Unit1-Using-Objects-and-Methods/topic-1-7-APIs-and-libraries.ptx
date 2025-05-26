@@ -73,9 +73,9 @@
     <activity label="count-println">
       <statement>
         <p>
-          How many <c>println</c> methods are there in the <c>PrintStream</c>
-          class documented at <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"></url>?
+          How many <c>println()</c> methods are documented in the <url
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
+          for the <c>PrintStream</c> class</url>?
         </p>
 
         <p>
