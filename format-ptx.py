@@ -209,7 +209,7 @@ def reformat(filename, inplace):
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=f)
     for e in document_elements(root):
-        print(serialize_element(e), file=f)
+        print(serialize_element(e).rstrip(), file=f)
 
 
 if __name__ == "__main__":
