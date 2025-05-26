@@ -1089,9 +1089,11 @@ System.out.println("Unexpected '}' on line 32. ")  // Line 3;
         </p>
 
         <raw format="html" xml:space="preserve">
-          <pre>Roses are red,
+          <pre>
+Roses are red,
 Violets are blue,
-Unexpected '}' on line 32.</pre>
+Unexpected '}' on line 32.
+          </pre>
         </raw>
 
         <p>

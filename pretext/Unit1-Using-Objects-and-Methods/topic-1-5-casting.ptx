@@ -420,7 +420,7 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>Did you try this out in Active Code?  Does it work that way?</p>
+            <p>Did you try this out in Active Code? Does it work that way?</p>
           </feedback>
         </choice>
 
@@ -451,7 +451,7 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>Try casting to int instead of double.  What does that do?</p>
+            <p>Try casting to int instead of double. What does that do?</p>
           </feedback>
         </choice>
 
@@ -1005,7 +1005,7 @@ public class RunestoneTests extends CodeTestHelper
 
         <choice correct="yes">
           <statement>
-            <p>(double) total /  3;</p>
+            <p>(double) total / 3;</p>
           </statement>
 
           <feedback>
