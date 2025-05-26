@@ -221,11 +221,18 @@ if __name__ == "__main__":
         description="Reformat PreText XML to be semi-human-digestible.",
     )
 
-    parser.add_argument("filename", help="File to reformat")
     parser.add_argument(
-        "-i", "--inplace", action="store_true", help="Reformat in place"
+        "-i", "--inplace", action="store_true", help="Reformat in place")
+    parser.add_argument(
+        "-q", "--quiet", action="store_true", help="Don't emit output about files."
     )
+    parser.add_argument("files", nargs="*", help="Files to reformat")
 
     args = parser.parse_args()
 
-    reformat(args.filename, args.inplace)
+    for f in args.files:
+        if not args.quiet:
+            print(f"{f} ... ", file=stderr, end="")
+        reformat(f, args.inplace)
+        if not args.quiet:
+            print("ok.", file=stderr)
