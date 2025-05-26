@@ -11,7 +11,7 @@ from lxml import etree
 INDENT = 2
 WIDTH = 80
 INLINE_TAGS = {"term", "url", "c", "h", "area"}
-PRESERVE_WHITESPACE = {"code", "cline", "tests"}
+PRESERVE_WHITESPACE = {"code", "cline", "tests", "pre"}
 ONE_LINE = {"cline"}
 WRAP = {"p", "caption"}
 DEFAULT_NS = {"xml": "http://www.w3.org/XML/1998/namespace"}
