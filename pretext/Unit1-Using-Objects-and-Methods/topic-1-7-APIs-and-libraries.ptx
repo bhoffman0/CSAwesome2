@@ -39,9 +39,9 @@
       used to avoid name conflicts. Because classes that are used together are
       usually collected into the same packages, the terms library, API, and
       package are often used interchangeably in Java. But to be precise, a
-      library is the collection of classes written by other programmers that you
-      can use and an API describes how you use the library. And a package is how
-      Java organizes classes.
+      library is a collection of classes written by other programmers that you
+      can use, the library's API describes how you use it, and the classes in
+      the library are probably organized into one or more Java packages.
     </p>
 
     <p>
@@ -69,20 +69,18 @@
 
     <p>
       Take a look at the <url
-      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">documentation
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">Javadocs
       for the <c>java.lang</c> package</url>. Can you find the documentation for
-      the <c>System</c> class?
-    </p>
-
-    <p>
-      Once you've found the Javadocs for <c>System</c>, you can find the
-      documentation for the <c>static</c> field <c>out</c> and see that it is an
-      instance of the class <c>PrintStream</c>. From there you can navigate to
-      the <url
+      the <c>System</c> class? Once you've found the Javadocs for <c>System</c>,
+      see if you can find the documentation for the <c>static</c> field
+      <c>out</c>. That should tell you that it is an instance of the class
+      <c>PrintStream</c>. From there you can click on <c>PrintStream</c> to
+      navigate to the <url
       href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
-      Javadocs</url> to find documentation for the <c>println()</c> method that
-      we use to print to the screen. In fact you can see that there area bunch
-      of versions of <c>println</c>, one for each type that it can print!
+      Javadocs</url> to find documentation for the various versions of the
+      <c>println()</c> method that we use to print to the screen. In fact you
+      can see that there are a bunch of versions of <c>println</c> for printing
+      different kinds of values.
     </p>
 
     <activity label="count-println">
@@ -270,12 +268,12 @@
       documentation) refer to the data related to the class and are stored in
       variables. <term>Behaviors</term> refer to what objects of the class can
       do (or what can be done with it) and are defined by methods. The
-      <c>Turtle</c> class has attributes like <c>name</c>, <c>height</c>, and
-      <c>width</c> that store data about the turtle, and it has
-      behaviors/methods like <c>forward()</c> and <c>turnLeft()</c> that allow
-      the turtle to move and turn. We will learn more about classes, objects,
-      attributes, and methods in the next lessons, but this lesson introduces
-      them to explore APIs.
+      <c>Turtle</c> class has attributes like <c>width</c> and <c>height</c>
+      that store information that is used by the Turtle class to draw the turtle
+      on the screen, and it has behaviors/methods like <c>forward()</c> and
+      <c>turnLeft()</c> that allow us to control the turtle from our code. We
+      will learn more about classes, objects, fields, and methods in the next
+      lessons, but this lesson introduces them to explore APIs.
     </p>
 
     <p>
@@ -284,26 +282,16 @@
       after them, for example <c>forward()</c> or <c>println()</c>. Sometimes
       these are empty, but still necessary, and sometimes they contain data that
       the method needs to do its job, for example what to print. Attributes are
-      variables and will not have parentheses after them. Here’s the API
-      documentation that lists all of the Turtle methods (but not the
-      attributes): <url
-      href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html"
-      visual="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html</url>.
+      variables and will not have parentheses after them. Here are <url
+      href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">the
+      Javadocs for that lists all of the Turtle methods</url> (but not the
+      attributes).
     </p>
 
     <p>
-      Try the Java program below that creates a Turtle object called
-      <c>yertle</c> using the Turtle class. The following code is used to tell
-      the turtle to move forward and then turn right. The <term>dot
-      operator</term> (.) is used to run an object’s methods, just like in the
-      <c>System.out.println()</c> method. (If the code below does not work or is
-      too slow in your browser, you can also see the <c>Turtle</c> code in
-      action at this <url
-      href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit
-      link</url> (refresh page after forking and if it gets stuck) or download
-      the files <url
-      href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
-      to use in your own IDE.)
+      Try the Java program below that creates a <c>Turtle</c> object and stores
+      a reference to in it the variable <c>yertle</c>. The following code is
+      used to tell the turtle to move forward and then turn right. 
     </p>
 
     <program language="java">
@@ -313,6 +301,18 @@ yertle.turnRight();
       </code>
     </program>
 
+    <p>
+      The <term>dot operator</term> (<c>.</c>) is used to run an object’s
+      methods, just like in the <c>System.out.println()</c> method. (If the code
+      below does not work or is too slow in your browser, you can also see the
+      <c>Turtle</c> code in action at this <url
+      href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit
+      link</url> (refresh page after forking and if it gets stuck) or download
+      the files <url
+      href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
+      to use in your own IDE.)
+    </p>
+    
     <activity label="TurtleAPI">
       <statement>
         <p>
@@ -430,7 +430,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="turtle_type">
       <statement>
-        <p>What type of thing is Turtle in the program above?</p>
+        <p>What type of thing does <c>Turtle</c> name in the program above?</p>
       </statement>
 
       <choices>
@@ -441,8 +441,8 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              Yes, Turtle is a class that defines the data and behaviors for all
-              turtles.
+              Yes, <c>Turtle</c> is a class that defines the data and behaviors
+              for all turtles.
             </p>
           </feedback>
         </choice>
@@ -453,7 +453,9 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>yertle is an object of type Turtle.</p>
+            <p>There is an object here: the variable <c>yertle</c> holds a
+            reference to an object of type <c>Turtle</c>. But <c>Turtle</c> is
+            not the name for a specific object.</p>
           </feedback>
         </choice>
 
@@ -463,7 +465,9 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An attribute is something the object knows about itself.</p>
+            <p>An attribute is something the object knows about itself.
+            Typically we do not even know the names of attributes in classes
+            that we did not write ourselves.</p>
           </feedback>
         </choice>
 
@@ -473,7 +477,8 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>A method is something an object can do like go forward.</p>
+            <p>A method is something an object can do. The names <c>forward</c>
+            and <c>turnRight</c> name methods in the code above.</p>
           </feedback>
         </choice>
       </choices>
@@ -481,7 +486,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="type_turn_right">
       <statement>
-        <p>What type of thing is turnRight in the program above?</p>
+        <p>What type of thing does <c>turnRight</c> name in the program above?</p>
       </statement>
 
       <choices>
@@ -525,8 +530,9 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              A behavior or method is something an object can do like turn
-              right.
+              Yes. A method desribes some behavior an object can do like turning
+              right. Code outside the class can cause that behavior to happen by
+              calling the method.
             </p>
           </feedback>
         </choice>
@@ -535,7 +541,10 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="type_position">
       <statement>
-        <p>What type of thing is the position of a turtle in a world?</p>
+        <p>
+          Every turtle has a position. What kind of program element stores
+          information like a turtle's position?
+        </p>
       </statement>
 
       <choices>
@@ -569,7 +578,7 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              An attribute is something the object knows about itself like its
+              An attribute holds information about an object such as its
               position.
             </p>
           </feedback>
@@ -605,7 +614,7 @@ public class RunestoneTests extends CodeTestHelper
 
         <choice correct="yes">
           <statement>
-            <p>Data related to the class stored in variables</p>
+            <p>Data related to instances of the class stored in variables</p>
           </statement>
 
           <feedback>
@@ -655,25 +664,20 @@ public class RunestoneTests extends CodeTestHelper
       </statement>
 
       <blocks>
-        <block order="12">
-          <cline>import java.util.*;</cline>
-          <cline>import java.awt.*;</cline>
-        </block>
-
-        <block order="2">
+        <block>
           <cline>public class TurtleTest {</cline>
         </block>
 
-        <block order="9">
+        <block>
           <cline>    public static void main(String[] args) {</cline>
         </block>
 
-        <block order="6">
+        <block>
           <cline>        World habitat = new World(300,300);</cline>
           <cline>        Turtle yertle = new Turtle(habitat);</cline>
         </block>
 
-        <block order="4">
+        <block>
           <choice correct="yes">
             <cline>        yertle.turnRight();</cline>
           </choice>
@@ -683,7 +687,7 @@ public class RunestoneTests extends CodeTestHelper
           </choice>
         </block>
 
-        <block order="7">
+        <block>
           <choice correct="yes">
             <cline>        yertle.forward();</cline>
           </choice>
@@ -693,19 +697,19 @@ public class RunestoneTests extends CodeTestHelper
           </choice>
         </block>
 
-        <block order="5">
+        <block>
           <cline>        yertle.turnLeft();</cline>
         </block>
 
-        <block order="10">
+        <block>
           <cline>        yertle.forward(50);</cline>
         </block>
 
-        <block order="3">
+        <block>
           <cline>        habitat.show(true);</cline>
         </block>
 
-        <block order="11">
+        <block>
           <cline>    } // end main</cline>
           <cline>} // end class</cline>
         </block>
@@ -720,9 +724,9 @@ public class RunestoneTests extends CodeTestHelper
       a zigzag shape or a block letter by calling the forward method and a turn
       method multiple times. We encourage you to work in pairs for this
       challenge. In the next lessons, we will draw more complicated shapes. Here
-      are some simple turtle methods that you could use or check the API at <url
-      href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html"
-      visual="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html</url>:
+      are some simple turtle methods that you could use or look at <url
+      href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">the
+      Turtle Javadocs</url> for the complete list.
     </p>
 
     <p>
@@ -927,7 +931,7 @@ public class RunestoneTests extends CodeTestHelper
         <li>
           <p>
             (AP 1.7.A.2) <term>Behaviors</term> refer to what instances of the
-            class can do (or what can be done with it) and are defined by
+            class can do (or what can be done with them) and are defined by
             methods.
           </p>
         </li>
