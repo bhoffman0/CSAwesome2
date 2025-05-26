@@ -112,7 +112,7 @@ def render_block(elem, ns, level=0):
     if is_empty(elem):
         return f"\n{indent(level)}{open_tag(elem, ns, empty=True)}"
     elif is_just_short_text(elem):
-        return f"{tag}{escape((elem.text or '').strip())}{close_tag(elem, ns)}"
+        return f"{tag}{escape(clean_text(elem.text or ''))}{close_tag(elem, ns)}"
     else:
         content = ""
 
@@ -125,16 +125,19 @@ def render_block(elem, ns, level=0):
                 content += escape(child.tail)
 
         if wrappable(elem):
-            content = re.sub(r"\s+", " ", content)
-            filled = fill_with_indent(content.strip(), indent(level + 1))
+            filled = fill_with_indent(content, indent(level + 1))
             return f"{tag}\n{filled}\n{indent(level)}{close_tag(elem, ns)}\n"
         else:
             return f"{tag}\n{indent(level + 1)}{content.strip()}\n{indent(level)}{close_tag(elem, ns)}\n"
 
 
+def clean_text(s):
+    return re.sub(r"\s+", " ", s.strip())
+
+
 def fill_with_indent(text, i):
     return fill(
-        text.strip(),
+        clean_text(text),
         width=WIDTH,
         initial_indent=i,
         subsequent_indent=i,
