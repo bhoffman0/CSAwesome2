@@ -139,6 +139,7 @@ def fill_with_indent(text, i):
         initial_indent=i,
         subsequent_indent=i,
         break_long_words=False,
+        break_on_hyphens=False,
     )
 
 
