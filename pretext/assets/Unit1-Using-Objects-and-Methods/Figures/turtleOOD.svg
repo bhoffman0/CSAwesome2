@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="420" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Turtle face -->
+  <ellipse cx="200" cy="110" rx="30" ry="40" fill="green"/>
+
+  <!-- Eyes -->
+  <circle cx="190" cy="95" r="5" fill="black"/>
+  <circle cx="210" cy="95" r="5" fill="black"/>
+
+  <!-- Turtle body parts -->
+  <ellipse cx="140" cy="150" rx="15" ry="30" fill="green"/>
+  <ellipse cx="260" cy="150" rx="15" ry="30" fill="green"/>
+  <ellipse cx="140" cy="260" rx="15" ry="30" fill="green"/>
+  <ellipse cx="260" cy="260" rx="15" ry="30" fill="green"/>
+  <path d="M195,270 Q185,300 225,315 Q195,275 225,270" fill="green"/>
+
+  <!-- Turtle shell -->
+  <g stroke="#9b9" fill="#ccff33" stroke-width="1">
+    <ellipse cx="200" cy="200" rx="70" ry="80" stroke-width="2"/>
+    <ellipse cx="200" cy="200" rx="65" ry="75" />
+
+    <!-- Markings -->
+    <polygon
+        points="
+         200,160
+         234.64,180
+         234.64,220
+         200,240
+         165.36,220
+         165.36,180
+         " fill="none" stroke-width="1"/>
+    <!-- Radial lines from vertices to ellipse boundary -->
+    <path d="M200,160 L200,125" />       <!-- θ = 270° -->
+    <path d="M234.64,180 L256.27,165" /> <!-- θ = 330° -->
+    <path d="M234.64,220 L256.27,235" /> <!-- θ = 30° -->
+    <path d="M200,240 L200,275" />       <!-- θ = 90° -->
+    <path d="M165.36,220 L143.73,235" /> <!-- θ = 150° -->
+    <path d="M165.36,180 L143.73,165" /> <!-- θ = 210° -->
+  </g>
+
+  <!-- Labels -->
+  <g font-family="monospace">
+    <!-- Fields -->
+    <text x="200" y="175" font-size="18" text-anchor="middle" fill="black">width</text>
+    <text x="200" y="205" font-size="18" text-anchor="middle" fill="black">height</text>
+    <text x="200" y="235" font-size="18" text-anchor="middle" fill="black">color</text>
+
+    <!-- Methods -->
+    <text x="200" y="50" font-size="18" text-anchor="middle" fill="black">forward()</text>
+    <text x="60" y="210" font-size="18" text-anchor="middle" fill="black">turnLeft()</text>
+    <text x="350" y="210" font-size="18" text-anchor="middle" fill="black">turnRight()</text>
+    <text x="200" y="350" font-size="18" text-anchor="middle" fill="black">backward()</text>
+  </g>
+</svg>

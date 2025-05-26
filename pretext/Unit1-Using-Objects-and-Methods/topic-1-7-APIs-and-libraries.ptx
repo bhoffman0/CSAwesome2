@@ -22,7 +22,7 @@
       a specific task. APIs are connected to <term>libraries</term> which are
       collections of classes written by other programmers that provide a set of
       methods that can be used to perform specific tasks. An API specification
-      tells the programmer how to use those classes with methods in a library.
+      tells the programmer how to use those classes and methods.
     </p>
 
     <p>
@@ -32,54 +32,65 @@
     </p>
 
     <p>
-      Classes in the APIs and libraries are grouped into packages. A
-      <term>package</term> is a collection of related classes and interfaces
-      (which are similar to classes) that can be <term>imported</term> into a
-      program to be used. A package is like a folder of classes in a library’s
-      file directory and is used to avoid name conflicts. Later on, we will
-      learn to <c>import</c> other Java packages to use in our code, but there
-      is a package that is already built into Java called <c>java.lang</c> that
-      we are already using.
+      In Java classes are grouped into packages. A <term>package</term> is a
+      collection of related classes and interfaces (which are similar to
+      classes) that can be <term>imported</term> into a program to be used. A
+      package is like a folder of classes in a library’s file directory and is
+      used to avoid name conflicts. Because classes that are used together are
+      usually collected into the same packages, the terms library, API, and
+      package are often used interchangeably in Java. But to be precise, a
+      library is the collection of classes written by other programmers that you
+      can use and an API describes how you use the library. And a package is how
+      Java organizes classes.
     </p>
 
     <p>
-      The terms library, API, and package are often used interchangeably to mean
-      similar things. A library is a collection of classes or code written by
-      other programmers that you can use. An API describes how you use the
-      library. And a package is how Java organizes a library to be used.
+      Later on, we will learn to <c>import</c> other Java packages to use in our
+      code, but first let's talk about a package that is always available in any
+      Java program: <c>java.lang</c>.
+    </p>
+
+    <p>
+
     </p>
   </introduction>
 
   <subsection xml:id="java-lang-package">
     <title>java.lang Package</title>
     <p>
-      The <c>java.lang</c> package contains built-in classes and interfaces that
-      are fundamental to the Java programming language, such as the
-      <c>String</c> class and the <c>System</c> class which we use in
-      <c>System.out.println</c>. Take a look at the <url
+      The <c>java.lang</c> package contains classes and interfaces that are
+      fundamental to the Java programming language, such as the <c>String</c>
+      class and the <c>System</c> class which we use in
+      <c>System.out.println</c>. Like all packages that are part of Java,
+      <c>java.lang</c> is documented in <term>Javadocs</term>, online
+      documentation of all the classes and inerfaces in a package. Learning to
+      navigate Javadocs is a key part of being a Java programmer.
+    </p>
+
+    <p>
+      Take a look at the <url
       href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">documentation
       for the <c>java.lang</c> package</url>. Can you find the documentation for
       the <c>System</c> class?
     </p>
 
     <p>
-      <term>Documentation</term> found in API specifications and libraries is
-      essential to understanding the attributes and behaviors of a class defined
-      by the API. The <c>System</c> class has an object called <c>out</c> that
-      is type <c>PrintStream</c>, and the <c>PrintStream</c> class has a method
-      called <c>println()</c> that we use to print to the screen. How many
-      <c>println()</c> methods are there in <url
-      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
-      for the <c>PrintStream</c> class</url>? One for each type that it can
-      print!
+      Once you've found the Javadocs for <c>System</c>, you can find the
+      documentation for the <c>static</c> field <c>out</c> and see that it is an
+      instance of the class <c>PrintStream</c>. From there you can navigate to
+      the <url
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
+      Javadocs</url> to find documentation for the <c>println()</c> method that
+      we use to print to the screen. In fact you can see that there area bunch
+      of versions of <c>println</c>, one for each type that it can print!
     </p>
 
     <activity label="count-println">
       <statement>
         <p>
           How many <c>println()</c> methods are documented in the <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
-          for the <c>PrintStream</c> class</url>?
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">
+          <c>PrintStream</c> Javadocs</url>?
         </p>
 
         <p>
@@ -217,32 +228,41 @@
   <subsection xml:id="turtle-library">
     <title>Turtle Library</title>
     <p>
+      <term>Classes</term> are one of the main building blocks in Java and other
+      object-oriented languages. We’ll discuss writing your own classes in Unit
+      3 but for now we just need to know enough to use classes that other people
+      have written.
+    </p>
+
+    <p>
+      A class defines a new reference type containing specific
+      <term>attributes</term> and <term>behaviors</term>, which are usually
+      called <term>fields</term> and <term>methods</term> in Java. All instances
+      of a given class have the same fields and methods though each instance
+      will have its own values for each field.
+    </p>
+
+    <p>
       The <c>Turtle</c> Java library, written by one of the author’s of this
-      book, Dr. Barbara Ericson, allows you to create drawings using an animated
-      turtle that moves around the screen. The turtle can move forward, turn,
-      and draw lines. The turtle library is a collection of classes that can be
-      imported into your code and is built in to this e-book.
+      book, Dr. Barbara Ericson, is a set of classes that allow you to create
+      drawings using an animated turtle that moves around the screen. The turtle
+      can move forward, turn, and draw lines. The classes from the turtle
+      library can be imported into your code and is built in to this e-book.
     </p>
 
     <p>
-      <term>Classes</term> are the building blocks of Java and object-oriented
-      programming. A class defines a specific reference type. Programmers often
-      create new classes like <c>Turtle</c> so that it can be used as a new data
-      type. Classes like <c>Turtle</c> and class libraries can be utilized to
-      create objects like a particular turtle named <c>yertle</c>. A class
-      defines the data and behavior for all objects of that type.
-    </p>
-
-    <p>
-      The following picture of a turtle shows some of the Turtle
-      <term>attributes</term> like name, width, height, color in the body of the
-      turtle and its <term>methods</term> like forward(), backward(), written
-      around the turtle.
+      The Turtle library is named after its main class, <c>Turtle</c>, which
+      represents a turtle that can move around the screen, drawing lines. The
+      following picture of a turtle shows some of the attributes every
+      <c>Turtle</c> object has, such as the <c>width</c>, <c>height</c>, and
+      <c>color</c> of the turtle’s body as well as <term>methods</term> like
+      <c>forward()</c>, <c>backward()</c>, shown in the picture written around
+      the turtle.
     </p>
 
     <figure align="center">
       <caption>Turtle Attributes and Behaviors</caption>
-      <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="71%" alt="Turtle attributes and behaviors" />
+      <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.svg" width="71%" alt="Turtle attributes and behaviors" />
     </figure>
 
     <p>
