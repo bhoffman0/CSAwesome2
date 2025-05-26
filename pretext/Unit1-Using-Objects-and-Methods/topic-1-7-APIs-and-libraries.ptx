@@ -49,10 +49,6 @@
       code, but first let's talk about a package that is always available in any
       Java program: <c>java.lang</c>.
     </p>
-
-    <p>
-
-    </p>
   </introduction>
 
   <subsection xml:id="java-lang-package">
@@ -87,8 +83,8 @@
       <statement>
         <p>
           How many <c>println()</c> methods are documented in the <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">
-          <c>PrintStream</c> Javadocs</url>?
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
+          Javadocs</url>?
         </p>
 
         <p>
@@ -291,7 +287,7 @@
     <p>
       Try the Java program below that creates a <c>Turtle</c> object and stores
       a reference to in it the variable <c>yertle</c>. The following code is
-      used to tell the turtle to move forward and then turn right. 
+      used to tell the turtle to move forward and then turn right.
     </p>
 
     <program language="java">
@@ -312,7 +308,7 @@ yertle.turnRight();
       href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
       to use in your own IDE.)
     </p>
-    
+
     <activity label="TurtleAPI">
       <statement>
         <p>
@@ -430,7 +426,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="turtle_type">
       <statement>
-        <p>What type of thing does <c>Turtle</c> name in the program above?</p>
+        <p>
+          What type of thing does <c>Turtle</c> name in the program above?
+        </p>
       </statement>
 
       <choices>
@@ -453,9 +451,11 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>There is an object here: the variable <c>yertle</c> holds a
-            reference to an object of type <c>Turtle</c>. But <c>Turtle</c> is
-            not the name for a specific object.</p>
+            <p>
+              There is an object here: the variable <c>yertle</c> holds a
+              reference to an object of type <c>Turtle</c>. But <c>Turtle</c> is
+              not the name for a specific object.
+            </p>
           </feedback>
         </choice>
 
@@ -465,9 +465,11 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An attribute is something the object knows about itself.
-            Typically we do not even know the names of attributes in classes
-            that we did not write ourselves.</p>
+            <p>
+              An attribute is something the object knows about itself. Typically
+              we do not even know the names of attributes in classes that we did
+              not write ourselves.
+            </p>
           </feedback>
         </choice>
 
@@ -477,8 +479,10 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>A method is something an object can do. The names <c>forward</c>
-            and <c>turnRight</c> name methods in the code above.</p>
+            <p>
+              A method is something an object can do. The names <c>forward</c>
+              and <c>turnRight</c> name methods in the code above.
+            </p>
           </feedback>
         </choice>
       </choices>
@@ -486,7 +490,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="type_turn_right">
       <statement>
-        <p>What type of thing does <c>turnRight</c> name in the program above?</p>
+        <p>
+          What type of thing does <c>turnRight</c> name in the program above?
+        </p>
       </statement>
 
       <choices>
