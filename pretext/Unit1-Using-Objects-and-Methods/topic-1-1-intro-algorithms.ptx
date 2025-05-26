@@ -1077,8 +1077,8 @@ public class MyClass
         <p>Consider the following code segment.</p>
         <program language="java">
           <code>
-System.out.println("Roses are red, ")      // Line 1;
-System.out.println("Violets are blue, ")  // Line 2;
+System.out.println("Roses are red, ")              // Line 1;
+System.out.println("Violets are blue, ")           // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
           </code>
         </program>
@@ -1088,13 +1088,11 @@ System.out.println("Unexpected '}' on line 32. ")  // Line 3;
           not work as intended.
         </p>
 
-        <raw format="html" xml:space="preserve">
-          <pre>
+        <pre>
 Roses are red,
 Violets are blue,
 Unexpected '}' on line 32.
-          </pre>
-        </raw>
+        </pre>
 
         <p>
           Which change, if any, can be made so that the code segment produces
