@@ -11,7 +11,7 @@ from lxml import etree
 INDENT = 2
 WIDTH = 80
 INLINE_TAGS = {"term", "url", "c", "h", "area"}
-PRESERVE_WHITESPACE = {"code", "cline", "tests"}
+PRESERVE_WHITESPACE = {"code", "cline", "tests", "pre"}
 ONE_LINE = {"cline"}
 WRAP = {"p", "caption"}
 DEFAULT_NS = {"xml": "http://www.w3.org/XML/1998/namespace"}
@@ -112,7 +112,7 @@ def render_block(elem, ns, level=0):
     if is_empty(elem):
         return f"\n{indent(level)}{open_tag(elem, ns, empty=True)}"
     elif is_just_short_text(elem):
-        return f"{tag}{escape((elem.text or '').strip())}{close_tag(elem, ns)}"
+        return f"{tag}{escape(clean_text(elem.text or ''))}{close_tag(elem, ns)}"
     else:
         content = ""
 
@@ -125,20 +125,24 @@ def render_block(elem, ns, level=0):
                 content += escape(child.tail)
 
         if wrappable(elem):
-            content = re.sub(r"\s+", " ", content)
-            filled = fill_with_indent(content.strip(), indent(level + 1))
+            filled = fill_with_indent(content, indent(level + 1))
             return f"{tag}\n{filled}\n{indent(level)}{close_tag(elem, ns)}\n"
         else:
             return f"{tag}\n{indent(level + 1)}{content.strip()}\n{indent(level)}{close_tag(elem, ns)}\n"
 
 
+def clean_text(s):
+    return re.sub(r"\s+", " ", s.strip())
+
+
 def fill_with_indent(text, i):
     return fill(
-        text.strip(),
+        clean_text(text),
         width=WIDTH,
         initial_indent=i,
         subsequent_indent=i,
         break_long_words=False,
+        break_on_hyphens=False,
     )
 
 
@@ -208,7 +212,7 @@ def reformat(filename, inplace):
 
     print('<?xml version="1.0" encoding="UTF-8"?>', file=f)
     for e in document_elements(root):
-        print(serialize_element(e), file=f)
+        print(serialize_element(e).rstrip(), file=f)
 
 
 if __name__ == "__main__":
@@ -217,11 +221,18 @@ if __name__ == "__main__":
         description="Reformat PreText XML to be semi-human-digestible.",
     )
 
-    parser.add_argument("filename", help="File to reformat")
     parser.add_argument(
-        "-i", "--inplace", action="store_true", help="Reformat in place"
+        "-i", "--inplace", action="store_true", help="Reformat in place")
+    parser.add_argument(
+        "-q", "--quiet", action="store_true", help="Don't emit output about files."
     )
+    parser.add_argument("files", nargs="*", help="Files to reformat")
 
     args = parser.parse_args()
 
-    reformat(args.filename, args.inplace)
+    for f in args.files:
+        if not args.quiet:
+            print(f"{f} ... ", file=stderr, end="")
+        reformat(f, args.inplace)
+        if not args.quiet:
+            print("ok.", file=stderr)

@@ -268,10 +268,8 @@ public class RunestoneTests extends CodeTestHelper
       the Hubble Space Telescope was launched to space in 1990, a math coding
       error in a formula caused it to point in the wrong direction! It missed
       its target stars by about half a degree which is about the width of the
-      moon seen from Earth (<url href="https://scholar.lib.vt.edu/VA-news/ROA-
-      Times/issues/1990/rt9005/900510/05100615.htm"
-      visual="https://scholar.lib.vt.edu/VA-news/ROA-
-      Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-
+      moon seen from Earth (<url
+      href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-
       news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough
       testing is the only way to make sure there are no logic errors that will
       cause runtime errors in your code. Try the following example that tries to
@@ -829,7 +827,8 @@ System.out.print("and cool!");
         <choice>
           <statement id="AP1-3-1_opt_a">
             <p>
-              <pre>Java is fun and cool!</pre>
+              <pre>Java is fun and cool!
+              </pre>
             </p>
           </statement>
 
@@ -842,7 +841,8 @@ System.out.print("and cool!");
           <statement id="AP1-3-1_opt_b">
             <p>
               <pre>Java isfun
-and cool!</pre>
+and cool!
+              </pre>
             </p>
           </statement>
 
@@ -856,7 +856,8 @@ and cool!</pre>
             <p>
               <pre>Java is
 fun
-and cool!</pre>
+and cool!
+              </pre>
             </p>
           </statement>
 
@@ -869,7 +870,8 @@ and cool!</pre>
           <statement id="AP1-3-1_opt_d">
             <p>
               <pre>Java is fun
-and cool!</pre>
+and cool!
+              </pre>
             </p>
           </statement>
 
@@ -963,4 +965,3 @@ System.out.println(5 + 5 / 2 * 3 - 1);
     </activity>
   </subsection>
 </section>
-

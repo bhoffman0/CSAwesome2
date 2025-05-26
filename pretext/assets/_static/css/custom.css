@@ -66,6 +66,11 @@ section > .para + .para {
   font-weight: 600;
 }
 
+/* I'm not sure why the .code-block:before rule exists in PtX but it just adds extra gorp. */
+.ptx-content .code-block:before {
+  content: none;
+}
+
 /* Code listings with <pre> in text washed out in Chrome */
 .ptx-content pre.program
 {
@@ -84,7 +89,9 @@ section > .para + .para {
 }
 
 /* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
-details.ptx-footnote {
+.ptx-content details.ptx-footnote,
+.ptx-content .ptx-runestone-container details.ptx-footnote
+{
   display: none;
 }
 

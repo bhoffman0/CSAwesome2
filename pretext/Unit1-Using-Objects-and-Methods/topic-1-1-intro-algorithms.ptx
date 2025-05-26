@@ -601,7 +601,7 @@ FirstClass.java:5: error: unclosed string literal
       code from your program. But below that is a very important line containing
       a single caret (<c>^</c>) positioned to point at exactly where in the line
       the Java compiler thinks the problem is. In this case it’s pointing at the
-      quotation mark (<c>”</c>) before “Hi”. So it’s complaining about something
+      quotation mark (<c>"</c>) before “Hi”. So it’s complaining about something
       being unclosed and it’s pointing us at a quotation mark. Usually quotation
       marks come in pairs called the open quote and the close quote, right? And
       if you look at the line of code you’ll see that there’s no closing
@@ -1077,8 +1077,8 @@ public class MyClass
         <p>Consider the following code segment.</p>
         <program language="java">
           <code>
-System.out.println("Roses are red, ")      // Line 1;
-System.out.println("Violets are blue, ")  // Line 2;
+System.out.println("Roses are red, ")              // Line 1;
+System.out.println("Violets are blue, ")           // Line 2;
 System.out.println("Unexpected '}' on line 32. ")  // Line 3;
           </code>
         </program>
@@ -1088,11 +1088,11 @@ System.out.println("Unexpected '}' on line 32. ")  // Line 3;
           not work as intended.
         </p>
 
-        <raw format="html" xml:space="preserve">
-          <pre>Roses are red,
+        <pre>
+Roses are red,
 Violets are blue,
-Unexpected '}' on line 32.</pre>
-        </raw>
+Unexpected '}' on line 32.
+        </pre>
 
         <p>
           Which change, if any, can be made so that the code segment produces
@@ -3836,4 +3836,3 @@ Unexpected '}' on line 32.</pre>
     </datafile>
   </subsection>
 </section>
-

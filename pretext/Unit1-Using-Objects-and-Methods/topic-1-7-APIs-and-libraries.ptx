@@ -73,10 +73,9 @@
     <activity label="count-println">
       <statement>
         <p>
-          How many <c>println</c> methods are there in the <c>PrintStream</c>
-          class documented at <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"
-          />?
+          How many <c>println()</c> methods are documented in the <url
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
+          for the <c>PrintStream</c> class</url>?
         </p>
 
         <p>
@@ -89,7 +88,11 @@
           <test>
             <strcmp use-answer="yes" />
             <feedback>
-              <p>Correct.  One for each type.</p>
+              <p>
+                Correct. One for each for nine different argument types plus one
+                that takes no arguments and just prints an end-of-line
+                character.
+              </p>
             </feedback>
           </test>
 
@@ -271,15 +274,12 @@
       operator</term> (.) is used to run an object’s methods, just like in the
       <c>System.out.println()</c> method. (If the code below does not work or is
       too slow in your browser, you can also see the <c>Turtle</c> code in
-      action at this <url href="https://replit.com/@BerylHoffman/Java-Swing-
-      Turtle#Main.java" visual="https://replit.com/@BerylHoffman/Java-Swing-
-      Turtle#Main.java">replit link</url> (refresh page after forking and if it
-      gets stuck) or download the files <url
-      href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-
-      Objects-and-Methods/TurtleJavaSwingCode.zip"
-      visual="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-
-      Objects-and-Methods/TurtleJavaSwingCode.zip">here</url> to use in your own
-      IDE.)
+      action at this <url
+      href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit
+      link</url> (refresh page after forking and if it gets stuck) or download
+      the files <url
+      href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
+      to use in your own IDE.)
     </p>
 
     <program language="java">

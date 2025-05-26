@@ -292,7 +292,7 @@ b = (int) a;
         </statement>
 
         <feedback>
-          <p>This would be true if it was b = a.  What does the (int) do?</p>
+          <p>This would be true if it was b = a. What does the (int) do?</p>
         </feedback>
       </choice>
 
@@ -530,4 +530,3 @@ x++;
     </choices>
   </activity>
 </section>
-

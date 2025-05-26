@@ -137,11 +137,11 @@ public class MyClass()
     <p>
       <ul>
         <li>
-          <p>@author  Author of the program</p>
+          <p>@author Author of the program</p>
         </li>
 
         <li>
-          <p>@since   Date released</p>
+          <p>@since Date released</p>
         </li>
 
         <li>
@@ -149,11 +149,11 @@ public class MyClass()
         </li>
 
         <li>
-          <p>@param   Parameter of a method</p>
+          <p>@param Parameter of a method</p>
         </li>
 
         <li>
-          <p>@return  Return value for a method</p>
+          <p>@return Return value for a method</p>
         </li>
       </ul>
     </p>
@@ -542,10 +542,10 @@ public class RunestoneTests extends CodeTestHelper
     <video youtube="TRcReyRYIMg" label="video-agile" />
     <p>Group Exercise</p>
     <p>
-      Try the <url href="https://www.agilesparks.com/blog/wake-up-in-the-
-      morning-game/" visual="https://www.agilesparks.com/blog/wake-up-in-the-
-      morning-game/">Wake Up In the Morning Game</url> in groups to practice the
-      iterative and incremental agile development process.
+      Try the <url
+      href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/">Wake
+      Up In the Morning Game</url> in groups to practice the iterative and
+      incremental agile development process.
     </p>
   </subsection>
 
