@@ -118,6 +118,7 @@ def render_block(elem, ns, level=0):
 
         if elem.text and elem.text.strip():
             content += escape(elem.text.lstrip())
+            content = re.sub(r"\s+$", " ", content)
 
         for child in elem:
             content += serialize_element(child, ns | elem.nsmap, level + 1)
@@ -230,9 +231,11 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
+    progress = args.inplace and not args.quiet
+
     for f in args.files:
-        if not args.quiet:
+        if progress:
             print(f"{f} ... ", file=stderr, end="")
         reformat(f, args.inplace)
-        if not args.quiet:
+        if progress:
             print("ok.", file=stderr)
