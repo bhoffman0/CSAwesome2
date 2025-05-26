@@ -601,7 +601,7 @@ FirstClass.java:5: error: unclosed string literal
       code from your program. But below that is a very important line containing
       a single caret (<c>^</c>) positioned to point at exactly where in the line
       the Java compiler thinks the problem is. In this case it’s pointing at the
-      quotation mark (<c>”</c>) before “Hi”. So it’s complaining about something
+      quotation mark (<c>"</c>) before “Hi”. So it’s complaining about something
       being unclosed and it’s pointing us at a quotation mark. Usually quotation
       marks come in pairs called the open quote and the close quote, right? And
       if you look at the line of code you’ll see that there’s no closing
