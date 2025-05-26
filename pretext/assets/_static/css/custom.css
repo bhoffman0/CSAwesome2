@@ -89,7 +89,9 @@ section > .para + .para {
 }
 
 /* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
-details.ptx-footnote {
+.ptx-content details.ptx-footnote,
+.ptx-content .ptx-runestone-container details.ptx-footnote
+{
   display: none;
 }
 
