@@ -118,7 +118,12 @@ def render_block(elem, ns, level=0):
 
         if elem.text and elem.text.strip():
             content += escape(elem.text.lstrip())
-            content = re.sub(r"\s+$", " ", content)
+
+        if len(elem) > 0:
+            if is_inline(elem[0]):
+                content = re.sub(r"\s+$", " ", content)
+            else:
+                content = content.rstrip()
 
         for child in elem:
             content += serialize_element(child, ns | elem.nsmap, level + 1)
@@ -231,11 +236,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    progress = args.inplace and not args.quiet
-
     for f in args.files:
-        if progress:
+        if not args.quiet:
             print(f"{f} ... ", file=stderr, end="")
         reformat(f, args.inplace)
-        if progress:
+        if not args.quiet:
             print("ok.", file=stderr)
