@@ -88,7 +88,11 @@
           <test>
             <strcmp use-answer="yes" />
             <feedback>
-              <p>Correct.  One for each type.</p>
+              <p>
+                Correct. One for each for nine different argument types plus one
+                that takes no arguments and just prints an end-of-line
+                character.
+              </p>
             </feedback>
           </test>
 
