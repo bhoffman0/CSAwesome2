@@ -22,7 +22,9 @@ span.title div.image-box {
 }
 
 /* Even grosser hack to hide the image in the TOC. */
-.toc-title-box span.title div.image-box {
+.toc-title-box span.title div.image-box,
+.summary-links span.title div.image-box
+{
   display: none;
 }
 
