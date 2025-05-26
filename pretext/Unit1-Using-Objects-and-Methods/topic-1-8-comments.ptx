@@ -80,18 +80,18 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>single-line comment</premise>
+        <match>
+          <premise order="1">single-line comment</premise>
           <response>//</response>
         </match>
 
-        <match order="2">
-          <premise>multi-line comment</premise>
+        <match>
+          <premise order="2">multi-line comment</premise>
           <response>/* */</response>
         </match>
 
-        <match order="3">
-          <premise>Java documentation comment</premise>
+        <match>
+          <premise order="3">Java documentation comment</premise>
           <response>/** */</response>
         </match>
       </cardsort>
@@ -708,4 +708,3 @@ Which of the following preconditions are reasonable for the computeScore method?
     </activity>
   </subsection>
 </section>
-

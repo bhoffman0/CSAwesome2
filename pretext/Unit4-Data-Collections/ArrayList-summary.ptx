@@ -66,19 +66,19 @@
     <statement><p>Drag the item from the left and drop it on its corresponding answer on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
 <cardsort>
-<match order="1"><premise>The index of the last element</premise><response>size() - 1</response></match>
-<match order="2"><premise>The number of elements in the list</premise><response>size()</response></match>
-<match order="3"><premise>The index of the first element</premise><response>0</response></match><match order="4"><premise>The index of the second element</premise><response>1</response></match>
+<match><premise order="1">The index of the last element</premise><response>size() - 1</response></match>
+<match><premise order="2">The number of elements in the list</premise><response>size()</response></match>
+<match><premise order="3">The index of the first element</premise><response>0</response></match><match><premise order="4">The index of the second element</premise><response>1</response></match>
 </cardsort></activity>
 <activity label="ArrayList_summary_match2">
     <statement><p>Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
 <cardsort>
-<match order="1"><premise>Declare an integer list named numList</premise><response>ArrayList&lt;Integer&gt; numList = null;</response></match>
-<match order="2"><premise>Declare and create a list of strings named list1 </premise><response>ArrayList&lt;String&gt; list1 = new ArrayList&lt;String&gt;();</response></match>
-<match order="3"><premise>Declare and create a list of integers named list1 </premise><response>ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();</response></match>
-<match order="4"><premise>Get the first object in a list named list1</premise><response>list1.get(0);</response></match>
-<match order="5"><premise>Get the last object in a list named list1</premise><response>list1.get(list1.size() - 1);</response></match>
+<match><premise order="1">Declare an integer list named numList</premise><response>ArrayList&lt;Integer&gt; numList = null;</response></match>
+<match><premise order="2">Declare and create a list of strings named list1 </premise><response>ArrayList&lt;String&gt; list1 = new ArrayList&lt;String&gt;();</response></match>
+<match><premise order="3">Declare and create a list of integers named list1 </premise><response>ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;();</response></match>
+<match><premise order="4">Get the first object in a list named list1</premise><response>list1.get(0);</response></match>
+<match><premise order="5">Get the last object in a list named list1</premise><response>list1.get(list1.size() - 1);</response></match>
 </cardsort></activity>         
    <p>For more practice, see this <url href="https://quizlet.com/434082008/cs-awesome-unit-7-vocabulary-flash-cards/" visual="https://quizlet.com/434082008/cs-awesome-unit-7-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>

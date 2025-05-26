@@ -1110,26 +1110,26 @@ public class RunestoneTests extends CodeTestHelper
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>the position of a character in a string</premise>
+        <match>
+          <premise order="1">the position of a character in a string</premise>
           <response>index</response>
         </match>
 
-        <match order="2">
-          <premise>
+        <match>
+          <premise order="2">
             a new string that is a part of another string with 0 to all characters copied from the original string
           </premise>
 
           <response>substring</response>
         </match>
 
-        <match order="3">
-          <premise>doesn't change</premise>
+        <match>
+          <premise order="3">doesn't change</premise>
           <response>immutable</response>
         </match>
 
-        <match order="4">
-          <premise>the number of characters in a string</premise>
+        <match>
+          <premise order="4">the number of characters in a string</premise>
           <response>length</response>
         </match>
       </cardsort>
@@ -1148,26 +1148,26 @@ public class RunestoneTests extends CodeTestHelper
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>Returns true if the characters in two strings are the same</premise>
+        <match>
+          <premise order="1">Returns true if the characters in two strings are the same</premise>
           <response>equals</response>
         </match>
 
-        <match order="2">
-          <premise>Returns the position of one string in another or -1</premise>
+        <match>
+          <premise order="2">Returns the position of one string in another or -1</premise>
           <response>indexOf</response>
         </match>
 
-        <match order="3">
-          <premise>
+        <match>
+          <premise order="3">
             Returns a number to indicate if one string is less than, equal to, or greater than another
           </premise>
 
           <response>compareTo</response>
         </match>
 
-        <match order="4">
-          <premise>
+        <match>
+          <premise order="4">
             Returns a string representing the object that is passed to this method
           </premise>
 
@@ -1823,4 +1823,3 @@ String s3 = s2.toLowerCase();
     </p>
   </subsection>
 </section>
-

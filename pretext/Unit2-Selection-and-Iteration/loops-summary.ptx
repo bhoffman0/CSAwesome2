@@ -62,11 +62,11 @@
 <activity label="vocabloops1">
     <statement><p>Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<cardsort><match order="1"><premise>a loop that repeats while a Boolean condition is true</premise><response>while loop</response></match><match order="2"><premise>a loop that has three parts: initialization, condition, and change</premise><response>for loop</response></match><match order="3"><premise>one loop inside of another</premise><response>nested loop</response></match></cardsort></activity>
+<cardsort><match><premise order="1">a loop that repeats while a Boolean condition is true</premise><response>while loop</response></match><match><premise order="2">a loop that has three parts: initialization, condition, and change</premise><response>for loop</response></match><match><premise order="3">one loop inside of another</premise><response>nested loop</response></match></cardsort></activity>
 <activity label="vocabloops2">
     <statement><p>Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.</p></statement>
     <feedback><p>Review the summaries above.</p></feedback>
-<cardsort><match order="1"><premise>the statement or block of statements following a loop header that is repeated</premise><response>body of a loop</response></match><match order="2"><premise>a loop that never ends</premise><response>infinite loop</response></match><match order="3"><premise>writing down the values of variables for each execution of the loop body</premise><response>trace code</response></match></cardsort></activity>            <p>For more practice, see this <url href="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/" visual="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/">Quizlet</url>.</p>
+<cardsort><match><premise order="1">the statement or block of statements following a loop header that is repeated</premise><response>body of a loop</response></match><match><premise order="2">a loop that never ends</premise><response>infinite loop</response></match><match><premise order="3">writing down the values of variables for each execution of the loop body</premise><response>trace code</response></match></cardsort></activity>            <p>For more practice, see this <url href="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/" visual="https://quizlet.com/434072046/cs-awesome-unit-4-vocabulary-flash-cards/">Quizlet</url>.</p>
         </subsection>
   <subsection xml:id="common-mistakes-2">
             <title>Common Mistakes</title>

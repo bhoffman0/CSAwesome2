@@ -157,23 +157,23 @@ Turtle myrtle;
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>a specific instance of a class with defined attributes</premise>
+        <match>
+          <premise order="1">a specific instance of a class with defined attributes</premise>
           <response>object</response>
         </match>
 
-        <match order="2">
-          <premise>defines a new data type that is like a blueprint</premise>
+        <match>
+          <premise order="2">defines a new data type that is like a blueprint</premise>
           <response>class</response>
         </match>
 
-        <match order="3">
-          <premise>define what the object knows about itself</premise>
+        <match>
+          <premise order="3">define what the object knows about itself</premise>
           <response>attributes or instance variables</response>
         </match>
 
-        <match order="4">
-          <premise>define what an object can do</premise>
+        <match>
+          <premise order="4">define what an object can do</premise>
           <response>behaviors or methods</response>
         </match>
       </cardsort>
@@ -1273,4 +1273,3 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
   </subsection>
 </section>
-

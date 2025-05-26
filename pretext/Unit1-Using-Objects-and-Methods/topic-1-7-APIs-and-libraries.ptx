@@ -52,14 +52,10 @@
       The <c>java.lang</c> package contains built-in classes and interfaces that
       are fundamental to the Java programming language, such as the
       <c>String</c> class and the <c>System</c> class which we use in
-      <c>System.out.println</c>. Take a look at the documentation for the
-      <c>java.lang</c> package at <url
-      href="https://docs.oracle.com/javase/8/docs/api/java/lang/package-
-      summary.html"
-      visual="https://docs.oracle.com/javase/8/docs/api/java/lang/package-
-      summary.html">https://docs.oracle.com/javase/8/docs/api/java/lang/package-
-      summary.html</url>. Can you find the <c>System</c> class in the
-      documentation?
+      <c>System.out.println</c>. Take a look at the <url
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">documentation
+      for the <c>java.lang</c> package</url>. Can you find the documentation for
+      the <c>System</c> class?
     </p>
 
     <p>
@@ -68,11 +64,10 @@
       by the API. The <c>System</c> class has an object called <c>out</c> that
       is type <c>PrintStream</c>, and the <c>PrintStream</c> class has a method
       called <c>println()</c> that we use to print to the screen. How many
-      <c>println()</c> methods are there in the PrintStream class documented at
-      <url
-      href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"
-      visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>?
-      One for each type that it can print!
+      <c>println()</c> methods are there in <url
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
+      for the <c>PrintStream</c> class</url>? One for each type that it can
+      print!
     </p>
 
     <activity label="count-println">
@@ -80,8 +75,8 @@
         <p>
           How many <c>println</c> methods are there in the <c>PrintStream</c>
           class documented at <url
-          href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"
-          visual="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html">https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html</url>?
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"
+          />?
         </p>
 
         <p>
@@ -121,34 +116,34 @@
       </feedback>
 
       <cardsort>
-        <match order="1">
-          <premise>A collection of classes written by other programmers</premise>
+        <match>
+          <premise order="1">A collection of classes written by other programmers</premise>
           <response>library</response>
         </match>
 
-        <match order="2">
-          <premise>
+        <match>
+          <premise order="2">
             A collection of related classes organized to be imported into your code
           </premise>
 
           <response>package</response>
         </match>
 
-        <match order="3">
-          <premise>
+        <match>
+          <premise order="3">
             A specification that tells the programmer how to use classes in a library
           </premise>
 
           <response>API</response>
         </match>
 
-        <match order="4">
-          <premise>The building blocks of Java and object-oriented programming</premise>
+        <match>
+          <premise order="4">The building blocks of Java and object-oriented programming</premise>
           <response>class</response>
         </match>
 
-        <match order="5">
-          <premise>A block of code that performs a specific task</premise>
+        <match>
+          <premise order="5">A block of code that performs a specific task</premise>
           <response>method</response>
         </match>
       </cardsort>
@@ -916,4 +911,3 @@ public class RunestoneTests extends CodeTestHelper
     </p>
   </subsection>
 </section>
-
