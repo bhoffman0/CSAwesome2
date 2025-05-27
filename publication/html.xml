@@ -9,23 +9,19 @@
   <numbering>
     <divisions chapter-start="0"/>
   </numbering>
+
   <common>
-       <tableofcontents level="3" focused="yes"/>
+    <tableofcontents level="3" focused="yes"/>
   </common>
+
   <html>
     <platform host="web"/>
     <!-- knowled checkpoints interfere with ActiveCode problems -->
     <knowl exercise-inline="no" example="no" listing="no"/>
     <!-- for scratch code language -->
     <calculator activecode="java"/>
-
- <!--  Deprecated <css style="wide" shell="wide" toc="wide" banner="wide" navbar="wide" colors="bluegreen_grey"/>
-       New theme styles https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options
-     blue #007d9f, bright blue #04B2D9, in-between blue #00A1E4
-     mcsp: #00B3E3, 007FAF has >= 4.5 contrast ratio with white
-   -->
-   <css theme="salem" color-main="#007FAF" /> 
-   <tableofcontents level="3" focused="yes"/>
+    <css theme="salem" color-main="#007FAF"/>
+    <tableofcontents level="3" focused="yes"/>
   </html>
 
 </publication>
