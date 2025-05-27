@@ -7,7 +7,8 @@
       format="html"
       publication="html.xml"
       source="main.ptx"
-      output-dir="build/html">
+      output-dir="build/html"
+      xsl="csawesome-pretext-style.xsl">
     <stringparams author.tools="yes" html.css.extra="external/_static/css/custom.css" />
    </target>
     <target
@@ -19,11 +20,9 @@
       xsl="csawesome-pretext-style.xsl">
     <stringparams author.tools="yes" html.css.extra="external/_static/css/custom.css" />
    </target>
-    <target
-      name="print"
-      format="pdf"
-      output-filename="csawesome2.pdf" />
+   <target
+       name="print"
+       format="pdf"
+       output-filename="csawesome2.pdf" />
   </targets>
 </project>
-
-   

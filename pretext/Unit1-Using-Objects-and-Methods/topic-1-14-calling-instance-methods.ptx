@@ -2,9 +2,10 @@
 
 <section xml:id="topic-1-14-calling-instance-methods">
   <title>
-    Calling Instance Methods 
-    <image source="_static/90min.svg" />
+    Calling Instance Methods
   </title>
+
+  <time minutes="90" />
 
   <introduction>
     <idx>instance methods</idx>
@@ -1054,9 +1055,9 @@ public class Rectangle
         // 1. Create a rectangle with width 5 and height 10
 
         // 2. Call the resize method to add 10 to its width
-        
+
         // 3. Print out its area using its getArea method
-    
+
     }
 }
         </code>

@@ -13,19 +13,17 @@
     --codeColor: #ffaaaa;
 }
 
-/* Gross hacks to put the clock image in chapter titles. */
-span.title div.image-box {
-  display: inline-block;
-  position: static;
-  width: 100px !important;
-  float: right;
+div.time {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 0.25em;
+    align-items: center;
 }
 
-/* Even grosser hack to hide the image in the TOC. */
-.toc-title-box span.title div.image-box,
-.summary-links span.title div.image-box
-{
-  display: none;
+.ptx-content section > .time + * {
+    margin-top: 0.75em;
 }
 
 /* The wide style seems to add huge font size so put it down */
