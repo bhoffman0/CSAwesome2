@@ -13,12 +13,17 @@
                 edge has been detected and the current pixel color should be set to black. Otherwise, the current pixel is
                 not part of an edge and its color should be set to white (Figure 1).</p>
             <figure align="center"><caption>Original picture and after edge detection</caption><image source="Unit4-Data-Collections/Figures/picturelabedge.png" width="80%"/></figure>
-            <p>How do you calculate the difference
-                between two colors? The formula for the difference between two points (x1,y1) and (x2,y2) is the square
-                root of ((x2 - x1)<superscript>2</superscript> + (y2 - y1)<superscript>2</superscript> ). The difference between two colors (red1,green1,blue1) and (red2,green2,blue2)
-                is the square root of ((red2 - red1)<superscript>2</superscript> +(green2 - green1)<superscript>2</superscript> +(blue2 - blue1)<superscript>2</superscript>
-                ). The colorDistance
-                method in the Pixel class uses this calculation to return the difference between the current pixel
+            <p>
+              How do you calculate the difference between two colors? The
+              formula for the difference between two points (x1,y1) and (x2,y2)
+              is <md><mrow>\sqrt{(x2 - x1)^{2} + (y2 - y1)^{2}}</mrow></md> Similarly, the
+              difference between two colors (red1,green1,blue1) and
+              (red2,green2,blue2) is <md><mrow>\sqrt{(red2 - red1)^{2} +(green2
+              - green1)^{2} +(blue2 - blue1)^{2}}</mrow></md>
+            </p>
+            <p>
+                 The <c>colorDistance</c>
+                method in the <c>Pixel</c> class uses this calculation to return the difference between the current pixel
                 color and a passed color.</p>
             <p>The following method implements this simple algorithm. Notice that the nested for loop stops earlier
                 than when it reaches the number of columns. That is because in the nested loop the current color is
@@ -52,7 +57,7 @@ public void edgeDetection(int edgeDist)
 
 <datafile label="swan" filename="swan.jpg">
     <image source="Unit4-Data-Collections/Figures/swan.jpg"/>
-</datafile> 
+</datafile>
 </hidden>
 
 <activity label="picture-lab-A9-edgeDetection">
