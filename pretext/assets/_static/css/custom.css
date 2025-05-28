@@ -22,7 +22,10 @@ div.time {
     top: 0;
     right: 0;
     color: #999;
-    svg { fill: #999; }
+    svg {
+      fill: #999;
+      background: #0000;
+    }
 }
 
 .ptx-content section.section:has(div.time) {
