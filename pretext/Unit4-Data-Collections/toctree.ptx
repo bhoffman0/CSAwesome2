@@ -1,104 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="unit4" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Data Collections</title>
-         <introduction>
-            <p>
-This unit introduces the Java data structures of array, ArrayList, and 2D array, which are used to represent collections of data. Searching and sorting algorithms using iteration and recursion are also covered.            </p>
-              <p><ul>
-                    <li> <p>
-                            AP Exam Weighting: 30–40%
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                             Class Periods: ~50-52
-                        </p>
-                    </li>
-                    
-                    <li>
-                        <p>
-                            Time Estimate: 90 minutes per lesson except 45 minutes for 4.1, 4.2, and 4.7.
-                            At least 20 class periods for review, practice, FRQs, labs, progress checks, and assessments. 
-                         </p>
-                    </li>
-                    <li><p>
-                     AP Classroom Progress Check Unit 4 Part 1: Topics 4.1–4.5, Multiple-choice: ~18 questions, Free-response: 2 questions on Data Analysis with Array (partial)
-                      </p></li>
-                       <li><p>AP Classroom Progress Check Unit 4 Part 2: Topics 4.6–4.10, Multiple-choice: ~21 questions, Free-response: 2 questions on Data Analysis with ArrayList      
-                        </p></li>
-                         <li><p>AP Classroom Progress Check Unit 4 Part 3: Topics 4.11–4.17, Multiple-choice: ~21 questions, Free-response: 2 questions on 2D Array    
-                        </p></li>
-                </ul>
-                </p>
-        </introduction>
-        <xi:include href='./topic-4-1-data-ethics.ptx' />
-        <xi:include href='./topic-4-2-data-sets.ptx' />
-        <xi:include href='./topic-4-3-array-basics.ptx' />
-        <xi:include href='./topic-4-4-array-traversal.ptx' />
-        <xi:include href='./topic-4-5-array-algorithms.ptx' />
-        <xi:include href='./topic-4-6-input-files.ptx' />
-        <xi:include href='./topic-4-7-wrapper-classes.ptx' />
-        <xi:include href='./topic-4-8-arraylists.ptx' />
-        <xi:include href='./topic-4-9-arraylist-traversal.ptx' />
-        <xi:include href='./topic-4-10-arraylist-algorithms.ptx' />
-        <xi:include href='./topic-4-11-2Darrays.ptx' />
-        <xi:include href='./topic-4-12-2Darray-traversal.ptx' />
-        <xi:include href='./topic-4-13-2Darray-algorithms.ptx' />
-        <xi:include href='./topic-4-14-searching.ptx' />
-        <xi:include href='./topic-4-15-sorting.ptx' />
-        <xi:include href='./topic-4-16-recursion.ptx' />
-        <xi:include href='./topic-4-17-recursive-search-sort.ptx' />
-        <xi:include href='./array-summary.ptx' />
-        <xi:include href='./ArrayParsonsPractice.ptx' />
-        <xi:include href='./ArrayPractice.ptx' />
-        <xi:include href='./MoreArrayPractice.ptx' />
-        <xi:include href='./array-Exercises.ptx' />
-        <xi:include href='./arrayExam.ptx' />
-        <xi:include href='./horseBarnA.ptx' />
-        <xi:include href='./horseBarnB.ptx' />
-        <xi:include href='./selfDivisorB.ptx' />
-        <xi:include href='./soundA.ptx' />
-        <xi:include href='./soundB.ptx' />
-        <xi:include href='./numberCubeA.ptx' />
-        <xi:include href='./numberCubeB.ptx' />
-        <xi:include href='./ArrayList-summary.ptx' />
-        <xi:include href='./ArrayListParsonsPractice.ptx' />
-        <xi:include href='./ArrayListPractice.ptx' />
-        <xi:include href='./ArrayList-Exercises.ptx' />
-        <xi:include href='./stringScrambleB.ptx' />
-        <xi:include href='./climbClubA.ptx' />
-        <xi:include href='./climbClubB.ptx' />
-        <xi:include href='./climbClubC.ptx' />
-        <xi:include href='./cookieOrderA.ptx' />
-        <xi:include href='./cookieOrderB.ptx' />
-        <xi:include href='./stringFormatterA.ptx' />
-        <xi:include href='./stringFormatterB.ptx' />
-        <xi:include href='./delimitersQ3a.ptx' />
-        <xi:include href='./delimitersQ3b.ptx' />
-        <xi:include href='./Search-Sort-Exercises.ptx' />
-        <xi:include href='./a2dSummary.ptx' />
-        <xi:include href='./Array2dParsonsPractice.ptx' />
-        <xi:include href='./Array2dCodePractice.ptx' />
-        <xi:include href='./Array2dMoreCodePractice.ptx' />
-        <xi:include href='./a2d-Exercises.ptx' />
-        <xi:include href='./grayImageA.ptx' />
-        <xi:include href='./grayImageB.ptx' />
-        <xi:include href='./routeCipherA.ptx' />
-        <xi:include href='./routeCipherB.ptx' />
-        <xi:include href='./recursion-summary.ptx' />
-        <xi:include href='./rParsonsPractice.ptx' />
-        <xi:include href='./rMixedUpCodePractice.ptx' />
-        <xi:include href='./recursionCodePractice.ptx' />
-        <xi:include href='./recursion-Exercises.ptx' />
-        <xi:include href='./hashmap.ptx' />
-        <xi:include href='./U4CBLabs.ptx' />
-        <xi:include href='./pictureLab.ptx' />
-        <xi:include href='./pictureLabA1toA3.ptx' />
-        <xi:include href='./pictureLabA4.ptx' />
-        <xi:include href='./pictureLabA5inheritance.ptx' />
-        <xi:include href='./pictureLabA5.ptx' />
-        <xi:include href='./pictureLabA6.ptx' />
-        <xi:include href='./pictureLabA7.ptx' />
-        <xi:include href='./pictureLabA8.ptx' />
-        <xi:include href='./pictureLabA9.ptx' />
-    </chapter>
+
+<chapter xml:id="unit4" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data Collections</title>
+  <introduction>
+    <p>
+      This unit introduces the Java data structures of array, ArrayList, and 2D
+      array, which are used to represent collections of data. Searching and
+      sorting algorithms using iteration and recursion are also covered.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>AP Exam Weighting: 30–40%</p>
+        </li>
+
+        <li>
+          <p>Class Periods: ~50-52</p>
+        </li>
+
+        <li>
+          <p>
+            Time Estimate: 90 minutes per lesson except 45 minutes for 4.1, 4.2,
+            and 4.7. At least 20 class periods for review, practice, FRQs, labs,
+            progress checks, and assessments.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AP Classroom Progress Check Unit 4 Part 1: Topics 4.1–4.5,
+            Multiple-choice: ~18 questions, Free-response: 2 questions on Data
+            Analysis with Array (partial)
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AP Classroom Progress Check Unit 4 Part 2: Topics 4.6–4.10,
+            Multiple-choice: ~21 questions, Free-response: 2 questions on Data
+            Analysis with ArrayList
+          </p>
+        </li>
+
+        <li>
+          <p>
+            AP Classroom Progress Check Unit 4 Part 3: Topics 4.11–4.17,
+            Multiple-choice: ~21 questions, Free-response: 2 questions on 2D
+            Array
+          </p>
+        </li>
+      </ul>
+    </p>
+  </introduction>
+
+  <xi:include href="./topic-4-1-data-ethics.ptx" />
+  <xi:include href="./topic-4-2-data-sets.ptx" />
+  <xi:include href="./topic-4-3-array-basics.ptx" />
+  <xi:include href="./topic-4-4-array-traversal.ptx" />
+  <xi:include href="./topic-4-5-array-algorithms.ptx" />
+  <xi:include href="./topic-4-6-input-files.ptx" />
+  <xi:include href="./topic-4-7-wrapper-classes.ptx" />
+  <xi:include href="./topic-4-8-arraylists.ptx" />
+  <xi:include href="./topic-4-9-arraylist-traversal.ptx" />
+  <xi:include href="./topic-4-10-arraylist-algorithms.ptx" />
+  <xi:include href="./topic-4-11-2Darrays.ptx" />
+  <xi:include href="./topic-4-12-2Darray-traversal.ptx" />
+  <xi:include href="./topic-4-13-2Darray-algorithms.ptx" />
+  <xi:include href="./topic-4-14-searching.ptx" />
+  <xi:include href="./topic-4-15-sorting.ptx" />
+  <xi:include href="./topic-4-16-recursion.ptx" />
+  <xi:include href="./topic-4-17-recursive-search-sort.ptx" />
+  <xi:include href="./array-summary.ptx" />
+  <xi:include href="./ArrayParsonsPractice.ptx" />
+  <xi:include href="./ArrayPractice.ptx" />
+  <xi:include href="./MoreArrayPractice.ptx" />
+  <xi:include href="./array-Exercises.ptx" />
+  <xi:include href="./arrayExam.ptx" />
+  <xi:include href="./horseBarnA.ptx" />
+  <xi:include href="./horseBarnB.ptx" />
+  <xi:include href="./selfDivisorB.ptx" />
+  <xi:include href="./soundA.ptx" />
+  <xi:include href="./soundB.ptx" />
+  <xi:include href="./numberCubeA.ptx" />
+  <xi:include href="./numberCubeB.ptx" />
+  <xi:include href="./ArrayList-summary.ptx" />
+  <xi:include href="./ArrayListParsonsPractice.ptx" />
+  <xi:include href="./ArrayListPractice.ptx" />
+  <xi:include href="./ArrayList-Exercises.ptx" />
+  <xi:include href="./stringScrambleB.ptx" />
+  <xi:include href="./climbClubA.ptx" />
+  <xi:include href="./climbClubB.ptx" />
+  <xi:include href="./climbClubC.ptx" />
+  <xi:include href="./cookieOrderA.ptx" />
+  <xi:include href="./cookieOrderB.ptx" />
+  <xi:include href="./stringFormatterA.ptx" />
+  <xi:include href="./stringFormatterB.ptx" />
+  <xi:include href="./delimitersQ3a.ptx" />
+  <xi:include href="./delimitersQ3b.ptx" />
+  <xi:include href="./Search-Sort-Exercises.ptx" />
+  <xi:include href="./a2dSummary.ptx" />
+  <xi:include href="./Array2dParsonsPractice.ptx" />
+  <xi:include href="./Array2dCodePractice.ptx" />
+  <xi:include href="./Array2dMoreCodePractice.ptx" />
+  <xi:include href="./a2d-Exercises.ptx" />
+  <xi:include href="./grayImageA.ptx" />
+  <xi:include href="./grayImageB.ptx" />
+  <xi:include href="./routeCipherA.ptx" />
+  <xi:include href="./routeCipherB.ptx" />
+  <xi:include href="./recursion-summary.ptx" />
+  <xi:include href="./rParsonsPractice.ptx" />
+  <xi:include href="./rMixedUpCodePractice.ptx" />
+  <xi:include href="./recursionCodePractice.ptx" />
+  <xi:include href="./recursion-Exercises.ptx" />
+  <xi:include href="./hashmap.ptx" />
+  <xi:include href="./U4CBLabs.ptx" />
+  <xi:include href="./pictureLab.ptx" />
+  <xi:include href="./pictureLabA1toA3.ptx" />
+  <xi:include href="./pictureLabA4.ptx" />
+  <xi:include href="./pictureLabA5inheritance.ptx" />
+  <xi:include href="./pictureLabA5.ptx" />
+  <xi:include href="./pictureLabA6.ptx" />
+  <xi:include href="./pictureLabA7.ptx" />
+  <xi:include href="./pictureLabA8.ptx" />
+  <xi:include href="./pictureLabA9.ptx" />
+</chapter>
