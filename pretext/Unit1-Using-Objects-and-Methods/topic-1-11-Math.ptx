@@ -1066,12 +1066,12 @@ int rnd4 = (int)(Math.random()*20) - 10;
             possible in your combination lock using
             <term>Math.pow(number,exponent)</term>. For example, if you had to
             spin the dial twice on your combination lock where each spin can
-            choose a digit from 0-9 (10 digits), there are 10
-            <superscript>2</superscript> possible permutations. In Java, this
-            would be written as <term>Math.pow(10,2)</term> which means 10 to
-            the power of 2. If you start listing all the permutations possible,
-            you can tell that there are 10 <superscript>2</superscript> or 100
-            possible permutations for a 2 spins on a dial lock from 0-9.
+            choose a digit from 0-9 (10 digits), there are <m>10^{2}</m>
+            possible permutations. In Java, this would be written as
+            <term>Math.pow(10,2)</term> which means 10 to the power of 2. If you
+            start listing all the permutations possible, you can tell that there
+            are <m>10^{2}</m> or 100 possible permutations for a 2 spins on a
+            dial lock from 0-9.
           </p>
         </li>
       </ol>
@@ -1079,7 +1079,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
 
     <p>
       <pre>
-        00, 01, 02, 03, 04, 05, 06, 07, 08, 09
+00, 01, 02, 03, 04, 05, 06, 07, 08, 09
 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
 ...
 90, 91, 92, 93, 94, 95, 96, 97, 98, 99
@@ -1090,10 +1090,9 @@ int rnd4 = (int)(Math.random()*20) - 10;
       Now what about the combination lock for this challenge? You will need to
       spin the dial 3 times: once to the right, once to the left, and once to
       the right to 3 different numbers from 0 up to 40 (not including 40). In
-      general, the formula to use is NumbersPerDial
-      <superscript>numberOfSpins</superscript>. Write this using the
-      <term>Math.pow()</term> method in your code and save it into a variable
-      and print out.
+      general, the formula to use is <m>NumbersPerDial^{numberOfSpins}</m>.
+      Write this using the <term>Math.pow()</term> method in your code and save
+      it into a variable and print out.
     </p>
 
     <project label="challenge1-11-random-math">
