@@ -16,14 +16,17 @@
 div.time {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    justify-content: flex-end;
     gap: 0.25em;
     align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    svg { fill: #999; }
 }
 
-.ptx-content section > .time + * {
-    margin-top: 0.75em;
+.ptx-content section.section:has(div.time) {
+    padding-top: 1.5em;
 }
 
 /* The wide style seems to add huge font size so put it down */
