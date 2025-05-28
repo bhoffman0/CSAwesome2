@@ -119,6 +119,12 @@ def render_block(elem, ns, level=0):
         if elem.text and elem.text.strip():
             content += escape(elem.text.lstrip())
 
+        if len(elem) > 0:
+            if is_inline(elem[0]):
+                content = re.sub(r"\s+$", " ", content)
+            else:
+                content = content.rstrip()
+
         for child in elem:
             content += serialize_element(child, ns | elem.nsmap, level + 1)
             if child.tail and child.tail.strip():
