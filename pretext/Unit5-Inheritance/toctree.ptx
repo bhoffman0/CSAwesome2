@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="unit-inheritance" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Inheritance (optional)</title>
-        <xi:include href='./topic-5-1-inheritance.ptx' />
-        <xi:include href='./topic-5-2-constructors.ptx' />
-        <xi:include href='./topic-5-3-overriding.ptx' />
-        <xi:include href='./topic-5-4-super.ptx' />
-        <xi:include href='./topic-5-5-hierarchies.ptx' />
-        <xi:include href='./topic-5-6-polymorphism.ptx' />
-        <xi:include href='./topic-5-7-Object.ptx' />
-        <xi:include href='./ooSummary.ptx' />
-        <xi:include href='./freeResponse.ptx' />
-        <xi:include href='./ooParsonsPractice.ptx' />
-        <xi:include href='./ooCodePractice.ptx' />
-        <xi:include href='./ooExercises.ptx' />
-        <xi:include href='./ooCBLabs.ptx' />
-    </chapter>
+
+<chapter xml:id="unit-inheritance" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Inheritance (optional)</title>
+  <xi:include href="./topic-5-1-inheritance.ptx" />
+  <xi:include href="./topic-5-2-constructors.ptx" />
+  <xi:include href="./topic-5-3-overriding.ptx" />
+  <xi:include href="./topic-5-4-super.ptx" />
+  <xi:include href="./topic-5-5-hierarchies.ptx" />
+  <xi:include href="./topic-5-6-polymorphism.ptx" />
+  <xi:include href="./topic-5-7-Object.ptx" />
+  <xi:include href="./ooSummary.ptx" />
+  <xi:include href="./freeResponse.ptx" />
+  <xi:include href="./ooParsonsPractice.ptx" />
+  <xi:include href="./ooCodePractice.ptx" />
+  <xi:include href="./ooExercises.ptx" />
+  <xi:include href="./ooCBLabs.ptx" />
+</chapter>
