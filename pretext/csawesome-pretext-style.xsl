@@ -40,7 +40,6 @@ along with MathBook XML.  If not, see <http://www.gnu.org/licenses/>.
 <xsl:import href="./core/pretext-html.xsl"/>
 
 <xsl:template match="time">
-  <xsl:message>Time element processed!!!</xsl:message>
   <div class="time">
     <svg xmlns="http://www.w3.org/2000/svg"
          width="16"
