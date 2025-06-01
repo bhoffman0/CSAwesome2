@@ -411,9 +411,13 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
       <p>
         Write code that prints the name on one line and the favorite food on the
-        next line. Your output should look like <c>Your name is Julian</c>
-        <c>Your favorite food is chicken wings</c>
+        next line. Your output should look like:
       </p>
+
+      <pre>
+Your name is Julian
+Your favorite food is chicken wings
+      </pre>
     </statement>
 
     <program interactive="activecode" language="java">
