@@ -41,9 +41,10 @@
   <!-- Labels -->
   <g font-family="monospace">
     <!-- Fields -->
-    <text x="200" y="175" font-size="18" text-anchor="middle" fill="black">width</text>
-    <text x="200" y="205" font-size="18" text-anchor="middle" fill="black">height</text>
-    <text x="200" y="235" font-size="18" text-anchor="middle" fill="black">color</text>
+    <text x="200" y="160" font-size="18" text-anchor="middle" fill="black">color</text>
+    <text x="200" y="190" font-size="18" text-anchor="middle" fill="black">xPos</text>
+    <text x="200" y="220" font-size="18" text-anchor="middle" fill="black">yPos</text>
+    <text x="200" y="250" font-size="18" text-anchor="middle" fill="black">heading</text>
 
     <!-- Methods -->
     <text x="200" y="50" font-size="18" text-anchor="middle" fill="black">forward()</text>
