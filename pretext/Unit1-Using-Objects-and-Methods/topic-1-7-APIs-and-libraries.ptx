@@ -282,7 +282,7 @@ System.out.println("hello, world!");
           </statement>
 
 
-v          
+v
           <feedback>
             <p>Incorrect. APIs and libraries are not for compiling code.</p>
           </feedback>
@@ -883,7 +883,7 @@ public class TurtleShape
         World habitat = new World(500, 500);
         Turtle yertle = new Turtle(habitat);
 
-        // Use ane of yertle's methods such as forward, turnRight, and turnLeft
+        // Use any of yertle's methods such as forward, turnRight, and turnLeft
         // to draw a shape
 
         // Do not change the line below!
