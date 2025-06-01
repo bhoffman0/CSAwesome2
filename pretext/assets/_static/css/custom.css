@@ -81,6 +81,12 @@ section > .para + .para {
   font-weight: 600;
 }
 
+.ptx-content .code-display {
+  color: var(--codeColor);
+  overflow-x: auto;
+  margin-left: 2em;
+}
+
 /* I'm not sure why the .code-block:before rule exists in PtX but it just adds extra gorp. */
 .ptx-content .code-block:before {
   content: none;
