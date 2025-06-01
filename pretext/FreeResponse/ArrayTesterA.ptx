@@ -75,10 +75,12 @@ public class ArrayTester
       <c>getColumn</c> method.
     </p>
 
-    <p>
-      <c>int [] [] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 }
-      };</c><c>int[] result = ArrayTester.getColumn (arr2D, 1);</c>
-    </p>
+    <program language="java">
+      <code>
+int [] [] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 }};
+int[] result = ArrayTester.getColumn (arr2D, 1);
+      </code>
+    </program>
 
     <p>
       When the code segment has completed execution, the variable result

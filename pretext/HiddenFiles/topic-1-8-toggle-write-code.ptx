@@ -61,8 +61,8 @@ public class RunestoneTests extends CodeTestHelper
   <activity label="u1_muc_wc2">
     <statement>
       <p>
-        Write code that prints the poem <c>Roses are red</c><c>Violets are
-        blue</c><c>Sugar is sweet</c><c>And so are you</c> with 1 sentence on
+        Write code that prints the poem <c>Roses are red</c> <c>Violets are
+        blue</c> <c>Sugar is sweet</c> <c>And so are you</c> with 1 sentence on
         each line.
       </p>
     </statement>
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
       <p>
         Write code that prints the name on one line and the favorite food on the
         next line. Your output should look like <c>Your name is
-        Julian</c><c>Your favorite food is chicken wings</c>
+        Julian</c> <c>Your favorite food is chicken wings</c>
       </p>
     </statement>
 

@@ -518,7 +518,7 @@
         calories consumed"</c> (e.g., <c>"5 calories consumed"</c>). There
         should also be a <c>Fruit</c> subclass that inherits from <c>Food</c>
         and adds the private <c>color</c> String instance variable. The
-        <c>Fruit</c> class should override the <c>Food</c><c>chomp()</c> method
+        <c>Fruit</c> class should override the <c>Food</c> <c>chomp()</c> method
         to return nothing, print <c>"{numCalories} calories consumed"</c>, and
         print <c>"fruit is {color}"</c> (on a new line). Finally, there should
         be an <c>Apple</c> subclass that inherits from <c>Fruit</c>, sets

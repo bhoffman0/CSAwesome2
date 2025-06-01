@@ -444,7 +444,7 @@ public class RunestoneTests extends CodeTestHelper
       <p>
         Write the <c>repeatThis</c> method. It should take in two parameters - a
         String <c>s</c> and an int <c>i</c> - and return a new String composed
-        of <c>s</c><c>i</c> times. For example, <c>repeatThis("Cat", 2)</c>
+        of <c>s</c> <c>i</c> times. For example, <c>repeatThis("Cat", 2)</c>
         would return <c>"CatCat"</c>.
       </p>
     </statement>
