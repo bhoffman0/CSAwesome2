@@ -45,20 +45,23 @@
       To understand how APIs are defined in Java lets take apart the snippet
     </p>
 
-    <pre>
+    <program language="java">
+      <code>
 System.out.println("hello, world!");
-    </pre>
+      </code>
+    </program>
+
     <p>
       To start with, you need to know that <c>System</c> is a <c>class</c>.
       We’ll talk about classes a lot more in later units but for now you just
       need to know that classes are a way of defining a set of
       <term>attributes</term> and <term>behaviors</term>. Each class defines a
-      new kind of value similar to how each of the <term>primitive
-      types</term><c>int</c>, <c>double</c>, and <c>boolean</c> that we’ve
-      already learned about define a particular kind of value, such as a 32-bit
-      integer quantity for an <c>int</c>. These new kinds of values defined by
-      classes are called <term>objects</term> which is where
-      <term>object-oriented programming</term> gets its name.
+      new kind of value similar to how each of the <term>primitive types</term>
+      <c>int</c>, <c>double</c>, and <c>boolean</c> that we’ve already learned
+      about define a particular kind of value, such as a 32-bit integer quantity
+      for an <c>int</c>. These new kinds of values defined by classes are called
+      <term>objects</term> which is where <term>object-oriented
+      programming</term> gets its name.
     </p>
 
     <p>
@@ -281,8 +284,6 @@ System.out.println("hello, world!");
             <p>To compile code</p>
           </statement>
 
-
-v
           <feedback>
             <p>Incorrect. APIs and libraries are not for compiling code.</p>
           </feedback>
@@ -367,13 +368,13 @@ yertle.turnRight();
 
     <p>
       In these lines the dot operator (<c>.</c>) is used to call the methods
-      <c>forward()</c> and <c>turnRight</c> run on the turtle value named by the
+      <c>forward()</c> and <c>turnRight()</c> on the turtle value named by the
       variable <c>yertle</c>. The exact behavior of those methods will depend on
-      the current values of the turtle’s attributes such as its color and x and
-      y position. For instance calling <c>forward</c> will cause the turtle to
-      draw a line from its current x and y position to a new position 100 pixels
-      away in whatever direction the turtle is facing. The color of the line
-      will be determined by the turtle’s color.
+      the current values of the turtle’s attributes such as its color, its x and
+      y position, and its heading. For instance calling <c>forward</c> will
+      cause the turtle to draw a line from its current x and y position to a new
+      position 100 pixels away in whatever direction the turtle is facing. The
+      color of the line will be determined by the turtle’s color.
     </p>
 
     <activity label="TurtleAPI">
