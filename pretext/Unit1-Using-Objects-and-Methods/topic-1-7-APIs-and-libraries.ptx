@@ -48,18 +48,17 @@
     <pre>
 System.out.println("hello, world!");
     </pre>
-
     <p>
       To start with, you need to know that <c>System</c> is a <c>class</c>.
       We’ll talk about classes a lot more in later units but for now you just
       need to know that classes are a way of defining a set of
       <term>attributes</term> and <term>behaviors</term>. Each class defines a
-      new kind of value similar to how each of the <term>primitive types</term>
-      <c>int</c>, <c>double</c>, and <c>boolean</c> that we’ve already learned
-      about define a particular kind of value, such as a 32-bit integer quantity
-      for an <c>int</c>. These new kinds of values defined by classes are called
-      <term>objects</term> which is where <term>object-oriented
-      programming</term> gets its name.
+      new kind of value similar to how each of the <term>primitive
+      types</term><c>int</c>, <c>double</c>, and <c>boolean</c> that we’ve
+      already learned about define a particular kind of value, such as a 32-bit
+      integer quantity for an <c>int</c>. These new kinds of values defined by
+      classes are called <term>objects</term> which is where
+      <term>object-oriented programming</term> gets its name.
     </p>
 
     <p>
@@ -89,7 +88,7 @@ System.out.println("hello, world!");
     <p>
       The <c>out</c> attribute is a type of value defined by another class
       called <c>PrintStream</c>. And <c>PrintStream</c> defines a
-      <term>method</term> <c>println</c> which is how classes can define
+      <term>method</term><c>println</c> which is how classes can define
       behaviors. The dot operator is used again to say, “get the method named
       <c>println</c> from the value stored in the <c>out</c> attribute”. Then
       the method is run with the argument <c>"hello, world!"</c> to print the
@@ -102,7 +101,6 @@ System.out.println("hello, world!");
       methods defined in code you didn’t write. You don’t have to see the code
       to be able to use it; you just need to understand what the method does.
     </p>
-
   </subsection>
 
   <subsection xml:id="packages">
@@ -142,7 +140,6 @@ System.out.println("hello, world!");
       documentation</term>. Learning to read and navigate Javadocs is a key part
       of being a Java programmer.
     </p>
-
 
     <activity label="count-println">
       <statement>
@@ -221,10 +218,7 @@ System.out.println("hello, world!");
         </match>
 
         <match>
-          <premise order="3">
-            A specification that tells a programmer how to use a library
-          </premise>
-
+          <premise order="3">A specification that tells a programmer how to use a library</premise>
           <response>API</response>
         </match>
 
@@ -265,9 +259,7 @@ System.out.println("hello, world!");
           </statement>
 
           <feedback>
-            <p>
-              Correct! APIs and libraries let you use code written by others.
-            </p>
+            <p>Correct! APIs and libraries let you use code written by others.</p>
           </feedback>
         </choice>
 
@@ -289,7 +281,9 @@ System.out.println("hello, world!");
             <p>To compile code</p>
           </statement>
 
-v          <feedback>
+
+v          
+          <feedback>
             <p>Incorrect. APIs and libraries are not for compiling code.</p>
           </feedback>
         </choice>
@@ -299,7 +293,6 @@ v          <feedback>
 
   <subsection xml:id="turtle-library">
     <title>Turtle Library</title>
-
     <p>
       While Java comes with a lot of useful classes, not all libraries the we
       might want to use come with Java itself. But there are lots of libraries
@@ -548,7 +541,8 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              An attribute is one part the definition of a class like <c>Turtle</c>.
+              An attribute is one part the definition of a class like
+              <c>Turtle</c>.
             </p>
           </feedback>
         </choice>
@@ -610,9 +604,11 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An attribute is something the object knows about itself. The name
-            <c>turnRight</c> refers to something a <c>Turtle</c> object can
-            do.</p>
+            <p>
+              An attribute is something the object knows about itself. The name
+              <c>turnRight</c> refers to something a <c>Turtle</c> object can
+              do.
+            </p>
           </feedback>
         </choice>
 
@@ -755,6 +751,7 @@ public class RunestoneTests extends CodeTestHelper
             You will be told if any of the lines are in the wrong order or are
             the wrong blocks.
           </p>
+
           <image source="Unit1-Using-Objects-and-Methods/Figures/turtleForwardLeftForward.png" width="36%" />
         </sidebyside>
       </statement>
