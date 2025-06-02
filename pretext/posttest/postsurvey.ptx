@@ -1,81 +1,154 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="post-survey">
-  <title>Post-Survey</title><p>
-    After you finish the course, please do this post-survey. It will help us understand how you feel about the course and your confidence in programming.  Your answers to all questions on this site will be used for educational research and to improve the ebook.  Any identifying information, such as your username, will be removed from the data before it is analyzed and used in publications (<url href="https://runestone.academy/runestone/default/privacy" visual="https://runestone.academy/runestone/default/privacy">Runestone Academy Privacy Policy</url>).
+  <title>Post-Survey</title>
+  <p>
+    After you finish the course, please do this post-survey. It will help us
+    understand how you feel about the course and your confidence in programming.
+    Your answers to all questions on this site will be used for educational
+    research and to improve the ebook. Any identifying information, such as your
+    username, will be removed from the data before it is analyzed and used in
+    publications (<url
+    href="https://runestone.academy/runestone/default/privacy"
+    visual="https://runestone.academy/runestone/default/privacy">Runestone
+    Academy Privacy Policy</url>).
   </p>
-          
 
-
-    <query label="qprogrammingpost">
-            <statement>
-                <p>I am now a </p>
-            </statement>
-            <choices>
-                <choice><p>beginner programmer</p></choice>
-                <choice><p>intermediate programmer</p></choice>
-                <choice><p>expert programmer</p></choice>
-                <choice><p>prefer not to answer</p></choice>
-                </choices>
-        </query>
-   
-<query label="qconfidencepost">
-            <statement>
-                <p>I am confident in my Java programming skills.</p>
-            </statement>
-            <choices>
-            <choice><p>strongly agree</p></choice>
-            <choice><p>agree</p></choice>
-            <choice><p>neither agree or disagree</p></choice>
-            <choice><p>disagree</p></choice>
-            <choice><p>strongly disagree</p></choice>
-            <choice><p>prefer not to answer</p></choice>
-            </choices>
-        </query>
-
-
-       
-
-<query label="qenjoypost">
-            <statement>
-                <p>I enjoyed learning about computer science and Java in this course.</p>
-            </statement>
-            <choices>
-            <choice><p>strongly agree</p></choice>
-            <choice><p>agree</p></choice>
-            <choice><p>neither agree or disagree</p></choice>
-            <choice><p>disagree</p></choice>
-            <choice><p>strongly disagree</p></choice>
-            <choice><p>prefer not to answer</p></choice>
-            </choices>
-</query>
-
-
-<query label="qcareerpost">
-            <statement>
-                <p>I would like to pursue further study or a career in computing.</p>
-            </statement>
-            <choices>
-            <choice><p>strongly agree</p></choice>
-            <choice><p>agree</p></choice>
-            <choice><p>neither agree or disagree</p></choice>
-            <choice><p>disagree</p></choice>
-            <choice><p>strongly disagree</p></choice>
-            <choice><p>prefer not to answer</p></choice>
-            </choices>
-</query>
-
-<activity label="qbest">
+  <query label="qprogrammingpost">
     <statement>
-            <p>What did you like best about this course?
- </p>
-    </statement>    <response/>
-</activity>
-<activity label="qimprove">
-    <statement>
-            <p>How could this course be improved?
- </p>
-    </statement>    <response/>
-</activity>
+      <p>I am now a</p>
+    </statement>
 
+    <choices>
+      <choice>
+        <p>beginner programmer</p>
+      </choice>
+
+      <choice>
+        <p>intermediate programmer</p>
+      </choice>
+
+      <choice>
+        <p>expert programmer</p>
+      </choice>
+
+      <choice>
+        <p>prefer not to answer</p>
+      </choice>
+    </choices>
+  </query>
+
+  <query label="qconfidencepost">
+    <statement>
+      <p>I am confident in my Java programming skills.</p>
+    </statement>
+
+    <choices>
+      <choice>
+        <p>strongly agree</p>
+      </choice>
+
+      <choice>
+        <p>agree</p>
+      </choice>
+
+      <choice>
+        <p>neither agree or disagree</p>
+      </choice>
+
+      <choice>
+        <p>disagree</p>
+      </choice>
+
+      <choice>
+        <p>strongly disagree</p>
+      </choice>
+
+      <choice>
+        <p>prefer not to answer</p>
+      </choice>
+    </choices>
+  </query>
+
+  <query label="qenjoypost">
+    <statement>
+      <p>
+        I enjoyed learning about computer science and Java in this course.
+      </p>
+    </statement>
+
+    <choices>
+      <choice>
+        <p>strongly agree</p>
+      </choice>
+
+      <choice>
+        <p>agree</p>
+      </choice>
+
+      <choice>
+        <p>neither agree or disagree</p>
+      </choice>
+
+      <choice>
+        <p>disagree</p>
+      </choice>
+
+      <choice>
+        <p>strongly disagree</p>
+      </choice>
+
+      <choice>
+        <p>prefer not to answer</p>
+      </choice>
+    </choices>
+  </query>
+
+  <query label="qcareerpost">
+    <statement>
+      <p>I would like to pursue further study or a career in computing.</p>
+    </statement>
+
+    <choices>
+      <choice>
+        <p>strongly agree</p>
+      </choice>
+
+      <choice>
+        <p>agree</p>
+      </choice>
+
+      <choice>
+        <p>neither agree or disagree</p>
+      </choice>
+
+      <choice>
+        <p>disagree</p>
+      </choice>
+
+      <choice>
+        <p>strongly disagree</p>
+      </choice>
+
+      <choice>
+        <p>prefer not to answer</p>
+      </choice>
+    </choices>
+  </query>
+
+  <activity label="qbest">
+    <statement>
+      <p>What did you like best about this course?</p>
+    </statement>
+
+    <response />
+  </activity>
+
+  <activity label="qimprove">
+    <statement>
+      <p>How could this course be improved?</p>
+    </statement>
+
+    <response />
+  </activity>
 </section>

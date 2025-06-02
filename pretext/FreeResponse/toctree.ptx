@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="unit-frq-practice" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Free Response Practice</title>
-        <xi:include href='./StringCoderA.ptx' />
-        <xi:include href='./StringCoderB.ptx' />
-        <xi:include href='./StudentAnswerSheetA.ptx' />
-        <xi:include href='./StudentAnswerSheetB.ptx' />
-        <xi:include href='./SkyViewA.ptx' />
-        <xi:include href='./SkyViewB.ptx' />
-        <xi:include href='./HiddenWord.ptx' />
-        <xi:include href='./ArrayTesterA.ptx' />
-        <xi:include href='./ArrayTesterB.ptx' />
-        <xi:include href='./NumberGroupB.ptx' />
-        <xi:include href='./NumberGroupC.ptx' />
-    </chapter>
+
+<chapter xml:id="unit-frq-practice" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Free Response Practice</title>
+  <xi:include href="./StringCoderA.ptx" />
+  <xi:include href="./StringCoderB.ptx" />
+  <xi:include href="./StudentAnswerSheetA.ptx" />
+  <xi:include href="./StudentAnswerSheetB.ptx" />
+  <xi:include href="./SkyViewA.ptx" />
+  <xi:include href="./SkyViewB.ptx" />
+  <xi:include href="./HiddenWord.ptx" />
+  <xi:include href="./ArrayTesterA.ptx" />
+  <xi:include href="./ArrayTesterB.ptx" />
+  <xi:include href="./NumberGroupB.ptx" />
+  <xi:include href="./NumberGroupC.ptx" />
+</chapter>

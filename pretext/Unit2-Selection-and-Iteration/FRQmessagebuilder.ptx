@@ -1,63 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<section xml:id="FRQmessagebuilder">
-  <title>FRQ 1 MessageBuilder with Loops and Strings</title><introduction>
-    
- <idx>control structures</idx>
- <idx>free response</idx>
- <idx>FRQ</idx>
 
-    <p>The AP exam’s first free response question (FRQ) is on Methods and Control Structures using expressions, Strings, loops, and if statements. Students will write two methods or one constructor and one method of a given class based on provided specifications and examples. In Part A (4 points),the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. In Part B (3 points), the method or constructor will require calling <c>String</c> methods as of 2026. The AP exam provides the method header with some parameter variables and other methods that you will need to call in the solution. This question does not involve more complex topics such as arrays. </p>
+<section xml:id="FRQmessagebuilder">
+  <title>FRQ 1 MessageBuilder with Loops and Strings</title>
+  <introduction>
+    <idx>control structures</idx>
+    <idx>free response</idx>
+    <idx>FRQ</idx>
+    <p>
+      The AP exam’s first free response question (FRQ) is on Methods and Control
+      Structures using expressions, Strings, loops, and if statements. Students
+      will write two methods or one constructor and one method of a given class
+      based on provided specifications and examples. In Part A (4 points),the
+      method or constructor will require students to write iterative or
+      conditional statements, or both, as well as statements that call methods
+      in the specified class. In Part B (3 points), the method or constructor
+      will require calling <c>String</c> methods as of 2026. The AP exam
+      provides the method header with some parameter variables and other methods
+      that you will need to call in the solution. This question does not involve
+      more complex topics such as arrays.
+    </p>
+
     <p>FRQ Question 1 on Control Structures will probably involve:</p>
     <p>
       <ul>
-            <li>
-                <p>a <c>for</c> or <c>while</c> loop that probably uses the method’s parameter variables,</p>
-            </li>
-            <li>
-                <p>an <c>if statement</c>, probably inside the loop,</p>
-            </li>
-            <li>
-                <p>calls to other class <c>methods given to you</c>,</p>
-            </li>
-            <li>
-                <p>a numerical or string value that is calculated by the loop and <c>returned</c> at the end of the method.</p>
-            </li>
-            <li>
-                <p>Part A will require a loop and part B will require String methods (with or without a loop).</p>
-            </li>
-        </ul>
+        <li>
+          <p>
+            a <c>for</c> or <c>while</c> loop that probably uses the method’s
+            parameter variables,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            an <c>if statement</c>, probably inside the loop,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            calls to other class <c>methods given to you</c>,
+          </p>
+        </li>
+
+        <li>
+          <p>
+            a numerical or string value that is calculated by the loop and
+            <c>returned</c> at the end of the method.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Part A will require a loop and part B will require String methods
+            (with or without a loop).
+          </p>
+        </li>
+      </ul>
     </p>
+
     <p>On question 1, you will get points for:</p>
     <p>
       <ul>
-            <li>
-                <p>constructing the loop correctly,</p>
-            </li>
-            <li>
-                <p>calling the correct methods,</p>
-            </li>
-            <li>
-                <p>calculating the correct value,</p>
-            </li>
-            <li>
-                <p>and returning the value.</p>
-            </li>
-        </ul>
+        <li>
+          <p>constructing the loop correctly,</p>
+        </li>
+
+        <li>
+          <p>calling the correct methods,</p>
+        </li>
+
+        <li>
+          <p>calculating the correct value,</p>
+        </li>
+
+        <li>
+          <p>and returning the value.</p>
+        </li>
+      </ul>
     </p>
-    <p>Try to have some code for each of these steps. Do not use arrays or other more complex code. You may need to use Math and String methods.</p>
-  </introduction>
-  <subsection xml:id="ced-frq-messagebuilder">
-  <title>FRQ 1 MessageBuilder</title>
 
     <p>
-      The following free response question is a great FRQ 1 example from page 168 of the <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf" visual="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf">2025-2026 AP CSA Course and Exam Description</url>. </p>
-        
-    <p>
-      This question involves the <c>MessageBuilder</c> class, which is used to generate a message
-      based on a starting word. The <c>MessageBuilder</c> class contains a helper method,
-      <c>getNextWord</c>. You will write a constructor and a method in the <c>MessageBuilder</c> class.
+      Try to have some code for each of these steps. Do not use arrays or other
+      more complex code. You may need to use Math and String methods.
     </p>
-            <program language="java"><code>
+  </introduction>
+
+  <subsection xml:id="ced-frq-messagebuilder">
+    <title>FRQ 1 MessageBuilder</title>
+    <p>
+      The following free response question is a great FRQ 1 example from page
+      168 of the <url
+      href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf"
+      visual="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf">2025-2026
+      AP CSA Course and Exam Description</url>.
+    </p>
+
+    <p>
+      This question involves the <c>MessageBuilder</c> class, which is used to
+      generate a message based on a starting word. The <c>MessageBuilder</c>
+      class contains a helper method, <c>getNextWord</c>. You will write a
+      constructor and a method in the <c>MessageBuilder</c> class.
+    </p>
+
+    <program language="java">
+      <code>
 public class MessageBuilder
 {
   private String message; // To be initialized in part (a)
@@ -93,190 +139,346 @@ public class MessageBuilder
 
   /* There may be instance variables, constructors, and methods that are not shown. */
 }
-    </code></program>
+      </code>
+    </program>
   </subsection>
 
-<subsection xml:id="parta-messagebuilder">
-            <title>Part A: MessageBuilder Constructor</title>
-
-
+  <subsection xml:id="parta-messagebuilder">
+    <title>Part A: MessageBuilder Constructor</title>
     <p>
-      In Part A, you will write the <c>MessageBuilder</c> constructor, which uses a helper method to create a message
-      starting with the word specified by the parameter <c>startingWord</c> and assigns the message to
-      the instance variable <c>message</c>. The constructor also counts the number of words in the message
-      and assigns the count to the instance variable <c>numWords</c>.
+      In Part A, you will write the <c>MessageBuilder</c> constructor, which
+      uses a helper method to create a message starting with the word specified
+      by the parameter <c>startingWord</c> and assigns the message to the
+      instance variable <c>message</c>. The constructor also counts the number
+      of words in the message and assigns the count to the instance variable
+      <c>numWords</c>.
     </p>
+
     <p>
-      Each word in the message will be separated by a single space. A helper method, <c>getNextWord</c>,
-      has been provided to obtain words to be added to the message. Each call to <c>getNextWord</c>
-      returns the next word in the message based on the word most recently added. When there are no more
+      Each word in the message will be separated by a single space. A helper
+      method, <c>getNextWord</c>, has been provided to obtain words to be added
+      to the message. Each call to <c>getNextWord</c> returns the next word in
+      the message based on the word most recently added. When there are no more
       words to be added, <c>getNextWord</c> returns <c>null</c>.
     </p>
-  
-  <p>
-  <term>Example 1:</term>  Consider the following calls to <c>getNextWord</c>, which are made within the <c>MessageBuilder</c> class. The return value of each call is used in the next call.
-  </p>
 
-  <table>
-    <tabular row-headers="yes">
-      <col top="minor"/><col top="minor"/>
-      <row header="yes" left="minor">
-        <cell bottom="minor" right="minor">Method Call</cell>
-        <cell bottom="minor" right="minor">Return Value</cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("the")</c></cell>
-        <cell bottom="minor" right="minor"><c>"book"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("book")</c></cell>
-        <cell bottom="minor" right="minor"><c>"on"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("on")</c></cell>
-        <cell bottom="minor" right="minor"><c>"the"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("the")</c></cell>
-        <cell bottom="minor" right="minor"><c>"table"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("table")</c></cell>
-        <cell bottom="minor" right="minor"><c>null</c></cell>
-      </row>
-    </tabular>
-  </table>
-
-  <p>
-    Based on these return values, a call to the <c>MessageBuilder</c> constructor with argument <c>"the"</c>
-    should set the instance variable <c>message</c> to <c>"the book on the table"</c> and should set
-    the instance variable <c>numWords</c> to <c>5</c>.
-  </p>
-
-  <p>  <term>Example 2:</term> 
-    Now consider a different set of calls to <c>getNextWord</c>. Again, the return value of each call is used as input to the next.
-  </p>
-
-  <table>
-    <tabular row-headers="yes">
-      <col top="minor"/><col top="minor"/>
-      <row header="yes" left="minor">
-        <cell bottom="minor" right="minor">Method Call</cell>
-        <cell bottom="minor" right="minor">Return Value</cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("good")</c></cell>
-        <cell bottom="minor" right="minor"><c>"morning"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("morning")</c></cell>
-        <cell bottom="minor" right="minor"><c>"sunshine"</c></cell>
-      </row>
-      <row left="minor">
-        <cell bottom="minor" right="minor"><c>getNextWord("sunshine")</c></cell>
-        <cell bottom="minor" right="minor"><c>null</c></cell>
-      </row>
-    </tabular>
-  </table>
-
-  <p>
-    Based on this, a call to the <c>MessageBuilder</c> constructor with argument <c>"good"</c>
-    should set <c>message</c> to <c>"good morning sunshine"</c> and <c>numWords</c> to <c>3</c>.
-  </p>
-</subsection>
-
-
-    <subsection xml:id="how-to-solve-messagebuilder-a">
-  <title>How to solve the MessageBuilder constructor</title>
-
-
-  <p>Here are some exercises to help you to tackle this FRQ. First, identify and highlight the methods and variables that you must use in the problem.</p>
-  <p>
-    <ul>
-      <li><p>The parameter <c>startingWord</c></p></li>
-      <li><p>The helper method <c>getNextWord(String s)</c></p></li>
-      <li><p>The instance variables <c>message</c> and <c>numWords</c></p></li>
-    </ul>
-  </p>
-<p>We will learn more about writing constructors in the next unit, but for now, you can think of a constructor as a method that is called when an object is created to initialize the instance variables of the class, in this case <c>message</c> and <c>numWords</c>. </p>
-  <p>
-    You will write a loop that adds to the <c>message</c> variable using the <c>getNextWord</c> method and increments <c>numWords</c> as you add more words to the message.  
-    The constructor starts with <c>startingWord</c> and repeatedly adds the result of
-    <c>getNextWord</c> until it returns <c>null</c>. Each word is separated by a space.
-  </p>
-
-  <p>
-    You can declare a temporary variable such as <c>nextWord</c> as your loop variable to store the result of
-    <c>getNextWord</c>, and update <c>message</c> and <c>numWords</c> in each loop iteration.
-  </p>
-
-
-  <p>Now let's plan the loop. The following questions will help guide your thinking.</p>
-
-  <activity label="msgbuilder-loop-type">
-    <statement>
-      <p>Which loop structure is best suited to keep building the message until <c>getNextWord</c> returns <c>null</c>?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement><p>for loop with fixed number of iterations</p></statement>
-        <feedback><p>The number of words is not known in advance, so a for loop with a fixed range won't work.</p></feedback>
-      </choice>
-      <choice correct="yes">
-        <statement><p>while loop that continues until <c>getNextWord</c> returns <c>null</c></p></statement>
-        <feedback><p>Correct. A while loop is appropriate because we don't know in advance how many words will be added.</p></feedback>
-      </choice>
-    </choices>
-  </activity>
-
-  <activity label="msgbuilder-variables">
-    <statement>
-      <p>What is the purpose of the variable <c>nextWord</c> in the loop?</p>
-    </statement>
-    <choices>
-      <choice>
-        <statement><p>It holds the entire message being built.</p></statement>
-        <feedback><p>No, the <c>message</c> variable holds the full message. <c>nextWord</c> holds each new word temporarily.</p></feedback>
-      </choice>
-      <choice correct="yes">
-        <statement><p>It stores the word returned by <c>getNextWord</c> in each iteration.</p></statement>
-        <feedback><p>Correct. <c>nextWord</c> lets you keep track of the latest word returned before adding it to the message.</p></feedback>
-      </choice>
-      <choice>
-        <statement><p>It counts how many words have been added.</p></statement>
-        <feedback><p>No, that’s the purpose of the <c>numWords</c> variable.</p></feedback>
-      </choice>
-    </choices>
-  </activity>
-
-  <p>As you write the loop, remember the 3 steps of the loop: </p>
-    <ol><li><p>Initialize the loop variable <c>nextWord</c> using the <c>getNextWord</c> method with the starting word as an argument.</p></li>
-     <li> <p>Test the loop variable to make sure it is not <c>null</c>.       
-      </p>
-    </li>
-    <li><p>Change the loop variable to the next word using the getNextWord method with the last word as an argument.</p></li>
-  </ol>
-
-</subsection>
-
-
-<subsection xml:id="msgbuilder-solve-part-a">
-  <title>Solve MessageBuilder Part A</title>
     <p>
-      Complete the <c>MessageBuilder</c> constructor below. 
+      <term>Example 1:</term> Consider the following calls to
+      <c>getNextWord</c>, which are made within the <c>MessageBuilder</c> class.
+      The return value of each call is used in the next call.
     </p>
 
-<activity label="FRQmessageBuilderPartA">
-    <statement>
-            <p> Complete the <c>MessageBuilder</c> constructor below that builds a message starting with the <c>startingWord</c> specified by the
-     parameter. It should 
-            use a while loop to add on to the message using the given <c>getNextWord</c> method and increment <c>numWords</c>. Make sure there are spaces between the words in the message.
-           </p>
-      
+    <table>
+      <tabular row-headers="yes">
+        <col top="minor" />
+        <col top="minor" />
+        <row header="yes" left="minor">
+          <cell bottom="minor" right="minor">Method Call</cell>
+          <cell bottom="minor" right="minor">Return Value</cell>
+        </row>
 
-    </statement>
-    <program interactive="activecode" language="java">
-      <code>
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("the")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"book"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("book")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"on"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("on")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"the"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("the")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"table"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("table")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>null</c>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Based on these return values, a call to the <c>MessageBuilder</c>
+      constructor with argument <c>"the"</c> should set the instance variable
+      <c>message</c> to <c>"the book on the table"</c> and should set the
+      instance variable <c>numWords</c> to <c>5</c>.
+    </p>
+
+    <p>
+      <term>Example 2:</term> Now consider a different set of calls to
+      <c>getNextWord</c>. Again, the return value of each call is used as input
+      to the next.
+    </p>
+
+    <table>
+      <tabular row-headers="yes">
+        <col top="minor" />
+        <col top="minor" />
+        <row header="yes" left="minor">
+          <cell bottom="minor" right="minor">Method Call</cell>
+          <cell bottom="minor" right="minor">Return Value</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("good")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"morning"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("morning")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>"sunshine"</c>
+          </cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">
+            <c>getNextWord("sunshine")</c>
+          </cell>
+
+          <cell bottom="minor" right="minor">
+            <c>null</c>
+          </cell>
+        </row>
+      </tabular>
+    </table>
+
+    <p>
+      Based on this, a call to the <c>MessageBuilder</c> constructor with
+      argument <c>"good"</c> should set <c>message</c> to <c>"good morning
+      sunshine"</c> and <c>numWords</c> to <c>3</c>.
+    </p>
+  </subsection>
+
+  <subsection xml:id="how-to-solve-messagebuilder-a">
+    <title>How to solve the MessageBuilder constructor</title>
+    <p>
+      Here are some exercises to help you to tackle this FRQ. First, identify
+      and highlight the methods and variables that you must use in the problem.
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            The parameter <c>startingWord</c>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The helper method <c>getNextWord(String s)</c>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The instance variables <c>message</c> and <c>numWords</c>
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      We will learn more about writing constructors in the next unit, but for
+      now, you can think of a constructor as a method that is called when an
+      object is created to initialize the instance variables of the class, in
+      this case <c>message</c> and <c>numWords</c>.
+    </p>
+
+    <p>
+      You will write a loop that adds to the <c>message</c> variable using the
+      <c>getNextWord</c> method and increments <c>numWords</c> as you add more
+      words to the message. The constructor starts with <c>startingWord</c> and
+      repeatedly adds the result of <c>getNextWord</c> until it returns
+      <c>null</c>. Each word is separated by a space.
+    </p>
+
+    <p>
+      You can declare a temporary variable such as <c>nextWord</c> as your loop
+      variable to store the result of <c>getNextWord</c>, and update
+      <c>message</c> and <c>numWords</c> in each loop iteration.
+    </p>
+
+    <p>
+      Now let's plan the loop. The following questions will help guide your
+      thinking.
+    </p>
+
+    <activity label="msgbuilder-loop-type">
+      <statement>
+        <p>
+          Which loop structure is best suited to keep building the message until
+          <c>getNextWord</c> returns <c>null</c>?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>for loop with fixed number of iterations</p>
+          </statement>
+
+          <feedback>
+            <p>
+              The number of words is not known in advance, so a for loop with a
+              fixed range won't work.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              while loop that continues until <c>getNextWord</c> returns
+              <c>null</c>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct. A while loop is appropriate because we don't know in
+              advance how many words will be added.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="msgbuilder-variables">
+      <statement>
+        <p>
+          What is the purpose of the variable <c>nextWord</c> in the loop?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>It holds the entire message being built.</p>
+          </statement>
+
+          <feedback>
+            <p>
+              No, the <c>message</c> variable holds the full message.
+              <c>nextWord</c> holds each new word temporarily.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              It stores the word returned by <c>getNextWord</c> in each
+              iteration.
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Correct. <c>nextWord</c> lets you keep track of the latest word
+              returned before adding it to the message.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>It counts how many words have been added.</p>
+          </statement>
+
+          <feedback>
+            <p>
+              No, that’s the purpose of the <c>numWords</c> variable.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <p>As you write the loop, remember the 3 steps of the loop:</p>
+    <ol>
+      <li>
+        <p>
+          Initialize the loop variable <c>nextWord</c> using the
+          <c>getNextWord</c> method with the starting word as an argument.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Test the loop variable to make sure it is not <c>null</c>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Change the loop variable to the next word using the getNextWord method
+          with the last word as an argument.
+        </p>
+      </li>
+    </ol>
+  </subsection>
+
+  <subsection xml:id="msgbuilder-solve-part-a">
+    <title>Solve MessageBuilder Part A</title>
+    <p>
+      Complete the <c>MessageBuilder</c> constructor below.
+    </p>
+
+    <activity label="FRQmessageBuilderPartA">
+      <statement>
+        <p>
+          Complete the <c>MessageBuilder</c> constructor below that builds a
+          message starting with the <c>startingWord</c> specified by the
+          parameter. It should use a while loop to add on to the message using
+          the given <c>getNextWord</c> method and increment <c>numWords</c>.
+          Make sure there are spaces between the words in the message.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
 public class MessageBuilder
 {
     private String message; // To be initialized in part (a)
@@ -333,8 +535,8 @@ public class MessageBuilder
         System.out.println("Number of words: " + builder.getNumWords());
     }
   }
-    </code>
-    <tests>
+        </code>
+        <tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -375,126 +577,256 @@ public class RunestoneTests extends CodeTestHelper
         }
 }
         </tests>
-    </program>
-</activity>
-    
-
+      </program>
+    </activity>
   </subsection>
 
-<subsection xml:id="partb-messagebuilder">
-  <title>Part B: getAbbreviation</title>
-  <p>
-    Starting in 2026, the AP exam will require students to use String methods in part B of FRQ 1.</p>
-      
+  <subsection xml:id="partb-messagebuilder">
+    <title>Part B: getAbbreviation</title>
     <p>
-    In MessageBuilder Part B, you are asked to write the <c>getAbbreviation</c> method, which returns an abbreviation consisting of the
-      first letter of each word in <c>message</c>. Assume that <c>message</c> consists of
-      two or more words, each separated by a single space.
-    
-      For example, if the value of <c>message</c> is <c>"as soon as possible"</c>,
-      then <c>getAbbreviation()</c> should return <c>"asap"</c>.
+      Starting in 2026, the AP exam will require students to use String methods
+      in part B of FRQ 1.
     </p>
 
-    
-
-<activity label="msgbuilder-string-methods">
-  <statement>
-    <p>Which of the following <code>String</code> method can be used to return the first letter of a word? </p>
-  </statement>
-  <choices>
-   <choice>
-      <statement><p><code>length()</code></p></statement>
-      <feedback><p>You do not need to know the length of a string to return its first letter.</p></feedback>
-    </choice>
-    <choice>
-      <statement><p><code>indexOf(String s)</code></p></statement>
-      <feedback><p>You do not need to know the index of a substring.</p></feedback>
-    </choice>
-    <choice correct="yes">
-      <statement><p><code>substring(int start, int end)</code></p></statement>
-      <feedback><p><code>substring</code> could be used to get the first letter of a string.</p></feedback>
-    </choice>
-    
-    <choice>
-      <statement><p><code>equals(String another)</code></p></statement>
-      <feedback><p><code>equals</code> is used for comparisons, which are not needed for this method.</p></feedback>
-    </choice>
-    
- 
-  </choices>
-</activity>
-
-
-<activity label="msgbuilder-string-methods2">
-  <statement>
-    <p>Which of the following <code>String</code> method can be used to find a space character in the message? </p>
-  </statement>
-  <choices>
-   <choice>
-      <statement><p><code>length()</code></p></statement>
-      <feedback><p>You do not need to know the length of the string.</p></feedback>
-    </choice>
-    <choice correct="yes">
-      <statement><p><code>indexOf(String s)</code></p></statement>
-      <feedback><p>You can use indexOf(" ") to find the index of a space in a string.</p></feedback>
-    </choice>
-    <choice>
-      <statement><p><code>substring(int start, int end)</code></p></statement>
-      <feedback><p>substring only works if you know the index of the space. </p></feedback>
-    </choice>
-    
-    <choice>
-      <statement><p><code>equals(String another)</code></p></statement>
-      <feedback><p><code>equals</code> is used for comparisons, which are not needed here.</p></feedback>
-    </choice>
-  </choices>
-</activity>
-
-<activity label="msgbuilder-partb-loop">
-  <statement>
-    <p>Which of the following loop patterns can be used to find the next space in a String?</p>
-  </statement>
-  <choices>
-   <choice>
-      <statement><p>for(int i=0; i &lt; message.length; i++)</p></statement>
-      <feedback><p>This iterates through the message letter by letter, but it doesn't find the next space. You could make it work with an if statement inside to find the space, but there is another solution.</p></feedback>
-    </choice>
-  <choice>
-      <statement><p>while(message.substring(0,1) == " ")</p></statement>
-      <feedback><p>This while loop would only check the first character. You could make this work if you used an index variable i but there is another solution.</p></feedback>
-    </choice>
-    <choice correct="yes">
-      <statement><p>while( tempMessage.indexOf(" ") &gt;= 0 ) </p></statement>
-      <feedback><p>You can use indexOf(" ") to find the index of a space in a string easily. You can copy message into tempMessage so that you can change it to skip to the next word.</p></feedback>
-    </choice>
-    
-  
-  </choices>
-</activity>
-  
-</subsection>
-
-<subsection xml:id="ap-scoring-rubric-parta">
-            <title>AP Scoring Rubric</title>
-            <p>Here is the AP rubric for this problem. Did your code meet the requirements for all 4 points? Notice that even a partial solution would get some of the points. It is not all or nothing. In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption>AP Rubric</caption><image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-parta.png" width="100%" alt="AP Rubric for part a"/></figure>
-        </subsection>
-
-<subsection xml:id="msgbuilder-partb-solve">
-  <title>Solve MessageBuilder Part B</title>
-  
     <p>
-      Complete the <c>getAbbreviation()</c> method below which returns a String that consists of the first letter of each word in the message.  Assume that <c>message</c> consists of two or more words, each separated by a single space.
+      In MessageBuilder Part B, you are asked to write the
+      <c>getAbbreviation</c> method, which returns an abbreviation consisting of
+      the first letter of each word in <c>message</c>. Assume that
+      <c>message</c> consists of two or more words, each separated by a single
+      space. For example, if the value of <c>message</c> is <c>"as soon as
+      possible"</c>, then <c>getAbbreviation()</c> should return <c>"asap"</c>.
     </p>
 
+    <activity label="msgbuilder-string-methods">
+      <statement>
+        <p>
+          Which of the following <code>String </code> method can be used to
+          return the first letter of a word?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <code>length()
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You do not need to know the length of a string to return its first
+              letter.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <code>indexOf(String s)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>You do not need to know the index of a substring.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <code>substring(int start, int end)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <code>substring </code> could be used to get the first letter of a
+              string.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <code>equals(String another)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <code>equals </code> is used for comparisons, which are not needed
+              for this method.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="msgbuilder-string-methods2">
+      <statement>
+        <p>
+          Which of the following <code>String </code> method can be used to find
+          a space character in the message?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>
+              <code>length()
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>You do not need to know the length of the string.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              <code>indexOf(String s)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can use indexOf(" ") to find the index of a space in a string.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <code>substring(int start, int end)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>substring only works if you know the index of the space.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              <code>equals(String another)
+              </code>
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              <code>equals </code> is used for comparisons, which are not needed
+              here.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="msgbuilder-partb-loop">
+      <statement>
+        <p>
+          Which of the following loop patterns can be used to find the next
+          space in a String?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>for(int i=0; i &lt; message.length; i++)</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This iterates through the message letter by letter, but it doesn't
+              find the next space. You could make it work with an if statement
+              inside to find the space, but there is another solution.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>while(message.substring(0,1) == " ")</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This while loop would only check the first character. You could
+              make this work if you used an index variable i but there is
+              another solution.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>while( tempMessage.indexOf(" ") &gt;= 0 )</p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can use indexOf(" ") to find the index of a space in a string
+              easily. You can copy message into tempMessage so that you can
+              change it to skip to the next word.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
+  <subsection xml:id="ap-scoring-rubric-parta">
+    <title>AP Scoring Rubric</title>
+    <p>
+      Here is the AP rubric for this problem. Did your code meet the
+      requirements for all 4 points? Notice that even a partial solution would
+      get some of the points. It is not all or nothing. In class, your teacher
+      may have you grade each others’ code.
+    </p>
+
+    <figure align="center">
+      <caption>AP Rubric</caption>
+      <image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-parta.png" width="100%" alt="AP Rubric for part a" />
+    </figure>
+  </subsection>
+
+  <subsection xml:id="msgbuilder-partb-solve">
+    <title>Solve MessageBuilder Part B</title>
+    <p>
+      Complete the <c>getAbbreviation()</c> method below which returns a String
+      that consists of the first letter of each word in the message. Assume that
+      <c>message</c> consists of two or more words, each separated by a single
+      space.
+    </p>
 
     <activity label="FRQmessageBuilderPartB">
-    <statement>
-            <p> Complete the  <c>getAbbreviation()</c> method below that returns a String that consists of the first letter of each word in the message.  Assume that <c>message</c> consists of two or more words, each separated by a single space.
-           </p>
-    </statement>
-    <program interactive="activecode" language="java">
-      <code>
+      <statement>
+        <p>
+          Complete the <c>getAbbreviation()</c> method below that returns a
+          String that consists of the first letter of each word in the message.
+          Assume that <c>message</c> consists of two or more words, each
+          separated by a single space.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
 public class MessageBuilder
 {
     private String message; 
@@ -535,8 +867,8 @@ public class MessageBuilder
         System.out.println("Abbreviation for " + builder.getMessage() + " is "  + builder.getAbbreviation());
     }
   }
-    </code>
-    <tests>
+        </code>
+        <tests>
 import static org.junit.Assert.*;
 
 import org.junit.*;
@@ -567,13 +899,23 @@ public class RunestoneTests extends CodeTestHelper
         }
 }
         </tests>
-    </program>
-</activity>
-</subsection>
+      </program>
+    </activity>
+  </subsection>
 
-        <subsection xml:id="ap-scoring-rubric-partb">
-            <title>AP Scoring Rubric</title>
-            <p>Here is the AP rubric for this problem. Did your code meet the requirements for all 7 points? Notice that even a partial solution would get some of the points. It is not all or nothing. There are also many other solutions possible. In class, your teacher may have you grade each others’ code.</p>
-            <figure align="center"><caption>AP Rubric</caption><image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-partb.png" width="100%" alt="AP Rubric for part b"/></figure>
-        </subsection>
+  <subsection xml:id="ap-scoring-rubric-partb">
+    <title>AP Scoring Rubric</title>
+    <p>
+      Here is the AP rubric for this problem. Did your code meet the
+      requirements for all 7 points? Notice that even a partial solution would
+      get some of the points. It is not all or nothing. There are also many
+      other solutions possible. In class, your teacher may have you grade each
+      others’ code.
+    </p>
+
+    <figure align="center">
+      <caption>AP Rubric</caption>
+      <image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-partb.png" width="100%" alt="AP Rubric for part b" />
+    </figure>
+  </subsection>
 </section>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="topic-1-9-method-signatures">
-  <title>
-    Method Signatures 
-    <image source="_static/45min.svg" />
-  </title>
-
+  <title>Method Signatures</title>
+  <time minutes="45" />
   <introduction />
   <subsection>
     <title>Methods and Procedural Abstraction</title>
@@ -502,7 +499,7 @@ public class Song
         <cline>    <area correct="no">System.out.println("Here a </area><area correct="yes"> moo</area><area correct="no">, there a </area> <area correct="yes">  moo </area> <area correct="no">, everywhere a </area> <area correct="yes"> moo moo</area><area correct="no">");</area></cline>
         <cline>    <area correct="no">System.out.println("Old MacDonald had a farm");</area></cline>
         <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
-        <cline>    <area correct="no">System.out.println("And on this farm, they had a </area> 
+        <cline>    <area correct="no">System.out.println("And on this farm, they had a </area>
 <area correct="yes"> duck</area><area correct="no">.");</area></cline>
         <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
         <cline>    <area correct="no">System.out.println("With a </area> <area correct="yes"> quack quack </area><area correct="no"> here and a </area><area correct="yes"> quack quack </area><area correct="no"> there");</area></cline>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="topic-1-8-comments">
-  <title>
-    Documentation with Comments and Preconditions 
-    <image source="_static/45min.svg" />
-  </title>
-
+  <title>Documentation with Comments and Preconditions</title>
+  <time minutes="45" />
   <introduction />
   <subsection xml:id="comments-1">
     <title>Comments</title>
@@ -186,10 +183,10 @@ public class MyClass()
               Scanner scan = new Scanner(System.in);
               int num1 = scan.nextInt();
               int num2 = scan.nextInt();
-              
+
               int result = num1 * num2;
-              
-              System.out.println(num1 + " x " + num2 + " = " + result); 
+
+              System.out.println(num1 + " x " + num2 + " = " + result);
               scan.close();
          }
     }

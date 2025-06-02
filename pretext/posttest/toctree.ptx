@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <chapter xml:id="post-course" xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
-        <title>Post Tests and Survey</title>
-        <xi:include href='./short-pd-posttest.ptx' />
-        <xi:include href='./posttest.ptx' />
-         <xi:include href='./postsurvey.ptx' />
-    </chapter>
+
+<chapter xml:id="post-course" xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Post Tests and Survey</title>
+  <xi:include href="./short-pd-posttest.ptx" />
+  <xi:include href="./posttest.ptx" />
+  <xi:include href="./postsurvey.ptx" />
+</chapter>
