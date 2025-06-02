@@ -97,7 +97,7 @@
   <subsection xml:id="while-find-and-replace-loop">
     <title>While Find and Replace Loop</title>
     <p>
-      A while loop can be used with the <c>String</c><c>indexOf</c> method to
+      A while loop can be used with the <c>String</c> <c>indexOf</c> method to
       find certain characters in a string and process them, usually using the
       <c>substring</c> method.
     </p>

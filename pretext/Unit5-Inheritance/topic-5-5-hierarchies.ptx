@@ -552,8 +552,8 @@ class Dog extends Pet
       In this challenge, you will add a new class called <c>DiscountedItem</c>
       that extends the <c>Item</c> class. The <c>ArrayList</c> of <c>Item</c>
       will still work since it can hold the subclasses of <c>Item</c> too! The
-      <c>ShoppingCart</c><c>printOrder</c> method will work with <c>Item</c> and
-      <c>DiscountedItem</c> but note that it has an <c>if</c> statement that
+      <c>ShoppingCart</c> <c>printOrder</c> method will work with <c>Item</c>
+      and <c>DiscountedItem</c> but note that it has an <c>if</c> statement that
       treats <c>DiscountedItem</c> differently.
     </p>
 

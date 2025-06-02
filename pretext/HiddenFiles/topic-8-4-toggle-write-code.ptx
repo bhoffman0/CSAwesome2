@@ -393,11 +393,10 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
       <p>
         Fill in the <c>numOccurrences</c> method. It should take in a
-        two-dimension <c>int</c> array <c>nums</c> and an
-        <c>int</c><c>desired</c> and return the number of times that
-        <c>desired</c> appears in <c>nums</c>. E.g., with <c>{ {3, 1, 2}, {3, 4,
-        1} }</c> as <c>nums</c>, <c>numOccurrences(nums, 1)</c> should return
-        <c>2</c>.
+        two-dimension <c>int</c> array <c>nums</c> and an <c>int</c>
+        <c>desired</c> and return the number of times that <c>desired</c>
+        appears in <c>nums</c>. E.g., with <c>{ {3, 1, 2}, {3, 4, 1} }</c> as
+        <c>nums</c>, <c>numOccurrences(nums, 1)</c> should return <c>2</c>.
       </p>
     </statement>
 

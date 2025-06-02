@@ -44,7 +44,7 @@
     <p>
       In the example below, the <c>Student</c> class overrides the
       <c>getFood</c> method of the <c>Person</c> class, and it uses
-      <c>super.getFood()</c> to call the <c>Person</c><c>getFood</c> method
+      <c>super.getFood()</c> to call the <c>Person</c> <c>getFood</c> method
       before adding on to it. Here, a <c>Person</c> is associated with the food
       “Hamburger” and a <c>Student</c> is associated with “Hamburger” and
       “Taco”.
