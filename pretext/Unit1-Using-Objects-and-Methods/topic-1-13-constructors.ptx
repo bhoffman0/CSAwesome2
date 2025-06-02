@@ -55,7 +55,7 @@ Turtle t = new Turtle(habitat); // create a new Turtle object
     </figure>
 
     <p>
-      The <term>no-argument constructor</term><c>World()</c>, with no arguments
+      The <term>no-argument constructor</term> <c>World()</c>, with no arguments
       inside the parentheses following the name of the constructor, creates a
       graphical window with a default size of 640x480 pixels. No-argument
       constructors usually set the attributes of the object to default values.

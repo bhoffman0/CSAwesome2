@@ -632,8 +632,8 @@ public class RunestoneTests extends CodeTestHelper
     <program language="java">
       <code>
        // get the name of the 0's student
-       String name = students.get(0).getName();    
-       // get the GPA of the student at index i 
+       String name = students.get(0).getName();
+       // get the GPA of the student at index i
        double gpa = students.get(i).getGPA();
       </code>
     </program>
@@ -650,7 +650,7 @@ public class RunestoneTests extends CodeTestHelper
         <code>
 import java.util.*;
 
-public class Roster 
+public class Roster
 {
     private ArrayList&lt;Student&gt; list = new ArrayList&lt;Student&gt;();
 
@@ -667,18 +667,18 @@ public class Roster
     // implicitly calling the toString() method of the Student class.
     public void printRoster()
     {
-       
+
     }
 
-    // Write a honorRoll() method to print the names of students 
-    // with a GPA greater than 3.5 on the list using an indexed for loop with index i 
+    // Write a honorRoll() method to print the names of students
+    // with a GPA greater than 3.5 on the list using an indexed for loop with index i
     // and chaining get(i) with the getGPA() and getName() methods of the Student class.
     public void honorRoll()
     {
-        
+
     }
-    
-    
+
+
     // main method for testing
     public static void main(String[] args)
     {
@@ -695,7 +695,7 @@ class Student
     private String name;
     private int id;
     private double gpa;
-    
+
 
     public Student(String name, int id, double gpa)
     {
@@ -941,8 +941,8 @@ class WordPair
                     <li>
                       <p>
                         Add the new <c>WordPair</c> formed from the <c>i</c>th
-                        word and the <c>j</c>th word to the
-                        <c>allPairs</c><c>ArrayList</c>.
+                        word and the <c>j</c>th word to the <c>allPairs</c>
+                        <c>ArrayList</c>.
                       </p>
                     </li>
                   </ul>
@@ -1124,7 +1124,7 @@ class WordPair
 
     <p>
       For this method, you will need a loop that goes through the
-      <c>ArrayList</c><c>allPairs</c> and for each <c>WordPair</c> in
+      <c>ArrayList</c> <c>allPairs</c> and for each <c>WordPair</c> in
       <c>allPairs</c>, it checks to see if its first word (using the
       <c>getFirst</c> method) equals the second word (using the <c>getSecond</c>
       method). If there is a match, it increments a counter which it returns at

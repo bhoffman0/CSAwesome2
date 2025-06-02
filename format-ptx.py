@@ -129,6 +129,8 @@ def render_block(elem, ns, level=0):
             content += serialize_element(child, ns | elem.nsmap, level + 1)
             if child.tail and child.tail.strip():
                 content += escape(child.tail)
+            elif child.tail and not child.tail.strip() and is_inline(child):
+                content += " "
 
         if wrappable(elem):
             filled = fill_with_indent(content, indent(level + 1))

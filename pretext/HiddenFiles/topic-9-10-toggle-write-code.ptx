@@ -57,7 +57,7 @@ public class RunestoneTests extends CodeTestHelper
       <p>
         Overload the <c>talk</c> method in the <c>Person</c> class so it can
         take in a String <c>name</c> and print <c>"Hello {name}!"</c> (e.g.,
-        calling <c>p.talk("Sarah")</c> on a <c>Person</c><c>p</c> would print
+        calling <c>p.talk("Sarah")</c> on a <c>Person p</c> would print
         <c>"Hello Sarah!"</c>).
       </p>
     </statement>
@@ -729,7 +729,7 @@ public class RunestoneTests extends CodeTestHelper
         calories consumed"</c>). There should also be a <c>Fruit</c> subclass
         that inherits from <c>Food</c> and adds the private <c>color</c> String
         instance variable. The <c>Fruit</c> class should override the
-        <c>Food</c><c>chomp()</c> method to return nothing, print
+        <c>Food</c> <c>chomp()</c> method to return nothing, print
         <c>"{numCalories} calories consumed"</c>, and print <c>"the fruit is
         {color}"</c> (on a new line). Finally, there should be an <c>Apple</c>
         subclass that inherits from <c>Fruit</c>, sets <c>color</c> to
