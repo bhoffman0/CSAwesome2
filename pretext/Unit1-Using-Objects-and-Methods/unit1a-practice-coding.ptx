@@ -175,6 +175,12 @@ public class RunestoneTests extends CodeTestHelper
                 getResults(expect, output, "Expected output from main");
         assertTrue(passed);
     }
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("+ name");
+        assertTrue(passed);
+    }
 }
       </tests>
     </program>
@@ -221,9 +227,7 @@ public class Test1
     {
         String name = "Justin";
         int age = 16;
-        System.out.println("Your name is " + name +
-                           " and your age is " + age);
-
+        System.out.println();
     }
 }
       </code>
@@ -245,6 +249,12 @@ public class Test1
                               getResults(expect, output, "Expected output from main");
                       assertTrue(passed);
                   }
+                  @Test
+                  public void test2()
+                  {
+                      boolean passed = checkCodeContains("+ name");
+                      assertTrue(passed);
+                  }
               }
       </tests>
     </program>
@@ -254,6 +264,21 @@ public class Test1
         Use the <c>+</c> operator to append the strings. Be sure to include
         spaces as needed.
       </p>
+       <program language="java">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String name = "Justin";
+        int age = 16;
+        System.out.println("Your name is " + name +
+                           " and your age is " + age);
+
+    }
+}
+      </code>
+    </program>
     </solution>
   </activity>
 
@@ -296,6 +321,13 @@ public class RunestoneTests extends CodeTestHelper
                     + " pizza.";
         boolean passed =
                 getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("name +");
         assertTrue(passed);
     }
 }
