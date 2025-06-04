@@ -64,7 +64,7 @@
       <c>int</c> or a 64-bit floating point value for a <c>double</c>. These new
       kinds of values, defined by classes, are called <term>objects</term> which
       is where <term>object-oriented programming</term> gets its name. The
-      values defined by th e<c>Turtle</c> class represent turtles that can move
+      values defined by the <c>Turtle</c> class represent turtles that can move
       around the screen, drawing lines.
     </p>
 
@@ -73,7 +73,7 @@
       <term>attributes</term> and <term>behaviors</term>. Attributes are the
       data that makes up the object, each stored in a variable defined by the
       class. Objects can be more complex than primitive values since they can
-      consist of an arbitrary nummber of attributes unlike primitive values
+      consist of an arbitrary number of attributes unlike primitive values
       which are always just one value. And unlike primitive values, which can
       only be operated on with a fixed set of operators like <c>+</c> and
       <c>*</c>, objects can have an arbitrary number of behaviors that describe
@@ -116,7 +116,7 @@
       <c>forward()</c> on a different turtle value would still draw a line but
       it would likely be in a different position and might be a different color.
       Calling a method may also change an object’s attributes—after we called
-      <c>forward()</c> the turtle’s position will have changed but it’s heading
+      <c>forward()</c> the turtle’s position will have changed but its heading
       and color will stay the same.
     </p>
 
@@ -391,7 +391,7 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              Yes. A method desribes some behavior an object can do like turning
+              Yes. A method describes some behavior an object can do like turning
               right. Code outside the class can cause that behavior to happen by
               calling the method.
             </p>
@@ -800,7 +800,7 @@ public class RunestoneTests extends CodeTestHelper
       classes usually define attributes in a way that means they’re not directly
       accessible from code outside the class that defines them. Thus although
       they can affect the behavior of methods (such as controlling the color of
-      the line drawn by <c>forward()</c> they don’t need to be documened as part
+      the line drawn by <c>forward()</c> they don’t need to be documented as part
       of the library’s API. For instance, <url
       href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">the
       Javadocs for one of the main classes in the Turtle library</url> list
@@ -826,7 +826,7 @@ public class RunestoneTests extends CodeTestHelper
           class. That should tell you that it is an instance of the class
           <c>PrintStream</c>. From there you can click on <c>PrintStream</c> to
           navigate to the <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">javadocs</url>
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">Javadocs</url>
           for that class. Once you’re there, see if you can find the
           documentation for the various versions of the <c>println()</c> method
           that we use to print to the screen.
@@ -835,7 +835,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>
           How many <c>println()</c> methods are documented in the <url
           href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
-          javadocs</url>?
+          Javadocs</url>?
         </p>
 
         <p>
