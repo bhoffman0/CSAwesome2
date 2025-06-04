@@ -634,20 +634,6 @@ public class RunestoneTests extends CodeTestHelper
       variables they will not have parentheses after the name.
     </p>
 
-    <p>
-      Note also that the Javadocs for many classes won’t list any attributes at
-      all. For reasons we’ll discuss when we talk about writing our own classes,
-      classes usually define attributes in a way that means they’re not directly
-      accessible from code outside the class that defines them. Thus although
-      they can affect the behavior of methods (such as controlling the color of
-      the line drawn by <c>forward()</c> they don’t need to be documented as part
-      of the library’s API. For instance, <url
-      href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">the
-      Javadocs for one of the main classes in the Turtle library</url> list
-      several dozen methods but no attributes even though the class actually has
-      sixteen attributes defined in its source code.
-    </p>
-
     <activity label="count-println">
       <statement>
         <p>
