@@ -12,275 +12,119 @@
     <idx>method</idx>
     <idx>dot operator</idx>
     <idx>behavior</idx>
+
     <p>
-      We have been using the <c>System.out.println()</c> method to print to the
-      screen. This method is part of the Java <term>API (Application Programming
-      Interface)</term>. A <term>method</term> is a block of code that performs
-      a specific task. APIs are connected to <term>libraries</term> which are
-      collections of classes written by other programmers that provide a set of
-      methods that can be used to perform specific tasks. An API specification
-      tells the programmer how to use those classes with methods in a library.
+      Earlier in this book, we used code like <c>System.out.println("hello,
+      world!")</c> to print to the screen. When we include that code in a
+      program, we don’t have to worry about exactly how it works; we just need
+      to know what it does. Namely, it causes the text “hello, world!” to appear
+      on the screen.
     </p>
 
     <p>
-      APIs and libraries are essential to programming because they allow you to
-      use code that has already been written by others. This saves you time and
-      allows you to focus on the specific task you are trying to accomplish.
+      A collection of code that we can use that we don’t have to write ourselves
+      is called a <term>library</term> and the details of how to use a library
+      are described in its <term>Application Programming Interface</term>, or
+      <term>API</term> for short. <c>System.out.println()</c> is part of the
+      Java API, a large set of code that comes with Java.
     </p>
 
     <p>
-      Classes in the APIs and libraries are grouped into packages. A
-      <term>package</term> is a collection of related classes and interfaces
-      (which are similar to classes) that can be <term>imported</term> into a
-      program to be used. A package is like a folder of classes in a library’s
-      file directory and is used to avoid name conflicts. Later on, we will
-      learn to <c>import</c> other Java packages to use in our code, but there
-      is a package that is already built into Java called <c>java.lang</c> that
-      we are already using.
-    </p>
-
-    <p>
-      The terms library, API, and package are often used interchangeably to mean
-      similar things. A library is a collection of classes or code written by
-      other programmers that you can use. An API describes how you use the
-      library. And a package is how Java organizes a library to be used.
+      APIs and libraries are essential to programming because they allow us to
+      focus on the specific task we are trying to accomplish without having to
+      rewrite the same bits of functionality over and over.
     </p>
   </introduction>
 
-  <subsection xml:id="java-lang-package">
-    <title>java.lang Package</title>
+  <subsection xml:id="classes-attributes-behaviors">
+    <title>The Turtle Library: Classes, Attributes, and Behaviors</title>
+
     <p>
-      The <c>java.lang</c> package contains built-in classes and interfaces that
-      are fundamental to the Java programming language, such as the
-      <c>String</c> class and the <c>System</c> class which we use in
-      <c>System.out.println</c>. Take a look at the <url
-      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">documentation
-      for the <c>java.lang</c> package</url>. Can you find the documentation for
-      the <c>System</c> class?
+      While the standard library that comes with Java has tons of useful
+      functionality, not all libraries the we might want to use come with Java
+      itself. But one of the great things about Java is the number of libraries
+      written by other programmers that we can use. One such library is the the
+      <c>Turtle</c> Java library, written by one of the author’s of this book,
+      Dr. Barbara Ericson and built into this e-book. It allows us to create
+      drawings using animated turtles that move around the screen.
     </p>
 
     <p>
-      <term>Documentation</term> found in API specifications and libraries is
-      essential to understanding the attributes and behaviors of a class defined
-      by the API. The <c>System</c> class has an object called <c>out</c> that
-      is type <c>PrintStream</c>, and the <c>PrintStream</c> class has a method
-      called <c>println()</c> that we use to print to the screen. How many
-      <c>println()</c> methods are there in <url
-      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
-      for the <c>PrintStream</c> class</url>? One for each type that it can
-      print!
-    </p>
-
-    <activity label="count-println">
-      <statement>
-        <p>
-          How many <c>println()</c> methods are documented in the <url
-          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">documentation
-          for the <c>PrintStream</c> class</url>?
-        </p>
-
-        <p>
-          <fillin mode="string" answer="10" />
-        </p>
-      </statement>
-
-      <evaluation>
-        <evaluate>
-          <test>
-            <strcmp use-answer="yes" />
-            <feedback>
-              <p>
-                Correct. One for each for nine different argument types plus one
-                that takes no arguments and just prints an end-of-line
-                character.
-              </p>
-            </feedback>
-          </test>
-
-          <test>
-            <!-- else -->
-            <feedback>
-              <p>Only count the println methods, not print or printf methods.</p>
-            </feedback>
-          </test>
-        </evaluate>
-      </evaluation>
-    </activity>
-
-    <activity label="API_vocab_match">
-      <statement>
-        <p>
-          Drag the definition from the left and drop it on the correct concept
-          on the right. Click the "Check Me" button to see if you are correct.
-        </p>
-      </statement>
-
-      <feedback>
-        <p>Review the summaries above.</p>
-      </feedback>
-
-      <cardsort>
-        <match>
-          <premise order="1">A collection of classes written by other programmers</premise>
-          <response>library</response>
-        </match>
-
-        <match>
-          <premise order="2">
-            A collection of related classes organized to be imported into your code
-          </premise>
-
-          <response>package</response>
-        </match>
-
-        <match>
-          <premise order="3">
-            A specification that tells the programmer how to use classes in a library
-          </premise>
-
-          <response>API</response>
-        </match>
-
-        <match>
-          <premise order="4">The building blocks of Java and object-oriented programming</premise>
-          <response>class</response>
-        </match>
-
-        <match>
-          <premise order="5">A block of code that performs a specific task</premise>
-          <response>method</response>
-        </match>
-      </cardsort>
-    </activity>
-
-    <activity label="purpose_apis">
-      <statement>
-        <p>What is the purpose of APIs and libraries in programming?</p>
-      </statement>
-
-      <choices>
-        <choice>
-          <statement>
-            <p>To write new code from scratch</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Incorrect. APIs and libraries allow you to use code written by
-              others.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice correct="yes">
-          <statement>
-            <p>To use code written by others</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Correct! APIs and libraries are used to use code written by
-              others.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>To create programming languages</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Incorrect. APIs and libraries are not for creating programming
-              languages.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>To compile code</p>
-          </statement>
-
-          <feedback>
-            <p>Incorrect. APIs and libraries are not for compiling code.</p>
-          </feedback>
-        </choice>
-      </choices>
-    </activity>
-  </subsection>
-
-  <subsection xml:id="turtle-library">
-    <title>Turtle Library</title>
-    <p>
-      The <c>Turtle</c> Java library, written by one of the author’s of this
-      book, Dr. Barbara Ericson, allows you to create drawings using an animated
-      turtle that moves around the screen. The turtle can move forward, turn,
-      and draw lines. The turtle library is a collection of classes that can be
-      imported into your code and is built in to this e-book.
+      The Turtle library is named after its main <term>class</term>,
+      <c>Turtle</c>. Classes are the main building blocks of Java programs and
+      libraries. We’ll discuss writing our own classes in Unit 3, but in this unit,
+      we just want to focus on using classes that other programmers have
+      written.
     </p>
 
     <p>
-      <term>Classes</term> are the building blocks of Java and object-oriented
-      programming. A class defines a specific reference type. Programmers often
-      create new classes like <c>Turtle</c> so that it can be used as a new data
-      type. Classes like <c>Turtle</c> and class libraries can be utilized to
-      create objects like a particular turtle named <c>yertle</c>. A class
-      defines the data and behavior for all objects of that type.
+      Each class defines a new kind of value similar to how each <term>primitive
+      type</term>—<c>int</c>, <c>double</c>, and <c>boolean</c>—define a
+      particular kind of value, such as a 32-bit integer quantity for an
+      <c>int</c> or a 64-bit floating point value for a <c>double</c>. These new
+      kinds of values, defined by classes, are called <term>objects</term> which
+      is where <term>object-oriented programming</term> gets its name. The
+      values defined by the <c>Turtle</c> class represent turtles that can move
+      around the screen, drawing lines.
     </p>
 
     <p>
-      The following picture of a turtle shows some of the Turtle
-      <term>attributes</term> like name, width, height, color in the body of the
-      turtle and its <term>methods</term> like forward(), backward(), written
-      around the turtle.
+      Classes define the structure of objects in terms of
+      <term>attributes</term> and <term>behaviors</term>. Attributes are the
+      data that makes up the object, each stored in a variable defined by the
+      class. Objects can be more complex than primitive values since they can
+      consist of an arbitrary number of attributes unlike primitive values
+      which are always just one value. And unlike primitive values, which can
+      only be operated on with a fixed set of operators like <c>+</c> and
+      <c>*</c>, objects can have an arbitrary number of behaviors that describe
+      what we can do with those objects. These behaviors are defined in the
+      class as <term>methods</term>.
+    </p>
+
+    <p>
+      The following picture of a turtle shows some of the attributes every
+      <c>Turtle</c> object has, such as a <c>color</c>, <c>xPos</c>,
+      <c>yPos</c>, and <c>heading</c> as well as methods like <c>forward()</c>,
+      <c>backward()</c>, <c>turnLeft()</c>, and <c>turnRight()</c> shown in the
+      picture written around the turtle.
     </p>
 
     <figure align="center">
       <caption>Turtle Attributes and Behaviors</caption>
-      <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.png" width="71%" alt="Turtle attributes and behaviors" />
+      <image source="Unit1-Using-Objects-and-Methods/Figures/turtleOOD.svg" width="71%" alt="Turtle attributes and behaviors" />
     </figure>
 
     <p>
-      <term>Attributes</term> (which are sometimes called <term>fields</term> in
-      documentation) refer to the data related to the class and are stored in
-      variables. <term>Behaviors</term> refer to what objects of the class can
-      do (or what can be done with it) and are defined by methods. The
-      <c>Turtle</c> class has attributes like <c>name</c>, <c>height</c>, and
-      <c>width</c> that store data about the turtle, and it has
-      behaviors/methods like <c>forward()</c> and <c>turnLeft()</c> that allow
-      the turtle to move and turn. We will learn more about classes, objects,
-      attributes, and methods in the next lessons, but this lesson introduces
-      them to explore APIs.
+      While the class <c>Turtle</c> defines what attributes each turtle has,
+      every turtle object has its own value for each attribute. So we can have
+      one blue turtle at position <c>200,100</c> and one red turtle at position
+      <c>50,75</c>, just like we can have one <c>int</c> whose value is <c>2</c>
+      and another whose value is <c>10</c>. The actual <c>Turtle</c> class
+      defines several more attributes than the ones shown in the image but these
+      are the main ones we need to know about to understand drawing with
+      turtles.
     </p>
 
     <p>
-      How can you tell attributes and methods apart when you look at library
-      documentation? One easy way is that methods will always have parentheses
-      after them, for example <c>forward()</c> or <c>println()</c>. Sometimes
-      these are empty, but still necessary, and sometimes they contain data that
-      the method needs to do its job, for example what to print. Attributes are
-      variables and will not have parentheses after them. Here’s the API
-      documentation that lists all of the Turtle methods (but not the
-      attributes): <url
-      href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html"
-      visual="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html</url>.
+      Similarly, the behaviors defined by the <c>Turtle</c> class are shared
+      among all turtle objects, but their exact effects will usually depend on
+      the attributes of the specific turtle object the method is called on.
+      For instance, the <c>forward()</c> method, as you’ll see in the next
+      exercise, causes a turtle to move forward and draw a line. Where the line
+      is drawn will depend on the turtle’s position and heading attributes and
+      the color of the line will be determined by the turtle’s color. Calling
+      <c>forward()</c> on a different turtle value would still draw a line but
+      it would likely be in a different position and might be a different color.
+      Calling a method may also change an object’s attributes—after we called
+      <c>forward()</c> the turtle’s position will have changed but its heading
+      and color will stay the same.
     </p>
 
     <p>
-      Try the Java program below that creates a Turtle object called
-      <c>yertle</c> using the Turtle class. The following code is used to tell
-      the turtle to move forward and then turn right. The <term>dot
-      operator</term> (.) is used to run an object’s methods, just like in the
-      <c>System.out.println()</c> method. (If the code below does not work or is
-      too slow in your browser, you can also see the <c>Turtle</c> code in
-      action at this <url
-      href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit
-      link</url> (refresh page after forking and if it gets stuck) or download
-      the files <url
-      href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
-      to use in your own IDE.)
+      To see an example of this, look at the the Java program in the exercise
+      below. It creates a <c>Turtle</c> object and stores a reference to it in
+      the variable <c>yertle</c>. The following two lines of code are used to
+      tell the turtle to move forward and then turn right.
     </p>
 
     <program language="java">
@@ -290,12 +134,36 @@ yertle.turnRight();
       </code>
     </program>
 
+    <p>
+      The period (<c>.</c>) after <c>yertle</c> in both those lines is called
+      the <term>dot operator</term> and it allows us to access the attributes
+      and methods of an object. In the first line the dot says get the method
+      named <c>forward()</c> defined in the <c>Turtle</c> class and call it on the
+      turtle object named by the variable <c>yertle</c>. The exact behavior of
+      the method will depend on the current values of <c>yertle</c>’s attributes
+      such as its color, its x and y position, and its heading. For instance,
+      calling <c>forward()</c> will cause the turtle to draw a line from its
+      current x and y position to a new position 100 pixels away in whatever
+      direction the turtle is facing and the color of the line will be
+      determined by the turtle’s color.
+    </p>
+
     <activity label="TurtleAPI">
       <statement>
         <p>
           Try clicking the run button below to see what the following program
           does. Then add 1 more line of code on line 16 to make yertle go
-          forward() again.
+          forward again.
+        </p>
+
+        <p>
+          If the code below does not work or is too slow in your browser, you
+          can also see the <c>Turtle</c> code in action at this <url
+          href="https://replit.com/@BerylHoffman/Java-Swing-Turtle#Main.java">replit
+          link</url> (refresh page after forking and if it gets stuck) or
+          download the files <url
+          href="https://github.com/bhoffman0/CSAwesome2/raw/main/_sources/Unit1-Using-Objects-and-Methods/TurtleJavaSwingCode.zip">here</url>
+          to use in your own IDE.)
         </p>
       </statement>
 
@@ -315,9 +183,7 @@ public class TurtleTest
         // Code to make yertle move forward and turn right
         yertle.forward();
         yertle.turnRight();
-        // Add a line of code to make yertle go forward() again
-
-
+        // Add a line of code here to make yertle go forward again
 
         // Do not change
         habitat.show(true);
@@ -407,7 +273,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="turtle_type">
       <statement>
-        <p>What type of thing is Turtle in the program above?</p>
+        <p>
+          What does <c>Turtle</c> refer to in the program above?
+        </p>
       </statement>
 
       <choices>
@@ -418,8 +286,8 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              Yes, Turtle is a class that defines the data and behaviors for all
-              turtles.
+              Yes, <c>Turtle</c> is a class that defines the attributes and
+              behaviors for all turtles.
             </p>
           </feedback>
         </choice>
@@ -430,7 +298,11 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>yertle is an object of type Turtle.</p>
+            <p>
+              There is an object here: the variable <c>yertle</c> holds a
+              reference to an object of type <c>Turtle</c>. But <c>Turtle</c> is
+              not the name for a specific object.
+            </p>
           </feedback>
         </choice>
 
@@ -440,17 +312,24 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An attribute is something the object knows about itself.</p>
+            <p>
+              An attribute is one part the definition of a class like
+              <c>Turtle</c>.
+            </p>
           </feedback>
         </choice>
 
         <choice>
           <statement>
-            <p>method</p>
+            <p>behavior</p>
           </statement>
 
           <feedback>
-            <p>A method is something an object can do like go forward.</p>
+            <p>
+              A behavior is something an object can do, defined as a method in
+              the class. In the code above <c>forward</c> and <c>turnRight</c>
+              are the names of methods defined in the class <c>Turtle</c>.
+            </p>
           </feedback>
         </choice>
       </choices>
@@ -458,7 +337,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="type_turn_right">
       <statement>
-        <p>What type of thing is turnRight in the program above?</p>
+        <p>
+          What does <c>turnRight</c> refer to in the program above?
+        </p>
       </statement>
 
       <choices>
@@ -468,7 +349,10 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An object has data and behavior.</p>
+            <p>
+              In the code above the variable <c>yertle</c> holds a reference to
+              an object.
+            </p>
           </feedback>
         </choice>
 
@@ -480,7 +364,8 @@ public class RunestoneTests extends CodeTestHelper
           <feedback>
             <p>
               A class defines the data and behavior for all objects of that
-              type.
+              type. <c>turnRight</c> names just one thing defined in the class
+              <c>Turtle</c>
             </p>
           </feedback>
         </choice>
@@ -491,7 +376,11 @@ public class RunestoneTests extends CodeTestHelper
           </statement>
 
           <feedback>
-            <p>An attribute is something the object knows about itself.</p>
+            <p>
+              An attribute is something the object knows about itself. The name
+              <c>turnRight</c> refers to something a <c>Turtle</c> object can
+              do.
+            </p>
           </feedback>
         </choice>
 
@@ -502,8 +391,9 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              A behavior or method is something an object can do like turn
-              right.
+              Yes. A method describes some behavior an object can do like turning
+              right. Code outside the class can cause that behavior to happen by
+              calling the method.
             </p>
           </feedback>
         </choice>
@@ -512,7 +402,10 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="type_position">
       <statement>
-        <p>What type of thing is the position of a turtle in a world?</p>
+        <p>
+          Every turtle has a position. What kind of program element stores
+          information like a turtle’s position?
+        </p>
       </statement>
 
       <choices>
@@ -546,7 +439,7 @@ public class RunestoneTests extends CodeTestHelper
 
           <feedback>
             <p>
-              An attribute is something the object knows about itself like its
+              An attribute holds information about an object such as its
               position.
             </p>
           </feedback>
@@ -572,7 +465,7 @@ public class RunestoneTests extends CodeTestHelper
       <choices>
         <choice>
           <statement>
-            <p>Methods that perform tasks</p>
+            <p>Tasks performed by methods defined in a class.</p>
           </statement>
 
           <feedback>
@@ -582,7 +475,7 @@ public class RunestoneTests extends CodeTestHelper
 
         <choice correct="yes">
           <statement>
-            <p>Data related to the class stored in variables</p>
+            <p>Data stored in variables defined in a class.</p>
           </statement>
 
           <feedback>
@@ -615,42 +508,41 @@ public class RunestoneTests extends CodeTestHelper
       </choices>
     </activity>
 
-    <image source="Unit1-Using-Objects-and-Methods/Figures/turtleForwardLeftForward.png" width="36%" />
     <activity label="parsons_TurtleL" numbered="yes" adaptive="yes" indentation="hide" language="java">
       <statement>
-        <p>
-          The following program uses a turtle to draw a sideways capital L as
-          seen in the image, but the lines are mixed up. The program should do
-          all necessary set-up. Then it should ask the turtle to turn right, go
-          forward, turn left, and then go forward 50 pixels. Next, it should ask
-          the habitat to show itself. Drag the needed blocks of statements from
-          the left column to the right column and put them in the right order.
-          There are 2 extra blocks that are not needed in a correct solution.
-          Then click on Check Me to see if you are right. You will be told if
-          any of the lines are in the wrong order or are the wrong blocks.
-        </p>
+        <sidebyside>
+          <p>
+            The following program uses a turtle to draw a sideways capital L as
+            seen in the image, but the lines are mixed up. The program should do
+            all necessary set-up. Then it should ask the turtle to turn right,
+            go forward, turn left, and then go forward 50 pixels. Next, it
+            should ask the habitat to show itself. Drag the needed blocks of
+            statements from the left column to the right column and put them in
+            the right order. There are 2 extra blocks that are not needed in a
+            correct solution. Then click on Check Me to see if you are right.
+            You will be told if any of the lines are in the wrong order or are
+            the wrong blocks.
+          </p>
+
+          <image source="Unit1-Using-Objects-and-Methods/Figures/turtleForwardLeftForward.png" width="36%" />
+        </sidebyside>
       </statement>
 
       <blocks>
-        <block order="12">
-          <cline>import java.util.*;</cline>
-          <cline>import java.awt.*;</cline>
-        </block>
-
-        <block order="2">
+        <block>
           <cline>public class TurtleTest {</cline>
         </block>
 
-        <block order="9">
+        <block>
           <cline>    public static void main(String[] args) {</cline>
         </block>
 
-        <block order="6">
+        <block>
           <cline>        World habitat = new World(300,300);</cline>
           <cline>        Turtle yertle = new Turtle(habitat);</cline>
         </block>
 
-        <block order="4">
+        <block>
           <choice correct="yes">
             <cline>        yertle.turnRight();</cline>
           </choice>
@@ -660,7 +552,7 @@ public class RunestoneTests extends CodeTestHelper
           </choice>
         </block>
 
-        <block order="7">
+        <block>
           <choice correct="yes">
             <cline>        yertle.forward();</cline>
           </choice>
@@ -670,19 +562,19 @@ public class RunestoneTests extends CodeTestHelper
           </choice>
         </block>
 
-        <block order="5">
+        <block>
           <cline>        yertle.turnLeft();</cline>
         </block>
 
-        <block order="10">
+        <block>
           <cline>        yertle.forward(50);</cline>
         </block>
 
-        <block order="3">
+        <block>
           <cline>        habitat.show(true);</cline>
         </block>
 
-        <block order="11">
+        <block>
           <cline>    } // end main</cline>
           <cline>} // end class</cline>
         </block>
@@ -690,16 +582,224 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
   </subsection>
 
+  <subsection xml:id="packages">
+    <title>Packages</title>
+
+    <p>
+      While classes are the main building blocks of Java programs, most programs
+      and libraries are made up of multiple classes that need to be used
+      together. In Java, related classes can be grouped together into a
+      <term>package</term>. You can think of a package like a folder where you
+      store related documents. Classes that work together will likely be
+      grouped into a single package just to keep things organized. But more
+      importantly, when we want to use a class defined in a package in our own
+      program we can <term>import</term> it and then use it as if we had written
+      it in our own program.
+    </p>
+
+    <p>
+      Because related classes are usually collected into the same package, Java
+      programmers tend to use the terms <term>library</term>, <term>API</term>,
+      and <term>package</term> somewhat interchangeably. But to be precise, a
+      library is a collection of classes that you can use, the library’s API
+      describes how you use it, and the classes in the library are probably
+      organized into one or more Java packages.
+    </p>
+
+    <p>
+      Later on, we will learn to <c>import</c> classes from Java packages to use
+      in our code, but first let’s talk about a package whose classes are always
+      available in any Java program: <c>java.lang</c>.
+    </p>
+
+    <p>
+      The <c>java.lang</c> package contains key classes that are fundamental to
+      the Java programming language, such as <c>String</c> and <c>System</c>.
+      Like all packages that are part of Java, <c>java.lang</c> is documented in
+      <term>Javadocs</term>, Java’s version of online <term>API
+      documentation</term>. Learning to read and navigate Javadocs is a key part
+      of being a Java programmer.
+    </p>
+
+    <p>
+      The Javadocs for a class will document all the publicly available
+      attributes (called <term>fields</term> in Javadocs) and behaviors (called
+      <term>methods</term>). How can you tell fields and methods apart when you
+      look at library documentation? Well, for one thing, they’re in different
+      sections. And another easy way is that methods will always have
+      parentheses after them, for example <c>forward()</c> or <c>println()</c>.
+      Sometimes there’s nothing between the parentheses, but they are still
+      necessary. Other times they contain data that the method needs to do its
+      job, for example what to print. Since attributes, a.k.a. fields, are just
+      variables they will not have parentheses after the name.
+    </p>
+
+    <activity label="count-println">
+      <statement>
+        <p>
+          Now let’s practice reading Javadocs to better understand the code
+          we’ve been using to print to the screen: <c>System.out.println</c>.
+        </p>
+
+        <p>
+          Take a look at the <url
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/package-summary.html">Javadocs
+          for the <c>java.lang</c> package</url>. Can you find the documentation
+          for the <c>System</c> class? The dot after <c>System</c> is the dot
+          operator and since the name after the dot, <c>out</c> isn’t followed
+          by parenthesis it must be a field rather than a method. See if you can
+          find the documentation for the field <c>out</c> in the <c>System</c>
+          class. That should tell you that it is an instance of the class
+          <c>PrintStream</c>. From there you can click on <c>PrintStream</c> to
+          navigate to the <url
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html">Javadocs</url>
+          for that class. Once you’re there, see if you can find the
+          documentation for the various versions of the <c>println()</c> method
+          that we use to print to the screen.
+        </p>
+
+        <p>
+          How many <c>println()</c> methods are documented in the <url
+          href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
+          Javadocs</url>?
+        </p>
+
+        <p>
+          <fillin mode="string" answer="10" />
+        </p>
+      </statement>
+
+      <evaluation>
+        <evaluate>
+          <test>
+            <strcmp use-answer="yes" />
+            <feedback>
+              <p>
+                Correct. One for each for nine different argument types plus one
+                that takes no arguments and just prints an end-of-line
+                character.
+              </p>
+            </feedback>
+          </test>
+
+          <test>
+            <!-- else -->
+            <feedback>
+              <p>Only count the println methods, not print or printf methods.</p>
+            </feedback>
+          </test>
+        </evaluate>
+      </evaluation>
+    </activity>
+
+    <activity label="API_vocab_match">
+      <statement>
+        <p>
+          Drag the definition from the left and drop it on the correct concept
+          on the right. Click the "Check Me" button to see if you are correct.
+        </p>
+      </statement>
+
+      <feedback>
+        <p>Review the summaries above.</p>
+      </feedback>
+
+      <cardsort>
+        <match>
+          <premise order="1">A collection of classes written by other programmers</premise>
+          <response>library</response>
+        </match>
+
+        <match>
+          <premise order="2">
+            A collection of related classes organized to be imported into your code
+          </premise>
+
+          <response>package</response>
+        </match>
+
+        <match>
+          <premise order="3">A specification that tells a programmer how to use a library</premise>
+          <response>API</response>
+        </match>
+
+        <match>
+          <premise order="4">The main building block of programs in Java</premise>
+          <response>class</response>
+        </match>
+
+        <match>
+          <premise order="5">A block of code that performs a specific task</premise>
+          <response>method</response>
+        </match>
+      </cardsort>
+    </activity>
+
+    <activity label="purpose_apis">
+      <statement>
+        <p>What is the purpose of APIs and libraries in programming?</p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>To write new code from scratch</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Incorrect. APIs and libraries allow you to use code written by
+              others.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>To use code written by others</p>
+          </statement>
+
+          <feedback>
+            <p>Correct! APIs and libraries let you use code written by others.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>To create programming languages</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Incorrect. APIs and libraries are are defined <em>in</em> a
+              programming language.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>To compile code</p>
+          </statement>
+
+          <feedback>
+            <p>Incorrect. APIs and libraries are not for compiling code.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="coding-challenge-turtle-drawing">
-    <title>Coding Challenge : Turtle Drawing</title>
+    <title>Coding Challenge: Turtle Drawing</title>
     <p>
       Make yertle the Turtle draw a shape. For example, have it draw a square or
       a zigzag shape or a block letter by calling the forward method and a turn
       method multiple times. We encourage you to work in pairs for this
       challenge. In the next lessons, we will draw more complicated shapes. Here
-      are some simple turtle methods that you could use or check the API at <url
-      href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html"
-      visual="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html">https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html</url>:
+      are some simple turtle methods that you could use or look at <url
+      href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">the
+      Turtle Javadocs</url> for the complete list.
     </p>
 
     <p>
@@ -763,10 +863,8 @@ public class TurtleShape
         World habitat = new World(500, 500);
         Turtle yertle = new Turtle(habitat);
 
-        // Use yertle's forward and turnRight or turnLeft methods to draw a shape
-
-
-
+        // Use any of yertle's methods such as forward, turnRight, and turnLeft
+        // to draw a shape
 
         // Do not change the line below!
         habitat.show(true);
@@ -904,7 +1002,7 @@ public class RunestoneTests extends CodeTestHelper
         <li>
           <p>
             (AP 1.7.A.2) <term>Behaviors</term> refer to what instances of the
-            class can do (or what can be done with it) and are defined by
+            class can do (or what can be done with them) and are defined by
             methods.
           </p>
         </li>
