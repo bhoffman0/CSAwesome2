@@ -87,7 +87,7 @@
         <cline><area correct="no">and stored in Test2</area> 
 <area correct="yes">String[] tokens</area>.</cline>
         <cline><area correct="no">Each token is either an open delimiter, a close delimiter, or a substring that is not a delimiter.</area></cline>
-        <cline><area correct="no">You will write the method </area><area correct="no"> getDelimitersList, </area> 
+        <cline><area correct="no">You will write the method </area> <area correct="no"> getDelimitersList, </area> 
 <area correct="no"> which returns an </area> <area correct="yes"> ArrayList </area></cline>
         <cline><area correct="no"> containing all the open and close delimiters found in tokens in their original order.</area></cline>
       </areas>
