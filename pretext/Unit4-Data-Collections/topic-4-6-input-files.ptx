@@ -202,12 +202,12 @@ public class RunestoneTests extends CodeTestHelper
 
     <program language="java">
       <code>
-try 
-{   
+try
+{
     Scanner scan = new Scanner(myFile);
 }
-catch (FileNotFoundException e) 
-{                   
+catch (FileNotFoundException e)
+{
     System.out.println("File not found!");
 }
       </code>
@@ -500,7 +500,7 @@ while(scan.hasNext())
 
     <datafile label="pokemon" filename="pokemon.csv" editable="no" hide="no">
       <pre>
-        
+
             Number,Pokemon,Type 1,Type 2,HP,Attack,Defense,Speed,PNG,Description
 1,Bulbasaur,Grass,Poison,45,49,49,45,https://play.pokemonshowdown.com/sprites/bw/bulbasaur.png,A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokemon.
 2,Ivysaur,Grass,Poison,60,62,63,60,https://play.pokemonshowdown.com/sprites/bw/ivysaur.png,&amp;quot;Often seen swimming elegantly by lake shores. It is often mistaken for the Japanese monster, Kappa.&amp;quot;
@@ -1190,8 +1190,7 @@ public class RunestoneTests extends CodeTestHelper
       that you will add to the array. If you find another data CSV file online
       that you would like to use, you can read from a URL instead of a file in
       Java using the <c>java.net</c> package following the directions here <url
-      href="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html"
-      visual="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html">https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html</url>.
+      href="https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html">https://docs.oracle.com/javase/tutorial/networking/urls/readingURL.html</url>.
     </p>
 
     <p>
@@ -1278,7 +1277,7 @@ public class Data
     //     and save it into the array.
 
     // Write a method that does something with the data
-    // with a for loop, for example 
+    // with a for loop, for example
     // find the object with a min or max attribute value
     // or print out all the objects of a certain attribute value.
 
@@ -1521,7 +1520,7 @@ public class RunestoneTests extends CodeTestHelper
 
     <datafile label="world" filename="WorldIndicators2000.csv" editable="no" hide="no">
       <pre>
-        
+
             Country,Year,Birth Rate,Business Tax Rate,CO2 Emissions,Days to Start Business,Ease of Business,Energy Usage,GDP,Health Exp % GDP,Health Exp/Capita,Hours to do Tax,Infant Mortality Rate,Internet Usage,Lending Interest,Life Expectancy Female,Life Expectancy Male,Mobile Phone Usage,Number of Records,Population 0-14,Population 15-64,Population 65+,Population Total,Population Urban,Region,Tourism Inbound,Tourism Outbound
 Algeria,12/1/2000,0.02,,87931,,,26998,54790058957,0.035,60,,0.034,0.005,0.1,71,67,0.003,1,0.342,0.619,0.039,31719449,0.599,Africa,102000000,193000000
 Angola,12/1/2000,0.05,,9542,,,7499,9129594819,0.034,22,,0.128,0.001,1.032,47,44,0.002,1,0.476,0.499,0.025,13924930,0.324,Africa,34000000,146000000

@@ -260,8 +260,7 @@
       visual="https://replit.com/@BerylHoffman/ColorChooser">https://replit.com/@BerylHoffman/ColorChooser</url>
       and click on the RGB tab. Java represents color using the java.awt.Color
       class described here <url
-      href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html"
-      visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html</url>.
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.desktop/java/awt/Color.html">https://docs.oracle.com/en/java/javase/22/docs/api/java.desktop/java/awt/Color.html</url>.
       This is the full name for the Color class, which includes the package name
       of java.awt followed by a period and then the class name Color. Java
       groups related classes into packages. The awt stands for Abstract

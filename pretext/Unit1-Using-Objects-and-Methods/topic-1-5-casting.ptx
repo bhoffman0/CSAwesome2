@@ -349,8 +349,7 @@ public class RunestoneTests extends CodeTestHelper
       <c>println</c>. It takes a format string like <c>%.02f</c> which tells
       <c>printf</c> to print a floating point number indicated by the <c>%</c>
       with 2 digits after the decimal point. See <url
-      href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html"
-      visual="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">https://docs.oracle.com/javase/tutorial/java/data/numberformat.html</url>
+      href="https://docs.oracle.com/javase/tutorial/java/data/numberformat.html">https://docs.oracle.com/javase/tutorial/java/data/numberformat.html</url>
       for more information. You can also use escape characters like <c>\n</c> in
       the format string to do a newline. Try it below.
     </p>
