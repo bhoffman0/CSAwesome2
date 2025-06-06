@@ -980,7 +980,7 @@ public class RunestoneTests extends CodeTestHelper
         </match>
 
         <match>
-          <premise order="3">method name, return type, and parameter list</premise>
+          <premise order="3">method name and parameter list</premise>
           <response>method signature</response>
         </match>
 
