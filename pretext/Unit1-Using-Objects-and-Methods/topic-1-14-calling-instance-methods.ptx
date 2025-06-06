@@ -340,8 +340,7 @@ public class RunestoneTests extends CodeTestHelper
                 Can you make yertle draw a square and change the pen color for
                 each side of the square? Try something like:
                 yertle.setColor(Color.red); This uses the <url
-                href="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html"
-                visual="https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html">Color</url>
+                href="https://docs.oracle.com/en/java/javase/22/docs/api/java.desktop/java/awt/Color.html">Color</url>
                 class in Java which has some colors predefined like red, yellow,
                 blue, magenta, cyan. You can also use more specific methods like
                 setPenColor, setBodyColor, and setShellColor.

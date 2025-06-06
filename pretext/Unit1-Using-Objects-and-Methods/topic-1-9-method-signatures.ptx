@@ -783,7 +783,7 @@ verse("cow", "moo");
       methods with the same name but different signatures with a different
       number or types of parameters. For example, the <c>println()</c> method in
       the <url
-      href="https://docs.oracle.com/javase/8/docs/api/java/io/PrintStream.html"><c>PrintStream</c>
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/io/PrintStream.html"><c>PrintStream</c>
       class</url> is overloaded with different parameter types. The method
       <c>println()</c> with no parameters prints a newline, the method
       <c>println(String x)</c> prints the given string followed by a newline,

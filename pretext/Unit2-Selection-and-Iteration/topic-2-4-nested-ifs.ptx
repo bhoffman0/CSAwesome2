@@ -197,8 +197,7 @@ public class RunestoneTests extends CodeTestHelper {
         Another way to handle 3 or more conditional cases is to use the
         <c>switch</c> and <c>break</c> keywords, but these will not be on the
         exam. For a tutorial on using switch see <url
-        href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html"
-        visual="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html</url>.
+        href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html">https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html</url>.
       </p>
     </note>
 
@@ -413,7 +412,7 @@ public class IfDebug
     {
         Scanner scan = new Scanner(System.in);
         int score = scan.nextInt();
-        
+
         String grade = "";
 
         if (score &gt;= 90)
@@ -455,7 +454,7 @@ public class RunestoneTests extends CodeTestHelper
         super("IfDebug"); // for Book
     }
 
-    private static String input1 = "93"; 
+    private static String input1 = "93";
 
     @Test
     public void test01()
@@ -591,7 +590,7 @@ public class RunestoneTests extends CodeTestHelper
         super("BatteryTest"); // for Book
     }
 
-    private static String input1 = "93"; 
+    private static String input1 = "93";
 
     @Test
     public void test01()
@@ -645,7 +644,7 @@ public class RunestoneTests extends CodeTestHelper
             "Result for battery = " + x,
             passed);
         assertTrue(passed);
-    }    
+    }
 }
         </tests>
       </program>
@@ -691,7 +690,7 @@ public class DanglingElseTest
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
-        
+
         boolean sunny = in.nextBoolean();
         boolean hot = in.nextBoolean();
         System.out.println("sunny = " + sunny);
@@ -720,7 +719,7 @@ public class RunestoneTests extends CodeTestHelper
         super("DanglingElseTest"); // for Book
     }
 
-    private static String input1 = "true false"; 
+    private static String input1 = "true false";
     private static String output1 = "Head for the beach!";
     private static String output2 = "Bring your umbrella!";
 
@@ -740,7 +739,7 @@ public class RunestoneTests extends CodeTestHelper
             "Result for input = " + x,
             passed);
         assertTrue(passed);
-    } 
+    }
 
     @Test
         public void test01()
@@ -758,7 +757,7 @@ public class RunestoneTests extends CodeTestHelper
                 "Result for input = " + x,
                 passed);
             assertTrue(passed);
-        }  
+        }
 
     @Test
         public void test04()
@@ -776,7 +775,7 @@ public class RunestoneTests extends CodeTestHelper
                 "Result for input = " + x,
                 passed);
             assertTrue(passed);
-        }  
+        }
 
     @Test
         public void test03()
@@ -794,7 +793,7 @@ public class RunestoneTests extends CodeTestHelper
                 "Result for input = " + x,
                 passed);
             assertTrue(passed);
-        }  
+        }
 }
         </tests>
       </program>
@@ -889,17 +888,17 @@ else  // belongs to first if
         <code>
   import java.util.Scanner;
 
-  public class Adventure 
+  public class Adventure
   {
       private static Scanner scan = new Scanner(System.in);
-      
-      public static void main(String[] args) 
+
+      public static void main(String[] args)
       {
-          // TODO #1. Change the adventure text below, especially the ?'s. 
+          // TODO #1. Change the adventure text below, especially the ?'s.
           // Be creative!
           System.out.println("You are on an island surrounded by water.");
           System.out.println("There is a path to the forest to the north, "
-                           + "the sea to the south, ? to the east, and ? to the west."); 
+                           + "the sea to the south, ? to the east, and ? to the west.");
           System.out.println("Which way do you want to go (n,e,s,w)?");
           String command = scan.next(); // use nextLine() in your own IDE
           if (command.equals("n"))
@@ -909,17 +908,17 @@ else  // belongs to first if
           }
           // TODO #2: Add else-ifs for command equals s, e, or w,
           // calling a method you will write below for each location.
-          // Add an else error message "You can't go in that direction!" 
+          // Add an else error message "You can't go in that direction!"
           // Change the input below the coding area to test these.
-     
 
-              
-        
-          System.out.println("End of adventure!");   
+
+
+
+          System.out.println("End of adventure!");
           scan.close();
-     }    
+     }
 
-    // TODO #3: Complete this method 
+    // TODO #3: Complete this method
     // north from main goes to the forest
     public static void forest()
     {
@@ -937,8 +936,8 @@ else  // belongs to first if
     }
 
     // TODO #4: Complete this method
-    // south from main or east from forest goes to the sea 
-    // (feel free to rename to another location of your choice)  
+    // south from main or east from forest goes to the sea
+    // (feel free to rename to another location of your choice)
     public static void sea()
     {
         // Print a description
@@ -947,9 +946,9 @@ else  // belongs to first if
         // Move to different locations
 
     }
-    
-    // TODO #5:  Add at least 2 more static methods for 2 more locations 
-  
+
+    // TODO #5:  Add at least 2 more static methods for 2 more locations
+
   }
         </code>
         <stdin>n e</stdin>
