@@ -144,8 +144,8 @@ yertle.turnRight();
       such as its color, its x and y position, and its heading. For instance,
       calling <c>forward()</c> will cause the turtle to draw a line from its
       current x and y position to a new position 100 pixels away in whatever
-      direction the turtle is facing and the color of the line will be
-      determined by the turtle’s color.
+      direction the turtle is facing. The color of the line will be determined
+      by the turtle’s color.
     </p>
 
     <activity label="TurtleAPI">
@@ -222,7 +222,10 @@ public class RunestoneTests extends CodeTestHelper
 
     <activity label="turtle_dir">
       <statement>
-        <p>Which way does a turtle face when it is first created?</p>
+        <p>
+          Based on running the code in the previous exercise, which way does a
+          turtle face when it is first created?
+        </p>
       </statement>
 
       <choices>
