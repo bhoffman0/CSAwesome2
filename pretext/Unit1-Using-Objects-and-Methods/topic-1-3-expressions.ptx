@@ -3,7 +3,26 @@
 <section xml:id="topic-1-3-expressions">
   <title>Expressions and Output</title>
   <time minutes="45" />
-  <introduction />
+  <introduction>
+    <p>
+      A lot of what happens when a computer program runs is invisible, happening
+      only within the computer’s memory. But ultimately we need some way to
+      convey information to humans outside the computer. If running the program
+      has no effect on the world outside the computer, what was the point of
+      running it? These days computers can communicate with the outside world in
+      all sorts of ways: sound, graphics, animated videos, even physical robots
+      moving around the world. But one of the simplest ways for a program to
+      communicate with us is to emit textual output to the screen.
+    </p>
+
+    <p>
+      In this section we will learn how to print values to the screen and then
+      how to use <term>operators</term> to create <term>expressions</term> that
+      compute new values from other values allowing us to write programs that
+      actually do something.
+    </p>
+  </introduction>
+
   <subsection xml:id="output">
     <title>Output</title>
     <idx>output</idx>
