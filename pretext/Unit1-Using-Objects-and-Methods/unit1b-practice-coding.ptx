@@ -792,7 +792,7 @@ public class TurtleTest
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
       <code>
 import java.util.*;
 import java.awt.*;
