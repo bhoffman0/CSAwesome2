@@ -612,7 +612,7 @@ public class RunestoneTests extends CodeTestHelper
 
           <li>
             <p>
-              <term>boolean equals(String other)</term> returns true when the
+              <term>boolean equals(Object other)</term> returns true when the
               characters in the current string are the same as the ones in the
               <c>other</c> string. This method is inherited from the Object
               class, but is <term>overridden</term> which means that the String
@@ -1589,7 +1589,7 @@ public class RunestoneTests extends CodeTestHelper
 
               <li>
                 <p>
-                  <term>boolean equals(String other)</term> : returns true if
+                  <term>boolean equals(Object other)</term> : returns true if
                   this (the calling object) is equal to other; returns false
                   otherwise. Using the equals method to compare one String
                   object with an object of a type other than String is outside

@@ -110,7 +110,7 @@ public class MessageBuilder
   private int numWords;   // To be initialized in part (a)
 
   /**
-   *  Builds a message starting with the word specified by the 
+   *  Builds a message starting with the word specified by the
    *  parameter and counts the number of words in the message,
    *  as described in part (a)
    *  Precondition: startingWord is a single word with no spaces.
@@ -119,9 +119,9 @@ public class MessageBuilder
   { /* to be implemented in part (a) */ }
 
   /**
-   * Returns a word to follow the word specified by the 
+   * Returns a word to follow the word specified by the
    * parameter or null if there are no remaining words.
-   * Precondition: s is a single word with no spaces. 
+   * Precondition: s is a single word with no spaces.
    * Postcondition: Returns an individual word with no spaces.
    */
   public String getNextWord(String s)
@@ -483,33 +483,33 @@ public class MessageBuilder
 {
     private String message; // To be initialized in part (a)
     private int numWords;   // To be initialized in part (a)
-  
+
     /**
     *  Part A: MessageBuilder(startingWord) constructor
     *  Builds a message of words with spaces in betwee
     *  starting with the word in the parameter
     *  and counts the number of words in the message.
     *  Precondition: startingWord is a single word with no spaces.
-    */    
+    */
     public MessageBuilder(String startingWord)
     {
         message = startingWord;
-        numWords = 1; 
-        
+        numWords = 1;
+
         // Complete the loop to build the message using the getNextWord method and increment numWords
         // Remember the 3 steps of writing a loop!
 
 
     }
-  
-    /* These variables and methods were added to simulate Example 1 for testing purposes 
+
+    /* These variables and methods were added to simulate Example 1 for testing purposes
      (implementation not shown in AP exam)
      */
     private String[] wordsForTesting = {"the", "book", "on", "the", "table"};
     private int currentWordIndex = 0;
-    
+
     public String getNextWord(String s)
-    {   
+    {
         if(currentWordIndex &lt; wordsForTesting.length - 1)
         {
             currentWordIndex++;
@@ -523,12 +523,12 @@ public class MessageBuilder
     public String getMessage()
     {
         return message;
-    } 
+    }
     public int getNumWords()
     {
         return numWords;
     }
-    public static void main(String[] args) 
+    public static void main(String[] args)
     {
         MessageBuilder builder = new MessageBuilder("the");
         System.out.println("Message: " + builder.getMessage());
@@ -559,7 +559,7 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = getResults(expect, output, "Running main");
         assertTrue(passed);
     }
-    
+
      @Test
         public void testWhile() {
           boolean passed = checkCodeContains("while loop","while");
@@ -654,7 +654,7 @@ public class RunestoneTests extends CodeTestHelper
         <choice>
           <statement>
             <p>
-              <code>equals(String another)
+              <code>equals(Object another)
               </code>
             </p>
           </statement>
@@ -722,7 +722,7 @@ public class RunestoneTests extends CodeTestHelper
         <choice>
           <statement>
             <p>
-              <code>equals(String another)
+              <code>equals(Object another)
               </code>
             </p>
           </statement>
@@ -829,36 +829,36 @@ public class RunestoneTests extends CodeTestHelper
         <code>
 public class MessageBuilder
 {
-    private String message; 
-    private int numWords;  
-  
-    /* Simplified constructor for testing */  
+    private String message;
+    private int numWords;
+
+    /* Simplified constructor for testing */
     public MessageBuilder(String m, int n)
     {
         message = m;
         numWords = n;
     }
 
-    // Part B: getAbbreviation() returns a String 
+    // Part B: getAbbreviation() returns a String
     // that consists of the first letter of each word in the message.
     public String getAbbreviation()
     {
         String tempMessage = message;
         // Complete the method to return the abbreviation of tempMessage
-       
+
     }
 
     public String getMessage()
     {
         return message;
-    } 
+    }
     public int getNumWords()
     {
         return numWords;
     }
-    
 
-    public static void main(String[] args) 
+
+    public static void main(String[] args)
     {
         MessageBuilder builder = new MessageBuilder("as soon as possible", 4);
         System.out.println("Abbreviation for " + builder.getMessage() + " is " + builder.getAbbreviation());
@@ -891,7 +891,7 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = getResults(expect, output, "Running main");
         assertTrue(passed);
     }
-    
+
      @Test
         public void testSubstr() {
           boolean passed = checkCodeContains("substring","substring");

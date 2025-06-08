@@ -161,7 +161,7 @@
 
               <li>
                 <p>
-                  <term>boolean equals(String other)</term> : returns true if
+                  <term>boolean equals(Object other)</term> : returns true if
                   this (the calling object) is equal to other; returns false
                   otherwise.
                 </p>
@@ -389,7 +389,7 @@
             Using <c>==</c> to test if two strings or objects are equal. This is
             actually a test to see if they refer to the same object. Usually you
             only want to know if they have the same characters in the same
-            order. In that case you should use <c>equals(String)</c> or
+            order. In that case you should use <c>equals(Object)</c> or
             <c>compareTo(String)</c> instead.
           </p>
         </li>
