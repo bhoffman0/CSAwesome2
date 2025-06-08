@@ -33,27 +33,52 @@
       <ul>
         <li>
           <p>
-            <term>System.out.println(value)</term> : prints the value followed
-            by a new line (ln)
+            <c>System.out.println(value)</c> prints the the textual
+            representation of value followed by a new line (<c>println</c> is an
+            abbreviation for “print line”.)
           </p>
         </li>
 
         <li>
           <p>
-            <term>System.out.print(value)</term> : prints the value without
-            advancing to the next line
+            <c>System.out.print(value)</c> prints the textual representation of
+            value without advancing to the next line
           </p>
         </li>
       </ul>
     </p>
 
     <p>
-      <c>System.out.println("Hi there!");</c> prints out the characters between
-      the first <c>"</c> and the second <c>"</c> followed by a new line. The
-      <c>"Hi there!"</c> is called a <term>string literal</term> which is zero
-      to many characters enclosed in starting and ending double quotes. A
-      <term>literal</term> is the code representation of a fixed value, which
-      can be a string or a numerical value.
+      The <em>value</em> between the parentheses can be any Java
+      <term>expression</term> which just means some bit of code that produces a
+      value. One simple kind of expression is a <term>literal value</term> which
+      is a way of representing a value directly—or literally—in our code. For
+      instance <c>42</c> is a literal expression representing the <c>int</c>
+      value 42. When we print a value with <c>print</c> or <c>println</c>, Java
+      converts the value to its textual representation and then emits that to
+      the screen. So we could write <c>System.out.print(42)</c> to print the
+      text <c>42</c>.
+    </p>
+
+    <p>
+      Another useful kind of literal value for generating output is a
+      <term>string literal</term>. A string, in programming, is a sequence of
+      textual characters like letters, numbers, punctuation, spaces, etc. If we
+      wanted to store any text, from a person’s name to the contents of a novel,
+      in a program, we would represent it as a string. Java provides a
+      <c>String</c> data type that we’ll learn more about in <xref
+      ref="topic-1-15-strings"/> but for now we just need to know we can write
+      string literals by enclosing the text we want in quotation marks:
+      <c>""</c>.
+    </p>
+
+    <p>
+      For instance <c>"Hi there!"</c> is a string literal whose value is the
+      text: <c>Hi there!</c>. The quotation marks are not part of the value;
+      they are the syntax for writing the string literal. Thus the code
+      <c>System.out.println("Hi there!");</c> prints the text <c>Hi there!</c>
+      on the screen, without the quotation marks, and then advances to the next
+      line.
     </p>
 
     <activity label="printCommands">
@@ -121,15 +146,43 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </activity>
 
+  </subsection>
+
+  <subsection xml:id="string-escapes">
+    <title>String escapes</title>
+
     <p>
       What if you wanted to print out a double quote <c>"</c> character? Since
-      <c>"</c> is a special character with a meaning in Java string literals, we
-      put in a backslash in front of the quote to signal that we want just the
-      character. This is called a <term>backslash escape sequence</term>. And if
-      you wanted to print out a backslash, you would have to backslash it too in
-      order to escape its special meaning. Another useful backslashed character
-      is <c>\n</c> which will put in a newline.
+      <c>"</c> has a special meaning within Java’s string literals, it might
+      seem there’d be no way to include it within a string. However, Java
+      provides a way to write string literals that contain double quotes using a
+      mechanism called <term>escaping</term>. To “escape” the normal syntax of a
+      string literal, where a quotation mark would indicate the end of the
+      string, we put a backslash (<c>\</c>) in front of the quotation mark which
+      tells Java to include the following quotation mark in the string value
+      rather than treating it as the end of the literal. This is called a
+      <term>backslash escape sequence</term>. Since backslash is used this way,
+      that also makes <em>it</em> a special character, so if we want to include
+      a backslash in a string literal, we need to escape it with another
+      backslash! There are a handful of other backslash escape sequences. The
+      only other one the College Board wants you to know about is <c>\n</c>
+      which will be translated to a newline character, which will break the text
+      across lines.
     </p>
+
+    <note>
+      <p>
+        Unfortunately, different operating systems use different characters to
+        represent the end of a line. <c>println</c> actually uses whatever is
+        appropriate on the computer the program is running on. On MacOS and
+        Linux that will be the same character as we can write in a string
+        literal with <c>\n</c>. On Windows, however, it will be the two
+        character sequence that would be written <c>\r\n</c>. To make our code
+        run the same everywhere, we’d have to use only <c>println</c> when we
+        want a new line. The College Board does want you to know about the
+        <c>\n</c> escape sequence, however.
+      </p>
+    </note>
 
     <activity label="bhescape">
       <statement>
@@ -144,11 +197,9 @@ public class TestEscape
 {
     public static void main(String[] args)
     {
-        String message =
-                "Here is a backslash quote \" " +
-                "and a backslashed backslash (\\) " +
-                "Backslash n \n prints out a new line.";
-        System.out.println(message);
+        System.out.print("Here is a backslash quote \" ");
+        System.out.print("and a backslashed backslash (\\) ");
+        System.out.println("Backslash n \nprints out a new line.");
     }
 }
         </code>
@@ -175,12 +226,32 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
   </subsection>
 
-  <subsection xml:id="expressions-and-operators">
-    <title>Expressions and Operators</title>
+  <subsection xml:id="arithmetic-expressions">
+    <title>Arithmetic Expressions</title>
     <p>
-      <term>Arithmetic Expressions</term> consist of numeric values, variables,
-      and arithmetic operators that evaluate to a single numerical value. For
-      example, the expression <c>2 + 3</c> evaluates to 5.
+      In the last section we saw how variables, such as <c>score</c>, can be
+      used to name a place we store a value. And in this section we’ve seen how
+      we can write literal values like <c>42</c> in our programs. Both variables
+      and literal values are simple kinds of <term>expressions</term>.
+    </p>
+
+    <p>
+      We also learned in <xref ref="topic-1-2-variables" /> how data types are
+      defined by both by set of values they can represent and the set of
+      operators that can operate on those values. Now we are going to see how we
+      can use operators to create more complex expressions that compute new
+      values from other expressions.
+    </p>
+
+    <p>
+      To take a simple example, <c>2 + 3</c> is an expression consisting of the
+      two literal values <c>2</c> and <c>3</c> and the operator <c>+</c>. The
+      values are sometimes called the <term>operands</term> of the expression.
+      The <c>+</c> operator works in Java about how you expect, adding together
+      its two operands and producing a new value, in this case <c>5</c>. The
+      expression <c>2 + 3</c> is an example of an <term>arithmetic
+      expression</term>, an expressions consisting of numeric values being
+      operated on by one of Java’s arithmetic operators.
     </p>
 
     <idx>expression</idx>
@@ -220,32 +291,42 @@ public class RunestoneTests extends CodeTestHelper
       since the character sets used until relatively recently didn’t have a
       character for a real multiplication sign, <c>×</c>, and keyboards still
       don’t have a key for it. For similar reasons the <c>÷</c> symbol is not
-      used in Java. (You may have noticed that <c>+</c> was also used to combine
-      <c>String</c> and other values into new <c>String</c>s. More on this
-      later.)
+      used in Java.
     </p>
 
     <p>
-      Arithmetic expressions can be of type <c>int</c> or <c>double</c>. An
-      arithmetic expression consisting only of <c>int</c> values will evaluate
-      to an <c>int</c> value. An arithmetic expression that uses at least one
-      <c>double</c> value will evaluate to a <c>double</c> value. This means
-      that when you are doing division with two integers, you will get an
-      integer result and the decimal part of the result will be thrown away.
-      This is called <term>truncating division</term>. If you want a double
-      result, you should make at least one of the values in the expression a
-      double like 2.0.
+      Just like variables have a type that was determined when we declared it,
+      expressions have a type that is determined by the kind of value they
+      produce. Arithmetic expressions can be of type <c>int</c> or <c>double</c>
+      depending on the types of the values in the expression.
+    </p>
+
+    <p>
+      An arithmetic expression consisting only of <c>int</c> values will always
+      evaluate to an <c>int</c> value, even if the true mathematical result is
+      not an integer. But an arithmetic expression that contains at least one
+      <c>double</c> value will always evaluate to a <c>double</c> value.
+    </p>
+
+    <p>
+      This means that when if we divide two <c>int</c>s, we will get an
+      <c>int</c> result and the decimal part of the result will be thrown away.
+      So, for instance, <c>5 / 2</c> would give us <c>2</c>, not <c>2.5</c>.
+      This is called <term>truncating division</term>. If we want to preserve
+      the part after the decimal point we need a <c>double</c> result, so we
+      should make at least one of the values in the expression a double like
+      2.0. The expression <c>5 / 2.0</c> will give us <c>2.5</c>.
     </p>
 
     <activity label="lcop1">
       <statement>
         <p>
-          Run the code below to see all the operators in action. Do all of those
-          operators do what you expected? What about 2 / 3? Isn’t it surprising
-          that it prints 0? See the note above about truncating division with
-          integers. Change the code to make it print the decimal part of the
-          division too. You can do this by making at least one of the numbers a
-          double like 2.0.
+          Run the code below to see the four basic arithmetic operators in
+          action. Do all of those operators do what you expected? What about 2 /
+          3? Isn’t it surprising that it prints 0? See the note above about
+          truncating division with integers. Change the code to make it print
+          the decimal part of the division too. You can do this by making at
+          least one of the numbers a double like 2.0.
         </p>
       </statement>
 
@@ -283,144 +364,17 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </activity>
 
-    <p>
-      Math errors sometimes lead to runtime errors in code. For example, when
-      the Hubble Space Telescope was launched to space in 1990, a math coding
-      error in a formula caused it to point in the wrong direction! It missed
-      its target stars by about half a degree which is about the width of the
-      moon seen from Earth (<url
-      href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-
-      news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough
-      testing is the only way to make sure there are no logic errors that will
-      cause runtime errors in your code. Try the following example that tries to
-      convert centimeters to inches. Can you fix the runtime error?
-    </p>
-
-    <activity label="cm2in-runtime-error">
-      <statement>
-        <p>
-          The following code is trying to convert centimeters to inches, but it
-          has a math error. Run the code to see that there are no error
-          messages, but it simply does the wrong calculation! Can you fix the
-          logic error in the code? 1 inch = 2.54 cms.
-        </p>
-      </statement>
-
-      <program interactive="activecode" language="java">
-        <code>
-public class CmToInches
-{
-    public static void main(String[] args)
-    {
-        System.out.print("100 centimeters in inches is: ");
-        System.out.println(100 * 2.54);
-    }
-}
-        </code>
-        <tests>
-import static org.junit.Assert.*;
-import org.junit.Test;
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void test1() throws IOException
-    {
-        String output = getMethodOutput("main");
-        String expect = "" + 100/2.54;
-        boolean passed =
-                getResults(expect, output, "Expected output from main");
-        assertTrue(passed);
-    }
-    @Test
-    public void test2()
-    {
-        String target = "/";
-        boolean passed = checkCodeContains("the division operator", target);
-        assertTrue(passed);
-    }
-}
-        </tests>
-      </program>
-    </activity>
-
-    <p>
-      Another runtime error that is possible in math expressions is dividing by
-      zero which is undefined in mathematics. An attempt to divide an integer by
-      the integer 0 will result in an <term>ArithmeticException</term> in Java,
-      as we saw in the first lesson. Try it in one of the active codes to see
-      what happens.
-    </p>
-  </subsection>
-
-  <subsection xml:id="compound-expressions">
-    <title>Compound Expressions</title>
-    <p>
-      Expressions can be combined into <term>compound expressions</term> with
-      multiple operators. When compound expressions are evaluated,
-      <term>operator precedence</term> rules are used, just like when we do math
-      (remember PEMDAS?), so that multiplication <c>*</c>, division <c>/</c>,
-      and remainder <c>%</c> are done before addition <c>+</c> and subtraction
-      <c>-</c>. However, anything in parentheses is done first. It doesn’t hurt
-      to put in extra parentheses if you are unsure as to what will be done
-      first or just to make it more clear.
-    </p>
-
-    <activity label="compound1">
-      <statement>
-        <p>
-          In the example below, try to guess what it will print out and then run
-          it to see if you are right. Remember to consider <term>operator
-          precedence</term>. How do the parentheses change the precedence?
-        </p>
-      </statement>
-
-      <program interactive="activecode" language="java">
-        <code>
-public class TestCompound
-{
-    public static void main(String[] args)
-    {
-        System.out.println(2 + 3 * 2);
-        System.out.println((2 + 3) * 2);
-        System.out.println(2 + (3 * 2));
-    }
-}
-        </code>
-        <tests>
-// Test Code for Lesson 1.4 Expressions - compounds
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void test1()
-    {
-        String output = getMethodOutput("main");
-        String expect = "8\n10\n8";
-        boolean passed =
-                getResults(expect, output, "Expected output from main", true);
-        assertTrue(passed);
-    }
-}
-        </tests>
-      </program>
-    </activity>
   </subsection>
 
   <subsection xml:id="the-remainder-operator">
     <title>The Remainder Operator</title>
     <p>
-      The operator <c>%</c> in Java is the <term>remainder</term> operator. Like
-      the other arithmetic operators it takes two operands. Mathematically it
-      returns the remainder after dividing the first number by the second, using
-      truncating integer division. For instance, <c>5 % 2</c> evaluates to 1
-      since 2 goes into 5 two times with a remainder of 1.
+      Java also supports a fifth arithmetic operator, <c>%</c>, called the
+      <term>remainder</term> operator. Like the other four basic arithmetic
+      operators it takes two operands. Mathematically it returns the remainder
+      after dividing the first number by the second, using truncating division.
+      For instance, <c>5 % 2</c> evaluates to 1 since 2 goes into 5 two times
+      with a remainder of 1.
     </p>
 
     <p>
@@ -445,10 +399,11 @@ public class RunestoneTests extends CodeTestHelper
       which uses <url
       href="https://en.wikipedia.org/wiki/Euclidean_division">Euclidean
       division</url> instead of truncating integer division, only matters when
-      negative operands are involved and the signs of the operands differ. With
-      positive operands, remainder and mod give the same results. Java does have
-      a method <c>Math.floorMod</c> in the <c>Math</c> class if you need to use
-      modulo instead of remainder, but <c>%</c> is all you need in the AP exam.
+      the signs of the operands differ. With operands of the same sign,
+      remainder and modulo give the same results. Java does have a method
+      <c>Math.floorMod</c> in the <c>Math</c> class if you need to use modulo
+      instead of remainder, but <c>%</c> is all you need in the AP exam and it
+      will only be used with positive operands.
     </p>
 
     <p>
@@ -505,9 +460,10 @@ public class RunestoneTests extends CodeTestHelper
 
     <note>
       <p>
-        The result of x % y when x is smaller than y is always x. The value y
-        can’t go into x at all (goes in 0 times), since x is smaller than y, so
-        the result is just x. So if you see 2 % 3 the result is 2.
+        Remember that the value of <c>x % y</c> when <c>x</c> is smaller than
+        <c>y</c> is always <c>x</c>. Since <c>y</c> can’t go into <c>x</c> at
+        all (goes in 0 times), the result is just <c>x</c>. So <c>2 %
+        3</c> is <c>2</c> since <c>2 &lt; 3</c>.
       </p>
     </note>
 
@@ -607,6 +563,181 @@ public class RunestoneTests extends CodeTestHelper
       </choices>
     </activity>
   </subsection>
+
+  <subsection xml:id="math-bugs">
+    <title>Math Bugs</title>
+    <p>
+      While computers are pretty good at math they will only do what we tell
+      them. And sometimes what we tell them isn’t exactly what we wanted. For
+      instance, we can get bit by an unexpected truncating division if we divide
+      two <c>int</c>s when we really wanted a <c>double</c> result.
+    </p>
+
+    <p>
+      And sometimes it’s something as silly as using the wrong operator. For
+      example, when the Hubble Space Telescope was launched to space in 1990, a
+      <url
+      href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">bug
+      where a programmer subtracted when they should have added</url> (or
+      possibly the other way around) caused it to point in the wrong direction!
+      It missed its target stars by about half a degree which is about the width
+      of the moon seen from Earth. Thorough testing is the only way to make sure
+      there are no logic errors that will cause runtime errors in your code. Try
+      the following example that tries to convert centimeters to inches. Can you
+      fix the runtime error?
+    </p>
+
+    <activity label="cm2in-runtime-error">
+      <statement>
+        <p>
+          The following code is trying to convert centimeters to inches, but it
+          has a math error. Run the code to see that there are no error
+          messages, but it simply does the wrong calculation! Can you fix the
+          logic error in the code? 1 inch = 2.54 cms.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+public class CmToInches
+{
+    public static void main(String[] args)
+    {
+        System.out.print("100 centimeters in inches is: ");
+        System.out.println(100 * 2.54);
+    }
+}
+        </code>
+        <tests>
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test1() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "" + 100/2.54;
+        boolean passed =
+                getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+    @Test
+    public void test2()
+    {
+        String target = "/";
+        boolean passed = checkCodeContains("the division operator", target);
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
+
+    <p>
+      Another kind of math bug is when we ask Java to do something
+      mathematically impossible. The main one we need to know about is what
+      happens when we divide by zero, something that is not defined in math. In
+      an <c>int</c> expression, dividing by 0 will result in an
+      <term>ArithmeticException</term> , as we saw in the <xref
+      ref="topic-1-1-intro-algorithms"/>. Try it in one of the active codes to
+      see what happens.
+    </p>
+
+    <note>
+      <p>
+        In <c>double</c> expressions, dividing by zero is not an error. Instead
+        we get a special <c>double</c> value <c>Infinity</c> which might makes
+        sense to you if you’ve learned about limits in math class. But if not,
+        don’t worry about it; it’s not part of the AP exam.
+      </p>
+    </note>
+  </subsection>
+
+  <subsection xml:id="compound-expressions">
+    <title>Compound Expressions</title>
+    <p>
+      Each arithmetic operator operates on just two operands. So what does an
+      expression like <c>2 * 3 + 4</c> mean? If we remember our PEMDAS, we know
+      in regular math that this expression should evaluate to <c>10</c> since we
+      first multiply <c>2</c> times <c>3</c>, getting <c>6</c>, and then add
+      <c>4</c> to that, getting <c>10</c>. It works the same in Java. Java
+      evaluates the <c>*</c> operator with the two operands are <c>2</c> and
+      <c>3</c>, and then the <c>+</c> operator with the value of the
+      subexpression <c>2 * 3</c> and <c>4</c>.
+    </p>
+
+    <p>
+      This kind of expression, where one or both of the operands are also
+      arithmetic expressions, not just variables or a literal values, is called
+      a <term>compound expression</term>.
+    </p>
+
+    <p>
+      When compound expressions are evaluated, Java uses <term>operator
+      precedence</term> rules, just like we do in regular math. So the
+      expression <c>2 + 5 * 3</c> is <c>17</c>, not <c>21</c> because the
+      expression <c>5 * 3</c> is evaluated first and then becomes one of the
+      operands to the <c>+</c> operator.
+    </p>
+
+
+    <p>
+      In Java, multiplication <c>*</c>, division <c>/</c>, and remainder
+      <c>%</c> are done before addition <c>+</c> and subtraction <c>-</c>.
+      However, as under PEMDAS rules, anything in parentheses is done first. It
+      doesn’t hurt to put in extra parentheses if you are unsure as to what will
+      be done first or just to make it more clear.
+    </p>
+
+    <activity label="compound1">
+      <statement>
+        <p>
+          In the example below, try to guess what it will print out and then run
+          it to see if you are right. Remember to consider <term>operator
+          precedence</term>. How do the parentheses change the precedence?
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+public class TestCompound
+{
+    public static void main(String[] args)
+    {
+        System.out.println(2 + 3 * 2);
+        System.out.println((2 + 3) * 2);
+        System.out.println(2 + (3 * 2));
+    }
+}
+        </code>
+        <tests>
+// Test Code for Lesson 1.4 Expressions - compounds
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "8\n10\n8";
+        boolean passed =
+                getResults(expect, output, "Expected output from main", true);
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
+  </subsection>
+
 
   <subsection xml:id="coding-challenge-pay-calculator">
     <title>Coding Challenge : Pay Calculator</title>
