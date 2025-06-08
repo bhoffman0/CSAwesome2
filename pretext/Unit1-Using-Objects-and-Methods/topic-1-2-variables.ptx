@@ -23,18 +23,21 @@
     <title>What is a Variable?</title>
     <idx>variable</idx>
     <p>
-      A <term>variable</term> is a memory location in the computer that can
-      store a value that can change or vary while the program is running. The
-      following <url href="https://youtu.be/pHgYlVjagmA"
-      visual="https://youtu.be/pHgYlVjagmA">video</url> explains what a variable
-      is and gives some real word examples of variables.
+      There are two aspects to a <term>variable</term>. To the computer a
+      variable is a location in its memory that can store a value. The value
+      stored at that location can change, or vary, while the program is running
+      which is why we call them variables. To us human programmers, on the other
+      hand, the important aspect of a variable as it’s name that we can use to
+      refer to the data without having to know about the variabel’s exact
+      location in memory.
     </p>
 
-    <video youtube="pHgYlVjagmA" label="video-variables" />
     <p>
-      For example, when you play a game, it will often have a score. Scores
-      often start at 0 and increase, so they can change. A score can be stored
-      in a variable.
+      For example, in a computer game we might need to keep track of the
+      player’s score, which will start at 0 and increase as they gain points.
+      The score can be stored somewher in memory but in our program we’ll refer
+      to it with the name <c>score</c> since that’s much more convenient than
+      something like “address <c>66a3ffec</c>”.
     </p>
 
     <figure align="center">
@@ -47,6 +50,7 @@
 
       <image source="Unit1-Using-Objects-and-Methods/Figures/pongScore.png" width="54%" />
     </figure>
+
   </subsection>
 
   <subsection xml:id="data-types">
@@ -85,12 +89,14 @@
     </idx>
 
     <p>
-      Every variable has a name and a data type that determines the kind of data
-      it can hold. There are two types of variables in Java: <term>primitive
-      variables</term> that hold values of primitive types like numbers and
-      <term>reference variables</term> that hold a reference to a more complex
-      object. A reference is a way to find the object (like a UPS tracking
-      number helps you find your package).
+      In Java, in addition to a name, every variable has a <term>data
+      type</term> that determines what kind of data it can hold. There are two
+      categories of data types in Java: <term>primitive types</term> that hold
+      the kinds of values that the computer can directly operate on such as
+      numbers and <term>reference types</term> that hold a reference to a more
+      complex value called an object. For now we’ll focus on three of the main
+      primitive data types in Java. We’ll come back to reference types in <xref
+      ref="topic-1-12-objects"/>.
     </p>
 
     <p>
@@ -136,17 +142,22 @@
     </p>
 
     <p>
-      <c>String</c> is one of the object types on the exam and is the name of a
-      class in Java. A <c>String</c> is written in a Java program as a sequence
-      of characters enclosed in a pair of double quotes - like <c>"Hello"</c>.
-      You will learn more about <c>String</c> objects later.
+      Another way to think of a data type is as a set of values (a domain, for
+      the mathematically inclined) and a set of operations on those values. For
+      example, the <c>int</c> datatype represent the set of integers that can be
+      represented in 32 bits (-2147483648 to 2147483647) and they support the
+      normal arithmetic operations like addition, subtraction, multiplication,
+      and division as well as a few that you probably didn’t learn about in
+      elementary school.
     </p>
 
     <p>
-      A data type is a set of values (a domain) and a set of operations on them.
-      For example, you can do addition operations with <c>int</c>s and
-      <c>double</c>s but not with <c>boolean</c>s and <c>String</c>s.
+      The following <url href="https://youtu.be/pHgYlVjagmA"
+      visual="https://youtu.be/pHgYlVjagmA">video</url> gives a quick summary of
+      the relationship between variables, their names, and their data types.
     </p>
+
+    <video youtube="pHgYlVjagmA" label="video-variables" />
 
     <activity label="chooseType1">
       <statement>
@@ -460,10 +471,11 @@
     <p>
       To create a variable, you must tell Java its data type and its name.
       Creating a variable is also called <term>declaring a variable</term>. The
-      type is a keyword like int, double, or boolean, but you get to make up the
-      name for the variable. When you create a <term>primitive variable</term>
-      Java will set aside enough bits in memory for that primitive type and
-      associate that memory location with the name that you used.
+      type is a keyword like <c>int</c>, <c>double</c>, or <c>boolean</c>, but
+      you get to make up the name for the variable. When you create a variable
+      that will hold a primitive type, Java will set aside enough memory to hold
+      a value of that type and will associate that memory location with the name
+      you used.
     </p>
 
     <p>
