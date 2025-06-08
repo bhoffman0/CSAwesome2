@@ -161,7 +161,7 @@
 
               <li>
                 <p>
-                  <term>boolean equals(String other)</term> : returns true if
+                  <term>boolean equals(Object other)</term> : returns true if
                   this (the calling object) is equal to other; returns false
                   otherwise.
                 </p>
