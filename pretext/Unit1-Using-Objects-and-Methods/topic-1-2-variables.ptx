@@ -3,7 +3,22 @@
 <section xml:id="topic-1-2-variables">
   <title>Variables and Data Types</title>
   <time minutes="45" />
-  <introduction />
+
+  <introduction>
+    <p>
+      Computers operate on <term>data</term> which is stored as
+      <term>bits</term>, usually described as “zeros and ones”, in the
+      computer's memory. However sequences of zeros and ones aren't convenient
+      for humans to deal with, so languages like Java give us higher-level
+      abstractions for dealing with data. Two important abstractions are
+      <term>variables</term> which allow us to give a name to a particular
+      location in the computer's memory where some data is stored and <term>data
+      types</term> that decribe how we are using those particular zeros and
+      ones: as a number, as a logical value, as text, or as some more more
+      complicated kind of value.
+    </p>
+  </introduction>
+
   <subsection xml:id="what-is-a-variable">
     <title>What is a Variable?</title>
     <idx>variable</idx>
