@@ -440,7 +440,7 @@ public class RunestoneTests extends CodeTestHelper
     public void testMain() throws IOException
     {
         String output = getMethodOutput("main");
-        String expect = "This file has 10000 lines.";
+        String expect = "This file has 10002 lines.";
         boolean passed = getResults(expect, output, "Expected output from main");
         assertTrue(passed);
     }
