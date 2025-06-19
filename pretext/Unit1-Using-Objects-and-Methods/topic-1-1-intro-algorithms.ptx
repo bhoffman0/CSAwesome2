@@ -820,7 +820,7 @@ public class DivideByZero
 {
    public static void main(String[] args)
    {
-       System.out("It makes no sense to divide a number by zero!");
+       // It makes no sense to divide a number by zero!
        System.out.println(3/0);
    }
 }
@@ -914,9 +914,9 @@ public class Challenge1_1
 {
    public static void main(String[] args)
    {
-       System.out.print("Good morning! ")
-       system.out.print("Good afternoon!);
-       System.Print " And good evening!";
+       System.out.println("Good morning! ")
+       system.out.printline("Good afternoon!);
+       System.PrintLn " And good evening!";
 
 }
         </code>
