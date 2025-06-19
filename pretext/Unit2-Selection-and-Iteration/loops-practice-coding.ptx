@@ -930,7 +930,7 @@ public class Test1
     <statement>
       <p>
         Write a loop below to print the number of <c>x</c>’s in the string
-        message. Use the <c>indexOf</c> and <c>substring</c> methods.
+        message. Use the <c>substring</c> method.
       </p>
     </statement>
 
@@ -978,8 +978,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <solution>
       <p>
-        Answer: Use indexOf to find the next x. Loop while pos is greater than
-        or equal to 0. Use substring to reset message beyond the next x.
+        Answer: You can use indexOf to find the next x or check every character in the string. 
+        Loop while pos is greater than or equal to 0. 
+        Use substring to reset message beyond the next x or to check every character.
       </p>
 
       <program language="java">

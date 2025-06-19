@@ -580,6 +580,20 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </activity>
   </subsection>
+<subsection xml:id="ap-scoring-rubric-parta">
+    <title>AP Scoring Rubric for Part A</title>
+    <p>
+      Here is the AP rubric for Part A. Did your code meet the
+      requirements for all 4 points? Notice that even a partial solution would
+      get some of the points. It is not all or nothing. In class, your teacher
+      may have you grade each others’ code.
+    </p>
+
+    <figure align="center">
+      <caption>AP Rubric</caption>
+      <image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-parta.png" width="100%" alt="AP Rubric for part a" />
+    </figure>
+  </subsection>
 
   <subsection xml:id="partb-messagebuilder">
     <title>Part B: getAbbreviation</title>
@@ -791,20 +805,7 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
   </subsection>
 
-  <subsection xml:id="ap-scoring-rubric-parta">
-    <title>AP Scoring Rubric</title>
-    <p>
-      Here is the AP rubric for this problem. Did your code meet the
-      requirements for all 4 points? Notice that even a partial solution would
-      get some of the points. It is not all or nothing. In class, your teacher
-      may have you grade each others’ code.
-    </p>
-
-    <figure align="center">
-      <caption>AP Rubric</caption>
-      <image source="Unit2-Selection-and-Iteration/Figures/frq-scoring-msgbuilder-parta.png" width="100%" alt="AP Rubric for part a" />
-    </figure>
-  </subsection>
+  
 
   <subsection xml:id="msgbuilder-partb-solve">
     <title>Solve MessageBuilder Part B</title>
