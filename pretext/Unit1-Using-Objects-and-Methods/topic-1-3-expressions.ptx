@@ -270,8 +270,7 @@ public class RunestoneTests extends CodeTestHelper
       error in a formula caused it to point in the wrong direction! It missed
       its target stars by about half a degree which is about the width of the
       moon seen from Earth (<url
-      href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-
-      news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough
+      href="https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm">https://scholar.lib.vt.edu/VA-news/ROA-Times/issues/1990/rt9005/900510/05100615.htm</url>). Thorough
       testing is the only way to make sure there are no logic errors that will
       cause runtime errors in your code. Try the following example that tries to
       convert centimeters to inches. Can you fix the runtime error?

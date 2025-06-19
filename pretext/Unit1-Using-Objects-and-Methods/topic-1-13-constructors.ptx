@@ -387,10 +387,8 @@ public class RunestoneTests extends CodeTestHelper
 
     <p>
       Watch the <url
-      href="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-
-      wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis"
-      visual="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-
-      wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url>
+      href="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis"
+      visual="https://www.youtube.com/watch?v=5fpjgXAV2BU&amp;list=PLHqz-wcqDQIEP6p1_0wOb9l9aQ0qFijrP&amp;ab_channel=colleenlewis">video</url>
       below about null.
     </p>
 
@@ -426,8 +424,7 @@ Turtle t2 = new Turtle(world1);
       When you use a class that someone has already written for you in a
       <term>library</term> that you can import like the <c>Turtle</c> class
       above, you can look up how to use the constructors and methods in the <url
-      href="https://www2.cs.uic.edu/~i101/doc/Turtle.html"
-      visual="https://www2.cs.uic.edu/~i101/doc/Turtle.html">documentation</url>
+      href="https://cseweb.ucsd.edu/~ricko/CSE11/turtleClassesDocs/index.html?turtleClasses/SimpleTurtle.html">documentation</url>
       for that class. The documentation will list the <term>signatures</term>
       (or headers) of the constructors or methods which will tell you their name
       and parameter list. The <term>parameter list</term>, in the
