@@ -13,6 +13,14 @@
     --codeColor: #ffaaaa;
 }
 
+/* Add some padding and border around clickable areas made up of paragraphs
+   rather than code. */
+div.clickablearea_section > div > div:has(> div.para) {
+    border: 1px dotted grey;
+    padding: 1em;
+    margin: 1em 0;
+}
+
 div.time {
     display: flex;
     flex-direction: row;
