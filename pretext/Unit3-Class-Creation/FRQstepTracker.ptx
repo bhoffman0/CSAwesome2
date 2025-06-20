@@ -5,66 +5,17 @@
   <introduction>
     <idx>class</idx>
     <idx>free response</idx>
-    <p>
-      The AP exam’s second free response question (FRQ) is on classes, where
-      students design and implement a described class. Students will be
-      instructed to design and implement a class based on provided
-      specifications and examples. A second class might also be included.
-      Students will be provided with a scenario and specifications in the form
-      of a table demonstrating ways to interact with the class and the results.
-      The class must include a class header, instance variables, a constructor,
-      a method, and implementation of the constructor and required method.
-      (Inheritance is no longer covered in the AP exam and FRQs.)This question
-      does not involve more complex topics such as arrays.
-    </p>
-
-    <p>
-      To succeed on the FRQ Question 2 on Classes, you must know how to:
-    </p>
-
-    <p>
-      <ul>
-        <li>
-          <p>
-            Create a class using <c>public class Classname { }</c>
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Write a constructor with the same name as the class and no return
-            type. This constructor will probably have a parameter that is
-            assigned to an instance variable and will need to assign default
-            values to the other instance variables.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            Write public methods in the class that use the instance variables as
-            well as parameters and return values. These methods will probably
-            use if statements but not more complex coding. One of these methods
-            will probably be an <term>accessor method</term> that returns an
-            instance variable or a calculated value that is dependent on the
-            instance variables, and one will probably be a <term>mutator
-            method</term> that changes the value of an instance variable.
-          </p>
-        </li>
-      </ul>
+   <p>
+      The 2019 FRQ 2 for the class StepTracker is question 2 on page 7 of <url
+      href="https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf"
+      visual="https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf">https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf</url>,
+      reproduced below.
     </p>
   </introduction>
 
   <subsection xml:id="steptracker-class-frq">
     <title>StepTracker Class FRQ</title>
-    <p>
-      The 2019 FRQ 2 for the class StepTracker is a good example of what to
-      expect. It is available as question 2 on page 7 of <url
-      href="https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf"
-      visual="https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf">https://apstudents.collegeboard.org/sites/default/files/2019-05/ap19-frq-computer-science-a.pdf</url>
-      , reproduced below.
-    </p>
-
-    <p>Question 2.</p>
+    
     <p>
       This question involves the implementation of a fitness tracking system
       that is represented by the <term>StepTracker</term> class. A StepTracker
@@ -105,9 +56,9 @@
 
     <table>
       <tabular row-headers="yes">
+        <col top="minor" halign="left"/>
         <col top="minor" />
-        <col top="minor" />
-        <col top="minor" />
+        <col top="minor" width="60%"/>
         <row header="yes" left="minor">
           <cell bottom="minor" right="minor">Statements and Expressions</cell>
           <cell bottom="minor" right="minor">Value Returned (blank if no value)</cell>
@@ -133,14 +84,15 @@
           <cell bottom="minor" right="minor">tr.averageSteps();</cell>
           <cell bottom="minor" right="minor">0.0</cell>
           <cell bottom="minor" right="minor">
-            When no step data have been recorded, the averageSteps method returns 0.0.
+          <p>When no step data have been recorded, the averageSteps method returns 0.0. </p>
           </cell>
         </row>
 
         <row left="minor">
           <cell bottom="minor" right="minor">tr.addDailySteps(9000);</cell>
           <cell bottom="minor" right="minor" />
-          <cell bottom="minor" right="minor">This is too few steps for the day to be considered active.</cell>
+          <cell bottom="minor" right="minor"><p>This is too few steps for the day to be considered 
+          active.</p></cell>
         </row>
 
         <row left="minor">
@@ -171,14 +123,14 @@
           <cell bottom="minor" right="minor">tr.activeDays();</cell>
           <cell bottom="minor" right="minor">1</cell>
           <cell bottom="minor" right="minor">
-            Of the three days for which step data were entered, one day had at least 10,000 steps.
-          </cell>
+          <p>Of the three days for which step data were entered, one day had at least 10,000 steps.
+          </p></cell>
         </row>
 
         <row left="minor">
           <cell bottom="minor" right="minor">tr.averageSteps();</cell>
           <cell bottom="minor" right="minor">9000.0</cell>
-          <cell bottom="minor" right="minor">The average number of steps per day is (27000 / 3).</cell>
+          <cell bottom="minor" right="minor">The average number of steps per day is (27000/3).</cell>
         </row>
 
         <row left="minor">
@@ -197,14 +149,14 @@
           <cell bottom="minor" right="minor">tr.activeDays();</cell>
           <cell bottom="minor" right="minor">2</cell>
           <cell bottom="minor" right="minor">
-            Of the five days for which step data were entered, two days had at least 10,000 steps.
-          </cell>
+           <p>Of the five days for which step data were entered, two days had at least 10,000 steps.
+          </p></cell>
         </row>
 
         <row left="minor">
           <cell bottom="minor" right="minor">tr.averageSteps();</cell>
           <cell bottom="minor" right="minor">10222.2</cell>
-          <cell bottom="minor" right="minor">The average number of steps per day is (51111 / 5).</cell>
+          <cell bottom="minor" right="minor">The average number of steps per day is (51111/5).</cell>
         </row>
       </tabular>
     </table>
@@ -221,7 +173,7 @@
     <p>
       Work in pairs or groups to read through the problem statement and
       determine the instance variables required for this class. During the exam,
-      it helps to circle the words that are important and may describe the
+      it helps to mark the words that are important and may describe the
       instance variables. Different groups may come up with different variables
       that will still work. Groups should report back and compare answers in
       class to determine the best variables before writing the class.
@@ -871,9 +823,9 @@ class Example
 
     <table>
       <tabular row-headers="yes">
+        <col top="minor" halign="left"/>
         <col top="minor" />
-        <col top="minor" />
-        <col top="minor" />
+        <col top="minor" width="60%" />
         <row header="yes" left="minor">
           <cell bottom="minor" right="minor">Statements and Expressions</cell>
           <cell bottom="minor" right="minor">Value Returned (blank if no value)</cell>
@@ -902,7 +854,7 @@ class Example
           <cell bottom="minor" right="minor">tr.activeDays();</cell>
           <cell bottom="minor" right="minor">1</cell>
           <cell bottom="minor" right="minor">
-            Of the three days for which step data were entered, one day had at least 10,000 steps.
+          <p>Of the three days for which step data were entered, one day had at least 10,000 steps.</p>
           </cell>
         </row>
       </tabular>
@@ -1190,9 +1142,9 @@ public class RunestoneTests extends CodeTestHelper
 
     <table>
       <tabular row-headers="yes">
+        <col top="minor" halign="left"/>
         <col top="minor" />
-        <col top="minor" />
-        <col top="minor" />
+        <col top="minor" width="60%"/>
         <row header="yes" left="minor">
           <cell bottom="minor" right="minor">Statements and Expressions</cell>
           <cell bottom="minor" right="minor">Value Returned (blank if no value)</cell>
@@ -1203,7 +1155,7 @@ public class RunestoneTests extends CodeTestHelper
           <cell bottom="minor" right="minor">tr.averageSteps();</cell>
           <cell bottom="minor" right="minor">0.0</cell>
           <cell bottom="minor" right="minor">
-            When no step data have been recorded, the averageSteps method returns 0.0.
+          <p>When no step data have been recorded, the averageSteps method returns 0.0.</p>
           </cell>
         </row>
       </tabular>
