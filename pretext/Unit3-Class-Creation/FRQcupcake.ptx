@@ -321,21 +321,37 @@ than <c>CupcakeMachine</c>
         </p>
       </feedback>
 
+
       <areas>
-<cline><area correct="no">CupcakeMachine objects</area> are created by calls to a constructor with two parameters.</cline>
-<cline>The first parameter is an <area correct="no">int</area> that represents the <area correct="yes">number of cupcakes</area> that</cline>
-<cline><area correct="no">the vending machine</area> has been stocked with.</cline>
-<cline>The second parameter is a <area correct="no">double</area> that represents the <area correct="yes">cost</area> in <area correct="no">dollars</area>, per <area correct="no">cupcake</area>. </cline>
-<cline></cline>
-<cline>A <area correct="no">cupcake order</area> is represented by a single <area correct="no">int</area> parameter to the <area correct="no"><c>takeOrder</c></area> method.</cline>
-<cline>If an order can be filled, the method updates the <area correct="yes">number of cupcakes</area> remaining</cline>
-<cline>in the machine and returns a String containing <area correct="no">information about the order</area>. </cline>
-<cline></cline>
-<cline>The returned String contains the <area correct="yes">order number</area> and the <area correct="yes">cost</area> of the order.</cline>
-<cline><area correct="yes">Order numbers</area> begin at 1 and increase by 1 for each order filled. </cline>
+        <p>
+          <area correct="no">CupcakeMachine objects</area> are created by calls
+          to a constructor with two parameters. The first parameter is an <area
+          correct="no">int</area> that represents the <area correct="yes">number
+          of cupcakes</area> that <area correct="no">the vending machine</area>
+          has been stocked with. The second parameter is a <area
+          correct="no">double</area> that represents the <area
+          correct="yes">cost</area> in <area correct="no">dollars</area>, per
+          <area correct="no">cupcake</area>.
+        </p>
+
+        <p>
+          A <area correct="no">cupcake order</area> is represented by a single
+          <area correct="no">int</area> parameter to the <area
+          correct="no"><c>takeOrder</c></area> method. If an order can be
+          filled, the method updates the <area correct="yes">number of
+          cupcakes</area> remaining in the machine and returns a String
+          containing <area correct="no">information about the order</area>.
+        </p>
+
+        <p>
+          The returned String contains the <area correct="yes">order
+          number</area> and the <area correct="yes">cost</area> of the order.
+          <area correct="yes">Order numbers</area> begin at 1 and increase by 1
+          for each order filled.
+        </p>
       </areas>
     </activity>
- 
+
 
   <activity label="cupcake-instance-vars-mcq">
       <statement>
