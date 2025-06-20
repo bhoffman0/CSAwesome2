@@ -274,7 +274,7 @@ public class RunestoneTests extends CodeTestHelper
     </p>
 
     <p>
-      As we saw in section 9.3 a class can override inherited methods by
+      As we saw in previous lessons, a class can override inherited methods by
       providing a method with the same method signature (method name, parameter
       types, and return type). <c>String</c> has done that with <c>equals</c> so
       when we compare <c>String</c> objects with <c>equals</c> that new method
