@@ -258,8 +258,8 @@ public class RunestoneTests extends CodeTestHelper
       it’s better to think of <c>sqrt</c> as having a precondition that says it
       only works properly if given a positive argument. These are described as
       special cases in the API documentation, for example in <url
-      href="https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double"
-      visual="https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double">https://docs.oracle.com/javase%2F8%2Fdocs%2Fapi%2F%2F/java/lang/Math.html#sqrt-double</url>. Try this out below.
+      href="https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Math.html#sqrt(double)">
+      https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Math.html#sqrt(double)</url>. Try this out below.
     </p>
 
     <activity label="math-preconditions">

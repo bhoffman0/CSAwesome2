@@ -384,12 +384,12 @@ class ExampleTemplate
     <p>
       Notice that the getter’s return type is the same as the type of the
       instance variable and all the body of the getter does is return the value
-      of the variable using a <c>return</c> statement. (We’ll talk more about
-      the <c>return</c> statement in section 5.6 but for now just notice that it
+      of the variable using a <c>return</c> statement. We’ll talk more about
+      the <c>return</c> statement in the next lesson, but for now just notice that it
       is followed by an expression whose value must be the same type as the
-      return type in the method’s header. In a getter that will definitely be
+      return type in the method’s header. In a getter, that will definitely be
       true as long as the type of the instance variable and the return type of
-      the getter are the same.)
+      the getter are the same.
     </p>
 
     <p>

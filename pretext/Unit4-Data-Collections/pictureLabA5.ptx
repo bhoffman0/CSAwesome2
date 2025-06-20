@@ -133,7 +133,7 @@ public void zeroBlue()
 
     <image source="Unit4-Data-Collections/Figures/keepOnlyBlue.png" width="45%" />
     <p>
-      1. You may have done this exercise in the coding challenge in lesson 8.2.
+      1. You may have already done this exercise in a coding challenge for 2D arrays.
       Using the <c>zeroBlue</c> method as a starting point, write the method
       <c>keepOnlyBlue</c> that will keep only the blue values, that is, it will
       set the red and green values to zero. Be sure to call the new test method
