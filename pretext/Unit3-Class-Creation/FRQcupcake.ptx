@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ2classes">
+   <title>Free Response Question (FRQ) 2 Class Design - CupcakeMachine Class</title>
+  <introduction>
+    <idx>class</idx>
+    <idx>free response</idx>
+    <p>
+      The AP exam’s second free response question (FRQ) is on classes, where
+      students design and implement a described class. Students will be
+      instructed to design and implement a class based on provided
+      specifications and examples. A second class might also be included.
+      Students will be provided with a scenario and specifications in the form
+      of a table demonstrating ways to interact with the class and the results.
+      The class must include a class header, instance variables, a constructor,
+      a method, and implementation of the constructor and required method. Note that only 
+      one constructor and one method are required. This question
+      does not involve more complex topics such as arrays or inheritance (which is no longer on the exam).
+    </p>
+
+    <p>
+      To succeed on the FRQ Question 2 on Classes, you must know how to:
+    </p>
+
+    <p>
+      <ul>
+        <li>
+          <p>
+            Create a class using <c>public class Classname { }</c>
+          </p>
+        </li>
+       <li>
+          <p>
+            Create private instance variables in the class based on the description. 
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Write a constructor with the same name as the class and no return
+            type. This constructor will probably have one or more parameters that are
+            assigned to instance variables. There is often another instance variable  
+            that is not a parameter which is assigned a default value. 
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Write a public method in the class that uses the instance variables as
+            well as parameters and return values. This method will probably
+            use if statements but not more complex coding. This method 
+            will probably change the values of the instance variables and 
+            return a calculated value that is dependent on the
+            instance variables.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p> 
+      The following problem is a good example FRQ 2 from  the
+       <url
+    href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf">
+    2025-2026 AP CSA Course and Exam Description (CED)</url>.
+    </p>
+      
+  </introduction>
+  
+<subsection xml:id="FRQ2practiceCupcake">
+    <title>Cupcake Machine Description</title>
+    <p>
+     The <c>CupcakeMachine</c> class, which you will write, represents a
+     cupcake vending machine, an automated machine that dispenses cupcakes.
+     <c>CupcakeMachine</c> objects are created by calls to a constructor with two
+parameters.
+</p>
+   <ul><li><p>
+ The first parameter is an int that represents the number of cupcakes that the
+ vending machine has been stocked with. Assume that this value will be greater
+ than or equal to 0.
+ </p></li>
+ <li><p>
+  The second parameter is a double that represents the cost, in dollars, per
+  cupcake. Assume that this value will be greater than 0.0.
+    </p></li>
+    </ul>
+  <p>
+  The <c>CupcakeMachine</c> class contains a <c>takeOrder</c> method, which
+determines whether a cupcake order can be filled. A cupcake order can be filled
+if there are at least as many cupcakes in the vending machine as there are in the
+order.</p>
+<p>A cupcake order is represented by a single int parameter to the
+<c>takeOrder</c> method. Assume that all values passed to the <c>takeOrder</c>
+method are positive.</p>
+ <p>
+ If an order can be filled, the method updates the number of cupcakes remaining
+in the machine and returns a String containing information about the order. 
+The returned String contains the order number and the cost of the order, as shown in the following table.
+Order numbers begin at 1 and increase by 1 for each order  filled.
+</p>
+<p>If the order cannot be filled because the vending machine does not have enough
+cupcakes, the <c>takeOrder</c> method should return the message "Order
+cannot be filled". In this case, the number of cupcakes available in the
+machine is unchanged and no order number is given to the order.
+</p>
+<p>
+The following table contains a sample code execution sequence and the 
+corresponding results. The code execution sequence appears in a class other 
+than <c>CupcakeMachine</c>
+</p>
+    <table>
+      <tabular row-headers="yes">
+        <col top="minor" halign="left" />
+        <col top="minor" />
+        <col top="minor" width="60%"/>
+        <row header="yes" left="minor">
+          <cell bottom="minor" right="minor">Statement</cell>
+          <cell bottom="minor" right="minor">Return Value
+                              (blank if no value) </cell>
+          <cell bottom="minor" right="minor">Explanation</cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">CupcakeMachine c1 = new CupcakeMachine(10, 1.75);</cell>
+          <cell bottom="minor" right="minor" /> 
+          <cell bottom="minor" right="minor"><p>CupcakeMachine c1 is constructed with 10 cupcakes 
+          and a cost of $1.75 per cupcake.</p></cell>
+        </row>
+
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">String info = c1.takeOrder(2);</cell>
+          <cell bottom="minor" right="minor">"Order number 1, cost $3.5"</cell>
+          <cell bottom="minor" right="minor"><p>A customer orders 2 cupcakes for a total cost of 
+          2 x $1.75. There are now 8 cupcakes remaining in the machine.</p></cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">info = c1.takeOrder(3);</cell>
+          <cell bottom="minor" right="minor">"Order number 2, cost $5.25"</cell>
+          <cell bottom="minor" right="minor"><p>A customer orders 3 cupcakes for a total cost of
+          3 × $1.75. There are now 5 cupcakes remaining in the machine.</p></cell>
+        </row>
+        <row left="minor">
+          <cell bottom="minor" right="minor">info = c2.takeOrder(10);</cell>
+          <cell bottom="minor" right="minor">"Order cannot be filled"</cell>
+          <cell bottom="minor" right="minor"><p>A customer attempts to order 10 cupcakes. The
+          machine only has 5 cupcakes available, so no order is made.</p></cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">info = c1.takeOrder(1);</cell>
+          <cell bottom="minor" right="minor">"Order number 3, cost $1.75"</cell>
+          <cell bottom="minor" right="minor"><p>A customer orders 1 cupcake for a total cost of
+          $1.75. There are now 4 cupcakes remaining in the machine.</p></cell>
+        </row>
+
+        <row left="minor">
+          <cell bottom="minor" right="minor">CupcakeMachine c2 = new CupcakeMachine(10, 1.5);</cell>
+          <cell bottom="minor" right="minor" />
+          <cell bottom="minor" right="minor"><p>CupcakeMachine c2 is constructed with 10 cupcakes 
+          and a cost of $1.50 per cupcake.</p></cell>
+        </row>
+        <row left="minor">
+          <cell bottom="minor" right="minor">info = c2.takeOrder(10);</cell>
+          <cell bottom="minor" right="minor">"Order number 1, cost $15.0"</cell>
+          <cell bottom="minor" right="minor"><p>A customer orders 10 cupcakes for a total cost of
+          10 × $1.50. There are now 0 cupcakes remaining in the machine.</p></cell>
+        </row>
+        
+      </tabular>
+    </table>
+    </subsection>
+
+ <subsection xml:id="frq-cupcake-scaffolding">
+    <title>Determining the Method Headers and Instance Variables</title>
+    <p>
+    Notice that the table above describes a <c>CupcakeMachine</c> constructor and a method 
+    <c>takeOrder</c> that you will need to write. You can determine the method signatures from the method calls in this table. 
+      </p>
+
+  <activity label="cupcake-constructor">
+      <statement>
+        <p>
+          Which of the following is the correct constructor signature or header for the <c>CupcakeMachine</c> constructor?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>CupcakeMachine(10, 1.75) </p>
+          </statement>
+
+          <feedback>
+            <p>This is a call to the constructor, not the signature.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>public CupcakeMachine()</p>
+          </statement>
+
+          <feedback>
+            <p>
+             This would be a valid default no-args constructor header, but the table only shows a constructor with parameters.
+            </p>
+          </feedback>
+        </choice>
+       <choice>
+          <statement>
+            <p>public CupcakeMachine(int n1, int n2) </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This is almost correct, but notice that in the table, the second argument in the constructor calls 
+              is a decimal number which requires the type <c>double</c>.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>public CupcakeMachine(int num, double cost) </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Yes, the constructor has the same name as the class, no return type, is public, and has 2 parameters 
+              which are an int and a double.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="cupcake-takeOrder">
+      <statement>
+        <p>
+          Which of the following is the correct method header for the <c>takeOrder</c> method?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p> 
+            c1.takeOrder(3);
+             </p>
+          </statement>
+
+          <feedback>
+            <p>This is a call to the method, not its header.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>public takeOrder()</p>
+          </statement>
+
+          <feedback>
+            <p>
+             This is missing the return type and parameter.
+            </p>
+          </feedback>
+        </choice>
+       <choice>
+          <statement>
+            <p>public void takeOrder(int order) </p>
+          </statement>
+
+          <feedback>
+            <p>
+              This is almost correct, but notice that in the table, the <c>takeOrder</c> method returns a String, not void. 
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+            public String takeOrder(int cupcakesOrdered) 
+             </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Yes, the method has a return type of String, is public, and has one parameter of type int.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+   <p>The constructor's parameters often determine the instance variables that you must create. 
+       However, the AP exam often has another instance variable that is described in the problem 
+       specification but not given as a parameter to the constructor. 
+       During the exam, it helps to mark the words that are important and may describe the
+       variables. Think about phrases that indicate a value that is being stored or
+       changed or returned. Remember that instance variables are for the attributes of the class.
+       Ask yourself whether a possible variable is a local variable that is just used within a method 
+       or whether it is an attribute of the <c>CupcakeMachine</c> that needs to be stored and used   
+       outside of the method.
+    </p>
+
+    <activity label="cupcake-instance-variables">
+      <statement>
+        <p>
+          Select the phrases from the problem specification below which probably mention an instance variable. 
+          Some of the phrases may occur twice and describe the same variable.
+        </p>
+      </statement>
+
+      <feedback>
+        <p>
+          Look for nouns that describe a value that is being stored or
+          changed or returned. Remember that instance variables are for the attributes of the class.
+          Ask yourself whether a possible variable is a local variable that is just used within a method
+          or whether it is an attribute of the <c>CupcakeMachine</c> that needs to be stored and used outside of the method.
+        </p>
+      </feedback>
+
+      <areas>
+<cline><area correct="no">CupcakeMachine objects</area> are created by calls to a constructor with two parameters.</cline>
+<cline>The first parameter is an <area correct="no">int</area> that represents the <area correct="yes">number of cupcakes</area> that</cline>
+<cline><area correct="no">the vending machine</area> has been stocked with.</cline>
+<cline>The second parameter is a <area correct="no">double</area> that represents the <area correct="yes">cost</area> in <area correct="no">dollars</area>, per <area correct="no">cupcake</area>. </cline>
+<cline></cline>
+<cline>A <area correct="no">cupcake order</area> is represented by a single <area correct="no">int</area> parameter to the <area correct="no"><c>takeOrder</c></area> method.</cline>
+<cline>If an order can be filled, the method updates the <area correct="yes">number of cupcakes</area> remaining</cline>
+<cline>in the machine and returns a String containing <area correct="no">information about the order</area>. </cline>
+<cline></cline>
+<cline>The returned String contains the <area correct="yes">order number</area> and the <area correct="yes">cost</area> of the order.</cline>
+<cline><area correct="yes">Order numbers</area> begin at 1 and increase by 1 for each order filled. </cline>
+      </areas>
+    </activity>
+ 
+
+  <activity label="cupcake-instance-vars-mcq">
+      <statement>
+        <p>
+          Which of the following are appropriate instance variables for the <c>CupcakeMachine</c> class?
+        </p>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p> 
+             numberOfCupcakes
+             </p>
+          </statement>
+          <feedback>
+            <p>Yes, the first parameter of the constructor is the number of cupcakes in the machine.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>cost</p>
+          </statement>
+          <feedback>
+            <p> Yes, the second parameter of the constructor is the cost of each cupcake.</p>
+          </feedback>
+        </choice>
+       <choice>
+          <statement>
+            <p>cupcakesOrdered</p>
+          </statement>
+          <feedback>
+            <p>
+              This is the parameter for the <c>takeOrder</c> method, but it is probably a local variable, not an instance variable. 
+              We can use the parameter to calculate the cost of the order, but we do not need to store it as an instance variable 
+              since it is not an attribute of the machine and is only used in the method and not outside of it.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+             orderNumber
+              </p>
+          </statement>
+          <feedback>
+            <p>
+              Yes, the problem description states that the order number starts at 1 and increases by 1 for each order filled by the cupcake machine. 
+              This would need to be stored as an instance variable.
+            </p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement>
+            <p>orderInformation</p>
+          </statement>
+          <feedback>
+            <p>
+              The <c>takeOrder</c> method returns the order information as a <c>String</c>, but it does not need to be an instance variable, 
+              since it is only used in the method and not needed outside of it.
+                          </p>
+          </feedback>
+          </choice>
+      </choices>
+    </activity>
+
+<activity label="cupcake-takeorder-mcq">
+      <statement>
+        <p>
+         Which variables does the <c>takeOrder</c> method need to update?
+        </p>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p> 
+             numberOfCupcakes
+             </p>
+          </statement>
+          <feedback>
+            <p>Yes, <c>takeOrder</c> will subtract its parameter, cupcakesOrdered, from the number of cupcakes in the machine. </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>cost (of 1 cupcake)</p>
+          </statement>
+          <feedback>
+            <p>No, <c>takeOrder</c> will use the cost of 1 cupcake to determine the cost of the order but it won't change it.</p>
+          </feedback>
+        </choice>
+       <choice>
+          <statement>
+            <p>cupcakesOrdered</p>
+          </statement>
+          <feedback>
+            <p>
+              No, <c>takeOrder</c> will use the parameter <c>cupcakesOrdered</c> to calculate the cost of the order, 
+              but it does not need to change it.
+            </p>
+          </feedback>
+        </choice>
+         <choice correct="yes">
+          <statement>
+            <p>
+             costOfOrder
+              </p>
+          </statement>
+          <feedback>
+            <p>
+              Yes, <c>takeOrder</c> will calculate the cost of the order (which could be a local variable) by multiplying 
+              the number of cupcakes ordered by the cost of one cupcake.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+             orderNumber
+              </p>
+          </statement>
+          <feedback>
+            <p>
+              Yes, the problem description states that the order number starts at 1 and increases by 1 for each order filled by
+               the cupcake machine. 
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>message (return value)</p>
+          </statement>
+          <feedback>
+            <p>
+              Yes, the <c>takeOrder</c> method needs to build a <c>String</c> message to return using the instance variables 
+              and its parameter.
+            </p>
+          </feedback>
+          </choice>
+      </choices>
+    </activity>
+
+</subsection>
+
+<subsection xml:id="frq-cupcake-machine-solve">
+    <title>Writing the CupcakeMachine Class</title> 
+
+<p>Write the <c>CupcakeMachine</c> class below. The class must include a class header, instance variables, a constructor, and method as 
+described in the problem specification.  The main method below which contains the code in the provided table 
+shows how the constructor and method are used. During the AP exam, you can use the table to trace through your code to check that it 
+generates the same results.
+</p>
+
+    <activity label="classCupCakeMachine">
+      <statement>
+        <p>
+          Write the complete CupcakeMachine class. Your implementation must
+          meet all specifications and conform to the examples shown in the table above 
+          and in the main method below. It should include the class header, 
+          instance variable declarations, a constructor, and a method as described in the main method.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+                        // Write public class your classname here and delete comment
+  {
+      // write instance variable declarations here
+    
+    
+      // write the constructor and other methods here
+    
+    
+      public static void main(String[] args)
+      {
+          CupcakeMachine c1 = new CupcakeMachine(10, 1.75);
+          System.out.println(c1.takeOrder(2)); // Order number 1, cost $3.5
+          System.out.println(c1.takeOrder(3)); // Order number 2, cost $5.25
+          System.out.println(c1.takeOrder(10)); // Order cannot be filled
+          System.out.println(c1.takeOrder(1)); // Order number 3, cost $1.75
+
+          CupcakeMachine c2 = new CupcakeMachine(10, 1.5);
+          System.out.println(c2.takeOrder(10)); // Order number 1, cost $15.0
+      }
+    }
+        </code>
+        <tests>
+    import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;    
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests()
+        {
+            super("CupcakeMachine");
+        }
+    
+        @Test
+        public void testMain()
+        {
+            String expected = "Order number 1, cost $3.5\n" +
+                              "Order number 2, cost $5.25\n" +
+                              "Order cannot be filled\n" +
+                              "Order number 3, cost $1.75\n" +
+                              "Order number 1, cost $15.0\n";
+            String output = getMethodOutput("main");
+
+            boolean passed = getResults(expected, output, "Checking main method output");
+            assertTrue(passed);
+        }
+        @Test
+        public void test2()
+        {          
+            String results = checkConstructor(2);
+    
+            boolean passed = getResults("pass", results, "Checking constructor with 2 parameters");
+            assertTrue(passed);
+        }
+    
+        @Test
+        public void test3()
+        {
+            String actual = testPrivateInstanceVariables();
+            String expected = "3 Private";
+    
+            boolean passed = getResults(expected, actual, "Checking declaration of instance variables");
+            assertTrue(passed);
+        }
+        @Test
+        public void test4() {
+          boolean passed = checkCodeContains("public takeOrder method with an int parameter and String return type", "public String takeOrder(int");
+         assertTrue(passed);
+        }
+      }
+        </tests>
+      </program>
+    </activity>
+  </subsection>
+  <subsection xml:id="frq-cupcake-grading">
+  <title>Grading Rubric for the CupcakeMachine Class</title>
+  <p>
+    The following AP rubric is used to grade the CupcakeMachine class. 
+    Each item is worth 1 point, for a total of 7 points. Did you receive all of the points? 
+    In class, your teacher may have you grade each others’ code.
+    </p>
+  <figure align="center">
+      <caption>Rubric for CupcakeMachine</caption>
+      <image source="Unit3-Class-Creation/Figures/cupcakeRubric1.png" width="100%" alt="Rubric for CupcakeMachine Class" />
+      <image source="Unit3-Class-Creation/Figures/cupcakeRubric2.png" width="100%" alt="Rubric for CupcakeMachine Class" />
+    </figure>
+    </subsection>
+</section>
