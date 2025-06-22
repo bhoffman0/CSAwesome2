@@ -149,6 +149,15 @@ figure.table-like {
      margin-left: 0px;
 }
 
+/* Hide the "Paragraph" autopermalink in the interactive exercises.
+   This is a hack to avoid the autopermalink being added to every choice in MCQs
+ */
+.ptx-content
+.exercise-interactives 
+div.autopermalink[data-description="Paragraph"] {
+    display: none;
+}
+
 
 
 /*
