@@ -174,12 +174,7 @@ public double averageWithinRange(double lower, double upper)
     <choices>
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-for (int i = 0; i &lt; inventory.length; i++) 
-                        </code>
-                    </program>
+                <p>for (int i = 0; i &lt; inventory.length; i++) 
                 </p>
             </statement>
             <feedback>
@@ -191,12 +186,7 @@ for (int i = 0; i &lt; inventory.length; i++)
 
         <choice correct="yes">
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-for (ItemInfo item : inventory) 
-                        </code>
-                    </program>
+                <p>for (ItemInfo item : inventory) 
                 </p>
             </statement>
             <feedback>
@@ -210,12 +200,7 @@ for (ItemInfo item : inventory)
 
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-while (inventory.hasNext()) 
-                        </code>
-                    </program>
+                <p>while (inventory.hasNext()) 
                 </p>
             </statement>
             <feedback>
@@ -227,12 +212,7 @@ while (inventory.hasNext())
 
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-for (int i = 0; i &lt;= inventory.size(); i++) 
-                        </code>
-                    </program>
+                <p> for (int i = 0; i &lt;= inventory.size(); i++) 
                 </p>
             </statement>
             <feedback>
@@ -254,7 +234,8 @@ for (int i = 0; i &lt;= inventory.size(); i++)
         </p>
         <program language="java">
             <code>
-for (ItemInfo currentItem : inventory) {
+for (ItemInfo currentItem : inventory) 
+{
     // ...
 }
             </code>
@@ -267,12 +248,7 @@ for (ItemInfo currentItem : inventory) {
     <choices>
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-currentItem.cost
-                        </code>
-                    </program>
+                <p>currentItem.cost
                 </p>
             </statement>
             <feedback>
@@ -285,12 +261,7 @@ currentItem.cost
 
         <choice correct="yes">
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-currentItem.getCost()
-                        </code>
-                    </program>
+                <p>currentItem.getCost()
                 </p>
             </statement>
             <feedback>
@@ -302,12 +273,7 @@ currentItem.getCost()
 
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-getCost(currentItem)
-                        </code>
-                    </program>
+                <p>getCost(currentItem)
                 </p>
             </statement>
             <feedback>
@@ -320,12 +286,7 @@ getCost(currentItem)
 
         <choice>
             <statement>
-                <p>
-                    <program language="java">
-                        <code>
-currentItem.getCost
-                        </code>
-                    </program>
+                <p>currentItem.getCost
                 </p>
             </statement>
             <feedback>
@@ -566,7 +527,7 @@ public class RunestoneTests extends CodeTestHelper
         String output = getMethodOutput("main");
         String expect = "Average cost of available items within range: $25.0";
 
-        boolean passed = getResults(expect, output, "Main outpu");
+        boolean passed = getResults(expect, output, "Main output");
         assertTrue(passed);
     }
     @Test
