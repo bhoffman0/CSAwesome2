@@ -325,29 +325,28 @@ than <c>CupcakeMachine</c>
       <areas>
         <p>
           <area correct="no">CupcakeMachine objects</area> are created by calls
-          to a constructor with two parameters. The first parameter is an <area
-          correct="no">int</area> that represents the <area correct="yes">number
-          of cupcakes</area> that <area correct="no">the vending machine</area>
-          has been stocked with. The second parameter is a <area
-          correct="no">double</area> that represents the <area
-          correct="yes">cost</area> in <area correct="no">dollars</area>, per
-          <area correct="no">cupcake</area>.
+          to a constructor with two parameters. 
+        </p>
+        <p>  
+          The first parameter is an <area correct="no">int</area> that represents 
+          the <area correct="yes">number of cupcakes</area> that 
+          <area correct="no">the vending machine</area> has been stocked with.
+        </p>
+        <p> 
+          The second parameter is a <area correct="no">double</area> that represents 
+          the <area correct="yes">cost in dollars</area>, per <area correct="no">cupcake</area>.
         </p>
 
         <p>
           A <area correct="no">cupcake order</area> is represented by a single
-          <area correct="no">int</area> parameter to the <area
-          correct="no"><c>takeOrder</c></area> method. If an order can be
-          filled, the method updates the <area correct="yes">number of
-          cupcakes</area> remaining in the machine and returns a String
-          containing <area correct="no">information about the order</area>.
+          int parameter to the <area correct="no"><c>takeOrder</c></area> method. 
         </p>
-
-        <p>
+        <p>If an order can be filled, the method updates the number of
+          cupcakes remaining in the machine and returns a String
+          containing <area correct="no">information about the order</area>.
           The returned String contains the <area correct="yes">order
-          number</area> and the <area correct="yes">cost</area> of the order.
-          <area correct="yes">Order numbers</area> begin at 1 and increase by 1
-          for each order filled.
+          number</area> and the cost of the order. Order numbers begin at 1 
+          and increase by 1 for each order filled.
         </p>
       </areas>
     </activity>
