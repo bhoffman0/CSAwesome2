@@ -87,6 +87,14 @@ public class MasterOrder
     {
         /* to be implemented in part (a) */
     }
+    
+    /** Removes all cookie orders from the master order that have the same variety of
+     * cookie as cookieVar and returns the total number of boxes that were removed.
+     * @param cookieVar the variety of cookies to remove from the master order
+     * @return the total number of boxes of cookieVar in the cookie orders removed
+    */
+    public int removeVariety(String cookieVar)
+    { /* to be implemented in part (b) */ }
 
     // There may be instance variables, constructors, and methods that are not
     // shown.
