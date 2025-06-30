@@ -1186,7 +1186,7 @@ public class RunestoneTests extends CodeTestHelper
    {
        Object[] args = {"medium"};
        String output = getMethodOutput("linearSearch", args);
-       String expect = "5549";
+       String expect = "5550";
 
        boolean passed =
                getResults(
