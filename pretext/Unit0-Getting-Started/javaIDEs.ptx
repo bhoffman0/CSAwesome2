@@ -17,6 +17,7 @@
     <idx>jGRASP</idx>
     <idx>IntelliJ</idx>
     <idx>PickCode</idx>
+    <idx>CodeHS</idx>
     <p>
       The tool that we use to compile a Java source file into a Java class file
       is called a <term>compiler</term>. Most programmers use an
@@ -56,6 +57,25 @@
       <ul>
         <li>
           <p>
+            CodeHS (<url href="https://codehs.com/"
+            >https://codehs.com/</url>) has a free Sandbox online IDE 
+            (<url href="https://codehs.com/app/sandbox">https://codehs.com/app/sandbox</url>) 
+            where you can run Java and Java Swing programs. Students can share the links 
+            to their code and the history of their code is saved. CodeHS has free and paid features.
+            Grading features are in the paid version.
+          </p>
+        </li>
+        <li>
+          <p>
+            PickCode (<url href="https://pickcode.io/"
+            visual="https://pickcode.io/">https://pickcode.io/</url>) is another
+            online IDE that offers many free and paid features for setting up
+            classrooms. In the free version, tudents can share links to their code and 
+            the history of their code is saved. Classroom features are in the paid version.
+          </p>
+        </li>
+        <li>
+          <p>
             Replit (<url href="https://replit.com/"
             visual="https://replit.com/">https://replit.com/</url>) an online
             IDE which recently switched to only allowing 3 projects at a time
@@ -74,15 +94,6 @@
             online IDE that offers many free and paid features for teachers to
             set up classrooms like Coding Rooms. It has a built-in version of
             CSAwesome.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            PickCode (<url href="https://pickcode.io/"
-            visual="https://pickcode.io/">https://pickcode.io/</url>) is another
-            online IDE that offers many free and paid features for setting up
-            classrooms.
           </p>
         </li>
       </ul>

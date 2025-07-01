@@ -760,16 +760,15 @@ public class RunestoneTests extends CodeTestHelper
       </statement>
 
       <choices>
-        <choice>
+        <choice correct="yes">
           <statement>
             <p>for(int i=0; i &lt; message.length; i++)</p>
           </statement>
 
           <feedback>
             <p>
-              This iterates through the message letter by letter, but it doesn't
-              find the next space. You could make it work with an if statement
-              inside to find the space, but there is another solution.
+              This iterates through the message letter by letter. You would need  
+              an if statement inside the loop to find the space.
             </p>
           </feedback>
         </choice>
@@ -782,8 +781,7 @@ public class RunestoneTests extends CodeTestHelper
           <feedback>
             <p>
               This while loop would only check the first character. You could
-              make this work if you used an index variable i but there is
-              another solution.
+              make this work if you used an index variable i.
             </p>
           </feedback>
         </choice>

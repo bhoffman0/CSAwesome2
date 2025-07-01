@@ -196,8 +196,10 @@ public class RunestoneTests extends CodeTestHelper
       error-handling. You put the code that may cause an exception in a try
       block (the Java compiler will let you know if it is needed), and the code
       that handles the exception in a catch block. If the file is not found, the
-      appropriate catch block will be executed. It can print out the exception
-      message or do something else to handle the exception.
+      appropriate catch block will be executed, and the program will terminate. 
+      It can print out the exception message or do something else to handle the exception.
+      You will not use try/catch in the AP CSA exam, but here is an example with more information 
+      available here <url href="https://www.w3schools.com/java/java_try_catch.asp">https://www.w3schools.com/java/java_try_catch.asp</url>.
     </p>
 
     <program language="java">
@@ -814,7 +816,10 @@ String imageFile = data[8];
 
     <p>
       Try the exercise below to display Pokemon images using the <c>split</c>
-      method to extract names and urls saved in the file.
+      method to extract names and urls saved in the file. Note that in the 
+      program below, the <c>readFile</c> method may throw an <c>IOException</c> 
+      to the calling method <c>main</c>, so both method headers must have the 
+      <c>throws IOException</c> clause.
     </p>
 
     <activity label="pokeImages">

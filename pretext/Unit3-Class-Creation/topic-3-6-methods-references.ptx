@@ -73,7 +73,10 @@ class Person
       When a copy of a reference is passed in and saved in the parameter
       variable, the parameter and the argument are then <term>aliases</term>,
       both refering to the same object. Remember when we discussed reference
-      aliases with turtle objects who are set equal to one another.
+      aliases with turtle objects in <xref ref="topic-2-2-booleans"/>. An object 
+      can have many names or aliases that refer to it, much like you may call
+      your teacher with their last name, but friends may call them by their first name, 
+      and their children may call them Mom or Dad.
     </p>
 
     <figure align="center">
@@ -82,11 +85,21 @@ class Person
     </figure>
 
     <p>
-      There can be unexpected results if the parameter refers to a mutable
-      object; the method or constructor can use this reference to alter the
-      state of the original object. Some classes like <c>String</c> are
-      immutable, so they cannot be changed by any method; for example, when
-      <c>s.toUpperCase()</c> is called, it returns a new String object with the
+      When we pass an object to a method, the parameter variable holds a
+      reference to the same object as the argument variable. This is similar
+      to a Google doc where multiple people can edit the same document at the
+      same time (Thanks to Rachel Chagnon at Somerville High School, MA for this analogy). 
+      If one person changes the document, everyone else sees the change. 
+      In the same way, if a method changes the state of a mutable object
+      that was passed in as a parameter, the change is seen by the caller of
+      the method. This can lead to unexpected results if we want to preserve 
+      the original object unchanged. 
+    </p>
+
+    <p>
+      Some classes like <c>String</c> are immutable, so they cannot be changed 
+      by any method; for example, when <c>s.toUpperCase()</c> is called, 
+      it returns a new String object with the
       uppercase letters, but the original String object is not changed. Any new
       classes that you write that have setters or methods that change the state
       of the object will be mutable. So, if you pass in an object of a class
