@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ4-Arrays2D">
+   <title>Free Response Question (FRQ) 4  - Two-dimensional Arrays </title>
+  <introduction>
+    <idx>2D Arrays</idx>
+    <idx>free response</idx>
+    <idx>FRQ</idx>
+    <idx>FRQ 4</idx>
+    <idx>FRQ Schedule</idx>
+    <idx>columnWithFewest</idx>
+
+    <p>
+      The fourth FRQ on the AP CSA Exam as of 2026 will be on 2D Arrays and
+      worth 6 points. Students will be provided with a scenario and its associated class(es).
+      Students will write one method of a given class based on provided specifications and examples. 
+      The method requires students to use, analyze,and manipulate data in an <term>2D array</term> structure. 
+    </p>
+
+    <p>
+      Here are two common nested loop patterns for nested loops that you will need 
+      to use in this FRQ. In the patterns below, the outer loop iterates through the rows,
+      and the inner loop iterates through the columns. Use enhanced for-each loops if indices are not needed. 
+      Use for-loops with row and col indices if you need to access specific elements of the 2D array or to return an index. 
+      This type of loop can loop through rows first or columns first if needed.
+    </p>
+
+    <program language="java">
+      <code>
+// 2D Array Traversal with Nested Loops 
+for (int row = 0; row &lt; array.length; row++)
+{
+    for (int col = 0; col &lt; array[0].length; col++)
+    {
+        if (array[row][col] ....)
+            ...
+    }
+}
+
+// Nested enhanced for loops
+for (int[] row : array)
+{
+    for (int value : row)
+    {
+        if (value ....)
+            ...
+    }
+}
+      </code>
+    </program>
+
+    
+
+ <p> 
+      The following problem is for FRQ 4 from  the
+       <url
+    href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf">
+    2025-2026 AP CSA Course and Exam Description (CED)</url>.
+  </p>
+
+ </introduction>
+
+<subsection xml:id="FRQ4-Schedule">
+    <title>FRQ 4 Schedule Description</title>
+    <p>
+      The <c>Appointment</c> class is used to store information about a person’s scheduled 
+      appointments. A partial declaration of the <c>Appointment</c> class is shown below.
+    </p>
+
+    <program language="java">
+      <code>
+public class Appointment
+{
+    /**
+    * Returns the status of the appointment ("free", "busy", etc.)
+    */
+    public String getStatus()
+    { /* implementation not shown */ }
+    
+    /**
+    * Returns the room number of the appointment location
+    */
+    public int getRoomNumber()
+    { /* implementation not shown */ }
+    
+    /* There may be instance variables, constructors, and methods
+    that are not shown. */
+}
+      </code>
+    </program>
+
+    <p>
+      The <c>Schedule</c> class maintains a two-dimensional array of appointments that 
+      represents a person’s schedule. A partial declaration of the <c>Schedule</c> class is shown below.
+      (Note that it contains a 2D array of <c>Appointment</c> objects.)
+    </p>
+
+    <program language="java">
+      <code>
+public class Schedule
+{
+    private Appointment[][] sched;
+
+    /**
+    * Returns the index of a column containing the fewest
+    * occurrences of the status indicated by the parameter
+    * target
+    * Preconditions: sched is not null and no elements
+    * of sched are null.
+    * sched has at least one row and at
+    * least one column.
+    */
+    public int columnWithFewest(String target)
+    { /* to be implemented */}
+    
+    /* There may be instance variables, constructors, and methods
+    that are not shown. */
+}
+     </code>
+    </program>
+
+    <p>
+      When an element of the two-dimensional array <c>sched</c> is accessed, the first index 
+      is used to specify the row and the second index is used to specify the column.
+    </p>
+    <p>
+      Write the <c>Schedule</c> method <c>columnWithFewest</c>. The method should
+      return the index of a column in <c>sched</c> that contains the fewest occurrences
+      of the parameter target. If there are multiple columns that have the fewest
+      number of occurrences of target, any of their column indices can be returned.
+    </p>
+    <p>
+        Suppose <c>sched</c> has the following contents. For each element, the first value is
+        the appointment status and the second value is the room number.
+    </p>
+
+    <figure align="center">
+      <caption>Schedule with 2D Array of Appointment objects</caption>
+      <image source="Unit4-Data-Collections/Figures/FRQ-schedule.png" width="100%" alt="schedule" />
+    </figure>
+    
+
+    <p>
+      For these contents of sched, the expected behavior of <c>columnWithFewest</c>is as follows.
+      </p>
+      <ul>
+        <li> 
+           <p>
+              The call <c>columnWithFewest("busy")</c> should return 1 because "busy" appears 
+              two times in column 1 and more than two times in each of the other columns.
+           </p>
+        </li>
+        <li>
+          <p>
+          The call <c>columnWithFewest("free")</c> should return either 2 or 3 because "free" 
+          appears one time in column 2, one time in column 3, and more than one time in each 
+          of the other columns.
+            </p>
+        </li>
+        <li>
+            <p>
+                The call <c>columnWithFewest("hold")</c> should return 4 because "hold" appears 
+                zero times in column 4 and one or more times in each of the other columns.
+            </p>
+        </li>
+        </ul>
+
+
+
+<p>
+   Complete method <c>columnWithFewest</c>.
+</p>
+
+<program language="java">
+      <code>
+/**
+ * Returns the index of a column containing the fewest
+ * occurrences of the status indicated by the parameter
+ * target
+ * Preconditions: sched is not null and no elements
+* of sched are null.
+ * sched has at least one row and at
+ * least one column.
+ */
+public int columnWithFewest(String target)
+</code>
+</program>
+</subsection>
+
+ <subsection xml:id="frq-schedule-scaffolding">
+    <title>The Algorithm for columnWithFewest</title>
+
+    <p>The following exercises will help you to develop the algorithm for the method
+        <c>columnWithFewest</c>.</p>
+
+
+
+<activity label="schedule-algorithm">
+    <statement>
+        <p>
+            Which of the following types of algorithms do we need to use to solve the problem of finding the index of a column
+            in the <c>sched</c> 2D array that contains the fewest occurrences of the <c>target</c> status?
+        </p>
+    </statement>
+
+    <choices>
+        <choice>
+            <statement>
+                <p>Accumulate sum</p>
+            </statement>
+            <feedback>
+                <p>No, we are not summing values.</p>
+            </feedback>
+        </choice>
+
+        <choice correct="yes">
+            <statement>
+                <p>Find minimum</p>
+            </statement>
+            <feedback>
+                <p>Yes, we need to find the column with the minimum count of occurrences of the target status.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p>Find maximum</p>
+            </statement>
+            <feedback>
+                <p>No, we are looking for the minimum count, not the maximum.</p>
+            </feedback>
+        </choice>
+
+        <choice correct="yes">
+            <statement>
+                <p>Count occurrences</p>
+            </statement>
+            <feedback>
+                <p>Yes, we need to count how many times the target status appears in each column.</p>
+            </feedback>
+        </choice>
+    </choices>
+</activity>
+
+<activity label="schedule-loop-mcq">
+    <statement>
+        <p>
+            Which of the following loops is the most appropriate to use for the outer loop in the <c>columnWithFewest</c> method
+            to return the index of a column in the <c>sched</c> 2D array that contains the fewest occurrences of the <c>target</c> status?
+        </p>
+    </statement>
+
+    <choices>
+    <choice>
+            <statement>
+                <p>for (Appointment[] row : sched) 
+                </p>
+            </statement>
+            <feedback> 
+                <p>Notice that the method needs to return an index, so we cannot use an enhanced for-each loop which does not 
+                   provide an index. Instead, we need to use a traditional for loop with an index variable.</p>
+            </feedback>
+        </choice>
+        
+        <choice>
+            <statement>
+                <p>for (int row = 0; row &lt; sched.length; row++) 
+                </p>
+            </statement>
+            <feedback>
+                <p>This is incorrect because we need to iterate through columns first, not rows.</p>
+            </feedback>
+        </choice>
+     
+        <choice>
+            <statement>
+                <p>for (int col = 0; col &lt; sched.length; col++) 
+                </p>
+            </statement>
+            <feedback>
+                <p>This is close, but <c>sched.length</c> refers to the number of rows, not columns.
+                 </p>
+            </feedback>
+        </choice>
+        <choice correct="yes">
+            <statement>
+                <p>for (int col = 0; col &lt; sched[0].length; col++) 
+                </p>
+            </statement>
+            <feedback>
+                <p>This is correct because <c>sched[0].length</c> refers to the number of columns in the first row.
+                </p>
+            </feedback>
+        </choice>
+
+    </choices>
+</activity>
+
+
+<activity label="schedule-status-equality">
+    <statement>
+        <p>
+            While looping through the columns and rows of the 2D array <c>sched</c>, which of the following expressions
+            would test to see if the status of the appointment at a given row and col is equal to the <c>target</c>?
+        </p>
+    </statement>
+
+    <choices>
+        <choice>
+            <statement>
+                <p>sched[row][col] == target</p>
+            </statement>
+            <feedback>
+                <p>This is incorrect because it compares the entire Appointment object to a String.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p>sched[row][col].getStatus() == target</p>
+            </statement>
+            <feedback>
+                <p>This is incorrect because it uses the '==' operator, which checks for reference equality, not value equality.</p>
+            </feedback>
+        </choice>
+
+        <choice correct="yes">
+            <statement>
+                <p>sched[row][col].getStatus().equals(target)</p>
+            </statement>
+            <feedback>
+                <p>Yes, this is correct because it uses the <c>.equals()</c> method to check for value equality between the status and target.</p>
+            </feedback>
+        </choice>
+
+        <choice>
+            <statement>
+                <p>sched[row][col].status == target.status</p>
+            </statement>
+            <feedback>
+                <p>This is incorrect because it assumes that <c>status</c> is a public variable, which it is not in this case. 
+                Use the <c>getStatus()</c> method given to you in the problem definition.</p>
+            </feedback>
+        </choice>
+
+    </choices>
+</activity>
+    
+</subsection>
+
+<subsection xml:id="frq-schedule-solve">
+    <title>Solve FRQ Schedule</title>
+    <p>
+      Write the <c>columnWithFewest</c> method for the <c>Schedule</c> class.
+    </p>
+
+   <activity label="frq4-schedule">
+      <statement>
+        <p>
+           Write the <c>columnWithFewest</c> method for the <c>Schedule</c> class below.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+public class Schedule
+{
+    private Appointment[][] sched;
+
+    public Schedule(Appointment[][] sched)
+    {
+        this.sched = sched;
+    }
+
+   /**
+    * Returns the index of a column containing the fewest
+    * occurrences of the status indicated by the parameter target
+    * Preconditions: sched is not null and no elements
+    * of sched are null.
+    * sched has at least one row and at least one column.
+    */
+    public int columnWithFewest(String target)
+    {
+        
+          
+    }
+
+
+    public static void main(String[] args)
+    {
+        Appointment[][] sched = {
+        { new Appointment("free", 100), new Appointment("free", 100), new Appointment("free", 100), new Appointment("busy", 206), new Appointment("busy", 204) },
+        { new Appointment("free", 100), new Appointment("free", 100), new Appointment("busy", 304), new Appointment("busy", 206), new Appointment("busy", 202) },
+        { new Appointment("hold", 201), new Appointment("busy", 105), new Appointment("busy", 205), new Appointment("free", 100), new Appointment("busy", 205) },
+        { new Appointment("busy", 204), new Appointment("free", 100), new Appointment("busy", 310), new Appointment("hold", 110), new Appointment("free", 100) },
+        { new Appointment("busy", 204), new Appointment("hold", 201), new Appointment("hold", 310), new Appointment("busy", 105), new Appointment("free", 100) },
+        { new Appointment("busy", 105), new Appointment("busy", 208), new Appointment("hold", 310), new Appointment("busy", 105), new Appointment("free", 100) }
+        };
+
+
+        Schedule schedule = new Schedule(sched);
+        int columnIndex = schedule.columnWithFewest("busy");
+        System.out.println("Column with fewest 'busy' should be 1: " + columnIndex);
+        columnIndex = schedule.columnWithFewest("free");
+        System.out.println("Column with fewest 'free' should be 2 or 3: " + columnIndex);
+        columnIndex = schedule.columnWithFewest("hold");
+        System.out.println("Column with fewest 'hold' should be 4: " + columnIndex);
+    }
+}
+
+class Appointment
+{
+    private String status;
+    private int roomNumber;
+    
+    public Appointment(String status, int roomNumber)
+    {
+        this.status = status;
+        this.roomNumber = roomNumber;
+    }
+    
+    public String getStatus()
+    {
+        return status;
+    }
+    
+    public int getRoomNumber()
+    {
+        return roomNumber;
+    }
+}
+        </code>
+        <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Schedule");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Column with fewest 'busy' should be 1: 1";
+
+        boolean passed = getResults(expect, output, "Main output");
+        assertTrue(passed);
+    }
+    @Test
+    public void test2()
+    {
+        Schedule sched2 = new Schedule(new Appointment[][] {
+            { new Appointment("free", 100), new Appointment("busy", 200), new Appointment("busy", 300) },
+            { new Appointment("busy", 400), new Appointment("busy", 500), new Appointment("busy", 600) },
+            { new Appointment("hold", 700), new Appointment("hold", 800), new Appointment("free", 900) }
+        });
+        int columnIndex = sched2.columnWithFewest("busy");
+        String expect = "Column with fewest 'busy' should be 0: 0";
+        String output = "" + columnIndex;
+        boolean passed = getResults(expect, output, "Column with fewest 'busy' in new test schedule");
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
+</subsection>
+ <subsection xml:id="frq-schedule-grading">
+  <title>Grading Rubric for FRQ 4</title>
+  <p>
+    The following AP rubric is used to grade the <c>columnWithFewest</c> method in the <c>Schedule</c> class.
+    Each item is worth 1 point, for a total of 6 points. Did you receive all of the points? 
+    In class, your teacher may have you grade each others’ code.
+    </p>
+  <figure align="center">
+      <caption>Rubric for <c>columnWithFewest</c></caption>
+      <image source="Unit4-Data-Collections/Figures/scheduleRubric1.png" width="100%" alt="Rubric for columnWithFewest" />
+      <image source="Unit4-Data-Collections/Figures/scheduleRubric2.png" width="100%" alt="Rubric for columnWithFewest" />
+    </figure>
+    </subsection>
+</section>
