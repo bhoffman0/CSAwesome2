@@ -464,9 +464,9 @@ public class RunestoneTests extends CodeTestHelper
             { new Appointment("hold", 700), new Appointment("hold", 800), new Appointment("free", 900) }
         });
         int columnIndex = sched2.columnWithFewest("busy");
-        String expect = "Column with fewest 'busy' should be 0: 0";
+        String expect = "0";
         String output = "" + columnIndex;
-        boolean passed = getResults(expect, output, "Column with fewest 'busy' in new test schedule");
+        boolean passed = getResults(expect, output, "Testing on a new schedule");
         assertTrue(passed);
     }
 }
