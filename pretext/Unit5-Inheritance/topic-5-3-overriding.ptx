@@ -280,7 +280,7 @@ public class RunestoneTests extends CodeTestHelper
           <em>override</em> the <c>getFood</c> method in <c>Person</c>?
         </p>
 
-        <blockquote>
+        
           <program language="java">
             <code>
 public class Person
@@ -322,7 +322,7 @@ public class Student extends Person
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -376,7 +376,7 @@ public class Student extends Person
           <em>overload</em> the <c>getFood</c> method in <c>Person</c>?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public class Person
@@ -418,7 +418,7 @@ public class Student extends Person
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>

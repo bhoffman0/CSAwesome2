@@ -1207,7 +1207,7 @@ public class RunestoneTests extends CodeTestHelper
           creates a new Cat object?
         </p>
 
-        <blockquote>
+        
           <program language="java">
             <code>
 public class Cat
@@ -1238,7 +1238,7 @@ III. String color = "orange";
      Cat c = new Cat(color, "Tabby", hungry);
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>

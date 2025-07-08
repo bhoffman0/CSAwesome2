@@ -274,7 +274,7 @@ System.out.println(2 + 3 * 5 - 1);
         finishes executing?
       </p>
 
-      <blockquote>
+
         <program language="java">
           <code>
 double a = 9.6982;
@@ -282,7 +282,7 @@ int b = 12;
 b = (int) a;
           </code>
         </program>
-      </blockquote>
+
     </statement>
 
     <choices>
@@ -341,13 +341,13 @@ b = (int) a;
   <activity label="qve_new7">
     <statement>
       <p>What does the following code do when it is executed?</p>
-      <blockquote>
+
         <program language="java">
           <code>
 System.out.println(5 / 0);
           </code>
         </program>
-      </blockquote>
+
     </statement>
 
     <choices>
@@ -399,13 +399,13 @@ System.out.println(5 / 0);
   <activity label="qve_new9">
     <statement>
       <p>What will the following code print?</p>
-      <blockquote>
+
         <program language="java">
           <code>
 System.out.println(1.0 / 3);
           </code>
         </program>
-      </blockquote>
+
     </statement>
 
     <choices>
@@ -465,7 +465,7 @@ System.out.println(1.0 / 3);
         What are the values of x, y, and z after the following code executes?
       </p>
 
-      <blockquote>
+
         <program language="java">
           <code>
 int x = 3;
@@ -474,7 +474,7 @@ int z = x * y;
 x++;
           </code>
         </program>
-      </blockquote>
+
     </statement>
 
     <choices>

@@ -80,7 +80,7 @@ public static void neverEnd()
     <activity label="qrb_1">
       <statement>
         <p>Is the following method recursive?</p>
-        <blockquote>
+        
           <program language="java">
             <code>
 public static int mystery()
@@ -94,7 +94,7 @@ public static int mystery()
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -126,7 +126,7 @@ public static int mystery()
     <activity label="qrb_2">
       <statement>
         <p>Is the following method recursive?</p>
-        <blockquote>
+
           <program language="java">
             <code>
 public static int mystery2(int x)
@@ -136,7 +136,7 @@ public static int mystery2(int x)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -443,7 +443,7 @@ public class RunestoneTests extends CodeTestHelper
           reaches the base case)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int product(int n)
@@ -455,7 +455,7 @@ public static int product(int n)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -504,7 +504,7 @@ public static int product(int n)
           calling itself (when it reaches the base case)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int bunnyEars(int bunnies)
@@ -515,7 +515,7 @@ public static int bunnyEars(int bunnies)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -554,7 +554,7 @@ public static int bunnyEars(int bunnies)
     <activity label="qrb_5-new">
       <statement>
         <p>Is the following method recursive?</p>
-        <blockquote>
+
           <program language="java">
             <code>
 public static int bunnyEars(int bunnies)
@@ -568,7 +568,7 @@ public static int bunnyEars(int bunnies)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -751,7 +751,7 @@ factorial(0) returns 1
           factorial(6)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int factorial(int n)
@@ -767,7 +767,7 @@ public static int factorial(int n)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -829,7 +829,7 @@ public static int factorial(int n)
           mystery(5)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int mystery(int n)
@@ -845,7 +845,7 @@ public static int mystery(int n)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -905,7 +905,7 @@ public static int mystery(int n)
           mystery(4,3)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int mystery(int n, int a)
@@ -918,7 +918,7 @@ public static int mystery(int n, int a)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -1056,7 +1056,7 @@ bunnyEars(1) returns 2
           mystery(1234)?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static void mystery (int x) {
@@ -1070,7 +1070,7 @@ public static void mystery (int x) {
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>
@@ -1148,7 +1148,7 @@ public static void mystery (int x) {
           String.
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public static int mystery(String str)
@@ -1171,7 +1171,7 @@ public static int mystery(String str)
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>

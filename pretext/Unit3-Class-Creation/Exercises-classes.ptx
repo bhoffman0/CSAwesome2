@@ -636,7 +636,7 @@ public class Liquid
         getAge method does NOT work as intended?
       </p>
 
-      <blockquote>
+      
         <program language="java">
           <code>
 public class Cat
@@ -655,7 +655,7 @@ public class Cat
 }
           </code>
         </program>
-      </blockquote>
+
     </statement>
 
     <choices>
