@@ -131,7 +131,6 @@ for (int index = 0; index &lt; test.length() - 1; index = index + 2)
           best describes the value returned by a call to <c>findLongest</c>?
         </p>
 
-        <blockquote>
           <program language="java">
             <code>
 private int[] nums;
@@ -165,7 +164,6 @@ public int findLongest(int target)
 }
             </code>
           </program>
-        </blockquote>
       </statement>
 
       <choices randomize="yes">

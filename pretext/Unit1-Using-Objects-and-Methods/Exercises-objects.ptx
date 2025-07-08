@@ -479,8 +479,7 @@ String s3 = s2.toLowerCase();
           would successfully create a new Movie object?
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 public class Movie
 {
@@ -507,8 +506,7 @@ public class Movie
 }
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice>
@@ -676,15 +674,13 @@ public class BankAccount
           between 0 and up to 1, for example 0.4.
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 double value = Math.random();
 int num = (int) (value * 5) + 5;
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice>
@@ -746,15 +742,13 @@ int num = (int) (value * 5) + 5;
           between 0 and up to 1, for example 0.4.
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 double value = Math.random();
 int num = (int) (value * 11) - 5;
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice>

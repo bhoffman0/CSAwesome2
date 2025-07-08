@@ -108,14 +108,14 @@ public class Person
             the main method or from outside the class.
           </p>
 
-          <blockquote>
+          
             <program language="java">
               <code>
 // Step 1: declare an object in main or from outside the class
 Classname objectName = new Classname();
               </code>
             </program>
-          </blockquote>
+
         </li>
 
         <li>
@@ -124,14 +124,14 @@ Classname objectName = new Classname();
             objectName.methodName();
           </p>
 
-          <blockquote>
+
             <program language="java">
               <code>
 // Step 2: call the object's method
 objectName.methodName(); //Step 2
               </code>
             </program>
-          </blockquote>
+
         </li>
 
         <li>
@@ -140,7 +140,7 @@ objectName.methodName(); //Step 2
             <term>header</term> and <term>body</term> code like below:
           </p>
 
-          <blockquote>
+
             <program language="java">
               <code>
 // Step 3: Define the method in the class
@@ -151,7 +151,7 @@ public void methodName()
 }
               </code>
             </program>
-          </blockquote>
+
         </li>
       </ol>
     </p>
@@ -1727,7 +1727,7 @@ public class RunestoneTests extends CodeTestHelper
           method does NOT work as intended?
         </p>
 
-        <blockquote>
+
           <program language="java">
             <code>
 public class Party
@@ -1746,7 +1746,7 @@ public class Party
 }
             </code>
           </program>
-        </blockquote>
+
       </statement>
 
       <choices>

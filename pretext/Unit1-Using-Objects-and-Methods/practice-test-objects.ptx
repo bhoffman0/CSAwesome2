@@ -199,8 +199,7 @@
           a new Party object?
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 public class Party
 {
@@ -226,8 +225,7 @@ III. int numOfFriends = 6;
      Party yourParty = new Party(numOfFriends + 3.0);
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice>
@@ -302,8 +300,7 @@ III. int numOfFriends = 6;
           Liquid object l with a boilingPoint of 98.6 ?
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 public class Liquid
 {
@@ -322,8 +319,7 @@ public class Liquid
 }
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice correct="yes">
@@ -389,8 +385,7 @@ public class Liquid
           than Liquid. Which of the following statements are valid?
         </p>
 
-        <blockquote>
-          <program language="java">
+                  <program language="java">
             <code>
 public class Liquid
 {
@@ -420,8 +415,7 @@ public class Liquid
 }
             </code>
           </program>
-        </blockquote>
-      </statement>
+              </statement>
 
       <choices>
         <choice>
