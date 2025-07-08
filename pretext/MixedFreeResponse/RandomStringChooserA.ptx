@@ -58,23 +58,25 @@ bus the wheels on NONE NONE
     </program>
   </introduction>
 
-  <subsection xml:id="try-and-solve-it-5">
+  <subsection xml:id="solve-random-strchooserA">
     <title>Try and Solve It</title>
     <p>
       Write the entire <c>RandomStringChooser</c> class. Your implementation
       must include an appropriate constructor and any necessary methods. Any
       instance variables must be <c>private</c>. The code segment in the example
       above should have the indicated behavior (that is, it must compile and
-      produce a result like the possible output shown. Neither the constructor
+      produce a result like the possible output shown). Neither the constructor
       or any of the methods should alter the parameter passed to the
       constructor, but your implementation may copy the contents of the array.
     </p>
 
-    <p>
-      The code below has comments to help you get started. It also has a main
-      method for testing. Finish writing the class and use the main method to
-      test it.
-    </p>
+  
+ <activity label="codeRandomStrChooserA">
+      <statement>
+        <p>
+          Complete the <c>RandomStringChooser</c> class below.
+        </p>
+      </statement>
 
     <program interactive="activecode" language="java">
       <code>
@@ -186,5 +188,6 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
+   </activity>
   </subsection>
 </section>
