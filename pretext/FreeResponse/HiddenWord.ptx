@@ -60,20 +60,18 @@ HiddenWord puzzle = new HiddenWord("HARPS");
     </figure>
   </introduction>
 
-  <subsection xml:id="try-and-solve-it-2">
+  <subsection xml:id="solve-hiddenword">
     <title>Try and Solve It</title>
-    <p>
-      Write the complete <c>HiddenWord</c> class, including any necessary
-      instance variables, its constructor, and the method, <c>getHint</c>,
-      described above. You may assume that the length of the guess is the same
-      as the length of the hidden word.
-    </p>
 
-    <p>
-      The code below has comments to help you get started. It also has a main
-      method for testing. Finish writing the class and use the main method to
-      test it.
-    </p>
+<activity label="HiddenWordFRQ">
+      <statement>
+        <p>
+         Write the complete <c>HiddenWord</c> class, including any necessary
+         instance variables, its constructor, and the method, <c>getHint</c>,
+         described above. You may assume that the length of the guess is the same
+         as the length of the hidden word.
+        </p>
+      </statement>   
 
     <program interactive="activecode" language="java">
       <code>
@@ -181,5 +179,6 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
+    </activity>
   </subsection>
 </section>
