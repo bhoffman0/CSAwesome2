@@ -222,7 +222,7 @@ catch (FileNotFoundException e)
       Once the file is opened, the data can be read using <c>Scanner</c>
       methods. For example, the method, <c>nextLine</c> will read the next line
       of input and returns it as a <c>String</c>. Here are the methods used in
-      the Scanner file to read all types of input (also on page 2 of the <url href="https://drive.google.com/file/d/1UL4JeQ5hfnO3H6uoZizgOU2XjHkitmFw/view?usp=drive_link">Java Quick Reference</url>
+      the Scanner file to read all types of input (also on page 2 of the <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf">Java Quick Reference</url>
       provided during the AP exam):
     </p>
     <p>
@@ -1390,7 +1390,7 @@ public class RunestoneTests extends CodeTestHelper
           <p>
             (AP 4.6.A.6) The following <c>Scanner</c> methods and
             constructor—including what they do and when they are used—are part
-            of the <url href="https://drive.google.com/file/d/1UL4JeQ5hfnO3H6uoZizgOU2XjHkitmFw/view?usp=drive_link">Java Quick Reference</url>
+            of the <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf">Java Quick Reference</url>
              (p. 2) provided during the AP CSA exam:
           </p>
 
@@ -1478,7 +1478,7 @@ public class RunestoneTests extends CodeTestHelper
         <li>
           <p>
             (AP 4.6.A.8) The following additional <c>String</c> method—including
-            what it does and when it is used—is part of the <url href="https://drive.google.com/file/d/1UL4JeQ5hfnO3H6uoZizgOU2XjHkitmFw/view?usp=drive_link">Java Quick Reference</url>
+            what it does and when it is used—is part of the <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf">Java Quick Reference</url>
             provided during the AP CSA Exam:
           </p>
 
