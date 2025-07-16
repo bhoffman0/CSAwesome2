@@ -2,11 +2,6 @@
 
 <section xml:id="unit1a-practice-mixed-code">
   <title>Mixed Up Code Practice 1a (1.1-1.6)</title>
-  <p>
-    Try to solve each of the following mixed-up code problems or try the
-    experimental switch between mixed up or write code versions of these
-    problems on the next page instead.
-  </p>
 
   <p>
     For these mixed up code problems, drag the blocks into the correct order.
@@ -18,7 +13,7 @@
     or other mobile device!
   </p>
 
-  <activity label="u1aex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex1muc" xml:id="u1aex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print Maria’s first name on one
