@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="topic-1-8-toggle-write-code">
+<section xml:id="u1a-toggle-write-code">
   <time minutes="90" />
-  <title>Unit 1 Write Code for Toggle Code</title>
+  <title>Unit 1a Write Code for Toggle Code</title>
   <p>
     This is the write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u1_muc_wc1">
+  <activity label="u1_muc_wc1" xml:id="u1_muc_wc1">
     <statement>
       <p>
         Write code that prints Maria’s first name on one line and her last name
