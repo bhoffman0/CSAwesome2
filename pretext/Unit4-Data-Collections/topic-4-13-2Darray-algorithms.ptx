@@ -396,10 +396,21 @@ public class Duplicates
             {
                 for (int row2 = row; row2 &lt; nums.length; row2++)
                 {
-                    for (int col2 = col + 1; col2 &lt; nums[0].length; col2++)
+                    int startCol;
+                    if (row2 == row) 
                     {
-                        if (nums[row][col] == nums[row2][col2])
+                        startCol = col + 1;
+                    } 
+                    else 
+                    {
+                        startCol = 0;
+                    }
+                    for (int col2 = startCol; col2 &lt; nums[row2].length; col2++) 
+                    {
+                        if (nums[row][col] == nums[row2][col2]) 
                         {
+                            System.out.println("Duplicate " + nums[row][col] + " found at: (" 
+                                    + row + ", " + col + ") and (" + row2 + ", " + col2 + ")");
                             return false;
                         }
                     }
@@ -412,7 +423,7 @@ public class Duplicates
     public static void main(String[] args)
     {
         int[][] matrix = { {3, 2, 3}, {4, 3, 6}, {8, 9, 3}, {10, 3, 3}};
-        System.out.println(noDups(matrix));
+        System.out.println("No dups: " + noDups(matrix));
     }
 }
         </code>
