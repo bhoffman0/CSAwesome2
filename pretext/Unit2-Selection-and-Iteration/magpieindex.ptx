@@ -2,6 +2,32 @@
 
 <section xml:lang="en-US" xml:id="magpie-chatbot-lab-1" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Magpie Chatbot Lab</title>
+
+  <introduction>
+ 
+    <p>
+      This is the original College Board Magpie lab from 2014. There is a new Magpie 2.0 lab as of 2025 
+      which is available in the AP Classroom. It is very similar to the following lab, but must be done within AP 
+      Classroom. You can use Runestone active codes below or in a Runestone assignment as your IDE to do 
+      Magpie 2.0 coding activities as described in the AP Classroom.
+    </p>
+    <p>
+      For the original Magpie lab, here is the College Board <url
+      href="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf"
+      visual="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf">
+      Magpie Chatbot Lab Student Guide</url>. See <url
+      href="https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/lab-resource-page"
+      visual="https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/lab-resource-page">https://apcentral.collegeboard.org/courses/ap-computer-science-a/classroom-resources/lab-resource-page</url>
+      for all of the 2014 and 2019 College Board labs.
+    </p>
+    <p>
+      The Magpie lab creates a simple <term>chatbot</term> and provides practice with <c>String</c> methods 
+      and conditionals. A <term>chatbot</term> is a computer program that tries to hold a conversation with a user. 
+      The exercises below will walk you through the activities in the original Magpie chatbot lab.
+    </p>
+</introduction>
+  
+
   <xi:include href="./magpie1.ptx" />
   <xi:include href="./magpie2.ptx" />
   <xi:include href="./magpie3.ptx" />
