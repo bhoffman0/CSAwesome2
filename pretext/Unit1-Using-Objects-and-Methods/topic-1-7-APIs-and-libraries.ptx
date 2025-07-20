@@ -1013,4 +1013,177 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+
+<subsection xml:id="ap-practice-api">
+    <title>AP Practice</title>
+    <p>
+      Try these AP practice questions that will help to prepare you for the AP
+      Classroom progress checks.
+    </p>
+
+    <activity label="AP-API1">
+      <statement>
+        <p>
+          The following is an excerpt from a class specification for the API for a <c>Turtle</c> class. 
+        </p>
+        <p>
+          <ul>
+            <li>
+              <p>
+                An int variable called <c>xPos</c> to represent the x-coordinate of the turtle
+              </p>
+            </li>
+
+            <li>
+              <p>
+                An int variable called <c>yPos</c> to represent the y-coordinate of the turtle
+              </p>
+            </li>
+
+            <li>
+              <p>
+                A method called <c>forward()</c> that moves the turtle forward by 100 pixels
+              </p>
+            </li>
+            <li>
+              <p>
+                A method called <c>turnRight()</c> that turns the turtle 90 degrees to the right
+              </p>  
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Based on the <c>Turtle</c> API above, which of the following
+          descriptions is accurate?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+             <p>The <c>xPos</c> and <c>yPos</c> are behaviors of <c>Turtle</c> objects.</p>
+          </statement>
+
+          <feedback>
+            <p>No, they are not behaviors because they are not methods.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>The <c>xPos</c> and <c>yPos</c> are attributes of <c>Turtle</c> objects.</p>
+          </statement>
+
+          <feedback>
+            <p>Yes, attributes are data stored in variables.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>forward</c> is an attribute of <c>Turtle</c> objects.</p>
+          </statement>
+          <feedback>
+            <p>No, <c>forward</c> is a method, not an attribute.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>Turtle</c> is an attribute of the API.</p>
+          </statement>
+
+          <feedback>
+            <p>No, <c>Turtle</c> is a class, not an attribute.</p>
+          </feedback>
+        </choice>
+
+      </choices>
+    </activity>
+
+    <activity label="AP-API2">
+      <statement>
+        <p>
+          The following is an excerpt from a class specification for the API for a <c>Turtle</c> class. 
+        </p>
+        <p>
+          <ul>
+            <li>
+              <p>
+                An int variable called <c>xPos</c> to represent the x-coordinate of the turtle
+              </p>
+            </li>
+
+            <li>
+              <p>
+                An int variable called <c>yPos</c> to represent the y-coordinate of the turtle
+              </p>
+            </li>
+
+            <li>
+              <p>
+                A method called <c>forward()</c> that moves the turtle forward by 100 pixels
+              </p>
+            </li>
+            <li>
+              <p>
+                A method called <c>turnRight()</c> that turns the turtle 90 degrees to the right
+              </p>  
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          Based on the <c>Turtle</c> API above, which of the following
+          descriptions is accurate?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p><c>Turtle</c> is an attribute of the API.</p>
+          </statement>
+
+          <feedback>
+            <p><c>Turtle</c> is a class, not an attribute.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>The <c>forward</c> method is an attribute of  <c>Turtle</c> objects.</p>
+          </statement>
+
+          <feedback>
+            <p>The <c>forward</c> method is a behavior, not an attribute.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>The <c>turnRight</c> method is a behavior of  <c>Turtle</c> objects.</p>
+          </statement>
+
+          <feedback>
+            <p>Yes, methods are behaviors.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>xPos</c> is a behavior of <c>Turtle</c> objects.</p>
+          </statement>
+
+          <feedback>
+            <p>No, <c>xPos</c> is an attribute of <c>Turtle</c> objects.</p>
+          </feedback>
+        </choice>
+
+      </choices>
+    </activity>
+
+   
+  </subsection>
 </section>
