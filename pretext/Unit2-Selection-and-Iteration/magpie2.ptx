@@ -49,7 +49,7 @@
       the flow of control from the main method to the other methods and back.
     </p>
 
-    <program interactive="codelens" language="java">
+    <program interactive="codelens" language="java" label="codeLensMagpie" xml:id="codelensidMagpie">
       <code>
 public class Magpie2
 {
