@@ -44,7 +44,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex2muc" xml:id="u1aex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print the words to a famous poem.
@@ -73,7 +73,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex3muc" xml:id="u1aex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print Marcus’s name on one
@@ -122,7 +122,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex4muc" xml:id="u1aex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should figure out the cost for each shirt
@@ -152,7 +152,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex5muc" xml:id="u1aex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should figure out the cost per person for
@@ -191,7 +191,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex6muc" xml:id="u1aex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the number of
@@ -246,7 +246,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex7muc" xml:id="u1aex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate the number of
@@ -298,7 +298,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex8muc" xml:id="u1aex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the name on one line
@@ -347,7 +347,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex9muc" xml:id="u1aex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the name on one line
@@ -399,7 +399,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex10muc" xml:id="u1aex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate the cost of a
@@ -457,7 +457,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex11muc" xml:id="u1aex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate how many miles
@@ -514,7 +514,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex12muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex12muc" xml:id="u1aex12muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate how many chicken
@@ -568,7 +568,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex13muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex13muc" xml:id="u1aex13muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate how much you
@@ -626,7 +626,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1aex14muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1aex14muc" xml:id="u1aex14muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should calculate how much the per

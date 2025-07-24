@@ -58,7 +58,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc2">
+  <activity label="u1_muc_wc2" xml:id="u1_muc_wc2">
     <statement>
       <p>
         Write code that prints the poem <c>Roses are red</c> <c>Violets are
@@ -107,7 +107,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc3">
+  <activity label="u1_muc_wc3" xml:id="u1_muc_wc3">
     <statement>
       <p>
         Write code that prints Marcus’s name on one line and his favorite color
@@ -158,7 +158,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc4">
+  <activity label="u1_muc_wc4" xml:id="u1_muc_wc4">
     <statement>
       <p>
         Write code that figures out the cost for each shirt if you buy 2 and get
@@ -208,7 +208,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc5">
+  <activity label="u1_muc_wc5" xml:id="u1_muc_wc5">
     <statement>
       <p>
         Write code that figures out the cost per person for a dinner including
@@ -259,7 +259,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc6">
+  <activity label="u1_muc_wc6" xml:id="u1_muc_wc6">
     <statement>
       <p>
         Write code that calculates and prints the number of seconds in 5 days.
@@ -306,7 +306,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc7">
+  <activity label="u1_muc_wc7" xml:id="u1_muc_wc7">
     <statement>
       <p>
         Write code that calculates and prints the number of months it would take
@@ -355,7 +355,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc8">
+  <activity label="u1_muc_wc8" xml:id="u1_muc_wc8">
     <statement>
       <p>
         Write code that prints the name on one line followed by the age on the
@@ -407,7 +407,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc9">
+  <activity label="u1_muc_wc9" xml:id="u1_muc_wc9">
     <statement>
       <p>
         Write code that prints the name on one line and the favorite food on the
@@ -463,7 +463,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc10">
+  <activity label="u1_muc_wc10" xml:id="u1_muc_wc10">
     <statement>
       <p>
         Write code that calculates and prints the cost of a trip that is 200
@@ -512,7 +512,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc11">
+  <activity label="u1_muc_wc11" xml:id="u1_muc_wc11">
     <statement>
       <p>
         Write code that calculates how many miles you can go on half a tank of
@@ -560,7 +560,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc12">
+  <activity label="u1_muc_wc12" xml:id="u1_muc_wc12">
     <statement>
       <p>
         Write code that calculates and prints how many chicken wings you can buy
@@ -621,7 +621,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc13">
+  <activity label="u1_muc_wc13" xml:id="u1_muc_wc13">
     <statement>
       <p>
         Write code that calculates how much you will have to pay for an item
@@ -672,7 +672,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u1_muc_wc14">
+  <activity label="u1_muc_wc14" xml:id="u1_muc_wc14">
     <statement>
       <p>
         Write code that calculates and prints how much the per item costs is for
