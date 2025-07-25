@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="topic-7-9-toggle-write-code">
+<section xml:id="u4b-toggle-write-code">
   <time minutes="90" />
-  <title>Unit 7 Write Code for Toggle Code</title>
+  <title>Unit 4b ArrayList Write Code for Toggle Code</title>
   <p>
-    This is the write code problems associated with the mixed up code problems.
+    This is the ArrayList write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u7_muc_wc1">
+  <activity label="u4b_muc_wc1">
     <statement>
       <p>
-        The following program should create a List called <c>conversation</c>,
+        The following program should create an ArrayList called <c>conversation</c>,
         add in some elements(<c>"hello"</c>, <c>"goodbye"</c>, <c>"how are
         you"</c>, and <c>"see you later"</c>), and print out the elements with
         <c>", "</c> after each. Fill in the code so that it adds the elements to
@@ -29,7 +29,7 @@ public class ListTest
     public static void main(String[] args)
     {
 
-        List&lt;String&gt; conversation;
+        ArrayList&lt;String&gt; conversation;
         conversation = new ArrayList&lt;String&gt;();
 
         // YOUR CODE HERE //
@@ -91,7 +91,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc2">
+  <activity label="u4b_muc_wc2">
     <statement>
       <p>
         Fix the two errors in the <c>printBackwards</c> method so that it will
@@ -162,7 +162,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc3">
+  <activity label="u4b_muc_wc3">
     <statement>
       <p>
         Write code to define the <c>removeZeros</c> method. This method should
@@ -240,7 +240,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc4">
+  <activity label="u4b_muc_wc4">
     <statement>
       <p>
         Write code for the <c>findSmallest</c> method. This code segment should
@@ -314,7 +314,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc5">
+  <activity label="u4b_muc_wc5">
     <statement>
       <p>
         Write code to flesh out the <c>removeOdd</c> method. This method should
@@ -386,7 +386,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc6">
+  <activity label="u4b_muc_wc6">
     <statement>
       <p>
         Fill out the <c>average</c> method. It should take in an ArrayList
@@ -454,7 +454,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc7">
+  <activity label="u4b_muc_wc7">
     <statement>
       <p>
         Create the <c>moveLargest</c> method. This should find the largest value
@@ -525,7 +525,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc8">
+  <activity label="u4b_muc_wc8">
     <statement>
       <p>
         Write code to finish the <c>removeShort</c> method. It should take an
@@ -596,7 +596,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc9">
+  <activity label="u4b_muc_wc9">
     <statement>
       <p>
         Write the method <c>doubleList</c>. This should take in an ArrayList
@@ -668,7 +668,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u7_muc_wc10">
+  <activity label="u4b_muc_wc10">
     <statement>
       <p>
         Write the method <c>removeElement</c>. This should take in an ArrayList
