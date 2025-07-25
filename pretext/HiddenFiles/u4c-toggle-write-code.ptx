@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="topic-8-4-toggle-write-code">
+<section xml:id="u4c-toggle-write-code">
   <time minutes="90" />
-  <title>Unit 8 Write Code for Toggle Code</title>
+  <title>Unit 4c 2D-Arrays Write Code for Toggle Code</title>
   <p>
-    This is the write code problems associated with the mixed up code problems.
+    This is the 2D-Arrays write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u8_muc_wc1">
+  <activity label="u4c_muc_wc1">
     <statement>
       <p>
         Fix the errors (marked by comments) in the code so that it correctly
@@ -70,7 +70,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc2">
+  <activity label="u4c_muc_wc2">
     <statement>
       <p>
         This program is supposed to create an 8x8 two-dimensional <c>int</c>
@@ -138,7 +138,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc3">
+  <activity label="u4c_muc_wc3">
     <statement>
       <p>
         The <c>sumVals</c> method in the below program should iterate through a
@@ -248,7 +248,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc4">
+  <activity label="u4c_muc_wc4">
     <statement>
       <p>
         Fill in the <c>flipImage</c> method. This should accept a
@@ -322,7 +322,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc5">
+  <activity label="u4c_muc_wc5">
     <statement>
       <p>
         Write the <c>makeEvenNumbersZero</c> method such that it iterates
@@ -389,7 +389,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc6">
+  <activity label="u4c_muc_wc6">
     <statement>
       <p>
         Fill in the <c>numOccurrences</c> method. It should take in a
@@ -451,7 +451,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc7">
+  <activity label="u4c_muc_wc7">
     <statement>
       <p>
         Fill in the <c>averageCols</c> method. It should accept a
@@ -517,7 +517,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc8">
+  <activity label="u4c_muc_wc8">
     <statement>
       <p>
         Write the <c>oddRows</c> method. This should take in a two-dimensional
@@ -605,7 +605,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc9">
+  <activity label="u4c_muc_wc9">
     <statement>
       <p>
         Write the <c>breakIntoLetters</c> method. It should accept a
@@ -697,7 +697,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u8_muc_wc10">
+  <activity label="u4c_muc_wc10">
     <statement>
       <p>
         Write the <c>maxEachRow</c> method. It that should accept a
