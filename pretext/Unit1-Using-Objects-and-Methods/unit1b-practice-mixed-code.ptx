@@ -13,7 +13,7 @@
     or other mobile device!
   </p>
 
-  <activity label="u1bex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex1muc" xml:id="u1bex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print a random number from
@@ -57,7 +57,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1bex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex2muc" xml:id="u1bex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the first 2
@@ -107,7 +107,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1bex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex3muc" xml:id="u1bex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the initials in
@@ -166,7 +166,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1bex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex4muc" xml:id="u1bex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the message in all
@@ -217,7 +217,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1bex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex5muc" xml:id="u1bex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the first 3 letters
@@ -272,7 +272,7 @@
     </blocks>
   </activity>
 
-  <activity label="u1bex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u1bex6muc" xml:id="u1bex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the part of the
