@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="ch5ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex1muc" xml:id="ch5ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print if your guess is too low,
@@ -58,7 +58,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex2muc" xml:id="ch5ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print either “You can go out” if
@@ -119,7 +119,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex3muc" xml:id="ch5ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print if x is in the range
@@ -178,7 +178,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex4muc" xml:id="ch5ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print out if a string has
@@ -237,7 +237,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex5muc" xml:id="ch5ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print if your favorite
@@ -296,7 +296,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex6muc" xml:id="ch5ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print your fine if you are
@@ -368,7 +368,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex7muc" xml:id="ch5ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print the alarm time. If
@@ -421,7 +421,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex8muc" xml:id="ch5ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print if you can text now.
@@ -482,7 +482,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex9muc" xml:id="ch5ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print if your name starts
@@ -544,7 +544,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch5ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch5ex10muc" xml:id="ch5ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print your grade for
