@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="ch6ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex1muc" xml:id="ch6ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print out all the values from 20 to
@@ -44,7 +44,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex2muc" xml:id="ch6ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print a countdown from 15 to 0 (15,
@@ -92,7 +92,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex3muc" xml:id="ch6ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print up from 0 to 50 by 5
@@ -148,7 +148,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex4muc" xml:id="ch6ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print out the values from
@@ -196,7 +196,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex5muc" xml:id="ch6ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print out the values from
@@ -244,7 +244,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex6muc" xml:id="ch6ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 3 rows with 6 *’s in
@@ -310,7 +310,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex7muc" xml:id="ch6ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 1 (followed by a
@@ -367,7 +367,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex8muc" xml:id="ch6ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 11111, 22222, 33333,
@@ -432,7 +432,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex9muc" xml:id="ch6ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 11111, 2222, 333,
@@ -490,7 +490,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex10muc" xml:id="ch6ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The <c>get_mid(str)</c> method in the <c>StringWorker</c> class should
@@ -554,7 +554,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex12muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch6ex11muc" xml:id="ch6ex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The <c>ev_div(s, n)</c> method in the <c>NumWorker</c> class should
