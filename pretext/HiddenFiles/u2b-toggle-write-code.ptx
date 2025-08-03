@@ -527,4 +527,70 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
   </activity>
+
+   <activity label="u2b_muc_wc10" xml:id="u2b_muc_wc10">
+    <statement>
+      <p>
+        The <c>ev_div(s, n)</c> method in the <c>NumWorker</c> class should
+        return the number of digits in <c>s</c> (a string representation of a
+        number) that are evenly divisible by <c>n</c>. For example,
+        <c>even_div("6892",3)</c> should return 2 since both 6 and 9 are evenly
+        divisible by 3.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java">
+      <code>
+public class NumWorker
+{
+    public static int even_div(String s, int n)
+    {
+        int count = 0;
+
+        // Add your code here
+
+        return count;
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(even_div("6892", 3) + " should be 2");
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("NumWorker");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "2 should be 2";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        int actual = NumWorker.even_div("45", 2);
+        int expect = 1;
+
+        boolean passed = getResults(expect, actual, "Calling even_div(\"45\", 2)");
+        assertTrue(passed);
+    }
+      </tests>
+    </program>
+  </activity>
+
 </section>

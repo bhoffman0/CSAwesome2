@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="unit2b-practice-toggle-code">
-  <title>Toggle Code Practice 2b Loops (2.7-2.12)</title>
+  <title>Loops Toggle Code Practice (2.7-2.12)</title>
 
   <p>
    For each of the coding problems below, if you need help, you can pull down the 
@@ -9,39 +9,43 @@
   </p>
 
 <exercise label="u2b-toggle1">
-  <select grade="first" questions="u2b_muc_wc1 ch6ex1muc"/>
+  <select grade="first" questions="u2b_muc_wc1 loopex1muc"/>
 </exercise>
 
 <exercise label="u2b-toggle2">
-  <select grade="first" questions="u2b_muc_wc2 ch6ex2muc"/>
+  <select grade="first" questions="u2b_muc_wc2 loopex2muc"/>
 </exercise>
 
 <exercise label="u2b-toggle3">
-  <select grade="first" questions="u2b_muc_wc3 ch6ex3muc"/>
+  <select grade="first" questions="u2b_muc_wc3 loopex3muc"/>
 </exercise>
 
 <exercise label="u2b-toggle4">
-  <select grade="first" questions="u2b_muc_wc4 ch6ex4muc"/>
+  <select grade="first" questions="u2b_muc_wc4 loopex4muc"/>
 </exercise>
 
 <exercise label="u2b-toggle5">
-  <select grade="first" questions="u2b_muc_wc5 ch6ex5muc"/>
+  <select grade="first" questions="u2b_muc_wc5 loopex5muc"/>
 </exercise>
 
 <exercise label="u2b-toggle6">
-  <select grade="first" questions="u2b_muc_wc6 ch6ex6muc"/>
+  <select grade="first" questions="u2b_muc_wc6 loopex6muc"/>
 </exercise>
 
 <exercise label="u2b-toggle7">
-  <select grade="first" questions="u2b_muc_wc7 ch6ex7muc"/>
+  <select grade="first" questions="u2b_muc_wc7 loopex7muc"/>
 </exercise>
 
 <exercise label="u2b-toggle8">
-  <select grade="first" questions="u2b_muc_wc8 ch6ex8muc"/>
+  <select grade="first" questions="u2b_muc_wc8 loopex8muc"/>
 </exercise>
 
 <exercise label="u2b-toggle9">
-  <select grade="first" questions="u2b_muc_wc9 ch6ex9muc"/>
+  <select grade="first" questions="u2b_muc_wc9 loopex9muc"/>
+</exercise>
+
+<exercise label="u2b-toggle10">
+  <select grade="first" questions="u2b_muc_wc10 loopex10muc"/>
 </exercise>
 
 </section>
