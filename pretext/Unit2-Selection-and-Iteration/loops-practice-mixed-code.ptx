@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="ch6ex1muc" xml:id="ch6ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex1muc" xml:id="loopex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print out all the values from 20 to
@@ -44,7 +44,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex2muc" xml:id="ch6ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex2muc" xml:id="loopex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print a countdown from 15 to 0 (15,
@@ -92,7 +92,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex3muc" xml:id="ch6ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex3muc" xml:id="loopex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print up from 0 to 50 by 5
@@ -148,7 +148,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex4muc" xml:id="ch6ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex4muc" xml:id="loopex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print out the values from
@@ -196,7 +196,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex5muc" xml:id="ch6ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex5muc" xml:id="loopex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print out the values from
@@ -244,7 +244,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex6muc" xml:id="ch6ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex6muc" xml:id="loopex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 3 rows with 6 *’s in
@@ -310,7 +310,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex7muc" xml:id="ch6ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex7muc" xml:id="loopex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 1 (followed by a
@@ -367,7 +367,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex8muc" xml:id="ch6ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex8muc" xml:id="loopex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 11111, 22222, 33333,
@@ -432,7 +432,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex9muc" xml:id="ch6ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex9muc" xml:id="loopex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The main method in the following class should print 11111, 2222, 333,
@@ -490,77 +490,13 @@
     </blocks>
   </activity>
 
-  <activity label="ch6ex10muc" xml:id="ch6ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
-    <statement>
-      <p>
-        The <c>get_mid(str)</c> method in the <c>StringWorker</c> class should
-        return the middle character if the string has an odd number of
-        characters and the middle two characters if the string has an even
-        number of characters. For example, <c>get_mid("way")</c> should return
-        <c>"a"</c> and <c>get_mid("away")</c> should return <c>"wa"</c>.
-      </p>
-    </statement>
-
-    <blocks>
-      <block order="1">
-        <cline>public class StringWorker</cline>
-        <cline>{</cline>
-      </block>
-
-      <block order="9">
-        <cline>    public static String get_mid(String str)</cline>
-        <cline>    {</cline>
-      </block>
-
-      <block order="2">
-        <cline>        int str_len = str.length();</cline>
-        <cline>        int mid = str_len / 2;</cline>
-      </block>
-
-      <block order="4">
-        <cline>        /* if odd number of chars */</cline>
-        <cline>        if (str_len % 2 == 1)</cline>
-        <cline>        {</cline>
-      </block>
-
-      <block order="11">
-        <cline>            return str.substring(mid, mid+1);</cline>
-      </block>
-
-      <block order="5">
-        <cline>        }</cline>
-      </block>
-
-      <block order="10">
-        <cline>        else</cline>
-        <cline>        {</cline>
-      </block>
-
-      <block order="3">
-        <cline>            return str.substring(mid-1, mid+1);</cline>
-      </block>
-
-      <block order="6">
-        <cline>        }</cline>
-      </block>
-
-      <block order="7">
-        <cline>    }</cline>
-      </block>
-
-      <block order="8">
-        <cline>}</cline>
-      </block>
-    </blocks>
-  </activity>
-
-  <activity label="ch6ex11muc" xml:id="ch6ex11muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="loopex10muc" xml:id="loopex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The <c>ev_div(s, n)</c> method in the <c>NumWorker</c> class should
         return the number of digits in <c>s</c> (a string representation of a
         number) that are evenly divisible by <c>n</c>. For example,
-        <c>even_div('6892',3)</c> should return 2 since both 6 and 9 are evenly
+        <c>even_div("6892",3)</c> should return 2 since both 6 and 9 are evenly
         divisible by 3.
       </p>
     </statement>
@@ -596,7 +532,7 @@
       </block>
 
       <block order="4">
-        <cline>            /* if is evely divisible by n */</cline>
+        <cline>            /* if is evenly divisible by n */</cline>
         <cline>            if (c_num % n == 0)</cline>
         <cline>            {</cline>
       </block>

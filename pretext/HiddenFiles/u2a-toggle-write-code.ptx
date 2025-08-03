@@ -718,4 +718,69 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
   </activity>
+
+    <activity label="u2a_muc_wc11" xml:id="u2a_muc_wc11">
+    <statement>
+      <p>
+        Complete the <c>get_mid(str)</c> method in the <c>StringWorker</c> class to
+        return the middle character if the string has an odd number of
+        characters and the middle two characters if the string has an even
+        number of characters. For example, <c>get_mid("way")</c> should return
+        <c>"a"</c> and <c>get_mid("away")</c> should return <c>"wa"</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java">
+      <code>
+public class StringWorker
+{
+    public static String get_mid(String str)
+    {
+        // Add your code here
+        return ""; // change the return value
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(get_mid("way") + " should be \"a\"");
+        System.out.println(get_mid("away") + " should be \"wa\"");
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("StringWorker");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "a should be \"a\"\nwa should be \"wa\"";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String actual = StringWorker.get_mid("candy");
+        String expect = "n";
+        boolean passed = getResults(expect, actual, "Testing get_mid(\"candy\")");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </activity>
 </section>
