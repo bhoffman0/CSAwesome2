@@ -589,6 +589,7 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = getResults(expect, actual, "Calling even_div(\"45\", 2)");
         assertTrue(passed);
     }
+}
       </tests>
     </program>
   </activity>
