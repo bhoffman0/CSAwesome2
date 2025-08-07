@@ -541,7 +541,7 @@ Have you ever played MAD LIBS? In this game, you first choose a bunch of words f
    <a href="https://www.w3schools.com/java/java_user_input.asp" target="_blank">Scanner class</a>
 
 
-Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. For more advanced programming, you could create this program in a Java IDE that can do input using the |Scanner| to read in input into the variables.
+Then, working in pairs, come up with another silly story that uses at least 5 new String variables. When you're done, try another team's mad libs code. Your teacher may ask you to create this program in a Java IDE that can do input for example this `JuiceMind IDE <https://play.juicemind.com/csawesome2/challengeMadLibs>`_ using the |Scanner| to read in input into the variables.
 
 .. activecode:: challengeMadLibs
    :language: java

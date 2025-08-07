@@ -1346,10 +1346,16 @@ public class RunestoneTests extends CodeTestHelper
 
     <p>
       Create a program that takes a word and transforms it to Pig Latin using
-      String methods. You may need the word’s length, a substring that does not
+      String methods. You may need the word's length, a substring that does not
       include the first letter, and a substring that is just the first letter
       (you can get the ith letter of a string using substring(i,i+1) so for
       example the letter at index 3 would be substring(3,4)).
+    </p>
+
+    <p>
+      Your teacher may ask you to create this program in a Java IDE that can use input to read in the word, for example in <url
+      href="https://play.juicemind.com/csawesome2/challenge-PigLatin"
+      visual="https://play.juicemind.com/csawesome2/challenge-PigLatin">JuiceMind IDE</url> using the Scanner class.
     </p>
 
     <project label="challenge-PigLatin">

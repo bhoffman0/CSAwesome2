@@ -203,7 +203,7 @@ When different methods are called from the main method, the control flows to the
 
    <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v2#Main.java" target="_blank">Magpie lab on replit.com</a>
 
-You can also run a version of the |Magpie lab on replit.com| that uses the Scanner class for input so that you can type in your own input to interact with it.
+You can also run a version of the Magpie lab on this `JuiceMind IDE <https://play.juicemind.com/csawesome2/lc-magpie2>`_ or on |Magpie lab on replit.com| that uses the Scanner class for input so that you can type in your own input to interact with it.
 
 As you can see the ``getResponse`` method of Magpie2 looks for certain keywords like ``"mother"`` and ``"brother"``.  Why do you think the response to "Do you know my brother?" isn't "Tell me more about your family."?  Discuss this with partner in pairs and see if you can figure it out.
 

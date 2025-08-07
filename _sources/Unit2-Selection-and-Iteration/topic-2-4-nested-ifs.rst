@@ -685,7 +685,7 @@ they are not technically required to avoid this kind of confusion.
 
 .. |JuiceMind| raw:: html
 
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/54bfe3f4-f112-4062-8d7d-a033b2bf09b6#079f4341-137a-497f-b874-553ababd627a" target="_blank" style="text-decoration:underline">JuiceMind</a>
+   <a href="https://play.juicemind.com/csawesome2/Adventure" target="_blank" style="text-decoration:underline">JuiceMind</a>
 
 .. |replit| raw:: html
 

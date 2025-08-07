@@ -232,7 +232,7 @@ Input with Variables
 
 .. |JavaIOExampleJuiceMind| raw:: html
 
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#18fe2d0b-9011-40b1-b384-f956576a86a7" target="_blank">Scanner input example in JuiceMind</a>
+   <a href="https://play.juicemind.com/csawesome2/inputName" target="_blank">JuiceMind IDE</a>
 
 .. |JavaIOExampleReplit| raw:: html
 
@@ -421,7 +421,7 @@ In this coding challenge, you will calculate your age, and your pet's age from y
 
 .. |JuiceMind template| raw:: html
 
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/2e6655aa-a1b1-446e-9302-8ae43ab07e54#de42baff-8802-40d7-a3a5-74701999c5ba" target="_blank">JuiceMind activity</a>
+   <a href="https://play.juicemind.com/csawesome2/challenge1-4" target="_blank">JuiceMind IDE</a>
 
 .. |Scanner| raw:: html
 

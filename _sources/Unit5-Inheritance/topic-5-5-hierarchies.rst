@@ -352,7 +352,7 @@ objects. Notice that the loop works with a variable of type ``Pet`` because a
     :align: left
     :alt: Shopping
 
-The following code contains a class called ShoppingCart that simulates a grocery store or an online store's shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this |replit.com link|. We encourage you to work in pairs.
+The following code contains a class called ShoppingCart that simulates a grocery store or an online store's shopping cart. It has an ArrayList called order that you can use to add Items to the shopping cart. The Item class keeps track of the name and the price of each Item. If you run the code below, you will see that it adds 2 items to the cart and then prints out the total order. It may be easier to follow and change the code in this `JuiceMind IDE <https://play.juicemind.com/csawesome2/challenge-9-5-shopping>`_ or this |replit.com link|. We encourage you to work in pairs.
 
 In this challenge, you will add a new class called ``DiscountedItem`` that extends the ``Item`` class. The ``ArrayList`` of ``Item`` will still work since it can hold the subclasses of ``Item`` too! The ``ShoppingCart`` ``printOrder`` method will work with ``Item`` and ``DiscountedItem`` but note that it has an ``if`` statement that treats ``DiscountedItem`` differently.
 
@@ -368,7 +368,7 @@ In the ``DiscountedItem`` subclass,
 
 5. Uncomment the code in the main method to test adding DiscountedItems to the cart.
 
-6. If you used replit.com or another IDE to complete this challenge, copy the code for DiscountedItem into the ActiveCode below so that it is saved for the next lesson.
+6. If you used `JuiceMind IDE <https://play.juicemind.com/csawesome2/challenge-9-5-shopping>`_ or replit.com or another IDE to complete this challenge, copy the code for DiscountedItem into the ActiveCode below so that it is saved for the next lesson.
 
 .. activecode:: challenge-9-5-shopping
   :language: java

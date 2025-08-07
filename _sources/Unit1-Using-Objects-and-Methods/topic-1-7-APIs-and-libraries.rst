@@ -114,7 +114,7 @@ Try the Java program below that creates a Turtle object called ``yertle`` using 
     :datafile: turtleClasses.jar
 
     Try clicking the run button below to see what the following program does. Then add 1 more line of code on line 16 to make yertle go forward() again.
-    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action at this `JuiceMind IDE <https://play.juicemind.com/csawesome2/TurtleAPI>`_, this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
     import java.awt.*;
     import java.util.*;
