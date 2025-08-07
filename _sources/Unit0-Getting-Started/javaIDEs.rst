@@ -32,7 +32,7 @@ Here are some popular online IDEs:
 
 - Replit (https://replit.com/) an online IDE which recently switched to only allowing 3 projects at a time for free.  Be aware that Replit has turned on its AI feature for code completion for all accounts (https://replit.com/ai). Each user can turn the AI on and off at the bottom of the code window, and use an AI chat window to ask questions of the AI.
 
-- JuiceMind (https://juicemind.com/) is an online IDE that offers many free and paid features for teachers to set up classrooms like Coding Rooms. It has a built-in version of CSAwesome. 
+- JuiceMind (https://juicemind.com/) has a free built-in version of CSAwesome that allows you to run Java and Java graphics program, view student code history, and provide comments and feedback to student code. Additionally, it features JuiceMind quizzes (Kahoot for coding) and various free AI-graded FRQs (for additional practice and feedback). Paid features include plagiarism detection, AI-grading, and student collaboration features. 
 
 - PickCode (https://pickcode.io/) is another online IDE that offers many free and paid features for setting up classrooms. 
  
