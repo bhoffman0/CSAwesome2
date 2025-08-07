@@ -762,6 +762,8 @@ Here is a list of common mistakes made with Strings.
 
 Create a program that takes a word and transforms it to Pig Latin using String methods. You may need the word's length, a substring that does not include the first letter, and a substring that is just the first letter (you can get the ith letter of a string using substring(i,i+1) so for example the letter at index 3 would be substring(3,4)).
 
+Your teacher may ask you to create this program in a Java IDE that can use input to read in the word, for example in `JuiceMind IDE <https://play.juicemind.com/csawesome2/challenge-PigLatin>`_ using the Scanner class.
+
 
 
 .. activecode:: challenge-PigLatin

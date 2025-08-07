@@ -192,7 +192,7 @@ Here's an example of an **input-controlled loop** that calculates the average of
 
 .. |JuiceMind| raw:: html
 
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/fce2f5ea-b4fe-4acd-9190-f24c22891a27#9c210139-7c72-441f-88c8-d68482488aa1" target="_blank" style="text-decoration:underline">JuiceMind</a>
+   <a href="https://play.juicemind.com/csawesome2/Average" target="_blank" style="text-decoration:underline">JuiceMind</a>
 
 .. |replit| raw:: html
 

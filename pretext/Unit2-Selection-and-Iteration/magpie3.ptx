@@ -213,12 +213,14 @@ private int findKeyword(String statement, String goal,
 
     <p>
       Run the code below or this <url
+      href="https://play.juicemind.com/csawesome2/lc-magpie3"
+      visual="https://play.juicemind.com/csawesome2/lc-magpie3">JuiceMind IDE</url> or this <url
       href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java"
       visual="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java">replit.com
       version 3</url> to see this new method <c>findKeyword</c> in action. It is
       called from the <c>getResponse</c> method to print out an appropriate
       response based on a keyword. For example, looking for the word <c>"no"</c>
-      to print out <c>"Why so negative?"</c>, but it won’t match no inside of
+      to print out <c>"Why so negative?"</c>, but it won't match no inside of
       another word like <c>"another"</c>.
     </p>
 
@@ -453,6 +455,8 @@ public class RunestoneTests extends CodeTestHelper
       Repeat the changes you made to the program in Activity 2, using this new
       method to detect keywords. You can use the active code window above, or
       the <url
+      href="https://play.juicemind.com/csawesome2/lc-magpie3"
+      visual="https://play.juicemind.com/csawesome2/lc-magpie3">JuiceMind IDE</url> or the <url
       href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java"
       visual="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java">replit.com
       version 3</url> or your own IDE.

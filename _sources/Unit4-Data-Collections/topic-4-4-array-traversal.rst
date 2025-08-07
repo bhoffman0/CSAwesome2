@@ -1164,7 +1164,7 @@ Remember that normally an enhanced for loop cannot be used to modify primitive v
 
 In this challenge, you will use an array of English words from a dictionary file to see if a given word is spelled correctly. We encourage you to work in pairs for this challenge. 
 
-This challenge includes a dictionary file of 10,000 English words which is read into the array dictionary for you. You could use this |replit| code instead that has an even bigger dictionary of English words and lets you do input with your spell checker. We will learn how to read in files using Java later on in this unit. 
+This challenge includes a dictionary file of 10,000 English words which is read into the array dictionary for you. You could use this `JuiceMind IDE <https://play.juicemind.com/csawesome2/challenge-spellchecker>`_ or this |replit| code instead that has an even bigger dictionary of English words and lets you do input with your spell checker. We will learn how to read in files using Java later on in this unit. 
 
 1. Write a ``print10`` method that prints out the first 10 words of the dictionary array. Do not print out the whole array of 10,000 words!
 2. Write a ``spellcheck`` method that takes a word as a parameter and returns true if it is in the dictionary array. It should return false if it is not found (When can you tell that you have not found a word in the dictionary?). Test your code below by changing the word sent to the spellcheck() method in main. This algorithm is called a **linear search** where we step through the array one element at a time (here the dictionary one word at a time) looking for a certain element.

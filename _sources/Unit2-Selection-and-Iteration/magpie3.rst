@@ -166,7 +166,7 @@ Take a look at the ``findKeyword`` method below.  It has a ``while`` loop in it 
 
    <a href="https://replit.com/@BerylHoffman/Magpie-ChatBot-Lab-v3#Main.java" target="_blank">replit.com version 3</a>
 
-Run the code below or this |replit.com version 3| to see this new method ``findKeyword`` in action. It is called from the ``getResponse`` method to print out an appropriate response based on a keyword. For example, looking for the word ``"no"`` to print out ``"Why so negative?"``, but it won't match no inside of another word like ``"another"``.
+Run the code below or this `JuiceMind IDE <https://play.juicemind.com/csawesome2/lc-magpie3>`_ or this |replit.com version 3| to see this new method ``findKeyword`` in action. It is called from the ``getResponse`` method to print out an appropriate response based on a keyword. For example, looking for the word ``"no"`` to print out ``"Why so negative?"``, but it won't match no inside of another word like ``"another"``.
 
 .. code-block:: java
 
@@ -387,7 +387,7 @@ You can also step through the code in the |Java Visualizer| or using the CodeLen
 Exercise: Use the new method
 -----------------------------
 
-Repeat the changes you made to the program in Activity 2, using this new method to detect keywords. You can use the active code window above, or the |replit.com version 3| or your own IDE.
+Repeat the changes you made to the program in Activity 2, using this new method to detect keywords. You can use the active code window above, or the `JuiceMind IDE <https://play.juicemind.com/csawesome2/lc-magpie3>`_ or the |replit.com version 3| or your own IDE.
 
 Questions: Prepare for the next activity
 -------------------------------------------

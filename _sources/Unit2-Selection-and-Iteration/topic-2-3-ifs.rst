@@ -795,7 +795,7 @@ Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake i
 
 .. |JuiceMind| raw:: html
 
-    <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/feaeda26-4591-4523-bbc2-ad6e8eca2633#abe979a9-45e0-455d-8a0d-1dde8c8a5d4e" target="_blank" style="text-decoration:underline">JuiceMind</a>
+    <a href="https://play.juicemind.com/csawesome2/challenge-Magic8ball" target="_blank" style="text-decoration:underline">JuiceMind</a>
 
 
 .. |replit| raw:: html

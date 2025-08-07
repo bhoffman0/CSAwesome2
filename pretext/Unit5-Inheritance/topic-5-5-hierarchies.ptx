@@ -538,12 +538,13 @@ class Dog extends Pet
     <image source="Unit5-Inheritance/Figures/shoppingcart.png" width="18%" alt="Shopping" />
     <p>
       The following code contains a class called ShoppingCart that simulates a
-      grocery store or an online store’s shopping cart. It has an ArrayList
+      grocery store or an online store's shopping cart. It has an ArrayList
       called order that you can use to add Items to the shopping cart. The Item
       class keeps track of the name and the price of each Item. If you run the
       code below, you will see that it adds 2 items to the cart and then prints
       out the total order. It may be easier to follow and change the code in
-      this <url href="https://replit.com/@BerylHoffman/Shopping-Cart"
+      this <url href="https://play.juicemind.com/csawesome2/challenge-9-5-shopping"
+      visual="https://play.juicemind.com/csawesome2/challenge-9-5-shopping">JuiceMind IDE</url> or this <url href="https://replit.com/@BerylHoffman/Shopping-Cart"
       visual="https://replit.com/@BerylHoffman/Shopping-Cart">replit.com
       link</url>. We encourage you to work in pairs.
     </p>
@@ -598,7 +599,8 @@ class Dog extends Pet
 
         <li>
           <p>
-            If you used replit.com or another IDE to complete this challenge,
+            If you used <url href="https://play.juicemind.com/csawesome2/challenge-9-5-shopping"
+            visual="https://play.juicemind.com/csawesome2/challenge-9-5-shopping">JuiceMind IDE</url> or replit.com or another IDE to complete this challenge,
             copy the code for DiscountedItem into the ActiveCode below so that
             it is saved for the next lesson.
           </p>

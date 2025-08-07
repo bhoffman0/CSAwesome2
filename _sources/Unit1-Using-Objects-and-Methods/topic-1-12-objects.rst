@@ -174,7 +174,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
 
 .. |JuiceMind| raw:: html
 
-   <a href="https://play.juicemind.com/dashboard/teams/Mk2wWMTqPkekcxTDWqRn/item/beca9c16-4004-4a4e-b4b0-11593e140808#f5357602-b60b-44c3-be0e-dfb07de2a778" target="_blank" style="text-decoration:underline">JuiceMind</a>
+   <a href="https://play.juicemind.com/csawesome2/Java-Swing-Turtle" target="_blank" style="text-decoration:underline">JuiceMind IDE</a>
 
 .. |replit| raw:: html
 
@@ -190,7 +190,7 @@ The Turtle class (that we've written for you and hidden on this page) is a bluep
     :datafile: turtleClasses.jar
 
     Try clicking the run button below to see what the following program does.
-    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action on |JuiceMind| or |replit| or download the files |github| to use in your own IDE.)
+    (If the code below does not work or is too slow in your browser, you can also see the ``Turtle`` code in action on |JuiceMind|, |replit|, or download the files |github| to use in your own IDE.)
     ~~~~
     import java.awt.*;
     import java.util.*;
