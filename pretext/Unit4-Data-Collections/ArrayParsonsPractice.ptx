@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="arrayex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex1muc" xml:id="arrayex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should loop from 0 to less than the length
@@ -46,7 +46,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex2muc" xml:id="arrayex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should fill an array with elements that
@@ -81,7 +81,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex3muc" xml:id="arrayex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should print each element in the array
@@ -120,7 +120,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex4muc" xml:id="arrayex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return the
@@ -179,7 +179,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex5muc" xml:id="arrayex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return the average
@@ -228,7 +228,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex6muc" xml:id="arrayex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return the largest
@@ -291,7 +291,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex7muc" xml:id="arrayex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return an integer
@@ -346,7 +346,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex8muc" xml:id="arrayex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return a new array
@@ -392,7 +392,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex9muc" xml:id="arrayex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return string
@@ -454,7 +454,7 @@
     </blocks>
   </activity>
 
-  <activity label="arrayex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="arrayex10muc" xml:id="arrayex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program copies the first half of an array given as an
