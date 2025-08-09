@@ -7,7 +7,7 @@
     This is the array write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u6_muc_wc1">
+  <activity label="u6_muc_wc1" xml:id="u6_muc_wc1">
     <statement>
       <p>
         Write a loop that traverses the array arr from 0 to less than the length
@@ -69,7 +69,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc2">
+  <activity label="u6_muc_wc2" xml:id="u6_muc_wc2">
     <statement>
       <p>
         Write a for loop that fills an array with elements that count up from 0
@@ -130,7 +130,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc3">
+  <activity label="u6_muc_wc3" xml:id="u6_muc_wc3">
     <statement>
       <p>
         Write an enhanced for each loop to traverse the array and print out an
@@ -189,7 +189,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc4">
+  <activity label="u6_muc_wc4" xml:id="u6_muc_wc4">
     <statement>
       <p>
         Finish the method to return the smallest integer in an array arr given
@@ -279,7 +279,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc5">
+  <activity label="u6_muc_wc5" xml:id="u6_muc_wc5">
     <statement>
       <p>
         Finish the method to return the average of the elements in an array arr
@@ -369,7 +369,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc6">
+  <activity label="u6_muc_wc6" xml:id="u6_muc_wc6">
     <statement>
       <p>
         Finish the method to return the largest integer in an array arr given as
@@ -457,7 +457,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc7">
+  <activity label="u6_muc_wc7" xml:id="u6_muc_wc7">
     <statement>
       <p>
         Finish the method that given an array as a parameter, returns the
@@ -549,7 +549,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc8">
+  <activity label="u6_muc_wc8" xml:id="u6_muc_wc8">
     <statement>
       <p>
         Finish the method to return a new array of length 2 containing the
@@ -644,7 +644,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc9">
+  <activity label="u6_muc_wc9" xml:id="u6_muc_wc9">
     <statement>
       <p>
         Finish the method that should return string array that is in reverse
@@ -735,7 +735,7 @@ public class RunestoneTests extends CodeTestHelper
     </program>
   </activity>
 
-  <activity label="u6_muc_wc10">
+  <activity label="u6_muc_wc10" xml:id="u6_muc_wc10">
     <statement>
       <p>
         Finish the method so that it copies the first half of an array given as
