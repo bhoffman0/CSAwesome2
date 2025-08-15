@@ -10,7 +10,7 @@
     to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="ch8ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex1muc" xml:id="ch8ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should be a class that adds some Strings
@@ -71,7 +71,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex2muc" xml:id="ch8ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should be a method that traverses through
@@ -116,7 +116,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex3muc" xml:id="ch8ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should remove all the zeros from an
@@ -174,7 +174,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex4muc" xml:id="ch8ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should return the
@@ -232,7 +232,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex5muc" xml:id="ch8ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should remove all the
@@ -289,7 +289,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex6muc" xml:id="ch8ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following method should calculate the average from an ArrayList of
@@ -339,7 +339,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex7muc" xml:id="ch8ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should find the largest
@@ -403,7 +403,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex8muc" xml:id="ch8ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following method should remove all the Strings that have length 3 or
@@ -461,7 +461,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex9muc" xml:id="ch8ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should take each String
@@ -517,7 +517,7 @@
     </blocks>
   </activity>
 
-  <activity label="ch8ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="ch8ex10muc" xml:id="ch8ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following method should remove a specific Integer (specified in
