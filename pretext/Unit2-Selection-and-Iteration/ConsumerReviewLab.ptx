@@ -284,9 +284,9 @@ public static double sentimentVal( String word )
           <p>
             How do you get each word in the file contents? Look for the spaces!
             You may want to review <url
-            href="https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html#while-find-and-replace-loop"
-            visual="https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html#while-find-and-replace-loop">Lesson
-            4.3 Loops and Strings</url>. Remember how we looped to find all the
+            href="topic-2-10-strings-loops.html"
+           >Lesson
+            2.10 Implementing String Algorithms</url>. Remember how we looped to find all the
             1’s in a <c>String</c>? Here we’re looking for all the spaces (<c>"
             "</c>). You will need to use <c>indexOf</c> to find the spaces and
             substring to get each word. To make it simpler, after finding a
