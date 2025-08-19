@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="array2Dex1muc" numbered="yes" adaptive="yes" indentation="show" language="java">
+  <activity label="array2Dex1muc" xml:id="array2Dex1muc" numbered="yes" adaptive="yes" indentation="show" language="java">
     <statement>
       <p>
         The following program segment should create a 10 by 10 two-dimensional
@@ -57,7 +57,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex2muc" numbered="yes" adaptive="yes" indentation="show" language="java">
+  <activity label="array2Dex2muc" xml:id="array2Dex2muc" numbered="yes" adaptive="yes" indentation="show" language="java">
     <statement>
       <p>
         The following program segment should create a 8 by 8 two-dimensional int
@@ -115,7 +115,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex3muc" numbered="yes" adaptive="yes" indentation="show" language="java">
+  <activity label="array2Dex3muc" xml:id="array2Dex3muc" numbered="yes" adaptive="yes" indentation="show" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -186,7 +186,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex4muc" numbered="yes" adaptive="yes" indentation="show" language="java">
+  <activity label="array2Dex4muc" xml:id="array2Dex4muc" numbered="yes" adaptive="yes" indentation="show" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -239,7 +239,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="array2Dex5muc" xml:id="array2Dex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -300,7 +300,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="array2Dex6muc" xml:id="array2Dex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -363,7 +363,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="array2Dex7muc" xml:id="array2Dex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -431,7 +431,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex8muc" numbered="yes" adaptive="yes" indentation="show" language="java">
+  <activity label="array2Dex8muc" xml:id="array2Dex8muc" numbered="yes" adaptive="yes" indentation="show" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -504,7 +504,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="array2Dex9muc" xml:id="array2Dex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
@@ -570,7 +570,7 @@
     </blocks>
   </activity>
 
-  <activity label="array2Dex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="array2Dex10muc" xml:id="array2Dex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment is a method that should accept a
