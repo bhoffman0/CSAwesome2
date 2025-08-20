@@ -7,7 +7,7 @@
     This is the selection write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u2a_muc_wc1" xml:id="u2a_muc_wc1">
+  <exercise label="u2a_muc_wc1" xml:id="u2a_muc_wc1">
     <statement>
       <p>
         Write code that tests guess to see if it is equal to answer or too high
@@ -83,9 +83,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc2" xml:id="u2a_muc_wc2">
+  <exercise label="u2a_muc_wc2" xml:id="u2a_muc_wc2">
     <statement>
       <p>
         Write code that prints <c>You can go out</c> if you don’t have any
@@ -152,9 +152,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc3" xml:id="u2a_muc_wc3">
+  <exercise label="u2a_muc_wc3" xml:id="u2a_muc_wc3">
     <statement>
       <p>
         Write code that tests if x is between 1 and 10, and prints <c>1 &lt;= x
@@ -226,9 +226,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc4"  xml:id="u2a_muc_wc4">
+  <exercise label="u2a_muc_wc4"  xml:id="u2a_muc_wc4">
     <statement>
       <p>
         Write code that prints out if the string <c>message</c> has the word
@@ -292,9 +292,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc5" xml:id="u2a_muc_wc5">
+  <exercise label="u2a_muc_wc5" xml:id="u2a_muc_wc5">
     <statement>
       <p>
         Write code that prints if your favorite food is junk food (pizza or
@@ -360,9 +360,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc6" xml:id="u2a_muc_wc6">
+  <exercise label="u2a_muc_wc6" xml:id="u2a_muc_wc6">
     <statement>
       <p>
         Write code that prints your fine if you are speeding. If you are going
@@ -423,9 +423,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc7" xml:id="u2a_muc_wc7">
+  <exercise label="u2a_muc_wc7" xml:id="u2a_muc_wc7">
     <statement>
       <p>
         Write code that prints the alarm time. If it is a weekday you should get
@@ -495,9 +495,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc8" xml:id="u2a_muc_wc8">
+  <exercise label="u2a_muc_wc8" xml:id="u2a_muc_wc8">
     <statement>
       <p>
         Write code that prints if you <c>Can text now</c> or <c>Can't text
@@ -568,9 +568,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc9" xml:id="u2a_muc_wc9">
+  <exercise label="u2a_muc_wc9" xml:id="u2a_muc_wc9">
     <statement>
       <p>
         Write code that prints whether your name <c>Starts with a vowel</c> (a,
@@ -640,9 +640,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u2a_muc_wc10" xml:id="u2a_muc_wc10">
+  <exercise label="u2a_muc_wc10" xml:id="u2a_muc_wc10">
     <statement>
       <p>
         Write code that prints the letter grade with your score. For a score
@@ -717,9 +717,9 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-    <activity label="u2a_muc_wc11" xml:id="u2a_muc_wc11">
+    <exercise label="u2a_muc_wc11" xml:id="u2a_muc_wc11">
     <statement>
       <p>
         Complete the <c>get_mid(str)</c> method in the <c>StringWorker</c> class to
@@ -782,5 +782,5 @@ public class RunestoneTests extends CodeTestHelper
 }
       </tests>
     </program>
-  </activity>
+  </exercise>
 </section>
