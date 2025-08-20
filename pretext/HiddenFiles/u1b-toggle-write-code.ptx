@@ -7,7 +7,7 @@
     This is the write code problems associated with the mixed up code problems.
   </p>
 
-  <activity label="u1b_muc_wc1" xml:id="u1b_muc_wc1">
+  <exercise label="u1b_muc_wc1" xml:id="u1b_muc_wc1">
     <statement>
       <p>Write code that prints a random number from 1 to 50.</p>
     </statement>
@@ -80,9 +80,9 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u1b_muc_wc2" xml:id="u1b_muc_wc2">
+  <exercise label="u1b_muc_wc2" xml:id="u1b_muc_wc2">
     <statement>
       <p>
         Write code that prints the first 2 characters of the message followed by
@@ -143,9 +143,9 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u1b_muc_wc3" xml:id="u1b_muc_wc3">
+  <exercise label="u1b_muc_wc3" xml:id="u1b_muc_wc3">
     <statement>
       <p>
         Write code that prints the first letters in first, middle, and last in
@@ -194,9 +194,9 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u1b_muc_wc4" xml:id="u1b_muc_wc4">
+  <exercise label="u1b_muc_wc4" xml:id="u1b_muc_wc4">
     <statement>
       <p>
         Write code that prints the message in all uppercase letters using the
@@ -244,9 +244,9 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u1b_muc_wc5" xml:id="u1b_muc_wc5">
+  <exercise label="u1b_muc_wc5" xml:id="u1b_muc_wc5">
     <statement>
       <p>
         Write code that prints the first 3 letters of the message in uppercase
@@ -293,9 +293,9 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 
-  <activity label="u1b_muc_wc6" xml:id="u1b_muc_wc6">
+  <exercise label="u1b_muc_wc6" xml:id="u1b_muc_wc6">
     <statement>
       <p>
         Write code that print the part of the message starting with the word
@@ -342,5 +342,5 @@ public class Test1
  }
       </tests>
     </program>
-  </activity>
+  </exercise>
 </section>
