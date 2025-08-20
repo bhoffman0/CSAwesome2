@@ -275,15 +275,20 @@ public class RunestoneTests extends CodeTestHelper
       within the range of <c>Integer.MIN_VALUE</c> and <c>Integer.MAX_VALUE</c>
       inclusively. If you try to store any number larger or smaller than these
       numbers in an <c>int</c> variable, it will result in an <term>integer
-      overflow</term> where an incorrect value could be stored. Try it below.
+      overflow</term> where an incorrect value could be stored. Try the code below to 
+      see the range of values that can be stored in an <c>int</c> variable. If the compiler 
+      did not catch these out of range errors, they would lead to an overflow error during runtime.
     </p>
 
     <activity label="overfl">
       <statement>
         <p>
-          Try the code below to see two integer overflows for a positive and
-          negative number. An int cannot hold that many digits! Fix the integer
-          overflow by deleting the last 0 in the numbers to store less digits.
+          Try the code below to see that the values given to two variables are 
+          out of range for ints. An int cannot hold that many digits! 
+          Fix the problem by deleting the last 0 in the numbers to 
+          store less digits. The last print statement shows a runtime overflow error
+          where <c>Integer.MAX_VALUE + 1</c> wraps around to evaluate to <c>Integer.MIN_VALUE</c>
+          which is an incorrect result for the expression.
         </p>
       </statement>
 
@@ -293,10 +298,13 @@ public class TestOverflow
 {
     public static void main(String[] args)
     {
-        int id = 2147483650; // overflow
-        int negative = -2147483650; // overflow
+        int id = 2147483650; // too large
+        int negative = -2147483650; // out of range
         System.out.println(id);
         System.out.println(negative);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println((Integer.MAX_VALUE + 1) 
+                            + " overflow will print an incorrect result!");
     }
 }
         </code>
@@ -317,7 +325,7 @@ public class RunestoneTests extends CodeTestHelper
 
         boolean passed =
                 getResults(
-                        expect, output, "Fixed Integer Overflow Error");
+                        expect, output, "Fixed out of range errors");
         assertTrue(passed);
     }
 }
