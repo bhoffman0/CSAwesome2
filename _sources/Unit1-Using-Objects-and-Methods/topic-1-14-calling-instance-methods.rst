@@ -206,7 +206,7 @@ different **method signature**, where it requires a different number or type of 
 
 .. |javadoc (documentation) file| raw:: html
 
-   <a href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html" target="_blank">javadoc (documentation) file</a>
+   <a href="https://bhoffman0.github.io/JavaTurtles/docs/SimpleTurtle.html" target="_blank">javadoc (documentation) file</a>
 
 
 |CodingEx| **Coding Exercise**
