@@ -158,19 +158,19 @@
         </block>
 
         <block order="6">
-          <cline>   If total more than $25, buy a gift card and subtract 25 from total.</cline>
+          <cline>   If total is greater than or equal to $25, buy a gift card and subtract 25 from total.</cline>
         </block>
 
         <block order="3">
-          <cline>   If total more than $10, buy a small cake and subtract 10 from total.</cline>
+          <cline>   If total is greater than or equal to $10, buy a small cake and subtract 10 from total.</cline>
         </block>
 
         <block order="2">
-          <cline>   If total more than $5, buy some candy and subtract 5 from total.</cline>
+          <cline>   If total is greater than or equal to $5, buy some candy and subtract 5 from total.</cline>
         </block>
 
         <block order="7">
-          <cline>   If total more than $1, buy a card and subtract 1 from total.</cline>
+          <cline>   If total is greater than or equal to $1, buy a card and subtract 1 from total.</cline>
         </block>
 
         <block order="1">
