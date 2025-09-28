@@ -414,7 +414,7 @@ The following code has 4 methods to draw shapes using a Turtle t passed in as an
 
 3. Complete the ``drawPentagon`` method to use a ``for`` loop to draw a pentagon (which has 5 sides and looks like a stop sign). What external angle should you use for the turns? Remember they have to add up to 360 degrees after 5 turns.
 
-4. Complete the ``drawPolygon`` method to use a ``for`` loop to draw any polygong with ``n`` sides of length ``pixels`` given as arguments. Use ``n`` in your loop for the number of sides (or the number of iterations). Use ``pixels`` for the amount to move forward. Calculate the angle to turn by using a formula that uses n and 360, so that n turns add up to 360 degrees. 
+4. Complete the ``drawPolygon`` method to use a ``for`` loop to draw any polygon with ``n`` sides of length ``pixels`` given as arguments. Use ``n`` in your loop for the number of sides (or the number of iterations). Use ``pixels`` for the amount to move forward. Calculate the angle to turn by using a formula that uses n and 360, so that n turns add up to 360 degrees. 
 
 5. In the main method, call the ``drawPolygon`` method to draw a hexagon (6 sides). This method can draw a variety of shapes by just changing the value of the argument n. The power of abstraction! Try drawing other shapes with it. Note that if the turtle runs into walls, it stays there and will mess up the shape, so you may have to move the turtle or go forward smaller amounts.
 
