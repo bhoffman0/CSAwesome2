@@ -645,7 +645,7 @@ public class RunestoneTests extends CodeTestHelper
         <li>
           <p>
             Complete the <c>drawPolygon</c> method to use a <c>for</c> loop to
-            draw any polygong with <c>n</c> sides of length <c>pixels</c> given
+            draw any polygon with <c>n</c> sides of length <c>pixels</c> given
             as arguments. Use <c>n</c> in your loop for the number of sides (or
             the number of iterations). Use <c>pixels</c> for the amount to move
             forward. Calculate the angle to turn by using a formula that uses n

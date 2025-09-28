@@ -145,7 +145,7 @@ public class BoolTestRef
         System.out.println(juan == mia);
         Turtle friend = mia; // set friend to be an alias for mia
         System.out.println(friend == mia);
-        // Create another Turtle friend2 and set it to juan
+        // Add another Turtle friend2 and set it to juan
         // Does friend2 == juan?
         // Does friend2 == friend?
 

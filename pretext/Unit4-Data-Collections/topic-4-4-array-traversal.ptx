@@ -1865,13 +1865,11 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       In the last unit, you came up with a class of your own choice relevant to
       you or your community. In the <url
-      href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community"
-      visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last
-      lesson</url>, you created an array to hold objects of your class. Copy
+      href="topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">
+      last lesson</url>, you created an array to hold objects of your class. Copy
       your array of objects code from the <url
-      href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community"
-      visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last
-      lesson</url>. In this challenge, add a loop to traverse your array to
+      href="topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">
+      last lesson</url>. In this challenge, add a loop to traverse your array to
       print out each object.
     </p>
 
@@ -1879,9 +1877,8 @@ public class RunestoneTests extends CodeTestHelper
       <statement>
         <p>
           Copy your class from the <url
-          href="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community"
-          visual="../Unit4-Data-Collections/topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">last
-          lesson</url> below. It should create an array of 3 objects of your
+          href="topic-4-3-array-basics.html#groupwork-design-an-array-of-objects-for-your-community">
+          last lesson</url> below. It should create an array of 3 objects of your
           class and initialize them to new objects. Instead of calling their
           print() methods individually, write a <c>for</c> (indexed or enhanced)
           loop that traverses your array to print out each object using the
