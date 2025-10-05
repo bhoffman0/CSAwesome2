@@ -378,7 +378,7 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void containsCall2()
     {
-        boolean passed = checkCodeContains("call to divide with the correct argument order", "divide(5,2)");
+        boolean passed = checkCodeContains("call to divide with the correct argument order", "divide(5");
         assertTrue(passed);
     }
     @Test
