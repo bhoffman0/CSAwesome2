@@ -943,8 +943,11 @@ public class Party
     <p>
       Mutator methods do not have to have a name with “set” in it, although most
       do. They can be any methods that change the value of an instance variable
-      in the class. Most mutator methods are non-void methods. Mutator methods
-      do not have to have parameters, but they usually do.
+      in the class. Mutator methods are often <code>void</code> methods to make
+      it clear that they are called for their side effects. Some mutators do
+      return a value that provides information about the result of the mutation
+      or the new state of the object. Similarly, mutator methods do not have to
+      take any arguments, but they usually do.
     </p>
   </subsection>
 
