@@ -49,6 +49,11 @@
       button at the bottom of the code to execute the next statement.
     </p>
 
+   <activity label="magpie4-activity">
+      <statement>
+        <p>Try Mapgpie4 below.</p>
+      </statement>
+        
     <program interactive="activecode" language="java">
       <code>
 /**
@@ -310,6 +315,8 @@ public class Magpie4
 }
       </code>
     </program>
+    </activity>
+
   </introduction>
 
   <subsection xml:id="exercises-4">
