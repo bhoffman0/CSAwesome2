@@ -11,6 +11,11 @@ Free Response Question (FRQ) - StepTracker Class
     single: class
     single: free response
 
+.. note::
+   **Teacher Note: AI-Graded FRQ Practice**
+
+   Assign this AI-Graded FRQ on `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=243dd38d-583d-48e6-b710-32c63b547712>`_ for authentic AP exam practice with real rubrics and instant feedback. View student grades, add comments, and track progress in real-time. **Teachers must assign the FRQ for students to access it.**
+
 The AP exam's second free response question (FRQ), since 2019, is on classes, where students design and implement a described class.  This question involves creating a class with private instance variables and public methods. The College Board will provide a description of the class and the methods. This question does not involve more complex topics such as arrays.
 
 
