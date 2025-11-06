@@ -105,9 +105,9 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       What if you wanted to print out a double quote <c>"</c> character? Since
       <c>"</c> is a special character with a meaning in Java string literals, we
-      put in a backslash in front of the quote to signal that we want just the
-      character. This is called a <term>backslash escape sequence</term>. And if
-      you wanted to print out a backslash, you would have to backslash it too in
+      put in a backslash (<c>\"</c>) in front of the quote to signal that we want just 
+      the quote character. This is called a <term>backslash escape sequence</term>. And if
+      you wanted to print out a backslash, you would have to backslash (<c>\\</c>) it too in
       order to escape its special meaning. Another useful backslashed character
       is <c>\n</c> which will put in a newline.
     </p>
@@ -723,10 +723,9 @@ public class RunestoneTests extends CodeTestHelper
           <p>
             (AP 1.3.B.3) <term>Escape sequences</term> are special sequences of
             characters that can be included in a string. They start with a
-            <title_reference> ` and have a special meaning in Java. Escape
-            sequences used in this course include double quote `”
-            </title_reference> , backslash <title_reference>`, and newline
-            `n</title_reference>.
+            backslash <c>\</c> and have a special meaning in Java. Escape
+            sequences used in this course include double quote <c>\"</c>, 
+            backslash <c>\\</c>, and newline<c>\n</c>.
           </p>
         </li>
 

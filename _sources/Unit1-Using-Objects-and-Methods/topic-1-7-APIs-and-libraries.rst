@@ -90,7 +90,7 @@ The following picture of a turtle shows some of the Turtle **attributes** like n
 **Attributes** (which are sometimes called **fields** in documentation) refer to the data related to the class and are stored in variables. **Behaviors** refer to what objects of the class can do (or what can be done with it) and are defined by methods. The ``Turtle`` class has attributes like ``name``, ``height``, and ``width`` that store data about the turtle, and it has behaviors/methods like ``forward()`` and ``turnLeft()`` that allow the turtle to move and turn.  We will learn more about classes, objects, attributes, and methods in the next lessons, but this lesson introduces them to explore APIs.  
 
 How can you tell attributes and methods apart when you look at library documentation? One easy way is that methods will always have parentheses after them, for example ``forward()`` or ``println()``. Sometimes these are empty, but still necessary, and sometimes they contain data that the method needs to do its job, for example what to print. Attributes are variables and will not have parentheses after them. Here's the API documentation that lists all of the Turtle methods (but not the attributes):
-https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html. 
+https://bhoffman0.github.io/JavaTurtles/docs/SimpleTurtle.html. 
 
 Try the Java program below that creates a Turtle object called ``yertle`` using the Turtle class. The following code is used to tell the turtle to move forward and then turn right. The **dot operator** (.) is used to run an object's methods, just like in the ``System.out.println()`` method. 
 
@@ -282,7 +282,7 @@ Try the Java program below that creates a Turtle object called ``yertle`` using 
 |Groupwork| Coding Challenge : Turtle Drawing
 --------------------------------------------------
 
-Make yertle the Turtle draw a shape.  For example, have it draw a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times. We encourage you to work in pairs for this challenge. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use or check the API at https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html: 
+Make yertle the Turtle draw a shape.  For example, have it draw a square or a zigzag shape or a block letter by calling the forward method and a turn method multiple times. We encourage you to work in pairs for this challenge. In the next lessons, we will draw more complicated shapes. Here are some simple turtle methods that you could use or check the API at https://bhoffman0.github.io/JavaTurtles/docs/SimpleTurtle.html: 
 
 - ``yertle.forward();``
 - ``yertle.turnLeft();``

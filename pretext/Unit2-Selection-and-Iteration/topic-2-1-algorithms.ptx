@@ -150,32 +150,29 @@
 
       <blocks>
         <block order="4">
-          <cline>Initialize *total* amount of money.</cline>
+          <cline>Initialize total amount of money to a whole number.</cline>
         </block>
 
         <block order="5">
-          <cline>Repeat while still money in *total*:</cline>
+          <cline>Repeat while total is greater than or equal to $1:</cline>
         </block>
 
         <block order="6">
-          <cline>   If total more than $25, buy a gift card and subtract 25 from total.</cline>
+          <cline>   If total is greater than or equal to $25, buy a gift card and subtract 25 from total.</cline>
         </block>
 
         <block order="3">
-          <cline>   If total more than $10, buy a small cake and subtract 10 from total.</cline>
+          <cline>   If total is greater than or equal to $10, buy a small cake and subtract 10 from total.</cline>
         </block>
 
         <block order="2">
-          <cline>   If total more than $5, buy some candy and subtract 5 from total.</cline>
+          <cline>   If total is greater than or equal to $5, buy some candy and subtract 5 from total.</cline>
         </block>
 
         <block order="7">
-          <cline>   If total more than $1, buy a card and subtract 1 from total.</cline>
+          <cline>   If total is greater than or equal to $1, buy a birthday card and subtract 1 from total.</cline>
         </block>
 
-        <block order="1">
-          <cline>   Otherwise, give them the change.</cline>
-        </block>
       </blocks>
     </activity>
 
@@ -190,7 +187,7 @@
       <choices>
         <choice>
           <statement>
-            <p>You will buy a gift card, a small cake, some candy, and a card.</p>
+            <p>You will buy a gift card, a small cake, some candy, and a birthday card.</p>
           </statement>
 
           <feedback>
@@ -213,7 +210,7 @@
 
         <choice correct="yes">
           <statement>
-            <p>You will buy a small cake, some candy, and a card.</p>
+            <p>You will buy a small cake, some candy, and a birthday card.</p>
           </statement>
 
           <feedback>
@@ -239,7 +236,7 @@
     <activity label="trace-algorithm-gift2">
       <statement>
         <p>
-          Given the pseudocode for buying a gift above, assume you have $22 to
+          Given the pseudocode for buying a gift above, assume you have $2 to
           spend. What will be the outcome of the algorithm?
         </p>
       </statement>
@@ -249,7 +246,7 @@
           <statement>
             <p>
               You will give them a gift card, a small cake, some candy, and a
-              card.
+              birthday card.
             </p>
           </statement>
 
@@ -267,27 +264,27 @@
           </statement>
 
           <feedback>
-            <p>You still have money left.</p>
+            <p>Not enough money.</p>
           </feedback>
         </choice>
 
         <choice>
           <statement>
-            <p>You will give them a small cake, some candy, and a card.</p>
+            <p>You will give them 1 birthday card.</p>
           </statement>
 
           <feedback>
-            <p>You still have money left.</p>
+            <p>You would still have enough money for the loop to run again.</p>
           </feedback>
         </choice>
 
         <choice correct="yes">
           <statement>
-            <p>You will give them 2 cakes, a card, and $1.</p>
+            <p>You will give them 2 birthday cards.</p>
           </statement>
 
           <feedback>
-            <p>Yep! That's a lot of cake!</p>
+            <p>Yes, the loop would run twice!</p>
           </feedback>
         </choice>
       </choices>
