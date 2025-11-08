@@ -10,6 +10,11 @@ FRQ APCalendar for Loops and Control Structures
     single: free response
     single: FRQ
 
+.. note::
+   **AI-Graded FRQ Practice**
+
+   This is also available as an AI-graded FRQ on the `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=16939ace-e81c-4f63-93a6-65467438b518>`_ for AP exam practice with rubrics and AI instant feedback.  **Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.**
+
 The AP exam's first free response question (FRQ) is on Methods and Control Structures as of 2019. This question 1 uses expressions, loops, and if statements. The AP exam provides the method header with some parameter variables and other methods that you will need to call in the solution. This question does not involve more complex topics such as arrays.
 
 

@@ -9,6 +9,11 @@ SkyView - Part A
     single: RandomStringChooser
     single: free response
 
+.. note::
+   **AI-Graded FRQ Practice**
+
+   This is also available as an AI-graded FRQ on the `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=8cd7ba1f-a4e1-4a02-bdca-58681297afc5>`_ for AP exam practice with rubrics and AI instant feedback.  **Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.**
+
 The following is a free response question from 2013.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 4.** A telescope scans a rectangular area of the night sky and collects the data into a 1-dimensional array. Each data

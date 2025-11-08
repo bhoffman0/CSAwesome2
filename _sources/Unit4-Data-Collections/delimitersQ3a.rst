@@ -9,6 +9,11 @@ Free Response - Delimiters A
     single: delimiters
     single: free response
 
+.. note::
+   **AI-Graded FRQ Practice**
+
+   This is also available as an AI-graded FRQ on the `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=58441250-b8cd-4277-b8b5-e32f4c8f20fc>`_ for AP exam practice with rubrics and AI instant feedback.  **Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.**
+
 The following is a free response question from 2019. It was question 3 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 3.   Many encoded strings contain *delimiters*. A delimiter is a non-empty string that acts as a boundary between

@@ -3,6 +3,20 @@
 <section xml:id="SkyViewB">
   <title>SkyView - Part B</title>
   <introduction>
+     <p>SkyView Part B is from the 2103 AP Computer Science A Exam at
+      <url
+      href="https://secure-media.collegeboard.org/digitalServices/pdf/ap/apcentral/ap13_frq_comp_sci.pdf"
+      >https://secure-media.collegeboard.org/digitalServices/pdf/ap/apcentral/ap13_frq_comp_sci.pdf</url>.
+    </p>
+    <note>
+    <title>JuiceMind AI-Graded FRQ Practice</title>
+      <p>
+        This is also available as an AI-graded FRQ on the 
+        <url href="https://play.juicemind.com/dashboard/explore?tab=frq&amp;frqId=8cd7ba1f-a4e1-4a02-bdca-58681297afc5">
+          JuiceMind IDE</url> for AP exam practice with rubrics and AI instant feedback. 
+          Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.
+      </p>
+    </note>
     <p>
       <term>Part b.</term> Write the <c>SkyView</c> method <c>getAverage</c>,
       which returns the average of the elements of the section of <c>view</c>
