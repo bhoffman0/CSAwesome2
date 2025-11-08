@@ -10,9 +10,9 @@ SkyView - Part A
     single: free response
 
 .. note::
-   **Teacher Note: AI-Graded FRQ Practice**
+   **AI-Graded FRQ Practice**
 
-   Assign this AI-Graded FRQ on `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=8cd7ba1f-a4e1-4a02-bdca-58681297afc5>`_ for authentic AP exam practice with real rubrics and instant feedback. View student grades, add comments, and track progress in real-time. **Teachers must assign the FRQ for students to access it.**
+   This is also available as an AI-graded FRQ on the `JuiceMind IDE <https://play.juicemind.com/dashboard/explore?tab=frq&frqId=8cd7ba1f-a4e1-4a02-bdca-58681297afc5>`_ for AP exam practice with rubrics and AI instant feedback.  **Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.**
 
 The following is a free response question from 2013.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 

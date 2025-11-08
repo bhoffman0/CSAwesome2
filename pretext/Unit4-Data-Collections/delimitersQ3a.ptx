@@ -5,22 +5,22 @@
   <introduction>
     <idx>delimiters</idx>
     <idx>free response</idx>
+    
+    <p>
+      The following is a free response question from 2019. It was question 3
+      part A on the exam <url
+      href="https://apcentral.collegeboard.org/media/pdf/ap19-frq-computer-science-a.pdf"
+      >https://apcentral.collegeboard.org/media/pdf/ap19-frq-computer-science-a.pdf</url>.
+    </p>
+
     <note>
-      <title>Teacher Note: AI-Graded FRQ Practice</title>
+      <title>JuiceMind AI-Graded FRQ Practice</title>
       <p>
-        Assign this AI-Graded FRQ on <url href="https://play.juicemind.com/dashboard/explore?tab=frq&amp;frqId=58441250-b8cd-4277-b8b5-e32f4c8f20fc">JuiceMind IDE</url> for authentic AP exam practice with real rubrics and instant feedback. View student grades, add comments, and track progress in real-time. Teachers must assign the FRQ for students to access it.
+        This is also available as an AI-graded FRQ on the <url href="https://play.juicemind.com/dashboard/explore?tab=frq&amp;frqId=58441250-b8cd-4277-b8b5-e32f4c8f20fc">JuiceMind IDE</url> for AP exam practice with rubrics and AI instant feedback.  Teachers must create free accounts and assign the FRQ on JuiceMind for students to access it.
       </p>
     </note>
     <p>
-      The following is a free response question from 2019. It was question 3
-      part A on the exam. You can see all the free response questions from past
-      exams at <url
-      href="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year"
-      visual="https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year">https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year</url>.
-    </p>
-
-    <p>
-      3. Many encoded strings contain <em>delimiters</em>. A delimiter is a
+      Many encoded strings contain <em>delimiters</em>. A delimiter is a
       non-empty string that acts as a boundary between different parts of a
       larger string. The delimiters involved in this question occur in pairs
       that must be <em>balanced</em>, with each pair having an open delimiter
