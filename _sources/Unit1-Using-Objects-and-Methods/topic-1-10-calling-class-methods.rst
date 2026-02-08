@@ -486,13 +486,13 @@ AP Practice
 
     .. code-block:: java
 
-        public void static inchesToCentimeters(double i)
+        public static void inchesToCentimeters(double i)
         {
             double c = i * 2.54;
             printInCentimeters(i, c);
         }
 
-        public void static printInCentimeters(double inches, double centimeters)
+        public static void printInCentimeters(double inches, double centimeters)
         {
             System.out.print(inches + "-->" + centimeters);
         }
