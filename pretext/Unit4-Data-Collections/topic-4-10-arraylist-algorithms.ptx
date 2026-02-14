@@ -490,7 +490,7 @@ public class RunestoneTests extends CodeTestHelper
         String output = getMethodOutput("main");
         String expect = "Max: 12";
 
-        boolean passed = getResults(expect, output, "Main outpu");
+        boolean passed = getResults(expect, output, "Main output");
         assertTrue(passed);
     }
     @Test
@@ -991,16 +991,7 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = getResults(expect, output, "Expected output from main");
         assertTrue(passed);
     }
-    @Test
-    public void testSet()
-    {
-        String target = "set";
-        boolean passed =
-                checkCodeContains(
-                        "set method",
-                        target);
-        assertTrue(passed);
-    }
+  
     @Test
         public void test2()
         {

@@ -197,7 +197,7 @@ public class RunestoneTests extends CodeTestHelper
     {
         String expected = "The sum of 1 to 10 is 55\nThe average of 1 to 10 is 5.5";
         String output = getMethodOutput("main");
-        boolean passed = getResults(expected, output, "Checking main output");
+        boolean passed = getResults(expected, output, "Checking main output. Remember to typecast to double.");
         assertTrue(passed);
     }
 

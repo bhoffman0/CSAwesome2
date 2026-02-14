@@ -782,14 +782,13 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void testMethod()
     {
-        int[] nums = {10, 20, 5, 40, 50};
+        int[] nums = {10, 20, 5, 40, 60};
         Object[] args = {nums};
-
-        // name of method, arguments are (nums, 30)
         String output = getMethodOutput("findMin", args);
         String expect = "5";
 
-        boolean passed = getResults(expect, output, "findMin({10, 20, 5, 40, 50})");
+        boolean passed = (output.equals(expect));
+        getResults(expect, output, "findMin({10, 20, 5, 40, 60})", passed);
         assertTrue(passed);
     }
 }
