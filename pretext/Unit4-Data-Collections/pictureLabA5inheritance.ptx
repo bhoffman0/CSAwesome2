@@ -39,26 +39,14 @@
       The following questions require some knowledge about inheritance which is
       no longer covered on the AP exam.
     </p>
-
-    <p>
-      Take a look at the <url
-      href="https://github.com/bhoffman0/CSAwesome2/tree/main/_static/PictureLab">
-      Picture Lab Java code files</url> 
-       below:
-    </p>
-
-    <datafile label="picturejava" xml:id="picturejava" filename="Picture.java" editable="no" hide="no">
-      <pre source="_static/PictureLab/Picture.java" />
-    </datafile>
-   
-   <datafile label="simplepicturejava" xml:id="simplepicturejava" filename="SimplePicture.java" editable="no" hide="no">
-      <pre source="_static/PictureLab/SimplePicture.java" />
-    </datafile>
+  
 
     <activity label="picture-day5-0a">
       <statement>
         <p>
-         Look at the first file <c>Picture.java</c> above.
+         Take a look at the <url
+      href="https://raw.githubusercontent.com/bhoffman0/CSAwesome2/refs/heads/main/_static/Picture-Lab/Picture.java">
+      Picture.java file</url>  
           and look for the method <c>getPixels2D</c>. Is it there?
         </p>
       </statement>
@@ -95,8 +83,10 @@
     <activity label="picture-day5-1">
       <statement>
         <p>
-          Look at the second file <c>SimplePicture.java</c> above and look for the method
-          <c>getPixels2D</c>. Is it there?
+          Take a look at the <url
+      href="https://raw.githubusercontent.com/bhoffman0/CSAwesome2/refs/heads/main/_static/Picture-Lab/SimplePicture.java">
+      SimplePicture.java file</url>  
+          and look for the method <c>getPixels2D</c>. Is it there?
         </p>
       </statement>
 
