@@ -41,17 +41,24 @@
     </p>
 
     <p>
-      Click on this <url href="https://replit.com/@BerylHoffman/Picture-Lab"
-      visual="https://replit.com/@BerylHoffman/Picture-Lab">Picture Lab project
-      link</url> and click on Show files to answer the following questions.
+      Take a look at the <url
+      href="https://github.com/bhoffman0/CSAwesome2/tree/main/_static/PictureLab">
+      Picture Lab Java code files</url> 
+       below:
     </p>
+
+    <datafile label="picturejava" xml:id="picturejava" filename="Picture.java" editable="no" hide="no">
+      <pre source="_static/PictureLab/Picture.java" />
+    </datafile>
+   
+   <datafile label="simplepicturejava" xml:id="simplepicturejava" filename="SimplePicture.java" editable="no" hide="no">
+      <pre source="_static/PictureLab/Picture.java" />
+    </datafile>
 
     <activity label="picture-day5-0a">
       <statement>
         <p>
-          Click on the <url href="https://replit.com/@BerylHoffman/Picture-Lab"
-          visual="https://replit.com/@BerylHoffman/Picture-Lab">Picture Lab
-          project link</url> and click on Show files. Open <c>Picture.java</c>
+         Look at the first file <c>Picture.java</c> above.
           and look for the method <c>getPixels2D</c>. Is it there?
         </p>
       </statement>
@@ -88,7 +95,7 @@
     <activity label="picture-day5-1">
       <statement>
         <p>
-          Open <c>SimplePicture.java</c> and look for the method
+          Look at the second file <c>SimplePicture.java</c> above and look for the method
           <c>getPixels2D</c>. Is it there?
         </p>
       </statement>
