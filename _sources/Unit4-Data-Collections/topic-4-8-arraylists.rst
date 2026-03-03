@@ -1108,7 +1108,7 @@ the beginning of the ``ArrayList`` instead of the end.
            // initialize digitList to an empty ArrayList of Integers
 
            // Use a while loop to add each digit in number to digitList
-           //   use add(object,index) with the index 0 to add the 
+           //   use add(index,object) with the index 0 to add the 
            //   digit to the beginning of the list instead of the end
 
 
