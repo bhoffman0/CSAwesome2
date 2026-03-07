@@ -531,7 +531,7 @@ We estimate that a score of about 50% on this test would correspond to the passi
                 }
             }
 
-        Consider the following code segment, which appears in a class other than Party or PartyOptions.
+        Consider the following code segment, which appears in a class other than Party or PartyOptions. Which of the following will be printed when the code is executed?
 
         .. code-block:: java
 

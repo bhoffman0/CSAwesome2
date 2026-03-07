@@ -70,7 +70,7 @@ More Code Practice with 2D Arrays
    :language: java
    :autograde: unittest
 
-   Replace the “ADD CODE HERE” below to finish a method ``findMaxOnes(matrix)`` that accepts a two-dimensional integer array ``matrix`` as input. The method should determine the row with the maximum number of occurrences of the integer 1 and return its index. If multiple rows have the same maximum number of 1s, return the index of the first such row encountered. For example: if the input matrix is: {[ 0, 1, 1 ], [ 1, 1, 0 ], [ 1, 0, 1 ]}. The method should return 1, as the second row contains the maximum number of 1s (2 in total).
+   Replace the “ADD CODE HERE” below to finish a method ``findMaxOnes(matrix)`` that accepts a two-dimensional integer array ``matrix`` as input. The method should determine the row with the maximum number of occurrences of the integer 1 and return its index. If multiple rows have the same maximum number of 1s, return the index of the first such row encountered. For example: if the input matrix is: {[ 0, 1, 1 ], [ 1, 1, 1 ], [ 1, 0, 1 ]}. The method should return 1, as the second row contains the maximum number of 1s (3 in total).
    ~~~~
    import java.util.Arrays;
 
