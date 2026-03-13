@@ -571,7 +571,7 @@ for (int i = 2; i &lt; 8; i++)
 
           <feedback>
             <p>
-              The outer loop executes 8-2+1=6 times so there are 6 rows and the
+              The outer loop executes (8-1)-2+1=6 times so there are 6 rows and the
               inner loop executes 5-1+1=5 times so there are 5 columns.
             </p>
           </feedback>
