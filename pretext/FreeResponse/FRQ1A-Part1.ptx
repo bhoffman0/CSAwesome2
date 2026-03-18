@@ -200,7 +200,7 @@ public class APCalendar
             </tr>
         </table>
 
-    <activity label="chooseType1">
+    <activity label="frqchooseType1">
       <statement>
         <p>What is the return type of this method?</p>
       </statement>
@@ -251,7 +251,7 @@ public class APCalendar
       </choices>
     </activity>
 
-    <activity label="chooseType2">
+    <activity label="frqchooseType2">
       <statement>
         <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>firstDayOfYear</c> method?</p>
       </statement>
@@ -300,7 +300,7 @@ public class APCalendar
       </choices>
     </activity>
 
-    <activity label="chooseType3">
+    <activity label="frqchooseType3">
       <statement>
         <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>dayOfYear</c> method?</p>
       </statement>
@@ -516,7 +516,7 @@ public class Game
     The score is calculated by adding the points from each level, but in this version, level 2 points are doubled, and level 3 points are tripled. You are to write the getScore method in Game.
 </p>
 
-<activity label="chooseType4">
+<activity label="frqchooseType4">
       <statement>
         <p>What is the return type of this method?</p>
       </statement>
@@ -567,7 +567,7 @@ public class Game
       </choices>
     </activity>
 
-    <activity label="chooseType5">
+    <activity label="frqchooseType5">
       <statement>
         <p>How do you call the <c>getPoints()</c> method for levelOne?</p>
       </statement>
