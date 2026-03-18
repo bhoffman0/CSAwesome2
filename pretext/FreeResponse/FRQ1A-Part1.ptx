@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1A-Part1">
+  <title>Free Response Question 1A - Methods and Return Values</title>
+  <introduction>
+    <idx>frq1a-methods</idx>
+    <idx>free response</idx>
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. In Part B (3 points), the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1A requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call a method in the same class or from an object</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Important Notes</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT make a main. Ever.</li>
+</ul>
+  
+    <p>
+      Assume that the following code segment appears in a class other than
+      <title_reference>APLine</title_reference>. The code segment shows an
+      example of using the <title_reference>APLine</title_reference> class to
+      represent the two equations shown in the table.
+    </p>
+
+  </introduction>
+
+  <subsection xml:id="return-types-and-method-headers">
+    <title>Return Types and Method Headers</title>
+    <p>
+      The return type determines the type of information the method returns.
+    </p>
+
+    <table>
+        <tr>
+            <th>Method Header</th>
+            <th>Return Type</th>
+            <th>Note</th>
+        </tr>
+        <tr>
+            <td><c>public void simulate()</c></td>
+            <td><c>void</c></td>
+            <td>Void means that the method does not return anything</td>
+        </tr>        
+        <tr>
+            <td><c>public int count()</c></td>
+            <td><c>int</c></td>
+            <td>This needs to return an int</td>
+        </tr>
+        <tr>
+            <td><c>public double average()</c></td>
+            <td><c>double</c></td>
+            <td>This needs to return a double, so you need to make sure your answer is a double.</td>
+        </tr>
+        <tr>
+            <td><c>public Game()</c></td>
+            <td>n/a</td>
+            <td>This is a constructor, which cannot return anything.</td>
+        </tr>
+    </table>
+
+    <p>Recommendation: If you have a return type, create a variable of that type, set it to zero, and immediately return it. Then add code in the middle!!!</p>
+    </subsection>
+
+    <subsection xml:id="calling-methods">
+    <title>Calling Methods</title>
+
+    <p>Some FRQs will give you methods that you need to call in order to get points. Sometimes they will be in the same class as your method. Sometimes they will be in a different object that you need to call.</p>
+
+    <p>When methods are in the same class, you just need to call the method name and include the proper parameters. If the method returns a value, make sure you are storing the value somehow.</p>
+
+    <p><b>Example</b>: The orderCoffee and calculateTotal methods are in the same class, so you can call them with the method name. Make sure you include the correct parameters.</p>
+    
+    <program language="java">
+      <code>
+public class CoffeeShop
+{
+    public double orderCoffee(int quantity, double pricePerCup)
+    {
+        // Calls the calculateTotal method and stores the return value as total
+        double total = calculateTotal(quantity, pricePerCup);
+        return total * 1.10;
+    }
+
+    public double calculateTotal(int count, double price) 
+    {
+        return count * price;
+    }
+}
+      </code>
+    </program>
+
+    <p>Remember that when a method returns a value, you must store it as a variable in order to use it again!</p>
+    </subsection>
+
+    <subsection xml:id="frq1a-2019-apcalendar-b">
+    <title>2019 FRQ - AP Calendar - Part (b)</title>
+    <p>The APCalendar class contains methods used to calculate information about a calendar. You will write one methods of the class.</p>
+
+    <program language="java">
+      <code>
+public class APCalendar
+{
+    /** Returns the value representing the day of the week for the first day of year,
+    * where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
+    */
+    private static int firstDayOfYear(int year)
+    { /* implementation not shown */ }
+
+    /** Returns n, where month, day, and year specify the nth day of the year.
+    * Returns 1 for January 1 (month = 1, day = 1) of any year.
+    * Precondition: The date represented by month, day, year is a valid date.
+    */
+    private static int dayOfYear(int month, int day, int year)
+    { /* implementation not shown */ }
+
+    /** Returns the value representing the day of the week for the given date
+    * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ...,
+    * and 6 denotes Saturday.
+    * Precondition: The date represented by month, day, year is a valid date.
+    */
+    public static int dayOfWeek(int month, int day, int year)
+    { /* to be implemented in part (b) */ }
+
+    // There may be instance variables, constructors, and other methods not shown.
+}
+
+      </code>
+    </program>
+
+<p>Write the static method dayOfWeek, which returns the integer value representing the day of the week for 
+    the given date (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday. </p>
+<p>For example, 2019 began on a Tuesday, and January 5 is the fifth day of 2019. As a result, January 5, 2019, fell on a Saturday, and the method call dayOfWeek(1, 5, 2019) returns 6.</p>
+<p>As another example, January 10 is the tenth day of 2019. As a result, January 10, 2019, fell on a Thursday, and the method call dayOfWeek(1, 10, 2019) returns 4.</p>
+<p>In order to calculate this value, two helper methods are provided for you.</p>
+<ul>
+<li><c>firstDayOfYear(year)</c> returns the integer value representing the day of the week for the first day of year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday. For example, since 2019 began on a Tuesday, firstDayOfYear(2019) returns 2.</li>
+<li><c>dayOfYear(month, day, year)</c> returns n, where month, day, and year specify the nth day of the year. For the first day of the year, January 1 (month = 1, day = 1), the value 1 is returned. This method accounts for whether year is a leap year. For example, dayOfYear(3, 1, 2017) returns 60, since 2017 is not a leap year, while dayOfYear(3, 1, 2016) returns 61, since 2016 is a leap year.</li>
+</ul>
+
+<p>This table shows how the calculations would be made:</p>
+<table>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>month</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>day</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>year</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>firstDayOfYear(year)</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>dayOfYear(month, day, year)</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>Returned</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>1</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>5</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>2019</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>2</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>5</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>(2 + 5 - 1) % 7 = 6</p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="1" rowspan="1">
+                    <p>1</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>10</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>2019</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>2</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>10</p>
+                </td>
+                <td colspan="1" rowspan="1">
+                    <p>(2 + 10 - 1) % 7 = 4</p>
+                </td>
+            </tr>
+        </table>
+
+    <activity label="chooseType1">
+      <statement>
+        <p>What is the return type of this method?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>void</p>
+          </statement>
+
+          <feedback>
+            <p>This method definitely wants you to return something!</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>int</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This method wants you to return a value that represents a day of the week. The best type is int.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>double</p>
+          </statement>
+
+          <feedback>
+            <p>This method wants you to return a value that represents a day of the week. Does that need a decimal?</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>None, it's a constructor.</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This method wants you to return a value that represents a day of the week. We are not constructing any objects here.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="chooseType2">
+      <statement>
+        <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>firstDayOfYear</c> method?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p><c>firstDayOfYear(int year)</c></p>
+          </statement>
+
+          <feedback>
+            <p>We do not need to include the type when passing parameters to a method.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>firstDayOfYear(2019)</c></p>
+          </statement>
+
+          <feedback>
+            <p>We want to use a variable name here instead of a single value.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p><c>firstDayOfYear(year)</c></p>
+          </statement>
+
+          <feedback>
+            <p><c>firstDayOfYear(year)</c> requires one parameter which should be a year</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>firstDayOfYear(month, day, year)</c></p>
+          </statement>
+
+          <feedback>
+            <p>
+              This method only requires one parameter, not three.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="chooseType3">
+      <statement>
+        <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>dayOfYear</c> method?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p><c>dayOfYear(int month, int day, int year)</c></p>
+          </statement>
+
+          <feedback>
+            <p>We do not need to include the type when passing parameters to a method.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>dayOfYear(1, 5, 2019)</c></p>
+          </statement>
+
+          <feedback>
+            <p>We want to use a variable name here instead of a single value.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p><c>dayOfYear(year)</c></p>
+          </statement>
+
+          <feedback>
+            <p><c>dayOfYear(month, day, year)</c> requires three parameters instead of one</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p><c>dayOfYear(month, day, year)</c></p>
+          </statement>
+
+          <feedback>
+            <p>
+              Yes! <c>dayOfYear(month, day, year)</c> requires three values, and we want them to be variables.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="FRQ1A-2019-APCalendar-B">
+      <statement>
+        <p>Complete the method dayOfWeek below. You must use firstDayOfYear and dayOfYear appropriately to receive full credit. </p>
+        <p>You could do this on a single line or several lines.</p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class APCalendar
+{
+
+    /**
+     * Returns the value representing the day of the week for the given date
+     * (month, day, year), where 0 denotes Sunday, 1 denotes Monday, ..., and 6
+     * denotes Saturday. Precondition: The date represented by month, day, year is
+     * a valid date.
+     */
+    public static int dayOfWeek(int month, int day, int year)
+    {
+        // WRITE YOUR CODE HERE using methods firstDayOfYear and dayOfYear
+
+    }
+    
+    /* Do NOT change anything after this comment */
+
+    public static void main(String[] args)
+    {
+        int answer = APCalendar.dayOfWeek(1, 8, 2019);
+        System.out.println("Your answer should be 2: " + answer);
+    }
+
+    /**
+     * Returns the value representing the day of the week for the first day of
+     * year, where 0 denotes Sunday, 1 denotes Monday, ..., and 6 denotes Saturday.
+     */
+    private static int firstDayOfYear(int year)
+    {
+        GregorianCalendar gc = new GregorianCalendar(year, Calendar.JANUARY, 1);
+        return gc.get(Calendar.DAY_OF_WEEK) - 1;
+    }
+
+    /**
+     * Returns n, where month, day, and year specify the nth day of the year.
+     * Returns 1 for January 1 (month = 1, day = 1) of any year. Precondition: The
+     * date represented by month, day, year is a valid date.
+     */
+    private static int dayOfYear(int month, int day, int year)
+    {
+        GregorianCalendar gc = new GregorianCalendar(year, month - 1, day);
+        return gc.get(Calendar.DAY_OF_YEAR);
+    }
+}
+        </code>
+        <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("APCalendar");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your answer should be 2: 2";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        int answer = APCalendar.dayOfWeek(7, 2, 2020);
+        int expect = 4;
+
+        boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(7, 2, 2020)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        int answer = APCalendar.dayOfWeek(2, 29, 2022);
+        int expect = 2;
+
+        boolean passed = getResults("" + expect, "" + answer, "dayOfWeek(2, 29, 2022)");
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
+  
+
+  </subsection>
+
+    <subsection xml:id="calling-methods-on-objects">
+    <title>Calling Methods on Objects</title>
+        <p>Sometimes you need to call methods on objects. In most FRQs, these objects will already exist. We will specifically look at calling String methods later.</p>
+        <p>To call a method on an object, you use <c>objectName.methodName(parameters)</c>.</p>
+        <p><b>Example</b>: The <c>Match</c> class has two instance variables <c>team1</c> and <c>team2</c> of type <c>Team</c>. We can call the getScore() method that is part of Team using 
+            the name of the team object and the method name: <c>team1.getScore()</c> and <c>team2.getScore()</c>.
+        </p>
+
+    <program language="java">
+      <code>
+public class Team {
+    public int getScore() { /* Implementation not shown */ }
+}
+
+public class Match {
+    Team team1, team2;
+
+    public int determineWinner() {
+        if (team1.getScore() &gt; team2.getScore())
+            return 1;
+        else if (team1.getScore() &lt; team2.getScore())
+            return 2;
+        return 0;
+    }
+}
+
+      </code>
+    </program>
+
+    </subsection>
+
+    <subsection xml:id="frq1a-2022-game-level-0">
+    <title>2022 FRQ - Game and Level</title>
+    <p>In this simplified version of this FRQ, you will use the 3 Level objects for the 3 levels of the game and then call their <c>getPoints()</c> methods to calculate the score for the game.
+    </p>
+    <p>
+        You are given the following classes:
+    </p>
+    <program language="java">
+      <code>
+public class Level
+{
+    /** Returns the number of points recorded for this level */
+    public int getPoints()
+    { return points; }
+}
+
+public class Game
+{
+    private Level levelOne, levelTwo, levelThree;
+
+    public int getScore()
+    { /* to be implemented in this question */}
+}
+      </code>
+    </program>
+<p>
+    The score is calculated by adding the points from each level, but in this version, level 2 points are doubled, and level 3 points are tripled. You are to write the getScore method in Game.
+</p>
+
+<activity label="chooseType4">
+      <statement>
+        <p>What is the return type of this method?</p>
+      </statement>
+      <choices>
+        <choice>
+          <statement>
+            <p>void</p>
+          </statement>
+
+          <feedback>
+            <p>This method definitely wants you to return something!</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>int</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This method wants you to return a value that represents a day of the week. The best type is int.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>double</p>
+          </statement>
+
+          <feedback>
+            <p>This method wants you to return a value that represents a day of the week. Does that need a decimal?</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>None, it's a constructor.</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This method wants you to return a value that represents a day of the week. We are not constructing any objects here.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+    <activity label="chooseType5">
+      <statement>
+        <p>How do you call the <c>getPoints()</c> method for levelOne?</p>
+      </statement>
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p><c>levelOne.getPoints()</c></p>
+          </statement>
+
+          <feedback>
+            <p>This is the correct way to call getPoints() on a specific level.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>getPoints(levelOne)</c></p>
+          </statement>
+
+          <feedback>
+            <p>
+              Remember that getPoints() must be called on an object and does not have a parameter.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>Level.getPoints()</c></p>
+          </statement>
+
+          <feedback>
+            <p>Remember that getPoints() is not a static method</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p><c>Level.getPoints(levelOne)</c></p>
+          </statement>
+
+          <feedback>
+            <p>
+              Remember that getPoints() is not a static method and does not have a parameter.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+
+              <activity label="FRQ-2022-Game-Score-Part0">
+      <statement>
+        <p>
+          Complete the getScore method below. The score is calculated by adding the points from each level, but in this version, level 2 points are doubled, and level 3 points are tripled. 
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+            public class Game
+{
+    private Level levelOne, levelTwo, levelThree;
+
+    public int getScore()
+    {
+        /* write your code here */
+        return -1;
+    }
+
+    /* Don't change any code after this comment */
+
+    public static void main(String[] args)
+    {
+        Level levelOne = new Level(100, true);
+        Level levelTwo = new Level(100, true);
+        Level levelThree = new Level(200, true);
+
+        Game game = new Game(levelOne, levelTwo, levelThree);
+        System.out.println("The score is: " + game.getScore());
+    }
+
+    public Game(Level level1, Level level2, Level level3)
+    {
+        levelOne = level1;
+        levelTwo = level2;
+        levelThree = level3;
+    }
+
+}
+
+/* The Level class: do not change */
+class Level
+{
+    private int points;
+    private boolean goal;
+
+    /** Constructor for the Level class */
+    public Level(int p, boolean g)
+    {
+        points = p;
+        goal = g;
+    }
+
+    /** Returns true if the player reached the goal on this level and returns false otherwise */
+    public boolean goalReached()
+    { return goal; }
+
+    /** Returns the number of points recorded for this level */
+    public int getPoints()
+    { return points; }
+}
+
+          </code>
+          <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        String code = getCode();
+        code = code.substring(0, code.indexOf("class Level"));
+        int count = countOccurences(code, ".getPoints()");
+        
+        String desc = "Calls to .getPoints()";
+        
+        boolean passed = getResults(""+3, ""+count, desc);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test01() {
+        Level l1 = new Level(100, true);
+        Level l2 = new Level(100, true);
+        Level l3 = new Level(200, true);
+        
+        int exp = 100 + 200 + 3 * 200;
+        
+        boolean passed = test(l1, l2, l3, exp);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test02() {
+        Level l1 = new Level(100, true);
+        Level l2 = new Level(200, true);
+        Level l3 = new Level(300, true);
+        
+        int exp = 100 + 2 * 200 + 3 * 300;
+        
+        boolean passed = test(l1, l2, l3, exp);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test03() {
+        Level l1 = new Level(300, true);
+        Level l2 = new Level(200, true);
+        Level l3 = new Level(100, true);
+        
+        int exp = 300 + 2 * 200 + 3 * 100;
+        
+        boolean passed = test(l1, l2, l3, exp);
+        assertTrue(passed);
+    }
+    
+    private boolean test(Level l1, Level l2, Level l3, int exp) {
+        Game g = new Game(l1, l2, l3);
+        
+        int result = g.getScore();
+        
+        boolean passed = result == exp;
+        
+        String desc = "Final score for " + l1.getPoints() + ", " + l2.getPoints() + ", and " + l3.getPoints();
+        
+        getResults(""+exp, ""+result, desc, passed);        
+        return passed;        
+    }
+}
+          </tests>
+            </program>
+        </activity>
+
+
+
+    </subsection>
+
+    <subsection xml:id="calling-static-methods">
+    <title>Calling Static Methods</title>
+        <p>Some methods are static methods and should be called using the class name instead of an object.</p>
+        <p>Math methods are static methods:</p>
+        <ul>
+            <li>
+                <p>
+                    <c>Math.random()</c>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <c>Math.pow(x, y)</c>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <c>Math.abs(x)</c>
+                </p>
+            </li>
+        </ul>
+
+    </subsection>
+</section>
