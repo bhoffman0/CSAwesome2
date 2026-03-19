@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1A-Part3">
+  <title>Free Response Question 1A - Loops</title>
+  <introduction>
+    <idx>frq1a-conditions</idx>
+    <idx>free response</idx>
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. In Part B (3 points), the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1A requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call a method in the same class or from an object</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main.</li>
+</ul>
+
+  </introduction>
+
+<!-- done -->
+    <subsection xml:id="for-loops">
+    <title>For Loops</title>
+<p>The syntax of a for loop is like this:</p>
+
+<program language="java">
+<code>
+for (int i = start; i &lt; end; i++) {
+  /* code you want to repeat */
+}
+</code>
+</program>
+
+<p>Typically the start value is whatever provided and the end value is not included. If you want to include the end, change the &lt; to &lt;=.
+</p>
+
+<p>For loops are most often used when the problem requires the code to repeat over a range of values. Several common algorithms that use for loops and if statements are:</p>
+<ul>
+<li>calculating the sum or average of a set of values</li>
+<li>counting the number of times a condition is met within a range of values</li>
+<li>calculating the minimum or maximum value in a set of values</li>
+</ul>
+
+<p>Many of these algorithms fit the <term>accumulator pattern</term>: an algorithm that loops through a set of values and updates an accumulator variable based on those values.</p>
+
+<p>There are four steps to the accumulator pattern:</p>
+<ul>
+<li>initialize the accumulator variable before the loop</li>
+<li>loop through the values</li>
+<li>update the accumulator variable inside the loop</li>
+<li>return the accumulated value (if necessary)</li>
+</ul>
+
+<p>The following FRQs can all be solved with the accumulator pattern and for loops.</p>
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="frq1a-2019-apcalendar-a">
+<title>2019 FRQ - APCalendar Part (a)</title>
+
+<p>The APCalendar class contains methods used to calculate information about a calendar. You will write one methods of the class.</p>
+
+<program language="java">
+<code>
+public class APCalendar
+{
+  /** Returns true if year is a leap year and false otherwise. */
+  private static boolean isLeapYear(int year)
+  { /* implementation not shown */ }
+  
+  /** Returns the number of leap years between year1 and year2, inclusive.
+  * Precondition: 0 &lt;= year1 &lt;= year2
+  */
+  public static int numberOfLeapYears(int year1, int year2)
+  { /* to be implemented below */ }
+
+  // There may be instance variables, constructors, and other methods not shown.
+}
+</code>
+</program>
+
+<activity label="FRQ-2019-APCalendar-PartA">
+<statement>
+<p>Write the static method numberOfLeapYears, which returns the number of leap years between year1 and year2, inclusive.</p>
+<p>In order to calculate this value, a helper method is provided for you.</p>
+<ul><li><p><c>isLeapYear(year)</c> returns true if year is a leap year and false otherwise.</p></li></ul>
+<p>Complete method numberOfLeapYears below. You must use isLeapYear appropriately to receive full credit.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.GregorianCalendar;
+
+public class APCalendar
+{
+    /**
+     * Returns the number of leap years between year1 and year2, inclusive.
+     * Precondition: 0 &lt;= year1 &lt;= year2
+     */
+    public static int numberOfLeapYears(int year1, int year2)
+    {
+        // WRITE YOUR CODE HERE
+
+    }
+
+    /* do not change anything below this line */
+
+    public static void main(String[] args)
+    {
+        int answer = APCalendar.numberOfLeapYears(2000, 2050);
+        System.out.println("Your answer should be 13: " + answer);
+    }
+
+    /** Returns true if year is a leap year and false otherwise. */
+    private static boolean isLeapYear(int year)
+    {
+        return new GregorianCalendar().isLeapYear(year);
+    }
+
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("APCalendar");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your answer should be 13: 13";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        int answer = APCalendar.numberOfLeapYears(1990, 2100);
+        int expect = 27;
+
+        boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(1990, 2100)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        int answer = APCalendar.numberOfLeapYears(2001, 2002);
+        int expect = 0;
+
+        boolean passed = getResults("" + expect, "" + answer, "numberOfLeapYears(2001, 2002)");
+        assertTrue(passed);
+    }
+}
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="frq1a-2022-game-b">
+<title>2022 FRQ - Game Part (b)</title>
+
+<p>Play of the game is represented by the Game class. You will write one method of the Game class.</p>
+  
+<program language="java">
+<code>
+public class Game
+{
+  private Level levelOne;
+  private Level levelTwo;
+  private Level levelThree;
+
+  /** Postcondition: All instance variables have been initialized. */
+  public Game()
+  { /* implementation not shown */ }
+
+  /** Returns true if this game is a bonus game and returns false otherwise */
+  public boolean isBonus()
+  { /* implementation not shown */ }
+
+  /** Simulates the play of this Game (consisting of three levels) and updates all relevant
+  * game data
+  */
+  public void play()
+  { /* implementation not shown */ }
+
+  /** Returns the score earned in the most recently played game, as described in part (a) */
+  public int getScore()
+  { /* to be implemented in part (a) */ }
+
+  /** Simulates the play of num games and returns the highest score earned, as
+  * described in part (b)
+  * Precondition: num &gt; 0
+  */
+  public int playManyTimes(int num)
+  { /* to be implemented below */ }
+
+  // There may be instance variables, constructors, and methods that are not shown.
+}
+
+</code>
+</program>
+
+
+<activity label="FRQ-2022-Game-PartB">
+<statement>
+<p>Write the <c>playManyTimes</c> method, which simulates the play of num games and returns the highest game score earned. For example, if the four plays of the game that are simulated as a result of the method call playManyTimes(4) earn scores of 75, 50, 90, and 20, then the method should return 90.</p>
+<p>Play of the game is simulated by calling the helper method play. Note that if play is called only one time followed by multiple consecutive calls to <c>getScore</c>, each call to <c>getScore</c> will return the score earned in the single simulated play of the game.</p>
+<p>Complete the <c>playManyTimes</c> method. Assume that <c>getScore</c> works as intended. You must call play and getScore appropriately in order to receive full credit.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class Game
+{
+    /* the Level objects */
+    private Level levelOne, levelTwo, levelThree;
+    private boolean bonus;
+
+    /** Simulates the play of num games and returns the highest score earned, as
+     * described in part (b)
+     * Precondition: num &gt; 0
+     */
+    public int playManyTimes(int num)
+    {
+        
+    }
+
+    /* Do NOT change any code beyond this comment */
+
+    public Game(int[] s)
+    {
+        scores = s;
+        score = -1;
+        i = 0;
+    }
+
+    public boolean isBonus()
+    {
+        return bonus;
+    }
+
+    public static void main(String[] args)
+    {
+        int[] scores = {75, 50, 90, 20};
+        Game g1 = new Game(scores);
+        int max = g1.playManyTimes(scores.length);
+        System.out.println("Highest score from 75, 50, 90, 20: " + max);
+    }
+    
+    public void play() {
+        score = scores[i];
+        i++;
+    }
+    
+    public int getScore()
+    {
+        return score;
+    }
+
+    private int[] scores;
+    private int score;
+    private int i;
+}
+class Level
+{
+    private int points;
+    private boolean goal;
+
+    /** Constructor for the Level class */
+    public Level(int p, boolean g)
+    {
+        points = p;
+        goal = g;
+    }
+
+    /** Returns true if the player reached the goal on this level and returns false otherwise */
+    public boolean goalReached()
+    { return goal; }
+
+    /** Returns the number of points recorded for this level */
+    public int getPoints()
+    { return points; }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test001() {
+        String code = getCode();
+        String exp = "play();";
+        
+        boolean passed = code.contains("play();");
+        
+        getResults("true",""+passed, "Code contains call to play()");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test002() {
+        String code = getCode();
+        String exp = "getScore();";
+        
+        boolean passed = code.contains("getScore();");
+        
+        getResults("true",""+passed, "Code contains call to getScore()");
+        assertTrue(passed);
+    }
+    
+    
+    @Test
+    public void test01() {
+        int[] scores = {10, 70, 65, 35, 45, 50, 85, 50};
+        int exp = 85;
+        
+        boolean passed = test(scores, exp);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test02() {
+        int[] scores = {45, 15, 20, 35, 85, 65, 50, 80, 90, 60, 5, 20};
+        int exp = 90;
+        
+        boolean passed = test(scores, exp);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test03() {
+        int[] scores = {50, 20, 40, 15, 45, 25, 35, 55, 30, 95, 100, 75};
+        
+        int exp = 100;
+        
+        boolean passed = test(scores, exp);
+        assertTrue(passed);
+    }
+    
+    private boolean test(int[] scores, int exp) {
+        Game g = new Game(scores);
+        
+        int result = g.playManyTimes(scores.length);
+        
+        boolean passed = result == exp;
+        
+        String desc = "Highest score for " + Arrays.toString(scores);
+        
+        getResults(""+exp, ""+result, desc, passed);        
+        return passed;        
+    }
+}
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="frq1a-2025-dogwalker-b">
+<title>2025 FRQ - DogWalker Part (b)</title>
+
+<p>This question involves dog walkers who are paid through a dog-walking company to take dogs for one-hour walks. A dog-walking company has a varying number of dogs that need to be walked during each hour of the day. A dog-walking company is represented by the following DogWalkCompany class.</p>
+
+<program language="java">
+<code>
+public class DogWalkCompany
+{
+  /**
+  * Returns the number of dogs, always greater than 0, that are available
+  * for a walk during the time specified by hour
+  * Precondition: 0 &lt;= hour &lt;= 23
+  */
+  public int numAvailableDogs(int hour)
+  { /* implementation not shown */ }
+
+  /**
+  * Decreases, by numberDogsWalked, the number of dogs available for a walk
+  * during the time specified by hour
+  * Preconditions: 0 &lt;= hour &lt;= 23
+  * numberDogsWalked &gt; 0
+  */
+  public void updateDogs(int hour, int numberDogsWalked)
+  { /* implementation not shown */ }
+
+  /* There may be instance variables, constructors,
+  and methods that are not shown. */
+}
+</code>
+</program>
+
+<p>A dog walker is associated with a dog-walking company and is represented by the DogWalker class. You will write one method of the DogWalker class.</p>
+
+<program language="java">
+<code>
+public class DogWalker
+{
+  /** The maximum number of dogs this walker can walk simultaneously
+  per hour */
+  private int maxDogs;
+  /** The dog-walking company this dog walker is associated with */
+  private DogWalkCompany company;
+  
+  /**
+  * Assigns max to maxDogs and comp to company
+  * Precondition: max &gt; 0
+  */
+  public DogWalker(int max, DogWalkCompany comp)
+  { /* implementation not shown */ }
+
+  /**
+  * Takes at least one dog for a walk during the time specified by
+  * hour, as described in part (a)
+  * Preconditions: 0 &lt;= hour &lt;= 23
+  * maxDogs &gt; 0
+  */
+  public int walkDogs(int hour)
+  { /* implementation not shown */ }
+
+  /**
+  * Performs an entire dog-walking shift and returns the amount
+  * earned, in dollars, as described in part (b)
+  * Preconditions: 0 &lt;= startHour &lt;= endHour &lt;= 23
+  * maxDogs &gt; 0
+  */
+  public int dogWalkShift(int startHour, int endHour)
+  { /* to be implemented below */ }
+
+  /* There may be instance variables, constructors, and methods that are not shown. */
+}
+</code>
+</program>
+
+<activity label="FRQ-25-DogWalker-PartB">
+<statement>
+
+<p>Write the dogWalkShift method, which performs a dog-walking shift of the hours in the range startHour to endHour, inclusive, and returns the total amount earned. For example, a dog-walking shift from 14 to 16 is composed of three one-hour dog walks starting at hours 14, 15, and 16.</p>
+<p>For each hour, the base pay is $5 per dog walked plus a bonus of $3 if at least one of the following is true.</p>
+<ul>
+  <li>maxDogs dogs are walked</li>
+  <li>the walk occurs between the peak hours of 9 and 17, inclusive</li>
+</ul>
+<p>The following table shows an example of the calculated amount earned by walking dogs from hour 7 through hour 10, inclusive.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1a-part3-dogwalker-b-table.png" width="100%" />
+</figure>
+
+<p>Complete method dogWalkShift. Assume that walkDogs works as specified. You must use walkDogs appropriately to earn full credit.</p>
+
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class DogWalker
+{
+    /** The maximum number of dogs this walker can walk simultaneously per hour */
+    private int maxDogs;
+    
+    /** The dog-walking company this dog walker is associated with */
+    private DogWalkCompany company;
+
+    /**
+     * Performs an entire dog-walking shift and returns the amount
+     * earned, in dollars, as described in part (b)
+     * Preconditions: 0 &lt;= startHour &lt;= endHour &lt;= 23
+     * maxDogs &gt; 0
+     */
+    public int dogWalkShift(int startHour, int endHour)
+    { 
+        /* WRITE YOUR CODE HERE */ 
+        
+    }
+
+    /* Do not change anything below this comment */
+    
+    /**
+     * Assigns max to maxDogs and comp to company
+     * Precondition: max &gt; 0
+     */
+    public DogWalker(int max, DogWalkCompany comp)
+    {
+        maxDogs = max;
+        company = comp;
+    }
+    
+    public static void main(String[] args) {
+        DogWalkCompany comp = new DogWalkCompany();
+        
+        DogWalker walker1 = new DogWalker(3, comp);
+        DogWalker walker2 = new DogWalker(4, comp);
+        DogWalker walker3 = new DogWalker(5, comp);
+        
+        int resultB1 = walker1.dogWalkShift(7, 10);
+        int resultB2 = walker2.dogWalkShift(3, 5);
+        int resultB3 = walker3.dogWalkShift(12, 17);
+        
+        System.out.println("Walker 1 should earn 59: " + resultB1);
+        System.out.println("Walker 2 should earn 38: " + resultB2);        
+        System.out.println("Walker 3 should earn 138: " + resultB3);
+    }
+
+    /**
+     * Takes at least one dog for a walk during the time specified by
+     * hour, as described in part (a)
+     * Preconditions: 0 &lt;= hour &lt;= 23
+     * maxDogs &gt; 0
+     */
+    public int walkDogs(int hour)
+    { 
+        int dogs = company.numAvailableDogs(hour);
+        
+        if (dogs &gt;= maxDogs) {
+            company.updateDogs(hour, dogs);
+            return dogs;
+        } else {
+            company.updateDogs(hour, maxDogs);
+            return maxDogs;
+        }
+    }
+}
+
+class DogWalkCompany
+{
+    private int[] dogs;
+    
+    public DogWalkCompany() {
+        dogs = new int[] {10, 3, 2, 2, 1, 5, 4, 3, 2, 2, 3, 1, 5, 4, 5, 2, 5, 3, 2, 1, 3, 3, 1, 5};
+    }
+    
+    /**
+     * Returns the number of dogs, always greater than 0, that are available
+     * for a walk during the time specified by hour
+     * Precondition: 0 &lt;= hour &lt;= 23
+     */
+    public int numAvailableDogs(int hour)
+    { return dogs[hour]; }
+
+    /**
+     * Decreases, by numberDogsWalked, the number of dogs available for a walk
+     * during the time specified by hour
+     * Preconditions: 0 &lt;= hour &lt;= 23
+     * numberDogsWalked &gt; 0
+     */
+    public void updateDogs(int hour, int numberDogsWalked)
+    { dogs[hour] -= numberDogsWalked; }
+    
+    /* There may be instance variables, constructors,
+    and methods that are not shown. */
+}
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test06() {
+        boolean passed = testPartB(3, 7, 10, 59);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test07() {
+        boolean passed = testPartB(4, 3, 5, 38);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test08() {
+        boolean passed = testPartB(5, 12, 17, 138);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test09() {
+        boolean passed = testPartB(2, 8, 17, 125);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test10() {
+        boolean passed = testPartB(1, 0, 23, 192);
+        assertTrue(passed);        
+    }
+    
+    private boolean testPartB(int max, int start, int end, int exp) {
+        DogWalkCompany comp = new DogWalkCompany();
+        DogWalker walker = new DogWalker(max, comp);
+        
+        int result = walker.dogWalkShift(start, end);
+        
+        boolean passed = result == exp;
+        
+        String desc = "Walker should earn " + exp +": " + result;
+        
+        getResults(""+exp, ""+result, desc, passed);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+<!-- not done -->
+<subsection xml:id="while-loops">
+<title>While Loops</title>
+<p>While loops are used when we are unsure of how many times the loop will need to repeat. It will based on a condition, similar to an if statement that repeats.</p>
+
+<program language="java">
+<code>
+while (/* condition */) {
+  /* code you want to repeat */
+}
+</code>
+</program>
+
+<p>The loop continues as long as the condition is true. It will stop once the condition is false. If the condition is never false, the loop will repeat infinitely.</p>
+
+<p>The following examples show two different implementations of while loops being used in an FRQ.</p>
+
+</subsection>
+
+<subsection xml:id="frq1a-self-divisor-A">
+<title>While Loops</title>
+<p>This question involves a class called SelfDivisor.</p>
+
+<program language="java">
+<code>
+public class SelfDivisor
+{
+  /** @param number the number to be tested
+  * Precondition: number &gt; 0
+  * @return true if every decimal digit of number is a divisor of number;
+  * false otherwise
+  */
+  public static boolean isSelfDivisor(int number)
+  { /* to be implemented below */ }
+
+  // There may be fields, constructors, and methods that are not shown.
+}
+
+</code>
+</program>
+
+<p>A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that
+is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a selfdivisor
+because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly
+divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0
+digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
+
+<p>
+  The algorithm for this problem is:
+</p>
+
+<ul>
+<li><p>Repeat while the number is greater than 0</p></li>
+  <ul>
+  <li><p>Access the right-most digit of number using <c>num % 10</c></p></li>
+  <li><p>Do something with the right-most digit. In this case, if the original number is not divisible by digit, return false</p></li>
+  <li><p>Remove the right-most digit of number by dividing number by 10 (<c>num / 10</c>)</p></li>
+  </ul>
+<li><p>If it makes it all the way through the loop without returning false, return true</p></li>
+</ul>
+<p>To access the right-most digit, you should use <c>num % 10</c>. To access the rest of the digit, you should use <c>num / 10</c>.</p>
+
+<activity label="FRQ-2007-Self-Divisor-PartA">
+<statement>
+<p>A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that
+is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a selfdivisor
+because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly
+divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0
+digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
+<p>Write method isSelfDivisor, which takes a positive integer as its parameter. This method returns true if the number is a self-divisor; otherwise, it returns false.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class SelfDivisor
+{
+    /**
+     * @param number the number to be tested Precondition: number > 0
+     * @return true if every decimal digit of number is a divisor of number; false
+     *     otherwise
+     */
+    public static boolean isSelfDivisor(int number)
+    {
+        // part A
+    }
+
+    /****************/
+
+    public static void main(String[] args)
+    {
+        System.out.println("128: " + isSelfDivisor(128));
+        System.out.println("26: " + isSelfDivisor(26));
+        System.out.println("120: " + isSelfDivisor(120));
+        System.out.println("102: " + isSelfDivisor(102));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = "128: true\n26: false\n120: false\n102: false\n";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testIfLoop()
+    {
+        String code = getCode();
+        boolean passed = code.contains("if") &amp;&amp; (code.contains("for") || code.contains("while"));
+        getResults(
+                "Expected loop, if, %", "" + passed, "Checking for loop and if statement", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testModDiv()
+    {
+        String code = getCode();
+        boolean passed = code.contains("%") &amp;&amp; code.contains("/");
+        getResults("Expected % and /", "" + passed, "Checking for use of % and /", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testFunction1()
+    {
+        Object[] args = {128};
+        String output = getMethodOutput("isSelfDivisor", args);
+        String expect = "true";
+        boolean passed = getResults(expect, output, "isSelfDivisor(128)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testFunction2()
+    {
+        Object[] args = {26};
+        String output = getMethodOutput("isSelfDivisor", args);
+        String expect = "false";
+        boolean passed = getResults(expect, output, "isSelfDivisor(26)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testFunction3()
+    {
+        Object[] args = {120};
+        String output = getMethodOutput("isSelfDivisor", args);
+        String expect = "false";
+        boolean passed = getResults(expect, output, "isSelfDivisor(120)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testFunction4()
+    {
+        Object[] args = {102};
+        String output = getMethodOutput("isSelfDivisor", args);
+        String expect = "false";
+
+        boolean passed = getResults(expect, output, "isSelfDivisor(102)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testFunction5()
+    {
+        Object[] args = {124};
+        String output = getMethodOutput("isSelfDivisor", args);
+        String expect = "true";
+
+        boolean passed = getResults(expect, output, "isSelfDivisor(124)");
+        assertTrue(passed);
+    }
+}
+</tests>
+</program>
+</activity>
+</subsection>
+
+<subsection xml:id="frq1a-2025c-messagebuilder-a">
+<title>2025 FRQ - Message Builder Part (a)</title>
+<p>This FRQ also uses a while loop in a manner similar to getting input from a user or a file.</p>
+
+
+
+
+<activity label="FRQ-2025-MessageBuilder-PartA">
+<statement>
+<p>Complete the MessageBuilder constructor below that builds a message starting with the startingWord specified by the parameter. It should use a while loop to add on to the message using the given getNextWord method and increment numWords. Make sure there are spaces between the words in the message.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class MessageBuilder
+{
+    private String message; // To be initialized in part (a)
+    private int numWords;   // To be initialized in part (a)
+
+    /**
+    *  Part A: MessageBuilder(startingWord) constructor
+    *  Builds a message of words with spaces in betwee
+    *  starting with the word in the parameter
+    *  and counts the number of words in the message.
+    *  Precondition: startingWord is a single word with no spaces.
+    */    
+    public MessageBuilder(String startingWord)
+    {
+        // WRITE YOUR CODE HERE
+
+
+    }
+
+    /* These variables and methods were added to simulate Example 1 for testing purposes 
+     (implementation not shown in AP exam)
+     */
+
+
+    public String getNextWord(String s)
+    {   
+        if(currentWordIndex &lt; wordsForTesting.length - 1)
+        {
+            currentWordIndex++;
+            return wordsForTesting[currentWordIndex];
+        }
+        else
+        {
+            return null;
+        }
+    }
+    public String getMessage()
+    {
+        return message;
+    } 
+    public int getNumWords()
+    {
+        return numWords;
+    }
+    public static void main(String[] args) 
+    {
+        MessageBuilder builder = new MessageBuilder("the");
+        System.out.println("Message: " + builder.getMessage());
+        System.out.println("Number of words: " + builder.getNumWords());
+    }
+
+    private String[] wordsForTesting = {"the", "book", "on", "the", "table"};
+    private int currentWordIndex = 0;
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Message: the book on the table\nNumber of words: 5\n";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+    
+     @Test
+        public void testWhile() {
+          boolean passed = checkCodeContains("while loop","while");
+         assertTrue(passed);
+        }
+        @Test
+        public void testNumWordsInc() {
+          boolean passed = checkCodeContains("numWords++");
+         assertTrue(passed);
+        }
+        @Test
+        public void testNextWordCall() {
+          boolean passed = checkCodeContains("getNextWord(nextWord)");
+         assertTrue(passed);
+        }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+</section>

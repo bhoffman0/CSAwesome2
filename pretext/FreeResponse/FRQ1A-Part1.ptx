@@ -16,10 +16,10 @@
 <li>Use a for loop or a while loop</li>
 </ul>
 
-<p>Important Notes</p>
+<p>Teacher Insights</p>
 <ul>
 <li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
-<li>You will NOT make a main. Ever.</li>
+<li>You will NOT need to write a main.</li>
 </ul>
   
     <p>
@@ -37,33 +37,9 @@
       The return type determines the type of information the method returns.
     </p>
 
-    <table>
-        <tr>
-            <th>Method Header</th>
-            <th>Return Type</th>
-            <th>Note</th>
-        </tr>
-        <tr>
-            <td><c>public void simulate()</c></td>
-            <td><c>void</c></td>
-            <td>Void means that the method does not return anything</td>
-        </tr>        
-        <tr>
-            <td><c>public int count()</c></td>
-            <td><c>int</c></td>
-            <td>This needs to return an int</td>
-        </tr>
-        <tr>
-            <td><c>public double average()</c></td>
-            <td><c>double</c></td>
-            <td>This needs to return a double, so you need to make sure your answer is a double.</td>
-        </tr>
-        <tr>
-            <td><c>public Game()</c></td>
-            <td>n/a</td>
-            <td>This is a constructor, which cannot return anything.</td>
-        </tr>
-    </table>
+    <figure align="center">
+      <image source="FreeResponse/Figures/frq1a-part1-returntypes.png" width="100%" />
+    </figure>
 
     <p>Recommendation: If you have a return type, create a variable of that type, set it to zero, and immediately return it. Then add code in the middle!!!</p>
     </subsection>
@@ -145,70 +121,11 @@ public class APCalendar
 </ul>
 
 <p>This table shows how the calculations would be made:</p>
-<table>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p>month</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>day</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>year</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>firstDayOfYear(year)</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>dayOfYear(month, day, year)</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>Returned</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p>1</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>5</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>2019</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>2</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>5</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>(2 + 5 - 1) % 7 = 6</p>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="1" rowspan="1">
-                    <p>1</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>10</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>2019</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>2</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>10</p>
-                </td>
-                <td colspan="1" rowspan="1">
-                    <p>(2 + 10 - 1) % 7 = 4</p>
-                </td>
-            </tr>
-        </table>
+    <figure align="center">
+      <image source="FreeResponse/Figures/frq1a-part1-apcalendar-b-table.png" width="100%" />
+    </figure>
 
-    <activity label="chooseType1">
+    <activity label="frq1a1-chooseType1">
       <statement>
         <p>What is the return type of this method?</p>
       </statement>
@@ -259,7 +176,7 @@ public class APCalendar
       </choices>
     </activity>
 
-    <activity label="chooseType2">
+    <activity label="frq1a1-chooseType2">
       <statement>
         <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>firstDayOfYear</c> method?</p>
       </statement>
@@ -308,7 +225,7 @@ public class APCalendar
       </choices>
     </activity>
 
-    <activity label="chooseType3">
+    <activity label="frq1a1-chooseType3">
       <statement>
         <p>The <c>dayOfWeek</c> method includes the parameters month, day, year. What is the correct way to call the <c>dayOfYear</c> method?</p>
       </statement>
@@ -333,7 +250,7 @@ public class APCalendar
           </feedback>
         </choice>
 
-        <choice correct="yes">
+        <choice>
           <statement>
             <p><c>dayOfYear(year)</c></p>
           </statement>
@@ -464,6 +381,30 @@ public class RunestoneTests extends CodeTestHelper
 
   </subsection>
 
+    <subsection xml:id="calling-static-methods">
+    <title>Calling Static Methods</title>
+        <p>Some methods are static methods and should be called using the class name instead of an object.</p>
+        <p>Math methods are static methods:</p>
+        <ul>
+            <li>
+                <p>
+                    <c>Math.random()</c>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <c>Math.pow(x, y)</c>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <c>Math.abs(x)</c>
+                </p>
+            </li>
+        </ul>
+
+    </subsection>
+
     <subsection xml:id="calling-methods-on-objects">
     <title>Calling Methods on Objects</title>
         <p>Sometimes you need to call methods on objects. In most FRQs, these objects will already exist. We will specifically look at calling String methods later.</p>
@@ -524,7 +465,7 @@ public class Game
     The score is calculated by adding the points from each level, but in this version, level 2 points are doubled, and level 3 points are tripled. You are to write the getScore method in Game.
 </p>
 
-<activity label="chooseType4">
+<activity label="frq1a1-chooseType4">
       <statement>
         <p>What is the return type of this method?</p>
       </statement>
@@ -575,7 +516,7 @@ public class Game
       </choices>
     </activity>
 
-    <activity label="chooseType5">
+    <activity label="frq1a1-chooseType5">
       <statement>
         <p>How do you call the <c>getPoints()</c> method for levelOne?</p>
       </statement>
@@ -764,30 +705,6 @@ public class RunestoneTests extends CodeTestHelper
         </activity>
 
 
-
-    </subsection>
-
-    <subsection xml:id="calling-static-methods">
-    <title>Calling Static Methods</title>
-        <p>Some methods are static methods and should be called using the class name instead of an object.</p>
-        <p>Math methods are static methods:</p>
-        <ul>
-            <li>
-                <p>
-                    <c>Math.random()</c>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <c>Math.pow(x, y)</c>
-                </p>
-            </li>
-            <li>
-                <p>
-                    <c>Math.abs(x)</c>
-                </p>
-            </li>
-        </ul>
 
     </subsection>
 </section>
