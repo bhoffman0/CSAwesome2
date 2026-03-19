@@ -67,7 +67,7 @@ else  // note that the else does not have () or a condition
 </subsection>
 
 <!-- done -->
-<subsection xml:id="2025-frq-1A-dogwalker-A">
+<subsection xml:id="frq1a-2025-dogwalker-A">
 <title>2025 FRQ: Dog Walker Part (a)</title>
 
 <p>
@@ -184,7 +184,7 @@ public int walkDogs(int hour)
 </choices>
 </activity>
 
-<activity label="FRQ-2025-DogWalker-PartA">
+<activity label="frq1a-2025-dogwalker-a">
 <statement>
 <p>
 Complete method <c>walkDogs</c>. You must use <c>numAvailableDogs</c> and <c>updateDogs</c> appropriately to receive full credit.
@@ -365,7 +365,7 @@ else // note that the else does not have () or a condition
 </subsection>
 
 <!-- done -->
-<subsection xml:id="2022-frq-1A-game-A">
+<subsection xml:id="frq1a-2022-game-A">
 <title>2022 FRQ: Game Part (a)</title>
 <p>This question involves simulation of the play and scoring of a single-player video game. In the game, a player attempts to complete three levels. A level in the game is represented by the Level class.</p>
 
@@ -414,7 +414,7 @@ public class Game
 </program>
 
 
-<activity label="FRQ-2022-Game-PartA">
+<activity label="frq1a-2022-Game-PartA">
 <statement>
 <p>Write the getScore method, which returns the score for the most recently played game. Each game consists of three levels. The score for the game is computed using the following helper methods.</p>
 <ul>
@@ -610,7 +610,7 @@ public class RunestoneTests extends CodeTestHelper
 
     </subsection>
 <!-- done -->
-    <subsection xml:id="2024-frq-1A-Feeder-A">
+    <subsection xml:id="frq1a-2024-Feeder-A">
     <title>2024 FRQ: Feeder Part (a)</title>
 
 <p>This question simulates birds or possibly a bear eating at a bird feeder. The following Feeder class contains information about how much food is in the bird feeder and simulates how much food is eaten. You will write two methods of the Feeder class.</p>
@@ -658,7 +658,7 @@ total of 110 grams of food will be consumed.</p>
 
 <!--TODO: add choice questions-->
 
-<activity label="FRQ-2024-Feeder-PartA">
+<activity label="frq1a-2024-Feeder-PartA">
 <statement>
 <p>Write the <c>simulateOneDay</c> method, which simulates numBirds birds or possibly a bear at the
 feeder for one day. The method determines the amount of food taken from the feeder on this day and
