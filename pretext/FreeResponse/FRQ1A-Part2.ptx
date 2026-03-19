@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1A-Part2">
+<title>Free Response Question 1A - Conditions and If Statements</title>
+<introduction>
+    <idx>frq1a-conditions</idx>
+    <idx>free response</idx>
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. In Part B (3 points), the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1A requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call a method in the same class or from an object</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main.</li>
+</ul>
+
+</introduction>
+
+<subsection xml:id="if-statements-and-conditions">
+<title>If Statements and Conditions</title>
+<p>If statements can be used to change the behavior of a method. The basic syntax is:</p>
+<program language="java">
+<code>
+if(/* condition */) {
+    this occurs if the condition is true
+}
+</code>
+</program>
+
+<p>If statements can also have else statements. An else is not required. The basic syntax is:</p>
+<program language="java">
+<code>
+if(/* condition */) {
+    /* this occurs if the condition is true */
+}
+else  // note that the else does not have () or a condition
+{
+    /* this occurs if the condition is false */
+}
+</code>
+</program>
+
+<p>Remember that conditional statements can include many things:</p>
+<ul>
+    <li><p>comparison of a variable to a value using &lt;, &gt;, &lt;=, &gt;=, ==, !=</p></li>
+    <li><p>multiple conditions combined with &amp;&amp; (and), || (or), and/or ! (not)</p></li>
+    <li><p>calls to a method that returns a boolean value</p></li>
+    <li><p>calls to a method that returns an int or double value with a comparison operator</p></li>
+</ul>
+
+<p>Examples:</p>
+<ul>
+<li><p>age &lt; 17</p></li>
+<li><p>age &gt;= 13 &amp;&amp; age &lt; 17</p></li>
+<li><p>average(nums) &lt; 10</p></li>
+<li><p>isRaining()</p></li>
+</ul>
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="2025-frq-1A-dogwalker-A">
+<title>2025 FRQ: Dog Walker Part (a)</title>
+
+<p>
+This FRQ requires you to call multiple methods and use an if statement.
+</p>
+
+<p>
+This question involves dog walkers who are paid through a dog-walking company to take dogs for one-hour walks. A dog-walking company has a varying number of dogs that need to be walked during each hour of the day. A dog-walking company is represented by the following DogWalkCompany class.
+</p>
+
+<program language="java">
+    <code>
+public class DogWalkCompany
+{
+/**
+* Returns the number of dogs, always greater than 0, that are available
+* for a walk during the time specified by hour
+* Precondition: 0 &lt;= hour &lt;= 23
+*/
+public int numAvailableDogs(int hour)
+{ /* implementation not shown */ }
+
+/**
+* Decreases, by numberDogsWalked, the number of dogs available for a walk
+* during the time specified by hour
+* Preconditions: 0 &lt;= hour &lt;= 23
+* numberDogsWalked &gt; 0
+*/
+public void updateDogs(int hour, int numberDogsWalked)
+{ /* implementation not shown */ }
+
+/* There may be instance variables, constructors, and methods that are not shown. */
+}
+    </code>
+</program>
+
+<p>A dog walker is associated with a dog-walking company and is represented by the DogWalker class. You will write two methods of the DogWalker class.</p>
+
+<program language="java">
+    <code>
+public class DogWalker
+{
+/** The maximum number of dogs this walker can walk simultaneously per hour */
+private int maxDogs;
+
+/** The dog-walking company this dog walker is associated with */
+private DogWalkCompany company;
+
+/**
+* Assigns max to maxDogs and comp to company
+* Precondition: max &gt; 0
+*/
+public DogWalker(int max, DogWalkCompany comp)
+{ /* implementation not shown */ }
+
+/**
+* Takes at least one dog for a walk during the time specified by
+* hour, as described in part (a)
+* Preconditions: 0 &lt;= hour &lt;= 23
+* maxDogs &gt; 0
+*/
+public int walkDogs(int hour)
+{ /* to be implemented in part (a) */ }
+
+/* There may be instance variables, constructors, and methods that are not shown. */ 
+}
+</code>
+</program>
+
+<p>Write the walkDogs method, which updates and returns the number of dogs this dog walker walks during the time specified by hour. Values of hour range from 0 to 23, inclusive.</p>
+<p>A helper method, <c>numAvailableDogs</c>, has been provided in the DogWalkCompany class. The method returns the number of dogs available to be taken for a walk at a given hour. The dog walker will always walk as many dogs as the dog-walking company has available to walk, as long as the available number of dogs is not greater than the maximum number of dogs that the dog walker can handle, represented by the value of maxDogs.</p>
+<p>Another helper method, <c>updateDogs</c>, has also been provided in the DogWalkCompany class. So that multiple dog walkers do not sign up to walk the same dogs, the walkDogs method should use updateDogs to update the dog-walking company with the number of dogs this dog walker will walk during the given hour. The parameters of the updateDogs method indicate how many dogs this dog walker will walk during the time specified by hour.</p>
+<p>For example, if the dog-walking company has 10 dogs that need to be walked at the given hour but the dog walker's maximum is 4, the updateDogs method should be used to indicate that this dog walker will walk 4 of the 10 dogs during the given hour. As another example, if the dog-walking company has 3 dogs that need to be walked at the given hour and the dog walker’s maximum is 4, the updateDogs method should be used to indicate that this dog walker will walk all 3 of the available dogs during the given hour.</p>
+<p>The walkDogs method should return the number of dogs to be walked by this dog walker during the time specified by hour.</p>
+<p>You must use <c>numAvailableDogs</c> and <c>updateDogs</c> appropriately to receive full credit.</p>
+
+<activity label="frq1a2-chooseType1">
+<statement><p>What is the return type of <c>walkDogs</c>?</p></statement>
+<choices>
+<choice ><statement><p>void</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return something</p></feedback></choice>
+<choice correct="yes"><statement><p>int</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return an int</p></feedback></choice>
+<choice ><statement><p>double</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return a whole number</p></feedback></choice>
+<choice ><statement><p>boolean</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so true/false wouldn't work</p></feedback></choice>
+</choices>
+</activity>
+
+<activity label="frq1a2-chooseType2">
+<statement><p>How do you call <c>numAvailableDogs</c> and store the result as a variable?</p></statement>
+<choices>
+<choice ><statement><p><c>int dogsToWalk = numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and needs to be called on an object</p></feedback></choice>
+<choice ><statement><p><c>int dogsToWalk = this.numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and cannot be called on this</p></feedback></choice>
+<choice ><statement><p><c>int dogsToWalk = DogWalkCompany.numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and needs to be called on an object</p></feedback></choice>
+<choice correct="yes"><statement><p><c>int dogsToWalk = company.numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and needs to be called on an object (company)</p></feedback></choice>
+</choices>
+</activity>
+
+<activity label="frq1a2-chooseType3">
+<statement><p>How do you determine how many dogs were walked?</p></statement>
+<choices>
+<choice ><statement><p>it will always be the number of available dogs</p></statement><feedback><p></p></feedback></choice>
+<choice ><statement><p>it will always be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
+<choice ><statement><p>if the maximum number of dogs is greater than the dogs to walk, it will be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
+<choice correct="yes"><statement><p>if the number of dogs to walk is greater than the maximum number of dogs, it will be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
+</choices>
+</activity>
+
+<activity label="frq1a2-chooseType4">
+<statement><p>How do you call updateDogs?</p></statement>
+<choices>
+<choice correct="yes"><statement><p><c>company.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
+<choice ><statement><p><c>DogWalkCompany.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
+<choice ><statement><p><c>this.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
+<choice><statement><p><c>updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
+</choices>
+</activity>
+
+<activity label="FRQ-2025-DogWalker-PartA">
+<statement>
+<p>
+Complete method <c>walkDogs</c>. You must use <c>numAvailableDogs</c> and <c>updateDogs</c> appropriately to receive full credit.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class DogWalker
+{
+    /** The maximum number of dogs this walker can walk simultaneously
+    per hour */
+    private int maxDogs;
+
+    /** The dog-walking company this dog walker is associated with */
+    private DogWalkCompany company;
+
+    /**
+        * Takes at least one dog for a walk during the time specified by
+        * hour, as described in part (a)
+        * Preconditions: 0 &lt;= hour &lt;= 23
+        * maxDogs &gt; 0
+        */
+    public int walkDogs(int hour)
+    { 
+        /* to be implemented in part (a) */ 
+        return -1;
+    }
+
+    /* Do not change anything below this comment */
+
+    /**
+        * Assigns max to maxDogs and comp to company
+        * Precondition: max &gt; 0
+        */
+    public DogWalker(int max, DogWalkCompany comp)
+    {
+        maxDogs = max;
+        company = comp;
+    }
+
+    public static void main(String[] args) {
+        DogWalkCompany comp = new DogWalkCompany();
+        
+        DogWalker walker1 = new DogWalker(3, comp);
+        DogWalker walker2 = new DogWalker(4, comp);
+        DogWalker walker3 = new DogWalker(5, comp);
+        
+        int resultsA1 = walker1.walkDogs(1);
+        int resultsA2 = walker2.walkDogs(0);
+        int resultsA3 = walker3.walkDogs(2);
+        
+        System.out.println("Walker 1 (max of 3) should walk 3 dogs: " + resultsA1);
+        System.out.println("Company should now have 6 dogs: " + comp.numAvailableDogs(0));
+        System.out.println("Walker 2 (max of 4) should walk 4 dogs: " + resultsA2);
+        System.out.println("Company should now have 0 dogs: " + comp.numAvailableDogs(1));
+        System.out.println("Walker 3 (max of 5) should walk 2 dogs: " + resultsA3);
+        System.out.println("Company should now have 0 dogs: " + comp.numAvailableDogs(2));
+    }
+}
+
+class DogWalkCompany
+{
+    private int[] dogs;
+
+    public DogWalkCompany() {
+        dogs = new int[] {10, 3, 2, 2, 1, 5, 4, 3, 2, 2, 3, 1, 5, 4, 5, 2, 5, 3, 2, 1, 3, 3, 1, 5};
+    }
+
+    /**
+        * Returns the number of dogs, always greater than 0, that are available
+        * for a walk during the time specified by hour
+        * Preconditions: 0 &lt;= hour &lt;= 23
+        */
+    public int numAvailableDogs(int hour)
+    { return dogs[hour]; }
+
+    /**
+        * Decreases, by numberDogsWalked, the number of dogs available for a walk
+        * during the time specified by hour
+        * Preconditions: 0 &lt;= hour &lt;= 23
+        * numberDogsWalked &gt; 0
+        */
+    public void updateDogs(int hour, int numberDogsWalked)
+    { dogs[hour] -= numberDogsWalked; }
+
+    /* There may be instance variables, constructors,
+    and methods that are not shown. */
+}
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test01() {
+        boolean passed = testPartA(4, 0, 4, 6);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02() {
+        boolean passed = testPartA(2, 1, 2, 1);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test03() {
+        boolean passed = testPartA(5, 3, 2, 0);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test04() {
+        boolean passed = testPartA(1, 2, 1, 1);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test05() {
+        boolean passed = testPartA(0, 4, 0, 1);
+        assertTrue(passed);        
+    }
+
+    private boolean testPartA(int max, int hour, int exp, int remain) {
+        DogWalkCompany comp = new DogWalkCompany();
+        DogWalker walker = new DogWalker(max, comp);
+        
+        int result = walker.walkDogs(hour);
+        
+        int left = comp.numAvailableDogs(hour);
+        
+        boolean passed = result == exp &amp;&amp; left == remain;
+        
+        String desc = "Walker (max of " + max + ") should walk " + exp + " dogs\n";
+        desc += "Company should now have " + remain + " dogs: " + left;
+        
+        getResults(""+exp, ""+result, desc, passed);        
+        return passed;
+    }
+}     
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="nested-if-statements">
+<title>Nested If Statements</title>
+<p>Nested if statements allow for multiple conditions to be tested. It is very important that you use curly braces to indicate which parts of an if statement are connected to other parts.</p>
+<program language="java">
+<code>
+if(/* condition1 */) {
+    if(/* condition1 */) {
+        /* this occurs if both conditions are true */
+    } else {
+        /* this occurs if condition1 is true, but condition2 is false */
+    }
+}
+else // note that the else does not have () or a condition
+{ 
+    if(/* condition3 */) {
+        /* this occurs if condition1 is false but condition3 is true */
+    } else {
+        /* this occurs if both conditions are false */
+    }
+}
+</code>
+</program>
+<p>Note that the else is not always needed.</p>
+
+<p>The following FRQ uses nested logic to determine the final score of a game.</p>
+</subsection>
+
+<!-- done -->
+<subsection xml:id="2022-frq-1A-game-A">
+<title>2022 FRQ: Game Part (a)</title>
+<p>This question involves simulation of the play and scoring of a single-player video game. In the game, a player attempts to complete three levels. A level in the game is represented by the Level class.</p>
+
+<program language="java">
+<code>
+public class Level
+{
+    /** Returns true if the player reached the goal on this level and returns false otherwise */
+    public boolean goalReached()
+    { /* implementation not shown */ }
+
+    /** Returns the number of points (a positive integer) recorded for this level */
+    public int getPoints()
+    { /* implementation not shown */ }
+    
+    // There may be instance variables, constructors, and methods that are not shown.
+}
+</code>
+</program>
+
+<p>Play of the game is represented by the Game class. You will write one method of the Game class.</p>
+
+<program language="java">
+<code>
+public class Game
+{
+    private Level levelOne;
+    private Level levelTwo;
+    private Level levelThree;
+    
+    /** Postcondition: All instance variables have been initialized. */
+    public Game()
+    { /* implementation not shown */ }
+    
+    /** Returns true if this game is a bonus game and returns false otherwise */
+    public boolean isBonus()
+    { /* implementation not shown */ }
+    
+    /** Returns the score earned in the most recently played game, as described in part (a) */
+    public int getScore()
+    { /* to be implemented below */ }
+
+    // There may be instance variables, constructors, and methods that are not shown.
+}
+</code>
+</program>
+
+
+<activity label="FRQ-2022-Game-PartA">
+<statement>
+<p>Write the getScore method, which returns the score for the most recently played game. Each game consists of three levels. The score for the game is computed using the following helper methods.</p>
+<ul>
+<li><p>The isBonus method of the Game class returns true if this is a bonus game and returns false otherwise.</p></li>
+<li><p>The goalReached method of the Level class returns true if the goal has been reached on a particular level and returns false otherwise.</p></li>
+<li><p>The getPoints method of the Level class returns the number of points recorded on a particular level. Whether or not recorded points are earned (included in the game score) depends on the rules of the game, which follow.</p></li>
+</ul>
+
+<p>The score for the game is computed according to the following rules.</p>
+<ul>
+<li><p>Level one points are earned only if the level one goal is reached. Level two points are earned only if both the level one and level two goals are reached. Level three points are earned only if the goals of all three levels are reached.</p></li>
+<li><p>The score for the game is the sum of the points earned for levels one, two, and three.</p></li>
+<li><p>If the game is a bonus game, the score for the game is tripled.</p></li>
+</ul>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1a-part2-game-a-table.png" width="100%" />
+</figure>
+
+<p>Complete the getScore method.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class Game
+{
+    /* the Level objects */
+    private Level levelOne;
+    private Level levelTwo;
+    private Level levelThree;
+    private boolean bonus;
+
+    /* Complete the getScore() method below */
+    public int getScore()
+    {
+        int score = 0;
+        // Write your code here
+
+
+
+        return score;
+    }
+
+
+    public Game( int p1, boolean g1, int p2, boolean g2, int p3, boolean g3, boolean b )
+    {
+        levelOne = new Level( p1, g1 );
+        levelTwo = new Level( p2, g2 );
+        levelThree = new Level( p3, g3 );
+        bonus = b;
+    }
+
+    public boolean isBonus()
+    {
+        return bonus;
+    }
+
+    public static void main(String[] args)
+    {
+        // These are the AP test cases given in the problem description
+        Game g1 = new Game(200,true,100,true,500,true,true);
+        // This should print out 2400
+        System.out.println( g1.getScore() );
+
+        Game g2 = new Game(200,true,100,true,500,false,false);
+        // This should print out 300
+        System.out.println( g2.getScore() );
+
+        Game g3 = new Game(200,true,100,false,500,true,true);
+        // This should print out 600
+        System.out.println( g3.getScore() );
+
+        Game g4 = new Game(200,false,100,true,500,true,false);
+        // This should print out 0
+        System.out.println( g4.getScore() );
+
+
+    }
+
+}
+class Level
+{
+    private int points;
+    private boolean goal;
+
+    /** Constructor for the Level class */
+    public Level(int p, boolean g)
+    {
+        points = p;
+        goal = g;
+    }
+
+    /** Returns true if the player reached the goal on this level and returns false otherwise */
+    public boolean goalReached()
+    { return goal; }
+
+    /** Returns the number of points recorded for this level */
+    public int getPoints()
+    { return points; }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+   public RunestoneTests()
+   {
+       super("Game");
+        // This sets default values for when objects are instantiated
+       Object[] values = new Object[] {100, true, 100, true, 100, false, true};
+       setDefaultValues(values);
+   }
+   @Test
+   public void testMain() throws IOException
+   {
+       String output = getMethodOutput("main");
+       String expect = "2400\n300\n600\n0\n";
+
+       boolean passed = getResults(expect, output, "Output from main");
+       assertTrue(passed);
+   }
+   @Test
+   public void checkCodeContains1()
+   {
+       boolean passed = checkCodeContains(
+        "call to levelThree.getPoints()", "levelThree.getPoints()");
+       assertTrue(passed);
+   }
+    @Test
+   public void checkCodeContains2()
+   {
+       boolean passed = checkCodeContains(
+        "call to levelThree.goalReached()", "levelThree.goalReached()");
+       assertTrue(passed);
+   }
+    @Test
+   public void testCall() throws IOException
+   {
+       int output = Integer.parseInt(
+         getMethodOutput("getScore"));
+       int expect = 600;
+
+       boolean passed = getResults(expect, output, "Checking another call to getScore()");
+       assertTrue(passed);
+   }
+}    
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<!-- done -->
+<subsection xml:id="random-behavior">
+<title>Random Behavior</title>
+
+<p>The <c>Math.random()</c> method allows for interesting random behavior.</p>
+
+<p>Using <c>Math.random()</c> in a condition allows something to happen a certain percentage of the time. For example, <c>if (Math.random() &lt; 0.10)</c> will cause something to happen 10% of the time. </p>
+
+
+    <!--TODO: add choice questions-->
+
+<p>Math.random() can also be used to generate a random number in a specific range. There are some important things to keep in mind.</p>
+<ul>
+    <li>
+        <p>
+            <c>Math.random()</c> returns a random double (decimal) between 0 and 0.999999. It will never return 1. 
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>Math.random()*range</c> returns a random double between 0 and range, not including range.
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>Math.random()*range + min</c> returns a random number from min to (min+range), exclusive.
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>(int) (Math.random()*range + min)</c> returns a random integer from min to (min+range), exclusive.
+        </p>
+    </li>
+</ul>
+
+<!--TODO: add choice questions-->
+
+<p>The 2024 FRQ Feeder uses random numbers in both of these ways to make interesting things happen.</p>
+
+    </subsection>
+<!-- done -->
+    <subsection xml:id="2024-frq-1A-Feeder-A">
+    <title>2024 FRQ: Feeder Part (a)</title>
+
+<p>This question simulates birds or possibly a bear eating at a bird feeder. The following Feeder class contains information about how much food is in the bird feeder and simulates how much food is eaten. You will write two methods of the Feeder class.</p>
+
+<program language="java">
+<code>
+public class Feeder
+{
+    /**
+    * The amount of food, in grams, currently in the bird feeder; initialized in the constructor and
+    * always greater than or equal to zero
+    */
+    private int currentFood;
+    /**
+    * Simulates one day with numBirds birds or possibly a bear at the bird feeder,
+    * as described in part (a)
+    * Precondition: numBirds &gt; 0
+    */
+    public void simulateOneDay(int numBirds)
+    { /* to be implemented in part (a) */ }
+    /**
+    * Returns the number of days birds or a bear found food to eat at the feeder in this simulation,
+    * as described in part (b)
+    * Preconditions: numBirds &gt; 0, numDays &gt; 0
+    */
+    public int simulateManyDays(int numBirds, int numDays)
+    { /* to be implemented in part (b) */ }
+    // There may be instance variables, constructors, or methods that are not shown.
+}
+</code>
+</program>
+
+<p>Write the <c>simulateOneDay</c> method, which simulates numBirds birds or possibly a bear at the
+feeder for one day. The method determines the amount of food taken from the feeder on this day and
+updates the currentFood instance variable. The simulation accounts for normal conditions, which
+occur 95% of the time, and abnormal conditions, which occur 5% of the time. </p>
+<p>Under normal conditions, the simulation assumes that on any given day, only birds visit the feeder and
+that each bird at the feeder consumes the same amount of food. This standard amount consumed is
+between 10 and 50 grams of food, inclusive, in 1-gram increments. That is, on any given day, each bird
+might eat 10, 11, . . . , 49, or 50 grams of food. The amount of food eaten by each bird on a given day is
+randomly generated and each integer from 10 to 50, inclusive, has an equal chance of being chosen. </p>
+<p>For example, a run of the simulation might predict that for a certain day under normal conditions, each
+bird coming to the feeder will eat 11 grams of food. If 10 birds come to the feeder on that day, then a
+total of 110 grams of food will be consumed.</p>
+
+<!--TODO: add choice questions-->
+
+<activity label="FRQ-2024-Feeder-PartA">
+<statement>
+<p>Write the <c>simulateOneDay</c> method, which simulates numBirds birds or possibly a bear at the
+feeder for one day. The method determines the amount of food taken from the feeder on this day and
+updates the currentFood instance variable. The simulation accounts for normal conditions, which
+occur 95% of the time, and abnormal conditions, which occur 5% of the time. </p>
+<p>Under normal conditions, the simulation assumes that on any given day, only birds visit the feeder and
+that each bird at the feeder consumes the same amount of food. This standard amount consumed is
+between 10 and 50 grams of food, inclusive, in 1-gram increments. That is, on any given day, each bird
+might eat 10, 11, . . . , 49, or 50 grams of food. The amount of food eaten by each bird on a given day is
+randomly generated and each integer from 10 to 50, inclusive, has an equal chance of being chosen. </p>
+<p>For example, a run of the simulation might predict that for a certain day under normal conditions, each
+bird coming to the feeder will eat 11 grams of food. If 10 birds come to the feeder on that day, then a
+total of 110 grams of food will be consumed.</p>
+<p>If the simulated food consumed is greater than the amount of food in the feeder, the birds empty the
+feeder and the amount of food in the feeder at the end of the day is zero.</p>
+<p>Under abnormal conditions, a bear empties the feeder and the amount of food in the feeder at the end of the day is zero. </p>
+<p>The following examples show possible results of three calls to simulateOneDay.</p>
+
+<ul>
+    <li>
+        <p>
+            Example 1: If the feeder initially contains 500 grams of food, the call <c>simulateOneDay(12)</c> could result in 12 birds eating 20 grams of food each, leaving 260 grams of food in the feeder.
+        </p>
+    </li>
+    <li>
+        <p>
+            Example 2: If the feeder initially contains 1,000 grams of food, the call <c>simulateOneDay(22)</c> could result in a bear eating all the food, leaving 0 grams of food in the feeder.
+        </p>
+    </li>
+    <li>
+        <p>
+            Example 3: If the feeder initially contains 100 grams of food, the call <c>simulateOneDay(5)</c> could result in 5 birds attempting to eat 30 grams of food each. Since the feeder initially contains less than 150 grams of food, the feeder is emptied, leaving 0 grams of food in the feeder.
+        </p>
+    </li>
+</ul>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class Feeder
+{
+    /**
+     * The amount of food, in grams, currently in the bird feeder; initialized in the constructor and
+     * always greater than or equal to zero
+     */
+    private int currentFood;
+    /**
+     * Simulates one day with numBirds birds or possibly a bear at the bird feeder,
+     * as described in part (a)
+     * Precondition: numBirds &gt; 0
+     */
+    public void simulateOneDay(int numBirds)
+    { 
+        /* write your code here */ 
+
+    }
+
+    /* do not change anything below this comment */
+    public Feeder(int curr) {
+        currentFood = curr;
+    }
+
+    public int getCurrentFood(){
+        return currentFood;
+    }
+
+    public static void main(String[] args) {
+        Feeder example1 = new Feeder(500);
+        example1.simulateOneDay(12);
+        System.out.println("Feeder contains 500 grams of food, 12 birds leave " + example1.getCurrentFood());
+
+        Feeder example2= new Feeder(1000);
+        example2.simulateOneDay(22);
+        System.out.println("Feeder contains 1000 grams of food, 22 birds leave " + example2.getCurrentFood());
+
+        Feeder example3 = new Feeder(100);
+        example3.simulateOneDay(5);
+        System.out.println("Feeder contains 500 grams of food, 12 birds leave " + example3.getCurrentFood());
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        int food = 500;
+        int birds = 12;
+        
+        int remain = testPartA(food, birds);
+        
+        int i = 0; 
+        
+        while (i &lt; 100 &amp;&amp; remain != 0) {
+            remain = testPartA(food, birds);
+            i++;
+        }
+        
+        boolean passed = remain == 0;
+        
+        String desc = "Feeder contains "+ food + " grams of food, " + birds + " birds leave " + remain;
+        
+        getResults("0", ""+remain, desc, passed);        
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test01() {
+        int food = 500;
+        int birds = 12;
+        
+        int remain = testPartA(food, birds);
+        
+        int i = 0; 
+        
+        while (i &lt; 100 &amp;&amp; remain == 0) {
+            remain = testPartA(food, birds);
+            i++;
+        }
+        
+        boolean passed = remain &gt; 0;
+        
+        String desc = "Feeder contains "+ food + " grams of food, " + birds + " birds leave " + remain;
+        
+        getResults("&gt; 0", ""+remain, desc, passed);        
+        assertTrue(passed);
+    }
+    
+    public int testPartA(int food, int birds) {
+        Feeder example1 = new Feeder(food);
+        example1.simulateOneDay(birds);
+        int remain = example1.getCurrentFood();
+        return remain;
+    }
+    
+    @Test
+    public void test02() {
+        String code = getCode();
+        code = getMethodCode(code, "simulateOneDay");
+        
+        String[] lines = code.split("\n");
+        String actual = "";
+        
+        for (String line : lines) {
+            if (line.contains("Math.random()") &amp;&amp; (line.contains(".05") || line.contains(".95"))) {
+                actual += line.trim() + "\n";
+            }
+        }
+        
+        boolean passed = stringMatch(actual, "&lt;.05") || stringMatch(actual, "&gt;.95") || stringMatch(actual, "&gt;0.95") || stringMatch(actual, "&lt;0.05");
+        String desc = "Math.random() used for 5% chance of bear";
+        
+        getResults("&lt; 0.05", actual, desc, passed);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test03() {
+        String code = getCode();
+        code = getMethodCode(code, "simulateOneDay");
+        
+        String[] lines = code.split("\n");
+        String actual = "";
+        
+        for (String line : lines) {
+            if (line.contains("Math.random()") &amp;&amp; line.contains("41")) {
+                actual += line.trim() + "\n";
+            }
+        }
+        
+        boolean range = stringMatch(actual, "41");
+        boolean add = stringMatch(actual, "+1");
+        boolean cast = stringMatch(actual, "(int)");
+        
+        String expect = "Range: " + range + "\nShift: "+add + "\nCast: " + cast;
+        
+        boolean passed = range &amp;&amp; add &amp;&amp; cast;
+        String desc = "Math.random() used for random food (10 to 50, inclusive)";
+        
+        getResults(expect, actual, desc, passed);
+        assertTrue(passed);        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+</section>
