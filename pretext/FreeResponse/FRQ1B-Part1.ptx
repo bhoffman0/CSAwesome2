@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1B-Part1">
+  <title>FRQ 1B - Strings - Part 1</title>
+  <introduction>
+    <idx>frq1-methods</idx>
+    <idx>frq1b-strings</idx>
+    <idx>free response</idx>
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. </p>
+    <p>In Part B (3 points)<term></term>, the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1B requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call String methods</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main.</li>
+</ul>
+  </introduction>
+
+<subsection xml:id="frq1b1-string-methods">
+<title>String Methods</title>
+<p>The following methods are on the quick reference, which you can view <url href="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf" visual="https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-java-quick-reference.pdf">on the College Board Website</url>.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1b-part1-string-methods-qr.png" width="100%" />
+</figure>
+
+<p>There are other methods in the String class that may also be helpful while writing FRQs, but it is important to remember that all FRQs can be solved using just the methods in the Quick Reference. If you use a method that is not on the Quick Reference, you must use it correctly to earn points.</p>
+<p>The following activities can all be solved with just the methods in the Quick Reference.</p>
+
+</subsection>
+
+<subsection xml:id="frq1b1-emailparser">
+<title>String Method - EmailParser</title>
+
+<activity label="frq1b1-emailparser">
+<statement>
+<p>Write the getDomain method for the EmailParser class. This method is intended to isolate the server information from a full email address.</p>
+<p>The getDomain method takes one parameter, a String called email. The method should identify the location of the "at-symbol" (@) and return only the portion of the string that appears after that symbol.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class EmailParser
+{
+    public static String getDomain(String email) {
+        
+        
+    }
+    
+    public static void main(String[] args)
+    {
+        // Test Case 1: Standard email
+        String email1 = "student@school.edu";
+        System.out.println("Test 1: " + email1);
+        System.out.println("Expected: school.edu");
+        System.out.println("Actual:   " + EmailParser.getDomain(email1));
+        System.out.println();
+
+        // Test Case 2: Different domain length
+        String email2 = "john.doe@gmail.com";
+        System.out.println("Test 2: " + email2);
+        System.out.println("Expected: gmail.com");
+        System.out.println("Actual:   " + EmailParser.getDomain(email2));
+        System.out.println();
+
+        // Test Case 3: Subdomain
+        String email3 = "dev@api.service.io";
+        System.out.println("Test 3: " + email3);
+        System.out.println("Expected: api.service.io");
+        System.out.println("Actual:   " + EmailParser.getDomain(email3));
+        System.out.println();
+
+        String email4 = "invalid-email";
+        System.out.println("Edge Case (No @): " + email4);
+        System.out.println("Expected: invalid-email");
+        System.out.println("Actual: " + EmailParser.getDomain(email4)); 
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;import java.util.Arrays;
+import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] email = {"nina@gmail.com", "user@me.co", "boss@mail.uk.edu", "a@work.com", "@nameless.com", "bad-input.com"};
+    private String[] expected = {"gmail.com", "me.co", "mail.uk.edu", "work.com", "nameless.com", "bad-input.com"};
+    
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test4() {
+        boolean passed = test(5);
+        assertTrue(passed);
+    }
+    
+    private boolean test(int i) {
+        String actual = EmailParser.getDomain(email[i]);
+        
+        String desc = "getDomain(\"" + email[i] + "\")";
+        
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b1-phoneprocessor">
+<title>String Method - Phone Processor</title>
+<activity label="frq1b1-phoneprocessor">
+<statement>
+<p>Write a method called <c>getAreaCode</c> that extracts the 3-digit area code from a formatted phone number. The area code will be the three digits between the parentheses.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class PhoneProcessor {
+    public static String getAreaCode(String phoneNumber) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // Example 1: Standard Format
+        String phone1 = "(800) 555-0100";
+        System.out.println("Input: " + phone1);
+        System.out.println("Area Code: " + getAreaCode(phone1));
+        System.out.println();
+
+        // Example 2: Different Numbers
+        String phone2 = "(415) 888-9999";
+        System.out.println("Input: " + phone2);
+        System.out.println("Area Code: " + getAreaCode(phone2));
+        System.out.println();
+
+        // Example 3: Leading spaces (still works because of indexOf)
+        String phone3 = "   (702) 111-2222";
+        System.out.println("Input: " + phone3);
+        System.out.println("Area Code: " + getAreaCode(phone3));
+    }
+}
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] phones = {"(916) 555-1234", "(123)456-7890", "(000) 000-0000", "Phone: (510) 555-1212", "()"};
+    private String[] expected = {"916", "123", "000", "510", ""};
+    
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+    
+    private boolean test(int i) {
+        String actual = "" + PhoneProcessor.getAreaCode(phones[i]);
+        
+        String desc = "getAreaCode(\"" + phones[i] + "\")";
+        
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b1-isvowel">
+<title>String Method - Letter Identifier</title>
+
+<activity label="frq1b1-isvowel">
+<statement>
+<p>Write a method called isVowel that checks if a given String represents a single vowel. If the letter does not have a length of 1, the method should return false.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class LetterIdentifier
+{
+    private static String vowels = "aeiouAEIOU";
+
+    public static boolean isVowel(String letter) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // Example 1: Lowercase vowel
+        System.out.println("Testing 'a': " + isVowel("a")); // Expected: true
+
+        // Example 2: Uppercase vowel
+        System.out.println("Testing 'E': " + isVowel("E")); // Expected: true
+
+        // Example 3: Consonant
+        System.out.println("Testing 'z': " + isVowel("z")); // Expected: false
+
+        // Example 4: Multiple characters (Validation check)
+        System.out.println("Testing 'ae': " + isVowel("ae")); // Expected: false
+
+        // Example 5: Non-alphabetic character
+        System.out.println("Testing '!': " + isVowel("!")); // Expected: false
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] letters = {"i", "O", "X", "apple", ""};
+    private String[] expected = {"true", "true", "false", "false", "false"};
+    
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+    
+    private boolean test(int i) {
+        String actual = "" + LetterIdentifier.isVowel(letters[i]);
+        
+        String desc = "isVowel(\"" + letters[i] + "\")";
+        
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+}
+</tests>
+</program>
+</activity>
+</subsection>
+
+<subsection xml:id="frq1b1-createusername">
+<title>String Method - Create User Name</title>
+
+<activity label="frq1b1-createusername">
+<statement>
+<p>This class creates a username by taking the first letter of the first name and the first five letters of the last name. It uses an if statement to handle cases where the last name is shorter than five characters.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class UserProfile {
+    public static String createHandle(String firstName, String lastName) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // Example 1: Standard names
+        System.out.println("Input: Charles, Babbage");
+        System.out.println("Handle: " + UserProfile.createHandle("Charles", "Babbage"));
+        System.out.println();
+
+        // Example 2: Last name exactly 5 characters
+        System.out.println("Input: Margaret, Hamil");
+        System.out.println("Handle: " + UserProfile.createHandle("Margaret", "Hamil"));
+        System.out.println();
+
+        // Example 3: Very short last name
+        System.out.println("Input: Alan, Tu");
+        System.out.println("Handle: " + UserProfile.createHandle("Alan", "Tu"));
+    }
+}
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] firstnames = {"Katherine", "Anita", "Guido", "Radia", "J"};
+    private String[] lastnames = {"Johnson", "Borg", "Van", "Perlm", "Smith"};
+    private String[] expected = {"KJohns", "ABorg", "GVan", "RPerlm", "JSmith"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "createHandle(\"" + firstnames[i] + "\", \"" + lastnames[i] + "\")";
+
+        try {
+            String actual = "" + UserProfile.createHandle(firstnames[i],lastnames[i]);
+
+
+            boolean passed = getResults(expected[i],actual,desc);
+            return passed;       
+        } catch (Exception e) {
+            boolean passed = getResults(expected[i],"There was an error",desc);
+            return passed;  
+        }
+
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b1-tagparser">
+<title>String Method - Tag Parser</title>
+
+<activity label="frq1b1-tagparser">
+<statement>
+<p>A common task is extracting text between two delimiters (like HTML tags). Uses indexOf to find the start and end and substring to grab what's in the middle. Return "not found" if the the tags are not found, not balanced, or backwards</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class TagParser {
+    public static String getContent(String html) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // Test 1: Standard case
+        String html1 = "&lt;p&gt;Hello World&lt;/p&gt;";
+        System.out.println("Test 1: " + html1);
+        System.out.println("Result: " + TagParser.getContent(html1));
+        System.out.println();
+
+        // Test 2: Text before and after the tags
+        String html2 = "Body text: &lt;p&gt;Important Info&lt;/p&gt; Footer";
+        System.out.println("Test 2: " + html2);
+        System.out.println("Result: " + TagParser.getContent(html2));
+        System.out.println();
+
+        // Test 3: Tag order reversed (Edge Case)
+        String html3 = "&lt;/p&gt;Wrong Order&lt;p&gt;";
+        System.out.println("Test 3: " + html3);
+        System.out.println("Result: " + TagParser.getContent(html3));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input = {"&lt;p&gt;Success&lt;/p&gt;", "&lt;p&gt;No closing tag", "No opening tag&lt;/p&gt;", "&lt;/p&gt;Bad order&lt;p&gt;", "&lt;p&gt;&lt;/p&gt;"};
+    private String[] expected = {"Success", "not found", "not found", "not found", ""};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "getContent(\"" + input[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = TagParser.getContent(input[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b1-swapstrings">
+<title>String Method - Swap Strings</title>
+
+<activity label="frq1b1-swapstrings">
+<statement>
+<p>This class takes a two-word string (separated by a space) and returns a new string where the words are swapped. Use indexOf to find the pivot point and length() to ensure there is actually a second word.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class StringScrambler {
+    public static String swapTwoWords(String phrase) {
+
+    }
+    
+
+    public static void main(String[] args) {
+        // Test 1: Standard two-word phrase
+        String p1 = "Hello World";
+        System.out.println("Input: " + p1);
+        System.out.println("Result: " + StringScrambler.swapTwoWords(p1));
+        System.out.println();
+
+        // Test 2: Different word lengths
+        String p2 = "Java Programming";
+        System.out.println("Input: " + p2);
+        System.out.println("Result: " + StringScrambler.swapTwoWords(p2));
+        System.out.println();
+
+        // Test 3: Single word (No space)
+        String p3 = "Computer";
+        System.out.println("Input: " + p3);
+        System.out.println("Result: " + StringScrambler.swapTwoWords(p3));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input = {"Apple Banana", "A B", "SpaceAtEnd ", "OneTwoThree", "Blue Red Green"};
+    private String[] expected = {"Banana Apple", "B A", "SpaceAtEnd ", "OneTwoThree", "Red Green Blue"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "swapTwoWords(\"" + input[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = StringScrambler.swapTwoWords(input[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+  <!--
+<subsection xml:id="frq1b1-">
+<title>String Method - </title>
+<p></p>
+
+<activity label="frq1b1-">
+<statement>
+<p></p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+
+</code>
+<tests>
+
+</tests>
+</program>
+</activity>
+
+</subsection>
+-->
+</section>

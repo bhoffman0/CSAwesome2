@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="FRQ2-Intro">
-<title>Free Response Question 2 - Classes</title>
+<section xml:id="FRQ2-Part1">
+<title>FRQ 2 - Class Design - Intro</title>
 <introduction>
-    <idx>frq1a-classes</idx>
+    <idx>frq2-classes</idx>
     <idx>free response</idx>
     <p>From the 2025 Course and Exam Description: </p>
-    <p><term>Free-Response Question 2: Methods and Control Structures</term>. Students will be instructed to design and implement a class based on provided specifications and examples. A second class might also be included. Students will be provided with a scenario and specifications in the form of a table demonstrating ways to interact with the class and the results. The class must include a class header, instance variables, a constructor, a method, and implementation of the constructor and required method.</p>
+    <p><term>Free-Response Question 2: Class Design</term>. Students will be instructed to design and implement a class based on provided specifications and examples. A second class might also be included. Students will be provided with a scenario and specifications in the form of a table demonstrating ways to interact with the class and the results. The class must include a class header, instance variables, a constructor, a method, and implementation of the constructor and required method.</p>
 
 <p>FRQ 2 requires the following skills:</p>
 <ul>
@@ -67,7 +67,17 @@ beginning and appended to the end of the parameter.</p></li>
 // Make sure you make the class header public
 
 {
+    // Private instance variables
+
     
+    // Constructor
+
+
+    // Methods
+
+
+
+    // Do not change any code below this point
 
     public static void main(String[] args) 
     {
