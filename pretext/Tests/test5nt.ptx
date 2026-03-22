@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="test5nt">
-  <title>Exam 5 for the AP CSA Exam (not timed)</title>
+  <title>Practice Exam - Inheritance (not timed)</title>
   <p>
     The following problems are similar to what you might see on the AP CSA exam.
     Please answer each to the best of your ability.
@@ -1207,118 +1207,7 @@ for(int k = 4; k &lt; 10; k +=2)
     </choices>
   </activity>
 
-  <activity label="qtnt5_16">
-    <statement>
-      <p>Consider the following code. What is printed?</p>
-      <program language="java">
-        <code>
-class Dog
-{
 
-    public void act()
-    {
-        System.out.print("run ");
-        eat();
-    }
-
-    public void eat()
-    {
-        System.out.print("eat ");
-    }
-}
-
-public class UnderDog extends Dog
-{
-
-    public void act()
-    {
-        super.act();
-        System.out.print("sleep ");
-    }
-
-    public void eat()
-    {
-        super.eat();
-        System.out.print("bark ");
-    }
-
-    public static void main(String[] args)
-    {
-        Dog fido = new UnderDog();
-        fido.act();
-    }
-}
-        </code>
-      </program>
-    </statement>
-
-    <choices>
-      <choice>
-        <statement>
-          <p>run eat</p>
-        </statement>
-
-        <feedback>
-          <p>
-            Because the fido is an "Underdog", we will call the eat() from class
-            Underdog, http://tinyurl.com/AP19-Q25
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>run eat sleep</p>
-        </statement>
-
-        <feedback>
-          <p>
-            Because the fido is an "Underdog", we will call the eat() from class
-            Underdog, http://tinyurl.com/AP19-Q25
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>run eat sleep bark</p>
-        </statement>
-
-        <feedback>
-          <p>
-            Because the fido is an "Underdog", we will call the eat() from class
-            Underdog, http://tinyurl.com/AP19-Q25
-          </p>
-        </feedback>
-      </choice>
-
-      <choice correct="yes">
-        <statement>
-          <p>run eat bark sleep</p>
-        </statement>
-
-        <feedback>
-          <p>
-            Because the fido is an "Underdog", we will call the eat() from class
-            Underdog, http://tinyurl.com/AP19-Q25
-          </p>
-        </feedback>
-      </choice>
-
-      <choice>
-        <statement>
-          <p>Nothing is printed due to infinite recursion</p>
-        </statement>
-
-        <feedback>
-          <p>
-            Because the fido is an "Underdog", we will call the eat() from class
-            Underdog, http://tinyurl.com/AP19-Q25
-          </p>
-        </feedback>
-      </choice>
-    </choices>
-  </activity>
 
   <activity label="qtnt5_17">
     <statement>

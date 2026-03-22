@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="FRQ1A-Part1">
-  <title>Free Response Question 1A - Methods and Return Values</title>
+  <title>FRQ 1A - Methods and Control - Part 1</title>
   <introduction>
     <idx>frq1a-methods</idx>
     <idx>free response</idx>
@@ -559,7 +559,7 @@ public class Game
       </choices>
     </activity>
 
-              <activity label="FRQ-2022-Game-Score-Part0">
+    <activity label="FRQ-2022-Game-Score-Part0">
       <statement>
         <p>
           Complete the getScore method below. The score is calculated by adding the points from each level, but in this version, level 2 points are doubled, and level 3 points are tripled. 
@@ -568,7 +568,7 @@ public class Game
 
       <program interactive="activecode" language="java">
         <code>
-            public class Game
+public class Game
 {
     private Level levelOne, levelTwo, levelThree;
 

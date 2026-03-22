@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1B-Part3">
+  <title>FRQ 1B - Strings - Part 3</title>
+  <introduction>
+    <idx>frq1-methods</idx>
+    <idx>frq1b-strings</idx>
+    <idx>free response</idx>
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. </p>
+    <p>In Part B (3 points)<term></term>, the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1B requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call String methods</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main.</li>
+</ul>
+
+</introduction>
+
+<subsection xml:id="frq1b3-practice-frqs">
+<title>Note - Practice FRQs</title>
+<p>There are very few examples of FRQ1B, since it has only existed since 2025-2026. You will see several examples of Strings being used in FRQs 2-3 in the following lessons.</p>
+<p>Here are a few unofficial FRQs that are written more like an official FRQ. </p>
+
+</subsection>
+
+<subsection xml:id="frq1b3-EmailFilter">
+<title>Practice FRQ - The EmailFilter Class</title>
+<p>A system is being designed to "sanitize" email subject lines by removing specific "flagged" words and replacing them with a placeholder. You will write the method sanitizeSubject.</p>
+<p>The sanitizeSubject method takes two parameters: a String subject and a String flaggedWord. The method should return a new String where every occurrence of flaggedWord in subject is replaced by the string "[REDACTED]".</p>
+
+
+<program language="java">
+<code>
+/**
+ * Returns a version of the subject where every instance of flaggedWord 
+ * is replaced by "[REDACTED]".
+ * Precondition: subject and flaggedWord are not null.
+ */
+public String sanitizeSubject(String subject, String flaggedWord) {
+    
+    // TO BE IMPLEMENTED IN PART (B)
+    
+}
+</code>
+</program>
+
+<p>Constraints and Rules:</p>
+<ul>
+    <li>If the flaggedWord is not found, the original subject should be returned.</li>
+    <li>The search should be case-sensitive.</li>
+</ul>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1b-part3-emailFilter-table.png" width="100%" />
+<caption>Sample Output</caption>
+</figure>
+
+<p>To solve this, you need a while loop to find the word, and you must "snip" the string into pieces to reassemble it.</p>
+<p>Common AP Exam Traps to Avoid:</p>
+<ul>
+    <li>The Infinite Loop: If you don't update the string you are searching (or don't move your index), the indexOf will keep finding the same word forever.</li>
+    <li>The "Last Bit" Bug: Many students forget to add result += remaining at the very end. Without it, your code would cut off the end of the sentence (e.g., "Check out this [REDACTED]" instead of "Check out this [REDACTED] offer!").</li>
+</ul>
+
+<activity label="frq1b3-EmailFilter">
+    <statement>
+    <p>A system is being designed to "sanitize" email subject lines by removing specific "flagged" words and replacing them with a placeholder. You will write the method sanitizeSubject.</p>
+    <p>The sanitizeSubject method takes two parameters: a String subject and a String flaggedWord. The method should return a new String where every occurrence of flaggedWord in subject is replaced by the string "[REDACTED]".</p>
+    </statement>
+
+    <program interactive="activecode" language="java">
+    <code>
+public class EmailFilter {
+
+    public static String sanitizeSubject(String subject, String flaggedWord) {
+
+        
+    }
+
+    public static void main(String[] args) {
+        // Test 1: Standard case with one word
+        System.out.println("Test 1: Single Flagged Word");
+        System.out.println(EmailFilter.sanitizeSubject("Check out this FREE offer!", "FREE"));
+        System.out.println();
+
+        // Test 2: Multiple occurrences
+        System.out.println("Test 2: Multiple Flagged Words");
+        System.out.println(EmailFilter.sanitizeSubject("URGENT: Please read URGENT", "URGENT"));
+        System.out.println();
+
+        // Test 3: No occurrences
+        System.out.println("Test 3: No Flagged Words Found");
+        System.out.println(EmailFilter.sanitizeSubject("Hello World", "Secret"));
+    }
+}
+    </code>
+    <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input1 = {"spam spam spam", "Danger Zone", "The end is near", "HiddenSecret", "banana"};
+    private String[] input2 = {"spam", "Danger", "near", "Secret", "ana"};
+    private String[] expected = {"[REDACTED] [REDACTED] [REDACTED]", "[REDACTED] Zone", "The end is [REDACTED]", "Hidden[REDACTED]", "b[REDACTED]na"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "sanitizeSubject(\"" + input1[i] + "\", \"" + input2[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + EmailFilter.sanitizeSubject(input1[i], input2[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+    </tests>
+    </program>
+</activity>
+
+</subsection>
+
+
+<subsection xml:id="frq1b3-sequenceAnalyzer">
+<title>Practice FRQ - The SequenceAnalyzer Class</title>
+<p>In bioinformatics, scientists analyze DNA strings composed of the characters A, C, G, and T. A "doublet" is defined as any two-character sequence where a character is immediately followed by the same character (e.g., "AA", "GG").</p>
+<p>Write the method countValidDoublets. This method analyzes a given DNA string and counts how many doublets exist, but only if the doublet appears after the first occurrence of a "start marker" character.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1b-part3-seqanalyzer-table.png" width="100%" />
+<caption>Sample Output</caption>
+</figure>
+
+
+<program language="java">
+<code>
+public class SequenceAnalyzer {
+    /**
+     * Counts doublets (two identical consecutive characters) that 
+     * appear AFTER the first occurrence of startMarker.
+     * Precondition: dna is not null, dna.length() >= 2.
+     */
+    public static int countValidDoublets(String dna, String startMarker) {
+        
+        /* TO BE IMPLEMENTED */
+        
+    }
+}
+</code>
+</program>
+
+
+<activity label="frq1b3-sequenceAnalyzer">
+<statement>
+<p>In bioinformatics, scientists analyze DNA strings composed of the characters A, C, G, and T. A "doublet" is defined as any two-character sequence where a character is immediately followed by the same character (e.g., "AA", "GG").</p>
+<p>Write the method countValidDoublets. This method analyzes a given DNA string and counts how many doublets exist, but only if the doublet appears after the first occurrence of a "start marker" character.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class SequenceAnalyzer {
+    /**
+     * Counts doublets (two identical consecutive characters) that 
+     * appear AFTER the first occurrence of startMarker.
+     * Precondition: dna is not null, dna.length() >= 2.
+     */
+    public static int countValidDoublets(String dna, String startMarker) {
+        
+    }
+    
+    public static void main(String[] args) {
+        // Test 1: Standard DNA sequence
+        // Marker 'T' is at index 1. Doublets after 'T': 'GG'
+        String dna1 = "ATGGC";
+        System.out.println("DNA: " + dna1 + " | Marker: T");
+        System.out.println("Doublets found: " + SequenceAnalyzer.countValidDoublets(dna1, "T")); // Expected: 1
+        System.out.println();
+
+        // Test 2: Marker at the very beginning
+        // Marker 'A' is at index 0. Doublets: 'CC' and 'CC' (for 'CCC')
+        String dna2 = "ACCCG";
+        System.out.println("DNA: " + dna2 + " | Marker: A");
+        System.out.println("Doublets found: " + SequenceAnalyzer.countValidDoublets(dna2, "A")); // Expected: 2
+        System.out.println();
+
+        // Test 3: Marker not found
+        String dna3 = "GATTACA";
+        System.out.println("DNA: " + dna3 + " | Marker: X");
+        System.out.println("Doublets found: " + SequenceAnalyzer.countValidDoublets(dna3, "X")); // Expected: 0
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input1 = {"AATTAA", "GGGGG", "ATGCGG", "ATGC", "AABBAA"};
+    private String[] input2 = {"T", "G", "GG", "C", "B"};
+    private String[] expected = {"1", "4", "1", "0", "2"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "countValidDoublets(\"" + input1[i] + "\", \"" + input2[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + SequenceAnalyzer.countValidDoublets(input1[i], input2[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+
+<subsection xml:id="frq1b3-TextExpander">
+<title>Practice FRQ - TextExpander</title>
+<p>A software company is creating a "Short-Hand Expander" that converts common abbreviations into their full-word equivalents. You will write a method for the TextExpander class that finds and replaces specific abbreviations.</p>
+<p>Write the method expandText, which takes three String parameters: message, abbr, and fullWord. The method should return a new String where every occurrence of the abbreviation abbr in message is replaced by fullWord.</p>
+
+<program language="java">
+<code>
+/**
+ * Returns a version of message where every instance of abbr 
+ * is replaced by fullWord.
+ * Precondition: message, abbr, and fullWord are not null.
+ */
+public String expandText(String message, String abbr, String fullWord) {
+    
+    /* TO BE IMPLEMENTED BELOW */
+}
+</code>
+</program>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq1b-part3-textexpander-table.png" width="100%" />
+<caption>Sample Output</caption>
+</figure>
+
+<p>Constraints:</p>
+<ul>
+    <li>If the abbreviation is not found, the original message should be returned.</li>
+    <li>The search should be case-sensitive.</li>
+</ul>
+
+
+<activity label="frq1b3-TextExpander">
+<statement>
+<p>A software company is creating a "Short-Hand Expander" that converts common abbreviations into their full-word equivalents. You will write a method for the TextExpander class that finds and replaces specific abbreviations.</p>
+<p>Write the method expandText, which takes three String parameters: message, abbr, and fullWord. The method should return a new String where every occurrence of the abbreviation abbr in message is replaced by fullWord.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class TextExpander
+{
+    /**
+     * Returns a version of message where every instance of abbr 
+     * is replaced by fullWord.
+     * Precondition: message, abbr, and fullWord are not null.
+     */
+    public static String expandText(String message, String abbr, String fullWord) 
+    {
+        
+    }
+
+    public static void main(String[] args) {
+        // Test 1: Standard replacement
+        String m1 = "See you l8r!";
+        System.out.println("Input: " + m1);
+        System.out.println("Result: " + expandText(m1, "l8r", "later"));
+        System.out.println();
+
+        // Test 2: Multiple occurrences
+        String m2 = "u should call u-r mom";
+        System.out.println("Input: " + m2);
+        System.out.println("Result: " + expandText(m2, "u", "you"));
+        System.out.println();
+
+        // Test 3: Abbreviation not found
+        String m3 = "Hello world";
+        System.out.println("Input: " + m3);
+        System.out.println("Result: " + expandText(m3, "bye", "goodbye"));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input1 = {"asap please", "Call me asap", "aaaaa", "JK...JK", "100%"};
+    private String[] input2 = {"asap", "asap", "aa", "JK", "100"};
+    private String[] input3 = {"as soon as possible", "soon", "b", "Just Kidding", "One Hundred"};
+    private String[] expected = {"as soon as possible please", "Call me soon", "bba", "Just Kidding...Just Kidding", "One Hundred%"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "expandText(\"" + input1[i] + "\", \"" + input2[i] + "\"" + input3[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + TextExpander.expandText(input1[i], input2[i], input3[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+</section>

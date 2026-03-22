@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ1B-Part2">
+<title>FRQ 1B - Strings - Part 2</title>
+<introduction>
+<idx>frq1-methods</idx>
+<idx>frq1b-strings</idx>
+<idx>free response</idx>
+<p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 1: Methods and Control Structures</term>. Students will write two methods or one constructor and one method of a given class based on the provided specifications and examples. In Part A (4 points), the method or constructor will require students to write iterative or conditional statements, or both, as well as statements that call methods in the specified class. </p>
+    <p>In Part B (3 points)<term></term>, the method or constructor will require calling String methods.</p>
+
+<p>FRQ 1B requires the following skills:</p>
+<ul>
+<li>Complete a method or a constructor</li>
+<li>Call String methods</li>
+<li>Use if statements</li>
+<li>Use a for loop or a while loop</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main.</li>
+</ul>
+</introduction>
+
+<subsection xml:id="frq1b2-string-algorithms">
+<title>String Algorithms</title>
+<p>There are many algorithms that traverse or process Strings that use loops and conditional statements.</p>
+<p>Common algorithms include:</p>
+
+<ul>
+<li>Counting the number of substrings that meet specific criteria</li>
+<li>Determining if one or more substrings has a specific property</li>
+<li>Building a new String based on certain conditions</li>
+</ul>
+
+</subsection>
+
+<subsection xml:id="frq1b2-processing-strings">
+<title>Processing a String with a For Loop</title>
+<p>Many algorithms can be solved with the accumulator pattern, similar to FRQ1A. In some cases, the accumulator value will be a String.</p>
+<p>There are four steps to the accumulator pattern:</p>
+<ul>
+<li>initialize the accumulator variable before the loop</li>
+<li>loop through the letters of the String</li>
+<li>update the accumulator variable inside the loop</li>
+<li>return the accumulated value (if necessary)</li>
+</ul>
+</subsection>
+
+<subsection xml:id="frq1b2-countVowels">
+<title>String Algorithm - Count Vowels</title>
+
+<activity label="frq1b2-countVowels">
+<statement>
+<p>You are working on a text-analysis tool. The StringProcessor class contains a helper method, isVowel(String letter), which returns true if a single-character string is a vowel (A, E, I, O, U, case-insensitive) and false otherwise.</p>
+<p>Write the countVowels method. This method analyzes a given String and returns the total number of vowels present in that string.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class StringProcessor {
+    // Corrected method name and parameter type
+    public static int countVowels(String phrase) {
+        
+    }
+
+    public static boolean isVowel(String letter) {
+        String vowels = "aeiouAEIOU";
+        return letter.length() == 1 &amp;&amp; vowels.contains(letter);
+    }
+    
+    public static void main(String[] args) {
+        // Test 1: Standard sentence
+        String s1 = "Java Programming";
+        System.out.println("Phrase: " + s1);
+        System.out.println("Vowels: " + StringProcessor.countVowels(s1)); // Expected: 5
+        System.out.println();
+
+        // Test 2: All uppercase
+        String s2 = "AEIOU";
+        System.out.println("Phrase: " + s2);
+        System.out.println("Vowels: " + StringProcessor.countVowels(s2)); // Expected: 5
+        System.out.println();
+
+        // Test 3: No vowels
+        String s3 = "Rhythm";
+        System.out.println("Phrase: " + s3);
+        System.out.println("Vowels: " + StringProcessor.countVowels(s3)); // Expected: 0
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input = {"Apple", "12345!", "", " ", "Queueing"};
+    private String[] expected = {"2", "0", "0", "0", "5"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "swapTwoWords(\"" + input[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + StringProcessor.countVowels(input[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b2-makeAbbreviation">
+<title>String Algorithm - Make Abbreviation</title>
+
+<activity label="frq1b2-makeAbbreviation">
+<statement>
+<p>Write a method called makeAbbreviation that takes a multi-word String and returns a new String consisting of the first letter of each word in uppercase.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class Abbreviator {
+
+    public static String makeAbbreviation(String phrase) {
+        String result = "";
+
+        // Write Your Code Here
+
+        return result.toUpperCase();
+    }
+
+    public static void main(String[] args) {
+        // Driver examples
+        System.out.println("Input: self contained underwater breathing apparatus");
+        System.out.println("Result: " + makeAbbreviation("self contained underwater breathing apparatus"));
+
+        System.out.println("\nInput: North Atlantic Treaty Organization");
+        System.out.println("Result: " + makeAbbreviation("North Atlantic Treaty Organization"));
+
+        System.out.println("Input: 'z'");
+        System.out.println("Result: " + Abbreviator.makeAbbreviation("z")); 
+        
+        System.out.println("Input: '3 blind mice'");
+        System.out.println("Result: " + Abbreviator.makeAbbreviation("3 blind mice"));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input = {"as soon as possible", "Java", "Frequently Asked Questions", "a b c", "object oriented"};
+    private String[] expected = {"ASAP", "J", "FAQ", "ABC", "OO"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "makeAbbreviation(\"" + input[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + Abbreviator.makeAbbreviation(input[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b2-maskvowels">
+<title>String Algorithm - Mask Vowels</title>
+
+<activity label="frq1b2-maskvowels">
+<statement>
+<p>Write a method called maskVowels that takes a String and returns a new String where all vowels are replaced with asterisks (*), but only if the String is longer than 3 letters.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class WordTransformer {
+    public static String maskVowels(String word) {
+        
+    }
+
+    public static boolean isVowel(String letter) {
+        String vowels = "aeiouAEIOU";
+        return letter.length() == 1 &amp;&amp; vowels.contains(letter);
+    }
+
+    public static void main(String[] args) {
+        // Test 1: Standard lowercase word
+        String w1 = "computer";
+        System.out.println("Input: " + w1);
+        System.out.println("Result: " + WordTransformer.maskVowels(w1)); // Expected: c*mp*t*r
+        System.out.println();
+
+        // Test 2: Word with uppercase vowels
+        String w2 = "ALPHABET";
+        System.out.println("Input: " + w2);
+        System.out.println("Result: " + WordTransformer.maskVowels(w2)); // Expected: *LPH*B*T
+        System.out.println();
+
+        // Test 3: Word too short (less than 3 chars)
+        String w3 = "it";
+        System.out.println("Input: " + w3);
+        System.out.println("Result: " + WordTransformer.maskVowels(w3)); // Expected: it
+    }
+}
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input = {"banana", "sky", "aeiou", "Cat", "Fly"};
+    private String[] expected = {"b*n*n*", "sky", "*****", "C*t", "Fly"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "swapTwoWords(\"" + input[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + WordTransformer.maskVowels(input[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="frq1b2-countOccurrences">
+<title>String Algorithm - Count Occurrences</title>
+
+<activity label="frq1b2-countOccurrences">
+<statement>
+<p>Write a method called countOccurrences that determines how many times a specific target string appears within a larger text string.</p>
+<p>Be careful! It is easy to end up with an infinite loop if you are not careful when updating your loop variable. You will need to use the indexOf method to find the next occurrence of the target string, and then update your loop variable to start searching for the next occurrence after the current one.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+public class PhraseAnalyzer {
+    public static int countOccurrences(String text, String target) {
+        
+    }
+
+    public static void main(String[] args) {
+        // Test 1: Multiple occurrences
+        String text1 = "cat bat rat cat";
+        String target1 = "cat";
+        System.out.println("Text: " + text1 + " | Target: " + target1);
+        System.out.println("Count: " + PhraseAnalyzer.countOccurrences(text1, target1)); // Expected: 2
+        System.out.println();
+
+        // Test 2: Target not in text
+        String text2 = "The quick brown fox";
+        String target2 = "dog";
+        System.out.println("Text: " + text2 + " | Target: " + target2);
+        System.out.println("Count: " + PhraseAnalyzer.countOccurrences(text2, target2)); // Expected: 0
+        System.out.println();
+
+        // Test 3: Entire text is the target
+        String text3 = "Java";
+        String target3 = "Java";
+        System.out.println("Text: " + text3 + " | Target: " + target3);
+        System.out.println("Count: " + PhraseAnalyzer.countOccurrences(text3, target3)); // Expected: 1
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String[] input1 = {"aaaaa", "HELLO hello", "Red Blue Red", "Empty", "abc"};
+    private String[] input2 = {"aa", "hello", "Red", "a", "abcd"};
+    private String[] expected = {"2", "1", "2", "0", "0"};
+
+    @Test
+    public void test0() {
+        boolean passed = test(0);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test1() {
+        boolean passed = test(1);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2() {
+        boolean passed = test(2);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        boolean passed = test(3);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4() {
+        boolean passed = test(4);
+        assertTrue(passed);
+    }
+
+    private boolean test(int i) {
+        String desc = "countOccurrences(\"" + input1[i] + "\", \"" + input2[i] + "\")";
+        String actual = "";
+
+        try {
+            actual = "" + PhraseAnalyzer.countOccurrences(input1[i], input2[i]);
+        } catch (Exception e) {
+            actual = "test experienced an error";
+        }
+
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed;        
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<!--
+<subsection xml:id="frq1b2-">
+<title>String Algorithm - </title>
+
+<activity label="frq1b2-">
+<statement>
+<p></p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+
+</code>
+<tests>
+
+</tests>
+</program>
+</activity>
+
+</subsection>
+-->
+</section>

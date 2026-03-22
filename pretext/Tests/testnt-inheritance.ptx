@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="test1nt">
+  <title>Exam 1 for the AP CSA Exam (not timed)</title>
+  <p>
+    The following problems are similar to what you might see on the AP CSA exam.
+    Please answer each to the best of your ability.
+  </p>
+
+  <activity label="qtnt1_8">
+    <statement>
+      <p>
+        Consider the following class declarations. Which statements are true?
+      </p>
+
+      <program language="java">
+        <code>
+ public class Animal
+ {
+  /* Some code */
+ }
+
+ public class Cat extends Animal
+ {
+    /* Some code */
+ }
+
+I. Cat inherits the constructors of Animal
+II. Cat cannot add new methods and private instance variables that Animal does not have.
+III. Cat can override existing public methods of Animal
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>A subclass needs to specify its own constructors.</p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            A subclass has the ability to add new methods and variables that are
+            unique to it (meaning its parent class dosen't contain them)
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Subclasses can overide public methods from their parent classes to
+            specialize behavior.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II</p>
+        </statement>
+
+        <feedback>
+          <p>Neither of these statements are true.</p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II and III</p>
+        </statement>
+
+        <feedback>
+          <p>Statement III is correct, but not statement II.</p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt1_11">
+    <statement>
+      <p>
+        Consider the following class definitions. Which of I, II and III below
+        would cause an error when used in place of the missing code in the main
+        method?
+      </p>
+
+      <program language="java">
+        <code>
+public class A
+{
+  public void method1() { };
+}
+
+public class B extends A
+{
+    // Instance variables and other methods not shown
+
+    public void method1()
+    {
+      /* implementation not shown */
+    }
+}
+
+public class C extends B
+{
+  //Instance variables and other methods not shown
+
+  public void method2(C o)
+  {
+     /* implementation not shown */
+  }
+
+  public static void main(String[] args)
+  {
+    C objectC = new C();
+    B objectB = new B();
+    // Missing code
+  }
+}
+
+I objectC.method1();
+II objectB.method2(objectC);
+III objectC.method2(objectB);
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This method call compiles because class C inherits all the public
+            methods in class B. This will not produce an error.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Method II will produce a compile time error because class B (the
+            superclass) does not inherit the methods of class C due to the fact
+            that class C is its subclass. But, it is not the only call that will
+            result in a compile time error.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II and III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Method II will produce a compile time error because class B (the
+            superclass) does not inherit the methods of class C due to the fact
+            that class C is its subclass. Method III will produce an error
+            because of the parameter it takes in. objectB is not a class C type
+            object which is what the method definition for method III required.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This method produces a compile time error, but method II will also
+            produce a compile time error.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I, II and III</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Methods II and III will both produce compile time errors, but method
+            I works because class C inherits all the public methods of class B.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt1_17">
+    <statement>
+      <p>
+        Consider the following class declarations. Which of the following
+        statements will not compile?
+      </p>
+
+      <program language="java">
+        <code>
+public class B
+{
+
+    public int myValue;
+
+    public B()
+    {
+        myValue = 0;
+    }
+
+    public B(int x)
+    {
+        myValue = x;
+    }
+}
+
+public class C extends B
+{
+
+    public C()
+    {
+        super(0);
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>C c1 = new C();</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Here we are simply creating a new instance of class C by calling the
+            appropiate constructor. Nothing is wrong here.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>B b1 = new B();</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Here we are simply creating a new instance of class B by calling the
+            appropiate constructor. Nothing is wrong here.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>B c2 = new C();</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Since class C is a subclass of class B, you can upcast an object of
+            type C to be of type B.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>B b3 = new B(10);</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This statement is creating a new object using the second constructor
+            of the B class. This is also a valid way to create a B object.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>C c3 = new C(24);</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Even though class C has a super class with a constructor that takes
+            in a single int argument, class C does not have a constructor that
+            takes an int value.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt2_1">
+    <statement>
+      <p>
+        Consider the <c>Animal</c>, <c>Fish</c>, and <c>Goldfish</c> classes
+        shown below. Which of the following object declarations will compile
+        without error?
+      </p>
+
+      <program language="java">
+        <code>
+public class Animal
+{
+    /* no constructors or other methods have been declared */
+}
+
+public class Fish extends Animal
+{
+    /* no constructors or other methods have been declared */
+}
+
+public class Goldfish extends Fish
+{
+    /* no constructors or other methods have been declared */
+}
+
+I. Goldfish glub = new Fish();
+
+II. Animal glub = new Fish();
+
+III. Fish glub = new Goldfish();
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            A Fish is NOT a type of Goldfish. The Fish class does not inherit
+            from the Goldfish class, so a Fish cannot be instantiated as a
+            Goldfish object.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            II is correct, but III is correct as well. A Goldfish IS-A type of
+            Fish, and a Fish IS-A type of Animal.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            III is correct, but II is correct as well. A Goldfish IS-A type of
+            Fish, and a Fish IS-A type of Animal.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            II is correct, but a Fish is NOT a type of Goldfish. A Fish cannot
+            be instantiated as a Goldfish object, because the Fish class does
+            not inherit from the Goldfish class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II and III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            A Goldfish IS-A type of Fish, and a Fish IS-A type of Animal. The
+            Goldfish class inherits from the Fish class, and the Fish class
+            inherits from the Animal class.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt2_9">
+    <statement>
+      <p>
+        Consider the following classes <c>Cat</c> and <c>FluffyCat</c>. What is
+        the result of executing the following code? <c>Cat obj = new
+        FluffyCat();</c>
+      </p>
+
+      <p>
+        <c>obj.display();</c>
+      </p>
+
+      <program language="java">
+        <code>
+public class Cat
+{
+    public String display()
+    {
+        System.out.print("Cats! ");
+    }
+}
+
+public class FluffyCat extends Cat
+{
+    public String display()
+    {
+        System.out.print("Cool!");
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>Cats!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be the case if obj was a Cat at run-time. At run-time,
+            obj is a FluffyCat, so the overwritten method in the Cat class is
+            used.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Cats! Cool!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be the case if the display method in FluffyCat used
+            'super' to call on the display method in the Cat class before it
+            printed "Cool!".
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>Cool!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Although obj is declared to be a Cat at compile time, at run-time it
+            is actually a FluffyCat. The overwritten display method defined in
+            the FluffyCat class will be called.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Cool! Cats!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The method has been overwritten in FluffyCat, so the display method
+            present in the Cat Class ("Cats! ") will not be printed.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>The code results in an error.</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This code compiles and runs correctly. A FluffyCat IS-A Cat object,
+            so the code will compile and run without issue.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt2_16">
+    <statement>
+      <p>
+        Consider the classes <c>Car</c> and <c>Minivan</c>, shown below. If
+        <c>obj</c> has been instantiated later in the class as a <c>Minivan</c>,
+        what is printed as a result of <c>obj.drive()</c>?
+      </p>
+
+      <program language="java">
+        <code>
+public class Car
+{
+    public void drive()
+    {
+        System.out.print("Vroom vroom! ");
+    }
+}
+
+public class Minivan extends Car
+{
+    public void drive()
+    {
+        super.drive();
+        System.out.print(" Let's go! ");
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>Vroom vroom! Let's go!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The method drive has been overwritten in the Minivan class. Since
+            obj is of type Minivan, the compiler will use the overwritten
+            method. The overwritten method uses super() to call to the method of
+            the parent class, so "Vroom vroom! " is printed. Then, the
+            overwritten method prints out "Let's go! ".
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Vroom vroom!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Although the overwritten method has a call to the method in the
+            parent class, there is another line of code that must be printed.
+            The drive method has been overwritten for the Minivan class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Let's go!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be the case if the overwritten method did not make a call
+            to the class in the parent class. Because the method has a call to
+            the parent class before it does anything else, "Vroom vroom! " is
+            printed.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Let's go! Vroom vroom!</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be the case if the parent method had been called after
+            "Let's go! " had been printed.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>This would result in a compile-time error.</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This code correctly compiles, so there are no errors present. The
+            Minivan class can make a call to a method in the Car class using
+            super, because the Minivan class extends the Car class.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt3_2">
+    <statement>
+      <p>
+        Consider the following class declarations. Which of the following code
+        can be executed in the <c>Swan</c> class?
+      </p>
+
+      <program language="java">
+        <code>
+public class Bird
+{
+    private String color;
+
+    public Bird(String theColor)
+    {
+        /* implementation not shown */
+    }
+
+    public void makeNoise()
+    {
+        /* implementation not shown */
+    }
+
+    public void eat()
+    {
+        /* implementation not shown */
+    }
+
+    public string showFeathers()
+    {
+        return color;
+    }
+}
+
+public class Swan extends Bird
+{
+    /* no constructors or other methods have been declared */
+}
+
+
+I. this.color = "blue";
+
+II. eat();
+
+III. Swan s = new Swan("blue");
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The color is a private instance variable in Bird. Children classes
+            do not have direct access to private variables. They must use the
+            public getter and setter methods to access the private variables.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The public eat method was inherited from the Bird class and can be
+            called from code in the Swan class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Constructors are not inherited by sub classes. Only public accessor
+            and mutator methods are inherited by sub classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            II is correct, but I is incorrect. Private instance variables cannot
+            be directly accessed by the child class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I, II, and III</p>
+        </statement>
+
+        <feedback>
+          <p>
+            II is correct, but I and III are incorrect. Constructors are not
+            inherited and subclasses do not have direct access to private
+            instance variables.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt3_8">
+    <statement>
+      <p>
+        The <c>Person</c> and <c>Student</c> classes are found below. Which of
+        the following correctly replaces <c>/* to be completed */</c> in the
+        <c>Student</c> class?
+      </p>
+
+      <program language="java">
+        <code>
+public class Person
+{
+   private String name;
+   private int age;
+
+   public Person(String theName, int theAge)
+   {
+      name = theName;
+      age = theAge;
+   }
+}
+
+public class Student extends Person
+{
+   private int grade;
+
+   public Student(String theName, int theAge, int theGrade)
+   {
+      /* to be completed */
+   }
+}
+
+I. name = theName;
+   age = theAge;
+   grade = theGrade;
+
+II. super(theName, theAge);
+    grade = theGrade;
+
+III. super(theName, theAge);
+     name = theName;
+     age = theAge;
+     grade = theGrade;
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            name and age are private instance variables in the Person class.
+            Children classes do not have direct access to private variables in
+            the parent class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This answer correctly calls on the constructor in the Person class
+            using super. Then, it correctly instantiates the instance variable
+            grade, located in the Student class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            name and age are private instance variables in the Person class.
+            Children classes do not have direct access to private variables in
+            the parent class. Although the Person constructor has correctly been
+            implemented using the super keyword, name and age cannot be accessed
+            by the Student class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            II is correct, but name and age instance variables found in the
+            Person class. Instance variables are not inherited and cannot be
+            modified by sub classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            name and age are private instance variables in the Person class.
+            Although the constructor from the Person class may be implemented
+            using super, the instance variables in the parent class are not
+            directly accessible by the child class.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt3_10">
+    <statement>
+      <p>
+        Consider the classes <c>Animal</c> and <c>Pig</c> shown below. What is
+        printed as a result of executing the code below?
+      </p>
+
+      <program language="java">
+        <code>
+public class Animal
+{
+    private String name;
+
+    public Animal(String theName)
+    {
+        name = theName;
+    }
+
+    public Animal()
+    {
+        name = "Animal";
+    }
+
+    public String makeNoise()
+    {
+        return "";
+    }
+    ;
+
+    public String getName()
+    {
+        return name;
+    }
+}
+
+public class Pig extends Animal
+{
+    public Pig(String theName)
+    {
+        super(theName);
+    }
+
+    public String makeNoise()
+    {
+        return "Oink!";
+    }
+
+    public String getName()
+    {
+        return "My name is " + super.getName() + "!";
+    }
+
+    public static void main(String[] args)
+    {
+        Animal piglet = new Pig("Piglet");
+        System.out.print(piglet.getName());
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>"My name is Piglet!"</p>
+        </statement>
+
+        <feedback>
+          <p>
+            At run-time, piglet is a Pig object. The compiler uses the
+            overwritten getName method located in the Pig class, which prints
+            out "My name is " before calling on the getName method in the Animal
+            class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>"Piglet"</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be correct if the getName method had not been overwritten
+            in the Pig class. Because piglet is a Pig object at run-time, the
+            compiler uses the getName method from the Pig class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>"My name is Animal!"</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Check the constructor method in the Pig class. The Pig class
+            constructor uses the Animal class constructor that has one String
+            parameter, not the default Animal constructor.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>"Animal"</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The constructor in the Pig class uses the Animal class constructor
+            that takes in a string parameter, not the default constructor. The
+            getName method has been overwritten in the Pig class, so "My name is
+            " is printed before the name of the object.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>"Oink"</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Check the problem and note which method has been used. This is what
+            is returned by the makeNoise method.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+   <activity label="qtnt3_16">
+    <statement>
+      <p>
+        The method <c>recur</c> is shown below. In which case will <c>recur</c>
+        terminate without error?
+      </p>
+
+      <program language="java">
+        <code>
+public void recur (String str)
+{
+     if (str.length() &lt; 15)
+         System.out.print("s");
+
+     recur(str + "!");
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>When the length of str is less than 15</p>
+        </statement>
+
+        <feedback>
+          <p>
+            If the string length is less than 15, "s" will be printed, but the
+            recursive call will still be made.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>When the length of str is greater than or equal to 15</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This would be correct if the recursive call was located in an else
+            statement. If the string length is 15 or greater, "s" will not be
+            printed, but the recursive call will still occur.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>When the length of str is equal to 0</p>
+        </statement>
+
+        <feedback>
+          <p>
+            If the string has length 0, the if statement will occur and "s" will
+            be printed, but the recursive call will still occur.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>For all string inputs</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Check the recursive call. The method is always called recursively,
+            regardless of the string length.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>For no string inputs</p>
+        </statement>
+
+        <feedback>
+          <p>
+            There is no base case present in this method that stops the
+            recursive calls. This method will continue until the compiler runs
+            out of memory. You could fix this code by placing the recursive call
+            in an else statement or creating a base case to end the call.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+   <activity label="qtnt3_17">
+    <statement>
+      <p>
+        Consider the <c>Fruit</c>, <c>Grape</c>, and <c>SeedlessGrape</c>
+        classes shown below. Which of the following object declarations will
+        compile without error?
+      </p>
+
+      <program language="java">
+        <code>
+public class Fruit
+{
+    private String name;
+    private boolean seeds;
+
+    public Fruit(String theName)
+    {
+        name = theName;
+        seeds = true;
+    }
+
+    public void setSeeds()
+    {
+        seeds = !seeds;
+    }
+
+}
+
+public class Grape extends Fruit
+{
+    private String color;
+
+    public Grape(String theName, String theColor)
+    {
+        super(theName);
+        color = theColor;
+    }
+}
+
+public class SeedlessGrape extends Grape
+{
+    public SeedlessGrape(String theName, String theColor)
+    {
+        super(theName, theColor);
+        setSeeds();
+    }
+}
+
+I. Fruit a = new SeedlessGrape("grape", "red");
+II. Grape b = new Grape("grape");
+III. SeedlessGrape c = new Grape("grape", "green");
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice correct="yes">
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            A SeedlessGrape IS-A fruit, so the inheritance relationship is
+            correct. The constructor for the SeedlessGrape class has two string
+            parameters.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            The Grape class constructor has two parameters. Although a Grape
+            IS-A fruit, the Grape constructor must have two string parameters to
+            compile without error.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            A Grape is NOT a SeedlessGrape. The inheritance relationship is
+            incorrect, and III does not compile. Object a is a Fruit at
+            compile-time and a SeedlessGrape at run-time. A SeedlessGrape IS-A
+            Fruit, so the code compiles.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+<activity label="qtnt4_5">
+    <statement>
+      <p>
+        Consider the <c>Animal</c> and <c>Cat</c> classes, shown below. In
+        another class, the line <c>Animal fluffy = new Cat ("orange", "Fluffy",
+        11)</c> appears. Which of the following declarations will compile
+        without error?
+      </p>
+
+      <program language="java">
+        <code>
+public class Animal
+{
+    private String color;
+    private String name;
+
+    public Animal (String theColor, String theName)
+    {
+        name = theName;
+        color = theColor;
+    }
+
+    public  String makeNoise() { return ""; }
+
+    public  int getWeight() { return 0; }
+}
+
+public class Cat extends Animal
+{
+    private int weight;
+
+    public Cat (String theColor, String theName, int theWeight)
+    {
+        super (theColor, theName);
+        weight = theWeight;
+    }
+
+    public String makeNoise()
+    {
+        return "Meow!";
+    }
+
+    public int getWeight()
+    {
+        return weight;
+    }
+}
+
+I. fluffy.color;
+
+II. fluffy.getWeight();
+
+III. fluffy.makeNoise();
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>I only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Color is a private instance variable located in the Animal class.
+            Private instance variables cannot be directly accessed using dot
+            notation in external classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            getWeight and makeNoise are methods in the Animal class, so they can
+            both be used by anything declared to be of the type Animal.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            getWeight and makeNoise are methods in the Animal class, so they can
+            both be used by anything declared to be of the type Animal.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Color is a private instance variable located in the Animal class.
+            Private instance variables cannot be directly accessed using dot
+            notation in external classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II and III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            getWeight and makeNoise are both defined in the Animal class, so
+            they can both be used by anything declare to be of the type Animal.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+    <activity label="qtnt4_14">
+    <statement>
+      <p>
+        The <c>Vehicle</c>, <c>Bike</c>, and <c>Car</c> classes are shown. The
+        objects <c>a</c> and <c>b</c> have been declared in a different class.
+        Which of the following lines will compile without error?
+      </p>
+
+      <program language="java">
+        <code>
+public class Vehicle
+{
+    private int wheels;
+    private String color;
+
+    public Vehicle (String theColor, int theWheels)
+    {
+        wheels = theWheels;
+        color = theColor;
+    }
+
+    public int numOfWheels()
+    {
+        return wheels;
+    }
+
+    public String getColor()
+    {
+        return color;
+    }
+}
+
+public class Bike extends Vehicle
+{
+    public Bike (String theColor, int theWheels)
+    {
+        super (theColor, theWheels);
+    }
+
+    /* no other constructors or methods implemented */
+}
+
+public class Car extends Vehicle
+{
+    public Car (String theColor, int theWheels()
+    {
+        super (theColor, theWheels);
+    }
+
+    /* no other constructors or methods implemented */
+}
+
+
+Vehicle a = new Bike ("green", 2);
+Vehicle b = new Car ("red", 4);
+
+I. b.wheels;
+II. a.getColor();
+III. b.numOfWheels();
+IV. a.color;
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            getColor and numOfWheels are both public methods of the Vehicle
+            class and so the code will compile.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>IV only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            color is a private instance variable located in the Vehicle class.
+            Private instance variables can not be directly accessed using dot
+            notation in external classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and II only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            wheels is a private instance variable located in the Vehicle class.
+            Private instance variables can not be directly accessed using dot
+            notation in external classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>I and IV only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            wheels and color are both private instance variables in the Vehicle
+            class. Private instance variables can not be directly accessed using
+            dot notation in external classes.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>II and III only</p>
+        </statement>
+
+        <feedback>
+          <p>
+            getColor and numOfWheels are both public methods in the Vehicle
+            class and can be invoked in any class on a variable of type Vehicle.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt4_18">
+    <statement>
+      <p>
+        The <c>Person</c> and <c>Student</c> classes are located below. Which of
+        the following methods contains an example of method overloading?
+      </p>
+
+      <program language="java">
+        <code>
+public class Person
+{
+    private String name;
+    private int age;
+
+    public Person(String theName, int theAge)
+    {
+        name = theName;
+        age = theAge;
+    }
+
+    public String sayName()
+    {
+        return name;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+}
+
+public class Student extends Person
+{
+    private int grade;
+
+    public Student(String theName, int theAge, int theGrade)
+    {
+        super(theName, theAge);
+        grade = theGrade;
+    }
+
+    public String sayName()
+    {
+        return "My name is " + super.sayName();
+    }
+
+    public String sayName(String nickname)
+    {
+        return "My name is " + name + " but I like to be called " + nickname;
+    }
+
+    public int getGrade()
+    {
+        return grade;
+    }
+
+    public void changeGrade()
+    {
+        grade++;
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>
+            Having a constructor in the Student class that has a different
+            parameter list than the constructor in the Person class.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            This is not an example of method overloading. In this constructor
+            method, the parent constructor is called, but the method is not
+            overloaded. Method overloading occurs when a class has two or more
+            methods with the same name and a different parameter list (like a
+            different number of parameters).
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Having a sayName() method in Person and in Student.</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This is an example of method overridding, not method overloading.
+            Method overridding occurs when a method is redefined in a subclass,
+            and the method has the same parameter list. Method overloading
+            occurs when there are two or more methods with the same name and
+            different parameter lists in the same class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>
+            Having sayName() and sayName(String nickname) in the Student class.
+          </p>
+        </statement>
+
+        <feedback>
+          <p>
+            In the Student class, there are two different sayName methods. The
+            second sayName method has the same name and same return type, but
+            the parameter lists differ. This is an example of method
+            overloading.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Having the changeGrade() method in the Student class.</p>
+        </statement>
+
+        <feedback>
+          <p>
+            This is just an example of adding new methods to the child class,
+            that were not inherited from the parent class.
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>None of the above</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Method overloading occurs when a class has two or more methods with
+            the same name and different parameters. There is a method in the
+            Student class with the same name and two different parameter lists.
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+  <activity label="qtnt5_16">
+    <statement>
+      <p>Consider the following code. What is printed?</p>
+      <program language="java">
+        <code>
+class Dog
+{
+
+    public void act()
+    {
+        System.out.print("run ");
+        eat();
+    }
+
+    public void eat()
+    {
+        System.out.print("eat ");
+    }
+}
+
+public class UnderDog extends Dog
+{
+
+    public void act()
+    {
+        super.act();
+        System.out.print("sleep ");
+    }
+
+    public void eat()
+    {
+        super.eat();
+        System.out.print("bark ");
+    }
+
+    public static void main(String[] args)
+    {
+        Dog fido = new UnderDog();
+        fido.act();
+    }
+}
+        </code>
+      </program>
+    </statement>
+
+    <choices>
+      <choice>
+        <statement>
+          <p>run eat</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Because the fido is an "Underdog", we will call the eat() from class
+            Underdog, http://tinyurl.com/AP19-Q25
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>run eat sleep</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Because the fido is an "Underdog", we will call the eat() from class
+            Underdog, http://tinyurl.com/AP19-Q25
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>run eat sleep bark</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Because the fido is an "Underdog", we will call the eat() from class
+            Underdog, http://tinyurl.com/AP19-Q25
+          </p>
+        </feedback>
+      </choice>
+
+      <choice correct="yes">
+        <statement>
+          <p>run eat bark sleep</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Because the fido is an "Underdog", we will call the eat() from class
+            Underdog, http://tinyurl.com/AP19-Q25
+          </p>
+        </feedback>
+      </choice>
+
+      <choice>
+        <statement>
+          <p>Nothing is printed due to infinite recursion</p>
+        </statement>
+
+        <feedback>
+          <p>
+            Because the fido is an "Underdog", we will call the eat() from class
+            Underdog, http://tinyurl.com/AP19-Q25
+          </p>
+        </feedback>
+      </choice>
+    </choices>
+  </activity>
+
+
+
+  </section>

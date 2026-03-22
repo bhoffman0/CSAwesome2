@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="FRQ1A-Part3">
-  <title>Free Response Question 1A - Loops</title>
+  <title>FRQ 1A - Methods and Control - Part 3</title>
   <introduction>
     <idx>frq1a-conditions</idx>
     <idx>free response</idx>
@@ -652,7 +652,7 @@ while (/* condition */) {
 </subsection>
 
 <subsection xml:id="frq1a-self-divisor-A">
-<title>While Loops</title>
+<title>2007 FRQ - Self Divisor - Part (a)</title>
 <p>This question involves a class called SelfDivisor.</p>
 
 <program language="java">
@@ -685,16 +685,16 @@ digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
 
 <ul>
 <li><p>Repeat while the number is greater than 0</p></li>
-  <ul>
+<li><ul>
   <li><p>Access the right-most digit of number using <c>num % 10</c></p></li>
   <li><p>Do something with the right-most digit. In this case, if the original number is not divisible by digit, return false</p></li>
   <li><p>Remove the right-most digit of number by dividing number by 10 (<c>num / 10</c>)</p></li>
-  </ul>
+</ul></li>
 <li><p>If it makes it all the way through the loop without returning false, return true</p></li>
 </ul>
 <p>To access the right-most digit, you should use <c>num % 10</c>. To access the rest of the digit, you should use <c>num / 10</c>.</p>
 
-<activity label="FRQ-2007-Self-Divisor-PartA">
+<activity label="frq1a-2007-Self-Divisor-PartA">
 <statement>
 <p>A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that
 is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a selfdivisor
@@ -827,7 +827,7 @@ public class RunestoneTests extends CodeTestHelper
 
 
 
-<activity label="FRQ-2025-MessageBuilder-PartA">
+<activity label="frq1a-2025-MessageBuilder-PartA">
 <statement>
 <p>Complete the MessageBuilder constructor below that builds a message starting with the startingWord specified by the parameter. It should use a while loop to add on to the message using the given getNextWord method and increment numWords. Make sure there are spaces between the words in the message.</p>
 </statement>
