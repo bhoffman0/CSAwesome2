@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="FRQ2-Part1">
-<title>FRQ 2 - Class Design - Intro</title>
+<title>FRQ 2 - Class Design - Part 1</title>
 <introduction>
     <idx>frq2-classes</idx>
     <idx>free response</idx>
@@ -18,10 +18,48 @@
 
 <p>Teacher Insights</p>
 <ul>
+<li>You do not need to include import statements. You can assume that any standard Java class is already imported.</li>
 <li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
 <li>You will NOT need to write a main. In this question, they are giving you the main.</li>
 </ul>
 </introduction>
+
+<subsection xml:id="Class-Design-Intro">
+<title>Introduction to Class Design</title>
+
+<p>These questions usually require the following components:</p>
+
+<program language="">
+    <code>
+public class ClassName			// Class Header - Note no ()
+{
+    private type variableName1;		// Private instance variable(s)
+    private type variableName2;
+
+    public ClassName(type param1, ...)	// Constructor with parameters
+    {
+        variableName1 = param1;	// set private instance variables to parameters
+        variableName2 = param2;
+    }
+
+    // Methods as requested
+    public returnType methodName(type param, ...)
+    {
+        /* implementation will vary */
+    }
+
+    public type getVariableName1()	// Possibly a getter
+    {
+        return variableName1;
+    }
+}
+
+    </code>
+    </program>
+    
+
+</subsection>
+
 
 <subsection xml:id="frq2-2025-signedtext">
 <title>2025 FRQ2 - Signed Text</title>
@@ -56,6 +94,15 @@ beginning and appended to the end of the parameter.</p></li>
 </ul>
 <p>The following table contains a sample code execution sequence and the corresponding results. The code execution sequence appears in a class other than SignedText.</p>
 
+<figure align="center">
+<image source="FreeResponse/Figures/frq2-signedtext-table1.png" width="100%" />
+<caption>Part 1 of SignedText Table</caption>
+</figure>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq2-signedtext-table2.png" width="100%" />
+<caption>Part 1 of SignedText Table</caption>
+</figure>
 
     <activity label="FRQ2-2025-SignedText">
       <statement>
