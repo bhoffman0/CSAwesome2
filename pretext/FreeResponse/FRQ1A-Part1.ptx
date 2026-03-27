@@ -18,6 +18,7 @@
 
 <p>Teacher Insights</p>
 <ul>
+  <li>You do not need to include import statements. You can assume that any standard Java class is already imported.</li>
 <li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
 <li>You will NOT need to write a main.</li>
 </ul>
@@ -33,15 +34,15 @@
       <image source="FreeResponse/Figures/frq1a-part1-returntypes.png" width="100%" />
     </figure>
 
-    <p>Recommendation: If you have a return type, create a variable of that type, set it to zero, and immediately return it. Then add code in the middle!!!</p>
+    <p>Recommendation: If you have a return type, create a variable of that type, set it to the default value, and immediately return it. Then add code in the middle!!!</p>
     </subsection>
 
     <subsection xml:id="calling-methods">
     <title>Calling Methods</title>
 
-    <p>Some FRQs will give you methods that you need to call in order to get points. Sometimes they will be in the same class as your method. Sometimes they will be in a different object that you need to call.</p>
+    <p>Some FRQs will give you methods that you need to call in order to get points. Sometimes they will be in the same class as your method. Sometimes, you will need to call the methods on an object.</p>
 
-    <p>When methods are in the same class, you just need to call the method name and include the proper parameters. If the method returns a value, make sure you are storing the value somehow.</p>
+    <p>When methods are in the same class, you just need to call the method name and include the proper parameters.   When methods are in different classes, you use an object to call the method with dot notation and include the proper parameters.  If the method returns a value, make sure you are storing the value somehow.</p>
 
     <p><b>Example</b>: The orderCoffee and calculateTotal methods are in the same class, so you can call them with the method name. Make sure you include the correct parameters.</p>
     
@@ -69,7 +70,7 @@ public class CoffeeShop
 
     <subsection xml:id="frq1a-2019-apcalendar-b">
     <title>2019 FRQ - AP Calendar - Part (b)</title>
-    <p>The APCalendar class contains methods used to calculate information about a calendar. You will write one methods of the class.</p>
+    <p>The APCalendar class contains methods used to calculate information about a calendar. You will write one method of the class.</p>
 
     <program language="java">
       <code>
@@ -119,7 +120,7 @@ public class APCalendar
 
     <activity label="frq1a1-chooseType1">
       <statement>
-        <p>What is the return type of this method?</p>
+        <p>What is the return type of the dayOfWeek method?</p>
       </statement>
       <choices>
         <choice>
