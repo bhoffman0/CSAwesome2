@@ -648,6 +648,25 @@ import java.util.List;
 public class ScrambledStrings
 {
 
+    /********************** Part (b) *********************/
+
+    /**
+     * Modifies wordList by replacing each word with its scrambled version,
+     * removing any words that are unchanged as a result of scrambling.
+     *
+     * @param wordList the list of words Precondition: wordList contains only
+     *     non-null objects Postcondition: - all words unchanged by scrambling have
+     *     been removed from wordList - each of the remaining words has been
+     *     replaced by its scrambled version - the relative ordering of the entries
+     *     in wordList is the same as it was before the method was called
+     */
+    public static void scrambleOrRemove(List&lt;String&gt; wordList) {
+      /********************** Write your code here /**********************
+
+    }
+
+
+
     /**
      * Scrambles a given word.
      *
@@ -689,19 +708,6 @@ public class ScrambledStrings
         return scrambled;
     }
 
-    /********************** Part (b) *********************/
-
-    /**
-     * Modifies wordList by replacing each word with its scrambled version,
-     * removing any words that are unchanged as a result of scrambling.
-     *
-     * @param wordList the list of words Precondition: wordList contains only
-     *     non-null objects Postcondition: - all words unchanged by scrambling have
-     *     been removed from wordList - each of the remaining words has been
-     *     replaced by its scrambled version - the relative ordering of the entries
-     *     in wordList is the same as it was before the method was called
-     */
-    public static void scrambleOrRemove(List&lt;String&gt; wordList) {}
 
     /********************** Test *********************/
 

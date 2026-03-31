@@ -252,7 +252,7 @@ public class RunestoneTests extends CodeTestHelper
 {
     private String[] input1 = {"AATTAA", "GGGGG", "ATGCGG", "ATGC", "AABBAA"};
     private String[] input2 = {"T", "G", "GG", "C", "B"};
-    private String[] expected = {"1", "4", "1", "0", "2"};
+    private String[] expected = {"2", "4", "1", "0", "2"};
 
     @Test
     public void test0() {
