@@ -60,6 +60,202 @@ public class ClassName			// Class Header - Note no ()
 
 </subsection>
 
+<subsection xml:id="frq2-2010-apline">
+<title>2010 FRQ 2 - APLine</title>
+
+    <p>
+      The following is a free response question from 2010. It was question 2 on
+      the exam. You can see all the free response questions from past exams at
+      <url
+     href="https://www.savemyexams.com/ap/computer-science/college-board/a/past-papers/">Past AP CSA Exams</url>.
+ 
+    </p>
+
+    <p>
+      <term>Question 2.</term> An <title_reference>APLine</title_reference> is a
+      line defined by the equation <c>ax + by + c = 0</c>,where <c>a</c> is not
+      equal to zero, <c>b</c> is not equal to zero, and <c>a</c>, <c>b</c>, and
+      <c>c</c> are all integers. The slope of an
+      <title_reference>APLine</title_reference> is defined to be the double
+      value <c>-a / b</c> . A point (represented by integers <c>x</c> and
+      <c>y</c>) is on an <title_reference>APLine</title_reference> if the
+      equation of the <title_reference>APLine</title_reference> is satisfied
+      when those <c>x</c> and <c>y</c> values are substituted into the equation.
+      That is, a point represented by <c>x</c> and <c>y</c> is on the line if
+      <c>ax + by + c</c> is equal to 0. Examples of two
+      <title_reference>APLine</title_reference> equations are shown in the
+      following table.
+    </p>
+
+    <figure align="center">
+      <image source="Unit3-Class-Creation/Figures/apLineTable.png" width="100%" />
+    </figure>
+
+    <p>
+      Assume that the following code segment appears in a class other than
+      <title_reference>APLine</title_reference>. The code segment shows an
+      example of using the <title_reference>APLine</title_reference> class to
+      represent the two equations shown in the table.
+    </p>
+
+    <program language="java">
+      <code>
+APLine line1 = new APLine(5, 4, -17);
+double slope1 = line1.getSlope();        // slope1 is assigned -1.25
+boolean onLine1 = line1.isOnLine(5, -2); // true because 5(5) + 4(-2) + (-17) = 0
+
+APLine line2 = new APLine(-25, 40, 30);
+double slope2 = line2.getSlope();        // slope2 is assigned 0.625
+boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 != 0
+      </code>
+    </program>
+
+    <p>
+      Write the <title_reference>APLine</title_reference> class. Your
+      implementation must include a constructor that has three integer
+      parameters that represent <c>a</c>, <c>b</c>, and <c>c</c>, in that order.
+      You may assume that the values of the parameters representing <c>a</c> and
+      <c>b</c> are not zero.
+    </p>
+
+    <p>
+      It must also include a method <c>getSlope()</c> that calculates and
+      returns the slope of the line (using the equation <c>-a / b</c>) and a
+      method <c>isOnLine(x, y)</c> that returns <c>true</c> if the point
+      represented by its two parameters (<c>x</c> and <c>y</c>, in that order)
+      is on the <c>APLine</c> and returns <c>false</c> otherwise, by testing if
+      <c>ax + by + c</c> is equal to 0.
+    </p>
+
+    <p>
+      Your class must produce the indicated results when the main method below
+      is run. You may ignore any issues related to integer overflow.
+    </p>
+
+    <activity label="APLineFRQ">
+      <statement>
+        <p>
+          Write a class APLine with instance variables, a constructor with 3
+          paramaters for a, b, c, and the methods getSlope() and isOnLine(x,y).
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+// Declare the APLine class
+
+{
+ /** Declare instance variables */
+
+ /** Constructor with 3 int parameters. */
+
+ /** method getSlope(): Determine the slope of this APLine. */
+
+ /** method isOnLine(x,y): Determine if coordinates (x,y) represent a point on this APLine. */
+
+ /** Test with this main method */
+ public static void main(String[] args)
+ {
+     APLine line1 = new APLine(5, 4, -17);
+     double slope1 = line1.getSlope(); // slope1 is assigned -1.25
+     boolean onLine1 = line1.isOnLine(5, -2); // true because 5(5) + 4(-2) + (-17) = 0
+
+     APLine line2 = new APLine(-25, 40, 30);
+     double slope2 = line2.getSlope(); // slope2 is assigned 0.625
+     boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 != 0
+     // Should print out true and false
+     System.out.println(onLine1 + " " + onLine2);
+  }
+}
+        </code>
+        <tests>
+// Test Code for Lesson 5.15 - FRQ - APLine
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("APLine");
+        // This sets default values for when objects are instantiated
+        Object[] values = new Object[] {3, 2, -6};
+        setDefaultValues(values);
+    }
+
+    @Test
+    public void testMain() throws IOException
+    {
+        String output = getMethodOutput("main");
+        String expect = " true false";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testConstructor()
+    {
+        String output = checkConstructor(3);
+        String expect = "pass";
+
+        boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetSlope() throws IOException
+    {
+        double output = Double.parseDouble(getMethodOutput("getSlope"));
+        double expect = -1.5;
+
+        boolean passed = getResults(expect, output, "Checking method getSlope()");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testIsOnLine1() throws IOException
+    {
+        Object[] args = {2, 0};
+        String output = getMethodOutput("isOnLine", args);
+        String expect = "true";
+
+        boolean passed = getResults(expect, output, "Checking method isOnLine(5, -2)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testIsOnLine2() throws IOException
+    {
+        Object[] args = {5, -2};
+        String output = getMethodOutput("isOnLine", args);
+        String expect = "false";
+
+        boolean passed = getResults(expect, output, "Checking method isOnLine(5, -2)");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testPrivateVariables()
+    {
+        String expect = "3 Private";
+        // Will produce a printout with number of private and public variables
+        String output = testPrivateInstanceVariables();
+
+        boolean passed = getResults("3 Private", output, "Checking Instance Variable(s)");
+
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
+  </subsection>
+
+
 <subsection xml:id="frq2-2024-scoreboard">
 <title>2024 FRQ 2 - Scoreboard</title>
 
@@ -446,365 +642,5 @@ public class RunestoneTests extends CodeTestHelper
 </subsection>
 
 
-<subsection xml:id="frq2-2025-signedtext">
-<title>2025 FRQ2 - Signed Text</title>
-  
-<p>This question involves the SignedText class, which contains methods that are used to include
-a signature as part of a string of text. You will write the complete SignedText class, which
-contains a constructor and two methods.
-</p><p>
-The SignedText constructor takes two String parameters. The first parameter is a first
-name and the second parameter is a last name. The length of the second parameter is always
-greater than or equal to 1.
-</p><p>
-The getSignature method takes no parameters and returns a formatted signature string
-constructed from the first and last names according to the following rules.
-</p>
 
-<ul>
-  <li><p>If the first name is an empty string, the returned signature string contains just the last name.</p></li>
-  <li><p>If the first name is not an empty string, the returned signature string is the first letter of
-the first name, a dash ("-"), and the last name, in that order.
-The addSignature method returns a possibly revised copy of its String parameter. The
-parameter will contain at most one occurrence of the object’s signature, at either the beginning
-or the end of the parameter. The returned string is created from the parameter according to the
-following rules.</p></li>
-  <li><p>If the object’s signature does not occur in the String parameter of the method, the
-returned String is the value of the parameter with the signature added to the end.</p></li>
-  <li><p>If the object’s signature occurs at the end of the String parameter, the returned
-String is the unchanged value of the parameter.</p></li>
-  <li><p>If the object’s signature occurs at the beginning of the String parameter, the returned
-String is the value of the original parameter with the signature removed from the
-beginning and appended to the end of the parameter.</p></li>
-</ul>
-<p>The following table contains a sample code execution sequence and the corresponding results. The code execution sequence appears in a class other than SignedText.</p>
-
-<figure align="center">
-<image source="FreeResponse/Figures/frq2-signedtext-table1.png" width="100%" />
-<caption>Part 1 of SignedText Table</caption>
-</figure>
-
-<figure align="center">
-<image source="FreeResponse/Figures/frq2-signedtext-table2.png" width="100%" />
-<caption>Part 2 of SignedText Table</caption>
-</figure>
-
-    <activity label="FRQ2-2025-SignedText">
-      <statement>
-        <p>Write the complete SignedText class. Your implementation must meet all specifications and conform to the examples in the table.</p>
-      </statement>
-
-      <program interactive="activecode" language="java">
-        <code>
-// Make sure you make the class header public
-
-{
-    // Private instance variables
-
-    
-    // Constructor
-
-
-    // Methods
-
-
-
-    // Do not change any code below this point
-
-    public static void main(String[] args) 
-    {
-        SignedText st1 = new SignedText("", "Wong");
-        String temp = st1.getSignature();
-        System.out.println("Expecting Wong: " + temp);
-
-        SignedText st2 = new SignedText("henri", "dubois");
-        temp = st2.getSignature();
-        System.out.println("Expecting h-dubois: " + temp);
-
-        SignedText st3 = new SignedText("GRACE", "LOPEZ");
-        temp = st3.getSignature();
-        System.out.println("Expecting G-LOPEZ: " + temp);
-
-        SignedText st4 = new SignedText("", "FOX");
-        
-        String text = "Dear";
-        temp = st4.addSignature(text);
-        System.out.println("Expecting DearFOX: " + temp);
-
-        text = "Best wishesFOX";
-        temp = st4.addSignature(text);
-        System.out.println("Expecting Best wishesFOX: " + temp);
-    }
-}
-        </code>
-        <tests>
-import static org.junit.Assert.*;
-import org.junit.*;
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void test01()
-    {
-        String code = getCode();
-        String expected = "class SignedText";
-        boolean passed = code.contains(expected);
-
-        String actual = "";
-        String[] lines = code.split("\n");
-
-        for (String line : lines) {
-            if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
-                actual = line.trim();
-                break;
-            }
-        }
-
-        getResults(expected, actual, "Created SignedText class header correctly", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test02()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        int str = countVariables(lines, "private String");
-
-        String expected = "private String: 2";
-        String actual = "private String: " + str;
-
-        boolean passed = str &gt;= 2;
-        getResults(expected, actual, "Created two private instance String variables", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test03()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "public SignedText(...)";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "SignedText(") &amp;&amp; !line.contains("new")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "String") == 2;
-        getResults(expect, actual, "Constructor header with two parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test04()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "firstName = first;\nlastName = last;";
-        String actual = "";
-
-        boolean start = false;
-
-        for (String line : lines) {
-            if(stringMatch(line, "SignedText(")) {
-                start = true;   
-            } else if (start &amp;&amp; line.contains("=")) {
-                actual += line.trim() + "\n";
-            } else if (start &amp;&amp; line.contains("}")) {
-                break;
-            }
-        }
-
-        boolean passed = countOccurences(actual, "=") == 2;
-        getResults(expect, actual, "Constructor sets both variables to values", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test05()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "String getSignature()\nString addSignature(String ...)";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "String getSignature()") || stringMatch(line, "String addSignature(")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length == 2 &amp;&amp; countOccurences(actual, "String") == 3;
-        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test06()
-    {
-        String code = getCode();
-        code = getMethodCode(code, "String getSignature()");
-        String[] lines = code.split("\n");
-
-        String expect = "firstname.equals(\"\")";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, ".equals") || stringMatch(line, "==")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.length() > 0 &amp;&amp; actual.contains("\"\"");
-        getResults(expect, actual, "Compares first name to the empty string", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test07()
-    {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        int numReturns = countOccurences(code, "return");
-
-        String[] lines = code.split("\n");
-
-        String expect = "if (index == -1)\nelse if (index == 0)\nelse";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "if") || stringMatch(line, "else")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length >= 2 &amp;&amp; stringMatch(actual, "==0") &amp;&amp; numReturns == 3;
-        getResults(expect, actual, "Identifies the three required cases for addSignature using appropriate conditions", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test08()
-    {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        String[] lines = code.split("\n");
-
-        String expect = ".indexOf(...)\n.length()\n.substring(...)";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "indexOf") || stringMatch(line, "length") || stringMatch(line, "contains") || stringMatch(line, "substring")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length >= 2;
-        getResults(expect, actual, "Uses String methods", passed);
-        assertTrue(passed);
-    }
-    
-    @Test
-    public void test09()
-    {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        String[] lines = code.split("\n");
-
-        String expect = "return textStr + sig;\nreturn textStr.substring(sig.length()) + sig;\nreturn textStr;";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "return")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length &gt;= 3;
-        getResults(expect, actual, "Returns three different cases", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test10()
-    {
-        String output = "No output detected";
-        String expect = "Expecting Wong: Wong\nExpecting h-dubois: h-dubois\n"
-            + "Expecting G-LOPEZ: G-LOPEZ\nExpecting DearFOX: DearFOX\n"
-            + "Expecting Best wishesFOX: Best wishesFOX";
-
-        try {
-            output = getMethodOutput("main");
-
-            boolean passed = stringMatch(output, expect);
-            getResults(expect, output, "Main method produces proper output", passed);
-            assertTrue(passed);
-        } catch (Exception e) {
-            getResults(expect, output, "Main method produces proper output", false);
-            assertTrue(false);
-        }
-    }
-
-    private String getMethodCode(String code, String name) {
-        String searchStr = code;
-        int start = searchStr.indexOf(name);
-        searchStr = searchStr.substring(start);
-
-        int level = 0;
-
-        for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
-                level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
-                level--;
-
-                if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
-                }
-            }
-        }
-
-        return searchStr.trim();
-    }
-
-    private boolean stringMatch(String str1, String str2) {
-        str1 = str1.replaceAll("\\s+", "");
-        str2 = str2.replaceAll("\\s+", "");
-
-        return str1.contains(str2);
-    }
-
-    private int countVariables(String[] lines, String type) {
-        int num = 0;
-        for (String line : lines){
-            if (line.contains(type)) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
-                }
-            }
-        }
-        return num;
-    }
-}
-        </tests>
-      </program>
-    </activity>
-  </subsection>
 </section>
