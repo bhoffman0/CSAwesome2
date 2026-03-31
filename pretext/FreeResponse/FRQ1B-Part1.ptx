@@ -129,9 +129,14 @@ public class RunestoneTests extends CodeTestHelper
     }
     
     private boolean test(int i) {
-        String actual = EmailParser.getDomain(email[i]);
-        
         String desc = "getDomain(\"" + email[i] + "\")";
+        String actual = "";
+        
+        try {
+            actual = "" + EmailParser.getDomain(email[i]);            
+        }catch(Exception e) {
+            actual = "The code caused an exception";
+        }
         
         boolean passed = getResults(expected[i],actual,desc);
         return passed;        
@@ -219,9 +224,14 @@ public class RunestoneTests extends CodeTestHelper
     }
     
     private boolean test(int i) {
-        String actual = "" + PhoneProcessor.getAreaCode(phones[i]);
-        
         String desc = "getAreaCode(\"" + phones[i] + "\")";
+        String actual = "";
+        
+        try {
+            actual = "" + PhoneProcessor.getAreaCode(phones[i]);            
+        }catch(Exception e) {
+            actual = "The code caused an exception";
+        }
         
         boolean passed = getResults(expected[i],actual,desc);
         return passed;        
@@ -317,9 +327,14 @@ public class RunestoneTests extends CodeTestHelper
     }
     
     private boolean test(int i) {
-        String actual = "" + LetterIdentifier.isVowel(letters[i]);
-        
         String desc = "isVowel(\"" + letters[i] + "\")";
+        String actual = "";
+        
+        try {
+            actual = "" + LetterIdentifier.isVowel(letters[i]);            
+        }catch(Exception e) {
+            actual = "The code caused an exception";
+        }
         
         boolean passed = getResults(expected[i],actual,desc);
         return passed;        
@@ -406,18 +421,16 @@ public class RunestoneTests extends CodeTestHelper
 
     private boolean test(int i) {
         String desc = "createHandle(\"" + firstnames[i] + "\", \"" + lastnames[i] + "\")";
-
+        String actual = "";
+        
         try {
-            String actual = "" + UserProfile.createHandle(firstnames[i],lastnames[i]);
-
-
-            boolean passed = getResults(expected[i],actual,desc);
-            return passed;       
-        } catch (Exception e) {
-            boolean passed = getResults(expected[i],"There was an error",desc);
-            return passed;  
+            actual = "" + UserProfile.createHandle(firstnames[i],lastnames[i]);            
+        }catch(Exception e) {
+            actual = "The code caused an exception";
         }
-
+        
+        boolean passed = getResults(expected[i],actual,desc);
+        return passed; 
     }
 
     private boolean stringMatch(String str1, String str2) {
@@ -515,7 +528,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = TagParser.getContent(input[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);
@@ -618,7 +631,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = StringScrambler.swapTwoWords(input[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);

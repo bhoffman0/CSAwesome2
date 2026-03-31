@@ -140,7 +140,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = "" + StringProcessor.countVowels(input[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);
@@ -243,7 +243,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = "" + Abbreviator.makeAbbreviation(input[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);
@@ -351,7 +351,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = "" + WordTransformer.maskVowels(input[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);
@@ -458,7 +458,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
             actual = "" + PhraseAnalyzer.countOccurrences(input1[i], input2[i]);
         } catch (Exception e) {
-            actual = "test experienced an error";
+            actual = "The code caused an exception";
         }
 
         boolean passed = getResults(expected[i],actual,desc);

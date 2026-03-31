@@ -5,6 +5,28 @@
   <introduction>
     <idx>apline</idx>
     <idx>free response</idx>
+<p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 2: Class Design</term>. Students will be instructed to design and implement a class based on provided specifications and examples. A second class might also be included. Students will be provided with a scenario and specifications in the form of a table demonstrating ways to interact with the class and the results. The class must include a class header, instance variables, a constructor, a method, and implementation of the constructor and required method.</p>
+
+<p>FRQ 2 requires the following skills:</p>
+<ul>
+<li>Create a class header</li>
+<li>Determine what private instance variables are needed by the class</li>
+<li>Write a constructor with appropriate parameters</li>
+<li>Implement a method according to the behavior specified in the table</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You do not need to include import statements. You can assume that any standard Java class is already imported.</li>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main. In this question, they are giving you the main.</li>
+</ul>
+  </introduction>
+
+<subsection xml:id="frq2-2010-apline">
+<title>2010 FRQ 2 - APLine</title>
+
     <p>
       The following is a free response question from 2010. It was question 2 on
       the exam. You can see all the free response questions from past exams at
@@ -51,10 +73,7 @@ double slope2 = line2.getSlope();        // slope2 is assigned 0.625
 boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 != 0
       </code>
     </program>
-  </introduction>
 
-  <subsection xml:id="try-and-solve-it-13">
-    <title>Try and Solve It</title>
     <p>
       Write the <title_reference>APLine</title_reference> class. Your
       implementation must include a constructor that has three integer
@@ -199,4 +218,417 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </activity>
   </subsection>
+
+<subsection xml:id="frq2-2023-sign">
+<title>2023 FRQ 2 - Sign</title>
+
+<p>This question involves methods that distribute text across lines of an electronic sign. The electronic sign and the text to be displayed on it are represented by the Sign class. You will write the complete Sign class, which contains a constructor and two methods.</p>
+
+<p>The Sign class constructor has two parameters. The first parameter is a String that contains the
+message to be displayed on the sign. The second parameter is an int that contains the width of each line of
+the sign. The width is the positive maximum number of characters that can be displayed on a single line of the
+sign.</p>
+
+<p>A sign contains as many lines as are necessary to display the entire message. The message is split among the lines of the sign without regard to spaces or punctuation. Only the last line of the sign may contain fewer characters than the width indicated by the constructor parameter.</p>
+
+<p>The following are examples of a message displayed on signs of different widths. Assume that in each example, the sign is declared with the width specified in the first column of the table and with the message "Everything on sale, please come in", which contains 34 characters.</p>
+
+<p>The following table contains a sample code execution sequence and the corresponding results. The code
+execution sequence appears in a class other than Sign.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq2-sign-table.png" width="100%" />
+</figure>
+
+<activity label="frq2-2023-sign">
+<statement>
+<p>Write the complete Sign class. Your implementation must meet all specifications and conform to the examples shown in the preceding table.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+// Make sure you make the class header public
+
+{
+    // Private instance variables
+
+    
+    // Constructor
+
+
+    // Methods
+
+
+
+    // Do not change any code below this point
+
+    public static void main(String[] args)
+    {
+        String str;
+        int x;
+        
+        Sign sign1 = new Sign("ABC222DE", 3);
+
+        x = sign1.numberOfLines ();
+        System.out.println(x);
+
+        str = sign1.getLines ();
+        System.out.println(str);
+        str = sign1.getLines ();
+        System.out.println(str);
+
+        Sign sign2 = new Sign ("ABCD", 10);
+
+        x = sign2.numberOfLines();
+        System.out.println(x);
+
+        str = sign2.getLines ();
+        System.out.println(str);
+        
+        Sign sign3 = new Sign ("ABCDEF", 6);
+
+        x = sign3.numberOfLines ();
+        System.out.println(x);
+
+        str = sign3.getLines ();
+        System.out.println(str);
+        
+        Sign sign4 = new Sign ("", 4);
+        
+        x = sign4.numberOfLines();
+        System.out.println(x);
+        
+        str = sign4.getLines();
+        System.out.println(str);
+        
+        Sign sign5 = new Sign("AB_CD_EF", 2);
+
+        x = sign5.numberOfLines();
+        System.out.println(x);
+
+        str = sign5.getLines ();
+        System.out.println(str);
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String className = "Sign";
+
+    @Test
+    public void test01()
+    {
+        boolean passed = false;
+        String expected = "class " + className;
+        String actual = "";
+
+        try {
+            String code = getCode();
+            passed = code.contains(expected);
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                    actual = line.trim();
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created " + className + " class header correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test02()
+    {
+        String expected = "String: 1\nint: 1\nprivate: 2";
+        String actual = "";
+        boolean passed = false;
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("private")) {
+                    actual += line.trim() + "\n";
+                }
+                if (stringMatch(line, className+"(") || line.contains("main(")) {
+                    break;
+                }
+            }
+            
+            lines = actual.split("\n");
+
+            int numstr = countVariables(lines, "String");
+            int numint = countVariables(lines, "int");
+            int numvar = countVariables(lines, "private");
+
+            actual = "String: " + numstr + "\nint: " + numint + "\nprivate: " + numvar;
+            passed = numstr == 1 &amp;&amp; numint == 1 &amp;&amp; numvar == 2;
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created two private instance variables (one Strings and one int)", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        String expect = "public "+ className + "(...)";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.contains(",") &amp;&amp; actual.contains("String") &amp;&amp; actual.contains("int");
+        getResults(expect, actual, "Constructor header with two parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04()
+    {
+        String expect = "message = m;\nwidth = w;";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            boolean start = false;
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(")) {
+                    start = true;   
+                } else if (start &amp;&amp; line.contains("=")) {
+                    actual += line.trim() + "\n";
+                } else if (start &amp;&amp; line.contains("}")) {
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = countOccurences(actual, "=") == 2;
+        getResults(expect, actual, "Constructor sets variables to initial values", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05()
+    {
+        String expect = "int numberOfLines()\nString getLines()";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "int numberOfLines()") || stringMatch(line, "String getLines()")) {
+                    actual += line.trim() + "\n";
+                }    
+                if (line.contains("main")){
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("int numberOfLines()") &amp;&amp; actual.contains("String getLines()");
+
+        getResults(expect, actual, "Method headers with correct return types and paramters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06()
+    {
+        String expect = "int len = message.length();\nif (len % width == 0)";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "int numberOfLines()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, ".length()") || stringMatch(line, "%")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.length() &gt; 0 &amp;&amp; actual.contains(".length()") &amp;&amp; actual.contains("%") &amp;&amp; (stringMatch(actual, "==0") || stringMatch(actual, "!=0"));
+        getResults(expect, actual, "numberOfLines() tests the length of the string", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07()
+    {
+        String expect = "return len / width;\nreturn len / width + 1;";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "int numberOfLines()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "return")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; countOccurences(actual, "+1") == 1;
+        getResults(expect, actual, "numberOfLines() returns the different options", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test08()
+    {
+        String expect = "int linesNeeded = numberOfLines();\nif (linesNeeded == 0)\nreturn null;";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "String getLines()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(line.contains("numberOfLines()") || line.contains("==") || line.contains("null")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 3;
+        getResults(expect, actual, "getLines() calls numberOfLines() and returns null if 0", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09()
+    {
+        String expect = "for (int i = 1; i &lt; linesNeeded; i++)\nsignLines += message.substring((i - 1) * width, i * width) + \";\";\nreturn signLines + message.substring((linesNeeded - 1) * width);";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "getLines()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(line.contains("while") || line.contains("for") || line.contains("substring")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 3 &amp;&amp; countOccurences(actual, "substring") &gt;= 2;
+        getResults(expect, actual, "getLines() uses a loop and substring to access parts of sign", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10()
+    {
+        String output = "No output detected";
+        String expect = "3\nABC;222;DE\nABC;222;DE\n1\nABCD\n1\nABCDEF\n0\nnull\n4\nAB;_C;D_;EF";
+
+        try {
+            output = getMethodOutput("main");
+        } catch (Exception e) {
+            output = "The code caused an exception";
+        }
+
+        boolean passed = stringMatch(output, expect);
+        getResults(expect, output, "Main method produces proper output", passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll("\\s+", "");
+        str2 = str2.replaceAll("\\s+", "");
+
+        return str1.contains(str2);
+    }
+
+    private int countVariables(String[] lines, String type) {
+        int num = 0;
+        for (String line : lines){
+            if (line.contains(type)) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+        return num;
+    }
+}
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+
 </section>

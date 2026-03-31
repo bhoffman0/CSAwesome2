@@ -54,9 +54,394 @@ public class ClassName			// Class Header - Note no ()
     }
 }
 
-    </code>
-    </program>
+</code>
+</program>
     
+
+</subsection>
+
+<subsection xml:id="frq2-2024-scoreboard">
+<title>2024 FRQ 2 - Scoreboard</title>
+
+
+<p>This question involves a <c>Scoreboard</c> for a game. The game is played between two teams who alternate turns so that at any given time, one team is active and the other team is inactive. During a turn, a team makes one or more plays. Each play can score one or more points and the team’s turn continues, or the play can fail, in which case no points are scored and the team’s turn ends. The <c>Scoreboard</c> class, which you will write, is used to keep track of the score in a game.</p>
+
+<ul>
+    <li><p>The constructor has two parameters. The first parameter is a String containing the name of team 1, and the second parameter is a String containing the name of team 2. The game always begins with team 1 as the active team.</p></li>
+    <li><p>The <c>recordPlay</c> method has a single nonnegative integer parameter that is equal to the number of points scored on a play or 0 if the play failed. If the play results in one or more points scored, the active team’s score is updated and that team remains active. If the value of the parameter is 0, the active team’s turn ends and the inactive team becomes the active team. The <c>recordPlay</c> method does not return a value.</p></li>
+    <li><p>The <c>getScore</c> method has no parameters. The method returns a String containing information about the current state of the game. The returned string begins with the score of team 1, followed by a hyphen ("-"), followed by the score of team 2, followed by a hyphen, followed by the name of the team that is currently active.</p></li>
+</ul>
+<p>The following table contains a sample code execution sequence and the corresponding results. The code execution sequence appears in a class other than <c>Scoreboard</c>.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq2-scoreboard-table.png" width="100%" />
+<caption>Scoreboard Table</caption>
+</figure>
+
+<activity label="frq2-2024-scoreboard">
+<statement>
+<p>Write the complete <c>Scoreboard</c> class. Your implementation must meet all specifications and conform to the examples shown in the preceding table.</p>
+</statement>
+
+<program interactive="activecode" language="java">
+<code>
+// Make sure you make the class header public
+
+{
+    // Private instance variables
+
+    
+    // Constructor
+
+
+    // Methods
+
+
+
+    // Do not change any code below this point
+
+    public static void main(String[] args)
+    {
+        Scoreboard game = new Scoreboard ("Red", "Blue") ;
+
+        System.out.println(game.getScore());
+        game.recordPlay(1);
+
+        System.out.println(game.getScore());
+        game.recordPlay (0);
+
+        System.out.println(game.getScore());
+        System.out.println(game.getScore());
+
+        game. recordPlay (3) ;
+        System.out.println(game.getScore());
+        
+        game. recordPlay (1);
+        game.recordPlay(0);
+
+        System.out.println(game.getScore());
+        game.recordPlay (0) ;
+
+        game.recordPlay(4) ;
+        game.recordPlay(0);
+
+        System.out.println(game.getScore());
+        
+        Scoreboard match = new Scoreboard ("Lions", "Tigers") ;
+        System.out.println(match.getScore());
+        
+        System.out.println(game.getScore());
+    }
+}
+
+
+
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String className = "Scoreboard";
+
+    @Test
+    public void test01()
+    {
+        boolean passed = false;
+        String expected = "class " + className;
+        String actual = "";
+
+        try {
+            String code = getCode();
+            passed = code.contains(expected);
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                    actual = line.trim();
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created " + className + " class header correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test02()
+    {
+        String expected = "private String: 2\nprivate int: 2+\nprivate total: 5";
+        String actual = "";
+        boolean passed = false;
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            int numstr = countVariables(lines, "private String");
+            int numint = countVariables(lines, "private int");
+            int numvar = countVariables(lines, "private");
+
+            actual = "private String: " + numstr + "\nprivate int: " + numint + "\nprivate total: " + numvar;
+            passed = numstr &gt;= 2 &amp;&amp; numint &gt;= 2 &amp;&amp; numvar &gt;= 5;
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created five private instance variables (at least 2 Strings and 2 ints)", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        String expect = "public "+ className + "(...)";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "String") == 2;
+        getResults(expect, actual, "Constructor header with two parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04()
+    {
+        String expect = "team1name = name1;\nteam2name = name2;";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            boolean start = false;
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(")) {
+                    start = true;   
+                } else if (start &amp;&amp; line.contains("=")) {
+                    actual += line.trim() + "\n";
+                } else if (start &amp;&amp; line.contains("}")) {
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = countOccurences(actual, "=") &gt;= 3;
+        getResults(expect, actual, "Constructor sets variables to initial values", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05()
+    {
+        String expect = "String getScore()\nvoid recordPlay(int ...)";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "String getScore()") || stringMatch(line, "void recordPlay(")) {
+                    actual += line.trim() + "\n";
+                }    
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("(int ");
+
+        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06()
+    {
+        String expect = "String result = score1 + \"-\" + score2 + \"-\";\nreturn result;";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "String getScore()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "String") || stringMatch(line, "return")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.length() &gt; 0 &amp;&amp; countOccurences(actual, "-") == 2;
+        getResults(expect, actual, "Creates and returns a String with score", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07()
+    {
+        String expect = "if (whoseTurn == 1)\nelse";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "String getScore()");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "if") || stringMatch(line, "else")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; stringMatch(actual, "==");
+        getResults(expect, actual, "Identifies the current team to return in getScore()", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test08()
+    {
+        String expect = "whoseTurn = 2;\nwhoseTurn = 1;\nscore1 += points;\nscore2 += points;";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "void recordPlay(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "=") &amp;&amp; !stringMatch(line, "==")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 3;
+        getResults(expect, actual, "recordPlay() changes the turn and the scores", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09()
+    {
+        String expect = "if (whoseTurn == 1)\nelse";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "void recordPlay(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "if") || stringMatch(line, "else")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 4;
+        getResults(expect, actual, "recordPlay() has enough if/else statements", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10()
+    {
+        String output = "No output detected";
+        String expect = "0-0-Red\n1-0-Red\n1-0-Blue\n1-0-Blue\n1-3-Blue\n1-4-Red\n"
+            + "1-8-Red\n0-0-Lions\n1-8-Red";
+
+        try {
+            output = getMethodOutput("main");
+        } catch (Exception e) {
+            output = "The code caused an exception";
+        }
+
+        boolean passed = stringMatch(output, expect);
+        getResults(expect, output, "Main method produces proper output", passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll("\\s+", "");
+        str2 = str2.replaceAll("\\s+", "");
+
+        return str1.contains(str2);
+    }
+
+    private int countVariables(String[] lines, String type) {
+        int num = 0;
+        for (String line : lines){
+            if (line.contains(type)) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+        return num;
+    }
+}
+
+
+</tests>
+</program>
+</activity>
 
 </subsection>
 
@@ -101,7 +486,7 @@ beginning and appended to the end of the parameter.</p></li>
 
 <figure align="center">
 <image source="FreeResponse/Figures/frq2-signedtext-table2.png" width="100%" />
-<caption>Part 1 of SignedText Table</caption>
+<caption>Part 2 of SignedText Table</caption>
 </figure>
 
     <activity label="FRQ2-2025-SignedText">
@@ -258,7 +643,7 @@ public class RunestoneTests extends CodeTestHelper
         }
 
         boolean passed = actual.split("\n").length == 2 &amp;&amp; countOccurences(actual, "String") == 3;
-        getResults(expect, actual, "Method headers with correct return types and paramters", passed);
+        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
         assertTrue(passed);
     }
 
@@ -294,7 +679,7 @@ public class RunestoneTests extends CodeTestHelper
 
         String[] lines = code.split("\n");
 
-        String expect = "";
+        String expect = "if (index == -1)\nelse if (index == 0)\nelse";
         String actual = "";
 
         for (String line : lines) {

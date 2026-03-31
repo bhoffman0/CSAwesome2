@@ -5,6 +5,29 @@
   <introduction>
     <idx>Hidden Word</idx>
     <idx>free response</idx>
+
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 2: Class Design</term>. Students will be instructed to design and implement a class based on provided specifications and examples. A second class might also be included. Students will be provided with a scenario and specifications in the form of a table demonstrating ways to interact with the class and the results. The class must include a class header, instance variables, a constructor, a method, and implementation of the constructor and required method.</p>
+
+<p>FRQ 2 requires the following skills:</p>
+<ul>
+<li>Create a class header</li>
+<li>Determine what private instance variables are needed by the class</li>
+<li>Write a constructor with appropriate parameters</li>
+<li>Implement a method according to the behavior specified in the table</li>
+</ul>
+
+<p>Teacher Insights</p>
+<ul>
+<li>You do not need to include import statements. You can assume that any standard Java class is already imported.</li>
+<li>You will NEVER print. If you think you need to print, you probably need to return something.</li>
+<li>You will NOT need to write a main. In this question, they are giving you the main.</li>
+</ul>
+</introduction>
+
+  <subsection xml:id="frq2-2015-hiddenword">
+    <title>2015 FRQ 2 - HiddenWord</title>
+
     <p>
       The following is a free response question from 2015. It was question 2 on
       the exam. You can see all the free response questions from past exams at
@@ -58,10 +81,8 @@ HiddenWord puzzle = new HiddenWord("HARPS");
       <caption>Example guesses and hints</caption>
       <image source="FreeResponse/Figures/HiddenWordExamples.png" width="100%" />
     </figure>
-  </introduction>
 
-  <subsection xml:id="solve-hiddenword">
-    <title>Try and Solve It</title>
+
 
 <activity label="HiddenWordFRQ">
       <statement>
@@ -181,4 +202,453 @@ public class RunestoneTests extends CodeTestHelper
     </program>
     </activity>
   </subsection>
+
+<subsection xml:id="frq2-multiple-classes">
+<title>FRQ 2 - Class Design with Multiple Classes</title>
+<p>Sometimes FRQs use multiple classes. They usually provide a class, then include objects related to that class as private instance variables in the next class. You have done several examples where the instance variables are Strings. A class with instance variables that are elements of another class is the same, but you will not know how the other class has been defined.</p>
+<p>The following FRQ demonstrates this.</p>
+</subsection>
+
+<subsection xml:id="frq2-2021-combined-table">
+<title>2021 FRQ 2 - Combined Table</title>
+
+<p>The class SingleTable represents a table at a restaurant.</p>
+
+
+<program language="java">
+<code>
+public class SingleTable
+{
+    /** Returns the number of seats at this table. The value is always greater than or equal to 4. */
+    public int getNumSeats()
+    { /* implementation not shown */ }
+
+    /** Returns the height of this table in centimeters. */
+    public int getHeight()
+    { /* implementation not shown */ }
+
+    /** Returns the quality of the view from this table. */
+    public double getViewQuality()
+    { /* implementation not shown */ }
+
+    /** Sets the quality of the view from this table to value . */
+    public void setViewQuality(double value)
+    { /* implementation not shown */ }
+
+    // There may be instance variables, constructors, and methods that are not shown.
+}
+</code>
+</program>
+
+<p>At the restaurant, customers can sit at tables that are composed of two single tables pushed together. You will write a class CombinedTable to represent the result of combining two SingleTable objects, based
+on the following rules and the examples in the chart that follows.</p>
+<ul>
+<li><p>A CombinedTable can seat a number of customers that is two fewer than the total number of seats in its two SingleTable objects (to account for seats lost when the tables are pushed together).</p></li>
+<li><p>A CombinedTable has a desirability that depends on the views and heights of the two single tables. If the two single tables of a CombinedTable object are the same height, the desirability of the CombinedTable object is the average of the view qualities of the two single tables.</p></li>
+<li><p>If the two single tables of a CombinedTable object are not the same height, the desirability of the CombinedTable object is 10 units less than the average of the view qualities of the two single tables.</p></li>
+</ul>
+
+<p>Assume SingleTable objects t1, t2, and t3 have been created as follows.</p>
+
+<ul>
+<li><p>SingleTable t1 has 4 seats, a view quality of 60.0, and a height of 74 centimeters.</p></li>
+<li><p>SingleTable t2 has 8 seats, a view quality of 70.0, and a height of 74 centimeters.</p></li>
+<li><p>SingleTable t3 has 12 seats, a view quality of 75.0, and a height of 76 centimeters.</p></li>
+</ul>
+
+<p>The chart contains a sample code execution sequence and the corresponding results.</p>
+<figure align="center">
+<image source="FreeResponse/Figures/frq2-combinedtable-table.png" width="100%" />
+</figure>
+
+<p>The last line of the chart illustrates that when the characteristics of a SingleTable change, so do those of the CombinedTable that contains it.</p>
+
+
+
+<activity label="frq2-2021-combined-table">
+<statement>
+<p>Write the complete CombinedTable class. Your implementation must meet all specifications and
+conform to the examples shown in the preceding chart.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+// Make sure you make the class header public
+
+{
+    // Private instance variables
+
+    
+    // Constructor
+
+
+    // Methods
+
+
+
+    // Do not change any code below this point
+
+    public static void main(String[] args)
+    {
+        SingleTable t1 = new SingleTable(4, 74, 60);
+        SingleTable t2 = new SingleTable(8, 74, 70);
+        SingleTable t3 = new SingleTable(12, 76, 75);
+
+        CombinedTable c1 = new CombinedTable(t1, t2);
+        System.out.println(c1.canSeat(9));
+        System.out.println(c1.canSeat(11));
+        System.out.println(c1.getDesirability());
+
+        CombinedTable c2 = new CombinedTable(t2, t3);
+        System.out.println(c2.canSeat(18));
+        System.out.println(c2.getDesirability());
+        t2.setViewQuality(80);
+        System.out.println(c2.getDesirability());
+    }
+}
+
+class SingleTable
+{
+    /** Returns the number of seats at this table. The value is always greater than or equal to 4. */
+    public int getNumSeats()
+    { return numSeats; }
+
+    /** Returns the height of this table in centimeters. */
+    public int getHeight()
+    { return height; }
+
+    /** Returns the quality of the view from this table. */
+    public double getViewQuality()
+    {   return viewQuality;  }
+
+    /** Sets the quality of the view from this table to value . */
+    public void setViewQuality(double value)
+    {   viewQuality = value;    }
+
+    public SingleTable(int n, int h, double v) {
+        numSeats = n;
+        height = h;
+        viewQuality = v;
+    }
+
+    private int numSeats;
+    private int height;
+    private double viewQuality;
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    private String className = "CombinedTable";
+
+    @Test
+    public void test01()
+    {
+        boolean passed = false;
+        String expected = "class " + className;
+        String actual = "";
+
+        try {
+            String code = getCode();
+            passed = code.contains(expected);
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                    actual = line.trim();
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created " + className + " class header correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test02()
+    {
+        String expected = "SingleTable variables: 2\nprivate variables: 2";
+        String actual = "";
+        boolean passed = false;
+
+        try{
+            String code = getCode();
+            code = getMethodCode(code, "class " + className);
+            
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (!line.contains(className)  &amp;&amp; line.contains("SingleTable")){
+                    actual += line.trim() + "\n";
+                }
+                if (line.contains("main")) {
+                    break;
+                }
+            }
+
+            
+            int numstr = countVariables(actual.split("\n"), "SingleTable");
+            int numvar = countVariables(actual.split("\n"), "private");
+
+            actual = "SingleTable variables: " + numstr + "\nprivate variables: " + numvar;
+            passed = numstr == 2 &amp;&amp; numvar == 2;
+            /**/
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        getResults(expected, actual, "Created two private instance variables of type SingleTable", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        String expect = "public "+ className + "(...)";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "SingleTable") == 2;
+        getResults(expect, actual, "Constructor header with two SingleTable parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04()
+    {
+        String expect = "table1 = t1;\ntable2 = t2;";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            boolean start = false;
+
+            for (String line : lines) {
+                if(stringMatch(line, className+"(")) {
+                    start = true;   
+                } else if (start &amp;&amp; line.contains("=")) {
+                    actual += line.trim() + "\n";
+                } else if (start &amp;&amp; line.contains("}")) {
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = countOccurences(actual, "=") == 2;
+        getResults(expect, actual, "Constructor sets variables to initial values", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05()
+    {
+        String expect = "boolean canSeat(int ...)\ndouble getDesirability()";
+        String actual = "";
+
+        try{
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "boolean canSeat(") || stringMatch(line, "double getDesirability(")) {
+                    actual += line.trim() + "\n";
+                }    
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("(int ");
+
+        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06()
+    {
+        String expect = "table1.getNumSeats() + table2.getNumSeats() - 2";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "boolean canSeat(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "getNumSeats")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.length() &gt; 0 &amp;&amp; countOccurences(actual, "getNumSeats") == 2 &amp;&amp; stringMatch(actual, "-2");
+        getResults(expect, actual, "Determines the number of seats accurately", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07()
+    {
+        String expect = "seats &gt;= people";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "boolean canSeat(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "&gt;=") || stringMatch(line, "&lt;") || stringMatch(line, "return")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.length() &gt; 0 &amp;&amp; actual.contains("return");
+        getResults(expect, actual, "Determines and returns if CombinedTable can seat enough people", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test08()
+    {
+        String expect = "(table1.getViewQuality() + table2.getViewQuality()) / 2";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "double getDesirability(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if((stringMatch(line, "=") || stringMatch(line, "getViewQuality") || stringMatch(line, "/2")) &amp;&amp; !stringMatch(line, "==")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = stringMatch(actual, "/2") &amp;&amp; countOccurences(actual, ".getViewQuality()") == 2;
+        getResults(expect, actual, "getDesirability() calculates average view correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09()
+    {
+        String expect = "if(table1.getHeight() == table2.getHeight())\nreturn averageView;\nreturn averageView - 10;";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "double getDesirability(");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if(stringMatch(line, "==") || stringMatch(line, ".getHeight()") || stringMatch(line, "return")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = actual.split("\n").length &gt;= 3;
+        getResults(expect, actual, "getDesirability() calculates desirability correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10()
+    {
+        String output = "No output detected";
+        String expect = "true\nfalse\n65.0\ntrue\n62.5\n67.5";
+
+        try {
+            output = getMethodOutput("main");
+        } catch (Exception e) {
+            output = "The code caused an exception";
+        }
+
+        boolean passed = stringMatch(output, expect);
+        getResults(expect, output, "Main method produces proper output", passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll("\\s+", "");
+        str2 = str2.replaceAll("\\s+", "");
+
+        return str1.contains(str2);
+    }
+
+    private int countVariables(String[] lines, String type) {
+        int num = 0;
+        for (String line : lines){
+            if (line.contains(type)) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+        return num;
+    }
+}
+</tests>
+</program>
+</activity>
+</subsection>
 </section>
