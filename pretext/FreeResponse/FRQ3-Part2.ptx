@@ -1,10 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="stringScrambleB">
-  <title>FRQ3 - ArrayLists - String Scramble B</title>
+<section xml:id="FRQ3-Part2">
+  <title>FRQ3 - ArrayLists - Part 2</title>
   <introduction>
     <idx>string scramble</idx>
+    <idx>ArrayList</idx>
     <idx>free response</idx>
+
+    <p>From the 2025 Course and Exam Description: </p>
+    <p><term>Free-Response Question 3: Data Analysis with ArrayList</term>. Students will be provided with a scenario and
+its associated class(es). Students will write one method of a given class based on provided specifications and 
+examples. The method requires students to use, analyze, and manipulate data in an ArrayList structure.</p>
+
+<p>FRQ 3 requires the following skills:</p>
+<ul>
+<li>Iterate through an ArrayList</li>
+<li>Access elements of an ArrayList</li>
+<li>Call methods on elements of the ArrayList</li>
+<li>Use a provided class</li>
+</ul>
+</introduction>
+
+<subsection xml:id="frq3-2014-ScrambledStrings">
+    <title>2014 FRQ3 - ScrambledStrings</title>
+
     <p>
       The following is part b of a free response question from 2014. It was
       question 1 on the exam. You can see all the free response questions from
@@ -14,7 +33,7 @@
     </p>
 
     <p>
-      <term>Question 1.</term> This question involves reasoning about strings
+      This question involves reasoning about strings
       made up of uppercase letters. You will implement two related methods that
       appear in the same class (not shown). The first method takes a single
       string parameter and returns a scrambled version of that string. The
@@ -72,7 +91,8 @@ public class ScrambledStrings
 }
       </code>
     </program>
-  </introduction>
+
+  </subsection>
 
   <subsection xml:id="how-to-solve-this-problem-7">
     <title>How to solve this problem</title>
@@ -629,6 +649,25 @@ import java.util.List;
 public class ScrambledStrings
 {
 
+    /********************** Part (b) *********************/
+
+    /**
+     * Modifies wordList by replacing each word with its scrambled version,
+     * removing any words that are unchanged as a result of scrambling.
+     *
+     * @param wordList the list of words Precondition: wordList contains only
+     *     non-null objects Postcondition: - all words unchanged by scrambling have
+     *     been removed from wordList - each of the remaining words has been
+     *     replaced by its scrambled version - the relative ordering of the entries
+     *     in wordList is the same as it was before the method was called
+     */
+    public static void scrambleOrRemove(List&lt;String&gt; wordList) {
+      /********************** Write your code here /**********************
+
+    }
+
+
+
     /**
      * Scrambles a given word.
      *
@@ -670,19 +709,6 @@ public class ScrambledStrings
         return scrambled;
     }
 
-    /********************** Part (b) *********************/
-
-    /**
-     * Modifies wordList by replacing each word with its scrambled version,
-     * removing any words that are unchanged as a result of scrambling.
-     *
-     * @param wordList the list of words Precondition: wordList contains only
-     *     non-null objects Postcondition: - all words unchanged by scrambling have
-     *     been removed from wordList - each of the remaining words has been
-     *     replaced by its scrambled version - the relative ordering of the entries
-     *     in wordList is the same as it was before the method was called
-     */
-    public static void scrambleOrRemove(List&lt;String&gt; wordList) {}
 
     /********************** Test *********************/
 

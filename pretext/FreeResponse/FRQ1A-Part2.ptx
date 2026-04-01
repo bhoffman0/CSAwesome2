@@ -170,8 +170,8 @@ public int walkDogs(int hour)
 <choices>
 <choice ><statement><p>it will always be the number of available dogs</p></statement><feedback><p></p></feedback></choice>
 <choice ><statement><p>it will always be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
-<choice ><statement><p>if the maximum number of dogs is greater than the dogs to walk, it will be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
-<choice correct="yes"><statement><p>if the number of dogs to walk is greater than the maximum number of dogs, it will be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
+<choice ><statement><p>if the maximum number of dogs is greater than the number of dogs available, the number of dogs walked will be the number available</p></statement><feedback><p></p></feedback></choice>
+<choice correct="yes"><statement><p>if the number of dogs available is greater than the maximum number of dogs, the number of dogs walked wll be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
 </choices>
 </activity>
 

@@ -681,13 +681,19 @@ digit is NOT a self-divisor. There are infinitely many self-divisors.</p>
 
 <ul>
 <li><p>Repeat while the number is greater than 0</p></li>
+<li><p>Make a new variable num that is the same as number
+</p></li>
+<li><p>Repeat while num is greater than 0</p></li>
 <li><ul>
   <li><p>Access the right-most digit of number using <c>num % 10</c></p></li>
+  <li><p>Make a new variable digit that is set to right-most digit of num using <c>num % 10</c></p></li>
   <li><p>Do something with the right-most digit. In this case, if the original number is not divisible by digit, return false</p></li>
   <li><p>Remove the right-most digit of number by dividing number by 10 (<c>num / 10</c>)</p></li>
+  <li><p>Remove the right-most digit of num by dividing number by 10 (<c>num / 10</c>)</p></li>
 </ul></li>
 <li><p>If it makes it all the way through the loop without returning false, return true</p></li>
 </ul>
+
 <p>To access the right-most digit, you should use <c>num % 10</c>. To access the rest of the digit, you should use <c>num / 10</c>.</p>
 
 <activity label="frq1a-2007-Self-Divisor-PartA">
