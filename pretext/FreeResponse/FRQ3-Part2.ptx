@@ -4,9 +4,6 @@
   <title>FRQ3 - ArrayLists - Part 2</title>
   <introduction>
     <idx>string scramble</idx>
-    <idx>free response</idx>
-
-
     <idx>ArrayList</idx>
     <idx>free response</idx>
 
@@ -24,6 +21,8 @@ examples. The method requires students to use, analyze, and manipulate data in a
 </ul>
 </introduction>
 
+<subsection xml:id="frq3-2014-ScrambledStrings">
+    <title>2014 FRQ3 - ScrambledStrings</title>
 
     <p>
       The following is part b of a free response question from 2014. It was
@@ -34,7 +33,7 @@ examples. The method requires students to use, analyze, and manipulate data in a
     </p>
 
     <p>
-      <term>Question 1.</term> This question involves reasoning about strings
+      This question involves reasoning about strings
       made up of uppercase letters. You will implement two related methods that
       appear in the same class (not shown). The first method takes a single
       string parameter and returns a scrambled version of that string. The
@@ -92,6 +91,8 @@ public class ScrambledStrings
 }
       </code>
     </program>
+
+  </subsection>
 
   <subsection xml:id="how-to-solve-this-problem-7">
     <title>How to solve this problem</title>
