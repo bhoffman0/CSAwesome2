@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ4-Part3">
+<title>FRQ4 - 2D Arrays - Part 3</title>
+<introduction>
+<idx>free response</idx>
+<idx>2D array</idx>
+<p>From the 2025 Course and Exam Description: </p>
+<p><term>Free-Response Question 4: 2D Array</term>. Students will be provided with a scenario and its associated class(es).
+Students will write one method of a given class based on provided specifications and examples. The method 
+requires students to use, analyze, and manipulate data in a 2D array structure.</p>
+
+<p>FRQ 4 requires the following skills:</p>
+<ul>
+<li>Iterate through a 2D array</li>
+<li>Access elements of a 2D array</li>
+<li>Call methods on elements of a 2D array</li>
+</ul>
+
+</introduction>
+
+<subsection xml:id="2025-FRQ4-SumOrSameGame-A">
+<title>2025 FRQ 4 - SumOrSameGame - Part (a)</title>
+
+<p>
+    This question involves reasoning about a number puzzle that is represented as a two-dimensional array of integers. Each element of the array initially contains a value between 1 and 9, inclusive. Solving the puzzle involves clearing pairs of array elements by setting them to 0. Two elements can be cleared if their values sum to 10 or if they have the same value. The puzzle is considered solved if all elements of the array are cleared.
+</p>
+<p>
+    You will write the constructor and one method of the <c>SumOrSameGame</c> class, which contains the methods that manipulate elements of the puzzle.
+</p>
+
+<program language="java">
+<code>
+public class SumOrSameGame
+{
+    private int[][] puzzle;
+
+    /**
+    * Creates a two-dimensional array and fills it with random integers,
+    * as described in part (a)
+    * Precondition: numRows > 0; numCols > 0
+    */
+    public SumOrSameGame(int numRows, int numCols)
+    { /* to be implemented in part (a) */ }
+    
+    /**
+    * Identifies and clears an element of puzzle that can be paired with
+    * the element at the given row and column, as described in part (b)
+    * Preconditions: row and col are valid row and column indices in puzzle.
+    * The element at the given row and column is between 1 and 9, inclusive.
+    */
+    public boolean clearPair(int row, int col)
+    { /* to be implemented in part (b) */ }
+    
+    /* There may be instance variables, constructors,
+    and methods that are not shown. */
+}
+</code>
+</program>
+
+<p>
+    <term>Part a.</term> 
+Write the constructor for the <c>SumOrSameGame</c> class. The constructor initializes the instance
+variable puzzle to be a two-dimensional integer array with the number of rows and
+columns specified by the parameters numRows and numCols, respectively. Array elements
+are initialized with random integers between 1 and 9, inclusive, each with an equal
+chance of being assigned to each element of puzzle.
+</p>
+
+<p>
+When an element of the two-dimensional array is accessed, the first index is used to specify
+the row and the second index is used to specify the column. 
+</p>
+
+<activity label="frq4-2023-sumorsamegame-a">
+<statement>
+<p>
+Complete the <c>SumOrSameGame</c> constructor.         
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Arrays;
+
+public class SumOrSameGame
+{
+    private int[][] puzzle;
+    
+    /**
+     * Identifies and clears an element of puzzle that can be paired with
+     * the element at the given row and column, as described in part (b)
+     * Preconditions: row and col are valid row and column indices in puzzle.
+     * The element at the given row and column is between 1 and 9, inclusive.
+     */
+    public boolean clearPair(int row, int col)
+    { 
+        /* to be implemented in part (b) */ 
+        
+
+    }
+    
+    /* There may be instance variables, constructors,
+    and methods that are not shown. */
+    
+    public static void main(String[] args)
+    {
+        int[][] p1 = {{0, 7, 9, 0}, {7, 4, 1, 6}, {8, 4, 1, 8}};
+        
+        SumOrSameGame g1 = new SumOrSameGame(p1);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(0, 1));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {5, 4, 1, 2}};
+        
+        g1 = new SumOrSameGame(p2);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(2, 2));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p3 = {{8, 1, 0, 5}, {0, 4, 3, 6}, {3, 4, 5, 8}};
+        
+        g1 = new SumOrSameGame(p3);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(1, 1));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p4 = {{1, 7, 9}, {2, 6, 5}, {4, 4, 4}};
+        
+        g1 = new SumOrSameGame(p4);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(0, 2));
+        System.out.println(g1);
+        System.out.println();
+    }
+    
+    public String toString()
+    {
+        return Arrays.deepToString(puzzle).replaceAll("], ", "\n").replaceAll(",","").replaceAll("\\[","").replaceAll("]",""); //replaceAll("\\[","\\{").replaceAll("\\]","\\}");
+    }
+    
+    public int[][] getPuzzle() {
+        return puzzle;
+    }
+    
+    public SumOrSameGame(int[][] p)
+    { 
+        puzzle = p;
+    }
+    
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        int[][] puz = {{3, 4, 4}, {8, 5, 9}, {8, 7, 6}};
+        String res = "3 0 0\n8 5 9\n8 7 6";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 0, 1);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test01() {
+        int[][] puz = {{1, 5, 4}, {4, 7, 6}, {4, 5, 5}};
+        String res = "1 5 4\n0 7 0\n4 5 5";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 1, 0);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02() {
+        int[][] puz = {{6, 4, 8, 7}, {4, 4, 7, 9}, {5, 7, 10, 3}, {6, 9, 4, 1}};
+        String res = "6 4 8 7\n0 0 7 9\n5 7 10 3\n6 9 4 1";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 1, 1);
+        assertTrue(passed);         
+    }
+
+    @Test
+    public void test03() {
+        int[][] puz = {{9, 3, 4, 9}, {5, 1, 3, 4}, {2, 9, 9, 9}, {1, 9, 3, 4}};
+        String res = "9 3 4 9\n5 1 3 4\n2 9 9 9\n1 9 3 4";
+        boolean ans = false;
+
+        boolean passed = test(puz, res, ans, 2, 0);
+        assertTrue(passed);          
+    }
+
+    @Test
+    public void test04() {
+        int[][] puz = {{6, 6, 8, 3, 1}, {10, 2, 9, 9, 5}, {8, 1, 5, 3, 3}};
+        String res = "6 6 8 3 1\n10 2 9 9 5\n8 1 5 3 3";
+        boolean ans = false;
+
+        boolean passed = test(puz, res, ans, 2, 1);
+        assertTrue(passed);      
+    }
+
+    private boolean test(int[][] puz, String res, boolean ans, int r, int c) {
+        String desc = "Testing clearPair(" + r + ", " + c + ") on\n"+  toString(puz);
+        String expected = ans + "\n" + res;
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            SumOrSameGame d1 = new SumOrSameGame(puz);
+            actual = d1.clearPair(r, c) + "\n";
+            
+            int[][] grid = d1.getPuzzle();
+            actual += toString(grid);
+            
+            passed = expected.equals(actual);
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        getResults(expected, actual, desc, passed);        
+        return passed;
+    }
+    
+    private String toString(int[][] puzzle)
+    {
+        return Arrays.deepToString(puzzle).replaceAll("], ", "\n").replaceAll(",","").replaceAll("\\[","").replaceAll("]",""); //replaceAll("\\[","\\{").replaceAll("\\]","\\}");
+    }
+}  
+</tests>
+</program>
+</activity>
+
+
+</subsection>
+
+<subsection xml:id="2025-FRQ4-SumOrSameGame-B">
+<title>2025 FRQ 4 - SumOrSameGame - Part (b)</title>
+
+<p>
+    <term>Part b.</term>
+Write the <c>clearPair</c> method, which takes a valid row index and valid column index as its
+parameters. The array element specified by those indices, which has a value between 1 and
+9, inclusive, is compared to other array elements in <c>puzzle</c> in an attempt to pair it with
+another array element that meets both of the following conditions.
+</p>
+
+<ul>
+    <li><p>The row index of the second element is greater than or equal to the parameter row.</p></li>
+    <li><p>The two elements have equal values or have values that sum to 10.</p></li>
+</ul>
+
+<p>
+If such an array element is found, both array elements of the pair are cleared (set to 0) and
+the method returns true. If more than one such array element is found, any one of those
+identified array elements can be used to complete the pair and can be cleared. If no such
+array element is found, no changes are made to <c>puzzle</c> and the method returns false.
+</p>
+
+<p>The following table shows the possible results of several calls to <c>clearPair</c>.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq4-sumorsamegame-table-b.png" width="100%" />
+</figure>
+
+
+
+
+<activity label="frq4-2023-sumorsamegame-b">
+<statement>
+<p>Complete method <c>clearPair</c>.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Arrays;
+
+public class SumOrSameGame
+{
+    private int[][] puzzle;
+    
+    /**
+     * Identifies and clears an element of puzzle that can be paired with
+     * the element at the given row and column, as described in part (b)
+     * Preconditions: row and col are valid row and column indices in puzzle.
+     * The element at the given row and column is between 1 and 9, inclusive.
+     */
+    public boolean clearPair(int row, int col)
+    { 
+        /* to be implemented in part (b) */ 
+
+        
+    }
+    
+    /* There may be instance variables, constructors,
+    and methods that are not shown. */
+    
+    public static void main(String[] args)
+    {
+        int[][] p1 = {{0, 7, 9, 0}, {7, 4, 1, 6}, {8, 4, 1, 8}};
+        
+        SumOrSameGame g1 = new SumOrSameGame(p1);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(0, 1));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p2 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {5, 4, 1, 2}};
+        
+        g1 = new SumOrSameGame(p2);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(2, 2));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p3 = {{8, 1, 0, 5}, {0, 4, 3, 6}, {3, 4, 5, 8}};
+        
+        g1 = new SumOrSameGame(p3);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(1, 1));
+        System.out.println(g1);
+        System.out.println();
+        
+        int[][] p4 = {{1, 7, 9}, {2, 6, 5}, {4, 4, 4}};
+        
+        g1 = new SumOrSameGame(p4);
+        System.out.println(g1);
+        System.out.println(g1.clearPair(0, 2));
+        System.out.println(g1);
+        System.out.println();
+    }
+    
+    public String toString() {
+        return Arrays.deepToString(puzzle).replaceAll("], ", "\n").replaceAll(",","").replaceAll("\\[","").replaceAll("]",""); //replaceAll("\\[","\\{").replaceAll("\\]","\\}");
+    }
+    
+    public int[][] getPuzzle() {
+        return puzzle;
+    }
+    
+    public SumOrSameGame(int[][] p) { 
+        puzzle = p;
+    }  
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        int[][] puz = {{3, 4, 4}, {8, 5, 9}, {8, 7, 6}};
+        String res = "3 0 0\n8 5 9\n8 7 6";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 0, 1);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test01() {
+        int[][] puz = {{1, 5, 4}, {4, 7, 6}, {4, 5, 5}};
+        String res = "1 5 4\n0 7 0\n4 5 5";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 1, 0);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02() {
+        int[][] puz = {{6, 4, 8, 7}, {4, 4, 7, 9}, {5, 7, 10, 3}, {6, 9, 4, 1}};
+        String res = "6 4 8 7\n0 0 7 9\n5 7 10 3\n6 9 4 1";
+        boolean ans = true;
+
+        boolean passed = test(puz, res, ans, 1, 1);
+        assertTrue(passed);         
+    }
+
+    @Test
+    public void test03() {
+        int[][] puz = {{9, 3, 4, 9}, {5, 1, 3, 4}, {2, 9, 9, 9}, {1, 9, 3, 4}};
+        String res = "9 3 4 9\n5 1 3 4\n2 9 9 9\n1 9 3 4";
+        boolean ans = false;
+
+        boolean passed = test(puz, res, ans, 2, 0);
+        assertTrue(passed);          
+    }
+
+    @Test
+    public void test04() {
+        int[][] puz = {{6, 6, 8, 3, 1}, {10, 2, 9, 9, 5}, {8, 1, 5, 3, 3}};
+        String res = "6 6 8 3 1\n10 2 9 9 5\n8 1 5 3 3";
+        boolean ans = false;
+
+        boolean passed = test(puz, res, ans, 2, 1);
+        assertTrue(passed);      
+    }
+
+    private boolean test(int[][] puz, String res, boolean ans, int r, int c) {
+        String desc = "Testing clearPair(" + r + ", " + c + ") on\n"+  toString(puz);
+        String expected = ans + "\n" + res;
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            SumOrSameGame d1 = new SumOrSameGame(puz);
+            actual = d1.clearPair(r, c) + "\n";
+            
+            int[][] grid = d1.getPuzzle();
+            actual += toString(grid);
+            
+            passed = expected.equals(actual);
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        getResults(expected, actual, desc, passed);        
+        return passed;
+    }
+    
+    private String toString(int[][] puzzle)
+    {
+        return Arrays.deepToString(puzzle).replaceAll("], ", "\n").replaceAll(",","").replaceAll("\\[","").replaceAll("]",""); //replaceAll("\\[","\\{").replaceAll("\\]","\\}");
+    }
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+
+</section>
