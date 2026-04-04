@@ -44,8 +44,7 @@
       A file can be connected to the program using the <c>File</c> and
       <c>Scanner</c> classes. These classes must be imported in from libraries;
       the <c>Scanner</c> class is in the <c>java.util</c> package and
-      <c>File</c> is in the <c>java.io</c> package (
-      <title_reference>io</title_reference> stands for
+      <c>File</c> is in the <c>java.io</c> package ( <c>io</c> stands for
       <term>input/output</term>).
     </p>
 
@@ -196,20 +195,20 @@ public class RunestoneTests extends CodeTestHelper
       error-handling. You put the code that may cause an exception in a try
       block (the Java compiler will let you know if it is needed), and the code
       that handles the exception in a catch block. If the file is not found, the
-      appropriate catch block will be executed, and the program will terminate. 
+      appropriate catch block will be executed, and the program will terminate.
       It can print out the exception message or do something else to handle the exception.
-      You will not use try/catch in the AP CSA exam, but here is an example with more information 
+      You will not use try/catch in the AP CSA exam, but here is an example with more information
       available here <url href="https://www.w3schools.com/java/java_try_catch.asp">https://www.w3schools.com/java/java_try_catch.asp</url>.
     </p>
 
     <program language="java">
       <code>
-try 
-{   
+try
+{
     Scanner scan = new Scanner(myFile);
 }
-catch (FileNotFoundException e) 
-{                   
+catch (FileNotFoundException e)
+{
     System.out.println("File not found!");
 }
       </code>
@@ -662,9 +661,9 @@ String imageFile = data[8];
 
     <p>
       Try the exercise below to display Pokemon images using the <c>split</c>
-      method to extract names and urls saved in the file. Note that in the 
-      program below, the <c>readFile</c> method may throw an <c>IOException</c> 
-      to the calling method <c>main</c>, so both method headers must have the 
+      method to extract names and urls saved in the file. Note that in the
+      program below, the <c>readFile</c> method may throw an <c>IOException</c>
+      to the calling method <c>main</c>, so both method headers must have the
       <c>throws IOException</c> clause.
     </p>
 
@@ -1128,7 +1127,7 @@ public class Data
     //     and save it into the array.
 
     // Write a method that does something with the data
-    // with a for loop, for example 
+    // with a for loop, for example
     // find the object with a min or max attribute value
     // or print out all the objects of a certain attribute value.
 
@@ -1370,8 +1369,8 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
 
- 
-  
+
+
 
     <datafile label="world" xml:id="world" filename="WorldIndicators2000.csv" editable="no" hide="no">
       <pre source="_static/datasets/WorldIndicators2000.csv" />
@@ -1384,6 +1383,6 @@ public class RunestoneTests extends CodeTestHelper
     <datafile label="cerealSubset" xml:id="cerealSubset" filename="cerealSubset.csv" editable="no" hide="no">
       <pre source="_static/datasets/cerealSubset.csv" />
     </datafile>
-    
+
   </subsection>
 </section>

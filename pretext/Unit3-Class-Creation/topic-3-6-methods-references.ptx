@@ -20,7 +20,7 @@
       example, a <c>Person</c> class could have an instance variable for the
       address which can be an object with its own instance variables of street,
       city, state, and zipcode. This is a <term>has-a</term> relationship where
-      a Person <title_reference>has an</title_reference> Address inside it.
+      a Person <em>has an</em> Address inside it.
     </p>
 
     <program language="java">
@@ -73,9 +73,9 @@ class Person
       When a copy of a reference is passed in and saved in the parameter
       variable, the parameter and the argument are then <term>aliases</term>,
       both refering to the same object. Remember when we discussed reference
-      aliases with turtle objects in <xref ref="topic-2-2-booleans"/>. An object 
+      aliases with turtle objects in <xref ref="topic-2-2-booleans"/>. An object
       can have many names or aliases that refer to it, much like you may call
-      your teacher with their last name, but friends may call them by their first name, 
+      your teacher with their last name, but friends may call them by their first name,
       and their children may call them Mom or Dad.
     </p>
 
@@ -88,17 +88,17 @@ class Person
       When we pass an object to a method, the parameter variable holds a
       reference to the same object as the argument variable. This is similar
       to a Google doc where multiple people can edit the same document at the
-      same time (Thanks to Rachel Chagnon at Somerville High School, MA for this analogy). 
-      If one person changes the document, everyone else sees the change. 
+      same time (Thanks to Rachel Chagnon at Somerville High School, MA for this analogy).
+      If one person changes the document, everyone else sees the change.
       In the same way, if a method changes the state of a mutable object
       that was passed in as a parameter, the change is seen by the caller of
-      the method. This can lead to unexpected results if we want to preserve 
-      the original object unchanged. 
+      the method. This can lead to unexpected results if we want to preserve
+      the original object unchanged.
     </p>
 
     <p>
-      Some classes like <c>String</c> are immutable, so they cannot be changed 
-      by any method; for example, when <c>s.toUpperCase()</c> is called, 
+      Some classes like <c>String</c> are immutable, so they cannot be changed
+      by any method; for example, when <c>s.toUpperCase()</c> is called,
       it returns a new String object with the
       uppercase letters, but the original String object is not changed. Any new
       classes that you write that have setters or methods that change the state
@@ -703,8 +703,8 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person p1 = new Person("Skyler", 
-                          new Address("123 Main St", 
+        Person p1 = new Person("Skyler",
+                          new Address("123 Main St",
                               "Anytown","Anystate","12345"));
         System.out.println(p1);
         Address a = p1.getAddress();
@@ -770,8 +770,8 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person p1 = new Person("Skyler", 
-                        new Address("123 Main St", 
+        Person p1 = new Person("Skyler",
+                        new Address("123 Main St",
                            "Anytown", "Anystate", "12345"));
         System.out.println(p1);
         Address a = p1.getAddress();
@@ -876,8 +876,8 @@ public class RunestoneTests extends CodeTestHelper
 
     <program language="java">
       <code>
-                Person p1 = new Person("Skyler", 
-                                new Address("123 Main St", 
+                Person p1 = new Person("Skyler",
+                                new Address("123 Main St",
                                 "Anytown", "Anystate","12345"));
                 System.out.println( p1.getAddress().getCity() );
       </code>
@@ -904,8 +904,8 @@ public class RunestoneTests extends CodeTestHelper
           <test>
             <!-- else -->
             <feedback>
-              Look at the arguments to the Address constructor in: <c>Person p1 = new Person("Skyler", 
-        new Address("123 Main St", 
+              Look at the arguments to the Address constructor in: <c>Person p1 = new Person("Skyler",
+        new Address("123 Main St",
         "Anytown", "Anystate","12345"));</c>
             </feedback>
           </test>
@@ -1011,13 +1011,13 @@ public class Person
 
     public static void main(String[] args)
     {
-        Person kay = new Person("Kay", 
-                        new Address("123 Main St", 
+        Person kay = new Person("Kay",
+                        new Address("123 Main St",
                            "Boston", "Massachusetts", "01234"));
-        // TODO: print out the first two letters of the state 
+        // TODO: print out the first two letters of the state
         // in the address of kay in 1 line
 
-     
+
     }
 }
 class Address

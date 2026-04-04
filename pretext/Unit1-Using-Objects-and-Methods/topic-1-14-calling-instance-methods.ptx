@@ -567,16 +567,14 @@ public class RunestoneTests extends CodeTestHelper
     </p>
 
     <p>
-      In contrast, methods with a return type of anything
-      <title_reference>other</title_reference> than <c>void</c> are called
-      <term>non-void</term> methods. These methods <term>return</term> a value
-      that the code calling the method can use. And because methods are called
-      on an object, these methods can be used to return values that tell us
-      things about an object’s internal state. In well-designed programs, non-
-      void methods typically don’t have effects; they just compute and return a
-      value. To put it another way, void methods <title_reference>do
-      things</title_reference> while non-void methods <title_reference>produce
-      values</title_reference>.
+      In contrast, methods with a return type of anything <em>other</em> than
+      <c>void</c> are called <term>non-void</term> methods. These methods
+      <term>return</term> a value that the code calling the method can use. And
+      because methods are called on an object, these methods can be used to
+      return values that tell us things about an object’s internal state. In
+      well-designed programs, non- void methods typically don’t have effects;
+      they just compute and return a value. To put it another way, void methods
+      <em>do things</em> while non-void methods <em>produce values</em>.
     </p>
 
     <p>

@@ -400,12 +400,11 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       We’ll write a class <c>Word</c> which represents a word in a particular
       language. We want two <c>Word</c> objects to be considered <c>equals</c>
-      if and only if they are spelled the same
-      <title_reference>and</title_reference> come from the same language. The
-      latter requirement is because sometimes different languages have words
-      that are spelled the same but with different meanings such as “pie” which
-      in English is a tasty baked treat and in Spanish is what we call a “foot”
-      in English.
+      if and only if they are spelled the same <em>and</em> come from the same
+      language. The latter requirement is because sometimes different languages
+      have words that are spelled the same but with different meanings such as
+      “pie” which in English is a tasty baked treat and in Spanish is what we
+      call a “foot” in English.
     </p>
 
     <activity label="OverrideEquals">
@@ -525,9 +524,8 @@ public class RunestoneTests extends CodeTestHelper
 
         <li>
           <p>
-            Use <c>instanceof</c> to check if
-            <title_reference>other</title_reference> is an instance of this
-            class and return <c>false</c> if not.
+            Use <c>instanceof</c> to check if <c>other</c> is an instance of
+            this class and return <c>false</c> if not.
           </p>
         </li>
 
@@ -544,7 +542,7 @@ public class RunestoneTests extends CodeTestHelper
             <c>equals</c> for reference types. If you need to compare multiple
             attributes <c>&amp;&amp;</c> together the comparisons of the
             individual attributes since two objects should only be equal if
-            <title_reference>all</title_reference> the attributes match.
+            <em>all</em> the attributes match.
           </p>
         </li>
       </ol>
@@ -561,15 +559,14 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       If we override <c>equals</c> in the <c>ClassifiedWord</c> to only consider
       two <c>ClassifiedWord</c> objects <c>equals</c> if their spelling,
-      language, <title_reference>and</title_reference> part of speech match,
-      that will break the symmetry since
-      <c>regularWord.equals(classifiedWord)</c> will invoke the <c>equals</c>
-      from <c>Word</c> which will only compare the spelling and language of the
-      word but <c>classifiedWord.equals(regularWord)</c> will return
-      <c>false</c> assuming the <c>equals</c> in <c>ClassifiedWord</c> checks
-      that <c>other</c> is an <c>instanceof ClassifiedWord</c>. In general you
-      should only provide an overridden <c>equals</c> method in one class in a
-      class hierarchy.
+      language, <em>and</em> part of speech match, that will break the symmetry
+      since <c>regularWord.equals(classifiedWord)</c> will invoke the
+      <c>equals</c> from <c>Word</c> which will only compare the spelling and
+      language of the word but <c>classifiedWord.equals(regularWord)</c> will
+      return <c>false</c> assuming the <c>equals</c> in <c>ClassifiedWord</c>
+      checks that <c>other</c> is an <c>instanceof ClassifiedWord</c>. In
+      general you should only provide an overridden <c>equals</c> method in one
+      class in a class hierarchy.
     </p>
   </subsection>
 

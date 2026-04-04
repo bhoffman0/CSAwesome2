@@ -105,7 +105,7 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       What if you wanted to print out a double quote <c>"</c> character? Since
       <c>"</c> is a special character with a meaning in Java string literals, we
-      put in a backslash (<c>\"</c>) in front of the quote to signal that we want just 
+      put in a backslash (<c>\"</c>) in front of the quote to signal that we want just
       the quote character. This is called a <term>backslash escape sequence</term>. And if
       you wanted to print out a backslash, you would have to backslash (<c>\\</c>) it too in
       order to escape its special meaning. Another useful backslashed character
@@ -696,12 +696,11 @@ public class RunestoneTests extends CodeTestHelper
       <ul>
         <li>
           <p>
-            (AP 1.3.A.1) <title_reference>System.out.print</title_reference> and
-            <title_reference>System.out.println</title_reference> are Java
-            output statements that display information on the computer screen.
-            <title_reference>System.out.println</title_reference> moves the
-            cursor to a new line after the information has been displayed, while
-            <title_reference>System.out.print</title_reference> does not.
+            (AP 1.3.A.1) <c>System.out.print</c> and <c>System.out.println</c>
+            are Java output statements that display information on the computer
+            screen. <c>System.out.println</c> moves the cursor to a new line
+            after the information has been displayed, while
+            <c>System.out.print</c> does not.
           </p>
         </li>
 
@@ -724,7 +723,7 @@ public class RunestoneTests extends CodeTestHelper
             (AP 1.3.B.3) <term>Escape sequences</term> are special sequences of
             characters that can be included in a string. They start with a
             backslash <c>\</c> and have a special meaning in Java. Escape
-            sequences used in this course include double quote <c>\"</c>, 
+            sequences used in this course include double quote <c>\"</c>,
             backslash <c>\\</c>, and newline<c>\n</c>.
           </p>
         </li>
