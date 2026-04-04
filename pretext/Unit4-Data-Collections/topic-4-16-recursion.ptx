@@ -80,7 +80,7 @@ public static void neverEnd()
     <activity label="qrb_1">
       <statement>
         <p>Is the following method recursive?</p>
-        
+
           <program language="java">
             <code>
 public static int mystery()
@@ -253,10 +253,9 @@ public static int mystery2(int x)
     <video youtube="V2S_8E_ubBY" label="video-factorial" />
     <idx>factorial</idx>
     <p>
-      See the method <title_reference>factorial</title_reference> below that
-      calculates the <term>factorial</term> of a number. The
-      <term>factorial</term> of a number is defined as 1 for 0 and <c>n *
-      factorial (n-1)</c> for any other number.
+      See the method <c>factorial</c> below that calculates the
+      <term>factorial</term> of a number. The <term>factorial</term> of a number
+      is defined as 1 for 0 and <c>n * factorial (n-1)</c> for any other number.
     </p>
 
     <program language="java" line-numbers="yes">
