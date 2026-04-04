@@ -138,7 +138,8 @@ public class RunestoneTests extends CodeTestHelper
             actual = "The code caused an exception";
         }
         
-        boolean passed = getResults(expected[i],actual,desc);
+        boolean passed = expected[i].equals(actual) &amp;&amp; !actual.contains("@");
+        getResults(expected[i], actual, desc, passed);
         return passed;        
     }
 }
@@ -233,7 +234,8 @@ public class RunestoneTests extends CodeTestHelper
             actual = "The code caused an exception";
         }
         
-        boolean passed = getResults(expected[i],actual,desc);
+        boolean passed = expected[i].equals(actual) &amp;&amp; !(actual.contains("(") || actual.contains(")"));
+        getResults(expected[i],actual,desc, passed);
         return passed;        
     }
 
@@ -531,8 +533,13 @@ public class RunestoneTests extends CodeTestHelper
             actual = "The code caused an exception";
         }
 
-        boolean passed = getResults(expected[i],actual,desc);
+        boolean passed = getResults(expected[i],replaceTags(actual),replaceTags(desc));
         return passed;        
+    }
+        
+    private String replaceTags(String text)
+    {
+        return text.replaceAll("&lt;","&amp;lt;").replaceAll("&gt;","&amp;gt;");
     }
 
     private boolean stringMatch(String str1, String str2) {

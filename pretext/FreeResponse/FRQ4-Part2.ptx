@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FRQ4-Part2">
+<title>FRQ4 - 2D Arrays - Part 2</title>
+<introduction>
+<idx>free response</idx>
+<idx>2D array</idx>
+<p>From the 2025 Course and Exam Description: </p>
+<p><term>Free-Response Question 4: 2D Array</term>. Students will be provided with a scenario and its associated class(es).
+Students will write one method of a given class based on provided specifications and examples. The method 
+requires students to use, analyze, and manipulate data in a 2D array structure.</p>
+
+<p>FRQ 4 requires the following skills:</p>
+<ul>
+<li>Iterate through a 2D array</li>
+<li>Access elements of a 2D array</li>
+<li>Call methods on elements of a 2D array</li>
+</ul>
+
+</introduction>
+
+<subsection xml:id="2022-FRQ4-Data-A">
+<title>2022 FRQ 4 - Data - Part (a)</title>
+
+<p>This question involves a two-dimensional array of integers that represents a collection of randomly generated data. 
+    A partial declaration of the <c>Data</c> class is shown. You will write two methods of the <c>Data</c> class.</p>
+
+<program language="java">
+<code>
+public class Data
+{
+    public static final int MAX = /* value not shown */;
+    private int[][] grid;
+    
+    /** Fills all elements of grid with randomly generated values, as described in part (a)
+    * Precondition: grid is not null.
+    * grid has at least one element.
+    */
+    public void repopulate()
+    { /* to be implemented in part (a) */ }
+    
+    /** Returns the number of columns in grid that are in increasing order, as described
+    * in part (b)
+    * Precondition: grid is not null.
+    * grid has at least one element.
+    */
+    public int countIncreasingCols()
+    { /* to be implemented in part (b) */ }
+    
+    // There may be instance variables, constructors, and methods that are not shown.
+}
+</code>
+</program>
+
+<p><term>Part (a)</term> Write the <c>repopulate</c> method, which assigns a newly generated random value to each element of
+grid. Each value is computed to meet all of the following criteria, and all valid values must have an
+equal chance of being generated.</p>
+
+<ul>
+<li>The value is between 1 and MAX, inclusive.</li>
+<li>The value is divisible by 10.</li>
+<li>The value is not divisible by 100.</li>
+</ul>
+
+<activity label="frq4-2022-data-a">
+<statement>
+<p>Complete the <c>repopulate</c> method.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Arrays;
+
+public class Data
+{
+    public static int MAX;
+    private int[][] grid;
+
+    /** Fills all elements of grid with randomly generated values, as described in part (a)
+     * Precondition: grid is not null.
+     * grid has at least one element.
+     */
+    public void repopulate()
+    { 
+        /* to be implemented in part (a) */ 
+        
+    }
+
+    // There may be instance variables, constructors, and methods that are not shown.
+
+    public static void main(String[] args) {
+        Data d1 = new Data(100, 3, 3);
+        
+        System.out.println(d1);
+        System.out.println();
+        
+        d1.repopulate();
+        System.out.println(d1);
+        System.out.println();
+        
+        d1.repopulate();
+        System.out.println(d1);
+        System.out.println();
+        
+        d1 = new Data(500, 3, 5);
+        
+        System.out.println(d1);
+        System.out.println();
+        
+        d1.repopulate();
+        System.out.println(d1);
+        System.out.println();
+        
+        d1.repopulate();
+        System.out.println(d1);
+    }
+    
+    public Data(int max, int rows, int cols) {
+        MAX = max;
+        grid = new int[rows][cols];
+    }
+    
+    public int[][] getGrid()
+    {
+        return grid;
+    }
+    
+    public void setGrid(int[][] g) {
+        grid = g;
+    }
+    
+    public String toString()
+    {
+        return Arrays.deepToString(grid).replaceAll("], ", "],\n");
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        boolean passed = test(100, 3, 3);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test01() {
+        boolean passed = test(200, 3, 6);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02() {
+        boolean passed = test(100, 3, 2);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test03() {
+        boolean passed = test(500, 2, 4);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test04() {
+        boolean passed = test(500, 2, 8);
+        assertTrue(passed);        
+    }
+
+    private boolean test(int max, int r, int c) {
+        String desc = "Testing " + r + " by " + c + " grid with max of " + max;
+        String expected = "";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            Data d1 = new Data(max, r, c);
+            d1.repopulate();
+            actual = d1.toString();
+            int[][] grid = d1.getGrid();
+
+            expected = testRandomGrid(max, grid);
+            passed = expected.equals("No issues");
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        getResults(expected, actual, desc, passed);        
+        return passed;
+    }
+
+    private String testRandomGrid(int max, int[][] grid) {
+        int same = 0;
+
+        for (int r = 0; r &lt; grid.length; r++) {
+            for (int c = 0; c &lt; grid[r].length; c++) {
+                if (grid[r][c] % 100 == 0)
+                    return "No multiples of 100";
+
+                if (grid[r][c] % 10 != 0)
+                    return "No non-multiples of 10";
+
+                if (grid[r][c] &gt; max)
+                    return "No numbers greater than max";
+
+                if (c > 0 &amp;&amp; grid[r][c] == grid[r][c-1])
+                    same++;
+            }
+        }        
+
+        if (same &gt; grid.length * grid[0].length / 2)
+            return ": Too many the same value - seems not random";
+
+        return "No issues";
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+
+}
+</tests>
+</program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="2022-FRQ4-Data-B">
+<title>2022 FRQ 4 - Data - Part (b)</title>
+
+<p><term>Part (b)</term> Write the <c>countIncreasingCols</c> method, which returns the number of columns in grid that
+are in increasing order. A column is considered to be in increasing order if the element in each row after
+the first row is greater than or equal to the element in the previous row. A column with only one row is
+considered to be in increasing order.</p>
+
+<p>The following examples show the <c>countIncreasingCols</c> return values for possible contents of
+grid.</p>
+
+<p>The return value for the following contents of grid is 1, since the first column is in increasing
+order but the second and third columns are not.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq4-data-grid1.png" width="50%" />
+</figure>
+
+<p>The return value for the following contents of grid is 2, since the first and third columns are in
+increasing order but the second and fourth columns are not.</p>
+
+<figure align="center">
+<image source="FreeResponse/Figures/frq4-data-grid2.png" width="60%" />
+</figure>
+
+
+<activity label="frq4-2022-data-b">
+<statement>
+<p>Complete the <c>countIncreasingCols</c> method.</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Arrays;
+
+public class Data
+{
+    public static int MAX;
+    private int[][] grid;
+
+    /** Returns the number of columns in grid that are in increasing order, as described
+     * in part (b)
+     * Precondition: grid is not null.
+     * grid has at least one element.
+     */
+    public int countIncreasingCols()
+    { 
+        /* to be implemented in part (b) */ 
+        
+        
+    }
+
+    // There may be instance variables, constructors, and methods that are not shown.
+
+    public static void main(String[] args) {
+        int[][] grid1 = {{10, 50, 40}, {20, 40, 20}, {30, 50, 30}};
+        Data d1 = new Data(grid1);
+        System.out.println(d1);
+        System.out.println(d1.countIncreasingCols());
+        
+        int[][] grid2 = {{10, 540, 440, 440}, {220, 450, 440, 190}};
+        
+        d1 = new Data(grid2);
+        System.out.println(d1);
+        System.out.println(d1.countIncreasingCols());
+        
+    }
+    
+    public Data(int[][] g) {
+        grid = g;
+    }
+    
+    public int[][] getGrid()
+    {
+        return grid;
+    }
+    
+    public String toString()
+    {
+        return Arrays.deepToString(grid).replaceAll("], ", "],\n");
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    int[] output = {0, 2, 0, 5, 2};    
+
+    @Test
+    public void test00() {
+        int[][] grid = {{60, 70, 80}, {70, 10, 60}, {10, 90, 20}};
+
+        boolean passed = test(0, grid);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test01() {
+        int[][] grid = {{10, 50, 60}, {20, 70, 50}, {30, 80, 60}};
+
+        boolean passed = test(1, grid);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02() {
+        int[][] grid = {{90, 480, 90, 220, 290}, {320, 140, 70, 110, 30}, {110, 270, 460, 250, 480}};
+
+        boolean passed = test(2, grid);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test03() {
+        int[][] grid = {{ 90, 140,  200, 140, 50}, 
+                        {130, 480, 220, 260, 190}, 
+                        {240, 700, 340, 500, 290}};
+
+        boolean passed = test(3, grid);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test04() {
+        int[][] grid = {{320,  20, 240}, 
+                        {200, 130, 240}, 
+                        {120, 260, 240}, 
+                        {80, 440, 240}, 
+                        {40, 520, 240}};
+
+        boolean passed = test(4, grid);
+        assertTrue(passed);        
+    }
+
+    private boolean test(int i, int[][] grid) {
+        String desc = "";
+        String expected = "" + output[i];
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            Data d1 = new Data(grid);
+            desc += "\n" + d1.toString();
+            
+            int ans = d1.countIncreasingCols();
+            actual += ans;
+            
+            passed = ans == output[i];
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        getResults(expected, actual, desc, passed);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
+</subsection>
+
+</section>

@@ -121,20 +121,9 @@ public class StudentAnswerSheet
         <code>
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class StudentAnswerSheet
 {
-    private List&lt;String&gt; answers; // the list of the student's answers
-    private String name;
-
-    public StudentAnswerSheet(String nm, List&lt;String&gt; ans)
-    {
-        name = nm;
-        answers = new ArrayList&lt;String&gt;();
-        for (String a : ans) answers.add(a);
-    }
-
     /**
      * @param key the list of correct answers, represented as strings of length one
      *     Precondition: key.size() is equal to the number of answers in this
@@ -152,6 +141,17 @@ public class StudentAnswerSheet
     public String getName()
     {
         return name;
+    }
+
+    
+    private ArrayList&lt;String&gt; answers; // the list of the student's answers
+    private String name;
+
+    public StudentAnswerSheet(String nm, ArrayList&lt;String&gt; ans)
+    {
+        name = nm;
+        answers = new ArrayList&lt;String&gt;();
+        for (String a : ans) answers.add(a);
     }
 
     public static void main(String[] args)
@@ -346,61 +346,11 @@ public class TestResults
         <code>
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-class StudentAnswerSheet
-{
-    private List&lt;String&gt; answers; // the list of the student's answers
-    private String name;
-
-    public StudentAnswerSheet(String nm, List&lt;String&gt; ans)
-    {
-        name = nm;
-        answers = new ArrayList&lt;String&gt;();
-        for (String a : ans) answers.add(a);
-    }
-
-    /**
-     * @param key the list of correct answers, represented as strings of length one
-     *     Precondition: key.size() is equal to the number of answers in this
-     *     answer sheet
-     * @return this student's test score
-     */
-    public double getScore(ArrayList&lt;String&gt; key)
-    {
-        double score = 0;
-        for (int i = 0; i &lt; key.size(); i++)
-        {
-            if (key.get(i).equals(answers.get(i)))
-            {
-                 score = score + 1.0;
-            }
-            else if (!answers.get(i).equals("?"))
-            {
-                 score = score - 0.25;
-            }
-        }
-        return score;
-    }
-
-    /**
-     * @return the name of the student
-     */
-    public String getName()
-    {
-        return name;
-    }
-}
 
 public class TestResults
 {
     private ArrayList&lt;StudentAnswerSheet&gt; sheets;
-
-    public TestResults(ArrayList&lt;StudentAnswerSheet&gt; shs)
-    {
-        sheets = new ArrayList&lt;StudentAnswerSheet&gt;();
-        for (StudentAnswerSheet s : shs) sheets.add(s);
-    }
 
     /**
      * Precondition: sheets.size() &gt; 0; all answer sheets in sheets have the same
@@ -494,6 +444,56 @@ public class TestResults
                 "Your best is: "
                         + results.highestScoringStudent(key)
                         + " and should be S4");
+    }
+    
+    public TestResults(ArrayList&lt;StudentAnswerSheet&gt; shs)
+    {
+        sheets = new ArrayList&lt;StudentAnswerSheet&gt;();
+        for (StudentAnswerSheet s : shs) sheets.add(s);
+    }
+}
+
+class StudentAnswerSheet
+{
+    private ArrayList&lt;String&gt; answers; // the list of the student's answers
+    private String name;
+
+    public StudentAnswerSheet(String nm, ArrayList&lt;String&gt; ans)
+    {
+        name = nm;
+        answers = new ArrayList&lt;String&gt;();
+        for (String a : ans) answers.add(a);
+    }
+
+    /**
+     * @param key the list of correct answers, represented as strings of length one
+     *     Precondition: key.size() is equal to the number of answers in this
+     *     answer sheet
+     * @return this student's test score
+     */
+    public double getScore(ArrayList&lt;String&gt; key)
+    {
+        double score = 0;
+        for (int i = 0; i &lt; key.size(); i++)
+        {
+            if (key.get(i).equals(answers.get(i)))
+            {
+                 score = score + 1.0;
+            }
+            else if (!answers.get(i).equals("?"))
+            {
+                 score = score - 0.25;
+            }
+        }
+        return score;
+    }
+
+    /**
+     * @return the name of the student
+     */
+    public String getName()
+    {
+        return name;
     }
 }
         </code>
