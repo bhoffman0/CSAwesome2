@@ -19,7 +19,7 @@ requires students to use, analyze, and manipulate data in a 2D array structure.<
 
 </introduction>
 
-<subsection xml:id="2022-FRQ4-Data-A">
+<subsection xml:id="frqs-2022-FRQ4-Data-A">
 <title>2022 FRQ 4 - Data - Part (a)</title>
 
 <p>This question involves a two-dimensional array of integers that represents a collection of randomly generated data. 
@@ -234,7 +234,7 @@ public class RunestoneTests extends CodeTestHelper
 
 </subsection>
 
-<subsection xml:id="2022-FRQ4-Data-B">
+<subsection xml:id="frqs-2022-FRQ4-Data-B">
 <title>2022 FRQ 4 - Data - Part (b)</title>
 
 <p><term>Part (b)</term> Write the <c>countIncreasingCols</c> method, which returns the number of columns in grid that
