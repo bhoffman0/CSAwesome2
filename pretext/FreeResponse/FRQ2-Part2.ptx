@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="APLine">
+<section xml:id="FRQ2-Part2">
   <title>FRQ 2 - Class Design - Part 2</title>
   <introduction>
     <idx>apline</idx>
@@ -42,11 +42,13 @@ constructed from the first and last names according to the following rules.
 <ul>
   <li><p>If the first name is an empty string, the returned signature string contains just the last name.</p></li>
   <li><p>If the first name is not an empty string, the returned signature string is the first letter of
-the first name, a dash ("-"), and the last name, in that order.
-The addSignature method returns a possibly revised copy of its String parameter. The
+the first name, a dash ("-"), and the last name, in that order.</p></li>
+</ul>
+<p>The addSignature method returns a possibly revised copy of its String parameter. The
 parameter will contain at most one occurrence of the object’s signature, at either the beginning
 or the end of the parameter. The returned string is created from the parameter according to the
-following rules.</p></li>
+following rules.</p>
+<ul>
   <li><p>If the object’s signature does not occur in the String parameter of the method, the
 returned String is the value of the parameter with the signature added to the end.</p></li>
   <li><p>If the object’s signature occurs at the end of the String parameter, the returned
@@ -112,6 +114,14 @@ beginning and appended to the end of the parameter.</p></li>
         text = "Best wishesFOX";
         temp = st4.addSignature(text);
         System.out.println("Expecting Best wishesFOX: " + temp);
+
+        text = "FOXThanks";
+        temp = st4.addSignature(text);
+        System.out.println("Expecting ThanksFOX: " + temp);
+        
+        text = "G-LOPEZHello";
+        temp = st3.addSignature(text);
+        System.out.println("Expecting HelloG-LOPEZ: " + temp);
     }
 }
         </code>
@@ -125,239 +135,137 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void test01()
     {
-        String code = getCode();
-        String expected = "class SignedText";
-        boolean passed = code.contains(expected);
-
-        String actual = "";
-        String[] lines = code.split("\n");
-
-        for (String line : lines) {
-            if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
-                actual = line.trim();
-                break;
-            }
-        }
-
-        getResults(expected, actual, "Created SignedText class header correctly", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test02()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        int str = countVariables(lines, "private String");
-
-        String expected = "private String: 2";
-        String actual = "private String: " + str;
-
-        boolean passed = str &gt;= 2;
-        getResults(expected, actual, "Created two private instance String variables", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test03()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "public SignedText(...)";
+        String expected = "Wong";
         String actual = "";
 
-        for (String line : lines) {
-            if(stringMatch(line, "SignedText(") &amp;&amp; !line.contains("new")) {
-                actual += line.trim() + "\n";
-            }
+        try {
+            SignedText st = new SignedText("", "Wong");
+            actual = st.getSignature();
+        } catch (Exception e) {
+            actual = "The code caused an exception";
         }
 
-        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "String") == 2;
-        getResults(expect, actual, "Constructor header with two parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test04()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "firstName = first;\nlastName = last;";
-        String actual = "";
-
-        boolean start = false;
-
-        for (String line : lines) {
-            if(stringMatch(line, "SignedText(")) {
-                start = true;   
-            } else if (start &amp;&amp; line.contains("=")) {
-                actual += line.trim() + "\n";
-            } else if (start &amp;&amp; line.contains("}")) {
-                break;
-            }
-        }
-
-        boolean passed = countOccurences(actual, "=") == 2;
-        getResults(expect, actual, "Constructor sets both variables to values", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test05()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String expect = "String getSignature()\nString addSignature(String ...)";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "String getSignature()") || stringMatch(line, "String addSignature(")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length == 2 &amp;&amp; countOccurences(actual, "String") == 3;
-        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test06()
-    {
-        String code = getCode();
-        code = getMethodCode(code, "String getSignature()");
-        String[] lines = code.split("\n");
-
-        String expect = "firstname.equals(\"\")";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, ".equals") || stringMatch(line, "==")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.length() > 0 &amp;&amp; actual.contains("\"\"");
-        getResults(expect, actual, "Compares first name to the empty string", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test07()
-    {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        int numReturns = countOccurences(code, "return");
-
-        String[] lines = code.split("\n");
-
-        String expect = "if (index == -1)\nelse if (index == 0)\nelse";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "if") || stringMatch(line, "else")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length >= 2 &amp;&amp; stringMatch(actual, "==0") &amp;&amp; numReturns == 3;
-        getResults(expect, actual, "Identifies the three required cases for addSignature using appropriate conditions", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test08()
-    {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        String[] lines = code.split("\n");
-
-        String expect = ".indexOf(...)\n.length()\n.substring(...)";
-        String actual = "";
-
-        for (String line : lines) {
-            if(stringMatch(line, "indexOf") || stringMatch(line, "length") || stringMatch(line, "contains") || stringMatch(line, "substring")) {
-                actual += line.trim() + "\n";
-            }
-        }
-
-        boolean passed = actual.split("\n").length >= 2;
-        getResults(expect, actual, "Uses String methods", passed);
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"\", \"Wong\");\nst.getSignature();");
         assertTrue(passed);
     }
     
     @Test
-    public void test09()
+    public void test02()
     {
-        String code = getCode();
-
-        code = getMethodCode(code, "String addSignature(");
-
-        String[] lines = code.split("\n");
-
-        String expect = "return textStr + sig;\nreturn textStr.substring(sig.length()) + sig;\nreturn textStr;";
+        String expected = "h-dubois";
         String actual = "";
 
-        for (String line : lines) {
-            if(stringMatch(line, "return")) {
-                actual += line.trim() + "\n";
-            }
+        try {
+            SignedText st = new SignedText("henri", "dubois");
+            actual = st.getSignature();
+        } catch (Exception e) {
+            actual = "The code caused an exception";
         }
 
-        boolean passed = actual.split("\n").length &gt;= 3;
-        getResults(expect, actual, "Returns three different cases", passed);
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"henri\", \"dubois\");\nst.getSignature();");
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test10()
+    public void test03()
     {
-        String output = "No output detected";
-        String expect = "Expecting Wong: Wong\nExpecting h-dubois: h-dubois\n"
-            + "Expecting G-LOPEZ: G-LOPEZ\nExpecting DearFOX: DearFOX\n"
-            + "Expecting Best wishesFOX: Best wishesFOX";
+        String expected = "G-LOPEZ";
+        String actual = "";
 
         try {
-            output = getMethodOutput("main");
-
-            boolean passed = stringMatch(output, expect);
-            getResults(expect, output, "Main method produces proper output", passed);
-            assertTrue(passed);
+            SignedText st = new SignedText("GRACE", "LOPEZ");
+            actual = st.getSignature();
         } catch (Exception e) {
-            getResults(expect, output, "Main method produces proper output", false);
-            assertTrue(false);
+            actual = "The code caused an exception";
         }
+
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"GRACE\", \"LOPEZ\");\nst.getSignature();");
+        assertTrue(passed);
     }
+    
+    @Test
+    public void test04()
+    {
+        String expected = "DearFOX";
+        String actual = "";
 
-    private String getMethodCode(String code, String name) {
-        String searchStr = code;
-        int start = searchStr.indexOf(name);
-        searchStr = searchStr.substring(start);
-
-        int level = 0;
-
-        for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
-                level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
-                level--;
-
-                if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
-                }
-            }
+        try {
+            SignedText st = new SignedText("", "FOX");
+            actual = st.addSignature("Dear");
+        } catch (Exception e) {
+            actual = "The code caused an exception";
         }
 
-        return searchStr.trim();
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"\", \"FOX\");\nst.addSignature(\"Dear\");");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test05()
+    {
+        String expected = "Best wishesFOX";
+        String actual = "";
+
+        try {
+            SignedText st = new SignedText("", "FOX");
+            actual = st.addSignature("Best wishesFOX");
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"\", \"FOX\");\nst.addSignature(\"Best wishesFOX\");");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test06()
+    {
+        String expected = "ThanksFOX";
+        String actual = "";
+
+        try {
+            SignedText st = new SignedText("", "FOX");
+            actual = st.addSignature("FOXThanks");
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"\", \"FOX\");\nst.addSignature(\"FOXThanks\");");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test07()
+    {
+        String expected = "HelloG-LOPEZ";
+        String actual = "";
+
+        try {
+            SignedText st = new SignedText("GRACE", "LOPEZ");
+            actual = st.addSignature("HelloG-LOPEZ");
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"GRACE\", \"LOPEZ\");\nst.addSignature(\"HelloG-LOPEZ\");");
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test08()
+    {
+        String expected = "HelloG-LOPEZ";
+        String actual = "";
+
+        try {
+            SignedText st = new SignedText("GRACE", "LOPEZ");
+            actual = st.addSignature("G-LOPEZHello");
+        } catch (Exception e) {
+            actual = "The code caused an exception";
+        }
+
+        boolean passed = getResults(expected, actual, "SignedText st = new SignedText(\"GRACE\", \"LOPEZ\");\nst.addSignature(\"G-LOPEZHello\");");
+        assertTrue(passed);
     }
 
     private boolean stringMatch(String str1, String str2) {
@@ -365,20 +273,6 @@ public class RunestoneTests extends CodeTestHelper
         str2 = str2.replaceAll("\\s+", "");
 
         return str1.contains(str2);
-    }
-
-    private int countVariables(String[] lines, String type) {
-        int num = 0;
-        for (String line : lines){
-            if (line.contains(type)) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
-                }
-            }
-        }
-        return num;
     }
 }
         </tests>
@@ -484,310 +378,131 @@ import java.io.*;
 
 public class RunestoneTests extends CodeTestHelper
 {
-    private String className = "Sign";
+    private String[] message = {"ABC222DE", "ABCD", "ABCDEF", "", "AB_CD_EF"};
+    private int[] width = {3, 10, 6, 4, 2};
+    private String[] output = {"ABC;222;DE", "ABCD", "ABCDEF", "null", "AB;_C;D_;EF"};
+    private int[] lines = {3, 1, 1, 0, 4};
 
     @Test
-    public void test01()
+    public void test00A()
     {
-        boolean passed = false;
-        String expected = "class " + className;
+        int i = 0;
+        boolean passed = testA(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test00B()
+    {
+        int i = 0;
+        boolean passed = testB(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test01A()
+    {
+        int i = 1;
+        boolean passed = testA(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test01B()
+    {
+        int i = 1;
+        boolean passed = testB(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test02A()
+    {
+        int i = 2;
+        boolean passed = testA(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test02B()
+    {
+        int i = 2;
+        boolean passed = testB(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test03A()
+    {
+        int i = 3;
+        boolean passed = testA(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test03B()
+    {
+        int i = 3;
+        boolean passed = testB(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test04A()
+    {
+        int i = 4;
+        boolean passed = testA(i);
+        assertTrue(passed);
+    }
+    
+    @Test
+    public void test04B()
+    {
+        int i = 4;
+        boolean passed = testB(i);
+        assertTrue(passed);
+    }
+    
+    public boolean testA(int i)
+    {
+        String mess = message[i];
+        int w = width[i];
+        String num = "" + lines[i];
+        //String expected = output[0];
         String actual = "";
-
+        
+        String desc = "Sign sign = new Sign(\"" + mess + "\", " + w + ");\nsign.numberOfLines()";
+        
         try {
-            String code = getCode();
-            passed = code.contains(expected);
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
-                    actual = line.trim();
-                    break;
-                }
-            }
+            Sign sign = new Sign(mess, w);
+            actual = "" + sign.numberOfLines();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        getResults(expected, actual, "Created " + className + " class header correctly", passed);
-        assertTrue(passed);
+        boolean passed = getResults(num, actual, desc);
+        return passed;
     }
-
-    @Test
-    public void test02()
+    
+    public boolean testB(int i)
     {
-        String expected = "String: 1\nint: 1\nprivate: 2";
+        String mess = message[i];
+        int w = width[i];
+        //String num = "" + lines[i];
+        String expected = output[i];
         String actual = "";
-        boolean passed = false;
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-            
-            for (String line : lines) {
-                if (line.contains("private")) {
-                    actual += line.trim() + "\n";
-                }
-                if (stringMatch(line, className+"(") || line.contains("main(")) {
-                    break;
-                }
-            }
-            
-            lines = actual.split("\n");
-
-            int numstr = countVariables(lines, "String");
-            int numint = countVariables(lines, "int");
-            int numvar = countVariables(lines, "private");
-
-            actual = "String: " + numstr + "\nint: " + numint + "\nprivate: " + numvar;
-            passed = numstr == 1 &amp;&amp; numint == 1 &amp;&amp; numvar == 2;
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        getResults(expected, actual, "Created two private instance variables (one Strings and one int)", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test03()
-    {
-        String expect = "public "+ className + "(...)";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
-                    actual += line.trim() + "\n";
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.contains(",") &amp;&amp; actual.contains("String") &amp;&amp; actual.contains("int");
-        getResults(expect, actual, "Constructor header with two parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test04()
-    {
-        String expect = "message = m;\nwidth = w;";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            boolean start = false;
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(")) {
-                    start = true;   
-                } else if (start &amp;&amp; line.contains("=")) {
-                    actual += line.trim() + "\n";
-                } else if (start &amp;&amp; line.contains("}")) {
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = countOccurences(actual, "=") == 2;
-        getResults(expect, actual, "Constructor sets variables to initial values", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test05()
-    {
-        String expect = "int numberOfLines()\nString getLines()";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "int numberOfLines()") || stringMatch(line, "String getLines()")) {
-                    actual += line.trim() + "\n";
-                }    
-                if (line.contains("main")){
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("int numberOfLines()") &amp;&amp; actual.contains("String getLines()");
-
-        getResults(expect, actual, "Method headers with correct return types and paramters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test06()
-    {
-        String expect = "int len = message.length();\nif (len % width == 0)";
-        String actual = "";
-
+        
+        String desc = "Sign sign = new Sign(\"" + mess + "\", " + w + ");\nsign.getLines()";
+        
         try {
-            String code = getCode();
-            code = getMethodCode(code, "int numberOfLines()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, ".length()") || stringMatch(line, "%")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            Sign sign = new Sign(mess, w);
+            actual = "" + sign.getLines();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.length() &gt; 0 &amp;&amp; actual.contains(".length()") &amp;&amp; actual.contains("%") &amp;&amp; (stringMatch(actual, "==0") || stringMatch(actual, "!=0"));
-        getResults(expect, actual, "numberOfLines() tests the length of the string", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test07()
-    {
-        String expect = "return len / width;\nreturn len / width + 1;";
-        String actual = "";
-
-        try {
-            String code = getCode();
-            code = getMethodCode(code, "int numberOfLines()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "return")) {
-                    actual += line.trim() + "\n";
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; countOccurences(actual, "+1") == 1;
-        getResults(expect, actual, "numberOfLines() returns the different options", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test08()
-    {
-        String expect = "int linesNeeded = numberOfLines();\nif (linesNeeded == 0)\nreturn null;";
-        String actual = "";
-
-        try {
-            String code = getCode();
-            code = getMethodCode(code, "String getLines()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(line.contains("numberOfLines()") || line.contains("==") || line.contains("null")) {
-                    actual += line.trim() + "\n";
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.split("\n").length &gt;= 3;
-        getResults(expect, actual, "getLines() calls numberOfLines() and returns null if 0", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test09()
-    {
-        String expect = "for (int i = 1; i &lt; linesNeeded; i++)\nsignLines += message.substring((i - 1) * width, i * width) + \";\";\nreturn signLines + message.substring((linesNeeded - 1) * width);";
-        String actual = "";
-
-        try {
-            String code = getCode();
-            code = getMethodCode(code, "getLines()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(line.contains("while") || line.contains("for") || line.contains("substring")) {
-                    actual += line.trim() + "\n";
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.split("\n").length &gt;= 3 &amp;&amp; countOccurences(actual, "substring") &gt;= 2;
-        getResults(expect, actual, "getLines() uses a loop and substring to access parts of sign", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test10()
-    {
-        String output = "No output detected";
-        String expect = "3\nABC;222;DE\nABC;222;DE\n1\nABCD\n1\nABCDEF\n0\nnull\n4\nAB;_C;D_;EF";
-
-        try {
-            output = getMethodOutput("main");
-        } catch (Exception e) {
-            output = "The code caused an exception";
-        }
-
-        boolean passed = stringMatch(output, expect);
-        getResults(expect, output, "Main method produces proper output", passed);
-        assertTrue(passed);
-    }
-
-    private String getMethodCode(String code, String name) {
-        String searchStr = code;
-        int start = searchStr.indexOf(name);
-        searchStr = searchStr.substring(start);
-
-        int level = 0;
-
-        for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
-                level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
-                level--;
-
-                if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
-                }
-            }
-        }
-
-        return searchStr.trim();
-    }
-
-    private boolean stringMatch(String str1, String str2) {
-        str1 = str1.replaceAll("\\s+", "");
-        str2 = str2.replaceAll("\\s+", "");
-
-        return str1.contains(str2);
-    }
-
-    private int countVariables(String[] lines, String type) {
-        int num = 0;
-        for (String line : lines){
-            if (line.contains(type)) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
-                }
-            }
-        }
-        return num;
+        boolean passed = getResults(expected, actual, desc);
+        return passed;
     }
 }
 </tests>

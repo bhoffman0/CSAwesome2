@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="HiddenWord">
+<section xml:id="FRQ2-Part3">
   <title>FRQ 2 - Class Design - Part 3</title>
   <introduction>
     <idx>Hidden Word</idx>
@@ -342,309 +342,131 @@ import java.io.*;
 
 public class RunestoneTests extends CodeTestHelper
 {
-    private String className = "CombinedTable";
-
     @Test
-    public void test01()
-    {
-        boolean passed = false;
-        String expected = "class " + className;
+    public void test01() {
+        String expected = "true";
         String actual = "";
 
         try {
-            String code = getCode();
-            passed = code.contains(expected);
-            String[] lines = code.split("\n");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
 
-            for (String line : lines) {
-                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
-                    actual = line.trim();
-                    break;
-                }
-            }
+            CombinedTable c1 = new CombinedTable(t1, t2);
+            actual += c1.canSeat(9);
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        getResults(expected, actual, "Created " + className + " class header correctly", passed);
+        String desc = "c1.canSeat(9)";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test02()
-    {
-        String expected = "SingleTable variables: 2\nprivate variables: 2";
-        String actual = "";
-        boolean passed = false;
-
-        try{
-            String code = getCode();
-            code = getMethodCode(code, "class " + className);
-            
-            String[] lines = code.split("\n");
-            
-            for (String line : lines) {
-                if (!line.contains(className)  &amp;&amp; line.contains("SingleTable")){
-                    actual += line.trim() + "\n";
-                }
-                if (line.contains("main")) {
-                    break;
-                }
-            }
-
-            
-            int numstr = countVariables(actual.split("\n"), "SingleTable");
-            int numvar = countVariables(actual.split("\n"), "private");
-
-            actual = "SingleTable variables: " + numstr + "\nprivate variables: " + numvar;
-            passed = numstr == 2 &amp;&amp; numvar == 2;
-            /**/
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        getResults(expected, actual, "Created two private instance variables of type SingleTable", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test03()
-    {
-        String expect = "public "+ className + "(...)";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
-                    actual += line.trim() + "\n";
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "SingleTable") == 2;
-        getResults(expect, actual, "Constructor header with two SingleTable parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test04()
-    {
-        String expect = "table1 = t1;\ntable2 = t2;";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            boolean start = false;
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(")) {
-                    start = true;   
-                } else if (start &amp;&amp; line.contains("=")) {
-                    actual += line.trim() + "\n";
-                } else if (start &amp;&amp; line.contains("}")) {
-                    break;
-                }
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = countOccurences(actual, "=") == 2;
-        getResults(expect, actual, "Constructor sets variables to initial values", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test05()
-    {
-        String expect = "boolean canSeat(int ...)\ndouble getDesirability()";
-        String actual = "";
-
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "boolean canSeat(") || stringMatch(line, "double getDesirability(")) {
-                    actual += line.trim() + "\n";
-                }    
-            }
-        } catch (Exception e) {
-            actual = "The code caused an exception";
-        }
-
-        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("(int ");
-
-        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test06()
-    {
-        String expect = "table1.getNumSeats() + table2.getNumSeats() - 2";
+    public void test02() {
+        String expected = "false";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "boolean canSeat(");
-            String[] lines = code.split("\n");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
 
-            for (String line : lines) {
-                if(stringMatch(line, "getNumSeats")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            CombinedTable c1 = new CombinedTable(t1, t2);
+            actual += c1.canSeat(11);
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.length() &gt; 0 &amp;&amp; countOccurences(actual, "getNumSeats") == 2 &amp;&amp; stringMatch(actual, "-2");
-        getResults(expect, actual, "Determines the number of seats accurately", passed);
+        String desc = "c1.canSeat(11)";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test07()
-    {
-        String expect = "seats &gt;= people";
+    public void test03() {
+        String expected = "65.0";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "boolean canSeat(");
-            String[] lines = code.split("\n");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
 
-            for (String line : lines) {
-                if(stringMatch(line, "&gt;=") || stringMatch(line, "&lt;") || stringMatch(line, "return")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            CombinedTable c1 = new CombinedTable(t1, t2);
+            actual += c1.getDesirability();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.length() &gt; 0 &amp;&amp; actual.contains("return");
-        getResults(expect, actual, "Determines and returns if CombinedTable can seat enough people", passed);
+        String desc = "c1.getDesirability()";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test08()
-    {
-        String expect = "(table1.getViewQuality() + table2.getViewQuality()) / 2";
+    public void test04() {
+        String expected = "true";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "double getDesirability(");
-            String[] lines = code.split("\n");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
 
-            for (String line : lines) {
-                if((stringMatch(line, "=") || stringMatch(line, "getViewQuality") || stringMatch(line, "/2")) &amp;&amp; !stringMatch(line, "==")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            CombinedTable c2 = new CombinedTable(t2, t3);
+            actual += c2.canSeat(18);
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = stringMatch(actual, "/2") &amp;&amp; countOccurences(actual, ".getViewQuality()") == 2;
-        getResults(expect, actual, "getDesirability() calculates average view correctly", passed);
+        String desc = "c2.canSeat(18)";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test09()
-    {
-        String expect = "if(table1.getHeight() == table2.getHeight())\nreturn averageView;\nreturn averageView - 10;";
+    public void test05() {
+        String expected = "62.5";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "double getDesirability(");
-            String[] lines = code.split("\n");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
 
-            for (String line : lines) {
-                if(stringMatch(line, "==") || stringMatch(line, ".getHeight()") || stringMatch(line, "return")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            CombinedTable c2 = new CombinedTable(t2, t3);
+            actual += c2.getDesirability();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.split("\n").length &gt;= 3;
-        getResults(expect, actual, "getDesirability() calculates desirability correctly", passed);
+        String desc = "c2.getDesirability()";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
     }
-
+    
     @Test
-    public void test10()
-    {
-        String output = "No output detected";
-        String expect = "true\nfalse\n65.0\ntrue\n62.5\n67.5";
+    public void test06() {
+        String expected = "67.5";
+        String actual = "";
 
         try {
-            output = getMethodOutput("main");
+            SingleTable t1 = new SingleTable(4, 74, 60);
+            SingleTable t2 = new SingleTable(8, 74, 70);
+            SingleTable t3 = new SingleTable(12, 76, 75);
+
+            CombinedTable c2 = new CombinedTable(t2, t3);
+            t2.setViewQuality(80);
+            actual += c2.getDesirability();
         } catch (Exception e) {
-            output = "The code caused an exception";
+            actual = "The code caused an exception";
         }
 
-        boolean passed = stringMatch(output, expect);
-        getResults(expect, output, "Main method produces proper output", passed);
+        String desc = "t2.setViewQuality(80);\nc2.getDesirability()";
+        boolean passed = getResults(expected, actual, desc);
         assertTrue(passed);
-    }
-
-    private String getMethodCode(String code, String name) {
-        String searchStr = code;
-        int start = searchStr.indexOf(name);
-        searchStr = searchStr.substring(start);
-
-        int level = 0;
-
-        for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
-                level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
-                level--;
-
-                if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
-                }
-            }
-        }
-
-        return searchStr.trim();
-    }
-
-    private boolean stringMatch(String str1, String str2) {
-        str1 = str1.replaceAll("\\s+", "");
-        str2 = str2.replaceAll("\\s+", "");
-
-        return str1.contains(str2);
-    }
-
-    private int countVariables(String[] lines, String type) {
-        int num = 0;
-        for (String line : lines){
-            if (line.contains(type)) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
-                }
-            }
-        }
-        return num;
     }
 }
 </tests>
