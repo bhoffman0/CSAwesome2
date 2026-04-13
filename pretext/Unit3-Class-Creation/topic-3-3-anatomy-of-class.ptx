@@ -326,15 +326,14 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       Access to attributes should be kept internal to the class in order to
       accomplish encapsulation. It is good programming practice to designate the
-      instance variables as <title_reference>private</title_reference> in order
-      to ensure <term>data encapsulation</term> where the data (instance
-      variables) and the code acting on the data (methods) are wrapped together
-      into a single unit and the implementation details are hidden. Only code in
-      the class can access or change the values of <c>private</c> instance
-      variables. This keeps the data secure and makes it a lot easier to keep
-      track of how your program works than if you had to worry that any code
-      anywhere in a much larger program could possibly change the values of the
-      variables.
+      instance variables as <c>private</c> in order to ensure <term>data
+      encapsulation</term> where the data (instance variables) and the code
+      acting on the data (methods) are wrapped together into a single unit and
+      the implementation details are hidden. Only code in the class can access
+      or change the values of <c>private</c> instance variables. This keeps the
+      data secure and makes it a lot easier to keep track of how your program
+      works than if you had to worry that any code anywhere in a much larger
+      program could possibly change the values of the variables.
     </p>
 
     <p>

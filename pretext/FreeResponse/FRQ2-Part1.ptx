@@ -56,7 +56,7 @@ public class ClassName			// Class Header - Note no ()
 
 </code>
 </program>
-    
+
 
 </subsection>
 
@@ -68,23 +68,20 @@ public class ClassName			// Class Header - Note no ()
       the exam. You can see all the free response questions from past exams at
       <url
      href="https://www.savemyexams.com/ap/computer-science/college-board/a/past-papers/">Past AP CSA Exams</url>.
- 
+
     </p>
 
     <p>
-      <term>Question 2.</term> An <title_reference>APLine</title_reference> is a
-      line defined by the equation <c>ax + by + c = 0</c>,where <c>a</c> is not
-      equal to zero, <c>b</c> is not equal to zero, and <c>a</c>, <c>b</c>, and
-      <c>c</c> are all integers. The slope of an
-      <title_reference>APLine</title_reference> is defined to be the double
+      <term>Question 2.</term> An <c>APLine</c> is a line defined by the
+      equation <c>ax + by + c = 0</c>,where <c>a</c> is not equal to zero,
+      <c>b</c> is not equal to zero, and <c>a</c>, <c>b</c>, and <c>c</c> are
+      all integers. The slope of an <c>APLine</c> is defined to be the double
       value <c>-a / b</c> . A point (represented by integers <c>x</c> and
-      <c>y</c>) is on an <title_reference>APLine</title_reference> if the
-      equation of the <title_reference>APLine</title_reference> is satisfied
-      when those <c>x</c> and <c>y</c> values are substituted into the equation.
-      That is, a point represented by <c>x</c> and <c>y</c> is on the line if
-      <c>ax + by + c</c> is equal to 0. Examples of two
-      <title_reference>APLine</title_reference> equations are shown in the
-      following table.
+      <c>y</c>) is on an <c>APLine</c> if the equation of the <c>APLine</c> is
+      satisfied when those <c>x</c> and <c>y</c> values are substituted into the
+      equation. That is, a point represented by <c>x</c> and <c>y</c> is on the
+      line if <c>ax + by + c</c> is equal to 0. Examples of two <c>APLine</c>
+      equations are shown in the following table.
     </p>
 
     <figure align="center">
@@ -93,9 +90,8 @@ public class ClassName			// Class Header - Note no ()
 
     <p>
       Assume that the following code segment appears in a class other than
-      <title_reference>APLine</title_reference>. The code segment shows an
-      example of using the <title_reference>APLine</title_reference> class to
-      represent the two equations shown in the table.
+      <c>APLine</c>. The code segment shows an example of using the
+      <c>APLine</c> class to represent the two equations shown in the table.
     </p>
 
     <program language="java">
@@ -111,11 +107,10 @@ boolean onLine2 = line2.isOnLine(5, -2); // false because -25(5) + 40(-2) + 30 !
     </program>
 
     <p>
-      Write the <title_reference>APLine</title_reference> class. Your
-      implementation must include a constructor that has three integer
-      parameters that represent <c>a</c>, <c>b</c>, and <c>c</c>, in that order.
-      You may assume that the values of the parameters representing <c>a</c> and
-      <c>b</c> are not zero.
+      Write the <c>APLine</c> class. Your implementation must include a
+      constructor that has three integer parameters that represent <c>a</c>,
+      <c>b</c>, and <c>c</c>, in that order. You may assume that the values of
+      the parameters representing <c>a</c> and <c>b</c> are not zero.
     </p>
 
     <p>
@@ -286,7 +281,7 @@ public class RunestoneTests extends CodeTestHelper
 {
     // Private instance variables
 
-    
+
     // Constructor
 
 
@@ -311,7 +306,7 @@ public class RunestoneTests extends CodeTestHelper
 
         game. recordPlay (3) ;
         System.out.println(game.getScore());
-        
+
         game. recordPlay (1);
         game.recordPlay(0);
 
@@ -322,10 +317,10 @@ public class RunestoneTests extends CodeTestHelper
         game.recordPlay(0);
 
         System.out.println(game.getScore());
-        
+
         Scoreboard match = new Scoreboard ("Lions", "Tigers") ;
         System.out.println(match.getScore());
-        
+
         System.out.println(game.getScore());
     }
 }

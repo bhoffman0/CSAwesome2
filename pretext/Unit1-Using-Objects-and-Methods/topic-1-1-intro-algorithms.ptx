@@ -307,9 +307,8 @@ public class RunestoneTests extends CodeTestHelper
       will not be penalized on the exam if you forget a needed semicolon, but
       the Java compiler is not so lenient; your program won’t compile without
       it. Note also that not <em>every</em> line ends with a semicolon; if the
-      line starts a construct like an <title_reference>if</title_reference>
-      statement, there is no semicolon before the opening <c>{</c> nor one after
-      the closing <c>}</c>.
+      line starts a construct like an <c>if</c> statement, there is no semicolon
+      before the opening <c>{</c> nor one after the closing <c>}</c>.
     </p>
 
     <exercise label="mp-print-order-1" adaptive="yes">
@@ -716,10 +715,9 @@ public class RunestoneTests extends CodeTestHelper
     <p>
       Click on the run button below to try and run the following code. What is
       wrong this time? The first error message will probably point you directly
-      at the problem. But after you fix that you’ll probably get a
-      <title_reference>new</title_reference> error! That happens sometimes
-      because the compiler can’t even detect the second error until the first
-      one is fixed.
+      at the problem. But after you fix that you’ll probably get a <c>new</c>
+      error! That happens sometimes because the compiler can’t even detect the
+      second error until the first one is fixed.
     </p>
 
     <p>
@@ -728,7 +726,7 @@ public class RunestoneTests extends CodeTestHelper
       to fix it. Arg, an error! Get rid of it! But if we don’t slow down and
       read the message in a case like this, we might not notice that we’ve
       actually fixed the first error. If we don’t notice that we fixed it, we
-      might undo our change and <title_reference>unfix</title_reference> it!
+      might undo our change and <em>unfix</em> it!
     </p>
 
     <p>
@@ -1104,8 +1102,7 @@ Unexpected '}' on line 32.
         <choice>
           <statement id="AP1-1-print_opt_a">
             <p>
-              Replacing <title_reference>System</title_reference> with
-              <title_reference>system</title_reference> on all lines.
+              Replacing <c>System</c> with <c>system</c> on all lines.
             </p>
           </statement>
 

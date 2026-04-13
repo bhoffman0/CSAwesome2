@@ -874,32 +874,28 @@ public class RunestoneTests extends CodeTestHelper
               <ul>
                 <li>
                   <p>
-                    The default value for an attribute of type
-                    <title_reference>int</title_reference> is
-                    <title_reference>0</title_reference>.
+                    The default value for an attribute of type <c>int</c> is
+                    <c>0</c>.
                   </p>
                 </li>
 
                 <li>
                   <p>
-                    The default value of an attribute of type
-                    <title_reference>double</title_reference> is
-                    <title_reference>0.0</title_reference>.
+                    The default value of an attribute of type <c>double</c> is
+                    <c>0.0</c>.
                   </p>
                 </li>
 
                 <li>
                   <p>
-                    The default value of an attribute of type
-                    <title_reference>boolean</title_reference> is
-                    <title_reference>false</title_reference>.
+                    The default value of an attribute of type <c>boolean</c> is
+                    <c>false</c>.
                   </p>
                 </li>
 
                 <li>
                   <p>
-                    The default value of a reference type is
-                    <title_reference>null</title_reference>.
+                    The default value of a reference type is <c>null</c>.
                   </p>
                 </li>
               </ul>
