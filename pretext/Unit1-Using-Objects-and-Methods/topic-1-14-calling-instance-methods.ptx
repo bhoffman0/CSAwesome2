@@ -97,7 +97,7 @@
         <cline>    <area correct="no">private String name;</area></cline>
         <cline>    <area correct="no">private String email;</area></cline>
         <cline></cline>
-        <cline>    <area correct="no">public Student(String initName, String intEmail) </area></cline>
+        <cline>    <area correct="no">public Student(String initName, String initEmail) </area></cline>
         <cline>    <area correct="no">{</area></cline>
         <cline>        <area correct="no">name = initName;</area></cline>
         <cline>        <area correct="no">email = initEmail;</area></cline>
