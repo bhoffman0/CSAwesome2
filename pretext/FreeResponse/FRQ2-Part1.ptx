@@ -341,270 +341,221 @@ public class RunestoneTests extends CodeTestHelper
     public void test01()
     {
         boolean passed = false;
-        String expected = "class " + className;
+        String expected = "0-0-Red";
         String actual = "";
 
         try {
-            String code = getCode();
-            passed = code.contains(expected);
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
-                    actual = line.trim();
-                    break;
-                }
-            }
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        getResults(expected, actual, "Created " + className + " class header correctly", passed);
+        passed = getResults(expected, actual, "Scoreboard game = new Scoreboard(\"Red\", \"Blue\");\nactual = game.getScore();");
         assertTrue(passed);
     }
 
     @Test
     public void test02()
     {
-        String expected = "private String: 2\nprivate int: 2+\nprivate total: 5";
-        String actual = "";
         boolean passed = false;
+        String expected = "1-0-Red";
+        String actual = "";
 
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            int numstr = countVariables(lines, "private String");
-            int numint = countVariables(lines, "private int");
-            int numvar = countVariables(lines, "private");
-
-            actual = "private String: " + numstr + "\nprivate int: " + numint + "\nprivate total: " + numvar;
-            passed = numstr &gt;= 2 &amp;&amp; numint &gt;= 2 &amp;&amp; numvar &gt;= 5;
+        try {
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        getResults(expected, actual, "Created five private instance variables (at least 2 Strings and 2 ints)", passed);
+        passed = getResults(expected, actual, "game.recordPlay(1);");
         assertTrue(passed);
     }
 
     @Test
     public void test03()
     {
-        String expect = "public "+ className + "(...)";
+        boolean passed = false;
+        String expected = "1-0-Blue";
         String actual = "";
 
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(") &amp;&amp; !line.contains("new")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+        try {
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.contains(",") &amp;&amp; countOccurences(actual, "String") == 2;
-        getResults(expect, actual, "Constructor header with two parameters", passed);
+        passed = getResults(expected, actual, "game.recordPlay(0);");
         assertTrue(passed);
     }
 
     @Test
     public void test04()
     {
-        String expect = "team1name = name1;\nteam2name = name2;";
+        boolean passed = false;
+        String expected = "1-3-Blue";
         String actual = "";
 
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            boolean start = false;
-
-            for (String line : lines) {
-                if(stringMatch(line, className+"(")) {
-                    start = true;
-                } else if (start &amp;&amp; line.contains("=")) {
-                    actual += line.trim() + "\n";
-                } else if (start &amp;&amp; line.contains("}")) {
-                    break;
-                }
-            }
+        try {
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = countOccurences(actual, "=") &gt;= 3;
-        getResults(expect, actual, "Constructor sets variables to initial values", passed);
+        passed = getResults(expected, actual, "game.recordPlay(3);");
         assertTrue(passed);
     }
 
     @Test
     public void test05()
     {
-        String expect = "String getScore()\nvoid recordPlay(int ...)";
+        boolean passed = false;
+        String expected = "1-4-Blue";
         String actual = "";
 
-        try{
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "String getScore()") || stringMatch(line, "void recordPlay(")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+        try {
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            game.recordPlay(1);
+            //game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; actual.contains("(int ");
-
-        getResults(expect, actual, "Method headers with correct return types and parameters", passed);
+        passed = getResults(expected, actual, "game.recordPlay(1);");
         assertTrue(passed);
     }
-
+    
     @Test
     public void test06()
     {
-        String expect = "String result = score1 + \"-\" + score2 + \"-\";\nreturn result;";
+        boolean passed = false;
+        String expected = "1-4-Red";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "String getScore()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "String") || stringMatch(line, "return")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            game.recordPlay(1);
+            game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.length() &gt; 0 &amp;&amp; countOccurences(actual, "-") == 2;
-        getResults(expect, actual, "Creates and returns a String with score", passed);
+        passed = getResults(expected, actual, "game.recordPlay(0);");
         assertTrue(passed);
     }
-
+    
     @Test
     public void test07()
     {
-        String expect = "if (whoseTurn == 1)\nelse";
+        boolean passed = false;
+        String expected = "1-4-Blue";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "String getScore()");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "if") || stringMatch(line, "else")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
-        boolean passed = actual.split("\n").length &gt;= 2 &amp;&amp; stringMatch(actual, "==");
-        getResults(expect, actual, "Identifies the current team to return in getScore()", passed);
+
+        passed = getResults(expected, actual, "game.recordPlay(0);");
         assertTrue(passed);
     }
-
+    
     @Test
     public void test08()
     {
-        String expect = "whoseTurn = 2;\nwhoseTurn = 1;\nscore1 += points;\nscore2 += points;";
+        boolean passed = false;
+        String expected = "1-8-Red";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "void recordPlay(");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "=") &amp;&amp; !stringMatch(line, "==")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            Scoreboard game = new Scoreboard("Red", "Blue");
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            game.recordPlay(1);
+            game.recordPlay(0);
+            game.recordPlay(0);
+            game.recordPlay(4);
+            game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.split("\n").length &gt;= 3;
-        getResults(expect, actual, "recordPlay() changes the turn and the scores", passed);
+        passed = getResults(expected, actual, "game.recordPlay(4);\ngame.recordPlay(0);");
         assertTrue(passed);
     }
-
+    
     @Test
     public void test09()
     {
-        String expect = "if (whoseTurn == 1)\nelse";
+        boolean passed = false;
+        String expected = "4-2-Lions";
         String actual = "";
 
         try {
-            String code = getCode();
-            code = getMethodCode(code, "void recordPlay(");
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if(stringMatch(line, "if") || stringMatch(line, "else")) {
-                    actual += line.trim() + "\n";
-                }
-            }
+            Scoreboard game = new Scoreboard("Lions", "Tigers");
+            game.recordPlay(4);
+            game.recordPlay(0);
+            game.recordPlay(2);
+            game.recordPlay(0);
+            actual = game.getScore();
         } catch (Exception e) {
             actual = "The code caused an exception";
         }
 
-        boolean passed = actual.split("\n").length &gt;= 4;
-        getResults(expect, actual, "recordPlay() has enough if/else statements", passed);
+        passed = getResults(expected, actual, "Scoreboard game = new Scoreboard(\"Lions\", \"Tigers\");\ngame.recordPlay(4);\ngame.recordPlay(0);\ngame.recordPlay(2);\ngame.recordPlay(0);");
         assertTrue(passed);
     }
-
+    
     @Test
     public void test10()
     {
-        String output = "No output detected";
-        String expect = "0-0-Red\n1-0-Red\n1-0-Blue\n1-0-Blue\n1-3-Blue\n1-4-Red\n"
-            + "1-8-Red\n0-0-Lions\n1-8-Red";
+        boolean passed = false;
+        String expected = "7-3-Tigers";
+        String actual = "";
 
         try {
-            output = getMethodOutput("main");
+            Scoreboard game = new Scoreboard("Lions", "Tigers");
+            game.recordPlay(4);
+            game.recordPlay(0);
+            game.recordPlay(2);
+            game.recordPlay(0);
+            game.recordPlay(3);
+            game.recordPlay(0);
+            game.recordPlay(1);
+            actual = game.getScore();
         } catch (Exception e) {
-            output = "The code caused an exception";
+            actual = "The code caused an exception";
         }
 
-        boolean passed = stringMatch(output, expect);
-        getResults(expect, output, "Main method produces proper output", passed);
+        passed = getResults(expected, actual, "game.recordPlay(0);\ngame.recordPlay(1);\ngame.recordPlay(0);\ngame.recordPlay(4);");
         assertTrue(passed);
-    }
-
-    private String getMethodCode(String code, String name) {
-        String searchStr = code;
-        int start = searchStr.indexOf(name);
-        searchStr = searchStr.substring(start);
-
-        int level = 0;
-
-        for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
-                level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
-                level--;
-
-                if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
-                }
-            }
-        }
-
-        return searchStr.trim();
     }
 
     private boolean stringMatch(String str1, String str2) {
@@ -613,23 +564,7 @@ public class RunestoneTests extends CodeTestHelper
 
         return str1.contains(str2);
     }
-
-    private int countVariables(String[] lines, String type) {
-        int num = 0;
-        for (String line : lines){
-            if (line.contains(type)) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
-                }
-            }
-        }
-        return num;
-    }
 }
-
-
 </tests>
 </program>
 </activity>
