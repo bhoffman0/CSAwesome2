@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="test-inheritance">
+  <title>Practice Exam - Inheritance Only</title>
+  <p>
+    The following questions are similar to what you would have seen on the AP CSA
+    exam regarding inheritance. Please answer each to the best of your ability.
+  </p>
+
+  <p>
+    Click the Start button when you are ready to begin the exam, but only then
+    as you can only take the exam once. Click on the Next button to go to the
+    next question. Click on the Previous button to go to the previous question.
+    Use the number buttons to jump to a particular question. Click the Pause
+    button to pause the exam (you will not be able to see the questions when the
+    exam is paused). Click on the Finish button after you have answered all the
+    questions. The number correct, number wrong, and number skipped will be
+    displayed.
+  </p>
+
+  <exercises label="test-inheritance" time-limit="45" timer="yes">
+    <exercise label="pe1_9">
+      <statement>
+        <p>
+          Consider the following declaration for a class that will be used to
+          represent points in the xy-coordinate plane. Which of these
+          constructors would be legal for the NamedPoint class?
+        </p>
+
+        <program language="java">
+          <code>
+ public class Point
+ {
+    private int myX; // coordinates
+    private int myY;
+
+    public Point( )
+    {
+       myX = 0;
+       myY = 0;
+    }
+
+    public Point(int a, int b)
+    {
+       myX = a;
+       myY = b;
+    }
+
+    // ... other methods not shown
+
+ }
+
+ // The following incomplete class declaration is intended to extend the
+ // above class so that two-dimensional points can be named.
+
+ public class NamedPoint extends Point
+ {
+    private String myName;
+    // constructors go here
+    // ... other methods not shown
+ }
+
+Proposed Constructors:
+
+I.   public NamedPoint()
+     {
+        myName = "";
+     }
+II.  public NamedPoint(int d1, int d2, String name)
+     {
+        myX = d1;
+        myY = d2;
+        myName = name;
+     }
+III. public NamedPoint(int d1, int d2, String name)
+     {
+        super(d1, d2);
+        myName = name;
+     }
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>I and III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              NamedPoint will inherit from Point all fields but the fields are
+              private and they can not be directly accessed in NamedPoint. You
+              can use super as the first line in a constructor to initialize
+              inherited fields. You can also set your own fields in a
+              constructor. If you don't use super as the first line in a
+              constructor one will be put there by the compiler that will call
+              the parent's no argument constructor.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I only</p>
+          </statement>
+
+          <feedback>
+            <p>I is okay but III is also okay.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>II only</p>
+          </statement>
+
+          <feedback>
+            <p>
+              II is invalid. Children inherit all of the fields from a parent
+              but do not have direct access to private fields. You can use super
+              in a constructor to initialize inherited fields by calling the
+              parent's constructor with the same parameter list.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>III only</p>
+          </statement>
+
+          <feedback>
+            <p>I is also okay</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I and II</p>
+          </statement>
+
+          <feedback>
+            <p>
+              I is okay but II is invalid. Children inherit all of the fields
+              from a parent but do not have direct access to private fields. You
+              can use super in a constructor to initialize inherited fields by
+              calling the parent's constructor with the same parameter list.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe1_11">
+      <statement>
+        <p>
+          Consider the following class definitions, which of the following can
+          replace the missing code?
+        </p>
+
+        <program language="java">
+          <code>
+public class ContactInfo
+{
+   private String name;
+   private String phoneNumber;
+
+   public ContactInfo(String theName, String thePhoneNumber)
+   {
+      this.name = theName;
+      this.phoneNumber = thePhoneNumber;
+   }
+
+   public String getName() { return name; }
+
+   public String getPhoneNumber() { return phoneNumber; }
+}
+
+public class ExtendedContactInfo extends ContactInfo
+{
+   private String nickname;
+
+   public ExtendedContactInfo (String theNickname,
+                               String theName,
+                               String thePhoneNumber)
+   {
+      // missing code
+   }
+}
+
+I.
+   super(theNickname, theName, thePhoneNumber);
+
+II.
+   this.name = theName;
+   this.phoneNumber = thePhoneNumber;
+   this.nickname = theNickname;
+
+III.
+   this.nickname = theNickname;
+   this.name = theName;
+   this.phoneNumber = thePhoneNumber;
+
+IV.
+   this.nickname = theNickname;
+   this.name = theName;
+   this.phoneNumber = thePhoneNumber;
+
+V.
+   super(theName,thePhoneNumber);
+   this.nickname = theNickname;
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>I</p>
+          </statement>
+
+          <feedback>
+            <p>
+              There is no parent constructor which takes all three of these
+              parameters.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>II</p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can not access private inherited fields directly. You can
+              either use public method to get and set their values or invoke the
+              parent's constructor using super(paramList) as the first line of
+              code in a constructor.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can not access private inherited fields directly. You can
+              either use public method to get and set their values or invoke the
+              parent's constructor using super(paramList) as the first line of
+              code in a constructor.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>IV</p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can not access private inherited fields directly. You can
+              either use public method to get and set their values or invoke the
+              parent's constructor using super(paramList) as the first line of
+              code in a constructor.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>V</p>
+          </statement>
+
+          <feedback>
+            <p>
+              To initialize inherited private fields you can use the parent's
+              constructor. Use super followed by the parameter list as the first
+              line of code in the constructor.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe1_13">
+      <statement>
+        <p>
+          Which of the following reasons for using an inheritance hierarchy are
+          valid?
+        </p>
+
+        <program language="java">
+          <code>
+I.   Methods from a superclass can be used in a subclass without rewriting
+     or copying code.
+II.  Objects from subclasses can be passed as arguments to a method  designed
+     for the superclass
+III. Objects from subclasses can be stored in the same array
+IV.  All of the above
+V.   None of the above
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>IV</p>
+          </statement>
+
+          <feedback>
+            <p>All of these are valid reasons to use an inheritance heirarchy.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>V</p>
+          </statement>
+
+          <feedback>
+            <p>
+              In fact, all of the reasons listed are valid. Subclasses can reuse
+              methods written for superclasses without code replication,
+              subclasses can be stored in the same array, and passed as
+              arguments to methods meant for the superclass. All of which make
+              writing code more streamlined.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I and II</p>
+          </statement>
+
+          <feedback>
+            <p>
+              III is also valid. In some cases you might want to store
+              subclasses together in a single array, and inheritance allows for
+              this.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I and III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              II is also valid. In some cases a single method is applicable for
+              a number of subclasses, and inheritance allows you to pass objects
+              of the subclasses to the same method instead of writing individual
+              methods for each subclass.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I only</p>
+          </statement>
+
+          <feedback>
+            <p>
+              II and III are also valid, in some cases a single method is
+              applicable for a number of subclasses, and inheritance allows you
+              to pass all the subclasses to the same method instead of writing
+              individual methods for each subclass and you might want to store
+              subclasses together in a single array, and inheritance allows for
+              this.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="mt1_13">
+      <statement>
+        <p>
+          Which of the following reasons for using an inheritance hierarchy are
+          valid?
+        </p>
+
+        <program language="java">
+          <code>
+I.   Methods from a superclass can be used in a subclass without rewriting or copying code.
+II.  An object from a subclass can be passed as an argument to a method that takes an object of the superclass
+III. Objects from subclasses can be stored in the same array
+IV.  All of the above
+V.   None of the above
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>IV</p>
+          </statement>
+
+          <feedback>
+            <p>All of these are valid reasons to use an inheritance hierarchy.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>V</p>
+          </statement>
+
+          <feedback>
+            <p>
+              In fact, all of the reasons listed are valid. Subclasses can reuse
+              methods written for superclasses without code replication,
+              subclasses can be stored in the same array, and passed as
+              arguments to methods meant for the superclass. All of which make
+              writing code more streamlined.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I and II</p>
+          </statement>
+
+          <feedback>
+            <p>
+              III is also valid. In some cases you might want to store
+              subclasses together in a single array, and inheritance allows for
+              this.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I and III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              II is also valid. In some cases a single method is applicable for
+              a number of subclasses, and inheritance allows you to pass objects
+              of the subclasses to the same method instead of writing individual
+              methods for each subclass.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I only</p>
+          </statement>
+
+          <feedback>
+            <p>
+              II and III are also valid, in some cases a single method is
+              applicable for a number of subclasses, and inheritance allows you
+              to pass all the subclasses to the same method instead of writing
+              individual methods for each subclass and you might want to store
+              subclasses together in a single array, and inheritance allows for
+              this.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_4">
+      <statement>
+        <p>
+          Given the following two class declarations, what is the relationship
+          between Dog and DogOwner?
+        </p>
+
+        <program language="java">
+          <code>
+public class Dog
+{
+    private String name;
+
+    public void setName(String n)
+    {
+        name = n;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+}
+
+public class DogOwner
+{
+    private String name;
+    private Dog[] dogs;
+}
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>Interface</p>
+          </statement>
+
+          <feedback>
+            <p>
+              An interface is a special kind of abstract class. It isn't a type
+              of relationship between classes.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Polymorphism</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Polymorphism is using the run-time type of the object to determine
+              which method to run. It isn't a type of relationship between
+              classes.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Inheritance (is-a)</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Inheritance is when one class (the child class) extends the other
+              (the parent class). Do you see the keyword extends here?
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>Association (has-a)</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Association is when one class keeps track of one or more objects
+              of the other class. In this case a DogOwner object has an array of
+              dog objects.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Overloading</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Overloading is when a class has two methods with the same name but
+              the parameter lists are different. It is not a type of
+              relationship between classes.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_6">
+      <statement>
+        <p>
+          Class C extends class B, which extends class A. Also, all of the three
+          classes implement a public method test(). How can a method in an
+          object of class C invoke the test() method defined in class A (without
+          creating a new instance of class A)?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>test();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would run the test method in class C since the object was
+              created by the C class. When a method is called the runtime system
+              will start looking for the method in the class that created the
+              object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>super.super.test();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can't use super.super. This would cause a compile-time error.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>super.test();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would run the test method in class B since super is used to
+              run a method in your parent class and B is the parent of C.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>this.test();</p>
+          </statement>
+
+          <feedback>
+            <p>This would run the test method in class C.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              There is no way to call a method in a grandparent class from a
+              grandchild class
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              You can use super to force the runtime to run a method in a parent
+              class, but there is no way to force a call to a method in a
+              grandparent (parent of your parent) class.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_7">
+      <statement>
+        <p>
+          Which of the following is a correct call to the <c>test</c> method?
+        </p>
+
+        <program language="java">
+          <code>
+public class Vehicle
+{
+    public void test(Car x, SportsCar y) {}
+}
+
+public class Car extends Vehicle {}
+
+public class SportsCar extends Car {}
+
+public class VehicleTest
+{
+    public static void main(String[] args)
+    {
+        Vehicle v = new Vehicle();
+        Car c = new Car();
+        SportsCar sporty = new SportsCar();
+    }
+}
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>v.test(sporty,v);</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if the test method took a SportsCar object and
+              a Vehicle object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>sporty.test(c,c);</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if the test method took two Car objects or a
+              Car and a Vehicle object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>v.test(sporty,c);</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if the test method took a SportsCar object and
+              a Car object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>sporty.test(sporty,v);</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if the test method took a SportsCar object and
+              a Vehicle object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>c.test(sporty,sporty);</p>
+          </statement>
+
+          <feedback>
+            <p>
+              The test method takes a Car object and a SportsCar object. Only
+              this answer correctly passes a SportsCar object as the second
+              parameter. You can use a SportsCar object as a Car object since it
+              is a subclass of Car. The test method can be called on any child
+              of Vehicle.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_11">
+      <statement>
+        <p>
+          Assume that Parent p = new Child(); appears in a client program. What
+          is the result of the call p.m1()?
+        </p>
+
+        <program language="java">
+          <code>
+public class Parent
+{
+    public void m1()
+    {
+        System.out.print("pm1");
+        m2();
+    }
+
+    public void m2()
+    {
+        System.out.print("pm2");
+    }
+}
+
+public class Child extends Parent
+{
+    public void m1()
+    {
+        super.m1();
+        System.out.print("cm1");
+    }
+
+    public void m2()
+    {
+        super.m2();
+        System.out.print("cm2");
+    }
+}
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice correct="yes">
+          <statement>
+            <p>pm1pm2cm2cm1</p>
+          </statement>
+
+          <feedback>
+            <p>
+              When p.m1() is run it will execute the m1 method in Child since p
+              is an object of that class. The first line calls super.m1() which
+              will execute the m1 method in Parent. That method will print "pm1"
+              and then call m2(). The m2 method in child will execute since p is
+              a Child object. The first line in that method calls super.m2()
+              which will execute the m2 method in Parent. This will print "pm2".
+              Then the parent m2 method will return, so execution will continue
+              in the m2 method of Child and it will print "cm2". Then the child
+              m2 method will return which will continue execution in the m1
+              method of Child which will print "cm1".
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>pm1pm2</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if p was an object of the Parent class, but it
+              is an object of the Child class and the runtime will start
+              execution of a method in the Child class method if it has it.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>pm1pm2cm1cm2</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Remember that each method call is added to the call stack and
+              after the method returns execution continues with the next
+              statement after the method call.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>pm1cm1</p>
+          </statement>
+
+          <feedback>
+            <p>This would be true if the m1 method in Parent didn't call m2().</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>pm1</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if the m1 method in Parent didn't call m2() and
+              the p was actually an object of the Parent class.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_12">
+      <statement>
+        <p>Assume the following classes.</p>
+        <program language="java">
+          <code>
+public class Animal
+{
+   // constructors not shown
+   public void eat()
+   { // code not shown
+   }
+}
+
+public class Bear extends Animal
+{
+   // constructors not shown
+   public void growl()
+   { // code not shown
+   }
+}
+
+Assume that the following declaration is in a different class.
+Animal b = new Bear();
+
+Which of the following will compile without error?
+I.    b.eat();
+II.   b.growl;
+III.  ((Bear) b).growl();
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>I only</p>
+          </statement>
+
+          <feedback>
+            <p>I does work, but so does another one.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>II only</p>
+          </statement>
+
+          <feedback>
+            <p>
+              The compiler will look for the method based on the declared type.
+              The declared type for b is Animal and Animal doesn't have a growl
+              method.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>III only</p>
+          </statement>
+
+          <feedback>
+            <p>III does work, but so does another one.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>I and III only</p>
+          </statement>
+
+          <feedback>
+            <p>
+              I works since the declared type is Animal and Animal has an eat
+              method. III works because the cast tells the compiler to treat b
+              is a Bear and Bear has a growl method.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>I, II, and III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Does Animal have a growl method? Remember that the compiler checks
+              for the method using the declared type.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe3_15">
+      <statement>
+        <p>
+          A classroom is a room and a building has many rooms. If the three
+          classes Room, Classroom, and Building create objects that have the
+          same relationship which of the following is the most appropriate set
+          of declarations?
+        </p>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>public class Room extends Classroom implements Building { … }</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Is a Classroom a type of Building? Don't use extends unless an
+              object of the child class can be substituted for a object of the
+              parent class.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>
+              public class Classroom extends Room { … } public class Building {
+              private Room[] rooms; …. }
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              If a classroom is a room, then Classroom should extend Room
+              (inherit from it). If a Building has rooms it should have a field
+              that holds them. Since a Building can have more than one Room we
+              can use an array to hold the rooms.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>
+              public class Room extends Building { private Classroom room; …. }
+            </p>
+          </statement>
+
+          <feedback>
+            <p>
+              Is a Room a type of Building? Don't use extends unless the child
+              is the same type of thing as the parent.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>public class Classroom extends Building, Room { … }</p>
+          </statement>
+
+          <feedback>
+            <p>You can't extend two classes in Java so this can't be right.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>public class Room extends Classroom, Building { … }</p>
+          </statement>
+
+          <feedback>
+            <p>You can't extend two classes in Java so this can't be right.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe4_1">
+      <statement>
+        <p>
+          Consider the following partial class definitions. Which of the
+          constructors shown below (I, II, and III) are valid for C2?
+        </p>
+
+        <program language="java">
+          <code>
+public class C1
+{
+   private int num;
+   private String name;
+
+   public C1(int theNum)
+   {
+      num = theNum;
+   }
+
+   public C1(String theName)
+   {
+      name = theName;
+   }
+   // other methods not shown
+}
+
+public class C2 extends C1
+{
+// methods not shown
+}
+
+Possible constructors
+I.   public C2 () { }
+II.  public C2 (int quan) {super (quan); }
+III. public C2 (String label) { super(label); }
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>All three are valid</p>
+          </statement>
+
+          <feedback>
+            <p>
+              If there is not a call to super as the first line in a child class
+              constructor then super() is automatically added. However, this
+              will cause a problem if the parent class does not have a no
+              argument constructor.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>II only</p>
+          </statement>
+
+          <feedback>
+            <p>While II is valid so is another choice.</p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>III only</p>
+          </statement>
+
+          <feedback>
+            <p>While III is valid so is another choice.</p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>II and III</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Since C1 has constructors that take just an int and just a String
+              both of these are valid.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>None are valid</p>
+          </statement>
+
+          <feedback>
+            <p>
+              C2 constructors can call C1 constructors using the super keyword.
+              In fact this call is automatically added to C2 constructors as the
+              first line in any C2 constructor if it isn't there.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe4_13">
+      <statement>
+        <p>
+          Given the following class declarations, which declaration below will
+          result in a compiler error?
+        </p>
+
+        <program language="java">
+          <code>
+public class Book
+{
+    // code for class
+}
+
+public class Dictionary extends Book
+{
+    // code for class
+}
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>Book b = new Book();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              A object can always be declared to be of the type of the class
+              that creates it.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>Dictionary d = new Book();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              The declared type must the type of the class that creates the
+              object or the type of any parent class. Dictionary is not a parent
+              of the Book class.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Book b = new Dictionary();</p>
+          </statement>
+
+          <feedback>
+            <p>
+              The declared type can be the actual type (the class that creates
+              the object) or any parent of the actual type.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="pe4_16">
+      <statement>
+        <p>
+          Given the following array declaration and the fact that Animal is the
+          parent class for Bird, Dog, Pig, Cat, and Cow, what is output from
+          looping through this array of animals and asking each object to
+          speak()?
+        </p>
+
+        <program language="java">
+          <code>
+Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
+
+Animal that has a method speak() which returns "Awk".
+Bird doesn’t have a speak method
+Dog has a speak method that returns "Woof"
+Pig doesn’t have a speak method
+Cow has a speak method that returns "Moo"
+Cat has a speak method that returns "Meow"
+          </code>
+        </program>
+      </statement>
+
+      <choices>
+        <choice>
+          <statement>
+            <p>Awk Awk Awk Awk Awk</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if none of the children classes overrode the
+              speak method, but many do.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>This won’t compile</p>
+          </statement>
+
+          <feedback>
+            <p>
+              It is always okay to substitute a child object for a parent
+              object.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Meow Moo Woof Oink Tweet</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if Pig had a speak method that returned "Oink"
+              and Bird had a speak method that returned "Tweet", but they do
+              not. The inherited speak method will be called in Animal.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice>
+          <statement>
+            <p>Meow Moo Woof Oink Awk</p>
+          </statement>
+
+          <feedback>
+            <p>
+              This would be true if Pig had a speak method that returned "Oink",
+              but it does not.
+            </p>
+          </feedback>
+        </choice>
+
+        <choice correct="yes">
+          <statement>
+            <p>Meow Moo Woof Awk Awk</p>
+          </statement>
+
+          <feedback>
+            <p>
+              Both Pig and Bird do not have a speak method so the one in Animal
+              will be used.
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    
+
+  </exercises>
+</section>
