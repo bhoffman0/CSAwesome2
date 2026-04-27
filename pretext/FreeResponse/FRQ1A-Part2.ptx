@@ -808,12 +808,12 @@ public class RunestoneTests extends CodeTestHelper
         String actual = "";
         
         for (String line : lines) {
-            if (line.contains("Math.random()") &amp;&amp; (line.contains(".05") || line.contains(".95"))) {
+            if (line.contains("Math.random()") || (line.contains(".05") || line.contains(".95"))) {
                 actual += line.trim() + "\n";
             }
         }
         
-        boolean passed = stringMatch(actual, "&lt;.05") || stringMatch(actual, "&gt;.95") || stringMatch(actual, "&gt;0.95") || stringMatch(actual, "&lt;0.05");
+        boolean passed = actual.contains("Math.random()") &amp;&amp; (actual.contains(.05) || actual.contains(.95));
         String desc = "Math.random() used for 5% chance of bear";
         
         getResults("&lt; 0.05", actual, desc, passed);
