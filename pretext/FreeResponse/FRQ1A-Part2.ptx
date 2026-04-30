@@ -661,9 +661,9 @@ total of 110 grams of food will be consumed.</p>
 
 <activity label="frq1a-2024-Feeder-PartA">
 <statement>
-<p>Write the <c>simulateOneDay</c> method, which simulates numBirds birds or possibly a bear at the
+<p>Write the <c>simulateOneDay</c> method, which simulates <c>numBirds</c> birds or possibly a bear at the
 feeder for one day. The method determines the amount of food taken from the feeder on this day and
-updates the currentFood instance variable. The simulation accounts for normal conditions, which
+updates the <c>currentFood</c> instance variable. The simulation accounts for normal conditions, which
 occur 95% of the time, and abnormal conditions, which occur 5% of the time. </p>
 <p>Under normal conditions, the simulation assumes that on any given day, only birds visit the feeder and
 that each bird at the feeder consumes the same amount of food. This standard amount consumed is
