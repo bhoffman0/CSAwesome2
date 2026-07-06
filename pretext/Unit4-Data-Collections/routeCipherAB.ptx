@@ -168,7 +168,7 @@ str.substring(k, k + 1)
         What type of loop should you use?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>for each</p>
@@ -234,7 +234,7 @@ str.substring(k, k + 1)
         <p>The <c>letterBlock</c> array has two dimensions.How many loops should you use?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1</p>
@@ -285,7 +285,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>numRows</p>
@@ -345,7 +345,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>numRows</p>
@@ -406,7 +406,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>str.length()</p>
@@ -457,7 +457,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>str.substring(k, k)</p>
@@ -508,7 +508,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>str.substring(c + r * this.numCols, 1 + c + r * this.numCols)</p>
@@ -571,7 +571,7 @@ str.substring(k, k + 1)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (str.length() &lt; (c + (r * this.numCols)))</p>
@@ -861,7 +861,7 @@ public class RunestoneTests extends CodeTestHelper
       concatenate. What type of loop could you use to solve this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>while</p>
@@ -909,7 +909,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What should your while statement conditional be?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while (message.substring(k, k + 1) &lt; 0)</p>
@@ -957,7 +957,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>How can you determine how large the “chunk size” should be?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>int chunkSize = this.numRows * this.numCols;</p>
@@ -1008,7 +1008,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>chunkSize = message.substring(chunkSize);</p>
@@ -1059,7 +1059,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>encryptMessage(message);</p>
@@ -1320,7 +1320,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What is your base case?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>if (message.length() == 0) { return ""; }</p>
@@ -1371,7 +1371,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What kind of recursion will you use?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Head</p>
@@ -1425,7 +1425,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What is your tail recursive call?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>return "";</p>
@@ -1530,5 +1530,3 @@ public class RunestoneTests extends CodeTestHelper
   </subsection>
 
 </section>
-
-

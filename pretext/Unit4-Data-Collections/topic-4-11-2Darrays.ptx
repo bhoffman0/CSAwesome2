@@ -952,7 +952,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>nums[3][2] = 5;</p>
@@ -1029,7 +1029,7 @@ String name = seatingInfo[0][1];
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Jamal</p>
@@ -1271,7 +1271,7 @@ ticketInfo[0].length // returns the number of columns
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>2</p>
@@ -1312,7 +1312,7 @@ ticketInfo[0].length // returns the number of columns
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>nums[3][2]</p>

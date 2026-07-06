@@ -49,7 +49,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>An attribute of breed is String.</p>
@@ -143,7 +143,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>An attribute of the scaryMovie class is title.</p>
@@ -225,7 +225,7 @@ public class Person
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>new Person john = Person("John", 16);</p>
@@ -295,7 +295,7 @@ int len = s1.length();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>8</p>
@@ -345,7 +345,7 @@ int pos = s1.indexOf("d");
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>3</p>
@@ -409,7 +409,7 @@ String s3 = s2.toLowerCase();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Hey</p>
@@ -508,7 +508,7 @@ public class Movie
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Movie one = new Movie("Harry Potter", "Bob");</p>
@@ -620,7 +620,7 @@ public class BankAccount
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>100.00</p>
@@ -682,7 +682,7 @@ int num = (int) (value * 5) + 5;
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a random number from 0 to 4</p>
@@ -750,7 +750,7 @@ int num = (int) (value * 11) - 5;
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a random number from 0 to 10</p>
@@ -817,7 +817,7 @@ III. s1 == s3
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>I, II, III</p>
@@ -903,7 +903,7 @@ System.out.println(s3);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>org</p>
@@ -994,7 +994,7 @@ s4 = null;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>null</p>
@@ -1085,7 +1085,7 @@ aBa
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -1164,7 +1164,7 @@ aBa
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -1283,7 +1283,7 @@ public class MainClass
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Hello Bob</p>
@@ -1368,7 +1368,7 @@ public class Test
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Woo Hoo Hoo Woo</p>
@@ -1433,7 +1433,7 @@ IV.  (s2.equals(s3))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>II and IV</p>
@@ -1511,7 +1511,7 @@ System.out.println("13" + 5 + 3);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>21</p>
@@ -1604,7 +1604,7 @@ public class MainClass
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>unknown value</p>
@@ -1679,7 +1679,7 @@ public class MainClass
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>unknown value</p>

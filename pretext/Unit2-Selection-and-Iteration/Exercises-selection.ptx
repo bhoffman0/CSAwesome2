@@ -31,7 +31,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>x is negative</p>
@@ -87,7 +87,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first case</p>
@@ -147,7 +147,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>
@@ -227,7 +227,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first case</p>
@@ -281,7 +281,7 @@ else
         <p>Which of the following expressions is equivalent to !(c || d) ?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>(!c) &amp;&amp; (!d)</p>
@@ -355,7 +355,7 @@ if (x &gt; 4)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>x = 0;</p>
@@ -414,7 +414,7 @@ if (x &lt; 0)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>x = 0;</p>
@@ -520,7 +520,7 @@ III. if (score &gt;= 93)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>I and III only</p>
@@ -627,7 +627,7 @@ III. if (score &gt;= 93)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(x &gt; 15 &amp;&amp; x &lt; 18) &amp;&amp; (x &gt; 10)</p>
@@ -705,7 +705,7 @@ System.out.print("third");
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first</p>
@@ -782,7 +782,7 @@ if (y / x &gt; 0)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first</p>

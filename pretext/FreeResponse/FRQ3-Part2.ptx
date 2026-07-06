@@ -129,7 +129,7 @@ public class ScrambledStrings
         <p>What is returned by this method?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>String</p>
@@ -189,7 +189,7 @@ public class ScrambledStrings
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>void</p>
@@ -242,7 +242,7 @@ public class ScrambledStrings
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(index != wordList.current())</p>
@@ -297,7 +297,7 @@ public class ScrambledStrings
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(int i = wordList.size() - 1; i != wordList.size(); i--)</p>
@@ -354,7 +354,7 @@ public class ScrambledStrings
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>wordList.get(index)</p>
@@ -405,7 +405,7 @@ public class ScrambledStrings
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>!(word != other)</p>

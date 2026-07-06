@@ -81,7 +81,7 @@ III. public NamedPoint(int d1, int d2, String name)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>I and III</p>
@@ -214,7 +214,7 @@ V.
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I</p>
@@ -309,7 +309,7 @@ V.   None of the above
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>IV</p>
@@ -402,7 +402,7 @@ V.   None of the above
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>IV</p>
@@ -510,7 +510,7 @@ public class DogOwner
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Interface</p>
@@ -591,7 +591,7 @@ public class DogOwner
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>test();</p>
@@ -691,7 +691,7 @@ public class VehicleTest
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>v.test(sporty,v);</p>
@@ -803,7 +803,7 @@ public class Child extends Parent
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>pm1pm2cm2cm1</p>
@@ -910,7 +910,7 @@ III.  ((Bear) b).growl();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I only</p>
@@ -984,7 +984,7 @@ III.  ((Bear) b).growl();
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>public class Room extends Classroom implements Building { … }</p>
@@ -1093,7 +1093,7 @@ III. public C2 (String label) { super(label); }
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>All three are valid</p>
@@ -1180,7 +1180,7 @@ public class Dictionary extends Book
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Book b = new Book();</p>
@@ -1246,7 +1246,7 @@ Cat has a speak method that returns "Meow"
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Awk Awk Awk Awk Awk</p>

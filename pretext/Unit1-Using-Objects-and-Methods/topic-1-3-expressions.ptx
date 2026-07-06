@@ -506,7 +506,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What is the result of 158 % 10?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>15</p>
@@ -547,7 +547,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What is the result of 3 % 8?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>3</p>
@@ -821,7 +821,7 @@ System.out.print("and cool!");
         <p>What is printed as a result of executing the code segment?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP1-3-1_opt_a">
             <p>
@@ -895,7 +895,7 @@ System.out.println(5 + 5 / 2 * 3 - 1);
         <p>What is printed when the code segment is executed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0.666666666666667</p>

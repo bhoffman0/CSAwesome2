@@ -19,7 +19,7 @@
       <p>I am now a</p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <p>beginner programmer</p>
       </choice>
@@ -43,7 +43,7 @@
       <p>I am confident in my Java programming skills.</p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <p>strongly agree</p>
       </choice>
@@ -77,7 +77,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <p>strongly agree</p>
       </choice>
@@ -109,7 +109,7 @@
       <p>I would like to pursue further study or a career in computing.</p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <p>strongly agree</p>
       </choice>

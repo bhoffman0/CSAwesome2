@@ -49,7 +49,7 @@ public class AlphaSort
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A B B C D</p>
@@ -150,7 +150,7 @@ public class NumberCount
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>
@@ -244,7 +244,7 @@ public class GuestList
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>-3</p>
@@ -339,7 +339,7 @@ public class OddEvenMod
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>8,7,7,3,4,1</p>
@@ -440,7 +440,7 @@ public class PrimeOrNot
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>3,5,3,9,2,4,</p>
@@ -541,7 +541,7 @@ public class GradeSort
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Anna John Billy Bob Roger Dominic</p>
@@ -640,7 +640,7 @@ public class DivisibleBy2or3
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>6 7 17 3 2 9 1 5</p>

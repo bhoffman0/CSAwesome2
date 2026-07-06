@@ -110,7 +110,7 @@ public class HorseBarn
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>spaces[index].name;</p>
@@ -160,7 +160,7 @@ public class HorseBarn
         <p>What is the best way to compare two strings for equality?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>str.compareTo(anotherString);</p>

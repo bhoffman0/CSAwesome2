@@ -517,7 +517,7 @@ public class Party
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The class is missing an accessor method.</p>
@@ -620,7 +620,7 @@ public class Movie
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP5-8-2_opt_a">
             <p>

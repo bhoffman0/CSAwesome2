@@ -17,7 +17,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -59,7 +59,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -144,7 +144,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1</p>
@@ -230,7 +230,7 @@ public static double mystery(int[] arr)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>17.5</p>
@@ -326,7 +326,7 @@ public void doubleLast()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{-20, -10, 2, 8, 16, 60}</p>
@@ -404,7 +404,7 @@ public void multAll(int amt)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{1, 3, -5, -2}</p>
@@ -478,7 +478,7 @@ public void mult(int amt)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{1, 3, -5, -2}</p>
@@ -547,7 +547,7 @@ b[0] != b[i] for all i from 1 to k-1
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -642,7 +642,7 @@ return temp;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -780,7 +780,7 @@ public int findLongest(int target)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -908,7 +908,7 @@ int m = mystery(n)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -1038,7 +1038,7 @@ public int checkArray()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -1151,7 +1151,7 @@ public static int m1(int[] a)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>4</p>
@@ -1250,7 +1250,7 @@ for (int i = 1; i &lt; k; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>k - 1</p>
@@ -1352,7 +1352,7 @@ public static void changeArray(int[] data)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{2, 6, 2, -1, -3}</p>
@@ -1454,7 +1454,7 @@ public static void copyArray(int[] arr1, int[] arr2)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[-2, -1, -5, 3, -4]</p>
@@ -1552,7 +1552,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -1693,7 +1693,7 @@ for (int j = 0; j &lt; arr.length; j++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Both implementations work as intended and are equally fast.</p>

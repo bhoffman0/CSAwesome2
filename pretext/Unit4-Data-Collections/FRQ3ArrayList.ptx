@@ -171,7 +171,7 @@ public double averageWithinRange(double lower, double upper)
         </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
         <choice>
             <statement>
                 <p>for (int i = 0; i &lt; inventory.length; i++) 
@@ -245,7 +245,7 @@ for (ItemInfo currentItem : inventory)
         </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
         <choice>
             <statement>
                 <p>currentItem.cost
@@ -308,7 +308,7 @@ for (ItemInfo currentItem : inventory)
         </p>
     </statement>
  
-    <choices>
+     <choices randomize="yes">
         <choice>
             <statement>
                 <p>

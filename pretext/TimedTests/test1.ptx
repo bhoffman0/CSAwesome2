@@ -39,7 +39,7 @@ public int m1 (int a)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>50</p>
@@ -109,7 +109,7 @@ for (int j = 1; j &lt;= 3; j++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1 2 3 2 4 6</p>
@@ -184,7 +184,7 @@ public int mystery(int n)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>128</p>
@@ -261,7 +261,7 @@ V. (int2 == int3)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I and II only</p>
@@ -331,7 +331,7 @@ V. (int2 == int3)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The search value is not in the array</p>
@@ -419,7 +419,7 @@ Data set 2: "bcb", "bcd", "c"
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Data set 1 since it has more test cases.</p>
@@ -565,7 +565,7 @@ for (int i = 0; i &lt; 5; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I</p>
@@ -644,7 +644,7 @@ System.out.println(list1);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[0, 1, 2, 3, 4, 5]</p>
@@ -786,7 +786,7 @@ System.out.println(list1);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>I</p>
@@ -864,7 +864,7 @@ System.out.println(list1);
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The value is the first one in the array</p>
@@ -946,7 +946,7 @@ public int m1(int[] a)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>4</p>
@@ -1039,7 +1039,7 @@ for (int i=1; i&lt;=6; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a = 6 and b = 7</p>
@@ -1118,7 +1118,7 @@ s4 = null;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>hi there</p>
@@ -1211,7 +1211,7 @@ for (int row = 0; row &lt; 4; row++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>4</p>
@@ -1303,7 +1303,7 @@ for (int row = 0; row &lt; mat.length; row++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{ { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }</p>
@@ -1396,7 +1396,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -1491,7 +1491,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>

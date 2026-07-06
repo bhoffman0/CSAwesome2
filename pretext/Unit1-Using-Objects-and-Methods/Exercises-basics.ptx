@@ -12,7 +12,7 @@ System.out.println(2 % 3);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>2</p>
@@ -78,7 +78,7 @@ System.out.println(19 % 5);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>3</p>
@@ -140,7 +140,7 @@ System.out.println(1 / 3);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0.3333333333333333</p>
@@ -211,7 +211,7 @@ System.out.println(2 + 3 * 5 - 1);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>24</p>
@@ -285,7 +285,7 @@ b = (int) a;
 
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>9.6982</p>
@@ -350,7 +350,7 @@ System.out.println(5 / 0);
 
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>It will print 0</p>
@@ -408,7 +408,7 @@ System.out.println(1.0 / 3);
 
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0</p>
@@ -477,7 +477,7 @@ x++;
 
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>x = 3, y = 3, z = 9</p>

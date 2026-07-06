@@ -107,7 +107,7 @@ z = 3;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>x = 0, y = 1, z = 2</p>
@@ -656,7 +656,7 @@ System.out.println(d);
         <p>What is printed when the code segment is executed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>8</p>

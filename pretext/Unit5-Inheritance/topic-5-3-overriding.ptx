@@ -325,7 +325,7 @@ public class Student extends Person
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>public void getFood()</p>
@@ -421,7 +421,7 @@ public class Student extends Person
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>public void getFood()</p>
@@ -615,7 +615,7 @@ public class EnhancedItem extends Item
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>currItem.setX(3);</p>

@@ -21,7 +21,7 @@
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>(a &gt;= b) &amp;&amp; (b &gt;= 0)</p>
@@ -113,7 +113,7 @@ public int mystery(int m)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>9</p>
@@ -190,7 +190,7 @@ III. An array that is in random order (not already sorted).
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>II only</p>
@@ -295,7 +295,7 @@ for (int i = max; i &gt; 0; i--)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -383,7 +383,7 @@ while (value &lt; 30)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>First: 15 Last: 29</p>
@@ -484,7 +484,7 @@ public int solution(int limit)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>25</p>
@@ -583,7 +583,7 @@ while (count &lt;= n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I and II are exactly equivalent for all input values n.</p>
@@ -669,7 +669,7 @@ for (int i = 0; i &lt;= k; i++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>k</p>
@@ -759,7 +759,7 @@ public void stringRecursion(String s)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>It will never produce a run time error.</p>
@@ -861,7 +861,7 @@ III ArrayList&lt;String&gt; stringList = new ArrayList&lt;String&gt;();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -979,7 +979,7 @@ IV.
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I</p>
@@ -1077,7 +1077,7 @@ randomList.set(1, 8);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[0, 1, 2, 3, 5, 7]</p>
@@ -1170,7 +1170,7 @@ while(counter &lt; str.length() - 1)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>edcba</p>
@@ -1268,7 +1268,7 @@ public static void test(String str, int y)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>s="rainbow"; b=8;</p>
@@ -1355,7 +1355,7 @@ III. Insertion sort is almost always less efficient than mergesort.
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -1480,7 +1480,7 @@ V. 1 5 7 7
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I</p>

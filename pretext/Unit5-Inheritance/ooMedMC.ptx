@@ -39,7 +39,7 @@ public class GradStudent extends Student
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -165,7 +165,7 @@ III. enItemObj.setX(52);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -274,7 +274,7 @@ Test3 t3 = new Test3();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>t1.method1(t1,t1);</p>
@@ -384,7 +384,7 @@ Animal[] a = { new Cat(), new Cow(), new Dog(), new Pig(), new Bird() }
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>Meow Moo Woof Awk Awk</p>
@@ -502,7 +502,7 @@ fastCar.display();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -634,7 +634,7 @@ III. ((Dictionary) b).getDefinition("wonderful");
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -767,7 +767,7 @@ public class MainClass
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Lasagna Meow Screeech</p>

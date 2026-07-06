@@ -353,7 +353,7 @@ public class MessageBuilder
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>for loop with fixed number of iterations</p>
@@ -392,7 +392,7 @@ public class MessageBuilder
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>It holds the entire message being built.</p>
@@ -619,7 +619,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -691,7 +691,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -759,7 +759,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>for(int i=0; i &lt; message.length; i++)</p>

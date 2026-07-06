@@ -147,7 +147,7 @@ public int walkDogs(int hour)
 
 <activity label="frq1a2-chooseType1">
 <statement><p>What is the return type of <c>walkDogs</c>?</p></statement>
-<choices>
+ <choices randomize="yes">
 <choice ><statement><p>void</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return something</p></feedback></choice>
 <choice correct="yes"><statement><p>int</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return an int</p></feedback></choice>
 <choice ><statement><p>double</p></statement><feedback><p><c>walkDogs</c> should return the number of dogs that are walked, so it should return a whole number</p></feedback></choice>
@@ -157,7 +157,7 @@ public int walkDogs(int hour)
 
 <activity label="frq1a2-chooseType2">
 <statement><p>How do you call <c>numAvailableDogs</c> and store the result as a variable?</p></statement>
-<choices>
+ <choices randomize="yes">
 <choice ><statement><p><c>int dogsToWalk = numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and needs to be called on an object</p></feedback></choice>
 <choice ><statement><p><c>int dogsToWalk = this.numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and cannot be called on this</p></feedback></choice>
 <choice ><statement><p><c>int dogsToWalk = DogWalkCompany.numAvailableDogs(hour)</c></p></statement><feedback><p><c>numAvailableDogs</c> is a method in the DogWalkCompany class and needs to be called on an object</p></feedback></choice>
@@ -167,7 +167,7 @@ public int walkDogs(int hour)
 
 <activity label="frq1a2-chooseType3">
 <statement><p>How do you determine how many dogs were walked?</p></statement>
-<choices>
+ <choices randomize="yes">
 <choice ><statement><p>it will always be the number of available dogs</p></statement><feedback><p></p></feedback></choice>
 <choice ><statement><p>it will always be the maximum number of dogs</p></statement><feedback><p></p></feedback></choice>
 <choice ><statement><p>if the maximum number of dogs is greater than the number of dogs available, the number of dogs walked will be the number available</p></statement><feedback><p></p></feedback></choice>
@@ -177,7 +177,7 @@ public int walkDogs(int hour)
 
 <activity label="frq1a2-chooseType4">
 <statement><p>How do you call updateDogs?</p></statement>
-<choices>
+ <choices randomize="yes">
 <choice correct="yes"><statement><p><c>company.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
 <choice ><statement><p><c>DogWalkCompany.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>
 <choice ><statement><p><c>this.updateDogs(hour, dogsToWalk);</c></p></statement><feedback><p></p></feedback></choice>

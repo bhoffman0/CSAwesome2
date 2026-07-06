@@ -12,7 +12,7 @@
       <p>What best describes the purpose of a class’s constructor?</p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>Initialize the fields in the object.</p>
@@ -60,7 +60,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>The methods do different things.</p>
@@ -140,7 +140,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -247,7 +247,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>How the methods are implemented.</p>
@@ -329,7 +329,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>

@@ -1082,7 +1082,7 @@ public class Cat
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="APclass1_opt_a">
             <program language="java">
@@ -1197,7 +1197,7 @@ public class Party
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="APclass2_opt_a">
             <program language="java">

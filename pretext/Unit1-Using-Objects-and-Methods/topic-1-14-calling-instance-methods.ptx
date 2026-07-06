@@ -840,7 +840,7 @@ System.out.println(c.getArea());
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -946,7 +946,7 @@ System.out.println(r.getArea());
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>150</p>
@@ -1125,7 +1125,7 @@ public class MethodTrace
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>5</p>
@@ -1537,7 +1537,7 @@ public class Party
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="AP-Party-Methods_opt_a">
             <p>myParty.cancelParty();</p>
@@ -1630,7 +1630,7 @@ public class Cat
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-Cat-trace_opt_a">
             <program language="java">
@@ -1763,7 +1763,7 @@ System.out.println(water.getTemp());
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-Liquid-return_opt_a">
             <p>-10</p>
@@ -1855,7 +1855,7 @@ public void printSlices(int slices)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="AP-Pizza-trace-args_opt_a">
             <p>printSlices(slicesPerPerson);</p>

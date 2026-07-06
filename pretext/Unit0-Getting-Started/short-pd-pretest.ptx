@@ -67,7 +67,7 @@ III. In lines 1, 2, and 3, the text inside the parentheses should be in quotatio
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDpretest1_opt_a">
             <p>I only</p>
@@ -290,7 +290,7 @@ III. Party otherParty = new Party();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDpretest3_opt_a">
             <p>I only</p>
@@ -863,7 +863,7 @@ public class Cat
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDpretest9_opt_a">
             <program language="java">
@@ -1197,7 +1197,7 @@ III. for (int i = 1; i &lt;= array.length; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDpretest12_opt_a">
             <p>I only</p>

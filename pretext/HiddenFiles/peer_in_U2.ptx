@@ -16,7 +16,7 @@ String name = "Bob";
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>"Bob"</p>
@@ -76,7 +76,7 @@ String name = "Bob";
       <image source="https://i.postimg.cc/DwWb2xyj/lecture11-Q07.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1-A, 2-C, 3-C, 4-D</p>

@@ -416,7 +416,7 @@ public class SortTest
         <p>Under what condition will a merge sort execute faster?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>If the data is already sorted in ascending order</p>
@@ -454,7 +454,7 @@ public class SortTest
         <p>Which sort should be the fastest most of the time?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>selection sort</p>

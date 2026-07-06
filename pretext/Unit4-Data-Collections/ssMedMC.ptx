@@ -15,7 +15,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>{3,7,8,5,2}, {3,7,8,5,2}, {3,5,7,8,2}, {2,3,5,7,8}</p>
@@ -114,7 +114,7 @@ public class Searcher
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>-1</p>
@@ -188,7 +188,7 @@ public class Searcher
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>{6,10,3,2,8}, {3,6,10,2,8}, {2,3,6,10,8}, {2,3,6,8,10}</p>
@@ -282,7 +282,7 @@ public class Searcher
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>int k = j - 1; k &gt;= 0; k--</p>
@@ -372,7 +372,7 @@ public static int test(int[] a, int v)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>-1</p>

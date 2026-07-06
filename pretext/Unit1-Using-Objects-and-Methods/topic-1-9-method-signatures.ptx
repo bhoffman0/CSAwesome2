@@ -285,7 +285,7 @@ public class Song
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I like to eat eat eat.</p>
@@ -1086,7 +1086,7 @@ public class Cat
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-trace-method-calls_opt_a">
             <program language="java">

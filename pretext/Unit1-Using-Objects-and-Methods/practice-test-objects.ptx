@@ -57,7 +57,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>An attribute of boilingPoint object is double.</p>
@@ -139,7 +139,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>painting1 is an instance of three String objects.</p>
@@ -227,7 +227,7 @@ III. int numOfFriends = 6;
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I only</p>
@@ -321,7 +321,7 @@ public class Liquid
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Liquid l = new Liquid(98.6);</p>
@@ -417,7 +417,7 @@ public class Liquid
           </program>
               </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>liquid.freeze(80);</p>
@@ -509,7 +509,7 @@ public class Dog
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-obj-3-4_opt_a">
             <program language="java">
@@ -617,7 +617,7 @@ public void printTemperature(double celsius, double fahrenheit)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-obj-4-3_opt_a">
             <p>5.0 –&gt; 77.0</p>
@@ -698,7 +698,7 @@ public void printOrder(int number)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="AP-obj-4-4_opt_a">
             <p>printOrder(numOfPizzas);</p>
@@ -780,7 +780,7 @@ public double calculateMovieRating(int numOfPeople, double rating)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-obj-5-3_opt_a">
             <p>int result = calculateMovieRating(234, null);</p>
@@ -862,7 +862,7 @@ public int anotherThing(int i, int j)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>int x = oneThing(2, 10) + anotherThing(5, 2);</p>

@@ -117,7 +117,7 @@ int numChanges = limitAmplitude(2000);
         <p>Which loop would be best for this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while</p>
@@ -169,7 +169,7 @@ int numChanges = limitAmplitude(2000);
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>samples[i].set(-limit);</p>

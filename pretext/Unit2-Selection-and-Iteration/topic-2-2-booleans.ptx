@@ -619,7 +619,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Is 5 prime?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes, 5 is prime.</p>
@@ -647,7 +647,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Is 6 prime?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes, 6 is prime.</p>
@@ -678,7 +678,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Is 7 prime?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes, 7 is prime.</p>
@@ -830,7 +830,7 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
         <p>What is the value of x after the statement has been executed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP2-2-1_opt_a">
             <p>false</p>
@@ -908,7 +908,7 @@ boolean x = (5 % 3 == 0) == (3 &gt; 5);
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP2-2-2_opt_a">
             <p>x = 10 and y = 12</p>

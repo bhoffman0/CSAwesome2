@@ -14,7 +14,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>nums.length</p>
@@ -71,7 +71,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>An array has faster access to its elements than a list does.</p>
@@ -118,7 +118,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>
@@ -164,7 +164,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>nums[0]</p>
@@ -238,7 +238,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>nums[1] = 5;</p>
@@ -306,7 +306,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>nums.remove(3);</p>
@@ -357,7 +357,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>nums.add(2, 0);</p>
@@ -440,7 +440,7 @@ System.out.println(list1);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[2, 3]</p>
@@ -512,7 +512,7 @@ System.out.println(list1);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>["Sarah", "Destini", "Layla", "Sharrie"]</p>

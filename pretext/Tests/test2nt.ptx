@@ -27,7 +27,7 @@ list.set(2, 7);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[6, 2, 7, 5]</p>
@@ -107,7 +107,7 @@ list.set(2, 7);
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>8</p>
@@ -220,7 +220,7 @@ III. int[][] arr = new int [7][9];
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -308,7 +308,7 @@ public void printString(String s)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>hciwdnas</p>
@@ -422,7 +422,7 @@ III. getName()
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -515,7 +515,7 @@ III. for (int i = 0; i &lt;= 8; i +=2)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -606,7 +606,7 @@ public int mystery(int x, int y)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>y is greater than 1</p>
@@ -704,7 +704,7 @@ public static void showMe(int arg)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>1</p>
@@ -802,7 +802,7 @@ System.out.println(sum);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>25</p>
@@ -915,7 +915,7 @@ while (col &lt; values[0].length)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -988,7 +988,7 @@ while (col &lt; values[0].length)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>(int) (Math.random() + 1) * 50</p>
@@ -1081,7 +1081,7 @@ public static int mystery(int num)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>The method will produce an infinite loop.</p>
@@ -1159,7 +1159,7 @@ public static int mystery(int num)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[4, 6, 12, 8, 13, 29, 7]</p>
@@ -1256,7 +1256,7 @@ public void changeArray(int[] data)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[2, 6, 2, -1, -3]</p>
@@ -1334,7 +1334,7 @@ public void changeArray(int[] data)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>(x &lt;= 7) &amp;&amp; (y &lt; 12)</p>
@@ -1451,7 +1451,7 @@ if (x / 2 == 1)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>I only</p>
@@ -1549,7 +1549,7 @@ public int findMax(int[] arr)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>This method will work correctly for all arrays.</p>

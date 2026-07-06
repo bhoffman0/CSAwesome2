@@ -472,7 +472,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>first case</p>
@@ -519,7 +519,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first case</p>
@@ -570,7 +570,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>first case</p>
@@ -660,7 +660,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first case</p>
@@ -722,7 +722,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>first case</p>
@@ -1033,7 +1033,7 @@ if (x % 2 == 0 &amp;&amp; y % 2 == 0 || x &gt; y)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-compound-bools_opt_a">
             <p>Nothing is printed out.</p>

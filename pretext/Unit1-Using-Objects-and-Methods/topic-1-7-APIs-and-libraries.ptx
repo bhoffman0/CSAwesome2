@@ -229,7 +229,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>Which way does a turtle face when it is first created?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>North</p>
@@ -282,7 +282,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>class</p>
@@ -346,7 +346,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>object</p>
@@ -412,7 +412,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>object</p>
@@ -466,7 +466,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What are attributes of a class?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Tasks performed by methods defined in a class.</p>
@@ -744,7 +744,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>What is the purpose of APIs and libraries in programming?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>To write new code from scratch</p>
@@ -1059,7 +1059,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
              <p>The <c>xPos</c> and <c>yPos</c> are behaviors of <c>Turtle</c> objects.</p>
@@ -1140,7 +1140,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p><c>Turtle</c> is an attribute of the API.</p>

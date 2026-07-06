@@ -108,7 +108,7 @@ for (int i = 1; i &lt; 7; i++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A rectangle of 7 rows with 5 stars per row.</p>
@@ -178,7 +178,7 @@ for (int i = 0; i &lt; 5; i++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A rectangle of 4 rows with 3 star per row.</p>

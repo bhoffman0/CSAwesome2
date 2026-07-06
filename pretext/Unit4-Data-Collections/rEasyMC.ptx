@@ -27,7 +27,7 @@ public static int factorial(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -96,7 +96,7 @@ public String starString(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -181,7 +181,7 @@ public static int fibonacci(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0</p>
@@ -251,7 +251,7 @@ public static int multiplyEvens(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0</p>

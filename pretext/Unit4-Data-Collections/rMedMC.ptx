@@ -30,7 +30,7 @@ public static void mystery (int x)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1441</p>
@@ -141,7 +141,7 @@ public static int mystery(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>243</p>
@@ -242,7 +242,7 @@ public static int product(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -349,7 +349,7 @@ public static int f(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>8</p>

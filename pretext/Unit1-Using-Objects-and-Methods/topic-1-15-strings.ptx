@@ -358,7 +358,7 @@ s1 = s1 + s2 + "z";
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>xyz</p>
@@ -758,7 +758,7 @@ int pos = s1.indexOf("b");
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>2</p>
@@ -815,7 +815,7 @@ int len = s1.length();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>2</p>
@@ -872,7 +872,7 @@ String s2 = s1.substring(0,3);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>baby</p>
@@ -933,7 +933,7 @@ String s2 = s1.substring(2);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>by</p>
@@ -1184,7 +1184,7 @@ int answer = s1.compareTo(s2);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>positive (&gt; 0)</p>
@@ -1633,7 +1633,7 @@ String s2 = s1.substring(0,pos);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>hi th</p>
@@ -1703,7 +1703,7 @@ String s3 = s2.toLowerCase();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Hi</p>

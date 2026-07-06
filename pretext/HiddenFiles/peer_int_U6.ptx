@@ -23,7 +23,7 @@ public void lab7Quiz3(Sound mySound)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Erases half of the sound</p>
@@ -128,7 +128,7 @@ public void guess()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0,9</p>
@@ -227,7 +227,7 @@ public void guess()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0,9</p>
@@ -322,7 +322,7 @@ for (int i=0;i&lt;noiseArray.length; i++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Sets the end of the array to 0s</p>
@@ -422,7 +422,7 @@ public void funky()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[160, 160, 160, 160]</p>
@@ -520,7 +520,7 @@ for (int i = 0; i &lt; foo.length; i++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>if (foo[i].getValue() &gt;= 0)</p>
@@ -616,7 +616,7 @@ public Sound funky2(int foo)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[143, 165, 110, 121, 99, 0, 0, 0, 0, 0]</p>
@@ -709,7 +709,7 @@ public void raiseP()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>this;</p>
@@ -800,7 +800,7 @@ public void raiseP()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -902,7 +902,7 @@ public Sound funky2(int foo)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>[A] public void raisePitch(), [B] this.getSamples();</p>
@@ -996,7 +996,7 @@ for(int i = 0; i &lt; noiseAr.length; i+=2)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[10, 15, 20, 25, 30, 35, 40, 45, 50, 55]</p>

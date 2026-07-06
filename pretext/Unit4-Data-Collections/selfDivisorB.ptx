@@ -117,7 +117,7 @@ public class SelfDivisor
         <p>Which loop should you use to solve this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>for</p>
@@ -167,7 +167,7 @@ public class SelfDivisor
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>int[] retArray = new int[3];</p>

@@ -400,7 +400,7 @@ public void numQuest()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>[0, 4, 2, 5, 3]</p>

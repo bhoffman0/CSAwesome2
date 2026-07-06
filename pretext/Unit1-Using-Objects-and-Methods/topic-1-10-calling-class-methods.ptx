@@ -231,7 +231,7 @@ public class MethodTrace
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>11</p>
@@ -493,7 +493,7 @@ double y = Math.sqrt(9); // the square root of 9 is 3.0
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="hypotenuse-java-mc_opt_a">
             <p>
@@ -718,7 +718,7 @@ public static double calculatePizzaBoxes(int numOfPeople, double slicesPerBox)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP1-10-static-method_opt_a">
             <p>int result = calculatePizzaBoxes(45, 9.0);</p>
@@ -812,7 +812,7 @@ public static void printInCentimeters(double inches, double centimeters)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP1-10-static-method2_opt_a">
             <p>inches –&gt; centimeters</p>

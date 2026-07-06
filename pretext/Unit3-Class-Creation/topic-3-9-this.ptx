@@ -327,7 +327,7 @@ System.out.println(one.getPay());
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-this-arg_opt_a">
             <p>10.0</p>
@@ -699,7 +699,7 @@ System.out.println(j.getTotalTemp());
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-this_opt_a">
             <p>50</p>

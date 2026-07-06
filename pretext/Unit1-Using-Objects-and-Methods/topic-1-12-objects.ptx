@@ -181,7 +181,7 @@ Turtle myrtle;
         <p>How many objects can you create from a class in Java?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1</p>
@@ -238,7 +238,7 @@ Turtle myrtle;
         <p>What specifies the behavior for objects of a class in Java?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>attributes</p>
@@ -292,7 +292,7 @@ Turtle myrtle;
         <p>What are the data or properties of an object called?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>attributes</p>
@@ -1122,7 +1122,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>An attribute of the name object is String.</p>
@@ -1213,7 +1213,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>boolean is an attribute of the myParty object.</p>

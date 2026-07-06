@@ -245,7 +245,7 @@ public class RunestoneTests extends CodeTestHelper
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>45 44 43 42 41</p>
@@ -874,7 +874,7 @@ for (int[] x : arr)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>36</p>

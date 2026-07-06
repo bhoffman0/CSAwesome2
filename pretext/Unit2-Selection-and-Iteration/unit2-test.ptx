@@ -85,7 +85,7 @@ for (int i = 0; i &lt; 5; i++) {
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>I only</p>
@@ -183,7 +183,7 @@ public static void conditionTest(int num1, int num2)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>
@@ -270,7 +270,7 @@ for (int i = max; i &gt; 0; i--)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I only</p>
@@ -363,7 +363,7 @@ public int solution(int limit)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>25</p>
@@ -433,7 +433,7 @@ public int solution(int limit)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(x &lt; 10) &amp;&amp; (x &gt; 5)</p>
@@ -531,7 +531,7 @@ public class Test1
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>s="rainbow"; b=8;</p>
@@ -610,7 +610,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>var1 = 0, var2 = 2</p>
@@ -688,7 +688,7 @@ while (x &lt; 0)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>5 4 3 2 1</p>
@@ -769,7 +769,7 @@ for (int i = 0; i &lt;= 15; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0 3 6 9 12</p>
@@ -830,7 +830,7 @@ for (int i = 0; i &lt;= 15; i++)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>!(a &amp;&amp; b)</p>
@@ -911,7 +911,7 @@ public class Mysterious
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>"Hello World!"</p>
@@ -999,7 +999,7 @@ for (int i = 1; i &lt;= 6; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a = 6 and b = 7</p>
@@ -1084,7 +1084,7 @@ s4 = null;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>hi there</p>
@@ -1165,7 +1165,7 @@ int c = 4;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a = 6.7</p>

@@ -32,7 +32,7 @@ III. Cat can override existing public methods of Animal
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -140,7 +140,7 @@ III objectC.method2(objectB);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -250,7 +250,7 @@ public class C extends B
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>C c1 = new C();</p>
@@ -353,7 +353,7 @@ III. Fish glub = new Goldfish();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -457,7 +457,7 @@ public class FluffyCat extends Cat
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Cats!</p>
@@ -558,7 +558,7 @@ public class Minivan extends Car
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>Vroom vroom! Let's go!</p>
@@ -682,7 +682,7 @@ III. Swan s = new Swan("blue");
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -799,7 +799,7 @@ III. super(theName, theAge);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -937,7 +937,7 @@ public class Pig extends Animal
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>"My name is Piglet!"</p>
@@ -1031,7 +1031,7 @@ public void recur (String str)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>When the length of str is less than 15</p>
@@ -1157,7 +1157,7 @@ III. SeedlessGrape c = new Grape("grape", "green");
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>I only</p>
@@ -1260,7 +1260,7 @@ III. fluffy.makeNoise();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -1394,7 +1394,7 @@ IV. a.color;
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>II only</p>
@@ -1530,7 +1530,7 @@ public class Student extends Person
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -1657,7 +1657,7 @@ public class UnderDog extends Dog
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>run eat</p>

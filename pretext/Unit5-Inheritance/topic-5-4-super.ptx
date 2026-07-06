@@ -240,7 +240,7 @@ public class Derived extends Base
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>AB</p>

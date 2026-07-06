@@ -150,7 +150,7 @@ String[] names = new String[5];
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>int[] prices = new int[10];</p>
@@ -441,7 +441,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>highScores.length</p>
@@ -526,7 +526,7 @@ System.out.println( highScores[0] );
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>cars[0]</p>
@@ -589,7 +589,7 @@ System.out.println( highScores[0] );
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>cars[0]</p>
@@ -1395,7 +1395,7 @@ public void mystery(int[] a, int i)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[8, 20, 30]</p>
@@ -1476,7 +1476,7 @@ public int[] mystery(int[] a, int i, int value)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-array2_opt_a">
             <program language="java">

@@ -56,7 +56,7 @@
         <p>What type does isBalanced return?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>String</p>
@@ -109,7 +109,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>openDel</p>
@@ -221,7 +221,7 @@
         <p>Which loop would be best for this situation?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while</p>
@@ -281,7 +281,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (currString = openDel)</p>

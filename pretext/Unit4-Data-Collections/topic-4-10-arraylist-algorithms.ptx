@@ -113,7 +113,7 @@ System.out.println(numList);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[1, 2, 3, 4, 5]</p>
@@ -193,7 +193,7 @@ System.out.println(list1);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[2, 3]</p>

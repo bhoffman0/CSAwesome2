@@ -117,7 +117,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>GridWorldUtilities</p>
@@ -171,7 +171,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Grid</p>
@@ -222,7 +222,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>.length</p>
@@ -275,7 +275,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>.getNumCols()</p>
@@ -375,7 +375,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>locs = new ArrayList&lt;Location&gt;();</p>
@@ -426,7 +426,7 @@
         <p>Which loop would be best for this situation?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>nested for loop</p>
@@ -490,7 +490,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>locToCheck = new Location (r,c);</p>
@@ -549,7 +549,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (locToCheck == null)</p>

@@ -27,7 +27,7 @@ for (int row = 0; row &lt; 4; row++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>
@@ -129,7 +129,7 @@ for (int row = 0; row &lt; mat.length; row++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>{ {2 3 3}, {1 2 3}, {1 1 2}, {1 1 1}}</p>
@@ -227,7 +227,7 @@ for (int k = 0; k &lt; m.length; k++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>

@@ -23,7 +23,7 @@ while (index &lt; pixelArray.length)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Removes all red from the picture</p>
@@ -121,7 +121,7 @@ while (index &lt; pixelArray.length) //Location B
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Location A</p>
@@ -204,7 +204,7 @@ while (index &lt; pixelArray.length)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>It has a compiler error</p>
@@ -280,7 +280,7 @@ while (index &lt; pixelArray.length)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -365,7 +365,7 @@ for(int index = 0; index &lt; pixelArray.length; index++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>It tries to access pixelArray[-1]</p>
@@ -457,7 +457,7 @@ for (int bar = 0; bar &lt; getWidth(); bar++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>It doesn’t, this loops across rows, going down</p>
@@ -540,7 +540,7 @@ for (int y = 0; y &lt; getHeight); y++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>y increases faster than x</p>
@@ -639,7 +639,7 @@ for(int y = 0; y &lt; getHeight(); y++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Copies top half into bottom half not mirrored</p>
@@ -731,7 +731,7 @@ for(int y = 40; y &lt; 50; y++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>10, 4</p>
@@ -807,7 +807,7 @@ for(int y = 40; y &lt;= 50; y++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>11, 5</p>
@@ -890,7 +890,7 @@ public void foo(int x, int y)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>for (int w = 0; w &lt;= x; w++) for (int h = 0; h &lt;= y; h++)</p>
@@ -978,7 +978,7 @@ public void everyColumn(Color newColor)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -1075,7 +1075,7 @@ public void everyOtherColumn(Color newColor)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>getHeight()-1 * getWidth()-1</p>
@@ -1181,7 +1181,7 @@ public void everyOtherColumn(Color newColor)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>if(bbb &lt; this.getWidth()/2)</p>
@@ -1264,7 +1264,7 @@ else
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -1353,7 +1353,7 @@ else
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Section A AND Section B may BOTH be executed</p>
@@ -1437,7 +1437,7 @@ else
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -1532,7 +1532,7 @@ for (int x = 0; x &lt; this.getWidth(); x++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Based on the coordinates of the Pixel</p>
@@ -1597,7 +1597,7 @@ for (int x = 0; x &lt; this.getWidth(); x++)
       <p>How would you call and display a flipped picture of Picture p?</p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -1705,7 +1705,7 @@ public void makeConvict()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>width * height / 2</p>
@@ -1803,7 +1803,7 @@ public void makeConvict()
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>width * height / 2</p>
@@ -1899,7 +1899,7 @@ public void makeConvict()
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Line A is executed the same number of times as Line B</p>
@@ -1979,7 +1979,7 @@ for(int i = pixelArray.length/4; i &lt; 3*pixelArray.length/4; i++)
       </blockquote>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>

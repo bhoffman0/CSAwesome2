@@ -71,7 +71,7 @@ public class NumberCube
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>(int) (Math.random() * 6) + 1)</p>
@@ -114,7 +114,7 @@ public class NumberCube
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>int[] tossArray = new int[];</p>
@@ -154,7 +154,7 @@ public class NumberCube
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>for (int i = 0; i &lt;= numTosses; i++)</p>

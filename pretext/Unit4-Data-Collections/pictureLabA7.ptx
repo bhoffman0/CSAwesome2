@@ -255,7 +255,7 @@ for (int row = 7; row &lt; 17; row++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>17</p>
@@ -306,7 +306,7 @@ for (int row = 7; row &lt; 17; row++)
       </pre>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>11</p>

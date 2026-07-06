@@ -122,7 +122,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes</p>
@@ -156,7 +156,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -187,7 +187,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes</p>
@@ -221,7 +221,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -258,7 +258,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -292,7 +292,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -330,7 +330,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -368,7 +368,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -405,7 +405,7 @@ public interface MenuItem
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>

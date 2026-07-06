@@ -22,7 +22,7 @@ implementation of the class?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement id="AP-OOP-1_opt_a">
           <program language="java">
@@ -140,7 +140,7 @@ implementation of the class?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-2_opt_a">
           <program language="java">
@@ -280,7 +280,7 @@ that represents a party that has three people at it?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-3_opt_a">
           <p>Party p = new Party (“Natasha”, “3”);</p>
@@ -378,7 +378,7 @@ III. Party b = new Party("Charlie", 0, 78);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -461,7 +461,7 @@ so that the object p is correctly created?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-5_opt_a">
           <program language="java">
@@ -580,7 +580,7 @@ public class Liquid
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-6_opt_a">
           <p>Precondition: fp &gt; 0</p>
@@ -658,7 +658,7 @@ public class Cat
 
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>The getAge method should be declared as private.</p>
@@ -750,7 +750,7 @@ public class Liquid
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-8_opt_a">
           <p>The getCurrentTemperature method should be declared as private.</p>
@@ -867,7 +867,7 @@ System.out.println("The temperature of the liquid is " + liq.currentTemp);
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="AP-OOP-9_opt_a">
           <p>The Liquid class constructor should not have a parameter.</p>
@@ -971,7 +971,7 @@ public class Liquid
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement id="AP-OOP-10_opt_a">
           <p>
@@ -1078,7 +1078,7 @@ public class Party
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>return (numOfBoxes + priceOfOnePizzaBox) / numOfPeople;</p>
@@ -1219,7 +1219,7 @@ III. if (numOfPeople += additionalPeople &lt;= capacity)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>

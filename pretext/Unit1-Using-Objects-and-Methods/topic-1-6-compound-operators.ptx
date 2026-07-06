@@ -269,7 +269,7 @@ z+=y;
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>x = -1, y = 1, z = 4</p>
@@ -355,7 +355,7 @@ z++;
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>x = 6, y = 2.5, z = 2</p>

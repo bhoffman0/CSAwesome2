@@ -549,7 +549,7 @@ public boolean find(int[] array, int target)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>
@@ -633,7 +633,7 @@ return temp;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -885,7 +885,7 @@ public static int getIndexOfLastElementSmallerThanTarget(int[ ] values, int comp
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>-1</p>
@@ -966,7 +966,7 @@ public static int getIndexOfLastElementSmallerThanTarget(int[] values, int compa
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>-1</p>

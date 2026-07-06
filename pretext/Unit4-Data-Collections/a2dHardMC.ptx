@@ -35,7 +35,7 @@ for (int row = 1; row &lt; arr.length; row++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>{ {6, 4, 2}, {2, 4, 6}}</p>
@@ -136,7 +136,7 @@ public int findMax(int[][] imagePixels)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>The maximum brightness value for all pixels in imagePixel</p>

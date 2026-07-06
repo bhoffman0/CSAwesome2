@@ -239,7 +239,7 @@ for (int i = 3; i &lt; 8; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>3 4 5 6 7 8</p>
@@ -305,7 +305,7 @@ for (int i = 1; i &lt;= 10; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>3 4 5 6 7 8</p>
@@ -367,7 +367,7 @@ for (int i = 3; i &lt;= 9; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>10</p>
@@ -929,7 +929,7 @@ III. int sum = 0;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-for-loop-1_opt_a">
             <p>I and II only</p>
@@ -1016,7 +1016,7 @@ System.out.println(result);
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-for-loop-2_opt_a">
             <p>The output of the code segment will be unchanged.</p>

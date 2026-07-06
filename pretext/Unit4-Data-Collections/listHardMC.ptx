@@ -23,7 +23,7 @@ nums.remove(1);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[5, 3, 1, 6]</p>
@@ -122,7 +122,7 @@ public void numQuest() {
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[0, 0, 4, 2, 5, 0, 3, 0]</p>

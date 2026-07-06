@@ -48,7 +48,7 @@ public class Derived extends Base
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>ABDC</p>
@@ -182,7 +182,7 @@ III. public Point3D(int x, int y)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>II only</p>
