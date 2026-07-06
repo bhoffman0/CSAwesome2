@@ -162,7 +162,7 @@ str.substring(k, k + 1)
       <response />
     </activity>
 
-    <activity label="routeciphera_1.5MC">
+    <activity label="routeciphera_1bMC">
       <statement>
         <p> You will need to access each element in the <c>letterBlock</c> array. 
         What type of loop should you use?</p>
@@ -229,7 +229,7 @@ str.substring(k, k + 1)
     </activity>
 
 
-    <activity label="routeciphera_1.75MC">
+    <activity label="routeciphera_1cMC">
       <statement>
         <p>The <c>letterBlock</c> array has two dimensions.How many loops should you use?</p>
       </statement>
@@ -500,7 +500,7 @@ str.substring(k, k + 1)
       </choices>
     </activity>
 
-    <activity label="routeciphera_5.5MC">
+    <activity label="routeciphera_5bMC">
       <statement>
         <p>
           How can one find the aforementioned <c>k</c>? (this is hard to
@@ -855,7 +855,7 @@ public class RunestoneTests extends CodeTestHelper
       <response />
     </activity>
 
-    <activity label="FRQRouteCipherB_1.5MC">
+    <activity label="FRQRouteCipherB_1bMC">
       <statement>
         <p> To solve <c>encryptMessage</c>, you have a message that you need to process and
       concatenate. What type of loop could you use to solve this problem?</p>
