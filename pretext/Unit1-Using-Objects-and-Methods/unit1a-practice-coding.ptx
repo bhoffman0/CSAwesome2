@@ -45,27 +45,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 is missing a starting ". Line 6 is missing a ending ;. Line 7 has
-        Name when it should be name. Remember that variable names start with a
-        lowercase letter.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name = "Mary";
-        String color = "blue";
-        System.out.println(name + "'s favorite color is " + color);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1afix2">
@@ -112,28 +92,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 is missing a =. Line 6 is missing the closing ". Line 7 has Name
-        when it should be name. Remember that a variable name starts with a
-        lowercase letter. Line 8 is missing an ending +.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name = "Gabby";
-        String sport = "soccer";
-        System.out.println(name +
-               "'s favorite sport is " + sport);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1afix3">
@@ -185,30 +144,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add the required strings using the + operator and be sure to include
-        spaces as needed.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name = "Carly";
-        String color = "red";
-        System.out.println(
-                "Your name is "
-                        + name
-                        + " and your favorite color is "
-                        + color);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1afix4">
@@ -259,27 +195,7 @@ public class Test1
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Use the <c>+</c> operator to append the strings. Be sure to include
-        spaces as needed.
-      </p>
-       <program language="java">
-      <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name = "Justin";
-        int age = 16;
-        System.out.println("Your name is " + name +
-                           " and your age is " + age);
-
-    }
-}
-      </code>
-    </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1afix5">
@@ -334,33 +250,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add the strings together using +. Don’t forget to include spaces and
-        periods at the end of the sentences.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name = "Julian";
-        String color = "green";
-        String food = "pizza";
-        System.out.println(
-                name
-                        + "'s favorite color is "
-                        + color
-                        + ".  His favorite food is "
-                        + food
-                        + ".");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1afix6">
@@ -425,31 +315,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Use + to add strings together. Add spaces as needed and periods.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String animal = "horse";
-        String food = "chicken";
-        System.out.println(
-                "My favorite animal is a "
-                        + animal
-                        + ".  "
-                        + "My favorite food is "
-                        + food
-                        + ".");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1aconcat">
@@ -512,28 +378,7 @@ public class Test1
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add the strings together using +. Don’t forget to include spaces and
-        periods at the end of the sentences.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String movie = "The Princess Bride";
-        String book = "Harry Potter";
-        System.out.println("My favorite movie is " + movie + ".  " +
-                           "My favorite book is " + book + ".");
-
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1acosts">
@@ -584,32 +429,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 is missing a semicolon. Line 6 has Double instead of double.
-        Remember that the primitive types all start with a lowercase letter.
-        Line 8 has tripmiles instead of tripMiles. Remember that you should
-        uppercase the first letter of each new word to make the variable name
-        easier to read (use camel case).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int tripMiles = 300;
-        double price = 2.50;
-        int milesPerGallon = 30;
-        double numberOfGallons = tripMiles / milesPerGallon;
-        double totalCost = numberOfGallons * price;
-        System.out.println(totalCost);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1abmi">
@@ -660,31 +480,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 has Height instead of height. Remember that variable names should
-        start with a lowercase letter. Line 6 is missing an equal sign. Line 7
-        is missing a * to square the height. Line 8 is missing a semicolon at
-        the end of the statement.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double height = 60; // in inches (60 inches is 5 feet)
-        double weight = 110; // in pounds
-        double heightSquared = height * height;
-        double bodyMassIndex = weight / heightSquared;
-        double bodyMassIndexMetric = bodyMassIndex * 703;
-        System.out.println(bodyMassIndexMetric);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1amiles">
@@ -734,30 +530,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 is missing the type double. Line 6 is backwards. It should be
-        double milesPerGallon = 40;. Line 8 is missing a /. Line 10 is missing a
-        ).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double gallonPrice = 2.35;
-        double milesPerGallon = 40;
-        double totalFunds = 8.0;
-        double numGallons = totalFunds / gallonPrice;
-        double distance = numGallons * milesPerGallon;
-        System.out.println(distance);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1aclearance">
@@ -805,27 +578,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Lines 5, 6, and 7 should all be double versus int so that the decimal
-        portion of the calculation isn’t thrown away.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double originalPrice = 68.00;
-        double clearancePrice = originalPrice * 0.3;
-        double finalPrice = clearancePrice * 0.8;
-        System.out.println(finalPrice);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1adays">
@@ -872,27 +625,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Lines 6 and 7 are both missing a /. Line 8 is missing a (. Line 9 is
-        missing a } to close the main method.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int numSecs = 320893;
-        int numHours = numSecs / 3600;
-        int numDays = numHours / 24;
-        System.out.println(numDays);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1amonths">
@@ -949,28 +682,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Calculate how many weeks it would take to make $200. Next divide the
-        number of weeks by 4 (roughly the number of weeks in a month).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double weeklyRate = 20;
-        double goal = 200;
-        double numWeeks = goal / weeklyRate;
-        double numMonths = numWeeks / 4;
-        System.out.println(numMonths);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1snumMiles">
@@ -1038,28 +750,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        First calculate the number of gallons you have left and then multiply
-        that by the miles per gallon to get the number of miles you can still
-        drive.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double numGallons = 10.0 / 4;
-        double milesPerGallon = 32;
-        double miles = numGallons * milesPerGallon;
-        System.out.println(miles);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1anumSecs">
@@ -1128,29 +819,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        First compute the number of seconds in 1 day and then multiple that by 3
-        days.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int secondsInMinute = 60;
-        int minutesInHour = 60;
-        int hoursInDay = 24;
-        int secondsInDay = secondsInMinute * minutesInHour * hoursInDay;
-        int secondsInThreeDays = secondsInDay * 3;
-        System.out.println(secondsInThreeDays);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="u1awings">
@@ -1212,26 +881,6 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Divide the amount of money you have by the cost of each wing and set the
-        result to an integer since you can’t buy a part of a wing.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double money = 4.5;
-        double pricePerWing = 0.75;
-        int numWings = (int) (money / pricePerWing);
-        System.out.println(numWings);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 </section>
