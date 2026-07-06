@@ -35,7 +35,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[1, 2, 3, 4, 5, 6]</p>
@@ -95,7 +95,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[1, 2, 3, 4, 5, 6]</p>
@@ -192,7 +192,7 @@ public int mysteryMethod() {
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="picture-lab-A4-2a_opt_a">
           <p>It sums up all the values in the matrix[0] column</p>
@@ -311,7 +311,7 @@ public int getTotalNested()
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="picture-lab-A4-3a_opt_a">
           <program language="Java">

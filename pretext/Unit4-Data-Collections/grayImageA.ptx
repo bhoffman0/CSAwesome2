@@ -102,7 +102,7 @@ public class GrayImage
         <p>What kind of loop could you use to solve this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>single for each loop</p>
@@ -150,7 +150,7 @@ public class GrayImage
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>nested for each loop</p>
@@ -264,7 +264,7 @@ public class Test
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>pixelValues</p>
@@ -321,7 +321,7 @@ public class Test
         <p>What array will you be modifying in this method?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>pixelValues</p>
@@ -394,7 +394,7 @@ public class Test
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(int row = 0; row &lt; pixelValues.length - 1; row++)</p>
@@ -445,7 +445,7 @@ public class Test
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(int col = 0; col &lt;= row; col++)</p>
@@ -499,7 +499,7 @@ public class Test
         <p>how could you check if the current value is white?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (pixelValues[row][col] == 0)</p>
@@ -558,7 +558,7 @@ public class Test
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(int[] row; row &lt; pixelValues; row++)</p>
@@ -612,7 +612,7 @@ public class Test
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(int col = 0; col &lt; pixelValues.length; col++)</p>
@@ -666,7 +666,7 @@ public class Test
         <p>How will you check if pv is white?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>if (pv == this.WHITE)</p>

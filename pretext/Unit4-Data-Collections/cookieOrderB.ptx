@@ -160,7 +160,7 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while</p>
@@ -210,7 +210,7 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>remove(list[2]);</p>
@@ -257,7 +257,7 @@ goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
         <p>How would you compare the values of two Strings str1 and str2?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (str1 == str2)</p>

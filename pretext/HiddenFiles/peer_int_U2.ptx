@@ -13,7 +13,7 @@ turtle1.turn(-45);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Type, method/message name, parameter list</p>

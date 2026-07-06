@@ -13,7 +13,7 @@ turtle1.turn(-45);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Type, method/message name, parameter list</p>
@@ -80,7 +80,7 @@ public bethsSquare(int size) {
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Nothing is incorrect</p>
@@ -161,7 +161,7 @@ public bethsSquare(int size) {
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement id="bs-methods-03-10_opt_a">
           <pre>World w = new World();
@@ -261,7 +261,7 @@ new Picture();
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>main, main, Picture, String</p>

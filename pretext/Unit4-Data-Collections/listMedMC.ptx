@@ -23,7 +23,7 @@ System.out.println(list1);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[1, 2, 3, 4, 5]</p>
@@ -116,7 +116,7 @@ public void numQuest()
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[0, 4, 2, 5, 3]</p>
@@ -221,7 +221,7 @@ public static List&lt;Integer&gt; process2(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -334,7 +334,7 @@ System.out.println(aList);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[1, 2, 5, 4, 6, 3]</p>
@@ -428,7 +428,7 @@ System.out.println(list);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[1, 2, 3, 4, 5]</p>
@@ -523,7 +523,7 @@ What is printed as a result of executing the following code segment?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[c, d, e, b]</p>
@@ -595,7 +595,7 @@ What is printed as a result of executing the following code segment?
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[2, 3, 4, 5]</p>
@@ -672,7 +672,7 @@ What is printed as a result of executing the following code segment?
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[e, d, b]</p>
@@ -757,7 +757,7 @@ public void mystery(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[4, 3, 2, 1, 0]</p>
@@ -852,7 +852,7 @@ public void mystery(int value)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[5, 7, 8, 12]</p>

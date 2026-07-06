@@ -28,7 +28,7 @@ public int t(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>
@@ -119,7 +119,7 @@ list.add(3);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[7, 1, 4, 8, 3]</p>
@@ -216,7 +216,7 @@ public int[] rowSums(int[][] arr)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>arr[i][j] = ans[i];</p>
@@ -328,7 +328,7 @@ public static int binSearch(int key, int[] arr)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -424,7 +424,7 @@ public static String wordScramble (String str)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>"!hello!"</p>
@@ -532,7 +532,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -612,7 +612,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>[62, 45, 30, 12, 7, 8, 10, 3]</p>
@@ -710,7 +710,7 @@ public void oddArray (int[] arr)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>arr[i] / 2 = 2</p>
@@ -800,7 +800,7 @@ public static int numFun(int num)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>
@@ -907,7 +907,7 @@ return false;
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>I only</p>
@@ -987,7 +987,7 @@ return false;
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>(int) (Math.random() * 25) * 1</p>
@@ -1067,7 +1067,7 @@ return false;
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>5</p>
@@ -1171,7 +1171,7 @@ public void printNames (String[][] arr)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>System.out.print(arr[x] + " ");</p>
@@ -1247,7 +1247,7 @@ public void printNames (String[][] arr)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>(x &lt; 10) &amp;&amp; (x &gt; 5)</p>
@@ -1342,7 +1342,7 @@ public int mystery (int num)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>12</p>

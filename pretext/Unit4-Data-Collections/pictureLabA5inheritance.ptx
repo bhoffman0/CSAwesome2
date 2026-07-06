@@ -51,7 +51,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -90,7 +90,7 @@
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes</p>
@@ -125,7 +125,7 @@
         <p>DigitalPicture p = new DigitalPicture();</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>yes</p>
@@ -165,7 +165,7 @@
         <p>DigitalPicture p = new SimplePicture();</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>yes</p>
@@ -205,7 +205,7 @@
         <p>DigitalPicture p = new Picture();</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>yes</p>
@@ -244,7 +244,7 @@
         <p>SimplePicture p = new Picture();</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>yes</p>
@@ -283,7 +283,7 @@
         <p>Picture p = new SimplePicture();</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>yes</p>

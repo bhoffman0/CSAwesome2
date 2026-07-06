@@ -391,7 +391,7 @@ System.out.print(x);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>3</p>
@@ -1200,7 +1200,7 @@ System.out.println(speed);
         <p>What is printed as a result of executing the code segment?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP2-3-1_opt_a">
             <p>28</p>
@@ -1283,7 +1283,7 @@ System.out.print(2*x + 1);
         <p>What is printed as a result of executing the code segment?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP2-3-2_opt_a">
             <p>3</p>
@@ -1372,7 +1372,7 @@ else
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="AP2-3-if-else_opt_a">
             <p>80</p>

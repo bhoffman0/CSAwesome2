@@ -104,7 +104,7 @@ Shape s3 = new Square();
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Person p = new Person();</p>
@@ -455,7 +455,7 @@ class Dog extends Pet
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>V</p>

@@ -112,7 +112,7 @@ public class MasterOrder
         <p>What type of loop is best for this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while</p>
@@ -155,7 +155,7 @@ public class MasterOrder
         <p>What will you return at the end of this method?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The total number of cookie orders</p>
@@ -208,7 +208,7 @@ public int getTotalBoxes()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>

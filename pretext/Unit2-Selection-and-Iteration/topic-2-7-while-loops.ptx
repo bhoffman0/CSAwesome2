@@ -283,7 +283,7 @@ int count = 0;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>while (count == 10)</p>
@@ -389,7 +389,7 @@ count = count - 10;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -461,7 +461,7 @@ while (x &lt; 0)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>5 4 3 2 1</p>
@@ -957,7 +957,7 @@ System.out.println(result);
         <p>What is the output after the code has been executed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-while-loop1_opt_a">
             <p>35</p>
@@ -1050,7 +1050,7 @@ int count = 0;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-while-loop2_opt_a">
             <p>while (count &gt; 0)</p>

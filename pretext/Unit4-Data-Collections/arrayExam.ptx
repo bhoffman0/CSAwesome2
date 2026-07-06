@@ -42,7 +42,7 @@ while ((sum &lt; limit) &amp;&amp; (i &lt; x.length))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -126,7 +126,7 @@ while ((i1 &gt; 0 ) &amp;&amp; (i2 &gt; 0 ))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>3</p>
@@ -209,7 +209,7 @@ for (int i = 0; i &lt; b.length; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1</p>
@@ -306,7 +306,7 @@ while ( (i1 &lt; x1.length) &amp;&amp;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -399,7 +399,7 @@ while (i &lt; j)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>{3,2,2,0}</p>
@@ -536,7 +536,7 @@ return false;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>
@@ -621,7 +621,7 @@ while ((sum&lt;limit) &amp;&amp; (i&lt;x.length))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -711,7 +711,7 @@ for (int i=0 ; i &lt; x.length - 1 ; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -848,7 +848,7 @@ for (int a1=0 ; a1 &lt;= array1.length ; a1++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>
@@ -924,7 +924,7 @@ for (int a1=1; a1 &lt; array1.length; a1++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>{4, 3, 0, 0}</p>

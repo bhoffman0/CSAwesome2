@@ -157,7 +157,7 @@ public static double sentimentVal( String word )
         <p>Which of the following correctly calls the method sentimentVal?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>double value = sentimentVal();</p>

@@ -18,7 +18,7 @@ for (Pixel pO: pixelArray)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Decreases the blue component of a picture</p>
@@ -108,7 +108,7 @@ for (Pixel pO: pixelArray)
       <image source="https://i.postimg.cc/rpzrHmMJ/lecture06-Q06.jpg" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A: Many, B: Many, C: 1, D: 1</p>
@@ -173,7 +173,7 @@ for (Pixel pO: pixelArray)
       <image source="https://i.postimg.cc/HLSgbHZy/lecture09-Q04.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A: 1, B: 1, C: 1, D: Many</p>
@@ -252,7 +252,7 @@ for (int foo = 0; foo &lt; getWidth();  bar++)
       <image source="https://i.postimg.cc/50RwmVh5/lecture10-Q04.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A</p>
@@ -355,7 +355,7 @@ for (int bar = 0; bar &lt; getHeight();  bar++)
       <image source="https://i.postimg.cc/50RwmVh5/lecture10-Q04.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>A</p>
@@ -465,7 +465,7 @@ for (int y = 0; y &lt; getHeight);  y++)
       <image source="https://i.postimg.cc/9Qc5jQPJ/lecture11-Q10.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>A</p>

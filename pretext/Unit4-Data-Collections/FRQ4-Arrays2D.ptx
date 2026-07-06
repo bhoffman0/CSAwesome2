@@ -203,7 +203,7 @@ public int columnWithFewest(String target)
         </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
         <choice>
             <statement>
                 <p>Accumulate sum</p>
@@ -250,7 +250,7 @@ public int columnWithFewest(String target)
         </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
     <choice>
             <statement>
                 <p>for (Appointment[] row : sched) 
@@ -305,7 +305,7 @@ public int columnWithFewest(String target)
         </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
         <choice>
             <statement>
                 <p>sched[row][col] == target</p>

@@ -106,7 +106,7 @@ while ((var2 != 0) &amp;&amp; ((var1 / var2) &gt;= 0))
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>var1 = 1, var2 = 1</p>
@@ -197,7 +197,7 @@ while (y &gt; 2 &amp;&amp; x &lt; y)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>x = 5, y = 2</p>
@@ -468,7 +468,7 @@ for (int i = 3; i &lt; 8; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>40</p>
@@ -540,7 +540,7 @@ for (int i = 2; i &lt; 8; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A rectangle of 8 rows with 5 stars per row.</p>
@@ -609,7 +609,7 @@ for (int i = 3; i &lt;= 9; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A rectangle of 9 rows and 5 stars per row.</p>
@@ -681,7 +681,7 @@ while (i &lt;= 4)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>15</p>

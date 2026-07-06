@@ -270,7 +270,7 @@ III. public NamedPoint(int d1, int d2, String name)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I only</p>

@@ -16,7 +16,7 @@ System.out.println(z);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>3, 5</p>
@@ -98,7 +98,7 @@ System.out.println(z);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Deep Red</p>
@@ -173,7 +173,7 @@ System.out.println(z);
       <image source="https://i.postimg.cc/GprMxkrk/lecture17-Q11.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Red - foo, Green - foo</p>
@@ -261,7 +261,7 @@ System.out.println(z);
       <image source="https://i.postimg.cc/Kcw4kfrs/lecture17-Q12.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Depends on the coordinates of x and y (not the color)</p>
@@ -334,7 +334,7 @@ System.out.println(z);
       <image source="https://i.postimg.cc/SRDYcw6M/lecture18-Q15.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Have shorter frequency and stronger compressions/rarefactions</p>
@@ -414,7 +414,7 @@ System.out.println(z);
       <image source="https://i.postimg.cc/FHZ3jCvm/lecture18-Q16.png" width="71%" />
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>A</p>

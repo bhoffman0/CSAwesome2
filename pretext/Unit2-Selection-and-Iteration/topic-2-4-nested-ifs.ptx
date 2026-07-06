@@ -222,7 +222,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>x is negative</p>
@@ -276,7 +276,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>x is negative</p>
@@ -340,7 +340,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first quartile</p>
@@ -1118,7 +1118,7 @@ III. if (x &gt;= 66)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-nested-if-else_opt_a">
             <p>I only</p>

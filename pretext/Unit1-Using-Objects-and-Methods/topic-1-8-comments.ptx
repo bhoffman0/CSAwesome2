@@ -633,7 +633,7 @@ Which of the following preconditions are reasonable for the computeScore method?
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>/* Precondition: score &lt;= 0 */</p>

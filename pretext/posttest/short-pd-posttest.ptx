@@ -60,7 +60,7 @@ III. In lines 1, 2, and 3, the text inside the parentheses should be in quotatio
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest1_opt_a">
             <p>I only</p>
@@ -165,7 +165,7 @@ y = y * z;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest2_opt_a">
             <p>2</p>
@@ -275,7 +275,7 @@ III. Party otherParty = new Party();
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest3_opt_a">
             <p>I only</p>
@@ -406,7 +406,7 @@ Liquid liquid = new Liquid();
         <p>Which of the following statements is valid?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest4_opt_a">
             <p>Liquid.freezingPoint;</p>
@@ -501,7 +501,7 @@ if (!p || q)
         <p>For what values of p and q will “winner” be printed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="PDposttest5_opt_a">
             <p>
@@ -609,7 +609,7 @@ System.out.print("on ");
         <p>What is printed when the code segment above is executed?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest6_opt_a">
             <p>go on</p>
@@ -698,7 +698,7 @@ int count = 0;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest7_opt_a">
             <p>for (int year1 = 2000; int year2 = 2020; count++)</p>
@@ -795,7 +795,7 @@ public static String changeStr(String str)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest8_opt_a">
             <p>“ABCDE”</p>
@@ -897,7 +897,7 @@ public class Cat
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest9_opt_a">
             <program language="java">
@@ -1031,7 +1031,7 @@ public Cat(String n, int a)
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest10_opt_a">
             <p>private int setY(int value)</p>
@@ -1141,7 +1141,7 @@ public class Student
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest11_opt_a">
             <p>The getId method should be declared as private.</p>
@@ -1250,7 +1250,7 @@ III. for (int i = 1; i &lt;= array.length; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest12_opt_a">
             <p>I only</p>
@@ -1351,7 +1351,7 @@ public boolean mystery(int array[], int value)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="PDposttest13_opt_a">
             <p>Whenever the first element in array is equal to value</p>

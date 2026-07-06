@@ -97,7 +97,7 @@ public static int mystery()
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Yes</p>
@@ -139,7 +139,7 @@ public static int mystery2(int x)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Yes</p>
@@ -457,7 +457,7 @@ public static int product(int n)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -517,7 +517,7 @@ public static int bunnyEars(int bunnies)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>0</p>
@@ -570,7 +570,7 @@ public static int bunnyEars(int bunnies)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>yes</p>
@@ -769,7 +769,7 @@ public static int factorial(int n)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1</p>
@@ -847,7 +847,7 @@ public static int mystery(int n)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>10</p>
@@ -920,7 +920,7 @@ public static int mystery(int n, int a)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>12</p>
@@ -1072,7 +1072,7 @@ public static void mystery (int x) {
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>12344321</p>
@@ -1173,7 +1173,7 @@ public static int mystery(String str)
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>7</p>

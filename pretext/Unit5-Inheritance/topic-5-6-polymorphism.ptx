@@ -231,7 +231,7 @@ class Circle extends Oval
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Shape Shape Shape Shape</p>
@@ -342,7 +342,7 @@ class GradStudent extends Student
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Pizza</p>
@@ -453,7 +453,7 @@ class RaceCar extends Car
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>5 6 10 11</p>
@@ -544,7 +544,7 @@ public class Dictionary extends Book
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>b.getISBN();</p>

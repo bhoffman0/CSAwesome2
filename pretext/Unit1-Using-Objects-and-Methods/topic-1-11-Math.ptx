@@ -206,7 +206,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="call-sqrt-mc_opt_a">
             <p>
@@ -312,7 +312,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="distance-mc_opt_a">
             <p>
@@ -775,7 +775,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         <p>Which of the following would be true about 40% of the time?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Math.random() &lt; 0.4</p>
@@ -822,7 +822,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>((int) (Math.random() * 5))</p>
@@ -866,7 +866,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>((int) (Math.random() * 10))</p>
@@ -907,7 +907,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         <p>Which of the following would be true about 75% of the time?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Math.random() &lt; 0.25</p>
@@ -957,7 +957,7 @@ int rnd4 = (int)(Math.random()*20) - 10;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>int rn = (int) (Math.random() * 25) + 36;</p>

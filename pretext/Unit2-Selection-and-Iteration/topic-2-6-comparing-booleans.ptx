@@ -285,7 +285,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>first case</p>
@@ -340,7 +340,7 @@ else
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>first case</p>
@@ -612,7 +612,7 @@ s2 = s1;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>s1 == s2 &amp;&amp; s1 == s3</p>
@@ -660,7 +660,7 @@ String s3 = new String("hi");
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>s1 == s2 &amp;&amp; s1 == s3</p>
@@ -708,7 +708,7 @@ String s3 = new String("hi");
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>s1 == s3 &amp;&amp; s1.equals(s3)</p>
@@ -998,7 +998,7 @@ public class RunestoneTests extends CodeTestHelper
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(x &lt; 2) || (y &gt; 4)</p>
@@ -1054,7 +1054,7 @@ public class RunestoneTests extends CodeTestHelper
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(x != 2) || (y &lt; 4)</p>
@@ -1110,7 +1110,7 @@ public class RunestoneTests extends CodeTestHelper
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>(x == 5) || (y == 7)</p>
@@ -1169,7 +1169,7 @@ public class RunestoneTests extends CodeTestHelper
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(x &gt; 5) &amp;&amp; (y &lt; 7)</p>
@@ -1388,7 +1388,7 @@ if (s1.equals(s2) &amp;&amp; s2.equals(s3))
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The value is always true.</p>
@@ -1489,7 +1489,7 @@ if (message.equals(note) &amp;&amp; !message.equals("memo"))
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-string-equality_opt_a">
             <p>message == note &amp;&amp; message == memo</p>

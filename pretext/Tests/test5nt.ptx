@@ -35,7 +35,7 @@
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -118,7 +118,7 @@ public int multiply(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1</p>
@@ -185,7 +185,7 @@ public int multiply(int n)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>double x = 0.6 * Math.random( ) + 0.4;</p>
@@ -269,7 +269,7 @@ public int f2(int x)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>-4</p>
@@ -329,7 +329,7 @@ public int f2(int x)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -422,7 +422,7 @@ public int mystery(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>10</p>
@@ -507,7 +507,7 @@ public int mystery(int n)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>I only</p>
@@ -598,7 +598,7 @@ System.out.println(x + " " + y);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>1 6</p>
@@ -676,7 +676,7 @@ int result = 13 - 3 * 6 / 4 % 3
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>-5</p>
@@ -748,7 +748,7 @@ for(int i = 2; i &lt;= k; i++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>0</p>
@@ -822,7 +822,7 @@ public void printSomething(String str)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>It prints string str</p>
@@ -923,7 +923,7 @@ public static int sum(int[][] mat)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>9</p>
@@ -984,7 +984,7 @@ public static int sum(int[][] mat)
       </p>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>Find the smallest element in arr and swap it into arr[0]</p>
@@ -1076,7 +1076,7 @@ public static int compute(int n)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>return 4 * n;</p>
@@ -1148,7 +1148,7 @@ for(int k = 4; k &lt; 10; k +=2)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>36</p>
@@ -1228,7 +1228,7 @@ System.out.println(x - y);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>-1</p>
@@ -1301,7 +1301,7 @@ for(int i = 0; i &lt; 3; i++)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>4</p>
@@ -1384,7 +1384,7 @@ System.out.println(s3);
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>mput</p>

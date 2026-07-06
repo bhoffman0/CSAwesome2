@@ -421,7 +421,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>true</p>
@@ -452,7 +452,7 @@ public class RunestoneTests extends CodeTestHelper
         <p>True or false: casting always results in a double type.</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>true</p>
@@ -981,7 +981,7 @@ public class RunestoneTests extends CodeTestHelper
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>(double) (total / 3);</p>

@@ -112,7 +112,7 @@ public class Sound
         <p>Which loop would be best for this problem?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>while</p>
@@ -163,7 +163,7 @@ public class Sound
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>int[] samples2;</p>

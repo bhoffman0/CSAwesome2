@@ -873,7 +873,7 @@ public class Party
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="setSignature_opt_a">
             <p>public int getNum(int people)</p>
@@ -1753,7 +1753,7 @@ public class Party
 
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>The getNumOfPeople method should be declared as public.</p>
@@ -1843,7 +1843,7 @@ public class Student
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-get2_opt_a">
             <p>The id instance variable should be public.</p>
@@ -1929,7 +1929,7 @@ public class Liquid
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="AP-mutator1_opt_a">
             <p>The constructor header does not have a return type.</p>
@@ -2023,7 +2023,7 @@ public class Party
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Replace line 12 with numOfPeople = additionalPeople;</p>

@@ -87,7 +87,7 @@ IV.  public void addMinutes(int additionMinutes)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I only</p>
@@ -155,7 +155,7 @@ IV.  public void addMinutes(int additionMinutes)
         <p>Which is NOT a correct way to declare an array of integers?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>int[] nums = [5];</p>
@@ -219,7 +219,7 @@ nums[4] = temp;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>{ 1, 2, 5, 4, 3 }</p>
@@ -286,7 +286,7 @@ nums[4] = temp;
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>!(a &amp;&amp; b)</p>
@@ -362,7 +362,7 @@ public void mystery(String tester)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>Prints the string in reverse order</p>
@@ -446,7 +446,7 @@ public class mysterious
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>"Hello World!"</p>
@@ -522,7 +522,7 @@ public class mysterious
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>The value is the first one in the array</p>
@@ -604,7 +604,7 @@ public int m1(int[] a)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>4</p>
@@ -693,7 +693,7 @@ for (int i = 1; i &lt;= 6; i++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>a = 6 and b = 7</p>
@@ -772,7 +772,7 @@ s4 = null;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>hi there</p>
@@ -865,7 +865,7 @@ for (int row = 0; row &lt; 4; row++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>4</p>
@@ -957,7 +957,7 @@ for (int row = 0; row &lt; mat.length; row++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{ { 2, 1, 1, 1 }, { 2, 2, 1, 1 }, { 2, 2, 2, 1 } }</p>
@@ -1050,7 +1050,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -1145,7 +1145,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>A</p>

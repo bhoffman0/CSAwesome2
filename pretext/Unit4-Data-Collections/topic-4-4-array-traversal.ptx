@@ -464,7 +464,7 @@ public void doubleLast()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{-40, -30, 4, 16, 32, 66}</p>
@@ -538,7 +538,7 @@ public void mystery()
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>{-40, -30, 4, 16, 32, 66}</p>
@@ -631,7 +631,7 @@ public void mystery()
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="qIndexOutOfBounds_opt_a">
             <p>for (int i = 0; i &lt; scores.length; i++)</p>
@@ -893,7 +893,7 @@ for ( int k = 0; k &lt; a.length; k++ )
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -1305,7 +1305,7 @@ III: If you wish to refer to elements through a variable name instead of an arra
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Only I.</p>
@@ -1382,7 +1382,7 @@ for (int num : numbers)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement id="mcqfor-each2_opt_a">
             <p>44 33 22 11</p>

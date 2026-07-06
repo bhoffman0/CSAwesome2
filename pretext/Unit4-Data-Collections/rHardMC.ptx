@@ -26,7 +26,7 @@ public static boolean check(String s)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice>
         <statement>
           <p>
@@ -125,7 +125,7 @@ public static int redo(int i, int j)
       </program>
     </statement>
 
-    <choices>
+     <choices randomize="yes">
       <choice correct="yes">
         <statement>
           <p>5</p>

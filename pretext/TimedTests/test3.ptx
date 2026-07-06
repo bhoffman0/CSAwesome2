@@ -35,7 +35,7 @@ for (int row = 0; row &lt; matrix.length; row++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>10</p>
@@ -126,7 +126,7 @@ public void mystery(int n)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[9, 3, 17, 2, 16, 4, 1]</p>
@@ -218,7 +218,7 @@ public static int mystery(int y)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>return 9 * y;</p>
@@ -308,7 +308,7 @@ public static int recur(int n)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>8</p>
@@ -396,7 +396,7 @@ for (int k = 0; k &lt; 20; k = k + 1)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1 3 5 7 9 11 13 15 17 19</p>
@@ -481,7 +481,7 @@ System.out.println(list);
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>[a, c, e, d, g]</p>
@@ -574,7 +574,7 @@ public void m(int[][]p)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>
@@ -681,7 +681,7 @@ public static void mystery (int x)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>12344321</p>
@@ -782,7 +782,7 @@ return temp;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>Whenever the first element in a is equal to val</p>
@@ -852,7 +852,7 @@ for (int j = 1; j &lt;=5; j++)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>1 1 1 2 2 1 2 2 3 1 3 2 4 1 4 2 5 1 5 2</p>
@@ -1004,7 +1004,7 @@ public void method3(int num1, int num2)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>method1 and method3</p>
@@ -1087,7 +1087,7 @@ while (t &lt; 29)
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>13, 28</p>
@@ -1174,7 +1174,7 @@ IV. s2 == s3;
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>I and III</p>

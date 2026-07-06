@@ -331,7 +331,7 @@ public class Temperature
         </program>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement id="staticTrace_opt_a">
             <p>Max Temp: 0</p>

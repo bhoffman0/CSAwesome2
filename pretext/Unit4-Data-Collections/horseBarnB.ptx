@@ -111,7 +111,7 @@ public class HorseBarn
         <p>How do we check if the space at the current index isn’t null?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>if (spaces.get(index) != null)</p>

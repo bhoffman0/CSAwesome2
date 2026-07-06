@@ -192,7 +192,7 @@ public class Game
         <p>Which method are you asked to write for part a?</p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>getPoints()</p>
@@ -278,7 +278,7 @@ public class Game
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice correct="yes">
           <statement>
             <p>getPoints()</p>
@@ -377,7 +377,7 @@ public class Game
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>goalReached()</p>
@@ -440,7 +440,7 @@ public class Game
         </p>
       </statement>
 
-      <choices>
+       <choices randomize="yes">
         <choice>
           <statement>
             <p>score += levelOnePoints</p>
