@@ -59,36 +59,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Overloading is when several methods have the same name but different
-        parameter types, order, or number. In this case, the original method had
-        no parameters and we overloaded it by creating a talk method with a
-        String parameter.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void talk()
-    {
-        System.out.println("hello there!");
-    }
-
-    public static void talk(String name)
-    {
-        System.out.println("Hello " + name);
-    }
-
-    public static void main(String[] args)
-    {
-        talk("Matthew");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex2">
@@ -155,40 +126,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        In order to specify the parent class, use the extends keyword in the
-        class header of the child class.
-      </p>
-
-      <program language="java">
-        <code>
-public class Dog
-{
-    public void speak()
-    {
-        System.out.println("woof!");
-    }
-
-    public static void main(String[] args)
-    {
-        Dog d = new Dog();
-        d.speak();
-        Dog b = new Beagle();
-        b.speak();
-    }
-}
-
-class Beagle extends Dog
-{
-    public void speak()
-    {
-        System.out.println("arf arf");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex3">
@@ -284,45 +222,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        In order to override the equals method, the method header has to have
-        the same return type and parameters as the equals method for the Object
-        class. The code should print false twice then true twice.
-      </p>
-
-      <program language="java">
-        <code>
-public class Dog
-{
-    private String name;
-
-    public Dog(String name)
-    {
-        this.name = name;
-    }
-
-    public boolean equals(Object other)
-    {
-        Dog d1 = (Dog) other;
-        return this.name.equals(d1.name);
-    }
-
-    public static void main(String[] args)
-    {
-        Dog d1 = new Dog("Rufus");
-        Dog d2 = new Dog("Sally");
-        Dog d3 = new Dog("Rufus");
-        Dog d4 = d3;
-        System.out.println(d1.equals(d2));
-        System.out.println(d2.equals(d3));
-        System.out.println(d1.equals(d3));
-        System.out.println(d3.equals(d4));
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex4">
@@ -393,40 +293,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        To override a method in a child class, you must have the same return
-        types and parameters as the parent class’s method.
-      </p>
-
-      <program language="java">
-        <code>
-public class Candy
-{
-    public String taste()
-    {
-        return "tastes sweet!";
-    }
-
-    public static void main(String[] args)
-    {
-        Candy c1 = new Candy();
-        System.out.println(c1.taste());
-        Candy c2 = new Chocolate();
-        System.out.println(c2.taste());
-    }
-}
-
-class Chocolate extends Candy
-{
-    public String taste()
-    {
-        return ("tastes chocolately");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex5">
@@ -483,36 +350,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        To overload a method, you use the same name as the method but change the
-        parameters or return type.
-      </p>
-
-      <program language="java">
-        <code>
-public class Student
-{
-
-    public static void greet()
-    {
-        System.out.println("Hello");
-    }
-
-    public static void greet(String name)
-    {
-        System.out.println("Hello " + name);
-    }
-
-    public static void main(String[] args)
-    {
-        greet();
-        greet("Sansa");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex6">
@@ -581,40 +419,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        In order to use a method that has been overwritten in a subclass, you
-        can use super.methodName().
-      </p>
-
-      <program language="java">
-        <code>
-public class Pet
-{
-
-    public void brag()
-    {
-        System.out.println("I have the best pet!");
-    }
-
-    public static void main(String[] args)
-    {
-        Dog d1 = new Dog();
-        d1.brag();
-    }
-}
-
-class Dog extends Pet
-{
-    public void brag()
-    {
-        super.brag();
-        System.out.println("I have the best dog!");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex7">
@@ -717,72 +522,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Use super(parm1,parm2) to call the parent’s constructor. This is
-        especially useful to initialize inherited fields.
-      </p>
-
-      <program language="java">
-        <code>
-public class Person
-{
-    private String name;
-    private int age;
-
-    public Person(String name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public int getAge()
-    {
-        return this.age;
-    }
-
-    public String toString()
-    {
-        return getName() + " " + getAge();
-    }
-
-    public static void main(String[] args)
-    {
-        Person p = new Person("Destini", 20);
-        System.out.println(p);
-        Teacher p2 = new Teacher("Erica", 55, "Masters in Teaching");
-        System.out.println(p2);
-    }
-}
-
-class Teacher extends Person
-{
-    String degree;
-
-    public String getDegree()
-    {
-        return this.degree;
-    }
-
-    public String toString()
-    {
-        return getName() + " " + getAge() + " " + getDegree();
-    }
-
-    public Teacher(String name, int age, String theDegree)
-    {
-        super(name, age);
-        this.degree = theDegree;
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex8">
@@ -863,63 +603,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        A getter method is one that returns the value of a private variable and
-        a setter method allows one to change the value of a private variable
-        without having direct access to it.
-      </p>
-
-      <program language="java">
-        <code>
-public class Store
-{
-    private String name;
-    private String address;
-
-    public Store(String theName, String theAddress)
-    {
-        this.name = theName;
-        this.address = theAddress;
-    }
-
-    public String getName()
-    {
-        return this.name;
-    }
-
-    public String getAddress()
-    {
-        return this.address;
-    }
-
-    public void setName(String theName)
-    {
-        this.name = theName;
-    }
-
-    public void setAddress(String theAddress)
-    {
-        this.address = theAddress;
-    }
-
-    public String toString()
-    {
-        return this.name + "\n" + this.address;
-    }
-
-    public static void main(String[] args)
-    {
-        Store myStore = new Store("Barb's Store", "333 Main St.");
-        System.out.println(myStore);
-        myStore.setName("Barbara's Store");
-        myStore.setAddress("555 Pine St.");
-        System.out.println(myStore);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex9">
@@ -1000,47 +684,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <program language="java">
-        <code>
-class Animal
-{
-    public String name;
-    public int numLegs;
-
-    public void speak()
-    {
-        System.out.println("sniff");
-    }
-
-    public void eat()
-    {
-        System.out.println("crunch");
-    }
-}
-
-public class Dog extends Animal
-{
-    public void speak()
-    {
-        System.out.println("woof");
-    }
-
-    public void eat()
-    {
-        System.out.println("num num");
-    }
-
-    public static void main(String[] args)
-    {
-        Dog myDog = new Dog();
-        myDog.speak();
-        myDog.eat();
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex10">
@@ -1148,54 +792,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        By overriding the compareTo method you are able to compare objects based
-        on specified factors.
-      </p>
-
-      <program language="java">
-        <code>
-public class Person implements Comparable&lt;Person&gt;
-{
-    private String name;
-    private int age;
-
-    public Person(String name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
-
-    public int compareTo(Person other)
-    {
-        if (this.age != other.age)
-        {
-            return this.age - other.age;
-        }
-        else
-        {
-            return this.name.compareTo(other.name);
-        }
-    }
-
-    public static void main(String[] args)
-    {
-        Person p1 = new Person("Carlos", 17);
-        Person p2 = new Person("Lia", 18);
-        Person p3 = new Person("Asraf", 17);
-        Person p4 = new Person("Lia", 17);
-        Person p5 = new Person("Karla", 17);
-        System.out.println(p1.compareTo(p2));
-        System.out.println(p2.compareTo(p3));
-        System.out.println(p3.compareTo(p1));
-        System.out.println(p4.compareTo(p3));
-        System.out.println(p4.compareTo(p5));
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="oocodeex11">
@@ -1264,39 +861,6 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        In the Student class we add a public void method called speak() and
-        print “I’m a student” inside. It is important to remember that in order
-        to override a method you must have the same method header and
-        parameters!
-      </p>
-
-      <program language="java">
-        <code>
-public class Person
-{
-    public void speak()
-    {
-        System.out.println("I'm a person");
-    }
-
-    public static void main(String[] args)
-    {
-        Person p1 = new Student();
-        p1.speak();
-    }
-}
-
-class Student extends Person
-{
-    public void speak()
-    {
-        System.out.println("I'm a student");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 </section>

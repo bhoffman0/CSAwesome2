@@ -56,25 +56,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: In a for loop you declare and initialize the variable(s),
-        specify the condition, and specify how the loop variable(s) change in
-        the header of the for loop as shown below.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 5; x &gt; 0; x = x - 1) System.out.println(x);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice2">
@@ -127,30 +109,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: You need to specify the declarations and initializations of the
-        loop variables(s) before the Boolean condition. You need to do the
-        change(s) at the end of the body of the loop.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 1;
-        while (x &lt;= 10)
-        {
-            System.out.println(x);
-            x++;
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice3">
@@ -207,28 +166,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: In a for loop you declare and initialize the variable(s),
-        specify the condition, and specify how the loop variable(s) change in
-        the header of the for loop as shown below.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 5; x &lt;= 15; x++)
-        {
-            System.out.println(x);
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice4">
@@ -280,30 +218,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: You need to specify the declarations and initializations of the
-        loop variables(s) before the Boolean condition. You need to do the
-        change(s) at the end of the body of the loop.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 10;
-        while (x &lt;= 100)
-        {
-            System.out.println(x);
-            x = x + 10;
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice5">
@@ -364,30 +279,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: On line 6 it should be while (x &lt;= 10). Add line 9 at the end
-        of the loop body to increment x so that the loop ends (isn’t an infinite
-        loop).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 1;
-        while (x &lt;= 10)
-        {
-            System.out.println(x);
-            x++;
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice6">
@@ -434,27 +326,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Remove the x--; at the end of the body of the loop. The change
-        area in the for loop decrements x by 1, so this line isn’t needed.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 10; x &gt;= 5; x--)
-        {
-            System.out.println(x);
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice7">
@@ -502,29 +374,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Move the x--; to the end of the loop body (after the
-        System.out.println. Change the while to x &gt; 0.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 10;
-        while (x &gt; 0)
-        {
-            System.out.println(x);
-            x--;
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice8">
@@ -576,25 +426,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: You can use a for loop as shown below. Start x at 100, loop
-        while it is greater or equal to 0, and subtract 10 each time after the
-        body of the loop executes.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 100; x &gt;= 0; x = x - 10) System.out.println(x);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice9">
@@ -658,34 +490,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use a for loop to loop from 10 to 1. Use a conditional to test
-        if x is even (x % 2 == 0).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 10; x &gt;= 1; x--)
-        {
-            if (x % 2 == 0)
-            {
-                System.out.println(x + " is even");
-            }
-            else
-            {
-                System.out.println(x + " is odd");
-            }
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice10">
@@ -739,27 +544,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use a for loop with x changing from 0 to 10 and print the value
-        of x and 10 * x.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 0; x &lt;= 10; x++)
-        {
-            System.out.println(x * 10);
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice11">
@@ -811,30 +596,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Add a while loop and loop while there is still at least one
-        character in the string. At the end of the body of the loop reset the
-        message to all characters except the last one.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String message = "help";
-        while (message.length() &gt; 0)
-        {
-            System.out.println(message);
-            message = message.substring(0, message.length() - 1);
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice12">
@@ -896,34 +658,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use a while loop. Loop while x has been found in the message
-        (using indexOf). Remove the x (using substring). Use indexOf again to
-        get the position of the next x or -1 if there are none left in the
-        message.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String message = "Ix lovex youxxx";
-        System.out.println(message);
-        int pos = message.indexOf("x");
-        while (pos &gt;= 0)
-        {
-            message = message.substring(0, pos) + message.substring(pos + 1);
-            pos = message.indexOf("x");
-            System.out.println(message);
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice13">
@@ -976,35 +711,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: You can use indexOf to find the next x or check every character in the string. 
-        Loop while pos is greater than or equal to 0. 
-        Use substring to reset message beyond the next x or to check every character.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-
-        String message = "xyxxzax";
-        int pos = message.indexOf("x");
-        int count = 0;
-        while (pos &gt;= 0)
-        {
-            count++;
-            message = message.substring(pos + 1);
-            pos = message.indexOf("x");
-        }
-        System.out.println("There were " + count + " x's");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice14">
@@ -1061,31 +768,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use nested for loops. Use the outer loop to control the number
-        of rows and the inner loop to control the number of stars per row.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int row = 0; row &lt; 5; row++)
-        {
-            for (int col = 0; col &lt; 3; col++)
-            {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice15">
@@ -1142,31 +825,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use nested for loops. Use the outer loop to control the number
-        of rows and the inner loop to control the number of stars per row.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int row = 0; row &lt; 3; row++)
-        {
-            for (int col = 0; col &lt; 5; col++)
-            {
-                System.out.print("*");
-            }
-            System.out.println();
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="looppractice16">
@@ -1222,31 +881,6 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Answer: Use nested for loops. The outer loop controls what is printed on
-        each row and the number of rows. The inner loop controls the number of
-        values printer per row.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        for (int x = 5; x &gt;= 1; x--)
-        {
-            for (int y = x; y &gt; 0; y--)
-            {
-                System.out.print(x);
-            }
-            System.out.println();
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 </section>
