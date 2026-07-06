@@ -53,25 +53,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        First multiply the output from Math.random() times 100 and then cast it
-        to an integer. This will result in a random number from 0 to 99. Add one
-        to make it from 1 to 100.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        System.out.println(((int) (Math.random() * 100)) + 1);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="circleMethods">
@@ -140,22 +122,7 @@ public void test2()
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Create a new Circle object with a radius of 5.0 and then print out its
-        area using the getArea method.
-      </p>
-
-      <program language="java">
-        <code>
-    public static void main(String[] args)
-    {
-        Circle c1 = new Circle(5.0);
-        System.out.println(c1.getArea());
-    }
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="tvMethods">
@@ -262,29 +229,7 @@ public void test4()
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Create a new Television object with a brand of "Sony" and a price of
-        499.99. Print out its brand and price using the methods in the class.
-        Set the number of pixels to 1080 using the setHighDef method.
-      </p>
-
-      <program language="java">
-        <code>
-            public static void main(String[] args)
-            {
-                // 1. Create a Television object with the brand "Sony" and price 499.99
-                Television tv = new Television("Sony", 499.99);
-                // 2. Print out its brand 
-                tv.printBrand();
-                // 3. Print out its price
-                System.out.println("Price: " + tv.getPrice()); 
-                // 4. Set the number of pixels to 1080 
-                tv.setHighDef(1080);
-            }
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="exFirstLetter">
@@ -342,34 +287,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 has an ending ' instead of ". Line 7 is missing a =. Line 8 has
-        firstname, but it should be firstName. Remember that you should
-        uppercase the first letter of each new word, after the first word, to
-        make the variable name easier to read (use camel case). Line 9 has
-        subString, but the method name is substring. Line 11 is missing a ).
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String firstName = "Sofia";
-        String middleName = "Maria";
-        String lastName = "Hernandez";
-        String initials =
-                firstName.substring(0, 1)
-                        + middleName.substring(0, 1)
-                        + lastName.substring(0, 1);
-        System.out.println(initials.toLowerCase());
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="exFirst3Lower">
@@ -424,27 +342,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 ends with : when it should be ;. Line 6 should be substring(0,3).
-        Line 7 should be part not message. Line 8 should be System.out.println.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String message = "Meet me by the bridge";
-        String part = message.substring(0, 3);
-        String lower = part.toLowerCase();
-        System.out.println(lower);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="exLower">
@@ -497,29 +395,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Create a string that is all lowercase. Create a new string from a
-        substring of the original string (first letter) and a substring of the
-        rest of the string that is all lowercase (all except the first letter).
-        Print that string.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String name1 = "ALEX";
-        String nameLower = name1.toLowerCase();
-        String finalName = name1.substring(0, 1) + nameLower.substring(1);
-        System.out.println(finalName);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="exRemoveVery">
@@ -580,30 +456,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Use indexOf to find the position and then create a new message up to the
-        pos and again after the target string.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String message = "I am very happy!";
-        String target = "very ";
-        int pos = message.indexOf(target);
-        String newMessage =
-                message.substring(0, pos)
-                        + message.substring(pos + target.length());
-        System.out.println(newMessage);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="exReplaceLol">
@@ -662,32 +515,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Use indexOf to find the position of the “lol” then create a new string
-        from up to that position and append the “laugh out loud” and the
-        substring after it.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String message = "That was great - lol.";
-        String target = "lol";
-        int pos = message.indexOf(target);
-        String newMessage =
-                message.substring(0, pos)
-                        + "laugh out loud"
-                        + message.substring(pos + target.length());
-        System.out.println(newMessage);
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <p>

@@ -45,32 +45,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 6 is missing a final ). Line 7 is missing a semicolon at the end.
-        Line 9 is missing the starting ".
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 3;
-        if (x &gt; 0)
-        {
-            System.out.println("x is greater than 0");
-        }
-        else
-        {
-            System.out.println("x is less than or equal 0");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice2">
@@ -120,38 +95,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 7 is missing the starting (. Line 8 is missing the closing ". Line
-        9 should be == rather than = to test for equality. Line 12 should be
-        System.out.println.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int guess = 7;
-        int answer = 9;
-        if (guess &lt; answer)
-        {
-            System.out.println("Your guess is too low");
-        }
-        else if (guess == answer)
-        {
-            System.out.println("You are right!");
-        }
-        else
-        {
-            System.out.println("Your guess is too high");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice3">
@@ -203,32 +147,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 should be true not True. Lines 10 and 8 should be swapped.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        boolean doneHomework = true;
-        boolean cleanedRoom = true;
-        if (doneHomework &amp;&amp; cleanedRoom)
-        {
-            System.out.println("You can go out");
-        }
-        else
-        {
-            System.out.println("You cannot go out");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice4">
@@ -275,27 +194,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Line 5 is missing an end ;. Line 6 should be x &gt;= 0. Line 8 should be
-        else instead of otherwise.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = 3;
-        if (x &gt;= 0 &amp;&amp; x &lt;= 10)
-            System.out.println("x is between 0 and 10 inclusive");
-        else System.out.println("x is either less than 0 or greater than 10");
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice5">
@@ -367,36 +266,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        One way to solve this is to add an else if and then print out if x is
-        equal to 0 and an else to print that x is greater than 0 as shown below.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int x = -3;
-        if (x &lt; 0)
-        {
-            System.out.println("x is less than 0");
-        }
-        else if (x == 0)
-        {
-            System.out.println("x is equal to 0");
-        }
-        else
-        {
-            System.out.println("x is greater than 0");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice6">
@@ -469,34 +339,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add an if statement and use a logical or (||) to join the conditions and
-        print the one message. Also add an else statement and print the other
-        message.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        boolean canWalk = true;
-        boolean haveRide = false;
-        if (canWalk || haveRide)
-        {
-            System.out.println("You can go out");
-        }
-        else
-        {
-            System.out.println("You can't go out");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice7">
@@ -563,33 +406,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add a conditional with a negation ! for haveHomework and a logical and
-        to create a complex conditional.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        boolean haveHomework = false;
-        boolean didDishes = true;
-        if (!haveHomework &amp;&amp; didDishes)
-        {
-            System.out.println("You can go out");
-        }
-        else
-        {
-            System.out.println("You can't go out");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice8">
@@ -661,32 +478,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add a conditional and print the first message if the temp is above 100
-        and otherwise print the other message.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        double temp = 103.5;
-        if (temp &gt; 100)
-        {
-            System.out.println("You have a fever");
-        }
-        else
-        {
-            System.out.println("You don't have a fever");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice9">
@@ -772,36 +564,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>Add a conditional with two else if statements and a final else.</p>
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int temp = 100;
-        if (temp &lt; 30)
-        {
-            System.out.println("It is freezing");
-        }
-        else if (temp &lt; 50)
-        {
-            System.out.println("It is cold");
-        }
-        else if (temp &lt; 90)
-        {
-            System.out.println("It is nice out");
-        }
-        else
-        {
-            System.out.println("It is hot");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <activity label="ifpractice10">
@@ -914,43 +677,7 @@ public class RunestoneTests extends CodeTestHelper
       </tests>
     </program>
 
-    <solution>
-      <p>
-        Add a conditional with three else if statements and a final else.
-      </p>
-
-      <program language="java">
-        <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int score = 67;
-        if (score &gt;= 92)
-        {
-            System.out.println("A");
-        }
-        else if (score &gt;= 82)
-        {
-            System.out.println("B");
-        }
-        else if (score &gt;= 72)
-        {
-            System.out.println("C");
-        }
-        else if (score &gt;= 62)
-        {
-            System.out.println("D");
-        }
-        else
-        {
-            System.out.println("E");
-        }
-    }
-}
-        </code>
-      </program>
-    </solution>
+    
   </activity>
 
   <p>

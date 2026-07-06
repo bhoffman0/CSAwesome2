@@ -75,31 +75,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Change line 5 to add the <c>[]</c> on the declaration of <c>arr1</c>
-          to show that it is an array of integer values. Change line 6 to
-          <c>index &lt; arr1.length</c> so that you don’t go out of bounds (the
-          last valid index is the length minus one). Change line 8 to print
-          <c>arr1[index]</c>.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] arr1 = {1, 3, 7, 9, 15, 17};
-        for (int index = 0; index &lt; arr1.length; index += 2)
-        {
-            System.out.print(arr1[index] + ", ");
-        }
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice2">
@@ -169,29 +145,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Change line 6 to <c>a1.length - 1</c> since the last valid index is
-          one less than the length of the array and <c>i &gt;= 0</c> since the
-          first valid index is 0. Change line 7 to <c>a1</c>.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] a1 = {1, 3, 7, 9, 15};
-        for (int i = a1.length - 1; i &gt;= 0; i--)
-        {
-            System.out.print(a1[i] + ", ");
-        }
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice3">
@@ -245,31 +199,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          In a for-each loop you specify the type of the values in the array, a
-          name for the current value, and then a <c>:</c> and then the name of
-          the array. The first time through the loop the value will be the one
-          at index 0. The next time the one at index 1 and so on until you reach
-          the last value in the array.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] arr1 = {1, 3, 7, 9};
-        for (int value : arr1)
-        {
-            System.out.print(value + ", ");
-        }
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice4">
@@ -323,31 +253,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          If the remainder of the value divided by 2 is 1 then it is odd so
-          print it out followed by a space (to keep the values separated).
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        int[] a1 = {0, 3, 6, 7, 9, 10};
-        for (int value : a1)
-        {
-            if (value % 2 == 1)
-            {
-                System.out.print(value + " ");
-            }
-        }
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice5">
@@ -412,37 +318,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Declare a variable to hold the <c>sum</c> and initialize it to zero.
-          Loop through all the values in the array using a for-each loop and add
-          each value to the <c>sum</c>. Return the <c>sum</c>.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static int getSum(int[] arr)
-    {
-        int sum = 0;
-        for (int value : arr)
-        {
-            sum = sum + value;
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] a1 = {1, 2, 5, 3};
-        System.out.println(
-                "It should print 11 " + " and your answer is: " + getSum(a1));
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice6">
@@ -509,47 +385,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Declare a variable to hold the <c>sum</c> and initialize it to zero.
-          Loop through all the values in the array. If the current value is non
-          negative (greater than or equal to 0) then add it to the <c>sum</c>.
-          Return the <c>sum</c>.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-
-    public static int getSumNonNeg(int[] arr)
-    {
-        int sum = 0;
-        for (int value : arr)
-        {
-            if (value &gt;= 0)
-            {
-                 sum = sum + value;
-            }
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] a1 =
-        {
-            1, 2, 5, 3, -1, -20,
-        };
-        System.out.println(
-                "The code should print 11 "
-                        + "and your answer is: "
-                        + getSumNonNeg(a1));
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice7">
@@ -599,28 +435,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Use a for loop and start the index at 1 and increment it by 2 each
-          time through the loop. Print the value at the index.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static void main(String[] args)
-    {
-        String[] stArr1 = {"Destini", "Landon", "Anaya", "Gabby", "Evert"};
-        for (int i = 1; i &lt; stArr1.length; i += 2)
-        {
-            System.out.println(stArr1[i]);
-        }
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice8">
@@ -697,36 +512,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Declare the <c>sum</c> and initialize it to 0. Use a for-each loop to
-          loop through each string in the array. Add the length of the current
-          string to the <c>sum</c>. Return the <c>sum</c>.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-    public static int getSumChars(String[] strArr)
-    {
-        int sum = 0;
-        for (String str : strArr)
-        {
-            sum = sum + str.length();
-        }
-        return sum;
-    }
-
-    public static void main(String[] args)
-    {
-        String[] strArr = {"hi", "bye", "hola"};
-        System.out.println(getSumChars(strArr));
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice9">
@@ -795,44 +581,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Declare a variable to hold the minimum value found and initialize it
-          to the first value in the array. Loop from 1 to the length of the
-          array minus one and get the value at that index. If the value is less
-          than the minimum found so far reset the minimum found so far to the
-          value. Return the minimum.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-
-    public static int findMin(int[] arr)
-    {
-        int min = arr[0];
-        int value = 0;
-        for (int i = 1; i &lt; arr.length; i++)
-        {
-            value = arr[i];
-            if (value &lt; min)
-            {
-                min = value;
-            }
-        }
-        return min;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] arr = {20, -3, 18, 55, 4};
-        System.out.println(findMin(arr));
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
 
     <activity label="ArraysPractice10">
@@ -903,39 +652,7 @@ public class RunestoneTests extends CodeTestHelper
         </tests>
       </program>
 
-      <solution>
-        <p>
-          Declare a variable to hold the <c>total</c> and it should be of type
-          <c>double</c> so that the average is a <c>double</c>. Initialize it to
-          0. Loop through all the values in the array and add each to the
-          <c>total</c>. Return the <c>total</c> divided by the length of the
-          array.
-        </p>
-
-        <program language="java">
-          <code>
-public class Test1
-{
-
-    public static double getAverage(int[] arr)
-    {
-        double total = 0;
-        for (int value : arr)
-        {
-            total = total + value;
-        }
-        return total / arr.length;
-    }
-
-    public static void main(String[] args)
-    {
-        int[] arr = {20, 3, 18, 55, 4};
-        System.out.println(getAverage(arr));
-    }
-}
-          </code>
-        </program>
-      </solution>
+      
     </activity>
   </subsection>
 
