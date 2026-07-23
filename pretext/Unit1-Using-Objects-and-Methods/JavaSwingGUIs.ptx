@@ -66,8 +66,7 @@ frame.setVisible(true); // usually at the end of the main method
     Once you have a JFrame, you can create graphical objects like buttons and
     labels and add them to the JFrame. You can look up more information about
     these Java Swing Components and what methods they have. For example, here’s
-    more information on the <url href="https://www.javatpoint.com/java-jbutton"
-    visual="https://www.javatpoint.com/java-jbutton">JButton Class</url>.
+    more information on the <url href="https://www.tpointtech.com/java-jbutton">JButton Class</url>.
   </p>
 
   <program language="java">
@@ -91,17 +90,17 @@ frame.add(button1);
   </p>
 
   <p>
-    In <url href="https://replit.com" visual="https://replit.com">replit</url>,
-    there is no GUI designer available, but it can display Java Swing GUIs. When
-    creating a new repl, you can choose Java Swing as the file type, instead of
-    just Java, to use a Java Swing UI.
+    Java Swing is not available in most online development environments, but 
+    you can use it in downloaded IDEs or in 
+    <url href="https://replit.com" visual="https://replit.com">replit</url> or
+    <url href="https://codehs.com" visual="https://codehs.com">codehs</url>.
+    There is no GUI designer available, but they can display Java Swing GUIs. 
   </p>
 
   <p>
-    Here’s a <url
-    href="https://replit.com/@BerylHoffman/JavaSwingHello#Main.java"
-    visual="https://replit.com/@BerylHoffman/JavaSwingHello#Main.java">Java
-    Swing Example</url> on replit that sets up a <c>JFrame</c> with a
+    Here’s a <url href="https://codehs.com/sandbox/id/javaswinghello-8PTVUI">CodeHS sandbox Java Swingexample</url> 
+    (or <url href="https://replit.com/@BerylHoffman/JavaSwingHello">replit example</url>) 
+    that sets up a <c>JFrame</c> with a
     <c>JButton</c> and a <c>JLabel</c>. It calls a special method called
     <c>addActionListener</c> where you can put the code to be executed when you
     click on a button. Can you add another button to it? Remember that you will
@@ -113,7 +112,7 @@ frame.add(button1);
   <p>
     To learn more about Java Swing, click on the different Swing components in
     the left navigation column of <url
-    href="https://www.javatpoint.com/java-swing">https://www.javatpoint.com/java-swing</url>
+    href="https://www.tpointtech.com/java-swing">https://www.tpointtech.com/java-swing</url>
     and try them out!
   </p>
 </section>
