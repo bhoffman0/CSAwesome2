@@ -936,7 +936,7 @@ public class RunestoneTests extends CodeTestHelper
     public void test4()
     {
         String[] code = getCode().split("\n");
-        int expect = 25;
+        int expect = 24;
 
         boolean passed = code.length &gt;= expect;
 

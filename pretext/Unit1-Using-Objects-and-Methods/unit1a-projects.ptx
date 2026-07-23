@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="unit1a-projects">
+<title>Unit 1A Projects</title>
+<time minutes="90" />
+<introduction>
+<idx>project</idx>
+<p>
+These projects were created by Leigh Anne Fitz and Lisa Ferran to support student learning in AP Computer Science A. They are intended to promote curiosity, creativity, collaboration, and confidence as students begin their journey into computer science.
+</p><p>
+We hope these projects make learning Java both challenging and enjoyable, and that they provide a strong foundation for the exciting topics that follow throughout the AP Computer Science A course.
+</p>
+<p>
+Learning to program is much like learning a new language—you develop fluency by reading, writing, 
+practicing, and creating. These projects are designed to help you move beyond simply memorizing Java syntax 
+and instead develop the problem-solving and computational thinking skills that are essential to becoming 
+a successful programmer.
+</p><p>
+Remember that mistakes are a natural part of programming. Every error message, failed test, and debugging session is an opportunity to deepen your understanding. Success in computer science comes not from writing perfect code the first time, but from learning how to analyze problems, experiment with solutions, and improve your work through persistence.
+</p>
+
+<p>Throughout these projects, you will explore the foundational concepts introduced in Unit 1, including:</p>
+
+<ul>
+    <li>
+        <p>
+            Writing, compiling, and running Java programs
+        </p>
+    </li>
+    <li>
+        <p>
+            Using primitive data types (int, double, and boolean)
+        </p>
+    </li>
+    <li>
+        <p>
+            Declaring, initializing, and updating variables
+        </p>
+    </li>
+    <li>
+        <p>
+            Evaluating arithmetic expressions and assignment statements
+        </p>
+    </li>
+    <li>
+        <p>
+            Using Java operators correctly
+        </p>
+    </li>
+    <li>
+        <p>
+            Calling methods and using parameters
+        </p>
+    </li>
+    <li>
+        <p>
+            Working with the Java API and standard library classes such as Math and String
+        </p>
+    </li>
+</ul>
+
+<p>
+Each project is designed to reinforce these concepts through engaging, authentic programming experiences. Rather than completing isolated coding exercises, you will apply your knowledge to solve meaningful problems, debug code, and create programs that demonstrate your understanding. As the projects progress, you'll be encouraged to think critically, test your ideas, and refine your solutions—just as professional software developers do.
+</p>
+
+
+</introduction>
+
+
+<subsection xml:id="unit1a-projects-scanner">
+<title>Scanner Reminders </title>
+<p>The Scanner class is used to read input from the user.</p>
+<p>To use the Scanner class, you must first import it at the top of your program with the following line of code. We have included it for you:</p>
+<pre>import java.util.Scanner;</pre>
+
+<p>
+    First, you must create a Scanner object and direct it to look for input from the user (System.in). This is done by writing the following line of code in your main method:
+</p>
+
+<pre>Scanner input = new Scanner(System.in);</pre>
+
+<p>
+The Scanner class has several methods that allow you to read different types of input. The most commonly used methods are:
+</p>
+<ul>
+    <li>
+        <p>
+            <c>input.nextInt()</c> - reads an integer from the user
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>input.nextDouble()</c> - reads a double from the user
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>input.nextBoolean()</c> - reads a boolean from the user
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>input.nextLine()</c> - reads a line of text from the user
+        </p>
+    </li>
+    <li>
+        <p>
+            <c>input.next()</c> - reads a single word from the user
+        </p>
+    </li>
+</ul>
+
+<p>You can use these methods to read input from the user and store it in variables for later use in your program. 
+    For example, to read an integer from the user and store it in a variable called <c>age</c>, you would write:</p>
+<pre>int age = input.nextInt();</pre>
+<p>
+    You will need to have a <c>.next</c> method for each input you want to read from the user. 
+    For example, if you want to read three integers from the user, you will need to have three separate <c>.nextInt()</c> methods.
+</p>
+<p>
+    At the end of each program that you use the Scanner class, it is good practice to close the Scanner object to free up system resources. 
+    This is done by writing the following line of code at the end of your main method:
+</p>
+<pre>input.close();</pre>
+</subsection>
+
+
+<subsection xml:id="unit1a-projects-formatting">
+<title>Formatting Reminders </title>
+<p>
+The String class has a method called <c>format()</c> that allows you to format output in a specific way.
+</p>
+<p>The format method takes two arguments: a format string and the values to be formatted. This will format the double value to two decimal places and return a string representation of the value:</p>
+<pre>String.format("%.02f", doubleValue)</pre>
+<p>
+    You can then use this string in your output statements to display the formatted value.
+</p>
+<pre>System.out.println("$" + String.format("%.02f", doubleValue));</pre>
+
+</subsection>
+
+
+<subsection xml:id="unit1a-project1">
+<title>Unit 1A - Project 1 - Coins</title>
+<p>
+    This project will give you practice using the Scanner class to read user input, performing calculations with variables, and formatting output. 
+    You will write a program that calculates the total value of coins in a jar based on user input for the number of quarters, dimes, nickels, and pennies.
+</p>
+
+
+<activity label="unit1a-project1-coins">
+<statement>
+<p>
+In the main method, you should allow the user to input the number of coins in a jar. 
+You should have separate inputs for quarters, dimes, nickels, and pennies. Be sure to write 
+an appropriate prompt before each input so that the user knows what value they should be entering. 
+The program should then display the values that represent the amount of each type of coin entered and 
+then display the total value of all of the coins. Be sure the output is pleasing to the eye, and be sure all 
+money totals are properly formatted to two decimal places and include a dollar sign.
+</p>
+<p>
+Example output for inputs <c>15 5 2 4</c> (15 quarters, 5 dimes, 2 nickels, and 4 pennies) should look like this:
+</p>
+<pre>
+The total amount in the jar is $4.39
+The breakdown is as follows:
+There are 15 quarters worth $3.75
+There are 5 dimes worth $0.50
+There are 2 nickels worth $0.10
+There are 4 pennies worth $0.04
+</pre>
+</statement>
+
+
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+</code>
+<stdin>15 5 2 4</stdin>
+<tests>
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper {
+      public RunestoneTests() {
+          super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("Coins", input1.replaceAll(" ", "\n")); // For Repl.it
+      }
+
+      private static int goal = 1;
+      private static String input1 = "15 5 2 4";
+      private static String input2 = "4 2 4 10";
+      private static String input3 = "10 6 8 7";
+      private String output1, output2;
+
+
+      @Test
+      public void test1() {
+          String input = input1.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = "No correct total found";
+          String expect = "$4.39";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains(expect))
+                  output1 = line;
+          }
+
+          boolean passed = output1.contains(expect);
+
+          passed = getResults(expect, output1, "Expected calculation for inputs " + input1, passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test2() {
+          String input = input2.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output2 = "No correct total found";
+          String expect = "$1.50";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains(expect))
+                  output2 = line;
+          }
+
+          boolean passed = output2.contains(expect);
+
+          passed = getResults(expect, output2, "Expected calculation for inputs " + input2, passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test3() {
+          String input = input3.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = "No correct total found";
+          String expect = "There are 10 quarters worth $2.50";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains("quarters"))
+                  output1 = line;
+          }
+
+          boolean passed = output1.contains(expect);
+
+          passed = getResults(expect, output1, "Correct calculation for 10 Quarters", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test4() {
+          String input = input3.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = "No correct total found";
+          String expect = "There are 6 dimes worth $0.60";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains("dimes"))
+                  output1 = line;
+          }
+
+          boolean passed = output1.contains(expect);
+
+          passed = getResults(expect, output1, "Correct calculation for 6 dimes", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test5() {
+          String input = input3.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = "No correct total found";
+          String expect = "There are 8 nickels worth $0.40";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains("nickels"))
+                  output1 = line;
+          }
+
+          boolean passed = output1.contains(expect);
+
+          passed = getResults(expect, output1, "Correct calculation for 8 nickels", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test6() {
+          String input = input3.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          output1 = "No correct total found";
+          String expect = "There are 7 pennies worth $0.07";
+
+          String[] lines = output.split("\n");
+          for (String line: lines) {
+              if (line.contains("pennies"))
+                  output1 = line;
+          }
+
+          boolean passed = output1.contains(expect);
+
+          passed = getResults(expect, output1, "Correct calculation for 7 pennies", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test7() {
+          String code = getCode();
+          int num = countOccurences(code, ".nextInt()");
+
+          boolean passed = getResults("4 times", num + " times", "Called Scanner method correctly");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test8() {
+          String code = getCode();
+          int num = countOccurences(code, "System.out.println(");
+
+          boolean passed = num &gt;= 5;
+          getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test9() {
+          String code = getCode();
+          int num = countOccurences(code, "String.format(\"%.02f\"");
+
+          boolean passed = getResults("5 times", num + " times", "Called String Format method correctly");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test10() {
+          String code = getCode();
+          String[] lines = code.split("\n");
+          int num = 0;
+
+          for (String line: lines) {
+              if (line.matches("\\s+double .+")) {
+
+                  if (line.contains(","))
+                      num += line.split(",").length;
+                  else
+                      num++;
+              }
+          }
+
+
+
+          boolean passed = num &gt;= 5;
+
+          getResults("5", num + "", "Double variables created");
+          assertTrue(passed);
+      }
+  }
+
+</tests>
+</program>
+</activity>
+</subsection>
+
+
+<subsection xml:id="unit1a-project2-dooflingies">
+<title>Unit 1A - Project 2 - Dooflingies</title>
+<p>
+    This project will give you practice using the Scanner class to read user input, performing calculations with variables, and formatting output. 
+    You will write a program that calculates the number of containers needed to ship a given number of dooflingies, using the fewest containers possible.
+</p>
+
+<activity label="unit1a-project2-dooflingies">
+<statement>
+<p>
+The shipping clerk at the Rinky Dooflingy Company is faced with the following problem: Dooflingies are very delicate and must be shipped in special containers. These containers are available in four sizes: huge, large, medium, and small, which can hold 50, 20, 5, and 1 dooflingy, respectively. Your program should allow a user to input any total number of dooflingies to be shipped and then display the number of huge, large, medium, and small containers needed to send the shipment in the minimum number of containers, and with the minimum amount of wasted space.
+</p><p>
+The output should look similar to the following (This example is for just one value. Be sure to write your program to work for any input.):
+</p>
+<pre>
+Number of Dooflingies:  1098
+Container	Number
+Huge		21
+Large		2
+Medium   	1
+Small		3
+</pre>
+</statement>
+
+
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+  }
+}
+</code>
+<stdin>1098</stdin>
+<tests>
+
+ import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests() {
+          super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("Dooflingies", input3.replaceAll(" ", "\n")); // For Repl.it
+      }
+
+      private static int goal = 1;
+      private static String input1 = "4271";
+      private static String input2 = "6952";
+      private static String input3 = "298";
+      private String output1, output2;
+
+
+      @Test
+      public void test1()
+      {
+          String input = input1.replaceAll(" ", "\n");
+          String output = getMethodOutputWithInput("main", input);
+          String expect = "Container   Number\n" +
+              "Huge        85\n" +
+              "Large       1\n" +
+              "Medium      0\n" +
+              "Small       1";
+
+          boolean passed = matchesIgnoreWhiteSpace(output, expect);
+
+          passed = getResults(expect, output, "Expected output for input " + input1, passed);
+          assertTrue(passed);
+      }
+
+      private boolean matchesIgnoreWhiteSpace(String a, String b) {
+          a = a.toLowerCase().replaceAll("\\s+","");
+          b = b.toLowerCase().replaceAll("\\s+","");
+          return a.contains(b);
+      }
+
+      @Test
+          public void test2()
+          {
+              String input = input2.replaceAll(" ", "\n");
+              String output = getMethodOutputWithInput("main", input);
+              String expect = "Container   Number\n" +
+                  "Huge        139\n" +
+                  "Large       0\n" +
+                  "Medium      0\n" +
+                  "Small       2";
+
+              boolean passed = matchesIgnoreWhiteSpace(output, expect);
+
+              passed = getResults(expect, output, "Expected output for input " + input2, passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test3()
+          {
+              String input = input3.replaceAll(" ", "\n");
+              String output = getMethodOutputWithInput("main", input);
+              output1 = "Huge";
+              String expect = "5";
+
+              String[] lines = output.split("\n");
+              for (String line : lines) {
+                  if (line.contains(output1))
+                      output1 = line;
+              }
+
+              boolean passed = output1.contains(expect);
+
+              passed = getResults("Huge\t" + expect, output1, "Expected calculation for input " + input3, passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test4()
+          {
+              String input = input3.replaceAll(" ", "\n");
+              String output = getMethodOutputWithInput("main", input);
+              output1 = "Large";
+              String expect = "2";
+
+              String[] lines = output.split("\n");
+              for (String line : lines) {
+                  if (line.contains(output1))
+                      output1 = line;
+              }
+
+              boolean passed = output1.contains(expect);
+
+              passed = getResults("Large\t" + expect, output1, "Expected calculation for input " + input3, passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test5()
+          {
+              String input = input3.replaceAll(" ", "\n");
+              String output = getMethodOutputWithInput("main", input);
+              output1 = "Medium";
+              String expect = "1";
+
+              String[] lines = output.split("\n");
+              for (String line : lines) {
+                  if (line.contains(output1))
+                      output1 = line;
+              }
+
+              boolean passed = output1.contains(expect);
+
+              passed = getResults("Medium\t" + expect, output1, "Expected calculation for input " + input3, passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test6()
+          {
+              String input = input3.replaceAll(" ", "\n");
+              String output = getMethodOutputWithInput("main", input);
+              output1 = "Small";
+              String expect = "3";
+
+              String[] lines = output.split("\n");
+              for (String line : lines) {
+                  if (line.contains(output1))
+                      output1 = line;
+              }
+
+              boolean passed = output1.contains(expect);
+
+              passed = getResults("Small\t" + expect, output1, "Expected calculation for input " + input3, passed);
+              assertTrue(passed);
+          }
+
+          @Test
+              public void test7()
+              {
+                  String code = getCode();
+                  int num = countOccurences(code, ".nextInt()");
+
+                  boolean passed = getResults("1 times", num + " times", "Called Scanner method correctly");
+                  assertTrue(passed);
+              }
+
+      @Test
+          public void test8()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "System.out.println(");
+
+              boolean passed = num &gt;= 5;
+              getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test9()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "%");
+
+              boolean passed = num &gt;= 3;
+
+              getResults("3 times", num + " times", "Used modular division", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test10()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "/");
+
+              boolean passed = num &gt;= 3;
+
+              getResults("5 times", num + " times", "Used integer division", passed);
+              assertTrue(passed);
+          }
+  }
+
+</tests>
+</program>
+</activity>
+</subsection>
+</section>
+
+
+

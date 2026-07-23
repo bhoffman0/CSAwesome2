@@ -13,6 +13,7 @@
  
     </p>
 
+
     <p>
       <term>Question 4.</term> This question involves reasoning about arrays of
       integers. You will write two static methods, both of which are in a class
@@ -91,7 +92,7 @@ int[] result = ArrayTester.getColumn (arr2D, 1);
 
   <subsection xml:id="try-and-solve-it">
     <title>Try and Solve It</title>
-    <activity label="isLatin">
+    <activity label="getColumn">
       <statement>
         <p>
           Complete the method <c>getColumn</c> below.

@@ -4,48 +4,1432 @@
 <title>2018 AP Exam Free Response Questions</title>
 <introduction>
 <idx>free response</idx>
-<p>The following questions appeared on the 2018 AP Computer Science A exam.</p>
+<p>The following questions appeared on the 2018 AP Computer Science A exam. You can see all the free response questions from past exams at
+<url href="https://www.savemyexams.com/ap/computer-science/college-board/a/past-papers/">Past AP CSA Exams</url>.
+</p>
 
 
 </introduction>
 
+
+
 <subsection xml:id="FRQ1-2018-FrogSimulation-A">
 <title>2018 FRQ 1 - FrogSimulation A</title>
+<p><term>Question 1.</term> 
+This question involves reasoning about a simulation of a frog hopping in a straight line. The frog attempts
+to hop to a goal within a specified number of hops. The simulation is encapsulated in the following
+<c>FrogSimulation</c> class. You will write two of the methods in this class.
+</p>
 
+<program language="java">
+<code>
+public class FrogSimulation
+{
+    /** Distance, in inches, from the starting position to the goal. */
+    private int goalDistance;
 
+    /** Maximum number of hops allowed to reach the goal. */
+    private int maxHops;
+    
+    /** Constructs a FrogSimulation where dist is the distance, in inches, from the starting
+    * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.
+    * Precondition: dist &gt;= 0; numHops &gt;= 0
+    */
+    public FrogSimulation(int dist, int numHops)
+    {
+        goalDistance = dist;
+        maxHops = numHops;
+    }
+    
+    /** Returns an integer representing the distance, in inches, to be moved when the frog hops.
+    */
+    private int hopDistance()
+    { /* implementation not shown */ }
+    
+    /** Simulates a frog attempting to reach the goal as described in part (a).
+    * Returns true if the frog successfully reached or passed the goal during the simulation;
+    * false otherwise.
+    */
+    public boolean simulate()
+    { /* to be implemented in part (a) */ }
+    
+    /** Runs num simulations and returns the proportion of simulations in which the frog
+    * successfully reached or passed the goal.
+    * Precondition: num &gt; 0
+    */
+    public double runSimulations(int num)
+    { /* to be implemented in part (b) */ }
+}
+</code>
+</program>
+
+<p>
+<term>Part (a)</term>
+Write the simulate method, which simulates the frog attempting to hop in a straight line to a goal from
+the frog's starting position of 0 within a maximum number of hops. The method returns true if the frog
+successfully reached the goal within the maximum number of hops; otherwise, the method returns false.</p>
+    
+<p>
+The FrogSimulation class provides a method called hopDistance that returns an integer
+representing the distance (positive or negative) to be moved when the frog hops. A positive distance
+represents a move toward the goal. A negative distance represents a move away from the goal. The returned
+distance may vary from call to call. Each time the frog hops, its position is adjusted by the value returned by
+a call to the hopDistance method.    
+</p>
+<p>
+The frog hops until one of the following conditions becomes true:
+</p>
+<ul>
+<li>The frog has reached or passed the goal.</li>
+<li>The frog has reached a negative position.</li>
+<li>The frog has taken the maximum number of hops without reaching the goal.</li>
+</ul>
+<p>The following example shows a declaration of a FrogSimulation object for which the goal distance is
+24 inches and the maximum number of hops is 5. The table shows some possible outcomes of calling the
+simulate method.</p>
+<p><c>FrogSimulation sim = new FrogSimulation(24, 5);</c></p>
+
+<activity label="frq2018-frogsimulation-A">
+<statement>
+<p>
+Complete method simulate below. You must use <c>hopDistance</c> appropriately to receive full credit. 
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class FrogSimulation
+{
+    /** Distance, in inches, from the starting position to the goal. */
+    private int goalDistance;
+
+    /** Maximum number of hops allowed to reach the goal. */
+    private int maxHops;
+
+    /** Simulates a frog attempting to reach the goal as described in part (a).
+     * Returns true if the frog successfully reached or passed the goal during the simulation;
+     * false otherwise.
+     */
+    public boolean simulate()
+    {
+        /* to be implemented in part (a) */ 
+        return false;  // change this line if necessary
+    }
+    
+    /** Constructs a FrogSimulation where dist is the distance, in inches, from the starting
+     * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.
+     * Precondition: dist &gt;= 0; numHops &gt;= 0
+     */
+    public FrogSimulation(int dist, int numHops)
+    {
+        goalDistance = dist;
+        maxHops = numHops;
+    }
+
+    /** Returns an integer representing the distance, in inches, to be moved when the frog hops.
+     */
+    private int hopDistance()
+    {
+        int val = hops[hop];
+        hop++;
+        return val;
+    }
+
+    private int hop = 0;
+    private int[] hops;
+
+    public static void main(String[] args)
+    {
+        FrogSimulation sim = new FrogSimulation(24, 5);
+        int[] ex1 = {5, 7, -2, 8, 6};
+        sim.setHops(ex1);
+        System.out.println("Example 1 should be true: " + sim.simulate());
+
+        int[] ex2 = {6, 7, 6, 6};
+        sim.setHops(ex2);
+        System.out.println("Example 2 should be true: " + sim.simulate());
+
+        int[] ex3 = {6, -6, 31};
+        sim.setHops(ex3);
+        System.out.println("Example 3 should be true: " + sim.simulate());
+
+        int[] ex4 = {4, 2, -8};
+        sim.setHops(ex4);
+        System.out.println("Example 4 should be false: " + sim.simulate());
+
+        int[] ex5 = {5, 4, 2, 4, 3};
+        sim.setHops(ex5);
+        System.out.println("Example 5 should be false: " + sim.simulate());
+
+    }
+
+    public void setHops(int[] values)
+    {
+        hops = values;
+        hop = 0;
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    int[] input = {};
+    int[] output = {};    
+
+    @Test
+    public void test01() {
+        int[] hops = {6, 2, -5, 3, 2, -6, -2, 9, 0, 4};
+        int goal = 12;
+        int maxNum = 10;
+        
+        boolean passed = test(hops, goal, maxNum, true);
+        assertTrue(passed);       
+    }
+
+    @Test
+    public void test02() {
+        int[] hops = {6, 2, -5, 3, 2, -6, -2, 9, 0, 4};
+        int goal = 30;
+        int maxNum = 10;
+        
+        boolean passed = test(hops, goal, maxNum, false);
+        assertTrue(passed);         
+    }
+
+    @Test
+    public void test03() {
+        int[] hops = {6, 5, 2, 1, 4, 4, 2, 5, 9, 7};
+        int goal = 30;
+        int maxNum = 5;
+        
+        boolean passed = test(hops, goal, maxNum, false);
+        assertTrue(passed);       
+    }
+
+    @Test
+    public void test04() {
+        int[] hops = {6, 5, 2, 1, 4, 4, 2, 5, 9, 7};
+        int goal = 30;
+        int maxNum = 10;
+        
+        boolean passed = test(hops, goal, maxNum, true);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test05() {
+        int[] hops = {-2, -6, -7, 7, 9, 0, 1, -4, -2, -2};
+        int goal = 7;
+        int maxNum = 5;
+        
+        boolean passed = test(hops, goal, maxNum, false);
+        assertTrue(passed);        
+    }
+
+    private boolean test(int[] hops, int goal, int maxNum, boolean exp) {
+        String desc = "Part (a) for (" + goal + ", " + maxNum + ") and hops: " + Arrays.toString(hops);
+        String expected = "" + exp;
+        String actual = "";
+
+        try {
+            FrogSimulation sim = new FrogSimulation(goal, maxNum);
+            sim.setHops(hops);
+            actual += sim.simulate();
+
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        boolean passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
 </subsection>
 
 <subsection xml:id="FRQ1-2018-FrogSimulation-B">
 <title>2018 FRQ 1 - FrogSimulation B</title>
 
+<p>
+<term>Part (b)</term>
+Write the runSimulations method, which performs a given number of simulations and returns the
+proportion of simulations in which the frog successfully reached or passed the goal. For example, if the
+parameter passed to runSimulations is 400, and 100 of the 400 simulate method calls returned
+true, then the runSimulations method should return 0.25.
+</p>
 
+
+<activity label="frq2018-frogsimulation-B">
+<statement>
+<p>
+Complete method runSimulations below. Assume that simulate works as specified, regardless
+of what you wrote in part (a). You must use simulate appropriately to receive full credit.      
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+public class FrogSimulation
+{
+    /** Distance, in inches, from the starting position to the goal. */
+    private int goalDistance;
+
+    /** Maximum number of hops allowed to reach the goal. */
+    private int maxHops;
+
+    /** Runs num simulations and returns the proportion of simulations in which the frog
+     * successfully reached or passed the goal.
+     * Precondition: num > 0
+     */
+    public double runSimulations(int num)
+    { 
+        /* to be implemented in part (b) */ 
+        return -1;  // change this line if necessary
+    } 
+
+    /** Constructs a FrogSimulation where dist is the distance, in inches, from the starting
+     * position to the goal, and numHops is the maximum number of hops allowed to reach the goal.
+     * Precondition: dist > 0; numHops > 0
+     */
+    public FrogSimulation(int dist, int numHops)
+    {
+        goalDistance = dist;
+        maxHops = numHops;
+    }    
+
+    public static void main(String[] args)
+    {
+        FrogSimulation sim = new FrogSimulation(24, 5);
+        double result = sim.runSimulations(10);
+        System.out.println("Example 1 should be 0.8: " + result);
+
+        result = sim.runSimulations(10);
+        System.out.println("Example 2 should be 0.5: " + result);
+
+        result = sim.runSimulations(10);
+        System.out.println("Example 3 should be 0.6: " + result);
+
+        result = sim.runSimulations(10);
+        System.out.println("Example 4 should be 0.6: " + result);
+
+        result = sim.runSimulations(10);
+        System.out.println("Example 5 should be 0.5: " + result);
+
+    }
+
+    /** Returns an integer representing the distance, in inches, to be moved when the frog hops.
+     */
+    private int hopDistance()
+    {
+        return -1;
+    }
+
+    /** Simulates a frog attempting to reach the goal as described in part (a).
+     * Returns true if the frog successfully reached or passed the goal during the simulation;
+     * false otherwise.
+     */
+    public boolean simulate()
+    {
+        i++;
+        return results[i];
+    }
+    
+    public void setResults(boolean[] r)
+    {
+        results = r;
+        i = -1;
+    }
+
+    private int i = -1;
+    private boolean[] results = {false, true, false, true, true, true, true, true, true, true, false, false, true, true, false, false, false, true, true, true, false, true, true, true, false, true, false, true, false, true, false, true, true, false, true, false, true, true, false, true, true, true, false, false, true, true, false, true, false, false};
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    int[] input = {};
+    int[] output = {};    
+
+    @Test
+    public void test01() {
+        boolean[] results = {false, false, true, false, false, false, false, true, false, true};
+
+        boolean passed = test(results, 0.3);
+        assertTrue(passed);       
+    }
+
+    @Test
+    public void test02() {
+        boolean[] results = {false, true, false, false, true, false, true, false, true, true};
+
+        boolean passed = test(results, 0.5);
+        assertTrue(passed);         
+    }
+
+    @Test
+    public void test03() {
+        boolean[] results = {true, false, true, false, false, false, false, false, false, false};
+
+        boolean passed = test(results, 0.2);
+        assertTrue(passed);      
+    }
+
+    @Test
+    public void test04() {
+        boolean[] results = {true, true, true, true, true, true, false, true, false, false};
+
+        boolean passed = test(results, 0.7);
+        assertTrue(passed);     
+    }
+
+    @Test
+    public void test05() {
+        boolean[] results = {false, true, false, false, true, false, true, false, true, false};
+
+        boolean passed = test(results, 0.4);
+        assertTrue(passed);        
+    }
+
+    private boolean test(boolean[] results, double exp) {
+        String desc = "Part (b) for simulation results: " + Arrays.toString(results);
+        String expected = "" + exp;
+        String actual = "";
+
+        try {
+            FrogSimulation sim = new FrogSimulation(0, 0);
+            sim.setResults(results);
+            actual += sim.runSimulations(10);
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        boolean passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
 </subsection>
 
-<subsection xml:id="FRQ2-2018-TBD">
-<title>2018 FRQ 2 - TBD</title>
+<subsection xml:id="FRQ2-2018-CodeWordChecker">
+<title>2018 FRQ 2 - CodeWordChecker</title>
 
+<p>
+<term>Question 2.</term> 
+This question involves writing a CodeWordChecker class.
+(This question originally appeared as Question 3 and was written slightly differently. It has been updated to match the new content and test format.)
+</p>
 
+<p>
+A CodeWordChecker object can be constructed with
+three parameters: two integers and a string. The first two parameters specify the minimum and maximum code
+word lengths, respectively, and the third parameter specifies a string that must not occur in the code word.
+A CodeWordChecker object can also be constructed with a single parameter that specifies a string that must
+not occur in the code word; in this case the minimum and maximum lengths will default to 6 and 20,
+respectively.
+</p>
+<p>The following examples illustrate the behavior of CodeWordChecker objects.</p>
+<p>Example 1</p>
+<p><c>StringChecker sc1 = new CodeWordChecker(5, 8, "$");</c></p>
+<p>Valid code words have 5 to 8 characters and must not include the string "$". </p>
+
+<p>Example 2</p>
+<p><c>StringChecker sc2 = new CodeWordChecker("pass");</c></p>
+<p>
+Valid code words must not include the string "pass". Because the bounds are not specified, the length
+bounds are 6 and 20, inclusive. 
+</p>
+
+<activity label="frq2018-wordchecker">
+<statement>
+<p>
+Write the complete <c>CodeWordChecker</c> class. Your implementation must meet all specifications and
+conform to all examples.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+/* class header */
+
+{
+    /* instance variables */
+    
+    /* constructor(s) */
+    
+    /* method(s) */
+
+    
+    /* do not change this code */
+    public static void main(String[] args)
+    {
+        CodeWordChecker sc1 = new CodeWordChecker(5, 8, "$");
+        System.out.println("sc1.isValid(\"happy\") should be true: " + sc1.isValid("happy"));
+        System.out.println("sc1.isValid(\"happy$\") should be false: " + sc1.isValid("happy$"));
+        System.out.println("sc1.isValid(\"Code\") should be false: " + sc1.isValid("Code"));
+        System.out.println("sc1.isValid(\"happyCode\") should be false: " + sc1.isValid("happyCode"));
+        
+        CodeWordChecker sc2 = new CodeWordChecker("pass");
+        System.out.println("sc2.isValid(\"MyPass\") should be true: " + sc2.isValid("MyPass"));
+        System.out.println("sc2.isValid(\"Mypassport\") should be false: " + sc2.isValid("Mypassport"));
+        System.out.println("sc2.isValid(\"happy\") should be true: " + sc2.isValid("happy"));
+        System.out.println("sc2.isValid(\"1,000,000,000,000,000\") should be true: " + sc2.isValid("1,000,000,000,000,000"));
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test00() {
+        boolean passed = testA(5, 8, "$", "happy", true);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test01() {
+        boolean passed = testA(6, 8, "$", "happy", false);
+        assertTrue(passed);       
+    }
+
+    @Test
+    public void test02() {
+        boolean passed = testA(5, 8, "$", "happy$", false);
+        assertTrue(passed);       
+    }
+
+    @Test
+    public void test03() {
+        boolean passed = testA(5, 8, "$", "happyhappy", false);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test04() {
+        boolean passed = testA(5, 8, "$$$", "happy$$$", false);
+        assertTrue(passed);        
+    }
+
+    private boolean testA(int min, int max, String symbol, String test, boolean exp) {
+        String desc = "sc1.isValid(\"" + test + "\") for length " + min + "-" + max + " and symbol " + symbol;
+        String expected = "" + exp;
+        String actual = "";
+        boolean passed = false;
+        
+        try {
+           CodeWordChecker sc1 = new CodeWordChecker(min, max, symbol);
+           actual += sc1.isValid(test);  
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+    
+    @Test
+    public void test05() {
+        boolean passed = testB("$", "happy", false);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test06() {
+        boolean passed = testB("$", "happyhappy", true);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test07() {
+        boolean passed = testB("$", "happy$", false);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test08() {
+        boolean passed = testB("$$$", "happy$", true);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test09() {
+        boolean passed = testB("$$$", "happy$$$", false);
+        assertTrue(passed);        
+    }
+    
+    private boolean testB(String symbol, String test, boolean exp) {
+        String desc = "sc2.isValid(\"" + test + "\") for default length and symbol " + symbol;
+        String expected = "" + exp;
+        String actual = "";
+        boolean passed = false;
+        
+        try {
+           CodeWordChecker sc1 = new CodeWordChecker(symbol);
+           actual += sc1.isValid(test);  
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
 </subsection>
 
 
-<subsection xml:id="FRQ3-2018-CodeWordChecker-A">
-<title>2018 FRQ 3 - CodeWordChecker - A</title>
+<subsection xml:id="FRQ3-2018-WordPair-A">
+<title>2018 FRQ 3 - WordPair - A</title>
+<p>
+<term>Question 3.</term> 
+This question involves reasoning about pairs of words that are represented by the following 
+WordPair class. (This question originally appeared as Question 2. It has been updated to match the new test format.)
+</p>
 
+<program language="java">
+<code>
+public class WordPair
+{
+    /** Constructs a WordPair object. */
+    public WordPair(String first, String second)
+    { /* implementation not shown */ }
 
+    /** Returns the first string of this WordPair object. */
+    public String getFirst()
+    { /* implementation not shown */ }
+    
+    /** Returns the second string of this WordPair object. */
+    public String getSecond()
+    { /* implementation not shown */ }
+}
+</code>
+</program>
+
+<p>
+You will implement the constructor and another method for the following WordPairList class.
+</p>
+
+<program language="java">
+<code>
+public class WordPairList
+{
+    /** The list of word pairs, initialized by the constructor. */
+    private ArrayList&lt;WordPair&gt; allPairs;
+    
+    /** Constructs a WordPairList object as described in part (a).
+    * Precondition: words.length &gt;= 2
+    */
+    public WordPairList(String[] words)
+    { /* to be implemented in part (a) */ }
+    
+    /** Returns the number of matches as described in part (b).
+    */
+    public int numMatches()
+    { /* to be implemented in part (b) */ }
+}
+</code>
+</program>
+<p>
+<term>Part (a)</term>
+Write the constructor for the <c>WordPairList</c> class. The constructor takes an array of strings words as
+a parameter and initializes the instance variable <c>allPairs</c> to an <c>ArrayList</c> of <c>WordPair</c> objects.
+</p>
+
+<p>
+A WordPair object consists of a word from the array paired with a word that appears later in the array.
+The allPairs list contains WordPair objects (words[i], words[j]) for every i and j,
+where 0 &lt;= i &lt; j &lt; words.length . Each WordPair object is added exactly once to the list. 
+</p>
+<p>
+The following examples illustrate two different WordPairList objects.
+</p>
+<p>
+Example 1    
+</p>
+<p>
+<c>
+String[] wordNums = {"one", "two", "three"};
+WordPairList exampleOne = new WordPairList(wordNums);
+</c>
+</p>
+<p>
+After the code segment has executed, the allPairs instance variable of exampleOne will contain
+the following WordPair objects in some order.    
+</p>
+<p>
+<c>
+("one", "two"), ("one", "three"), ("two", "three")
+</c>
+</p>
+<p>
+Example 2    
+</p>
+<p>
+<c>
+String[] phrase = {"the", "more", "the", "merrier"};
+WordPairList exampleTwo = new WordPairList(phrase);
+</c>
+</p>
+<p>
+After the code segment has executed, the allPairs instance variable of exampleTwo will contain
+the following WordPair objects in some order.   
+</p>
+<p>
+<c>
+("the", "more"), ("the", "the"), ("the", "merrier"),
+("more", "the"), ("more", "merrier"), ("the", "merrier")
+</c>
+</p>
+
+<activity label="frq2018-WordPair-A">
+<statement>
+<p>
+Complete the WordPairList constructor below.      
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.ArrayList;
+
+public class WordPairList
+{
+    /** The list of word pairs, initialized by the constructor. */
+    private ArrayList&lt;WordPair&gt; allPairs;
+
+    /** Constructs a WordPairList object as described in part (a).
+     * Precondition: words.length &gt;= 2
+     */
+    public WordPairList(String[] words)
+    { 
+        /* to be implemented in part (a) */ 
+    }
+
+    public static void main(String[] args) 
+    {
+        String[] wordNums = {"one", "two", "three"};
+        WordPairList exampleOne = new WordPairList(wordNums);
+
+        System.out.println("Example 1 should be: [(one, two), (one, three), (two, three)]");
+        System.out.println(exampleOne);
+
+        String[] phrase = {"the", "more", "the", "merrier"};
+        WordPairList exampleTwo = new WordPairList(phrase);
+
+        System.out.println("Example 2 should be: [(the, more), (the, the), (the, merrier), (more, the), (more, merrier), (the, merrier)]");
+        System.out.println(exampleTwo);
+
+        String[] moreWords = {"the", "red", "fox", "the", "red"};
+        WordPairList exampleThree = new WordPairList(moreWords);
+
+        System.out.println("Example 3 should be: [(the, red), (the, fox), (the, the), (the, red), (red, fox), (red, the), (red, red), (fox, the), (fox, red), (the, red)]");
+        System.out.println(exampleThree);
+    }
+
+    public String toString()
+    {
+        if (allPairs == null)
+            return "ArrayList is null";
+        return allPairs.toString();
+    }
+}
+
+class WordPair
+{
+    /** Constructs a WordPair object. */
+    public WordPair(String first, String second)
+    {
+        this.first = first;
+        this.second = second;
+    }
+
+    /** Returns the first string of this WordPair object. */
+    public String getFirst()
+    { return first; }
+
+    /** Returns the second string of this WordPair object. */
+    public String getSecond()
+    { return second; }
+
+    public String toString() {
+        return "(" + first + ", " + second + ")";
+    }
+
+    private String first, second;
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test01A() {
+        String[] words = "hello world code runs fast".split(" ");
+        String expect = "[(hello, world), (hello, code), (hello, runs), (hello, fast), (world, code), (world, runs), (world, fast), (code, runs), (code, fast), (runs, fast)]";
+        
+        boolean passed = testA(words, expect);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test02A() {
+        String[] words = "never say never again".split(" ");
+        String expect = "[(never, say), (never, never), (never, again), (say, never), (say, again), (never, again)]";
+        
+        boolean passed = testA(words, expect);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test03A() {
+        String[] words = "duck duck duck goose".split(" ");
+        String expect = "[(duck, duck), (duck, duck), (duck, goose), (duck, duck), (duck, goose), (duck, goose)]";
+        
+        boolean passed = testA(words, expect);
+        assertTrue(passed);        
+    }
+    
+    @Test
+    public void test04A() {
+        String[] words = "duck duck duck goose goose".split(" ");
+        String expect = "    [(duck, duck), (duck, duck), (duck, goose), (duck, goose), (duck, duck), (duck, goose), (duck, goose), (duck, goose), (duck, goose), (goose, goose)]";
+        
+        boolean passed = testA(words, expect);
+        assertTrue(passed);        
+    }
+
+    private boolean testA(String[] words, String expect) {
+        String desc = "Part (a) for " + Arrays.toString(words);
+        String expected = "" + expect;
+        String actual = "";
+        
+        
+        try {
+            WordPairList exampleOne = new WordPairList(words);
+            actual += exampleOne.toString();
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        boolean passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
 </subsection>
+
+
 <subsection xml:id="FRQ3-2018-CodeWordChecker-B">
-<title>2018 FRQ 3 - CodeWordChecker - B</title>
+<title>2018 FRQ 3 - WordPair - B</title>
+
+<p>
+<term>Part (b)</term>
+Write the WordPairList method numMatches. This method returns the number of WordPair
+objects in allPairs for which the two strings match.
+</p>
+
+<p>
+For example, the following code segment creates a WordPairList object.
+</p>
+
+<p><c>
+String[] moreWords = {"the", "red", "fox", "the", "red"};
+WordPairList exampleThree = new WordPairList(moreWords);   
+</c></p>
+<p>
+After the code segment has executed, the allPairs instance variable of exampleThree will contain
+the following WordPair objects in some order. The pairs in which the first string matches the second
+string are shaded for illustration.    
+</p>
+<p><c>
+("the", "red"), ("the", "fox"), ("the", "the"),
+("the", "red"), ("red", "fox"), ("red", "the"),
+("red", "red"), ("fox", "the"), ("fox", "red"),
+("the", "red")    
+</c></p>
+<p>
+    The call <c>exampleThree.numMatches()</c> should return 2.
+</p>
+
+<activity label="frq2018-WordPair-B">
+<statement>
+<p>
+Complete method numMatches below.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.ArrayList;
+
+public class WordPairList
+{
+    /** The list of word pairs, initialized by the constructor. */
+    private ArrayList&lt;WordPair&gt; allPairs;
+
+    /** Returns the number of matches as described in part (b).
+     */
+    public int numMatches()
+    { 
+        /* to be implemented in part (b) */ 
+        return -1; // change this line if necessary
+    }
+
+    public static void main(String[] args) 
+    {
+        String[] wordNums = {"one", "two", "three"};
+        WordPairList exampleOne = new WordPairList(wordNums);
+        System.out.println(exampleOne);
+        
+        System.out.println("Example 1 numMatches should be: 0");
+        System.out.println(exampleOne.numMatches());
+        System.out.println();
+
+        String[] phrase = {"the", "more", "the", "merrier"};
+        WordPairList exampleTwo = new WordPairList(phrase);
+        System.out.println(exampleTwo);
+        
+        System.out.println("Example 2 numMatches should be: 1");
+        System.out.println(exampleTwo.numMatches());
+        System.out.println();
+
+        String[] moreWords = {"the", "red", "fox", "the", "red"};
+        WordPairList exampleThree = new WordPairList(moreWords);
+        System.out.println(exampleThree);
+        
+        System.out.println("Example 3 numMatches should be: 2");
+        System.out.println(exampleThree.numMatches());
+        System.out.println();
+    }
+
+    public String toString()
+    {
+        if (allPairs == null)
+            return "ArrayList is null";
+        return allPairs.toString();
+    }
+    
+    /** Constructs a WordPairList object as described in part (a).
+     * Precondition: words.length &gt;= 2
+     */
+    public WordPairList(String[] words)
+    { 
+        allPairs = new ArrayList&lt;WordPair&gt;();
+
+        for (int i = 0; i &lt; words.length; i++)
+        {
+            for (int j = i + 1; j &lt; words.length; j++)
+            {
+                allPairs.add(new WordPair(words[i], words[j]));
+            }
+        }
+    }
+}
+
+class WordPair
+{
+    /** Constructs a WordPair object. */
+    public WordPair(String first, String second)
+    {
+        this.first = first;
+        this.second = second;
+    }
+
+    /** Returns the first string of this WordPair object. */
+    public String getFirst()
+    { return first; }
+
+    /** Returns the second string of this WordPair object. */
+    public String getSecond()
+    { return second; }
+
+    public String toString() {
+        return "(" + first + ", " + second + ")";
+    }
+
+    private String first, second;
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    @Test
+    public void test01B() {
+        String[] words = "hello world code runs fast".split(" ");;
+        String expect = "0";
+
+        boolean passed = testB(words, expect);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test02B() {
+        String[] words = "never say never again".split(" ");;
+        String expect = "1";
+
+        boolean passed = testB(words, expect);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test03B() {
+        String[] words = "duck duck duck goose".split(" ");;
+        String expect = "3";
+
+        boolean passed = testB(words, expect);
+        assertTrue(passed);        
+    }
+
+    @Test
+    public void test04B() {
+        String[] words = "duck duck duck goose goose".split(" ");;
+        String expect = "4";
+
+        boolean passed = testB(words, expect);
+        assertTrue(passed);        
+    }
+
+    private boolean testB(String[] words, String expect) {
+        String desc = "Part (b) for " + Arrays.toString(words);
+        String expected = "" + expect;
+        String actual = "";
+
+        try {
+            WordPairList exampleOne = new WordPairList(words);
+            actual += exampleOne.numMatches();
+        } catch (Exception e) {
+            actual = "Code caused an error";
+        }
+
+        boolean passed = getResults(expected, actual, desc);        
+        return passed;
+    }
+}
+</tests>
+</program>
+</activity>
 
 </subsection>
-
 
 <subsection xml:id="FRQ4-2018-ArrayTester-A">
 <title>2018 FRQ 4 - ArrayTester - A</title>
 
+    <p>
+      <term>Question 4.</term> This question involves reasoning about arrays of
+      integers. You will write two static methods, both of which are in a class
+      named <c>ArrayTester</c>.
+    </p>
+
+    <program language="java">
+      <code>
+public class ArrayTester
+{
+    /**
+     * Returns an array containing the elements of column c of arr2D in the same
+     * order as they appear in arr2D. Precondition: c is a valid column index in
+     * arr2D. Postcondition: arr2D is unchanged.
+     */
+    public static int[] getColumn(int[][] arr2D, int c)
+    {
+        /* to be implemented in part (a) */
+    }
+
+    /**
+     * Returns true if and only if every value in arr1 appears in arr2.
+     * Precondition: arr1 and arr2 have the same length. Postcondition: arr1 and
+     * arr2 are unchanged.
+     */
+    public static boolean hasAllValues(int[] arr1, int[] arr2)
+    {
+        /* implementation not shown */
+    }
+
+    /** Returns true if arr contains any duplicate values; false otherwise. */
+    public static boolean containsDuplicates(int[] arr)
+    {
+        /* implementation not shown) */
+    }
+
+    /**
+     * Returns true if square is a Latin square as described in part (b); false
+     * otherwise. Precondition: square has an equal number of rows and columns.
+     * Precondition: square has at least one row.
+     */
+    public static boolean isLatin(int[][] square)
+    {
+        /* to be implemented in part (b) */
+    }
+}
+      </code>
+    </program>
+
+    <p>
+      <term>Part a.</term> Write a static method <c>getColumn</c>, which returns
+      a one-dimensional array containing the elements of a single column in a
+      two-dimensional array. The elements in the returned array should be in the
+      same order as they appear in the given column. The notation <c>arr2D
+      [r][c]</c> represents the array at row <c>r</c> and column <c>c</c>.
+    </p>
+
+    <p>
+      The following code segment initializes an array and calls the
+      <c>getColumn</c> method.
+    </p>
+
+    <program language="java">
+      <code>
+int [] [] arr2D = { { 0, 1, 2 }, { 3, 4, 5 }, { 6, 7, 8 }, { 9, 5, 3 }};
+int[] result = ArrayTester.getColumn (arr2D, 1);
+      </code>
+    </program>
+
+    <p>
+      When the code segment has completed execution, the variable result
+      <c>result</c> will have the following contents. <c>result: {1, 4, 7,
+      5}</c>
+    </p>
+
+    <activity label="frq2018-getColumn">
+      <statement>
+        <p>
+          Complete the method <c>getColumn</c> below.
+        </p>
+      </statement>
+
+      <program interactive="activecode" language="java">
+        <code>
+public class ArrayTester
+{
+
+    /**
+     * Returns an array containing the elements of column c of arr2D in the same
+     * order as they appear in arr2D. Precondition: c is a valid column index in
+     * arr2D. Postcondition: arr2D is unchanged.
+     */
+    public static int[] getColumn(int[][] arr2D, int c)
+    {
+        /** Complete this method * */
+    }
+
+    // Main method to test getColumn method
+    public static void main(String[] args)
+    {
+        int[][] arr2D = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
+        int[] result = ArrayTester.getColumn(arr2D, 1);
+        System.out.println(
+                "It should print the values from the second column: 1 4 7 5.");
+        for (int i = 0; i &lt; result.length; i++)
+        {
+            System.out.print(result[i] + " ");
+        }
+    } // end of main
+} // end of class
+        </code>
+        <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+import java.util.Arrays;
+
+// import java.util.ArrayList;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("ArrayTester");
+        // CodeTestHelper.sort = true;
+    }
+
+    @Test
+    public void testMain1()
+    {
+        boolean passed = false;
+
+        String expect = "It should print the values from the second column: 1 4 7 5.\n1 4 7 5";
+
+        String output = getMethodOutput("main");
+
+        passed = getResults(expect, output, "Checking for expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testMain2()
+    {
+        boolean passed = false;
+
+        int[][] arr2D = { {0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {9, 5, 3}};
+
+        String arrayStr = "[[0, 1, 2],\n [3, 4, 5],\n [6, 7, 8],\n [9, 5, 3]]";
+
+        int[] result = ArrayTester.getColumn(arr2D, 0);
+
+        String expect = "[0, 3, 6, 9]";
+        String output = Arrays.toString(result);
+
+        passed =
+                getResults(
+                        expect,
+                        output,
+                        "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testMain3()
+    {
+        boolean passed = false;
+
+        int[][] arr2D = { {0, 1, 2, 3, 4, 5}, {6, 7, 8, 9, 5, 3}};
+
+        String arrayStr = "[[0, 1, 2, 3, 4, 5],\n [6, 7, 8, 9, 5, 3]]";
+
+        int[] result = ArrayTester.getColumn(arr2D, 2);
+
+        String expect = "[2, 8]";
+        String output = Arrays.toString(result);
+
+        passed =
+                getResults(
+                        expect,
+                        output,
+                        "Checking for expected output for getColumn(arr2D, 0)\n" + arrayStr);
+        assertTrue(passed);
+    }
+}
+        </tests>
+      </program>
+    </activity>
 
 </subsection>
+
 <subsection xml:id="FRQ4-2018-ArrayTester-B">
 <title>2018 FRQ 4 - ArrayTester - B</title>
+<p>
+      <term>Part b.</term> Write the static method <c>isLatin</c>, which returns
+      <c>true</c> if a given two-dimensional square array is a <c>Latin
+      square</c>, and otherwise, returns false.
+    </p>
 
+    <p>
+      A two-dimensional square array of integers is a Latin square if the
+      following conditions are true. 1) The first row has no duplicate values.
+      2) All values in the first row of the square appear in each row of the
+      square. 3) All values in the first row of the square appear in each column
+      of the square.
+    </p>
+
+    <figure align="center">
+      <image source="FreeResponse/Figures/LatinSquareEx.png" width="100%" />
+    </figure>
+
+    <p>
+      The <c>ArrayTester</c> class provides two helper methods:
+      <c>containsDuplicates</c> and <c>hasAllValues</c>. The method
+      <c>containsDuplicates</c> returns <c>true</c> if the given one-dimensional
+      array <c>arr</c> contains any duplicate values and <c>false</c> otherwise.
+      The method <c>hasAllValues</c> returns <c>true</c> if and only if every
+      value in <c>arr1</c> appears in <c>arr2</c>. You do not need to write the
+      code for these methods.
+    </p>
+
+    <figure align="center">
+      <image source="FreeResponse/Figures/LatinSquareEx2.png" width="100%" />
+    </figure>
+
+<p>
+    Complete method <c>isLatin</c> below. Assume that <c>getColumn</c> works
+    as specified, regardless of what you wrote in part (a). You must use
+    <c>getColumn</c>, <c>hasAllValues</c>, and <c>containsDuplicates</c>
+    appropriately to receive full credit.
+</p>
+
+
+<activity label="frq2018-isLatin">
+    <statement>
+    <p>
+        Complete the method <c>isLatin</c> below.
+    </p>
+    </statement>
+
+    <program interactive="activecode" language="java">
+    <code>
+public class ArrayTester
+{
+
+    public static boolean isLatin(int[][] square)
+    {
+        // put your solution here
+
+    }
+
+    /** Copy in your solution of getColumn from the previous section */
+    public static int[] getColumn(int[][] arr2D, int c)
+    {
+        // put your solution here
+
+    }
+
+    // Main method to test getColumn method
+    public static void main(String[] args)
+    {
+        int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
+        boolean test = isLatin(arr2D);
+        System.out.println("If isLatin is implemented correctly, then test should be true:" + test);
+        if (!test)
+        {
+            System.out.print("Uh oh! isLatin(test) was false, but it should be true.");
+        }
+        else
+        {
+            System.out.println("Correct!");
+        }
+    } // end of main
+
+    /** Returns true if and only if every value in arr1 appears in arr2. */
+    public static boolean hasAllValues(int[] arr1, int[] arr2)
+    {
+
+        boolean[] flags = new boolean[arr1.length]; // default values false
+
+        for (int i = 0; i &lt; arr1.length; i++)
+        {
+            for (int j = 0; j &lt; arr2.length; j++)
+            {
+                if (arr1[i] == arr2[j])
+                {
+                    flags[i] = true;
+                }
+            }
+        }
+        for (boolean b : flags)
+        {
+            if (b == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /** Returns true if arr contains any duplicate values; false otherwise. */
+    public static boolean containsDuplicates(int[] arr)
+    {
+        for (int i = 0; i &lt; arr.length - 1; i++)
+        {
+            for (int j = i + 1; j &lt; arr.length; j++)
+            {
+                if (arr[i] == arr[j])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+} // end of the class
+</code>
+<tests>
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  // import java.util.ArrayList;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests()
+      {
+          super("ArrayTester");
+          // CodeTestHelper.sort = true;
+      }
+
+      @Test
+      public void testMain1()
+      {
+          boolean passed = false;
+
+          String expect =
+                  "If isLatin is implemented correctly, then test should be true:true\nCorrect!";
+
+          String output = getMethodOutput("main");
+
+          passed = getResults(expect, output, "Checking for expected output from main");
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testMain2()
+      {
+          boolean passed = false;
+
+          int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {3, 1, 2}};
+
+          String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [3, 1, 2]]";
+
+          String expect = "true";
+          String output = "" + ArrayTester.isLatin(arr2D);
+
+          passed =
+                  getResults(
+                          expect,
+                          output,
+                          "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void testMain3()
+      {
+          boolean passed = false;
+
+          int[][] arr2D = { {1, 2, 3}, {2, 3, 1}, {7, 8, 9}};
+
+          String arrayStr = "[[1, 2, 3],\n [2, 3, 1],\n [7, 8, 9]]";
+
+          String expect = "false";
+          String output = "" + ArrayTester.isLatin(arr2D);
+
+          passed =
+                  getResults(
+                          expect,
+                          output,
+                          "Checking for expected output for isLatin(arr2D)\n" + arrayStr);
+          assertTrue(passed);
+      }
+  }
+</tests>
+</program>
+</activity>
 </subsection>
+
 </section>
