@@ -6,9 +6,25 @@
   <idx>projects</idx>
 
   <introduction>  
-    <p>
-      This section contains projects for Unit 1B.
-    </p>
+<p>
+These projects were created by Leigh Anne Fitz and Lisa Ferran to support student learning in AP Computer Science A. 
+They are intended to promote curiosity, creativity, collaboration, and confidence as students begin their journey into computer science.
+</p><p>
+We hope these projects make learning Java both challenging and enjoyable, 
+and that they provide a strong foundation for the exciting topics that follow throughout the AP Computer Science A course.
+</p>
+<p>
+Learning to program is much like learning a new language—you develop fluency by reading, writing, 
+practicing, and creating. These projects are designed to help you move beyond simply memorizing Java syntax 
+and instead develop the problem-solving and computational thinking skills that are essential to becoming 
+a successful programmer.
+</p><p>
+Remember that mistakes are a natural part of programming. Every error message, failed test, and debugging session is an opportunity to deepen your understanding. Success in computer science comes not from writing perfect code the first time, but from learning how to analyze problems, experiment with solutions, and improve your work through persistence.
+</p>
+<p>
+Each project is designed to reinforce these concepts through engaging, authentic programming experiences. Rather than completing isolated coding exercises, you will apply your knowledge to solve meaningful problems, debug code, and create programs that demonstrate your understanding. As the projects progress, you'll be encouraged to think critically, test your ideas, and refine your solutions—just as professional software developers do.
+</p>
+
   </introduction>
 
   <subsection xml:id="unit1b-project1">
@@ -71,12 +87,17 @@ public class MyShape {
     }
 
     // define the perimeter method here
+    public static void perimeter(double l, double w) {
+        // calculate and print the perimeter here
 
+
+    }
 
     // define the area method here (before the })
+    public static double area(double l, double w) {
+        // calculate and return the area here
 
-
-
+    }
 }
         </code>
         <stdin>4.0 5.0</stdin>
@@ -333,16 +354,16 @@ public class MyShape {
 
   <ol>
     <li>
-        calcAreaCircle() - receives the radius of a circle, and returns the area
+        <c>calcAreaCircle()</c> - receives the radius of a circle, and returns the area
     </li>
     <li>
-        calcCircumCircle() - receives the radius of a circle and returns the circumference
+        <c>calcCircumCircle()</c> - receives the radius of a circle and returns the circumference
     </li>
     <li>
-        calcAreaSphere() - receives the radius of a Sphere and returns the area
+        <c>calcAreaSphere()</c> - receives the radius of a Sphere and returns the area
     </li>
     <li>
-        calcVolumeSphere() - receives the radius of a Sphere and returns the volume - watch out for integer division!
+        <c>calcVolumeSphere()</c> - receives the radius of a Sphere and returns the volume - watch out for integer division!
     </li>
   </ol>
 
@@ -367,7 +388,7 @@ public class MyShape {
   </p>
 
   <p>
-    <em>Method:</em> <c>outPut</c> – this static method should be below the main method, and will receive 4 values as parameters:  a description of the type of value calculated (i.e. circumference, area, volume, surface area), one for the shape name (i.e. circle or sphere), one for the radius inputted by the user, and one for the actual value calculated.  It will not return anything, but rather will display (print) the information formatted nicely (see below).
+    <em>Method:</em> <c>outPut</c> - this static method should be below the main method, and will receive 4 values as parameters:  a description of the type of value calculated (i.e. circumference, area, volume, surface area), one for the shape name (i.e. circle or sphere), one for the radius inputted by the user, and one for the actual value calculated.  It will not return anything, but rather will display (print) the information formatted nicely (see below).
   </p>
 
       <activity label="unit1b-project2-roundthings">
@@ -568,7 +589,7 @@ public class RoundThingsDriver{
           String code = getCode();
           int num = countOccurences(code, "Math.PI");
 
-          boolean passed = num &amp;gt;= 4;
+          boolean passed = num &gt;= 4;
           getResults("4 times", num + " times", "Used Math.PI correct number of times", passed);
           assertTrue(passed);
       }
@@ -579,7 +600,7 @@ public class RoundThingsDriver{
           String code = getCode();
           int num = countOccurences(code, "System.out.print");
 
-          boolean passed = num &amp;lt;= 2 &amp;&amp; num &amp;gt; 0;
+          boolean passed = num &lt;= 2 &amp;&amp; num &gt; 0;
           getResults("2 times", num + " times", "Called System.out.print[ln](...) 2 times maximum", passed);
           assertTrue(passed);
       }
