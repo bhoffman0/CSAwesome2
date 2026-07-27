@@ -831,6 +831,36 @@ verse("cow", "moo");
 
       <program interactive="activecode" language="java">
         <code>
+public class AntsSong
+{
+    public static void chorus(String num)
+    {
+        System.out.println("The ants go marching " + num
+                         + " by " + num + " hurrah, hurrah");
+        System.out.println("The ants go marching " + num
+                         + " by " + num + " hurrah, hurrah");
+    }
+
+    public static void verse(String num, String action)
+    {
+        System.out.println("The ants go marching " + num + " by " + num);
+        System.out.println("The little one stops to " + action);
+        System.out.println("And they all go marching down to the ground");
+        System.out.println("To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n");
+    }
+
+    public static void main(String args[])
+    {
+        // Call the chorus and verse methods
+        // with the correct arguments
+        // to print out all three verses above.
+
+
+    }
+}
+
+        </code>
+        <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.io.*;
@@ -949,77 +979,6 @@ public class RunestoneTests extends CodeTestHelper
         + "The little one stops to climb a tree\n"
         + "And they all go marching down to the ground\n"
         + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
-}
-        </code>
-        <tests>
-import static org.junit.Assert.*;
-import org.junit.*;
-import java.io.*;
-
-public class RunestoneTests extends CodeTestHelper
-{
-    @Test
-    public void checkCodeContains1()
-    {
-        String code = getCode();
-        int actual = countOccurences(code, "chorus(");
-        String expected = "3";
-
-        boolean passed = actual &gt;= 3;
-        getResults(
-                expected,
-                "" + actual,
-                "Checking that code contains 3 calls to  chorus",
-                passed);
-        assertTrue(passed);
-    }
-    @Test
-    public void checkCodeContains2()
-    {
-        String code = getCode();
-        int actual = countOccurences(code, "verse(");
-        String expected = "3";
-
-        boolean passed = actual &gt;= 3;
-        getResults(
-                expected,
-                "" + actual,
-                "Checking that code contains three calls to verse method",
-                passed);
-        assertTrue(passed);
-    }
-    @Test
-     public void testMain() throws IOException
-     {
-         String output = getMethodOutput("main");
-
-         String expect =
-            "The ants go marching one by one, hurrah, hurrah\n"
-                    + "The ants go marching one by one, hurrah, hurrah\n"
-                    + "The ants go marching one by one\n"
-                    + "The little one stops to suck a thumb\n"
-                    + "And they all go marching down to the ground\n"
-                    + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-                    + "\n"
-                    + "The ants go marching two by two, hurrah, hurrah\n"
-                    + "The ants go marching two by two, hurrah, hurrah\n"
-                    + "The ants go marching two by two\n"
-                    + "The little one stops to tie a shoe\n"
-                    + "And they all go marching down to the ground\n"
-                    + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!\n"
-                    + "\n"
-                    + "The ants go marching three by three, hurrah, hurrah\n"
-                    + "The ants go marching three by three, hurrah, hurrah\n"
-                    + "The ants go marching three by three\n"
-                    + "The little one stops to climb a tree\n"
-                    + "And they all go marching down to the ground\n"
-                    + "To get out of the rain, BOOM! BOOM! BOOM! BOOM!";
-
-               boolean passed =
-               getResults(expect, output, "Expected output from main");
-               assertTrue(passed);
-         }
-
 }
         </tests>
       </program>
