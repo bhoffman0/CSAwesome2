@@ -7,78 +7,110 @@
 
   <introduction>  
 <p>
-These projects were created by Leigh Anne Fitz and Lisa Ferran to support student learning in AP Computer Science A. 
-They are intended to promote curiosity, creativity, collaboration, and confidence as students begin their journey into computer science.
-</p><p>
-We hope these projects make learning Java both challenging and enjoyable, 
-and that they provide a strong foundation for the exciting topics that follow throughout the AP Computer Science A course.
+<em>These projects were created by Leigh Anne Fitz and Lisa Ferran to to provide engaging, standards-aligned learning experiences for AP Computer Science A students.</em>
 </p>
 <p>
-Learning to program is much like learning a new language—you develop fluency by reading, writing, 
-practicing, and creating. These projects are designed to help you move beyond simply memorizing Java syntax 
-and instead develop the problem-solving and computational thinking skills that are essential to becoming 
-a successful programmer.
-</p><p>
-Remember that mistakes are a natural part of programming. Every error message, failed test, and debugging session is an opportunity to deepen your understanding. Success in computer science comes not from writing perfect code the first time, but from learning how to analyze problems, experiment with solutions, and improve your work through persistence.
+With the fundamentals of Java syntax and variables behind you, it's time to begin working with the building blocks of object-oriented programming. In these projects, you'll explore Java's built-in classes, write and call methods, and manipulate String objects.
 </p>
 <p>
-Each project is designed to reinforce these concepts through engaging, authentic programming experiences. Rather than completing isolated coding exercises, you will apply your knowledge to solve meaningful problems, debug code, and create programs that demonstrate your understanding. As the projects progress, you'll be encouraged to think critically, test your ideas, and refine your solutions—just as professional software developers do.
+Each project is designed to reinforce concepts through authentic programming tasks. As you complete them, focus on writing clean, readable code, testing your programs carefully, and thinking about how objects and methods work together to solve problems.
+</p>
+</introduction>
+
+<subsection xml:id="unit1b-project1-method-headers">
+    <title>Method Headers and Method Calls Review</title>
+<p>
+    A method header defines a method by specifying its access modifier, return type, method name, and any parameters it accepts. The header tells Java what the method is called, what type of value it returns (if any), and what information it needs to perform its task.
+</p>
+<p>
+    <c>public static int add(int a, int b)</c>
+</p>
+<p>
+    A method call is used to execute a method. When calling a method, provide any required arguments in the correct order and type.
+</p>
+<p>
+    <c>int sum = add(4, 7);</c>
+</p>
+<p>
+    Remember:
 </p>
 
-  </introduction>
+<ul>
+    <li>The method header defines the method.</li>
+    <li>The method call uses (invokes) the method.</li>
+    <li>The arguments in a method call must match the parameters in the method header.</li>
+    <li>If a method returns a value, you can store it in a variable, use it in an expression, or print it.</li>
+</ul>
 
-  <subsection xml:id="unit1b-project1">
-    <title>Unit 1B Project 1 - My Shape</title>
 
-    <p>Write a program that calculates and displays the perimeter and area of a rectangle using double amounts for the length and width provided by the user.</p>
+<activity label="unit1b-projects-choose1">
+<statement><p>Which of the following is the correct method header for a method that prints the perimeter of a rectangle given the length and width?</p></statement>
+<choices>
+<choice ><statement><p><c>public static double perimeter(double l, double w)</c></p></statement><feedback><p>Think about whether this method is supposed to print the perimeter or return it. Which return type should a method use when it only displays output?</p></feedback></choice>
+<choice correct="yes"><statement><p><c>public static void perimeter(double l, double w)</c></p></statement><feedback><p>The method should be void because it prints the perimeter rather than returning it. It must also accept the length and width as parameters so it can calculate the perimeter.</p></feedback></choice>
+<choice ><statement><p><c>public static void perimeter(double p)</c></p></statement><feedback><p>What information does the method need to calculate the perimeter? Can it compute the perimeter from only one parameter?</p></feedback></choice>
+<choice ><statement><p><c>public static void perimeter(double w, double l, double p)</c></p></statement><feedback><p>Ask yourself which values should be inputs to the method. Should the perimeter be passed in, or should it be calculated inside the method?</p></feedback></choice>
+</choices>
+</activity>
 
-    <ol>
-      <li>
-        <p>
-          In the main method, declare appropriate variables for length, width, and the rectangle’s area (do not initialize them). These should allow for decimal values.  Create a scanner object, and prompt the user to enter values for length and width, storing those values into the appropriate variables.
-        </p>
-      </li>
-      <li>
-        <p>
-          Write a method outside of main to calculate the perimeter (this is still within the class, so it should be after the } for main, but before the } to end the whole program).  This should be a static method that receives length and width as parameters and does not return any value.  This method should calculate and print the perimeter of the rectangle (make sure to add words to the print statement so the output shows that the value represents the perimeter).
-        </p>
-      </li>
+<activity label="unit1b-projects-choose2">
+<statement><p>Which of the following is the correct method header for a method that returns the area of a rectangle given the length and width?</p></statement>
+<choices>
+<choice ><statement><p><c>public static void area(double l, double w)</c></p></statement><feedback><p>Think about whether this method should return the area or simply perform an action. What return type is needed if the method produces a value?</p></feedback></choice>
+<choice ><statement><p><c>public static double area(double area)</c></p></statement><feedback><p>Should the method be given the answer, or should it calculate the answer? Consider which values are needed to compute the area.</p></feedback></choice>
+<choice correct="yes"><statement><p><c>public static double area(double l, double w)</c></p></statement><feedback><p>The method should return the calculated area, so its return type should be double. Since the length and width are double values, their product may also be a double. Returning an int could lose the decimal portion of the result.</p></feedback></choice>
+<choice ><statement><p><c>public static int area(double l, double w)</c></p></statement><feedback><p>The parameters are correct, but think about the type of value that could result from multiplying two double values. Can every possible result be stored in an int without losing information?</p></feedback></choice>
+</choices>
+</activity>
+
+
+<activity label="unit1b-projects-choose3">
+<statement><p>Using the two correct method headers from the previous problems, which of the following correctly call both methods?</p></statement>
+<choices>
+<choice ><statement><p><c>double p = perimeter(8.5, 4.0);</c></p><p><c>double a = area(8.5, 4.0);</c></p></statement><feedback><p>Can a method with a void return type be assigned to a variable?</p></feedback></choice>
+<choice correct="yes"><statement><p><c>perimeter(8.5, 4.0);</c></p><p><c>double a = area(8.5, 4.0);</c></p></statement><feedback><p>The perimeter method has a void return type, so it is called as a standalone statement. The area method returns a double, so its return value should be used in some way, such as storing it in a variable.</p></feedback></choice>
+<choice ><statement><p><c>perimeter(8.5);</c></p><p><c>double a = area(8.5, 4.0);</c></p></statement><feedback><p>Compare the number of arguments in the method call to the number of parameters in the method header.</p></feedback></choice>
+<choice ><statement><p><c>perimeter(8.5, 4.0);</c></p><p><c>area(8.5, 4.0);</c></p></statement><feedback><p>The method call itself is valid, but think about what happens to the value returned by area(). Is it being used?</p></feedback></choice>
+</choices>
+</activity>
+
+</subsection>
+
+
+<subsection xml:id="unit1b-project1">
+<title>Unit 1B Project 1 - My Shape</title>
+
+<p>Write a program that calculates and displays the perimeter and area of a rectangle using double amounts for the length and width provided by the user.</p>
+
+<ol>
     <li>
-        <p>
-          Back in main, call the perimeter method, sending in the appropriate variables (since the method and main are in the same class, you do not need to use dot notation but rather make the call with only the method name).
-        </p>
-      </li>
-      <li>
-        <p>
-          Test what you have so far to make sure the perimeter is calculating and printing correctly.
-        </p>
-      </li>
-      <li>
-        <p>
-          Below the perimeter method (but before the } that ends the class), write a method to calculate the area of the rectangle (make sure your method name is not the same as your variable name).  This should be a static method that returns the value of the area and receives length and width as parameters.  This method should not have any print statement, but rather has a return statement.
-        </p>
-      </li>
-      <li>
-        <p>
-          Back in main, call the area method, sending in the appropriate variables, and store the result of the call into your area variable.  Still in main, print the area of the rectangle (make sure to add words to the print statement so the output shows that the value represents the area).  
-        </p>
-      </li>
-      <li>
-        <p>
-          Test your program to make sure both area and perimeter are calculating and printing correctly.
-        </p>
-      </li>
-    </ol>
+    In the main method, declare appropriate variables for length, width, and the rectangle’s area (do not initialize them). These should allow for decimal values. Create a scanner object, and prompt the user to enter values for length and width, storing those values into the appropriate variables.
+    </li>
+    <li>
+    Complete the body of the perimeter method so that it calculates and prints the perimeter of the rectangle (make sure to add words to the print statement so the output shows that the value represents the perimeter).
+    </li>
+    <li>
+    Back in main, call the perimeter method, sending in the appropriate variables.
+    </li>
+    <li>
+    Complete the body of the area method so that it calculates and returns the value of the area of the rectangle.
+    </li>
+    <li>
+    Back in main, call the area method, sending in the appropriate variables, and store the result of the call into your area variable. Still in main, print the area of the rectangle (make sure to add words to the print statement so the output shows that the value represents the area).
+    </li>
+    <li>
+    Test your program to make sure both area and perimeter are calculating and printing correctly.
+    </li>
+</ol>
 
 
-      <activity label="unit1b-project1-myshape" xml:id="unit1b-project1-myshape">
-      <statement>
-        <p>Write a program that calculates and displays the perimeter and area of a rectangle using double amounts for the length and width provided by the user. 
-          See above for more detailed instructions.</p>
-      </statement>
+    <activity label="unit1b-project1-myshape" xml:id="unit1b-project1-myshape">
+    <statement>
+    <p>Write a program that calculates and displays the perimeter and area of a rectangle using double amounts for the length and width provided by the user. See above for more detailed instructions.</p>
+    </statement>
 
-      <program interactive="activecode" language="java">
-        <code>
+    <program interactive="activecode" language="java">
+    <code>
 import java.util.Scanner;
 
 public class MyShape {
@@ -89,773 +121,904 @@ public class MyShape {
     // define the perimeter method here
     public static void perimeter(double l, double w) {
         // calculate and print the perimeter here
-
-
+        
     }
 
     // define the area method here (before the })
     public static double area(double l, double w) {
         // calculate and return the area here
 
+        return 0; // This line will need to be changed
     }
 }
-        </code>
-        <stdin>4.0 5.0</stdin>
-        <tests>
-  import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
+    </code>
+    <stdin>4.0 5.0</stdin>
+    <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
 
-  public class RunestoneTests extends CodeTestHelper
-  {
-      public RunestoneTests() {
-          //super("Main", input1.replaceAll(" ", "\n")); // For Book
-          //super("MyShape", input3.replaceAll(" ", "\n")); // For Repl.it
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("MyShape", input3.replaceAll(" ", "\n")); // For Repl.it
 
-          length = (int) (Math.random() * 10 + 5);
-          width = (int) (Math.random() * 10 + 5);
-      }
+        length = (int) (Math.random() * 10 + 5);
+        width = (int) (Math.random() * 10 + 5);
+    }
 
-      private static int goal = 1;
-      private static String input1 = "4.0 5.0";
-      private static String input2 = "10.0 3.0";
-      private static String input3 = "2.0 3.0";
-      private String output1, output2;
+    private static int goal = 1;
+    private static String input1 = "4.0 5.0";
+    private static String input2 = "10.0 3.0";
+    private static String input3 = "2.0 3.0";
+    private String output1, output2;
 
-      private double length, width;
-
-
-      @Test
-      public void test1()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-
-          String expect = "Perimeter = 18.0\nArea = 20.0";
-
-          boolean passed = output.contains("18.0") &amp;&amp; output.contains("20.0") ;
-
-          getResults(expect, output, "Expected calculation for inputs " + input1, passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test2()
-      {
-          String input = input2.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-
-          String expect = "Perimeter = 26.0\nArea = 30.0";
-
-          boolean passed = output.contains("26.0") &amp;&amp; output.contains("30.0") ;
-
-          getResults(expect, output, "Expected calculation for inputs " + input2, passed);
-          assertTrue(passed);
-      }
+    private double length, width;
 
 
-      @Test
-      public void test3()
-      {
-          String code = getCode();
-          boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-          int num = countOccurences(code, ".nextDouble()");
-          boolean called = num == 2;
+    @Test
+    public void test1()
+    {
+        String input = input1.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
 
-          String output = "Created: " + created + "\nCalled: " + num + " times";
-          String expected = "Created: " + true + "\nCalled: " + 2 + " times";
+        String expect = "Perimeter = 18.0\nArea = 20.0";
 
-          boolean passed = created &amp;&amp; called;
-          getResults(expected, output, "Used Scanner correctly", passed);
-          assertTrue(passed);
-      }
+        boolean passed = output.contains("18.0") &amp;&amp; output.contains("20.0") ;
 
-      @Test
-      public void test4()
-      {
-          String code = getCode();
-          String output = "no matching method declared";
-          String expect = "static void perimeter(...)";
-          boolean passed = false;
+        getResults(expect, output, "Expected calculation for inputs " + input1, passed);
+        assertTrue(passed);
+    }
 
-          String[] lines = code.split("\n");
+    @Test
+    public void test2()
+    {
+        String input = input2.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
 
-          for (String line: lines) {
-              if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                  output = line;
-                  if (line.contains("static void perimeter")) {
-                      passed = true;
-                      break;
-                  }
-              }
-          }
+        String expect = "Perimeter = 26.0\nArea = 30.0";
+
+        boolean passed = output.contains("26.0") &amp;&amp; output.contains("30.0") ;
+
+        getResults(expect, output, "Expected calculation for inputs " + input2, passed);
+        assertTrue(passed);
+    }
 
 
-          getResults(expect, output, "Perimeter method declared properly", passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test3()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".nextDouble()");
+        boolean called = num == 2;
 
-      @Test
-      public void test5()
-      {
-          String code = getCode();
-          boolean header = false, ret = false;
-          String hdr = "none", retn = "none";
+        String output = "Created: " + created + "\nCalled: " + num + " times";
+        String expected = "Created: " + true + "\nCalled: " + 2 + " times";
 
-          String[] lines = code.split("\n");
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
 
-          for (String line : lines) {
-              if (line.contains("public") &amp;&amp; line.contains("area")) {
-                  if (line.contains("static double area")) {
-                      header = true;
-                      hdr = line;
-                  }
-              }
-              if (line.contains("return")) {
-                  ret = true;
-                  retn = line;
-              }
-          }
+    @Test
+    public void test4()
+    {
+        String code = getCode();
+        String output = "no matching method declared";
+        String expect = "static void perimeter(...)";
+        boolean passed = false;
 
-          boolean passed = header &amp;&amp; ret;
+        String[] lines = code.split("\n");
 
-          String output = "Header: " + hdr + "\nReturn: " + retn;
-          String expect = "Header: public static double area(double l, double w)" + "\nReturn: " + "return l * w;";
-
-          getResults(expect, output, "Area method declared properly and returns a value", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test6()
-      {
-          String code = getCode();
-          int area = -1, perimeter = -1;
-          String areaH = "none", perimH = "none";
-
-          String[] lines = code.split("\n");
-
-          for (String line: lines) {
-              if (line.contains("public") &amp;&amp; line.contains("area")) {
-                  area = numParameters(line);
-                  areaH = line;
-              }
-              if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                  perimeter = numParameters(line);
-                  perimH = line;
-              }
-          }
-
-          boolean passed = area == 2 &amp;&amp; perimeter == 2;
-
-          String output = "Perimeter: " + perimH + " (" + perimeter + " parameters)\nArea: " + areaH + " (" + area + " parameters)";
-          String expect = "Perimeter: perimeter(double l, double w)\nArea: area(double l, double w)";
-
-          getResults(expect, output, "Methods both have 2 parameters each", passed);
-          assertTrue(passed);
-      }
-
-      private int numParameters(String line) {
-          if(line.contains("(") &amp;&amp; line.contains(")")) {
-              line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
-              return line.split(",").length;
-          }
-          return 0;
-      }
-
-      @Test
-      public void test7()
-      {
-          String code = getCode();
-          String area = "none", perimeter = "none";
-          int areaNum = -1, perimNum = -1;
-
-          String[] lines = code.split("\n");
-
-          for (String line: lines) {
-              if (line.contains("area") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("System")) {
-                  area = line;
-                  areaNum = numParameters(line);
-              }
-              if (perimeter == "none" &amp;&amp; line.contains("perimeter") &amp;&amp; !line.contains("static")  &amp;&amp; !line.contains("System")) {
-                  perimeter = line;
-                  perimNum = numParameters(line);
-              }
-          }
-
-          boolean passed = areaNum == 2 &amp;&amp; perimNum == 2;
-
-          String output = "Perimeter: " + perimeter + " (" + perimNum + " parameters)\nArea: " + area + " (" + areaNum + " parameters)";
-          String expect = "Perimeter: perimeter(length, width) (2 parameters)\nArea: area(length, width) (2 parameters)";
-
-          getResults(expect, output, "Perimeter and Area methods have been called properly", passed);
-          assertTrue(passed);
-      }
+        for (String line: lines) {
+            if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
+                output = line;
+                if (line.contains("static void perimeter")) {
+                    passed = true;
+                    break;
+                }
+            }
+        }
 
 
-      @Test
-      public void test8()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "System.out.println(");
+        getResults(expect, output, "Perimeter method declared properly", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = num &amp;amp;gt;= 2;
-          getResults("2 times", num + " times", "Called System.out.println(...) enough times", passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test5()
+    {
+        String code = getCode();
+        boolean header = false, ret = false;
+        String hdr = "none", retn = "none";
 
-     @Test
-      public void test9() {
-          Object[] args = {length, width};
-          String ans = getMethodOutput("perimeter", args);
-          double exp = 2 * length + 2 * width;
+        String[] lines = code.split("\n");
 
-          boolean passed = getResults("" + exp, "" + ans, "Correct calculation for perimeter with inputs " + length + " and " + width);
-          assertTrue(passed);
-      }
+        for (String line : lines) {
+            if (line.contains("public") &amp;&amp; line.contains("area")) {
+                if (line.contains("static double area")) {
+                    header = true;
+                    hdr = line;
+                }
+            }
+            if (line.contains("return")) {
+                ret = true;
+                retn = line;
+            }
+        }
 
-      @Test
-      public void test10() {
-          Object[] args = {length, width};
-          String ans = getMethodOutput("area", args);
-          double exp = length * width;
+        boolean passed = header &amp;&amp; ret;
 
-          boolean passed = getResults("" + exp, "" + ans, "Correct calculation for area with inputs " + length + " and " + width);
-          assertTrue(passed);
-      }
-  }
+        String output = "Header: " + hdr + "\nReturn: " + retn;
+        String expect = "Header: public static double area(double l, double w)" + "\nReturn: " + "return l * w;";
 
-        </tests>
-      </program>
-    </activity>
+        getResults(expect, output, "Area method declared properly and returns a value", passed);
+        assertTrue(passed);
+    }
 
-  </subsection>
+    @Test
+    public void test6()
+    {
+        String code = getCode();
+        int area = -1, perimeter = -1;
+        String areaH = "none", perimH = "none";
 
-  <subsection xml:id="unit1b-project2">
-   <title>Unit 1B Project 2 - Round Things</title>
+        String[] lines = code.split("\n");
 
-   <p>
-    Write a Java program that calculates and displays the area and circumference of a circle and the volume and surface area of a sphere.  You will be writing two classes for this program.  One will use the RoundThingsDriver class and the other will use the RoundThings class.
-   </p>
+        for (String line: lines) {
+            if (line.contains("public") &amp;&amp; line.contains("area")) {
+                area = numParameters(line);
+                areaH = line;
+            }
+            if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
+                perimeter = numParameters(line);
+                perimH = line;
+            }
+        }
+
+        boolean passed = area == 2 &amp;&amp; perimeter == 2;
+
+        String output = "Perimeter: " + perimH + " (" + perimeter + " parameters)\nArea: " + areaH + " (" + area + " parameters)";
+        String expect = "Perimeter: perimeter(double l, double w)\nArea: area(double l, double w)";
+
+        getResults(expect, output, "Methods both have 2 parameters each", passed);
+        assertTrue(passed);
+    }
+
+    private int numParameters(String line) {
+        if(line.contains("(") &amp;&amp; line.contains(")")) {
+            line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+            return line.split(",").length;
+        }
+        return 0;
+    }
+
+    @Test
+    public void test7()
+    {
+        String code = getCode();
+        String area = "none", perimeter = "none";
+        int areaNum = -1, perimNum = -1;
+
+        String[] lines = code.split("\n");
+
+        for (String line: lines) {
+            if (line.contains("area") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("System")) {
+                area = line;
+                areaNum = numParameters(line);
+            }
+            if (perimeter == "none" &amp;&amp; line.contains("perimeter") &amp;&amp; !line.contains("static")  &amp;&amp; !line.contains("System")) {
+                perimeter = line;
+                perimNum = numParameters(line);
+            }
+        }
+
+        boolean passed = areaNum == 2 &amp;&amp; perimNum == 2;
+
+        String output = "Perimeter: " + perimeter + " (" + perimNum + " parameters)\nArea: " + area + " (" + areaNum + " parameters)";
+        String expect = "Perimeter: perimeter(length, width) (2 parameters)\nArea: area(length, width) (2 parameters)";
+
+        getResults(expect, output, "Perimeter and Area methods have been called properly", passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test8()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "System.out.println(");
+
+        boolean passed = num &gt;= 2;
+        getResults("2 times", num + " times", "Called System.out.println(...) enough times", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test9() {
+        Object[] args = {length, width};
+        String ans = getMethodOutput("perimeter", args);
+        double exp = 2 * length + 2 * width;
+
+        boolean passed = getResults("" + exp, "" + ans, "Correct calculation for perimeter with inputs " + length + " and " + width);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        Object[] args = {length, width};
+        String ans = getMethodOutput("area", args);
+        double exp = length * width;
+
+        boolean passed = getResults("" + exp, "" + ans, "Correct calculation for area with inputs " + length + " and " + width);
+        assertTrue(passed);
+    }
+}
+
+    </tests>
+    </program>
+</activity>
+
+</subsection>
+
+<subsection xml:id="unit1b-project2-static-methods">
+    <title>Static Methods Review</title>
+    
 <p>
-  <term>Class Name: RoundThings</term>
+    A static method belongs to the class, not to an individual object. Because of this, you do not need to create an object before calling a static method. 
+</p>
+<p>
+    To call a static method in the same class, simply use its name:  <c>printGreeting( );</c>
+</p>
+<p>
+    To call a static method from another class, use the class name followed by a dot (.):  <c>Math.sqrt(25);</c>
+</p>
+<p>
+    You will find the name of the class in the class header:  <c>public class Math</c>
 </p>
 
-  <p>
-    There will not be a main method in this class.  It should go below the } that ends the RoundThingsDriver class.  Do not put the word public in the class name declaration.  This class will just have four methods.
-  </p>
+<p>
+    Remember:
+</p>
+
+<ul>
+    <li>Static methods belong to the class.</li>
+    <li>You can call a static method without creating an object.</li>
+    <li>If the method is in another class, use <c>ClassName.methodName(...)</c></li>
+    <li>Provide the required arguments in the correct order and type when calling the method.</li>
+</ul>
+
+<activity label="unit1b-projects-choose4">
+<statement>
+    <p>The following method is defined in a class named Geometry.</p>
+<program language="java">
+<code>
+
+public class Geometry
+{
+    public static double findArea(double length, double width)
+    {
+        return length * width;
+    }
+}
+</code>
+</program>
   
+    <p>Which of the following correctly calls the findArea method from another class and stores the result in a variable?</p>
+</statement>
+<choices>
+<choice ><statement><p><c>double area = findArea(8.5, 4.0);</c></p></statement><feedback><p>Since this call is being made from another class, what must be included before the method name?</p></feedback></choice>
+<choice ><statement><p><c>double area = Geometry.findArea( );</c></p></statement><feedback><p>Compare the number of arguments in the method call to the number of parameters in the method header.</p></feedback></choice>
+<choice ><statement><p><c>int area = Geometry.findArea(8, 12);</c></p></statement><feedback><p>What type of value does the method return?</p></feedback></choice>
+<choice correct="yes"><statement><p><c>double area = Geometry.findArea(8.5, 4.0);</c></p></statement><feedback><p>Because findArea is a static method in the Geometry class, it is called using the class name, a dot (.), and the method name. The method requires two arguments (length and width) and returns a double, which is stored in the variable area.</p></feedback></choice>
+</choices>
+</activity>
+
+</subsection>
+
+<subsection xml:id="unit1b-project2">
+<title>Unit 1B Project 2 - Round Things</title>
+
 <p>
-  <em>Methods</em>
+Write a Java program that calculates and displays the area and circumference of a circle and the volume and surface area of a sphere.  You will be writing two classes for this program.  One will use the RoundThingsDriver class and the other will use the RoundThings class.
 </p>
 <p>
-  All these methods will be static. Use Math.PI for pi. The radius parameter will be a double value.
+<term>Class Name: RoundThings</term>
 </p>
 
-  <ol>
-    <li>
-        <c>calcAreaCircle()</c> - receives the radius of a circle, and returns the area
-    </li>
-    <li>
-        <c>calcCircumCircle()</c> - receives the radius of a circle and returns the circumference
-    </li>
-    <li>
-        <c>calcAreaSphere()</c> - receives the radius of a Sphere and returns the area
-    </li>
-    <li>
-        <c>calcVolumeSphere()</c> - receives the radius of a Sphere and returns the volume - watch out for integer division!
-    </li>
-  </ol>
+<p>
+There will not be a main method in this class. This class will just have four methods.
+</p>
 
-  <p><term>Class Name: RoundThingsDriver</term></p>
+<p>
+<em>Methods</em>
+</p>
+<p>
+All these methods will be static. Use Math.PI for pi. The radius parameter will be a double value.
+</p>
 
-  <p>
-    This will have a main method and will call on methods from <c>RoundThings</c>.
-  </p>
+<ol>
+<li>
+    <c>calcAreaCircle()</c> - receives the radius of a circle, and returns the area
+</li>
+<li>
+    <c>calcCircumCircle()</c> - receives the radius of a circle and returns the circumference
+</li>
+<li>
+    <c>calcAreaSphere()</c> - receives the radius of a Sphere and returns the area
+</li>
+<li>
+    <c>calcVolumeSphere()</c> - receives the radius of a Sphere and returns the volume - watch out for integer division!
+</li>
+</ol>
 
-  <p><em>Variables:</em></p>
-  <ol>
-    <li><c>radius</c> - input variable, a double value (to be gotten from the user using a Scanner)</li>
-    <li><c>area</c> - a double value returned from the <c>calcAreaCircle</c> method</li>
-    <li><c>circumference</c> - a double value returned from the <c>calcCircumCircle</c> method</li>
-    <li><c>surfaceArea</c> - a double value returned from the <c>calcAreaSphere</c> method</li>
-    <li><c>volume</c> - a double value returned from the <c>calcVolumeSphere</c> method</li>
-  </ol>
-     
+<p><term>Class Name: RoundThingsDriver</term></p>
 
-  <p>
-    <em>Processing:</em> In main, declare all variables listed above and create a Scanner object.  Prompt the user to enter a value for the radius and store that value into the appropriate variable.  Call the methods you wrote in RoundThings and store the results into the appropriate variables (since these are static methods, the call will start with the name of the class where the methods are written).  
-  </p>
+<p>
+This will have a main method and will call on methods from <c>RoundThings</c>.
+</p>
 
-  <p>
-    <em>Method:</em> <c>outPut</c> - this static method should be below the main method, and will receive 4 values as parameters:  a description of the type of value calculated (i.e. circumference, area, volume, surface area), one for the shape name (i.e. circle or sphere), one for the radius inputted by the user, and one for the actual value calculated.  It will not return anything, but rather will display (print) the information formatted nicely (see below).
-  </p>
+<p><em>Variables:</em></p>
+<ol>
+<li><c>radius</c> - input variable, a double value (to be gotten from the user using a Scanner)</li>
+<li><c>area</c> - a double value returned from the <c>calcAreaCircle</c> method</li>
+<li><c>circumference</c> - a double value returned from the <c>calcCircumCircle</c> method</li>
+<li><c>surfaceArea</c> - a double value returned from the <c>calcAreaSphere</c> method</li>
+<li><c>volume</c> - a double value returned from the <c>calcVolumeSphere</c> method</li>
+</ol>
+    
 
-      <activity label="unit1b-project2-roundthings">
-      <statement>
-        <p></p>
-      </statement>
+<p>
+<em>Processing:</em> In main, declare all variables listed above and create a Scanner object.  
+Prompt the user to enter a value for the radius and store that value into the appropriate variable.  
+Call the methods you wrote in RoundThings and store the results into the appropriate variables.  
+</p>
 
-      <program interactive="activecode" language="java">
-        <code>
+<p>
+<em>Method:</em> <c>outPut</c> - This method will receive 4 values as parameters: a description of the type of value calculated (i.e. circumference, area, volume, surface area), one for the shape name (i.e. circle or sphere), one for the radius inputted by the user, and one for the actual value calculated. It will display (print) the information formatted nicely (see below).
+</p>
+
+<program language="java">
+<code>
+The area of a circle with a radius of # is #.
+The volume of a sphere with a radius of # is #. 
+(# will be replaced by the appropriate value)
+</code>
+</program>
+
+<p>
+   In main, call the outPut method four times. The first time should be for the area of a circle. The second time should be for the circumference of a circle. The third time should be for the surface area of a sphere.  The fourth time should be for the volume of a sphere. They should all use the same radius value. 
+</p>
+
+    <activity label="unit1b-project2-roundthings">
+    <statement>
+    <p></p>
+    </statement>
+
+    <program interactive="activecode" language="java">
+    <code>
 import java.util.Scanner;
+
 
 public class RoundThingsDriver{
     public static void main(String[] args)
     {
 
+
+    }
+
+
+    public static void outPut(String typeOfValue, String shape, double radius, double calculatedValue)
+    {
+           // write the code for the body of the outPut method below
+
+
     }
 }
 
-// Add RoundThings class here - do not include public
+
+class RoundThings
+{
+     // write the four methods for the RoundThings class below
+
+
+}
+    </code>
+    <stdin>5.0</stdin>
+    <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("RoundThingsDriver", input3.replaceAll(" ", "\n")); // For Repl.it
+
+        radius = (int) (Math.random() * 10 + 5);
+    }
+
+    private static String input1 = "5.0";
+    private static String input2 = "7.0";
+    private static String input3 = "10.0";
+
+    private double radius;
+
+
+    @Test
+    public void test1()
+    {
+        String input = input1.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
+
+        String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877".replaceAll(", ","\n");
+
+        boolean passed = output.contains("78.53981633");
+        passed = passed &amp;&amp; output.contains("31.415926");
+        passed = passed &amp;&amp; output.contains("314.15926");
+        passed = passed &amp;&amp; output.contains("523.59877");
+
+        getResults(expect, output, "Expected calculation for input " + input1, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String input = input2.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
+
+        String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504".replaceAll(", ","\n");
+
+        boolean passed = output.contains("153.93804");
+        passed = passed &amp;&amp; output.contains("43.982297");
+        passed = passed &amp;&amp; output.contains("615.75216");
+        passed = passed &amp;&amp; output.contains("1436.75504");
+
+        getResults(expect, output, "Expected calculation for input " + input2, passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test3()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "class RoundThings");
+
+        boolean passed = num == 2;
+        getResults("Classes: " + 2, "Classes: " + num, "Two classes created", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "public static double");
+        String output = "public static double methods: " + num;
+        String expect = "public static double methods: " + 4;
+
+        boolean passed = num == 4;
+        getResults(expect, output, "4 static double methods created", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test5()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".nextDouble()");
+        boolean called = num == 1;
+
+        String output = "Created: " + created + "\nCalled: " + num + " time";
+        String expected = "Created: " + true + "\nCalled: " + 1 + " time";
+
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
 
 
 
-        </code>
-        <stdin>5.0</stdin>
-        <tests>
-  import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
+    @Test
+    public void test6()
+    {
+        String code = getCode();
+        int param = -1;
+        String header = "no header found";
 
-  public class RunestoneTests extends CodeTestHelper
-  {
-      public RunestoneTests() {
-          //super("Main", input1.replaceAll(" ", "\n")); // For Book
-          //super("RoundThingsDriver", input3.replaceAll(" ", "\n")); // For Repl.it
+        String[] lines = code.split("\n");
 
-          radius = (int) (Math.random() * 10 + 5);
-      }
+        for (String line: lines) {
+            if (line.contains("static") &amp;&amp; line.contains("outPut")) {
+                param = numParameters(line);
+                header = line;
+                break;
+            }
+        }
 
-      private static String input1 = "5.0";
-      private static String input2 = "7.0";
-      private static String input3 = "10.0";
+        boolean passed = param == 4 &amp;&amp; !header.equals("no header found");
 
-      private double radius;
+        String output = header + " (" + param + ")";
+        String expect = "public static void outPut (...) (4 parameters)";
 
+        getResults(expect, output, "outPut method declared properly with four parameters", passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test1()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
+    private int numParameters(String line) {
+        if(line.contains("(") &amp;&amp; line.contains(")")) {
+            line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+            return line.split(",").length;
+        }
+        return 0;
+    }
 
-          String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877".replaceAll(", ","\n");
+    @Test
+    public void test7() {
+        String code = getCode();
+        int num = 0;
 
-          boolean passed = output.contains("78.53981633");
-          passed = passed &amp;&amp; output.contains("31.415926");
-          passed = passed &amp;&amp; output.contains("314.15926");
-          passed = passed &amp;&amp; output.contains("523.59877");
+        String[] lines = code.split("\n");
 
-          getResults(expect, output, "Expected calculation for input " + input1, passed);
-          assertTrue(passed);
-      }
+        for (String line: lines) {
+            if (line.contains("outPut") &amp;&amp; !line.contains("static")) {
+                if (numParameters(line) == 4) {
+                    num++;
+                }
+            }
+        }
 
-      @Test
-      public void test2()
-      {
-          String input = input2.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
+        boolean passed = num == 4;
+        getResults("4 times", num + " times", "Called outPut method 4 times", passed);
+        assertTrue(passed);
+    }
 
-          String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504".replaceAll(", ","\n");
+    @Test
+    public void test8() {
+        String code = getCode();
+        int num = 0;
 
-          boolean passed = output.contains("153.93804");
-          passed = passed &amp;&amp; output.contains("43.982297");
-          passed = passed &amp;&amp; output.contains("615.75216");
-          passed = passed &amp;&amp; output.contains("1436.75504");
+        String[] lines = code.split("\n");
 
-          getResults(expect, output, "Expected calculation for input " + input2, passed);
-          assertTrue(passed);
-      }
+        for (String line: lines) {
+            if (line.contains("RoundThings.")) {
+                num++;
+            }
+        }
 
+        boolean passed = num == 4;
+        getResults("4 times", num + " times", "Called static methods properly", passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test3()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "class RoundThings");
+    @Test
+    public void test9()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "Math.PI");
 
-          boolean passed = num == 2;
-          getResults("Classes: " + 2, "Classes: " + num, "Two classes created", passed);
-          assertTrue(passed);
-      }
+        boolean passed = num &gt;= 4;
+        getResults("4 times", num + " times", "Used Math.PI correct number of times", passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test4()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "public static double");
-          String output = "public static double methods: " + num;
-          String expect = "public static double methods: " + 4;
+    @Test
+    public void test10()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "System.out.print");
 
-          boolean passed = num == 4;
-          getResults(expect, output, "4 static double methods created", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test5()
-      {
-          String code = getCode();
-          boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-          int num = countOccurences(code, ".nextDouble()");
-          boolean called = num == 1;
-
-          String output = "Created: " + created + "\nCalled: " + num + " time";
-          String expected = "Created: " + true + "\nCalled: " + 1 + " time";
-
-          boolean passed = created &amp;&amp; called;
-          getResults(expected, output, "Used Scanner correctly", passed);
-          assertTrue(passed);
-      }
+        boolean passed = num &lt;= 2 &amp;&amp; num &gt; 0;
+        getResults("2 times", num + " times", "Called System.out.print[ln](...) 2 times maximum", passed);
+        assertTrue(passed);
+    }
 
 
+}
 
-      @Test
-      public void test6()
-      {
-          String code = getCode();
-          int param = -1;
-          String header = "no header found";
+    </tests>
+    </program>
+</activity>
 
-          String[] lines = code.split("\n");
+</subsection>
 
-          for (String line: lines) {
-              if (line.contains("static") &amp;&amp; line.contains("outPut")) {
-                  param = numParameters(line);
-                  header = line;
-                  break;
-              }
-          }
+<subsection xml:id="unit1b-project3-string-methods">
+    <title>String Methods Review</title>
 
-          boolean passed = param == 4 &amp;&amp; !header.equals("no header found");
+<p>
+    The String class provides many useful methods for working with text. Two of the most common are <c>indexOf()</c> and <c>substring()</c>.
+</p>
+<p>
+    The <c>indexOf()</c> method returns the index of the first occurrence of a character or string. If it is not found, the method returns -1.
+</p>
+<program language="java">
+<code>
+String word = "computer";
+int index = word.indexOf("p"); // index is 3
+</code>
+</program>
 
-          String output = header + " (" + param + ")";
-          String expect = "public static void outPut (...) (4 parameters)";
+<p>
+    One version of <c>substring()</c> returns a new string starting at a beginning index and continuing to the end of the original string.
+</p>
+<program language="java">
+<code>
+String word = "computer";
+String part = word.substring(3); // "puter"
+</code>
+</program>
 
-          getResults(expect, output, "outPut method declared properly with four parameters", passed);
-          assertTrue(passed);
-      }
+<p>
+    A second version of <c>substring</c> returns the characters from a beginning index up to, but not including, an ending index.
+</p>
+<program language="java">
+<code>
+String word = "computer";
+String part = word.substring(3, 6); // "put"
+</code>
+</program>
 
-      private int numParameters(String line) {
-          if(line.contains("(") &amp;&amp; line.contains(")")) {
-              line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
-              return line.split(",").length;
-          }
-          return 0;
-      }
+<p>
+    Remember:
+</p>
+<ul>
+<li>String indexing begins at 0.</li>
+<li><c>indexOf()</c> returns the first matching index or -1 if not found.</li>
+<li><c>substring(beginIndex)</c> goes to the end of the string.</li>
+<li><c>substring(beginIndex, endIndex)</c> does not include the character at endIndex.</li>
+</ul>
 
-      @Test
-      public void test7() {
-          String code = getCode();
-          int num = 0;
+</subsection>
 
-          String[] lines = code.split("\n");
-
-          for (String line: lines) {
-              if (line.contains("outPut") &amp;&amp; !line.contains("static")) {
-                  if (numParameters(line) == 4) {
-                      num++;
-                  }
-              }
-          }
-
-          boolean passed = num == 4;
-          getResults("4 times", num + " times", "Called outPut method 4 times", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test8() {
-          String code = getCode();
-          int num = 0;
-
-          String[] lines = code.split("\n");
-
-          for (String line: lines) {
-              if (line.contains("RoundThings.")) {
-                  num++;
-              }
-          }
-
-          boolean passed = num == 4;
-          getResults("4 times", num + " times", "Called static methods properly", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test9()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "Math.PI");
-
-          boolean passed = num &gt;= 4;
-          getResults("4 times", num + " times", "Used Math.PI correct number of times", passed);
-          assertTrue(passed);
-      }
-
-      @Test
-      public void test10()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "System.out.print");
-
-          boolean passed = num &lt;= 2 &amp;&amp; num &gt; 0;
-          getResults("2 times", num + " times", "Called System.out.print[ln](...) 2 times maximum", passed);
-          assertTrue(passed);
-      }
-
-
-  }
-
-        </tests>
-      </program>
-    </activity>
-
-  </subsection>
 
 <subsection xml:id="unit1b-project3">
-   <title>Unit 1B Project 3 - String Program</title>
+<title>Unit 1B Project 3 - String Program</title>
 
-   <p>
-    <term>StringProgram</term>
-   </p>
+<p>
+<term>StringProgram</term>
+</p>
 <p>
 Write a program that reads in a single String from the user containing exactly four words separated by symbols with no spaces into a single String object. Next, extract each word from the original string and store each word in a String object. Then, concatenate the words in reverse order to form another string. Display both the original and final strings.  
 </p>
 <p>
-  Hint: to extract the words, you should use the indexOf ( ) method to find each symbol and then use the substring ( ) method to get the characters between the * symbols.
+Hint: to extract the words, you should use the indexOf ( ) method to find each symbol and then use the substring ( ) method to get the characters between the * symbols.
 </p>
 <p>
-  Example output:
+Example output:
 </p>
 <pre>
 Original: one*two*three*four
 Reverse: four three two one
 </pre>
 
-      <activity label="unit1b-project3-stringprogram">
-      <statement>
-        <p></p>
-      </statement>
+    <activity label="unit1b-project3-stringprogram">
+    <statement>
+    <p></p>
+    </statement>
 
-      <program interactive="activecode" language="java">
-        <code>
+    <program interactive="activecode" language="java">
+    <code>
 import java.util.Scanner;
 
 public class StringProgram{
-  public static void main(String[] args)
-  {
+    public static void main(String[] args)
+    {
 
-  }
+    }
 }
 
-        </code>
-        <stdin>This*code*works*well</stdin>
-        <tests>
-  import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
+    </code>
+    <stdin>This*code*works*well</stdin>
+    <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
 
-  public class RunestoneTests extends CodeTestHelper
-  {
-      public RunestoneTests() {
-          //super("Main", input1.replaceAll(" ", "\n")); // For Book
-          //super("StringProgram", input1.replaceAll(" ", "\n")); // For Repl.it
-      }
-
-
-      private static String input1 = "This*code*works*well";
-      private static String input2 = "Am*I*correct*now?";
-      private static String input3 = "This*Is*A*Test";
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("StringProgram", input1.replaceAll(" ", "\n")); // For Repl.it
+    }
 
 
-      @Test
-      public void test1()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          String actual = "No matching lines";
-          String expect = "well works code This";
-          boolean passed = false;
-
-          String[] lines = output.split("\n");
-
-          for (String line: lines) {
-              if (line.contains(expect)) {
-                  passed = true;
-                  actual = line;
-                  break;
-              }
-          }
+    private static String input1 = "This*code*works*well";
+    private static String input2 = "Am*I*correct*now?";
+    private static String input3 = "This*Is*A*Test";
 
 
-          getResults(expect, actual, "Expected output for input " + input1, passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test1()
+    {
+        String input = input1.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
+        String actual = "No matching lines";
+        String expect = "well works code This";
+        boolean passed = false;
 
-      @Test
-          public void test2()
-          {
-              String input = input2.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              String actual = "No matching lines";
-              String expect = "now? correct I Am";
-              boolean passed = false;
+        String[] lines = output.split("\n");
 
-              String[] lines = output.split("\n");
-
-              for (String line: lines) {
-                  if (line.contains(expect)) {
-                      passed = true;
-                      actual = line;
-                      break;
-                  }
-              }
+        for (String line: lines) {
+            if (line.contains(expect)) {
+                passed = true;
+                actual = line;
+                break;
+            }
+        }
 
 
-              getResults(expect, actual, "Expected output for input " + input2, passed);
-              assertTrue(passed);
-          }
+        getResults(expect, actual, "Expected output for input " + input1, passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test3()
-      {
-          String code = getCode();
-          boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-          int num = countOccurences(code, ".nextLine()");
-          boolean called = num == 1;
+    @Test
+        public void test2()
+        {
+            String input = input2.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
+            String actual = "No matching lines";
+            String expect = "now? correct I Am";
+            boolean passed = false;
 
-          String output = "Created: " + created + "\nMethod Called: " + true;
-          String expected = "Created: " + true + "\nMethod Called: " + called;
+            String[] lines = output.split("\n");
 
-          boolean passed = created &amp;&amp; called;
-          getResults(expected, output, "Used Scanner correctly", passed);
-          assertTrue(passed);
-      }
+            for (String line: lines) {
+                if (line.contains(expect)) {
+                    passed = true;
+                    actual = line;
+                    break;
+                }
+            }
 
-      @Test
-      public void test4()
-      {
-          String code = getCode();
-          int num = countOccurences(code, ".indexOf(");
 
-          boolean passed = num &gt;= 3;
-          getResults("3 times", num + " times", "Called indexOf(\"*\")", passed);
-          assertTrue(passed);
-      }
+            getResults(expect, actual, "Expected output for input " + input2, passed);
+            assertTrue(passed);
+        }
 
-      @Test
-      public void test5()
-      {
-          String code = getCode();
-          int num = countOccurences(code, ".substring(");
+    @Test
+    public void test3()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".nextLine()");
+        boolean called = num == 1;
 
-          boolean passed = num &gt;= 4;
-          getResults("4+ times", num + " times", "Called substring(...)", passed);
-          assertTrue(passed);
-      }
+        String output = "Created: " + created + "\nMethod Called: " + true;
+        String expected = "Created: " + true + "\nMethod Called: " + called;
 
-      @Test
-      public void test6()
-      {
-          String code = getCode();
-          int num = countOccurences(code, "System.out.print");
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = num &gt;= 3;
-          getResults("3+ times", num + " times", "Called System.out.print[ln](...) at least 3 times", passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test4()
+    {
+        String code = getCode();
+        int num = countOccurences(code, ".indexOf(");
 
-      @Test
-      public void test7()
-      {
-          String code = getCode();
-          int num = 0;
+        boolean passed = num &gt;= 3;
+        getResults("3 times", num + " times", "Called indexOf(\"*\")", passed);
+        assertTrue(passed);
+    }
 
-          String[] lines = code.split("\n");
+    @Test
+    public void test5()
+    {
+        String code = getCode();
+        int num = countOccurences(code, ".substring(");
 
-          for (String line : lines){
-              if (line.contains("String") &amp;&amp; !line.contains("main") &amp;&amp; !line.contains("class")) {
-                  if (line.contains(",")) {
-                      num += line.split(",").length;
-                  } else {
-                      num++;
-                  }
-              }
-          }
+        boolean passed = num &gt;= 4;
+        getResults("4+ times", num + " times", "Called substring(...)", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = num &gt;= 4;
-          getResults("4+", num + "", "Created at least four String variables", passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test6()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "System.out.print");
 
-      @Test
-      public void test8()
-      {
-          String code = getCode();
-          int num = 0;
+        boolean passed = num &gt;= 3;
+        getResults("3+ times", num + " times", "Called System.out.print[ln](...) at least 3 times", passed);
+        assertTrue(passed);
+    }
 
-          String[] lines = code.split("\n");
+    @Test
+    public void test7()
+    {
+        String code = getCode();
+        int num = 0;
 
-          for (String line : lines){
-              if (line.contains("int ")) {
-                  if (line.contains(",")) {
-                      num += line.split(",").length;
-                  } else {
-                      num++;
-                  }
-              }
-          }
+        String[] lines = code.split("\n");
 
-          boolean passed = num &gt;= 1;
-          getResults("1+", num + "", "Created at least one int variable", passed);
-          assertTrue(passed);
-      }
+        for (String line : lines){
+            if (line.contains("String") &amp;&amp; !line.contains("main") &amp;&amp; !line.contains("class")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
 
-      @Test
-      public void test9()
-      {
-          String code = getCode();
-          String output = "not found";
-          boolean passed = false;
+        boolean passed = num &gt;= 4;
+        getResults("4+", num + "", "Created at least four String variables", passed);
+        assertTrue(passed);
+    }
 
-          String[] lines = code.split("\n");
+    @Test
+    public void test8()
+    {
+        String code = getCode();
+        int num = 0;
 
-          for (String line : lines){
-              if (line.contains("\"") &amp;&amp; line.contains("+")) {
-                  output = line;
-                  passed = true;
-              }
-          }
-          getResults("\"...\" + \"...\"", output, "Used String concatenation", passed);
-          assertTrue(passed);
-      }
+        String[] lines = code.split("\n");
 
-      @Test
-      public void test10()
-      {
-          String input = input3.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          String actual = "No matching lines";
-          String expect = "Test A Is This";
-          boolean passed = false;
+        for (String line : lines){
+            if (line.contains("int ")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
 
-          String[] lines = output.split("\n");
+        boolean passed = num &gt;= 1;
+        getResults("1+", num + "", "Created at least one int variable", passed);
+        assertTrue(passed);
+    }
 
-          if (lines.length &gt; 1)
-              actual = lines[lines.length-1];
+    @Test
+    public void test9()
+    {
+        String code = getCode();
+        String output = "not found";
+        boolean passed = false;
 
-          passed = !actual.contains("*") &amp;&amp; actual.contains(" ") &amp;&amp; !actual.equals("No matching lines");
-          getResults(expect, actual, "Reverse String has spaces instead of astericks", passed);
-          assertTrue(passed);
-      }
+        String[] lines = code.split("\n");
 
-  }
+        for (String line : lines){
+            if (line.contains("\"") &amp;&amp; line.contains("+")) {
+                output = line;
+                passed = true;
+            }
+        }
+        getResults("\"...\" + \"...\"", output, "Used String concatenation", passed);
+        assertTrue(passed);
+    }
 
-        </tests>
-      </program>
-    </activity>
+    @Test
+    public void test10()
+    {
+        String input = input3.replaceAll(" ", "\n");
+        String output = getMethodOutputWithInput("main", input);
+        String actual = "No matching lines";
+        String expect = "Test A Is This";
+        boolean passed = false;
 
-  </subsection>
+        String[] lines = output.split("\n");
+
+        if (lines.length &gt; 1)
+            actual = lines[lines.length-1];
+
+        passed = !actual.contains("*") &amp;&amp; actual.contains(" ") &amp;&amp; !actual.equals("No matching lines");
+        getResults(expect, actual, "Reverse String has spaces instead of astericks", passed);
+        assertTrue(passed);
+    }
+
+}
+
+    </tests>
+    </program>
+</activity>
+
+</subsection>
 </section>
