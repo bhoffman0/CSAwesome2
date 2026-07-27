@@ -166,10 +166,10 @@
         <term>postfix</term> operator), the value of the variable is changed
         <em>after</em> evaluating the variable to get its value. And if the
         operator is before the variable (the <term>prefix</term> operator), the
-        value of the variable in incremented <em>before</em> the variable is
+        value of the variable is incremented <em>before</em> the variable is
         evaluated to get the value of the expression. For example, if <c>x</c>
         is 10 and we write, <c>System.out.println(x++)</c> it will print 10 but
-        aftewards <c>x</c> will be 11. On the other hand if we write,
+        afterwards <c>x</c> will be 11. On the other hand if we write,
         <c>System.out.println(++x)</c>, it will print 11 and afterwards the
         value will be 11.
       </p>
