@@ -1,24 +1,695 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="unit2b-projects">
-  <title>Unit 2b Projects</title>
+  <title>Unit 2B Projects</title>
   <idx>projects</idx>
 
   <introduction>  
     <p>
-      This section contains projects for Unit 2b.
+      These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
+    </p>
+    <p>
+      Now that your programs can make decisions, it's time to make them repeat those decisions efficiently. In these projects, you'll explore how loops allow programs to execute instructions multiple times without writing the same code over and over. You'll use iteration to solve problems, process data, and build algorithms that are both efficient and easy to maintain.
+    </p>
+    <p>
+      Each project is designed to reinforce these concepts through authentic programming tasks. As you complete them, focus on recognizing patterns, choosing the appropriate type of loop, and tracing your algorithms to ensure they repeat the correct number of times. Great programmers know that well-designed loops make programs more powerful, flexible, and efficient.
     </p>
   </introduction>
 
-  <subsection xml:id="unit2b-project1">
-    <title>Unit 2B Project 1</title>
+  <subsection xml:id="unit2b-project1-loops">
+    <title>Review: Using for Loops to Repeat Code</title>
+    <p>
+      A for loop is used when you know how many times you want a section of code to repeat. The loop uses a counter variable that keeps track of the number of repetitions. The general structure of a for loop is:
+    </p>
+<program language="java">
+<code>
+for (initialization; condition; update) {
+    // code that repeats
+}
 
-    
+</code>
+</program>
+<p>
+  Example: Loop 5 times and print a message each time:
+</p>
+<program language="java">
+<code>
+for (int i = 0; i &lt; 5; i++) {
+    System.out.println("Hello!");
+}
+</code>
+</program>
+
+<p>
+  How it works:
+</p>
+<ul>
+<li><c>int i = 0</c> creates the counter and starts it at 0.</li>
+<li><c>i &lt; 5</c> keeps the loop running while i is less than 5.</li>
+<li><c>i++</c> increases the counter by 1 after each repetition.</li>
+</ul>
+<p>
+  The loop above runs when i is 0, 1, 2, 3, and 4 - a total of 5 times.
+</p>
+
+<activity label="unit2b-project1-choose1">
+<statement><p>The variable num stores the number of times a loop should repeat. Which for loop header correctly repeats a block of code num times?</p></statement>
+<choices>
+<choice ><statement><p><c>for (int i = 1; i &lt; num; i++)</c></p></statement><feedback><p>The counter starts at 1 instead of 0. How many values are there from 1 up to (but not including) num?</p></feedback></choice>
+<choice ><statement><p><c>for (int i = 0; i &lt;= num; i++)</c></p></statement><feedback><p>The condition uses &lt;=, which includes the value num. This causes the loop to run one extra time.</p></feedback></choice>
+<choice correct="yes"><statement><p><c>for (int i = 0; i &lt; num; i++)</c></p></statement><feedback><p>The loop starts with i = 0 and continues while i &lt; num. The counter values are: 0, 1, 2, ..., num - 1. This produces exactly num repetitions.</p></feedback></choice>
+<choice ><statement><p><c>for (int i = num; i &gt;= 0; i--)</c></p></statement><feedback><p>This loop starts at i = num and goes down to 0. Since 0 is included, how many times is it looping?</p></feedback></choice>
+</choices>
+</activity>
 
   </subsection>
 
-  <subsection xml:id="unit2b-project2">
-   <title>Unit 2B Project 2</title>
+  <subsection xml:id="unit2b-project1">
+    <title>Unit 2B Project 1 - Grades</title>
+
+    <activity label="unit2b-project1-grades">
+<statement>
+<p>
+Write a program that allows the user to input the number of grades he or she wants to be averaged.  Then use a for loop structure to have the user input all the test grades individually, calculating the sum of these grades as they are being entered.  These amounts, including the sum, are to be all ints.  After all the grades have been entered, the program will calculate the average (what data type should this variable be?).  Print out the average for the number of grades entered.          
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Grades {
+  public static void main(String[] args) {
+
+  }
+}
+</code>
+<stdin>5 98 80 61 73 94</stdin>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("Grades", input1.replaceAll(" ", "\n")); // For Repl.it
+    }
+
+    private static String input1 = "5 98 80 61 73 94";
+    private static String input2 = "3 91 74 53";
+    private static String input3 = "7 100 95 90 85 80 75 70 65 60";
+
+    /*
+     * Test for Scanner
+     */
+    @Test
+    public void test01()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".nextInt()");
+        boolean called = num &gt;= 2;
+
+        String output = "Created: " + created + "\nMethod Called: " + num + " times";
+        String expected = "Created: " + true + "\nMethod Called: 2 times";
+
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
+
+    /**
+     *  Test how many variables were created
+     */
+    @Test
+    public void test02()
+    {
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("int")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= 2;
+        getResults("2+", num + "", "Created at least 2 int variable", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03()
+    {
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("double ")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= 1;
+        getResults("2+", num + "", "Created at least 1 double variable", passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test04()
+    {
+        String input = input1.replaceAll(" ", "\n");
+        String expect = "81.2";
+
+        String output1 = testInput(input, expect);
+
+        String actual = output1;
+
+        boolean passed = output1.contains(expect);
+
+        getResults(expect, actual, "Expected output for input \"" + input1 + "\"", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05()
+    {
+        String input = input2.replaceAll(" ", "\n");
+        String expect = "72.666666";
+
+        String output1 = testInput(input, expect);
+
+        String actual = output1;
+
+        boolean passed = output1.contains(expect);
+
+        getResults(expect, actual, "Expected output for input \"" + input2 + "\"", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06()
+    {
+        String input = input3.replaceAll(" ", "\n");
+        String expect = "85.0";
+
+        String output1 = testInput(input, expect);
+
+        String actual = output1;
+
+        boolean passed = output1.contains(expect);
+
+        getResults(expect, actual, "Expected output for input \"" + input3 + "\"", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07()
+    {
+        String input = input2.replaceAll(" ", "\n");
+        String expect = "#.#";
+
+        String output1 = testInput(input, expect);
+
+        String[] lines = output1.split("\\s");
+        String actual = lines[lines.length-1];
+
+        boolean passed = actual.matches("\\d+.\\d+");
+
+        getResults(expect, actual, "Checking that answer is a double", passed);
+        assertTrue(passed);
+    }
+
+    private String testInput(String input, String expect) {
+        String actual = "No matching lines";
+
+        String output = getMethodOutputWithInput("main", input);
+
+        String[] lines = null;
+
+        if (output.contains(":"))
+            lines = output.split(":");
+        else if (output.contains("\n"))
+            lines = output.split(":");
+        else
+            lines = output.split(" ");
+
+        actual = lines[lines.length-1].trim();
+
+        return actual;
+    }
+
+    @Test
+    public void test08()
+    {
+        String code = getCode();
+        String[] lines = code.split("\n");
+        String loop = "";
+
+        for (String line : lines){
+            //line = line.replaceAll("for (","for(");
+            if (line.contains("for(") || line.contains("for (")) {
+                loop = line.trim();
+                break;
+            }                        
+        }
+
+
+        if (loop.contains("{")) {
+            loop = loop.substring(0, loop.indexOf("{"));
+        }
+
+        boolean passed = loop.replaceAll("\\s+","").matches("for\\(int\\S+=\\d;\\S+&lt;=*\\S+;\\S+\\+\\+\\)");
+
+        getResults("for(int *=0; *&lt;*; *++)", loop + "", "Checking that code contains for(int * = 0; * &lt; *; *++)", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09()
+    {
+        String code = getCode();
+        String[] lines = code.split("\n");
+
+        String loop = "";
+
+        for (String line : lines){
+            //line = line.replaceAll("for (","for(");
+            if (line.contains("for(") || line.contains("for (")) {
+                loop = line.trim();
+                break;
+            }                        
+        }
+
+
+        if (loop.contains("{")) {
+            loop = loop.substring(0, loop.indexOf("{"));
+        }
+
+        String varName = "";
+
+        for (String line : lines){
+            if (line.contains(".nextInt()")) {
+                varName = line.substring(0, line.indexOf("=")).trim();
+                varName = varName.replaceAll("int ","").trim();
+                break;
+            }
+        }
+
+        boolean passed = loop.contains(varName) &amp;&amp;
+            (loop.replaceAll(" ","").matches("for\\(int\\S+=0;\\S+&lt;" + varName + "*\\S+;\\S+\\+\\+\\)") || loop.replaceAll(" ","").matches("for\\(int\\S+=1;\\S+&lt;=" + varName + "*\\S+;\\S+\\+\\+\\)"));
+
+        getResults("for(int *=0; *&lt; " + varName + "; *++) // or\nfor(int *=1; *&lt;= " + varName + "; *++)", loop + "", "Checking that code loops the correct number of times", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "System.out.println");
+
+        boolean passed = num &gt;= 1;
+        getResults("1+", num + "", "At least 1 print statements are used", passed);
+        assertTrue(passed);
+    }
+}
+</tests>
+</program>
+</activity>
+</subsection>
+
+<subsection xml:id="unit2b-project2-while-loops">
+  <title>Review:  Using while Loops</title>
+
+<p>
+  A while loop repeats a section of code as long as a condition is true. While loops are useful when you do not know exactly how many times a loop will repeat.
+</p>
+<p>
+  A sentinel value is a special value that tells a program when to stop repeating. The sentinel value is not usually processed as regular data.
+</p>
+<p>
+  Example: Continue entering names until the user enters "Q":
+</p>
+<program language="java">
+<code>
+String name = input.nextLine();
+
+while (!name.equals("Q"))
+{
+  System.out.println("Hello " + name);
+  name = input.nextLine();
+}
+</code>
+</program>
+<p>
+  The loop continues until the user enters the sentinel value "Q".
+</p>
+<activity label="unit2b-project2-choose1">
+<statement><p>The variable num stores the number of times a loop should repeat. Which for loop header correctly repeats a block of code num times?</p></statement>
+<choices>
+<choice ><statement><p><c>while (number == -1)</c></p></statement><feedback><p>This condition only runs when the user enters the stopping value. The sentinel value should end the loop, not continue it.</p></feedback></choice>
+<choice correct="yes"><statement><p><c>while (number != -1)</c></p></statement><feedback><p>The loop should continue while the user has not entered the sentinel value. Since -1 indicates that the user wants to stop, the condition should check: number != -1. The loop will repeat for all other numbers and stop when number becomes -1.</p></feedback></choice>
+<choice ><statement><p><c>while (number &lt; -1)</c></p></statement><feedback><p>Consider whether all valid inputs will be less than -1. The loop should continue for most values except the sentinel.</p></feedback></choice>
+<choice ><statement><p><c>while (number &gt; -1)</c></p></statement><feedback><p>This condition would prevent the loop from running for many possible valid inputs. Think about what value should cause the loop to stop.</p></feedback></choice>
+</choices>
+</activity>
+
+<p>
+  A validation loop repeatedly asks for input until the user provides an acceptable value. This helps prevent invalid data from entering a program.
+</p>
+<p>
+  Example: Require a number between 1 and 100:
+</p>
+<program language="java">
+<code>
+int score = input.nextInt();
+
+while (score &lt; 1 || score &gt; 100)
+{
+  System.out.println("Invalid score. Try again.");
+  score = input.nextInt();
+}
+</code>
+</program>
+<p>
+  The loop continues while the input is invalid and stops when the input is acceptable.
+</p>
+<activity label="unit2b-project2-choose2">
+<statement><p>A program requires the user to enter a positive number. Which loop correctly validates the input?</p></statement>
+<choices>
+<choice ><statement><p><c>while (number &gt; 0)</c></p></statement><feedback><p>This condition is true for valid input. A validation loop should repeat when the input is incorrect.</p></feedback></choice>
+<choice ><statement><p><c>while (number == 0)</c></p></statement><feedback><p>This only catches one invalid value. What about negative numbers?</p></feedback></choice>
+<choice correct="yes"><statement><p><c>while (number &lt;= 0)</c></p></statement><feedback><p>The loop should continue while the input is invalid. A positive number must be greater than 0, so values that are invalid are: 0 and Negative numbers. The condition: while (number &lt;= 0) keeps asking for input until the user enters a valid positive number.</p></feedback></choice>
+<choice ><statement><p><c>while (number != 0)</c></p></statement><feedback><p>This condition would reject all nonzero numbers, including valid positive numbers.</p></feedback></choice>
+</choices>
+</activity>
+
+<p>
+  The <c>String.format()</c> method can be used to display a double value with a specific number of decimal places. To format a number to two decimal places, use: <c>String.format("%.02f", number)</c>
+</p>
+<ul>
+<li><c>%f</c> indicates that the value is a floating-point number (double).</li>
+<li><c>.02</c> specifies that exactly two digits should appear after the decimal point.</li>
+</ul>
+<p>
+  Example:
+</p>
+<program language="java">
+<code>
+double price = 12.5;
+
+System.out.println(String.format("%.02f", price));
+</code>
+</program>
+
+<p>
+  Output:  12.50
+</p>
+<p>
+  The original value is not changed; String.format() only controls how the value is displayed.
+</p>
+
+</subsection>
+
+<subsection xml:id="unit2b-project2">
+   <title>Unit 2B Project 2 - Concert Tickets (Loop)</title>
+
+<p>
+  Recall the Concert Tickets program from Unit 3 where the user chooses a seat based on the location with the costs listed below (remember that these values should be used as ints).
+</p>
+<pre>
+Seat location			Concert ticket price ($)
+B (box)           $75
+P (pavillion)     $30
+L (lawn)          $21
+</pre>
+<p>
+  This will be a similar situation where the user will enter an upper or lowercase B, P, or L to choose a seat. Include the following:
+</p>
+<ul>
+<li>Allow the user to continue buying tickets (one at a time). At the end of the loop, ask the user if they would like to purchase another ticket. Y for yes, and N for No.</li>
+<li>When prompting the user for a ticket type, if the user inputs an invalid type, use a loop to prompt the user to keep entering a seat type until a valid input is received.  This is to be done with a while data verification loop.</li>
+<li>Keep a running total of the number of each type of ticket purchased and the subtotals for the costs of each type of ticket (these will need to be stored as ints)</li>
+<li>Calculate a convenience fee of $1.50 per ticket (this will need to be a double).</li>
+<li>Calculate the total cost of all tickets, including the convenience fee (this will need to be a double).</li>
+</ul>
+<p>
+  After all tickets have been purchased, display the quantity and type of each ticket bought with a subtotal, the total convenience fee, and a total price for all the tickets.
+</p>
+<p>
+  Example output:
+</p>
+<pre>
+2	box tickets         $150
+4	pavillion tickets   $120
+1	lawn tickets        $21
+	Convenience fee			$10.50
+	Total					      $301.50
+</pre>
+<p>
+  *Be sure to put a $ in front of all monetary amounts, and be sure to use String formatting on the convenience fee and total so that you will ensure two decimal places. 
+</p>
+
+<activity label="unit2b-project2-concert-tickets-loop">
+<statement>
+<p>
+Modify and expand the Unit 2A Concert Tickets program to process multiple ticket orders iteratively. Implement a loop allowing the user to purchase tickets one at a time until they choose to stop, enforce input validation for seat selections using a while loop, track counts and subtotals for each ticket type, apply a per-ticket convenience fee, and present an itemized final receipt with properly formatted currency values.
+</p>
+<p>
+Please refer to the detailed requirements above for specific pricing, variable types, and formatting guidelines when writing your solution.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class ConcertTickets {
+  public static void main(String[] args) {
+
+  }
+}
+</code>
+<stdin>B Y B Y B Y P Y L Y L Y L Y L Y L N</stdin>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("ConcertTickets", input1.replaceAll(" ", "\n")); // For Repl.it
+    }
+
+    private static String input1 = "B Y B Y B Y P Y L Y L Y L Y L Y L N";
+    private static String input2 = "P";
+    private static String input3 = "L";
+
+    @Test
+    public void test1()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".next()") + countOccurences(code, ".nextLine()");
+        boolean called = num &gt;= 2;
+
+        String output = "Created: " + created + "\nMethod Called: " + num + " times";
+        String expected = "Created: " + true + "\nMethod Called: " + 2 + "+ times";
+
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        int goal = 1;
+
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("String") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("class")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= goal;
+        getResults(""+goal, num + "", "Created at least "+goal + " String variables", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        int goal = 3;
+
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("int")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= goal;
+        getResults(goal + "+", num + "", "Created at least " + goal + " int variable", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        int goal = 2;
+
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("double")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= goal;
+        getResults(goal + "+", num + "", "Created at least " + goal + " double variables", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test5()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "while");
+
+        boolean passed = num &gt;= 2;
+        getResults("2", num + "", "2 while loops used", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test6()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "if") - countOccurences(code, "else if");
+
+        boolean passed = num &gt;= 1;
+        getResults("1", num + "", "1 if statement used", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test7()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "else if");
+
+        boolean passed = num &gt;= 1;
+        getResults("1+", num + "", "At least 1 else if statements used", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test8()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "else") - countOccurences(code, "else if");
+
+        boolean passed = num &gt;= 1;
+        getResults("1", num + "", "1 else statement used", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test9()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "String.format(\"%.02f\",");
+
+        boolean passed = num &gt;= 2;
+        getResults("2+", num + "", "String.format() used correctly to format the numbers", passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test10()
+    {
+        String input = input1.replaceAll(" ", "\n");
+        String[] lookfor = {"box", "pavillion", "lawn", "fee", "total"};
+        String[] expected = {"225", "30", "105", "13.50", "373.50"};
+        boolean passed = true;
+        String output = "";
+
+        for (int i = 0; i &lt; expected.length; i++){
+            String output1 = testInput(input, lookfor[i]);
+            output += output1 + "\n";
+            passed = passed &amp;&amp; output1.contains(expected[i]);
+        }
+
+        String expect = "3\tbox tickets\t\t$225\n1\tpavillion tickets\t\t$30\n5\tlawn tickets\t\t$105\n\tConvenience fee\t\t$13.50\n\tTotal\t\t$373.50";
+
+        getResults(expect, output, "Expected output for input:\n" + input1 + "", passed);
+        assertTrue(passed);
+    }
+
+
+    private String testInput(String input, String expect) {
+        String actual = "No matching lines";
+
+        String output = getMethodOutputWithInput("main", input);
+
+        String[] lines = output.split("[:?\\n]");
+
+        for (String line: lines) {
+            if (line.toLowerCase().contains(expect.toLowerCase())) {
+                actual = line;
+                break;
+            }
+        }
+
+        return actual;
+    }
+}     
+</tests>
+</program>
+</activity>
 
 
   </subsection>
