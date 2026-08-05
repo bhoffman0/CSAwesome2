@@ -4,22 +4,600 @@
   <title>Unit 2A Projects</title>
   <idx>projects</idx>
 
-  <introduction>  
-    <p>
-      This section contains projects for Unit 2A.
-    </p>
-  </introduction>
+<introduction>  
+<p>
+These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
+</p>
+<p>
+    Now that you've learned how to represent data and build simple algorithms, it's time to make your programs think. In these projects, you'll explore how selection statements allow programs to make decisions by evaluating conditions. You'll write algorithms that use Boolean expressions, relational and logical operators, and conditional statements to control the flow of execution.
+</p>
+<p>
+    Each project is designed to reinforce these concepts through authentic problem-solving tasks. As you complete them, focus on developing clear algorithms, testing multiple scenarios, and thinking carefully about how different inputs affect the decisions your program makes. Strong programmers don't just write code—they design algorithms that make the right decision every time.
+</p>
+</introduction>
+
+<subsection xml:id="unit2a-project1-review-">
+    <title>Review: if and else if Statements</title>
+<p>
+    Selection statements allow a program to make decisions based on whether a condition is true or false.
+</p>
+<ul>
+<li>Use an if statement to execute code only when a condition is true.</li>
+<li>Use an else if statement to check another condition if the previous condition was false.</li>
+<li>Use an else statement to provide a default action when none of the previous conditions are true.</li>
+</ul>
+
+<p>
+    Conditions are evaluated from top to bottom, and only the first condition that is true will execute.
+</p>
+
+<activity label="unit2a-project1-choose1">
+<statement><p>What is printed when the following code executes?</p>
+<program language="java">
+<code>
+int temperature = 72;
+
+if (temperature &gt; 80)
+{
+    System.out.println("Hot"); 
+}
+else if (temperature &gt;= 70)
+{
+    System.out.println("Warm");
+}
+else
+{
+    System.out.println("Cold");
+}
+
+</code>
+</program>
+
+
+</statement>
+<choices>
+<choice ><statement><p>Hot</p></statement><feedback><p>Check whether 72 is greater than 80. Remember that &gt; means strictly greater than.</p></feedback></choice>
+<choice correct="yes"><statement><p>Warm</p></statement><feedback><p>The first condition, temperature &gt; 80, is false because 72 is not greater than 80. The program then checks the next condition, temperature &gt;= 70, which is true because 72 is greater than or equal to 70. Since this condition is true, the program prints Warm and skips the remaining else block.</p></feedback></choice>
+<choice ><statement><p>Cold</p></statement><feedback><p>The else block only executes if all previous conditions are false. Is temperature &gt;= 70 true or false?</p></feedback></choice>
+<choice ><statement><p>Nothing is printed</p></statement><feedback><p>One branch of an if/else if/else statement will always execute when an else is present.</p></feedback></choice>
+</choices>
+</activity>
+
+
+
+</subsection>
 
   <subsection xml:id="unit2a-project1">
-    <title>Unit 2A Project 1</title>
+    <title>Unit 2A Project 1 - Concert Tickets</title>
+
+<p>Write a program that displays the price of a concert ticket. The concert ticket price is based on the seat location, as shown in the following table (use them as ints, not doubles). The user should be able to enter the seat location using either an uppercase (B, P, or L) or a lowercase (b, p, or l) letter.  </p>
+
+<p>Hint:  use <c>toLowerCase()</c> or <c>toUpperCase()</c> on the variable or use OR statements.</p>
+
+<p>Make sure the price in your output has a $ in front of it.</p>
+
+
+<pre>
+Seat location			Concert ticket price ($)
+B (box)				$75
+P (pavillion)			$30
+L (lawn)			$21
+</pre>
+
+<p>If the user enters any other seat location, the program should display an “Invalid location” message.</p>
+
+<activity label="unit2A-project1-concerttickets">
+<statement>
+<p>
+<p>Write a program that displays the price of a concert ticket. The concert ticket price is based on the seat location, as shown in the following table (use them as ints, not doubles). The user should be able to enter the seat location using either an uppercase (B, P, or L) or a lowercase (b, p, or l) letter.  </p>      
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class ConcertTickets {
+    public static void main(String[] args) {
+        
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+      public RunestoneTests() {
+          //super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("ConcertTickets", input1.replaceAll(" ", "\n")); // For Repl.it
+      }
+
+
+      private static String input1 = "B";
+      private static String input2 = "P";
+      private static String input3 = "L";
+
+
+      @Test
+      public void test1()
+      {
+          String code = getCode();
+          boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+          int num = countOccurences(code, ".nextLine()");
+          boolean called = num == 1;
+
+          String output = "Created: " + created + "\nMethod Called: " + num + " times";
+          String expected = "Created: " + true + "\nMethod Called: " + 1 + " times";
+
+          boolean passed = created &amp;&amp; called;
+          getResults(expected, output, "Used Scanner correctly", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+      public void test2()
+      {
+          String code = getCode();
+          int num = 0;
+
+          String[] lines = code.split("\n");
+
+          for (String line : lines){
+              if (line.contains("String") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("class")) {
+                  if (line.contains(",")) {
+                      num += line.split(",").length;
+                  } else {
+                      num++;
+                  }
+              }
+          }
+
+          boolean passed = num &gt;= 1;
+          getResults("1", num + "", "Created at least one String variable", passed);
+          assertTrue(passed);
+      }
+
+      @Test
+          public void test3()
+          {
+              String input = input1;
+              String expect = "$75";
+
+              String output1 = testInput(input, expect);
+              String output2 = testInput(input.toLowerCase(), expect);
+
+              String actual = "Input " + input + ": " + output1 + "\n";
+              actual += "Input " + input.toLowerCase() + ": " + output2;
+
+              boolean passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+
+              getResults(expect, actual, "Expected output for input " + input + " (checks upper and lower case)", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test4()
+          {
+              String input = input2;
+              String expect = "$30";
+
+              String output1 = testInput(input, expect);
+              String output2 = testInput(input.toLowerCase(), expect);
+
+              String actual = "Input " + input + ": " + output1 + "\n";
+              actual += "Input " + input.toLowerCase() + ": " + output2;
+
+              boolean passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+
+              getResults(expect, actual, "Expected output for input " + input + " (checks upper and lower case)", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test5()
+          {
+              String input = input3;
+              String expect = "$21";
+
+              String output1 = testInput(input, expect);
+              String output2 = testInput(input.toLowerCase(), expect);
+
+              String actual = "Input " + input + ": " + output1 + "\n";
+              actual += "Input " + input.toLowerCase() + ": " + output2;
+
+              boolean passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+
+              getResults(expect, actual, "Expected output for input " + input + " (checks upper and lower case)", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test6()
+          {
+              String randLetters = "ACDEFGHIJKLMNOQRSTUVWXYZ";
+              int rand = (int) (Math.random() * randLetters.length());
+              String input = randLetters.substring(rand, rand+1);
+              String expect = "Invalid location";
+
+              String output1 = testInput(input, expect);
+              String output2 = testInput(input.toLowerCase(), expect);
+
+              String actual = "Input " + input + ": " + output1 + "\n";
+              actual += "Input " + input.toLowerCase() + ": " + output2;
+
+              boolean passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+
+              getResults(expect, actual, "Expected output for input " + input + " (checks upper and lower case)", passed);
+              assertTrue(passed);
+          }
+
+      private String testInput(String input, String expect) {
+          String actual = "No matching lines";
+
+          String output = getMethodOutputWithInput("main", input);
+
+          String[] lines = output.split(":");
+
+          for (String line: lines) {
+              if (line.contains(expect)) {
+                  actual = line.trim();
+                  break;
+              }
+          }
+
+          return actual;
+      }
+
+      @Test
+          public void test7()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "if") - countOccurences(code, "else if");
+
+              boolean passed = num &gt;= 1;
+              getResults("1", num + "", "One if statement used", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test8()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "else if");
+
+              boolean passed = num &gt;= 2;
+              getResults("2", num + "", "At least 2 else if statements used", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test9()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "else") - countOccurences(code, "else if");
+
+              boolean passed = num &gt;= 1;
+              getResults("1", num + "", "One else statement used", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+          public void test10()
+          {
+              String code = getCode();
+              int num = countOccurences(code, "System.out.print");
+
+              boolean passed = num &gt;= 2;
+              getResults("2+", num + "", "At least 2 print statements are used", passed);
+              assertTrue(passed);
+          }
+  }
+</tests>
+</program>
+</activity>
+</subsection>
+
+<subsection xml:id="unit2a-project2-random">
+    <title>Using Math.random() to Generate Random Integers</title>
+<p>
+    The <c>Math.random()</c> method generates a random decimal greater than or equal to 0.0 and less than 1.0.
+</p>
+<p>
+    To generate a random integer in a specific range, use this formula:
+</p>
+<p>
+    <c>(int)(Math.random() * (max - min + 1)) + min</c>
+</p>
+<p>
+    Where:
+</p>
+<ul>
+<li>min is the smallest possible value.</li>
+<li>max is the largest possible value.</li>
+<li>(max - min + 1) is the number of possible integers in the range.</li>
+</ul>
+
+<p>
+    Generate a random integer from 1 to 6: <c>int roll = (int)(Math.random() * 6) + 1;</c>
+</p>
+<p>
+    Generate a random integer from 10 to 20: <c>int num = (int)(Math.random() * 11) + 10;</c>
+</p>
+
+<activity label="unit2a-project2-choose1">
+<statement><p>Which statement correctly generates a random integer from 25 to 40, inclusive?</p></statement>
+<choices>
+<choice ><statement><p><c>(int)(Math.random() * 15) + 25</c></p></statement><feedback><p>Count how many integers are in the range 25-40, including both endpoints. Is it 15 or 16?</p></feedback></choice>
+<choice><statement><p><c>(int)(Math.random() * 25) + 16</c></p></statement><feedback><p>The number added after Math.random() should be the minimum value in the range.</p></feedback></choice>
+<choice  correct="yes"><statement><p><c>(int)(Math.random() * 16) + 25</c></p></statement><feedback><p>To generate integers from 25 to 40: Minimum = 25, Maximum = 40, Number of possible values = 40 - 25 + 1 = 16. Substitute these into the formula: (int)(Math.random( ) * 16) + 25. This produces every integer from 25 through 40, with each value equally likely.</p></feedback></choice>
+<choice ><statement><p><c>(int)(Math.random() * 40) + 25</c></p></statement><feedback><p>The multiplier should be the size of the range, not the maximum value.</p></feedback></choice>
+</choices>
+</activity>
+
+</subsection>
+
+<subsection xml:id="unit2a-project2">
+<title>Unit 2A Project 2 - Lottery</title>
+
+<p>Write a Java program that picks a lottery number for the Virginia PowerBall Lottery game. In this lottery, the computer randomly chooses 5 numbers between 1 and 59 inclusive and a power ball number between 1 and 39 inclusive.</p> 
+
+<p>Add code to allow the user to enter their numbers, one value at a time. Then compare the user choices with the winning combination.  For every matching number, the person wins $50, except for the PowerBall match, in which they win $500. Output the user’s numbers, the winning numbers, and any prize money modeled after the examples below. (Note: the user’s choice must match in the same order to win)</p>
+
+<p>Example 1:</p>
+
+<pre>
+The winning number combination is:	
+5	22	1	45	55	Power Ball: 25
+
+Your number combination is:	
+8	22	3	12	30	Power Ball: 25
+
+Congratulations!  Your Prize is $550
+</pre>
+
+<p>Example 2:</p>
+
+<pre>
+The winning number combination is:	
+8	14	9	32	15	Power Ball: 33
+
+Your number combination is:	
+14	26	34	42	51	Power Ball: 19
+
+Sorry you did not win.
+</pre>
+
+<activity label="unit-2A-project2-lottery">
+<statement>
+<p>Write a Java program that picks a lottery number for the Virginia PowerBall Lottery game. In this lottery, the computer randomly chooses 5 numbers between 1 and 59 inclusive and a power ball number between 1 and 39 inclusive.</p> 
+
+<p>Add code to allow the user to enter their numbers, one value at a time. Then compare the user choices with the winning combination.  For every matching number the person wins $50 dollars, with the exception of the PowerBall match in which they win $500. Output the user’s numbers, the winning numbers, and any prize money modeled after the examples above.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Lottery {
+    public static void main(String[] args) {
+
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        //super("Lottery", input1.replaceAll(" ", "\n")); // For Repl.it
+    }
+
+    private static String input1 = "14 26 34 42 51 19";
+    private static String input2 = "1 1 1 1 1 1";
+    private static String input3 = "1 0 1 0 1 0";
+
+    @Test
+    public void test1()
+    {
+        String code = getCode();
+        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+        int num = countOccurences(code, ".nextInt()");
+        boolean called = num == 6;
+
+        String output = "Created: " + created + "\nnextInt() Called: " + num + " times";
+        String expected = "Created: " + true + "\nnextInt() Called: " + 6 + " times";
+
+        boolean passed = created &amp;&amp; called;
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCode();
+        int num = 0;
+
+        String[] lines = code.split("\n");
+
+        for (String line : lines){
+            if (line.contains("int") &amp;&amp; !line.contains("print")) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+
+        boolean passed = num &gt;= 13;
+        getResults("13", num + "", "Created at least 13 int variables (6 for random numbers, 6 for user input, and 1 for total winnings)", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "if(");
+
+        boolean passed = num &gt;= 7;
+        getResults("7", num + "", "if statements used", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCode();
+        int num = countOccurencesRegex(code, "(* == *)");
+
+        boolean passed = num &gt;= 7;
+        getResults("7", num + "", "7 boolean conditions in if statements that test equality using ==", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test5()
+    {
+        String code = getCode();
+        int num = countRandom(code, 59, 1);
+
+        boolean passed = num == 5;
+        getResults("5", num + "", "Generates 5 random ints in the range [1, 59] using Math.random()", passed);
+        assertTrue(passed);
+    }
+
+    private int countRandom(String code, int range, int min) {
+        String[] lines = code.split("\n");
+
+        int num = 0;
+
+        for (String line : lines) {
+            if (line.contains("Math.random()")) {
+                if (line.contains("" + range) &amp;&amp; line.contains("" + min) &amp;&amp; line.contains("(int)"))
+                    num++;               
+            }
+        }
+        return num;            
+    }
+
+    @Test
+    public void test6()
+    {
+        String code = getCode();
+        int num = countRandom(code, 39, 1);
+
+        boolean passed = num == 1;
+        getResults("1", num + "", "Generates 1 random int in the range [1, 39] using Math.random()", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test7()
+    {
+        String input = "0 0 0 0 0 0";
+        String expect = "Sorry you did not win";
+
+        String actual = testInput(input, expect);
+
+        boolean passed = actual.contains(expect);
+
+        getResults(expect, actual, "Outputs \"Sorry you did not win.\" if no money was won.", passed);
+        assertTrue(passed);
+    }
+
+    private String testInput(String input, String expect) {
+        String actual = "No matching lines";
+
+        String output = getMethodOutputWithInput("main", input);
+
+        String[] lines = output.split("\n");
+
+        for (String line: lines) {
+            if (line.contains(expect)) {
+                actual = line.trim();
+                break;
+            }
+        }
 
       
+    @Test
+    public void test8()
+    {
+        String className = "Lottery1";
 
-  </subsection>
+        String program = getCode();
 
-  <subsection xml:id="unit2a-project2">
-    <title>Unit 2A Project 2</title>
+        //System.out.println(program);
+
+        program = program.replace("Lottery", className).replace("public class", "class");
+        program = program.replaceAll("Math.random\\(\\)", "0");
+
+        //System.out.println(program);
+
+        String output = getMethodOutputChangedCodeWithInput(program, className, "main", input3);
+
+        String[] lines = output.split("\n");
+        output = lines[lines.length-1];
+
+        String expected = "Congratulations! Your prize is $150";
+        boolean passed = output.contains("$150");
+        getResults(expected, output, "Checking output for partial winning numbers", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test9() throws Exception {
+        String className = "Lottery2";
+
+        String program = getCode();
+
+        //System.out.println(program);
+
+        program = program.replace("Lottery", className).replace("public class", "class");
+        program = program.replaceAll("Math.random\\(\\)", "0");
+
+        //System.out.println(program);
+
+        String output = getMethodOutputChangedCodeWithInput(program, className, "main", input2);
+
+        String[] lines = output.split("\n");
+        output = lines[lines.length-1];
+
+        String expected = "Congratulations! Your prize is $750";
+        boolean passed = output.contains("$750");
+        getResults(expected, output, "Checking output for winning numbers", passed);
+        assertTrue(passed);
+    }
+
+    /* */
+
+    @Test
+    public void test10()
+    {
+        String code = getCode();
+        int num = countOccurences(code, "System.out.println");
+
+        boolean passed = num &gt;= 2;
+        getResults("4+", num + "", "At least 4 println statements are used", passed);
+        assertTrue(passed);
+    }
+
+}
+     
+</tests>
+</program>
+</activity>
 
 
-  </subsection>
+
+
+</subsection>
 </section>
