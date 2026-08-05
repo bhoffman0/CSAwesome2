@@ -16,7 +16,7 @@ These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engagi
 </p>
 </introduction>
 
-<subsection xml:id="unit2a-project1-review-">
+<subsection xml:id="unit2a-project1-review-ifelse">
     <title>Review: if and else if Statements</title>
 <p>
     Selection statements allow a program to make decisions based on whether a condition is true or false.
@@ -526,7 +526,7 @@ public class RunestoneTests extends CodeTestHelper
                 break;
             }
         }
-
+    }
       
     @Test
     public void test8()
