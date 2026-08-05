@@ -8,6 +8,8 @@
   <!-- This starts chapter numbering at 0 -->
   <numbering>
     <divisions chapter-start="0"/>
+    <!-- to have <activity> be on its on numbering counter -->
+    <projects distinct="yes"/>  
   </numbering>
   <common>
        <tableofcontents level="3" focused="yes"/>

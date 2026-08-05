@@ -4,40 +4,7 @@
   <xi:include href="./bookinfo.ptx" />
   <book xml:id="csawesome2">
     <title>CSAwesome2</title>
-    <subtitle>AP CSA Java 2025+</subtitle>
-    <introduction>
-      <p>
-        Welcome to CSAwesome2! This version of CSAwesome follows the College
-        Board 2025-2026 revisions. CSAwesome is a College Board endorsed
-        curriculum for AP Computer Science A, an introductory college-level
-        computer programming course in Java. If you are a teacher using this
-        curriculum, please join the <url
-        href="https://groups.google.com/forum/#!forum/teaching-csawesome"
-        visual="https://groups.google.com/forum/#!forum/teaching-csawesome">teaching
-        CSAwesome group</url> which will give you access to teacher resources at
-        <url href="http://csawesome.org"
-        visual="http://csawesome.org">csawesome.org</url>.
-      </p>
-
-      <p>
-        To make sure the site saves your answers on questions, please click on
-        the person icon at the top to register or login to your Runestone
-        course.
-      </p>
-      <p>
-       If you are a woman taking Advanced Placement Computer Science (CSP and/or CSA) and 
-       identify as Black, Hispanic/Latina, and/or Native American you are eligible for a free 
-       mentoring program run by Dr. Barbara Ericson at the University of Michigan. She created 
-       the first version of this ebook and she and her PhD students have added new types of 
-       practice problems such as the mixed-up code problems. Sisters Rise Up offers weekly 
-       one-hour remote help sessions and monthly two hour special sessions.  Students who enroll 
-       in the program and send in their score(s) on the AP exams before the end of August 
-       receive a $100 gift card.  The help sessions are led by experienced undergraduate college 
-       students.  Students can start the enrollment process by providing information for a 
-       parent or guardian at <url href="https://tinyurl.com/55z7tyb9">
-       https://tinyurl.com/55z7tyb9</url>.
-      </p>
-    </introduction>
+    <subtitle>AP CSA Java 2026+</subtitle>
 
     <xi:include href="./Unit0-Getting-Started/toctree.ptx" />
     <xi:include href="./Unit1-Using-Objects-and-Methods/toctree.ptx" />
@@ -58,12 +25,5 @@
       </index>
     </backmatter>
 
-    <conclusion>
-      <p>
-        If you see errors or bugs, please report them with this <url
-        href="https://forms.gle/4gMBsv4W71vG5mNe8"
-        visual="https://forms.gle/4gMBsv4W71vG5mNe8">errors form</url>.
-      </p>
-    </conclusion>
   </book>
 </pretext>
