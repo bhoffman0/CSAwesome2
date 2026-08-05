@@ -1,9 +1,9 @@
 html:root {
   --emphasisColor: #007d9f;
   --codeColor: #641227;
-  --content-fontSize: 90%;
-  --ptx-content-font-size: 90%;
-  --ptx-content-line-height: 90%;
+  --content-fontSize: 1em;
+  --ptx-content-font-size: 1em;
+  --ptx-content-line-height: 1.5;
     /* Make this as narrow as we can while still getting side-by-side Parson's problems. */
   --contentWidthWide: calc(var(--contentWidthRegular) + 250px);
 }
@@ -41,9 +41,9 @@ div.time {
 }
 
 /* The wide style seems to add huge font size so put it down */
-.ptx-content .para
-{
-  font-size: 90%;
+.ptx-content .para {
+  font-size: 97%;
+  /* line-height: 1.5; This freezes the accessibility tool line height */
 }
 
 /* Default spacing between paragraphs is too much. */
@@ -62,6 +62,13 @@ section > .para + .para {
     margin-bottom: 0.5em;
 }
 
+/* Activity headings */
+.ptx-content .heading h3,
+.ptx-content article>.heading {
+  font-size: 1.1em;
+}
+
+/* This might not be used anymore */
 .ptx-content .heading h4
 {
   font-size: 1.3em;
@@ -115,8 +122,9 @@ section > .para + .para {
    padding: 8px;
 }
 
+/* These are the big buttons for the sections */
 .ptx-content .summary-links {
-  font-size: 1em;
+  font-size: 90%;
 }
 
 /* For displaying exercise ids */
