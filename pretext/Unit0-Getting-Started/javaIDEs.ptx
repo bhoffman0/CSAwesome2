@@ -52,7 +52,7 @@
       make your own copy.
     </p>
 
-    <p>Here are some popular online IDEs:</p>
+    <p>Here are some popular online IDEs in alphabetical order:</p>
     <p>
       <ul>
         <li>
@@ -63,6 +63,23 @@
             where you can run Java and Java Swing programs. Students can share the links 
             to their code and the history of their code is saved. CodeHS has free and paid features.
             Grading features are in the paid version.
+          </p>
+        </li>
+          <li>
+          <p>CuraCourse (<url href="https://www.curacourse.com/">
+           https://www.curacourse.com/</url>) is an interactive learning platform that has a 
+           free built-in version of CSAwesome. It has free and paid features including AI help in building courses and activities.   </p>
+        </li>
+        <li>
+          <p>
+            JuiceMind (<url href="https://juicemind.com/"
+            visual="https://juicemind.com/">https://juicemind.com/</url>) has a free built-in version 
+            of <url href="https://play.juicemind.com/dashboard/explore/class/ap-cs-a?tab=curriculum&amp;curriculum=juicemind&amp;coursePreview=true" visual="https://play.juicemind.com/dashboard/explore/class/ap-cs-a?tab=curriculum&amp;curriculum=juicemind&amp;coursePreview=true">CSAwesome</url> 
+            that allows you to run Java and Java graphics programs and view basic grading analytics. 
+            Additionally, it features JuiceMind quizzes 
+            (<url href="https://play.juicemind.com/dashboard/explore/quizzesInfo/code?tab=quizzes" visual="https://play.juicemind.com/dashboard/explore/quizzesInfo/code?tab=quizzes">
+              Kahoot for coding</url>) and various free <url href="https://play.juicemind.com/dashboard/explore/teamsInfo/ai?tab=frq" visual="https://play.juicemind.com/dashboard/explore/teamsInfo/ai?tab=frq">AI-graded FRQs</url> 
+              (for additional practice and feedback). Paid features include plagiarism detection, viewing student code, AI-grading for Free Response Questions, and student collaboration features.
           </p>
         </li>
         <li>
@@ -86,31 +103,22 @@
             and use an AI chat window to ask questions of the AI.
           </p>
         </li>
-
-        <li>
-          <p>
-            JuiceMind (<url href="https://juicemind.com/"
-            visual="https://juicemind.com/">https://juicemind.com/</url>) has a free built-in version of <url href="https://play.juicemind.com/dashboard/explore/class/ap-cs-a?tab=curriculum&amp;curriculum=juicemind&amp;coursePreview=true" visual="https://play.juicemind.com/dashboard/explore/class/ap-cs-a?tab=curriculum&amp;curriculum=juicemind&amp;coursePreview=true">CSAwesome</url> that allows you to run Java and Java graphics programs and view basic grading analytics. Additionally, it features JuiceMind quizzes (<url href="https://play.juicemind.com/dashboard/explore/quizzesInfo/code?tab=quizzes" visual="https://play.juicemind.com/dashboard/explore/quizzesInfo/code?tab=quizzes">Kahoot for coding</url>) and various free <url href="https://play.juicemind.com/dashboard/explore/teamsInfo/ai?tab=frq" visual="https://play.juicemind.com/dashboard/explore/teamsInfo/ai?tab=frq">AI-graded FRQs</url> (for additional practice and feedback). Paid features include plagiarism detection, viewing student code, AI-grading for Free Response Questions, and student collaboration features.
-          </p>
-        </li>
       </ul>
     </p>
   </subsection>
 
   <subsection>
-    <title>Github Classroom and Codespaces</title>
+    <title>Github Codespaces</title>
     <p>
-      Github provides many free opportunities for students and teachers (<url
-      href="https://docs.github.com/en/education/quickstart"
-      visual="https://docs.github.com/en/education/quickstart">https://docs.github.com/en/education/quickstart</url>).
-      Github Classroom (<url href="https://classroom.github.com/"
-      visual="https://classroom.github.com/">https://classroom.github.com/</url>)
-      allows teachers to set up a classroom based on github repositories. Github
-      and git are both widely used in the computer industry, so learning to use
-      them is great experience for students. Github now has a cloud IDE called
+      Github Classroom has unfortunately been discontinued, but it recommends transitioning
+      to <url href="https://www.codio.com/">Codio</url> or 
+      <url href="https://classroom50.org/">Classroom50</url>. </p>
+      
+      <p>Github cloud IDE called
       Codespaces (<url href="https://github.com/features/codespaces"
       visual="https://github.com/features/codespaces">https://github.com/features/codespaces</url>)
-      which you can use for 60 hours a month for free or completely free if you
+      is still available. 
+      You can use it for 60 hours a month for free or completely free if you
       join as a school or get approved as a teacher or student. In Codespaces,
       you can start from a blank template or a repo, open a .java file in the
       VSCode editor, follow prompts to install the Extension Pack for Java,
