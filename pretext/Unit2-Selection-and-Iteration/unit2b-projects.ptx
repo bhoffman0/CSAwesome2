@@ -360,7 +360,7 @@ while (!name.equals("Q"))
   The loop continues until the user enters the sentinel value "Q".
 </p>
 <activity label="unit2b-project2-choose1">
-<statement><p>The variable num stores the number of times a loop should repeat. Which for loop header correctly repeats a block of code num times?</p></statement>
+<statement><p>Which condition should be used to continue a loop that asks the user for numbers until they enter -1?</p></statement>
 <choices>
 <choice ><statement><p><c>while (number == -1)</c></p></statement><feedback><p>This condition only runs when the user enters the stopping value. The sentinel value should end the loop, not continue it.</p></feedback></choice>
 <choice correct="yes"><statement><p><c>while (number != -1)</c></p></statement><feedback><p>The loop should continue while the user has not entered the sentinel value. Since -1 indicates that the user wants to stop, the condition should check: number != -1. The loop will repeat for all other numbers and stop when number becomes -1.</p></feedback></choice>
@@ -414,14 +414,13 @@ while (score &lt; 1 || score &gt; 100)
 double price = 12.5;
 
 System.out.println(String.format("%.02f", price));
+
+// Output:  12.50
 </code>
 </program>
 
 <p>
-  Output:  12.50
-</p>
-<p>
-  The original value is not changed; String.format() only controls how the value is displayed.
+  The original value is not changed; <c>String.format()</c> only controls how the value is displayed.
 </p>
 
 </subsection>
@@ -430,10 +429,10 @@ System.out.println(String.format("%.02f", price));
    <title>Unit 2B Project 2 - Concert Tickets (Loop)</title>
 
 <p>
-  Recall the Concert Tickets program from Unit 3 where the user chooses a seat based on the location with the costs listed below (remember that these values should be used as ints).
+  Recall the Concert Tickets program from Unit 2A where the user chooses a seat based on the location with the costs listed below (remember that these values should be used as ints).
 </p>
 <pre>
-Seat location			Concert ticket price ($)
+Seat location     Concert ticket price ($)
 B (box)           $75
 P (pavillion)     $30
 L (lawn)          $21
@@ -455,11 +454,11 @@ L (lawn)          $21
   Example output:
 </p>
 <pre>
-2	box tickets         $150
-4	pavillion tickets   $120
-1	lawn tickets        $21
-	Convenience fee			$10.50
-	Total					      $301.50
+2   box tickets         $150
+4   pavillion tickets   $120
+1   lawn tickets        $21
+    Convenience fee     $10.50
+    Total               $301.50
 </pre>
 <p>
   *Be sure to put a $ in front of all monetary amounts, and be sure to use String formatting on the convenience fee and total so that you will ensure two decimal places. 

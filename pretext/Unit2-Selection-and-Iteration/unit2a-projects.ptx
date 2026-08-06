@@ -78,10 +78,10 @@ else
 
 
 <pre>
-Seat location			Concert ticket price ($)
-B (box)				$75
-P (pavillion)			$30
-L (lawn)			$21
+Seat location       Concert ticket price ($)
+B (box)             $75
+P (pavillion)       $30
+L (lawn)            $21
 </pre>
 
 <p>If the user enters any other seat location, the program should display an “Invalid location” message.</p>
@@ -102,6 +102,7 @@ public class ConcertTickets {
     }
 }
 </code>
+<stdin>B</stdin>
 <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -386,6 +387,7 @@ public class Lottery {
     }
 }
 </code>
+<stdin>14 26 34 42 51 19</stdin>
 <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
