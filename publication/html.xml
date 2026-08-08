@@ -16,6 +16,7 @@
   </common>
   <html>
     <platform host="web"/>
+    <!-- did not work here! moving back to bookinfo -->
     <brandlogo url="./index.html" source="_static/CSAwesomeLogo.png" alt="CSAwesome" />
     <!-- knowled checkpoints interfere with ActiveCode problems -->
     <knowl exercise-inline="no" example="no" listing="no"/>

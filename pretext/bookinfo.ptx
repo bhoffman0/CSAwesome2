@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <docinfo>
-  <document-id>csawesome2</document-id><!-- Rename Checkpoint for exercise to Activity -->
+  <document-id>csawesome2</document-id>
+  
+  <!-- did not work when moved to publication files -->
+  <brandlogo url="./index.html" source="_static/CSAwesomeLogo.png" alt="CSAwesome" />
+
+  <!-- Rename Checkpoint for exercise to Activity -->
   <rename element="inlineexercise">Activity</rename>
   <rename element="chapter">Unit</rename>
   <blurb shelf="AP Computer Science">
