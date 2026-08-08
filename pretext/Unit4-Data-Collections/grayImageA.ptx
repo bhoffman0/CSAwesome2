@@ -196,9 +196,10 @@ public class GrayImage
       numbers.
     </p>
 
-    <program interactive="activecode" language="java">
+    <program language="java">
       <code>
-public class Test
+// Nested indexed for loops
+public class NestedIndexedForLoops
 {
     public static void main(String[] args)
     {
@@ -215,9 +216,10 @@ public class Test
       </code>
     </program>
 
-    <program interactive="activecode" language="java">
+    <program language="java">
       <code>
- public class Test
+ // Nested for each loops
+ public class NestedForEachLoops
  {
      public static void main(String[] args)
      {

@@ -627,7 +627,7 @@
         </p>
       </statement>
 
-      <program interactive="activecode" language="java" datafile="GridWorld.jar">
+      <program interactive="activecode" language="java" datafile="GridWorld-jar">
         <code>
 import java.util.*;
 
@@ -1282,7 +1282,7 @@ public class RunestoneTests extends CodeTestHelper
       </program>
     </activity>
 
-    <datafile label="GrideWorld.jar" filename="GridWorld.jar" editable="no" hide="yes">
+    <datafile label="GridWorld-jar" filename="GridWorld-jar" editable="no" hide="yes">
       <pre>
         
         

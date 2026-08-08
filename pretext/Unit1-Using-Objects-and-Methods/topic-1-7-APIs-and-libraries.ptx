@@ -53,7 +53,7 @@
       Try clicking run below to see a turtle in action.
     </p>
 
-      <program interactive="activecode" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
+      <program interactive="activecode" label="demo-turtle-code" language="java" datafile="turtleClasses.jar,turtleClasses2.jar">
         <code>
 import java.awt.*;
 import java.util.*;
