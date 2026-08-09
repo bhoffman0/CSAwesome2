@@ -3,28 +3,1072 @@
 <section xml:id="unit3-projects">
   <title>Unit 3 Projects</title>
   <idx>projects</idx>
+<introduction>
+  <p>
+    These projects were created by Leigh Anne Fitz to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
+  </p>
+  <p>
+    Now that you've mastered the fundamentals of Java programming, it's time to begin building your own classes. In these projects, you'll learn how to design classes that model real-world objects by creating instance variables, writing constructors, and implementing methods that define an object's behavior.
+  </p>
+  <p>
+    Each project is designed to reinforce object-oriented programming through authentic programming tasks. As you complete them, focus on designing classes with clear responsibilities, choosing meaningful names for variables and methods, and testing your classes thoroughly. Well-designed classes are the foundation of organized, reusable, and maintainable programs.
+  </p>
+</introduction>
 
+<subsection xml:id="unit3-projects-class-review">
+  <title>Class Structure Review</title>
+<p>
+  A class is a blueprint for creating objects. It defines the data an object has and the actions it can perform.
+</p>
+<p>
+<term>Basic Class Structure:</term>
+</p>
+<program language="java">
+<code>
+public class Student {
+    
+    // Instance variables
+    private String name;
+    private int grade;
+    
+    // Constructor
+    public Student(String n, int g) {
+        name = n;
+        grade = g;
+    }
+    
+    // Method
+    public String introduce() {
+        return "My name is " + name 
+          + " and I am in grade " + grade;
+    }
+}
+</code>
+</program>
+ 
+<table xml:id="unit3-table-class-parts">
+<title>The Main Parts of a Class</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col halign="left" />
+<col halign="left" />
+<col halign="left" />
 
+<row header="yes" halign="center" valign="middle">
+<cell>Part</cell>
+<cell>Example</cell>
+<cell>Description</cell>
+</row>
+
+<row>
+<cell>Class declaration</cell>
+<cell>
+<program language="java">
+<code>
+public class Student {
+</code>
+</program>
+</cell>
+<cell>Creates a class named Student.</cell>
+</row>
+
+<row>
+<cell>Instance variables</cell>
+<cell>
+  <program language="java">
+  <code>
+private String name;
+private int grade;
+  </code>
+  </program>
+  </cell>
+<cell>Store information about each Student object.</cell>
+</row>
+
+<row>
+<cell>Constructor</cell>
+<cell>
+<program language="java">
+<code>
+public Student(String n, int g) {
+    name = n;
+    grade = g;
+}
+</code>
+</program>
+</cell>
+<cell>A constructor is used to initialize an object when it is created. It has the same name as the class and does not have a return type.</cell>
+</row>
+
+<row>
+<cell>Methods</cell>
+<cell>
+<program language="java">
+<code>
+public String introduce() {
+    return "My name is " + name 
+      + " and I am in grade " + grade;
+}
+</code>
+</program>
+</cell>
+<cell>Methods define what an object can do.</cell>
+</row>
+
+</tabular>
+</table>
+
+<note>
+  <p>
+    Remember -  A useful way to think about a class is:
+  </p>
+  <blockquote>
     <p>
-      This section contains projects for Unit 3.
+      <term>Class</term> = <term>What it has</term> + <term>What it can do</term>
     </p>
+  </blockquote>
+</note>
+
+<p>
+  Example:
+</p>
+<p>
+  <ul>
+    <li>
+      <p>
+        Class: Dog
+      </p>
+    </li>
+    <li>
+      <p>
+        What it Has: name, breed, age
+      </p>
+    </li>
+    <li>
+      <p>
+        What it Can Do: bark(), run(), eat()
+      </p>
+    </li>
+  </ul>
+  
+</p>
+
+</subsection>
+
+<subsection xml:id="unit3-project1-librarybook">
+  <title>Unit 3 Project 1 - Library Book</title>
+    <p>
+      A library wants to create a program to keep track of books that students can borrow.
+    </p>
+    <p>
+      A LibraryBook object represents one book in the library. Each book has a title, an author, and the number of days the book may be borrowed.
+    </p>
+    <p>
+      The class should provide methods that allow a program to:
+    </p>
+<p>
+  <ul>
+    <li>Create a new LibraryBook object.</li>
+    <li>Get the title of a book.</li>
+    <li>Get the number of days a book may be borrowed.</li>
+    <li>Extend the number of days a book may be borrowed.</li>
+    <li>Get a description of the book.</li>
+  </ul>
+</p>
+    <p>
+      The following table shows examples of calls to methods in the LibraryBook class.
+    </p>
+
+<table xml:id="unit3-project1-table">
+<title>LibraryBook Methods</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="35%" halign="left" />
+<col width="30%" halign="center" />
+<col width="35%" halign="left" />
+
+<row header="yes" halign="center" valign="middle">
+<cell>Statement</cell>
+<cell>Return Value (blank if no value)</cell>
+<cell>Explanation</cell>
+</row>
+
+<row>
+<cell>LibraryBook book1 = new LibraryBook("The Giver", "Lois Lowry", 14);</cell>
+<cell><nbsp/></cell>
+<cell>Creates a LibraryBook object with the title "The Giver", author "Lois Lowry", and 14 borrow days.</cell>
+</row>
+
+<row>
+<cell>book1.getTitle( )</cell>
+<cell>"The Giver"</cell>
+<cell>Returns the title of book1.</cell>
+</row>
+
+<row>
+<cell>book1.getBorrowDays( )</cell>
+<cell>14</cell>
+<cell>Returns the current number of days book1 may be borrowed.</cell>
+</row>
+
+<row>
+<cell>book1.extendBorrow(7)</cell>
+<cell><nbsp/></cell>
+<cell>Increases the borrow period from 14 days to 21 days.</cell>
+</row>
+
+<row>
+<cell>book1.getBorrowDays()</cell>
+<cell>21</cell>
+<cell>Returns the updated number of borrow days.</cell>
+</row>
+
+<row>
+<cell>book1.getDescription( )</cell>
+<cell>"The Giver by Lois Lowry (21 days)"</cell>
+<cell>Returns a String containing the title, author, and current borrow period.</cell>
+</row>
+
+<row>
+<cell>LibraryBook book2 = new LibraryBook("Holes", "Louis Sachar", 10);</cell>
+<cell><nbsp/></cell>
+<cell>Creates a second LibraryBook object with a borrow period of 10 days.</cell>
+</row>
+
+<row>
+<cell>book2.getDescription( )</cell>
+<cell>"Holes by Louis Sachar (10 days)"</cell>
+<cell>Returns a description of book2.</cell>
+</row>
+
+<row>
+<cell>book2.extendBorrow(5)</cell>
+<cell><nbsp/></cell>
+<cell>Increases the borrow period for book2 from 10 days to 15 days.</cell>
+</row>
+
+<row>
+<cell>book2.getBorrowDays( )</cell>
+<cell><nbsp/></cell>
+<cell>Returns the updated borrow period for book2.</cell>
+</row>
+
+</tabular>
+</table>
+
+  <activity label="unit3_project_1" xml:id="unit3_project_1">
+  <statement>
+    <p>Write the complete LibraryBook class using the description above.</p>
+  </statement>
+
+  <program interactive="activecode" language="java">
+    <code>
+
+// Make sure you write the proper class header - {} for the class are provided
+
+{
+    // Instance Variables
+
+
+    // Constructor
+
+
+    // Methods
+
+
+    // Do not change the main method below. It is used to test your class.
+    public static void main(String[] args) {
+        LibraryBook book1 = new LibraryBook("The Giver", "Lois Lowry", 14);
+        System.out.println(book1.getTitle());
+        System.out.println(book1.getBorrowDays());
+        book1.extendBorrow(7);
+        System.out.println(book1.getBorrowDays());
+        System.out.println(book1.getDescription());
+
+        LibraryBook book2 = new LibraryBook("Holes", "Louis Sachar", 10);
+        System.out.println(book2.getDescription());
+        book2.extendBorrow(5);
+        System.out.println(book2.getBorrowDays());
+    }
+}
+
+    </code>
+    <tests>
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    // Correct class header
+    @Test
+    public void test01() {
+        boolean passed = false;
+        String expected = "class LibraryBook";
+        String actual = "";
+
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            passed = code.contains(expected);
+
+            for (String line : lines) {
+                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                    actual = line;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Created LibraryBook class header correctly", passed);
+        assertTrue(passed);
+    }
+
+    // Instance variables are private
+    @Test
+    public void test02() {
+        String expected = "private: 3";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            int num = countVariables(lines, "private");
+
+            actual = "private: "+ num; // Str+"\nprivate int: " + numInt;
+            passed = num &gt;= 3; // &amp;&amp; numStr &gt;= 2 &amp;&amp; numInt &gt;=1;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Created three private variables", passed);
+        assertTrue(passed);
+    }
+    
+    // 3 instance variables that are 2 Strings and 1 int
+    @Test
+    public void test03() {
+        String expected = "private String: 2\nprivate int: 1";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            //int num = countVariables(lines, "private");
+            int numStr = countVariables(lines, "private String");
+            int numInt = countVariables(lines, "private int");
+
+            actual = "private String: "+numStr+"\nprivate int: " + numInt;
+            passed = numStr &gt;= 2 &amp;&amp; numInt &gt;=1;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Created three variables with proper types", passed);
+        assertTrue(passed);
+    }
+    
+    // Correct Constructor header
+    @Test
+    public void test04() {
+        String expected = "public LibraryBook(String *, String *, int *)";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("public LibraryBook("))
+                    actual += line + "\n";
+            }
+            
+            actual = actual.trim();
+            
+            String line = actual.substring(actual.indexOf("(")+1, actual.indexOf(")"));
+            
+            int numStr = countOccurences(line, "String");
+            int numInt = countOccurences(line, "int");
+  
+            passed = numStr &gt;= 2 &amp;&amp; numInt &gt;= 1;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Constructor header is correct with proper parameters", passed);
+        assertTrue(passed);
+    }
+    
+    
+    // Constructor correctly assigns the parameters to the instance variables
+    @Test
+    public void test05() {
+        String expected = "title = t;\nauthor = a;\nborrowDays = b;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public LibraryBook(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("="))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = actual.split("\n").length == 3;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Constructor correctly assigns the parameters to the instance variables", passed);
+        assertTrue(passed);
+    }
+    
+    // Correct headers for getTitle method, the getBorrowDays method, and the getDescription method
+    @Test
+    public void test06() {
+        String expected = "public String getTitle()\npublic int getBorrowDays()\npublic String getDescription()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("get") &amp;&amp; line.contains("(") &amp;&amp; line.contains(")") &amp;&amp; !line.contains(";"))
+                    actual += line.trim() + "\n";
+            }
+            
+            int numStr = countOccurences(actual, "String");
+            int numInt = countOccurences(actual, "int");
+  
+            //actual = "Strings: " + numStr + "\nInts: " + numInt;
+            passed = numStr &gt;= 2 &amp;&amp; numInt &gt;= 1;
+            passed = passed &amp;&amp; actual.contains("getTitle");
+            passed = passed &amp;&amp; actual.contains("getBorrowDays");
+            passed = passed &amp;&amp; actual.contains("getDescription");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Correct headers for getTitle method, the getBorrowDays method, and the getDescription method", passed);
+        assertTrue(passed);
+    }
+    
+    // Correct header for extendBorrow method
+    @Test
+    public void test07() {
+        String expected = "public void extendBorrow(int *)";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("extendBorrow") &amp;&amp; line.contains("(") &amp;&amp; line.contains(")") &amp;&amp; !line.contains(";"))
+                    actual += line.trim() + "\n";
+            }
+            
+            
+            passed = actual.contains("void") &amp;&amp; actual.contains("int");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Correct headers for extendBorrow method", passed);
+        assertTrue(passed);
+    }
+
+    // The getTitle and getBorrowDays methods return the value of the correct instance variables
+    @Test
+    public void test08() {
+        String expected = "return title;\nreturn borrowDays;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            String title = getMethodCode(code, "public String getTitle(");
+            String borrow = getMethodCode(code, "public int getBorrowDays(");
+
+            code = title + "\n" + borrow;
+
+            for (String line : code.split("\n")) {
+                if (line.contains("return"))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = actual.split("\n").length == 2;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "The getTitle and getBorrowDays methods return the value of the correct instance variables", passed);
+        assertTrue(passed);
+    }
+
+    // The extendBorrow method updates the int variable by the parameter value
+    @Test
+    public void test09() {
+        String expected = "borrowDays += num;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public void extendBorrow(");
+
+            for (String line : code.split("\n")) {
+                if (line.contains("+="))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = actual.split("\n").length == 1;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "The extendBorrow method updates the int variable by the parameter value", passed);
+        assertTrue(passed);
+    }
+
+    // The getDescription method returns a correctly formatted String
+    @Test
+    public void test10() {
+        String expected = "{title} by {author} ({borrowDays} days)";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            LibraryBook book = new LibraryBook("The Book Thief", "Markus Zusak", 21);
+            actual = book.getDescription();
+            LibraryBook book2 = new LibraryBook("The Giver", "Lois Lowry", 14);
+            actual += "\n" + book2.getDescription();
+
+            passed = actual.contains("The Book Thief") &amp;&amp; actual.contains("Markus Zusak") &amp;&amp; actual.contains("21") &amp;&amp; actual.contains("The Giver") &amp;&amp; actual.contains("Lois Lowry") &amp;&amp; actual.contains("14");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "The getDescription method returns a correctly formatted String", passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private int countVariables(String[] lines, String type) {
+        int num = 0;
+        for (String line : lines){
+            if (line.contains(type)) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+        return num;
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
+
+    </tests>
+  </program>
+</activity>
+
+</subsection> 
+
+<subsection xml:id="unit3-project2">
+  <title>Unit 3 Project 2 - Game Player</title>
+  
+<p>
+  An online game tracks information about each player's performance. A GamePlayer object stores a player's username, the number of games played, the total number of points earned, and whether the player is currently active.
+</p>
+<p>
+  The class should provide methods that allow a program to:
+</p>
+<p>
+<ul>
+<li>Create a new GamePlayer object</li>
+<li>Complete a game where it adds the given number of points to totalPoints, increases gamesPlayed by 1, and if the player has completed 20 or more games, set active to false.</li>
+<li>Change the player's status to active</li>
+<li>Get the player's average score (if the player has not completed any games, return 0.0)</li>
+<li><p>Get the rank of the player:
+  <ul>
+    <li><em>Beginner</em> if the average score is less than 50.</li>
+    <li><em>Intermediate</em> if the average score is at least 50 but less than 100.</li>
+    <li><p><em>Advanced</em> if the average score is 100 or higher.
+      <ul>
+      <li>Note: This method must call the method for averaging the score correctly to receive full points</li>
+      </ul></p>
+    </li>
+  </ul>
+</p>
+</li>
+<li>Get the status of the player (active or not)</li>
+<li><p>Prints the player object in the form:  &lt;username&gt;: Games Played = &lt;gamesPlayed&gt;, Average Score = &lt;average&gt;, Rank = &lt;rank&gt;
+  <ul>
+    <li>This method must call the appropriate methods for the average and the rank to receive full points</li>
+  </ul>
+</p>
+</li>
+</ul>
+</p>
+<p>
+  The following table shows examples of calls to methods in the GamePlayer class.
+</p>
+<table xml:id="unit3-project2-table">
+<title>GamePlayer Methods</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="35%" halign="left" />
+<col width="30%" halign="center" />
+<col width="35%" halign="left" />
+
+<row header="yes" halign="center" valign="middle">
+<cell>Statement</cell>
+<cell>Return Value (blank if no value)</cell>
+<cell>Explanation</cell>
+</row>
+
+<row>
+<cell>GamePlayer p1 = new GamePlayer("DragonMaster");</cell>
+<cell></cell>
+<cell>Creates a player with a username of “DragonMaster”, 0 games played, 0 points, and an active status.</cell>
+</row>
+
+<row>
+<cell>p1.getAverageScore();</cell>
+<cell>0</cell>
+<cell>No games have been completed yet.</cell>
+</row>
+
+<row>
+<cell>p1.completeGame(75);</cell>
+<cell></cell>
+<cell>The player has completed 1 game and has 75 total points.</cell>
+</row>
+
+<row>
+<cell>p1.completeGame(125);</cell>
+<cell></cell>
+<cell>The player has completed 2 games and has 200 total points.</cell>
+</row>
+
+<row>
+<cell>p1.getAverageScore();</cell>
+<cell>100</cell>
+<cell>The average score is 200 points and 2 games have been played.</cell>
+</row>
+
+<row>
+<cell>p1.getRank();</cell>
+<cell>"Advanced"</cell>
+<cell>The average score is at least 100.</cell>
+</row>
+
+<row>
+<cell>p1.isActive();</cell>
+<cell>true</cell>
+<cell>The player has completed fewer than 20 games.</cell>
+</row>
+
+<row>
+<cell>p1.toString();</cell>
+<cell>"DragonMaster: Games Played = 2, Average Score = 100.0, Rank = Advanced"</cell>
+<cell>Displays the player's current information.</cell>
+</row>
+
+</tabular>
+</table>
+
+<activity label="unit3-project2-gameplayer">
+<statement>
+<p>
+  Write the complete GamePlayer class using the description above.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+// Make sure you write the proper class header - {} for the class are provided
  
+{
+    
 
-      <activity label="unit3_project_1" xml:id="unit3_project_1">
-      <statement>
-        <p></p>
-      </statement>
+    // Do not change the main method below. It is used to test your class.
+    public static void main(String[] args) {
+        GamePlayer p1 = new GamePlayer("DragonMaster");
+        p1.getAverageScore();
+        p1.completeGame(75);
+        p1.completeGame(125);
+        System.out.println(p1.getAverageScore());
+        System.out.println(p1.getRank());
+        System.out.println(p1.isActive());
+        System.out.println(p1);
+    }
+}
+</code>
+<tests>
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
-      <program interactive="activecode" language="java">
-        <code>
+public class RunestoneTests extends CodeTestHelper
+{
+    // Correct class header
+    @Test
+    public void test01() {
+        boolean passed = false;
+        String expected = "class GamePlayer";
+        String actual = "";
 
-        </code>
-        <tests>
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            passed = code.contains(expected);
+
+            for (String line : lines) {
+                if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                    actual = line;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Created GamePlayer class header correctly", passed);
+        assertTrue(passed);
+    }
+
+    // Instance variables are private
+    @Test
+    public void test02() {
+        String expected = "private: 4";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            int num = countVariables(lines, "private");
+            //int numStr = countVariables(lines, "private String");
+            //int numInt = countVariables(lines, "private int");
+
+            actual = "private: "+ num; // Str+"\nprivate int: " + numInt;
+            passed = num &gt;= 4; // &amp;&amp; numStr &gt;= 2 &amp;&amp; numInt &gt;=1;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Created four private variables", passed);
+        assertTrue(passed);
+    }
+    
+    // Constructor sets all instance variables correctly
+    @Test
+    public void test03() {
+        String expected = "username = u;\ngamesPlayed = 0;\ntotalPoints = 0;\nisActive = true;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public GamePlayer(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("="))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = actual.split("\n").length == 4;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "Constructor sets all instance variables correctly", passed);
+        assertTrue(passed);
+    }
+    
+    // getAverageScore method avoids int division and division by 0
+    @Test
+    public void test04() {
+        String expected = "if (gamesPlayed == 0)\nreturn 0.0;\nreturn (double) totalPoints / gamesPlayed;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public double getAverageScore(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("return") || line.contains("if"))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = stringMatch(actual, "==0") &amp;&amp; stringMatch(actual, "return0.0") &amp;&amp; stringMatch(actual, "(double)");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "getAverageScore method avoids int division and division by 0", passed);
+        assertTrue(passed);
+    }
+
+    // completeGame method increments gamesPlayed by 1, adds parameter to totalPoints, and checks if isActive should be false
+    @Test
+    public void test05() {
+        String expected = "gamesPlayed++;\ntotalPoints += pts;\nif (gamesPlayed &gt;= 20)\nisActive = false;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public void completeGame(");
+            String[] lines = code.split("\n");
+
+            String param = code.substring(code.indexOf("(")+1, code.indexOf(")")).trim();
+            param = param.split(" ")[1];
+            
+            for (String line : lines) {
+                if (line.contains("+") || line.contains("=") || line.contains("&gt;"))
+                    actual += line.trim() + "\n";
+            }
+
+            boolean increment = stringMatch(actual, "++") || stringMatch(actual, "+=1") || stringMatch(actual, "+1");
+            boolean addition = stringMatch(actual, "+=" + param) || stringMatch(actual, "+" + param);
+            boolean condition = stringMatch(actual, "&gt;=20") || stringMatch(actual, "&gt;19");
+            boolean ifactive = stringMatch(actual, "=false");
+            
+            passed = increment &amp;&amp; addition &amp;&amp; condition &amp;&amp; ifactive;
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "completeGame method increments gamesPlayed by 1, adds parameter to total points, and checks if isActive should be false", passed);
+        assertTrue(passed);
+    }
+
+    // getRank method calls getAverageScore method correctly
+    @Test
+    public void test06() {
+        String expected = "getAverageScore();";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public String getRank(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("getAverageScore()"))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = stringMatch(actual, "getAverageScore()");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "getRank method calls getAverageScore method", passed);
+        assertTrue(passed);
+    }
+
+    // getRank returns the correct String based on comparisons
+    @Test
+    public void test07() {
+        String expected = "Beginner\nIntermediate\nAdvanced";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            GamePlayer p1 = new GamePlayer("DragonMaster");
+            p1.completeGame(25);
+            actual += p1.getRank() + "\n";
+            p1.completeGame(100);
+            actual += p1.getRank() + "\n";
+            p1.completeGame(200);
+            actual += p1.getRank() + "\n";
+            
+            passed = stringMatch(actual, "Beginner") &amp;&amp; stringMatch(actual, "Intermediate") &amp;&amp; stringMatch(actual, "Advanced");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "getRank method returns the correct String based on comparisons", passed);
+        assertTrue(passed);
+    }
+
+    // isActive returns the correct instance variable
+    @Test
+    public void test08() {
+        String expected = "return {boolean instance variable};";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+
+            String variableName = code.substring(code.indexOf("boolean"));
+            variableName = variableName.substring(variableName.indexOf(" ")+1, variableName.indexOf(";")).trim();
+
+            code = getMethodCode(code, "public boolean isActive(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("return"))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = actual.contains(variableName);
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "isActive method returns the correct instance variable", passed);
+        assertTrue(passed);
+    }
+
+    // toString calls the getAverageScore and getRank methods correctly
+    @Test
+    public void test09() {
+        String expected = "getAverageScore()\ngetRank()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public String toString(");
+            String[] lines = code.split("\n");
+            
+            for (String line : lines) {
+                if (line.contains("getAverageScore()") || line.contains("getRank()"))
+                    actual += line.trim() + "\n";
+            }
+            
+            passed = stringMatch(actual, "getAverageScore()") &amp;&amp; stringMatch(actual, "getRank()");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "toString method calls the getAverageScore and getRank methods correctly", passed);
+        assertTrue(passed);
+    }
+
+    // toString method returns a correctly formatted String
+    @Test
+    public void test10() {
+        String expected = "{username}: Games Played = {gamesPlayed}, Average Score = {average}, Rank = {rank}";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            GamePlayer p1 = new GamePlayer("GameMaster");
+            p1.completeGame(75);
+            p1.completeGame(125);
+            p1.completeGame(200);
+            actual = p1.toString();
+                        
+            passed = stringMatch(actual, "GameMaster") &amp;&amp; stringMatch(actual, "Games Played = 3") &amp;&amp; stringMatch(actual, "Average Score = 133.33") &amp;&amp; stringMatch(actual, "Rank = Advanced");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
+        getResults(expected, actual, "toString method returns a correctly formatted String", passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private int countVariables(String[] lines, String type) {
+        int num = 0;
+        for (String line : lines){
+            if (line.contains(type)) {
+                if (line.contains(",")) {
+                    num += line.split(",").length;
+                } else {
+                    num++;
+                }
+            }
+        }
+        return num;
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+} 
+   
+</tests>
+</program>
+</activity>
 
 
-        </tests>
-      </program>
-    </activity>
+</subsection>
 
- 
 </section>
