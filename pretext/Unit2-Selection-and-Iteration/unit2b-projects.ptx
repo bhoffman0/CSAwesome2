@@ -52,7 +52,7 @@ for (int i = 0; i &lt; 5; i++) {
   The loop above runs when i is 0, 1, 2, 3, and 4 - a total of 5 times.
 </p>
 
-<activity label="unit2b-project1-choose1">
+<exercise label="unit2b-project1-choose1">
 <statement><p>The variable num stores the number of times a loop should repeat. Which for loop header correctly repeats a block of code num times?</p></statement>
 <choices>
 <choice ><statement><p><c>for (int i = 1; i &lt; num; i++)</c></p></statement><feedback><p>The counter starts at 1 instead of 0. How many values are there from 1 up to (but not including) num?</p></feedback></choice>
@@ -60,7 +60,7 @@ for (int i = 0; i &lt; 5; i++) {
 <choice correct="yes"><statement><p><c>for (int i = 0; i &lt; num; i++)</c></p></statement><feedback><p>The loop starts with i = 0 and continues while i &lt; num. The counter values are: 0, 1, 2, ..., num - 1. This produces exactly num repetitions.</p></feedback></choice>
 <choice ><statement><p><c>for (int i = num; i &gt;= 0; i--)</c></p></statement><feedback><p>This loop starts at i = num and goes down to 0. Since 0 is included, how many times is it looping?</p></feedback></choice>
 </choices>
-</activity>
+</exercise>
 
   </subsection>
 
@@ -340,7 +340,7 @@ public class RunestoneTests extends CodeTestHelper
   A while loop repeats a section of code as long as a condition is true. While loops are useful when you do not know exactly how many times a loop will repeat.
 </p>
 <p>
-  A sentinel value is a special value that tells a program when to stop repeating. The sentinel value is not usually processed as regular data.
+  A <term>sentinel value</term> is a special value that tells a program when to stop repeating. The sentinel value is not usually processed as regular data.
 </p>
 <p>
   Example: Continue entering names until the user enters "Q":
@@ -370,7 +370,7 @@ while (!name.equals("Q"))
 </activity>
 
 <p>
-  A validation loop repeatedly asks for input until the user provides an acceptable value. This helps prevent invalid data from entering a program.
+  A <term>validation loop</term> repeatedly asks for input until the user provides an acceptable value. This helps prevent invalid data from entering a program.
 </p>
 <p>
   Example: Require a number between 1 and 100:
@@ -402,10 +402,12 @@ while (score &lt; 1 || score &gt; 100)
 <p>
   The <c>String.format()</c> method can be used to display a double value with a specific number of decimal places. To format a number to two decimal places, use: <c>String.format("%.02f", number)</c>
 </p>
+<p>
 <ul>
 <li><c>%f</c> indicates that the value is a floating-point number (double).</li>
 <li><c>.02</c> specifies that exactly two digits should appear after the decimal point.</li>
 </ul>
+</p>
 <p>
   Example:
 </p>
@@ -440,13 +442,15 @@ L (lawn)          $21
 <p>
   This will be a similar situation where the user will enter an upper or lowercase B, P, or L to choose a seat. Include the following:
 </p>
-<ul>
-<li>Allow the user to continue buying tickets (one at a time). At the end of the loop, ask the user if they would like to purchase another ticket. Y for yes, and N for No.</li>
-<li>When prompting the user for a ticket type, if the user inputs an invalid type, use a loop to prompt the user to keep entering a seat type until a valid input is received.  This is to be done with a while data verification loop.</li>
-<li>Keep a running total of the number of each type of ticket purchased and the subtotals for the costs of each type of ticket (these will need to be stored as ints)</li>
-<li>Calculate a convenience fee of $1.50 per ticket (this will need to be a double).</li>
-<li>Calculate the total cost of all tickets, including the convenience fee (this will need to be a double).</li>
-</ul>
+<p>
+  <ul>
+    <li>Allow the user to continue buying tickets (one at a time). At the end of the loop, ask the user if they would like to purchase another ticket. Y for yes, and N for No.</li>
+    <li>When prompting the user for a ticket type, if the user inputs an invalid type, use a loop to prompt the user to keep entering a seat type until a valid input is received.  This is to be done with a while data verification loop.</li>
+    <li>Keep a running total of the number of each type of ticket purchased and the subtotals for the costs of each type of ticket (these will need to be stored as ints)</li>
+    <li>Calculate a convenience fee of $1.50 per ticket (this will need to be a double).</li>
+    <li>Calculate the total cost of all tickets, including the convenience fee (this will need to be a double).</li>
+  </ul>
+</p>
 <p>
   After all tickets have been purchased, display the quantity and type of each ticket bought with a subtotal, the total convenience fee, and a total price for all the tickets.
 </p>
