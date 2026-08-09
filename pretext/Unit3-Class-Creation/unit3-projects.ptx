@@ -216,7 +216,7 @@ public String introduce() {
 </row>
 
 <row>
-<cell>book1.getBorrowDays( )</cell>
+<cell>book1.getBorrowDays()</cell>
 <cell>21</cell>
 <cell>Returns the updated number of borrow days.</cell>
 </row>
@@ -675,7 +675,7 @@ public class RunestoneTests extends CodeTestHelper
 </row>
 
 <row>
-<cell>p1.getAverageScore( );</cell>
+<cell>p1.getAverageScore();</cell>
 <cell>0</cell>
 <cell>No games have been completed yet.</cell>
 </row>
@@ -693,25 +693,25 @@ public class RunestoneTests extends CodeTestHelper
 </row>
 
 <row>
-<cell>p1.getAverageScore( );</cell>
+<cell>p1.getAverageScore();</cell>
 <cell>100</cell>
 <cell>The average score is 200 points and 2 games have been played.</cell>
 </row>
 
 <row>
-<cell>p1.getRank( );</cell>
+<cell>p1.getRank();</cell>
 <cell>"Advanced"</cell>
 <cell>The average score is at least 100.</cell>
 </row>
 
 <row>
-<cell>p1.isActive( );</cell>
+<cell>p1.isActive();</cell>
 <cell>true</cell>
 <cell>The player has completed fewer than 20 games.</cell>
 </row>
 
 <row>
-<cell>p1.toString( );</cell>
+<cell>p1.toString();</cell>
 <cell>"DragonMaster: Games Played = 2, Average Score = 100.0, Rank = Advanced"</cell>
 <cell>Displays the player's current information.</cell>
 </row>
