@@ -546,7 +546,7 @@ public class RunestoneTests extends CodeTestHelper
     // The getDescription method returns a correctly formatted String
     @Test
     public void test10() {
-        String expected = "{title} by {author} can be borrowed for {borrowDays} days.";
+        String expected = "{title} by {author} ({borrowDays} days)";
         String actual = "";
         boolean passed = false;
 
