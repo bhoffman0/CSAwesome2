@@ -52,7 +52,7 @@ for (int i = 0; i &lt; 5; i++) {
   The loop above runs when i is 0, 1, 2, 3, and 4 - a total of 5 times.
 </p>
 
-<exercise label="unit2b-project1-choose1">
+<activity label="unit2b-project1-choose1">
 <statement><p>The variable num stores the number of times a loop should repeat. Which for loop header correctly repeats a block of code num times?</p></statement>
 <choices>
 <choice ><statement><p><c>for (int i = 1; i &lt; num; i++)</c></p></statement><feedback><p>The counter starts at 1 instead of 0. How many values are there from 1 up to (but not including) num?</p></feedback></choice>
@@ -60,7 +60,7 @@ for (int i = 0; i &lt; 5; i++) {
 <choice correct="yes"><statement><p><c>for (int i = 0; i &lt; num; i++)</c></p></statement><feedback><p>The loop starts with i = 0 and continues while i &lt; num. The counter values are: 0, 1, 2, ..., num - 1. This produces exactly num repetitions.</p></feedback></choice>
 <choice ><statement><p><c>for (int i = num; i &gt;= 0; i--)</c></p></statement><feedback><p>This loop starts at i = num and goes down to 0. Since 0 is included, how many times is it looping?</p></feedback></choice>
 </choices>
-</exercise>
+</activity>
 
   </subsection>
 
