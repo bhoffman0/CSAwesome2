@@ -471,7 +471,7 @@ import org.junit.Test;
 
 public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        super("Dooflingies.java", input1.replaceAll(" ", "\n"));
+        super("Dooflingies", input1.replaceAll(" ", "\n"));
     }
 
     private static String input1 = "4271";
