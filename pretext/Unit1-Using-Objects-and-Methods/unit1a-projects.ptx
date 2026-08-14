@@ -176,7 +176,7 @@ There are 4 pennies worth $0.04
 <code>
 import java.util.Scanner;
 
-public class Main {
+public class Coins {
     public static void main(String[] args) {
 
     }
@@ -184,190 +184,245 @@ public class Main {
 </code>
 <stdin>15 5 2 4</stdin>
 <tests>
-  import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
-  public class RunestoneTests extends CodeTestHelper {
-      public RunestoneTests() {
-          super("Main", input1.replaceAll(" ", "\n")); // For Book
-          //super("Coins", input1.replaceAll(" ", "\n")); // For Repl.it
-      }
+public class RunestoneTests extends CodeTestHelper {
+    public RunestoneTests() {
+        super("Coins", input1.replaceAll(" ", "\n"));
+    }
 
-      private static int goal = 1;
-      private static String input1 = "15 5 2 4";
-      private static String input2 = "4 2 4 10";
-      private static String input3 = "10 6 8 7";
-      private String output1, output2;
+    private static String input1 = "15 5 2 4";
+    private static String input2 = "4 2 4 10";
+    private static String input3 = "10 6 8 7";
 
+    @Test
+    public void test1() {
+        String expect = "$4.39";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-      @Test
-      public void test1() {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = "No correct total found";
-          String expect = "$4.39";
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains(expect))
-                  output1 = line;
-          }
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(expect))
+                    actual = line;
+            }
 
-          boolean passed = output1.contains(expect);
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-          passed = getResults(expect, output1, "Expected calculation for inputs " + input1, passed);
-          assertTrue(passed);
-      }
+        passed = getResults(expect, actual, "Expected calculation for inputs " + input1, passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test2() {
-          String input = input2.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output2 = "No correct total found";
-          String expect = "$1.50";
+    @Test
+    public void test2() {
+        String expect = "$1.50";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains(expect))
-                  output2 = line;
-          }
+        try {
+            String input = input2.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-          boolean passed = output2.contains(expect);
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(expect))
+                    actual = line;
+            }
 
-          passed = getResults(expect, output2, "Expected calculation for inputs " + input2, passed);
-          assertTrue(passed);
-      }
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-      @Test
-      public void test3() {
-          String input = input3.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = "No correct total found";
-          String expect = "There are 10 quarters worth $2.50";
+        passed = getResults(expect, actual, "Expected calculation for inputs " + input2, passed);
+        assertTrue(passed);
+    }
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains("quarters"))
-                  output1 = line;
-          }
+    @Test
+    public void test3() {
+        String expect = "There are 10 quarters worth $2.50";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-          boolean passed = output1.contains(expect);
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-          passed = getResults(expect, output1, "Correct calculation for 10 Quarters", passed);
-          assertTrue(passed);
-      }
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains("quarters"))
+                    actual = line;
+            }
 
-      @Test
-      public void test4() {
-          String input = input3.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = "No correct total found";
-          String expect = "There are 6 dimes worth $0.60";
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains("dimes"))
-                  output1 = line;
-          }
+        passed = getResults(expect, actual, "Correct calculation for 10 Quarters", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = output1.contains(expect);
+    @Test
+    public void test4() {
+        String expect = "There are 6 dimes worth $0.60";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-          passed = getResults(expect, output1, "Correct calculation for 6 dimes", passed);
-          assertTrue(passed);
-      }
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-      @Test
-      public void test5() {
-          String input = input3.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = "No correct total found";
-          String expect = "There are 8 nickels worth $0.40";
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains("dimes"))
+                    actual = line;
+            }
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains("nickels"))
-                  output1 = line;
-          }
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-          boolean passed = output1.contains(expect);
+        passed = getResults(expect, actual, "Correct calculation for 6 dimes", passed);
+        assertTrue(passed);
+    }
 
-          passed = getResults(expect, output1, "Correct calculation for 8 nickels", passed);
-          assertTrue(passed);
-      }
+    @Test
+    public void test5() {
+        String expect = "There are 8 nickels worth $0.40";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-      @Test
-      public void test6() {
-          String input = input3.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          output1 = "No correct total found";
-          String expect = "There are 7 pennies worth $0.07";
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-          String[] lines = output.split("\n");
-          for (String line: lines) {
-              if (line.contains("pennies"))
-                  output1 = line;
-          }
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains("nickels"))
+                    actual = line;
+            }
 
-          boolean passed = output1.contains(expect);
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-          passed = getResults(expect, output1, "Correct calculation for 7 pennies", passed);
-          assertTrue(passed);
-      }
+        passed = getResults(expect, actual, "Correct calculation for 8 nickels", passed);
+        assertTrue(passed);
+    }
 
-      @Test
-      public void test7() {
-          String code = getCode();
-          int num = countOccurences(code, ".nextInt()");
+    @Test
+    public void test6() {
+        String expect = "There are 7 pennies worth $0.07";
+        String actual = "No correct total found";
+        boolean passed = false;
 
-          boolean passed = getResults("4 times", num + " times", "Called Scanner method correctly");
-          assertTrue(passed);
-      }
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-      @Test
-      public void test8() {
-          String code = getCode();
-          int num = countOccurences(code, "System.out.println(");
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains("pennies"))
+                    actual = line;
+            }
 
-          boolean passed = num &gt;= 5;
-          getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
-          assertTrue(passed);
-      }
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
-      @Test
-      public void test9() {
-          String code = getCode();
-          int num = countOccurences(code, "String.format(\"%.02f\"");
+        passed = getResults(expect, actual, "Correct calculation for 7 pennies", passed);
+        assertTrue(passed);
+    }
 
-          boolean passed = getResults("5 times", num + " times", "Called String Format method correctly");
-          assertTrue(passed);
-      }
+    @Test
+    public void test7() {
+        int num = 0;
 
-      @Test
-      public void test10() {
-          String code = getCode();
-          String[] lines = code.split("\n");
-          int num = 0;
+        try {
+            String code = getCode();
+            num = countOccurences(code, ".nextInt()");
+        } catch (Exception e) {
+            num = -1;
+        }
 
-          for (String line: lines) {
-              if (line.matches("\\s+double .+")) {
+        boolean passed = getResults("4 times", num + " times", "Called Scanner method correctly");
+        assertTrue(passed);
+    }
 
-                  if (line.contains(","))
-                      num += line.split(",").length;
-                  else
-                      num++;
-              }
-          }
+    @Test
+    public void test8() {
+        boolean passed = false;
+        int num = 0;
 
+        try {
+            String code = getCode();
+            num = countOccurences(code, "System.out.println(");
 
+            passed = num &gt;= 5;
+        } catch (Exception e) {
+            num = -1;
+        }
 
-          boolean passed = num &gt;= 5;
+        getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
+        assertTrue(passed);
+    }
 
-          getResults("5", num + "", "Double variables created");
-          assertTrue(passed);
-      }
-  }
+    @Test
+    public void test9() {
+        int num = 0;
 
+        try {
+            String code = getCode();
+            num = countOccurences(code, "String.format(\"%.02f\"");
+        } catch (Exception e) {
+            num = -1;
+        }
+
+        boolean passed = getResults("5 times", num + " times", "Called String Format method correctly");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        int num = -1;
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+            num = 0;
+
+            for (String line : lines) {
+                if (line.matches("\\s+double .+")) {
+
+                    if (line.contains(","))
+                        num += line.split(",").length;
+                    else
+                        num++;
+                }
+            }
+
+            passed = num &gt;= 5;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+getResults("5+ doubles", num + "", "Double variables created", passed);
+        assertTrue(passed);
+    }
+}
 </tests>
 </program>
 </activity>
@@ -403,7 +458,7 @@ Small		3
 <code>
 import java.util.Scanner;
 
-public class Main {
+public class Dooflingies {
   public static void main(String[] args) {
 
   }
@@ -411,191 +466,243 @@ public class Main {
 </code>
 <stdin>1098</stdin>
 <tests>
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
- import static org.junit.Assert.*;
-  import org.junit.*;
-  import java.io.*;
+public class RunestoneTests extends CodeTestHelper {
+    public RunestoneTests() {
+        super("Dooflingies", input1.replaceAll(" ", "\n"));
+    }
 
-  public class RunestoneTests extends CodeTestHelper
-  {
-      public RunestoneTests() {
-          super("Main", input1.replaceAll(" ", "\n")); // For Book
-          //super("Dooflingies", input3.replaceAll(" ", "\n")); // For Repl.it
-      }
+    private static String input1 = "4271";
+    private static String input2 = "6952";
+    private static String input3 = "298";
 
-      private static int goal = 1;
-      private static String input1 = "4271";
-      private static String input2 = "6952";
-      private static String input3 = "298";
-      private String output1, output2;
+    @Test
+    public void test1() {
+        String expect = "Container   Number\n" +
+                "Huge        85\n" +
+                "Large       1\n" +
+                "Medium      0\n" +
+                "Small       1";
+        boolean passed = false;
+        String output = "";
 
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
 
-      @Test
-      public void test1()
-      {
-          String input = input1.replaceAll(" ", "\n");
-          String output = getMethodOutputWithInput("main", input);
-          String expect = "Container   Number\n" +
-              "Huge        85\n" +
-              "Large       1\n" +
-              "Medium      0\n" +
-              "Small       1";
+            passed = matchesIgnoreWhiteSpace(output, expect);
+        } catch (Exception e) {
+            output = "Error";
+        }
 
-          boolean passed = matchesIgnoreWhiteSpace(output, expect);
+        passed = getResults(expect, output, "Expected output for input " + input1, passed);
+        assertTrue(passed);
+    }
 
-          passed = getResults(expect, output, "Expected output for input " + input1, passed);
-          assertTrue(passed);
-      }
+    private boolean matchesIgnoreWhiteSpace(String a, String b) {
+        a = a.toLowerCase().replaceAll("\\s+", "");
+        b = b.toLowerCase().replaceAll("\\s+", "");
+        return a.contains(b);
+    }
 
-      private boolean matchesIgnoreWhiteSpace(String a, String b) {
-          a = a.toLowerCase().replaceAll("\\s+","");
-          b = b.toLowerCase().replaceAll("\\s+","");
-          return a.contains(b);
-      }
+    @Test
+    public void test2() {
+        String expect = "Container   Number\n" +
+                "Huge        139\n" +
+                "Large       0\n" +
+                "Medium      0\n" +
+                "Small       2";
+        String output = "";
+        boolean passed = false;
 
-      @Test
-          public void test2()
-          {
-              String input = input2.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              String expect = "Container   Number\n" +
-                  "Huge        139\n" +
-                  "Large       0\n" +
-                  "Medium      0\n" +
-                  "Small       2";
+        try {
+            String input = input2.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
 
-              boolean passed = matchesIgnoreWhiteSpace(output, expect);
+            passed = matchesIgnoreWhiteSpace(output, expect);
+        } catch (Exception e) {
+            output = "Error";
+        }
 
-              passed = getResults(expect, output, "Expected output for input " + input2, passed);
-              assertTrue(passed);
-          }
+        getResults(expect, output, "Expected output for input " + input2, passed);
+        assertTrue(passed);
+    }
 
-      @Test
-          public void test3()
-          {
-              String input = input3.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              output1 = "Huge";
-              String expect = "5";
+    @Test
+    public void test3() {
 
-              String[] lines = output.split("\n");
-              for (String line : lines) {
-                  if (line.contains(output1))
-                      output1 = line;
-              }
+        String output1 = "Huge";
+        String expect = "5";
+        String output = "";
+        boolean passed = false;
 
-              boolean passed = output1.contains(expect);
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
 
-              passed = getResults("Huge\t" + expect, output1, "Expected calculation for input " + input3, passed);
-              assertTrue(passed);
-          }
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(output1))
+                    output1 = line;
+            }
 
-      @Test
-          public void test4()
-          {
-              String input = input3.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              output1 = "Large";
-              String expect = "2";
+            passed = output1.contains(expect);
+        } catch (Exception e) {
+            output1 = "Error";
+        }
 
-              String[] lines = output.split("\n");
-              for (String line : lines) {
-                  if (line.contains(output1))
-                      output1 = line;
-              }
+        passed = getResults("Huge\t" + expect, output1, "Expected calculation for input " + input3, passed);
+        assertTrue(passed);
+    }
 
-              boolean passed = output1.contains(expect);
+    @Test
+    public void test4() {
+        String output1 = "Large";
+        String expect = "2";
+        boolean passed = false;
 
-              passed = getResults("Large\t" + expect, output1, "Expected calculation for input " + input3, passed);
-              assertTrue(passed);
-          }
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-      @Test
-          public void test5()
-          {
-              String input = input3.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              output1 = "Medium";
-              String expect = "1";
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(output1))
+                    output1 = line;
+            }
 
-              String[] lines = output.split("\n");
-              for (String line : lines) {
-                  if (line.contains(output1))
-                      output1 = line;
-              }
+            passed = output1.contains(expect);
+        } catch (Exception e) {
+            output1 = "Error";
+        }
 
-              boolean passed = output1.contains(expect);
+        passed = getResults("Large\t" + expect, output1, "Expected calculation for input " + input3, passed);
+        assertTrue(passed);
+    }
 
-              passed = getResults("Medium\t" + expect, output1, "Expected calculation for input " + input3, passed);
-              assertTrue(passed);
-          }
+    @Test
+    public void test5() {
+        String output1 = "Medium";
+        String expect = "1";
+        boolean passed = false;
 
-      @Test
-          public void test6()
-          {
-              String input = input3.replaceAll(" ", "\n");
-              String output = getMethodOutputWithInput("main", input);
-              output1 = "Small";
-              String expect = "3";
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-              String[] lines = output.split("\n");
-              for (String line : lines) {
-                  if (line.contains(output1))
-                      output1 = line;
-              }
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(output1))
+                    output1 = line;
+            }
 
-              boolean passed = output1.contains(expect);
+            passed = output1.contains(expect);
+        } catch (Exception e) {
+            output1 = "Error";
+        }
 
-              passed = getResults("Small\t" + expect, output1, "Expected calculation for input " + input3, passed);
-              assertTrue(passed);
-          }
+        passed = getResults("Medium\t" + expect, output1, "Expected calculation for input " + input3, passed);
+        assertTrue(passed);
+    }
 
-          @Test
-              public void test7()
-              {
-                  String code = getCode();
-                  int num = countOccurences(code, ".nextInt()");
+    @Test
+    public void test6() {
+        String output1 = "Small";
+        String expect = "3";
+        boolean passed = false;
 
-                  boolean passed = getResults("1 times", num + " times", "Called Scanner method correctly");
-                  assertTrue(passed);
-              }
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-      @Test
-          public void test8()
-          {
-              String code = getCode();
-              int num = countOccurences(code, "System.out.println(");
+            String[] lines = output.split("\n");
+            for (String line : lines) {
+                if (line.contains(output1))
+                    output1 = line;
+            }
 
-              boolean passed = num &gt;= 5;
-              getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
-              assertTrue(passed);
-          }
+            passed = output1.contains(expect);
+        } catch (Exception e) {
+            output1 = "Error";
+        }
 
-      @Test
-          public void test9()
-          {
-              String code = getCode();
-              int num = countOccurences(code, "%");
+        passed = getResults("Small\t" + expect, output1, "Expected calculation for input " + input3, passed);
+        assertTrue(passed);
+    }
 
-              boolean passed = num &gt;= 3;
+    @Test
+    public void test7() {
+        int num = 0;
+        boolean passed = false;
 
-              getResults("3 times", num + " times", "Used modular division", passed);
-              assertTrue(passed);
-          }
+        try {
+            String code = getCode();
+            num = countOccurences(code, ".nextInt()");
+        } catch (Exception e) {
+            num = -1;
+        }
 
-      @Test
-          public void test10()
-          {
-              String code = getCode();
-              int num = countOccurences(code, "/");
+        passed = getResults("1 times", num + " times", "Called Scanner method correctly");
+        assertTrue(passed);
+    }
 
-              boolean passed = num &gt;= 3;
+    @Test
+    public void test8() {
+        int num = 0;
+        boolean passed = false;
 
-              getResults("5 times", num + " times", "Used integer division", passed);
-              assertTrue(passed);
-          }
-  }
+        try {
+            String code = getCode();
+            num = countOccurences(code, "System.out.println(");
 
+            passed = num &gt;= 5;
+        } catch (Exception e) {
+            num = -1;
+        }
+        
+        getResults("5+ times", num + " times", "Called System.out.println(...) enough times", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test9() {
+        int num = 0;
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "%");
+
+            passed = num &gt;= 3;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+        getResults("3 times", num + " times", "Used modular division", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        int num = 0;
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "/");
+
+            passed = num &gt;= 3;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+        getResults("3 times", num + " times", "Used integer division", passed);
+        assertTrue(passed);
+    }
+
+}
 </tests>
 </program>
 </activity>
