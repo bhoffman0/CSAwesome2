@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.15.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u4c_muc_wc9-1-1">Write the <code class="code-inline tex2jax_ignore">breakIntoLetters</code> method. It should accept a two-dimensional String array, in which each row contains the characters of a word. It should then return a single-dimensional (normal) String array containing the words in each row of the two-dimensional array. For example, calling <code class="code-inline tex2jax_ignore">breakIntoLetters</code> on { {“b”, “a”, “t”, “h”}, {“t”, “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”} } should return {“bath”, “tens”, “jack”, “lazy”}.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4c_muc_wc9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u4c_muc_wc9" class="language-java">import java.util.Arrays;
+
+public class Test1
+{
+
+    public static String[] breakIntoLetters(String[][] words)
+    {
+
+        // YOUR CODE HERE
+
+    } // end method
+
+    public static void main(String[] args)
+    {
+        String[][] mat1 =
+        {
+            {"b", "a", "t", "h"},
+            {"t", "e", "n", "s"},
+            {"j", "a", "c", "k"},
+            {"l", "a", "z", "y"}
+        };
+        String[] out1 = breakIntoLetters(mat1);
+
+        System.out.println("mat1 --&gt; " + Arrays.deepToString(mat1));
+        System.out.println("breakIntoLetters(mat1) --&gt; " + Arrays.toString(out1));
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.15.9"><a tabindex="-1" href="#u4c_muc_wc9" title="Copy heading and permalink for Activity 12.15.9" aria-label="Copy heading and permalink for Activity 12.15.9">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4c-toggle-write-code.html#u4c_muc_wc9">In Context</a></span>
+</body>
+</html>

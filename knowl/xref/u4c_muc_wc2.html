@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.15.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u4c_muc_wc2-1-1">This program is supposed to create an 8x8 two-dimensional <code class="code-inline tex2jax_ignore">int</code> array that is filled with a checkered patterns of 0s and 1s, starting with a 1 in the top left corner. It should also print the output in row-column order, separating each element with a space. The only missing part is the <code class="code-inline tex2jax_ignore">if</code> statement that decides if a specific cell should be a 0 or a 1. Fill that in to finish the problem.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4c_muc_wc2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="u4c_muc_wc2-1-2">Hint: Try drawing out a smaller version (around 4x4) of a checkered two-dimensional array. Can you notice a pattern in the row numbers and column numbers of the 1s?<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4c_muc_wc2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u4c_muc_wc2" class="language-java">public class Test1 {
+    public static void main(String[] args)
+    {
+        int[][] checkerboard = new int[8][8];
+        for (int row = 0; row &lt; checkerboard.length; row++)
+        {
+            for (int col = 0; col &lt; checkerboard[row].length; col++)
+            {
+                if ()  // How can we check if a cell should be 0 or 1?
+                {
+                    checkerboard[row][col] = 1;
+                } //end if
+                System.out.print(checkerboard[row][col] + " ");
+            } //end inner for loop
+        } //end outer for loop
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.15.2"><a tabindex="-1" href="#u4c_muc_wc2" title="Copy heading and permalink for Activity 12.15.2" aria-label="Copy heading and permalink for Activity 12.15.2">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4c-toggle-write-code.html#u4c_muc_wc2">In Context</a></span>
+</body>
+</html>

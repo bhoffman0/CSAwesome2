@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.13.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u6_muc_wc7-1-1">Finish the method that given an array as a parameter, returns the elements “right shifted” by one – so <code class="code-inline tex2jax_ignore">{6, 2, 5, 3}</code> returns <code class="code-inline tex2jax_ignore">{3, 6, 2, 5}</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u6_muc_wc7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u6_muc_wc7" class="language-java">import java.util.Arrays;
+
+public class Test1
+{
+
+    public static int[] shiftRight(int[] arr)
+    {
+
+        int[] result = new int[arr.length];
+
+        // Add your code here
+
+        return result;
+    } // end shiftRight method
+
+    // Don't change any code beyond this point
+    public static void main(String[] args)
+    {
+        int[] arr1 = {1, 2, 3, 4, 5, 6};
+        int[] arr1o = shiftRight(arr1);
+
+        System.out.println("arr1 --&gt; " + Arrays.toString(arr1));
+        System.out.println("shiftRight(arr1) --&gt; " + Arrays.toString(arr1o));
+
+        int[] arr2 = {1, 3, 5};
+        int[] arr2o = shiftRight(arr2);
+
+        System.out.println("arr2 --&gt; " + Arrays.toString(arr2));
+        System.out.println("shiftRight(arr2) --&gt; " + Arrays.toString(arr2o));
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.13.7"><a tabindex="-1" href="#u6_muc_wc7" title="Copy heading and permalink for Activity 12.13.7" aria-label="Copy heading and permalink for Activity 12.13.7">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4a-toggle-write-code.html#u6_muc_wc7">In Context</a></span>
+</body>
+</html>

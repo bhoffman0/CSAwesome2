@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.13.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u6_muc_wc9-1-1">Finish the method that should return string array that is in reverse order – so <code class="code-inline tex2jax_ignore">{"b", "a", "z"}</code> should return <code class="code-inline tex2jax_ignore">{"z", "a", "b"}</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u6_muc_wc9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u6_muc_wc9" class="language-java">import java.util.Arrays;
+
+public class Test1
+{
+
+    public static String[] reverse(String[] arr)
+    {
+
+        String[] result = new String[arr.length];
+
+        // Add your code here
+
+        return result;
+    } // end reverse method
+
+    // Don't change the code below
+    public static void main(String[] args)
+    {
+        String[] arr1 = "abc".split("");
+        String[] arr1o = reverse(arr1);
+
+        System.out.println("arr1 --&gt; " + Arrays.toString(arr1));
+        System.out.println("reverse(arr1) --&gt; " + Arrays.toString(arr1o));
+
+        String[] arr2 = "abcdef".split("");
+        String[] arr2o = reverse(arr2);
+
+        System.out.println("arr2 --&gt; " + Arrays.toString(arr2));
+        System.out.println("reverse(arr2) --&gt; " + Arrays.toString(arr2o));
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.13.9"><a tabindex="-1" href="#u6_muc_wc9" title="Copy heading and permalink for Activity 12.13.9" aria-label="Copy heading and permalink for Activity 12.13.9">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4a-toggle-write-code.html#u6_muc_wc9">In Context</a></span>
+</body>
+</html>

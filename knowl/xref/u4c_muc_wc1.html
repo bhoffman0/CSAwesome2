@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.15.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u4c_muc_wc1-1-1">Fix the errors (marked by comments) in the code so that it correctly creates a 10x10 array called <code class="code-inline tex2jax_ignore">table</code> filled with numbers from 0 to 99 in left-right top-bottom order and prints the output (in row-column order) with the numbers separated by tabs. Most of the errors are syntactical, but one is logical.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4c_muc_wc1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u4c_muc_wc1" class="language-java">public class Test1
+{
+    public static void main(String[] args)
+    {
+        int[][] table = int[9][9]; // This line has errors
+        for (int row = 0; row &lt; table.length(); row++)  // This line has an error
+        {
+            for (int col = row; col &lt; table[row].length(); col++)  // This line has errors
+            {
+                table[row][col] = col + 10 * row;
+                System.out.print(table[row][col] + "\t");
+            }
+        }
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.15.1"><a tabindex="-1" href="#u4c_muc_wc1" title="Copy heading and permalink for Activity 12.15.1" aria-label="Copy heading and permalink for Activity 12.15.1">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4c-toggle-write-code.html#u4c_muc_wc1">In Context</a></span>
+</body>
+</html>

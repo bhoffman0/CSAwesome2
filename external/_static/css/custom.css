@@ -1,0 +1,288 @@
+html:root {
+  --emphasisColor: #007d9f;
+  --codeColor: #641227;
+  --content-fontSize: 1em;
+  --ptx-content-font-size: 1em;
+  --ptx-content-line-height: 1.5;
+    /* Make this as narrow as we can while still getting side-by-side Parson's problems. */
+  --contentWidthWide: calc(var(--contentWidthRegular) + 250px);
+}
+
+:root.dark-mode {
+    --emphasisColor: #00b3e3;
+    --codeColor: #ffaaaa;
+}
+
+/* Add some padding and border around clickable areas made up of paragraphs
+   rather than code. */
+div.clickablearea_section > div > div:has(> div.para) {
+    border: 1px dotted grey;
+    padding: 1em;
+    margin: 1em 0;
+}
+
+div.time {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25em;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #999;
+    svg {
+      fill: #999;
+      background: #0000;
+    }
+}
+
+.ptx-content section.section:has(div.time) {
+    padding-top: 1.5em;
+}
+
+/* The wide style seems to add huge font size so put it down */
+.ptx-content .para {
+  font-size: 97%;
+  /* line-height: 1.5; This freezes the accessibility tool line height */
+}
+
+/* Default spacing between paragraphs is too much. */
+section > .para + .para {
+  margin-top: 0.6em;
+}
+
+.ptx-content section > .heading,
+.ptx-content section section > .heading,
+.ptx-content section section section > .heading
+{
+    font-size: 1.3em;
+    color:  var(--emphasisColor);
+    border-bottom: 2px solid #70d549;
+    padding-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Activity headings */
+.ptx-content .heading h3,
+.ptx-content article>.heading {
+  font-size: 1.1em;
+}
+
+/* This might not be used anymore */
+.ptx-content .heading h4
+{
+  font-size: 1.3em;
+  color:  var(--emphasisColor);
+}
+
+/* Add csawesome2 in title for the course name in course home,
+   but don't diplay that because there's the logo in the banner */
+.ptx-banner .title
+{
+   display: none;
+}
+
+.ptx-content .terminology
+{
+    color:  var(--emphasisColor);
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.ptx-content .code-inline
+{
+  color: var(--codeColor);
+  white-space: collapse nowrap;
+  padding: 0;
+  border: none;
+  background: none;
+  font-weight: 600;
+}
+
+.ptx-content .code-display {
+  color: var(--codeColor);
+  overflow-x: auto;
+  margin-left: 2em;
+}
+
+/* I'm not sure why the .code-block:before rule exists in PtX but it just adds extra gorp. */
+.ptx-content .code-block:before {
+  content: none;
+}
+
+/* Code listings with <pre> in text washed out in Chrome */
+.ptx-content pre.program
+{
+  font-weight: bolder;
+  font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
+}
+
+/* There's no padding in the output of activecode exercises, so add some. */
+.ptx-runestone-container .ac_output pre {
+   padding: 8px;
+}
+
+/* These are the big buttons for the sections */
+.ptx-content .summary-links {
+  font-size: 90%;
+}
+
+/* For displaying exercise ids */
+.ptx-content .runestone_caption,
+.runestone_caption {
+  display: block;
+}
+
+/* A potentialy gross hack to hide the footnotes PreTeXt loves to put on every link. */
+.ptx-content details.ptx-footnote,
+.ptx-content .ptx-runestone-container details.ptx-footnote
+{
+  display: none;
+}
+
+.ptx-content .para a
+{
+  text-decoration: underline !important;
+}
+
+.ptx-content blockquote
+{
+  font-size: inherit;
+}
+
+.ptx-content
+#summary ul.simple li
+{
+  padding-top: 1em;
+}
+
+.ptx-content
+figure.table-like {
+     margin-left: 0px;
+}
+
+/* Hide the "Paragraph" autopermalink in the interactive exercises.
+   This is a hack to avoid the autopermalink being added to every choice in MCQs
+ */
+.ptx-content
+.exercise-interactives 
+div.autopermalink[data-description="Paragraph"] {
+    display: none;
+}
+
+
+
+/*
+ * Table on Unit1's aboutcsa page.
+ */
+
+#aboutcsa-table
+{
+  padding-top: 1em;
+}
+
+#aboutcsa-table th,
+#aboutcsa-table td
+{
+  text-align: center;
+}
+
+#aboutcsa-table thead {
+  background-color: lightblue;
+}
+
+/*
+ * Time estimates at the top right of some pages.
+ */
+div.unit-time,
+.ptx-content div.unit-time
+{
+  clear: right;
+  float: right;
+  width: 50%;
+  text-align: right;
+  font-size: 16px;
+  padding: 1em;
+  color: grey;
+}
+
+div.unit-time svg,
+.ptx-content div.unit-time svg {
+  display: inline;
+  vertical-align: middle;
+}
+
+/*
+ * Give paragraphs immediately after certain elements a bit of breathing room.
+ * This could also be achieved by giving some margin-bottom to those preceding
+ * elements but this seems simpler for now.
+ */
+
+iframe + p,
+div.highlight-java + p,
+.ptx-content iframe + p,
+.ptx-content div.highlight-java + p,
+.ptx-content div.highlight-text + p
+{
+  margin-top: 10px;
+}
+
+/*
+ * Override this which would otherwise be --contentWidthWide. (We've also
+ * adjusted --contentWidthWide above to be slightly less wide.)
+ */
+.ptx-content #main-content section > .runestone.ac_section
+{
+  max-width: calc(var(--contentWidthRegular) + 100px);
+}
+
+/*
+ * Set the width so it uses the space in the box. This was put in so the videos
+ * wouldn't overflow their box. Don't know if there are other things it will
+ * catch up that we don't want.
+ */
+.runestone iframe
+{
+  width: 100%;
+}
+
+/* Padding for table of unit test responses.
+   until Brad adds it to the template.
+*/
+.ptx-content .ac-feedback,
+.ptx-runestone-container .ac-feedback {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+/* Changing font in code window in active codes
+   Default is washed out in Windows Chrome.
+*/
+.ptx-runestone-container .ac_section .CodeMirror pre,
+.ptx-content .ac_section .CodeMirror pre {
+  font-family: Menlo, Monaco, Consolas,"Courier New", monospace;
+}
+
+/* Try adding flex wrap on buttons */
+.ac_actions {
+  flex-wrap: wrap;
+}
+
+/* To unsquish bottom of unit test results box */
+.unittest-results {
+    margin-bottom: 8px;
+}
+
+/* For tables in the FRQs (default 0) */
+.ptx-runestone-container td, .ptx-runestone-container th,
+.ptx-content td, .ptx-content th {
+    padding: 5px;
+}
+
+table.random-recipes tbody tr td:first-child {
+  text-align: left;
+}
+
+table .align-default, td {
+  text-align: left;
+}

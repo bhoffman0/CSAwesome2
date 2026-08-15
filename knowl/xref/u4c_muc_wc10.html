@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.15.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u4c_muc_wc10-1-1">Write the <code class="code-inline tex2jax_ignore">maxEachRow</code> method. It that should accept a two-dimensional <code class="code-inline tex2jax_ignore">int</code> array <code class="code-inline tex2jax_ignore">nums</code>, and return a single-dimensional (normal) <code class="code-inline tex2jax_ignore">int</code> array containing the max of each row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} } should be {3, 9, 45}.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4c_muc_wc10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u4c_muc_wc10" class="language-java">import java.util.Arrays;
+
+public class Test1
+{
+
+    public static int[] maxEachRow(int[][] nums)
+    {
+
+        // YOUR CODE HERE
+
+    } // end method
+
+    public static void main(String[] args)
+    {
+        int[][] mat1 = { {-1, 2, 0}, {6, -4, 5}, {3, 4, 8}};
+        int[] out1 = maxEachRow(mat1);
+
+        System.out.println("mat1 --&gt; " + Arrays.deepToString(mat1));
+        System.out.println("maxEachRow(mat1) --&gt; " + Arrays.toString(out1));
+
+        int[][] mat2 = { {7, -3}, {-5, 1}};
+        int[] out2 = maxEachRow(mat2);
+
+        System.out.println("mat2 --&gt; " + Arrays.deepToString(mat2));
+        System.out.println("maxEachRow(mat2) --&gt; " + Arrays.toString(out2));
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.15.10"><a tabindex="-1" href="#u4c_muc_wc10" title="Copy heading and permalink for Activity 12.15.10" aria-label="Copy heading and permalink for Activity 12.15.10">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4c-toggle-write-code.html#u4c_muc_wc10">In Context</a></span>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="exercise exercise-like"><h2 class="heading">
+<span class="type">Activity</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.14.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h2>
+<div class="para" id="u4b_muc_wc3-1-1">Write code to define the <code class="code-inline tex2jax_ignore">removeZeros</code> method. This method should take in an ArrayList of integers <code class="code-inline tex2jax_ignore">listOfNums</code> and delete all of the zeros. For example, <code class="code-inline tex2jax_ignore">{3, 0, 5, 0}</code> would change into <code class="code-inline tex2jax_ignore">{3, 5}</code>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#u4b_muc_wc3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<pre class="program clipboardable"><code id="rs-u4b_muc_wc3" class="language-java">import java.util.ArrayList;
+
+public class ListTest
+{
+
+    public static void removeZeros(ArrayList&lt;Integer&gt; listOfNums)
+    {
+        // YOUR CODE HERE
+
+        // HINT: When you delete an element, the indexes of the following elements
+        // shift!
+        // That means you CANNOT use an enhanced for loop
+        // And it also means you need to carefully handle when you increment your
+        // index variable
+
+    }
+
+    public static void main(String[] args)
+    {
+
+        ArrayList&lt;Integer&gt; list;
+        list = new ArrayList&lt;Integer&gt;();
+
+        list.add(1);
+        list.add(0);
+        list.add(0);
+        list.add(3);
+        list.add(2);
+        list.add(0);
+        list.add(9);
+
+        System.out.println("Before: " + list);
+        removeZeros(list);
+        System.out.println("After: " + list);
+    }
+}
+</code></pre>
+<div class="autopermalink" aria-hidden="true" data-description="Activity 12.14.3"><a tabindex="-1" href="#u4b_muc_wc3" title="Copy heading and permalink for Activity 12.14.3" aria-label="Copy heading and permalink for Activity 12.14.3">🔗</a></div>
+</article><span class="incontext"><a class="internal" href="u4b-toggle-write-code.html#u4b_muc_wc3">In Context</a></span>
+</body>
+</html>
