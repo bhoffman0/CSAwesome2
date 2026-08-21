@@ -965,7 +965,7 @@ public class RunestoneTests extends CodeTestHelper {
                 }
             }
         } catch (Exception e) {
-            output = "Error";
+            actual = "Error: " + e;
         }
 
         getResults(expect, actual, "Expected output for input " + input1, passed);
