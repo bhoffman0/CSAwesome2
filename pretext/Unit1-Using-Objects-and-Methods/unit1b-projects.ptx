@@ -134,161 +134,184 @@ public class MyShape {
     </code>
     <stdin>4.0 5.0</stdin>
     <tests>
-import static org.junit.Assert.*;
-import org.junit.*;
-import java.io.*;
+import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
-public class RunestoneTests extends CodeTestHelper
-{
+
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
-        //super("MyShape", input3.replaceAll(" ", "\n")); // For Repl.it
+        //super("MyShape", input3.replaceAll(" ", "\n"));
 
         length = (int) (Math.random() * 10 + 5);
         width = (int) (Math.random() * 10 + 5);
     }
 
-    private static int goal = 1;
     private static String input1 = "4.0 5.0";
     private static String input2 = "10.0 3.0";
     private static String input3 = "2.0 3.0";
-    private String output1, output2;
 
-    private double length, width;
-
+    private final double length, width;
 
     @Test
-    public void test1()
-    {
-        String input = input1.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
-
+    public void test1() {
         String expect = "Perimeter = 18.0\nArea = 20.0";
+        String input = input1.replaceAll(" ", "\n");
+        boolean passed = false;
+        String output;
 
-        boolean passed = output.contains("18.0") &amp;&amp; output.contains("20.0") ;
+        try {
+            output = getMethodOutputWithInput("main", input);
+            passed = output.contains("18.0") &amp;&amp; output.contains("20.0");
+        } catch (Exception e) {
+            output = "Error";
+        }
 
         getResults(expect, output, "Expected calculation for inputs " + input1, passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test2()
-    {
-        String input = input2.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
-
+    public void test2() {
         String expect = "Perimeter = 26.0\nArea = 30.0";
+        String input = input2.replaceAll(" ", "\n");
+        String output;
+        boolean passed = false;
 
-        boolean passed = output.contains("26.0") &amp;&amp; output.contains("30.0") ;
+        try {
+            output = getMethodOutputWithInput("main", input);
+            passed = output.contains("26.0") &amp;&amp; output.contains("30.0");
+        } catch (Exception e) {
+            output = "Error";
+        }
 
         getResults(expect, output, "Expected calculation for inputs " + input2, passed);
         assertTrue(passed);
     }
 
-
     @Test
-    public void test3()
-    {
-        String code = getCode();
-        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-        int num = countOccurences(code, ".nextDouble()");
-        boolean called = num == 2;
-
-        String output = "Created: " + created + "\nCalled: " + num + " times";
+    public void test3() {
+        String output;
+        boolean passed = false;
         String expected = "Created: " + true + "\nCalled: " + 2 + " times";
 
-        boolean passed = created &amp;&amp; called;
+        try {
+            String code = getCode();
+            boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+            int num = countOccurences(code, ".nextDouble()");
+            boolean called = num == 2;
+
+            output = "Created: " + created + "\nCalled: " + num + " times";
+
+            passed = created &amp;&amp; called;
+        } catch (Exception e) {
+            output = "Error";
+        }
+
         getResults(expected, output, "Used Scanner correctly", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test4()
-    {
-        String code = getCode();
+    public void test4() {
+
         String output = "no matching method declared";
         String expect = "static void perimeter(...)";
         boolean passed = false;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
 
-        for (String line: lines) {
-            if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                output = line;
-                if (line.contains("static void perimeter")) {
-                    passed = true;
-                    break;
+            for (String line : lines) {
+                if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
+                    output = line;
+                    if (line.contains("static void perimeter")) {
+                        passed = true;
+                        break;
+                    }
                 }
             }
+        } catch (Exception e) {
+            output = "Error";
         }
-
 
         getResults(expect, output, "Perimeter method declared properly", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test5()
-    {
-        String code = getCode();
+    public void test5() {
+        String expect = "Header: public static double area(double l, double w)" + "\nReturn: " + "return l * w;";
         boolean header = false, ret = false;
         String hdr = "none", retn = "none";
+        boolean passed = false;
+        String output;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
 
-        for (String line : lines) {
-            if (line.contains("public") &amp;&amp; line.contains("area")) {
-                if (line.contains("static double area")) {
-                    header = true;
-                    hdr = line;
+            for (String line : lines) {
+                if (line.contains("public") &amp;&amp; line.contains("area")) {
+                    if (line.contains("static double area")) {
+                        header = true;
+                        hdr = line;
+                    }
+                }
+                if (line.contains("return")) {
+                    ret = true;
+                    retn = line;
                 }
             }
-            if (line.contains("return")) {
-                ret = true;
-                retn = line;
-            }
+
+            passed = header &amp;&amp; ret;
+
+            output = "Header: " + hdr + "\nReturn: " + retn;
+        } catch (Exception e) {
+            output = "Error";
         }
-
-        boolean passed = header &amp;&amp; ret;
-
-        String output = "Header: " + hdr + "\nReturn: " + retn;
-        String expect = "Header: public static double area(double l, double w)" + "\nReturn: " + "return l * w;";
 
         getResults(expect, output, "Area method declared properly and returns a value", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test6()
-    {
-        String code = getCode();
+    public void test6() {
+        String expect = "Perimeter: perimeter(double l, double w)\nArea: area(double l, double w)";
         int area = -1, perimeter = -1;
         String areaH = "none", perimH = "none";
+        boolean passed = false;
+        String output;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
 
-        for (String line: lines) {
-            if (line.contains("public") &amp;&amp; line.contains("area")) {
-                area = numParameters(line);
-                areaH = line;
+            for (String line : lines) {
+                if (line.contains("public") &amp;&amp; line.contains("area")) {
+                    area = numParameters(line);
+                    areaH = line;
+                }
+                if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
+                    perimeter = numParameters(line);
+                    perimH = line;
+                }
             }
-            if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                perimeter = numParameters(line);
-                perimH = line;
-            }
+
+            passed = area == 2 &amp;&amp; perimeter == 2;
+
+            output = "Perimeter: " + perimH + " (" + perimeter + " parameters)\nArea: " + areaH + " (" + area
+                    + " parameters)";
+        } catch (Exception e) {
+            output = "Error";
         }
-
-        boolean passed = area == 2 &amp;&amp; perimeter == 2;
-
-        String output = "Perimeter: " + perimH + " (" + perimeter + " parameters)\nArea: " + areaH + " (" + area + " parameters)";
-        String expect = "Perimeter: perimeter(double l, double w)\nArea: area(double l, double w)";
 
         getResults(expect, output, "Methods both have 2 parameters each", passed);
         assertTrue(passed);
     }
 
     private int numParameters(String line) {
-        if(line.contains("(") &amp;&amp; line.contains(")")) {
+        if (line.contains("(") &amp;&amp; line.contains(")")) {
             line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
             return line.split(",").length;
         }
@@ -296,63 +319,91 @@ public class RunestoneTests extends CodeTestHelper
     }
 
     @Test
-    public void test7()
-    {
-        String code = getCode();
-        String area = "none", perimeter = "none";
-        int areaNum = -1, perimNum = -1;
-
-        String[] lines = code.split("\n");
-
-        for (String line: lines) {
-            if (line.contains("area") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("System")) {
-                area = line;
-                areaNum = numParameters(line);
-            }
-            if (perimeter == "none" &amp;&amp; line.contains("perimeter") &amp;&amp; !line.contains("static")  &amp;&amp; !line.contains("System")) {
-                perimeter = line;
-                perimNum = numParameters(line);
-            }
-        }
-
-        boolean passed = areaNum == 2 &amp;&amp; perimNum == 2;
-
-        String output = "Perimeter: " + perimeter + " (" + perimNum + " parameters)\nArea: " + area + " (" + areaNum + " parameters)";
+    public void test7() {
         String expect = "Perimeter: perimeter(length, width) (2 parameters)\nArea: area(length, width) (2 parameters)";
+        String output;
+        boolean passed = false;
+        
+        try {
+            String code = getCode();
+            String area = null, perimeter = null;
+            int areaNum = -1, perimNum = -1;
 
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("area") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("System")) {
+                    area = line;
+                    areaNum = numParameters(line);
+                }
+                if (perimeter == null &amp;&amp; line.contains("perimeter") &amp;&amp; !line.contains("static")
+                        &amp;&amp; !line.contains("System")) {
+                    perimeter = line;
+                    perimNum = numParameters(line);
+                }
+            }
+
+            passed = areaNum == 2 &amp;&amp; perimNum == 2;
+
+            output = "Perimeter: " + perimeter + " (" + perimNum + " parameters)\nArea: " + area + " (" + areaNum
+                    + " parameters)";
+        } catch (Exception e) {
+            output = "Error";
+        }
+       
         getResults(expect, output, "Perimeter and Area methods have been called properly", passed);
         assertTrue(passed);
     }
 
-
     @Test
-    public void test8()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "System.out.println(");
+    public void test8() {
+        boolean passed = false;
+        int num = 0;
+        
+        try {
+            String code = getCode();
+            num = countOccurences(code, "System.out.println(");
 
-        boolean passed = num &gt;= 2;
+            passed = num &gt;= 2;
+        } catch (Exception e) {
+            num = -1;
+        }
+
         getResults("2 times", num + " times", "Called System.out.println(...) enough times", passed);
         assertTrue(passed);
     }
 
     @Test
     public void test9() {
-        Object[] args = {length, width};
-        String ans = getMethodOutput("perimeter", args);
         double exp = 2 * length + 2 * width;
+        String ans;
+        
+        try {
+            Object[] args = { length, width };
+            ans = getMethodOutput("perimeter", args);
+        } catch (Exception e) {
+            ans = "Error";
+        }
 
-        boolean passed = getResults("" + exp, "" + ans, "Correct calculation for perimeter with inputs " + length + " and " + width);
+        boolean passed = getResults("" + exp, "" + ans,
+                "Correct calculation for perimeter with inputs " + length + " and " + width);
         assertTrue(passed);
     }
 
     @Test
     public void test10() {
-        Object[] args = {length, width};
-        String ans = getMethodOutput("area", args);
         double exp = length * width;
+        String ans = null;
 
-        boolean passed = getResults("" + exp, "" + ans, "Correct calculation for area with inputs " + length + " and " + width);
+        try {
+            Object[] args = { length, width };
+            ans = getMethodOutput("area", args);
+        } catch (Exception e) {
+            ans = "Error";
+        }
+
+        boolean passed = getResults("" + exp, "" + ans,
+                "Correct calculation for area with inputs " + length + " and " + width);
         assertTrue(passed);
     }
 }
@@ -530,64 +581,74 @@ class RoundThings
     <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
-import java.io.*;
 
-public class RunestoneTests extends CodeTestHelper
-{
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
-        //super("RoundThingsDriver", input3.replaceAll(" ", "\n")); // For Repl.it
-
-        radius = (int) (Math.random() * 10 + 5);
+        // super("RoundThingsDriver", input3.replaceAll(" ", "\n"));
     }
 
     private static String input1 = "5.0";
     private static String input2 = "7.0";
     private static String input3 = "10.0";
 
-    private double radius;
-
-
     @Test
-    public void test1()
-    {
-        String input = input1.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
+    public void test1() {
+        String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877"
+                .replaceAll(", ", "\n");
+        String output = "";
+        boolean passed = false;
 
-        String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877".replaceAll(", ","\n");
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
 
-        boolean passed = output.contains("78.53981633");
-        passed = passed &amp;&amp; output.contains("31.415926");
-        passed = passed &amp;&amp; output.contains("314.15926");
-        passed = passed &amp;&amp; output.contains("523.59877");
+            passed = output.contains("78.53981633");
+            passed = passed &amp;&amp; output.contains("31.415926");
+            passed = passed &amp;&amp; output.contains("314.15926");
+            passed = passed &amp;&amp; output.contains("523.59877");
+        } catch (Exception e) {
+            output = "Error";
+        }
 
         getResults(expect, output, "Expected calculation for input " + input1, passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test2()
-    {
+    public void test2() {
+        String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504"
+                .replaceAll(", ", "\n");
         String input = input2.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
+        String output = "";
+        boolean passed = false;
 
-        String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504".replaceAll(", ","\n");
+        try {
+            output = getMethodOutputWithInput("main", input);
 
-        boolean passed = output.contains("153.93804");
-        passed = passed &amp;&amp; output.contains("43.982297");
-        passed = passed &amp;&amp; output.contains("615.75216");
-        passed = passed &amp;&amp; output.contains("1436.75504");
+            passed = output.contains("153.93804");
+            passed = passed &amp;&amp; output.contains("43.982297");
+            passed = passed &amp;&amp; output.contains("615.75216");
+            passed = passed &amp;&amp; output.contains("1436.75504");
+        } catch (Exception e) {
+            output = "Error";
+        }
 
         getResults(expect, output, "Expected calculation for input " + input2, passed);
         assertTrue(passed);
     }
 
-
     @Test
-    public void test3()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "class RoundThings");
+    public void test3() {
+        String code = "";
+        int num = 0;
+
+        try {
+            code = getCode();
+            num = countOccurences(code, "class RoundThings");
+        } catch (Exception e) {
+            code = "Error";
+            num = -1;
+        }
 
         boolean passed = num == 2;
         getResults("Classes: " + 2, "Classes: " + num, "Two classes created", passed);
@@ -595,64 +656,89 @@ public class RunestoneTests extends CodeTestHelper
     }
 
     @Test
-    public void test4()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "public static double");
-        String output = "public static double methods: " + num;
+    public void test4() {
         String expect = "public static double methods: " + 4;
+        String output = "";
+        String code = "";
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = num == 4;
+        try {
+            code = getCode();
+            num = countOccurences(code, "public static double");
+            output = "public static double methods: " + num;
+        } catch (Exception e) {
+            output = "Error";
+            num = -1;
+        }
+
+        passed = num == 4;
         getResults(expect, output, "4 static double methods created", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test5()
-    {
-        String code = getCode();
-        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-        int num = countOccurences(code, ".nextDouble()");
-        boolean called = num == 1;
-
-        String output = "Created: " + created + "\nCalled: " + num + " time";
+    public void test5() {
         String expected = "Created: " + true + "\nCalled: " + 1 + " time";
+        String output = "";
+        String code = "";
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = created &amp;&amp; called;
+        try {
+            code = getCode();
+            boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+            num = countOccurences(code, ".nextDouble()");
+            boolean called = num == 1;
+
+            output = "Created: " + created + "\nCalled: " + num + " time";
+
+            passed = created &amp;&amp; called;
+        } catch (Exception e) {
+            output = "Error";
+            num = -1;
+        }
+
         getResults(expected, output, "Used Scanner correctly", passed);
         assertTrue(passed);
     }
 
-
-
     @Test
-    public void test6()
-    {
-        String code = getCode();
-        int param = -1;
-        String header = "no header found";
-
-        String[] lines = code.split("\n");
-
-        for (String line: lines) {
-            if (line.contains("static") &amp;&amp; line.contains("outPut")) {
-                param = numParameters(line);
-                header = line;
-                break;
-            }
-        }
-
-        boolean passed = param == 4 &amp;&amp; !header.equals("no header found");
-
-        String output = header + " (" + param + ")";
+    public void test6() {
         String expect = "public static void outPut (...) (4 parameters)";
+        String output = "";
+        String code = "";
+        int param = -1;
+        boolean passed = false;
+
+        try {
+            code = getCode();
+
+            String header = "no header found";
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("static") &amp;&amp; line.contains("outPut")) {
+                    param = numParameters(line);
+                    header = line;
+                    break;
+                }
+            }
+
+            passed = param == 4 &amp;&amp; !header.equals("no header found");
+            output = header + " (" + param + ")";
+        } catch (Exception e) {
+            output = "Error";
+            param = -1;
+        }
 
         getResults(expect, output, "outPut method declared properly with four parameters", passed);
         assertTrue(passed);
     }
 
     private int numParameters(String line) {
-        if(line.contains("(") &amp;&amp; line.contains(")")) {
+        if (line.contains("(") &amp;&amp; line.contains(")")) {
             line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
             return line.split(",").length;
         }
@@ -661,67 +747,101 @@ public class RunestoneTests extends CodeTestHelper
 
     @Test
     public void test7() {
-        String code = getCode();
+        String code = "";
         int num = 0;
+        boolean passed = false;
 
-        String[] lines = code.split("\n");
+        try {
+            code = getCode();
+            num = 0;
 
-        for (String line: lines) {
-            if (line.contains("outPut") &amp;&amp; !line.contains("static")) {
-                if (numParameters(line) == 4) {
-                    num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("outPut") &amp;&amp; !line.contains("static")) {
+                    if (numParameters(line) == 4) {
+                        num++;
+                    }
                 }
             }
+
+            passed = num == 4;
+        } catch (Exception e) {
+            code = "Error";
+            num = -1;
         }
 
-        boolean passed = num == 4;
         getResults("4 times", num + " times", "Called outPut method 4 times", passed);
         assertTrue(passed);
     }
 
     @Test
     public void test8() {
-        String code = getCode();
+        String code = "";
         int num = 0;
+        boolean passed = false;
 
-        String[] lines = code.split("\n");
+        try {
+            code = getCode();
 
-        for (String line: lines) {
-            if (line.contains("RoundThings.")) {
-                num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("RoundThings.")) {
+                    num++;
+                }
             }
+
+            passed = num == 4;
+        } catch (Exception e) {
+            code = "Error";
+            num = -1;
         }
 
-        boolean passed = num == 4;
         getResults("4 times", num + " times", "Called static methods properly", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test9()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "Math.PI");
+    public void test9() {
+        String code = "";
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = num &gt;= 4;
+        try {
+            code = getCode();
+            num = countOccurences(code, "Math.PI");
+
+            passed = num &gt;= 4;
+        } catch (Exception e) {
+            code = "Error";
+            num = -1;
+        }
+
         getResults("4 times", num + " times", "Used Math.PI correct number of times", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test10()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "System.out.print");
+    public void test10() {
+        String code = "";
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = num &lt;= 2 &amp;&amp; num &gt; 0;
+        try {
+            code = getCode();
+            num = countOccurences(code, "System.out.print");
+
+            passed = num &lt;= 2 &amp;&amp; num &gt; 0;
+        } catch (Exception e) {
+            code = "Error";
+            num = -1;
+        }
+        
         getResults("2 times", num + " times", "Called System.out.print[ln](...) 2 times maximum", passed);
         assertTrue(passed);
     }
-
-
 }
-
     </tests>
     </program>
 </activity>
@@ -779,10 +899,6 @@ String part = word.substring(3, 6); // "put"
 
 <subsection xml:id="unit1b-project3">
 <title>Unit 1B Project 3 - String Program</title>
-
-<p>
-<term>StringProgram</term>
-</p>
 <p>
 Write a program that reads in a single String from the user containing exactly four words separated by symbols with no spaces into a single String object. Next, extract each word from the original string and store each word in a String object. Then, concatenate the words in reverse order to form another string. Display both the original and final strings.  
 </p>
@@ -820,202 +936,257 @@ import static org.junit.Assert.*;
 import org.junit.*;
 import java.io.*;
 
-public class RunestoneTests extends CodeTestHelper
-{
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
-        //super("StringProgram", input1.replaceAll(" ", "\n")); // For Repl.it
+        //super("StringProgram", input1.replaceAll(" ", "\n"));
     }
-
 
     private static String input1 = "This*code*works*well";
     private static String input2 = "Am*I*correct*now?";
     private static String input3 = "This*Is*A*Test";
 
-
     @Test
-    public void test1()
-    {
-        String input = input1.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
-        String actual = "No matching lines";
+    public void test1() {
         String expect = "well works code This";
+        String output = "";
+        String actual = "No matching lines";
         boolean passed = false;
 
-        String[] lines = output.split("\n");
-
-        for (String line: lines) {
-            if (line.contains(expect)) {
-                passed = true;
-                actual = line;
-                break;
-            }
-        }
-
-
-        getResults(expect, actual, "Expected output for input " + input1, passed);
-        assertTrue(passed);
-    }
-
-    @Test
-        public void test2()
-        {
-            String input = input2.replaceAll(" ", "\n");
-            String output = getMethodOutputWithInput("main", input);
-            String actual = "No matching lines";
-            String expect = "now? correct I Am";
-            boolean passed = false;
-
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
             String[] lines = output.split("\n");
 
-            for (String line: lines) {
+            for (String line : lines) {
                 if (line.contains(expect)) {
                     passed = true;
                     actual = line;
                     break;
                 }
             }
-
-
-            getResults(expect, actual, "Expected output for input " + input2, passed);
-            assertTrue(passed);
+        } catch (Exception e) {
+            actual = "Error: " + e;
         }
 
-    @Test
-    public void test3()
-    {
-        String code = getCode();
-        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-        int num = countOccurences(code, ".nextLine()");
-        boolean called = num == 1;
-
-        String output = "Created: " + created + "\nMethod Called: " + true;
-        String expected = "Created: " + true + "\nMethod Called: " + called;
-
-        boolean passed = created &amp;&amp; called;
-        getResults(expected, output, "Used Scanner correctly", passed);
+        getResults(expect, actual, "Expected output for input " + input1, passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test4()
-    {
-        String code = getCode();
-        int num = countOccurences(code, ".indexOf(");
+    public void test2() {
+        String expect = "now? correct I Am";
+        String actual = "No matching lines";
+        String output = "";
+        boolean passed = false;
 
-        boolean passed = num &gt;= 3;
+        try {
+            String input = input2.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
+
+            String[] lines = output.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expect)) {
+                    passed = true;
+                    actual = line;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, actual, "Expected output for input " + input2, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3() {
+        String expected = "Created: " + true + "\nMethod Called: " + true;
+        String output = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+            int num = countOccurences(code, ".nextLine()");
+            boolean called = num == 1;
+
+            output = "Created: " + created + "\nMethod Called: " + called;
+
+            passed = created &amp;&amp; called;
+
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expected, output, "Used Scanner correctly", passed);
+        assertTrue(passed);
+
+    @Test
+    public void test4() {
+        int num = 0;
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, ".indexOf(");
+
+            passed = num &gt;= 3;
+        } catch (Exception e) {
+            num = -1;
+        }
+
         getResults("3 times", num + " times", "Called indexOf(\"*\")", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test5()
-    {
-        String code = getCode();
-        int num = countOccurences(code, ".substring(");
+    public void test5() {
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = num &gt;= 4;
+        try {
+            String code = getCode();
+            num = countOccurences(code, ".substring(");
+
+            passed = num &gt;= 4;
+        } catch (Exception e) {
+            num = -1;
+        }
+
         getResults("4+ times", num + " times", "Called substring(...)", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test6()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "System.out.print");
+    public void test6() {
+        int num = 0;
+        boolean passed = false;
 
-        boolean passed = num &gt;= 3;
+        try {
+            String code = getCode();
+            num = countOccurences(code, "System.out.print");
+
+            passed = num &gt;= 3;
+        } catch (Exception e) {
+            num = -1;
+        }
+
         getResults("3+ times", num + " times", "Called System.out.print[ln](...) at least 3 times", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test7()
-    {
-        String code = getCode();
+    public void test7() {
         int num = 0;
+        boolean passed = false;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            num = 0;
 
-        for (String line : lines){
-            if (line.contains("String") &amp;&amp; !line.contains("main") &amp;&amp; !line.contains("class")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("String") &amp;&amp; !line.contains("main") &amp;&amp; !line.contains("class")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
+
+            passed = num &gt;= 4;
+        } catch (Exception e) {
+            num = -1;
         }
 
-        boolean passed = num &gt;= 4;
         getResults("4+", num + "", "Created at least four String variables", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test8()
-    {
-        String code = getCode();
+    public void test8() {
         int num = 0;
+        boolean passed = false;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            num = 0;
 
-        for (String line : lines){
-            if (line.contains("int ")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("int ")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
+
+            passed = num &gt;= 1;
+        } catch (Exception e) {
+            num = -1;
         }
 
-        boolean passed = num &gt;= 1;
         getResults("1+", num + "", "Created at least one int variable", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test9()
-    {
-        String code = getCode();
-        String output = "not found";
+    public void test9() {
+
         boolean passed = false;
+        String output = "not found";
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
 
-        for (String line : lines){
-            if (line.contains("\"") &amp;&amp; line.contains("+")) {
-                output = line;
-                passed = true;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("\"") &amp;&amp; line.contains("+")) {
+                    output = line;
+                    passed = true;
+                }
             }
+        } catch (Exception e) {
+            output = "Error";
         }
+
         getResults("\"...\" + \"...\"", output, "Used String concatenation", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test10()
-    {
-        String input = input3.replaceAll(" ", "\n");
-        String output = getMethodOutputWithInput("main", input);
+    public void test10() {
         String actual = "No matching lines";
         String expect = "Test A Is This";
         boolean passed = false;
 
-        String[] lines = output.split("\n");
+        try {
+            String input = input3.replaceAll(" ", "\n");
+            String output = getMethodOutputWithInput("main", input);
 
-        if (lines.length &gt; 1)
-            actual = lines[lines.length-1];
+            String[] lines = output.split("\n");
 
-        passed = !actual.contains("*") &amp;&amp; actual.contains(" ") &amp;&amp; !actual.equals("No matching lines");
+            if (lines.length &gt; 1)
+                actual = lines[lines.length - 1];
+
+            passed = !actual.contains("*") &amp;&amp; actual.contains(" ") &amp;&amp; !actual.equals("No matching lines");
+        } catch (Exception e) {
+            actual = "Error";
+        }
+
         getResults(expect, actual, "Reverse String has spaces instead of astericks", passed);
         assertTrue(passed);
     }
 
 }
-
     </tests>
     </program>
 </activity>
