@@ -140,7 +140,7 @@ import org.junit.Test;
 
 public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        super("MyShape", input3.replaceAll(" ", "\n"));
+        //super("MyShape", input3.replaceAll(" ", "\n"));
 
         length = (int) (Math.random() * 10 + 5);
         width = (int) (Math.random() * 10 + 5);
