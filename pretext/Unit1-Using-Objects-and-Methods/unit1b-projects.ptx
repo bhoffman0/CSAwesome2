@@ -1022,8 +1022,6 @@ public class RunestoneTests extends CodeTestHelper {
 
         getResults(expected, output, "Used Scanner correctly", passed);
         assertTrue(passed);
-        assertTrue(passed);
-    }
 
     @Test
     public void test4() {
