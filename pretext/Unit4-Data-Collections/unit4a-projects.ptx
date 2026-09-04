@@ -80,7 +80,7 @@ public StudentList( ) throws IOException
 <cell>
 <program language="java">
 <code>
-    Scanner input = new Scanner(new File(“students.txt”));
+    Scanner input = new Scanner(new File("students.txt"));
 </code>
 </program>
 </cell>
