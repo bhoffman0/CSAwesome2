@@ -109,7 +109,7 @@ import org.junit.*;
 
 public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("ConcerTickets", input1.replaceAll(" ", "\n"));
+        //super("ConcertTickets", input1.replaceAll(" ", "\n"));
     }
 
     private static String input1 = "B";
