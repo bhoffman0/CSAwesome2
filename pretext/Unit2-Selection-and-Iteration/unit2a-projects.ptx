@@ -690,7 +690,7 @@ String code = getCode();
         int num = countOccurences(code, "System.out.println");
 
         actual += num;
-        passed = num &gt;= 2;
+        passed = num &gt;= 4;
         } catch (Exception e) {
             actual = "Error";
         }
