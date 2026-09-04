@@ -211,12 +211,103 @@ StudentList list = new StudentList();
     Write a program that will grade a multiple choice test. This program will contain two classes:  Main and UnitTest. You are to code the UnitTest class first as described below:
    </p>
 
+   <table xml:id="unit4a-project1-unittest-classdescription">
+<title>Unit Test Class Description</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="25%" halign="left" />
+<col width="25%" halign="left" />
+<col width="50%" halign="left" />
 
+<row header="yes" halign="center" valign="middle">
+<cell>Component</cell>
+<cell>Requirement</cell>
+<cell>Description</cell>
+</row>
+
+<row>
+<cell>Class Name</cell>
+<cell><program language="java"><code>UnitTest</code></program></cell>
+<cell>Do not put public on the class line.</cell>
+</row>
+
+<row>
+<cell>Instance Variables</cell>
+<cell><program language="java"><code>
+    studentAns (String [ ])
+    answerKey (String [ ])</code></program></cell>
+<cell></cell>
+</row>
+
+<row>
+<cell>Constructor</cell>
+<cell>One parameter (String [ ]) and it will need to throw an IOException</cell>
+<cell>
+    <p>
+    You will need to create each instance variable to be the same length as the parameter. 
+    </p>
+    <p>
+<ul>
+<li>The studentAns variable should copy all of the elements from the parameter into itself in the same order as the parameter. You will need to make sure each element is changed to uppercase as it is being copied into the array.</li>
+<li>The answerKey variable will scan in its elements from the answerKey.txt file."</li>
+</ul>
+</p>
+</cell>
+</row>
+
+<row>
+<cell>Methods</cell>
+<cell><program language="java"><code>getStudentAnswers( )</code></program></cell>
+<cell>Returns the studentAns instance variable.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>totalCorrect( )</code></program></cell>
+<cell>This method will return the number of correctly answered questions.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>totalMistakes( )</code></program></cell>
+<cell>This method will return the number of incorrect answers.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>isPassing( )</code></program></cell>
+<cell>This method will return true if the student passed the test, or false if the student failed. A student must correctly answer 14 out of 20 questions in order to pass the test.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>toString( )</code></program></cell>
+<cell>This method will return a display of the correct answers and the student answers. It must be in a side by side, 2 column format, with item numbers. See format below.</cell>
+</row>
+
+</tabular>
+</table>
+
+<p>
+    Example output from the toString method (remember to return the String, not print it):
+</p>
+
+<pre>
+ANSWER KEY 	Student's Answers
+1) B 			1) A
+2) D 			2) A
+3) C 			3) C
+.			.
+. 			.
+. 			.
+20) E 			20) A
+</pre>
    <p>
     Hint for the toString method:  Create a String and initialize it to the first line of the output using a tab between the phrases instead of spaces (\t).  Create another String for the rest of your output, initializing it to the empty String.  Use a for loop to concatenate onto that string the problem number (which should be one more than the index number) and the String from each array at that index with tabs between the correct answer and the student’s answer (two tabs should do it - \t\t).  Return the first String, followed by a new line (\n), followed by the second String.
   </p>
    <p>
     Once the UnitTest class is complete, you are to complete the Main class to test your UnitTest class as follows:
+    </p>
+   <p>
     In the main method,
    </p>
 
@@ -596,6 +687,69 @@ String result = String.format("%.02f", price);  // 12.50
    <p>
     Write a program about sales data. This program will contain two classes:  Main and SalesData. You are to code the SalesData class first as described below:
    </p>
+   <table xml:id="unit4a-project2-salesdata-classdescription">
+<title>SalesData Class Description</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="25%" halign="left" />
+<col width="25%" halign="left" />
+<col width="50%" halign="left" />
+
+<row header="yes" halign="center" valign="middle">
+<cell>Component</cell>
+<cell>Requirement</cell>
+<cell>Description</cell>
+</row>
+
+<row>
+<cell>Class Name</cell>
+<cell><program language="java"><code>SalesData</code></program></cell>
+<cell>Do not put public on the class line.</cell>
+</row>
+
+<row>
+<cell>Instance Variable</cell>
+<cell><program language="java"><code>sales (double[ ])</code></program></cell>
+<cell></cell>
+</row>
+
+<row>
+<cell>Constructor</cell>
+<cell>One parameter (double [ ])</cell>
+<cell>Creates the sales array the same size as that parameter and copies all of the elements of the parameter array into the sales array.</cell>
+</row>
+
+<row>
+<cell>Methods</cell>
+<cell><program language="java"><code>getTotal( )</code></program></cell>
+<cell>This method returns the sum of the elements in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getAverage( )</code></program></cell>
+<cell>This method returns the average of the elements in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getHighest( )</code></program></cell>
+<cell>This method returns the highest value stored in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getLowest( )</code></program></cell>
+<cell>This method returns the lowest value stored in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>toString( )</code></program></cell>
+<cell>This method returns a String representation of the values stored in the sales array, one per line. Make sure the values are formatted to two decimal places and have a $ in front of the values.</cell>
+</row>
+
+</tabular>
+</table>
    <p>
     Once the SalesData class is complete, you are to complete the Main class to test your SalesData class as follows:
   </p>
