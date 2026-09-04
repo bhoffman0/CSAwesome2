@@ -6,16 +6,1074 @@
 
   <introduction>  
     <p>
-      This section contains projects for Unit 4A.
+      These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
+    </p><p>
+      Now that you've learned how to create your own classes, it's time to work with collections of data using one-dimensional arrays. In these projects, you'll learn how to store, access, and manipulate multiple values efficiently. You'll practice traversing arrays, processing their elements with loops, and developing algorithms to search for information, calculate results, and modify data.
+    </p><p>
+      Each project is designed to reinforce these concepts through authentic programming tasks. As you complete them, focus on using loops effectively, paying close attention to array indices and boundaries, and breaking complex problems into manageable steps. Mastering one-dimensional arrays is an essential skill that prepares you for more advanced data structures and algorithms.
     </p>
   </introduction>
 
-  <subsection xml:id="unit4a-project1">
-    <title>Unit 4A Project 1</title>
+  <subsection xml:id="unit4a-review-textfile">
+    <title>Review - Reading a Text File into an Instance Variable</title>
+<p>
+  If you have an array instance variable that is to be filled with data from a text file automatically when an object is created, the best place to do this is in the constructor. For example, the file students.txt contains:
+</p>
+<pre>
+Alice
+Brian
+Carlos
+Diana
+Emma
+</pre>
+<p>
+  You want an instance variable in your class that contains the data in an array.
+</p>
+<table xml:id="unit4a-projects-review-text-files-table">
+<title>Code for Reading a Text File</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="50%" halign="left" />
+<col width="50%" halign="left" />
 
-   
+
+<row header="yes" halign="center" valign="middle">
+<cell>Description</cell>
+<cell>Code</cell>
+</row>
+
+<row>
+<cell>You will first need to declare a private instance variable.</cell>
+<cell>
+<program language="java">
+<code>
+private String[ ] students
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Create a constructor for the class. The constructor should declare that it may throw an IOException.</cell>
+<cell>
+<program language="java">
+<code>
+public StudentList( ) throws IOException
+</code>
+</program>
+</cell>
+</row>
+
+
+<row>
+<cell>Inside the constructor:</cell>
+<cell>
+<program language="java">
+<code>
+{
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Create a Scanner that reads from a file named students.txt.</cell>
+<cell>
+<program language="java">
+<code>
+    Scanner input = new Scanner(new File("students.txt"));
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Create the students array with enough space to store all of the names in the file.</cell>
+<cell>
+<program language="java">
+<code>
+    students = new String[5];
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Use a for loop to read each name from the file.</cell>
+<cell>
+<program language="java">
+<code>
+    for(int i = 0; i &lt; students.length; i++)
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Store each name in the appropriate position of the students array.</cell>
+<cell>
+<program language="java">
+<code>
+    students[i] = input.nextLine( );
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>Close the Scanner after all names have been read.</cell>
+<cell>
+<program language="java">
+<code>
+    input.close( );
+</code>
+</program>
+</cell>
+</row>
+
+<row>
+<cell>End of the constructor</cell>
+<cell>
+<program language="java">
+<code>
+}
+</code>
+</program>
+</cell>
+</row>
+
+</tabular>
+</table>
+
+<activity label="unit4a-project1-choose">
+<statement>
+  <p>
+    Consider the following class:
+  </p>
+<program language="java">
+<code>
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class StudentList
+{
+    private String[] students;
+
+
+    public StudentList() throws IOException
+    {
+        Scanner input = new Scanner(new File("students.txt"));
+        students = new String[5];
+        for (int i = 0; i &lt; students.length; i++)
+        {
+            students[i] = input.nextLine();
+        }
+        input.close();
+    }
+}
+</code>
+</program>
+
+
+<p>The file students.txt contains:</p>
+  
+<pre>
+Alice
+Brian
+Carlos
+Diana
+Emma
+</pre>
+  <p>
+    Which statement best explains what happens when the following line is executed?
+  </p>
+
+<program language="java">
+<code>
+StudentList list = new StudentList();
+</code>
+</program>
+</statement>
+<choices>
+<choice ><statement><p>The students array is created but remains empty until a method is called.</p></statement><feedback><p>Think about when the constructor runs. Does the constructor contain code that fills the array?</p></feedback></choice>
+<choice correct="yes"><statement><p>The constructor automatically reads the five names from the file and stores them in the students array.</p></statement><feedback><p>The constructor runs automatically when the object is created. It creates the array, reads each line from the file, and stores the names in the instance variable.</p></feedback></choice>
+<choice ><statement><p>The students array is created inside the constructor and is destroyed when the constructor finishes.</p></statement><feedback><p>Think about the difference between a local variable and an instance variable. Where is students declared?</p></feedback></choice>
+<choice ><statement><p>The program reads the file only when students[i] is accessed later.</p></statement><feedback><p>Look at the for loop. When does input.nextLine() actually execute? Does the program wait until an array element is accessed?</p></feedback></choice>
+</choices>
+</activity>
 
   </subsection>
+
+  <subsection xml:id="unit4a-project1">
+    <title>Unit 4A Project 1 - Unit Test</title>
+
+   <p>
+    Write a program that will grade a multiple choice test. This program will contain two classes:  Main and UnitTest. You are to code the UnitTest class first as described below:
+   </p>
+
+   <table xml:id="unit4a-project1-unittest-classdescription">
+<title>Unit Test Class Description</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="25%" halign="left" />
+<col width="25%" halign="left" />
+<col width="50%" halign="left" />
+
+<row header="yes" halign="center" valign="middle">
+<cell>Component</cell>
+<cell>Requirement</cell>
+<cell>Description</cell>
+</row>
+
+<row>
+<cell>Class Name</cell>
+<cell><program language="java"><code>UnitTest</code></program></cell>
+<cell>Do not put public on the class line.</cell>
+</row>
+
+<row>
+<cell>Instance Variables</cell>
+<cell><program language="java"><code>
+    studentAns (String [ ])
+    answerKey (String [ ])</code></program></cell>
+<cell></cell>
+</row>
+
+<row>
+<cell>Constructor</cell>
+<cell>One parameter (String [ ]) and it will need to throw an IOException</cell>
+<cell>
+    <p>
+    You will need to create each instance variable to be the same length as the parameter. 
+    </p>
+    <p>
+<ul>
+<li>The studentAns variable should copy all of the elements from the parameter into itself in the same order as the parameter. You will need to make sure each element is changed to uppercase as it is being copied into the array.</li>
+<li>The answerKey variable will scan in its elements from the answerKey.txt file.</li>
+</ul>
+</p>
+</cell>
+</row>
+
+<row>
+<cell>Methods</cell>
+<cell><program language="java"><code>getStudentAnswers( )</code></program></cell>
+<cell>Returns the studentAns instance variable.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>totalCorrect( )</code></program></cell>
+<cell>This method will return the number of correctly answered questions.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>totalMistakes( )</code></program></cell>
+<cell>This method will return the number of incorrect answers.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>isPassing( )</code></program></cell>
+<cell>This method will return true if the student passed the test, or false if the student failed. A student must correctly answer 14 out of 20 questions in order to pass the test.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>toString( )</code></program></cell>
+<cell>This method will return a display of the correct answers and the student answers. It must be in a side by side, 2 column format, with item numbers. See format below.</cell>
+</row>
+
+</tabular>
+</table>
+
+<p>
+    Example output from the toString method (remember to return the String, not print it):
+</p>
+
+<pre>
+ANSWER KEY 	Student's Answers
+1) B 			1) A
+2) D 			2) A
+3) C 			3) C
+.			.
+. 			.
+. 			.
+20) E 			20) A
+</pre>
+   <p>
+    Hint for the toString method:  Create a String and initialize it to the first line of the output using a tab between the phrases instead of spaces (\t).  Create another String for the rest of your output, initializing it to the empty String.  Use a for loop to concatenate onto that string the problem number (which should be one more than the index number) and the String from each array at that index with tabs between the correct answer and the student’s answer (two tabs should do it - \t\t).  Return the first String, followed by a new line (\n), followed by the second String.
+  </p>
+   <p>
+    Once the UnitTest class is complete, you are to complete the Main class to test your UnitTest class as follows:
+    </p>
+   <p>
+    In the main method,
+   </p>
+
+<p>
+<ul>
+<li>Create a String array called answerArray of size 20.</li>
+<li>Create a Scanner object.</li>
+<li>Use a for loop to allow the user to enter their answers one at a time until they have entered all 20 answers.  Store these into the answerArray as they enter them.  It should not matter if they enter upper or lower case letters.</li>
+<li>Create a UnitTest object using the array of answers as the parameter.</li>
+<li>Display the following information:</li>
+<li>
+  <ul>
+    <li>The correct answers and student’s answers using the toString method.</li>
+    <li>Number of Correct Answers: ___ (the blank should be filled in with the appropriate value returned from the appropriate method).</li>
+    <li>Number of Mistakes: ___ (the blank should be filled in with the appropriate value returned from the appropriate method).</li>
+    <li>Display either “The student PASSED” or “The student FAILED” as determined by the appropriate method.</li>
+  </ul>
+</li>
+</ul>
+</p>
+
+<activity label="unit4a-project1-unittest">
+<statement>
+<p>
+  Complete the UnitTest class and the Main class using the directions above.  
+</p>
+</statement>
+<program interactive="activecode" language="java" datafile="answerKey.txt">
+<code>
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+
+ // write your UnitTest class here (omit the word public on the class line)
+
+
+</code>
+<tests>
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests() {
+          //super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("Tester", input1.replaceAll(" ", "\n")); // For Repl.it
+      }
+
+
+      private static String input1 = "B D C A E A B A E B B E E D D A A A A A";
+      private static String input2 = "B D C A E A B A E B B E E D D A A A A A";
+      private static String input3 = "A A A A A A A A A A A A A A A A A A A A";
+
+      @Test // class header
+          public void test1() {
+              String code = getCode();
+              String expected = "class UnitTest";
+              boolean passed = code.contains(expected);
+
+              String actual = "";
+              String[] lines = code.split("\n");
+
+              for (String line : lines) {
+                  if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                      actual = line;
+                      break;
+                  }
+              }
+
+              getResults(expected, actual, "Created UnitTest class header correctly", passed);
+              assertTrue(passed);
+          }
+
+      @Test // two private String[] variables
+          public void test2() {
+              String code = getCode();
+              code = code.substring(code.indexOf("class UnitTest"));
+              code = code.substring(code.indexOf("{")+1);
+              code = code.replaceAll("\\{[\\S\\s]+\\};", "");
+              String[] lines = code.split("\n");
+
+              int num = countVariables(lines, "private String[]");
+
+              String expected = "private String[]: 2";
+              String actual = "private String[]: " + num;
+
+              boolean passed = num &gt;= 2;
+              getResults(expected, actual, "Created two private String arrays", passed);
+              assertTrue(passed);
+          }
+
+      @Test
+      public void test3() {
+          String code = getCode();
+          String expected = "public UnitTest(String[]";
+          boolean passed = false;
+
+          boolean header = code.contains(expected);
+          boolean newArray = false;
+          boolean loop = false;
+
+          String actual = "";
+
+          if (header) {
+              code = getMethodCode(code, expected);
+
+              String[] lines = code.split("\n");
+
+              for (String line: lines) {
+                  if (line.contains(expected)) {
+                      actual += "Header: " + line.trim() + "\n";
+                  } else if (line.contains(" = new String[")) {
+                      actual += "Creating array: " + line.trim() + "\n";
+                      newArray = line.contains(".length");
+                  } else if (line.contains("for")) {
+                      actual += "Loop: " + line.trim() + "\n";
+                      loop = line.replaceAll(" ","").matches("for\\s*\\(int\\S+=\\d;\\S+&lt;\\S+\\.length;\\S+\\+\\+\\)\\{*");
+                  }
+              }
+          }
+
+          if (!header) actual += "Header: not found\n";
+          if (!newArray) actual += "Creating Array: not found\n";
+          if (!loop) actual += "Loop: not found\n";
+
+          passed = header &amp;&amp; loop &amp;&amp; newArray;
+
+          expected = "Header: public UnitTest(String[] *)\nCreating array:new String[*.length]\nLoop: for(int i = 0; i &lt; *.length; i++)";
+
+          getResults(expected, actual, "Constructor created that uses a for loop to initialize studentAns instance variable", passed);
+          assertTrue(passed);
+      }
+
+      @Test // number of for loops
+          public void test4() {
+              String code = getCode();
+              String actual = "";
+              int num = 0;
+
+              String[] lines = code.split("\n");
+
+              for (String line: lines) {
+                  if (line.contains("for")) {
+                      boolean loop = line.replaceAll(" ","").matches("for\\(int\\S+=\\d;\\S+&lt;\\S+\\.length;\\S+\\+\\+\\)\\{*");
+                      if (loop) {
+                          num++;
+                          actual += line.trim() + "\n";
+                      }
+
+                  }
+              }
+
+              boolean passed = num &gt;= 3;
+
+              String expected = "3 for loops";
+              actual = num + " for loops:\n" + actual;
+
+              getResults(expected, actual, "At least 3 for loops used", passed);
+              assertTrue(passed);
+          }
+
+      @Test // totalCorrect
+          public void test5() {
+              UnitTest test1 = new UnitTest(input2.split(" "));
+              UnitTest test2 = new UnitTest(input3.split(" "));
+
+              String expected = "test1: 17\ntest2: 5";
+              String actual = "test1: " + test1.totalCorrect() + "\n";
+              actual += "test2: " + test2.totalCorrect();
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "totalCorrect method created and outputs correct result for test cases", passed);
+              assertTrue(passed);
+          }
+
+      @Test // totalCorrect
+          public void test6() {
+              UnitTest test1 = new UnitTest(input2.split(" "));
+              UnitTest test2 = new UnitTest(input3.split(" "));
+
+              String expected = "test1: 3\ntest2: 15";
+              String actual = "test1: " + test1.totalMistakes() + "\n";
+              actual += "test2: " + test2.totalMistakes();
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "totalMistakes method created and outputs correct result for test cases", passed);
+              assertTrue(passed);
+          }
+
+      @Test // isPassing
+          public void test7() {
+              UnitTest test1 = new UnitTest(input2.split(" "));
+              UnitTest test2 = new UnitTest(input3.split(" "));
+
+              String expected = "test1: true\ntest2: false";
+              String actual = "test1: " + test1.isPassing() + "\n";
+              actual += "test2: " + test2.isPassing();
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "isPassing method created and outputs correct result for test cases", passed);
+              assertTrue(passed);
+          }
+
+      @Test // toString
+      public void test8() {
+          UnitTest test1 = new UnitTest(input2.split(" "));
+          String output = test1.toString();
+          String actual = "";
+
+          boolean passed = false;
+          boolean item = true;
+
+          String[] lines = output.split("\n");
+
+          boolean answerkey = output.toLowerCase().contains("answer key");
+          boolean studentans = output.toLowerCase().contains("student's answers");
+
+          for (int i = 0; i &lt; lines.length; i++) {
+              if (lines[i].toLowerCase().contains("answer key") || lines[i].toLowerCase().contains("student's answers")) {
+                  actual += lines[i] + "\n";
+              } else if (i &lt; 5) {
+                  //actual += lines[i] + "\n";
+                  item = item &amp;&amp; lines[i].matches("[1-6]\\S*\\s*[A-E]\\s+[1-6]\\S*\\s*[A-E]");
+                  actual += lines[i] + "\n"; // + (item ? "passed" : "failed") + "\n";
+              } else if (i == 20) {
+                  actual += "...\n";
+                  actual += lines[i] + "\n";
+              }
+          }
+
+          passed = answerkey &amp;&amp; studentans &amp;&amp; item &amp;&amp; lines.length == 21;
+
+          String expected = "ANSWER KEY  Student's Answers\n1) B        1) B\n" +
+              "2) D        2) D\n" + "3) C        3) C\n" +
+              "4) A        4) A\n" + "...\n" + "20) E       20) A\n";
+
+          getResults(expected, actual, "toString method created and prints results", passed);
+          assertTrue(passed);
+      }
+
+      @Test // Output matches for Input 2
+          public void test9()
+          {
+              String input = input2.replaceAll(" ", "\n");
+              String expect = "Number of Correct Answers: 17\nNumber of Mistakes: 3\nThe student PASSED";
+
+              String actual = getMethodOutputWithInput("main",input);
+              actual = actual.substring(actual.indexOf("Number"));
+
+              boolean passed = actual.contains("17") && actual.contains("3") && actual.toLowerCase().contains("passed");
+
+              getResults(expect, actual, "Expected output for input \"" + input2 + "\"", passed);
+              assertTrue(passed);
+          }
+
+      @Test // Output matches for Input 3
+          public void test10()
+          {
+              String input = input3.replaceAll(" ", "\n");
+              String expect = "Number of Correct Answers: 5\nNumber of Mistakes: 15\nThe student FAILED";
+
+              String actual = getMethodOutputWithInput("main",input);
+              actual = actual.substring(actual.indexOf("Number"));
+
+              boolean passed = actual.contains("5") && actual.contains("15") && actual.toLowerCase().contains("failed");
+
+              getResults(expect, actual, "Expected output for input \"" + input3 + "\"", passed);
+              assertTrue(passed);
+          }
+
+
+
+      private String getMethodCode(String code, String name) {
+          String searchStr = code;
+          int start = searchStr.indexOf(name);
+          searchStr = searchStr.substring(start);
+
+          int level = 0;
+
+          for (int i = 0; i &lt; searchStr.length(); i++) {
+              if (searchStr.substring(i,i+1).equals("{")) {
+                  level++;
+              } else if (searchStr.substring(i,i+1).equals("}")) {
+                  level--;
+
+                  if (level == 0) {
+                      //System.out.println(searchStr.substring(0, i+1).trim());
+                      return searchStr.substring(0, i+1).trim();
+                  }
+              }
+          }
+
+          return searchStr.trim();
+      }
+
+      private int countVariables(String[] lines, String type) {
+          int num = 0;
+          for (String line : lines){
+              if (line.contains(type)) {
+                  if (line.contains(",")) {
+                      num += line.split(",").length;
+                  } else {
+                      num++;
+                  }
+              }
+          }
+          return num;
+      }
+  }
+
+
+</tests>
+</program>
+</activity>
+
+  </subsection>
+
+  <subsection xml:id="unit4a-review-doubleformat">
+    <title>Review - Formatting a Double </title>
+  <p>
+    Use String.format( ) when you want to control how a number is displayed. To format a double to two decimal places:
+  </p>
+  <program language="java">
+<code>
+double price = 12.5;
+String result = String.format("%.02f", price);  // 12.50
+</code>
+</program>
+
+<p>Remember:</p>
+<p>
+<ul>
+<li>%f → formats a double</li>
+<li>.02 → displays 2 digits after the decimal</li>
+<li>The result of String.format( ) is a String</li>
+</ul>
+</p>
+
+<activity label="unit4a-project2-double-choose">
+<statement>
+  
+  <p>What is stored in result?</p>
+  <program language="java">
+  <code>
+  double score = 87.456;
+  String result = String.format("%.02f", score);
+  </code>
+  </program>
+
+</statement>
+<choices>
+<choice ><statement><p>87.456</p></statement><feedback><p>Look at the .02 in "%.02f". How many digits should appear after the decimal?</p></feedback></choice>
+<choice ><statement><p>87.45</p></statement><feedback><p>Remember that formatting to two decimal places involves rounding. Look at the third digit after the decimal.</p></feedback></choice>
+<choice correct="yes"><statement><p>87.46</p></statement><feedback><p>String.format("%.02f", score) rounds the value to two decimal places and returns it as a String.</p></feedback></choice>
+<choice ><statement><p>87.46 as a double</p></statement><feedback><p>Think about what String.format( ) returns. Is the result a number, or is it text?</p></feedback></choice>
+</choices>
+</activity>
+
+
+  
+
+  </subsection>
+
+  <subsection xml:id="unit4a-project2">
+    <title>Unit 4A Project 2 - Sales Data</title>
+
+   <p>
+    Write a program about sales data. This program will contain two classes:  Main and SalesData. You are to code the SalesData class first as described below:
+   </p>
+   <table xml:id="unit4a-project2-salesdata-classdescription">
+<title>SalesData Class Description</title>
+<tabular top="minor" bottom="minor" left="minor" right="minor" valign="top" width="100%">
+<col width="25%" halign="left" />
+<col width="25%" halign="left" />
+<col width="50%" halign="left" />
+
+<row header="yes" halign="center" valign="middle">
+<cell>Component</cell>
+<cell>Requirement</cell>
+<cell>Description</cell>
+</row>
+
+<row>
+<cell>Class Name</cell>
+<cell><program language="java"><code>SalesData</code></program></cell>
+<cell>Do not put public on the class line.</cell>
+</row>
+
+<row>
+<cell>Instance Variable</cell>
+<cell><program language="java"><code>sales (double[ ])</code></program></cell>
+<cell></cell>
+</row>
+
+<row>
+<cell>Constructor</cell>
+<cell>One parameter (double [ ])</cell>
+<cell>Creates the sales array the same size as that parameter and copies all of the elements of the parameter array into the sales array.</cell>
+</row>
+
+<row>
+<cell>Methods</cell>
+<cell><program language="java"><code>getTotal( )</code></program></cell>
+<cell>This method returns the sum of the elements in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getAverage( )</code></program></cell>
+<cell>This method returns the average of the elements in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getHighest( )</code></program></cell>
+<cell>This method returns the highest value stored in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>getLowest( )</code></program></cell>
+<cell>This method returns the lowest value stored in the sales array.</cell>
+</row>
+
+<row>
+<cell></cell>
+<cell><program language="java"><code>toString( )</code></program></cell>
+<cell>This method returns a String representation of the values stored in the sales array, one per line. Make sure the values are formatted to two decimal places and have a $ in front of the values.</cell>
+</row>
+
+</tabular>
+</table>
+   <p>
+    Once the SalesData class is complete, you are to complete the Main class to test your SalesData class as follows:
+  </p>
+   <p>
+      In the main method,
+   </p>
+
+<ul>
+<li>Create a weekSales array of type double to hold sales amounts for a week (7 days).</li>
+<li>Use a for loop to fill the array with input from the user. Include a data verification while loop to ensure that the user is entering values greater than or equal to zero.</li>
+<li>Create a SalesData object named salesObject, passing in weekSales as the parameter.</li>
+<li>Display the total, average, highest, and lowest sales amounts for the week (be sure to format them to two decimal places) using the following format:</li>
+<li>
+  <ul>
+    <li>Total Sales:  $____</li>
+    <li>Average Sales:  $___</li>
+    <li>Highest Sale:   $___</li>
+    <li>Lowest Sale:  $___</li>
+    <li>Display the salesObject using the toString method.</li>
+  </ul>
+</li>
+</ul>
+
+<activity label="unit4a-project2-salesdata">
+<statement>
+<p>
+  Complete the SalesData class and the Main class using the directions above.   
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+
+  }
+}
+
+ // write your SalesData class here (omit the word public on the class line)
+
+
+</code>
+<tests>
+  import static org.junit.Assert.*;
+  import org.junit.*;
+  import java.io.*;
+
+  import java.util.Arrays;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+      public RunestoneTests() {
+          //super("Main", input1.replaceAll(" ", "\n")); // For Book
+          //super("Tester", input1.replaceAll(" ", "\n")); // For Repl.it
+      }
+
+
+      private static String input1 = "8.43 7.02 3.40 -5 1.00 9.26 0.43 5.82";
+      private static String input2 = "8.43 7.02 3.40 -5 1.00 9.26 0.43 5.82";
+      private static String input3 = "8.43 7.02 3.40 -5 1.00 9.26 0.43 5.82";
+
+      @Test // class header
+          public void test01() {
+              String code = getCode();
+              String expected = "class SalesData";
+              boolean passed = code.contains(expected);
+
+              String actual = "";
+              String[] lines = code.split("\n");
+
+              for (String line : lines) {
+                  if (line.contains("class") &amp;&amp; !line.contains("Main") &amp;&amp; !line.contains("Tester")){
+                      actual = line;
+                      break;
+                  }
+              }
+
+              getResults(expected, actual, "Created SalesData class header correctly", passed);
+              assertTrue(passed);
+          }
+
+      @Test // one private double[] array
+          public void test02() {
+              String code = getCode();
+              code = code.substring(code.indexOf("class SalesData"));
+              code = code.substring(code.indexOf("{")+1);
+              code = code.replaceAll("\\{[\\S\\s]+\\};", "");
+              String[] lines = code.split("\n");
+
+              int num = countVariables(lines, "private double[]");
+
+              String expected = "private double[]: 1";
+              String actual = "private double[]: " + num;
+
+              boolean passed = num &gt;= 1;
+              getResults(expected, actual, "Created one private double array", passed);
+              assertTrue(passed);
+          }
+
+      @Test // constructor
+      public void test03() {
+          String code = getCode();
+          String expected = "public SalesData(double[]";
+          boolean passed = false;
+
+          boolean header = code.contains(expected);
+          boolean newArray = false;
+          boolean loop = false;
+
+          String actual = "";
+
+          if (header) {
+              code = getMethodCode(code, expected);
+
+              String[] lines = code.split("\n");
+
+              for (String line: lines) {
+                  if (line.contains(expected)) {
+                      actual += "Header: " + line.trim() + "\n";
+                  } else if (line.contains(" = new double[")) {
+                      actual += "Creating array: " + line.trim() + "\n";
+                      newArray = line.contains(".length");
+                  } else if (line.contains("for")) {
+                      actual += "Loop: " + line.trim() + "\n";
+                      loop = line.replaceAll(" ","").matches("for\\(int\\S+=\\d;\\S+&lt;\\S+\\.length;\\S+\\+\\+\\)\\{*");
+                  }
+              }
+          }
+
+          if (!header) actual += "Header: not found\n";
+          if (!newArray) actual += "Creating Array: not found\n";
+          if (!loop) actual += "Loop: not found\n";
+
+          passed = header &amp;&amp; loop &amp;&amp; newArray;
+
+          expected = "Header: public SalesData(double[] *)\nCreating array:new double[*.length]\nLoop: for(int i = 0; i &lt; *.length; i++)";
+
+          getResults(expected, actual, "Constructor created that uses a for loop to initialize sales instance variable", passed);
+          assertTrue(passed);
+      }
+
+      @Test // number of for loops
+          public void test04() {
+              String code = getCode();
+              String actual = "";
+              int num = 0, numwhile = 0;
+
+              String[] lines = code.split("\n");
+
+              for (String line: lines) {
+                  if (line.contains("for")) {
+                      boolean loop = line.replaceAll(" ","").matches("for\\(int\\S+=\\d;\\S+&lt;\\S+\\.length;\\S+\\+\\+\\)\\{*") || line.replaceAll(" ","").matches("for\\(double\\S+:\\S+\\)\\{*");
+                      if (loop) {
+                          num++;
+                          actual += line.trim() + "\n";
+                      }
+                  } else if (line.contains("while")) {
+                      numwhile++;
+                  }
+              }
+
+              boolean passed = num &gt;= 2 &amp;&amp; numwhile &gt;= 1;
+
+              String expected = "for loops: 2\nwhile loop: 1";
+              actual = "for loops:" + num + "\n" + "while loop: " + numwhile;// + "\n" + actual;
+
+              getResults(expected, actual, "At least 2 for loops and one while used", passed);
+              assertTrue(passed);
+          }
+
+      @Test // totalCorrect
+          public void test05() {
+              double[] values1 = {9.70, 6.68, 1.23, 4.42, 9.02, 3.63, 6.35};
+              double[] values2 = {8.76, 8.29, 9.82, 0.38, 1.05, 9.41, 0.22};
+
+              SalesData test1 = new SalesData(values1);
+              SalesData test2 = new SalesData(values2);
+
+              String expected = "test1: 41.03\ntest2: 37.93";
+              String actual = "test1: " + String.format("%.02f",test1.getTotal()) + "\n";
+              actual += "test2: " + String.format("%.02f",test2.getTotal());
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "getTotal method created and outputs correct result for test cases\ninput1: " + Arrays.toString(values1) + "\ninput2: " + Arrays.toString(values2), passed);
+              assertTrue(passed);
+          }
+
+      @Test // getAverage
+          public void test06() {
+              double[] values1 = {9.70, 6.68, 1.23, 4.42, 9.02, 3.63, 6.35};
+              double[] values2 = {8.76, 8.29, 9.82, 0.38, 1.05, 9.41, 0.22};
+
+              SalesData test1 = new SalesData(values1);
+              SalesData test2 = new SalesData(values2);
+
+              String expected = "test1: 5.86\ntest2: 5.42";
+              String actual = "test1: " + String.format("%.02f",test1.getAverage()) + "\n";
+              actual += "test2: " + String.format("%.02f",test2.getAverage());
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "getAverage method created and outputs correct result for test cases\ninput1: " + Arrays.toString(values1) + "\ninput2: " + Arrays.toString(values2), passed);
+              assertTrue(passed);
+          }
+
+      @Test // getHighest
+          public void test07() {
+              double[] values1 = {9.70, 6.68, 1.23, 4.42, 9.02, 3.63, 6.35};
+              double[] values2 = {8.76, 8.29, 9.82, 0.38, 1.05, 9.41, 0.22};
+
+              SalesData test1 = new SalesData(values1);
+              SalesData test2 = new SalesData(values2);
+
+              String expected = "test1: 9.7\ntest2: 9.82";
+              String actual = "test1: " + test1.getHighest() + "\n";
+              actual += "test2: " + test2.getHighest();
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "getHighest method created and outputs correct result for test cases\ninput1: " + Arrays.toString(values1) + "\ninput2: " + Arrays.toString(values2), passed);
+              assertTrue(passed);
+          }
+
+      @Test // getLowest
+          public void test08() {
+              double[] values1 = {9.70, 6.68, 1.23, 4.42, 9.02, 3.63, 6.35};
+              double[] values2 = {8.76, 8.29, 9.82, 0.38, 1.05, 9.41, 0.22};
+
+              SalesData test1 = new SalesData(values1);
+              SalesData test2 = new SalesData(values2);
+
+              String expected = "test1: 1.23\ntest2: 0.22";
+              String actual = "test1: " + test1.getLowest() + "\n";
+              actual += "test2: " + test2.getLowest();
+
+              boolean passed = expected.equals(actual);
+
+              getResults(expected, actual, "getLowest method created and outputs correct result for test cases\ninput1: " + Arrays.toString(values1) + "\ninput2: " + Arrays.toString(values2), passed);
+              assertTrue(passed);
+          }
+
+      @Test
+      public void test09() {
+          String code = getCode();
+          String actual = "";
+          int num = 0;
+
+          String target = "String.format(";
+          String target2 = "%.02f";
+
+          String[] lines = code.split("\n");
+
+          for (String line: lines) {
+              if (line.contains(target) &amp;&amp; (line.contains(target2) || line.contains("%.2f")))
+                  num++;
+          }
+
+          boolean passed = num &gt;= 5;
+
+          String expected = "5";
+          actual = ""+num;
+
+          getResults(expected, actual, "String.format used to ensure output is two decimal places (at least 5 times)", passed);
+          assertTrue(passed);
+      }
+
+      @Test // toString
+      public void test10() {
+          String actual = getMethodOutputWithInput("main", input2.replaceAll(" ", "\n"));
+
+          String expected = "$8.43\n$7.02\n$3.40\n$1.00\n$9.26\n$0.43\n$5.82";
+
+          boolean passed = actual.contains(expected);
+
+          getResults(expected, actual, "toString method created and prints results", passed);
+          assertTrue(passed);
+      }
+
+
+
+
+      private String getMethodCode(String code, String name) {
+          String searchStr = code;
+          int start = searchStr.indexOf(name);
+          searchStr = searchStr.substring(start);
+
+          int level = 0;
+
+          for (int i = 0; i &lt; searchStr.length(); i++) {
+              if (searchStr.substring(i,i+1).equals("{")) {
+                  level++;
+              } else if (searchStr.substring(i,i+1).equals("}")) {
+                  level--;
+
+                  if (level == 0) {
+                      //System.out.println(searchStr.substring(0, i+1).trim());
+                      return searchStr.substring(0, i+1).trim();
+                  }
+              }
+          }
+
+          return searchStr.trim();
+      }
+
+      private int countVariables(String[] lines, String type) {
+          int num = 0;
+          for (String line : lines){
+              if (line.contains(type)) {
+                  if (line.contains(",")) {
+                      num += line.split(",").length;
+                  } else {
+                      num++;
+                  }
+              }
+          }
+          return num;
+      }
+  }     
+</tests>
+</program>
+</activity>
+</subsection>
 
   
 </section>
