@@ -567,7 +567,7 @@ public class Main {
               String actual = getMethodOutputWithInput("main",input);
               actual = actual.substring(actual.indexOf("Number"));
 
-              boolean passed = actual.contains("17") && actual.contains("3") && actual.toLowerCase().contains("passed");
+              boolean passed = actual.contains("17") &amp;&amp; actual.contains("3") &amp;&amp; actual.toLowerCase().contains("passed");
 
               getResults(expect, actual, "Expected output for input \"" + input2 + "\"", passed);
               assertTrue(passed);
@@ -582,7 +582,7 @@ public class Main {
               String actual = getMethodOutputWithInput("main",input);
               actual = actual.substring(actual.indexOf("Number"));
 
-              boolean passed = actual.contains("5") && actual.contains("15") && actual.toLowerCase().contains("failed");
+              boolean passed = actual.contains("5") &amp;&amp; actual.contains("15") &amp;&amp; actual.toLowerCase().contains("failed");
 
               getResults(expect, actual, "Expected output for input \"" + input3 + "\"", passed);
               assertTrue(passed);
