@@ -558,7 +558,7 @@ public class Main {
           assertTrue(passed);
       }
 
-      @Test // Ouptut matches for Input 2
+      @Test // Output matches for Input 2
           public void test9()
           {
               String input = input2.replaceAll(" ", "\n");
@@ -567,9 +567,9 @@ public class Main {
               String actual = getMethodOutputWithInput("main",input);
               actual = actual.substring(actual.indexOf("Number"));
 
-              boolean passed = actual.contains("17") &amp;&amp; actual.contains("3") &amp;&amp; actual.toLowerCase().contains("passed");
+              boolean passed = actual.contains("17") && actual.contains("3") && actual.toLowerCase().contains("passed");
 
-              getResults(expect, actual, "Expected output for input \"" + input1 + "\"", passed);
+              getResults(expect, actual, "Expected output for input \"" + input2 + "\"", passed);
               assertTrue(passed);
           }
 
