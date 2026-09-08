@@ -231,7 +231,7 @@ public class RunestoneTests extends CodeTestHelper {
 
             String[] lines = output.split("\n");
             for (String line : lines) {
-                if (line.contains("quarters"))
+                if (line.toLowerCase().contains("quar") || line.contains("2.5"))
                     actual = line;
             }
 
@@ -256,7 +256,7 @@ public class RunestoneTests extends CodeTestHelper {
 
             String[] lines = output.split("\n");
             for (String line : lines) {
-                if (line.contains("dimes"))
+                if (line.toLowerCase().contains("dim") || line.contains(".6"))
                     actual = line;
             }
 
@@ -281,7 +281,7 @@ public class RunestoneTests extends CodeTestHelper {
 
             String[] lines = output.split("\n");
             for (String line : lines) {
-                if (line.contains("nickels"))
+                if (line.toLowerCase().contains("nick") || line.contains(".4"))
                     actual = line;
             }
 
@@ -306,7 +306,7 @@ public class RunestoneTests extends CodeTestHelper {
 
             String[] lines = output.split("\n");
             for (String line : lines) {
-                if (line.contains("pennies"))
+                if (line.toLowerCase().contains("pen") || line.contains(".07"))
                     actual = line;
             }
 
