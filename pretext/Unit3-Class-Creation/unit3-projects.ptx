@@ -713,7 +713,7 @@ public class RunestoneTests extends CodeTestHelper
 <row>
 <cell>p1.toString();</cell>
 <cell>"DragonMaster: Games Played = 2, Average Score = 100.0, Rank = Advanced"</cell>
-<cell>Displays the player's current information.</cell>
+<cell>Returns a String with the player's current information.</cell>
 </row>
 
 </tabular>
