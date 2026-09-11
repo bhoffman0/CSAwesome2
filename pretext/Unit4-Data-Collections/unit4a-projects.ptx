@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="unit4a-projects">
+  <time minutes="90" />
   <title>Unit 4A Projects</title>
   <idx>projects</idx>
 
   <introduction>  
-    <p>
-      These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
-    </p><p>
+<p><em>
+    These projects were created by Leigh Anne Fitz and Lisa Ferran to to provide engaging, standards-aligned learning experiences for AP Computer Science A students.  The autograding tests were designed by Kate McDonnell.
+</em></p>
+<p>
       Now that you've learned how to create your own classes, it's time to work with collections of data using one-dimensional arrays. In these projects, you'll learn how to store, access, and manipulate multiple values efficiently. You'll practice traversing arrays, processing their elements with loops, and developing algorithms to search for information, calculate results, and modify data.
     </p><p>
       Each project is designed to reinforce these concepts through authentic programming tasks. As you complete them, focus on using loops effectively, paying close attention to array indices and boundaries, and breaking complex problems into manageable steps. Mastering one-dimensional arrays is an essential skill that prepares you for more advanced data structures and algorithms.
@@ -342,7 +344,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
     }
 }
