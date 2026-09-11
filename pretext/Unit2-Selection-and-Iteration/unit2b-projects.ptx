@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="unit2b-projects">
+  <time minutes="90" />
   <title>Unit 2B Projects</title>
   <idx>projects</idx>
 
   <introduction>  
-    <p>
-      These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.
-    </p>
+<p><em>
+    These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.  The autograding tests were designed by Kate McDonnell.
+</em></p>
     <p>
       Now that your programs can make decisions, it's time to make them repeat those decisions efficiently. In these projects, you'll explore how loops allow programs to execute instructions multiple times without writing the same code over and over. You'll use iteration to solve problems, process data, and build algorithms that are both efficient and easy to maintain.
     </p>
@@ -87,13 +88,11 @@ public class Grades {
 <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
-import java.io.*;
 
-public class RunestoneTests extends CodeTestHelper
-{
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
-        //super("Grades", input1.replaceAll(" ", "\n")); // For Repl.it
+        // super("Main", input1.replaceAll(" ", "\n")); // For Book
+        // super("Grades", input1.replaceAll(" ", "\n")); // For Repl.it
     }
 
     private static String input1 = "5 98 80 61 73 94";
@@ -104,131 +103,167 @@ public class RunestoneTests extends CodeTestHelper
      * Test for Scanner
      */
     @Test
-    public void test01()
-    {
-        String code = getCode();
-        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-        int num = countOccurences(code, ".nextInt()");
-        boolean called = num &gt;= 2;
-
-        String output = "Created: " + created + "\nMethod Called: " + num + " times";
+    public void test01() {
         String expected = "Created: " + true + "\nMethod Called: 2 times";
+        String output = "";
+        boolean passed = false;
 
-        boolean passed = created &amp;&amp; called;
+        try {
+            String code = getCode();
+            boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+            int num = countOccurences(code, ".nextInt()");
+            boolean called = num &gt;= 2;
+
+            output = "Created: " + created + "\nMethod Called: " + num + " times";
+
+            passed = created &amp;&amp; called;
+        } catch (Exception e) {
+            output = "Error";
+        }
+
         getResults(expected, output, "Used Scanner correctly", passed);
         assertTrue(passed);
     }
 
     /**
-     *  Test how many variables were created
+     * Test how many variables were created
      */
     @Test
-    public void test02()
-    {
-        String code = getCode();
+    public void test02() {
+        boolean passed = false;
         int num = 0;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
 
-        for (String line : lines){
-            if (line.contains("int")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("int")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
-        }
 
-        boolean passed = num &gt;= 2;
+            passed = num &gt;= 2;
+        } catch (Exception e) {
+            num = -1;
+        }
         getResults("2+", num + "", "Created at least 2 int variable", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test03()
-    {
-        String code = getCode();
+    public void test03() {
+        boolean passed = false;
         int num = 0;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
+            num = 0;
 
-        for (String line : lines){
-            if (line.contains("double ")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("double ")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
-        }
 
-        boolean passed = num &gt;= 1;
+            passed = num &gt;= 1;
+        } catch (Exception e) {
+            num = -1;
+        }
         getResults("2+", num + "", "Created at least 1 double variable", passed);
         assertTrue(passed);
     }
 
-
     @Test
-    public void test04()
-    {
-        String input = input1.replaceAll(" ", "\n");
+    public void test04() {
         String expect = "81.2";
+        String actual = "";
+        boolean passed = false;
 
-        String output1 = testInput(input, expect);
+        try {
+            String input = input1.replaceAll(" ", "\n");
 
-        String actual = output1;
-
-        boolean passed = output1.contains(expect);
+            actual = testInput(input, expect);
+            passed = actual.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
         getResults(expect, actual, "Expected output for input \"" + input1 + "\"", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test05()
-    {
-        String input = input2.replaceAll(" ", "\n");
+    public void test05() {
         String expect = "72.666666";
+        String actual = "";
+        boolean passed = false;
 
-        String output1 = testInput(input, expect);
+        try {
+            String input = input2.replaceAll(" ", "\n");
 
-        String actual = output1;
+            actual = testInput(input, expect);
 
-        boolean passed = output1.contains(expect);
+            passed = actual.contains(expect);
+
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
         getResults(expect, actual, "Expected output for input \"" + input2 + "\"", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test06()
-    {
-        String input = input3.replaceAll(" ", "\n");
+    public void test06() {
         String expect = "85.0";
+        String actual = "";
+        boolean passed = false;
 
-        String output1 = testInput(input, expect);
+        try {
+            String input = input3.replaceAll(" ", "\n");
 
-        String actual = output1;
+            actual = testInput(input, expect);
+            passed = actual.contains(expect);
 
-        boolean passed = output1.contains(expect);
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
         getResults(expect, actual, "Expected output for input \"" + input3 + "\"", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test07()
-    {
-        String input = input2.replaceAll(" ", "\n");
+    public void test07() {
         String expect = "#.#";
+        String actual = "";
+        boolean passed = false;
 
-        String output1 = testInput(input, expect);
+        try {
+            String input = input2.replaceAll(" ", "\n");
 
-        String[] lines = output1.split("\\s");
-        String actual = lines[lines.length-1];
+            String output1 = testInput(input, expect);
 
-        boolean passed = actual.matches("\\d+.\\d+");
+            String[] lines = output1.split("\\s");
+            actual = lines[lines.length - 1];
+
+            passed = actual.matches("\\d+.\\d+");
+
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
         getResults(expect, actual, "Checking that answer is a double", passed);
         assertTrue(passed);
@@ -237,93 +272,116 @@ public class RunestoneTests extends CodeTestHelper
     private String testInput(String input, String expect) {
         String actual = "No matching lines";
 
-        String output = getMethodOutputWithInput("main", input);
+        try {
+            String output = getMethodOutputWithInput("main", input);
 
-        String[] lines = null;
+            String[] lines = null;
 
-        if (output.contains(":"))
-            lines = output.split(":");
-        else if (output.contains("\n"))
-            lines = output.split(":");
-        else
-            lines = output.split(" ");
+            if (output.contains(":"))
+                lines = output.split(":");
+            else if (output.contains("\n"))
+                lines = output.split(":");
+            else
+                lines = output.split(" ");
 
-        actual = lines[lines.length-1].trim();
+            actual = lines[lines.length - 1].trim();
+
+        } catch (Exception e) {
+            actual = "Error";
+        }
 
         return actual;
     }
 
     @Test
-    public void test08()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
+    public void test08() {
+        boolean passed = false;
         String loop = "";
 
-        for (String line : lines){
-            //line = line.replaceAll("for (","for(");
-            if (line.contains("for(") || line.contains("for (")) {
-                loop = line.trim();
-                break;
-            }                        
-        }
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
 
-
-        if (loop.contains("{")) {
-            loop = loop.substring(0, loop.indexOf("{"));
-        }
-
-        boolean passed = loop.replaceAll("\\s+","").matches("for\\(int\\S+=\\d;\\S+&lt;=*\\S+;\\S+\\+\\+\\)");
-
-        getResults("for(int *=0; *&lt;*; *++)", loop + "", "Checking that code contains for(int * = 0; * &lt; *; *++)", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test09()
-    {
-        String code = getCode();
-        String[] lines = code.split("\n");
-
-        String loop = "";
-
-        for (String line : lines){
-            //line = line.replaceAll("for (","for(");
-            if (line.contains("for(") || line.contains("for (")) {
-                loop = line.trim();
-                break;
-            }                        
-        }
-
-
-        if (loop.contains("{")) {
-            loop = loop.substring(0, loop.indexOf("{"));
-        }
-
-        String varName = "";
-
-        for (String line : lines){
-            if (line.contains(".nextInt()")) {
-                varName = line.substring(0, line.indexOf("=")).trim();
-                varName = varName.replaceAll("int ","").trim();
-                break;
+            for (String line : lines) {
+                // line = line.replaceAll("for (","for(");
+                if (line.contains("for(") || line.contains("for (")) {
+                    loop = line.trim();
+                    break;
+                }
             }
+
+            if (loop.contains("{")) {
+                loop = loop.substring(0, loop.indexOf("{"));
+            }
+
+            passed = loop.replaceAll("\\s+", "").matches("for\\(int\\S+=\\d;\\S+&lt;=*\\S+;\\S+\\+\\+\\)");
+        } catch (Exception e) {
+            passed = false;
         }
 
-        boolean passed = loop.contains(varName) &amp;&amp;
-            (loop.replaceAll(" ","").matches("for\\(int\\S+=0;\\S+&lt;" + varName + "*\\S+;\\S+\\+\\+\\)") || loop.replaceAll(" ","").matches("for\\(int\\S+=1;\\S+&lt;=" + varName + "*\\S+;\\S+\\+\\+\\)"));
-
-        getResults("for(int *=0; *&lt; " + varName + "; *++) // or\nfor(int *=1; *&lt;= " + varName + "; *++)", loop + "", "Checking that code loops the correct number of times", passed);
+        getResults("for(int *=0; *&lt;*; *++)", loop + "", "Checking that code contains for(int * = 0; * &lt; *; *++)",
+                passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test10()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "System.out.println");
+    public void test09() {
+        boolean passed = false;
+        String loop = "";
+        String expected = "for(int *=0; *&lt; varName; *++) // or\nfor(int *=1; *&lt;= varName; *++)";
 
-        boolean passed = num &gt;= 1;
+        try {
+            String code = getCode();
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                // line = line.replaceAll("for (","for(");
+                if (line.contains("for(") || line.contains("for (")) {
+                    loop = line.trim();
+                    break;
+                }
+            }
+
+            if (loop.contains("{")) {
+                loop = loop.substring(0, loop.indexOf("{"));
+            }
+
+            String varName = "";
+
+            for (String line : lines) {
+                if (line.contains(".nextInt()")) {
+                    varName = line.substring(0, line.indexOf("=")).trim();
+                    varName = varName.replaceAll("int ", "").trim();
+                    break;
+                }
+            }
+
+            expected = expected.replace("varName", varName);
+
+            passed = loop.contains(varName) &amp;&amp;
+                    (loop.replaceAll(" ", "").matches("for\\(int\\S+=0;\\S+&lt;" + varName + "*\\S+;\\S+\\+\\+\\)") || loop
+                            .replaceAll(" ", "").matches("for\\(int\\S+=1;\\S+&lt;=" + varName + "*\\S+;\\S+\\+\\+\\)"));
+        } catch (Exception e) {
+            loop = "Error";
+        }
+        getResults(expected, loop + "",
+                "Checking that code loops the correct number of times", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        int num = 0;
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "System.out.println");
+            passed = num &gt;= 1;
+        } catch (Exception e) {
+            num = -1;
+        }
+
         getResults("1+", num + "", "At least 1 print statements are used", passed);
         assertTrue(passed);
     }
@@ -491,182 +549,291 @@ public class ConcertTickets {
 <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
-import java.io.*;
 
-public class RunestoneTests extends CodeTestHelper
-{
+
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        // super("Main", input1.replaceAll(" ", "\n")); // For Book
         //super("ConcertTickets", input1.replaceAll(" ", "\n")); // For Repl.it
     }
 
+
     private static String input1 = "B Y B Y B Y P Y L Y L Y L Y L Y L N";
-    private static String input2 = "P";
-    private static String input3 = "L";
+
 
     @Test
-    public void test1()
-    {
-        String code = getCode();
-        boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
-        int num = countOccurences(code, ".next()") + countOccurences(code, ".nextLine()");
-        boolean called = num &gt;= 2;
-
-        String output = "Created: " + created + "\nMethod Called: " + num + " times";
+    public void test01() {
         String expected = "Created: " + true + "\nMethod Called: " + 2 + "+ times";
+        String output = "";
+        boolean passed = false;
 
-        boolean passed = created &amp;&amp; called;
+
+        try {
+            String code = getCode();
+            boolean created = countOccurences(code, "new Scanner(System.in)") == 1;
+            int num = countOccurences(code, ".next()") + countOccurences(code, ".nextLine()");
+            boolean called = num &gt;= 2;
+
+
+            output = "Created: " + created + "\nMethod Called: " + num + " times";
+
+
+            passed = created &amp;&amp; called;
+
+
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+
         getResults(expected, output, "Used Scanner correctly", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test2()
-    {
-        int goal = 1;
 
-        String code = getCode();
+    @Test
+    public void test02() {
+        boolean passed = false;
+        int goal = 1;
         int num = 0;
 
-        String[] lines = code.split("\n");
 
-        for (String line : lines){
-            if (line.contains("String") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("class")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+        try {
+            String code = getCode();
+
+
+            String[] lines = code.split("\n");
+
+
+            for (String line : lines) {
+                if (line.contains("String") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("class")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
+
+
+            passed = num &gt;= goal;
+        } catch (Exception e) {
+            num = -1;
         }
 
-        boolean passed = num &gt;= goal;
-        getResults(""+goal, num + "", "Created at least "+goal + " String variables", passed);
+
+        getResults("" + goal, num + "", "Created at least " + goal + " String variables", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test3()
-    {
-        int goal = 3;
 
-        String code = getCode();
+    @Test
+    public void test03() {
+        boolean passed = false;
+        int goal = 3;
         int num = 0;
 
-        String[] lines = code.split("\n");
 
-        for (String line : lines){
-            if (line.contains("int")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+        try {
+            String code = getCode();
+
+
+            String[] lines = code.split("\n");
+
+
+            for (String line : lines) {
+                if (line.contains("int")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
+
+
+            passed = num &gt;= goal;
+        } catch (Exception e) {
+            num = -1;
         }
 
-        boolean passed = num &gt;= goal;
+
         getResults(goal + "+", num + "", "Created at least " + goal + " int variable", passed);
         assertTrue(passed);
     }
 
+
     @Test
-    public void test4()
-    {
+    public void test04() {
+        boolean passed = false;
+        int num = 0;
         int goal = 2;
 
-        String code = getCode();
-        int num = 0;
 
-        String[] lines = code.split("\n");
+        try {
+            String code = getCode();
 
-        for (String line : lines){
-            if (line.contains("double")) {
-                if (line.contains(",")) {
-                    num += line.split(",").length;
-                } else {
-                    num++;
+
+            String[] lines = code.split("\n");
+
+
+            for (String line : lines) {
+                if (line.contains("double")) {
+                    if (line.contains(",")) {
+                        num += line.split(",").length;
+                    } else {
+                        num++;
+                    }
                 }
             }
+
+
+            passed = num &gt;= goal;
+        } catch (Exception e) {
+            num = -1;
         }
 
-        boolean passed = num &gt;= goal;
+
         getResults(goal + "+", num + "", "Created at least " + goal + " double variables", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test5()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "while");
 
-        boolean passed = num &gt;= 2;
+    @Test
+    public void test05() {
+        boolean passed = false;
+        int num = 0;
+
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "while");
+
+
+            passed = num &gt;= 2;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+
         getResults("2", num + "", "2 while loops used", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test6()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "if") - countOccurences(code, "else if");
 
-        boolean passed = num &gt;= 1;
+    @Test
+    public void test06() {
+        boolean passed = false;
+        int num = 0;
+
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "if") - countOccurences(code, "else if");
+
+
+            passed = num &gt;= 1;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+
         getResults("1", num + "", "1 if statement used", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test7()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "else if");
 
-        boolean passed = num &gt;= 1;
+    @Test
+    public void test07() {
+        boolean passed = false;
+        int num = 0;
+
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "else if");
+
+
+            passed = num &gt;= 1;
+        } catch (Exception e) {
+            num = -1;
+        }
+
+
         getResults("1+", num + "", "At least 1 else if statements used", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test8()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "else") - countOccurences(code, "else if");
 
-        boolean passed = num &gt;= 1;
+    @Test
+    public void test08() {
+        boolean passed = false;
+        int num = 0;
+
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "else") - countOccurences(code, "else if");
+
+
+            passed = num &gt;= 1;
+
+
+        } catch (Exception e) {
+            num = -1;
+        }
         getResults("1", num + "", "1 else statement used", passed);
         assertTrue(passed);
     }
 
-    @Test
-    public void test9()
-    {
-        String code = getCode();
-        int num = countOccurences(code, "String.format(\"%.02f\",");
 
-        boolean passed = num &gt;= 2;
+    @Test
+    public void test09() {
+        boolean passed = false;
+        int num = 0;
+
+
+        try {
+            String code = getCode();
+            num = countOccurences(code, "String.format(\"%.02f\",");
+
+
+            passed = num &gt;= 2;
+        } catch (Exception e) {
+            num = -1;
+        }
         getResults("2+", num + "", "String.format() used correctly to format the numbers", passed);
         assertTrue(passed);
     }
 
 
     @Test
-    public void test10()
-    {
-        String input = input1.replaceAll(" ", "\n");
-        String[] lookfor = {"box", "pavillion", "lawn", "fee", "total"};
-        String[] expected = {"225", "30", "105", "13.50", "373.50"};
-        boolean passed = true;
+    public void test10() {
+        String expect = "3\tbox tickets\t\t$225\n1\tpavillion tickets\t\t$30\n5\tlawn tickets\t\t$105\n\tConvenience fee\t\t$13.50\n\tTotal\t\t$373.50";
         String output = "";
+        boolean passed = false;
+        int num = 0;
 
-        for (int i = 0; i &lt; expected.length; i++){
-            String output1 = testInput(input, lookfor[i]);
-            output += output1 + "\n";
-            passed = passed &amp;&amp; output1.contains(expected[i]);
+
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            String[] lookfor = { "box", "pavillion", "lawn", "fee", "total" };
+            String[] expected = { "225", "30", "105", "13.50", "373.50" };
+            passed = true;
+
+
+            for (int i = 0; i &lt; expected.length; i++) {
+                String output1 = testInput(input, lookfor[i]);
+                output += output1 + "\n";
+                passed = passed &amp;&amp; output1.contains(expected[i]);
+            }
+
+
+        } catch (Exception e) {
+            output = "Error";
+            passed = false;
         }
 
-        String expect = "3\tbox tickets\t\t$225\n1\tpavillion tickets\t\t$30\n5\tlawn tickets\t\t$105\n\tConvenience fee\t\t$13.50\n\tTotal\t\t$373.50";
 
         getResults(expect, output, "Expected output for input:\n" + input1 + "", passed);
         assertTrue(passed);
@@ -676,20 +843,25 @@ public class RunestoneTests extends CodeTestHelper
     private String testInput(String input, String expect) {
         String actual = "No matching lines";
 
-        String output = getMethodOutputWithInput("main", input);
+        try {
 
-        String[] lines = output.split("[:?\\n]");
+            String output = getMethodOutputWithInput("main", input);
 
-        for (String line: lines) {
-            if (line.toLowerCase().contains(expect.toLowerCase())) {
-                actual = line;
-                break;
+            String[] lines = output.split("[:?\\n]");
+
+            for (String line : lines) {
+                if (line.toLowerCase().contains(expect.toLowerCase())) {
+                    actual = line;
+                    break;
+                }
             }
+        } catch (Exception e) {
+            actual = "Error";
         }
 
         return actual;
     }
-}     
+}
 </tests>
 </program>
 </activity>
