@@ -162,16 +162,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class RunestoneTests extends CodeTestHelper {
-    public RunestoneTests() {
-        super("Coins", input1.replaceAll(" ", "\n"));
-    }
 
     private static String input1 = "15 5 2 4";
     private static String input2 = "4 2 4 10";
     private static String input3 = "10 6 8 7";
 
     @Test
-    public void test1() {
+    public void test01() {
         String expect = "$4.39";
         String actual = "No correct total found";
         boolean passed = false;
@@ -196,7 +193,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test2() {
+    public void test02() {
         String expect = "$1.50";
         String actual = "No correct total found";
         boolean passed = false;
@@ -221,7 +218,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test3() {
+    public void test03() {
         String expect = "There are 10 quarters worth $2.50";
         String actual = "No correct total found";
         boolean passed = false;
@@ -246,7 +243,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test4() {
+    public void test04() {
         String expect = "There are 6 dimes worth $0.60";
         String actual = "No correct total found";
         boolean passed = false;
@@ -271,7 +268,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test5() {
+    public void test05() {
         String expect = "There are 8 nickels worth $0.40";
         String actual = "No correct total found";
         boolean passed = false;
@@ -296,7 +293,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test6() {
+    public void test06() {
         String expect = "There are 7 pennies worth $0.07";
         String actual = "No correct total found";
         boolean passed = false;
@@ -321,7 +318,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test7() {
+    public void test07() {
         int num = 0;
 
         try {
@@ -336,7 +333,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test8() {
+    public void test08() {
         boolean passed = false;
         int num = 0;
 
@@ -354,7 +351,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test9() {
+    public void test09() {
         int num = 0;
 
         try {
@@ -444,16 +441,13 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class RunestoneTests extends CodeTestHelper {
-    public RunestoneTests() {
-        super("Dooflingies", input1.replaceAll(" ", "\n"));
-    }
 
     private static String input1 = "4271";
     private static String input2 = "6952";
     private static String input3 = "298";
 
     @Test
-    public void test1() {
+    public void test01() {
         String expect = "Container   Number\n" +
                 "Huge        85\n" +
                 "Large       1\n" +
@@ -482,7 +476,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test2() {
+    public void test02() {
         String expect = "Container   Number\n" +
                 "Huge        139\n" +
                 "Large       0\n" +
@@ -505,7 +499,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test3() {
+    public void test03() {
 
         String output1 = "Huge";
         String expect = "5";
@@ -532,7 +526,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test4() {
+    public void test04() {
         String output1 = "Large";
         String expect = "2";
         boolean passed = false;
@@ -557,7 +551,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test5() {
+    public void test05() {
         String output1 = "Medium";
         String expect = "1";
         boolean passed = false;
@@ -582,7 +576,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test6() {
+    public void test06() {
         String output1 = "Small";
         String expect = "3";
         boolean passed = false;
@@ -607,7 +601,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test7() {
+    public void test07() {
         int num = 0;
         boolean passed = false;
 
@@ -623,7 +617,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test8() {
+    public void test08() {
         int num = 0;
         boolean passed = false;
 
@@ -641,7 +635,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test9() {
+    public void test09() {
         int num = 0;
         boolean passed = false;
 
