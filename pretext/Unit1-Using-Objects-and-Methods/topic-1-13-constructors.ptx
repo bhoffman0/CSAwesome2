@@ -846,6 +846,13 @@ public class RunestoneTests extends CodeTestHelper
         boolean passed = codeChanged(orig);
         assertTrue(passed);
     }
+    @Test
+    public void testHeight() throws IOException
+    {
+        String target = "World(300,0)";
+        boolean passed = checkCodeNotContains("Change World(300,0) to height larger than 0, ex. World(300,300)", target);
+        assertTrue(passed);
+    }
 }
         </tests>
       </program>
