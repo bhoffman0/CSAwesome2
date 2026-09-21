@@ -75,16 +75,6 @@ public int m1 (int a)
 
         <choice>
           <statement>
-            <p>10</p>
-          </statement>
-
-          <feedback>
-            <p>This would be true if the call was m(1).</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>30</p>
           </statement>
 
@@ -153,15 +143,6 @@ for (int j = 1; j &lt;= 3; j++)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>0 1 2 3 0 2 4 6 0 3 6 9</p>
-          </statement>
-
-          <feedback>
-            <p>This would be true if k started at 0 instead of 1.</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -228,15 +209,6 @@ public int mystery(int n)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>1</p>
-          </statement>
-
-          <feedback>
-            <p>This would be the result of mystery(0).</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -295,16 +267,6 @@ V. (int2 == int3)
 
           <feedback>
             <p>Look at IV. Are int1 and int2 referring to the same object?</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>I, II, and III only</p>
-          </statement>
-
-          <feedback>
-            <p>V is also true.</p>
           </feedback>
         </choice>
 
@@ -386,20 +348,6 @@ V. (int2 == int3)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>Sequential search can never be faster than binary search.</p>
-          </statement>
-
-          <feedback>
-            <p>
-              When the search value is the first element, sequential will always
-              be faster, as it will only need to check one element whereas a
-              binary search would start in the middle of the array and have to
-              keep looking.
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -445,19 +393,6 @@ Data set 2: "bcb", "bcd", "c"
             <p>
               It is actually better to test with strings that contain both upper
               and lower case characters.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>There are no advantages.</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Data set 1 only contains cases that should return true. How about
-              checking cases that should return false?
             </p>
           </feedback>
         </choice>
@@ -604,19 +539,6 @@ for (int i = 0; i &lt; 5; i++)
 
         <choice>
           <statement>
-            <p>IV</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This will loop with i changing from 1 to 5 and j from 0 to i but
-              it will print each value on a different line.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>V</p>
           </statement>
 
@@ -645,18 +567,6 @@ System.out.println(list1);
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>[0, 1, 2, 3, 4, 5]</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This code does not sort the items in the list and set replaces the
-              value at that index.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -815,19 +725,6 @@ System.out.println(list1);
 
         <choice>
           <statement>
-            <p>III</p>
-          </statement>
-
-          <feedback>
-            <p>
-              There is no advance method that takes no arguments and it doesn't
-              return a value to add to a total.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>IV</p>
           </statement>
 
@@ -865,18 +762,6 @@ System.out.println(list1);
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>The value is the first one in the array</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true for the shortest execution. This would only
-              take one execution of the loop.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -955,19 +840,6 @@ public int m1(int[] a)
           <feedback>
             <p>
               This would be true if it was <code>return(a[1]*= 2); </code>.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>16</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if the return statement was <code>return
-              (a[0]*=2); </code>.
             </p>
           </feedback>
         </choice>
@@ -1086,15 +958,6 @@ for (int i=1; i&lt;=6; i++)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>a = 0 and b = 13</p>
-          </statement>
-
-          <feedback>
-            <p>No a = 13 and b = 0 after the loop finishes.</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -1175,18 +1038,6 @@ s4 = null;
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>hI tHERE</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Strings are immutable and so any changes to a string returns a new
-              string.
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -1212,18 +1063,6 @@ for (int row = 0; row &lt; 4; row++)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>4</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be correct if the variable col was 0 because then it
-              would add 1 + 1 + 1 + 1 which is 4.
-            </p>
-          </feedback>
-        </choice>
 
         <choice correct="yes">
           <statement>
@@ -1333,20 +1172,6 @@ for (int row = 0; row &lt; mat.length; row++)
 
         <choice>
           <statement>
-            <p>{ { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if it was int [][] mat = new int [4][3] and it
-              filled the mat with 1 if the row index is less than the column
-              index.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>{ { 2, 3, 3 }, { 1, 2, 3 }, { 1, 1, 2 }, { 1, 1, 1 } }</p>
           </statement>
 
@@ -1397,17 +1222,6 @@ for ( int k = 0; k &lt; a.length; k++ )
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              The values don't matter, this will always cause an infinite loop.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>An infinite loop will not always occur in this program segment.</p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -1492,18 +1306,6 @@ for ( int k = 0; k &lt; a.length; k++ )
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>A</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if num1 and num2 were both greater than 0 and
-              num1 was greater than num2. However, num2 is less than 0.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
