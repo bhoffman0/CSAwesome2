@@ -4,48 +4,606 @@
   <title>Loops Toggle Code Practice (2.7-2.12)</title>
 
   <p>
-   For each of the coding problems below, if you need help, you can pull down the 
-   toggle menu to select the associated mixed up code problem to help you get started.
+   For each of the coding problems below, write your own solution. If you get stuck,
+   click the <em>Get Help</em> button for a personalized mixed-up code problem built
+   from your current attempt.
   </p>
 
-<exercise label="u2b-toggle1">
-  <select grade="first" questions="u2b_muc_wc1 loopex1muc"/>
-</exercise>
+<exercise label="u2b-toggle1" xml:id="u2b-toggle1">
+    <statement>
+      <p>
+        Finish the code to print out all the values from 20 to 30 (20, 21, 22, …
+        30).
+      </p>
+    </statement>
 
-<exercise label="u2b-toggle2">
-  <select grade="first" questions="u2b_muc_wc2 loopex2muc"/>
-</exercise>
+    <program interactive="activecode" language="java" label="u2b-toggle1-prog" xml:id="u2b-toggle1-prog"
+           codetailor="incorrect" codetailor-fallback="loopex1muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
 
-<exercise label="u2b-toggle3">
-  <select grade="first" questions="u2b_muc_wc3 loopex3muc"/>
-</exercise>
+    }
+}
+      </code>
+      <tests>
+// ch6ex1muc
+import static org.junit.Assert.*;
 
-<exercise label="u2b-toggle4">
-  <select grade="first" questions="u2b_muc_wc4 loopex4muc"/>
-</exercise>
+import org.junit.*;
 
-<exercise label="u2b-toggle5">
-  <select grade="first" questions="u2b_muc_wc5 loopex5muc"/>
-</exercise>
+import java.io.*;
 
-<exercise label="u2b-toggle6">
-  <select grade="first" questions="u2b_muc_wc6 loopex6muc"/>
-</exercise>
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
 
-<exercise label="u2b-toggle7">
-  <select grade="first" questions="u2b_muc_wc7 loopex7muc"/>
-</exercise>
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30";
 
-<exercise label="u2b-toggle8">
-  <select grade="first" questions="u2b_muc_wc8 loopex8muc"/>
-</exercise>
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
 
-<exercise label="u2b-toggle9">
-  <select grade="first" questions="u2b_muc_wc9 loopex9muc"/>
-</exercise>
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt; 0;
+        getResults("1 loop", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
 
-<exercise label="u2b-toggle10">
-  <select grade="first" questions="u2b_muc_wc10 loopex10muc"/>
-</exercise>
+<exercise label="u2b-toggle2" xml:id="u2b-toggle2">
+    <statement>
+      <p>
+        Finish the code to print a countdown from 15 to 0 (15, 14, 13, … 0).
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle2-prog" xml:id="u2b-toggle2-prog"
+           codetailor="incorrect" codetailor-fallback="loopex2muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex2muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "15\n14\n13\n12\n11\n10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt; 0;
+        getResults("1 loop", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle3" xml:id="u2b-toggle3">
+    <statement>
+      <p>
+        Finish the code to print up from 0 to 50 by 5 (0, 5, 10, 15 … 50).
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle3-prog" xml:id="u2b-toggle3-prog"
+           codetailor="incorrect" codetailor-fallback="loopex3muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex3muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "0\n5\n10\n15\n20\n25\n30\n35\n40\n45\n50";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt; 0;
+        getResults("1 loop", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle4" xml:id="u2b-toggle4">
+    <statement>
+      <p>
+        Finish the code to print out the values from 0 to 100 by 20’s (0, 20,
+        40, .. 100).
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle4-prog" xml:id="u2b-toggle4-prog"
+           codetailor="incorrect" codetailor-fallback="loopex4muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex4muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "0\n20\n40\n60\n80\n100";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt; 0;
+        getResults("1 loop", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle5" xml:id="u2b-toggle5">
+    <statement>
+      <p>
+        Finish the code to print out the values from 100 to 0 by 10’s (100, 90,
+        80, … 0).
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle5-prog" xml:id="u2b-toggle5-prog"
+           codetailor="incorrect" codetailor-fallback="loopex5muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex5muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "100\n90\n80\n70\n60\n50\n40\n30\n20\n10\n0";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt; 0;
+        getResults("1 loop", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle6" xml:id="u2b-toggle6">
+    <statement>
+      <p>
+        Finish the code to print 3 rows with 6 <c>*</c> in each row. Be sure to
+        use two loops.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle6-prog" xml:id="u2b-toggle6-prog"
+           codetailor="incorrect" codetailor-fallback="loopex6muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex7muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "******\n******\n******";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count == 2;
+        getResults("2 loops", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle7" xml:id="u2b-toggle7">
+    <statement>
+      <p>
+        Finish the code to print 1 (followed by a newline), then 22 (followed by
+        a newline), and then 333 (followed by a newline). Be sure to use two
+        loops.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle7-prog" xml:id="u2b-toggle7-prog"
+           codetailor="incorrect" codetailor-fallback="loopex7muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex8muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "1\n22\n333";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count == 2;
+        getResults("2 loops", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle8" xml:id="u2b-toggle8">
+    <statement>
+      <p>
+        Finish the code to print 11111, 22222, 33333, 44444, and 55555. Be sure
+        to use two loops.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle8-prog" xml:id="u2b-toggle8-prog"
+           codetailor="incorrect" codetailor-fallback="loopex8muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex9muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "11111\n22222\n33333\n44444\n55555";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt;= 2;
+        getResults("2 loops", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle9" xml:id="u2b-toggle9">
+    <statement>
+      <p>
+        Finish the code to print 11111, 2222, 333, 44, 5. Be sure to use two
+        loops.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle9-prog" xml:id="u2b-toggle9-prog"
+           codetailor="incorrect" codetailor-fallback="loopex9muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch6ex10muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "11111\n2222\n333\n44\n5";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "while") + countOccurences(code, "for");
+        boolean passed = count &gt;= 2;
+        getResults("2 loops", count + " loop(s)", "Counting number of loops", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2b-toggle10" xml:id="u2b-toggle10">
+    <statement>
+      <p>
+        The <c>ev_div(s, n)</c> method in the <c>NumWorker</c> class should
+        return the number of digits in <c>s</c> (a string representation of a
+        number) that are evenly divisible by <c>n</c>. For example,
+        <c>even_div("6892",3)</c> should return 2 since both 6 and 9 are evenly
+        divisible by 3.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2b-toggle10-prog" xml:id="u2b-toggle10-prog"
+           codetailor="incorrect" codetailor-fallback="loopex10muc">
+      <code>
+public class NumWorker
+{
+    public static int even_div(String s, int n)
+    {
+        int count = 0;
+
+        // Add your code here
+
+        return count;
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(even_div("6892", 3) + " should be 2");
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("NumWorker");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "2 should be 2";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        int actual = NumWorker.even_div("45", 2);
+        int expect = 1;
+
+        boolean passed = getResults(expect, actual, "Calling even_div(\"45\", 2)");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
 
 </section>
