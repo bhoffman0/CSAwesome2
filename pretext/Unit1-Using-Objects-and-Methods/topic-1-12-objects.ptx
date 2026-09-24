@@ -536,7 +536,7 @@ public class RunestoneTests extends CodeTestHelper
 // To create or declare a new object, write:
 // ClassName variableName = new ClassName(arguments);
 Turtle yourTurtleName = new Turtle(habitat);
-yourTurtlename.forward();
+yourTurtleName.forward();
       </code>
     </program>
 
