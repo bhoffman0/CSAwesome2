@@ -66,7 +66,7 @@
 
       <areas>
         <cline><area correct="no">public static void main(String args[]) {</area></cline>
-        <cline>    <area correct="yes">System.out.println("Old MacDonald had a farm.");</area></cline>
+        <cline>    <area correct="yes">System.out.println("Old MacDonald had a farm");</area></cline>
         <cline>    <area correct="yes">System.out.println("E-I-E-I-O");</area></cline>
         <cline>    <area correct="no">System.out.println("And on this farm, they had a cow.");</area></cline>
         <cline>    <area correct="yes">System.out.println("E-I-E-I-O");</area></cline>
@@ -482,7 +482,7 @@ public class Song
 
       <areas>
         <cline><area correct="no">public static void main(String args[]) {</area></cline>
-        <cline>    <area correct="no">System.out.println("Old MacDonald had a farm.");</area></cline>
+        <cline>    <area correct="no">System.out.println("Old MacDonald had a farm");</area></cline>
         <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
         <cline>    <area correct="no">System.out.println("And on this farm, they had a </area> <area correct="yes"> cow</area><area correct="no">.");</area></cline>
         <cline>    <area correct="no">System.out.println("E-I-E-I-O");</area></cline>
