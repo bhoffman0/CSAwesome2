@@ -4,32 +4,352 @@
   <title>Toggle Code Practice 1b (1.7-1.15)</title>
 
   <p>
-   For each of the coding problems below, if you need help, you can pull down the 
-   toggle menu to select the associated mixed up code problem to help you get started.
+   For each of the coding problems below, write your own solution. If you get stuck,
+   click the <em>Get Help</em> button for a personalized mixed-up code problem built
+   from your current attempt.
   </p>
 
-<exercise label="u1b-toggle1">
-  <select grade="first" questions="u1b_muc_wc1 u1bex1muc"/>
+<exercise label="u1b-toggle1" xml:id="u1b-toggle1">
+  <statement>
+    <p>Write code that prints a random number from 1 to 50.</p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle1-prog" xml:id="u1b-toggle1-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex1muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String expect = "Any number between 1 and 50";
+         int out = Integer.parseInt(output);
+
+         boolean passed = (out &gt; 0) &amp;&amp; (out &lt;= 50);
+
+         passed = getResults(expect, output, "Running main", passed);
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test2()
+     {
+         boolean passed = checkCodeContains("Math.random()");
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test3()
+     {
+         boolean passed = checkCodeContains("50");
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test4()
+     {
+         boolean passed = checkCodeContains("+1");
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test5()
+     {
+         boolean passed = checkCodeContains("(int)");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
-<exercise label="u1b-toggle2">
-  <select grade="first" questions="u1b_muc_wc2 u1bex2muc"/>
+<exercise label="u1b-toggle2" xml:id="u1b-toggle2">
+  <statement>
+    <p>
+      Write code that prints the first 2 characters of the message followed by
+      the last 2 characters of the message using the appropriate String
+      methods.
+    </p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle2-prog" xml:id="u1b-toggle2-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex2muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String message = "I hope this works";
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String expect = "I ks";
+
+         boolean passed = getResults(expect, output, "Running main");
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test2()
+     {
+         boolean passed = checkCodeContains(".substring(0, 2)");
+         assertTrue(passed);
+     }
+
+     @Test
+     public void test3()
+     {
+         boolean passed = checkCodeContains(".length()");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
-<exercise label="u1b-toggle3">
-  <select grade="first" questions="u1b_muc_wc3 u1bex3muc"/>
+<exercise label="u1b-toggle3" xml:id="u1b-toggle3">
+  <statement>
+    <p>
+      Write code that prints the first letters in first, middle, and last in
+      lowercase letters using the appropriate String methods.
+    </p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle3-prog" xml:id="u1b-toggle3-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex3muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String first = "Gerald";
+        String middle = "Foster";
+        String last = "Jones";
+
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String expect = "gfj";
+
+         boolean passed = getResults(expect, output, "Running main");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
-<exercise label="u1b-toggle4">
-  <select grade="first" questions="u1b_muc_wc4 u1bex4muc"/>
+<exercise label="u1b-toggle4" xml:id="u1b-toggle4">
+  <statement>
+    <p>
+      Write code that prints the message in all uppercase letters using the
+      appropriate String methods.
+    </p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle4-prog" xml:id="u1b-toggle4-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex4muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String message = "Don't Pokemon and drive!";
+
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String message = "Don't Pokemon and drive!";
+         String expect = message.toUpperCase();
+
+         boolean passed = getResults(expect, output, "Running main");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
-<exercise label="u1b-toggle5">
-  <select grade="first" questions="u1b_muc_wc5 u1bex5muc"/>
+<exercise label="u1b-toggle5" xml:id="u1b-toggle5">
+  <statement>
+    <p>
+      Write code that prints the first 3 letters of the message in uppercase
+      letters using the appropriate String methods.
+    </p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle5-prog" xml:id="u1b-toggle5-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex5muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String message = "Have a nice day!";
+
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String expect = "HAV";
+
+         boolean passed = getResults(expect, output, "Running main");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
-<exercise label="u1b-toggle6">
-  <select grade="first" questions="u1b_muc_wc6 u1bex6muc"/>
+<exercise label="u1b-toggle6" xml:id="u1b-toggle6">
+  <statement>
+    <p>
+      Write code that print the part of the message starting with the word
+      “nice” using the appropriate String methods.
+    </p>
+  </statement>
+
+  <program interactive="activecode" language="java" label="u1b-toggle6-prog" xml:id="u1b-toggle6-prog"
+           codetailor="incorrect" codetailor-fallback="u1bex6muc">
+    <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String message = "Have a nice day!";
+
+        // Add your code here
+
+    }
+}
+    </code>
+    <tests>
+ import static org.junit.Assert.*;
+
+ import org.junit.*;
+
+ import java.io.*;
+
+ public class RunestoneTests extends CodeTestHelper
+ {
+     public RunestoneTests()
+     {
+         super("Test1");
+     }
+
+     @Test
+     public void test1()
+     {
+         String output = getMethodOutput("main");
+         String expect = "nice day";
+
+         boolean passed = getResults(expect, output, "Running main");
+         assertTrue(passed);
+     }
+ }
+    </tests>
+  </program>
 </exercise>
 
 </section>

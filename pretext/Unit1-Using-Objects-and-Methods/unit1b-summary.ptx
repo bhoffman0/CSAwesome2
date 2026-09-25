@@ -52,11 +52,16 @@
 
         <li>
           <p>
-            <term>methods</term> - define the behaviors or functions for
+            <term>(instance) methods</term> - define the behaviors or functions for
             objects.
           </p>
         </li>
-
+      <li>
+          <p>
+            <term>static methods</term> - methods that belong to the class itself
+            rather than to any specific instance of the class.
+          </p>
+        </li>
         <li>
           <p>
             <term>dot (.) operator</term> - used to access an object’s methods.
@@ -83,13 +88,6 @@
             <term>immutable</term> - String methods do not change the String
             object. Any method that seems to change a string actually creates a
             new string.
-          </p>
-        </li>
-
-        <li>
-          <p>
-            <term>wrapper classes</term> - classes that create objects from
-            primitive types, for example the Integer class and Double class.
           </p>
         </li>
       </ul>

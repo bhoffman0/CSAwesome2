@@ -235,7 +235,8 @@ public class RunestoneTests extends CodeTestHelper
         <p>
           In this example, the local variable is used instead of the instance
           variable of the same name. What will the code print out? Try it with
-          the CodeLens button.
+          the CodeLens button. Then fix the code so that the instance variable is used 
+          instead of the local variable by commenting out the local variable declaration.
         </p>
       </statement>
 
@@ -282,8 +283,8 @@ public class RunestoneTests extends CodeTestHelper
     public void testMain() throws IOException
     {
         String output = getMethodOutput("main");
-        String expect = "unknown: sana@gmail.com";
-        boolean passed = getResults(expect, output, "Expected output from main", true);
+        String expect = "Sana: sana@gmail.com";
+        boolean passed = getResults(expect, output, "Expected output from main after commenting out local variable name", true);
         assertTrue(passed);
     }
 }
