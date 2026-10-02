@@ -88,18 +88,6 @@ IV.  public void addMinutes(int additionMinutes)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>I only</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This implementation of ''addMinutes'' does not account for values
-              of additionMinutes that push the minute count above 60.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -242,19 +230,6 @@ nums[4] = temp;
 
         <choice>
           <statement>
-            <p>{ 5, 4, 1, 2, 3 }</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Incorrect, temp is used to hold the value from index 2 and that
-              value is put in index 4.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>{ 1, 2, 4, 4, 3 }</p>
           </statement>
 
@@ -317,16 +292,6 @@ nums[4] = temp;
 
           <feedback>
             <p>Correct!</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>a &amp;&amp; b</p>
-          </statement>
-
-          <feedback>
-            <p>This will only be true only when both a and b are true.</p>
           </feedback>
         </choice>
 
@@ -395,16 +360,6 @@ public void mystery(String tester)
 
         <choice>
           <statement>
-            <p>Compile-time error occurs</p>
-          </statement>
-
-          <feedback>
-            <p>Incorrect, this method prints the string reversed.</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>
               Prints alternating characters from beginning and end of the
               string.
@@ -447,18 +402,6 @@ public class mysterious
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>"Hello World!"</p>
-          </statement>
-
-          <feedback>
-            <p>
-              The variable holds all characters that were stored at even indices
-              for the original phrase.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -523,18 +466,6 @@ public class mysterious
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>The value is the first one in the array</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true for the shortest execution. This would only
-              take one execution of the loop.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -612,18 +543,6 @@ public int m1(int[] a)
 
           <feedback>
             <p>This would be true if it was return(a[1]*= 2);.</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>16</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if the return statement was return (a[0]*=2);.
-            </p>
           </feedback>
         </choice>
 
@@ -740,15 +659,6 @@ for (int i = 1; i &lt;= 6; i++)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>a = 0 and b = 13</p>
-          </statement>
-
-          <feedback>
-            <p>No a = 13 and b = 0 after the loop finishes.</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -829,18 +739,6 @@ s4 = null;
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>hI tHERE</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Strings are immutable and so any changes to a string returns a new
-              string.
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -866,18 +764,6 @@ for (int row = 0; row &lt; 4; row++)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>4</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be correct if the variable col was 0 because then it
-              would add 1 + 1 + 1 + 1 which is 4.
-            </p>
-          </feedback>
-        </choice>
 
         <choice correct="yes">
           <statement>
@@ -987,20 +873,6 @@ for (int row = 0; row &lt; mat.length; row++)
 
         <choice>
           <statement>
-            <p>{ { 2, 1, 1 }, { 2, 2, 1 }, { 2, 2, 2 }, { 2, 2, 2 } }</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if it was int [][] mat = new int [4][3] and it
-              filled the mat with 1 if the row index is less than the column
-              index.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>{ { 2, 3, 3 }, { 1, 2, 3 }, { 1, 1, 2 }, { 1, 1, 1 } }</p>
           </statement>
 
@@ -1051,17 +923,6 @@ for ( int k = 0; k &lt; a.length; k++ )
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>
-              The values don't matter, this will always cause an infinite loop.
-            </p>
-          </statement>
-
-          <feedback>
-            <p>An infinite loop will not always occur in this program segment.</p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -1146,18 +1007,6 @@ for ( int k = 0; k &lt; a.length; k++ )
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>A</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if num1 and num2 were both greater than 0 and
-              num1 was greater than num2. However, num2 is less than 0.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>

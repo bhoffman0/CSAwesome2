@@ -89,18 +89,6 @@
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>x &lt; y</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Since this expression is only about equality how could this be
-              true?
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -188,18 +176,6 @@ public static void sort(int[] a)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>if (a[j] == a[savedIndex]) { savedIndex = j; }</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Why would you want to change the savedIndex if the values are the
-              same?
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -227,18 +203,6 @@ public static void changeMatrix(int[][] matrix )
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>{ {4, -5, 6},{-1, -2, 3}}</p>
-          </statement>
-
-          <feedback>
-            <p>
-              How did the values in row1 change to those in row2 and vice versa?
-              Why didn't any value change to the absolute value?
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -350,19 +314,6 @@ for (int i=1; i&lt;=4; i++)
 
         <choice>
           <statement>
-            <p>a = 5 and b = 2</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if the loop stopped when i was equal to 6, but
-              it stops when i is equal to 5.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
             <p>a = 9 and b = 2</p>
           </statement>
 
@@ -404,16 +355,6 @@ public static int mystery(int n)
 
           <feedback>
             <p>This would be true if it was mystery(5).</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>0</p>
-          </statement>
-
-          <feedback>
-            <p>How can this be? The value 0 is never returned.</p>
           </feedback>
         </choice>
 
@@ -509,15 +450,6 @@ public static int mystery(int n)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>{1,6,3,8,5}, {1,3,6,8,5}, {1,3,5,6,8}</p>
-          </statement>
-
-          <feedback>
-            <p>This doesn't match selection, insertion, or merge sort.</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -562,19 +494,6 @@ for(int i = 0; i &lt; 3; i++)
 
           <feedback>
             <p>This would be true if the inner loop stopped when j equals 7.</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>32</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if the outer loop executed 4 times and the
-              inner loop 8, but is that right?
-            </p>
           </feedback>
         </choice>
 
@@ -643,18 +562,6 @@ public static void conditionTest(int num1, int num2)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>A</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This will only print if both num1 and num2 are greater than 0 and
-              num1 is greater than num2.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -771,15 +678,6 @@ s4 = null;
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>hI tHERE</p>
-          </statement>
-
-          <feedback>
-            <p>How could this have happened?</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -851,18 +749,6 @@ System.out.println(s3);
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>om</p>
-          </statement>
-
-          <feedback>
-            <p>
-              A substring of (0,3) will have 3 characters in it (index 0, index
-              1, and index 2).
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -936,15 +822,6 @@ public static int mystery(String str)
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>0</p>
-          </statement>
-
-          <feedback>
-            <p>Since the first character is "x" how can this be true?</p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -966,19 +843,6 @@ public static int mystery(String str)
             <p>
               This could take a long time, but there is an answer that takes
               longer.
-            </p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>The value is in the middle of the array</p>
-          </statement>
-
-          <feedback>
-            <p>
-              This would be true if we were looking for the shortest execution
-              of a binary search
             </p>
           </feedback>
         </choice>
@@ -1032,18 +896,6 @@ public static int mystery(String str)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>4 in base 8</p>
-          </statement>
-
-          <feedback>
-            <p>
-              You can't just subtract the two numbers since they are in
-              different bases. Convert both to decimal first.
-            </p>
-          </feedback>
-        </choice>
 
         <choice>
           <statement>
@@ -1174,18 +1026,6 @@ test(s,b);
           </feedback>
         </choice>
 
-        <choice>
-          <statement>
-            <p>s={6, 8}; b=8;</p>
-          </statement>
-
-          <feedback>
-            <p>
-              Java passes arguments by creating a copy of the current value so
-              the value of b won't be affected by changes to y.
-            </p>
-          </feedback>
-        </choice>
       </choices>
     </exercise>
 
@@ -1221,16 +1061,6 @@ III.  Selection sort takes less time to execute if the array is already sorted
 
           <feedback>
             <p>This is true, but at least one other thing is true as well.</p>
-          </feedback>
-        </choice>
-
-        <choice>
-          <statement>
-            <p>III only</p>
-          </statement>
-
-          <feedback>
-            <p>Selection sort always takes the same amount of time to execute.</p>
           </feedback>
         </choice>
 
@@ -1298,18 +1128,6 @@ public int mystery(int low, int high, int num)
       </statement>
 
        <choices randomize="yes">
-        <choice>
-          <statement>
-            <p>1</p>
-          </statement>
-
-          <feedback>
-            <p>
-              No, the method is recursive and in the first call it will compare
-              3 to 5 and then do mystery(3,4,5).
-            </p>
-          </feedback>
-        </choice>
 
         <choice correct="yes">
           <statement>
