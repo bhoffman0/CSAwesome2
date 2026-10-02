@@ -193,7 +193,7 @@ public class Main {
 
 
                 if (i &gt; 0) {
-                    rows = matrix.length;
+rows = i;
                     cols = matrix[0].split(" ").length;
                     actual += rows + " x " + cols + " square of random 0 or 1";
                 } else {
