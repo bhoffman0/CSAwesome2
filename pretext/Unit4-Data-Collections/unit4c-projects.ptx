@@ -668,7 +668,7 @@ Use the outline below to help you create this program.
           <ul>
             <li>
               <p>
-                <title>If available:</title>
+<em>If available:</em>
                 <c>findSeat()</c> updates the seat location to <c>0</c> and returns: <em>"You purchased the seat at row __, column __ for $__"</em>.
               </p>
             </li>
