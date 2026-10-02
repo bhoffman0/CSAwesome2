@@ -522,7 +522,7 @@ boolean passed = countOccurences(actual, ".get(") == 2
 
 <row>
 <cell><program language="java"><code>sum(list2)</code></program></cell>
-<cell>233</cell>
+<cell>327</cell>
 <cell>Returns the sum of all the numbers in list2</cell>
 </row>
 
