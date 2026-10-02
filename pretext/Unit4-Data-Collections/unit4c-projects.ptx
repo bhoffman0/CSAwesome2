@@ -927,7 +927,7 @@ public class RunestoneTests extends CodeTestHelper
 
 
         for (String line : lines){
-            if (line.contains(expected)) {
+if (line.replaceAll("\\s", "").contains(expected)) {
                 actual += line.trim() + "\n";
             }
         }
