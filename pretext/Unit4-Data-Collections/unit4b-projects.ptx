@@ -604,7 +604,8 @@ public class RunestoneTests extends CodeTestHelper
         }
 
 
-        boolean passed = stringMatch(actual, "new " + expected + "()");
+boolean passed = stringMatch(actual, "new " + expected + "()")
+    || stringMatch(actual, "new ArrayList&lt;&gt;()");
         expected = expected + " * = new " + expected + "()";
         getResults(replaceTags(expected),replaceTags(actual),"ArrayList of Integers created properly",passed);
         assertTrue(passed);
