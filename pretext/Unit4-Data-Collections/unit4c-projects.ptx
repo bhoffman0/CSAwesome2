@@ -12,9 +12,1202 @@
   </introduction>
 
   <subsection xml:id="unit4c-project1">
-    <title>Unit 4C Project 1</title>
+    <title>Unit 4C Project 1 - Random 2D Array</title>
 
-    
+<activity label="unit4c-project1-random2darray">
+<statement>
+<p>
+  Create a program involving a random 2D Array.  In the main method, write a program that randomly fills in 0s and 1s into an n-by-n matrix (ask the user to enter a single value for the number of rows and columns represented by n), prints the matrix using nested for loops, prints out the amount of 1s in the row with the most amount and the amount of 1s in the column with the most amount, and finds the index of the rows with the most 1s and the index of the columns with the most 1s. Be sure to list all the rows and columns with the most 1s if there is a tie (use a space between the row or column numbers if there are more than one).  (Hint:  Use two ArrayLists to store the number of 1s in each row and each column).
+</p>
+<p>
+  Example output: 
+</p>
+<pre>
+Enter the array size n:  4
+The random array is:
+0 0 1 1
+0 0 1 1
+1 1 0 1
+1 0 1 0
+The max 1s in any row:  3
+The max 1s in any column:  3
+The largest row index:  2
+The largest column index:  2 3
+</pre>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+</code>
+<tests>
+       import static org.junit.Assert.*;
+    import org.junit.*;
+    import java.io.*;
+    import java.util.Arrays;
+    import java.util.ArrayList;
+
+
+    public class RunestoneTests extends CodeTestHelper
+    {
+        public RunestoneTests() {
+            //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        }
+
+
+
+
+        private static String input1 = "5";
+        private static String input2 = "";
+        private static String input3 = "";
+
+
+       
+        @Test
+        public void test01(){
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+
+            String[] lines = code.split("\n");
+            String expected = "int[";
+            String actual = "";
+
+
+            for (String line : lines){
+                if (line.contains(expected) &amp;&amp; line.contains("][")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+           
+            expected = "int[][] * = new int[*][*];";
+            int num1 = countOccurencesRegex(actual, "int[][] *");
+            int num2 = countOccurencesRegex(actual, "= new int[*][*];");
+
+
+            boolean passed = num1 == 1 &amp;&amp; num2 == 1;
+           
+            getResults(expected,actual,"Correctly creates an n x n 2D array of ints",passed);
+            assertTrue(passed);
+        }
+
+
+        @Test
+            public void test02(){
+                String code = getCode();
+                code = getMethodCode(code, "main(String[] args)");
+
+
+                String[] lines = code.split("\n");
+                String expected = "Scanner";
+                String actual = "";
+
+
+                for (String line : lines){
+                    if (line.contains(expected)) {
+                        actual += line.trim() + "\n";
+                    } else if (line.contains(".nextInt()")) {
+                        actual += line.trim() + "\n";
+                    }
+                }
+
+
+                expected = "Scanner * = new Scanner (System.in);\nint * = *.nextInt()";
+                boolean created = stringMatch(actual, "= new Scanner(System.in);");
+                boolean nextInt = stringMatch(actual, ".nextInt()");
+
+
+                boolean passed = created &amp;&amp; nextInt;
+
+
+                getResults(expected,actual,"Creates a scanner object and uses it to scan in one int value",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test03(){
+                String code = getCode();
+                code = getMethodCode(code, "main(String[] args)");
+
+
+                String[] lines = code.split("\n");
+                String expected = "Math.random()";
+                String actual = "";
+
+
+                for (String line : lines){
+                    if (line.contains(expected)) {
+                        actual += line + "\n";
+                    }
+                }
+
+
+                boolean cast = stringMatch(actual, "(int)");
+                //boolean shift = stringMatch(actual,"+1");
+                boolean range = stringMatch(actual,"*2");
+
+
+                boolean passed = cast &amp;&amp; range;
+
+
+                String expect = "Cast: true\nRange: true";
+                actual += "Cast: " + cast + "\nRange: " + range;
+                   
+               
+                getResults(expect,actual,"Math.random() used to create an integer in the range [0, 1]",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test04(){
+                int n = 5;
+                String output = getMethodOutputWithInput("main", "" + n);
+               
+                String[] lines = output.split("\n");
+                String expected = n + " x " + n + " square of random 0 or 1";
+                String actual = "";
+                String[] matrix = new String[n];
+                int i = 0;
+
+
+                for (String line : lines){
+                    if (line.matches("^[01 ]+")) {
+                        actual += line.trim() + "\n";
+                        matrix[i] = actual.trim();
+                        i++;
+                    }
+                }
+
+
+               
+                int rows = -1;
+                int cols = -1;
+
+
+                if (i &gt; 0) {
+                    rows = matrix.length;
+                    cols = matrix[0].split(" ").length;
+                    actual += rows + " x " + cols + " square of random 0 or 1";
+                } else {
+                    actual = "No matrix printed";
+                }
+
+
+               
+               
+                boolean passed = rows == n &amp;&amp; cols == n;
+               
+                getResults(expected,actual,"Prints the 2D array in matrix format using nested for loops (make sure there is a space between the ints)",passed);
+                assertTrue(passed);
+            }
+       
+       
+
+
+        @Test
+            public void test05(){
+                String code = getCode();
+               
+                String[] lines = code.split("\n");
+                String expected = "new ArrayList&lt;Integer&gt;";
+                String actual = "";
+
+
+                for (String line : lines){
+                    if (line.contains(expected)) {
+                        actual += line.trim() + "\n";
+                    }
+                }
+
+
+                int num  = countOccurences(actual, expected);
+               
+                //actual += expected + " x " + num;
+                expected =  expected + " x 2";
+               
+                boolean passed = num == 2;
+
+
+                getResults(expected,actual,"Creates two ArrayLists of type Integer",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test06(){
+                String code = getCode();
+
+
+                String[] lines = code.split("\n");
+                String expected = "if(";
+                String actual = "";
+
+
+                for (String line : lines){
+                    if (stringMatch(line, expected)) {
+                        actual += line.trim() + "\n";
+                    }
+                }
+
+
+                int num  = countOccurences(actual, expected);
+
+
+                expected =  expected + "...) x 2 (or more)";
+
+
+                boolean passed = num &gt;= 2;
+
+
+                getResults(expected,actual,"Uses at least two if statements",passed);
+                assertTrue(passed);
+            }
+       
+
+
+        @Test
+            public void test07(){
+                int n = 5;
+                String output = getMethodOutputWithInput("main", "" + n);
+
+
+                String[] lines = output.split("\n");
+                String expected = "";
+                String actual = "";
+                String[][] matrix = new String[n][];
+                int i = 0;
+
+
+                for (String line : lines){
+                    if (line.matches("^[01 ]+")) {
+                        //actual += line.trim() + "\n";
+                        matrix[i] = line.trim().split(" ");
+                        i++;
+                    } else if (stringMatch(line, "max") &amp;&amp; stringMatch(line, "row")) {
+                        actual += line.trim() + "\n";
+                    }
+                }
+
+
+                int maxRows = -1;
+                if (i &gt; 0)
+                    maxRows = maxRow(matrix);
+
+
+                expected += "Rows max: " + maxRows;
+
+
+                boolean passed = actual.contains("" + maxRows);
+
+
+                getResults(expected,actual,"Identifies the most amount of 1s in any of the rows",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test08(){
+                int n = 5;
+                String output = getMethodOutputWithInput("main", "" + n);
+
+
+                String[] lines = output.split("\n");
+                String expected = "";
+                String actual = "";
+                String[][] matrix = new String[n][];
+                int i = 0;
+
+
+                int max = -1;
+                String results = "none";
+
+
+                for (String line : lines){
+                    if (line.matches("^[01 ]+")) {
+                        //actual += line.trim() + "\n";
+                        matrix[i] = line.trim().split(" ");
+                        i++;
+                    } else if (stringMatch(line, "max") &amp;&amp; stringMatch(line, "col")) {
+                        actual += line.trim() + "\n";
+                    }
+                }
+
+
+                int maxCols = -1;
+                if (i &gt; 0)
+                    maxCols = maxCol(matrix);
+
+
+                expected += "Cols max: " + maxCols;
+
+
+                boolean passed = actual.contains("" + maxCols);
+
+
+                getResults(expected,actual,"Identifies the most amount of 1s in any of the columns",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test09(){
+                int n = 5;
+                String output = getMethodOutputWithInput("main", "" + n);
+
+
+                String[] lines = output.split("\n");
+                String expected = "";
+                String actual = "";
+                String[][] matrix = new String[n][];
+                int i = 0;
+
+
+                int max = -1;
+                String results = "none";
+
+
+                for (String line : lines){
+                    if (line.matches("^[01 ]+")) {
+                        actual += line.trim() + "\n";
+                        matrix[i] = line.trim().split(" ");
+                        i++;
+                    } else if (stringMatch(line, "ind") &amp;&amp; stringMatch(line, "row")) {
+                        actual += line.trim() + "\n";
+                    }
+
+
+                    if(i == n) {
+                        max = maxRow(matrix);
+                        results = listRows(matrix, max);
+                    }
+                }
+
+
+                expected += "Row indexes: " + results;
+
+
+                boolean passed = actual.contains("" + results);
+
+
+                getResults(expected,actual,"Prints all row numbers with the most amount of 1s",passed);
+                assertTrue(passed);
+            }
+
+
+        @Test
+            public void test10(){
+                int n = 5;
+                String output = getMethodOutputWithInput("main", "" + n);
+
+
+                String[] lines = output.split("\n");
+                String expected = "";
+                String actual = "";
+                String[][] matrix = new String[n][];
+                int i = 0;
+
+
+                int max = -1;
+                String results = "none";
+
+
+                for (String line : lines){
+                    if (line.matches("^[01 ]+")) {
+                        actual += line.trim() + "\n";
+                        matrix[i] = line.trim().split(" ");
+                        i++;
+                    } else if (stringMatch(line, "ind") &amp;&amp; stringMatch(line, "col")) {
+                        actual += line.trim() + "\n";
+                    } else if (stringMatch(line, results)) {
+                        actual += line.trim() + "\n";
+                    }
+
+
+                    if(i == n) {
+                        max = maxCol(matrix);
+                        results = listCols(matrix, max);
+                    }
+                }
+
+
+               
+
+
+                expected += "Col indexes: " + results;
+
+
+                boolean passed = actual.contains("" + results);
+
+
+                getResults(expected,actual,"Prints all column numbers with the most amount of 1s",passed);
+                assertTrue(passed);
+            }
+
+
+        private String listCols(String[][] matrix, int max) {
+            String results = "";
+
+
+            for (int c = 0; c &lt; matrix[0].length; c++) {
+                int ones = 0;
+
+
+                for (int r = 0; r &lt; matrix.length; r++) {
+                    if (matrix[r][c].equals("1"))
+                        ones++;
+                }
+
+
+                if (ones == max)
+                    results += c + " ";
+            }
+
+
+            return results.trim();
+        }
+       
+        private String listRows(String[][] matrix, int max) {
+            String results = "";
+
+
+            for (int r = 0; r &lt; matrix.length; r++) {
+                int ones = 0;
+
+
+                for (int c = 0; c &lt; matrix[0].length; c++) {
+                    if (matrix[r][c].equals("1"))
+                        ones++;
+                }
+
+
+                if (ones == max)
+                    results += r + " ";
+            }
+
+
+            return results.trim();
+        }
+       
+        private int maxRow(String[][] matrix) {
+            int maxRow = 0;
+
+
+            for (int r = 0; r &lt; matrix.length; r++) {
+                int ones = 0;
+
+
+                for (int c = 0; c &lt; matrix[0].length; c++) {
+                    if (matrix[r][c].equals("1"))
+                        ones++;
+                }
+               
+                if (ones &gt; maxRow)
+                    maxRow = ones;
+            }
+            return maxRow;
+        }
+
+
+        private int maxCol(String[][] matrix) {
+            int maxCol = 0;
+
+
+            for (int c = 0; c &lt; matrix[0].length; c++) {
+                int ones = 0;
+
+
+                for (int r = 0; r &lt; matrix.length; r++) {
+                    if (matrix[r][c].equals("1"))
+                        ones++;
+                }
+
+
+                if (ones &gt; maxCol)
+                    maxCol = ones;
+            }
+            return maxCol;
+        }
+
+
+        private String getMethodCode(String code, String name) {
+            String searchStr = code;
+            int start = searchStr.indexOf(name);
+            searchStr = searchStr.substring(start);
+
+
+            int level = 0;
+
+
+            for (int i = 0; i &lt; searchStr.length(); i++) {
+                if (searchStr.substring(i,i+1).equals("{")) {
+                    level++;
+                } else if (searchStr.substring(i,i+1).equals("}")) {
+                    level--;
+
+
+                    if (level == 0) {
+                        //System.out.println(searchStr.substring(0, i+1).trim());
+                        return searchStr.substring(0, i+1).trim();
+                    }
+                }
+            }
+
+
+            return searchStr.trim();
+        }
+
+
+        private boolean stringMatch(String str1, String str2) {
+            str1 = str1.replaceAll(" ", "");
+            str2 = str2.replaceAll(" ", "");
+
+
+            return str1.contains(str2);
+        }
+
+
+        private String replaceTags(String str) {
+            return str.replaceAll("&gt;","&amp;gt;").replaceAll("&lt;","&amp;lt;");
+        }
+    }
+
+
+
+  
+</tests>
+</program>
+</activity>
+
+
+  </subsection>
+
+<subsection xml:id="unit4c-project2">
+    <title>Unit 4C Project 2 - Theater Seats</title>
+<p>
+  Create a program about Theater Seating.  A theater seating chart is implemented as a two-dimensional array of ticket prices, like this:
+</p>
+<pre>
+10	10	10	10	10	10	10	10	10	10
+10	10	10	10	10	10	10	10	10	10
+10	10	10	10	10	10	10	10	10	10
+10	10 	20 	20 	20 	20 	20 	20 	10 	10
+10 	10 	20 	20 	20 	20 	20 	20 	10 	10
+10 	10 	20 	20 	20 	20 	20 	20 	10 	10
+20 	20 	30 	30 	40 	40 	30 	30 	20 	20
+20 	30 	30 	40 	50 	50 	40 	30 	30 	20
+30 	40 	50 	50 	50 	50 	50 	50 	40 	30
+</pre>
+<p>
+  In main, create a 2D array using the values above.  Write a program that prompts users to pick either a seat (by specifying the row and column) or a price.  Mark sold seats by changing the price to 0.  When a user specifies a seat, make sure it is available.  When a user specifies a price, find any seat with that price.  If a user picks a seat that is not available, notify them as such.  After the user has successfully picked a seat, print out the seat location and price and the updated 2D array.  Use a while loop with a sentinel value to allow the user to pick as many seats as they would like until they indicate they are done.
+</p>
+<p>
+  In main, create a 2D array using the values above.  Write a program that prompts users to pick either a seat (by specifying the row and column) or a price.  Mark sold seats by changing the price to 0.  When a user specifies a seat, make sure it is available.  When a user specifies a price, find any seat with that price.  If a user picks a seat that is not available, notify them as such.  After the user has successfully picked a seat, print out the seat location and price and the updated 2D array.  Use a while loop with a sentinel value to allow the user to pick as many seats as they would like until they indicate they are done.
+</p>
+<p>
+Use the outline below to help you create this program.
+</p>
+
+<p>
+  <ul>
+    <li>
+      <p>
+        Setup &amp; Initialization: 
+        Create a 2D array using an initializer list, initialize a <c>Scanner</c> object, and declare a <c>boolean</c> variable to control the loop.
+      </p>
+    </li>
+    <li>
+      <p>
+        Main Program Loop: 
+        Use a <c>while</c> loop (controlled by the boolean variable) to allow repeated ticket purchases.
+      </p>
+      <ul>
+        <li>
+          <p>
+            Display Seating: 
+            Print the 2D array using nested <c>for</c> loops, putting a tab between each entry.
+          </p>
+        </li>
+        <li>
+          <p>
+            Prompt Purchase Method:
+            Ask the user to purchase by price (<c>"p"</c>) or seat location (<c>"s"</c>) and store the input in a <c>String</c>.<line/>
+            <em>Note: Use <c>scan.next()</c> instead of <c>scan.nextLine()</c> to avoid Scanner buffering issues when mixing Strings and ints.</em>
+          </p>
+        </li>
+        <li>
+          <p>
+            Option A — Purchase by Price: 
+            Ask for the target price and pass it along with the 2D array to a static method named <c>findPrice()</c>.
+          </p>
+          <ul>
+            <li>
+              <p>
+                If available: <c>findPrice()</c> updates the seat location to <c>0</c> and returns: <em>"You purchased the seat at row __, column __ for $__"</em> (adjust array 0-indices to 1-based theater numbers).
+              </p>
+            </li>
+            <li>
+              <p>
+                If unavailable: Returns <em>"There is no seat available at that price."</em>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            Option B — Purchase by Location: 
+            Ask for the row and column numbers and pass them along with the 2D array to a static method named <c>findSeat()</c>.
+          </p>
+          <ul>
+            <li>
+              <p>
+                <title>If available:</title>
+                <c>findSeat()</c> updates the seat location to <c>0</c> and returns: <em>"You purchased the seat at row __, column __ for $__"</em>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <title>If unavailable:</title>
+                Returns: <em>"That seat is not available."</em>
+              </p>
+            </li>
+            <li>
+              <p>
+                <em>Note: Subtract 1 from the user's row and column inputs to map 1-based seat choices to 0-based array indices.</em>
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            <title>Continue or Exit:</title>
+            Ask the user if they want to buy another seat (<c>Y</c> or <c>N</c>). If <c>"N"</c>, update the boolean variable to terminate the loop.
+          </p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>
+        <c>findPrice</c> Method:
+      </p>
+      <ul>
+        <li>
+          <p>
+            This static method should take two parameters: the 2D array and the price, and return a String that will be printed in the if statement.
+          </p>
+        </li>
+        <li>
+          <p>
+            This method should find the first seat at that price, change that location to 0 to indicate it is now purchased, and return a String in the form: <c>You purchased the seat at row __, column __ for $__</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            Remember that even though the 2D array starts at row 0, column 0, the theater would start at row 1, column 1.
+          </p>
+        </li>
+        <li>
+          <p>
+            If there are no seats left at that price, the method should return the String: <c>There is no seat available at that price.</c>
+          </p>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <p>
+        <c>findSeat</c> Method
+      </p>
+      <ul>
+        <li>
+          <p>
+            This method should check whether or not the requested seat is available.
+          </p>
+          <ul>
+            <li>
+              <p>
+                Remember that the user will enter a seat thinking that the first row and column are 1, not 0, so be sure to adjust the values for the 2D array.
+              </p>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            This static method should have three parameters: the 2D array, the row choice, and the column choice, and it should return a String that will be printed.
+          </p>
+        </li>
+        <li>
+          <p>
+            If the seat is not available, the method should return the String: <c>That seat is not available.</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            Otherwise, the method should change that location to 0 to indicate it is now purchased, and return a String in the form: <c>You purchased the seat at row __, column __ for $__</c>
+          </p>
+          <ul>
+            <li>
+              <p>
+                Remember to adjust the row and column numbers again.
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</p>
+
+<activity label="unit4c-project2-theaterseats">
+<statement>
+  <p>
+  Create a program about Theater Seating.  A theater seating chart is implemented as a two-dimensional array of ticket prices, like this:
+</p>
+<pre>
+10	10	10	10	10	10	10	10	10	10
+10	10	10	10	10	10	10	10	10	10
+10	10	10	10	10	10	10	10	10	10
+10	10 	20 	20 	20 	20 	20 	20 	10 	10
+10 	10 	20 	20 	20 	20 	20 	20 	10 	10
+10 	10 	20 	20 	20 	20 	20 	20 	10 	10
+20 	20 	30 	30 	40 	40 	30 	30 	20 	20
+20 	30 	30 	40 	50 	50 	40 	30 	30 	20
+30 	40 	50 	50 	50 	50 	50 	50 	40 	30
+</pre>
+<p>
+  Use the outline above to help you write your code.
+</p>
+</statement>
+<program interactive="activecode" language="java">
+<code>
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+    }
+}
+</code>
+<tests>    
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.io.*;
+import java.util.Arrays;
+import java.util.ArrayList;
+
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests() {
+        super("Main", input1.replaceAll(" ", "\n")); // For Book
+    }
+
+
+    private static String input1 = "p 10 Y s 8 2 Y s 8 2 N";
+    private static String input2 = "p 10 N";
+    private static String input3 = "";
+
+
+    private int[][] seats = {{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {20, 20, 30, 30, 40, 40, 30, 30, 20, 20}, {20, 30, 30, 40, 50, 50, 40, 30, 30, 20}, {30, 40, 50, 50, 50, 50, 50, 50, 40, 30}};
+    private String seatsList = "{{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {10, 10, 20, 20, 20, 20, 20, 20, 10, 10}, {20, 20, 30, 30, 40, 40, 30, 30, 20, 20}, {20, 30, 30, 40, 50, 50, 40, 30, 30, 20}, {30, 40, 50, 50, 50, 50, 50, 50, 40, 30}};";
+
+
+    @Test
+    public void test01(){
+        seatsList = seatsList.replaceAll("},", "},\n");
+
+
+        String code = getCode();
+        code = getMethodCode(code, "main(String[] args)");
+
+
+        String[] lines = code.split("\n");
+        String expected = "int[][]";
+        String actual = "";
+
+
+        for (String line : lines){
+            if (line.contains(expected) || (line.contains("{") &amp;&amp; line.contains(","))) {
+                actual += line.trim() + "\n";
+            }
+        }
+
+
+        expected = "int[][] * = {{...}, ...};\n" + getDescription(seatsList);
+
+
+        boolean passed = stringMatch(actual, seatsList);
+
+
+        String incorrect = "";
+        if(!passed) {
+            incorrect = "\nIncorrect indexes: " + valuesIncorrect(actual.substring(actual.indexOf("{")), seatsList);
+        }
+
+
+        actual = actual.substring(0, 30) + "...\n" + getDescription(actual.substring(actual.indexOf("{"))) + incorrect;
+
+
+        getResults(expected,actual,"Creates 2D array of seats using initializer list",passed);
+        assertTrue(passed);
+    }
+
+
+    private String valuesIncorrect(String actual, String expect) {
+        String result = "";
+
+
+        String[][] actMatrix = makeMatrix(actual);
+        String[][] expMatrix = makeMatrix(expect);
+
+
+        if (actMatrix.length != expMatrix.length || actMatrix[0].length != expMatrix[0].length) {
+            return "Results have different dimensions";
+        }
+
+
+        for (int r = 0; r &lt; actMatrix.length; r++) {
+            for (int c = 0; c &lt; actMatrix[0].length; c++) {
+                if (!actMatrix[r][c].equals(expMatrix[r][c])) {
+                    result += "(" + r + ", " + c + ") ";
+                }
+            }
+        }
+
+
+        return result;
+    }
+
+
+    private void printMatrix(String[][] matrix) {
+        for (int r = 0; r &lt; matrix.length; r++) {
+            for (int c = 0; c &lt; matrix[0].length; c++) {
+                System.out.print(matrix[r][c] + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+
+    private String[][] makeMatrix (String initList) {
+        String[] lines = initList.split("\n");
+        String[][] matrix = new String[lines.length][];
+
+
+        int i = 0;
+        for (String line : lines) {
+            line = line.replaceAll("[{},;]","").trim();
+            matrix[i] = line.split("\\s");
+            i++;
+        }
+        return matrix;
+    }
+
+
+    private String getDescription(String initList) {
+        String[][] matrix = makeMatrix(initList);
+
+
+        return "2D array of size " + matrix.length + " x " + matrix[0].length;
+    }
+
+
+    @Test
+    public void test02(){
+        String code = getCode();
+        code = getMethodCode(code, "main(String[] args)");
+
+
+        String[] lines = code.split("\n");
+        String expected = "while(";
+        String actual = "";
+
+
+        for (String line : lines){
+            if (line.contains(expected)) {
+                actual += line.trim() + "\n";
+            }
+        }
+
+
+        boolean passed = actual.contains(expected);
+        expected = "while(*)";
+
+
+        getResults(expected,actual,"Uses one while loop",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test03(){
+        String input1 = "p 10 Y p 10 N";
+        String output1 = getMethodOutputWithInput("main", input1.replaceAll(" ", "\n"));
+
+
+        String input2 = "p 10 N";
+        String output2 = getMethodOutputWithInput("main", input2.replaceAll(" ", "\n"));
+
+
+        int num = output1.length() / output2.length();
+        String expected = "Code executes 2 times";
+        String actual = "Code executes " + num + " times";
+
+
+        boolean passed = num == 2;
+        getResults(expected,actual,"While loop ends when user enters N (testing using \"p 10 Y p 10 N\" for input)",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test04(){
+        String code = getCode();
+        String method = getMethodCode(code, "main(String[]");
+        String expected = "Prints 9 x 10 2d array\nUses nested loops";
+        try {
+
+
+            code = getMethodCode(code, "for(");
+            int fors = countOccurences(method, "for(");
+
+
+            String output = getMethodOutputWithInput("main", input2.replaceAll(" ", "\n"));
+
+
+            String[] lines = output.split("\n");
+            String actual = "";
+            String[] matrix = new String[9];
+            int i = 0;
+
+
+            for (String line : lines){
+                if (i &lt; 10 &amp;&amp; line.matches("[0-9\\s]+")) {
+                    actual += line.trim() + "\n";
+                    matrix[i] = actual.trim();
+                    i++;
+                }
+            }
+
+
+            int rows = -1;
+            int cols = -1;
+
+
+            if (i &gt; 0) {
+                rows = matrix.length;
+                cols = matrix[0].split("\\s").length;
+                actual = "Prints " + rows + " x " + cols + " 2d array\n";
+            } else {
+                actual = "No matrix printed\n";
+            }
+
+
+            if (fors == 2) {
+                actual += "Uses nested for loops";
+            } else if (fors &lt; 2) {
+                actual += "Not enough for loops";
+            } else {
+                actual += "Too many for loops";
+            }
+
+
+            boolean passed = rows == 9 &amp;&amp; cols == 10 &amp;&amp; fors == 2;
+
+
+            getResults(expected,actual,"Prints the 2D array in matrix format using nested for loops (make sure there is a space between the ints)",passed);
+            assertTrue(passed);
+        } catch (Exception e) {
+            getResults(expected,"No matrix printed","Prints the 2D array in matrix format using nested for loops (make sure there is a space between the ints)", false);
+            assertTrue(false);
+        }
+    }
+
+
+    @Test
+    public void test05(){
+        String code = getCode();
+        code = getMethodCode(code, "main(String[] args)");
+
+
+        String[] lines = code.split("\n");
+        String expected = "Scanner";
+        String actual = "";
+
+
+        for (String line : lines){
+            if (line.contains(expected)) {
+                actual += line.trim() + "\n";
+            } else if (line.contains(".next") &amp;&amp; line.contains("()")) {
+                actual += line.trim() + "\n";
+            }
+        }
+
+
+        expected = "Scanner * = new Scanner (System.in);\nint * = *.nextInt();\nString * = *.next();\nString * = *.nextLine();";
+        boolean created = stringMatch(actual, "= new Scanner(System.in);");
+        boolean nextInt = stringMatch(actual, ".nextInt()");
+        boolean next = stringMatch(actual, ".next()") || stringMatch(actual, ".nextLine()");
+
+
+        boolean passed = created &amp;&amp; nextInt &amp;&amp; next;
+
+
+        getResults(expected,actual,"Uses Scanner to scan in Strings and ints",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test06(){
+        String code = getCode();
+
+
+        String[] lines = code.split("\n");
+        String expected = "findPrice(int[][]";
+        String actual = "";
+
+
+        for (String line : lines){
+            if (stringMatch(line, expected)) {
+                actual += line + "\n";
+            }
+        }
+
+
+        boolean passed = actual.contains("static") &amp;&amp; stringMatch(actual, "int[][]") &amp;&amp; stringMatch(actual, ", int") &amp;&amp; actual.contains("String");
+
+
+        String expect = "public static String findPrice(int[][] *, int *)";
+
+
+        getResults(expect,actual,"Correct header for findPrice method",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test07(){
+        String code = getCode();
+
+
+        String[] lines = code.split("\n");
+        String expected = "findSeat(int[][]";
+        String actual = "";
+
+
+        for (String line : lines){
+            if (stringMatch(line, expected)) {
+                actual += line + "\n";
+            }
+        }
+
+
+        boolean passed = actual.contains("static") &amp;&amp; stringMatch(actual, "int[][]") &amp;&amp; countOccurences(actual, ", int") == 2 &amp;&amp; actual.contains("String");
+
+
+        String expect = "public static String findSeat(int[][] *,int *, int *)";
+        getResults(expect,actual,"Correct header for findSeat method",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test08(){
+        Object[] args = {seats, 20};
+        String expected = "You purchased the seat at row 4, column 3 for $20";
+        String output = getMethodOutput("findPrice", args);
+
+
+        boolean passed = output.contains("row 4") &amp;&amp; output.contains("column 3") &amp;&amp; output.contains("$20");
+
+
+        getResults(expected,output,"Correct output for a ticket purchased by price ($20)",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test09(){
+        Object[] args = {seats, 8, 2};
+        String expected = "You purchased the seat at row 8, column 2 for $30";
+        String output = getMethodOutput("findSeat", args);
+
+
+        boolean passed = output.contains("row 8") &amp;&amp; output.contains("column 2") &amp;&amp; output.contains("$30");
+
+
+        getResults(expected,output,"Correct output for a ticket purchased by seat location (Row 8, Column 2)",passed);
+        assertTrue(passed);
+    }
+
+
+    @Test
+    public void test10(){
+        int[][] newSeats = new int[10][10];
+        Object[] args = {newSeats, 8, 2};
+        String expected = "That seat is not available.";
+        String output = getMethodOutput("findSeat", args);
+
+
+        boolean passed = output.contains("not available");
+
+
+        getResults(expected,output,"Correct output for an unavailable seat (Row 8, Column 2 - second request)",passed);
+        assertTrue(passed);
+    }
+
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+
+        int level = 0;
+
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i,i+1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i,i+1).equals("}")) {
+                level--;
+
+
+                if (level == 0) {
+                    //System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i+1).trim();
+                }
+            }
+        }
+
+
+        return searchStr.trim();
+    }
+
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll("\\s", "");
+        str2 = str2.replaceAll("\\s", "");
+
+
+        return str1.contains(str2);
+    }
+
+
+    private String replaceTags(String str) {
+        return str.replaceAll("&gt;","&amp;gt;").replaceAll("&lt;","&amp;lt;");
+    }
+}
+</tests>
+</program>
+</activity>
 
   </subsection>
 
