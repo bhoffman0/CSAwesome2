@@ -1001,7 +1001,7 @@ public class RunestoneTests extends CodeTestHelper
 
 
             if (i &gt; 0) {
-                rows = matrix.length;
+rows = i;
                 cols = matrix[0].split("\\s").length;
                 actual = "Prints " + rows + " x " + cols + " 2d array\n";
             } else {
