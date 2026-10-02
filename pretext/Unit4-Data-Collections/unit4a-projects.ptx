@@ -353,6 +353,7 @@ public class Main {
 
 
 </code>
+<stdin>B D C A E A B A E B B E E D D A A A A A</stdin>
 <tests>
   import static org.junit.Assert.*;
   import org.junit.*;
@@ -479,7 +480,7 @@ public class Main {
           }
 
       @Test // totalCorrect
-          public void test5() {
+          public void test5() throws IOException {
               UnitTest test1 = new UnitTest(input2.split(" "));
               UnitTest test2 = new UnitTest(input3.split(" "));
 
@@ -494,7 +495,7 @@ public class Main {
           }
 
       @Test // totalCorrect
-          public void test6() {
+          public void test6() throws IOException{
               UnitTest test1 = new UnitTest(input2.split(" "));
               UnitTest test2 = new UnitTest(input3.split(" "));
 
@@ -509,7 +510,7 @@ public class Main {
           }
 
       @Test // isPassing
-          public void test7() {
+          public void test7() throws IOException {
               UnitTest test1 = new UnitTest(input2.split(" "));
               UnitTest test2 = new UnitTest(input3.split(" "));
 
@@ -524,7 +525,7 @@ public class Main {
           }
 
       @Test // toString
-      public void test8() {
+      public void test8() throws IOException {
           UnitTest test1 = new UnitTest(input2.split(" "));
           String output = test1.toString();
           String actual = "";
@@ -561,7 +562,7 @@ public class Main {
       }
 
       @Test // Output matches for Input 2
-          public void test9()
+          public void test9() throws IOException
           {
               String input = input2.replaceAll(" ", "\n");
               String expect = "Number of Correct Answers: 17\nNumber of Mistakes: 3\nThe student PASSED";
@@ -576,7 +577,7 @@ public class Main {
           }
 
       @Test // Output matches for Input 3
-          public void test10()
+          public void test10() throws IOException
           {
               String input = input3.replaceAll(" ", "\n");
               String expect = "Number of Correct Answers: 5\nNumber of Mistakes: 15\nThe student FAILED";
