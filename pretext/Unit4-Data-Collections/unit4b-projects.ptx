@@ -485,7 +485,7 @@ boolean passed = countOccurences(actual, ".get(") == 2
 </row>
 
 <row>
-<cell><program language="java"><code>// list2 = [14, 42, 73, 89, 31]</code></program></cell>
+<cell><program language="java"><code>// list1 = [14, 42, 73, 89, 31]</code></program></cell>
 <cell></cell>
 <cell>Assume list1 has been created property and that the values have been added</cell>
 </row>
