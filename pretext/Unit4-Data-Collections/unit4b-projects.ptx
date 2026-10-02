@@ -295,7 +295,8 @@ boolean passed = stringMatch(actual, "new " + expected + "()")
                         }
                     }
    
-                    boolean passed = countOccurences(actual, ".get(") == 2 &amp;&amp; actual.contains("==");
+boolean passed = countOccurences(actual, ".get(") == 2
+    &amp;&amp; (actual.contains("==") || actual.contains(".equals("));
                     expected = "if (*.get(*) == *.get(*))";
                     getResults(expected,actual,desc,passed);
                     assertTrue(passed);
