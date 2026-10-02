@@ -971,8 +971,7 @@ public class RunestoneTests extends CodeTestHelper
         try {
 
 
-            code = getMethodCode(code, "for(");
-            int fors = countOccurences(method, "for(");
+int fors = countOccurences(method, "for(");
 
 
             String output = getMethodOutputWithInput("main", input2.replaceAll(" ", "\n"));
