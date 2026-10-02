@@ -375,10 +375,10 @@ rows = i;
 
 
                 for (String line : lines){
-                    if (line.matches("^[01 ]+")) {
-                        actual += line.trim() + "\n";
-                        matrix[i] = line.trim().split(" ");
-                        i++;
+if (line.matches("^[01 ]+")) {
+    matrix[i] = line.trim().split(" ");
+    i++;
+}
                     } else if (stringMatch(line, "ind") &amp;&amp; stringMatch(line, "row")) {
                         actual += line.trim() + "\n";
                     }
