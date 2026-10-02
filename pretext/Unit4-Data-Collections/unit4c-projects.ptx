@@ -609,9 +609,6 @@ if (line.matches("^[01 ]+")) {
   In main, create a 2D array using the values above.  Write a program that prompts users to pick either a seat (by specifying the row and column) or a price.  Mark sold seats by changing the price to 0.  When a user specifies a seat, make sure it is available.  When a user specifies a price, find any seat with that price.  If a user picks a seat that is not available, notify them as such.  After the user has successfully picked a seat, print out the seat location and price and the updated 2D array.  Use a while loop with a sentinel value to allow the user to pick as many seats as they would like until they indicate they are done.
 </p>
 <p>
-  In main, create a 2D array using the values above.  Write a program that prompts users to pick either a seat (by specifying the row and column) or a price.  Mark sold seats by changing the price to 0.  When a user specifies a seat, make sure it is available.  When a user specifies a price, find any seat with that price.  If a user picks a seat that is not available, notify them as such.  After the user has successfully picked a seat, print out the seat location and price and the updated 2D array.  Use a while loop with a sentinel value to allow the user to pick as many seats as they would like until they indicate they are done.
-</p>
-<p>
 Use the outline below to help you create this program.
 </p>
 
