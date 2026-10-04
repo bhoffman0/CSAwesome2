@@ -542,7 +542,7 @@ public class RunestoneTests extends CodeTestHelper
 <exercise label="u2b-toggle10" xml:id="u2b-toggle10">
     <statement>
       <p>
-        The <c>ev_div(s, n)</c> method in the <c>NumWorker</c> class should
+        The <c>even_div(s, n)</c> method in the <c>NumWorker</c> class should
         return the number of digits in <c>s</c> (a string representation of a
         number) that are evenly divisible by <c>n</c>. For example,
         <c>even_div("6892",3)</c> should return 2 since both 6 and 9 are evenly

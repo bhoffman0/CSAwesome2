@@ -597,7 +597,7 @@ public class Test1
         System.out.println("arr1 --&gt; " + Arrays.toString(arr1));
         System.out.println("makeMiddle(arr1) --&gt; " + Arrays.toString(arr1o));
 
-        int[] arr2 = { 1, 3, 5 };
+        int[] arr2 = { 1, 2, 3, 4 };
         int[] arr2o = makeMiddle(arr2);
 
         System.out.println("arr2 --&gt; " + Arrays.toString(arr2));
@@ -628,8 +628,8 @@ public class RunestoneTests extends CodeTestHelper
         String expect =
                 "arr1 --&gt; [1, 2, 3, 4, 5, 6]\n"
                     + "makeMiddle(arr1) --&gt; [3, 4]\n"
-                    + "arr2 --&gt; [1, 3, 5]\n"
-                    + "makeMiddle(arr2) --&gt; [1, 3]";
+                    + "arr2 --&gt; [1, 2, 3, 4]\n"
+                    + "makeMiddle(arr2) --&gt; [2, 3]";
 
         boolean passed = getResults(expect, output, "Running main");
         assertTrue(passed);
