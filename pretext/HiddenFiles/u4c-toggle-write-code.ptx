@@ -325,7 +325,7 @@ public class RunestoneTests extends CodeTestHelper
   <exercise label="u4c_muc_wc5" xml:id="u4c_muc_wc5">
     <statement>
       <p>
-        Write the <c>makeEvenNumbersZero</c> method such that it iterates
+        Write the <c>makeEvenNumsZero</c> method such that it iterates
         through the two-dimensional <c>int</c> array <c>nums</c> and replaces
         each instance of an even number with 0. For example, <c>{ {3, 4, 5}, {6,
         7, 8} }</c> would become <c>{ {3, 0, 5}, {0, 7, 0} }</c>.
@@ -372,7 +372,7 @@ public class RunestoneTests extends CodeTestHelper
 {
     public RunestoneTests()
     {
-        super("MakeEvenNumbersZero");
+        super("Test1");
     }
 
     @Test
@@ -393,7 +393,7 @@ public class RunestoneTests extends CodeTestHelper
     <statement>
       <p>
         Fill in the <c>numOccurrences</c> method. It should take in a
-        two-dimension <c>int</c> array <c>nums</c> and an <c>int</c>
+        two-dimensional <c>int</c> array <c>nums</c> and an <c>int</c>
         <c>desired</c> and return the number of times that <c>desired</c>
         appears in <c>nums</c>. E.g., with <c>{ {3, 1, 2}, {3, 4, 1} }</c> as
         <c>nums</c>, <c>numOccurrences(nums, 1)</c> should return <c>2</c>.
@@ -700,7 +700,7 @@ public class RunestoneTests extends CodeTestHelper
   <exercise label="u4c_muc_wc10" xml:id="u4c_muc_wc10">
     <statement>
       <p>
-        Write the <c>maxEachRow</c> method. It that should accept a
+        Write the <c>maxEachRow</c> method. It should accept a
         two-dimensional <c>int</c> array <c>nums</c>, and return a
         single-dimensional (normal) <c>int</c> array containing the max of each
         row. For example, the returned array for { {3}, {4, 9, 6, -1}, {45, 1} }

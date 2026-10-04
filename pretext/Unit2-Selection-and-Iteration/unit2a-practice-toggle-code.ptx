@@ -4,52 +4,797 @@
   <title>Selection Toggle Code Practice (2.1-2.6)</title>
 
   <p>
-   For each of the coding problems below, if you need help, you can pull down the 
-   toggle menu to select the associated mixed up code problem to help you get started.
+   For each of the coding problems below, write your own solution. If you get stuck,
+   click the <em>Get Help</em> button for a personalized mixed-up code problem built
+   from your current attempt.
   </p>
 
-<exercise label="u2a-toggle1">
-  <select grade="first" questions="u2a_muc_wc1 ifex1muc"/>
-</exercise>
+<exercise label="u2a-toggle1" xml:id="u2a-toggle1">
+    <statement>
+      <p>
+        Write code that tests guess to see if it is equal to answer or too high
+        or too low. If it is too high as in the example below, it should print
+        out <c>Your guess is too high</c>.
+      </p>
+    </statement>
 
-<exercise label="u2a-toggle2">
-  <select grade="first" questions="u2a_muc_wc2 ifex2muc"/>
-</exercise>
+    <program interactive="activecode" language="java" label="u2a-toggle1-prog" xml:id="u2a-toggle1-prog"
+           codetailor="incorrect" codetailor-fallback="ifex1muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int guess = 10;
+        int answer = 5;
 
-<exercise label="u2a-toggle3">
-  <select grade="first" questions="u2a_muc_wc3 ifex3muc"/>
-</exercise>
+        // Add your code here
 
-<exercise label="u2a-toggle4">
-  <select grade="first" questions="u2a_muc_wc4 ifex4muc"/>
-</exercise>
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
 
-<exercise label="u2a-toggle5">
-  <select grade="first" questions="u2a_muc_wc5 ifex5muc"/>
-</exercise>
+import org.junit.*;
 
-<exercise label="u2a-toggle6">
-  <select grade="first" questions="u2a_muc_wc6 ifex6muc"/>
-</exercise>
+import java.io.*;
 
-<exercise label="u2a-toggle7">
-  <select grade="first" questions="u2a_muc_wc7 ifex7muc"/>
-</exercise>
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
 
-<exercise label="u2a-toggle8">
-  <select grade="first" questions="u2a_muc_wc8 ifex8muc"/>
-</exercise>
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your guess is too high";
 
-<exercise label="u2a-toggle9">
-  <select grade="first" questions="u2a_muc_wc9 ifex9muc"/>
-</exercise>
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
 
-<exercise label="u2a-toggle10">
-  <select grade="first" questions="u2a_muc_wc10 ifex10muc"/>
-</exercise>
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 2, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
 
-<exercise label="u2a-toggle11">
-  <select grade="first" questions="u2a_muc_wc11 ifex11muc"/>
-</exercise>
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 2, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of else ifs");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle2" xml:id="u2a-toggle2">
+    <statement>
+      <p>
+        Write code that prints <c>You can go out</c> if you don’t have any
+        homework and have cleaned and otherwise prints <c>You can not go
+        out</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle2-prog" xml:id="u2a-toggle2-prog"
+           codetailor="incorrect" codetailor-fallback="ifex2muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        boolean homeworkLeft = false;
+        boolean cleaned = true;
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch4ex2muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "You can go out";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle3" xml:id="u2a-toggle3">
+    <statement>
+      <p>
+        Write code that tests if x is between 1 and 10, and prints <c>1 &lt;= x
+        &lt;= 10</c> or <c>x is not in range</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle3-prog" xml:id="u2a-toggle3-prog"
+           codetailor="incorrect" codetailor-fallback="ifex3muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int x = 3;
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "1 &lt;= x &lt;= 10";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        boolean passed = checkCodeContains("x &gt;= 1 &amp;&amp; x &lt;= 10");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle4" xml:id="u2a-toggle4">
+    <statement>
+      <p>
+        Write code that prints out if the string <c>message</c> has the word
+        <c>ringing</c> in it or not. It should print out <c>Answer the
+        phone!</c> if <c>ringing</c> is in <c>message</c>, and <c>I don't hear
+        anything.</c> if not.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle4-prog" xml:id="u2a-toggle4-prog"
+           codetailor="incorrect" codetailor-fallback="ifex4muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String message = "Is that the phone ringing?";
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Answer the phone!";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        boolean passed = checkCodeContains(".indexOf(\"ringing\"");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle5" xml:id="u2a-toggle5">
+    <statement>
+      <p>
+        Write code that prints if your favorite food is junk food (pizza or
+        wings) or not. Your code should check to see if the variable
+        <c>favFood</c> value is <c>pizza</c> or <c>wings</c>. If it is, it
+        should print out <c>Your fav is junk food</c>. If not, it should print
+        <c>Your fav is not junk</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle5-prog" xml:id="u2a-toggle5-prog"
+           codetailor="incorrect" codetailor-fallback="ifex5muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String favFood = "kale";
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your fav is not junk";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, ".equals(");
+        boolean passed = count &gt;= 2;
+        passed = getResults("" + 2, "" + count, "Counting number of calls to .equals()", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        boolean passed = checkCodeContains("||");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle6" xml:id="u2a-toggle6">
+    <statement>
+      <p>
+        Write code that prints your fine if you are speeding. If you are going
+        over 65 but less than 75, the fine is <c>50</c>. If you are going at
+        least 75 and less than 85, the fine is <c>100</c>. Over that the fine is
+        <c>200</c>. It should not print anything if you are not speeding.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle6-prog" xml:id="u2a-toggle6-prog"
+           codetailor="incorrect" codetailor-fallback="ifex6muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int speed = 90;
+        // Add your code here
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "200";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("speed &gt; 65 &amp;&amp; speed &lt; 75");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        boolean passed = checkCodeContains("speed &gt;= 75 &amp;&amp; speed &lt; 85");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle7" xml:id="u2a-toggle7">
+    <statement>
+      <p>
+        Write code that prints the alarm time. If it is a weekday you should get
+        up at <c>7:00am</c> and if not get up at <c>10:00am</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle7-prog" xml:id="u2a-toggle7-prog"
+           codetailor="incorrect" codetailor-fallback="ifex7muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        boolean weekend = false;
+        // Add your code here
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "7:00am";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("!weekend");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle8" xml:id="u2a-toggle8">
+    <statement>
+      <p>
+        Write code that prints if you <c>Can text now</c> or <c>Can't text
+        now</c>. You can text if you are not driving and not eating.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle8-prog" xml:id="u2a-toggle8-prog"
+           codetailor="incorrect" codetailor-fallback="ifex8muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        boolean driving = true;
+        boolean eating = false;
+        // Add your code here
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Can't text now";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("!driving &amp;&amp; !eating");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 1, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle9" xml:id="u2a-toggle9">
+    <statement>
+      <p>
+        Write code that prints whether your name <c>Starts with a vowel</c> (a,
+        e, i, o, u) or <c>Starts with a consonant</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle9-prog" xml:id="u2a-toggle9-prog"
+           codetailor="incorrect" codetailor-fallback="ifex9muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String name = "Julian";
+        String firstLetter = name.substring(0, 1);
+        String lowerFirst = firstLetter.toLowerCase();
+
+        // Add your code here
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Starts with a consonant";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "substring(0,1)");
+        boolean passed = count &gt;= 1;
+
+        getResults("1 or more", "" + count, "Counting number of substring(0, 1)", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, ".equals(");
+        boolean passed = count == 5;
+
+        getResults("1 or more", "" + count, "Counting number of .equals()", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle10" xml:id="u2a-toggle10">
+    <statement>
+      <p>
+        Write code that prints the letter grade with your score. For a score
+        greater than 90, it should print <c>A</c>. For a score between 80 and
+        90, it should print <c>B</c>. For a score between 70 and 80, it should
+        print <c>C</c>. For a score between 60 and 70, it should print <c>D</c>.
+        For all other scores, it should print <c>E</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle10-prog" xml:id="u2a-toggle10-prog"
+           codetailor="incorrect" codetailor-fallback="ifex10muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        int score = 73;
+        // Add your code here
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "C";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "if");
+        boolean passed = getResults("" + 4, "" + count, "Counting number of ifs");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else");
+        boolean passed = getResults("" + 4, "" + count, "Counting number of elses");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test4()
+    {
+        String code = getCodeWithoutComments();
+        int count = countOccurences(code, "else if");
+        boolean passed = getResults("" + 3, "" + count, "Counting number of else ifs");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u2a-toggle11" xml:id="u2a-toggle11">
+    <statement>
+      <p>
+        Complete the <c>get_mid(str)</c> method in the <c>StringWorker</c> class to
+        return the middle character if the string has an odd number of
+        characters and the middle two characters if the string has an even
+        number of characters. For example, <c>get_mid("way")</c> should return
+        <c>"a"</c> and <c>get_mid("away")</c> should return <c>"wa"</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u2a-toggle11-prog" xml:id="u2a-toggle11-prog"
+           codetailor="incorrect" codetailor-fallback="ifex11muc">
+      <code>
+public class StringWorker
+{
+    public static String get_mid(String str)
+    {
+        // Add your code here
+        return ""; // change the return value
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(get_mid("way") + " should be \"a\"");
+        System.out.println(get_mid("away") + " should be \"wa\"");
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("StringWorker");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "a should be \"a\"\nwa should be \"wa\"";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String actual = StringWorker.get_mid("candy");
+        String expect = "n";
+        boolean passed = getResults(expect, actual, "Testing get_mid(\"candy\")");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
 
 </section>
