@@ -304,11 +304,14 @@ for (int i=1; i&lt;=4; i++)
 
         <choice>
           <statement>
-            <p>a = 2 and b = -2</p>
+            <p>a = 5 and b = 2</p>
           </statement>
 
           <feedback>
-            <p>Go back and check your values each time through the loop.</p>
+            <p>
+              This would be true if the loop stopped when i was equal to 6, but
+              it stops when i is equal to 5.
+            </p>
           </feedback>
         </choice>
 
