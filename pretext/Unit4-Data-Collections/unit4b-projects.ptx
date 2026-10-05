@@ -60,403 +60,385 @@ public class Main {
 }
 </code>
 <tests>
-    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.util.Arrays;
-    import java.util.ArrayList;
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.Arrays;
+import java.util.ArrayList;
 
+public class RunestoneTests extends CodeTestHelper {
+    public RunestoneTests() {
+        super("Main");
+    }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            super("Main");
-        }
-       
-       
-        private static String input1 = "";
-        private static String input2 = "";
-        private static String input3 = "";
+    @Test
+    public void test01() {
+        String expected = "ArrayList&lt;Integer&gt;";
+        String actual = "";
+        boolean passed = false;
 
-
-        @Test
-        public void test01(){
+        try {
             String code = getCode();
             code = getMethodCode(code, "main(String[] args)");
 
-
             String[] lines = code.split("\n");
-            String expected = "ArrayList&lt;Integer&gt;";
-            String actual = "";
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains(expected)) {
                     actual += line + "\n";
                 }
             }
 
-
-boolean passed = stringMatch(actual, "new " + expected + "()")
-    || stringMatch(actual, "new ArrayList&lt;&gt;()");
-            expected = expected + " * = new " + expected + "()";
-            getResults(replaceTags(expected),replaceTags(actual),"ArrayList of Integers created properly",passed);
-            assertTrue(passed);
+            passed = stringMatch(actual, "new " + expected + "()")
+                    || stringMatch(actual, "new ArrayList&lt;&gt;()");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
-
-        @Test
-            public void test02(){
-                String code = getCode();
-                code = getMethodCode(code, "main(String[] args)");
-
-
-                String[] lines = code.split("\n");
-                String expected = "Math.random()";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (line.contains(expected)) {
-                        actual += line + "\n";
-                    }
-                }
-
-
-                boolean cast = stringMatch(actual, "(int)");
-                boolean shift = stringMatch(actual,"+1");
-                boolean range = stringMatch(actual,"*10");
-
-
-                boolean passed = cast &amp;&amp; shift &amp;&amp; range;
-
-
-                String expect = "Cast: true\nRange: true\nShift: true";
-                actual += "Cast: " + cast + "\nRange: " + range + "\nShift: " + shift;
-                   
-               
-                getResults(expect,actual,"Math.random() used to create an integer in the range [1, 10]",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test03(){
-                String code = getCode();
-                code = getMethodCode(code, "main(String[] args)");
-                code = getMethodCode(code, "for");
-
-
-                String[] lines = code.split("\n");
-                String expected = "for";
-                String actual = "";
-
-
-                boolean loop = false;
-
-
-                for (String line : lines){
-                    if (line.contains(expected) &amp;&amp; line.contains("20")) {
-                        actual += line + "\n";
-                        loop = true;
-                    } else if (loop &amp;&amp; line.contains(".add(")) {
-                        actual += line + "\n";
-                        break;
-                    }
-                }
-
-
-                boolean passed = stringMatch(actual, "for (int") &amp;&amp; actual.contains("++") &amp;&amp; actual.contains(".add(");
-                boolean pass2 = stringMatch(actual, "= 0") &amp;&amp; stringMatch(actual, "&lt; 20");
-                boolean pass3 = stringMatch(actual, "= 1") &amp;&amp; stringMatch(actual, "&lt;= 20");
-                boolean pass4 = pass2 || pass3;
-                passed = passed &amp;&amp; pass4;
-               
-                expected = "for(int i = 0; i &lt; 20; i++)";
-                getResults(expected,actual,"20 random integers are added to the ArrayList using a for loop",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test04(){
-                String code = getCode();
-
-
-                String[] lines = code.split("\n");
-                String expected = "removeDuplicates";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (line.contains(expected) &amp;&amp; line.contains("public")) {
-                        actual += line + "\n";
-                    }
-                }
-
-
-                expected =  "public static ArrayList&lt;Integer&gt; removeDuplicates(ArrayList&lt;Integer&gt;";
-                boolean passed = stringMatch(actual,expected);
-               
-                getResults(replaceTags(expected + " *)"),replaceTags(actual),"Header for removeDuplicates method is correct",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test05(){
-                String desc = "Nested for loops used to traverse arrays";
-               
-               
-                try {
-                    String code = getCode();
-                   
-                    code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
-                    //System.out.println(code);
-   
-                    String[] lines = code.split("\n");
-                    String expected = "for";
-                    String actual = "";
-   
-                    for (String line : lines){
-                        if (line.contains(expected)) {
-                            actual += line.trim() + "\n";
-                        }
-                    }
-   
-                    int fors = countOccurences(actual, "for");
-                    int size = countOccurences(actual, ".size()");
-   
-   
-   
-                    String forwardStr  = "for\\(int([a-zA-Z0-9_]+)=(0|[a-zA-Z0-9_]+\\+1);\\1&lt;[a-zA-Z0-9_]+.size\\(\\)[-1]*;\\1\\+\\+\\)\\{*";
-                    String backwardStr = "for\\(int([a-zA-Z0-9_]+)=[a-zA-Z0-9_\\.\\(\\)]*-1;\\1&gt;=*[a-zA-Z0-9]*;\\1--\\)\\{*";
-   
-                    String[] loops = actual.split("\n");
-                    int numLoops = loops.length;
-   
-                   
-                    int forward = 0, backward = 0;
-   
-   
-   
-   
-                    if (numLoops == 2) {
-                        for (String line : loops) {
-                            //System.out.println(line);
-                            if(line.replaceAll(" ", "").matches(forwardStr)) {
-                               //System.out.println(line + " --&gt; forward");
-                                forward++;
-                            }
-   
-                            if(line.replaceAll(" ", "").matches(backwardStr)) {
-                                //System.out.println(line + " --&gt; backward");
-                                backward++;
-                            }
-   
-                        }
-   
-                    }
-                    /**/                
-   
-                    expected =  "for(int i = 0; i &lt; d.size(); i++)\n" +
-                         "for(int j = i + 1; j &lt; d.size(); j++)\n\n";
-                    boolean passed = forward + backward == 2;
-   
-                    getResults(expected,actual,desc,passed);
-                    assertTrue(passed);
-                } catch (Exception e) {
-                    String expected =  "for(int i = 0; i &lt; d.size(); i++)\n" +
-                         "for(int j = i + 1; j &lt; d.size(); j++)\n\n";
-                    String actual = "Test caused an exception";
-
-
-                    boolean passed = getResults(expected,actual,desc);
-                    assertTrue(false);
-                }
-               
-            }
-
-
-        @Test
-            public void test06(){
-                String desc = "if statement used for comparison of two data elements";
-                try {
-                    String code = getCode();
-                    code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
-   
-                    String[] lines = code.split("\n");
-                    String expected = "if";
-                    String actual = "";
-   
-                    for (String line : lines){
-                        if (line.contains(expected)) {
-                            actual += line + "\n";
-                        }
-                    }
-   
-boolean passed = countOccurences(actual, ".get(") == 2
-    &amp;&amp; (actual.contains("==") || actual.contains(".equals("));
-                    expected = "if (*.get(*) == *.get(*))";
-                    getResults(expected,actual,desc,passed);
-                    assertTrue(passed);
-
-
-                } catch (Exception e) {
-                    String expected =  "if (*.get(*) == *.get(*))";
-                    String actual = "Test caused an exception";
-
-
-                    boolean passed = getResults(expected,actual,desc);
-                    assertTrue(false);
-                }
-            }
-
-
-        @Test
-            public void test07(){
-                String desc = "System.out.print used at least twice to print elements from list in main method";
-                try {
-                    String code = getCode();
-                    code = getMethodCode(code, "main(String[] args");
-   
-                    String[] lines = code.split("\n");
-                    String expected = "System.out.print(";
-                    String actual = "";
-   
-                    for (String line : lines){
-                        if (line.contains(expected) &amp;&amp; line.contains(".get")) {
-                            actual += line + "\n";
-                        }
-                    }
-   
-                    boolean passed = actual.split("\n").length &gt;= 2;
-                    expected = "System.out.print(*.get(*));\nSystem.out.print(*.get(*));";
-                    getResults(expected,actual, desc, passed);
-                    assertTrue(passed);
-
-
-                } catch (Exception e) {
-                    String expected = "System.out.print(*.get(*));\nSystem.out.print(*.get(*));";
-                    String actual = "Test caused an exception";
-
-
-                    boolean passed = getResults(expected,actual,desc);
-                    assertTrue(false);
-                }
-            }
-
-
-        @Test
-            public void test08(){
-                String desc = "System.out.println used at least once to print elements as they are removed in removeDuplicates method";
-                try {
-                    String code = getCode();
-                    code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
-   
-                    String[] lines = code.split("\n");
-                    String expected = "System.out.print";
-                    String actual = "";
-   
-                    for (String line : lines){
-                        if (line.contains(expected)) {
-                            actual += line + "\n";
-                        }
-                    }
-   
-                    boolean passed = actual.contains(".get(") || actual.contains(".remove(");
-                    expected = "System.out.println(*.get(*)); // or\nSystem.out.println(*.remove(*));";
-                    getResults(expected,actual,desc,passed);
-                    assertTrue(passed);
-
-
-                } catch (Exception e) {
-                    String expected = "System.out.println(*.get(*)); // or\nSystem.out.println(*.remove(*));";
-                    String actual = "Test caused an exception";
-
-
-                    boolean passed = getResults(expected,actual,desc);
-                    assertTrue(false);
-                }
-            }
-
-
-       
-        @Test
-        public void test09() {
-            ArrayList&lt;Integer&gt; list1 = new ArrayList &lt;Integer&gt; (Arrays.asList(10, 1, 4, 4, 2, 1, 5, 5, 6, 7, 7, 5, 10, 5, 1, 4, 1, 10, 6, 6));
-            String list = list1.toString();
-            ArrayList&lt;Integer&gt; result = Main.removeDuplicates(list1);
-            ArrayList&lt;Integer&gt; expect = new ArrayList &lt;Integer&gt; (Arrays.asList(10, 1, 4, 2, 5, 6, 7));
-
-
-            boolean passed = result.equals(expect);
-            getResults(expect.toString(), result.toString(), "Testing with values " + list, passed);
-            assertTrue(passed);
-        }
-
-
-        @Test
-            public void test10() {
-                ArrayList&lt;Integer&gt; list1 = new ArrayList &lt;Integer&gt; (Arrays.asList(3, 3, 7, 8, 3, 7, 6, 4, 9, 9, 9, 1, 8, 4, 9, 3, 5, 1, 1, 10));
-                String list = list1.toString();
-                ArrayList&lt;Integer&gt; result = Main.removeDuplicates(list1);
-                ArrayList&lt;Integer&gt; expect = new ArrayList &lt;Integer&gt; (Arrays.asList(3, 7, 8, 6, 4, 9, 1, 5, 10));
-
-
-                boolean passed = result.equals(expect);
-
-
-                getResults(expect.toString(), result.toString(), "Testing with values " + list, passed);
-                assertTrue(passed);
-            }
-
-
-
-
-        private String getMethodCode(String code, String name) {
-            String searchStr = code;
-            int start = searchStr.indexOf(name);
-            searchStr = searchStr.substring(start);
-
-
-            int level = 0;
-
-
-            for (int i = 0; i &lt; searchStr.length(); i++) {
-                if (searchStr.substring(i,i+1).equals("{")) {
-                    level++;
-                } else if (searchStr.substring(i,i+1).equals("}")) {
-                    level--;
-
-
-                    if (level == 0) {
-                        //System.out.println(searchStr.substring(0, i+1).trim());
-                        return searchStr.substring(0, i+1).trim();
-                    }
-                }
-            }
-
-
-            return searchStr.trim();
-        }
-
-
-        private boolean stringMatch(String str1, String str2) {
-            str1 = str1.replaceAll(" ", "");
-            str2 = str2.replaceAll(" ", "");
-
-
-            return str1.contains(str2);
-        }
-
-
-        private String replaceTags(String str) {
-            return str.replaceAll("&gt;","&amp;gt;").replaceAll("&lt;","&amp;lt;");
-        }
+        expected = expected + " * = new " + expected + "()";
+        getResults(replaceTags(expected), replaceTags(actual), "ArrayList of Integers created properly", passed);
+        assertTrue(passed);
     }
 
-    
+    @Test
+    public void test02() {
+        String expected = "Math.random()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            boolean cast = stringMatch(actual, "(int)");
+            boolean shift = stringMatch(actual, "+1");
+            boolean range = stringMatch(actual, "*10");
+
+            passed = cast &amp;&amp; shift &amp;&amp; range;
+            actual += "Cast: " + cast + "\nRange: " + range + "\nShift: " + shift;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        String expect = "Cast: true\nRange: true\nShift: true";
+
+        getResults(expect, actual, "Math.random() used to create an integer in the range [1, 10]", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03() {
+        String expected = "for";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+            code = getMethodCode(code, "for");
+
+            String[] lines = code.split("\n");
+
+            boolean loop = false;
+
+            for (String line : lines) {
+                if (line.contains(expected) &amp;&amp; line.contains("20")) {
+                    actual += line + "\n";
+                    loop = true;
+                } else if (loop &amp;&amp; line.contains(".add(")) {
+                    actual += line + "\n";
+                    break;
+                }
+            }
+
+            passed = stringMatch(actual, "for (int") &amp;&amp; actual.contains("++") &amp;&amp; actual.contains(".add(");
+            boolean pass2 = stringMatch(actual, "= 0") &amp;&amp; stringMatch(actual, "&lt; 20");
+            boolean pass3 = stringMatch(actual, "= 1") &amp;&amp; stringMatch(actual, "&lt;= 20");
+            boolean pass4 = pass2 || pass3;
+            passed = passed &amp;&amp; pass4;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "for(int i = 0; i &lt; 20; i++)";
+        getResults(expected, actual, "20 random integers are added to the ArrayList using a for loop", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04() {
+
+        String expected = "removeDuplicates";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected) &amp;&amp; line.contains("public")) {
+                    actual += line + "\n";
+                }
+            }
+            passed = stringMatch(actual, expected);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "public static ArrayList&lt;Integer&gt; removeDuplicates(ArrayList&lt;Integer&gt;";
+
+        getResults(replaceTags(expected + " *)"), replaceTags(actual), "Header for removeDuplicates method is correct",
+                passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05() {
+        String desc = "Nested for loops used to traverse arrays";
+        String expected = "for";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+
+            code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
+            // System.out.println(code);
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line.trim() + "\n";
+                }
+            }
+
+            int fors = countOccurences(actual, "for");
+            int size = countOccurences(actual, ".size()");
+
+            String forwardStr = "for\\(int([a-zA-Z0-9_]+)=(0|[a-zA-Z0-9_]+\\+1);\\1&lt;[a-zA-Z0-9_]+.size\\(\\)[-1]*;\\1\\+\\+\\)\\{*";
+            String backwardStr = "for\\(int([a-zA-Z0-9_]+)=[a-zA-Z0-9_\\.\\(\\)]*-1;\\1&gt;=*[a-zA-Z0-9]*;\\1--\\)\\{*";
+
+            String[] loops = actual.split("\n");
+            int numLoops = loops.length;
+
+            int forward = 0, backward = 0;
+
+            if (numLoops == 2) {
+                for (String line : loops) {
+                    // System.out.println(line);
+                    if (line.replaceAll(" ", "").matches(forwardStr)) {
+                        // System.out.println(line + " --&gt; forward");
+                        forward++;
+                    }
+
+                    if (line.replaceAll(" ", "").matches(backwardStr)) {
+                        // System.out.println(line + " --&gt; backward");
+                        backward++;
+                    }
+                }
+            }
+
+            passed = forward + backward == 2;
+
+        } catch (Exception e) {
+            actual = "Test caused an exception";
+        }
+
+        expected = "for(int i = 0; i &lt; d.size(); i++)\n" +
+                "for(int j = i + 1; j &lt; d.size(); j++)\n\n";
+        getResults(expected, actual, desc, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06() {
+        String desc = "if statement used for comparison of two data elements";
+        String expected = "if";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+passed = countOccurences(actual, ".get(") == 2 &amp;&amp; (actual.contains("==") || actual.contains(".equals("));
+
+        } catch (Exception e) {
+            actual = "Test caused an exception";
+        }
+
+        expected = "if (*.get(*) == *.get(*))";
+        getResults(expected, actual, desc, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07() {
+        String desc = "System.out.print used at least twice to print elements from list in main method";
+        String expected = "System.out.print(";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected) &amp;&amp; line.contains(".get")) {
+                    actual += line + "\n";
+                }
+            }
+
+            passed = actual.split("\n").length &gt;= 2;
+        } catch (Exception e) {
+            actual = "Test caused an exception";
+        }
+
+        expected = "System.out.print(*.get(*));\nSystem.out.print(*.get(*));";
+        getResults(expected, actual, desc, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test08() {
+        String desc = "System.out.println used at least once to print elements as they are removed in removeDuplicates method";
+        String expected = "System.out.print";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public static ArrayList&lt;Integer&gt;");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            passed = actual.contains(".get(") || actual.contains(".remove(");
+
+        } catch (Exception e) {
+            actual = "Test caused an exception";
+            passed = false;
+        }
+
+        expected = "System.out.println(*.get(*)); // or\nSystem.out.println(*.remove(*));";
+        getResults(expected, actual, desc, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09() {
+        ArrayList&lt;Integer&gt; expect = new ArrayList&lt;Integer&gt;(Arrays.asList(10, 1, 4, 2, 5, 6, 7));
+        String expected = expect.toString();
+        String actual = "";
+        boolean passed = false;
+
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;(
+                Arrays.asList(10, 1, 4, 4, 2, 1, 5, 5, 6, 7, 7, 5, 10, 5, 1, 4, 1, 10, 6, 6));
+        String list = list1.toString();
+
+        try {
+            ArrayList&lt;Integer&gt; result = Main.removeDuplicates(list1);
+            actual = result.toString();
+
+            passed = result.equals(expect);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        getResults(expected, actual, "Testing with values " + list, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        ArrayList&lt;Integer&gt; expect = new ArrayList&lt;Integer&gt;(Arrays.asList(3, 7, 8, 6, 4, 9, 1, 5, 10));
+        String expected = expect.toString();
+        String actual = "";
+        boolean passed = false;
+
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;(
+                Arrays.asList(3, 3, 7, 8, 3, 7, 6, 4, 9, 9, 9, 1, 8, 4, 9, 3, 5, 1, 1, 10));
+        String list = list1.toString();
+
+        try {
+            ArrayList&lt;Integer&gt; result = Main.removeDuplicates(list1);
+            actual = result.toString();
+
+            passed = result.equals(expect);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        getResults(expected, actual, "Testing with values " + list, passed);
+        assertTrue(passed);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i, i + 1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i, i + 1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    // System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i + 1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+
+    private String replaceTags(String str) {
+        return str.replaceAll("&gt;", "&amp;gt;").replaceAll("&lt;", "&amp;lt;");
+    }
+}
+   
 </tests>
 </program>
 </activity>
@@ -567,101 +549,93 @@ public class Main {
 <tests>
 import static org.junit.Assert.*;
 import org.junit.*;
-import java.io.*;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-
-public class RunestoneTests extends CodeTestHelper
-{
+public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+        super("Main");
     }
 
-
-
-
-    private static String input1 = "";
-    private static String input2 = "";
-    private static String input3 = "";
-
-
     @Test
-    public void test01(){
-        String code = getCode();
-        code = getMethodCode(code, "main(String[] args)");
-
-
-        String[] lines = code.split("\n");
+    public void test01() {
         String expected = "ArrayList&lt;Integer&gt;";
         String actual = "";
+        boolean passed = false;
 
-
-        for (String line : lines){
-            if (line.contains(expected)) {
-                actual += line + "\n";
-            }
-        }
-
-
-boolean passed = stringMatch(actual, "new " + expected + "()")
-    || stringMatch(actual, "new ArrayList&lt;&gt;()");
-        expected = expected + " * = new " + expected + "()";
-        getResults(replaceTags(expected),replaceTags(actual),"ArrayList of Integers created properly",passed);
-        assertTrue(passed);
-    }
-
-
-    @Test
-        public void test02(){
+        try {
             String code = getCode();
             code = getMethodCode(code, "main(String[] args)");
 
-
             String[] lines = code.split("\n");
-            String expected = "Math.random()";
-            String actual = "";
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains(expected)) {
                     actual += line + "\n";
                 }
             }
 
-
-            boolean cast = stringMatch(actual, "(int)");
-            boolean range = stringMatch(actual,"*101");
-
-
-            boolean passed = cast &amp;&amp; range;
-
-
-            String expect = "Cast: true\nRange: true";
-            actual += "Cast: " + cast + "\nRange: " + range;
-                
-            
-            getResults(expect,actual,"Math.random() used to create an integer in the range [0, 100]",passed);
-            assertTrue(passed);
+            passed = stringMatch(actual, "new " + expected + "()")
+                    || stringMatch(actual, "new ArrayList&lt;&gt;()");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
+        expected = expected + " * = new " + expected + "()";
+        getResults(replaceTags(expected), replaceTags(actual), "ArrayList of Integers created properly", passed);
+        assertTrue(passed);
+    }
 
     @Test
-        public void test03(){
+    public void test02() {
+        String expected = "Math.random()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            boolean cast = stringMatch(actual, "(int)");
+            boolean range = stringMatch(actual, "*101");
+
+            passed = cast &amp;&amp; range;
+            actual += "Cast: " + cast + "\nRange: " + range;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        String expect = "Cast: true\nRange: true";
+        getResults(expect, actual, "Math.random() used to create an integer in the range [0, 100]", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03() {
+        String expected = "for";
+        String actual = "";
+        boolean passed = false;
+
+        try {
             String code = getCode();
             code = getMethodCode(code, "main(String[] args)");
             code = getMethodCode(code, "for");
 
-
             String[] lines = code.split("\n");
-            String expected = "for";
-            String actual = "";
-
 
             boolean loop = false;
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains(expected) &amp;&amp; line.contains("50")) {
                     actual += line + "\n";
                     loop = true;
@@ -671,260 +645,276 @@ boolean passed = stringMatch(actual, "new " + expected + "()")
                 }
             }
 
-
-            boolean passed = stringMatch(actual, "for (int") &amp;&amp; actual.contains("++") &amp;&amp; actual.contains(".add(");
+            passed = stringMatch(actual, "for (int") &amp;&amp; actual.contains("++") &amp;&amp; actual.contains(".add(");
             boolean pass2 = stringMatch(actual, "= 0") &amp;&amp; stringMatch(actual, "&lt; 50");
             boolean pass3 = stringMatch(actual, "= 1") &amp;&amp; stringMatch(actual, "&lt;= 50");
             boolean pass4 = pass2 || pass3;
             passed = passed &amp;&amp; pass4;
-            
-            expected = "for(int i = 0; i &lt; 50; i++)\n\t*.add(*)";
-            getResults(expected,actual,"50 random integers are added to the ArrayList using a for loop",passed);
-            assertTrue(passed);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
+        expected = "for(int i = 0; i &lt; 50; i++)\n\t*.add(*)";
+        getResults(expected, actual, "50 random integers are added to the ArrayList using a for loop", passed);
+        assertTrue(passed);
+    }
 
     @Test
-        public void test04(){
+    public void test04() {
+        String expected = "public static: 4\nint Return type: 3\n";
+        expected += "Return type double: 1\nParameters: 4";
+        String actual = "";
+        String result = "";
+        boolean passed = false;
+
+        try {
             String code = getCode();
 
-
             String[] lines = code.split("\n");
-            String expect = "sum";
-            String actual = "";
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains("public static ") &amp;&amp; !line.contains("main")) {
                     actual += line + "\n";
-                    //System.out.println(line);
                 }
             }
-
 
             int num = actual.split("\n").length;
             int ints = countOccurences(actual, "static int");
             int doubles = countOccurences(actual, "double");
             int params = countOccurences(actual, "(ArrayList&lt;Integer&gt;");
-            
-            String expected =  "public static: 4\nint Return type: 3\n";
-            expected += "Return type double: 1\nParameters: 4";
 
+            result = "public static: " + num + "\nint Return type: " + ints + "\n";
+            result += "Return type double: " + doubles + "\nParameters: " + params;
 
-            String result =  "public static: "+ num + "\nint Return type: " + ints + "\n";
-                result += "Return type double: "+ doubles + "\nParameters: " + params;
-            
-            boolean passed = result.contains(expected);
+            passed = result.contains(expected);
 
-
-            getResults(expected,result,"Method headers",passed);
-            assertTrue(passed);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
-
-    @Test
-    public void test05() {
-        String output = getMethodOutput("main");
-
-
-        boolean sum = stringMatch(output, "sum");
-        boolean avg = stringMatch(output, "average");
-        boolean min = stringMatch(output, "min");
-        boolean max = stringMatch(output, "max");
-
-
-        boolean passed = sum &amp;&amp; avg &amp;&amp; min &amp;&amp; max;
-
-
-        String expected = "sum\naverage\nmaximum\nminimum";
-
-
-        getResults(expected,output,"Output includes labels",passed);
+        getResults(expected, result, "Method headers", passed);
         assertTrue(passed);
     }
 
+    @Test
+    public void test05() {
+        String expected = "sum\naverage\nmaximum\nminimum";
+        String output = "";
+        boolean passed = false;
+
+        try {
+            output = getMethodOutput("main");
+
+            boolean sum = stringMatch(output, "sum");
+            boolean avg = stringMatch(output, "average");
+            boolean min = stringMatch(output, "min");
+            boolean max = stringMatch(output, "max");
+
+            passed = sum &amp;&amp; avg &amp;&amp; min &amp;&amp; max;
+        } catch (Exception e) {
+            output = "Error";
+            passed = false;
+        }
+
+        getResults(expected, output, "Output includes labels", passed);
+        assertTrue(passed);
+    }
 
     @Test
-        public void test06() {
+    public void test06() {
+        String expected = "Random results: true\nPrint double: 1\nPrint ints: 3";
+        String actual = "";
+        boolean passed = false;
+
+        try {
             String output1 = getMethodOutput("main");
             String output2 = getMethodOutput("main");
 
-
-            boolean passed = !output1.equals(output2);
-
-
-            String expected = "Random results: true\nPrint double: 1\nPrint ints: 3";
-
+            passed = !output1.equals(output2);
 
             String output = output1.replaceAll("[^\\.^0-9^\\n]", "");
-            String actual = "Random results: " + passed + "\n";
+            actual = "Random results: " + passed + "\n";
             int doubles = countOccurences(output, ".");
             int ints = output.split("\n").length - doubles;
             actual += "Print double: " + doubles + "\n";
             actual += "Print ints: " + ints;
 
-
             passed = expected.equals(actual);
-            
-            getResults(expected,actual,"Output includes results from random values",passed);
-            assertTrue(passed);
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
+        getResults(expected, actual, "Output includes results from random values", passed);
+        assertTrue(passed);
+    }
 
     @Test
-        public void test07(){
+    public void test07() {
+        String expected = "sum(*)\naverage(*)\nmaximum(*)\nminimum(*)";
+        String actual = "";
+        boolean passed = false;
+
+        try {
             String code = getCode();
             code = getMethodCode(code, "main(String[] args");
 
-
             String[] lines = code.split("\n");
-            String actual = "";
             boolean sum = false, avg = false, max = false, min = false;
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains("sum(")) {
-                    actual += line + "\n"; sum = true;
+                    actual += line + "\n";
+                    sum = true;
                 } else if (line.contains("average(")) {
-                    actual += line + "\n"; avg = true;
+                    actual += line + "\n";
+                    avg = true;
                 } else if (line.contains("maximum(")) {
-                    actual += line + "\n"; max = true;
+                    actual += line + "\n";
+                    max = true;
                 } else if (line.contains("minimum(")) {
-                    actual += line + "\n"; min = true;
+                    actual += line + "\n";
+                    min = true;
                 }
             }
-
-
-            String expected = "sum(*)\naverage(*)\nmaximum(*)\nminimum(*)";
-            
-            boolean passed = sum &amp;&amp; avg &amp;&amp; max &amp;&amp; min;
-
-
-            getResults(expected,actual,"Calls all four methods in main",passed);
-            assertTrue(passed);
+            passed = sum &amp;&amp; avg &amp;&amp; max &amp;&amp; min;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
-    
+
+        getResults(expected, actual, "Calls all four methods in main", passed);
+        assertTrue(passed);
+    }
+
     @Test
-        public void test08(){
+    public void test08() {
+        String expected = "System.out.println(";
+        String actual = "";
+        boolean passed = false;
+
+        try {
             String code = getCode();
             code = getMethodCode(code, "main(String[] args");
 
-
             String[] lines = code.split("\n");
-            String expected = "System.out.println(";
-            String actual = "";
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains(expected)) {
                     actual += line + "\n";
                 }
             }
 
-
             int times = actual.split("\n").length;
-            boolean passed = times &gt;= 4;
-            
-            getResults("4+",""+times,"System.out.println used at least 4 times",passed);
-            assertTrue(passed);
+            passed = times &gt;= 4;
+            actual = "" + times;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
-
-      
-    
-    @Test
-    public void test09() {
-        ArrayList&lt;Integer&gt; list1 = new ArrayList &lt;Integer&gt; (Arrays.asList(89, 97, 27, 27, 87, 16, 69, 19, 53, 71, 87, 23, 3, 83, 36, 30, 52, 50, 72, 62, 21, 29, 31, 2, 67, 27, 61, 76, 30, 19, 48, 84, 98, 54, 92, 31, 75, 89, 21, 94, 91, 12, 28, 69, 42, 67, 2, 100, 21, 12));
-        String list = list1.toString();
-
-
-        int sum = Main.sum(list1);
-        double avg = Main.average(list1);
-        int min = Main.minimum(list1);
-        int max = Main.maximum(list1);
-
-
-        String expected = "Sum: 2546\nAverage: 50.92\nMaximum: 100\nMinimum: 2";
-        String result = "Sum: " + sum + "\nAverage: ";
-        result += String.format("%.2f", avg);
-            result += "\nMaximum: " + max + "\nMinimum: " + min;
-
-
-        boolean passed = result.equals(expected);
-        getResults(expected, result, "Testing with values " + list, passed);
+        getResults("4+", actual, "System.out.println used at least 4 times", passed);
         assertTrue(passed);
     }
 
-
     @Test
-        public void test10() {
-            ArrayList&lt;Integer&gt; list1 = new ArrayList &lt;Integer&gt; (Arrays.asList(12, 87, 46, 9, 65, 49, 19, 24, 91, 60, 7, 46, 16, 18, 72, 47, 94, 80, 77, 97, 3, 34, 32, 84, 99, 72, 64, 56, 50, 27, 77, 74, 59, 92, 2, 71, 41, 42, 55, 14, 0, 82, 52, 96, 40, 2, 40, 96, 95, 74));
-            String list = list1.toString();
+    public void test09() {
+        String expected = "Sum: 2546\nAverage: 50.92\nMaximum: 100\nMinimum: 2";
+        String result = "";
+        boolean passed = false;
 
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;(Arrays.asList(89, 97, 27, 27, 87, 16, 69, 19, 53, 71, 87, 23,
+                3, 83, 36, 30, 52, 50, 72, 62, 21, 29, 31, 2, 67, 27, 61, 76, 30, 19, 48, 84, 98, 54, 92, 31, 75, 89,
+                21, 94, 91, 12, 28, 69, 42, 67, 2, 100, 21, 12));
+        String list = list1.toString();
 
+        try {
             int sum = Main.sum(list1);
             double avg = Main.average(list1);
             int min = Main.minimum(list1);
             int max = Main.maximum(list1);
 
-
-            String expected = "Sum: 2641\nAverage: 52.82\nMaximum: 99\nMinimum: 0";
-            String result = "Sum: " + sum + "\nAverage: ";
+            result = "Sum: " + sum + "\nAverage: ";
             result += String.format("%.2f", avg);
-                result += "\nMaximum: " + max + "\nMinimum: " + min;
+            result += "\nMaximum: " + max + "\nMinimum: " + min;
 
-
-            boolean passed = result.equals(expected);
-            getResults(expected, result, "Testing with values " + list, passed);
-            assertTrue(passed);
+            passed = result.equals(expected);
+        } catch (Exception e) {
+            result = "Error";
+            passed = false;
         }
 
+        getResults(expected, result, "Testing with values " + list, passed);
+        assertTrue(passed);
+    }
 
+    @Test
+    public void test10() {
+        String expected = "Sum: 2641\nAverage: 52.82\nMaximum: 99\nMinimum: 0";
+        String result = "";
+        boolean passed = false;
 
+        ArrayList&lt;Integer&gt; list1 = new ArrayList&lt;Integer&gt;(Arrays.asList(12, 87, 46, 9, 65, 49, 19, 24, 91, 60, 7, 46,
+                16, 18, 72, 47, 94, 80, 77, 97, 3, 34, 32, 84, 99, 72, 64, 56, 50, 27, 77, 74, 59, 92, 2, 71, 41, 42,
+                55, 14, 0, 82, 52, 96, 40, 2, 40, 96, 95, 74));
+        String list = list1.toString();
 
+        try {
+            int sum = Main.sum(list1);
+            double avg = Main.average(list1);
+            int min = Main.minimum(list1);
+            int max = Main.maximum(list1);
 
+            result = "Sum: " + sum + "\nAverage: ";
+            result += String.format("%.2f", avg);
+            result += "\nMaximum: " + max + "\nMinimum: " + min;
+
+            passed = result.equals(expected);
+        } catch (Exception e) {
+            result = "Error";
+            passed = false;
+        }
+
+        getResults(expected, result, "Testing with values " + list, passed);
+        assertTrue(passed);
+    }
 
     private String getMethodCode(String code, String name) {
         String searchStr = code;
         int start = searchStr.indexOf(name);
         searchStr = searchStr.substring(start);
 
-
         int level = 0;
 
-
         for (int i = 0; i &lt; searchStr.length(); i++) {
-            if (searchStr.substring(i,i+1).equals("{")) {
+            if (searchStr.substring(i, i + 1).equals("{")) {
                 level++;
-            } else if (searchStr.substring(i,i+1).equals("}")) {
+            } else if (searchStr.substring(i, i + 1).equals("}")) {
                 level--;
 
-
                 if (level == 0) {
-                    //System.out.println(searchStr.substring(0, i+1).trim());
-                    return searchStr.substring(0, i+1).trim();
+                    // System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i + 1).trim();
                 }
             }
         }
 
-
         return searchStr.trim();
     }
-
 
     private boolean stringMatch(String str1, String str2) {
         str1 = str1.replaceAll(" ", "");
         str2 = str2.replaceAll(" ", "");
 
-
         return str1.contains(str2);
     }
 
-
     private String replaceTags(String str) {
-        return str.replaceAll("&gt;","&amp;gt;").replaceAll("&lt;","&amp;lt;");
+        return str.replaceAll("&gt;", "&amp;gt;").replaceAll("&lt;", "&amp;lt;");
     }
-}     
+}  
 </tests>
 </program>
 </activity>
@@ -977,426 +967,419 @@ public class Main {
 
 
 </code>
+<stdin>Bob Jane Sam Sue Jon Alice Peter Michael Joey Kate</stdin>
 <tests>
-    import static org.junit.Assert.*;
-    import org.junit.*;
-    import java.io.*;
-    import java.util.Arrays;
-    import java.util.ArrayList;
+import static org.junit.Assert.*;
+import org.junit.*;
 
+public class RunestoneTests extends CodeTestHelper {
+    public RunestoneTests() {
+        //super("Main", input1.replaceAll(" ", "\n")); // For Book
+    }
 
-    public class RunestoneTests extends CodeTestHelper
-    {
-        public RunestoneTests() {
-            //super("Main", input1.replaceAll(" ", "\n")); // For Book
-        }
+    private static String input1 = "Bob Jane Sam Sue Jon Alice Peter Michael Joey Kate ";
 
+    @Test
+    public void test01() {
+        String expected = "private";
+        String actual = "";
+        boolean passed = false;
 
-
-
-        private static String input1 = "Bob Jane Sam Sue Jon Alice Peter Michael Joey Kate ";
-        private static String input2 = "";
-        private static String input3 = "";
-
-
-        @Test
-        public void test01(){
+        try {
             String code = getCode();
             code = getMethodCode(code, "class Student");
 
-
             String[] lines = code.split("\n");
-            String expected = "private";
-            String actual = "";
 
-
-            for (String line : lines){
+            for (String line : lines) {
                 if (line.contains(expected)) {
                     actual += line + "\n";
                 }
             }
 
-
-            boolean passed = actual.contains("int") &amp;&amp; actual.contains("String");
-            expected = "private String *;\nprivate int *;";
-            getResults(expected,actual,"Instance variables created for Student class",passed);
-            assertTrue(passed);
+            passed = actual.contains("int") &amp;&amp; actual.contains("String");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
+        expected = "private String *;\nprivate int *;";
+        getResults(expected, actual, "Instance variables created for Student class", passed);
+        assertTrue(passed);
+    }
 
-        @Test
-            public void test02(){
-                String code = getCode();
-                code = getMethodCode(code, "class Student");
+    @Test
+    public void test02() {
+        String expected = "public Student";
+        String actual = "";
+        boolean passed = false;
 
-
-                String[] lines = code.split("\n");
-                String expected = "public Student";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (line.contains(expected) &amp;&amp; line.contains("String")) {
-                        actual += line + "\n";
-                    }
-                }
-
-
-                boolean passed = actual.split("\n").length == 1;
-                expected = "public Student(String *)";
-                getResults(expected,actual,"Instance variables created for Student class",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test03(){
-                String code = getCode();
-                code = getMethodCode(code, "public Student");
-
-
-                String[] lines = code.split("\n");
-                String expected = "Math.random()";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (line.contains(expected)) {
-                        actual += line + "\n";
-                    }
-                }
-
-
-                boolean cast = stringMatch(actual, "(int)");
-                boolean range = stringMatch(actual,"*4");
-                boolean shift = stringMatch(actual, "+9");
-
-
-                boolean passed = cast &amp;&amp; range &amp;&amp; shift;
-
-
-                String expect = "Cast: true\nRange: true\nShift: true";
-                actual += "Cast: " + cast + "\nRange: " + range + "\nShift: " + shift;
-                   
-               
-                getResults(expect,actual,"Math.random() used to create an integer in the range [9, 12]",passed);
-                assertTrue(passed);
-            }
-       
-        @Test
-            public void test04(){
-                String code = getCode();
-                code = getMethodCode(code, "class Student");
-
-
-                String[] lines = code.split("\n");
-                String expected = "";
-                String getters = "";
-                String setters = "";
-                boolean name = false, grade = false;
-
-
-                for (String line : lines){
-                    if (line.contains("get") &amp;&amp; line.contains("public") &amp;&amp; line.contains("()")) {
-                        getters += line.trim() + "\n";
-                    } else if (line.contains("set") &amp;&amp; line.contains("public void")) {
-                        setters += line.trim() + "\n";
-                        if (line.contains("Name") &amp;&amp; line.contains("String")) name = true;
-                        if (line.contains("GradeLevel") &amp;&amp; line.contains("int")) grade = true;
-                    }
-                }
-
-
-                boolean passed = getters.split("\n").length == 2 &amp;&amp; setters.split("\n").length == 2 &amp;&amp; name &amp;&amp; grade;
-               
-                expected = "public String getName()\npublic int getGradeLevel()\npublic void setName(String *)\npublic void setGradeLevel(int *)";
-                String actual = getters + setters;
-                getResults(expected,actual,"Accessors and Mutators created for Student class",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test05(){
-                String code = getCode();
-                code = getMethodCode(code, "class Student");
-
-
-                String[] lines = code.split("\n");
-                String expected = "toString()";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (stringMatch(line,expected)) {
-                        actual += line + "\n";
-                    }
-                }
-               
-                boolean passed = actual.contains("public String");
-
-
-                getResults("public String toString()",actual,"toString method header is correct",passed);
-                assertTrue(passed);
-            }
-       
-        @Test
-            public void test06(){
-                String code = getCode();
-                code = getMethodCode(code, "main(String[] args)");
-
-
-                String[] lines = code.split("\n");
-                String expected = "ArrayList&lt;Student&gt;";
-                String actual = "";
-
-
-                for (String line : lines){
-                    if (stringMatch(line,expected)) {
-                        actual += line + "\n";
-                    }
-                }
-
-
-                int num = actual.split("\n").length;
-                boolean passed = num &gt;= 5;
-               
-                getResults("5","" + num,"ArrayList of Students created properly",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test07(){
-                String code = getCode();
-                code = getMethodCode(code, "main(String[] args)");
-
-
-                String[] lines = code.split("\n");
-                String expected = "for (";
-                String actual = "";
-                boolean regFor = false, enhFor = false;
-               
-
-
-                for (String line : lines){
-                    if (stringMatch(line,expected)) {
-                        actual += line.trim() + "\n";
-                        regFor = regFor || (line.contains("int") &amp;&amp; (line.contains(".size()") || line.contains("10")));
-                        enhFor = enhFor || (line.contains("Student") &amp;&amp; line.contains(":"));
-                    }
-                }
-
-
-                boolean passed = regFor &amp;&amp; enhFor;
-                expected = "for(int i = 0; i &lt; 10; i++)\nfor(Student * : *)";
-                getResults(expected,actual,"At least 1 for loop and 1 enhanced for loop",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-            public void test08(){
-                String code = getCode();
-                code = getMethodCode(code, "main(String[] args)");
-
-
-                String[] lines = code.split("\n");
-                String expected = "if (";
-                String actual = "";
-
-
-
-
-                for (String line : lines){
-                    if (stringMatch(line,expected)) {
-                        actual += line.trim() + "\n";
-                    } else if (stringMatch(line,".getGradeLevel()")) {
-                            actual += line.trim() + "\n";
-                        }
-                }
-
-
-                boolean num = actual.split("\n").length &gt;= 4;
-                boolean equals = countOccurences(actual, "==") == 4;
-                boolean gets = countOccurences(actual, ".getGradeLevel()") &gt;= 1;
-                boolean grades = actual.contains("9") &amp;&amp; actual.contains("10") &amp;&amp; actual.contains("11") &amp;&amp; actual.contains("12");
-                boolean passed = num &amp;&amp; equals &amp;&amp; gets &amp;&amp; grades;
-                expected = "if x 4\n== x 4\ngrades: 9-12\n.getGradeLevel()";
-                getResults(expected,actual,"if statements used to determine which grade level ArrayList to add students to",passed);
-                assertTrue(passed);
-            }
-
-
-        @Test
-        public void test09() {
-            String className = "StudentsTest1";
+        try {
             String code = getCode();
+            code = getMethodCode(code, "class Student");
 
+            String[] lines = code.split("\n");
 
-            String actual = "";
-            String expected = "Number of ninth graders: 4\n" +
+            for (String line : lines) {
+                if (line.contains(expected) &amp;&amp; line.contains("String")) {
+                    actual += line + "\n";
+                }
+            }
+
+            passed = actual.split("\n").length == 1;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "public Student(String *)";
+        getResults(expected, actual, "Instance variables created for Student class", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03() {
+        String expected = "Math.random()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "public Student");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains(expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            boolean cast = stringMatch(actual, "(int)");
+            boolean range = stringMatch(actual, "*4");
+            boolean shift = stringMatch(actual, "+9");
+
+            passed = cast &amp;&amp; range &amp;&amp; shift;
+            actual += "Cast: " + cast + "\nRange: " + range + "\nShift: " + shift;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        String expect = "Cast: true\nRange: true\nShift: true";
+
+        getResults(expect, actual, "Math.random() used to create an integer in the range [9, 12]", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04() {
+
+        String expected = "";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "class Student");
+
+            String[] lines = code.split("\n");
+            String getters = "";
+            String setters = "";
+            boolean name = false, grade = false;
+
+            for (String line : lines) {
+                if (line.contains("get") &amp;&amp; line.contains("public") &amp;&amp; line.contains("()")) {
+                    getters += line.trim() + "\n";
+                } else if (line.contains("set") &amp;&amp; line.contains("public void")) {
+                    setters += line.trim() + "\n";
+                    if (line.contains("Name") &amp;&amp; line.contains("String"))
+                        name = true;
+                    if (line.contains("GradeLevel") &amp;&amp; line.contains("int"))
+                        grade = true;
+                }
+            }
+
+            passed = getters.split("\n").length == 2 &amp;&amp; setters.split("\n").length == 2 &amp;&amp; name &amp;&amp; grade;
+            actual = getters + setters;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "public String getName()\npublic int getGradeLevel()\npublic void setName(String *)\npublic void setGradeLevel(int *)";
+        getResults(expected, actual, "Accessors and Mutators created for Student class", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05() {
+        String expected = "toString()";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "class Student");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (stringMatch(line, expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            passed = actual.contains("public String");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        getResults("public String toString()", actual, "toString method header is correct", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06() {
+        String expected = "ArrayList&lt;Student&gt;";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (stringMatch(line, expected)) {
+                    actual += line + "\n";
+                }
+            }
+
+            int num = actual.split("\n").length;
+            passed = num &gt;= 5;
+            actual = "" + num;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        getResults("5", actual, "ArrayList of Students created properly", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07() {
+        String expected = "for (";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+            String[] lines = code.split("\n");
+            boolean regFor = false, enhFor = false;
+
+            for (String line : lines) {
+                if (stringMatch(line, expected)) {
+                    actual += line.trim() + "\n";
+                    regFor = regFor || (line.contains("int") &amp;&amp; (line.contains(".size()") || line.contains("10")));
+                    enhFor = enhFor || (line.contains("Student") &amp;&amp; line.contains(":"));
+                }
+            }
+
+            passed = regFor &amp;&amp; enhFor;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "for(int i = 0; i &lt; 10; i++)\nfor(Student * : *)";
+        getResults(expected, actual, "At least 1 for loop and 1 enhanced for loop", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test08() {
+        String expected = "if (";
+        String actual = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(String[] args)");
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (stringMatch(line, expected)) {
+                    actual += line.trim() + "\n";
+                } else if (stringMatch(line, ".getGradeLevel()")) {
+                    actual += line.trim() + "\n";
+                }
+            }
+
+            boolean num = actual.split("\n").length &gt;= 4;
+            boolean equals = countOccurences(actual, "==") == 4;
+            boolean gets = countOccurences(actual, ".getGradeLevel()") &gt;= 1;
+            boolean grades = actual.contains("9") &amp;&amp; actual.contains("10") &amp;&amp; actual.contains("11")
+                    &amp;&amp; actual.contains("12");
+            passed = num &amp;&amp; equals &amp;&amp; gets &amp;&amp; grades;
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        expected = "if x 4\n== x 4\ngrades: 9-12\n.getGradeLevel()";
+        getResults(expected, actual, "if statements used to determine which grade level ArrayList to add students to",
+                passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test09() {
+        String actual = "";
+        String expected = "Number of ninth graders: 4\n" +
                 "Number of tenth graders: 2\n" +
                 "Number of eleventh graders: 2\n" +
                 "Number of twelfth graders: 2";
+        boolean passed = false;
 
+        try {
+            String className = "StudentsTest1";
+            String code = getCode();
 
-            if(code.contains("new ArrayList")) {
-
-
-            code = code.replace("Main", className).replace("public class", "class");
-            int iFor = code.indexOf("for(int");
-
-
-            if (iFor == -1) iFor = code.indexOf("for (int");
-            int iEnd = code.indexOf("}", iFor) + 1;
-
-
-            int inAL = code.indexOf("&lt;Student&gt;");
-            int inEq = code.indexOf("=", inAL);
-            String name = code.substring(inAL, inEq).split(" ")[1].trim();
-           
-            String newCode = "\n\ns.get(0).setGradeLevel(12);\n  s.get(1).setGradeLevel(9);\n  s.get(2).setGradeLevel(11);\n  s.get(3).setGradeLevel(9);\n  s.get(4).setGradeLevel(9);\n  s.get(5).setGradeLevel(10);\n  s.get(6).setGradeLevel(10);\n  s.get(7).setGradeLevel(9);\n  s.get(8).setGradeLevel(11);\n  s.get(9).setGradeLevel(12);";
-            newCode = newCode.replaceAll("s.get", name + ".get");
-
-
-            code = code.substring(0, iEnd) + newCode + code.substring(iEnd + 1);
-
-
-            String output = getMethodOutputChangedCodeWithInput(code, className, "main", input1.replaceAll(" ", "\n"));
-
-
-            String[] lines = output.split("\n");
-           
-
-
-            for (String line : lines) {
-                if(line.matches(".*\\d"))
-                    actual += line + "\n";
-            }
-
-
-           
-            }
-            String values = actual.replaceAll("\\D", "");
-           
-            boolean passed = values.equals("4222");
-
-
-            getResults(expected, actual, "Correct output for test case 1", passed);
-            assertTrue(passed);
-        }
-
-
-        @Test
-            public void test10() {
-                String className = "StudentsTest2";
-                String code = getCode();
-
-
-                String actual = "";
-                String expected = "Number of ninth graders: 3\n" +
-                    "Number of tenth graders: 4\n" +
-                    "Number of eleventh graders: 1\n" +
-                    "Number of twelfth graders: 2";
-
-
-                if(code.contains("new ArrayList")) {
-
+            if (code.contains("new ArrayList")) {
 
                 code = code.replace("Main", className).replace("public class", "class");
                 int iFor = code.indexOf("for(int");
 
-
-                if (iFor == -1) iFor = code.indexOf("for (int");
-                   
+                if (iFor == -1)
+                    iFor = code.indexOf("for (int");
                 int iEnd = code.indexOf("}", iFor) + 1;
-
 
                 int inAL = code.indexOf("&lt;Student&gt;");
                 int inEq = code.indexOf("=", inAL);
                 String name = code.substring(inAL, inEq).split(" ")[1].trim();
-                //System.out.println(name);
 
+                String newCode = "\n\ns.get(0).setGradeLevel(12);\n  s.get(1).setGradeLevel(9);\n  s.get(2).setGradeLevel(11);\n  s.get(3).setGradeLevel(9);\n  s.get(4).setGradeLevel(9);\n  s.get(5).setGradeLevel(10);\n  s.get(6).setGradeLevel(10);\n  s.get(7).setGradeLevel(9);\n  s.get(8).setGradeLevel(11);\n  s.get(9).setGradeLevel(12);";
+                newCode = newCode.replaceAll("s.get", name + ".get");
+
+                code = code.substring(0, iEnd) + newCode + code.substring(iEnd + 1);
+
+                String output = getMethodOutputChangedCodeWithInput(code, className, "main",
+                        input1.replaceAll(" ", "\n"));
+
+                String[] lines = output.split("\n");
+
+                for (String line : lines) {
+                    if (line.matches(".*\\d"))
+                        actual += line + "\n";
+                }
+
+            }
+            String values = actual.replaceAll("\\D", "");
+
+            passed = values.equals("4222");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
+        }
+
+        getResults(expected, actual, "Correct output for test case 1", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        String actual = "";
+        String expected = "Number of ninth graders: 3\n" +
+                "Number of tenth graders: 4\n" +
+                "Number of eleventh graders: 1\n" +
+                "Number of twelfth graders: 2";
+        boolean passed = false;
+
+        try {
+            String className = "StudentsTest2";
+            String code = getCode();
+
+            if (code.contains("new ArrayList")) {
+
+                code = code.replace("Main", className).replace("public class", "class");
+                int iFor = code.indexOf("for(int");
+
+                if (iFor == -1)
+                    iFor = code.indexOf("for (int");
+
+                int iEnd = code.indexOf("}", iFor) + 1;
+
+                int inAL = code.indexOf("&lt;Student&gt;");
+                int inEq = code.indexOf("=", inAL);
+                String name = code.substring(inAL, inEq).split(" ")[1].trim();
+                // System.out.println(name);
 
                 String newCode = "\n\ns.get(0).setGradeLevel(10);\n  s.get(1).setGradeLevel(11);\n  s.get(2).setGradeLevel(9);\n  s.get(3).setGradeLevel(9);\n  s.get(4).setGradeLevel(10);\n  s.get(5).setGradeLevel(10);\n  s.get(6).setGradeLevel(12);\n  s.get(7).setGradeLevel(9);\n  s.get(8).setGradeLevel(12);\n  s.get(9).setGradeLevel(10);";
                 newCode = newCode.replaceAll("s.get", name + ".get");
 
-
                 code = code.substring(0, iEnd) + newCode + code.substring(iEnd + 1);
-                //System.out.println(code);
+                // System.out.println(code);
 
-
-                String output = getMethodOutputChangedCodeWithInput(code, className, "main", input1.replaceAll(" ", "\n"));
-
+                String output = getMethodOutputChangedCodeWithInput(code, className, "main",
+                        input1.replaceAll(" ", "\n"));
 
                 String[] lines = output.split("\n");
-               
+
                 for (String line : lines) {
-                    if(line.matches(".*\\d"))
+                    if (line.matches(".*\\d"))
                         actual += line + "\n";
                 }
-
-
-                }
-
-
-                String values = actual.replaceAll("\\D", "");
-
-
-                boolean passed = values.equals("3412");
-
-
-                getResults(expected, actual, "Correct output for test case 2", passed);
-                assertTrue(passed);
             }
 
+            String values = actual.replaceAll("\\D", "");
 
-        private String getMethodCode(String code, String name) {
-            String searchStr = code;
-            int start = searchStr.indexOf(name);
-            searchStr = searchStr.substring(start);
-
-
-            int level = 0;
-
-
-            for (int i = 0; i &lt; searchStr.length(); i++) {
-                if (searchStr.substring(i,i+1).equals("{")) {
-                    level++;
-                } else if (searchStr.substring(i,i+1).equals("}")) {
-                    level--;
-
-
-                    if (level == 0) {
-                        //System.out.println(searchStr.substring(0, i+1).trim());
-                        return searchStr.substring(0, i+1).trim();
-                    }
-                }
-            }
-
-
-            return searchStr.trim();
+            passed = values.equals("3412");
+        } catch (Exception e) {
+            actual = "Error";
+            passed = false;
         }
 
-
-        private boolean stringMatch(String str1, String str2) {
-            str1 = str1.replaceAll(" ", "");
-            str2 = str2.replaceAll(" ", "");
-
-
-            return str1.contains(str2);
-        }
-
-
-        private String replaceTags(String str) {
-            return str.replaceAll("&gt;","&amp;gt;").replaceAll("&lt;","&amp;lt;");
-        }
+        getResults(expected, actual, "Correct output for test case 2", passed);
+        assertTrue(passed);
     }
 
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
 
+        int level = 0;
 
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i, i + 1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i, i + 1).equals("}")) {
+                level--;
 
+                if (level == 0) {
+                    // System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i + 1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+}
 </tests>
 </program>
 </activity>
