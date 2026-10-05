@@ -283,7 +283,7 @@ public class RunestoneTests extends CodeTestHelper {
                 }
             }
 
-            passed = countOccurences(actual, ".get(") == 2 &amp;&amp; actual.contains("==");
+passed = countOccurences(actual, ".get(") == 2 &amp;&amp; (actual.contains("==") || actual.contains(".equals("));
 
         } catch (Exception e) {
             actual = "Test caused an exception";
