@@ -4,64 +4,753 @@
   <title>Toggle Code Practice 1a (1.1-1.6)</title>
 
   <p>
-   For each of the problems below, if you need help, you can pull down the 
-   toggle menu to select the associated mixed up code problem to help you get started.
+   For each of the coding problems below, write your own solution. If you get stuck,
+   click the <em>Get Help</em> button for a personalized mixed-up code problem built
+   from your current attempt.
   </p>
 
-<exercise label="u1a-toggle1">
-  <select grade="first" questions="u1_muc_wc1 u1aex1muc"/>
-</exercise>
+<exercise label="u1a-toggle1" xml:id="u1a-toggle1">
+    <statement>
+      <p>
+        Write code that prints Maria’s first name on one line and her last name
+        on the next line.
+      </p>
+    </statement>
 
-<exercise label="u1a-toggle2">
-  <select grade="first" questions="u1_muc_wc2 u1aex2muc"/>
-</exercise>
+    <program interactive="activecode" language="java" label="u1a-toggle1-prog" xml:id="u1a-toggle1-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex1muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String firstName = "Maria";
+        String lastName = "Hernandez";
 
-<exercise label="u1a-toggle3">
-  <select grade="first" questions="u1_muc_wc3 u1aex3muc"/>
-</exercise>
+        // Add your code here
 
-<exercise label="u1a-toggle4">
-  <select grade="first" questions="u1_muc_wc4 u1aex4muc"/>
-</exercise>
+    }
+}
+      </code>
+      <tests>
+// ch4ex1muc
+import static org.junit.Assert.*;
 
-<exercise label="u1a-toggle5">
-  <select grade="first" questions="u1_muc_wc5 u1aex5muc"/>
-</exercise>
+import org.junit.*;
 
-<exercise label="u1a-toggle6">
-  <select grade="first" questions="u1_muc_wc6 u1aex6muc"/>
-</exercise>
+import java.io.*;
 
-<exercise label="u1a-toggle7">
-  <select grade="first" questions="u1_muc_wc7 u1aex7muc"/>
-</exercise>
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
 
-<exercise label="u1a-toggle8">
-  <select grade="first" questions="u1_muc_wc8 u1aex8muc"/>
-</exercise>
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Maria\nHernandez";
 
-<exercise label="u1a-toggle9">
-  <select grade="first" questions="u1_muc_wc9 u1aex9muc"/>
-</exercise>
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
 
-<exercise label="u1a-toggle10">
-  <select grade="first" questions="u1_muc_wc10 u1aex10muc"/>
-</exercise>
+<exercise label="u1a-toggle2" xml:id="u1a-toggle2">
+    <statement>
+      <p>
+        Write code that prints the poem <c>Roses are red</c> <c>Violets are
+        blue</c> <c>Sugar is sweet</c> <c>And so are you</c> with 1 sentence on
+        each line.
+      </p>
+    </statement>
 
-<exercise label="u1a-toggle11">
-  <select grade="first" questions="u1_muc_wc11 u1aex11muc"/>
-</exercise>
+    <program interactive="activecode" language="java" label="u1a-toggle2-prog" xml:id="u1a-toggle2-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex2muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
 
-<exercise label="u1a-toggle12">
-  <select grade="first" questions="u1_muc_wc12 u1aex12muc"/>
-</exercise>
+    }
+}
+      </code>
+      <tests>
+// ch4ex2muc
+import static org.junit.Assert.*;
 
-<exercise label="u1a-toggle13">
-  <select grade="first" questions="u1_muc_wc13 u1aex13muc"/>
-</exercise>
+import org.junit.*;
 
-<exercise label="u1a-toggle14">
-  <select grade="first" questions="u1_muc_wc14 u1aex14muc"/>
-</exercise>
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Roses are red\nViolets are blue\nSugar is sweet\nAnd so are you";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle3" xml:id="u1a-toggle3">
+    <statement>
+      <p>
+        Write code that prints Marcus’s name on one line and his favorite color
+        (Blue) on the next line.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle3-prog" xml:id="u1a-toggle3-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex3muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String name = "Marcus";
+        String favoriteColor = "Blue";
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch4ex3muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Marcus\nBlue";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle4" xml:id="u1a-toggle4">
+    <statement>
+      <p>
+        Write code that figures out the cost for each shirt if you buy 2 and get
+        the third free and they are originally $45 each. Make sure your answer
+        is a double.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle4-prog" xml:id="u1a-toggle4-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex4muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        double price = 45;
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex1muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "30.0";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle5" xml:id="u1a-toggle5">
+    <statement>
+      <p>
+        Write code that figures out the cost per person for a dinner including
+        the tip. Assume the bill was $89.23, there are three people, and the tip
+        should be 20%. Make sure your answer is a double.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle5-prog" xml:id="u1a-toggle5-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex5muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        double bill = 89.23;
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex2muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        double result = Double.parseDouble(output);
+        double expect = 35.692;
+
+        boolean passed = getResults(expect, result, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle6" xml:id="u1a-toggle6">
+    <statement>
+      <p>
+        Write code that calculates and prints the number of seconds in 5 days.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle6-prog" xml:id="u1a-toggle6-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex6muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex4muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "432000";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle7" xml:id="u1a-toggle7">
+    <statement>
+      <p>
+        Write code that calculates and prints the number of months it would take
+        you to save $500 if you make $50 a week. Make sure your answer is a
+        double.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle7-prog" xml:id="u1a-toggle7-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex7muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex5muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "2.5";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle8" xml:id="u1a-toggle8">
+    <statement>
+      <p>
+        Write code that prints the name on one line followed by the age on the
+        next line. Your output should look like <c>Your name is Layla</c> and
+        <c>Your age is 16</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle8-prog" xml:id="u1a-toggle8-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex8muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String name = "Layla";
+        String age = "16";
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch4ex5muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your name is Layla\nYour age is 16";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle9" xml:id="u1a-toggle9">
+    <statement>
+      <p>
+        Write code that prints the name on one line and the favorite food on the
+        next line. Your output should look like:
+      </p>
+
+      <pre>
+Your name is Julian
+Your favorite food is chicken wings
+      </pre>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle9-prog" xml:id="u1a-toggle9-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex9muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        String name = "Julian";
+        String food = "chicken wings";
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch4ex6muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Your name is Julian\nYour favorite food is chicken wings";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle10" xml:id="u1a-toggle10">
+    <statement>
+      <p>
+        Write code that calculates and prints the cost of a trip that is 200
+        miles when the price of gas is 2.20 and the miles per gallon is 42. Make
+        sure your answer is a double.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle10-prog" xml:id="u1a-toggle10-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex10muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex6muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "10.476190476190476";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle11" xml:id="u1a-toggle11">
+    <statement>
+      <p>
+        Write code that calculates how many miles you can go on half a tank of
+        gas if the miles per gallon is 26 and your tank holds 15 gallons.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle11-prog" xml:id="u1a-toggle11-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex11muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex7muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "195";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle12" xml:id="u1a-toggle12">
+    <statement>
+      <p>
+        Write code that calculates and prints how many chicken wings you can buy
+        with $3.50 if the wings are $.60 each. Make sure your answer is an
+        integer.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle12-prog" xml:id="u1a-toggle12-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex12muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex8muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5";
+
+        boolean passed = !output.contains(".");
+
+        passed = getResults(expect, output, "Checking for integer output", passed);
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle13" xml:id="u1a-toggle13">
+    <statement>
+      <p>
+        Write code that calculates how much you will have to pay for an item
+        that is 60 percent off the original price of $52.99.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle13-prog" xml:id="u1a-toggle13-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex13muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        double price = 52.99;
+        double discount = 0.6;
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex9muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "21.196";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
+
+<exercise label="u1a-toggle14" xml:id="u1a-toggle14">
+    <statement>
+      <p>
+        Write code that calculates and prints how much the per item costs is for
+        shorts that are buy 2 and get the third free. The shorts are $39.99
+        each.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u1a-toggle14-prog" xml:id="u1a-toggle14-prog"
+           codetailor="incorrect" codetailor-fallback="u1aex14muc">
+      <code>
+public class Test1
+{
+    public static void main(String[] args)
+    {
+        double price = 39.99;
+
+        // Add your code here
+
+    }
+}
+      </code>
+      <tests>
+// ch3ex10muc
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Test1");
+    }
+
+    @Test
+    public void test1()
+    {
+        String output = getMethodOutput("main");
+        String expect = "26.66";
+
+        boolean passed = getResults(expect, output, "Running main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test2()
+    {
+        boolean passed = checkCodeContains("*2");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test3()
+    {
+        boolean passed = checkCodeContains("/3");
+        assertTrue(passed);
+    }
+}
+      </tests>
+    </program>
+  </exercise>
 
 </section>

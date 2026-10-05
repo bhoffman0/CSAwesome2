@@ -16,7 +16,8 @@
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex1muc">
       <code>
 public class Dog
 {
@@ -88,7 +89,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex2muc">
       <code>
 public class Dog
 {
@@ -172,7 +174,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex3muc">
       <code>
 public class Cat
 {
@@ -279,7 +282,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex4muc">
       <code>
 public class Square
 {
@@ -398,7 +402,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex5muc">
       <code>
 public class Rectangle
 {
@@ -472,7 +477,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex6muc">
       <code>
 public class CelestialBody
 {
@@ -558,7 +564,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex7muc">
       <code>
 public class Person
 {
@@ -589,7 +596,7 @@ public class Person
                 "p's new name: "
                         + p.getName()); // Should print "p's new name: Joseph"
 
-        System.out.println(p); // Should print "Joseph is 35 years old"
+        System.out.println(p); // Should print "Joseph is 2 years old"
     }
 }
       </code>
@@ -620,7 +627,7 @@ public class RunestoneTests extends CodeTestHelper
     @Test
     public void testCheckHardcode() throws IOException
     {
-        String target = "System.out.println(\"Joseph is 35 years old\")";
+        String target = "System.out.println(\"Joseph is 2 years old\")";
         String desc = "hardcoded print statements";
         boolean doesntManuallyPrint = checkCodeContains(false, desc, target, false);
         assertTrue(doesntManuallyPrint);
@@ -659,7 +666,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex8muc">
       <code>
 public class Point
 {
@@ -800,7 +808,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex9muc">
       <code>
 public class Account
 {
@@ -897,7 +906,8 @@ public class RunestoneTests extends CodeTestHelper
       </p>
     </statement>
 
-    <program interactive="activecode" language="java">
+    <program interactive="activecode" language="java"
+           codetailor="incorrect" codetailor-fallback="u3ex10muc">
       <code>
 public class Character
 {

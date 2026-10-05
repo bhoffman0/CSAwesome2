@@ -10,7 +10,7 @@
     solution. Try to solve these on your phone or other mobile device!
   </p>
 
-  <activity label="u3ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex1muc" xml:id="u3ex1muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should define a <c>Dog</c> class with a
@@ -73,7 +73,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex2muc" xml:id="u3ex2muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should define a <c>Dog</c> class with a
@@ -135,7 +135,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex3muc" xml:id="u3ex3muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should define a <c>Cat</c> class with a
@@ -206,7 +206,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex4muc" xml:id="u3ex4muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should define a <c>Square</c> class with a
@@ -271,7 +271,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex5muc" xml:id="u3ex5muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program segment should define a <c>Rectangle</c> class
@@ -334,7 +334,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex6muc" xml:id="u3ex6muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program should define a <c>CelestialBody</c> class. The
@@ -406,7 +406,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex7muc" xml:id="u3ex7muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program should define a <c>Person</c> class. Each
@@ -464,7 +464,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex8muc" xml:id="u3ex8muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program should define a <c>Point</c> class. Each
@@ -524,7 +524,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex9muc" xml:id="u3ex9muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program should define an <c>Account</c> class. Each
@@ -593,7 +593,7 @@
     </blocks>
   </activity>
 
-  <activity label="u3ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
+  <activity label="u3ex10muc" xml:id="u3ex10muc" numbered="yes" adaptive="yes" indentation="hide" language="java">
     <statement>
       <p>
         The following program should define a <c>Character</c> class. Each
