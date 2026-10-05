@@ -782,6 +782,10 @@ public class RunestoneTests extends CodeTestHelper {
 </program>
 </activity>
 
+<datafile label="answerKey" xml:id="answerKey" filename="answerKey.txt" editable="no" hide="no">
+      <pre source="_static/datasets/answerKey.txt" />
+</datafile>
+
   </subsection>
 
   <subsection xml:id="unit4a-review-doubleformat">
