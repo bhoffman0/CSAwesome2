@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="delimitersQ3b">
-  <title>Free Response - Delimiters B</title>
+  <title>Unit 4B - Free Response - Delimiters B</title>
   <introduction />
   <subsection xml:id="part-b">
     <title>Part B</title>
@@ -32,7 +32,7 @@
     </p>
 
     <p>
-      Consider a <c>Delimiters</c> object for which <c>openDel`</c> is
+      Consider a <c>Delimiters</c> object for which <c>openDel</c> is
       <c>"&lt;sup&gt;"</c> and <c>closeDel</c> is <c>"&lt;/sup&gt;"</c>. The
       examples below show different <c>ArrayList</c> objects that could be
       returned by calls to <c>getDelimitersList</c> and the value that would be
