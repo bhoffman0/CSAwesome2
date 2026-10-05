@@ -470,9 +470,8 @@ public class RunestoneTests extends CodeTestHelper {
                         newArray = line.contains(".length");
                     } else if (line.contains("for")) {
                         actual += "Loop: " + line.trim() + "\n";
-                        loop = line.replaceAll(" ", "")
+loop = line.replaceAll(" ", "")
                                 .matches("for\\s*\\(int\\S+=\\d;\\S+&lt;\\S+\\.length;\\S+\\+\\+\\)\\{*");
-                        loop = true;
                     }
                 }
             }
