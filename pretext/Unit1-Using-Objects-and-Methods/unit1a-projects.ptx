@@ -357,6 +357,7 @@ public class RunestoneTests extends CodeTestHelper {
         try {
             String code = getCode();
             num = countOccurences(code, "String.format(\"%.02f\"");
+            num += countOccurences(code, "String.format(\"%.2f\"");
         } catch (Exception e) {
             num = -1;
         }
@@ -474,6 +475,7 @@ public class RunestoneTests extends CodeTestHelper {
         b = b.toLowerCase().replaceAll("\\s+", "");
         return a.contains(b);
     }
+
 
     @Test
     public void test02() {
