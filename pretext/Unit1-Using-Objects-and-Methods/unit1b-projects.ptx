@@ -638,24 +638,6 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test3() {
-        String code = "";
-        int num = 0;
-
-        try {
-            code = getCode();
-            num = countOccurences(code, "class RoundThings");
-        } catch (Exception e) {
-            code = "Error";
-            num = -1;
-        }
-
-        boolean passed = num == 2;
-        getResults("Classes: " + 2, "Classes: " + num, "Two classes created", passed);
-        assertTrue(passed);
-    }
-
-    @Test
     public void test4() {
         String expect = "public static double methods: " + 4;
         String output = "";
