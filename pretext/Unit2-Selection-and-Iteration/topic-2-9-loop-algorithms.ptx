@@ -1209,4 +1209,96 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-2-9-loop-algorithms">
+    <title>AP Practice</title>
+    <activity label="apq-2-9-loop-algorithms-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int sum = 0;
+for (int i = 1; i &lt;= 4; i++)
+    sum += i;
+System.out.println(sum);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-1-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-1-a">
+            <p>The loop adds each value. It does not print the last value alone.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-1-b">
+            <p>9</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-1-b">
+            <p>The sum is 1 + 2 + 3 + 4.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-9-loop-algorithms-1-c">
+            <p>10</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-1-c">
+            <p>The accumulator adds 1, then 2, then 3, then 4.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-1-d">
+            <p>24</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-1-d">
+            <p>The loop adds the values. It does not multiply them.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-2-9-loop-algorithms-2">
+      <statement>
+        <p>A program needs to know whether integer n is evenly divisible by 5.</p>
+        <p>Which expression is true exactly when that is the case?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-2-a">
+            <p>n / 5 == 0</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-2-a">
+            <p>Integer division by 5 is 0 only for small n, not for every multiple of 5.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-9-loop-algorithms-2-b">
+            <p>n % 5 == 0</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-2-b">
+            <p>The remainder is 0 exactly when 5 divides n.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-2-c">
+            <p>n % 5 == 1</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-2-c">
+            <p>A remainder of 1 means n is not a multiple of 5.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-9-loop-algorithms-2-d">
+            <p>n / 5 == 5</p>
+          </statement>
+          <feedback id="apq-2-9-loop-algorithms-2-d">
+            <p>That asks whether n is 25, not whether 5 divides n.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>
