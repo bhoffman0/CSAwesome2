@@ -117,6 +117,17 @@ public class RunestoneTests extends CodeTestHelper {
     private static String input2 = "P";
     private static String input3 = "L";
 
+    private boolean hasPrice(String output, String price) {
+        int i = output.indexOf(price);
+        while (i &gt;= 0) {
+            int end = i + price.length();
+            if (end == output.length() || !Character.isDigit(output.charAt(end)))
+                return true;
+            i = output.indexOf(price, i + 1);
+        }
+        return false;
+    }
+
     @Test
     public void test01() {
         String expected = "Created: " + true + "\nMethod Called: " + 1 + " times";
@@ -185,7 +196,7 @@ public class RunestoneTests extends CodeTestHelper {
             actual = "Input " + input + ": " + output1 + "\n";
             actual += "Input " + input.toLowerCase() + ": " + output2;
 
-            passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+            passed = hasPrice(output1, expect) &amp;&amp; hasPrice(output2, expect);
         } catch (Exception e) {
             actual = "Error";
         }
@@ -208,7 +219,7 @@ public class RunestoneTests extends CodeTestHelper {
             actual = "Input " + input + ": " + output1 + "\n";
             actual += "Input " + input.toLowerCase() + ": " + output2;
 
-            passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+            passed = hasPrice(output1, expect) &amp;&amp; hasPrice(output2, expect);
         } catch (Exception e) {
             actual = "Error";
         }
@@ -231,7 +242,7 @@ public class RunestoneTests extends CodeTestHelper {
             actual = "Input " + input + ": " + output1 + "\n";
             actual += "Input " + input.toLowerCase() + ": " + output2;
 
-            passed = output1.contains(expect) &amp;&amp; output2.contains(expect);
+            passed = hasPrice(output1, expect) &amp;&amp; hasPrice(output2, expect);
         } catch (Exception e) {
             actual = "Error";
         }
