@@ -475,6 +475,11 @@ public class RunestoneTests extends CodeTestHelper {
         return a.contains(b);
     }
 
+    private boolean countIs(String line, String expect) {
+        String[] parts = line.trim().split("\\s+");
+        return parts[parts.length - 1].equals(expect);
+    }
+
     @Test
     public void test02() {
         String expect = "Container   Number\n" +
@@ -516,7 +521,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -541,7 +546,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -566,7 +571,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -591,7 +596,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
