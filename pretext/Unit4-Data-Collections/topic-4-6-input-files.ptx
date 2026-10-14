@@ -680,6 +680,8 @@ String imageFile = data[8];
 
       <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
                  <preamble>
+import java.io.*;
+import java.util.*;
 class ImageHelper
 {
     public static void showImage(String url)
@@ -693,8 +695,7 @@ class ImageHelper
 }
         </preamble>
         <code>
-import java.io.*;
-import java.util.*;
+// (import libraries are already included in the hidden Imagehelper class)
 
 public class PokeImages
 {
@@ -901,6 +902,8 @@ while (scan.hasNext())
 
       <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
                 <preamble>
+import java.io.*;
+import java.util.*;
 class ImageHelper
 {
     public static void showImage(String url)
@@ -914,8 +917,7 @@ class ImageHelper
 }
         </preamble>
         <code>
-import java.io.*;
-import java.util.*;
+// (import libraries are already included in hidden ImageHelper class)
 
 class Pokemon
 {
