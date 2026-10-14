@@ -991,11 +991,8 @@ public class Countries
 
         // 3. Print out the info in each array using the random index
 
-        // Example of showing image files using an array called images (your array
-        // name above may be different)
-        // (this will only work in Active Code)
-        // Countries obj = new Countries();
-        // ImageHelper.showImage( images[index] );
+        // 4. Call the ImageHelper.showImage method 
+        // with an element of the images array to show the image.
 
     }
 }
@@ -1022,23 +1019,17 @@ public class Countries
 
           int len = expect.split(" ").length;
 
-          boolean passed = len == 4 &amp;&amp; output.contains(".jpg");
+          boolean passed = len == 4;
 
-          passed = getResults(expect, expect, "Did you print all the info?", passed);
+          passed = getResults(expect, expect, "Did you print all the info in at least 4 lines", passed);
           assertTrue(passed);
       }
 
       @Test
       public void test2() throws IOException
       {
-          String output = getMethodOutput("main");
-          String expect = "&lt;img src";
-
-          boolean passed = output.contains(expect);
-
-          // passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
-          passed = getResults("image", "image", "Did you uncomment the image code?", passed);
-          assertTrue(passed);
+        boolean passed = checkCodeContains("call to ImageHelper.showImage", "ImageHelper.showImage(");
+        assertTrue(passed);
       }
 
       @Test
