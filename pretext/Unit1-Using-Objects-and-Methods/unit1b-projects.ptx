@@ -137,10 +137,9 @@ public class MyShape {
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
-
 public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        //super("MyShape", input3.replaceAll(" ", "\n"));
+        // super("MyShape", input3.replaceAll(" ", "\n"));
 
         length = (int) (Math.random() * 10 + 5);
         width = (int) (Math.random() * 10 + 5);
@@ -153,43 +152,7 @@ public class RunestoneTests extends CodeTestHelper {
     private final double length, width;
 
     @Test
-    public void test1() {
-        String expect = "Perimeter = 18.0\nArea = 20.0";
-        String input = input1.replaceAll(" ", "\n");
-        boolean passed = false;
-        String output;
-
-        try {
-            output = getMethodOutputWithInput("main", input);
-            passed = output.contains("18.0") &amp;&amp; output.contains("20.0");
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Expected calculation for inputs " + input1, passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test2() {
-        String expect = "Perimeter = 26.0\nArea = 30.0";
-        String input = input2.replaceAll(" ", "\n");
-        String output;
-        boolean passed = false;
-
-        try {
-            output = getMethodOutputWithInput("main", input);
-            passed = output.contains("26.0") &amp;&amp; output.contains("30.0");
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Expected calculation for inputs " + input2, passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test3() {
+    public void test01() {
         String output;
         boolean passed = false;
         String expected = "Created: " + true + "\nCalled: " + 2 + " times";
@@ -212,154 +175,10 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test4() {
-
-        String output = "no matching method declared";
-        String expect = "static void perimeter(...)";
-        boolean passed = false;
-
-        try {
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                    output = line;
-                    if (line.contains("static void perimeter")) {
-                        passed = true;
-                        break;
-                    }
-                }
-            }
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Perimeter method declared properly", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test5() {
-        String expect = "Header: public static double area(double l, double w)" + "\nReturn: " + "return l * w;";
-        boolean header = false, ret = false;
-        String hdr = "none", retn = "none";
-        boolean passed = false;
-        String output;
-
-        try {
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("public") &amp;&amp; line.contains("area")) {
-                    if (line.contains("static double area")) {
-                        header = true;
-                        hdr = line;
-                    }
-                }
-                if (line.contains("return")) {
-                    ret = true;
-                    retn = line;
-                }
-            }
-
-            passed = header &amp;&amp; ret;
-
-            output = "Header: " + hdr + "\nReturn: " + retn;
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Area method declared properly and returns a value", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test6() {
-        String expect = "Perimeter: perimeter(double l, double w)\nArea: area(double l, double w)";
-        int area = -1, perimeter = -1;
-        String areaH = "none", perimH = "none";
-        boolean passed = false;
-        String output;
-
-        try {
-            String code = getCode();
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("public") &amp;&amp; line.contains("area")) {
-                    area = numParameters(line);
-                    areaH = line;
-                }
-                if (line.contains("public") &amp;&amp; line.contains("perimeter")) {
-                    perimeter = numParameters(line);
-                    perimH = line;
-                }
-            }
-
-            passed = area == 2 &amp;&amp; perimeter == 2;
-
-            output = "Perimeter: " + perimH + " (" + perimeter + " parameters)\nArea: " + areaH + " (" + area
-                    + " parameters)";
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Methods both have 2 parameters each", passed);
-        assertTrue(passed);
-    }
-
-    private int numParameters(String line) {
-        if (line.contains("(") &amp;&amp; line.contains(")")) {
-            line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
-            return line.split(",").length;
-        }
-        return 0;
-    }
-
-    @Test
-    public void test7() {
-        String expect = "Perimeter: perimeter(length, width) (2 parameters)\nArea: area(length, width) (2 parameters)";
-        String output;
-        boolean passed = false;
-        
-        try {
-            String code = getCode();
-            String area = null, perimeter = null;
-            int areaNum = -1, perimNum = -1;
-
-            String[] lines = code.split("\n");
-
-            for (String line : lines) {
-                if (line.contains("area") &amp;&amp; !line.contains("static") &amp;&amp; !line.contains("System")) {
-                    area = line;
-                    areaNum = numParameters(line);
-                }
-                if (perimeter == null &amp;&amp; line.contains("perimeter") &amp;&amp; !line.contains("static")
-                        &amp;&amp; !line.contains("System")) {
-                    perimeter = line;
-                    perimNum = numParameters(line);
-                }
-            }
-
-            passed = areaNum == 2 &amp;&amp; perimNum == 2;
-
-            output = "Perimeter: " + perimeter + " (" + perimNum + " parameters)\nArea: " + area + " (" + areaNum
-                    + " parameters)";
-        } catch (Exception e) {
-            output = "Error";
-        }
-       
-        getResults(expect, output, "Perimeter and Area methods have been called properly", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test8() {
+    public void test02() {
         boolean passed = false;
         int num = 0;
-        
+
         try {
             String code = getCode();
             num = countOccurences(code, "System.out.println(");
@@ -374,10 +193,136 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test9() {
+    public void test03() {
+        String output = "";
+        String expect = "System.out.println(...)";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "static void perimeter");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("System.out.print")) {
+                    output = line;
+                    passed = true;
+                    break;
+                }
+            }
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Perimeter method prints result", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test04() {
+        String expect = "return l * w;";
+        String retn = "none";
+        boolean passed = false;
+        String output;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "static double area");
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("return")) {
+                    retn = line;
+                }
+            }
+
+            passed = !retn.contains("0");
+
+            output = retn;
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Area method returns something other than 0", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test05() {
+        String expect = "perimeter(length, width) (2 parameters)";
+        String output = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(");
+            String perimeter = "";
+            int perimNum = 0;
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (stringMatch(line, "perimeter(")) {
+                    perimeter = line;
+                    perimNum = numParameters(line);
+                }
+            }
+
+            passed = stringMatch(perimeter, "perimeter(") &amp;&amp; perimNum == 2;
+            if (perimNum &gt; 0) {
+                output = "" + perimeter + " (" + perimNum + " parameters)";
+            } else {
+                output = perimeter;
+            }
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Perimeter method called properly with two parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test06() {
+        String expect = "area(length, width) (2 parameters)";
+        String output = "";
+        boolean passed = false;
+
+        try {
+            String code = getCode();
+            code = getMethodCode(code, "main(");
+            String area = "";
+            int areaNum = 0;
+
+            String[] lines = code.split("\n");
+
+            for (String line : lines) {
+                if (line.contains("area(")) {
+                    area = line;
+                    areaNum = numParameters(line);
+                }
+            }
+
+            passed = stringMatch(area, "area(") &amp;&amp; areaNum == 2;
+            if (areaNum &gt; 0) {
+                output = "" + area + " (" + areaNum + " parameters)";
+            } else {
+                output = area;
+            }
+
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Area method called properly with two parameters", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test07() {
         double exp = 2 * length + 2 * width;
         String ans;
-        
+
         try {
             Object[] args = { length, width };
             ans = getMethodOutput("perimeter", args);
@@ -391,7 +336,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test10() {
+    public void test08() {
         double exp = length * width;
         String ans = null;
 
@@ -406,8 +351,81 @@ public class RunestoneTests extends CodeTestHelper {
                 "Correct calculation for area with inputs " + length + " and " + width);
         assertTrue(passed);
     }
-}
 
+    @Test
+    public void test09() {
+        String expect = "Perimeter = 18.0\nArea = 20.0";
+        String input = input1.replaceAll(" ", "\n");
+        boolean passed = false;
+        String output;
+
+        try {
+            output = getMethodOutputWithInput("main", input);
+            passed = output.contains("18.0") &amp;&amp; output.contains("20.0");
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Expected calculation for inputs " + input1, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        String expect = "Perimeter = 26.0\nArea = 30.0";
+        String input = input2.replaceAll(" ", "\n");
+        String output;
+        boolean passed = false;
+
+        try {
+            output = getMethodOutputWithInput("main", input);
+            passed = output.contains("26.0") &amp;&amp; output.contains("30.0");
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Expected calculation for inputs " + input2, passed);
+        assertTrue(passed);
+    }
+
+    private int numParameters(String line) {
+        if (line.contains("(") &amp;&amp; line.contains(")")) {
+            line = line.substring(line.indexOf("(") + 1, line.indexOf(")"));
+            return line.split(",").length;
+        }
+        return 0;
+    }
+
+    private boolean stringMatch(String str1, String str2) {
+        str1 = str1.replaceAll(" ", "");
+        str2 = str2.replaceAll(" ", "");
+
+        return str1.contains(str2);
+    }
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i, i + 1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i, i + 1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    // System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i + 1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
+    }
+}
     </tests>
     </program>
 </activity>
@@ -473,7 +491,7 @@ public class Geometry
 <title>Unit 1B Project 2 - Round Things</title>
 
 <p>
-Write a Java program that calculates and displays the area and circumference of a circle and the volume and surface area of a sphere.  You will be writing two classes for this program.  One will use the RoundThingsDriver class and the other will use the RoundThings class.
+Write a Java program that calculates and displays the area and circumference of a circle and the volume and surface area of a sphere.  You will be writing two classes for this program.  One will use the Main class and the other will use the RoundThings class.
 </p>
 <p>
 <term>Class Name: RoundThings</term>
@@ -505,7 +523,7 @@ All these methods will be static. Use Math.PI for pi. The radius parameter will 
 </li>
 </ol>
 
-<p><term>Class Name: RoundThingsDriver</term></p>
+<p><term>Class Name: Main</term></p>
 
 <p>
 This will have a main method and will call on methods from <c>RoundThings</c>.
@@ -553,13 +571,13 @@ The volume of a sphere with a radius of # is #. 
 import java.util.Scanner;
 
 
-public class RoundThingsDriver{
+public class Main
+{
     public static void main(String[] args)
     {
 
 
     }
-
 
     public static void outPut(String typeOfValue, String shape, double radius, double calculatedValue)
     {
@@ -584,7 +602,7 @@ import org.junit.*;
 
 public class RunestoneTests extends CodeTestHelper {
     public RunestoneTests() {
-        // super("RoundThingsDriver", input3.replaceAll(" ", "\n"));
+        // super("Main", input1.replaceAll(" ", "\n"));
     }
 
     private static String input1 = "5.0";
@@ -592,72 +610,8 @@ public class RunestoneTests extends CodeTestHelper {
     private static String input3 = "10.0";
 
     @Test
-    public void test1() {
-        String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877"
-                .replaceAll(", ", "\n");
-        String output = "";
-        boolean passed = false;
-
-        try {
-            String input = input1.replaceAll(" ", "\n");
-            output = getMethodOutputWithInput("main", input);
-
-            passed = output.contains("78.53981633");
-            passed = passed &amp;&amp; output.contains("31.415926");
-            passed = passed &amp;&amp; output.contains("314.15926");
-            passed = passed &amp;&amp; output.contains("523.59877");
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Expected calculation for input " + input1, passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test2() {
-        String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504"
-                .replaceAll(", ", "\n");
-        String input = input2.replaceAll(" ", "\n");
-        String output = "";
-        boolean passed = false;
-
-        try {
-            output = getMethodOutputWithInput("main", input);
-
-            passed = output.contains("153.93804");
-            passed = passed &amp;&amp; output.contains("43.982297");
-            passed = passed &amp;&amp; output.contains("615.75216");
-            passed = passed &amp;&amp; output.contains("1436.75504");
-        } catch (Exception e) {
-            output = "Error";
-        }
-
-        getResults(expect, output, "Expected calculation for input " + input2, passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test3() {
-        String code = "";
-        int num = 0;
-
-        try {
-            code = getCode();
-            num = countOccurences(code, "class RoundThings");
-        } catch (Exception e) {
-            code = "Error";
-            num = -1;
-        }
-
-        boolean passed = num == 2;
-        getResults("Classes: " + 2, "Classes: " + num, "Two classes created", passed);
-        assertTrue(passed);
-    }
-
-    @Test
-    public void test4() {
-        String expect = "public static double methods: " + 4;
+    public void test01() {
+        String expect = "" + 4;
         String output = "";
         String code = "";
         int num = 0;
@@ -665,20 +619,44 @@ public class RunestoneTests extends CodeTestHelper {
 
         try {
             code = getCode();
+            code = getMethodCode(code, "class RoundThings");
             num = countOccurences(code, "public static double");
-            output = "public static double methods: " + num;
+            output = "" + num;
         } catch (Exception e) {
             output = "Error";
             num = -1;
         }
 
         passed = num == 4;
-        getResults(expect, output, "4 static double methods created", passed);
+        getResults(expect, output, "Number of public static double methods created", passed);
         assertTrue(passed);
     }
 
     @Test
-    public void test5() {
+    public void test02() {
+        String expect = "4";
+        String output = "";
+        String code = "";
+        int num = 0;
+        boolean passed = false;
+
+        try {
+            code = getCode();
+            code = getMethodCode(code, "class RoundThings");
+            num = countOccurences(code, "return");
+            output = "" + num;
+        } catch (Exception e) {
+            output = "Error";
+            num = -1;
+        }
+
+        passed = num == 4;
+        getResults(expect, output, "Number of return statements in methods", passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test03() {
         String expected = "Created: " + true + "\nCalled: " + 1 + " time";
         String output = "";
         String code = "";
@@ -704,7 +682,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test6() {
+    public void test04() {
         String expect = "public static void outPut (...) (4 parameters)";
         String output = "";
         String code = "";
@@ -746,7 +724,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test7() {
+    public void test05() {
         String code = "";
         int num = 0;
         boolean passed = false;
@@ -776,7 +754,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test8() {
+    public void test06() {
         String code = "";
         int num = 0;
         boolean passed = false;
@@ -803,7 +781,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test9() {
+    public void test07() {
         String code = "";
         int num = 0;
         boolean passed = false;
@@ -823,7 +801,7 @@ public class RunestoneTests extends CodeTestHelper {
     }
 
     @Test
-    public void test10() {
+    public void test08() {
         String code = "";
         int num = 0;
         boolean passed = false;
@@ -840,6 +818,76 @@ public class RunestoneTests extends CodeTestHelper {
         
         getResults("2 times", num + " times", "Called System.out.print[ln](...) 2 times maximum", passed);
         assertTrue(passed);
+    }
+
+    @Test
+    public void test09() {
+        String expect = "area = 78.53981633, circumference = 31.415926, surface area = 314.15926, volume = 523.59877"
+                .replaceAll(", ", "\n");
+        String output = "";
+        boolean passed = false;
+
+        try {
+            String input = input1.replaceAll(" ", "\n");
+            output = getMethodOutputWithInput("main", input);
+
+            passed = output.contains("78.53981633");
+            passed = passed &amp;&amp; output.contains("31.415926");
+            passed = passed &amp;&amp; output.contains("314.15926");
+            passed = passed &amp;&amp; output.contains("523.59877");
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Expected calculation for input " + input1, passed);
+        assertTrue(passed);
+    }
+
+    @Test
+    public void test10() {
+        String expect = "area = 153.93804, circumference = 43.982297, surface area = 615.75216, volume = 1436.75504"
+                .replaceAll(", ", "\n");
+        String input = input2.replaceAll(" ", "\n");
+        String output = "";
+        boolean passed = false;
+
+        try {
+            output = getMethodOutputWithInput("main", input);
+
+            passed = output.contains("153.93804");
+            passed = passed &amp;&amp; output.contains("43.982297");
+            passed = passed &amp;&amp; output.contains("615.75216");
+            passed = passed &amp;&amp; output.contains("1436.75504");
+        } catch (Exception e) {
+            output = "Error";
+        }
+
+        getResults(expect, output, "Expected calculation for input " + input2, passed);
+        assertTrue(passed);
+    }
+
+
+    private String getMethodCode(String code, String name) {
+        String searchStr = code;
+        int start = searchStr.indexOf(name);
+        searchStr = searchStr.substring(start);
+
+        int level = 0;
+
+        for (int i = 0; i &lt; searchStr.length(); i++) {
+            if (searchStr.substring(i, i + 1).equals("{")) {
+                level++;
+            } else if (searchStr.substring(i, i + 1).equals("}")) {
+                level--;
+
+                if (level == 0) {
+                    // System.out.println(searchStr.substring(0, i+1).trim());
+                    return searchStr.substring(0, i + 1).trim();
+                }
+            }
+        }
+
+        return searchStr.trim();
     }
 }
     </tests>
