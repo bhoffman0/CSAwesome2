@@ -752,8 +752,7 @@ System.out.println(  highScores[index] );
     <image source="Unit4-Data-Collections/array-images/cow.jpg" width="27%" />
     <p>
       Here’s a fun String array of image filenames. The following code displays
-      an online image using an HTML tag. (Note that this just works in this
-      Active Code window which interprets HTML. In other Java IDEs you would
+      an online image using a built-in ImageHelper class. (In other Java IDEs you would
       need to use Java Swing graphics instead). Run the code and see that it
       displays images[0] which is “cow.jpg”. The images array holds 5 images.
     </p>
@@ -770,7 +769,23 @@ System.out.println(  highScores[index] );
         </p>
       </statement>
 
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="pictureLab.jar">
+        <preamble>
+class ImageHelper
+{
+    private static final String BASE_URL =
+        "https://raw.githubusercontent.com/bhoffman0/CSAwesome2/main/pretext/assets/Unit4-Data-Collections/array-images/";
+
+    public static void showImage(String filename)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(BASE_URL + filename))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + filename);
+    }
+}
+        </preamble>
         <code>
 public class ImageEx
 {
@@ -785,15 +800,7 @@ public class ImageEx
         // Change index to see different images in the array!
         // Can you have it pick out a random image?
         int index = 0;
-        obj.printHTMLimage(images[index]);
-    }
-
-    // This method will just work in Active Code which interprets html
-    public void printHTMLimage(String filename)
-    {
-        String baseURL =
-                "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("&lt;img src=" + baseURL + filename + " width=500px /&gt;");
+        ImageHelper.showImage(images[index]);
     }
 }
         </code>
@@ -917,9 +924,8 @@ public class ImageEx
           <p>
             Print out the country name, its capital, and its language, and the
             map image for that country using the random index to access the
-            corresponding item in each parallel array. For the images, the
-            <c>printHTMLimage</c> method has been given to get the image URL
-            online and print it out as an HTML image.
+            corresponding item in each parallel array. For the images, use the built-in
+            <c>ImageHelper.showImage</c> method to show the images.
           </p>
         </li>
 
@@ -948,7 +954,23 @@ public class ImageEx
         </p>
       </statement>
 
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="pictureLab.jar">
+                <preamble>
+class ImageHelper
+{
+    private static final String BASE_URL =
+        "https://raw.githubusercontent.com/bhoffman0/CSAwesome2/main/pretext/assets/Unit4-Data-Collections/array-images/";
+
+    public static void showImage(String filename)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(BASE_URL + filename))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + filename);
+    }
+}
+        </preamble>
         <code>
 public class Countries
 {
@@ -973,16 +995,8 @@ public class Countries
         // name above may be different)
         // (this will only work in Active Code)
         // Countries obj = new Countries();
-        // obj.printHTMLimage( images[index] );
+        // ImageHelper.showImage( images[index] );
 
-    }
-
-    // This method will just work in Active Code which interprets html
-    public void printHTMLimage(String filename)
-    {
-        String baseURL =
-                "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("&lt;img src=" + baseURL + filename + " width=500px /&gt;");
     }
 }
         </code>

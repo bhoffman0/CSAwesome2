@@ -1703,6 +1703,32 @@ for (int[] x : arr)
          }
 
          /**
+          * Method to load the picture from a URL
+          * @param imageURL the URL of the image to load
+          * @return true if the image was loaded successfully, false otherwise
+          */
+        public boolean loadFromURL(String imageURL)
+        {
+            try
+            {
+                java.net.URL url = new java.net.URL(imageURL);
+                bufferedImage = ImageIO.read(url);
+
+                if (bufferedImage == null)
+                    return false;
+
+                this.fileName = imageURL;
+                this.extension = "png";
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.out.println("Could not load image: " + imageURL);
+                return false;
+            }
+        }
+
+         /**
           * Method to show the picture in a picture frame
           */
          public void show()
