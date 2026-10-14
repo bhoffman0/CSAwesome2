@@ -439,7 +439,7 @@ public class CodeTestHelper {
                 if (m.getName().equals(methodName)) {
 
                     if (!checkStaticMethod(m) && checkReturnType(m, "void")) {
-                        return getInstanceMethodOutput(m, null);
+                        return getInstanceMethodOutput(m, args);
                     } else if (!checkStaticMethod(m)) {
                         Object o = getTestInstance();
 
@@ -1718,6 +1718,43 @@ public class CodeTestHelper {
             Object[] _args = new Object[] { new String[0] };
 
             String output = getStaticMethodOutput(m, _args);
+
+            return output;
+        } catch (Exception e) {
+            return "Error: " + e;
+        }
+
+    }
+
+    public String getMethodOutputWithInput(Method m, Object[] arguments, String input) {
+        inContent = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
+        System.setIn(inContent);
+
+        String output = getStaticMethodOutput(m, arguments);
+
+        System.setIn(System.in);
+
+        return output;
+    }
+
+    public String getMethodOutputChangedCodeWithInput(String program, String className, String methodName, String input) {
+        // System.out.println(program);
+
+        try {
+            JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
+
+            Iterable<? extends JavaFileObject> fileObjects;
+            fileObjects = getJavaSourceFromString(program);
+
+            compiler.getTask(null, null, null, null, null, fileObjects).call();
+
+            Class<?> clazz = Class.forName(className);
+
+            Method m = clazz.getMethod(methodName, new Class[] { String[].class });
+
+            Object[] _args = new Object[] { new String[0] };
+
+            String output = getMethodOutputWithInput(m, _args, input);
 
             return output;
         } catch (Exception e) {
