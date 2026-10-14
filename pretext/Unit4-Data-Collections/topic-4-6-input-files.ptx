@@ -678,10 +678,24 @@ String imageFile = data[8];
         </p>
       </statement>
 
-      <program interactive="activecode" language="java" datafile="pokemon.csv">
-        <code>
+      <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
+                 <preamble>
 import java.io.*;
 import java.util.*;
+class ImageHelper
+{
+    public static void showImage(String url)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(url))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + url);
+    }
+}
+        </preamble>
+        <code>
+// (import libraries are already included in the hidden Imagehelper class)
 
 public class PokeImages
 {
@@ -718,8 +732,9 @@ public class PokeImages
         // 4. Print out the name using the correct index in the split data
         //   (Check above for the correct index for the name)
 
-        // 5. Call the printHTMLimage method below
-        //    with an element of the data array to print out the image.
+
+        // 5. Call the ImageHelper.showImage method 
+        //    with an element of the data array to show the image.
         //    (Check above for the correct index for the image url)
 
     }
@@ -730,12 +745,6 @@ public class PokeImages
         // call readFile() to read file into the array pokemonLines
         int length = obj.readFile();
         obj.randomPokemon(length);
-    }
-
-    // This method will just work on Runestone to print out images
-    public static void printHTMLimage(String url)
-    {
-        System.out.print("&lt;img src=" + url + " width=300px /&gt;");
     }
 }
         </code>
@@ -777,7 +786,7 @@ public class RunestoneTests extends CodeTestHelper
    public void imageCode()
    {
        boolean passed =
-               checkCodeContains("call to printHTMLimage", "printHTMLimage(");
+               checkCodeContains("call to ImageHelper.showImage", "ImageHelper.showImage(");
        assertTrue(passed);
    }
 
@@ -891,10 +900,24 @@ while (scan.hasNext())
         </p>
       </statement>
 
-      <program interactive="activecode" language="java" datafile="pokemon.csv">
-        <code>
+      <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
+                <preamble>
 import java.io.*;
 import java.util.*;
+class ImageHelper
+{
+    public static void showImage(String url)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(url))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + url);
+    }
+}
+        </preamble>
+        <code>
+// (import libraries are already included in hidden ImageHelper class)
 
 class Pokemon
 {
@@ -932,22 +955,16 @@ public class PokemonArray
     // given its name as an argument.
     // It should loop through the array to find the Pokemon object with the correct name.
     // It should print and return the type and print the image.
-    // This method can call printHTMLimage(url) defined below.
+    // This method can call ImageHelper.showImage(url) defined below.
     public String findType(String name)
     {
         // Loop through the array to find the Pokemon with the given name
         // Call the getType method to get the type of the Pokemon
-        // Call the printHTMLimage method to print out the image
+        // Call the ImageHelper.showImage method to print out the image
         // return the type
 
 
         return "Type";
-    }
-
-    // This method will just work on Runestone to print out images
-    public static void printHTMLimage(String url)
-    {
-        System.out.print("&lt;img src=" + url + " width=300px /&gt;");
     }
 
     public static void main(String[] args) throws IOException
