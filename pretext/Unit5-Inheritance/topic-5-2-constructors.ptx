@@ -620,4 +620,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-2-constructors">
+    <title>AP Practice</title>
+    <activity label="apq-5-2-constructors-1">
+      <statement>
+        <p>A subclass constructor calls the superclass constructor.</p>
+        <p>Where does that call belong?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-2-constructors-1-a">
+            <p>On the last line of the subclass constructor.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-1-a">
+            <p>The superclass call is not last.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-2-constructors-1-b">
+            <p>On the first line of the subclass constructor.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-1-b">
+            <p>The lesson says a superclass constructor must be called from the first line.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-2-constructors-1-c">
+            <p>Inside main, after new returns.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-1-c">
+            <p>The call is part of the subclass constructor.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-2-constructors-1-d">
+            <p>In a setter, instead of the constructor.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-1-d">
+            <p>A setter is not the required constructor call.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-2-constructors-2">
+      <statement>
+        <p>A subclass extends a superclass that has constructors.</p>
+        <p>Which statement matches the lesson?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-2-constructors-2-a">
+            <p>The subclass inherits those constructors and can call them by name.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-2-a">
+            <p>Constructors are not inherited.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-2-constructors-2-b">
+            <p>The subclass does not inherit the constructors.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-2-b">
+            <p>The lesson says subclasses do not inherit constructors.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-2-constructors-2-c">
+            <p>The subclass inherits only the no-argument constructor.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-2-c">
+            <p>The lesson does not make that exception.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-2-constructors-2-d">
+            <p>The constructors become public methods named super.</p>
+          </statement>
+          <feedback id="apq-5-2-constructors-2-d">
+            <p>super is the call. It is not a renamed inherited constructor.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

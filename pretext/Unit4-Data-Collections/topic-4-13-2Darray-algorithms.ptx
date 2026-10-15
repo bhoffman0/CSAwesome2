@@ -519,6 +519,109 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
   </subsection>
 
+  <subsection xml:id="ap-practice-4-13-2Darray-algorithms">
+    <title>AP Practice</title>
+    <activity label="apq-4-13-2Darray-algorithms-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int[][] g = {{1, 2}, {3, 4}};
+int s = 0;
+for (int r = 0; r &lt; g.length; r++)
+    for (int c = 0; c &lt; g[0].length; c++)
+        s += g[r][c];
+System.out.println(s);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-1-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-1-a">
+            <p>4 is one element. The loops add every element.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-1-b">
+            <p>7</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-1-b">
+            <p>The total is 1 + 2 + 3 + 4.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-13-2Darray-algorithms-1-c">
+            <p>10</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-1-c">
+            <p>Both rows are added: 1 + 2 and 3 + 4.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-1-d">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-1-d">
+            <p>2 is a column count, not the sum.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-13-2Darray-algorithms-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int[][] g = {{1, 2}, {3, 4}};
+int s = 0;
+for (int r = 0; r &lt; g.length; r++)
+    s += g[r][0];
+System.out.println(s);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-2-a">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-2-a">
+            <p>3 is only the second row of that column.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-13-2Darray-algorithms-2-b">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-2-b">
+            <p>Column 0 holds 1 and 3.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-2-c">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-2-c">
+            <p>2 and 4 are column 1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-13-2Darray-algorithms-2-d">
+            <p>10</p>
+          </statement>
+          <feedback id="apq-4-13-2Darray-algorithms-2-d">
+            <p>10 is the sum of every cell, not one column.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="review-and-frq-practice-with-2d-arrays">
     <title>Review and FRQ Practice with 2D arrays</title>
     <p>

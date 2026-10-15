@@ -629,4 +629,93 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-7-wrapper-classes">
+    <title>AP Practice</title>
+    <activity label="apq-4-7-wrapper-classes-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+System.out.println(Integer.parseInt("24"));
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-1-a">
+            <p>"24"</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-1-a">
+            <p>parseInt converts the text. It does not print the quotes.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-7-wrapper-classes-1-b">
+            <p>24</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-1-b">
+            <p>Integer.parseInt returns the int value of the string.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-1-c">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-1-c">
+            <p>The string has two characters, but parseInt reads the number 24.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-1-d">
+            <p>0</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-1-d">
+            <p>The string is a valid integer, so parsing does not fail or return 0.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-7-wrapper-classes-2">
+      <statement>
+        <p>An int is stored in an Integer variable with no explicit constructor call.</p>
+        <p>What is that conversion called in this lesson?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-2-a">
+            <p>Parsing</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-2-a">
+            <p>Parsing builds a number from a string.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-7-wrapper-classes-2-b">
+            <p>Autoboxing</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-2-b">
+            <p>Autoboxing is the compiler's automatic conversion from the primitive to the wrapper.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-2-c">
+            <p>Unboxing</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-2-c">
+            <p>Unboxing goes from the wrapper object back to the primitive.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-7-wrapper-classes-2-d">
+            <p>Casting to int</p>
+          </statement>
+          <feedback id="apq-4-7-wrapper-classes-2-d">
+            <p>The value is already an int. The conversion wraps it.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

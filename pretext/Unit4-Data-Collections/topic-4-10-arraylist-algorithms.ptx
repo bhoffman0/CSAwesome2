@@ -1309,6 +1309,114 @@ public class ParallelTests
     </p>
   </subsection>
 
+  <subsection xml:id="ap-practice-4-10-arraylist-algorithms">
+    <title>AP Practice</title>
+    <activity label="apq-4-10-arraylist-algorithms-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+list.add(1);
+list.add(2);
+list.add(3);
+int first = list.remove(0);
+list.add(first);
+System.out.println(list.get(0));
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-1-a">
+            <p>1</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-1-a">
+            <p>1 was removed from the front and added at the end.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-10-arraylist-algorithms-1-b">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-1-b">
+            <p>Removing the front item and appending it moves 2 to index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-1-c">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-1-c">
+            <p>3 stays at the end until the removed 1 is appended after it.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-1-d">
+            <p>0</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-1-d">
+            <p>The list is not empty after the move.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-10-arraylist-algorithms-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
+list.add(4);
+list.add(9);
+list.add(1);
+int max = list.get(0);
+for (int i = 1; i &lt; list.size(); i++)
+    if (list.get(i) &gt; max)
+        max = list.get(i);
+System.out.println(max);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-2-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-2-a">
+            <p>4 is the first value. A later value is larger.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-10-arraylist-algorithms-2-b">
+            <p>9</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-2-b">
+            <p>The loop keeps max when it sees a larger element.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-2-c">
+            <p>1</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-2-c">
+            <p>1 is the smallest value.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-10-arraylist-algorithms-2-d">
+            <p>14</p>
+          </statement>
+          <feedback id="apq-4-10-arraylist-algorithms-2-d">
+            <p>The loop keeps one maximum. It does not add the values.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="review-and-frq-practice-with-arraylists">
     <title>Review and FRQ Practice with ArrayLists</title>
     <p>

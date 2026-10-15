@@ -357,4 +357,88 @@
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-2-1-algorithms">
+    <title>AP Practice</title>
+    <activity label="apq-2-1-algorithms-1">
+      <statement>
+        <p>A program decides whether to take one path or another.</p>
+        <p>Which algorithm building block is that decision?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-1-algorithms-1-a">
+            <p>Sequence</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-1-a">
+            <p>Sequence is steps in order, with no choice between paths.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-1-algorithms-1-b">
+            <p>Selection</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-1-b">
+            <p>Selection is the decision that branches the algorithm.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-1-algorithms-1-c">
+            <p>Repetition</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-1-c">
+            <p>Repetition repeats a block. It does not choose between paths.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-1-algorithms-1-d">
+            <p>Pseudocode</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-1-d">
+            <p>Pseudocode is a way to write steps. The decision between paths is selection.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-2-1-algorithms-2">
+      <statement>
+        <p>A block of steps runs again while a condition is true.</p>
+        <p>Which algorithm building block is that?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-1-algorithms-2-a">
+            <p>Sequence</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-2-a">
+            <p>Sequence does not send the flow back to repeat a block.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-1-algorithms-2-b">
+            <p>Selection</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-2-b">
+            <p>Selection chooses a path once. It does not repeat the block.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-1-algorithms-2-c">
+            <p>Repetition</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-2-c">
+            <p>Repetition is the loop that runs a block again.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-1-algorithms-2-d">
+            <p>Input</p>
+          </statement>
+          <feedback id="apq-2-1-algorithms-2-d">
+            <p>Input reads data. Repeating a block is a control structure.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>
