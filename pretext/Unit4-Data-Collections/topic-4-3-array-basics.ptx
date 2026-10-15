@@ -1039,21 +1039,17 @@ public class Countries
           super("Countries");
       }
 
-      @Test
-      public void test1() throws IOException
-      {
-          String output = getMethodOutput("main");
-          String expect = "Country Capital Language Image";
+     @Test
+     public void testSquareBrackets()
+     {
+        String code = getCode();
+        int count = countOccurences(code, "[");
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Arrays accessed with square brackets", passed);
+        assertTrue(passed);
+     }
 
-          int len = expect.split(" ").length;
-
-          boolean passed = len == 4;
-
-          passed = getResults(expect, expect, "Did you print all the info in at least 4 lines", passed);
-          assertTrue(passed);
-      }
-
-      @Test
+     @Test
       public void test2() throws IOException
       {
         boolean passed = checkCodeContains("call to ImageHelper.showImage", "ImageHelper.showImage(");
@@ -1104,6 +1100,12 @@ public class Countries
                           "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays? (the 5th one is main's arg)");
           assertTrue(passed);
       }
+      @Test
+     public void testRandomAdded()
+     {
+         boolean passed = checkCodeContains("Math.random to set index", "Math.random");
+         assertTrue(passed);
+     }
   }
         </tests>
       </program>
