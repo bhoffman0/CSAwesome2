@@ -679,7 +679,7 @@ String imageFile = data[8];
       </statement>
 
       <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
-                 <preamble>
+                 <preamble visible="no">
 import java.io.*;
 import java.util.*;
 class ImageHelper
@@ -901,7 +901,7 @@ while (scan.hasNext())
       </statement>
 
       <program interactive="activecode" language="java" datafile="pokemon.csv,pictureLab.jar">
-                <preamble>
+                <preamble visible="no">
 import java.io.*;
 import java.util.*;
 class ImageHelper
