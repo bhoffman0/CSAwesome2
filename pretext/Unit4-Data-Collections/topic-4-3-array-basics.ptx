@@ -1043,9 +1043,21 @@ public class Countries
      public void testSquareBrackets()
      {
         String code = getCode();
-        int count = countOccurences(code, "[");
+        int count = countOccurencesRegex(code, "*[*]");
+
         boolean passed = count &gt;= 4;
         getResults("4", count + "", "Arrays accessed with square brackets", passed);
+        assertTrue(passed);
+     }
+
+      @Test
+     public void testPrintln()
+     {
+        String code = getCode();
+        int count = countOccurences(code, "println(");
+
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Array info printed with println", passed);
         assertTrue(passed);
      }
 
