@@ -788,29 +788,8 @@ class ImageHelper
 // SimplePicture needs Picture class because it returns Picture objects from some methods.
 class Picture extends SimplePicture
 {
-    /** Constructor that takes no arguments */
-    public Picture()
-    {
-        /* not needed but use it to show students the implicit call to super()
-         * child constructors always call a parent constructor
-         */
-        super();
-    }
-
-    /**
-     * Constructor that takes a file name and creates the picture
-     *
-     * @param fileName the name of the file to create the picture from
-     */
-    public Picture(String fileName)
-    {
-        // let the parent class handle this fileName
-        super(fileName);
-    }
-
     /**
      * Constructor that takes the height and width
-     *
      * @param height the height of the desired picture
      * @param width the width of the desired picture
      */
@@ -818,17 +797,6 @@ class Picture extends SimplePicture
     {
         // let the parent class handle this width and height
         super(width, height);
-    }
-
-    /**
-     * Constructor that takes a picture and creates a copy of that picture
-     *
-     * @param copyPicture the picture to copy
-     */
-    public Picture(Picture copyPicture)
-    {
-        // let the parent class do the copy
-        super(copyPicture);
     }
 }
         </preamble>
@@ -1016,6 +984,20 @@ class ImageHelper
             System.out.println("Could not load image: " + filename);
     }
 }
+// SimplePicture needs Picture class because it returns Picture objects from some methods.
+class Picture extends SimplePicture
+{
+    /**
+     * Constructor that takes the height and width
+     * @param height the height of the desired picture
+     * @param width the width of the desired picture
+     */
+    public Picture(int height, int width)
+    {
+        // let the parent class handle this width and height
+        super(width, height);
+    }
+}
         </preamble>
         <code>
 public class Countries
@@ -1057,21 +1039,29 @@ public class Countries
           super("Countries");
       }
 
-      @Test
-      public void test1() throws IOException
-      {
-          String output = getMethodOutput("main");
-          String expect = "Country Capital Language Image";
+     @Test
+     public void testSquareBrackets()
+     {
+        String code = getCode();
+        int count = countOccurencesRegex(code, "*[*]");
 
-          int len = expect.split(" ").length;
-
-          boolean passed = len == 4;
-
-          passed = getResults(expect, expect, "Did you print all the info in at least 4 lines", passed);
-          assertTrue(passed);
-      }
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Arrays accessed with square brackets", passed);
+        assertTrue(passed);
+     }
 
       @Test
+     public void testPrintln()
+     {
+        String code = getCode();
+        int count = countOccurences(code, "println(");
+
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Array info printed with println", passed);
+        assertTrue(passed);
+     }
+
+     @Test
       public void test2() throws IOException
       {
         boolean passed = checkCodeContains("call to ImageHelper.showImage", "ImageHelper.showImage(");
@@ -1122,6 +1112,12 @@ public class Countries
                           "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays? (the 5th one is main's arg)");
           assertTrue(passed);
       }
+      @Test
+     public void testRandomAdded()
+     {
+         boolean passed = checkCodeContains("Math.random to set index", "Math.random");
+         assertTrue(passed);
+     }
   }
         </tests>
       </program>
