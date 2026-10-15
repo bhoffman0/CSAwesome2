@@ -693,6 +693,20 @@ class ImageHelper
             System.out.println("Could not load image: " + url);
     }
 }
+// SimplePicture needs Picture class because it returns Picture objects from some methods.
+class Picture extends SimplePicture
+{
+    /**
+     * Constructor that takes the height and width
+     * @param height the height of the desired picture
+     * @param width the width of the desired picture
+     */
+    public Picture(int height, int width)
+    {
+        // let the parent class handle this width and height
+        super(width, height);
+    }
+}
         </preamble>
         <code>
 // (import libraries are already included in the hidden Imagehelper class)
@@ -913,6 +927,20 @@ class ImageHelper
             picture.show();
         else
             System.out.println("Could not load image: " + url);
+    }
+}
+// SimplePicture needs Picture class because it returns Picture objects from some methods.
+class Picture extends SimplePicture
+{
+    /**
+     * Constructor that takes the height and width
+     * @param height the height of the desired picture
+     * @param width the width of the desired picture
+     */
+    public Picture(int height, int width)
+    {
+        // let the parent class handle this width and height
+        super(width, height);
     }
 }
         </preamble>
