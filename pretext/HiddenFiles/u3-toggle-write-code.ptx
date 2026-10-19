@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u3-toggle-write-code">
+  <title>Unit 3 Write Code for Toggle Code</title>
+  <p>
+    These are the write code problems and mixed up code puzzles used by the
+    Unit 3 Toggle Code Practice page. Each problem has two copies that differ
+    only in their label: the Get Help puzzle for the copy whose label ends in
+    -ct-static is always the mixed up code puzzle below it, while the other
+    copy's Get Help puzzle is personalized by CodeTailor when the course has
+    an API token. The practice page assigns each student one copy of each
+    problem at random.
+  </p>
+
+  <exercise label="u3_ct_wc1" xml:id="u3_ct_wc1">
+    <statement>
+      <p>
+        Write a constructor for the <c>Student</c> class. It takes a <c>name</c> (a <c>String</c>), a <c>grade</c> (an <c>int</c>), and a <c>gpa</c> (a <c>double</c>), in that order, and sets the matching instance variables. Then write a <c>toString</c> method that returns the student's information in the form <c>name (grade grade): gpa</c>, for example <c>Ana (grade 10): 3.8</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc1-prog" xml:id="u3_ct_wc1-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc1">
+      <code>
+public class Student
+{
+    private String name;
+    private int grade;
+    private double gpa;
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        Student s = new Student("Ana", 10, 3.8);
+        System.out.println(s);
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Student");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Ana (grade 10): 3.8";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testToString1()
+    {
+        Object[] args = {"Ben", 9, 2.5};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("toString");
+        boolean passed = getResults("Ben (grade 9): 2.5", output, "toString() with constructor arguments {\"Ben\", 9, 2.5}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <exercise label="u3_ct_wc1-ct-static" xml:id="u3_ct_wc1-ct-static">
+    <statement>
+      <p>
+        Write a constructor for the <c>Student</c> class. It takes a <c>name</c> (a <c>String</c>), a <c>grade</c> (an <c>int</c>), and a <c>gpa</c> (a <c>double</c>), in that order, and sets the matching instance variables. Then write a <c>toString</c> method that returns the student's information in the form <c>name (grade grade): gpa</c>, for example <c>Ana (grade 10): 3.8</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc1-ct-static-prog" xml:id="u3_ct_wc1-ct-static-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc1">
+      <code>
+public class Student
+{
+    private String name;
+    private int grade;
+    private double gpa;
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        Student s = new Student("Ana", 10, 3.8);
+        System.out.println(s);
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Student");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "Ana (grade 10): 3.8";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testToString1()
+    {
+        Object[] args = {"Ben", 9, 2.5};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("toString");
+        boolean passed = getResults("Ben (grade 9): 2.5", output, "toString() with constructor arguments {\"Ben\", 9, 2.5}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <activity label="u3_ct_muc1" xml:id="u3_ct_muc1" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        Write a constructor for the <c>Student</c> class. It takes a <c>name</c> (a <c>String</c>), a <c>grade</c> (an <c>int</c>), and a <c>gpa</c> (a <c>double</c>), in that order, and sets the matching instance variables. Then write a <c>toString</c> method that returns the student's information in the form <c>name (grade grade): gpa</c>, for example <c>Ana (grade 10): 3.8</c>.
+        The blocks below are mixed up and include extra blocks that are not
+        needed. Drag the needed blocks from the left and put them in order on
+        the right, with the right indentation. Click Check to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block>
+        <cline>public class Student</cline>
+        <cline>{</cline>
+      </block>
+
+      <block>
+        <cline>    private String name;</cline>
+        <cline>    private int grade;</cline>
+        <cline>    private double gpa;</cline>
+      </block>
+
+      <block>
+        <cline>    public Student(String name, int grade, double gpa)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        this.name = name;</cline>
+          <cline>        this.grade = grade;</cline>
+          <cline>        this.gpa = gpa;</cline>
+        </choice>
+
+        <choice>
+          <cline>        name = name;</cline>
+          <cline>        this.grade = grade;</cline>
+          <cline>        this.gpa = gpa;</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>    } // end constructor</cline>
+      </block>
+
+      <block>
+        <cline>    public String toString()</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        return name + " (grade " + grade + "): " + gpa;</cline>
+        </choice>
+
+        <choice>
+          <cline>        System.out.println(name + " (grade " + grade + "): " + gpa);</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>    } // end toString</cline>
+      </block>
+
+      <block>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        Student s = new Student("Ana", 10, 3.8);</cline>
+        <cline>        System.out.println(s);</cline>
+      </block>
+
+      <block>
+        <cline>    } // end main</cline>
+      </block>
+
+      <block>
+        <cline>} // end class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <exercise label="u3_ct_wc2" xml:id="u3_ct_wc2">
+    <statement>
+      <p>
+        Write a <c>getPrice</c> method for the <c>Ticket</c> class. It returns <c>5</c> if <c>age</c> is under 12, and <c>10</c> otherwise.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc2-prog" xml:id="u3_ct_wc2-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc2">
+      <code>
+public class Ticket
+{
+    private int age;
+
+    public Ticket(int age)
+    {
+        this.age = age;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        System.out.println(new Ticket(8).getPrice());
+        System.out.println(new Ticket(12).getPrice());
+        System.out.println(new Ticket(40).getPrice());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Ticket");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5\n10\n10";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetPrice1()
+    {
+        Object[] args = {11};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getPrice");
+        boolean passed = getResults("5", output, "getPrice() with constructor arguments {11}");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetPrice2()
+    {
+        Object[] args = {65};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getPrice");
+        boolean passed = getResults("10", output, "getPrice() with constructor arguments {65}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <exercise label="u3_ct_wc2-ct-static" xml:id="u3_ct_wc2-ct-static">
+    <statement>
+      <p>
+        Write a <c>getPrice</c> method for the <c>Ticket</c> class. It returns <c>5</c> if <c>age</c> is under 12, and <c>10</c> otherwise.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc2-ct-static-prog" xml:id="u3_ct_wc2-ct-static-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc2">
+      <code>
+public class Ticket
+{
+    private int age;
+
+    public Ticket(int age)
+    {
+        this.age = age;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        System.out.println(new Ticket(8).getPrice());
+        System.out.println(new Ticket(12).getPrice());
+        System.out.println(new Ticket(40).getPrice());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Ticket");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5\n10\n10";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetPrice1()
+    {
+        Object[] args = {11};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getPrice");
+        boolean passed = getResults("5", output, "getPrice() with constructor arguments {11}");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetPrice2()
+    {
+        Object[] args = {65};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getPrice");
+        boolean passed = getResults("10", output, "getPrice() with constructor arguments {65}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <activity label="u3_ct_muc2" xml:id="u3_ct_muc2" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        Write a <c>getPrice</c> method for the <c>Ticket</c> class. It returns <c>5</c> if <c>age</c> is under 12, and <c>10</c> otherwise.
+        The blocks below are mixed up and include extra blocks that are not
+        needed. Drag the needed blocks from the left and put them in order on
+        the right, with the right indentation. Click Check to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block>
+        <cline>public class Ticket</cline>
+        <cline>{</cline>
+      </block>
+
+      <block>
+        <cline>    private int age;</cline>
+      </block>
+
+      <block>
+        <cline>    public Ticket(int age)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        this.age = age;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end constructor</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>    public int getPrice()</cline>
+          <cline>    {</cline>
+        </choice>
+
+        <choice>
+          <cline>    public void getPrice()</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        if (age &lt; 12)</cline>
+          <cline>        {</cline>
+        </choice>
+
+        <choice>
+          <cline>        if (age &lt;= 12)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>            return 5;</cline>
+      </block>
+
+      <block>
+        <cline>        } // end if</cline>
+      </block>
+
+      <block>
+        <cline>        return 10;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end getPrice</cline>
+      </block>
+
+      <block>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        System.out.println(new Ticket(8).getPrice());</cline>
+        <cline>        System.out.println(new Ticket(12).getPrice());</cline>
+        <cline>        System.out.println(new Ticket(40).getPrice());</cline>
+      </block>
+
+      <block>
+        <cline>    } // end main</cline>
+      </block>
+
+      <block>
+        <cline>} // end class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <exercise label="u3_ct_wc3" xml:id="u3_ct_wc3">
+    <statement>
+      <p>
+        Write a <c>withdraw</c> method for the <c>BankAccount</c> class. It takes an <c>int</c> <c>amount</c>. If the account has at least that much money, subtract <c>amount</c> from <c>balance</c>. Otherwise, leave <c>balance</c> unchanged.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc3-prog" xml:id="u3_ct_wc3-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc3">
+      <code>
+public class BankAccount
+{
+    private int balance;
+
+    public BankAccount(int balance)
+    {
+        this.balance = balance;
+    }
+
+    public int getBalance()
+    {
+        return balance;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        BankAccount acct = new BankAccount(100);
+        acct.withdraw(30);
+        System.out.println(acct.getBalance());
+        acct.withdraw(200);
+        System.out.println(acct.getBalance());
+        acct.withdraw(70);
+        System.out.println(acct.getBalance());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("BankAccount");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "70\n70\n0";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <exercise label="u3_ct_wc3-ct-static" xml:id="u3_ct_wc3-ct-static">
+    <statement>
+      <p>
+        Write a <c>withdraw</c> method for the <c>BankAccount</c> class. It takes an <c>int</c> <c>amount</c>. If the account has at least that much money, subtract <c>amount</c> from <c>balance</c>. Otherwise, leave <c>balance</c> unchanged.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc3-ct-static-prog" xml:id="u3_ct_wc3-ct-static-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc3">
+      <code>
+public class BankAccount
+{
+    private int balance;
+
+    public BankAccount(int balance)
+    {
+        this.balance = balance;
+    }
+
+    public int getBalance()
+    {
+        return balance;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        BankAccount acct = new BankAccount(100);
+        acct.withdraw(30);
+        System.out.println(acct.getBalance());
+        acct.withdraw(200);
+        System.out.println(acct.getBalance());
+        acct.withdraw(70);
+        System.out.println(acct.getBalance());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("BankAccount");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "70\n70\n0";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <activity label="u3_ct_muc3" xml:id="u3_ct_muc3" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        Write a <c>withdraw</c> method for the <c>BankAccount</c> class. It takes an <c>int</c> <c>amount</c>. If the account has at least that much money, subtract <c>amount</c> from <c>balance</c>. Otherwise, leave <c>balance</c> unchanged.
+        The blocks below are mixed up and include extra blocks that are not
+        needed. Drag the needed blocks from the left and put them in order on
+        the right, with the right indentation. Click Check to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block>
+        <cline>public class BankAccount</cline>
+        <cline>{</cline>
+      </block>
+
+      <block>
+        <cline>    private int balance;</cline>
+      </block>
+
+      <block>
+        <cline>    public BankAccount(int balance)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        this.balance = balance;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end constructor</cline>
+      </block>
+
+      <block>
+        <cline>    public int getBalance()</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        return balance;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end getBalance</cline>
+      </block>
+
+      <block>
+        <cline>    public void withdraw(int amount)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        if (amount &lt;= balance)</cline>
+          <cline>        {</cline>
+        </choice>
+
+        <choice>
+          <cline>        if (amount &lt; balance)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>            balance = balance - amount;</cline>
+        </choice>
+
+        <choice>
+          <cline>            balance = amount - balance;</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>        } // end if</cline>
+      </block>
+
+      <block>
+        <cline>    } // end withdraw</cline>
+      </block>
+
+      <block>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        BankAccount acct = new BankAccount(100);</cline>
+        <cline>        acct.withdraw(30);</cline>
+        <cline>        System.out.println(acct.getBalance());</cline>
+        <cline>        acct.withdraw(200);</cline>
+        <cline>        System.out.println(acct.getBalance());</cline>
+        <cline>        acct.withdraw(70);</cline>
+        <cline>        System.out.println(acct.getBalance());</cline>
+      </block>
+
+      <block>
+        <cline>    } // end main</cline>
+      </block>
+
+      <block>
+        <cline>} // end class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <exercise label="u3_ct_wc4" xml:id="u3_ct_wc4">
+    <statement>
+      <p>
+        Write two methods for the <c>Rectangle</c> class. <c>getArea</c> returns <c>width</c> times <c>height</c>. <c>isLargerThan</c> takes another <c>Rectangle</c> and returns <c>true</c> if this rectangle's area is larger than the other rectangle's area.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc4-prog" xml:id="u3_ct_wc4-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc4">
+      <code>
+public class Rectangle
+{
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        Rectangle a = new Rectangle(4, 5);
+        Rectangle b = new Rectangle(3, 6);
+        System.out.println(a.getArea());
+        System.out.println(a.isLargerThan(b));
+        System.out.println(b.isLargerThan(a));
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Rectangle");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "20\ntrue\nfalse";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetArea1()
+    {
+        Object[] args = {2, 7};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getArea");
+        boolean passed = getResults("14", output, "getArea() with constructor arguments {2, 7}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <exercise label="u3_ct_wc4-ct-static" xml:id="u3_ct_wc4-ct-static">
+    <statement>
+      <p>
+        Write two methods for the <c>Rectangle</c> class. <c>getArea</c> returns <c>width</c> times <c>height</c>. <c>isLargerThan</c> takes another <c>Rectangle</c> and returns <c>true</c> if this rectangle's area is larger than the other rectangle's area.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc4-ct-static-prog" xml:id="u3_ct_wc4-ct-static-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc4">
+      <code>
+public class Rectangle
+{
+    private int width;
+    private int height;
+
+    public Rectangle(int width, int height)
+    {
+        this.width = width;
+        this.height = height;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        Rectangle a = new Rectangle(4, 5);
+        Rectangle b = new Rectangle(3, 6);
+        System.out.println(a.getArea());
+        System.out.println(a.isLargerThan(b));
+        System.out.println(b.isLargerThan(a));
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("Rectangle");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "20\ntrue\nfalse";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+
+    @Test
+    public void testGetArea1()
+    {
+        Object[] args = {2, 7};
+        setDefaultValues(args);
+        String output = "" + getMethodOutput("getArea");
+        boolean passed = getResults("14", output, "getArea() with constructor arguments {2, 7}");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <activity label="u3_ct_muc4" xml:id="u3_ct_muc4" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        Write two methods for the <c>Rectangle</c> class. <c>getArea</c> returns <c>width</c> times <c>height</c>. <c>isLargerThan</c> takes another <c>Rectangle</c> and returns <c>true</c> if this rectangle's area is larger than the other rectangle's area.
+        The blocks below are mixed up and include extra blocks that are not
+        needed. Drag the needed blocks from the left and put them in order on
+        the right, with the right indentation. Click Check to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block>
+        <cline>public class Rectangle</cline>
+        <cline>{</cline>
+      </block>
+
+      <block>
+        <cline>    private int width;</cline>
+        <cline>    private int height;</cline>
+      </block>
+
+      <block>
+        <cline>    public Rectangle(int width, int height)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        this.width = width;</cline>
+        <cline>        this.height = height;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end constructor</cline>
+      </block>
+
+      <block>
+        <cline>    public int getArea()</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        return width * height;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end getArea</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>    public boolean isLargerThan(Rectangle other)</cline>
+          <cline>    {</cline>
+        </choice>
+
+        <choice>
+          <cline>    public boolean isLargerThan()</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        return this.getArea() &gt; other.getArea();</cline>
+        </choice>
+
+        <choice>
+          <cline>        return this.getArea() &gt; other;</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>    } // end isLargerThan</cline>
+      </block>
+
+      <block>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        Rectangle a = new Rectangle(4, 5);</cline>
+        <cline>        Rectangle b = new Rectangle(3, 6);</cline>
+        <cline>        System.out.println(a.getArea());</cline>
+        <cline>        System.out.println(a.isLargerThan(b));</cline>
+        <cline>        System.out.println(b.isLargerThan(a));</cline>
+      </block>
+
+      <block>
+        <cline>    } // end main</cline>
+      </block>
+
+      <block>
+        <cline>} // end class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <exercise label="u3_ct_wc5" xml:id="u3_ct_wc5">
+    <statement>
+      <p>
+        Every <c>PizzaOrder</c> shares the same price per slice, stored in the static variable <c>pricePerSlice</c>. Write a static method <c>setPricePerSlice</c> that takes a <c>double</c> <c>price</c> and changes <c>pricePerSlice</c> to it. Then write a <c>getTotal</c> method that returns the order's total cost: <c>slices</c> times <c>pricePerSlice</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc5-prog" xml:id="u3_ct_wc5-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc5">
+      <code>
+public class PizzaOrder
+{
+    private int slices;
+    private static double pricePerSlice = 2.0;
+
+    public PizzaOrder(int slices)
+    {
+        this.slices = slices;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        PizzaOrder small = new PizzaOrder(2);
+        PizzaOrder large = new PizzaOrder(6);
+        PizzaOrder.setPricePerSlice(2.5);
+        System.out.println(small.getTotal());
+        System.out.println(large.getTotal());
+        PizzaOrder.setPricePerSlice(3.0);
+        System.out.println(small.getTotal());
+        System.out.println(large.getTotal());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("PizzaOrder");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5.0\n15.0\n6.0\n18.0";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <exercise label="u3_ct_wc5-ct-static" xml:id="u3_ct_wc5-ct-static">
+    <statement>
+      <p>
+        Every <c>PizzaOrder</c> shares the same price per slice, stored in the static variable <c>pricePerSlice</c>. Write a static method <c>setPricePerSlice</c> that takes a <c>double</c> <c>price</c> and changes <c>pricePerSlice</c> to it. Then write a <c>getTotal</c> method that returns the order's total cost: <c>slices</c> times <c>pricePerSlice</c>.
+      </p>
+    </statement>
+
+    <program interactive="activecode" language="java" label="u3_ct_wc5-ct-static-prog" xml:id="u3_ct_wc5-ct-static-prog"
+             codetailor="all" codetailor-fallback="u3_ct_muc5">
+      <code>
+public class PizzaOrder
+{
+    private int slices;
+    private static double pricePerSlice = 2.0;
+
+    public PizzaOrder(int slices)
+    {
+        this.slices = slices;
+    }
+
+    // YOUR CODE HERE
+
+    public static void main(String[] args)
+    {
+        PizzaOrder small = new PizzaOrder(2);
+        PizzaOrder large = new PizzaOrder(6);
+        PizzaOrder.setPricePerSlice(2.5);
+        System.out.println(small.getTotal());
+        System.out.println(large.getTotal());
+        PizzaOrder.setPricePerSlice(3.0);
+        System.out.println(small.getTotal());
+        System.out.println(large.getTotal());
+    }
+}
+      </code>
+      <tests>
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+import java.io.*;
+
+public class RunestoneTests extends CodeTestHelper
+{
+    public RunestoneTests()
+    {
+        super("PizzaOrder");
+    }
+
+    @Test
+    public void testMain()
+    {
+        String output = getMethodOutput("main");
+        String expect = "5.0\n15.0\n6.0\n18.0";
+        boolean passed = getResults(expect, output, "Expected output from main");
+        assertTrue(passed);
+    }
+}
+
+      </tests>
+    </program>
+  </exercise>
+
+  <activity label="u3_ct_muc5" xml:id="u3_ct_muc5" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        Every <c>PizzaOrder</c> shares the same price per slice, stored in the static variable <c>pricePerSlice</c>. Write a static method <c>setPricePerSlice</c> that takes a <c>double</c> <c>price</c> and changes <c>pricePerSlice</c> to it. Then write a <c>getTotal</c> method that returns the order's total cost: <c>slices</c> times <c>pricePerSlice</c>.
+        The blocks below are mixed up and include extra blocks that are not
+        needed. Drag the needed blocks from the left and put them in order on
+        the right, with the right indentation. Click Check to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block>
+        <cline>public class PizzaOrder</cline>
+        <cline>{</cline>
+      </block>
+
+      <block>
+        <cline>    private int slices;</cline>
+        <cline>    private static double pricePerSlice = 2.0;</cline>
+      </block>
+
+      <block>
+        <cline>    public PizzaOrder(int slices)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        this.slices = slices;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end constructor</cline>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>    public static void setPricePerSlice(double price)</cline>
+          <cline>    {</cline>
+        </choice>
+
+        <choice>
+          <cline>    public void setPricePerSlice(double price)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block>
+        <choice correct="yes">
+          <cline>        pricePerSlice = price;</cline>
+        </choice>
+
+        <choice>
+          <cline>        this.pricePerSlice = price;</cline>
+        </choice>
+      </block>
+
+      <block>
+        <cline>    } // end setPricePerSlice</cline>
+      </block>
+
+      <block>
+        <cline>    public double getTotal()</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        return slices * pricePerSlice;</cline>
+      </block>
+
+      <block>
+        <cline>    } // end getTotal</cline>
+      </block>
+
+      <block>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block>
+        <cline>        PizzaOrder small = new PizzaOrder(2);</cline>
+        <cline>        PizzaOrder large = new PizzaOrder(6);</cline>
+        <cline>        PizzaOrder.setPricePerSlice(2.5);</cline>
+        <cline>        System.out.println(small.getTotal());</cline>
+        <cline>        System.out.println(large.getTotal());</cline>
+        <cline>        PizzaOrder.setPricePerSlice(3.0);</cline>
+        <cline>        System.out.println(small.getTotal());</cline>
+        <cline>        System.out.println(large.getTotal());</cline>
+      </block>
+
+      <block>
+        <cline>    } // end main</cline>
+      </block>
+
+      <block>
+        <cline>} // end class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+</section>

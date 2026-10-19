@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="unit3-practice-toggle-code">
+  <title>Toggle Code Practice 3 (3.4-3.9)</title>
+
+  <p>
+    Write your own solution for each problem below and click Run to check it.
+    If you get stuck, click the <em>Get Help</em> button for a mixed up code
+    puzzle that can help you finish.
+  </p>
+
+  <exercise label="u3-toggle1">
+    <title>Constructors and toString</title>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct-1"
+            questions="u3_ct_wc1 u3_ct_wc1-ct-static"/>
+  </exercise>
+
+  <exercise label="u3-toggle2">
+    <title>Methods that return a value</title>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct-2"
+            questions="u3_ct_wc2 u3_ct_wc2-ct-static"/>
+  </exercise>
+
+  <exercise label="u3-toggle3">
+    <title>Methods that change an object</title>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct-3"
+            questions="u3_ct_wc3 u3_ct_wc3-ct-static"/>
+  </exercise>
+
+  <exercise label="u3-toggle4">
+    <title>Objects as parameters and this</title>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct-4"
+            questions="u3_ct_wc4 u3_ct_wc4-ct-static"/>
+  </exercise>
+
+  <exercise label="u3-toggle5">
+    <title>Static variables and methods</title>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct-5"
+            questions="u3_ct_wc5 u3_ct_wc5-ct-static"/>
+  </exercise>
+</section>
