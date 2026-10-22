@@ -3,6 +3,10 @@
 <section xml:id="unit3-practice-toggle-code">
   <title>Toggle Code Practice 3 (3.4-3.9)</title>
 
+  <!-- CodeTailor study: one experiment name (csa-u3-ct) puts each student in   -->
+  <!-- one group for the whole page. The question order alternates, so group 0 -->
+  <!-- gets personalized help on problems 1, 3, 5 and static help on 2, 4;     -->
+  <!-- group 1 gets the reverse. Every student sees both kinds of help.        -->
   <p>
     Write your own solution for each problem below and click Run to check it.
     If you get stuck, click the <em>Get Help</em> button for a mixed up code
@@ -11,31 +15,121 @@
 
   <exercise label="u3-toggle1">
     <title>Constructors and toString</title>
-    <select grade="ab-experiment" experiment-name="csa-u3-ct-1"
+    <select grade="ab-experiment" experiment-name="csa-u3-ct"
             questions="u3_ct_wc1 u3_ct_wc1-ct-static"/>
   </exercise>
 
+  <query label="u3-ct-1-cl-poll">
+    <statement>
+      <p>
+        How closely does the provided solution in <q>Get Help</q> align with
+        your initial idea for a solution?
+      </p>
+    </statement>
+    <choices>
+      <choice><p>1 (very low alignment)</p></choice>
+      <choice><p>2</p></choice>
+      <choice><p>3</p></choice>
+      <choice><p>4</p></choice>
+      <choice><p>5 (very high alignment)</p></choice>
+      <choice><p>I did not have an initial idea for a solution before getting help</p></choice>
+      <choice><p>I did not use <q>Get Help</q> for this problem</p></choice>
+    </choices>
+  </query>
+
   <exercise label="u3-toggle2">
     <title>Methods that return a value</title>
-    <select grade="ab-experiment" experiment-name="csa-u3-ct-2"
-            questions="u3_ct_wc2 u3_ct_wc2-ct-static"/>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct"
+            questions="u3_ct_wc2-ct-static u3_ct_wc2"/>
   </exercise>
+
+  <query label="u3-ct-2-cl-poll">
+    <statement>
+      <p>
+        How closely does the provided solution in <q>Get Help</q> align with
+        your initial idea for a solution?
+      </p>
+    </statement>
+    <choices>
+      <choice><p>1 (very low alignment)</p></choice>
+      <choice><p>2</p></choice>
+      <choice><p>3</p></choice>
+      <choice><p>4</p></choice>
+      <choice><p>5 (very high alignment)</p></choice>
+      <choice><p>I did not have an initial idea for a solution before getting help</p></choice>
+      <choice><p>I did not use <q>Get Help</q> for this problem</p></choice>
+    </choices>
+  </query>
 
   <exercise label="u3-toggle3">
     <title>Methods that change an object</title>
-    <select grade="ab-experiment" experiment-name="csa-u3-ct-3"
+    <select grade="ab-experiment" experiment-name="csa-u3-ct"
             questions="u3_ct_wc3 u3_ct_wc3-ct-static"/>
   </exercise>
 
+  <query label="u3-ct-3-cl-poll">
+    <statement>
+      <p>
+        How closely does the provided solution in <q>Get Help</q> align with
+        your initial idea for a solution?
+      </p>
+    </statement>
+    <choices>
+      <choice><p>1 (very low alignment)</p></choice>
+      <choice><p>2</p></choice>
+      <choice><p>3</p></choice>
+      <choice><p>4</p></choice>
+      <choice><p>5 (very high alignment)</p></choice>
+      <choice><p>I did not have an initial idea for a solution before getting help</p></choice>
+      <choice><p>I did not use <q>Get Help</q> for this problem</p></choice>
+    </choices>
+  </query>
+
   <exercise label="u3-toggle4">
     <title>Objects as parameters and this</title>
-    <select grade="ab-experiment" experiment-name="csa-u3-ct-4"
-            questions="u3_ct_wc4 u3_ct_wc4-ct-static"/>
+    <select grade="ab-experiment" experiment-name="csa-u3-ct"
+            questions="u3_ct_wc4-ct-static u3_ct_wc4"/>
   </exercise>
+
+  <query label="u3-ct-4-cl-poll">
+    <statement>
+      <p>
+        How closely does the provided solution in <q>Get Help</q> align with
+        your initial idea for a solution?
+      </p>
+    </statement>
+    <choices>
+      <choice><p>1 (very low alignment)</p></choice>
+      <choice><p>2</p></choice>
+      <choice><p>3</p></choice>
+      <choice><p>4</p></choice>
+      <choice><p>5 (very high alignment)</p></choice>
+      <choice><p>I did not have an initial idea for a solution before getting help</p></choice>
+      <choice><p>I did not use <q>Get Help</q> for this problem</p></choice>
+    </choices>
+  </query>
 
   <exercise label="u3-toggle5">
     <title>Static variables and methods</title>
-    <select grade="ab-experiment" experiment-name="csa-u3-ct-5"
+    <select grade="ab-experiment" experiment-name="csa-u3-ct"
             questions="u3_ct_wc5 u3_ct_wc5-ct-static"/>
   </exercise>
+
+  <query label="u3-ct-5-cl-poll">
+    <statement>
+      <p>
+        How closely does the provided solution in <q>Get Help</q> align with
+        your initial idea for a solution?
+      </p>
+    </statement>
+    <choices>
+      <choice><p>1 (very low alignment)</p></choice>
+      <choice><p>2</p></choice>
+      <choice><p>3</p></choice>
+      <choice><p>4</p></choice>
+      <choice><p>5 (very high alignment)</p></choice>
+      <choice><p>I did not have an initial idea for a solution before getting help</p></choice>
+      <choice><p>I did not use <q>Get Help</q> for this problem</p></choice>
+    </choices>
+  </query>
 </section>
