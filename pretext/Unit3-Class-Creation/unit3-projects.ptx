@@ -695,7 +695,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <row>
 <cell>p1.getAverageScore();</cell>
-<cell>100</cell>
+<cell>100.0</cell>
 <cell>The average score is 200 points and 2 games have been played.</cell>
 </row>
 
@@ -706,6 +706,25 @@ public class RunestoneTests extends CodeTestHelper
 </row>
 
 <row>
+<cell>p1.completeGame(50);</cell>
+<cell></cell>
+<cell>The player has completed 3 games and has 250 total points.</cell>
+</row>
+
+<row>
+<cell>p1.getAverageScore();</cell>
+<cell>83.33333333333333</cell>
+<cell>The average score is 250 points and 3 games have been played.</cell>
+</row>
+
+
+<row>
+<cell>p1.getRank();</cell>
+<cell>"Intermediate"</cell>
+<cell>The average score is between 50 (inclusive) and 100.</cell>
+</row>
+
+<row>
 <cell>p1.isActive();</cell>
 <cell>true</cell>
 <cell>The player has completed fewer than 20 games.</cell>
@@ -713,7 +732,7 @@ public class RunestoneTests extends CodeTestHelper
 
 <row>
 <cell>p1.toString();</cell>
-<cell>"DragonMaster: Games Played = 2, Average Score = 100.0, Rank = Advanced"</cell>
+<cell>"DragonMaster: Games Played = 3, Average Score = 83.33333333333333, Rank = Advanced"</cell>
 <cell>Returns a String with the player's current information.</cell>
 </row>
 
@@ -739,6 +758,9 @@ public class RunestoneTests extends CodeTestHelper
         p1.getAverageScore();
         p1.completeGame(75);
         p1.completeGame(125);
+        System.out.println(p1.getAverageScore());
+        System.out.println(p1.getRank());
+        p1.completeGame(50);
         System.out.println(p1.getAverageScore());
         System.out.println(p1.getRank());
         System.out.println(p1.isActive());
