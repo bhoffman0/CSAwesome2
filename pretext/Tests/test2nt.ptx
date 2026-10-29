@@ -55,7 +55,7 @@ list.set(2, 7);
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>[4, 7, 9, 5]</p>
@@ -65,7 +65,7 @@ list.set(2, 7);
           <p>Remember that in ArrayLists, indexing starts at 0, not 1.</p>
         </feedback>
       </choice>
-
+-->
       <choice correct="yes">
         <statement>
           <p>[6, 4, 7, 5]</p>
@@ -149,7 +149,7 @@ list.set(2, 7);
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>2000</p>
@@ -164,7 +164,7 @@ list.set(2, 7);
           </p>
         </feedback>
       </choice>
-
+-->
       <choice correct="yes">
         <statement>
           <p>11</p>
@@ -221,6 +221,7 @@ III. int[][] arr = new int [7][9];
     </statement>
 
      <choices randomize="yes">
+<!--
       <choice>
         <statement>
           <p>I only</p>
@@ -233,7 +234,7 @@ III. int[][] arr = new int [7][9];
           </p>
         </feedback>
       </choice>
-
+-->
       <choice correct="yes">
         <statement>
           <p>II only</p>
@@ -336,7 +337,7 @@ public void printString(String s)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>andwichandwichndwichdwichwichichchh</p>
@@ -352,7 +353,7 @@ public void printString(String s)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>hchichwichdwichndwichandwich</p>
@@ -471,7 +472,7 @@ III. getName()
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>I, II, and III</p>
@@ -484,6 +485,7 @@ III. getName()
           </p>
         </feedback>
       </choice>
+      -->
     </choices>
   </activity>
 
@@ -516,6 +518,7 @@ III. for (int i = 0; i &lt;= 8; i +=2)
     </statement>
 
      <choices randomize="yes">
+<!--
       <choice>
         <statement>
           <p>I only</p>
@@ -528,7 +531,7 @@ III. for (int i = 0; i &lt;= 8; i +=2)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>II only</p>
@@ -607,6 +610,7 @@ public int mystery(int x, int y)
     </statement>
 
      <choices randomize="yes">
+<!--
       <choice>
         <statement>
           <p>y is greater than 1</p>
@@ -620,7 +624,7 @@ public int mystery(int x, int y)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice correct="yes">
         <statement>
           <p>y is less than or equal to 0</p>
@@ -718,7 +722,7 @@ public static void showMe(int arg)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>0</p>
@@ -732,7 +736,7 @@ public static void showMe(int arg)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>10 9 8 7 6 5 4 3 2 1</p>
@@ -840,7 +844,7 @@ System.out.println(sum);
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>36</p>
@@ -854,7 +858,7 @@ System.out.println(sum);
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>10</p>
@@ -916,6 +920,7 @@ while (col &lt; values[0].length)
     </statement>
 
      <choices randomize="yes">
+      <!--
       <choice>
         <statement>
           <p>I only</p>
@@ -928,7 +933,7 @@ while (col &lt; values[0].length)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>II only</p>
@@ -1015,7 +1020,7 @@ while (col &lt; values[0].length)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>(int) (Math.random() + 1 * 50)</p>
@@ -1030,7 +1035,7 @@ while (col &lt; values[0].length)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>(int) Math.random() * 50</p>
@@ -1082,6 +1087,7 @@ public static int mystery(int num)
     </statement>
 
      <choices randomize="yes">
+      <!--
       <choice>
         <statement>
           <p>The method will produce an infinite loop.</p>
@@ -1095,7 +1101,7 @@ public static int mystery(int num)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>19</p>
@@ -1218,7 +1224,7 @@ public static int mystery(int num)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>[4, 6, 7, 8, 12, 13, 29]</p>
@@ -1230,7 +1236,7 @@ public static int mystery(int num)
             seven iterations to reach this state.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
     </choices>
   </activity>
 
@@ -1296,7 +1302,7 @@ public void changeArray(int[] data)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>This method creates an IndexOutOfBounds exception.</p>
@@ -1310,7 +1316,7 @@ public void changeArray(int[] data)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice correct="yes">
         <statement>
           <p>[35, 33, 25, 15, 6]</p>
@@ -1356,13 +1362,13 @@ public void changeArray(int[] data)
         <feedback>
           <p>
             Use A and B to represent the expressions -- A == (x &gt; 7), B ==
-            !(y &lt; 12)Using DeMorgan's law, !(A &amp;&amp; B) is equivalent to
+            !(y &lt; 12). Using DeMorgan's law, !(A &amp;&amp; B) is equivalent to
             !A || !B. The negation of (x &gt; 7) is (x &lt;= 7), and the
             negation of !(y &lt; 12) is (y &lt; 12).
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>(x &gt; 7) || (y &gt;= 12)</p>
@@ -1370,14 +1376,14 @@ public void changeArray(int[] data)
 
         <feedback>
           <p>
-            Use A and B to represent the expressions -- A == (x &gt; 7), B ==
-            !(y &lt; 12)!(A &amp;&amp; B) is NOT equivalent to (A || B). It
+            Use A and B to represent the expressions: A == (x &gt; 7), B ==
+            !(y &lt; 12)!. (A &amp;&amp; B) is NOT equivalent to (A || B). It
             should be (!A || !B). Also, (y &gt;= 12) is equivalent to !(y &lt;
             12).
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>(x &gt; 7) &amp;&amp; (y &gt;= 12)</p>
@@ -1477,7 +1483,7 @@ if (x / 2 == 1)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>III and IV only</p>
@@ -1490,7 +1496,7 @@ if (x / 2 == 1)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>I and II only</p>
@@ -1550,6 +1556,7 @@ public int findMax(int[] arr)
     </statement>
 
      <choices randomize="yes">
+      <!--
       <choice>
         <statement>
           <p>This method will work correctly for all arrays.</p>
@@ -1564,7 +1571,7 @@ public int findMax(int[] arr)
           </p>
         </feedback>
       </choice>
-
+-->
       <choice>
         <statement>
           <p>The first value in the array is less than 0.</p>
