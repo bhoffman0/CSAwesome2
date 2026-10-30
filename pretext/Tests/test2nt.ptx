@@ -1377,7 +1377,7 @@ public void changeArray(int[] data)
         <feedback>
           <p>
             Use A and B to represent the expressions: A == (x &gt; 7), B ==
-            !(y &lt; 12)!. (A &amp;&amp; B) is NOT equivalent to (A || B). It
+            !(y &lt; 12). !(A &amp;&amp; B) is NOT equivalent to (A || B). It
             should be (!A || !B). Also, (y &gt;= 12) is equivalent to !(y &lt;
             12).
           </p>
