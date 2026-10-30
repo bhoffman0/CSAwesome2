@@ -1309,4 +1309,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-14-searching">
+    <title>AP Practice</title>
+    <activity label="apq-4-14-searching-1">
+      <statement>
+        <p>Which search in this lesson requires the data to be in order?</p>
+        <p>Choose the accurate statement.</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-14-searching-1-a">
+            <p>Linear search, because it starts at the middle.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-1-a">
+            <p>Linear search can start at the beginning of unsorted data.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-14-searching-1-b">
+            <p>Binary search, because it uses the middle of a sorted array.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-1-b">
+            <p>The lesson says binary search requires the values to be sorted.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-14-searching-1-c">
+            <p>Both, because every search sorts the array first.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-1-c">
+            <p>The lesson does not sort the data as part of linear search.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-14-searching-1-d">
+            <p>Neither, because both searches ignore order.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-1-d">
+            <p>Binary search eliminates half only when the values are ordered.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-14-searching-2">
+      <statement>
+        <p>Linear search looks for a value that is not in the array.</p>
+        <p>What does it have to do?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-14-searching-2-a">
+            <p>Check only the middle element.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-2-a">
+            <p>The middle check is binary search.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-14-searching-2-b">
+            <p>Check elements until it has looked through the array.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-2-b">
+            <p>A missing value is known only after the sequential check finishes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-14-searching-2-c">
+            <p>Stop after the first element that is larger.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-2-c">
+            <p>Stopping early that way requires sorted data and is not linear search.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-14-searching-2-d">
+            <p>Reverse the array and stop.</p>
+          </statement>
+          <feedback id="apq-4-14-searching-2-d">
+            <p>Reversing is not the search.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

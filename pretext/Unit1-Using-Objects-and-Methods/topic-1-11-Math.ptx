@@ -13,7 +13,7 @@
     <p>
       Games would be boring if the same thing happened each time you played the
       game. Random numbers can be used in games to generate different outcomes
-      each time the game is played. In Java, the <c>Math.random()</c> method to
+      each time the game is played. In Java, the <c>Math.random()</c> method
       is used to generate a random number.
     </p>
 
@@ -1359,4 +1359,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-1-11-Math">
+    <title>AP Practice</title>
+    <activity label="apq-1-11-Math-1">
+      <statement>
+        <p>Consider the following expression.</p>
+        <p>Which values can (int) (Math.random() * 10) produce?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-1-11-Math-1-a">
+            <p>Every integer from 1 through 10</p>
+          </statement>
+          <feedback id="apq-1-11-Math-1-a">
+            <p>Multiplying by 10 and casting does not start at 1 or include 10.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-1-11-Math-1-b">
+            <p>Every integer from 0 through 9</p>
+          </statement>
+          <feedback id="apq-1-11-Math-1-b">
+            <p>Math.random() is from 0 inclusive to 1 exclusive, so the cast stops at 9.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-11-Math-1-c">
+            <p>Every integer from 0 through 10</p>
+          </statement>
+          <feedback id="apq-1-11-Math-1-c">
+            <p>The result of Math.random() is never 1, so 10 is not produced.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-11-Math-1-d">
+            <p>Every real number from 0 up to but not including 10</p>
+          </statement>
+          <feedback id="apq-1-11-Math-1-d">
+            <p>The (int) cast removes the fraction.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-1-11-Math-2">
+      <statement>
+        <p>Consider the following expression.</p>
+        <p>What does Math.pow(2, 3) return?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-1-11-Math-2-a">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-1-11-Math-2-a">
+            <p>pow raises 2 to the third power. It does not multiply 2 by 3.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-11-Math-2-b">
+            <p>8</p>
+          </statement>
+          <feedback id="apq-1-11-Math-2-b">
+            <p>The numeric result is 8, but Math.pow returns a double.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-1-11-Math-2-c">
+            <p>8.0</p>
+          </statement>
+          <feedback id="apq-1-11-Math-2-c">
+            <p>Math.pow takes two doubles and returns the double 8.0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-11-Math-2-d">
+            <p>9</p>
+          </statement>
+          <feedback id="apq-1-11-Math-2-d">
+            <p>2 to the third power is 8, not 3 squared.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

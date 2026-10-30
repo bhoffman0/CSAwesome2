@@ -120,4 +120,88 @@
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-2-data-sets">
+    <title>AP Practice</title>
+    <activity label="apq-4-2-data-sets-1">
+      <statement>
+        <p>The lesson asks how to find the average GPA in the student table.</p>
+        <p>Which algorithm matches that question?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-2-data-sets-1-a">
+            <p>Print the first GPA in the table.</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-1-a">
+            <p>The average uses every GPA, not one row.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-2-data-sets-1-b">
+            <p>Add each GPA, then divide by the number of rows.</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-1-b">
+            <p>The lesson describes that sum and that division.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-2-data-sets-1-c">
+            <p>Multiply the GPAs together.</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-1-c">
+            <p>The average is a sum divided by the count.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-2-data-sets-1-d">
+            <p>Sort the names and print the last name.</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-1-d">
+            <p>The question is about the GPA values.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-2-data-sets-2">
+      <statement>
+        <p>The school wants an honor roll of students with a GPA of 3.5 or higher.</p>
+        <p>Where does the GPA test belong?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-2-data-sets-2-a">
+            <p>Before any row is visited, using only the column titles</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-2-a">
+            <p>The GPA is in each row. The test has to see those values.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-2-data-sets-2-b">
+            <p>Inside the loop that visits each row</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-2-b">
+            <p>Each row's GPA is checked while the loop moves through the table.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-2-data-sets-2-c">
+            <p>After the average has replaced every GPA</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-2-c">
+            <p>The honor roll uses each student's own GPA, not the average.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-2-data-sets-2-d">
+            <p>Only on the last row</p>
+          </statement>
+          <feedback id="apq-4-2-data-sets-2-d">
+            <p>Every student at or above 3.5 belongs on the list.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

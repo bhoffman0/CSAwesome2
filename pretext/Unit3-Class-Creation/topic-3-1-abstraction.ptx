@@ -73,7 +73,7 @@
       For example, here is a UML class diagram for the <c>Turtle</c> class which
       includes a list of its attributes and behaviors. <term>Class
       Diagrams</term> are a way to represent the classes in a program and the
-      data and procedural abstractions found in each class. T The attributes are
+      data and procedural abstractions found in each class. The attributes are
       the instance variables and the methods are the behaviors of the class.
       (The <c>-</c> in front of the attributes indicate that they are private,
       and the <c>+</c> in front of the methods indicate that they are public.
@@ -459,4 +459,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-3-1-abstraction">
+    <title>AP Practice</title>
+    <activity label="apq-3-1-abstraction-1">
+      <statement>
+        <p>A problem statement describes the things the program must model.</p>
+        <p>Which words in that statement are the best clue to the classes?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-1-abstraction-1-a">
+            <p>Verbs</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-1-a">
+            <p>Verbs suggest behaviors. The things being modeled are the nouns.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-1-abstraction-1-b">
+            <p>Nouns</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-1-b">
+            <p>The lesson identifies classes from the nouns in the specification.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-1-abstraction-1-c">
+            <p>Numbers</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-1-c">
+            <p>A number may be an attribute. It does not name the class by itself.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-1-abstraction-1-d">
+            <p>Comments</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-1-d">
+            <p>Comments are notes. The specification's nouns name the classes.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-3-1-abstraction-2">
+      <statement>
+        <p>A UML class diagram lists attributes and behaviors.</p>
+        <p>What do the attributes represent?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="yes">
+          <statement id="apq-3-1-abstraction-2-a">
+            <p>The instance variables</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-2-a">
+            <p>The lesson says the attributes are the instance variables.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-1-abstraction-2-b">
+            <p>The methods</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-2-b">
+            <p>The methods are the behaviors, not the attributes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-1-abstraction-2-c">
+            <p>Only the public constructors</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-2-c">
+            <p>Constructors are not the attribute list.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-1-abstraction-2-d">
+            <p>The main method's local variables</p>
+          </statement>
+          <feedback id="apq-3-1-abstraction-2-d">
+            <p>Attributes belong to the class, not to one local block.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

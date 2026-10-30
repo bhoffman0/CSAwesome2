@@ -918,4 +918,88 @@ class Item
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-5-hierarchies">
+    <title>AP Practice</title>
+    <activity label="apq-5-5-hierarchies-1">
+      <statement>
+        <p>Shape is a superclass of Rectangle.</p>
+        <p>Which declaration does the lesson allow?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-5-hierarchies-1-a">
+            <p>Rectangle s = new Shape();</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-1-a">
+            <p>A superclass object is not automatically a subclass object.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-5-hierarchies-1-b">
+            <p>Shape s = new Rectangle();</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-1-b">
+            <p>A superclass reference can refer to a subclass object.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-5-hierarchies-1-c">
+            <p>Object s = new int[4];</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-1-c">
+            <p>An array creation is not the hierarchy example.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-5-hierarchies-1-d">
+            <p>Rectangle s = new Shape().Rectangle;</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-1-d">
+            <p>That is not a Java declaration.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-5-hierarchies-2">
+      <statement>
+        <p>Where is Object in the hierarchy from this lesson?</p>
+        <p>Choose the matching statement.</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-5-hierarchies-2-a">
+            <p>Object extends every class the programmer writes.</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-2-a">
+            <p>Programmer classes inherit from Object, not the other way around.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-5-hierarchies-2-b">
+            <p>Object is at the top. Every class inherits from it.</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-2-b">
+            <p>The lesson says Object is at the top of the hierarchy.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-5-hierarchies-2-c">
+            <p>Object is a subclass of Shape only.</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-2-c">
+            <p>Object is above the classes in the diagram, not under Shape.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-5-hierarchies-2-d">
+            <p>Object is used only for arrays.</p>
+          </statement>
+          <feedback id="apq-5-5-hierarchies-2-d">
+            <p>Every class in Java inherits from Object.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>
