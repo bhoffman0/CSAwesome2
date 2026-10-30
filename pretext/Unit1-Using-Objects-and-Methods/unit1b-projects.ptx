@@ -693,7 +693,7 @@ public class RunestoneTests extends CodeTestHelper {
         try {
             code = getCode();
             code = getMethodCode(code, "class RoundThings");
-            num = countOccurences(output, "System.out.print");
+            num = countOccurences(code, "System.out.print");
 
             passed = num == 0;
             output = "" + num;
