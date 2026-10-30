@@ -9,7 +9,7 @@
     These projects were created by Leigh Anne Fitz and Lisa Ferran to provide engaging, standards-aligned learning experiences for AP Computer Science A students.  The autograding tests were designed by Kate McDonnell.
 </em></p>
 <p>
-These projects are intended to promote curiosity, creativity, collaboration, and confidence as students begin their journey into computer science. We hope they make learning Java both challenging and enjoyable, and that they provide a strong foundation for the exciting topics that follow throughout the AP Computer Science A course.
+    These projects are intended to promote curiosity, creativity, collaboration, and confidence as students begin their journey into computer science. We hope they make learning Java both challenging and enjoyable, and that they provide a strong foundation for the exciting topics that follow throughout the AP Computer Science A course.
 </p>
 <p>
 Learning to program is much like learning a new language—you develop fluency by reading, writing, 
@@ -469,17 +469,6 @@ public class RunestoneTests extends CodeTestHelper {
         assertTrue(passed);
     }
 
-    private boolean matchesIgnoreWhiteSpace(String a, String b) {
-        a = a.toLowerCase().replaceAll("\\s+", "");
-        b = b.toLowerCase().replaceAll("\\s+", "");
-        return a.contains(b);
-    }
-
-    private boolean countIs(String line, String expect) {
-        String[] parts = line.trim().split("\\s+");
-        return parts[parts.length - 1].equals(expect);
-    }
-
     @Test
     public void test02() {
         String expect = "Container   Number\n" +
@@ -673,6 +662,18 @@ public class RunestoneTests extends CodeTestHelper {
 
         getResults("3 times", num + " times", "Used integer division", passed);
         assertTrue(passed);
+    }
+
+    
+    private boolean matchesIgnoreWhiteSpace(String a, String b) {
+        a = a.toLowerCase().replaceAll("\\s+", "");
+        b = b.toLowerCase().replaceAll("\\s+", "");
+        return a.contains(b);
+    }
+
+    private boolean countIs(String line, String expect) {
+        String[] parts = line.trim().split("\\s+");
+        return parts[parts.length - 1].equals(expect);
     }
 
 }
