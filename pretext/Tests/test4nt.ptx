@@ -81,7 +81,7 @@ public int minVal (int[][] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>-1</p>
         </statement>
@@ -94,7 +94,7 @@ public int minVal (int[][] arr)
             minimum value will not be found.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -190,7 +190,7 @@ public int fibonacci (int num)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>15</p>
         </statement>
@@ -201,7 +201,7 @@ public int fibonacci (int num)
             not 1.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -228,19 +228,19 @@ public int fibonacci (int num)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>(x &lt; 7) &amp;&amp; (x &lt;= 2)</p>
         </statement>
 
         <feedback>
           <p>
-            Use A and B to represent the expressions -- A becomes !(x &gt;= 7),
+            Use A and B to represent the expressions: A becomes !(x &gt;= 7),
             B becomes (x &gt; 2). ! (A &amp;&amp; B) does NOT equal A &amp;&amp;
             !B. !(x &gt;= 7) is the same as (x &lt; 7).
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -352,7 +352,7 @@ for (int i : 10)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>III only</p>
         </statement>
@@ -364,7 +364,7 @@ for (int i : 10)
             array.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -469,7 +469,7 @@ public int mysteryNum (int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>This method results in an infinite loop.</p>
         </statement>
@@ -480,7 +480,7 @@ public int mysteryNum (int n)
             greater than 1, the method will always reach its base case.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -581,7 +581,7 @@ public int binSearch(int key, int[] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>5</p>
         </statement>
@@ -593,7 +593,7 @@ public int binSearch(int key, int[] arr)
             (number of elements) iterations. log2 (8) is less than 5.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -678,7 +678,7 @@ public String numList (int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>This method will result in an infinite loop.</p>
         </statement>
@@ -690,7 +690,7 @@ public String numList (int n)
             case and the method will end.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -738,7 +738,7 @@ numbers.set(5, 5);
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>[7, 2, 1, 3, 2, 5, 9]</p>
         </statement>
@@ -751,7 +751,7 @@ numbers.set(5, 5);
             not added to the end of the array.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -810,7 +810,7 @@ public int columnSum (int col, int[][] arr)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>arr[col][i] += sum;</p>
         </statement>
@@ -821,7 +821,7 @@ public int columnSum (int col, int[][] arr)
             assignment occurs from right to left.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -917,7 +917,7 @@ public int columnSum (int col, int[][] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>[2, 4, 34, 6, 10, 13, 8, 12]</p>
         </statement>
@@ -930,7 +930,7 @@ public int columnSum (int col, int[][] arr)
             the value at the specified index in a pre-sorted array.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -1032,7 +1032,7 @@ public String wordMixer (String s)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>nninuinguinnguinenguin</p>
         </statement>
@@ -1045,7 +1045,7 @@ public String wordMixer (String s)
             method.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1118,7 +1118,7 @@ public String wordMixer (String s)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>x % y == 2</p>
         </statement>
@@ -1130,7 +1130,7 @@ public String wordMixer (String s)
             there is a remainder of 2 left after the division.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1214,7 +1214,7 @@ public String wordMixer (String s)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>100</p>
         </statement>
@@ -1226,7 +1226,7 @@ public String wordMixer (String s)
             (number of elements) iterations to perform correctly.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1306,7 +1306,7 @@ for (int i : num)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>III only</p>
         </statement>
@@ -1317,7 +1317,7 @@ for (int i : num)
             array or list.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -1422,7 +1422,7 @@ public int threes (int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>This method will result in an infinite loop.</p>
         </statement>
@@ -1433,7 +1433,7 @@ public int threes (int n)
             value of 3 will be returned.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 </section>

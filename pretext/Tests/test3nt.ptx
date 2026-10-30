@@ -69,7 +69,7 @@ public int t(int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>14</p>
         </statement>
@@ -81,7 +81,7 @@ public int t(int n)
             call is made.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -120,7 +120,7 @@ list.add(3);
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--      <choice>
         <statement>
           <p>[7, 1, 4, 8, 3]</p>
         </statement>
@@ -132,7 +132,7 @@ list.add(3);
             index, not at the end of the list.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -247,9 +247,9 @@ public int[] rowSums(int[][] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
-          <p>ans[i ][j] += arr[i][j];</p>
+          <p>ans[i][j] += arr[i][j];</p>
         </statement>
 
         <feedback>
@@ -258,7 +258,7 @@ public int[] rowSums(int[][] arr)
             indexes for an element of ans, because ans is only a 1-D array.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -388,7 +388,7 @@ public static int binSearch(int key, int[] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>5</p>
         </statement>
@@ -400,7 +400,7 @@ public static int binSearch(int key, int[] arr)
             be that the key was not found.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
     </choices>
   </activity>
 
@@ -440,7 +440,7 @@ public static String wordScramble (String str)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>"hello!"</p>
         </statement>
@@ -452,7 +452,7 @@ public static String wordScramble (String str)
             followed by the letters of the original string in reverse order.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -533,7 +533,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--      <choice>
         <statement>
           <p>I only</p>
         </statement>
@@ -544,7 +544,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
             accomplished by using a for loop or a while loop.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -656,7 +656,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>[62, 45, 30, 12, 7, 8, 10, 3]</p>
         </statement>
@@ -667,7 +667,7 @@ III. for (int i = 0; i &lt;= 100; i += 10)
             steps and try again.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -711,7 +711,7 @@ public void oddArray (int[] arr)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--      <choice>
         <statement>
           <p>arr[i] / 2 = 2</p>
         </statement>
@@ -722,7 +722,7 @@ public void oddArray (int[] arr)
             used.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -824,7 +824,7 @@ public static int numFun(int num)
           </p>
         </feedback>
       </choice>
-
+<!--
       <choice>
         <statement>
           <p>0</p>
@@ -837,7 +837,7 @@ public static int numFun(int num)
             other digits.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -923,7 +923,7 @@ return false;
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>II only</p>
         </statement>
@@ -935,7 +935,7 @@ return false;
             list[i].
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -1028,7 +1028,7 @@ return false;
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>(int) (Math.random()) * 25 + 1</p>
         </statement>
@@ -1040,7 +1040,7 @@ return false;
             0, and 0 + 1 equals 1.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice correct="yes">
         <statement>
@@ -1125,7 +1125,7 @@ return false;
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>128</p>
         </statement>
@@ -1137,7 +1137,7 @@ return false;
             find an item.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
     </choices>
   </activity>
 
@@ -1227,7 +1227,7 @@ public void printNames (String[][] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>System.out.print(row.get(x) + " ");</p>
         </statement>
@@ -1235,7 +1235,7 @@ public void printNames (String[][] arr)
         <feedback>
           <p>x is a String, not an index.</p>
         </feedback>
-      </choice>
+      </choice>-->
     </choices>
   </activity>
 
@@ -1263,19 +1263,19 @@ public void printNames (String[][] arr)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>(x &gt; 10) &amp;&amp; (x &lt;=5)</p>
         </statement>
 
         <feedback>
           <p>
-            Use A and B to represent the expressions -- A becomes (x &gt; 10), B
+            Use A and B to represent the expressions: A becomes (x &gt; 10), B
             becomes (x &lt;= 5). ! (A &amp;&amp; B) is NOT equivalent to (A
             &amp;&amp; B).
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>
@@ -1383,7 +1383,7 @@ public int mystery (int num)
         </feedback>
       </choice>
 
-      <choice>
+<!--      <choice>
         <statement>
           <p>15</p>
         </statement>
@@ -1395,7 +1395,7 @@ public int mystery (int num)
             parameter and try again.
           </p>
         </feedback>
-      </choice>
+      </choice>-->
 
       <choice>
         <statement>

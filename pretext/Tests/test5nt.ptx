@@ -36,7 +36,7 @@
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>I only</p>
         </statement>
@@ -44,7 +44,7 @@
         <feedback>
           <p>We don't know the value of z</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -119,7 +119,7 @@ public int multiply(int n)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>1</p>
         </statement>
@@ -127,7 +127,7 @@ public int multiply(int n)
         <feedback>
           <p>n != 0</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -209,7 +209,7 @@ public int multiply(int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>double x = Math.random( ) - 0.4;</p>
         </statement>
@@ -217,7 +217,7 @@ public int multiply(int n)
         <feedback>
           <p>This gives -.4 &lt;= x &lt; 6</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -270,7 +270,7 @@ public int f2(int x)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>-4</p>
         </statement>
@@ -278,7 +278,7 @@ public int f2(int x)
         <feedback>
           <p>Trace out the recursive calls. See https://tinyurl.com/AP19-Q6</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -343,7 +343,7 @@ public int f2(int x)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>
             The constructor in a subclass must use the keyword super to
@@ -356,6 +356,16 @@ public int f2(int x)
             This is true, under the hood if you don't explicitly use the 'super'
             keyword, the compiler will do it for you automatically
           </p>
+        </feedback>
+      </choice> -->
+
+      <choice>
+        <statement>
+          <p>A constructor's name must match the name of its class exactly.</p>
+        </statement>
+
+        <feedback>
+          <p>This is true.</p>
         </feedback>
       </choice>
 
@@ -382,7 +392,7 @@ public int f2(int x)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>
             If a subclass does not explicitly provide a constructor and its
@@ -398,7 +408,7 @@ public int f2(int x)
             called and it is expecting a passed in parameter
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -463,7 +473,7 @@ public int mystery(int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>32</p>
         </statement>
@@ -471,7 +481,7 @@ public int mystery(int n)
         <feedback>
           <p>Trace out the recursive calls, see https://tinyurl.com/AP19-Q10</p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -531,7 +541,7 @@ public int mystery(int n)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>III only</p>
         </statement>
@@ -542,7 +552,7 @@ public int mystery(int n)
             false
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -599,7 +609,7 @@ System.out.println(x + " " + y);
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>1 6</p>
         </statement>
@@ -610,7 +620,7 @@ System.out.println(x + " " + y);
             https://tinyurl.com/AP19-Q12
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -697,7 +707,7 @@ int result = 13 - 3 * 6 / 4 % 3
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>13</p>
         </statement>
@@ -705,7 +715,7 @@ int result = 13 - 3 * 6 / 4 % 3
         <feedback>
           <p>the %, *, and / all have the same precedence</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -749,7 +759,7 @@ for(int i = 2; i &lt;= k; i++)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>0</p>
         </statement>
@@ -757,7 +767,7 @@ for(int i = 2; i &lt;= k; i++)
         <feedback>
           <p>k &gt; 2 so will print out "SMALL"</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -771,7 +781,7 @@ for(int i = 2; i &lt;= k; i++)
 
       <choice correct="yes">
         <statement>
-          <p>k -1</p>
+          <p>k - 1</p>
         </statement>
 
         <feedback>
@@ -781,7 +791,7 @@ for(int i = 2; i &lt;= k; i++)
 
       <choice>
         <statement>
-          <p>k -2</p>
+          <p>k - 2</p>
         </statement>
 
         <feedback>
@@ -795,7 +805,7 @@ for(int i = 2; i &lt;= k; i++)
         </statement>
 
         <feedback>
-          <p>max of k -1 iterations</p>
+          <p>max of k - 1 iterations</p>
         </feedback>
       </choice>
     </choices>
@@ -848,7 +858,7 @@ public void printSomething(String str)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>It prints only the first two characters of string str</p>
         </statement>
@@ -856,7 +866,7 @@ public void printSomething(String str)
         <feedback>
           <p>there is a recursive call of a substring at each iteration</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -924,7 +934,7 @@ public static int sum(int[][] mat)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>9</p>
         </statement>
@@ -932,7 +942,7 @@ public static int sum(int[][] mat)
         <feedback>
           <p>Second for loop goes until colum &lt;= row index</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1024,7 +1034,7 @@ public static int sum(int[][] mat)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>
             Compare the first and last elements, and if the first is less than
@@ -1038,7 +1048,7 @@ public static int sum(int[][] mat)
             process
           </p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -1077,7 +1087,7 @@ public static int compute(int n)
     </statement>
 
      <choices randomize="yes">
-      <choice>
+<!--       <choice>
         <statement>
           <p>return 4 * n;</p>
         </statement>
@@ -1085,7 +1095,7 @@ public static int compute(int n)
         <feedback>
           <p>3 iterations of the loop and each loop does n^2</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1175,7 +1185,7 @@ for(int k = 4; k &lt; 10; k +=2)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>35</p>
         </statement>
@@ -1183,7 +1193,7 @@ for(int k = 4; k &lt; 10; k +=2)
         <feedback>
           <p>Outer loop does gets incremented by 2, NOT by 1</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice correct="yes">
         <statement>
@@ -1259,7 +1269,7 @@ System.out.println(x - y);
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>-2</p>
         </statement>
@@ -1267,7 +1277,7 @@ System.out.println(x - y);
         <feedback>
           <p>http://tinyurl.com/AP19-Q26</p>
         </feedback>
-      </choice>
+      </choice> -->
 
       <choice>
         <statement>
@@ -1354,7 +1364,7 @@ for(int i = 0; i &lt; 3; i++)
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>8</p>
         </statement>
@@ -1365,7 +1375,7 @@ for(int i = 0; i &lt; 3; i++)
             http://tinyurl.com/AP19-Q27
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 
@@ -1441,7 +1451,7 @@ System.out.println(s3);
         </feedback>
       </choice>
 
-      <choice>
+<!--       <choice>
         <statement>
           <p>Om</p>
         </statement>
@@ -1453,7 +1463,7 @@ System.out.println(s3);
             for the substring up to the rest of the string.
           </p>
         </feedback>
-      </choice>
+      </choice> -->
     </choices>
   </activity>
 </section>
