@@ -357,6 +357,7 @@ public class RunestoneTests extends CodeTestHelper {
         try {
             String code = getCode();
             num = countOccurences(code, "String.format(\"%.02f\"");
+            num += countOccurences(code, "String.format(\"%.2f\"");
         } catch (Exception e) {
             num = -1;
         }
@@ -475,10 +476,6 @@ public class RunestoneTests extends CodeTestHelper {
         return a.contains(b);
     }
 
-    private boolean countIs(String line, String expect) {
-        String[] parts = line.trim().split("\\s+");
-        return parts[parts.length - 1].equals(expect);
-    }
 
     @Test
     public void test02() {
