@@ -752,8 +752,7 @@ System.out.println(  highScores[index] );
     <image source="Unit4-Data-Collections/array-images/cow.jpg" width="27%" />
     <p>
       Here’s a fun String array of image filenames. The following code displays
-      an online image using an HTML tag. (Note that this just works in this
-      Active Code window which interprets HTML. In other Java IDEs you would
+      an online image using a built-in ImageHelper class. (In other Java IDEs you would
       need to use Java Swing graphics instead). Run the code and see that it
       displays images[0] which is “cow.jpg”. The images array holds 5 images.
     </p>
@@ -770,7 +769,37 @@ System.out.println(  highScores[index] );
         </p>
       </statement>
 
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="pictureLab.jar">
+        <preamble visible="no">
+class ImageHelper
+{
+    private static final String BASE_URL =
+        "https://raw.githubusercontent.com/bhoffman0/CSAwesome2/main/pretext/assets/Unit4-Data-Collections/array-images/";
+
+    public static void showImage(String filename)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(BASE_URL + filename))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + filename);
+    }
+}
+// SimplePicture needs Picture class because it returns Picture objects from some methods.
+class Picture extends SimplePicture
+{
+    /**
+     * Constructor that takes the height and width
+     * @param height the height of the desired picture
+     * @param width the width of the desired picture
+     */
+    public Picture(int height, int width)
+    {
+        // let the parent class handle this width and height
+        super(width, height);
+    }
+}
+        </preamble>
         <code>
 public class ImageEx
 {
@@ -785,15 +814,7 @@ public class ImageEx
         // Change index to see different images in the array!
         // Can you have it pick out a random image?
         int index = 0;
-        obj.printHTMLimage(images[index]);
-    }
-
-    // This method will just work in Active Code which interprets html
-    public void printHTMLimage(String filename)
-    {
-        String baseURL =
-                "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("&lt;img src=" + baseURL + filename + " width=500px /&gt;");
+        ImageHelper.showImage(images[index]);
     }
 }
         </code>
@@ -917,9 +938,8 @@ public class ImageEx
           <p>
             Print out the country name, its capital, and its language, and the
             map image for that country using the random index to access the
-            corresponding item in each parallel array. For the images, the
-            <c>printHTMLimage</c> method has been given to get the image URL
-            online and print it out as an HTML image.
+            corresponding item in each parallel array. For the images, use the built-in
+            <c>ImageHelper.showImage</c> method to show the images.
           </p>
         </li>
 
@@ -948,7 +968,37 @@ public class ImageEx
         </p>
       </statement>
 
-      <program interactive="activecode" language="java">
+      <program interactive="activecode" language="java" datafile="pictureLab.jar">
+                <preamble visible="no">
+class ImageHelper
+{
+    private static final String BASE_URL =
+        "https://raw.githubusercontent.com/bhoffman0/CSAwesome2/main/pretext/assets/Unit4-Data-Collections/array-images/";
+
+    public static void showImage(String filename)
+    {
+        SimplePicture picture = new SimplePicture();
+        if (picture.loadFromURL(BASE_URL + filename))
+            picture.show();
+        else
+            System.out.println("Could not load image: " + filename);
+    }
+}
+// SimplePicture needs Picture class because it returns Picture objects from some methods.
+class Picture extends SimplePicture
+{
+    /**
+     * Constructor that takes the height and width
+     * @param height the height of the desired picture
+     * @param width the width of the desired picture
+     */
+    public Picture(int height, int width)
+    {
+        // let the parent class handle this width and height
+        super(width, height);
+    }
+}
+        </preamble>
         <code>
 public class Countries
 {
@@ -969,20 +1019,9 @@ public class Countries
 
         // 3. Print out the info in each array using the random index
 
-        // Example of showing image files using an array called images (your array
-        // name above may be different)
-        // (this will only work in Active Code)
-        // Countries obj = new Countries();
-        // obj.printHTMLimage( images[index] );
+        // 4. Call the ImageHelper.showImage method 
+        // with an element of the images array to show the image.
 
-    }
-
-    // This method will just work in Active Code which interprets html
-    public void printHTMLimage(String filename)
-    {
-        String baseURL =
-                "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-        System.out.print("&lt;img src=" + baseURL + filename + " width=500px /&gt;");
     }
 }
         </code>
@@ -1000,31 +1039,33 @@ public class Countries
           super("Countries");
       }
 
-      @Test
-      public void test1() throws IOException
-      {
-          String output = getMethodOutput("main");
-          String expect = "Country Capital Language Image";
+     @Test
+     public void testSquareBrackets()
+     {
+        String code = getCode();
+        int count = countOccurencesRegex(code, "*[*]");
 
-          int len = expect.split(" ").length;
-
-          boolean passed = len == 4 &amp;&amp; output.contains(".jpg");
-
-          passed = getResults(expect, expect, "Did you print all the info?", passed);
-          assertTrue(passed);
-      }
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Arrays accessed with square brackets", passed);
+        assertTrue(passed);
+     }
 
       @Test
+     public void testPrintln()
+     {
+        String code = getCode();
+        int count = countOccurences(code, "println(");
+
+        boolean passed = count &gt;= 4;
+        getResults("4", count + "", "Array info printed with println", passed);
+        assertTrue(passed);
+     }
+
+     @Test
       public void test2() throws IOException
       {
-          String output = getMethodOutput("main");
-          String expect = "&lt;img src";
-
-          boolean passed = output.contains(expect);
-
-          // passed = getResults(expect + "...", output, "Did you uncomment the image code?", passed);
-          passed = getResults("image", "image", "Did you uncomment the image code?", passed);
-          assertTrue(passed);
+        boolean passed = checkCodeContains("call to ImageHelper.showImage", "ImageHelper.showImage(");
+        assertTrue(passed);
       }
 
       @Test
@@ -1071,6 +1112,12 @@ public class Countries
                           "5 x String[]", arrays + " x String[]", "Did you declare 4 String arrays? (the 5th one is main's arg)");
           assertTrue(passed);
       }
+      @Test
+     public void testRandomAdded()
+     {
+         boolean passed = checkCodeContains("Math.random to set index", "Math.random");
+         assertTrue(passed);
+     }
   }
         </tests>
       </program>

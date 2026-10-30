@@ -518,7 +518,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -543,7 +543,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -568,7 +568,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }
@@ -593,7 +593,7 @@ public class RunestoneTests extends CodeTestHelper {
                     output1 = line;
             }
 
-            passed = output1.contains(expect);
+            passed = countIs(output1, expect);
         } catch (Exception e) {
             output1 = "Error";
         }

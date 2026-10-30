@@ -38,7 +38,7 @@
       <code>
 // Calling class methods
 // ClassName.methodName();
-int x = Math.sqrt(9);
+double x = Math.sqrt(9);
 
  // If the method is in the same class,
  // you can call it with or without the class name
@@ -292,7 +292,7 @@ public class RunestoneTests extends CodeTestHelper
     </activity>
 
     <p>
-      Another common use for static variables is the keep track of a minimum or
+      Another common use for static variables is to keep track of a minimum or
       maximum value or an average of the values in a collection of objects.
     </p>
 
@@ -334,7 +334,7 @@ public class Temperature
        <choices randomize="yes">
         <choice>
           <statement id="staticTrace_opt_a">
-            <p>Max Temp: 0</p>
+            <p>Max Temp: 0.0</p>
           </statement>
 
           <feedback id="staticTrace_opt_a">
@@ -362,7 +362,7 @@ public class Temperature
 
         <choice correct="yes">
           <statement id="staticTrace_opt_c">
-            <p>Max Temp: 100</p>
+            <p>Max Temp: 100.0</p>
           </statement>
 
           <feedback id="staticTrace_opt_c">
@@ -375,7 +375,7 @@ public class Temperature
 
         <choice>
           <statement id="staticTrace_opt_d">
-            <p>Max Temp: 75</p>
+            <p>Max Temp: 75.0</p>
           </statement>
 
           <feedback id="staticTrace_opt_d">
@@ -388,13 +388,13 @@ public class Temperature
 
         <choice>
           <statement id="staticTrace_opt_e">
-            <p>Max Temp: 65</p>
+            <p>Max Temp: 65.0</p>
           </statement>
 
           <feedback id="staticTrace_opt_e">
             <p>
               maxTemp will not be changed to 65 by the third constructor call
-              because 67 is not &gt; 100.
+              because 65 is not &gt; 100.
             </p>
           </feedback>
         </choice>
@@ -498,7 +498,7 @@ public class Temperature
 
     <program language="java">
       <code>
-final double PI = 3.14
+final double PI = 3.14;
       </code>
     </program>
 
