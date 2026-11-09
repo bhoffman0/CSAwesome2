@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u1b-ct-labeled">
+  <title>Unit 1b Subgoal Labeled Puzzles for Toggle Code</title>
+  <p>
+    These are copies of the Mixed Up Code Practice 1b puzzles with subgoal
+    labels added. The Unit 1b Toggle Code Practice page uses them as the Get
+    Help puzzles for its write code problems. Problems whose solution has
+    fewer than two subgoals keep the original, unlabeled puzzle.
+  </p>
+
+  <activity label="u1bex1muc-sgl" xml:id="u1bex1muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print a random number from
+        1 to 50. But, the blocks have been mixed up and may include an extra
+        block that isn’t needed in the solution. Drag the needed blocks from the
+        left and put them in the correct order on the right. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="5">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Pick a random whole number in the range</cline>
+          <cline>        int num = (int)(Math.random() * 50) + 1;</cline>
+        </choice>
+        <choice>
+          <cline>        // Pick a random whole number in the range</cline>
+          <cline>        int num = (int) Math.random() * 50 + 1;</cline>
+        </choice>
+        <choice>
+          <cline>        // Pick a random whole number in the range</cline>
+          <cline>        int num = (int)(Math.random() * 50);</cline>
+        </choice>
+        <choice>
+          <cline>        // Pick a random whole number in the range</cline>
+          <cline>        int num = Math.random() * 50 + 1;</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Display the random number</cline>
+        <cline>        System.out.println(num);</cline>
+      </block>
+
+      <block order="3">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="6">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1bex2muc-sgl" xml:id="u1bex2muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the first 2
+        characters of the message followed by the last 2 characters of the
+        message. But, the blocks have been mixed up and include an extra block
+        that isn’t needed in the solution. Drag the needed blocks from the left
+        and put them in the correct order on the right. Click the Check button
+        to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="7">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="3">
+        <cline>        // Store the message</cline>
+        <cline>        String message = "I hope this works";</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Get the start of the message</cline>
+          <cline>        String part1 = message.substring(0,2);</cline>
+        </choice>
+        <choice>
+          <cline>        // Get the start of the message</cline>
+          <cline>        String part1 = message.substring(0,1);</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>        // Get the end of the message</cline>
+          <cline>        String part2 = message.substring(message.length() - 2);</cline>
+        </choice>
+        <choice>
+          <cline>        // Get the end of the message</cline>
+          <cline>        String part2 = message.substring(message.length() - 2, message.length() - 1);</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Combine the start and end</cline>
+          <cline>        String ends = part1 + part2;</cline>
+        </choice>
+        <choice>
+          <cline>        // Combine the start and end</cline>
+          <cline>        String ends = part1 * part2;</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Display the combined start and end</cline>
+        <cline>        System.out.println(ends);</cline>
+      </block>
+
+      <block order="5">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="1">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1bex3muc-sgl" xml:id="u1bex3muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the initials in
+        lowercase letters. But, the blocks have been mixed up and include an
+        extra block that isn’t needed in the solution. Drag the needed blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="7">
+        <cline>        // Store the names</cline>
+        <cline>        String first = "Gerald";</cline>
+        <cline>        String middle = "Foster";</cline>
+        <cline>        String last= "Jones";</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Get the first letter of each name</cline>
+        <cline>        String initials = first.substring(0,1) +</cline>
+        <cline>                          middle.substring(0,1) +</cline>
+        <cline>                          last.substring(0,1);</cline>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>        // Change the first letters into lowercase</cline>
+          <cline>        String lowerInitials = initials.toLowerCase();</cline>
+        </choice>
+        <choice>
+          <cline>        // Change the first letters into lowercase</cline>
+          <cline>        initials.toLowerCase();</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Display the lowercase letters</cline>
+          <cline>        System.out.println(lowerInitials);</cline>
+        </choice>
+        <choice>
+          <cline>        // Display the lowercase letters</cline>
+          <cline>        System.out.println(initials);</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="6">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1bex4muc-sgl" xml:id="u1bex4muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the message in all
+        uppercase letters. But, the blocks have been mixed up and include an
+        extra block that isn’t needed in the solution. Drag the needed blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="3">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <cline>      // Store the message</cline>
+        <cline>      String message = "Don't Pokemon and drive!";</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>      // Change the message into uppercase</cline>
+          <cline>      String upperMessage = message.toUpperCase();</cline>
+        </choice>
+        <choice>
+          <cline>      // Change the message into uppercase</cline>
+          <cline>      message.toUpperCase();</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>      // Display the uppercase message</cline>
+          <cline>      System.out.println(upperMessage);</cline>
+        </choice>
+        <choice>
+          <cline>      // Display the uppercase message</cline>
+          <cline>      System.print(upperMessage);</cline>
+        </choice>
+        <choice>
+          <cline>      // Display the uppercase message</cline>
+          <cline>      System.out.println(message);</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="2">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1bex5muc-sgl" xml:id="u1bex5muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the first 3 letters
+        of message in uppercase letters. But, the blocks have been mixed up and
+        include an extra block that isn’t needed in the solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="7">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="5">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="9">
+        <cline>        // Store the message</cline>
+        <cline>        String message = "Have a nice day!";</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Get the start of the message</cline>
+          <cline>        String part = message.substring(0,3);</cline>
+        </choice>
+        <choice>
+          <cline>        // Get the start of the message</cline>
+          <cline>        String part = message.substring(0,4);</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Change the start into uppercase</cline>
+          <cline>        String upper = part.toUpperCase();</cline>
+        </choice>
+        <choice>
+          <cline>        // Change the start into uppercase</cline>
+          <cline>        part.toUpperCase();</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Display the uppercase letters</cline>
+          <cline>        System.out.println(upper);</cline>
+        </choice>
+        <choice>
+          <cline>        // Display the uppercase letters</cline>
+          <cline>        System.out.println(part);</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="2">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1bex6muc-sgl" xml:id="u1bex6muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the part of the
+        message starting with the word “nice”. But, the blocks have been mixed
+        up and include an extra block that isn’t needed in the solution. Drag
+        the needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="6">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="3">
+        <cline>        // Store the message</cline>
+        <cline>        String message = "Have a nice day!";</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>        // Find where the word starts in the message</cline>
+          <cline>        int pos = message.indexOf("nice");</cline>
+        </choice>
+        <choice>
+          <cline>        // Find where the word starts in the message</cline>
+          <cline>        int pos = message.indexof("nice");</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Get the part of the message starting at the word</cline>
+          <cline>        String part = message.substring(pos);</cline>
+        </choice>
+        <choice>
+          <cline>        // Get the part of the message starting at the word</cline>
+          <cline>        String part = message.substring(0, pos);</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Display the part of the message</cline>
+        <cline>        System.out.println(part);</cline>
+      </block>
+
+      <block order="4">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="9">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>
