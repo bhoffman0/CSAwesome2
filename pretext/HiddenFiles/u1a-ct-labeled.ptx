@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u1a-ct-labeled">
+  <title>Unit 1a Subgoal Labeled Puzzles for Toggle Code</title>
+  <p>
+    These are copies of the Mixed Up Code Practice 1a puzzles with subgoal
+    labels added. The Unit 1a Toggle Code Practice page uses them as the Get
+    Help puzzles for its write code problems. Problems whose solution has
+    fewer than two subgoals keep the original, unlabeled puzzle.
+  </p>
+
+  <activity label="u1aex4muc-sgl" xml:id="u1aex4muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should figure out the cost for each shirt
+        if they are buy 2 and get the third free and they are originally $45
+        each. But, the blocks have been mixed up. Drag the blocks from the left
+        and put them in the correct order on the right. Click the Check button
+        to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>// Store the original price per shirt</cline>
+        <cline>double price = 45;</cline>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>// Find the total paid for three shirts</cline>
+          <cline>double totalCost = price * 2;</cline>
+        </choice>
+        <choice>
+          <cline>// Find the total paid for three shirts</cline>
+          <cline>double totalCost = price * 3;</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>// Split the total paid equally among the shirts</cline>
+        <cline>double pricePerShirt = totalCost / 3;</cline>
+      </block>
+
+      <block order="4">
+        <cline>// Display the cost per shirt</cline>
+        <cline>System.out.println(pricePerShirt);</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1aex5muc-sgl" xml:id="u1aex5muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should figure out the cost per person for
+        a dinner including the tip. But the blocks have been mixed up and may
+        include an extra block that isn’t needed in the solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>// Store the bill</cline>
+        <cline>double bill = 89.23;</cline>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>// Find the tip as a percent of the bill</cline>
+          <cline>double tip = bill * 0.20;</cline>
+        </choice>
+        <choice>
+          <cline>// Find the tip as a percent of the bill</cline>
+          <cline>double tip = bill * 20;</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <cline>// Raise the bill by the tip</cline>
+        <cline>double total = bill + tip;</cline>
+      </block>
+
+      <block order="3">
+        <cline>// Split the total equally among the people</cline>
+        <cline>double perPersonCost = total / 3;</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>// Display the cost per person</cline>
+          <cline>System.out.println(perPersonCost);</cline>
+        </choice>
+        <choice>
+          <cline>// Display the cost per person</cline>
+          <cline>System.out.println(perpersoncost);</cline>
+        </choice>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1aex6muc-sgl" xml:id="u1aex6muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the number of
+        seconds in 5 days. But, the blocks have been mixed up and may include an
+        extra block that isn’t needed in the solution. Drag the needed blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="9">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="4">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="7">
+        <cline>        // Store the time conversion rates</cline>
+        <cline>        int sInMin = 60;</cline>
+        <cline>        int mInHour = 60;</cline>
+        <cline>        int hInDay = 24;</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>        // Combine the rates into seconds per day</cline>
+          <cline>        int sInDay = sInMin * mInHour * hInDay;</cline>
+        </choice>
+        <choice>
+          <cline>        // Combine the rates into seconds per day</cline>
+          <cline>        int sInDay = sInMin + mInHour + hInDay;</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>        // Use a rate to change days to seconds</cline>
+        <cline>        int total = sInDay * 5;</cline>
+      </block>
+
+      <block order="8">
+        <cline>        // Display the number of seconds</cline>
+        <cline>        System.out.println(total);</cline>
+      </block>
+
+      <block order="3">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="6">
+        <cline>} // end of class</cline>
+      </block>
+
+    </blocks>
+  </activity>
+
+  <activity label="u1aex7muc-sgl" xml:id="u1aex7muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate the number of
+        months it would take you to save 500 if you make 50 a week. But, the
+        blocks have been mixed up and may include an extra block that isn’t
+        needed in the solution. Drag the needed blocks from the left and put
+        them in the correct order on the right. Click the Check button to check
+        your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="8">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="4">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Store the savings goal, weekly pay, and weeks per month</cline>
+          <cline>        double weeklyRate = 50;</cline>
+          <cline>        double goal = 500;</cline>
+          <cline>        double weeksPerMonth = 4;</cline>
+        </choice>
+        <choice>
+          <cline>        // Store the savings goal, weekly pay, and weeks per month</cline>
+          <cline>        int weeklyRate = 50;</cline>
+          <cline>        int goal = 500;</cline>
+          <cline>        int weeksPerMonth = 4;</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>        // Use a rate to change dollars to weeks</cline>
+        <cline>        double numWeeks = goal / weeklyRate;</cline>
+      </block>
+
+      <block order="1">
+        <cline>        // Use a rate to change weeks to months</cline>
+        <cline>        double numMonths = numWeeks / weeksPerMonth;</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Display the number of months</cline>
+        <cline>        System.out.println(numMonths);</cline>
+      </block>
+
+      <block order="7">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+
+    </blocks>
+  </activity>
+
+  <activity label="u1aex10muc-sgl" xml:id="u1aex10muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate the cost of a
+        trip that is 200 miles when the price of gas is 2.20 and the miles per
+        gallon is 42. But, the blocks have been mixed up and may include an
+        extra block that isn’t needed in the solution. Drag the needed blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="7">
+        <cline>        // Store the trip distance, gas price, and miles per gallon</cline>
+        <cline>        int miles = 200;</cline>
+        <cline>        double price = 2.20;</cline>
+        <cline>        int mpg = 42;</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Use a rate to change miles to gallons</cline>
+          <cline>        double numGalls = (double) miles / mpg;</cline>
+        </choice>
+        <choice>
+          <cline>        // Use a rate to change miles to gallons</cline>
+          <cline>        double numGalls = (double) (miles / mpg);</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <cline>        // Use a rate to change gallons to dollars</cline>
+        <cline>        double totalCost = numGalls * price;</cline>
+      </block>
+
+      <block order="10">
+        <choice correct="yes">
+          <cline>        // Display the cost of the trip</cline>
+          <cline>        System.out.println(totalCost);</cline>
+        </choice>
+        <choice>
+          <cline>        // Display the cost of the trip</cline>
+          <cline>        System.println(totalCost);</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="4">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1aex11muc-sgl" xml:id="u1aex11muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate how many miles
+        you can go on half a tank of gas if the miles per gallon is 26 and your
+        tank holds 15 gallons. But, the blocks have been mixed up and may
+        include an extra block that isn’t needed in the solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="5">
+        <cline>        // Store the miles per gallon and the tank size</cline>
+        <cline>        int mpg = 26;</cline>
+        <cline>        int tankHolds = 15;</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Find the gallons in half a tank</cline>
+          <cline>        double numGalls = (double) tankHolds / 2;</cline>
+        </choice>
+        <choice>
+          <cline>        // Find the gallons in half a tank</cline>
+          <cline>        double numGalls = tankHolds / 2;</cline>
+        </choice>
+      </block>
+
+      <block order="10">
+        <cline>        // Use a rate to change gallons to miles</cline>
+        <cline>        double miles = numGalls * mpg;</cline>
+      </block>
+
+      <block order="8">
+        <cline>        // Display the miles you can go</cline>
+        <cline>        System.out.println(miles);</cline>
+      </block>
+
+      <block order="6">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="9">
+        <cline>} // end of class</cline>
+      </block>
+
+    </blocks>
+  </activity>
+
+  <activity label="u1aex12muc-sgl" xml:id="u1aex12muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate how many chicken
+        wings you can buy with $3.50 if the wings are $.60 each. But, the blocks
+        have been mixed up and may include an extra block that isn’t needed in
+        the solution. Drag the needed blocks from the left and put them in the
+        correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>        // Store the money you have and the price per wing</cline>
+          <cline>        double cost = 0.6;</cline>
+          <cline>        double money = 3.5;</cline>
+        </choice>
+
+        <choice>
+          <cline>        // Store the money you have and the price per wing</cline>
+          <cline>        int cost = 0.6;</cline>
+          <cline>        int money = 3.5;</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <cline>        // Use a rate to change dollars to wings</cline>
+        <cline>        double exactWings = money / cost;</cline>
+      </block>
+
+      <block order="10">
+        <choice correct="yes">
+          <cline>        // Convert the number of wings to an integer</cline>
+          <cline>        int numWings = (int) exactWings;</cline>
+        </choice>
+        <choice>
+          <cline>        // Convert the number of wings to an integer</cline>
+          <cline>        int numWings = exactWings;</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>        // Display the number of wings</cline>
+        <cline>        System.out.println(numWings);</cline>
+      </block>
+
+      <block order="3">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="6">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="u1aex13muc-sgl" xml:id="u1aex13muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate how much you
+        will have to pay for an item that is 60% off the original price of
+        $52.99. But, the blocks have been mixed up and may include an extra
+        block that isn’t needed in the solution. Drag the needed blocks from the
+        left and put them in the correct order on the right. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="8">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="4">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <cline>        // Store the original price and the percent off</cline>
+        <cline>        double price = 52.99;</cline>
+        <cline>        double discount = 0.6;</cline>
+      </block>
+
+      <block order="10">
+        <cline>        // Find the savings as a percent of the price</cline>
+        <cline>        double savings = price * discount;</cline>
+      </block>
+
+      <block order="5">
+        <cline>        // Lower the original price by the savings</cline>
+        <cline>        double finalPrice = price - savings;</cline>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>        // Display the price you pay</cline>
+          <cline>        System.out.println(finalPrice);</cline>
+        </choice>
+        <choice>
+          <cline>        // Display the price you pay</cline>
+          <cline>        System.out.println(savings);</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="7">
+        <cline>} // end of class</cline>
+      </block>
+
+    </blocks>
+  </activity>
+
+  <activity label="u1aex14muc-sgl" xml:id="u1aex14muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should calculate how much the per
+        item costs is for shorts that are buy 2 and get the third free. The
+        shorts are $39.99 each. But, the blocks have been mixed up and may
+        include an extra block that isn’t needed in the solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="1">
+        <cline>        // Store the original price per pair of shorts</cline>
+        <cline>        double price = 39.99;</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Find the total paid for three pairs of shorts</cline>
+          <cline>        double priceForTwo = price * 2;</cline>
+        </choice>
+        <choice>
+          <cline>        // Find the total paid for three pairs of shorts</cline>
+          <cline>        double priceForTwo = price * 2</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>        // Split the total paid equally among the shorts</cline>
+          <cline>        double itemPrice = priceForTwo / 3;</cline>
+        </choice>
+        <choice>
+          <cline>        // Split the total paid equally among the shorts</cline>
+          <cline>        double itemPrice = priceForTwo / 2;</cline>
+        </choice>
+      </block>
+
+      <block order="10">
+        <cline>        // Display the cost per pair of shorts</cline>
+        <cline>        System.out.println(itemPrice);</cline>
+      </block>
+
+      <block order="9">
+        <cline>    } // end main method</cline>
+      </block>
+
+      <block order="7">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>
