@@ -18,7 +18,7 @@
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle1-prog" xml:id="u2b-toggle1-prog"
-           codetailor="incorrect" codetailor-fallback="loopex1muc">
+           codetailor="incorrect" codetailor-fallback="loopex1muc-sgl">
       <code>
 public class Test1
 {
@@ -76,7 +76,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle2-prog" xml:id="u2b-toggle2-prog"
-           codetailor="incorrect" codetailor-fallback="loopex2muc">
+           codetailor="incorrect" codetailor-fallback="loopex2muc-sgl">
       <code>
 public class Test1
 {
@@ -134,7 +134,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle3-prog" xml:id="u2b-toggle3-prog"
-           codetailor="incorrect" codetailor-fallback="loopex3muc">
+           codetailor="incorrect" codetailor-fallback="loopex3muc-sgl">
       <code>
 public class Test1
 {
@@ -193,7 +193,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle4-prog" xml:id="u2b-toggle4-prog"
-           codetailor="incorrect" codetailor-fallback="loopex4muc">
+           codetailor="incorrect" codetailor-fallback="loopex4muc-sgl">
       <code>
 public class Test1
 {
@@ -252,7 +252,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle5-prog" xml:id="u2b-toggle5-prog"
-           codetailor="incorrect" codetailor-fallback="loopex5muc">
+           codetailor="incorrect" codetailor-fallback="loopex5muc-sgl">
       <code>
 public class Test1
 {
@@ -311,7 +311,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle6-prog" xml:id="u2b-toggle6-prog"
-           codetailor="incorrect" codetailor-fallback="loopex6muc">
+           codetailor="incorrect" codetailor-fallback="loopex6muc-sgl">
       <code>
 public class Test1
 {
@@ -371,7 +371,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle7-prog" xml:id="u2b-toggle7-prog"
-           codetailor="incorrect" codetailor-fallback="loopex7muc">
+           codetailor="incorrect" codetailor-fallback="loopex7muc-sgl">
       <code>
 public class Test1
 {
@@ -430,7 +430,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle8-prog" xml:id="u2b-toggle8-prog"
-           codetailor="incorrect" codetailor-fallback="loopex8muc">
+           codetailor="incorrect" codetailor-fallback="loopex8muc-sgl">
       <code>
 public class Test1
 {
@@ -489,7 +489,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle9-prog" xml:id="u2b-toggle9-prog"
-           codetailor="incorrect" codetailor-fallback="loopex9muc">
+           codetailor="incorrect" codetailor-fallback="loopex9muc-sgl">
       <code>
 public class Test1
 {
@@ -551,7 +551,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u2b-toggle10-prog" xml:id="u2b-toggle10-prog"
-           codetailor="incorrect" codetailor-fallback="loopex10muc">
+           codetailor="incorrect" codetailor-fallback="loopex10muc-sgl">
       <code>
 public class NumWorker
 {
