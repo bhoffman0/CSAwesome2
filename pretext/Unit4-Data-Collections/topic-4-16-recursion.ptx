@@ -1575,4 +1575,101 @@ strMethod("y") returns 0
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-16-recursion">
+    <title>AP Practice</title>
+    <activity label="apq-4-16-recursion-1">
+      <statement>
+        <p>The factorial method in this lesson is used.</p>
+        <program language="java">
+          <code>
+public static int factorial(int n)
+{
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+System.out.println(factorial(4));
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-16-recursion-1-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-1-a">
+            <p>4 is multiplied by factorial(3), and that call does not return 1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-16-recursion-1-b">
+            <p>10</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-1-b">
+            <p>The method multiplies. It does not add 1 through 4.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-16-recursion-1-c">
+            <p>24</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-1-c">
+            <p>4 * 3 * 2 * 1, and factorial(0) returns 1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-16-recursion-1-d">
+            <p>0</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-1-d">
+            <p>The base case returns 1 when n is 0. It does not return 0.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-16-recursion-2">
+      <statement>
+        <p>The factorial method's base case is removed, and factorial(4) is called.</p>
+        <p>What happens?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-16-recursion-2-a">
+            <p>It returns 0.</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-2-a">
+            <p>Without the base case there is no return of 0. The calls do not stop.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-16-recursion-2-b">
+            <p>It returns 24, because the multiplications are unchanged.</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-2-b">
+            <p>The multiplications never reach a call that returns.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-16-recursion-2-c">
+            <p>The method keeps calling itself.</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-2-c">
+            <p>The base case is what stops the recursion.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-16-recursion-2-d">
+            <p>It skips factorial(0) and returns 1 immediately.</p>
+          </statement>
+          <feedback id="apq-4-16-recursion-2-d">
+            <p>The call starts at 4 and works downward.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

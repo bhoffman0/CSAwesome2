@@ -620,4 +620,97 @@ public class RunestoneTests extends CodeTestHelper
       in the Practice and Summary section of this unit.
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-2-10-strings-loops">
+    <title>AP Practice</title>
+    <activity label="apq-2-10-strings-loops-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+String s = "cat";
+String rev = "";
+for (int i = s.length() - 1; i &gt;= 0; i--)
+    rev += s.substring(i, i + 1);
+System.out.println(rev);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-10-strings-loops-1-a">
+            <p>cat</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-1-a">
+            <p>The loop starts at the last index and walks backward.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-10-strings-loops-1-b">
+            <p>tac</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-1-b">
+            <p>The characters are copied from index 2, then 1, then 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-10-strings-loops-1-c">
+            <p>at</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-1-c">
+            <p>Every character is copied, including the c.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-10-strings-loops-1-d">
+            <p>cta</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-1-d">
+            <p>The first character copied is the last character of the string.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-2-10-strings-loops-2">
+      <statement>
+        <p>Consider the string "hello".</p>
+        <p>What is the index of the last character?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-10-strings-loops-2-a">
+            <p>5</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-2-a">
+            <p>The length is 5. The last index is one less than the length.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-10-strings-loops-2-b">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-2-b">
+            <p>Indexes start at 0, so the last index is length() - 1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-10-strings-loops-2-c">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-2-c">
+            <p>The string has 5 characters, not 6.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-10-strings-loops-2-d">
+            <p>0</p>
+          </statement>
+          <feedback id="apq-2-10-strings-loops-2-d">
+            <p>Index 0 is the first character.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

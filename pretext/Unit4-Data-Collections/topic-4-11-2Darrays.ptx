@@ -1637,4 +1637,100 @@ public class RunestoneTests extends CodeTestHelper
       <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1" />
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-11-2Darrays">
+    <title>AP Practice</title>
+    <activity label="apq-4-11-2Darrays-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int[][] g = {{1, 2}, {3, 4}};
+System.out.println(g[1][0]);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-11-2Darrays-1-a">
+            <p>1</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-1-a">
+            <p>1 is at row 0, column 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-11-2Darrays-1-b">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-1-b">
+            <p>2 is at row 0, column 1.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-11-2Darrays-1-c">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-1-c">
+            <p>Row 1, column 0 holds 3.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-11-2Darrays-1-d">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-1-d">
+            <p>4 is at row 1, column 1.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-11-2Darrays-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int[][] g = {{1, 2}, {3, 4}};
+System.out.println(g.length + " " + g[0].length);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-11-2Darrays-2-a">
+            <p>4 2</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-2-a">
+            <p>g.length is the number of rows, not the number of elements.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-11-2Darrays-2-b">
+            <p>2 4</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-2-b">
+            <p>The row length is g[0].length, which is 2.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-11-2Darrays-2-c">
+            <p>2 2</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-2-c">
+            <p>There are 2 rows, and row 0 has 2 columns.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-11-2Darrays-2-d">
+            <p>1 1</p>
+          </statement>
+          <feedback id="apq-4-11-2Darrays-2-d">
+            <p>Both indexes used in the initializer go past 1.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

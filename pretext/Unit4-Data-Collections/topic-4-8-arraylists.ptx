@@ -1957,4 +1957,107 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-8-arraylists">
+    <title>AP Practice</title>
+    <activity label="apq-4-8-arraylists-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+names.add("A");
+names.add("C");
+names.add(1, "B");
+System.out.println(names.get(1));
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-8-arraylists-1-a">
+            <p>A</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-1-a">
+            <p>A stays at index 0. B is inserted at index 1.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-8-arraylists-1-b">
+            <p>B</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-1-b">
+            <p>add(1, "B") inserts B between A and C.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-8-arraylists-1-c">
+            <p>C</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-1-c">
+            <p>C shifts from index 1 to index 2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-8-arraylists-1-d">
+            <p>null</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-1-d">
+            <p>Every slot that is printed was given a string.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-8-arraylists-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+ArrayList&lt;String&gt; names = new ArrayList&lt;String&gt;();
+names.add("A");
+names.add("B");
+names.add("C");
+names.remove(0);
+System.out.println(names.get(0));
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-8-arraylists-2-a">
+            <p>A</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-2-a">
+            <p>remove(0) removes A and shifts the later items left.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-8-arraylists-2-b">
+            <p>B</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-2-b">
+            <p>After A is removed, B is at index 0.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-8-arraylists-2-c">
+            <p>C</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-2-c">
+            <p>C shifts from index 2 to index 1. Index 0 holds B.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-8-arraylists-2-d">
+            <p>null</p>
+          </statement>
+          <feedback id="apq-4-8-arraylists-2-d">
+            <p>The list still contains B and C.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

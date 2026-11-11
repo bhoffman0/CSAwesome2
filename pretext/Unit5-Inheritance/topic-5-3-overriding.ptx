@@ -896,4 +896,88 @@ class Dog
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-3-overriding">
+    <title>AP Practice</title>
+    <activity label="apq-5-3-overriding-1">
+      <statement>
+        <p>A subclass overrides a public superclass method.</p>
+        <p>What must the subclass method have?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-3-overriding-1-a">
+            <p>The same name and a longer parameter list.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-1-a">
+            <p>A different parameter list is not the override described here.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-3-overriding-1-b">
+            <p>The same method signature.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-1-b">
+            <p>The lesson requires the same name, parameter types, and return type.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-3-overriding-1-c">
+            <p>A private version of the method.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-1-c">
+            <p>The inherited method stays public, and the override is public.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-3-overriding-1-d">
+            <p>No parameters, whatever the superclass method had.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-1-d">
+            <p>The parameter list has to match.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-3-overriding-2">
+      <statement>
+        <p>A subclass overrides greet, and greet is called on a subclass object.</p>
+        <p>Which method runs?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-3-overriding-2-a">
+            <p>Only the superclass greet.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-2-a">
+            <p>The subclass method replaces it for that object.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-3-overriding-2-b">
+            <p>The subclass greet.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-2-b">
+            <p>The lesson says the subclass method is called instead of the superclass method.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-3-overriding-2-c">
+            <p>Both, superclass first, every time.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-2-c">
+            <p>An override does not automatically run both. super.greet() would be a separate call.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-3-overriding-2-d">
+            <p>Neither, because two methods cannot share a name.</p>
+          </statement>
+          <feedback id="apq-5-3-overriding-2-d">
+            <p>Sharing the signature is how overriding works.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

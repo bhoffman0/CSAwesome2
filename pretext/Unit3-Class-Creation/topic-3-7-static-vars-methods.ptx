@@ -870,4 +870,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-3-7-static-vars-methods">
+    <title>AP Practice</title>
+    <activity label="apq-3-7-static-vars-methods-1">
+      <statement>
+        <p>A class declares a static variable.</p>
+        <p>How many copies of that variable exist?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-1-a">
+            <p>One copy for each object</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-1-a">
+            <p>An instance variable has one copy per object. A static variable does not.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-7-static-vars-methods-1-b">
+            <p>One copy for the whole class</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-1-b">
+            <p>The lesson says there is only one copy of a class variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-1-c">
+            <p>One copy for each method call</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-1-c">
+            <p>A local variable can do that. A static variable stays with the class.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-1-d">
+            <p>None, until main creates it with new</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-1-d">
+            <p>The static variable belongs to the class, not to a new object.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-3-7-static-vars-methods-2">
+      <statement>
+        <p>Code in another class needs to call a public static method.</p>
+        <p>Which call matches the lesson?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-2-a">
+            <p>methodName;</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-2-a">
+            <p>A call needs parentheses, and a static call from another class uses the class name.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-7-static-vars-methods-2-b">
+            <p>ClassName.methodName();</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-2-b">
+            <p>Class methods are called with the class name and the dot operator.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-2-c">
+            <p>new ClassName().static;</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-2-c">
+            <p>static is a keyword, not the method name.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-7-static-vars-methods-2-d">
+            <p>ClassName = methodName();</p>
+          </statement>
+          <feedback id="apq-3-7-static-vars-methods-2-d">
+            <p>The class name is not assigned the method.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

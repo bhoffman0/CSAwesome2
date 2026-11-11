@@ -613,4 +613,97 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-2-11-nested-loops">
+    <title>AP Practice</title>
+    <activity label="apq-2-11-nested-loops-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int count = 0;
+for (int row = 0; row &lt; 3; row++)
+    for (int col = 0; col &lt; 4; col++)
+        count++;
+System.out.println(count);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-11-nested-loops-1-a">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-1-a">
+            <p>The outer loop runs 3 times, and the inner loop runs on each of those.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-11-nested-loops-1-b">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-1-b">
+            <p>The inner loop runs 4 times each time it starts, and it starts more than once.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-11-nested-loops-1-c">
+            <p>7</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-1-c">
+            <p>The loop counts are multiplied by nesting, not added.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-11-nested-loops-1-d">
+            <p>12</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-1-d">
+            <p>The inner body runs 4 times on each of 3 outer iterations.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-2-11-nested-loops-2">
+      <statement>
+        <p>A nested loop prints a grid. The outer loop begins its next iteration.</p>
+        <p>What does the inner loop do?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-11-nested-loops-2-a">
+            <p>It continues from the value it had at the end of the previous row.</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-2-a">
+            <p>The inner loop is started over for the new outer iteration.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-11-nested-loops-2-b">
+            <p>It starts over from the beginning.</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-2-b">
+            <p>Each outer iteration restarts the inner loop.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-11-nested-loops-2-c">
+            <p>It runs only on the first outer iteration.</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-2-c">
+            <p>The inner loop is inside the outer loop, so it runs again each time.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-11-nested-loops-2-d">
+            <p>It runs after the outer loop has finished every iteration.</p>
+          </statement>
+          <feedback id="apq-2-11-nested-loops-2-d">
+            <p>The inner loop must finish before the outer loop can continue.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

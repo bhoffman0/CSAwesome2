@@ -944,4 +944,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-1-inheritance">
+    <title>AP Practice</title>
+    <activity label="apq-5-1-inheritance-1">
+      <statement>
+        <p>A class is declared with the header public class Car extends Vehicle.</p>
+        <p>Which statement is true?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-1-inheritance-1-a">
+            <p>Vehicle is-a Car.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-1-a">
+            <p>The subclass is the more specific type.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-1-inheritance-1-b">
+            <p>A Car object is-a Vehicle.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-1-b">
+            <p>extends means the subclass is a kind of the superclass.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-1-inheritance-1-c">
+            <p>Car has-a Vehicle as an instance variable.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-1-c">
+            <p>extends is inheritance, not a field.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-1-inheritance-1-d">
+            <p>Car and Vehicle are the same class.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-1-d">
+            <p>They are two classes in an is-a relationship.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-1-inheritance-2">
+      <statement>
+        <p>A Vehicle class has an Engine field. A Car class extends Vehicle.</p>
+        <p>Which statement matches the lesson?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-1-inheritance-2-a">
+            <p>Engine extends Vehicle.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-2-a">
+            <p>The engine is a part stored in the vehicle.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-1-inheritance-2-b">
+            <p>Car has-a Vehicle.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-2-b">
+            <p>Car is-a Vehicle. The containment goes the other way for Engine.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-1-inheritance-2-c">
+            <p>Car is-a Vehicle, and Vehicle has-a Engine.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-2-c">
+            <p>extends is the is-a relationship. A field of another type is has-a.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-1-inheritance-2-d">
+            <p>Both relationships are written with extends.</p>
+          </statement>
+          <feedback id="apq-5-1-inheritance-2-d">
+            <p>has-a is an instance variable, not extends.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

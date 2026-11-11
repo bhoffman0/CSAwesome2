@@ -298,4 +298,88 @@
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-1-data-ethics">
+    <title>AP Practice</title>
+    <activity label="apq-4-1-data-ethics-1">
+      <statement>
+        <p>A program collects and stores personal data.</p>
+        <p>What does the lesson say programmers must do first?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-1-data-ethics-1-a">
+            <p>Publish the data so users can search it</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-1-a">
+            <p>Publishing personal data is the opposite of safeguarding it.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-1-data-ethics-1-b">
+            <p>Ask the users for permission to access and store their data</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-1-b">
+            <p>The lesson says programmers must ask for that permission.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-1-data-ethics-1-c">
+            <p>Wait until a data breach and then delete the program</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-1-c">
+            <p>The lesson says affected users must be informed after a breach. Permission comes first.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-1-data-ethics-1-d">
+            <p>Store the data only in the photo's metadata</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-1-d">
+            <p>Metadata is one way location leaks. It is not the required permission step.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-1-data-ethics-2">
+      <statement>
+        <p>A maps app keeps the user's location.</p>
+        <p>Which statement matches the lesson?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-1-data-ethics-2-a">
+            <p>Location tracking is always harmful and never useful.</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-2-a">
+            <p>The lesson gives a case where being found is beneficial.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-1-data-ethics-2-b">
+            <p>Location tracking is always beneficial and has no privacy cost.</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-2-b">
+            <p>The lesson says unauthorized access can be harmful.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-1-data-ethics-2-c">
+            <p>It can help if the user is lost, and it can be unsafe if an unauthorized person gets the location.</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-2-c">
+            <p>The lesson states both of those outcomes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-1-data-ethics-2-d">
+            <p>Location is stored only when the user takes a photo.</p>
+          </statement>
+          <feedback id="apq-4-1-data-ethics-2-d">
+            <p>The maps example tracks location for directions, separate from photo metadata.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

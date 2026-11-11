@@ -1430,4 +1430,88 @@ public class RunestoneTests extends CodeTestHelper
     </datafile>
 
   </subsection>
+  <subsection xml:id="ap-practice-4-6-input-files">
+    <title>AP Practice</title>
+    <activity label="apq-4-6-input-files-1">
+      <statement>
+        <p>A Scanner is constructed on a file that is not there.</p>
+        <p>Which exception does the lesson say that constructor throws?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-6-input-files-1-a">
+            <p>NullPointerException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-1-a">
+            <p>A missing file is an input failure, not a null dereference.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-6-input-files-1-b">
+            <p>FileNotFoundException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-1-b">
+            <p>The lesson says the Scanner constructor throws FileNotFoundException, a type of IOException.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-6-input-files-1-c">
+            <p>ArithmeticException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-1-c">
+            <p>No arithmetic failed.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-6-input-files-1-d">
+            <p>IndexOutOfBoundsException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-1-d">
+            <p>No list index was used.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-6-input-files-2">
+      <statement>
+        <p>A method constructs a Scanner on a file.</p>
+        <p>Which method header does the lesson show as one way to handle the checked exception?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-6-input-files-2-a">
+            <p>A header with throws NullPointerException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-2-a">
+            <p>The failure is an IOException, not a null pointer.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-6-input-files-2-b">
+            <p>A header that ends with throws IOException</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-2-b">
+            <p>The lesson adds throws IOException to the method that uses the file.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-6-input-files-2-c">
+            <p>A header with no change, because file errors are ignored</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-2-c">
+            <p>FileNotFoundException is checked. The method must account for it.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-6-input-files-2-d">
+            <p>A header that ends with throws RuntimeException only</p>
+          </statement>
+          <feedback id="apq-4-6-input-files-2-d">
+            <p>The lesson names IOException for this file error.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>
