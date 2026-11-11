@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u2a-ct-labeled">
+  <title>Unit 2a Subgoal Labeled Puzzles for Toggle Code</title>
+  <p>
+    These are copies of the Selection Mixed Up Code Practice puzzles with
+    subgoal labels added. The Selection Toggle Code Practice page uses them as
+    the Get Help puzzles for its write code problems. Each branch of an if
+    statement is one block, so one label sits on each branch.
+  </p>
+
+  <activity label="ifex1muc-sgl" xml:id="ifex1muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should print if your guess is correct,
+        too high, or too low. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>// Store the guess and the answer</cline>
+        <cline>int guess = 10;</cline>
+        <cline>int answer = 5;</cline>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>// Check for a correct guess</cline>
+          <cline>if (guess == answer)</cline>
+          <cline>{</cline>
+          <cline>    System.out.println("You are right!");</cline>
+          <cline>} // end if</cline>
+        </choice>
+        <choice>
+          <cline>// Check for a correct guess</cline>
+          <cline>if (guess = answer)</cline>
+          <cline>{</cline>
+          <cline>    System.out.println("You are right!");</cline>
+          <cline>} // end if</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>// Check for a guess that is too high</cline>
+          <cline>else if (guess &gt; answer)</cline>
+          <cline>{</cline>
+          <cline>    System.out.println("Your guess is too high");</cline>
+          <cline>} // end else if</cline>
+        </choice>
+        <choice>
+          <cline>// Check for a guess that is too high</cline>
+          <cline>else if (guess &lt; answer)</cline>
+          <cline>{</cline>
+          <cline>    System.out.println("Your guess is too high");</cline>
+          <cline>} // end else if</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>// Otherwise, report a guess that is too low</cline>
+        <cline>else</cline>
+        <cline>{</cline>
+        <cline>    System.out.println("Your guess is too low");</cline>
+        <cline>} // end else</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex2muc-sgl" xml:id="ifex2muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should print either “You can go out” if
+        you don’t have any homework and have cleaned and otherwise should print
+        “You can not go out”. But the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed
+        blocks from the left and put them in the correct order on the right.
+        Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="8">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="7">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="3">
+        <cline>        // Store whether homework is left and cleaning is done</cline>
+        <cline>        boolean homeworkLeft = false;</cline>
+        <cline>        boolean cleaned = true;</cline>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Check for permission to go out</cline>
+          <cline>        if (!homeworkLeft &amp;&amp; cleaned)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("You can go out");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for permission to go out</cline>
+          <cline>        if (homeworkLeft &amp;&amp; cleaned)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("You can go out");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for permission to go out</cline>
+          <cline>        if (!homeworkLeft || cleaned)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("You can go out");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="6">
+        <cline>        // Otherwise, report no permission to go out</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("You can not go out");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="9">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex3muc-sgl" xml:id="ifex3muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print if x is in the range
+        of 1 to 10 (inclusive) or not. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="3">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Store the number to test</cline>
+        <cline>        int x = 3;</cline>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>        // Check for a number in the range</cline>
+          <cline>        if (x &gt;= 1 &amp;&amp; x &lt;= 10)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("1 &lt;= x &lt;= 10");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a number in the range</cline>
+          <cline>        if (x &gt;= 1 || x &lt;= 10)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("1 &lt;= x &lt;= 10");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a number in the range</cline>
+          <cline>        if (x &gt; 1 &amp;&amp; x &lt; 10)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("1 &lt;= x &lt;= 10");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>        // Otherwise, report a number outside the range</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("x is not in range");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="9">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex4muc-sgl" xml:id="ifex4muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print out if a string has
+        the word “ringing” in it or not. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="6">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="8">
+        <cline>       // Store the message</cline>
+        <cline>       String message = "Is that the phone ringing?";</cline>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>       // Check for a message with the word</cline>
+          <cline>       if (message.indexOf("ringing") &gt;= 0)</cline>
+          <cline>       {</cline>
+          <cline>           System.out.println("Answer the phone!");</cline>
+          <cline>       } // end if</cline>
+        </choice>
+        <choice>
+          <cline>       // Check for a message with the word</cline>
+          <cline>       if (message.indexOf("ringing") &gt; 0)</cline>
+          <cline>       {</cline>
+          <cline>           System.out.println("Answer the phone!");</cline>
+          <cline>       } // end if</cline>
+        </choice>
+        <choice>
+          <cline>       // Check for a message with the word</cline>
+          <cline>       if (message.indexof("ringing") &gt;= 0)</cline>
+          <cline>       {</cline>
+          <cline>           System.out.println("Answer the phone!");</cline>
+          <cline>       } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>       // Otherwise, report a message without the word</cline>
+        <cline>       else</cline>
+        <cline>       {</cline>
+        <cline>           System.out.println("I don't hear anything.");</cline>
+        <cline>       } // end else</cline>
+      </block>
+
+      <block order="4">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex5muc-sgl" xml:id="ifex5muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print if your favorite
+        food is junk food (pizza or wings) or not. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the
+        correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="6">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="4">
+        <cline>        // Store the favorite food</cline>
+        <cline>        String favFood = "kale";</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Compare the favorite food with each junk food</cline>
+          <cline>        boolean favPizza = favFood.equals("pizza");</cline>
+          <cline>        boolean favWings = favFood.equals("wings");</cline>
+        </choice>
+        <choice>
+          <cline>        // Compare the favorite food with each junk food</cline>
+          <cline>        boolean favPizza = favFood == "pizza";</cline>
+          <cline>        boolean favWings = favFood == "wings";</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Check for a junk food favorite</cline>
+          <cline>        if (favPizza || favWings)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Your fav is junk food");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a junk food favorite</cline>
+          <cline>        if (favPizza &amp;&amp; favWings)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Your fav is junk food");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>        // Otherwise, report a favorite that is not junk food</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("Your fav is not junk");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="8">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex6muc-sgl" xml:id="ifex6muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print your fine if you are
+        speeding. If you are going over 65 but less than 75 the fine is 50. If
+        you are going at least 75 and less than 85 the fine is 100. Over that
+        the fine is 200. It does not print anything if you are not speeding.
+        But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and
+        put them in the correct order on the right. Click the Check button to
+        check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="1">
+        <cline>        // Store the speed</cline>
+        <cline>        int speed = 90;</cline>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Check for a speed with the smallest fine</cline>
+          <cline>        if (speed &gt; 65 &amp;&amp; speed &lt; 75)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("50");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a speed with the smallest fine</cline>
+          <cline>        if (speed &gt; 65 || speed &lt; 75)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("50");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>        // Check for a speed with a medium fine</cline>
+          <cline>        else if (speed &gt;= 75 &amp;&amp; speed &lt; 85)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("100");</cline>
+          <cline>        } // end else if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a speed with a medium fine</cline>
+          <cline>        else if (speed &gt;= 75 || speed &lt; 85)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("100");</cline>
+          <cline>        } // end else if</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>        // Check for a speed with the largest fine</cline>
+        <cline>        else if (speed &gt;= 85)</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("200");</cline>
+        <cline>        } // end else if</cline>
+      </block>
+
+      <block order="7">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex7muc-sgl" xml:id="ifex7muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print the alarm time. If
+        it is a weekday you should get up at 7:00am and if not get up at
+        10:00am. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed blocks from
+        the left and put them in the correct order on the right. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="4">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="1">
+        <cline>        // Store whether it is the weekend</cline>
+        <cline>        boolean weekend = false;</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Check for a weekday</cline>
+          <cline>        if (!weekend)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("7:00am");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a weekday</cline>
+          <cline>        if (weekend)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("7:00am");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>        // Otherwise, report the weekend alarm time</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("10:00am");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="8">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex8muc-sgl" xml:id="ifex8muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print if you can text now.
+        You can text if you are not driving and not eating. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the
+        correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="6">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="4">
+        <cline>        // Store whether you are driving and eating</cline>
+        <cline>        boolean driving = true;</cline>
+        <cline>        boolean eating = false;</cline>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Check for permission to text</cline>
+          <cline>        if (!driving &amp;&amp; !eating)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Can text now");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for permission to text</cline>
+          <cline>        if (!driving || !eating)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Can text now");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>        // Otherwise, report no permission to text</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("Can't text now");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="8">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex9muc-sgl" xml:id="ifex9muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print if your name starts
+        with a vowel or not. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="6">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="3">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Store the name and its lowercase first letter</cline>
+        <cline>        String name = "Julian";</cline>
+        <cline>        String firstLetter = name.substring(0,1);</cline>
+        <cline>        String lowerFirst = firstLetter.toLowerCase();</cline>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>        // Compare the first letter with each vowel</cline>
+          <cline>        boolean aF = lowerFirst.equals("a");</cline>
+          <cline>        boolean eF = lowerFirst.equals("e");</cline>
+          <cline>        boolean iF = lowerFirst.equals("i");</cline>
+          <cline>        boolean oF = lowerFirst.equals("o");</cline>
+          <cline>        boolean uF = lowerFirst.equals("u");</cline>
+        </choice>
+        <choice>
+          <cline>        // Compare the first letter with each vowel</cline>
+          <cline>        boolean aF = lowerFirst == "a";</cline>
+          <cline>        boolean eF = lowerFirst == "e";</cline>
+          <cline>        boolean iF = lowerFirst == "i";</cline>
+          <cline>        boolean oF = lowerFirst == "o";</cline>
+          <cline>        boolean uF = lowerFirst == "u";</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Check for a name starting with a vowel</cline>
+          <cline>        if (aF || eF || iF || oF || uF)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Starts with a vowel");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a name starting with a vowel</cline>
+          <cline>        if (aF &amp;&amp; eF &amp;&amp; iF &amp;&amp; oF &amp;&amp; uF)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("Starts with a vowel");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Otherwise, report a name starting with a consonant</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("Starts with a consonant");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="7">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex10muc-sgl" xml:id="ifex10muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The main method in the following class should print your grade for
+        score. But, the blocks have been mixed up and include extra blocks that are not needed in a correct solution. Drag the needed blocks from
+        the left and put them in the correct order on the right. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>public class Test1</cline>
+        <cline>{</cline>
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="10">
+        <cline>        // Store the score</cline>
+        <cline>        int score = 73;</cline>
+      </block>
+
+      <block order="4">
+        <cline>        // Check for an excellent score</cline>
+        <cline>        if (score &gt;= 90)</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("A");</cline>
+        <cline>        } // end if</cline>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>        // Check for a good score</cline>
+          <cline>        else if (score &gt;= 80)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("B");</cline>
+          <cline>        } // end else if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a good score</cline>
+          <cline>        if (score &gt;= 80)</cline>
+          <cline>        {</cline>
+          <cline>            System.out.println("B");</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Check for an average score</cline>
+        <cline>        else if (score &gt;= 70)</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("C");</cline>
+        <cline>        } // end else if</cline>
+      </block>
+
+      <block order="5">
+        <cline>        // Check for a poor score</cline>
+        <cline>        else if (score &gt;= 60)</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("D");</cline>
+        <cline>        } // end else if</cline>
+      </block>
+
+      <block order="3">
+        <cline>        // Otherwise, report a failing score</cline>
+        <cline>        else</cline>
+        <cline>        {</cline>
+        <cline>            System.out.println("E");</cline>
+        <cline>        } // end else</cline>
+      </block>
+
+      <block order="7">
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ifex11muc-sgl" xml:id="ifex11muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The <c>get_mid(str)</c> method in the <c>StringWorker</c> class should
+        return the middle character if the string has an odd number of
+        characters and the middle two characters if the string has an even
+        number of characters. For example, <c>get_mid("way")</c> should return
+        <c>"a"</c> and <c>get_mid("away")</c> should return <c>"wa"</c>. The blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public class StringWorker</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="9">
+        <cline>    public static String get_mid(String str)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Set up the length and middle position the method needs</cline>
+        <cline>        int str_len = str.length();</cline>
+        <cline>        int mid = str_len / 2;</cline>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Check for an odd number of characters</cline>
+          <cline>        if (str_len % 2 == 1)</cline>
+          <cline>        {</cline>
+          <cline>            return str.substring(mid, mid+1);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for an odd number of characters</cline>
+          <cline>        if (str_len % 2 == 0)</cline>
+          <cline>        {</cline>
+          <cline>            return str.substring(mid, mid+1);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="10">
+        <choice correct="yes">
+          <cline>        // Otherwise, return the middle two characters</cline>
+          <cline>        else</cline>
+          <cline>        {</cline>
+          <cline>            return str.substring(mid-1, mid+1);</cline>
+          <cline>        } // end else</cline>
+        </choice>
+        <choice>
+          <cline>        // Otherwise, return the middle two characters</cline>
+          <cline>        else</cline>
+          <cline>        {</cline>
+          <cline>            return str.substring(mid, mid+2);</cline>
+          <cline>        } // end else</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>    } // end method get_mid</cline>
+      </block>
+
+      <block order="8">
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>
