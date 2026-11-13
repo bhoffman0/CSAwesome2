@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u4c-ct-labeled">
+  <title>Unit 4c Subgoal Labeled Puzzles for Toggle Code</title>
+  <p>
+    These are copies of the 2D Arrays Mixed Up Code Practice puzzles with
+    subgoal labels added. The 2D Arrays Toggle Code Practice page uses them as
+    the Get Help puzzles for its write code problems. Each loop header and its
+    opening brace are one block, so one label sits on each loop, and each if
+    statement is one block with its body.
+  </p>
+
+  <activity label="array2Dex1muc-sgl" xml:id="array2Dex1muc-sgl" numbered="yes" adaptive="yes" indentation="show" language="java">
+    <statement>
+      <p>
+        The following program segment should create a 10 by 10 two-dimensional
+        int array. It should fill this array with numbers 0 to 99 from left to
+        right, top row to bottom row and print the output (in row-column order).
+        But, the blocks have been mixed up and include extra blocks that are not
+        needed in a correct solution. Drag the needed blocks from the left and
+        put them in the correct order on the right. Click the Check button to
+        check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <choice correct="yes">
+          <cline>// Create the array with 10 rows and 10 columns</cline>
+          <cline>int[][] table = new int[10][10];</cline>
+        </choice>
+        <choice>
+          <cline>// Create the array with 10 rows and 10 columns</cline>
+          <cline>int[][] table = int[10][10];</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>// Use an outer for loop to visit each row index of the array</cline>
+          <cline>for (int row = 0; row &lt; table.length; row++)</cline>
+          <cline>{</cline>
+        </choice>
+        <choice>
+          <cline>// Use an outer for loop to visit each row index of the array</cline>
+          <cline>for (int row = 0; row &lt; table.length(); row++)</cline>
+          <cline>{</cline>
+        </choice>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>    // Use an inner for loop to visit each column index of this row</cline>
+          <cline>    for (int col = 0; col &lt; table[row].length; col++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use an inner for loop to visit each column index of this row</cline>
+          <cline>    for (int col = row; col &lt; table[row].length; col++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <cline>        // Set the element at this row and column to its place in reading order</cline>
+        <cline>        table[row][col] = col + 10 * row;</cline>
+      </block>
+
+      <block order="5">
+        <cline>        // Print the element without moving to a new line</cline>
+        <cline>        System.out.print(table[row][col] + "\t");</cline>
+      </block>
+
+      <block order="3">
+        <cline>    } // end inner for loop</cline>
+        <cline>} // end outer for loop</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex2muc-sgl" xml:id="array2Dex2muc-sgl" numbered="yes" adaptive="yes" indentation="show" language="java">
+    <statement>
+      <p>
+        The following program segment should create a 8 by 8 two-dimensional int
+        array. It should fill this array with a checkered pattern of 0s and 1s –
+        starting with a 1 in the top left corner and print the output (in
+        row-column order). But, the blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution. Drag the needed
+        blocks from the left and put them in the correct order on the right.
+        Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>// Create the array with 8 rows and 8 columns</cline>
+        <cline>int[][] checkerboard = new int[8][8];</cline>
+      </block>
+
+      <block order="3">
+        <cline>// Use an outer for loop to visit each row index of the array</cline>
+        <cline>for (int row = 0; row &lt; checkerboard.length; row++)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    // Use an inner for loop to visit each column index of this row</cline>
+        <cline>    for (int col = 0; col &lt; checkerboard[row].length; col++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Check for a square whose row and column call for 1 and set it</cline>
+          <cline>        if ((row + col) % 2 == 0)</cline>
+          <cline>        {</cline>
+          <cline>            checkerboard[row][col] = 1;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a square whose row and column call for 1 and set it</cline>
+          <cline>        if ((row + col) % 2 == 1)</cline>
+          <cline>        {</cline>
+          <cline>            checkerboard[row][col] = 1;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a square whose row and column call for 1 and set it</cline>
+          <cline>        if (row % 2 == 0)</cline>
+          <cline>        {</cline>
+          <cline>            checkerboard[row][col] = 1;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>        // Print the element without moving to a new line</cline>
+        <cline>        System.out.print(checkerboard[row][col] + " ");</cline>
+      </block>
+
+      <block order="4">
+        <cline>    } // end inner for loop</cline>
+        <cline>} // end outer for loop</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex3muc-sgl" xml:id="array2Dex3muc-sgl" numbered="yes" adaptive="yes" indentation="show" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional int array and return the sum of all of its values. But,
+        the blocks have been mixed up and include extra blocks that are not
+        needed in a correct solution. Drag the needed blocks from the left and
+        put them in the correct order on the right. Click the Check button to
+        check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>public static int sumVals(int[][] nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    // Start the running total at zero</cline>
+        <cline>    int sum = 0;</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>    // Use an outer for loop to visit each row index of the array</cline>
+          <cline>    for (int row = 0; row &lt; nums.length; row++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use an outer for loop to visit each row index of the array</cline>
+          <cline>    for (int row = 0; row &lt;= nums.length; row++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use an outer for loop to visit each row index of the array</cline>
+          <cline>    for (int row = 0; row &lt; nums.length(); row++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int col = 0; col &lt; nums[row].length; col++)</cline>
+          <cline>        {</cline>
+        </choice>
+        <choice>
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int col = 0; col &lt; nums.length; col++)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block order="6">
+        <cline>            // Add the element at this row and column to the running total</cline>
+        <cline>            sum += nums[row][col];</cline>
+      </block>
+
+      <block order="3">
+        <cline>        } // end inner for loop</cline>
+        <cline>    } // end outer for loop</cline>
+      </block>
+
+      <block order="8">
+        <cline>    // Return the sum of all the values after checking every element</cline>
+        <cline>    return sum;</cline>
+      </block>
+
+      <block order="4">
+        <cline>} // end sumVals method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex4muc-sgl" xml:id="array2Dex4muc-sgl" numbered="yes" adaptive="yes" indentation="show" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional String array “image” and reverse each row from left to
+        right. For example: 1 2 3 4 -&gt; 4 3 2 1. But, the blocks have
+        been mixed up and include extra blocks that are not needed in a
+        correct solution. Drag the needed blocks from the left and put them in
+        the correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public static void flipImage(String[][] image)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="5">
+        <cline>    // Use an outer for loop to visit each row index of the array</cline>
+        <cline>    for (int row = 0; row &lt; image.length; row++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="2">
+        <cline>        // Use an inner for loop to visit each column index in the left half</cline>
+        <cline>        for (int col = 0; col &lt; image[0].length / 2; col++)</cline>
+        <cline>        {</cline>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>            // Swap the element with the one equally far from the row's other end</cline>
+          <cline>            String temp = image[row][col];</cline>
+          <cline>            image[row][col] = image[row][image[row].length - 1 - col];</cline>
+          <cline>            image[row][image[row].length - 1 - col] = temp;</cline>
+        </choice>
+        <choice>
+          <cline>            // Swap the element with the one equally far from the row's other end</cline>
+          <cline>            image[row][col] = image[row][image[row].length - 1 - col];</cline>
+          <cline>            image[row][image[row].length - 1 - col] = image[row][col];</cline>
+        </choice>
+        <choice>
+          <cline>            // Swap the element with the one equally far from the row's other end</cline>
+          <cline>            String temp = image[row][col];</cline>
+          <cline>            image[row][col] = image[row][image[row].length - col];</cline>
+          <cline>            image[row][image[row].length - col] = temp;</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <cline>        } // end inner for loop</cline>
+        <cline>    } // end outer for loop</cline>
+        <cline>} // end flipImage method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex5muc-sgl" xml:id="array2Dex5muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional array of ints and edit it such that all even numbers are
+        replaced by zero. But, the blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution. Drag the needed
+        blocks from the left and put them in the correct order on the right.
+        Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>public static void makeEvenNumsZero(int[][] nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>    // Use an outer for loop to visit each row index of the array</cline>
+          <cline>    for (int row = 0; row &lt; nums.length; row++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use an outer for loop to visit each row index of the array</cline>
+          <cline>    for (int row = 0; row &lt; nums[0].length; row++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int col = 0; col &lt; nums[row].length; col++)</cline>
+          <cline>        {</cline>
+        </choice>
+        <choice>
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int col = 0; col &lt; nums[row].length(); col++)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>            // Check for an even number and replace it with zero</cline>
+          <cline>            if (nums[row][col] % 2 == 0)</cline>
+          <cline>            {</cline>
+          <cline>                nums[row][col] = 0;</cline>
+          <cline>            } // end if</cline>
+        </choice>
+        <choice>
+          <cline>            // Check for an even number and replace it with zero</cline>
+          <cline>            if (nums[row][col] / 2 == 0)</cline>
+          <cline>            {</cline>
+          <cline>                nums[row][col] = 0;</cline>
+          <cline>            } // end if</cline>
+        </choice>
+        <choice>
+          <cline>            // Check for an even number and replace it with zero</cline>
+          <cline>            if (nums[row][col] % 2 == 1)</cline>
+          <cline>            {</cline>
+          <cline>                nums[row][col] = 0;</cline>
+          <cline>            } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <cline>        } // end inner for loop</cline>
+        <cline>    } // end outer for loop</cline>
+        <cline>} // end makeEvenNumsZero method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex6muc-sgl" xml:id="array2Dex6muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional array of ints and a desired int and return the number of
+        occurrences of the desired int in the two-dimensional array. But, the
+        blocks have been mixed up and include extra blocks that are not
+        needed in a correct solution. Drag the needed blocks from the left and
+        put them in the correct order on the right. Click the Check button to
+        check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>public static int numOccurrences(int[][] nums, int desired)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    // Start the count of occurrences at zero</cline>
+        <cline>    int occurrences = 0;</cline>
+      </block>
+
+      <block order="4">
+        <cline>    // Use an outer for loop to visit each row index of the array</cline>
+        <cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int j = 0; j &lt; nums[i].length; j++)</cline>
+          <cline>        {</cline>
+        </choice>
+        <choice>
+          <cline>        // Use an inner for loop to visit each column index of this row</cline>
+          <cline>        for (int j = 0; j &lt;= nums[i].length; j++)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>            // Check for the desired number and count it</cline>
+          <cline>            if (nums[i][j] == desired)</cline>
+          <cline>            {</cline>
+          <cline>                occurrences++;</cline>
+          <cline>            } // end if</cline>
+        </choice>
+        <choice>
+          <cline>            // Check for the desired number and count it</cline>
+          <cline>            if (nums[i][j] != desired)</cline>
+          <cline>            {</cline>
+          <cline>                occurrences++;</cline>
+          <cline>            } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>        } // end inner for loop</cline>
+        <cline>    } // end outer for loop</cline>
+      </block>
+
+      <block order="5">
+        <cline>    // Return the count of occurrences after checking every element</cline>
+        <cline>    return occurrences;</cline>
+        <cline>} // end numOccurrences method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex7muc-sgl" xml:id="array2Dex7muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional int array and return a single dimensional (normal) int
+        array containing the average of each of the columns. But, the blocks
+        have been mixed up and include extra blocks that are not needed in
+        a correct solution. Drag the needed blocks from the left and put them in
+        the correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="10">
+        <cline>public static int[] averageCols(int[][] nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="3">
+        <cline>    // Create the result array with one place for each column</cline>
+        <cline>    int[] averages = new int[nums[0].length];</cline>
+      </block>
+
+      <block order="11">
+        <choice correct="yes">
+          <cline>    // Use an outer for loop to visit each column index of the given array</cline>
+          <cline>    for (int col = 0; col &lt; nums[0].length; col++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use an outer for loop to visit each column index of the given array</cline>
+          <cline>    for (int col = 0; col &lt; nums.length; col++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <cline>        // Start the column's running total at zero</cline>
+        <cline>        int colSum = 0;</cline>
+      </block>
+
+      <block order="1">
+        <cline>        // Use an inner for loop to visit each row index of this column</cline>
+        <cline>        for (int row = 0; row &lt; nums.length; row++)</cline>
+        <cline>        {</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>            // Add the element at this row and column to the column's running total</cline>
+          <cline>            colSum += nums[row][col];</cline>
+        </choice>
+        <choice>
+          <cline>            // Add the element at this row and column to the column's running total</cline>
+          <cline>            colSum += nums[col][row];</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>        } // end inner for loop</cline>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Turn the column's running total into its average and store it</cline>
+          <cline>        averages[col] = colSum / nums.length;</cline>
+        </choice>
+        <choice>
+          <cline>        // Turn the column's running total into its average and store it</cline>
+          <cline>        averages[col] = colSum / nums[0].length;</cline>
+        </choice>
+        <choice>
+          <cline>        // Turn the column's running total into its average and store it</cline>
+          <cline>        averages[col] = colSum / nums.length();</cline>
+        </choice>
+      </block>
+
+      <block order="6">
+        <cline>    } // end outer for loop</cline>
+      </block>
+
+      <block order="9">
+        <cline>    // Return the array holding the column averages</cline>
+        <cline>    return averages;</cline>
+      </block>
+
+      <block order="5">
+        <cline>} // end averageCols method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex8muc-sgl" xml:id="array2Dex8muc-sgl" numbered="yes" adaptive="yes" indentation="show" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional int array and return a new two-dimensional int array
+        containing only the odd index rows. But, the blocks have been mixed up
+        and include extra blocks that are not needed in a correct
+        solution. Drag the needed blocks from the left and put them in the
+        correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="8">
+        <cline>public static int[][] oddRows(int[][] nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="4">
+        <cline>    // Create the result array and a counter starting at its first row</cline>
+        <cline>    int[][] odds = new int[nums.length / 2][nums[0].length];</cline>
+        <cline>    int index = 0;</cline>
+      </block>
+
+      <block order="2">
+        <cline>    // Use an outer for loop to visit each row index of the given array</cline>
+        <cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="10">
+        <cline>        // Check for a row at an odd index</cline>
+        <cline>        if (i % 2 == 1)</cline>
+        <cline>        {</cline>
+      </block>
+
+      <block order="1">
+        <cline>            // Use an inner for loop to visit each column index of this row</cline>
+        <cline>            for (int j = 0; j &lt; nums[i].length; j++)</cline>
+        <cline>            {</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>                // Copy the element into the result at the counter's row</cline>
+          <cline>                odds[index][j] = nums[i][j];</cline>
+        </choice>
+        <choice>
+          <cline>                // Copy the element into the result at the counter's row</cline>
+          <cline>                odds[index][j] = nums[j][i];</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <cline>            } // end inner for loop</cline>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>            // Move the counter past the row just copied</cline>
+          <cline>            index++;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>            // Move the counter past the row just copied</cline>
+          <cline>        } // end if</cline>
+          <cline>        index++;</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>    } // end outer for loop</cline>
+        <cline>    return odds;</cline>
+        <cline>} // end oddRows method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex9muc-sgl" xml:id="array2Dex9muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional String array, in which each row contains the characters
+        of a word. The method should return a single-dimensional (normal) String
+        array containing the words in each row of the two-dimensional array.
+      </p>
+
+      <p>
+        Take for example, the input 2d array: <pre>{ {“b”, “a”, “t”, “h”}, {“t”,
+        “e”, “n”, “s”}, {“j”, “a”, “c”, “k”}, {“l”, “a”, “z”, “y”} } </pre>
+      </p>
+
+      <p>Resulting array: {“bath”, “tens”, “jack”, “lazy”}</p>
+      <p>
+        But, the blocks have been mixed up and include extra blocks that are
+        not needed in a correct solution. Drag the needed code from the left
+        to the right and put them in order with the correct indention so that
+        the code would work correctly. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="10">
+        <cline>public static String[] breakIntoLetters(String[][] words)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>    // Create the result array with one place for each word</cline>
+          <cline>    String[] result = new String[words.length];</cline>
+        </choice>
+        <choice>
+          <cline>    // Create the result array with one place for each word</cline>
+          <cline>    String[] result = new String[words[0].length];</cline>
+        </choice>
+      </block>
+
+      <block order="11">
+        <cline>    // Use an outer for loop to visit each row index of the given array</cline>
+        <cline>    for (int i = 0; i &lt; words.length; i++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>        // Start this row's word as an empty string</cline>
+          <cline>        String word = "";</cline>
+        </choice>
+        <choice>
+          <cline>        // Start this row's word as an empty string</cline>
+          <cline>        String word;</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>        // Use an inner for loop to visit each column index of this row</cline>
+        <cline>        for (int j = 0; j &lt; words[i].length; j++)</cline>
+        <cline>        {</cline>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>            // Add the letter at this column to the end of the row's word</cline>
+          <cline>            word += words[i][j];</cline>
+        </choice>
+        <choice>
+          <cline>            // Add the letter at this column to the end of the row's word</cline>
+          <cline>            word = words[i][j];</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <cline>        } // end inner for loop</cline>
+      </block>
+
+      <block order="7">
+        <cline>        // Put the row's word into the result</cline>
+        <cline>        result[i] = word;</cline>
+      </block>
+
+      <block order="3">
+        <cline>    } // end outer for loop</cline>
+      </block>
+
+      <block order="5">
+        <cline>    // Return the array holding the words</cline>
+        <cline>    return result;</cline>
+      </block>
+
+      <block order="8">
+        <cline>} // end breakIntoLetters method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="array2Dex10muc-sgl" xml:id="array2Dex10muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should accept a
+        two-dimensional int array, and return a single-dimensional (normal) int
+        array containing the max of each row. But, the blocks have been mixed up
+        and include extra blocks that are not needed in a correct solution.
+        Drag the needed code from the left to the right and put them in order
+        with the correct indention so that the code would work correctly. Click
+        the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="10">
+        <cline>public static int[] maxEachRow(int[][] nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>    // Create the result array with one place for each row</cline>
+          <cline>    int[] max = new int[nums.length];</cline>
+        </choice>
+        <choice>
+          <cline>    // Create the result array with one place for each row</cline>
+          <cline>    int[] max = new int[nums[0].length];</cline>
+        </choice>
+      </block>
+
+      <block order="11">
+        <cline>    // Use an outer for loop to visit each row index of the given array</cline>
+        <cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Start with the row's first element as the largest so far</cline>
+          <cline>        int maxVal = nums[i][0];</cline>
+        </choice>
+        <choice>
+          <cline>        // Start with the row's first element as the largest so far</cline>
+          <cline>        int maxVal = nums[0][0];</cline>
+        </choice>
+      </block>
+
+      <block order="8">
+        <choice correct="yes">
+          <cline>        // Use an inner for loop to visit each remaining column index of this row</cline>
+          <cline>        for (int j = 1; j &lt; nums[i].length; j++)</cline>
+          <cline>        {</cline>
+        </choice>
+        <choice>
+          <cline>        // Use an inner for loop to visit each remaining column index of this row</cline>
+          <cline>        for (int j = 1; j &lt; nums.length; j++)</cline>
+          <cline>        {</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>            // Replace the largest so far when you find a larger element</cline>
+          <cline>            if (maxVal &lt; nums[i][j])</cline>
+          <cline>            {</cline>
+          <cline>                maxVal = nums[i][j];</cline>
+          <cline>            } // end if</cline>
+        </choice>
+        <choice>
+          <cline>            // Replace the largest so far when you find a larger element</cline>
+          <cline>            if (maxVal &gt; nums[i][j])</cline>
+          <cline>            {</cline>
+          <cline>                maxVal = nums[i][j];</cline>
+          <cline>            } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="9">
+        <cline>        } // end inner for loop</cline>
+      </block>
+
+      <block order="6">
+        <cline>        // Put the row's largest element into the result</cline>
+        <cline>        max[i] = maxVal;</cline>
+      </block>
+
+      <block order="4">
+        <cline>    } // end outer for loop</cline>
+      </block>
+
+      <block order="7">
+        <cline>    // Return the array holding the max of each row</cline>
+        <cline>    return max;</cline>
+      </block>
+
+      <block order="3">
+        <cline>} // end maxEachRow method</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>
