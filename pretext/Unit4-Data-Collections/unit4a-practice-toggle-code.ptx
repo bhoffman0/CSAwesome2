@@ -20,7 +20,7 @@
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle1-prog" xml:id="u4a-toggle1-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex1muc">
+           codetailor="incorrect" codetailor-fallback="arrayex1muc-sgl">
       <code>
 public class Test1
 {
@@ -82,7 +82,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle2-prog" xml:id="u4a-toggle2-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex2muc">
+           codetailor="incorrect" codetailor-fallback="arrayex2muc-sgl">
       <code>
 public class Test1
 {
@@ -143,7 +143,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle3-prog" xml:id="u4a-toggle3-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex3muc">
+           codetailor="incorrect" codetailor-fallback="arrayex3muc-sgl">
       <code>
 public class Test1
 {
@@ -203,7 +203,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle4-prog" xml:id="u4a-toggle4-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex4muc">
+           codetailor="incorrect" codetailor-fallback="arrayex4muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -294,7 +294,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle5-prog" xml:id="u4a-toggle5-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex5muc">
+           codetailor="incorrect" codetailor-fallback="arrayex5muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -385,7 +385,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle6-prog" xml:id="u4a-toggle6-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex6muc">
+           codetailor="incorrect" codetailor-fallback="arrayex6muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -475,7 +475,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle7-prog" xml:id="u4a-toggle7-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex7muc">
+           codetailor="incorrect" codetailor-fallback="arrayex7muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -568,7 +568,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle8-prog" xml:id="u4a-toggle8-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex8muc">
+           codetailor="incorrect" codetailor-fallback="arrayex8muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -663,7 +663,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle9-prog" xml:id="u4a-toggle9-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex9muc">
+           codetailor="incorrect" codetailor-fallback="arrayex9muc-sgl">
       <code>
 import java.util.Arrays;
 
@@ -755,7 +755,7 @@ public class RunestoneTests extends CodeTestHelper
     </statement>
 
     <program interactive="activecode" language="java" label="u4a-toggle10-prog" xml:id="u4a-toggle10-prog"
-           codetailor="incorrect" codetailor-fallback="arrayex10muc">
+           codetailor="incorrect" codetailor-fallback="arrayex10muc-sgl">
       <code>
 import java.util.Arrays;
 

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="u4b-ct-labeled">
+  <title>Unit 4b Subgoal Labeled Puzzles for Toggle Code</title>
+  <p>
+    These are copies of the ArrayList Mixed Up Code Practice puzzles with
+    subgoal labels added. The ArrayList Toggle Code Practice page uses them as
+    the Get Help puzzles for its write code problems. Each loop header and its
+    opening brace are one block, so one label sits on each loop, and each if or
+    else is one block with its body.
+  </p>
+
+  <activity label="ch8ex1muc-sgl" xml:id="ch8ex1muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should be a class that creates an
+        ArrayList called <c>conversation</c>, adds in some elements
+        (<c>"hello"</c>, <c>"goodbye"</c>, <c>"how are you"</c>, and <c>"see you
+        later"</c>), and prints out the elements with <c>", "</c> after each. But,
+        the blocks have been mixed up and include extra blocks that are not
+        needed in a correct solution. Drag the needed code from the left to the
+        right and put them in order with the correct indention so that the code
+        would work correctly. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="2">
+        <cline>import java.util.ArrayList;</cline>
+        <cline>import java.util.List;</cline>
+      </block>
+
+      <block order="4">
+        <cline>public class ListTest</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    public static void main(String[] args)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="6">
+        <cline>        // Create the list to hold the phrases</cline>
+        <cline>        ArrayList&lt;String&gt; conversation;</cline>
+        <cline>        conversation = new ArrayList&lt;String&gt;();</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Store the four phrases in the list</cline>
+          <cline>        conversation.add("hello");</cline>
+          <cline>        conversation.add("goodbye");</cline>
+          <cline>        conversation.add("how are you");</cline>
+          <cline>        conversation.add("see you later");</cline>
+        </choice>
+        <choice>
+          <cline>        // Store the four phrases in the list</cline>
+          <cline>        conversation[0] = "hello";</cline>
+          <cline>        conversation[1] = "goodbye";</cline>
+          <cline>        conversation[2] = "how are you";</cline>
+          <cline>        conversation[3] = "see you later";</cline>
+        </choice>
+        <choice>
+          <cline>        // Store the four phrases in the list</cline>
+          <cline>        conversation.add("hello", "goodbye", "how are you", "see you later");</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <cline>        // Use an enhanced for-each loop to visit each element of the list</cline>
+        <cline>        for (String element : conversation)</cline>
+        <cline>        {</cline>
+      </block>
+
+      <block order="3">
+        <cline>            // Print the phrase without moving to a new line</cline>
+        <cline>            System.out.print(element + ", ");</cline>
+      </block>
+
+      <block order="8">
+        <cline>        } // end for loop</cline>
+        <cline>    } // end main method</cline>
+        <cline>} // end of class</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex2muc-sgl" xml:id="ch8ex2muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should be a method that traverses through
+        an ArrayList of Strings (the parameter) and print out the elements in
+        reverse order – so {“cat”, “dog”, “mouse”} should print “mouse, dog,
+        cat, ” as output. Assume the ArrayList “myList” has been instantiated
+        and filled with Strings. But, the blocks have been mixed up and include
+        extra blocks that are not needed in a correct solution. Drag the
+        needed blocks from the left and put them in the correct order on the
+        right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="3">
+        <cline>public static void printBackwards(ArrayList&lt;String&gt; myList)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>    // Use a for loop to visit each index of the list back to front</cline>
+          <cline>    for (int i = myList.size() - 1; i &gt;= 0; i--)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a for loop to visit each index of the list back to front</cline>
+          <cline>    for (int i = myList.size() - 1; i &gt; 0; i--)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a for loop to visit each index of the list back to front</cline>
+          <cline>    for (int i = myList.size(); i &gt;= 0; i--)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Print the element at this index without moving to a new line</cline>
+          <cline>        System.out.print(myList.get(i) + ", ");</cline>
+        </choice>
+        <choice>
+          <cline>        // Print the element at this index without moving to a new line</cline>
+          <cline>        System.out.print(myList[i] + ", ");</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>    } // end for loop</cline>
+        <cline>} // end printBackwards method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex3muc-sgl" xml:id="ch8ex3muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment should remove all the zeros from an
+        ArrayList of Integers. Assume the ArrayList “listOfNums” has been
+        instantiated and filled with Integers. But, the blocks have been mixed
+        up and include extra blocks that are not needed in a correct
+        solution. Drag the blocks from the left and put them in the correct
+        order on the right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <cline>// Start the counter at the front of the list</cline>
+        <cline>int i = 0;</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>// Use a while loop to visit each element of the list in order</cline>
+          <cline>while (i &lt; listOfNums.size())</cline>
+          <cline>{</cline>
+        </choice>
+        <choice>
+          <cline>// Use a while loop to visit each element of the list in order</cline>
+          <cline>while (i &lt;= listOfNums.size())</cline>
+          <cline>{</cline>
+        </choice>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>    // Check for a zero and remove it</cline>
+          <cline>    if (listOfNums.get(i) == 0)</cline>
+          <cline>    {</cline>
+          <cline>        listOfNums.remove(i);</cline>
+          <cline>    } // end if</cline>
+        </choice>
+        <choice>
+          <cline>    // Check for a zero and remove it</cline>
+          <cline>    if (listOfNums.get(i) == 0)</cline>
+          <cline>    {</cline>
+          <cline>        listOfNums.remove(0);</cline>
+          <cline>    } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>    // Otherwise, move the counter past an element that is not zero</cline>
+          <cline>    else</cline>
+          <cline>    {</cline>
+          <cline>        i++;</cline>
+          <cline>    } // end else</cline>
+        </choice>
+        <choice>
+          <cline>    // Otherwise, move the counter past an element that is not zero</cline>
+          <cline>    i++;</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>} // end while loop</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex4muc-sgl" xml:id="ch8ex4muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should return the
+        smallest int given an ArrayList of Integers (the parameter). But, the
+        blocks have been mixed up and include extra blocks that are not needed
+        in a correct solution. Drag the blocks from the left and put them in the
+        correct order on the right. Click the Check button to check your
+        solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>public static int findSmallest(ArrayList&lt;Integer&gt; nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="2">
+        <cline>    // Start with the first element as the smallest so far</cline>
+        <cline>    int min = nums.get(0);</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>    // Use a for loop to visit each index of the list in order</cline>
+          <cline>    for (int i = 0; i &lt; nums.size(); i++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a for loop to visit each index of the list in order</cline>
+          <cline>    for (int i = 0; i &lt;= nums.size(); i++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Replace the smallest so far when you find a smaller element</cline>
+          <cline>        if (nums.get(i) &lt; min)</cline>
+          <cline>        {</cline>
+          <cline>            min = nums.get(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Replace the smallest so far when you find a smaller element</cline>
+          <cline>        if (nums.get(i) &gt; min)</cline>
+          <cline>        {</cline>
+          <cline>            min = nums.get(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="6">
+        <cline>    } // end for loop</cline>
+      </block>
+
+      <block order="3">
+        <cline>    // Return the smallest integer after checking every element</cline>
+        <cline>    return min;</cline>
+      </block>
+
+      <block order="4">
+        <cline>} // end findSmallest method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex5muc-sgl" xml:id="ch8ex5muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should remove all the
+        positive and negative odd values in an ArrayList of Integers (the
+        parameter). But, the blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution. Drag the blocks from
+        the left and put them in the correct order on the right. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <cline>public static void removeOdd(ArrayList&lt;Integer&gt; nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="1">
+        <cline>    // Start the counter at the front of the list</cline>
+        <cline>    int i = 0;</cline>
+      </block>
+
+      <block order="6">
+        <cline>    // Use a while loop to visit each element of the list in order</cline>
+        <cline>    while (i &lt; nums.size())</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>        // Check for a positive or negative odd value and remove it</cline>
+          <cline>        if (Math.abs(nums.get(i)) % 2 == 1)</cline>
+          <cline>        {</cline>
+          <cline>            nums.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for a positive or negative odd value and remove it</cline>
+          <cline>        if (nums.get(i) % 2 == 1)</cline>
+          <cline>        {</cline>
+          <cline>            nums.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Otherwise, move the counter past an even value</cline>
+          <cline>        else</cline>
+          <cline>        {</cline>
+          <cline>            i++;</cline>
+          <cline>        } // end else</cline>
+        </choice>
+        <choice>
+          <cline>        // Otherwise, move the counter past an even value</cline>
+          <cline>        i++;</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>    } // end while loop</cline>
+      </block>
+
+      <block order="5">
+        <cline>} // end removeOdd method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex6muc-sgl" xml:id="ch8ex6muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following method should calculate the average from an ArrayList of
+        Integers (the parameter). But, the blocks have been mixed up and include
+        extra blocks that are not needed in a correct solution. Drag the
+        needed code from the left to the right and put them in order with the
+        correct indention so that the code would work correctly. Click the Check
+        button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="1">
+        <cline>public static double average(ArrayList&lt;Integer&gt; nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="5">
+        <choice correct="yes">
+          <cline>    // Start the running total at zero</cline>
+          <cline>    double sum = 0;</cline>
+        </choice>
+        <choice>
+          <cline>    // Start the running total at zero</cline>
+          <cline>    int sum = 0;</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>    // Use a for loop to visit each index of the list in order</cline>
+          <cline>    for (int i = 0; i &lt; nums.size(); i++)</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a for loop to visit each index of the list in order</cline>
+          <cline>    for (int i = 0; i &lt; nums.length; i++)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>        // Add the element at this index to the running total</cline>
+        <cline>        sum += nums.get(i);</cline>
+      </block>
+
+      <block order="4">
+        <cline>    } // end for loop</cline>
+      </block>
+
+      <block order="6">
+        <cline>    // Turn the running total into the average and return it</cline>
+        <cline>    return (sum / nums.size());</cline>
+      </block>
+
+      <block order="3">
+        <cline>} // end average method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex7muc-sgl" xml:id="ch8ex7muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should find the largest
+        value given an ArrayList of Integers (the parameter) and move it to the
+        back of the list. But, the blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution. Drag the blocks
+        from the left and put them in the correct order on the right. Click the
+        Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="8">
+        <cline>public static void moveLargest(ArrayList&lt;Integer&gt; nums)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="6">
+        <cline>    // Start with the first element's position as the largest so far</cline>
+        <cline>    int largest = 0;</cline>
+      </block>
+
+      <block order="5">
+        <cline>    // Use a for loop to visit each index of the list in order</cline>
+        <cline>    for (int i = 0; i &lt; nums.size(); i++)</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="3">
+        <choice correct="yes">
+          <cline>        // Replace the largest so far when you find a larger element</cline>
+          <cline>        if (nums.get(i) &gt; nums.get(largest))</cline>
+          <cline>        {</cline>
+          <cline>            largest = i;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Replace the largest so far when you find a larger element</cline>
+          <cline>        if (nums.get(i) &gt; nums.get(largest))</cline>
+          <cline>        {</cline>
+          <cline>            largest = nums.get(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Replace the largest so far when you find a larger element</cline>
+          <cline>        if (nums[i] &gt; nums[largest])</cline>
+          <cline>        {</cline>
+          <cline>            largest = i;</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <cline>    } // end for loop</cline>
+      </block>
+
+      <block order="2">
+        <cline>    // Remove the largest element from the list and keep it</cline>
+        <cline>    Integer largestVal = nums.remove(largest);</cline>
+      </block>
+
+      <block order="9">
+        <choice correct="yes">
+          <cline>    // Put the largest element at the back of the list</cline>
+          <cline>    nums.add(largestVal);</cline>
+        </choice>
+        <choice>
+          <cline>    // Put the largest element at the back of the list</cline>
+          <cline>    nums.add(largest);</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>} // end moveLargest method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex8muc-sgl" xml:id="ch8ex8muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following method should remove all the Strings that have length 3 or
+        shorter from an ArrayList of Strings (the parameter) – so {“catch”,
+        “dog”, “tree”, “me”} should become {“catch”, “tree”}. But, the blocks
+        have been mixed up and include extra blocks that are not needed in a
+        correct solution. Drag the needed code from the left to the right and
+        put them in order with the correct indention so that the code would work
+        correctly. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="5">
+        <cline>public static void removeShort(ArrayList&lt;String&gt; words)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="6">
+        <cline>    // Start the counter at the front of the list</cline>
+        <cline>    int i = 0;</cline>
+      </block>
+
+      <block order="2">
+        <cline>    // Use a while loop to visit each element of the list in order</cline>
+        <cline>    while (i &lt; words.size())</cline>
+        <cline>    {</cline>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Check for an element of length 3 or shorter and remove it</cline>
+          <cline>        if (words.get(i).length() &lt;= 3)</cline>
+          <cline>        {</cline>
+          <cline>            words.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for an element of length 3 or shorter and remove it</cline>
+          <cline>        if (words.get(i).length &lt;= 3)</cline>
+          <cline>        {</cline>
+          <cline>            words.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for an element of length 3 or shorter and remove it</cline>
+          <cline>        if (words.get(i).length() &lt; 3)</cline>
+          <cline>        {</cline>
+          <cline>            words.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Otherwise, move the counter past a longer element</cline>
+          <cline>        else</cline>
+          <cline>        {</cline>
+          <cline>            i++;</cline>
+          <cline>        } // end else</cline>
+        </choice>
+        <choice>
+          <cline>        // Otherwise, move the counter past a longer element</cline>
+          <cline>        i++;</cline>
+        </choice>
+      </block>
+
+      <block order="3">
+        <cline>    } // end while loop</cline>
+      </block>
+
+      <block order="4">
+        <cline>} // end removeShort method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex9muc-sgl" xml:id="ch8ex9muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following program segment is a method that should take each String
+        from an ArrayList of Strings (the parameter) and add it again to the
+        list – so {“cat”, “ribbon”, “house”} should become {“cat”, “cat”,
+        “ribbon”, “ribbon”, “house”, “house”}. But, the blocks have been mixed
+        up and include extra blocks that are not needed in a correct
+        solution. Drag the blocks from the left and put them in the correct
+        order on the right. Click the Check button to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="3">
+        <cline>public static void doubleList(ArrayList&lt;String&gt; words)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="6">
+        <cline>    // Start the counter at the front of the list</cline>
+        <cline>    int count = 0;</cline>
+      </block>
+
+      <block order="2">
+        <choice correct="yes">
+          <cline>    // Use a while loop to visit each element of the list in order</cline>
+          <cline>    while (count &lt; words.size())</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a while loop to visit each element of the list in order</cline>
+          <cline>    while (count &lt;= words.size())</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <cline>        // Put a copy of the element at this index right before it</cline>
+        <cline>        String toAdd = words.get(count);</cline>
+        <cline>        words.add(count, toAdd);</cline>
+      </block>
+
+      <block order="4">
+        <choice correct="yes">
+          <cline>        // Move the counter past both copies of the element</cline>
+          <cline>        count += 2;</cline>
+        </choice>
+        <choice>
+          <cline>        // Move the counter past both copies of the element</cline>
+          <cline>        count++;</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <cline>    } // end while loop</cline>
+      </block>
+
+      <block order="5">
+        <cline>} // end doubleList method</cline>
+      </block>
+    </blocks>
+  </activity>
+
+  <activity label="ch8ex10muc-sgl" xml:id="ch8ex10muc-sgl" numbered="yes" adaptive="yes" indentation="hide" language="java">
+    <statement>
+      <p>
+        The following method should remove a specific Integer (specified in
+        parameter) whenever it occurs in a given ArrayList of Integers (the
+        parameter). But, the blocks have been mixed up and include extra
+        blocks that are not needed in a correct solution. Drag the needed code
+        from the left to the right and put them in order with the correct
+        indention so that the code would work correctly. Click the Check button
+        to check your solution.
+      </p>
+    </statement>
+
+    <blocks>
+      <block order="4">
+        <cline>public static void removeElement(ArrayList&lt;Integer&gt; nums, int toRemove)</cline>
+        <cline>{</cline>
+      </block>
+
+      <block order="3">
+        <cline>    // Start the counter at the front of the list</cline>
+        <cline>    int i = 0;</cline>
+      </block>
+
+      <block order="6">
+        <choice correct="yes">
+          <cline>    // Use a while loop to visit each element of the list in order</cline>
+          <cline>    while (i &lt; nums.size())</cline>
+          <cline>    {</cline>
+        </choice>
+        <choice>
+          <cline>    // Use a while loop to visit each element of the list in order</cline>
+          <cline>    while (i &lt; nums.length)</cline>
+          <cline>    {</cline>
+        </choice>
+      </block>
+
+      <block order="1">
+        <choice correct="yes">
+          <cline>        // Check for the given integer and remove it</cline>
+          <cline>        if (nums.get(i) == toRemove)</cline>
+          <cline>        {</cline>
+          <cline>            nums.remove(i);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+        <choice>
+          <cline>        // Check for the given integer and remove it</cline>
+          <cline>        if (nums.get(i) == toRemove)</cline>
+          <cline>        {</cline>
+          <cline>            nums.remove(toRemove);</cline>
+          <cline>        } // end if</cline>
+        </choice>
+      </block>
+
+      <block order="7">
+        <choice correct="yes">
+          <cline>        // Otherwise, move the counter past an element that does not match</cline>
+          <cline>        else</cline>
+          <cline>        {</cline>
+          <cline>            i++;</cline>
+          <cline>        } // end else</cline>
+        </choice>
+        <choice>
+          <cline>        // Otherwise, move the counter past an element that does not match</cline>
+          <cline>        i++;</cline>
+        </choice>
+      </block>
+
+      <block order="2">
+        <cline>    } // end while loop</cline>
+      </block>
+
+      <block order="5">
+        <cline>} // end removeElement method</cline>
+      </block>
+    </blocks>
+  </activity>
+</section>
