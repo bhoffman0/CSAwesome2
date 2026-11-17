@@ -1182,4 +1182,100 @@ class WordPair
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-4-9-arraylist-traversal">
+    <title>AP Practice</title>
+    <activity label="apq-4-9-arraylist-traversal-1">
+      <statement>
+        <p>An enhanced for loop calls remove on the ArrayList it is traversing.</p>
+        <p>What does the lesson say can happen?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-1-a">
+            <p>The loop skips nothing and finishes normally.</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-1-a">
+            <p>Changing the size during that loop is the problem case.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-9-arraylist-traversal-1-b">
+            <p>A ConcurrentModificationException can be thrown.</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-1-b">
+            <p>The lesson names that exception for add or remove during the enhanced loop.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-1-c">
+            <p>The list is automatically copied first.</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-1-c">
+            <p>The lesson does not insert a copy. It says to use a regular loop instead.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-1-d">
+            <p>Only the last element can be removed.</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-1-d">
+            <p>The exception is about changing the list during the enhanced traversal.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-9-arraylist-traversal-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+ArrayList&lt;Integer&gt; nums = new ArrayList&lt;Integer&gt;();
+nums.add(2);
+nums.add(4);
+nums.add(6);
+int s = 0;
+for (int i = 0; i &lt; nums.size(); i++)
+    s += nums.get(i);
+System.out.println(s);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-2-a">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-2-a">
+            <p>2 is the first value. The loop adds the others too.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-2-b">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-2-b">
+            <p>6 is the last value, not the total.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-9-arraylist-traversal-2-c">
+            <p>12</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-2-c">
+            <p>get(i) supplies 2, then 4, then 6.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-9-arraylist-traversal-2-d">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-4-9-arraylist-traversal-2-d">
+            <p>3 would be the size, not the sum of the values.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

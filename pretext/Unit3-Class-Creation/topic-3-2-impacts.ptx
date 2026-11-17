@@ -143,4 +143,88 @@
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-3-2-impacts">
+    <title>AP Practice</title>
+    <activity label="apq-3-2-impacts-1">
+      <statement>
+        <p>A program performs its tasks as expected under stated conditions without failure.</p>
+        <p>Which term from this lesson names that property?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-2-impacts-1-a">
+            <p>Automation</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-1-a">
+            <p>Automation is work done by the system. It is not the no-failure property.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-2-impacts-1-b">
+            <p>System reliability</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-1-b">
+            <p>System reliability means the program performs its tasks without failure.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-2-impacts-1-c">
+            <p>Culture</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-1-c">
+            <p>The lesson lists culture as something a program can affect, not as this property.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-2-impacts-1-d">
+            <p>Privacy</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-1-d">
+            <p>Privacy is about personal data, not about failing to perform a task.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-3-2-impacts-2">
+      <statement>
+        <p>The lesson quotes the ACM code of ethics.</p>
+        <p>Which guideline is named there?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-2-impacts-2-a">
+            <p>Test with a variety of conditions</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-2-a">
+            <p>The lesson does recommend that testing. The guideline quoted from the ACM code is Avoid harm.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-2-impacts-2-b">
+            <p>Avoid harm</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-2-b">
+            <p>The lesson names Avoid harm and Respect privacy.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-2-impacts-2-c">
+            <p>Prefer the shortest class name</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-2-c">
+            <p>Naming style is not one of the quoted guidelines.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-2-impacts-2-d">
+            <p>Keep every data set forever</p>
+          </statement>
+          <feedback id="apq-3-2-impacts-2-d">
+            <p>The privacy guideline works against keeping data without a reason.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

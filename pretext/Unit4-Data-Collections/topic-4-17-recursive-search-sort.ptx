@@ -585,6 +585,90 @@ public class SortTest
     </p>
   </subsection>
 
+  <subsection xml:id="ap-practice-4-17-recursive-search-sort">
+    <title>AP Practice</title>
+    <activity label="apq-4-17-recursive-search-sort-1">
+      <statement>
+        <p>The binary search in this lesson runs on a sorted array.</p>
+        <p>What does one pass do to the remaining elements?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-1-a">
+            <p>It checks every remaining element.</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-1-a">
+            <p>Checking every element is linear search.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-17-recursive-search-sort-1-b">
+            <p>It eliminates half of them.</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-1-b">
+            <p>The lesson says each pass eliminates half.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-1-c">
+            <p>It sorts that half.</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-1-c">
+            <p>The array is already sorted. The search does not sort it.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-1-d">
+            <p>It swaps the first and last elements.</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-1-d">
+            <p>That swap is not the binary-search step.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-17-recursive-search-sort-2">
+      <statement>
+        <p>The lesson computes the middle index of a binary search.</p>
+        <p>Which expression matches the code?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-2-a">
+            <p>left + right</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-2-a">
+            <p>The sum is not yet the middle index.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-17-recursive-search-sort-2-b">
+            <p>(left + right) / 2</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-2-b">
+            <p>The lesson sets middle to that integer division.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-2-c">
+            <p>(left + right) * 2</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-2-c">
+            <p>The middle is not twice the sum.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-17-recursive-search-sort-2-d">
+            <p>right - left</p>
+          </statement>
+          <feedback id="apq-4-17-recursive-search-sort-2-d">
+            <p>The difference is a width, not the middle index.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="summary-and-review-exercises">
     <title>Summary and Review Exercises</title>
     <p>

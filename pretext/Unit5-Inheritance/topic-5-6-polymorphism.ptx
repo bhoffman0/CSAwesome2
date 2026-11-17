@@ -908,4 +908,88 @@ class Item
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-6-polymorphism">
+    <title>AP Practice</title>
+    <activity label="apq-5-6-polymorphism-1">
+      <statement>
+        <p>Animal has makeNoise, and Dog overrides it. The variable type is Animal and the object is a Dog.</p>
+        <p>Which makeNoise runs?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-6-polymorphism-1-a">
+            <p>Animal's method, because the variable is an Animal.</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-1-a">
+            <p>The variable's type is not the type that supplies the overriding method.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-6-polymorphism-1-b">
+            <p>Dog's method, because the object at run time is a Dog.</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-1-b">
+            <p>The lesson says the method that runs depends on the run-time type.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-6-polymorphism-1-c">
+            <p>Both methods, one after the other.</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-1-c">
+            <p>One overriding method is selected.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-6-polymorphism-1-d">
+            <p>Neither, because the types differ.</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-1-d">
+            <p>A superclass variable may hold a subclass object, and the override still runs.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-6-polymorphism-2">
+      <statement>
+        <p>A variable is declared as Animal and holds a Dog.</p>
+        <p>What is the declared type?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-6-polymorphism-2-a">
+            <p>Dog</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-2-a">
+            <p>Dog is the type of the object.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-6-polymorphism-2-b">
+            <p>Animal</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-2-b">
+            <p>The declared type is the type written on the variable.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-6-polymorphism-2-c">
+            <p>Object only</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-2-c">
+            <p>Object is a superclass, but the declared type here is Animal.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-6-polymorphism-2-d">
+            <p>There is no declared type when the types differ.</p>
+          </statement>
+          <feedback id="apq-5-6-polymorphism-2-d">
+            <p>The lesson names the declared type separately from the run-time type.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

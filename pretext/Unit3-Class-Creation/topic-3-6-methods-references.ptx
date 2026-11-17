@@ -72,7 +72,7 @@ class Person
     <p>
       When a copy of a reference is passed in and saved in the parameter
       variable, the parameter and the argument are then <term>aliases</term>,
-      both refering to the same object. Remember when we discussed reference
+      both referring to the same object. Remember when we discussed reference
       aliases with turtle objects in <xref ref="topic-2-2-booleans"/>. An object
       can have many names or aliases that refer to it, much like you may call
       your teacher with their last name, but friends may call them by their first name,
@@ -1290,4 +1290,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-3-6-methods-references">
+    <title>AP Practice</title>
+    <activity label="apq-3-6-methods-references-1">
+      <statement>
+        <p>A method parameter receives an object argument.</p>
+        <p>What is copied into the parameter?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-6-methods-references-1-a">
+            <p>A complete new copy of the object's data</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-1-a">
+            <p>The lesson says the reference is copied, not the whole object.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-6-methods-references-1-b">
+            <p>A copy of the reference</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-1-b">
+            <p>The parameter and the argument are aliases for the same object.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-6-methods-references-1-c">
+            <p>Only the class name</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-1-c">
+            <p>The argument is a particular object, not the name of its class.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-6-methods-references-1-d">
+            <p>Nothing, because objects cannot be parameters</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-1-d">
+            <p>Objects can be parameters. The reference is what is passed.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-3-6-methods-references-2">
+      <statement>
+        <p>A Person class has an Address object as an instance variable.</p>
+        <p>Which relationship is that?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-3-6-methods-references-2-a">
+            <p>is-a, because Person extends Address</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-2-a">
+            <p>The Address is stored inside a Person. Person does not extend Address.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-3-6-methods-references-2-b">
+            <p>has-a</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-2-b">
+            <p>The lesson calls an object stored in another object a has-a relationship.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-6-methods-references-2-c">
+            <p>static, because the address belongs to the class</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-2-c">
+            <p>An instance variable belongs to each object.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-3-6-methods-references-2-d">
+            <p>override, because Address replaces Person</p>
+          </statement>
+          <feedback id="apq-3-6-methods-references-2-d">
+            <p>Nothing is being overridden.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

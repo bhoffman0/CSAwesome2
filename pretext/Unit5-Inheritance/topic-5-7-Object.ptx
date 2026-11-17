@@ -789,4 +789,88 @@ public class RunestoneTests extends CodeTestHelper
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-7-Object">
+    <title>AP Practice</title>
+    <activity label="apq-5-7-Object-1">
+      <statement>
+        <p>A class does not override equals.</p>
+        <p>When does the inherited equals method return true?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-7-Object-1-a">
+            <p>When the objects have the same field values.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-1-a">
+            <p>Same field values are not enough until equals is overridden.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-7-Object-1-b">
+            <p>When both references are the same object, the same test as ==.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-1-b">
+            <p>The lesson says the inherited method does the same test as ==.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-7-Object-1-c">
+            <p>When the objects are the same type, even if they are different objects.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-1-c">
+            <p>Two different objects of the same class are not equal under Object's equals.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-7-Object-1-d">
+            <p>It always returns true.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-1-d">
+            <p>Different objects fail the test.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-7-Object-2">
+      <statement>
+        <p>A class inherits toString from Object and does not override it.</p>
+        <p>What does the lesson recommend instead?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-7-Object-2-a">
+            <p>Leave toString unchanged so it prints the field values.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-2-a">
+            <p>The inherited version is not the field printout.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-7-Object-2-b">
+            <p>Override toString so it can print the object's attributes.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-2-b">
+            <p>The lesson says toString is overridden to print attributes.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-7-Object-2-c">
+            <p>Override equals instead, because toString cannot be changed.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-2-c">
+            <p>toString is one of the methods the lesson says to override.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-7-Object-2-d">
+            <p>Call super() from toString.</p>
+          </statement>
+          <feedback id="apq-5-7-Object-2-d">
+            <p>super() is a constructor call, not the toString override.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

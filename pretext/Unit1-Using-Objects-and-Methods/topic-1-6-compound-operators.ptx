@@ -516,6 +516,106 @@ z--;
     </p>
   </subsection>
 
+  <subsection xml:id="ap-practice-1-6-compound-operators">
+    <title>AP Practice</title>
+    <activity label="apq-1-6-compound-operators-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int x = 4;
+x += 3;
+x *= 2;
+System.out.println(x);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-1-6-compound-operators-1-a">
+            <p>7</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-1-a">
+            <p>x += 3 changes 4 to 7, and the next statement still runs.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-6-compound-operators-1-b">
+            <p>10</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-1-b">
+            <p>The multiplication applies to the updated value of x, not to 4 alone.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-1-6-compound-operators-1-c">
+            <p>14</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-1-c">
+            <p>x += 3 stores 7, then x *= 2 stores 14.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-6-compound-operators-1-d">
+            <p>11</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-1-d">
+            <p>+= adds, and *= then multiplies that sum.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-1-6-compound-operators-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int n = 8;
+n--;
+n %= 3;
+System.out.println(n);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-1-6-compound-operators-2-a">
+            <p>7</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-2-a">
+            <p>n-- runs, and the %= statement runs after it.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-1-6-compound-operators-2-b">
+            <p>1</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-2-b">
+            <p>n-- changes 8 to 7, and 7 % 3 is 1.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-6-compound-operators-2-c">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-2-c">
+            <p>7 divided by 3 leaves a remainder of 1, not 2.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-1-6-compound-operators-2-d">
+            <p>5</p>
+          </statement>
+          <feedback id="apq-1-6-compound-operators-2-d">
+            <p>The decrement happens before the remainder.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="review-practice-for-unit-1A">
     <title>Review/Practice for Unit 1 Part A</title>
     <p>

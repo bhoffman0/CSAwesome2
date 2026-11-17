@@ -497,4 +497,88 @@ class OnlineCustomer
       </ul>
     </p>
   </subsection>
+  <subsection xml:id="ap-practice-5-4-super">
+    <title>AP Practice</title>
+    <activity label="apq-5-4-super-1">
+      <statement>
+        <p>An overriding method should run the superclass behavior and then do more.</p>
+        <p>Which call runs the superclass method?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-4-super-1-a">
+            <p>this.method();</p>
+          </statement>
+          <feedback id="apq-5-4-super-1-a">
+            <p>this stays in the subclass and can call the override again.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-4-super-1-b">
+            <p>super.method();</p>
+          </statement>
+          <feedback id="apq-5-4-super-1-b">
+            <p>The lesson uses super.method() to force the superclass method to run.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-4-super-1-c">
+            <p>super();</p>
+          </statement>
+          <feedback id="apq-5-4-super-1-c">
+            <p>super() calls a superclass constructor, not an ordinary method.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-4-super-1-d">
+            <p>method().super;</p>
+          </statement>
+          <feedback id="apq-5-4-super-1-d">
+            <p>super is not written after the call.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-5-4-super-2">
+      <statement>
+        <p>The lesson describes two uses of super.</p>
+        <p>Which pair is correct?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-5-4-super-2-a">
+            <p>super() calls a method, and super.method() calls a constructor.</p>
+          </statement>
+          <feedback id="apq-5-4-super-2-a">
+            <p>The two uses are the other way around.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-5-4-super-2-b">
+            <p>super() calls a constructor, and super.method() calls a method.</p>
+          </statement>
+          <feedback id="apq-5-4-super-2-b">
+            <p>The lesson lists those two uses.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-4-super-2-c">
+            <p>Both forms call only constructors.</p>
+          </statement>
+          <feedback id="apq-5-4-super-2-c">
+            <p>super.method() is for methods.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-5-4-super-2-d">
+            <p>Both forms are illegal in a subclass.</p>
+          </statement>
+          <feedback id="apq-5-4-super-2-d">
+            <p>The lesson uses both forms in subclasses.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>

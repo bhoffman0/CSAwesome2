@@ -787,6 +787,107 @@ while (i &lt;= 4)
     <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1" />
   </subsection>
 
+  <subsection xml:id="ap-practice-2-12-loop-analysis">
+    <title>AP Practice</title>
+    <activity label="apq-2-12-loop-analysis-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int n = 0;
+for (int i = 0; i &lt; 5; i++)
+    n++;
+System.out.println(n);
+          </code>
+        </program>
+        <p>How many times does the loop body run?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-12-loop-analysis-1-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-1-a">
+            <p>i takes the values 0, 1, 2, 3, and 4.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-12-loop-analysis-1-b">
+            <p>5</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-1-b">
+            <p>i goes from 0 up to but not including 5.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-12-loop-analysis-1-c">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-1-c">
+            <p>The condition fails when i becomes 5, so the body does not run a sixth time.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-12-loop-analysis-1-d">
+            <p>0</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-1-d">
+            <p>The condition 0 &lt; 5 is true, so the body runs.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-2-12-loop-analysis-2">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int n = 0;
+for (int i = 0; i &lt; 4; i++)
+    for (int j = 0; j &lt; 4; j++)
+        n++;
+System.out.println(n);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-2-12-loop-analysis-2-a">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-2-a">
+            <p>The inner loop runs once for every outer iteration, not once overall.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-12-loop-analysis-2-b">
+            <p>8</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-2-b">
+            <p>The counts are multiplied, not added.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-2-12-loop-analysis-2-c">
+            <p>16</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-2-c">
+            <p>The outer body runs 4 times and the inner body runs 4 times on each of those.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-2-12-loop-analysis-2-d">
+            <p>12</p>
+          </statement>
+          <feedback id="apq-2-12-loop-analysis-2-d">
+            <p>4 times 4 is 16.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
   <subsection xml:id="review-practice-for-loops">
     <title>Review/Practice for Loops</title>
     <p>

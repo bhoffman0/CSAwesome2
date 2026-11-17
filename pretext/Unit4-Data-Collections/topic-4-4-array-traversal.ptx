@@ -2064,4 +2064,94 @@ public class RunestoneTests extends CodeTestHelper
 
     <interactive iframe="iframe/csagames.html" width="95%" aspect="1:1" />
   </subsection>
+  <subsection xml:id="ap-practice-4-4-array-traversal">
+    <title>AP Practice</title>
+    <activity label="apq-4-4-array-traversal-1">
+      <statement>
+        <p>Consider the following code segment.</p>
+        <program language="java">
+          <code>
+int[] arr = {2, 4, 6};
+System.out.println(arr[arr.length - 1]);
+          </code>
+        </program>
+        <p>What is printed as a result of executing the code segment?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-4-array-traversal-1-a">
+            <p>2</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-1-a">
+            <p>Index 0 holds 2. The printed index is the last one.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-4-array-traversal-1-b">
+            <p>4</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-1-b">
+            <p>4 is the middle value.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-4-array-traversal-1-c">
+            <p>6</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-1-c">
+            <p>The last index is length - 1, and that slot holds 6.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-4-array-traversal-1-d">
+            <p>3</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-1-d">
+            <p>3 is the length, not a value stored in the array.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+    <activity label="apq-4-4-array-traversal-2">
+      <statement>
+        <p>An enhanced for loop assigns a new value to its loop variable.</p>
+        <p>What happens to the array?</p>
+      </statement>
+      <choices randomize="yes">
+        <choice>
+          <statement id="apq-4-4-array-traversal-2-a">
+            <p>The matching array slot is updated.</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-2-a">
+            <p>Assigning the loop variable does not write back into the array.</p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement id="apq-4-4-array-traversal-2-b">
+            <p>The array values stay the same.</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-2-b">
+            <p>Only the loop variable value will change.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-4-array-traversal-2-c">
+            <p>The array length grows by one.</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-2-c">
+            <p>An enhanced for loop does not change the length.</p>
+          </feedback>
+        </choice>
+        <choice>
+          <statement id="apq-4-4-array-traversal-2-d">
+            <p>The array is reversed.</p>
+          </statement>
+          <feedback id="apq-4-4-array-traversal-2-d">
+            <p>Nothing in that assignment reverses the array.</p>
+          </feedback>
+        </choice>
+      </choices>
+    </activity>
+  </subsection>
+
 </section>
